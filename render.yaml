@@ -1,0 +1,17 @@
+# Render Blueprint. Phase 1 is stateless: no database, no secrets, no client data on the server.
+# Before Phase 4 (accounts), move to a Render HIPAA-enabled workspace and sign Render's BAA (see docs/DEPLOY.md).
+services:
+  - type: web
+    name: clinician-resource-companion
+    runtime: node
+    plan: free
+    region: oregon
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    healthCheckPath: /
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: NEXT_TELEMETRY_DISABLED
+        value: "1"
