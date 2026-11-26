@@ -1,0 +1,66 @@
+{
+  "id": "cultural-formulation-exploration",
+  "name": "Cultural formulation exploration (original questions; CFI is link-out only)",
+  "modality": "Culturally responsive assessment",
+  "conditions": [
+    "panic-disorder",
+    "agoraphobia",
+    "generalized-anxiety-disorder",
+    "major-depressive-disorder",
+    "ptsd"
+  ],
+  "evidenceLevel": "Assessment practice, not a treatment. In the DSM-5 international field trial, patients and clinicians rated the DSM-5 Cultural Formulation Interview (CFI) as feasible, acceptable and clinically useful, and clinicians' feasibility ratings improved after their first interview (Lewis-Fernandez et al., 2017). The CFI is copyrighted by the American Psychiatric Association and is linked out only; the questions in this entry are original and are not the CFI. See DSM-5-TR, Section III: Cultural Formulation.",
+  "minutes": { "min": 15, "max": 45 },
+  "purpose": "A short, respectful conversation to understand how the client's culture, identities, community and life circumstances shape how they experience and explain their distress, how they cope, and what kind of help they want. It draws on explanatory-model ideas (Kleinman, Eisenberg and Good), the ADDRESSING framework (Pamela Hays), and the cultural formulation approach in DSM-5-TR and the ICD-11 clinical descriptions (CDDR). It helps prevent misdiagnosis, improves engagement, and guides how to adapt any intervention in this library. To use the official CFI, its informant version or its supplementary modules, follow the APA link.",
+  "steps": [
+    "Explain why you are asking: you want to understand the client's own view and what matters to them so that care fits. Make clear there are no wrong answers and they can skip any question.",
+    "Invite the client to name the problem in their own words, including any family or community term for it (Kleinman's explanatory-model approach).",
+    "Explore the client's own explanation: what they think is causing it, what it means for them, and what they fear might happen.",
+    "Ask about identity and context (heritage, language, religion, migration, gender, sexuality, disability, age, money and work) and which of these matter most right now. Ask about discrimination or unfair treatment.",
+    "Explore supports and stresses: family, community, faith, work, and how each one helps or adds strain.",
+    "Ask about coping and earlier help: what they have tried, including traditional, religious or community healing, and what helped or did not.",
+    "Ask about hopes for care and possible barriers: what kind of help they want and from whom, and obstacles such as cost, transport, stigma, language, or mistrust from past experiences.",
+    "Ask how differences between you and the client might affect the work, and invite them to tell you when something does not fit.",
+    "Summarize what you heard and use it to shape goals, interventions and handouts. For the official structured interview, use the APA CFI (link out)."
+  ],
+  "script": [
+    "You are the expert on your own life. Can you walk me through what has been happening, using whatever words feel right to you?",
+    "Is there a name or a saying for this kind of trouble in your family or where you grew up?",
+    "Some people link troubles like this to stress, the body, the spirit, family, or something that happened to them. What do you link it to? What do the people at home say?",
+    "When you picture this getting worse, what scares you the most?",
+    "Many things can shape a hard time: age, faith, where your family comes from, the languages you speak, money, gender, a disability. Which of these is on your mind most these days, and does it make things lighter or heavier?",
+    "Have you been treated unfairly because of who you are? How has that affected you?",
+    "What has gotten you through rough patches before? That might be prayer, family, a healer, a doctor, or something you do on your own. What helped, and what did not?",
+    "If our work together goes well, what would be different a few months from now? What could get in the way of coming here, like cost, rides, time off, language or bad past experiences?",
+    "We may come from different places. If I say something that does not fit you or your family's ways, please stop me. I want to get it right."
+  ],
+  "contraindications": [
+    "Do not copy, embed or modify the APA Cultural Formulation Interview in this app; it is APA copyrighted. Link out to the official version.",
+    "Avoid stereotyping. Culture is personal and changes over time; use the answers to understand this client, not to apply group generalizations.",
+    "Use trained professional interpreters, not family members, especially for sensitive topics.",
+    "Explanations involving spirits, curses or religious causes are common and are not, on their own, signs of psychosis. Assess within cultural context, and consult cultural brokers or colleagues when unsure.",
+    "Do not enter information about immigration status, substance use or other sensitive topics into this tool; nothing is stored or sent. Any export or note about substance use must carry the notice: 42 CFR Part 2 prohibits unauthorized disclosure of these records.",
+    "This intervention does not assess or decide risk. If suicidal thoughts, self-harm or risk to others come up, follow your setting's risk-assessment and safety-planning procedures. Keep crisis options visible: 988 Suicide & Crisis Lifeline (US, call or text), the local emergency number, and findahelpline.com for other countries."
+  ],
+  "culturalAdaptations": [
+    "Ask about cultural concepts of distress that may apply (for example, ataque de nervios, khyal cap, taijin kyofusho, or 'thinking too much') and what they mean for this person.",
+    "Fit the length and order to the setting. A few questions now and more later is better than none.",
+    "Include family or community perspectives only with the client's consent. APA also offers an informant version of the CFI (link out).",
+    "Treat structural factors such as poverty, racism, housing and legal status as part of the formulation, not only beliefs.",
+    "Reflect on your own cultural background, assumptions and power in the room, and practice cultural humility."
+  ],
+  "handoutIds": [],
+  "sources": [
+    { "title": "DSM-5-TR online assessment measures (includes the Cultural Formulation Interview, informant version and supplementary modules)", "publisher": "American Psychiatric Association", "url": "https://psychiatry.org/psychiatrists/practice/dsm/educational-resources/assessment-measures" },
+    { "title": "Cultural Formulation Interview (DSM-5-TR) - official PDF, link out only", "publisher": "American Psychiatric Association", "url": "https://www.psychiatry.org/File%20Library/Psychiatrists/Practice/DSM/DSM-5-TR/APA-DSM5TR-CulturalFormulationInterview.pdf" },
+    { "title": "Feasibility, acceptability and clinical utility of the Cultural Formulation Interview: mixed-methods results from the DSM-5 international field trial (Lewis-Fernandez et al.)", "publisher": "British Journal of Psychiatry", "url": "https://doi.org/10.1192/bjp.bp.116.193862", "year": 2017 },
+    { "title": "An introduction to the Cultural Formulation Interview", "publisher": "FOCUS (American Psychiatric Association Publishing)", "url": "https://focus.psychiatryonline.org/doi/10.1176/appi.focus.18103" },
+    { "title": "Culture, illness, and care: clinical lessons from anthropologic and cross-cultural research (Kleinman, Eisenberg and Good; reprint)", "publisher": "FOCUS (originally Annals of Internal Medicine, 1978)", "url": "https://focus.psychiatryonline.org/doi/10.1176/foc.4.1.140", "year": 1978 },
+    { "title": "Addressing Cultural Complexities in Counseling and Clinical Practice (Hays)", "publisher": "American Psychological Association", "url": "https://www.apa.org/pubs/books/addressing-cultural-complexities-counseling-clinical-practice", "year": 2022 },
+    { "title": "Clinical descriptions and diagnostic requirements for ICD-11 mental, behavioural and neurodevelopmental disorders (CDDR)", "publisher": "World Health Organization", "url": "https://www.who.int/publications/i/item/9789240077263", "year": 2024 },
+    { "title": "'Thinking too much': a systematic review of a common idiom of distress (Kaiser et al.)", "publisher": "Social Science & Medicine (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/26584235/", "year": 2015 }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

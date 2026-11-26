@@ -1,0 +1,72 @@
+{
+  "id": "relapse-prevention-planning",
+  "name": "Relapse prevention planning",
+  "modality": "CBT - relapse prevention (Marlatt and Gordon model)",
+  "conditions": [
+    "alcohol-use-disorder",
+    "major-depressive-disorder",
+    "persistent-depressive-disorder",
+    "generalized-anxiety-disorder",
+    "panic-disorder",
+    "obsessive-compulsive-disorder"
+  ],
+  "evidenceLevel": "Substance use: a meta-analysis of 26 studies (9,504 participants) found relapse prevention generally effective, particularly for alcohol problems (Irvin et al., 1999). In an RCT with 286 adults in aftercare, standard relapse prevention delayed time to first drug use at 6 months compared with treatment as usual, and mindfulness-based relapse prevention reduced drug use and heavy drinking more than both at 12 months (Bowen et al., 2014). NICE CG115 recommends psychological interventions, including CBT-based therapies, focused on alcohol-related thoughts, behavior, problems and social networks. Depression: NICE NG222 recommends offering relapse prevention, such as group CBT or MBCT, to adults at higher risk of relapse. For anxiety disorders and OCD, relapse-prevention planning is a standard end-of-treatment part of CBT protocols, and evidence for the planning step on its own is limited.",
+  "minutes": { "min": 20, "max": 50 },
+  "purpose": "Relapse prevention, based on the cognitive-behavioral model developed by G. Alan Marlatt and Judith Gordon, helps the client expect and cope with situations that raise the risk of returning to old patterns. Its key ideas: relapse is often a process, not a single event. High-risk situations (difficult emotions, conflict, social pressure, cues, and sometimes celebrations) are the immediate triggers. Coping responses and confidence (self-efficacy) shape what happens next. Lifestyle imbalance and urges can build up quietly. A single lapse can snowball when the person reacts with guilt and 'I've blown it' thinking, which Marlatt called the abstinence violation effect. The written plan covers warning signs, high-risk situations, coping responses, supports, and what to do after a lapse. The same structure is used near the end of treatment for depression, anxiety and OCD.",
+  "steps": [
+    "Review what has helped in treatment so far and what the client wants to keep doing. Agree on the goal in the client's words (for alcohol, the client's own goal of abstinence or cutting down, with medical advice where needed).",
+    "Identify personal high-risk situations from recent examples or a drinking diary: emotions, people, places, times, physical states and events, including celebrations.",
+    "Map early warning signs, including subtle ones: dropping routines, pulling away from people, small choices that edge toward risk, rising urges, poor sleep, return of avoidance or rituals, or low mood.",
+    "Build a coping menu for each high-risk situation: avoid or change the situation where possible; cope in the moment (urge surfing, delaying, distraction, leaving, calling someone); and use skills learned in therapy. Rehearse refusal or assertive responses in session.",
+    "Address lifestyle balance: add activities that bring enjoyment and meaning, and reduce ongoing stressors where possible.",
+    "Plan for lapses: normalize that slips can happen, agree on the difference between a lapse and a relapse, and write specific steps for the first 24 hours (stop, step back, reach out, review what happened, return to the plan). Gently challenge all-or-nothing thinking.",
+    "List supports and resources: people the client trusts, mutual-help groups the client chooses, treatment contacts, and crisis lines (in the US, call or text 988; the local emergency number; findahelpline.com for other countries).",
+    "Write the plan together on the relapse-prevention-plan handout and on coping-cards, and schedule booster sessions or check-ins.",
+    "For alcohol: discuss medication options and refer for medical review when appropriate (see medication-referral), and screen for withdrawal risk before any rapid cut-down."
+  ],
+  "script": [
+    "Let's make a plan for the hard moments ahead, so you're ready before they come.",
+    "What situations or feelings have made it hardest for you in the past?",
+    "What are the early signs that things are starting to slip? Sometimes they're small, like skipping meals or staying home more.",
+    "For each risky situation, what could you do instead? Let's write down two or three options.",
+    "A slip doesn't wipe out your progress. What matters most is what you do next.",
+    "If you slip, what are the first three things you'll do in the next 24 hours?",
+    "Who could you reach out to? You can write them on your own paper copy.",
+    "Your plan can change. We'll look at it again in a few weeks."
+  ],
+  "contraindications": [
+    "Alcohol withdrawal can be dangerous. Clients who drink heavily every day, or who have had withdrawal symptoms such as shakes, sweats, seizures or hallucinations, need a medical assessment before stopping or cutting down quickly.",
+    "Relapse-prevention planning supports, but does not replace, a full treatment plan for moderate to severe alcohol use disorder, including a medication referral when indicated.",
+    "A return to heavy drinking, worsening depression or new suicidal thoughts calls for reassessment and possibly a higher level of care. This tool does not judge risk. Crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com.",
+    "Avoid shaming language about lapses. Shame can strengthen the abstinence violation effect and lead to dropout.",
+    "Substance-use content: do not enter names, dates, places or other identifying details into this tool; nothing is stored or sent. Any note or export about substance use must carry this notice: 42 CFR Part 2 prohibits unauthorized disclosure of these records."
+  ],
+  "culturalAdaptations": [
+    "High-risk situations often include family celebrations, religious holidays, hospitality customs and workplace culture. Plan respectful ways to decline that fit the client's community.",
+    "Support may come from extended family, faith communities or community elders rather than formal groups. Ask who the client trusts.",
+    "Mutual-help options vary (12-step, secular, faith-based, and culturally specific or Indigenous-led recovery programs). Let the client choose.",
+    "Stigma about substance use or mental illness can make telling family risky. Respect the client's choices about who knows.",
+    "In some cultures, warning signs of depression or anxiety show up as physical complaints or changes in family and work roles. Include these on the plan."
+  ],
+  "faithIntegrated": {
+    "note": "If the client chooses, the plan can include faith-based supports (for example, a trusted clergy member, prayer, attending worship, or a faith-based recovery group) and the client's own spiritual reasons for staying on track. The client leads. Never suggest that a lapse reflects weak faith.",
+    "consentNote": "Offer only if the client raises faith or spirituality and asks to include it. Before starting, explain what the faith-integrated option involves, that it is optional, that the same intervention is available without religious content, and that the client can change their mind at any time; document informed consent. Follow the client's own tradition and words, and never introduce, impose, endorse or challenge beliefs (AACC Code of Ethics: informed consent before spiritual interventions, client-led integration; ACA Code of Ethics 2014, A.2 informed consent and A.4.b personal values)."
+  },
+  "handoutIds": ["relapse-prevention-plan", "coping-cards", "urge-surfing-log", "drinking-diary"],
+  "sources": [
+    { "title": "Relapse prevention: an overview of Marlatt's cognitive-behavioral model (Larimer, Palmer and Marlatt)", "publisher": "Alcohol Research and Health (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/10890810/", "year": 1999 },
+    { "title": "Efficacy of relapse prevention: a meta-analytic review (Irvin, Bowers, Dunn and Wang)", "publisher": "Journal of Consulting and Clinical Psychology (DOI)", "url": "https://doi.org/10.1037/0022-006X.67.4.563", "year": 1999 },
+    { "title": "Relative efficacy of mindfulness-based relapse prevention, standard relapse prevention, and treatment as usual for substance use disorders: a randomized clinical trial (Bowen et al.)", "publisher": "JAMA Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/24647726/", "year": 2014 },
+    { "title": "Alcohol-use disorders: diagnosis, assessment and management of harmful drinking (high-risk drinking) and alcohol dependence (CG115)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/cg115", "year": 2011 },
+    { "title": "Depression in adults: treatment and management (NG222)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng222", "year": 2022 },
+    { "title": "Depression in adults quality standard (QS8), quality statement 3: preventing relapse", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/qs8/chapter/Quality-statement-3-Preventing-relapse" },
+    { "title": "Healthcare Professional's Core Resource on Alcohol", "publisher": "National Institute on Alcohol Abuse and Alcoholism", "url": "https://niaaa.nih.gov/health-professionals-communities/core-resource-on-alcohol" },
+    { "title": "The HIPAA Privacy Rule and 42 CFR Part 2", "publisher": "US Department of Health and Human Services", "url": "https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/hipaa-part-2/index.html" },
+    { "title": "988 Suicide & Crisis Lifeline", "publisher": "988 Lifeline", "url": "https://988lifeline.org" },
+    { "title": "AACC Code of Ethics", "publisher": "American Association of Christian Counselors", "url": "https://aacc.net/aacc-code-of-ethics/" },
+    { "title": "ACA Code of Ethics (2014) and ethics resources", "publisher": "American Counseling Association", "url": "https://www.counseling.org/resources/ethics", "year": 2014 }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

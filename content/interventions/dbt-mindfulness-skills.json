@@ -1,0 +1,64 @@
+{
+  "id": "dbt-mindfulness-skills",
+  "name": "DBT skills: Core mindfulness",
+  "modality": "Dialectical Behavior Therapy (DBT) skills",
+  "conditions": [
+    "major-depressive-disorder",
+    "generalized-anxiety-disorder",
+    "ptsd"
+  ],
+  "evidenceLevel": "Emerging evidence for the core mindfulness module on its own. It is the foundation of the skills modules in comprehensive DBT, which has strong evidence for BPD and recurrent self-harm (Cochrane, Storebo et al., 2020); stand-alone DBT skills training has preliminary support (Valentine et al., 2015). NCCIH notes that evidence for mindfulness approaches in anxiety and depression is mixed and often preliminary. The 2023 VA/DoD PTSD guideline found insufficient evidence for or against DBT as a PTSD treatment.",
+  "minutes": { "min": 15, "max": 30 },
+  "purpose": "Core mindfulness underpins the other DBT skills. The client learns to bring emotion-driven and logic-driven ways of knowing together into a balanced, integrated stance (Linehan's 'wise mind'), and practices noticing experience, putting it into plain words, and throwing themselves fully into an activity, while letting go of judgments, doing one thing at a time, and focusing on what works. Practices are short and concrete, which suits clients with high arousal. This entry uses original wording; Linehan's own skills and handouts are in the DBT Skills Training Manual (Linehan, 2015). Fit across presentations: Anxiety - noticing and describing sensations and thoughts without judgment can slow worry spirals. Depression - full participation in activities counters withdrawal, and a nonjudgmental stance softens self-criticism. Trauma - short, outward-focused practices support stabilization. Substance use - noticing urges and triggers, and choosing what works over impulse.",
+  "steps": [
+    "Orient: mindfulness here means training attention on purpose. It is not relaxation and not emptying the mind.",
+    "Explore three states of mind: run by emotion, run by logic, and the balanced place where both meet. Ask for real examples from the client's life of choices made from each.",
+    "Practice noticing only: for one minute, attend to one sensation, such as hands resting on a cool surface, without adding words.",
+    "Practice putting it into words: describe what was noticed in plain, factual language, the way a reporter would, separating facts from interpretations.",
+    "Practice full participation: do a short activity with complete engagement, such as a song, a stretch or a mindful walk across the room.",
+    "Practice letting go of judgments: catch words like 'stupid' or 'awful' and restate them as facts plus preferences. Add doing one thing at a time and asking 'what works here?'",
+    "Assign brief daily practice (1-5 minutes) and track it on the mindful-check-in handout.",
+    "Review practice at the next session and troubleshoot barriers such as forgetting, boredom or distress."
+  ],
+  "script": [
+    "Mindfulness isn't about clearing your mind or feeling calm. It's about noticing what's happening right now, on purpose.",
+    "There's the part of you that runs on feelings and the part that runs on logic. Wise choices usually come from where those two meet. Can you think of a time you made a choice from that place?",
+    "Rest your hands on the table. Just notice. Cool? Smooth? Now say what you notice in plain words, like a news reporter would.",
+    "Notice if a judgment sneaks in, like 'this is stupid.' Try swapping it for the facts: 'I feel restless and I'd rather be doing something else.'",
+    "This week, pick one minute a day to do just one thing, like drinking your tea or walking to your car, with your full attention."
+  ],
+  "contraindications": [
+    "Some practices (eyes closed, focusing on breath or body) can trigger distress in trauma survivors. Offer eyes-open, outward-focused options and keep practices short.",
+    "With psychosis, severe dissociation or current mania, keep practices very brief, concrete and outward-focused, and consult before use.",
+    "Mindfulness skills alone are not a crisis response to suicidal thoughts. Follow your risk protocol and safety planning, and keep 988 in the US (call or text), the local emergency number and findahelpline.com visible. The clinician, not this tool, judges risk.",
+    "Substance-use care: screen for withdrawal risk (alcohol or benzodiazepine withdrawal needs medical referral), coordinate with SUD treatment, and keep notes and handouts free of identifying details. 42 CFR Part 2 prohibits unauthorized disclosure of these records."
+  ],
+  "culturalAdaptations": [
+    "Linehan drew DBT mindfulness from Zen and other contemplative practice and translated it into secular skills. Say so openly; some clients welcome the link and others prefer a fully secular framing.",
+    "Let the client pick culturally familiar activities for full participation, such as songs, dance, crafts or cooking.",
+    "Some judgments carry moral or religious meaning for the client. Focus on the judgments that fuel distress, not on the client's moral framework.",
+    "Adapt for literacy and language: use spoken practice, pictures and demonstration instead of written worksheets when helpful, and use a professional interpreter when needed.",
+    "Culturally adapted psychotherapies tend to outperform unadapted versions (Hall et al., 2016)."
+  ],
+  "faithIntegrated": {
+    "note": "Clients who wish to may practice mindful attention within their own tradition, such as attentive prayer, slow contemplative reading of a sacred text, or full participation in worship or ritual. The client decides whether and how to do this. The clinician does not introduce religious content or require any spiritual practice.",
+    "consentNote": "Before any faith-integrated variant, explain its purpose and alternatives, confirm the client's right to decline or stop at any time, and document informed consent (AACC Code of Ethics; ACA Code of Ethics). Faith integration is client-led. Never impose beliefs or suggest that distress reflects weak faith."
+  },
+  "trainingRequired": "Individual skills can be taught by clinicians competent in DBT skills. Comprehensive DBT (individual therapy, skills group, phone coaching and a consultation team) requires formal DBT training.",
+  "handoutIds": ["mindful-check-in"],
+  "sources": [
+    { "title": "DBT Skills Training Manual, Second Edition (Linehan)", "publisher": "Guilford Press", "url": "https://www.guilford.com/books/DBT-Skills-Training-Manual/Marsha-Linehan/9781462516995", "year": 2015 },
+    { "title": "Psychological therapies for people with borderline personality disorder (Storebo et al.)", "publisher": "Cochrane Database of Systematic Reviews", "url": "https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD012955.pub2/full", "year": 2020 },
+    { "title": "The use of dialectical behavior therapy skills training as stand-alone treatment: a systematic review of the treatment outcome literature (Valentine et al.)", "publisher": "Journal of Clinical Psychology (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/25042066/", "year": 2015 },
+    { "title": "Meditation and Mindfulness: Effectiveness and Safety", "publisher": "National Center for Complementary and Integrative Health (NCCIH)", "url": "https://www.nccih.nih.gov/health/meditation-and-mindfulness-effectiveness-and-safety" },
+    { "title": "Clinician summary of the 2023 VA/DoD PTSD clinical practice guideline", "publisher": "Focus (American Psychiatric Association Publishing)", "url": "https://focus.psychiatryonline.org/doi/10.1176/appi.focus.16408" },
+    { "title": "A meta-analysis of cultural adaptations of psychological interventions (Hall et al.)", "publisher": "Behavior Therapy (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/27993346/", "year": 2016 },
+    { "title": "AACC Code of Ethics", "publisher": "American Association of Christian Counselors", "url": "https://aacc.net/aacc-code-of-ethics/" },
+    { "title": "The HIPAA Privacy Rule and 42 CFR Part 2", "publisher": "US Department of Health and Human Services", "url": "https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/hipaa-part-2/index.html" },
+    { "title": "988 Suicide & Crisis Lifeline", "publisher": "988 Lifeline", "url": "https://988lifeline.org" },
+    { "title": "Find A Helpline (international directory)", "publisher": "Find A Helpline", "url": "https://findahelpline.com" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

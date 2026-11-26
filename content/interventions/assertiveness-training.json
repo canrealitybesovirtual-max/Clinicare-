@@ -1,0 +1,58 @@
+{
+  "id": "assertiveness-training",
+  "name": "Assertiveness training",
+  "modality": "Behavioral skills training",
+  "conditions": ["major-depressive-disorder"],
+  "evidenceLevel": "Emerging evidence as a stand-alone treatment. A review by Speed, Goldstein and Goldfried (2018) summarizes early trials linking assertiveness training to better symptoms, self-esteem and relationships, and argues the method has been overlooked. Drink-refusal skills training is part of NIAAA's Project MATCH coping-skills CBT manual and the COMBINE Combined Behavioral Intervention, and a secondary COMBINE analysis examined its effects (Witkiewitz et al.). For social anxiety disorder, NICE CG159 recommends individual CBT developed for social anxiety as first line; use assertiveness practice within that framework.",
+  "minutes": { "min": 30, "max": 60 },
+  "purpose": "Helps clients express needs, opinions and limits honestly and respectfully, finding a middle path between passive responses (giving in, staying silent) and aggressive ones (attacking, overriding). Covers saying no, making requests, handling criticism and refusing drinks. Rooted in behavior therapy (Andrew Salter, Joseph Wolpe, Robert Alberti and Michael Emmons) and delivered through modeling, rehearsal, feedback and step-by-step real-world practice. Useful when unassertiveness feeds social fear, resentment and low mood, or pressure to drink.",
+  "steps": [
+    "Assess patterns: situations where the client goes passive, aggressive or passive-aggressive, and the beliefs behind them (for example, 'saying no makes me selfish').",
+    "Explain the three styles and the idea that the client has a right to needs and limits, while respecting other people's rights too.",
+    "Teach a simple structure: describe the situation, state your feeling or view, make a specific request or set a limit, and, if useful, mention the benefit.",
+    "Teach supporting skills: calmly repeating a refusal (the broken-record technique), offering a workable compromise, and responding to criticism by acknowledging what is fair.",
+    "Build a step-by-step list of situations from easier to harder, and start near the bottom.",
+    "Model, role-play and give feedback on words, tone, posture and eye contact. Repeat until the client feels ready.",
+    "Assign real-world practice and debrief. For social anxiety, frame practices as behavioral experiments and drop safety behaviors.",
+    "For drink refusal: rehearse a clear 'no thanks', an alternative drink or activity, and changing the subject or leaving."
+  ],
+  "script": [
+    "Being assertive means saying what you need in a clear, respectful way. It's not about winning. It's about being honest with yourself and with the other person.",
+    "When your coworker asks you to cover another shift, what do you usually say? What would you like to say?",
+    "Try this: 'I can't take the shift this weekend. I could swap with you next Friday if that helps.'",
+    "If they push, you can calmly say it again: 'I hear you. I still can't do this weekend.'",
+    "Let's practice someone offering you a drink. Look at me and say no in your own words. Short and friendly is fine.",
+    "From 0 to 10, how anxious were you when you said that? Let's try it once more and see if the number changes."
+  ],
+  "contraindications": [
+    "Check safety before encouraging assertion with an abusive partner, family member or employer. In unsafe relationships, safety planning comes first, and assertiveness may need to be adapted or postponed.",
+    "Consider real-world consequences (job security, immigration status, discrimination) and help the client decide when speaking up is worth the risk.",
+    "For social anxiety disorder, use it within CBT developed for social anxiety rather than as a substitute.",
+    "Alcohol withdrawal can be dangerous. Clients who drink heavily every day or have had withdrawal symptoms need a medical assessment before cutting down quickly; refer to medical care.",
+    "This intervention does not assess or decide risk. If suicidal thoughts, self-harm or risk to others come up, follow your setting's risk-assessment and safety-planning procedures. Keep crisis options visible: 988 Suicide & Crisis Lifeline (US, call or text), the local emergency number, and findahelpline.com for other countries.",
+    "Substance-use content: do not enter names, places, dates or other identifying details into this tool; nothing is stored or sent. Any export or note about substance use must carry the notice: 42 CFR Part 2 prohibits unauthorized disclosure of these records."
+  ],
+  "culturalAdaptations": [
+    "Norms for assertiveness are shaped by culture. A direct refusal can seem disrespectful toward elders, supervisors or guests, so build respectful, culturally fitting ways of expressing needs.",
+    "Gender roles and power differences change the risks of speaking up. Explore them openly.",
+    "For clients facing racism or discrimination, talk about the extra cost of being seen as 'aggressive' and plan responses that protect their wellbeing.",
+    "Where drinking is tied to hospitality, practice refusals that protect the relationship, such as accepting a non-alcoholic drink or giving a health reason."
+  ],
+  "faithIntegrated": {
+    "note": "If the client asks, explore how their faith tradition views humility, service, honesty and caring for oneself, and identify teachings or role models from their tradition that support speaking up respectfully. Let the client lead, and never use religious ideas to pressure the client toward either speaking up or giving in.",
+    "consentNote": "Offer only if the client raises faith or spirituality and asks to include it. Before starting, explain what a faith-integrated approach involves, that it is optional, that the same intervention is available without religious content, and that the client can change their mind at any time; document the client's informed consent. Follow the client's own tradition and words, and never introduce, impose, endorse or challenge beliefs (AACC Code of Ethics: consent before spiritual interventions, client-led integration; ACA Code of Ethics 2014, A.2 informed consent and A.4.b personal values)."
+  },
+  "handoutIds": ["assertive-communication"],
+  "sources": [
+    { "title": "Assertiveness training: a forgotten evidence-based treatment (Speed, Goldstein and Goldfried)", "publisher": "Clinical Psychology: Science and Practice (author copy, Stony Brook University)", "url": "https://ehs.stonybrook.edu/commcms/psychology/_pdfs/faculty/Speed_et_al-2017-Clinical_Psychology__Science_and_Practice.pdf", "year": 2018 },
+    { "title": "Project MATCH Monograph Series, Volume 3: Cognitive-Behavioral Coping Skills Therapy Manual (archived)", "publisher": "National Institute on Alcohol Abuse and Alcoholism", "url": "https://webarchive.library.unt.edu/eot2008/20090130190042/http:/pubs.niaaa.nih.gov/publications/MATCHSeries3/index.htm", "year": 1995 },
+    { "title": "COMBINE Monograph Series, Volume 1: Combined Behavioral Intervention Manual", "publisher": "National Institute on Alcohol Abuse and Alcoholism", "url": "https://pubs.niaaa.nih.gov/sites/default/files/NIAAA-combined-behavioral-intervention-manual.pdf", "year": 2004 },
+    { "title": "Drink refusal training as part of a combined behavioral intervention: effectiveness and mechanisms of change (Witkiewitz, Donovan and Hartzler)", "publisher": "PubMed Central", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3349797/" },
+    { "title": "Social anxiety disorder: recognition, assessment and treatment (CG159)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/cg159", "year": 2013 },
+    { "title": "AACC Code of Ethics", "publisher": "American Association of Christian Counselors", "url": "https://aacc.net/aacc-code-of-ethics/" },
+    { "title": "ACA Code of Ethics (2014) and ethics resources", "publisher": "American Counseling Association", "url": "https://www.counseling.org/resources/ethics", "year": 2014 }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

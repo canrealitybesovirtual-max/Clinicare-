@@ -1,0 +1,55 @@
+{
+  "id": "narrative-externalizing",
+  "name": "Narrative therapy: externalizing conversations",
+  "modality": "Narrative therapy",
+  "conditions": ["major-depressive-disorder"],
+  "evidenceLevel": "Emerging evidence with few controlled trials. An eight-session narrative therapy program for adults with major depression showed improvement in symptoms and relationships in an uncontrolled trial (Vromans and Schweitzer). The ANU BluePages evidence summary judges the evidence not yet strong enough to recommend narrative therapy as a stand-alone treatment for depression. No NICE or APA Division 12 recommendation was found. Use it as an add-on technique within guideline-supported care.",
+  "minutes": { "min": 20, "max": 50 },
+  "purpose": "Externalizing, developed by Michael White and David Epston, separates the person from the problem, so the problem becomes something the client has a relationship with rather than who they are. Naming the problem, mapping its effects, and finding moments when the client resisted it (unique outcomes) can reduce shame and blame, make room for the client's preferred identity and values, and support re-authoring a richer life story.",
+  "steps": [
+    "Listen for all-or-nothing self-descriptions ('I'm a depressed person', 'I'm a failure') and ask permission to talk about the problem in a different way.",
+    "Invite the client to name the problem in their own words (for example, 'the Fog', 'the Worry Voice', 'the Heaviness').",
+    "Map the problem's influence: how it shows up, what it tells the client, what it gets them to do or avoid, and how it affects relationships, work and hopes.",
+    "Invite the client to take a position: is this okay, not okay, or mixed, and why? The 'why' often points to what the client values.",
+    "Look for unique outcomes: times the client stood up to the problem, even a little, or the problem had less pull. Ask how they did it and what it says about what matters to them.",
+    "Thicken the alternative story: connect unique outcomes over time, and to people who would not be surprised by them.",
+    "If the client wants, document progress with letters, certificates, or witnesses the client chooses.",
+    "Keep responsibility clear: externalizing a problem never means removing accountability for harm done to others."
+  ],
+  "script": [
+    "When you say 'I'm just a depressed person', it sounds like depression has taken over the whole story. Could we talk about it as something that's happening to you, not who you are?",
+    "If you gave this problem a name, what would you call it?",
+    "What does the Fog tell you about yourself? What does it get you to do, or stop doing?",
+    "Are you okay with how much room the Fog takes up in your life? Why not?",
+    "Was there a time this week when the Fog wanted you to stay in bed, but you got up anyway? How did you manage that?",
+    "Who in your life would not be surprised that you were able to do that?"
+  ],
+  "contraindications": [
+    "Do not externalize violence, abuse or other harm in a way that removes responsibility. Externalize the problem's tactics while holding people accountable for their actions.",
+    "Some clients find naming a problem odd or trivializing. Check fit and use plainer language if needed.",
+    "Use caution with clients experiencing psychosis, where talking about a problem as a separate being may blur with hallucinations; seek specialist input.",
+    "Not a stand-alone treatment for moderate to severe depression. Combine with guideline-recommended care and a medication referral when indicated.",
+    "Externalizing is not risk assessment. This intervention does not assess or decide risk. If suicidal thoughts, self-harm or risk to others come up, follow your setting's risk-assessment and safety-planning procedures. Keep crisis options visible: 988 Suicide & Crisis Lifeline (US, call or text), the local emergency number, and findahelpline.com for other countries."
+  ],
+  "culturalAdaptations": [
+    "Narrative practice looks at how wider cultural stories (about gender, race, class, disability, sexuality) shape problem stories. Invite the client to notice which stories they accept and which they want to resist.",
+    "Use names, metaphors and story forms from the client's own language and traditions.",
+    "Storytelling, witnessing and community ceremony are central in many cultures, including many Indigenous communities. Involve chosen witnesses or community members when the client wishes.",
+    "In collectivist cultures, the preferred story may be about the family or community rather than the individual. Follow the client's frame."
+  ],
+  "faithIntegrated": {
+    "note": "If the client asks to include faith, explore how stories, values and community from their tradition support the identity they prefer, and look for unique outcomes linked to spiritual practices. Let the client name any spiritual meaning; do not assign one.",
+    "consentNote": "Offer only if the client raises faith or spirituality and asks to include it. Before starting, explain what a faith-integrated approach involves, that it is optional, that the same intervention is available without religious content, and that the client can change their mind at any time; document the client's informed consent. Follow the client's own tradition and words, and never introduce, impose, endorse or challenge beliefs (AACC Code of Ethics: consent before spiritual interventions, client-led integration; ACA Code of Ethics 2014, A.2 informed consent and A.4.b personal values)."
+  },
+  "handoutIds": ["values-compass", "coping-cards"],
+  "sources": [
+    { "title": "Externalising Conversations (course on Michael White's narrative practice)", "publisher": "Dulwich Centre", "url": "https://dulwichcentre.com.au/courses/externalising-conversations/" },
+    { "title": "Narrative therapy for adults with major depressive disorder: improved symptom and interpersonal outcomes (Vromans and Schweitzer)", "publisher": "Psychotherapy Research (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/20306354/" },
+    { "title": "Narrative therapy (evidence summary)", "publisher": "BluePages, Australian National University", "url": "https://bluepages.anu.edu.au/psychological-treatments/narrative-therapy" },
+    { "title": "AACC Code of Ethics", "publisher": "American Association of Christian Counselors", "url": "https://aacc.net/aacc-code-of-ethics/" },
+    { "title": "ACA Code of Ethics (2014) and ethics resources", "publisher": "American Counseling Association", "url": "https://www.counseling.org/resources/ethics", "year": 2014 }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

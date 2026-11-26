@@ -1,0 +1,61 @@
+{
+  "id": "behavioral-experiments",
+  "name": "Behavioral experiments (testing beliefs in real life)",
+  "modality": "CBT - cognitive therapy (behavioral experiments)",
+  "conditions": [
+    "panic-disorder",
+    "agoraphobia",
+    "generalized-anxiety-disorder",
+    "major-depressive-disorder"
+  ],
+  "evidenceLevel": "A core technique within cognitive therapy packages that guidelines recommend, for example CBT based on the Clark and Wells model for social anxiety disorder (NICE CG159) and CBT for panic disorder (NICE CG113). Evidence for behavioral experiments as an isolated component is limited. A meta-analysis of 20 RCTs comparing cognitive therapy (which includes behavioral experiments) with exposure found no overall difference for panic disorder, PTSD and OCD, and an advantage for cognitive therapy in social phobia (Ougrin, 2011; some figures were corrected in a 2012 commentary). Emerging evidence as a stand-alone technique; see Bennett-Levy et al. (2004) for the clinical method.",
+  "minutes": { "min": 20, "max": 60 },
+  "purpose": "A behavioral experiment is a planned activity, designed with the client, that tests a specific belief or prediction in real life (for example, 'If I say I don't know in a meeting, people will think I'm stupid' or 'If my heart races, I will faint'). Exposure is often framed as getting used to anxiety. Here the stated aim is to gather evidence about a belief and compare the old belief with a new, more helpful one. Experiments can be active tests (doing something differently), surveys of other people's views, or careful observation. The method is described in detail by Bennett-Levy, Butler, Fennell, Hackmann, Mueller and Westbrook in the Oxford Guide to Behavioural Experiments in Cognitive Therapy (2004). This entry uses original wording.",
+  "steps": [
+    "Pick one specific, testable belief or prediction linked to the problem, often from a thought record or a recent example. Ask how strongly the client believes it (0-100%).",
+    "Develop an alternative belief together and rate that one too.",
+    "Design the experiment: what the client will do, where, when and with whom, and exactly what result would support each belief. Agree in advance how the result will be judged (for example, count how many people react).",
+    "Identify safety behaviors that would spoil the test (for example, holding on to a chair, over-preparing, scanning for reactions) and plan to drop them during the experiment. See the safety-behavior-reduction entry.",
+    "Think through likely problems ahead of time, and frame the experiment so the client cannot lose: any result gives useful information.",
+    "Run the experiment in session when you can (role-play, going outside together, a quick survey, or bringing on a feared body sensation), or set it as homework.",
+    "Review: What happened? What did you notice? What does this say about the original prediction? Re-rate both beliefs and record the results on the behavioral-experiment-record handout.",
+    "Plan a follow-up experiment that builds on what was learned or tests a doubt that remains. Repeat in different settings so the learning carries over."
+  ],
+  "script": [
+    "Let's treat your fear like a guess we can test. What exactly do you think will happen?",
+    "How strongly do you believe that, from 0 to 100?",
+    "What is another way it could go? How strongly do you believe that one?",
+    "Let's plan a small test. What will you do, and how will we know which guess was right?",
+    "Try to drop the things you usually do to stay safe. They can hide what really happens.",
+    "There is no way to fail this. Whatever happens, we learn something.",
+    "So, what happened? What does that tell you about your first guess?",
+    "What would be a good next test?"
+  ],
+  "contraindications": [
+    "Do not design experiments that carry a real risk of physical harm, legal trouble, job loss or damage to important relationships. Choose tests where the feared outcome is unlikely or manageable.",
+    "Experiments that bring on body sensations (for example, over-breathing or spinning) need medical screening for heart, lung, seizure or pregnancy concerns. See the interoceptive-exposure entry.",
+    "When a feared social outcome is realistic (for example, discrimination or harassment), validate this and choose settings with care. Do not treat real mistreatment as a distorted belief.",
+    "In depression, an experiment that seems to 'fail' can feel like more proof of failure. Keep tests small, frame them as gathering information, and review gently.",
+    "In OCD, avoid experiments that turn into reassurance-seeking or checking. Design them to test beliefs about thoughts and uncertainty, not to prove that harm will not happen.",
+    "Stop and assess if suicidal thoughts, self-harm, psychosis or mania come up. This tool does not judge risk. Crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com."
+  ],
+  "culturalAdaptations": [
+    "Choose predictions and settings that matter in the client's life and culture (for example, speaking up with elders, at a place of worship, or in a second language).",
+    "In cultures that value modesty or deference, some 'drop the safety behavior' tasks (such as strong eye contact or speaking first) may break real norms. Ask what is expected in the client's community before designing tests.",
+    "Survey experiments can draw on the client's own community (asking friends or relatives what they think) when the client prefers that to asking strangers.",
+    "Use the client's own language and metaphors for beliefs and evidence, and work with a professional interpreter when needed. Culturally adapted psychotherapies tend to outperform unadapted versions (Hall et al., 2016)."
+  ],
+  "handoutIds": ["behavioral-experiment-record", "thought-record"],
+  "sources": [
+    { "title": "Oxford Guide to Behavioural Experiments in Cognitive Therapy (Bennett-Levy, Butler, Fennell, Hackmann, Mueller and Westbrook, eds.)", "publisher": "Oxford University Press", "url": "https://academic.oup.com/book/1220", "year": 2004 },
+    { "title": "Efficacy of exposure versus cognitive therapy in anxiety disorders: systematic review and meta-analysis (Ougrin)", "publisher": "BMC Psychiatry", "url": "https://bmcpsychiatry.biomedcentral.com/articles/10.1186/1471-244X-11-200", "year": 2011 },
+    { "title": "Correcting and interpreting the effect of cognitive therapy versus exposure in anxiety disorders (correspondence)", "publisher": "BMC Psychiatry", "url": "https://bmcpsychiatry.biomedcentral.com/articles/10.1186/1471-244X-12-202", "year": 2012 },
+    { "title": "Social anxiety disorder: recognition, assessment and treatment (CG159)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/cg159", "year": 2013 },
+    { "title": "Generalised anxiety disorder and panic disorder in adults: management (CG113)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/cg113", "year": 2011 },
+    { "title": "Maximizing exposure therapy: an inhibitory learning approach (Craske et al.)", "publisher": "Behaviour Research and Therapy (PubMed Central)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4114726/", "year": 2014 },
+    { "title": "A meta-analysis of cultural adaptations of psychological interventions (Hall et al.)", "publisher": "Behavior Therapy (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/27993346/", "year": 2016 }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

@@ -1,0 +1,94 @@
+{
+  "id": "diaphragmatic-breathing",
+  "name": "Diaphragmatic (slow, low) breathing",
+  "modality": "Relaxation - breathing skill",
+  "conditions": ["generalized-anxiety-disorder", "panic-disorder", "agoraphobia"],
+  "evidenceLevel": "Mixed; use as a supporting skill, not a stand-alone treatment. NCCIH lists slow diaphragmatic breathing as a generally safe relaxation technique with limited condition-specific evidence. A small 2017 randomized trial in healthy adults (Ma et al.) found lower negative affect and cortisol after 8 weeks of training. In panic CBT, a 2018 component network meta-analysis (Pompoli et al.) found breathing retraining improved acceptability but had small effects on efficacy, and a 2003 review (Meuret et al.) cautions that breathing training can become a safety behavior or lead to over-breathing.",
+  "minutes": { "min": 5, "max": 15 },
+  "purpose": "Teaches slow, gentle breathing that uses the diaphragm, with an out-breath longer than the in-breath, to help settle physical arousal. It is a general calming skill and an alternative to fast, shallow chest breathing. In panic work, present it as a way to ride out sensations, not as protection from a feared catastrophe, so it does not turn into a safety behavior that blocks learning during exposure.",
+  "steps": [
+    "Ask about asthma, COPD, other lung or heart conditions, pregnancy, and recent chest or abdominal surgery. Keep the practice gentle and suggest medical advice if there are concerns.",
+    "Explain the rationale: fast, shallow chest breathing can add to dizziness and tingling, and slower breathing with a longer out-breath often helps the body settle. Stress 'slower and softer,' not 'bigger and deeper.'",
+    "Have the client rest one hand on the chest and one on the belly (or both hands on the lap if touch is uncomfortable). Ask them to breathe so the lower hand rises more than the upper one.",
+    "Guide a gentle in-breath through the nose for about 4 counts and a slower out-breath for about 6 counts. Adjust the counts to comfort; the key is a relaxed, longer out-breath.",
+    "Practice for 3 to 5 minutes. Watch for gulping, breath-holding or dizziness; if these appear, cue smaller, softer breaths and a shorter in-breath.",
+    "Take a 0-10 calm or tension rating before and after, and ask what the client noticed.",
+    "For clients with panic: explain that the skill is for comfort, and that the sensations are not dangerous whether or not they use it. Plan to do exposure tasks without relying on it.",
+    "Assign brief daily practice (for example, 5 minutes twice a day) at calm times using the breathing-practice handout, so the skill is easier to use under stress."
+  ],
+  "script": [
+    "Let's try a way of breathing that can help your body slow down.",
+    "Put one hand on your chest and one hand on your belly. Or rest your hands in your lap if that feels better.",
+    "Breathe in gently through your nose. Let your belly rise. Your chest stays mostly still.",
+    "Now breathe out slowly, a little longer than you breathed in. Let your belly fall.",
+    "In, 2, 3, 4... and out, 2, 3, 4, 5, 6.",
+    "This is not about big breaths. Small, slow and easy is the goal.",
+    "If you feel dizzy or light-headed, make your breaths softer and smaller. That feeling will pass.",
+    "Let's keep going for a few more breaths. Just notice the air going in and out.",
+    "Practice when you are calm. That makes it easier to use when you are stressed."
+  ],
+  "contraindications": [
+    "Over-breathing: cue gentle, low-volume breaths. Big or forced deep breaths can lower carbon dioxide and increase dizziness, tingling and panic-like sensations.",
+    "Asthma, COPD, other lung or heart conditions, pregnancy, and recent chest or abdominal surgery: keep it gentle, avoid breath-holding, and suggest the client check with their medical provider.",
+    "Panic and agoraphobia: do not present breathing as a way to prevent a heart attack, fainting or losing control. Used that way it can become a safety behavior and weaken exposure. Fade reliance on it during interoceptive and in-vivo exposure.",
+    "Some people feel more anxious when they focus on their breath, especially with a trauma history or past breathing problems. Offer eyes-open practice, shorter sets, or an outward-focused skill such as 5-4-3-2-1 grounding.",
+    "Not a crisis intervention. If the client reports thoughts of self-harm or harm to others, pause and follow your risk-assessment procedures."
+  ],
+  "culturalAdaptations": [
+    "Many traditions have their own breathing practices (for example, from yoga, tai chi, qigong or contemplative prayer). Ask what the client already knows and build on it where it fits, while keeping the pattern slow and gentle.",
+    "Counting can be done in the client's own language, or replaced with a short word or phrase that fits the rhythm of the breath.",
+    "Placing hands on the chest and belly may feel uncomfortable or immodest for some clients; offer hands on the lap or one hand on the belly only.",
+    "Where distress is described through the body (chest pressure, 'wind' rising, a 'weak heart'), explore the client's explanation first and frame the skill in their terms. Hofmann and Hinton describe culture-specific beliefs about the danger of bodily sensations.",
+    "Use a professional interpreter, not a family member, and check that phrases such as 'belly breathing' translate clearly."
+  ],
+  "faithIntegrated": {
+    "note": "If the client wishes, they may match a short phrase from their own tradition to the breath (for example, one word on the in-breath and one on the out-breath), or use the practice as a quiet moment of prayer or reflection. The client chooses the words and whether to use them.",
+    "consentNote": "Offer only if the client raises faith or spirituality as a resource, and only after informed consent. Explain that the faith element is optional, that the standard version works without it, and that the client can change or stop it at any time. Use the client's own beliefs and words; never introduce or impose religious content. Record the consent discussion in your own clinical record, not in this app. See the AACC Code of Ethics on consent for spiritual interventions and the ACA Code of Ethics on informed consent and not imposing counselor values."
+  },
+  "handoutIds": ["breathing-practice"],
+  "sources": [
+    {
+      "title": "Relaxation Techniques: What You Need To Know",
+      "publisher": "National Center for Complementary and Integrative Health (NCCIH)",
+      "url": "https://www.nccih.nih.gov/health/relaxation-techniques-what-you-need-to-know"
+    },
+    {
+      "title": "The effect of diaphragmatic breathing on attention, negative affect and stress in healthy adults (Ma et al.)",
+      "publisher": "Frontiers in Psychology (PubMed Central)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5455070/",
+      "year": 2017
+    },
+    {
+      "title": "Dismantling cognitive-behaviour therapy for panic disorder: a systematic review and component network meta-analysis (Pompoli et al.)",
+      "publisher": "Psychological Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29368665/",
+      "year": 2018
+    },
+    {
+      "title": "Breathing training for treating panic disorder: useful intervention or impediment? (Meuret et al.)",
+      "publisher": "Behavior Modification (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/14531164/",
+      "year": 2003
+    },
+    {
+      "title": "Cross-cultural aspects of anxiety disorders (Hofmann & Hinton)",
+      "publisher": "Current Psychiatry Reports (PubMed Central)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4037698/",
+      "year": 2014
+    },
+    {
+      "title": "AACC Code of Ethics",
+      "publisher": "American Association of Christian Counselors",
+      "url": "https://aacc.net/aacc-code-of-ethics/"
+    },
+    {
+      "title": "ACA Code of Ethics (2014) and ethics resources",
+      "publisher": "American Counseling Association",
+      "url": "https://www.counseling.org/resources/ethics",
+      "year": 2014
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

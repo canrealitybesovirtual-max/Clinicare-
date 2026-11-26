@@ -1,0 +1,66 @@
+{
+  "id": "exposure-and-response-prevention",
+  "name": "Exposure and response prevention (ERP) for OCD",
+  "modality": "Exposure - exposure and response prevention (CBT)",
+  "conditions": ["obsessive-compulsive-disorder"],
+  "evidenceLevel": "First-line psychological treatment for OCD. NICE CG31 (2005) recommends CBT that includes ERP, matched to how much the OCD affects daily life: brief, low-intensity ERP-based treatment (up to about 10 therapist hours) for mild impairment; a choice of more intensive CBT with ERP or an SSRI for moderate impairment; and CBT with ERP combined with an SSRI for severe impairment. For obsessions without overt compulsions, NICE advises CBT that includes exposure to the feared thoughts and prevention of mental rituals. APA Division 12 lists ERP for OCD with strong research support (confirm the current rating on the Division 12 site). A 2024 Military Health System evidence brief and a 2019 review (Law and Boisseau) describe decades of randomized trials supporting ERP. Check whether NICE has replaced CG31 before citing it.",
+  "minutes": { "min": 45, "max": 90 },
+  "purpose": "ERP helps the client face the thoughts, images, urges, objects and situations that set off obsessional distress (exposure) while choosing not to do the compulsion, avoidance, reassurance-seeking or mental ritual that usually follows (response prevention). Repeated practice teaches the client that distress rises and falls without rituals, that feared outcomes are unlikely or bearable, and that uncertainty can be lived with. The clinician and client build a graded list of practice tasks together and work through it in session and at home. ERP is linked to the work of Victor Meyer and, later, Edna Foa and colleagues; see their therapist guides for full protocols. This entry describes the technique in original wording only.",
+  "steps": [
+    "Assess the OCD pattern: obsessions (including harm, sexual, religious, moral, symmetry or contamination themes), visible and mental compulsions, avoidance, reassurance-seeking and family accommodation. Use a validated severity scale by link-out (the Y-BOCS is license pending in this app). Screen for depression, suicidal thoughts, tics, hoarding and body-image concerns.",
+    "Give plain-language psychoeducation: unwanted intrusive thoughts are common. Rituals bring short-term relief but teach the brain that the thought was dangerous and that the ritual was needed, so the cycle grows.",
+    "Map triggers and rituals together, then build a hierarchy of about 10 to 15 practice tasks rated for expected distress (0-10 or 0-100). Include real-life tasks and, for feared thoughts that cannot be acted out, imaginal or written scripts that the client writes with you.",
+    "Agree on response-prevention rules for each task (for example, no washing for an agreed period, no checking, no asking for reassurance, no mental undoing or counting). Plan what the client will do instead, such as letting the urge be there.",
+    "Begin in session with a task in the moderate range. Model it if useful, then let the client do it. Ask the client to predict what will happen and how sure they are, and to stay with the task until the prediction has been tested, not only until distress drops.",
+    "Debrief right away: What happened? What did you learn about the thought, the distress and your ability to cope? Record the practice on the erp-practice-log handout.",
+    "Assign daily home practice of the same or similar tasks, and vary settings and triggers to strengthen learning. Fade in-session support as the client becomes more independent.",
+    "With consent, involve family members or partners to reduce accommodation (giving reassurance, joining in rituals, taking over tasks) through a gradual, agreed plan.",
+    "Move up the hierarchy at a steady pace, watch for hidden or mental rituals and new avoidance, review progress with the measure, and close with relapse-prevention planning."
+  ],
+  "script": [
+    "Lots of people get thoughts that pop in and feel awful. Having a thought does not mean you want it or that it will happen.",
+    "Rituals bring quick relief. But they also teach your brain that the thought was an emergency. So the thought keeps coming back, louder.",
+    "In this work, we face the things that set off the fear, a little at a time. Then you choose not to do the ritual.",
+    "You decide where we start. We pick a step that feels hard, but doable.",
+    "Before we begin: if you skip the ritual this time, what do you think will happen? How sure are you, from 0 to 100?",
+    "Let the urge be there. You do not have to fight it or obey it. Just notice it rise and fall.",
+    "What did you learn just now? Was it as bad as you expected? Could you handle it?",
+    "Practice every day this week. Write down what you did and what you noticed in your log."
+  ],
+  "contraindications": [
+    "Screen for problems that change the order of care: severe depression, suicidal thoughts, psychosis, mania or substance problems. Address safety first and keep crisis options visible: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com. This tool does not judge risk.",
+    "Exposure tasks must never be truly dangerous, illegal or harmful to others (for example, real food-safety risks, unsafe driving, or acting on harm thoughts). ERP targets the feared thought and the uncertainty, not real danger.",
+    "Use exposure to harm, sexual or taboo intrusive thoughts only after the clinician has judged that the thoughts are unwanted OCD content. If there are signs of real intent to harm self or others, stop ERP and follow your setting's risk procedures.",
+    "Low insight or strongly held beliefs can reduce engagement. Use motivational work, go at a collaborative pace, and refer for a psychiatric evaluation when needed.",
+    "Medical issues (for example, skin damage from washing, eating-disorder risk with food tasks, pregnancy) may need medical input and adapted tasks.",
+    "Hoarding, body dysmorphic concerns, tic-related OCD and severe or treatment-resistant OCD need specialized adaptations. This app covers adults only. Refer to a clinician experienced in ERP, or to intensive or combined care, when the presentation is complex or severe.",
+    "Do not give reassurance in session, because it can become a ritual. Instead, gently reflect the urge to feel certain."
+  ],
+  "culturalAdaptations": [
+    "Religious or moral scrupulosity: learn about the client's tradition before planning tasks. With consent, consult a religious leader the client trusts so that tasks respect real religious duties while targeting rituals that go beyond them. Never ask a client to break a genuine religious rule.",
+    "Cleanliness and purity practices differ across cultures. Tell shared cultural norms apart from OCD-driven rituals by asking what others in the client's community usually do.",
+    "Families often accommodate rituals out of love. In family-centered cultures, frame reducing accommodation as a way to support recovery, and involve family with the client's consent.",
+    "Shame about intrusive thoughts (especially sexual, violent or blasphemous content) can be strong. Normalize intrusive thoughts, use the client's own words, and use a professional interpreter rather than family members for these disclosures.",
+    "Home-based or telehealth ERP can let the client practice where the triggers actually happen. Culturally adapted psychotherapies tend to outperform unadapted versions (Hall et al., 2016)."
+  ],
+  "faithIntegrated": {
+    "note": "For clients with religious scrupulosity who want their faith included, ERP can be framed as supporting their own values (for example, trusting in grace or mercy instead of repeating prayers until they feel certain). With the client's consent, the clinician may coordinate with a clergy member the client chooses to clarify which practices the tradition requires and which are driven by OCD. The client leads; the clinician does not interpret doctrine.",
+    "consentNote": "Offer only if the client raises faith or spirituality and asks to include it. Before starting, explain what the faith-integrated option involves, that it is optional, that the same intervention is available without religious content, and that the client can change their mind at any time; document informed consent. Follow the client's own tradition and words, and never introduce, impose, endorse or challenge beliefs (AACC Code of Ethics: informed consent before spiritual interventions, client-led integration; ACA Code of Ethics 2014, A.2 informed consent and A.4.b personal values)."
+  },
+  "handoutIds": ["erp-practice-log", "exposure-ladder"],
+  "sources": [
+    { "title": "Obsessive-compulsive disorder and body dysmorphic disorder: treatment (CG31)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/cg31", "year": 2005 },
+    { "title": "Psychological Treatments (treatment index)", "publisher": "APA Division 12, Society of Clinical Psychology", "url": "https://div12.org/psychological-treatments/treatments/" },
+    { "title": "Exposure and Response Prevention for Obsessive Compulsive Disorder (evidence brief)", "publisher": "Psychological Health Center of Excellence, Military Health System", "url": "https://health.mil/Reference-Center/Publications/2024/03/29/Exposure-and-Response-Prevention-for-Obsessive-Compulsive-Disorder-2024-508", "year": 2024 },
+    { "title": "Exposure and response prevention in the treatment of obsessive-compulsive disorder: current perspectives (Law and Boisseau)", "publisher": "Psychology Research and Behavior Management (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/31920413/", "year": 2019 },
+    { "title": "Exposure and Response Prevention Therapy", "publisher": "International OCD Foundation", "url": "https://iocdf.org/exposure-response-prevention/" },
+    { "title": "Treating Your OCD with Exposure and Response (Ritual) Prevention Therapy, Workbook, 2nd edition (Yadin, Foa and Lichner)", "publisher": "Oxford University Press", "url": "https://academic.oup.com/book/1099", "year": 2012 },
+    { "title": "Obsessive-Compulsive Disorder (health topic)", "publisher": "National Institute of Mental Health", "url": "https://www.nimh.nih.gov/health/topics/obsessive-compulsive-disorder-ocd" },
+    { "title": "A meta-analysis of cultural adaptations of psychological interventions (Hall et al.)", "publisher": "Behavior Therapy (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/27993346/", "year": 2016 },
+    { "title": "AACC Code of Ethics", "publisher": "American Association of Christian Counselors", "url": "https://aacc.net/aacc-code-of-ethics/" },
+    { "title": "ACA Code of Ethics (2014) and ethics resources", "publisher": "American Counseling Association", "url": "https://www.counseling.org/resources/ethics", "year": 2014 }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

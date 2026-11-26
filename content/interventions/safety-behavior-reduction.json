@@ -1,0 +1,76 @@
+{
+  "id": "safety-behavior-reduction",
+  "name": "Safety-behavior reduction (fading 'just in case' behaviors)",
+  "modality": "Exposure - safety-behavior fading",
+  "conditions": ["panic-disorder", "agoraphobia", "generalized-anxiety-disorder"],
+  "evidenceLevel": "Supported as part of exposure-based CBT. In an experimental study of panic with agoraphobia (Salkovskis et al., 1999), dropping safety-seeking behaviors during brief exposure was linked to greater improvement. Craske et al. (2014) recommend removing safety signals to strengthen inhibitory learning. A 2016 review (Blakey & Abramowitz) notes that evidence is mixed on whether every safety behavior must be removed at once, which supports a planned, gradual approach. Delivered within CBT for panic and GAD (see NICE CG113).",
+  "minutes": { "min": 20, "max": 40 },
+  "purpose": "Helps the client identify the subtle things they do to feel safe or to prevent a feared outcome (carrying water or medication 'just in case,' sitting near exits, checking the pulse, seeking reassurance, over-preparing, avoiding caffeine or exercise) and then fade them in a planned way during exposure and daily life. Safety behaviors bring short-term relief but stop the client from learning that the feared outcome would not have happened, or could have been handled.",
+  "steps": [
+    "Explain the idea with an example: if someone always holds a rail to avoid 'fainting,' they never find out they would not have fainted anyway.",
+    "With the client, list safety behaviors for each feared situation or worry, including mental ones (distraction, reassurance seeking, checking, over-planning). Use the exposure-ladder and panic-cycle handouts.",
+    "For each behavior, ask: What do you fear would happen without it? Rate belief 0-100.",
+    "Rank the safety behaviors from easiest to hardest to drop.",
+    "Plan experiments: drop one safety behavior during a planned exposure step and test the prediction. Partial reduction is fine to start (for example, the water bottle stays in the bag instead of in the hand).",
+    "Debrief: What happened? What did you learn?",
+    "Keep fading over time, aiming to stop safety behaviors fully. Clearly separate them from genuine, medically needed precautions.",
+    "For worry: reduce reassurance seeking, repeated checking or online searching, and over-preparation, and track the effect on anxiety and confidence."
+  ],
+  "script": [
+    "Many people do small things to feel safe when they are anxious. Let's make a list of yours.",
+    "What do you do 'just in case'? What do you carry? Where do you sit? What do you check?",
+    "What do you fear would happen if you did not do that?",
+    "These things help in the moment. But they can stop you from finding out that you are okay without them.",
+    "Let's pick one to try without. We can start small, like keeping it in your bag instead of in your hand.",
+    "Afterward, ask yourself: What did I expect? What really happened?",
+    "Step by step, we will let go of more of these, at a pace that works for you."
+  ],
+  "contraindications": [
+    "Never ask a client to drop a medically needed precaution (for example, an asthma inhaler, prescribed medication, glucose for diabetes, or a mobility aid). Coordinate with the medical provider when unsure.",
+    "Do not ask the client to drop precautions that protect against real danger (for example, a domestic-violence safety plan, or avoiding genuinely unsafe areas).",
+    "Do not change prescribed medication. If as-needed medication works as a safety signal, discuss it with the prescriber.",
+    "Do not start during an active crisis, current suicidal risk, or intoxication. Stabilize first, and share crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com.",
+    "Removing all safety behaviors at once may lead to refusal or dropout. A planned, gradual approach is often more acceptable."
+  ],
+  "culturalAdaptations": [
+    "Respect cultural and religious practices. A prayer, amulet or blessing is not a safety behavior simply because it is religious. Explore its function with the client, and target it only if the client agrees it is driven by anxiety and wants to change it.",
+    "Reassurance from family can be part of normal closeness in some cultures. Work with the client (and family, with consent) to reduce anxiety-driven reassurance while keeping supportive contact.",
+    "Real risks differ by identity and setting (for example, carrying a phone for safety as a woman or as a member of a targeted group). Keep realistic precautions in place."
+  ],
+  "handoutIds": ["exposure-ladder", "panic-cycle"],
+  "sources": [
+    {
+      "title": "An experimental investigation of the role of safety-seeking behaviours in the maintenance of panic disorder with agoraphobia (Salkovskis et al.)",
+      "publisher": "Behaviour Research and Therapy (DOI)",
+      "url": "https://doi.org/10.1016/S0005-7967(98)00153-3",
+      "year": 1999
+    },
+    {
+      "title": "Maximizing exposure therapy: an inhibitory learning approach (Craske et al.)",
+      "publisher": "Behaviour Research and Therapy (PubMed Central)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4114726/",
+      "year": 2014
+    },
+    {
+      "title": "The effects of safety behaviors during exposure therapy for anxiety: critical analysis from an inhibitory-learning perspective (Blakey & Abramowitz)",
+      "publisher": "Clinical Psychology Review (DOI)",
+      "url": "https://doi.org/10.1016/j.cpr.2016.07.002",
+      "year": 2016
+    },
+    {
+      "title": "Generalised anxiety disorder and panic disorder in adults: management (CG113)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg113",
+      "year": 2011
+    },
+    {
+      "title": "A meta-analysis of cultural adaptations of psychological interventions (Hall et al.)",
+      "publisher": "Behavior Therapy (DOI)",
+      "url": "https://doi.org/10.1016/j.beth.2016.09.005",
+      "year": 2016
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

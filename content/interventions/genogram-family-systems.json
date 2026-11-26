@@ -1,0 +1,61 @@
+{
+  "id": "genogram-family-systems",
+  "name": "Genogram and family systems exploration",
+  "modality": "Family systems (Bowen / structural)",
+  "conditions": ["major-depressive-disorder"],
+  "evidenceLevel": "Genograms are an assessment and engagement tool rather than a stand-alone treatment. Their clinical use is described in the family therapy and family medicine literature (McGoldrick and Gerson; Journal of Family Practice, 1988), with little outcome research on the genogram itself. Related systemic treatments have stronger evidence: NICE CG115 recommends behavioural couples therapy for harmful drinking and mild alcohol dependence when a regular partner is willing to take part (updated in 2022 to state it is not suitable where there is domestic abuse), and a Cochrane review found couple therapy about as effective as individual psychotherapy for depression, based on low-quality evidence (Barbato et al., 2018).",
+  "minutes": { "min": 30, "max": 75 },
+  "purpose": "A genogram is a family diagram, built with the client across three or more generations, that maps relationships, roles, losses, illnesses, migrations and patterns such as drinking, depression, cutoffs or conflict. It is grounded in Murray Bowen's family systems theory (differentiation of self, triangles, patterns passed down through generations) and complemented by Salvador Minuchin's structural ideas (boundaries, hierarchy, alliances). It helps clients see current problems in family context, eases self-blame, highlights resilience and support, and guides decisions about involving family in care.",
+  "steps": [
+    "Explain the purpose and ask for consent; the client decides what to share. Draw the genogram on paper with the client (or keep it in your own records system). Do not type names, dates or places into this tool.",
+    "Start with the current household and close family, then extend to parents, grandparents, siblings and other important people, including chosen family. Use standard symbols or simple shapes, with labels the client is comfortable with.",
+    "Add key events: births, deaths, separations, moves and migrations, illnesses, substance use, trauma and major transitions.",
+    "Map relationships: close, distant, conflicted, cut off or overly involved. Note triangles, such as a child pulled into the parents' conflict.",
+    "Explore patterns with curiosity: repeated roles, how the family handles stress, unspoken rules about feelings, and how drinking or depression has affected different generations.",
+    "Highlight strengths: survival, caregiving, faith, humor, and the people who helped.",
+    "Link the map to goals: what the client wants to keep, change or repair, and whether to involve family members or refer for couple or family therapy.",
+    "For full Bowen or structural family therapy, or for couples therapy, refer to or consult with a clinician trained in systemic therapy."
+  ],
+  "script": [
+    "Would you be willing to draw a map of your family with me? It can help us see where you come from and who matters to you. You choose what goes on it.",
+    "Who lived in your home when you were growing up? Who were you closest to?",
+    "When things got stressful in your family, what usually happened? Who did people turn to?",
+    "You mentioned drinking shows up with your dad and your uncle. How has that affected you, and the choices you want to make?",
+    "Looking at the whole map, what stands out to you? What strengths do you see?",
+    "Is there anyone on here you would like to feel closer to, or more separate from?"
+  ],
+  "contraindications": [
+    "A genogram can bring up painful material (abuse, losses, family secrets). Go at the client's pace and have grounding options ready.",
+    "Do not use family information to blame relatives or the client. Frame patterns as understandable responses to stress.",
+    "Screen for intimate partner violence and family abuse before inviting family members. Joint sessions and couples therapy are not suitable where there is domestic abuse.",
+    "Privacy: keep the genogram on paper with the client or in your own records system. Do not enter names, dates, places or other identifiers into this tool.",
+    "Alcohol withdrawal can be dangerous. If current heavy drinking is present, screen for withdrawal risk and refer for a medical assessment before the client cuts down quickly.",
+    "This intervention does not assess or decide risk. If suicidal thoughts, self-harm or risk to others come up, follow your setting's risk-assessment and safety-planning procedures. Keep crisis options visible: 988 Suicide & Crisis Lifeline (US, call or text), the local emergency number, and findahelpline.com for other countries.",
+    "Substance-use content: nothing is stored or sent by this tool. Any export or note about substance use must carry the notice: 42 CFR Part 2 prohibits unauthorized disclosure of these records."
+  ],
+  "culturalAdaptations": [
+    "Family structures vary. Include extended kin, godparents, clan or tribal relations, co-parents, step and foster family, and chosen family (important for many LGBTQ+ clients).",
+    "Ask about migration, displacement and historical trauma (for example, colonization, slavery, war) and how they shaped the family.",
+    "Bowen's ideal of individual differentiation may clash with cultural values of interdependence. Frame goals as the client's own balance of closeness and independence.",
+    "Adoption, donor conception or unknown parentage may leave gaps. Treat unknowns with respect, without pressing for details.",
+    "Use trained interpreters and the client's own terms for family members."
+  ],
+  "faithIntegrated": {
+    "note": "If the client asks, add faith traditions, religious changes and faith community ties across generations to the genogram, and explore how beliefs have been a source of strength or of conflict in the family, in the client's own terms.",
+    "consentNote": "Offer only if the client raises faith or spirituality and asks to include it. Before starting, explain what a faith-integrated approach involves, that it is optional, that the same intervention is available without religious content, and that the client can change their mind at any time; document the client's informed consent. Follow the client's own tradition and words, and never introduce, impose, endorse or challenge beliefs (AACC Code of Ethics: consent before spiritual interventions, client-led integration; ACA Code of Ethics 2014, A.2 informed consent and A.4.b personal values)."
+  },
+  "trainingRequired": "Building a genogram is within general clinical practice. Delivering Bowen or structural family therapy, or couples therapy such as behavioural couples therapy, requires systemic training and supervision (see the AAMFT Code of Ethics on competence).",
+  "handoutIds": [],
+  "sources": [
+    { "title": "Reading and interpreting genograms: a systematic approach", "publisher": "Journal of Family Practice", "url": "https://cdn.mdedge.com/files/s3fs-public/jfp-archived-issues/1988-volume_26-27/JFP_1988-04_v26_i4_reading-and-interpreting-genograms-a-sys.pdf", "year": 1988 },
+    { "title": "Alcohol-use disorders: diagnosis, assessment and management of harmful drinking (high-risk drinking) and alcohol dependence (CG115)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/cg115", "year": 2011 },
+    { "title": "CG115 update information (behavioural couples therapy and domestic abuse, 2022)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/CG115/chapter/update-information" },
+    { "title": "Couple therapy for depression (Barbato, D'Avanzo and Parabiaghi)", "publisher": "Cochrane Database of Systematic Reviews", "url": "https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD004188.pub3/information", "year": 2018 },
+    { "title": "AAMFT Code of Ethics", "publisher": "American Association for Marriage and Family Therapy", "url": "https://aamft.org/coe", "year": 2015 },
+    { "title": "AACC Code of Ethics", "publisher": "American Association of Christian Counselors", "url": "https://aacc.net/aacc-code-of-ethics/" },
+    { "title": "ACA Code of Ethics (2014) and ethics resources", "publisher": "American Counseling Association", "url": "https://www.counseling.org/resources/ethics", "year": 2014 }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

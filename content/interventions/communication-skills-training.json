@@ -1,0 +1,53 @@
+{
+  "id": "communication-skills-training",
+  "name": "Communication skills training",
+  "modality": "Behavioral skills training",
+  "conditions": ["major-depressive-disorder"],
+  "evidenceLevel": "Usually delivered as part of broader treatments rather than alone. NICE CG115 recommends behavioural couples therapy, which includes communication training, for harmful drinking and mild alcohol dependence when a regular partner is willing to take part (not suitable where there is domestic abuse). A Cochrane review found couple therapy about as effective as individual psychotherapy for depression, based on low-quality evidence (Barbato et al., 2018). Skills-training modules, including handling social pressure to drink, are part of NIAAA's COMBINE Combined Behavioral Intervention. Evidence for communication training as a stand-alone treatment is emerging.",
+  "minutes": { "min": 30, "max": 60 },
+  "purpose": "Teaches practical skills for saying what you feel and need clearly, listening so the other person feels heard, and working through disagreements without escalating. Often used when relationship strain is feeding low mood or drinking, within IPT, CBT, behavioural couples therapy or relapse-prevention work. Uses standard behavioral skills-training methods: explain, model, rehearse, give feedback, and practice in real life.",
+  "steps": [
+    "Choose one real situation with moderate stakes to work on, not the most explosive conflict first.",
+    "Teach speaking skills: describe the specific situation, say how you feel using 'I' statements, and make a clear, doable request.",
+    "Teach listening skills: let the other person finish, say back what you heard, and check you got it right before responding.",
+    "Teach a time-out plan: agree on a signal to pause when either person is too upset, a set time to cool down, and a time to come back to the talk.",
+    "Model the skill, then role-play it with the client. Swap roles so the client hears it from the other side.",
+    "Give specific, encouraging feedback and repeat the rehearsal.",
+    "Agree on a small real-world practice and debrief next session: what happened, what worked, what to adjust.",
+    "For couples work, see both partners together only after screening each one separately for violence or coercion."
+  ],
+  "script": [
+    "Let's pick one conversation that's coming up this week. What do you want the other person to understand?",
+    "Try starting with what happened and how you felt: 'When plans change at the last minute, I feel stressed. Could you text me by noon if things change?'",
+    "Now let's switch. I'll say something, and you tell me back what you heard before you answer.",
+    "If things get heated, it's okay to say, 'I want to keep talking, but I need 20 minutes to calm down.' Then come back to it.",
+    "That was clear and calm. What did it feel like to say it that way?",
+    "This week, try it once in a low-pressure moment and notice what happens."
+  ],
+  "contraindications": [
+    "Screen for intimate partner violence and coercive control. Do not coach a client to speak up more with someone who may retaliate, and do not hold joint sessions where there is abuse; prioritize safety planning and specialized services.",
+    "Skills training does not fix every relationship problem. Some conflicts reflect real incompatibility or unfair treatment that needs a different response.",
+    "Severe depression, intoxication or withdrawal can limit concentration. Keep practice short and simple, and address those problems first.",
+    "Alcohol withdrawal can be dangerous. Clients who drink heavily every day or have had withdrawal symptoms need a medical assessment before cutting down quickly; refer to medical care.",
+    "This intervention does not assess or decide risk. If suicidal thoughts, self-harm or risk to others come up, follow your setting's risk-assessment and safety-planning procedures. Keep crisis options visible: 988 Suicide & Crisis Lifeline (US, call or text), the local emergency number, and findahelpline.com for other countries.",
+    "Substance-use content: do not enter names, places, dates or other identifying details into this tool; nothing is stored or sent. Any export or note about substance use must carry the notice: 42 CFR Part 2 prohibits unauthorized disclosure of these records."
+  ],
+  "culturalAdaptations": [
+    "Direct 'I' statements may feel rude where indirectness, harmony or deference to elders is valued. Help the client find respectful wording that still gets the need across.",
+    "Practice with the people and roles that matter in the client's life (in-laws, elders, employers), and consider power differences.",
+    "Norms for eye contact, volume, touch and personal space vary. Tailor role plays to the client's context.",
+    "For clients who communicate across languages, practice key phrases in the language they will actually use."
+  ],
+  "handoutIds": ["assertive-communication", "problem-solving-steps"],
+  "sources": [
+    { "title": "Alcohol-use disorders: diagnosis, assessment and management of harmful drinking (high-risk drinking) and alcohol dependence (CG115)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/cg115", "year": 2011 },
+    { "title": "CG115 update information (behavioural couples therapy and domestic abuse, 2022)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/CG115/chapter/update-information" },
+    { "title": "Alcohol-use disorders quality standard (QS11), statement 5: interventions to prevent relapse", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/qs11/chapter/quality-statement-5-interventions-to-prevent-relapse-after-unplanned-withdrawal-from-alcohol-in" },
+    { "title": "Couple therapy for depression (Barbato, D'Avanzo and Parabiaghi)", "publisher": "Cochrane Database of Systematic Reviews", "url": "https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD004188.pub3/information", "year": 2018 },
+    { "title": "COMBINE Monograph Series, Volume 1: Combined Behavioral Intervention Manual", "publisher": "National Institute on Alcohol Abuse and Alcoholism", "url": "https://pubs.niaaa.nih.gov/sites/default/files/NIAAA-combined-behavioral-intervention-manual.pdf", "year": 2004 },
+    { "title": "Drink refusal training as part of a combined behavioral intervention: effectiveness and mechanisms of change (Witkiewitz, Donovan and Hartzler)", "publisher": "PubMed Central", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3349797/" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

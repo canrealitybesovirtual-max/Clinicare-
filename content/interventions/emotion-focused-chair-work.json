@@ -1,0 +1,50 @@
+{
+  "id": "emotion-focused-chair-work",
+  "name": "Emotion-focused chair work: overview and referral",
+  "modality": "Emotion-focused therapy (EFT)",
+  "conditions": ["major-depressive-disorder", "ptsd", "generalized-anxiety-disorder"],
+  "evidenceLevel": "APA Division 12 lists emotion-focused therapy for depression (1998 status: modest research support; 2015 status: pending re-evaluation; check the current page). In an RCT of 38 adults with major depression, adding emotion-focused tasks, including chair work, to a client-centered relationship led to greater improvement in depressive symptoms than the relationship alone (Goldman, Greenberg and Angus, 2006). For childhood abuse trauma, two versions of emotion-focused therapy for trauma, with and without empty-chair confrontation, were similarly effective (Paivio et al., 2010). GAD: emerging evidence. A feasibility RCT found EFT and CBT had similar outcomes (Timulak et al., 2022). Not a NICE first-line treatment for these conditions.",
+  "minutes": { "min": 15, "max": 40 },
+  "purpose": "Structured, experiential tasks from emotion-focused therapy (Leslie Greenberg, Robert Elliott, Jeanne Watson, Sandra Paivio and colleagues) that help clients reach and change painful, long-standing emotional patterns. Two-chair dialogue works with an inner split, such as a harsh self-critical part and the self that feels criticized, or a worrying part that frightens the self. Empty-chair work addresses unresolved feelings toward an important person, where the client imagines the other and voices unmet needs and lingering hurt. It is delivered within a strong, empathic relationship by trained clinicians. Overview for planning and referral only.",
+  "steps": [
+    "Confirm training. Chair work is for clinicians trained in EFT or a related experiential approach; otherwise, refer.",
+    "Build a safe, empathic alliance first, and confirm the client can feel strong emotion and then settle again.",
+    "Notice openings: harsh self-criticism suggests a two-chair task; lingering hurt, resentment or longing toward a specific person suggests an empty-chair task.",
+    "Explain the task in plain language and ask for consent. Offer a less intense option, such as talking about the other person with the clinician, if the client prefers.",
+    "Process overview: the client gives voice to each side, or speaks to the imagined other, while the clinician guides attention toward feelings, unmet needs and new emotional responses (such as self-compassion or healthy protective anger).",
+    "Close with grounding and reflection on what the client experienced. Never end a session while the client is still highly activated.",
+    "Track change across sessions. Resolution often shows up as a softer inner critic, a clearer sense of need, or letting go of resentment."
+  ],
+  "script": [
+    "When you talk to yourself that way, saying 'you're useless', it sounds like there are two sides in you. Would you be open to trying something that may feel a bit unusual, using two chairs to hear from each side?",
+    "Take a moment in this chair. What do you feel when you hear those words? What do you need from that critical side?",
+    "If you could picture your father here for a few minutes, what would you want him to know about how that felt?",
+    "We can also just talk about him together, if that feels better today. You decide.",
+    "Let's slow down and come back to the room. Feel your feet on the floor. What stands out for you from what just happened?"
+  ],
+  "contraindications": [
+    "Trained clinicians only. Steps are overview-level and are not a protocol.",
+    "Avoid or postpone during acute crisis, active psychosis or mania, severe dissociation, active self-harm, or when the client cannot yet manage strong emotion; stabilize first.",
+    "Do not use empty-chair work in a way that pushes real-life reconciliation or confrontation with a current abuser. The client's safety comes first.",
+    "Offer a less intense alternative (talking with the clinician about the other person) for clients who find chair work too intense or culturally unfamiliar.",
+    "This intervention does not assess or decide risk. If suicidal thoughts, self-harm or risk to others come up, stop the exercise, help the client ground, and follow your setting's risk-assessment and safety-planning procedures. Keep crisis options visible: 988 Suicide & Crisis Lifeline (US, call or text), the local emergency number, and findahelpline.com for other countries."
+  ],
+  "culturalAdaptations": [
+    "Speaking to an imagined parent or elder may feel disrespectful where honoring parents is a core value. Discuss what it means to the client first, and offer alternatives such as writing or talking to the clinician.",
+    "Rules about showing emotion vary. Aim for the client's comfortable range of expression rather than a set level of intensity.",
+    "Some traditions already include speaking to the dead or to ancestors. Ask how those practices fit with, or differ from, the exercise.",
+    "For telehealth, use a second seat or an image on screen, and confirm the client has privacy to speak freely."
+  ],
+  "trainingRequired": "EFT chair work: trained clinicians only (for example, training recognized by the International Society for Emotion Focused Therapy, with supervised practice). Steps here are overview-level.",
+  "handoutIds": ["kind-self-talk"],
+  "sources": [
+    { "title": "Psychological Treatments (treatment index)", "publisher": "APA Division 12, Society of Clinical Psychology", "url": "https://div12.org/psychological-treatments/treatments/" },
+    { "title": "The effects of adding specific emotion-focused interventions to the therapeutic relationship in the treatment of depression (Goldman, Greenberg and Angus)", "publisher": "Psychotherapy Research", "url": "https://doi.org/10.1080/10503300600589456", "year": 2006 },
+    { "title": "Emotion-Focused Therapy for Trauma (Paivio model overview)", "publisher": "American Psychological Association", "url": "https://www.apa.org/pubs/videos/4310912" },
+    { "title": "A comparison of emotion-focused therapy and cognitive-behavioral therapy in the treatment of generalized anxiety disorder: results of a feasibility randomized controlled trial (Timulak et al.)", "publisher": "Psychotherapy (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/35113639/", "year": 2022 },
+    { "title": "International Society for Emotion Focused Therapy (training standards)", "publisher": "ISEFT", "url": "https://iseft.wildapricot.org/" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

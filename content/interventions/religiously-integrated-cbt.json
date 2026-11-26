@@ -1,0 +1,58 @@
+{
+  "id": "religiously-integrated-cbt",
+  "name": "Religiously integrated CBT (client-led, with consent)",
+  "modality": "CBT / spiritually integrated",
+  "conditions": ["major-depressive-disorder", "generalized-anxiety-disorder"],
+  "evidenceLevel": "Emerging evidence. In a pilot RCT of 132 adults with major depression and chronic medical illness who rated religion as at least somewhat important, religiously integrated CBT and conventional CBT produced similar improvement, with somewhat greater benefit for more religious participants (Koenig et al., 2015). A meta-analysis of 97 studies found that therapies adapted to clients' religious or spiritual beliefs were as effective as standard therapies for psychological distress in the more rigorous additive designs, and improved spiritual well-being more (Captari et al., 2018). The core CBT it adapts is recommended for depression in NICE NG222 and for GAD in NICE CG113. GAD use is an extension; the RCBT trial evidence is for depression.",
+  "minutes": { "min": 45, "max": 60 },
+  "purpose": "Religiously integrated CBT (RCBT), developed by Harold Koenig, Michelle Pearce and colleagues at Duke University, delivers standard CBT (behavioral activation, work with unhelpful thoughts, gratitude and other skills) while drawing on the client's own religious beliefs, practices, texts and community as resources. Manuals exist for several faith traditions. It is offered only when the client wants their faith included and after informed consent. The clinician does not need to share the client's faith but must be competent in CBT and respectful of religious diversity.",
+  "steps": [
+    "Ask about religion and spirituality as part of routine assessment, and ask whether the client would like it included in therapy. Accept a 'no' without further discussion.",
+    "If yes, obtain and document informed consent (see the consent note): what it involves, that it is optional, that standard CBT is equally available, and that the client may stop at any time.",
+    "Learn the client's tradition from the client: key beliefs, practices, texts and community. Do not assume; ask how they personally understand their faith.",
+    "Deliver standard CBT steps (psychoeducation, activity scheduling, identifying and examining unhelpful thoughts, coping cards) and invite the client to draw on their beliefs, for example by using a belief they find comforting as a balanced alternative to a harsh automatic thought.",
+    "If the client chooses, use their spiritual practices as coping resources (prayer, meditation, sacred texts, service, worship, community) and schedule them like other valued activities.",
+    "Watch for negative religious coping, such as believing an illness is a punishment. Explore it gently, keeping the client's own tradition in mind, and involve their faith leader if the client wishes.",
+    "Track symptoms (for example, PHQ-9 or GAD-7) and review whether the integration is helping. Switch to standard CBT if the client prefers."
+  ],
+  "script": [
+    "Some people find their faith matters a lot when they're struggling. Is faith or spirituality part of your life? Would you like it to be part of our work, or would you rather keep it separate? Either is completely fine.",
+    "Help me understand what your faith teaches about hard times like this, in your own words.",
+    "The thought 'I'm worthless' came up again. Is there anything in your faith that speaks to how you are seen or valued?",
+    "You mentioned prayer used to calm you. Would you like to plan a time for it this week, like any other helpful activity?",
+    "It sounds like part of you believes this illness is a punishment. How does that fit with other things you believe? Would it help to talk it over with someone from your faith community?"
+  ],
+  "contraindications": [
+    "Client-led only, after informed consent. Never introduce, promote, criticize or debate religious beliefs, and never make care depend on taking part in faith-based work.",
+    "Not suitable when religious ideas are part of psychosis or of severe obsessional doubt (scrupulosity). For scrupulosity, use exposure and response prevention, with input from a faith leader if the client wishes.",
+    "Be alert to spiritual abuse or coercive religious settings. Prioritize the client's safety and autonomy.",
+    "Stay within your competence. If the client wants theological guidance, refer to a clergy member or chaplain of the client's choosing rather than giving it yourself.",
+    "Faith-based reassurance does not replace risk assessment. This intervention does not assess or decide risk. If suicidal thoughts, self-harm or risk to others come up, follow your setting's risk-assessment and safety-planning procedures. Keep crisis options visible: 988 Suicide & Crisis Lifeline (US, call or text), the local emergency number, and findahelpline.com for other countries."
+  ],
+  "culturalAdaptations": [
+    "Duke's RCBT materials include versions for several traditions (link out). Use the one that matches the client's tradition, and adapt further to their denomination, culture and personal practice.",
+    "Religion and culture interact. The same tradition can look very different across countries and communities, so follow the client's own understanding.",
+    "Consider religious minority stress, discrimination, and losses of religious community linked to migration.",
+    "For clients who are spiritual but not religious, or who have left a faith, adapt to their own ways of making meaning without assuming a tradition.",
+    "Respect religious calendars, fasting and dietary practices, and prayer times when scheduling sessions and activities."
+  ],
+  "faithIntegrated": {
+    "note": "This whole intervention is a faith-integrated version of CBT. Use it only when the client chooses it; the same CBT steps are available without religious content (see thought-record, behavioral-activation and related entries).",
+    "consentNote": "Offer only if the client raises faith or spirituality and asks to include it. Before starting, explain what a faith-integrated approach involves, that it is optional, that standard CBT is equally available, and that the client can change their mind at any time; document the client's informed consent. Follow the client's own tradition and words, and never introduce, impose, endorse or challenge beliefs (AACC Code of Ethics: consent before spiritual interventions, client-led integration; ACA Code of Ethics 2014, A.2 informed consent and A.4.b personal values)."
+  },
+  "trainingRequired": "Requires competence in standard CBT and in religious and spiritual diversity. Review the Duke RCBT manual for the client's tradition (link out only) before use.",
+  "handoutIds": ["thought-record", "activity-schedule", "coping-cards", "kind-self-talk"],
+  "sources": [
+    { "title": "Religious vs. conventional cognitive behavioral therapy for major depression in persons with chronic medical illness: a pilot randomized trial (Koenig et al.)", "publisher": "Journal of Nervous and Mental Disease", "url": "https://doi.org/10.1097/NMD.0000000000000273", "year": 2015 },
+    { "title": "Religiously integrated cognitive behavioral therapy: a new method of treatment for major depression in patients with chronic medical illness (Pearce et al.)", "publisher": "Psychotherapy", "url": "https://doi.org/10.1037/a0036448", "year": 2015 },
+    { "title": "Integrating clients' religion and spirituality within psychotherapy: a comprehensive meta-analysis (Captari et al.)", "publisher": "Journal of Clinical Psychology (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/30221353/", "year": 2018 },
+    { "title": "Religious CBT study: therapy manuals", "publisher": "Duke University Center for Spirituality, Theology and Health", "url": "https://spiritualityandhealth.duke.edu/index.php/religious-cbt-study/therapy-manuals/" },
+    { "title": "Depression in adults: treatment and management (NG222)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng222", "year": 2022 },
+    { "title": "Generalised anxiety disorder and panic disorder in adults: management (CG113)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/cg113", "year": 2011 },
+    { "title": "AACC Code of Ethics", "publisher": "American Association of Christian Counselors", "url": "https://aacc.net/aacc-code-of-ethics/" },
+    { "title": "ACA Code of Ethics (2014) and ethics resources", "publisher": "American Counseling Association", "url": "https://www.counseling.org/resources/ethics", "year": 2014 }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

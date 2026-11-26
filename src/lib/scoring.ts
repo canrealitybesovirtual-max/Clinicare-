@@ -18,8 +18,12 @@
  *   substance    substancePossible "yes" => x0.75 + flag listing the condition's substance rule-outs
  *   medical      medicalPossible "yes"   => x0.75 + flag listing the condition's medical rule-outs
  *   partial-core matched core count < minCore => strength capped at "possible" + flag
+ *   breadth      the score reaches "strong" but matched associated weight is under 25% of the
+ *                condition's associated weight (A > 0)  => score held at 64 ("moderate") + flag.
+ *                Key features alone are not a full picture: e.g. low mood + loss of interest with
+ *                nothing else documented stays "moderate" until supporting features are recorded.
  *
- * score = round(base * gate multipliers), clamped to 0-100.
+ * score = round(base * gate multipliers), clamped to 0-100 (then the breadth hold, if it applies).
  * strength: score >= 65 "strong", >= 40 "moderate", otherwise "possible" (after the partial-core cap).
  * Scores below 15 are dropped; the rest are sorted by score desc, then name, then id; at most 7 shown.
  * matched / missing: FeatureRefs with lexicon labels, core first, then weight desc, then file order.
@@ -49,6 +53,7 @@ export const SCORING = {
   medicalMultiplier: 0.75,
   strongAt: 65,
   moderateAt: 40,
+  breadthShare: 0.25,
   minScore: 15,
   maxSuggestions: 7,
 } as const;
@@ -172,11 +177,12 @@ function scoreOne(
   if (C === 0 || coreHits.length === 0) return null;
 
   const mc = coreHits.reduce((n, f) => n + f.weight, 0);
-  const ma = assoc.filter((f) => present.has(f.symptomId)).reduce((n, f) => n + f.weight, 0);
+  const assocHits = assoc.filter((f) => present.has(f.symptomId));
+  const ma = assocHits.reduce((n, f) => n + f.weight, 0);
   const base = A > 0 ? 100 * (SCORING.coreShare * (mc / C) + SCORING.associatedShare * (ma / A)) : 100 * (mc / C);
 
   const { multiplier, flags } = gateFlags(cond, input);
-  const score = Math.min(100, Math.max(0, Math.round(base * multiplier)));
+  let score = Math.min(100, Math.max(0, Math.round(base * multiplier)));
 
   let strength = strengthFor(score);
   if (coreHits.length < cond.minCore) {
@@ -185,6 +191,13 @@ function scoreOne(
     flags.unshift({
       type: "partial-core",
       message: `Only ${coreHits.length} of the ${core.length} key features ${verb} present (at least ${cond.minCore} expected); gather more information.`,
+    });
+  } else if (strength === "strong" && A > 0 && ma / A < SCORING.breadthShare) {
+    score = SCORING.strongAt - 1;
+    strength = "moderate";
+    flags.push({
+      type: "breadth",
+      message: `Few supporting features are documented yet (${assocHits.length} of ${assoc.length} associated features); score reduced to ${score} so the match stays moderate until more of the picture is documented.`,
     });
   }
 

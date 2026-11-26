@@ -1,0 +1,92 @@
+{
+  "id": "graded-in-vivo-exposure",
+  "name": "Graded in-vivo exposure (exposure ladder)",
+  "modality": "Exposure - in vivo",
+  "conditions": ["agoraphobia", "panic-disorder"],
+  "evidenceLevel": "Core component of CBT for panic disorder with or without agoraphobia, which NICE CG113 recommends; APA Division 12 lists CBT for panic with strong research support (check the current rating). Craske et al. (2014) describe inhibitory-learning strategies (testing expectations, varying practice, removing safety signals) to strengthen exposure. A 2018 component network meta-analysis (Pompoli et al.) found in-vivo exposure improved treatment acceptability, with small effects on efficacy, within panic CBT packages.",
+  "minutes": { "min": 30, "max": 90 },
+  "purpose": "Helps the client approach avoided places and situations step by step (for example, shops, public transport, crowds, queues, being far from home or alone) so they learn that feared outcomes are unlikely or manageable and that anxiety can be tolerated. The ladder breaks a large goal into practical steps chosen by the client and practiced often, without safety behaviors.",
+  "steps": [
+    "Check readiness: the client understands the rationale, has some coping confidence, and is not in an active crisis or intoxicated.",
+    "List avoided situations with the client, including partial avoidance (going only at quiet times, only with a companion, sitting near exits).",
+    "Rate each situation for expected fear (0-10) and order them into a ladder of about 8 to 12 steps on the exposure-ladder handout. Add variations in time of day, distance, duration, and alone versus accompanied.",
+    "Identify safety behaviors linked to each step (carrying medication 'just in case,' checking the phone, holding onto objects, distraction) and plan how to reduce them (see the safety-behavior-reduction entry).",
+    "Pick a starting step that feels hard but doable, usually in the middle-low range. Ask: What do you predict will happen? How likely is it, 0-100?",
+    "Do the exposure in session when possible (clinician accompanying, or by telehealth with the client in the situation). Stay long enough to test the prediction rather than leaving at peak fear.",
+    "Debrief right away: What happened? Was the prediction confirmed? What did you learn? Emphasize learning, not only drops in anxiety.",
+    "Assign frequent home practice (several times a week) of the same or next step. Vary places and contexts to strengthen learning.",
+    "Move up the ladder at the client's pace. Fade any companion's role over time. Name progress and plan for setbacks."
+  ],
+  "script": [
+    "We are going to make a ladder. The top step is a goal you care about. The bottom steps are smaller and easier.",
+    "Each step is something you have been avoiding. We will rate how hard each one feels, from 0 to 10.",
+    "We start low, but not too low. A step that feels hard, but doable.",
+    "Before you start, what do you think will happen? How sure are you?",
+    "Stay long enough to find out what really happens. Try not to leave just because the fear is high.",
+    "Leave the 'just in case' things behind if you can. They can stop you from learning that you can handle it.",
+    "Afterward, ask yourself: What did I expect? What happened? What did I learn?",
+    "Practice the same step a few times this week. When it feels easier, move up.",
+    "Setbacks are normal. They do not mean you are back at the start."
+  ],
+  "contraindications": [
+    "Do not begin during an active crisis, current suicidal risk, acute intoxication or withdrawal, or an untreated medical problem that makes the situations unsafe. Stabilize first, and share crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com.",
+    "Exposure targets fears that are out of proportion to real danger. Never ask clients to enter genuinely unsafe settings (for example, places with a real risk of violence, harassment or immigration enforcement).",
+    "Medical conditions that limit activity (heart, lung, mobility) may need medical input and adapted steps.",
+    "As-needed sedating medication taken before exposure can act as a safety signal. Discuss with the prescriber rather than changing medication yourself.",
+    "In-vivo exposure to trauma reminders is part of trauma-focused protocols such as prolonged exposure. For trauma-related avoidance, refer to or train in those protocols rather than improvising.",
+    "Watch for hidden avoidance during exposure (distraction, rituals, mental checking) and address it gently."
+  ],
+  "culturalAdaptations": [
+    "Choose steps that fit the client's real life and values (for example, attending a place of worship, a market, a family event, or the bus route they actually need).",
+    "Where women or older adults customarily go out accompanied, going alone may not be a meaningful goal. Let the client set goals rather than imposing independence norms.",
+    "Account for real-world barriers such as discrimination, harassment or immigration-related fears when choosing settings, and validate realistic caution.",
+    "Family members often help with avoidance (driving, shopping for the client). With consent, involve them in the plan and gradually reduce this help.",
+    "Home-based or telehealth sessions can help clients who cannot yet reach the clinic."
+  ],
+  "handoutIds": ["exposure-ladder"],
+  "sources": [
+    {
+      "title": "Generalised anxiety disorder and panic disorder in adults: management (CG113)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg113",
+      "year": 2011
+    },
+    {
+      "title": "Psychological Treatments (treatment index)",
+      "publisher": "APA Division 12, Society of Clinical Psychology",
+      "url": "https://div12.org/psychological-treatments/treatments/"
+    },
+    {
+      "title": "Maximizing exposure therapy: an inhibitory learning approach (Craske et al.)",
+      "publisher": "Behaviour Research and Therapy (PubMed Central)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4114726/",
+      "year": 2014
+    },
+    {
+      "title": "Dismantling cognitive-behaviour therapy for panic disorder: a systematic review and component network meta-analysis (Pompoli et al.)",
+      "publisher": "Psychological Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29368665/",
+      "year": 2018
+    },
+    {
+      "title": "The effects of safety behaviors during exposure therapy for anxiety: critical analysis from an inhibitory-learning perspective (Blakey & Abramowitz)",
+      "publisher": "Clinical Psychology Review (DOI)",
+      "url": "https://doi.org/10.1016/j.cpr.2016.07.002",
+      "year": 2016
+    },
+    {
+      "title": "Anxiety Disorders (health topic)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/topics/anxiety-disorders"
+    },
+    {
+      "title": "A meta-analysis of cultural adaptations of psychological interventions (Hall et al.)",
+      "publisher": "Behavior Therapy (DOI)",
+      "url": "https://doi.org/10.1016/j.beth.2016.09.005",
+      "year": 2016
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

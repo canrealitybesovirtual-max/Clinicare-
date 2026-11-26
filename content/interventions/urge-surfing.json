@@ -1,0 +1,60 @@
+{
+  "id": "urge-surfing",
+  "name": "Urge surfing (riding out cravings mindfully)",
+  "modality": "Mindfulness-based relapse prevention (MBRP) skill",
+  "conditions": ["alcohol-use-disorder"],
+  "evidenceLevel": "Emerging evidence for the skill on its own. Urge surfing is a core practice in mindfulness-based relapse prevention (MBRP). In an RCT with 286 adults in aftercare, MBRP reduced drug use and heavy drinking more than standard relapse prevention and treatment as usual at 12 months, though not at every time point (Bowen et al., 2014). In a laboratory study with 123 student smokers, brief urge-surfing instructions did not reduce urge ratings overall compared with no instructions (Bowen and Marlatt, 2009). Use it as one skill within a broader treatment plan.",
+  "minutes": { "min": 10, "max": 20 },
+  "purpose": "Urge surfing, a technique developed by G. Alan Marlatt, teaches the client to notice a craving as a passing wave of body sensations, thoughts and impulses that rises, peaks and falls, rather than something that must be obeyed or fought. The client pauses, brings curious attention to where the urge shows up in the body, breathes with it, and watches its strength change without acting on it. Over time this can loosen the automatic link between craving and drinking. It is taught within MBRP (Sarah Bowen, Neha Chawla, Katie Witkiewitz and Marlatt) and similar approaches. This entry uses original wording.",
+  "steps": [
+    "Introduce the wave image: urges build, peak and pass with time, whether or not the person acts on them.",
+    "Practice first with a mild, everyday urge (for example, an itch or the urge to check a phone). Later, with the client's agreement and only if they are not in withdrawal, practice with a mild craving the client brings to mind.",
+    "Guide the client to pause, notice the urge, and find where it shows up in the body (mouth, throat, chest, stomach, hands). Describe the sensations with curiosity.",
+    "Use the breath as a 'surfboard': breathe with the sensations and notice them rise, change and fall. Rate strength (0-10) at a few points.",
+    "Notice the thoughts that come with the urge (for example, 'just one' or 'I deserve it') as thoughts, without arguing with them or obeying them.",
+    "Debrief: What changed? Did the urge peak and fall? What helped?",
+    "Plan real-world use: when an urge comes, pause and surf it before deciding what to do, and pair this with other plan steps (leave the situation, call someone). Track practice on the urge-surfing-log handout.",
+    "Review the log each session and fold what was learned into the relapse-prevention plan."
+  ],
+  "script": [
+    "An urge is like a wave. It builds, it peaks, and then it goes down, even if you don't act on it.",
+    "Let's practice. Notice the urge. Where do you feel it in your body?",
+    "What does it feel like? Tight? Warm? Buzzing? Just describe it.",
+    "Breathe with it. Ride the wave, like a surfer on a board.",
+    "How strong is it now, from 0 to 10? And now?",
+    "Thoughts like 'just one' may show up. Notice them. You don't have to argue with them or obey them.",
+    "You just watched an urge change without acting on it. That's a skill you can build.",
+    "This week, write down each time you surf an urge, how strong it got, and what happened."
+  ],
+  "contraindications": [
+    "Alcohol withdrawal is not an urge to surf. Shakes, sweats, a racing heart, confusion, seizures or hallucinations need urgent medical care. Clients who drink heavily every day need a medical assessment before cutting down quickly.",
+    "Do not deliberately expose clients in early recovery to strong alcohol cues in session without training in cue exposure and a clear plan.",
+    "Mindfulness practice can bring up distressing material for some people, including trauma memories or dissociation. Offer eyes-open practice and grounding, and stop if needed.",
+    "If urges are linked to suicidal thoughts or self-harm, address safety first. This tool does not judge risk. Crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com.",
+    "Substance-use content: do not enter names, dates, places or other identifying details into this tool; nothing is stored or sent. Any note or export about substance use must carry this notice: 42 CFR Part 2 prohibits unauthorized disclosure of these records."
+  ],
+  "culturalAdaptations": [
+    "If the ocean is unfamiliar, use a metaphor from the client's world (for example, a passing storm, a train going by, or a fever that breaks).",
+    "Mindfulness has roots in Buddhist contemplative practice. Some clients welcome this; others prefer a secular framing. Ask and adapt.",
+    "Where drinking is tied to hospitality or ceremony, plan how and where the client can surf urges discreetly during gatherings.",
+    "Use a professional interpreter when needed, and check that 0-10 ratings make sense to the client."
+  ],
+  "faithIntegrated": {
+    "note": "If the client chooses, a short prayer, sacred word or phrase from their own tradition can be the anchor instead of the breath, or the client may frame riding out an urge in terms of their own spiritual values. The client leads and chooses the words.",
+    "consentNote": "Offer only if the client raises faith or spirituality and asks to include it. Before starting, explain what the faith-integrated option involves, that it is optional, that the same intervention is available without religious content, and that the client can change their mind at any time; document informed consent. Follow the client's own tradition and words, and never introduce, impose, endorse or challenge beliefs (AACC Code of Ethics: informed consent before spiritual interventions, client-led integration; ACA Code of Ethics 2014, A.2 informed consent and A.4.b personal values)."
+  },
+  "handoutIds": ["urge-surfing-log", "drinking-diary"],
+  "sources": [
+    { "title": "Relative efficacy of mindfulness-based relapse prevention, standard relapse prevention, and treatment as usual for substance use disorders: a randomized clinical trial (Bowen et al.)", "publisher": "JAMA Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/24647726/", "year": 2014 },
+    { "title": "Surfing the urge: brief mindfulness-based intervention for college student smokers (Bowen and Marlatt)", "publisher": "Psychology of Addictive Behaviors (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/20025372/", "year": 2009 },
+    { "title": "Relapse prevention: an overview of Marlatt's cognitive-behavioral model (Larimer, Palmer and Marlatt)", "publisher": "Alcohol Research and Health (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/10890810/", "year": 1999 },
+    { "title": "Meditation and Mindfulness: Effectiveness and Safety", "publisher": "National Center for Complementary and Integrative Health (NCCIH)", "url": "https://www.nccih.nih.gov/health/meditation-and-mindfulness-effectiveness-and-safety" },
+    { "title": "Healthcare Professional's Core Resource on Alcohol", "publisher": "National Institute on Alcohol Abuse and Alcoholism", "url": "https://niaaa.nih.gov/health-professionals-communities/core-resource-on-alcohol" },
+    { "title": "The HIPAA Privacy Rule and 42 CFR Part 2", "publisher": "US Department of Health and Human Services", "url": "https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/hipaa-part-2/index.html" },
+    { "title": "AACC Code of Ethics", "publisher": "American Association of Christian Counselors", "url": "https://aacc.net/aacc-code-of-ethics/" },
+    { "title": "ACA Code of Ethics (2014) and ethics resources", "publisher": "American Counseling Association", "url": "https://www.counseling.org/resources/ethics", "year": 2014 }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

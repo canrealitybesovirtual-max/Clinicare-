@@ -1,0 +1,111 @@
+{
+  "id": "problem-solving",
+  "name": "Structured problem-solving",
+  "modality": "Problem-solving therapy (CBT-based)",
+  "conditions": ["major-depressive-disorder", "generalized-anxiety-disorder"],
+  "evidenceLevel": "Supported for depression. NICE NG222 lists individual problem solving among treatment options for more severe depression. Meta-analyses (Bell & D'Zurilla, 2009; Cuijpers et al., 2018) found problem-solving therapy effective for depression, with effects comparable to other psychological treatments. The VA/DoD 2022 guideline includes problem-solving therapy among psychotherapy options for uncomplicated MDD. WHO's Problem Management Plus uses problem-solving as a core element for adults facing adversity. For worry it is commonly part of CBT packages (see NICE CG113); stand-alone evidence for GAD is more limited.",
+  "minutes": { "min": 20, "max": 45 },
+  "purpose": "Teaches a step-by-step way to tackle practical problems that feed low mood or worry: define the problem clearly, set a realistic goal, brainstorm options, weigh them, choose and plan one, try it, and review the result. It builds a sense of control and helps the client separate problems they can change from ones that call for coping, support or acceptance.",
+  "steps": [
+    "List the client's current problems and sort them into practical, changeable problems and those outside the client's control.",
+    "Pick one changeable problem that matters but is not overwhelming. Define it in specific, concrete terms (what, when, where, who is involved).",
+    "Set a realistic, specific goal for that problem.",
+    "Brainstorm as many options as possible without judging them yet. Include asking others for help.",
+    "Weigh each option: pros, cons, cost, effort, likely effect on the goal, and fit with the client's values.",
+    "Choose one option, or a mix, and break it into small, scheduled steps. Plan for obstacles.",
+    "The client carries out the plan between sessions.",
+    "Review the outcome: What worked? What did not? What needs adjusting? Praise the effort and repeat the cycle as needed.",
+    "For problems outside the client's control, shift to coping skills, social support and acceptance-based strategies."
+  ],
+  "script": [
+    "Let's pick one problem to work on. Not the biggest one. One that matters, but feels possible.",
+    "Let's describe it clearly. What is happening? When? Who is involved?",
+    "What would you like to be different? Let's make a small, clear goal.",
+    "Now let's list every idea we can think of. No idea is too silly right now.",
+    "For each idea, what are the good parts? What are the hard parts?",
+    "Which idea, or mix of ideas, do you want to try first?",
+    "What is the first small step? When will you do it?",
+    "Next time we will look at how it went. If it does not work, we learn from it and try another idea."
+  ],
+  "contraindications": [
+    "Crisis and safety come first. If the client reports thoughts of harming themselves or others, or is unsafe at home, follow your risk-assessment and safety procedures. Crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com.",
+    "Do not place responsibility on the client for problems caused by others (for example, abuse or discrimination). Focus on safety, rights and support, and refer for legal, housing or social services as needed.",
+    "Severe low mood with poor concentration may need simpler, shorter steps and more clinician support.",
+    "Clients who worry a lot may analyze options without end. Set a time limit and accept 'good enough' choices."
+  ],
+  "culturalAdaptations": [
+    "Decisions may be shared with family or community. With the client's consent, include key people, or plan how the client will discuss options with them.",
+    "Weigh options by the client's own values and cultural priorities, not only by individual benefit.",
+    "WHO's Problem Management Plus shows that problem-solving can be adapted for adults in communities affected by adversity and delivered in simple, concrete language.",
+    "Many problems come from social conditions (income, housing, immigration). Pair problem-solving with referrals to practical resources.",
+    "Use visual or spoken formats for clients with low literacy."
+  ],
+  "faithIntegrated": {
+    "note": "If the client wishes, they may weigh options against their faith values, include asking a trusted faith leader for guidance as one option, or use prayer or reflection when choosing. The client decides how, and whether, faith fits into the process.",
+    "consentNote": "Offer only if the client raises faith or spirituality as a resource, and only after informed consent. Explain that the faith element is optional, that the standard version works without it, and that the client can change or stop it at any time. Use the client's own beliefs and words; never introduce or impose religious content. Record the consent discussion in your own clinical record, not in this app. See the AACC Code of Ethics on consent for spiritual interventions and the ACA Code of Ethics on informed consent and not imposing counselor values."
+  },
+  "handoutIds": [],
+  "sources": [
+    {
+      "title": "Depression in adults: treatment and management (NG222)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng222",
+      "year": 2022
+    },
+    {
+      "title": "Discussing first-line treatments for more severe depression (NG222 patient decision aid)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://nice.org.uk/guidance/ng222/resources/discussing-firstline-treatments-for-more-severe-depression-pdf-11131007007",
+      "year": 2022
+    },
+    {
+      "title": "Problem-solving therapy for depression: a meta-analysis (Bell & D'Zurilla)",
+      "publisher": "Clinical Psychology Review (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19299058/",
+      "year": 2009
+    },
+    {
+      "title": "Problem-solving therapy for adult depression: an updated meta-analysis (Cuijpers et al.)",
+      "publisher": "European Psychiatry (DOI)",
+      "url": "https://doi.org/10.1016/j.eurpsy.2017.11.006",
+      "year": 2018
+    },
+    {
+      "title": "VA/DoD Clinical Practice Guideline for the Management of Major Depressive Disorder (version 4.0)",
+      "publisher": "US Department of Veterans Affairs and Department of Defense",
+      "url": "https://www.healthquality.va.gov/guidelines/MH/mdd/VADoDMDDCPGFinal508.pdf",
+      "year": 2022
+    },
+    {
+      "title": "Problem Solving Therapy for Major Depressive Disorder (clinician brief)",
+      "publisher": "Psychological Health Center of Excellence, Defense Health Agency",
+      "url": "https://health.mil/Reference-Center/Publications/2023/12/19/Problem-Solving-Therapy-for-Major-Depressive-Disorder",
+      "year": 2023
+    },
+    {
+      "title": "Problem Management Plus (PM+): individual psychological help for adults impaired by distress in communities exposed to adversity",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/publications/i/item/problem-management-plus-(-pm-)-individual-psychological-help-for-adults-impaired-by-distress-in-communities-exposed-to-adversity"
+    },
+    {
+      "title": "Generalised anxiety disorder and panic disorder in adults: management (CG113)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg113",
+      "year": 2011
+    },
+    {
+      "title": "AACC Code of Ethics",
+      "publisher": "American Association of Christian Counselors",
+      "url": "https://aacc.net/aacc-code-of-ethics/"
+    },
+    {
+      "title": "ACA Code of Ethics (2014) and ethics resources",
+      "publisher": "American Counseling Association",
+      "url": "https://www.counseling.org/resources/ethics",
+      "year": 2014
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

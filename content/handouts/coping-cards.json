@@ -1,0 +1,87 @@
+{
+  "id": "coping-cards",
+  "title": "Coping Cards",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 15,
+  "intro": "A coping card is a small card you write yourself and carry with you. It reminds you of what helps when times get hard. When you are upset, it can be hard to remember what you learned in counseling. A card puts those ideas right in your hand. Making a few cards takes about 15 minutes.",
+  "sections": [
+    {
+      "heading": "What you need",
+      "steps": [
+        "A few index cards or small pieces of paper.",
+        "A pen.",
+        "A place to keep them, like your wallet, bag, or pocket."
+      ]
+    },
+    {
+      "heading": "Kinds of cards you can make",
+      "body": "Pick one or two kinds to start. Write in your own words.",
+      "steps": [
+        "Thought card: On the front, write a thought that often gets you down. On the back, write a more balanced or helpful answer to it.",
+        "Skill card: Write the steps of a skill that helps you, like slow breathing or grounding.",
+        "Reason card: Write why you are doing this hard work, like the people or goals that matter to you.",
+        "Kind words card: Write what you would say to a good friend who felt the way you do.",
+        "Help card: Write the people you can reach out to, and crisis lines like 988."
+      ]
+    },
+    {
+      "heading": "Examples",
+      "steps": [
+        "Front: 'I always mess things up.' Back: 'I made one mistake. I have done many things well, too. I can fix this.'",
+        "Front: 'I can't handle this feeling.' Back: 'This feeling is strong, but it will pass. I can breathe slowly and wait 10 minutes.'",
+        "Reason card: 'I'm doing this so I can be there for my kids and enjoy time with them.'"
+      ]
+    },
+    {
+      "heading": "Tips for writing good cards",
+      "steps": [
+        "Keep it short. You should be able to read it in less than a minute.",
+        "Use words that sound like you.",
+        "Make the words believable. If a line feels false, change it until it feels true enough.",
+        "Write your cards when you are calm, or with your counselor."
+      ]
+    },
+    {
+      "heading": "How to use your cards",
+      "steps": [
+        "Read your cards every day, even when you feel okay. This helps the words stick.",
+        "Pull out a card when you notice the first signs of a hard time.",
+        "Change or add cards as you learn what helps.",
+        "Bring your cards to your next visit."
+      ]
+    }
+  ],
+  "practiceLog": {
+    "columns": ["Day", "Card I used", "What was going on", "Did it help? (0-10)"],
+    "rows": 7
+  },
+  "safetyNote": "Safety first: Coping cards can help in hard moments, but they are not enough on their own if you are thinking about suicide or might hurt yourself or someone else. Get help now. In the US, call or text 988 or call 911. In other countries, call your local emergency number or visit findahelpline.com. Think about putting these numbers on one of your cards. Resource only. This sheet does not replace care from a licensed professional.",
+  "sources": [
+    {
+      "title": "Cognitive Behavior Therapy: Basics and Beyond, Third Edition (J. S. Beck)",
+      "publisher": "Guilford Press",
+      "url": "https://www.guilford.com/books/Cognitive-Behavior-Therapy/Judith-Beck/9781462544196",
+      "year": 2020
+    },
+    {
+      "title": "Effect of crisis response planning vs. contracts for safety on suicide risk in U.S. Army soldiers: a randomized clinical trial (Bryan et al.)",
+      "publisher": "Journal of Affective Disorders",
+      "url": "https://doi.org/10.1016/j.jad.2017.01.028",
+      "year": 2017
+    },
+    {
+      "title": "988 Suicide & Crisis Lifeline",
+      "publisher": "988 Lifeline",
+      "url": "https://988lifeline.org"
+    },
+    {
+      "title": "Find A Helpline (international directory)",
+      "publisher": "Find A Helpline",
+      "url": "https://findahelpline.com"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

@@ -1,0 +1,61 @@
+{
+  "id": "interpersonal-psychotherapy",
+  "name": "Interpersonal psychotherapy (IPT): overview and referral",
+  "modality": "Interpersonal psychotherapy",
+  "conditions": ["major-depressive-disorder", "ptsd"],
+  "evidenceLevel": "Recommended in NICE NG222 (2022) as an option for less severe depression, where the committee judged it effective and cost effective; check the guideline tables for more severe depression. APA Division 12 lists IPT for depression (1998 status: strong research support; 2015 status: pending re-evaluation; check the current page). Meta-analyses support IPT for depression, alone and combined with medication (Cuijpers et al., 2011; 2016). WHO publishes a group IPT manual for depression for low-resource settings (2016). PTSD: emerging evidence. One RCT found IPT was not meaningfully inferior to prolonged exposure (Markowitz et al., 2015). Adjustment problems: good theoretical fit through the role-transition focus, but trial evidence was not verified.",
+  "minutes": { "min": 45, "max": 60 },
+  "purpose": "A time-limited, structured therapy, usually about 12 to 16 weekly sessions, that links current mood symptoms to what is happening in the client's relationships and social roles. It then works on one or two focal problem areas: grief after a death, a dispute with an important person, a role transition, or social isolation and interpersonal sensitivity. Developed by Gerald Klerman and Myrna Weissman. Depression is framed as a common, treatable illness that is not the client's fault, which frees the client to focus on recovery. This entry is an overview to support planning and referral; it is not a protocol.",
+  "steps": [
+    "Confirm fit and training. IPT is best delivered by clinicians with IPT training and supervision; otherwise, refer to a trained provider (see the ISIPT and WHO resources).",
+    "Opening phase (overview): review symptoms and measure them (for example, PHQ-9). Explain depression as a common, treatable condition (the clinician decides any diagnosis). Map the client's important relationships, link the start or worsening of symptoms to life and relationship events, and agree on one or two focal problem areas.",
+    "Middle phase (overview): work on the chosen area. For grief, support mourning and rebuilding connections. For disputes, clarify each person's expectations and the options. For role transitions, acknowledge what was lost in the old role and build skills and supports for the new one. For isolation or sensitivity, reduce isolation and strengthen relationships.",
+    "Use IPT methods such as communication analysis (looking closely at a specific conversation), role play and exploring options, always tied to the client's real relationships between sessions.",
+    "Track symptoms each session and link changes in mood to what happened in relationships that week.",
+    "Closing phase (overview): review gains, talk about feelings about ending, name early warning signs, and plan for relapse prevention, including maintenance IPT when episodes recur."
+  ],
+  "script": [
+    "Depression is common and treatable, and it is not a sign of weakness. Right now it is making everything harder, so let's treat it as something that is happening to you, not something you are.",
+    "Let's look at the important people in your life: who you feel close to, who you clash with, and who you have lost touch with.",
+    "It sounds like your mood started sliding around the time you retired and lost your routine and your coworkers. Does that fit for you?",
+    "When you and your sister argue, what do you want her to understand? What happens when you tell her?",
+    "Let's practice. I'll play your sister. Try saying what you need in the way you would like to say it.",
+    "As we get close to our last sessions, let's look at what has changed and what you will do if the old feelings start to come back."
+  ],
+  "contraindications": [
+    "Full IPT requires training. Use these steps only as an overview, or refer to a trained provider.",
+    "Prolonged grief: a targeted grief treatment had a higher response rate than IPT in an RCT (Shear et al., 2005). For grief that stays intense and impairing well past what the client's culture expects, consider grief-focused therapy.",
+    "Not a stand-alone treatment for psychotic depression, bipolar disorder or very severe depressive episodes. Coordinate a medication evaluation and higher levels of care as needed.",
+    "Where there is intimate partner violence, do not encourage confrontation or joint sessions that could raise danger; prioritize safety planning and specialized services.",
+    "This intervention does not assess or decide risk. If suicidal thoughts, self-harm or risk to others come up, pause and follow your setting's risk-assessment and safety-planning procedures. Keep crisis options visible: 988 Suicide & Crisis Lifeline (US, call or text), the local emergency number, and findahelpline.com for other countries."
+  ],
+  "culturalAdaptations": [
+    "IPT has been adapted for many countries and settings, including WHO group IPT for low-resource settings. Use local, meaningful words for depression and for each problem area.",
+    "Define important relationships broadly. Extended family, elders, community and faith leaders, and chosen family may matter as much as a partner.",
+    "For disputes, explore cultural expectations about hierarchy, gender roles and open disagreement before practicing new ways of talking. The goal is the outcome the client wants, not a Western style of directness.",
+    "Role transitions often include migration, acculturation, caregiving, divorce or retirement. Acknowledge losses of language, status and community, as well as experiences of discrimination.",
+    "Use trained interpreters, and involve family members only with the client's consent."
+  ],
+  "faithIntegrated": {
+    "note": "When a faith community is part of the client's social world and the client wants it included, add clergy, congregation members or faith groups to the relationship map. Explore them as possible sources of support, conflict or role change (for example, a change in religious role after a move), in the client's own terms.",
+    "consentNote": "Offer only if the client raises faith or spirituality and asks to include it. Before starting, explain what a faith-integrated approach involves, that it is optional, that the same intervention is available without religious content, and that the client can change their mind at any time; document the client's informed consent. Follow the client's own tradition and words, and never introduce, impose, endorse or challenge beliefs (AACC Code of Ethics: consent before spiritual interventions, client-led integration; ACA Code of Ethics 2014, A.2 informed consent and A.4.b personal values)."
+  },
+  "trainingRequired": "IPT: formal training and supervised cases are recommended before delivering the full therapy (for example, ISIPT therapist certification lists at least 16 hours of introductory IPT training plus supervision). Steps here are overview-level only.",
+  "handoutIds": ["grief-and-loss", "assertive-communication"],
+  "sources": [
+    { "title": "Depression in adults: treatment and management (NG222)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng222", "year": 2022 },
+    { "title": "Depression in adults (NG222): rationale and impact", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng222/chapter/Rationale-and-impact", "year": 2022 },
+    { "title": "Psychological Treatments (treatment index)", "publisher": "APA Division 12, Society of Clinical Psychology", "url": "https://div12.org/psychological-treatments/treatments/" },
+    { "title": "Interpersonal psychotherapy for depression: a meta-analysis (Cuijpers et al.)", "publisher": "American Journal of Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/21362740/", "year": 2011 },
+    { "title": "Interpersonal psychotherapy for mental health problems: a comprehensive meta-analysis (Cuijpers et al.)", "publisher": "American Journal of Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/27032627/", "year": 2016 },
+    { "title": "Group Interpersonal Therapy (IPT) for Depression (WHO generic field-trial version 1.0)", "publisher": "World Health Organization", "url": "https://www.who.int/publications/i/item/group-interpersonal-therapy-for-depression", "year": 2016 },
+    { "title": "Is exposure necessary? A randomized clinical trial of interpersonal psychotherapy for PTSD (Markowitz et al.)", "publisher": "American Journal of Psychiatry", "url": "https://ajp.psychiatryonline.org/doi/10.1176/appi.ajp.2014.14070908", "year": 2015 },
+    { "title": "Treatment of complicated grief: a randomized controlled trial (Shear et al.)", "publisher": "JAMA", "url": "https://doi.org/10.1001/jama.293.21.2601", "year": 2005 },
+    { "title": "ISIPT therapist certification", "publisher": "International Society of Interpersonal Psychotherapy", "url": "https://interpersonalpsychotherapy.org/therapist-certification/" },
+    { "title": "AACC Code of Ethics", "publisher": "American Association of Christian Counselors", "url": "https://aacc.net/aacc-code-of-ethics/" },
+    { "title": "ACA Code of Ethics (2014) and ethics resources", "publisher": "American Counseling Association", "url": "https://www.counseling.org/resources/ethics", "year": 2014 }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

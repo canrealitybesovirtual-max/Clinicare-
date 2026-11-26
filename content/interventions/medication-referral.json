@@ -1,0 +1,81 @@
+{
+  "id": "medication-referral",
+  "name": "Medication referral (psychiatry, primary care or psychiatric nurse practitioner)",
+  "modality": "Care coordination - referral for medication evaluation",
+  "conditions": [
+    "panic-disorder",
+    "agoraphobia",
+    "generalized-anxiety-disorder",
+    "major-depressive-disorder",
+    "persistent-depressive-disorder",
+    "ptsd",
+    "social-anxiety-disorder",
+    "obsessive-compulsive-disorder",
+    "alcohol-use-disorder",
+    "insomnia-disorder"
+  ],
+  "evidenceLevel": "Guidelines include medication as an option, alone or with psychotherapy, for several conditions. Examples: NICE NG222 (depression; antidepressants are not routinely offered first-line for less severe depression unless the person prefers them); NICE CG113 (GAD and panic disorder); NICE CG159 (social anxiety, where antidepressants are usually less helpful than individual CBT); NICE CG31 (OCD, SSRIs for moderate or severe impairment); the 2025 APA PTSD guideline (suggests SSRIs or SNRIs); the APA 2018 alcohol pharmacotherapy guideline (naltrexone or acamprosate for moderate to severe AUD); and ACP 2016 with AASM (CBT-I first for chronic insomnia, with short-term medication considered if CBT-I is not enough). Decisions belong to the prescriber and the client.",
+  "minutes": { "min": 10, "max": 20 },
+  "purpose": "Helps the clinician recognize when a medication evaluation may help, explain options in plain language, and refer to a prescriber (psychiatrist, primary care clinician or psychiatric nurse practitioner) while therapy continues. This is clinician-facing, class-level medication education only. It gives no doses, no prescribing advice, and no advice to start, stop or change any medicine. Non-prescribing clinicians should stay within their scope of practice and coordinate with the prescriber, with the client's consent.",
+  "steps": [
+    "Consider a referral when symptoms are moderate to severe or not improving after an adequate trial of psychotherapy; when the client prefers medication or combined care; when daily functioning is badly affected; when there are signs of bipolar disorder, psychosis or a possible medical cause; when alcohol problems might respond to AUD medication; or when there are concerns about current medicines (side effects, interactions, pregnancy plans).",
+    "Ask about all current prescribed and over-the-counter medicines and supplements, and encourage the client to share the full list with the prescriber. Some herbal products (for example, St. John's wort) can interact dangerously with many medicines.",
+    "Antidepressants (for example, SSRIs and SNRIs), education only: used for depression, several anxiety disorders, PTSD and OCD. Benefits usually build over weeks, side effects often come first, and stopping suddenly can cause discontinuation symptoms. FDA boxed warnings cover increased suicidal thoughts and behavior in children, adolescents and young adults under 25, especially early in treatment or after dose changes.",
+    "Benzodiazepines, education only: sometimes prescribed short term for anxiety or sleep. Since 2020, FDA's boxed warning covers misuse, addiction, physical dependence and withdrawal reactions, and combining them with opioids or alcohol raises the risk of overdose. Taken before exposure practice, they can act as a safety signal; discuss timing with the prescriber rather than advising changes yourself.",
+    "Alcohol use disorder, education only: FDA-approved medications include naltrexone (oral and long-acting injectable), acamprosate and disulfiram. They are underused. Prescribers check liver and kidney function and current opioid use before choosing.",
+    "Insomnia, education only: CBT-I is first-line. Sleep medicines are generally considered short term when CBT-I is not enough or not available, with attention to next-day drowsiness and falls.",
+    "Make the referral: with consent, send a brief summary that uses only the minimum necessary information (main concerns, measure totals such as PHQ-9 or GAD-7, current treatment, and the question you want answered). Use NPPES or local directories to find psychiatrists, psychiatric NPs or primary care. For substance use, include the Part 2 notice on anything shared.",
+    "Follow up: confirm the appointment happened, ask about benefits and side effects, keep coordinating, and encourage the client to raise concerns with the prescriber rather than stopping on their own."
+  ],
+  "script": [
+    "Some people find that medicine, together with therapy, helps them feel better faster or more fully.",
+    "I don't prescribe medicine, but I can help you see someone who does: a psychiatrist, your primary care provider, or a psychiatric nurse practitioner.",
+    "Taking medicine is your choice. Seeing a prescriber just gives you more information.",
+    "Many of these medicines take a few weeks to help. Side effects often show up first and may ease with time.",
+    "Please don't stop or change a medicine on your own. Talk to your prescriber first, because stopping suddenly can cause problems.",
+    "Can you bring a list of everything you take, including vitamins and herbal products?",
+    "There are also medicines that can help people cut down or stop drinking. Would you like to ask about those?",
+    "Would it be okay if I shared a short summary with the prescriber?"
+  ],
+  "contraindications": [
+    "Scope of practice: non-prescribing clinicians must not recommend specific drugs, doses or changes. Give class-level information and refer.",
+    "Some situations need a same-day or emergency referral: suicidal thoughts with intent or a plan, psychosis, mania, severe withdrawal, suspected overdose, or a severe reaction to a medicine. This tool does not judge risk. Crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com.",
+    "Possible bipolar disorder (past mania or hypomania, or a strong family history): flag this to the prescriber, because antidepressants alone may raise the risk of switching into mania.",
+    "Pregnancy, breastfeeding or plans to conceive, older age, liver or kidney disease, and taking many medicines all change prescribing decisions. Flag them in the referral.",
+    "This entry is not drug information. Prescribers should use current labeling (for example, FDA labels) and guidelines.",
+    "Substance-use content: share only with written consent that meets 42 CFR Part 2 requirements, and do not enter identifying details into this tool; nothing is stored or sent. Any note or export about substance use must carry this notice: 42 CFR Part 2 prohibits unauthorized disclosure of these records."
+  ],
+  "culturalAdaptations": [
+    "Beliefs about psychiatric medicine vary (fear of addiction, stigma, preference for traditional or herbal remedies). Explore them without judgment, and ask about herbal products because of interaction risks.",
+    "Some communities have experienced coercive or discriminatory psychiatric care. Acknowledge mistrust, stress the client's choice, and help them find a prescriber they can trust, including language and gender preferences.",
+    "Cost, insurance and pharmacy access affect whether people can take medicine as planned. Point to low-cost options (for example, community health centers) and discuss costs openly.",
+    "Use professional interpreters for medication discussions, and make sure written instructions are in the client's preferred language."
+  ],
+  "faithIntegrated": {
+    "note": "If the client's faith community has views about medication, the client may wish to talk with a trusted faith leader, and the clinician can explore how the client sees medication fitting with their beliefs (for example, as one means of care). The client leads; the clinician neither endorses nor challenges religious views about treatment.",
+    "consentNote": "Offer only if the client raises faith or spirituality and asks to include it. Before starting, explain what the faith-integrated option involves, that it is optional, that the same intervention is available without religious content, and that the client can change their mind at any time; document informed consent. Follow the client's own tradition and words, and never introduce, impose, endorse or challenge beliefs (AACC Code of Ethics: informed consent before spiritual interventions, client-led integration; ACA Code of Ethics 2014, A.2 informed consent and A.4.b personal values)."
+  },
+  "handoutIds": [],
+  "sources": [
+    { "title": "Mental Health Medications (health topic)", "publisher": "National Institute of Mental Health", "url": "https://www.nimh.nih.gov/health/topics/mental-health-medications" },
+    { "title": "Depression in adults: treatment and management (NG222)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng222", "year": 2022 },
+    { "title": "Generalised anxiety disorder and panic disorder in adults: management (CG113)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/cg113", "year": 2011 },
+    { "title": "Social anxiety disorder: recognition, assessment and treatment (CG159)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/cg159", "year": 2013 },
+    { "title": "Obsessive-compulsive disorder and body dysmorphic disorder: treatment (CG31)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/cg31", "year": 2005 },
+    { "title": "Monitor on Psychology (July/August 2025): updated APA guidelines for treating PTSD and trauma", "publisher": "American Psychological Association", "url": "https://www.apa.org/monitor/2025/07-08/guidelines-treating-ptsd-trauma", "year": 2025 },
+    { "title": "The American Psychiatric Association practice guideline for the pharmacological treatment of patients with alcohol use disorder (Reus et al.; Focus reprint)", "publisher": "Focus (American Psychiatric Association Publishing)", "url": "https://doi.org/10.1176/appi.focus.17205", "year": 2018 },
+    { "title": "Medication for the Treatment of Alcohol Use Disorder: A Brief Guide (SMA15-4907)", "publisher": "Substance Abuse and Mental Health Services Administration", "url": "https://store.samhsa.gov/product/medication-treatment-alcohol-use-disorder-brief-guide/sma15-4907", "year": 2015 },
+    { "title": "Healthcare Professional's Core Resource on Alcohol", "publisher": "National Institute on Alcohol Abuse and Alcoholism", "url": "https://niaaa.nih.gov/health-professionals-communities/core-resource-on-alcohol" },
+    { "title": "Management of chronic insomnia disorder in adults: a clinical practice guideline from the American College of Physicians (Qaseem et al.)", "publisher": "Annals of Internal Medicine (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/27136449/", "year": 2016 },
+    { "title": "Combination treatment for chronic insomnia (guideline announcement)", "publisher": "American Academy of Sleep Medicine", "url": "https://aasm.org/combination-treatment-chronic-insomnia-guideline/", "year": 2026 },
+    { "title": "FDA requiring Boxed Warning updated to improve safe use of benzodiazepine drug class", "publisher": "US Food and Drug Administration", "url": "https://www.fda.gov/drugs/drug-safety-and-availability/fda-requiring-boxed-warning-updated-improve-safe-use-benzodiazepine-drug-class", "year": 2020 },
+    { "title": "Depression and Complementary Health Approaches: What the Science Says", "publisher": "National Center for Complementary and Integrative Health (NCCIH)", "url": "https://www.nccih.nih.gov/health/providers/digest/depression-and-complementary-health-approaches" },
+    { "title": "NPPES NPI Registry", "publisher": "Centers for Medicare and Medicaid Services", "url": "https://npiregistry.cms.hhs.gov/" },
+    { "title": "The HIPAA Privacy Rule and 42 CFR Part 2", "publisher": "US Department of Health and Human Services", "url": "https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/hipaa-part-2/index.html" },
+    { "title": "AACC Code of Ethics", "publisher": "American Association of Christian Counselors", "url": "https://aacc.net/aacc-code-of-ethics/" },
+    { "title": "ACA Code of Ethics (2014) and ethics resources", "publisher": "American Counseling Association", "url": "https://www.counseling.org/resources/ethics", "year": 2014 }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

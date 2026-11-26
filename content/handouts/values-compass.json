@@ -1,0 +1,94 @@
+{
+  "id": "values-compass",
+  "title": "Values Compass: What Matters to Me",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 20,
+  "intro": "Values are the things that matter most to you. They are about how you want to live and what kind of person you want to be. A value is like a direction on a compass. You never reach 'west,' but you can always take a step that way. A goal is different. A goal is something you can finish, like a class or a project. This sheet helps you name your values and pick small steps toward them. It takes about 20 minutes. There are no right or wrong answers.",
+  "sections": [
+    {
+      "heading": "Values, goals, and feelings",
+      "body": "A value is a direction, like 'being a caring parent' or 'being honest.' A goal is a stop along the way, like 'read to my child three nights this week.' Feelings come and go. You can take a step toward a value even when you feel tired, sad, or scared."
+    },
+    {
+      "heading": "Step 1: Look at the parts of your life",
+      "body": "Read the list below. Circle the 2 or 3 areas that matter most to you right now. You can add your own.",
+      "steps": [
+        "Family and the people I care for",
+        "Partner or close relationships",
+        "Friends and community",
+        "Work, school, or learning",
+        "Health and taking care of my body",
+        "Faith, spirit, or meaning, if that is part of your life",
+        "Fun, rest, and creative time",
+        "Helping others or making a difference"
+      ]
+    },
+    {
+      "heading": "Step 2: Ask yourself a few questions",
+      "steps": [
+        "When did I last feel most like myself? What was I doing?",
+        "How do I want to treat the people around me?",
+        "What would I keep doing, even if no one ever saw it?",
+        "What do I want to stand for?",
+        "If a trusted friend described me at my best, what would they say?"
+      ]
+    },
+    {
+      "heading": "Step 3: Put it into words",
+      "body": "For each area you circled, write a few words about the way you want to go. Use your own words. For example: 'Be a patient and fun dad.' 'Show up for my friends.' 'Treat my body with care.' Then check each one. Is this something I truly care about? Or is it a 'should' that someone else gave me? Your values are yours to choose."
+    },
+    {
+      "heading": "Step 4: Pick one small step",
+      "steps": [
+        "Choose one value to start with.",
+        "Pick one small action you can do this week. Make it so small that you can do it even on a hard day.",
+        "Decide when and where you will do it. For example: 'Text my sister on Sunday after lunch.'",
+        "Expect some hard feelings or 'I can't' thoughts. They can come along while you take the step.",
+        "Write what you did in the log below."
+      ]
+    },
+    {
+      "heading": "Tips",
+      "steps": [
+        "Values are not a test. A gap between your values and your life is not a failure. It shows you where to start.",
+        "Your values may be about your family or community, not just about you. That is okay.",
+        "Values can change over time. Look at this sheet again every few weeks.",
+        "Bring this sheet to your next visit. Your counselor can help you plan next steps."
+      ]
+    }
+  ],
+  "practiceLog": {
+    "columns": ["Day", "Value I moved toward", "What I did", "How it went"],
+    "rows": 7
+  },
+  "safetyNote": "Safety first: Thinking about what matters can bring up sadness, loss, or regret. That is normal. Go at your own pace, and talk about it with your counselor or therapist. If you start to feel hopeless, or have thoughts of death or of hurting yourself, do not wait for your next visit. Reach out now. In the US, call or text 988 or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sources": [
+    {
+      "title": "Acceptance and commitment therapy: model, processes and outcomes (Hayes, Luoma, Bond, Masuda & Lillis)",
+      "publisher": "Behaviour Research and Therapy (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16300724/",
+      "year": 2006
+    },
+    {
+      "title": "The impact of treatment components suggested by the psychological flexibility model: a meta-analysis of laboratory-based component studies (Levin et al.)",
+      "publisher": "Behavior Therapy (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23046777/",
+      "year": 2012
+    },
+    {
+      "title": "A meta-analysis of the efficacy of acceptance and commitment therapy for clinically relevant mental and physical health problems (A-Tjak et al.)",
+      "publisher": "Psychotherapy and Psychosomatics (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25547522/",
+      "year": 2015
+    },
+    {
+      "title": "988 Suicide & Crisis Lifeline",
+      "publisher": "988 Lifeline",
+      "url": "https://988lifeline.org"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

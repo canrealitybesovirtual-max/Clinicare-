@@ -1,0 +1,115 @@
+{
+  "id": "hard-moment-plan",
+  "title": "My Plan for Hard Moments",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 15,
+  "intro": "Sometimes feelings get so strong that it is hard to think. You may feel an urge to do something that could make things worse, like yelling, quitting, or shutting everyone out. This plan helps you get through those moments without making them worse. These skills do not fix the problem. They help you ride out the wave until you can think more clearly. Fill out this plan when you are calm. It takes about 15 minutes.",
+  "sections": [
+    {
+      "heading": "Know your signs",
+      "body": "What tells you a hard moment is building? Write a few signs on the lines below.",
+      "steps": [
+        "In my body, I notice: ________________________",
+        "In my thoughts, I notice: ________________________",
+        "I feel the urge to: ________________________"
+      ]
+    },
+    {
+      "heading": "Step 1: Pause",
+      "steps": [
+        "Stop. Do not act on the urge yet. Tell yourself, 'Wait. Not right now.'",
+        "Step back from the situation if you can. Leave the room, or put down what is in your hands.",
+        "Take one slow breath in and a longer breath out."
+      ]
+    },
+    {
+      "heading": "Step 2: Cool down your body",
+      "body": "Strong feelings live in the body. Calming your body first can help your mind catch up.",
+      "steps": [
+        "Splash cool water on your face, or hold a cold pack or ice wrapped in a cloth for a short time.",
+        "Breathe slowly. Make each breath out longer than the breath in.",
+        "Move hard for a few minutes, like a fast walk, stairs, or jumping jacks, if your body allows.",
+        "Squeeze your hands into fists or tense your shoulders. Hold for 5 seconds, then let go."
+      ]
+    },
+    {
+      "heading": "Step 3: Shift your focus",
+      "steps": [
+        "Do something that takes your full attention, like a puzzle, a game, cooking, or cleaning.",
+        "Count backward from 100 by 7s, or name everything in the room that is blue.",
+        "Call or text someone and talk about something else.",
+        "Help someone else with a small task."
+      ]
+    },
+    {
+      "heading": "Step 4: Comfort your senses",
+      "body": "Find small comforts for each sense. Pick ones that are safe and free or low-cost.",
+      "steps": [
+        "See: look at photos you love, or watch the sky.",
+        "Hear: play music that calms you, or listen to the rain.",
+        "Smell: soap, coffee, a flower, or a lotion you like.",
+        "Taste: sip some tea, or eat something slowly.",
+        "Touch: a soft blanket, a warm shower, or petting an animal."
+      ]
+    },
+    {
+      "heading": "Step 5: Think it through before you act",
+      "steps": [
+        "When you are calm, write what happens when you act on the urge. What happens right away? What happens later?",
+        "Then write what happens when you ride it out. What happens right away? What happens later?",
+        "Read what you wrote in a hard moment. It can remind you why waiting is worth it."
+      ]
+    },
+    {
+      "heading": "Step 6: Reach out",
+      "steps": [
+        "A person I can call or text: ________________________",
+        "A place I can go to be around others: ________________________",
+        "My counselor or therapist: ________________________"
+      ]
+    },
+    {
+      "heading": "Tips",
+      "steps": [
+        "Practice these skills when you are a little upset, not just in a crisis. Then they will come more easily when you need them.",
+        "Cold water and hard exercise change your heart rate. Ask your doctor first if you have a heart problem, an eating problem, or other health concerns, or if you are pregnant. Until then, use gentler options.",
+        "These skills are for short-term relief. If you find yourself using them to avoid all hard feelings, talk with your counselor.",
+        "Keep this plan where you can find it fast, like in your bag or by your bed.",
+        "If you have thoughts of suicide or of hurting yourself, use your safety plan and reach out for help right away."
+      ]
+    }
+  ],
+  "practiceLog": {
+    "columns": ["Day", "What set it off", "Upset before (0-10)", "What I tried", "Upset after (0-10)"],
+    "rows": 6
+  },
+  "safetyNote": "Safety first: This plan helps with strong feelings and urges. It is not enough on its own if you are thinking about suicide or might hurt yourself or someone else. If that happens, use your safety plan and get help now. In the US, call or text 988 or call 911. In other countries, call your local emergency number or visit findahelpline.com. If someone is hurting you, get to a safe place first. Resource only. This sheet does not replace care from a licensed professional.",
+  "sources": [
+    {
+      "title": "DBT Skills Training Manual, Second Edition (Linehan)",
+      "publisher": "Guilford Press",
+      "url": "https://www.guilford.com/books/DBT-Skills-Training-Manual/Marsha-Linehan/9781462516995",
+      "year": 2015
+    },
+    {
+      "title": "The use of dialectical behavior therapy skills training as stand-alone treatment: a systematic review of the treatment outcome literature (Valentine et al.)",
+      "publisher": "Journal of Clinical Psychology (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25042066/",
+      "year": 2015
+    },
+    {
+      "title": "988 Suicide & Crisis Lifeline",
+      "publisher": "988 Lifeline",
+      "url": "https://988lifeline.org"
+    },
+    {
+      "title": "Find A Helpline (international directory)",
+      "publisher": "Find A Helpline",
+      "url": "https://findahelpline.com"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

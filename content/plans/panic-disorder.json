@@ -1,0 +1,101 @@
+{
+  "conditionId": "panic-disorder",
+  "problems": [
+    {
+      "id": "panic-fear-of-body-sensations",
+      "label": "Sudden panic episodes and frightening readings of body sensations",
+      "definitions": [
+        "Reports or logs episodes in which fear and body sensations (for example a pounding heart, breathlessness or dizziness) spike quickly and then ease, with some episodes having no obvious trigger.",
+        "Names specific worst-case predictions during these episodes, such as 'my heart is giving out', 'I am about to faint' or 'I can't get enough air'.",
+        "Has gone to an emergency department or urgent care for episodes, or keeps checking pulse, blood pressure or symptoms online even after normal medical results.",
+        "Spends part of most days bracing for the next episode and scanning the body for early signs of one."
+      ],
+      "longTermGoals": [
+        "The client treats a racing heart, light-headedness and similar sensations as unpleasant but harmless, and panic episodes come less often and feel far less threatening.",
+        "The client spends little of the day bracing for the next attack and feels confident riding one out if it happens."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "pd-medical-review",
+          "text": "Within the first 4 weeks, and before any sensation-provoking practice begins, the client and clinician confirm that a medical provider has reviewed possible heart, thyroid, breathing and medication causes of the sensations, and note any limits the provider sets.",
+          "interventionIds": []
+        },
+        {
+          "id": "pd-episode-log",
+          "text": "For the next 3 weeks, write down each panic episode within a few hours of it, noting where it happened, the first sensation noticed, the scariest thought with a belief rating (0-100) and what was done to cope.",
+          "interventionIds": ["thought-record", "catastrophic-misinterpretation-restructuring"]
+        },
+        {
+          "id": "pd-cycle-walkthrough",
+          "text": "By session 3, use one recent episode to explain in their own words how a body sensation, a frightening interpretation of it and rising alarm can feed each other in a loop.",
+          "interventionIds": ["catastrophic-misinterpretation-restructuring"]
+        },
+        {
+          "id": "pd-prediction-review",
+          "text": "Over weeks 3 to 8, complete at least 2 written reviews per week of a catastrophic prediction (evidence for it, evidence against it, a more balanced explanation), aiming for belief in the main feared outcome to fall to half of its starting rating or lower.",
+          "interventionIds": ["catastrophic-misinterpretation-restructuring", "thought-record"]
+        },
+        {
+          "id": "pd-sensation-practice",
+          "text": "After medical clearance, practice at least 3 sensation-provoking exercises chosen with the clinician (for example spinning in a chair, breathing through a thin straw or jogging in place) on at least 5 days a week for 4 weeks, recording fear (0-10), what was predicted and what actually happened after each trial.",
+          "interventionIds": ["interoceptive-exposure"]
+        },
+        {
+          "id": "pd-gad7-tracking",
+          "text": "Complete the GAD-7 at the start of treatment and every 2 to 4 weeks after that. Because it tracks general anxiety rather than panic frequency, review the scores alongside the episode log, and revisit the plan together if neither has improved across 2 check-ins in a row.",
+          "interventionIds": []
+        }
+      ],
+      "measureIds": ["gad-7"]
+    },
+    {
+      "id": "panic-protective-habits",
+      "label": "Protective habits and dropped activities that keep panic fears going",
+      "definitions": [
+        "Keeps items close for a sense of safety (for example a water bottle, as-needed medication or a fully charged phone) and becomes very distressed when one is missing.",
+        "Avoids or cuts short anything that speeds up heart rate or breathing, such as exercise, stairs, hot showers, caffeine, sex or strong emotions.",
+        "Uses quiet coping moves when sensations start, such as sitting down at once, gripping a rail, forcing slow breathing to make the feeling stop or heavy distraction, and credits these moves with preventing disaster.",
+        "Has given up or limited at least one valued activity, such as driving, the gym, a work task or social plans, since the episodes began."
+      ],
+      "longTermGoals": [
+        "The client lets panic-related sensations rise and settle on their own without protective habits, and has taken back the activities that were dropped because of panic."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "pd-habit-inventory",
+          "text": "Within 2 weeks, build a written list with the clinician of every protective habit and avoided activity tied to panic, rating how necessary each one feels (0-100).",
+          "interventionIds": ["safety-behavior-reduction"]
+        },
+        {
+          "id": "pd-habit-fading",
+          "text": "Over weeks 4 to 10, drop or delay at least 1 listed protective habit per week during planned practice, writing down the predicted outcome beforehand and the actual outcome afterward.",
+          "interventionIds": ["safety-behavior-reduction", "interoceptive-exposure"]
+        },
+        {
+          "id": "pd-activity-return",
+          "text": "By week 10, take back at least 2 activities that had been avoided because they stir up body sensations (for example a brisk walk or a cup of coffee, if medically safe), doing each one at least twice a week.",
+          "interventionIds": ["graded-in-vivo-exposure", "interoceptive-exposure"]
+        },
+        {
+          "id": "pd-setback-plan",
+          "text": "In the last 2 sessions, write a personal setback plan that lists at least 3 early warning signs, the 3 skills that helped most and the point at which to book a booster session.",
+          "interventionIds": ["catastrophic-misinterpretation-restructuring", "interoceptive-exposure", "safety-behavior-reduction"]
+        }
+      ],
+      "measureIds": ["gad-7"]
+    }
+  ],
+  "collaborativeNote": "These are starting points for clinician review, not a finished plan. Rewrite each problem, goal and objective with the client in their own words, check that the numbers and timelines feel realistic to them, and record their agreement before anything is added to the plan. Confirm medical clearance before any sensation-provoking practice. Swap the examples for ones that fit the client's culture, faith, body and daily life. Do not add names or other identifying details. Resource only. Not a substitute for clinical judgment.",
+  "sources": [
+    { "title": "Generalised anxiety disorder and panic disorder in adults: management (CG113)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/cg113", "year": 2011 },
+    { "title": "Diagnosis: Panic Disorder (psychological treatments listing)", "publisher": "APA Division 12, Society of Clinical Psychology", "url": "https://div12.org/?p=8120" },
+    { "title": "Panic Disorder: When Fear Overwhelms", "publisher": "National Institute of Mental Health", "url": "https://www.nimh.nih.gov/health/publications/panic-disorder-when-fear-overwhelms" },
+    { "title": "A Tipping Point for Measurement-Based Care (Fortney et al.)", "publisher": "Psychiatric Services; reprinted in Focus (PubMed Central)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6996080/", "year": 2017 },
+    { "title": "Implementing Measurement-Based Care in Behavioral Health: A Review (Lewis et al.)", "publisher": "JAMA Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/30566197/", "year": 2019 },
+    { "title": "Shared decision making (NG197)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng197", "year": 2021 },
+    { "title": "PHQ and GAD-7 screeners (reproduction terms)", "publisher": "Pfizer / PHQ Screeners", "url": "https://www.phqscreeners.com" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

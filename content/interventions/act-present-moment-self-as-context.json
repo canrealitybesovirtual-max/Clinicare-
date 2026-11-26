@@ -1,0 +1,64 @@
+{
+  "id": "act-present-moment-self-as-context",
+  "name": "ACT: Present-moment awareness and self-as-context",
+  "modality": "Acceptance and Commitment Therapy (ACT)",
+  "conditions": [
+    "generalized-anxiety-disorder",
+    "major-depressive-disorder",
+    "ptsd"
+  ],
+  "evidenceLevel": "Emerging evidence as stand-alone components; moderate evidence for ACT as a package. In a meta-analysis of 66 laboratory component studies, present-moment components outperformed inactive comparisons on targeted outcomes, while self-as-context was not among the components with significant effects (Levin et al., 2012), so it has the thinnest direct support of the ACT processes. Full ACT outperforms waitlist and usual care and is broadly comparable to CBT (A-Tjak et al., 2015; Gloster et al., 2020). The 2023 VA/DoD PTSD guideline found insufficient evidence for or against ACT as a PTSD treatment. APA Division 12 rating not verified this session; check div12.org.",
+  "minutes": { "min": 10, "max": 25 },
+  "purpose": "Present-moment work trains flexible attention to what is happening now (sounds, sensations, the task at hand, the person in front of you) instead of being pulled into worry about the future or rumination about the past. Self-as-context helps the client experience a steady observing perspective from which thoughts, feelings, memories and self-labels can be noticed, so the client is not reduced to any single story ('I am damaged', 'I am my diagnosis'). Fit across presentations: Anxiety - interrupts future-focused worry and, in social anxiety, shifts self-focused attention outward to the task and the people present. Depression - interrupts rumination and loosens rigid self-concepts. Trauma - brief, eyes-open, externally anchored practice can reduce being pulled into memories, and the observer stance can soften identity-level shame. Substance use - noticing triggers and urges early, from an observer stance, before use becomes automatic. Grief - helps the client hold memories of the person who died alongside present life. Theoretical grounding: ACT (Hayes, Strosahl & Wilson).",
+  "steps": [
+    "Start with a brief anchoring practice (1-3 minutes) using outside senses first, such as sounds in the room or feet on the floor. Move to the breath only if the client finds that comfortable.",
+    "Teach noticing and returning: the mind will wander, and each return of attention is the actual practice, not a failure.",
+    "Carry it into daily life: choose one routine activity (washing dishes, walking to the bus, a cup of tea) to do with full attention once a day.",
+    "Introduce self-as-context experientially: invite the client to recall themselves at a younger age, in a hard year, and today, and to notice that the same 'you' was there noticing each time, even though thoughts, feelings and body changed.",
+    "Offer a perspective image and invite the client's own, such as the sky that holds every kind of weather, or a house where many visitors come and go.",
+    "Work with self-labels: write two or three 'I am...' labels on cards and practice relating to them as thoughts ('I am having the thought that I am...').",
+    "Debrief: what did the client notice, did anything feel uncomfortable, and how could they use this during the week? The mindful-check-in and grounding-5-4-3-2-1 handouts support home practice."
+  ],
+  "script": [
+    "For the next minute, let's just notice three sounds, in this room or outside. No need to judge them. Just notice.",
+    "Your mind will wander. That's what minds do. Each time you notice it has wandered and you gently come back, that's the exercise working.",
+    "Think about yourself as a child, then during a hard year, then today. Your body, your thoughts and your feelings have all changed. But there's a part of you that has been there, noticing, the whole time.",
+    "That noticing part of you is bigger than any one feeling or label. The sadness is in you, but it isn't all of you.",
+    "This week, pick one ordinary thing, like brushing your teeth, and do it as if it were the first time you'd ever done it."
+  ],
+  "contraindications": [
+    "Inward, eyes-closed attention can trigger flashbacks, panic or dissociation in some clients. Start with eyes open and outside anchors, keep practice short, and remind the client they can stop at any time.",
+    "Self-as-context exercises can feel confusing or destabilizing for clients with depersonalization, dissociative symptoms, psychosis or current mania. Keep language concrete, or skip this component and consult.",
+    "Do not use present-moment practice to sidestep needed problem-solving or safety planning. If suicidal thoughts arise, follow your risk protocol and keep 988 in the US (call or text), the local emergency number and findahelpline.com visible. The clinician, not this tool, judges risk.",
+    "Substance-use care: screen for withdrawal risk (alcohol or benzodiazepine withdrawal needs medical referral), coordinate with SUD treatment, and keep notes and handouts free of identifying details. 42 CFR Part 2 prohibits unauthorized disclosure of these records."
+  ],
+  "culturalAdaptations": [
+    "Many traditions have their own attention practices. Ask what the client already does (prayer, chanting, walking, crafts, music) and build on it.",
+    "Ideas of the self vary. In more interdependent cultures the self is experienced through relationships and roles; adapt self-as-context to 'the you that shows up across all your roles and relationships'.",
+    "Some clients link mindfulness to a religion that is not their own. Offer secular framing and explain that attention training is used in many traditions and in mainstream health care.",
+    "Clients in crowded, noisy or unsafe housing may not have a quiet place. Short practices woven into routine tasks often work better than formal sitting.",
+    "Culturally adapted psychotherapies tend to outperform unadapted versions (Hall et al., 2016); adapt images and language to the client."
+  ],
+  "faithIntegrated": {
+    "note": "Clients who wish to may anchor present-moment practice in a familiar spiritual form, such as a brief prayer of attention, a repeated sacred word, a moment of thanksgiving, or mindful attention during a religious ritual. Some clients may also relate the observing self to their tradition's understanding of the soul or spirit. The client decides; the clinician does not introduce, interpret or rank religious practices.",
+    "consentNote": "Before any faith-integrated variant, explain its purpose and alternatives, confirm the client's right to decline or stop at any time, and document informed consent (AACC Code of Ethics; ACA Code of Ethics). Faith integration is client-led. Never impose beliefs or suggest that distress reflects weak faith."
+  },
+  "handoutIds": ["mindful-check-in", "grounding-5-4-3-2-1"],
+  "sources": [
+    { "title": "Acceptance and Commitment Therapy, Second Edition: The Process and Practice of Mindful Change (Hayes, Strosahl & Wilson)", "publisher": "Guilford Press", "url": "https://www.guilford.com/books/Acceptance-and-Commitment-Therapy/Hayes-Strosahl-Wilson/9781462528943", "year": 2012 },
+    { "title": "Acceptance and commitment therapy: model, processes and outcomes (Hayes, Luoma, Bond, Masuda & Lillis)", "publisher": "Behaviour Research and Therapy (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/16300724/", "year": 2006 },
+    { "title": "The impact of treatment components suggested by the psychological flexibility model: a meta-analysis of laboratory-based component studies (Levin et al.)", "publisher": "Behavior Therapy (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/23046777/", "year": 2012 },
+    { "title": "A meta-analysis of the efficacy of acceptance and commitment therapy for clinically relevant mental and physical health problems (A-Tjak et al.)", "publisher": "Psychotherapy and Psychosomatics (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/25547522/", "year": 2015 },
+    { "title": "The empirical status of acceptance and commitment therapy: a review of meta-analyses (Gloster et al.)", "publisher": "Journal of Contextual Behavioral Science", "url": "https://doi.org/10.1016/j.jcbs.2020.09.009", "year": 2020 },
+    { "title": "Clinician summary of the 2023 VA/DoD PTSD clinical practice guideline", "publisher": "Focus (American Psychiatric Association Publishing)", "url": "https://focus.psychiatryonline.org/doi/10.1176/appi.focus.16408" },
+    { "title": "Psychological Treatments (treatment index)", "publisher": "APA Division 12, Society of Clinical Psychology", "url": "https://div12.org/psychological-treatments/treatments/" },
+    { "title": "A meta-analysis of cultural adaptations of psychological interventions (Hall et al.)", "publisher": "Behavior Therapy (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/27993346/", "year": 2016 },
+    { "title": "AACC Code of Ethics", "publisher": "American Association of Christian Counselors", "url": "https://aacc.net/aacc-code-of-ethics/" },
+    { "title": "The HIPAA Privacy Rule and 42 CFR Part 2", "publisher": "US Department of Health and Human Services", "url": "https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/hipaa-part-2/index.html" },
+    { "title": "988 Suicide & Crisis Lifeline", "publisher": "988 Lifeline", "url": "https://988lifeline.org" },
+    { "title": "Find A Helpline (international directory)", "publisher": "Find A Helpline", "url": "https://findahelpline.com" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

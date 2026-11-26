@@ -18,7 +18,8 @@
     { "symptomId": "irritability", "kind": "associated", "weight": 2 },
     { "symptomId": "muscle-tension", "kind": "associated", "weight": 2 },
     { "symptomId": "insomnia", "kind": "associated", "weight": 2 },
-    { "symptomId": "nausea-abdominal-distress", "kind": "associated", "weight": 1 }
+    { "symptomId": "nausea-abdominal-distress", "kind": "associated", "weight": 1 },
+    { "symptomId": "subjective-anxiety-stress", "kind": "associated", "weight": 1 }
   ],
   "minCore": 2,
   "durationGate": {

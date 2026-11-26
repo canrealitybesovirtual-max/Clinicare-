@@ -1,0 +1,55 @@
+{
+  "id": "written-exposure-therapy",
+  "name": "Written exposure therapy (WET) - overview and referral",
+  "modality": "Trauma-focused exposure therapy (brief manualized protocol)",
+  "conditions": ["ptsd"],
+  "evidenceLevel": "The VA/DoD 2023 PTSD guideline suggests WET (a 'weak for' recommendation, together with Ehlers' cognitive therapy for PTSD and present-centered therapy), one tier below its recommendations for CPT, PE and EMDR. Guideline developers attributed the lower tier mainly to the smaller number of trials. In randomized noninferiority trials, five sessions of WET were noninferior to 12 sessions of CPT (Sloan et al., 2018) and to PE in veterans (Sloan et al., 2023), with lower dropout in both (6% vs 39% against CPT; about 13% vs 36% against PE). Check the 2025 APA PTSD guideline for its current rating of WET.",
+  "minutes": { "min": 10, "max": 20 },
+  "purpose": "WET is a brief, manualized trauma-focused therapy developed by Denise Sloan and Brian Marx. Over about five weekly sessions, the client writes about the trauma memory, including thoughts and feelings, in timed writing periods that follow standardized instructions, with short clinician check-ins. There is little homework between sessions. Its brevity and low dropout make it an option for clients who prefer a shorter treatment. This library entry covers overview and referral only, and the time estimate is for that conversation. It deliberately contains no protocol instructions or writing prompts. Deliver WET only after formal training.",
+  "steps": [
+    "Give brief, plain-language psychoeducation about how avoiding trauma memories keeps PTSD going, and introduce WET as one evidence-based option.",
+    "Explain what to expect in general terms: about five weekly sessions of roughly an hour, writing about the memory in session with the therapist's guidance, and little homework.",
+    "Compare options with the client (WET, cognitive processing therapy, prolonged exposure, EMDR, other trauma-focused CBT, referral for medication evaluation) and support an informed choice. Note that CPT, PE and EMDR carry stronger guideline recommendations.",
+    "Screen for issues that affect timing or level of care: current safety, suicide risk, severe dissociation, psychosis and substance problems. Address urgent needs first. Do not record substance-use details in this app.",
+    "If you are not trained in WET, refer to a WET-trained clinician (for example, through VA or Military Health System trauma services or community clinicians who completed a recognized WET workshop). Share information with the receiving clinician only with the client's consent.",
+    "Offer interim support while the client waits (sleep basics, grounding, safety planning) without starting trauma writing.",
+    "Follow up to confirm that the referral was completed and the client was able to start."
+  ],
+  "script": [
+    "There is a short treatment called written exposure therapy, or WET. It helps many people after trauma.",
+    "In WET, you write about what happened, during the session, for a set amount of time. A trained therapist guides you.",
+    "Writing about it can be hard at first. But avoiding the memory keeps the fear strong. Facing it, in a safe way, helps it lose its grip.",
+    "It is usually about five sessions, with very little homework.",
+    "WET must be done by a therapist with special training. I can help you find one.",
+    "You can take time to decide. We can also talk about other options."
+  ],
+  "contraindications": [
+    "Current safety threats (ongoing abuse, imminent suicide risk) need attention first. Crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com. This tool does not judge risk.",
+    "Active psychosis, an elevated mood state, or severe substance problems may need stabilization or integrated care first. The VA/DoD 2023 guideline states that co-occurring conditions, including substance use disorders, should not by themselves prevent access to recommended or suggested PTSD treatment. Decide timing with a trained clinician.",
+    "Clients with limited literacy, writing difficulties, vision problems or a strong preference for talking may be better served by another therapy. Discuss options with a trained provider.",
+    "Do not improvise trauma-writing assignments (for example, asking a client to write about the trauma at home) as a substitute for WET. Unguided exposure can raise distress and lead to dropout.",
+    "Written trauma accounts are highly sensitive. The provider must explain how they are kept and destroyed. This app stores nothing."
+  ],
+  "culturalAdaptations": [
+    "Ask about the language the client prefers to write in, and whether a provider can deliver WET in that language.",
+    "Writing about trauma may feel unsafe if others at home could find the pages, or if disclosure carries risks of shame, family honor or legal problems. Ask the provider how materials are protected.",
+    "For clients from oral traditions, or who prefer telling their story aloud, narrative exposure therapy or other talking-based options may fit better.",
+    "Clients may prefer a clinician of a particular gender or background, especially after sexual violence. Include this preference in the referral."
+  ],
+  "trainingRequired": "WET: trained clinicians only. Deliver only after completing a recognized WET training workshop with case consultation. Otherwise refer.",
+  "handoutIds": [],
+  "sources": [
+    { "title": "VA/DoD Clinical Practice Guideline for Management of PTSD and Acute Stress Disorder: provider summary", "publisher": "US Department of Veterans Affairs and Department of Defense", "url": "https://www.healthquality.va.gov/guidelines/MH/ptsd/VA-DoD-CPG-PTSD-Provider-Summary.pdf", "year": 2023 },
+    { "title": "The management of posttraumatic stress disorder and acute stress disorder: synopsis of the 2023 VA/DoD clinical practice guideline", "publisher": "Annals of Internal Medicine (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/38408360/", "year": 2024 },
+    { "title": "Using the 2023 VA/DoD clinical practice guideline for management of posttraumatic stress disorder and acute stress disorder", "publisher": "International Society for Traumatic Stress Studies", "url": "https://istss.org/using-the-2023-va-dod-clinical-practice-guideline-for-management-of-posttraumatic-stress-disorder-and-acute-stress-disorder-ariel-j-lang-jessica-l-hamblen-paul-holtzheimer-ursula-kelly-sonya-b/" },
+    { "title": "A brief exposure-based treatment vs cognitive processing therapy for posttraumatic stress disorder: a randomized noninferiority clinical trial (Sloan, Marx, Lee and Resick)", "publisher": "JAMA Psychiatry", "url": "https://jamanetwork.com/journals/jamapsychiatry/fullarticle/2669771", "year": 2018 },
+    { "title": "Written exposure therapy vs prolonged exposure therapy in the treatment of posttraumatic stress disorder: a randomized clinical trial (Sloan et al.)", "publisher": "JAMA Psychiatry (DOI)", "url": "https://doi.org/10.1001/jamapsychiatry.2023.2810", "year": 2023 },
+    { "title": "A shorter but effective treatment for PTSD (science news)", "publisher": "National Institute of Mental Health", "url": "https://www.nimh.nih.gov/news/science-news/2018/a-shorter-but-effective-treatment-for-ptsd", "year": 2018 },
+    { "title": "Psychotherapy for PTSD", "publisher": "Military Health System", "url": "https://health.mil/Reference-Center/Publications/2024/01/04/Psychotherapy-for-PTSD", "year": 2024 },
+    { "title": "Monitor on Psychology (July/August 2025): updated APA guidelines for treating PTSD and trauma", "publisher": "American Psychological Association", "url": "https://www.apa.org/monitor/2025/07-08/guidelines-treating-ptsd-trauma", "year": 2025 },
+    { "title": "Post-Traumatic Stress Disorder (health topic)", "publisher": "National Institute of Mental Health", "url": "https://www.nimh.nih.gov/health/topics/post-traumatic-stress-disorder-ptsd" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

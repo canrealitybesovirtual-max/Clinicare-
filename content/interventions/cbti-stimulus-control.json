@@ -1,0 +1,62 @@
+{
+  "id": "cbti-stimulus-control",
+  "name": "CBT-I: Stimulus control",
+  "modality": "CBT for insomnia (CBT-I) - behavioral component",
+  "conditions": ["insomnia-disorder", "major-depressive-disorder", "generalized-anxiety-disorder", "ptsd"],
+  "evidenceLevel": "The AASM 2021 guideline strongly recommends multicomponent CBT-I for chronic insomnia in adults and gives stimulus control a conditional recommendation as a single-component therapy (Edinger et al., 2021). The American College of Physicians (2016) recommends CBT-I as the initial treatment for chronic insomnia disorder (strong recommendation, moderate-quality evidence). The 2025 VA/DoD guideline on chronic insomnia and obstructive sleep apnea recommends offering CBT-I. Stimulus control works best as part of full CBT-I.",
+  "minutes": { "min": 20, "max": 40 },
+  "purpose": "Stimulus control, first described by Richard Bootzin, aims to re-link the bed and bedroom with feeling sleepy and sleeping, rather than with lying awake, worrying and frustration. The client uses the bed only for sleep and sex, goes to bed only when sleepy, gets up and does something quiet in dim light when unable to sleep instead of lying awake, returns only when sleepy, keeps the same wake-up time every day, and avoids daytime naps (or keeps them short and early, if agreed). It is usually combined with sleep restriction, cognitive strategies and sleep education in CBT-I. Insomnia often continues alongside depression, anxiety and PTSD and can be treated directly.",
+  "steps": [
+    "Assess first: screen for other sleep disorders that need medical evaluation (loud snoring, witnessed breathing pauses or gasping, restless legs, irregular body-clock patterns, acting out dreams), plus medical and medication causes, substance use and mood. Refer for sleep medicine evaluation when indicated.",
+    "Collect 1 to 2 weeks of sleep diary data on the sleep-diary handout before changing anything.",
+    "Explain the rationale: lying awake in bed teaches the brain that bed is a place for being awake. Changing what happens in bed retrains that link.",
+    "Agree on the instructions with the client: the same rise time 7 days a week; bed only when sleepy (not just tired); bed for sleep and sex only (no screens, work, eating or worrying in bed); if not asleep after what feels like about 15 to 20 minutes, or awake in the night and not drifting off, get up and go to another room or space for a quiet, low-light activity, then return when sleepy, repeating as needed; and avoid or limit daytime naps.",
+    "Problem-solve barriers: shared rooms or small homes (use a chair in a corner or another spot), cold rooms, caregiving, pain, nighttime safety and fall risk, and what to do when out of bed (plan calm, non-screen options ahead of time).",
+    "Advise against clock-watching; turn clocks away from view.",
+    "Review the diary weekly. Explain that sleep may get a little worse before it improves, and reinforce consistency, especially the fixed rise time.",
+    "Combine with other CBT-I components (sleep restriction, cognitive work on sleep worries, relaxation) and the sleep-habits handout, or refer to a CBT-I-trained provider or a digital CBT-I program."
+  ],
+  "script": [
+    "When you lie awake in bed night after night, your brain starts to link bed with being awake.",
+    "We want to teach your brain again that bed means sleep.",
+    "Go to bed only when you feel sleepy, when your eyes feel heavy and your head starts to nod.",
+    "If you can't sleep, don't stay in bed fighting it. Get up, go somewhere calm with low light, and do something quiet. Come back when you feel sleepy.",
+    "Get up at the same time every morning, even on weekends and even after a bad night.",
+    "Use the bed only for sleep and sex. Do your phone, TV, work and worrying somewhere else.",
+    "Turn the clock so you can't see it. Watching the time keeps you awake.",
+    "The first week or two can be hard. Stick with it. It usually gets better."
+  ],
+  "contraindications": [
+    "Getting up at night can raise fall risk (older adults, sedating medicines, low vision, mobility problems). Plan safe lighting and paths, or use a chair beside the bed instead of leaving the room.",
+    "Stimulus control does not treat sleep apnea, restless legs, narcolepsy, body-clock disorders or parasomnias. Refer suspected cases for medical evaluation.",
+    "Time out of bed can briefly reduce sleep. In bipolar disorder or with a history of mania, sleep loss can trigger mood episodes; coordinate with the prescriber and monitor closely. In seizure disorders, coordinate with the medical provider.",
+    "Daytime sleepiness can rise early in treatment. Advise caution with driving and safety-sensitive work.",
+    "Do not stop or change sleep medicines without the prescriber. Plan any taper with them.",
+    "If insomnia comes with depression or trauma symptoms and suicidal thoughts, address safety first. This tool does not judge risk. Crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com."
+  ],
+  "culturalAdaptations": [
+    "Sharing a bed or room with family is common in many cultures and households. Adapt 'leave the bedroom' to 'leave the bed', and find a quiet spot that fits the home.",
+    "Shift work, more than one job, caregiving, and religious practices such as night prayer or fasting periods (for example, Ramadan) affect sleep schedules. Build the fixed rise time around the client's real life.",
+    "Beliefs about rest differ (for example, the value of an afternoon rest). Discuss naps respectfully and agree on a plan together.",
+    "Housing insecurity, noise and unsafe neighborhoods can limit options. Problem-solve with the client rather than assuming a private bedroom."
+  ],
+  "faithIntegrated": {
+    "note": "If the client wishes, a short prayer, reading or devotional practice can be part of the calm out-of-bed activity or the wind-down routine, chosen by the client. If night prayer is part of the client's practice, build it into the sleep schedule rather than treating it as a problem.",
+    "consentNote": "Offer only if the client raises faith or spirituality and asks to include it. Before starting, explain what the faith-integrated option involves, that it is optional, that the same intervention is available without religious content, and that the client can change their mind at any time; document informed consent. Follow the client's own tradition and words, and never introduce, impose, endorse or challenge beliefs (AACC Code of Ethics: informed consent before spiritual interventions, client-led integration; ACA Code of Ethics 2014, A.2 informed consent and A.4.b personal values)."
+  },
+  "handoutIds": ["sleep-diary", "sleep-habits"],
+  "sources": [
+    { "title": "Behavioral and psychological treatments for chronic insomnia disorder in adults: an American Academy of Sleep Medicine clinical practice guideline (Edinger et al.)", "publisher": "Journal of Clinical Sleep Medicine (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/33164742/", "year": 2021 },
+    { "title": "Behavioral and psychological treatments for chronic insomnia disorder in adults: an AASM systematic review, meta-analysis and GRADE assessment", "publisher": "Journal of Clinical Sleep Medicine (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/33164741/", "year": 2021 },
+    { "title": "New guideline supports behavioral and psychological treatments for insomnia", "publisher": "American Academy of Sleep Medicine", "url": "https://aasm.org/new-guideline-supports-behavioral-psychological-treatments-for-insomnia/", "year": 2021 },
+    { "title": "Behavioral and Psychological Treatments for Insomnia: patient guide", "publisher": "American Academy of Sleep Medicine", "url": "https://aasm.org/wp-content/uploads/2021/08/Behavioral-and-Psychological-Treatments-for-Insomnia-Patient-Guide.pdf", "year": 2021 },
+    { "title": "Management of chronic insomnia disorder in adults: a clinical practice guideline from the American College of Physicians (Qaseem et al.)", "publisher": "Annals of Internal Medicine (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/27136449/", "year": 2016 },
+    { "title": "New clinical practice guideline recognizes insomnia and sleep apnea can occur together (2025 VA/DoD guideline)", "publisher": "Military Health System", "url": "https://health.mil/News/Dvids-Articles/2026/01/22/news556510", "year": 2026 },
+    { "title": "Treating Insomnia: providers guide", "publisher": "Military Health System", "url": "https://health.mil/Reference-Center/Publications/2025/11/26/Treating-Insomnia-Providers-Guide", "year": 2025 },
+    { "title": "AACC Code of Ethics", "publisher": "American Association of Christian Counselors", "url": "https://aacc.net/aacc-code-of-ethics/" },
+    { "title": "ACA Code of Ethics (2014) and ethics resources", "publisher": "American Counseling Association", "url": "https://www.counseling.org/resources/ethics", "year": 2014 }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

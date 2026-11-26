@@ -1,0 +1,89 @@
+{
+  "id": "catastrophic-misinterpretation-restructuring",
+  "name": "Restructuring catastrophic misinterpretations of body sensations",
+  "modality": "CBT - cognitive therapy for panic",
+  "conditions": ["panic-disorder", "agoraphobia"],
+  "evidenceLevel": "Core component of CBT for panic disorder, which NICE CG113 recommends; APA Division 12 lists CBT for panic with strong research support (check the current rating). Based on Clark's (1986) cognitive model, in which panic attacks follow from misreading normal body sensations as signs of immediate catastrophe.",
+  "minutes": { "min": 20, "max": 45 },
+  "purpose": "Helps the client map the panic cycle (body sensation, catastrophic thought, fear, more sensations) and test the feared meaning of sensations such as a racing heart, dizziness, breathlessness or feeling unreal. The aim is for the client to see these sensations as uncomfortable but harmless, which reduces fear of the sensations themselves. It works best combined with interoceptive and in-vivo exposure, which act as behavioral tests of the beliefs.",
+  "steps": [
+    "Confirm that relevant physical causes (for example, heart rhythm problems, thyroid disease, respiratory conditions, medication or substance effects) have been medically assessed before describing sensations as harmless. Coordinate with the client's medical provider as needed.",
+    "Review a recent panic attack in detail: the trigger, the first sensation, the first thought, what the client feared would happen, and what they did to cope.",
+    "Draw the panic cycle together, using the panic-cycle handout. Show how fear adds new sensations, which then seem to confirm the catastrophic thought.",
+    "Name the specific feared outcome (for example, heart attack, fainting, 'losing my mind,' losing control) and rate belief 0-100 both during an attack and right now.",
+    "Weigh the evidence together: How many attacks have there been without the feared outcome? What else explains the sensations (adrenaline, breathing changes, muscle tension)? Did safety behaviors 'prevent' something that would not have happened anyway?",
+    "Give brief, plain-language psychoeducation on the body's alarm response, tailored to the client's specific fear (for example, explain that blood pressure usually rises during anxiety, which makes fainting unlikely, unless the client has a history of fainting at the sight of blood or needles).",
+    "Write a balanced alternative explanation in the client's words and re-rate belief in the catastrophic thought.",
+    "Plan a behavioral experiment, often an interoceptive exercise, to test the prediction directly, and agree on which safety behavior to drop during it.",
+    "Assign monitoring of attacks (sensations, thoughts, outcome) on the thought-record handout."
+  ],
+  "script": [
+    "Let's walk through your last panic attack, step by step. What did you notice first in your body?",
+    "And what went through your mind when you noticed that?",
+    "When we think something dangerous is happening, the body sounds an alarm. The alarm makes the heart beat faster and changes how we breathe.",
+    "Those changes feel scary, so the danger seems real. Then the alarm gets louder. That is the panic cycle.",
+    "You have had many of these attacks. How many times did the thing you feared actually happen?",
+    "What else could explain a fast heartbeat or feeling dizzy?",
+    "Let's write down a new way to understand these feelings. Use your own words.",
+    "The best way to find out what is true is to test it. Next, we can bring on some of these feelings on purpose, here with me, and see what happens."
+  ],
+  "contraindications": [
+    "Rule out medical causes first. Do not call sensations harmless until relevant medical evaluation is complete. New, changing or exertion-linked chest pain, fainting, or breathlessness needs prompt medical assessment.",
+    "A history of fainting with blood, needles or injury is an exception to the 'anxiety rarely causes fainting' message. Tailor the psychoeducation.",
+    "Avoid giving repeated reassurance, which can become a safety behavior. Help the client weigh the evidence instead.",
+    "Stimulants, high caffeine intake, and substance or medication withdrawal can cause or mimic panic sensations. Ask, and refer as needed. Do not record substance-use details in this app.",
+    "If the client reports thoughts of self-harm or harm to others, pause and follow your risk-assessment procedures."
+  ],
+  "culturalAdaptations": [
+    "Catastrophic meanings vary across cultures (for example, fears about 'wind' rising in the body, a 'weak heart' or 'nerves'). Hofmann and Hinton describe culture-related presentations such as khyal attacks and ataque de nervios. Ask what the client believes the sensations mean and address that specific belief.",
+    "Do not dismiss traditional explanations. Offer the body's alarm response as one more way to understand the sensations, using familiar examples.",
+    "Family members may share or reinforce catastrophic beliefs. With the client's consent, include them in psychoeducation.",
+    "Check that words such as 'panic' and 'attack' translate without stigma, and use the client's own words for the experience."
+  ],
+  "handoutIds": ["panic-cycle", "thought-record"],
+  "sources": [
+    {
+      "title": "A cognitive approach to panic (Clark)",
+      "publisher": "Behaviour Research and Therapy (DOI)",
+      "url": "https://doi.org/10.1016/0005-7967(86)90011-2",
+      "year": 1986
+    },
+    {
+      "title": "Generalised anxiety disorder and panic disorder in adults: management (CG113)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg113",
+      "year": 2011
+    },
+    {
+      "title": "Psychological Treatments (treatment index)",
+      "publisher": "APA Division 12, Society of Clinical Psychology",
+      "url": "https://div12.org/psychological-treatments/treatments/"
+    },
+    {
+      "title": "Panic Disorder: When Fear Overwhelms",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/publications/panic-disorder-when-fear-overwhelms"
+    },
+    {
+      "title": "Dismantling cognitive-behaviour therapy for panic disorder: a systematic review and component network meta-analysis (Pompoli et al.)",
+      "publisher": "Psychological Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29368665/",
+      "year": 2018
+    },
+    {
+      "title": "Cross-cultural aspects of anxiety disorders (Hofmann & Hinton)",
+      "publisher": "Current Psychiatry Reports (PubMed Central)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4037698/",
+      "year": 2014
+    },
+    {
+      "title": "A meta-analysis of cultural adaptations of psychological interventions (Hall et al.)",
+      "publisher": "Behavior Therapy (DOI)",
+      "url": "https://doi.org/10.1016/j.beth.2016.09.005",
+      "year": 2016
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

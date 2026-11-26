@@ -1,0 +1,89 @@
+{
+  "id": "prolonged-exposure",
+  "name": "Prolonged exposure (PE) - overview and referral",
+  "modality": "Trauma-focused exposure therapy (manualized protocol)",
+  "conditions": ["ptsd"],
+  "evidenceLevel": "First-line trauma-focused psychotherapy. The VA/DoD 2023 guideline strongly recommends individual, manualized trauma-focused psychotherapies, including PE. The APA PTSD guideline (2017; updated 2025) recommends PE. NICE NG116 recommends individual trauma-focused CBT, a category that includes prolonged exposure, for adults presenting more than one month after a trauma.",
+  "minutes": { "min": 10, "max": 20 },
+  "purpose": "PE is a manualized trauma-focused protocol that combines repeated, guided recounting of the trauma memory (imaginal exposure) with gradual approach to safe but avoided reminders in daily life (in-vivo exposure), plus psychoeducation and breathing retraining. It is commonly delivered in roughly 8 to 15 weekly sessions of about 90 minutes. This library entry covers overview and referral only, and the time estimate is for that conversation. It deliberately contains no protocol scripts. Deliver PE only after formal training with ongoing consultation.",
+  "steps": [
+    "Give brief, plain-language psychoeducation about how avoidance keeps trauma-related fear going, and introduce PE as one first-line option.",
+    "Explain what to expect in general terms: longer weekly sessions, talking through the memory with the therapist's guidance, and gradually facing safe situations the client has been avoiding, with practice between sessions.",
+    "Compare options with the client (PE, cognitive processing therapy, EMDR, other trauma-focused CBT, referral for medication evaluation) and support an informed choice.",
+    "Screen for issues that affect timing or level of care: current safety, suicide risk, severe dissociation, psychosis, and substance problems. Address urgent needs first. Do not record substance-use details in this app.",
+    "If you are not trained in PE, refer to a PE-trained clinician (for example, through VA or community trauma services, or a certified PE provider). Share information with the receiving clinician only with the client's consent.",
+    "Offer interim support while the client waits (sleep basics, safety planning, general coping) without starting imaginal exposure.",
+    "Follow up to confirm that the referral was completed and the client was able to start."
+  ],
+  "script": [
+    "There is a treatment called prolonged exposure, or PE. It helps many people after trauma.",
+    "In PE, you slowly and safely face memories and places you have been avoiding, with a trained therapist.",
+    "That can sound hard, and it can be at first. But avoiding keeps the fear strong. Facing it, step by step, helps the fear shrink.",
+    "Sessions are often longer, about 90 minutes, and the treatment usually lasts a few months.",
+    "You and your therapist decide the pace together. I can help you find someone trained in PE.",
+    "You can take time to decide. We can also talk about other options."
+  ],
+  "contraindications": [
+    "Current safety threats (ongoing abuse, imminent suicide risk) need attention first. Crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com.",
+    "Active psychosis, an elevated mood state, or severe substance problems may need stabilization or integrated care first. NICE NG116 advises against excluding people from PTSD treatment solely because of co-occurring drug or alcohol misuse. Decide timing with a trained clinician.",
+    "Do not attempt imaginal exposure to trauma memories without PE training and consultation. Improvised exposure can increase distress and lead to dropout.",
+    "Ongoing real danger (for example, living with an abusive partner) changes what in-vivo exposure is safe. The PE provider must assess this."
+  ],
+  "culturalAdaptations": [
+    "In-vivo steps should reflect the client's real life and values (for example, returning to a place of worship, a market or a family gathering) and should never include genuinely unsafe settings.",
+    "Talking about trauma in detail may conflict with norms about privacy, shame or family honor. Look for a provider who explains the rationale respectfully and lets the client set the pace.",
+    "Clients may prefer a clinician of a particular gender or background, especially after sexual violence. Include this preference in the referral.",
+    "Ask the provider about professional interpreter use and whether interpreters are briefed on trauma content."
+  ],
+  "trainingRequired": "PE: trained clinicians only. Deliver only after completing a recognized intensive PE workshop with case consultation (for example, through the program founded by the treatment developer or an equivalent recognized program). Otherwise refer.",
+  "handoutIds": [],
+  "sources": [
+    {
+      "title": "The management of posttraumatic stress disorder and acute stress disorder: synopsis of the 2023 VA/DoD clinical practice guideline",
+      "publisher": "Annals of Internal Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38408360/",
+      "year": 2024
+    },
+    {
+      "title": "VA/DoD Clinical Practice Guideline for Management of Posttraumatic Stress Disorder and Acute Stress Disorder",
+      "publisher": "US Department of Veterans Affairs and Department of Defense",
+      "url": "https://www.healthquality.va.gov/guidelines/MH/ptsd/",
+      "year": 2023
+    },
+    {
+      "title": "Clinical Practice Guideline for the Treatment of PTSD: treatments",
+      "publisher": "American Psychological Association",
+      "url": "https://www.apa.org/ptsd-guideline/treatments"
+    },
+    {
+      "title": "Monitor on Psychology (July/August 2025): updated APA guideline for treating PTSD",
+      "publisher": "American Psychological Association",
+      "url": "https://www.apa.org/monitor/2025/07-08/guidelines-treating-ptsd-trauma",
+      "year": 2025
+    },
+    {
+      "title": "Post-traumatic stress disorder (NG116)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng116",
+      "year": 2018
+    },
+    {
+      "title": "Intensive Workshop in Prolonged Exposure Therapy for PTSD",
+      "publisher": "Center for the Treatment and Study of Anxiety, University of Pennsylvania",
+      "url": "https://www.med.upenn.edu/ctsa/workshops_ptsd.html"
+    },
+    {
+      "title": "PE Certification Program",
+      "publisher": "Center for the Treatment and Study of Anxiety, University of Pennsylvania",
+      "url": "https://www.med.upenn.edu/ctsa/pe_certification.html"
+    },
+    {
+      "title": "Post-Traumatic Stress Disorder (health topic)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/topics/post-traumatic-stress-disorder-ptsd"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

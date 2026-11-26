@@ -1,0 +1,91 @@
+{
+  "id": "assertive-communication",
+  "title": "Speaking Up: Assertive Communication",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 15,
+  "intro": "Being assertive means saying what you think, feel, and need in a clear and respectful way. You respect yourself, and you respect the other person, too. It is a skill, so it gets easier with practice. This sheet gives you simple steps to plan what to say, practice it, and try it in real life. Planning one talk takes about 15 minutes.",
+  "sections": [
+    {
+      "heading": "Three ways people talk",
+      "steps": [
+        "Passive: You stay quiet or give in, even when something matters to you. Others may not know what you need.",
+        "Aggressive: You push, blame, or yell. You may get your way, but others may feel hurt or pull away.",
+        "Assertive: You speak up calmly and clearly, and you listen, too. This gives you the best chance of being heard."
+      ]
+    },
+    {
+      "heading": "Plan what to say",
+      "body": "Think of a real situation. Then plan your message in four parts. Keep it short.",
+      "steps": [
+        "Say what happened. Stick to the facts, without blame. For example, 'You were an hour late for dinner twice this week.'",
+        "Say how you feel. Start with 'I.' For example, 'I felt worried and let down.'",
+        "Ask for what you want. Be clear and specific. For example, 'Please text me if you will be more than 15 minutes late.'",
+        "Say why it helps. For example, 'That way I won't worry, and we can still enjoy our evening.'"
+      ]
+    },
+    {
+      "heading": "How to say it",
+      "steps": [
+        "Use a calm, steady voice.",
+        "Sit or stand up straight. Look at the person if that feels okay to you and fits your culture.",
+        "Listen to their side. You can say, 'I hear you,' and still stick to your request.",
+        "If they argue or change the subject, calmly repeat your main point.",
+        "Be willing to meet in the middle, if it still meets your needs."
+      ]
+    },
+    {
+      "heading": "Saying no",
+      "steps": [
+        "You can say no without a long excuse. For example, 'No, I can't this weekend.'",
+        "Offer another choice if you want to, like 'I can help next week.'",
+        "Take time if you need it: 'Let me think about it and get back to you.'"
+      ]
+    },
+    {
+      "heading": "Practice first",
+      "steps": [
+        "Write your message down.",
+        "Say it out loud in front of a mirror, or practice with someone you trust or with your counselor.",
+        "Start with an easier situation before you try a harder one.",
+        "Afterward, notice what went well. Speaking up does not always get you what you want, but it helps you feel more in charge of yourself."
+      ]
+    },
+    {
+      "heading": "Respect for different ways",
+      "body": "In some families and cultures, being very direct can seem rude. You can still be clear while being polite and showing respect. You get to choose the words, the time, and the place that fit your life."
+    }
+  ],
+  "practiceLog": {
+    "columns": ["Situation", "What I said", "How it went", "What I might try next time"],
+    "rows": 6
+  },
+  "safetyNote": "Safety first: Speaking up is not always safe. If you think someone may hurt you, threaten you, or punish you for speaking up, put your safety first and talk with your counselor about a plan. In the US, you can call the National Domestic Violence Hotline at 1-800-799-7233 or text START to 88788. If you are in danger right now, call 911. If you have thoughts of hurting yourself or someone else, call or text 988 in the US. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sources": [
+    {
+      "title": "Assertiveness training: a forgotten evidence-based treatment (Speed, Goldstein & Goldfried)",
+      "publisher": "Clinical Psychology: Science and Practice (author copy, Stony Brook University)",
+      "url": "https://ehs.stonybrook.edu/commcms/psychology/_pdfs/faculty/Speed_et_al-2017-Clinical_Psychology__Science_and_Practice.pdf",
+      "year": 2018
+    },
+    {
+      "title": "DBT Skills Training Manual, Second Edition (Linehan)",
+      "publisher": "Guilford Press",
+      "url": "https://www.guilford.com/books/DBT-Skills-Training-Manual/Marsha-Linehan/9781462516995",
+      "year": 2015
+    },
+    {
+      "title": "National Domestic Violence Hotline",
+      "publisher": "The Hotline",
+      "url": "https://www.thehotline.org"
+    },
+    {
+      "title": "988 Suicide & Crisis Lifeline",
+      "publisher": "988 Lifeline",
+      "url": "https://988lifeline.org"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

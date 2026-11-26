@@ -1,0 +1,54 @@
+{
+  "id": "narrative-exposure-therapy",
+  "name": "Narrative exposure therapy (NET) - overview and referral",
+  "modality": "Trauma-focused exposure therapy (manualized protocol)",
+  "conditions": ["ptsd"],
+  "evidenceLevel": "Guideline ratings are mixed. The APA's 2017 PTSD guideline conditionally recommended NET; check the 2025 update for its current rating. After a stricter GRADE review, the VA/DoD 2023 guideline moved NET to 'neither for nor against' (it had been included within a 'strong for' recommendation for trauma-focused therapies in 2017). A 2019 meta-analysis of 16 RCTs (947 participants) found large within-group effects on PTSD and medium effects on depression. NET outperformed inactive and non-trauma-focused comparators, but not active comparators overall, and head-to-head trials against other guideline-supported trauma therapies were lacking (Lely et al., 2019). NET has been studied mainly with survivors of many or prolonged traumas, including refugees and people affected by war and organized violence.",
+  "minutes": { "min": 10, "max": 20 },
+  "purpose": "NET was developed by Maggie Schauer, Frank Neuner and Thomas Elbert. With the therapist, the client builds a timeline of their whole life that marks both traumatic and positive events. They then talk through the traumatic events in detail with emotional processing while the therapist writes the narrative down. The written life story is reviewed together, and the client usually keeps a copy at the end. NET is a short-term treatment, and it has been delivered by trained lay counselors in low-resource settings. This library entry covers overview and referral only, and the time estimate is for that conversation. It deliberately contains no protocol instructions. Deliver NET only after formal training.",
+  "steps": [
+    "Give brief, plain-language psychoeducation about how trauma memories can stay 'stuck' and fragmented, and introduce NET as one option, especially for people who have lived through many traumatic events.",
+    "Explain what to expect in general terms: building a life timeline with the therapist, telling the story of the hardest events in detail with support, and the therapist writing the story down for the client to keep.",
+    "Compare options with the client (NET, cognitive processing therapy, prolonged exposure, EMDR, written exposure therapy, referral for medication evaluation) and support an informed choice. Note that NET's guideline ratings vary.",
+    "Screen for issues that affect timing or level of care: current safety, suicide risk, severe dissociation, psychosis and substance problems. Address urgent needs first. Do not record substance-use details in this app.",
+    "If you are not trained in NET, refer to a NET-trained clinician (for example, through refugee, torture-survivor or humanitarian mental health services). Share information with the receiving clinician only with the client's consent.",
+    "Offer interim support while the client waits (grounding, sleep basics, safety planning, help with practical needs) without starting trauma narration.",
+    "Follow up to confirm that the referral was completed and the client was able to start."
+  ],
+  "script": [
+    "There is a treatment called narrative exposure therapy, or NET. It was made for people who have been through many hard events.",
+    "In NET, you and a trained therapist look at your whole life story, the good times and the hard times.",
+    "You talk through the hardest parts in detail, with support. The therapist writes your story down.",
+    "At the end, you can keep a copy of your story.",
+    "NET must be done by a therapist with special training. I can help you find one.",
+    "You can take time to decide. We can also talk about other options."
+  ],
+  "contraindications": [
+    "Current safety threats (ongoing abuse, imminent suicide risk) need attention first. Crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com. This tool does not judge risk.",
+    "Active psychosis, an elevated mood state, or severe substance problems may need stabilization or integrated care first. Decide timing with a trained clinician.",
+    "Ongoing threat (for example, uncertain legal or asylum status, living near conflict, or contact with a perpetrator) changes what is safe. The NET provider must weigh this.",
+    "The written narrative is highly sensitive. Before the client shares it with anyone (including in legal or asylum proceedings), encourage them to get legal advice. Keep it only in secure clinical systems; this app stores nothing.",
+    "Do not ask a client to tell their full trauma story in detail without NET or other trauma-focused training. Untrained, unstructured retelling can raise distress."
+  ],
+  "culturalAdaptations": [
+    "NET was designed for cross-cultural and humanitarian settings. Ask the provider about delivery in the client's language and about trauma-trained professional interpreters.",
+    "Collective and political violence may be central to the client's story. Look for a provider who respects the client's own understanding of what happened and what healing means.",
+    "Let the client choose meaningful symbols and words for good and bad life events, and include family and community events that matter to them.",
+    "Clients may prefer a clinician of a particular gender or background, especially after sexual violence. Include this preference in the referral."
+  ],
+  "trainingRequired": "NET: trained clinicians only. Deliver only after completing recognized NET training with supervised practice. Otherwise refer.",
+  "handoutIds": [],
+  "sources": [
+    { "title": "Narrative Exposure Therapy (NET) (guideline treatment page)", "publisher": "American Psychological Association", "url": "https://www.apa.org/ptsd-guideline/treatments/narrative-exposure-therapy" },
+    { "title": "Clinical Practice Guideline for the Treatment of PTSD: treatments", "publisher": "American Psychological Association", "url": "https://www.apa.org/ptsd-guideline/treatments" },
+    { "title": "Monitor on Psychology (July/August 2025): updated APA guidelines for treating PTSD and trauma", "publisher": "American Psychological Association", "url": "https://www.apa.org/monitor/2025/07-08/guidelines-treating-ptsd-trauma", "year": 2025 },
+    { "title": "VA/DoD Clinical Practice Guideline for Management of PTSD and Acute Stress Disorder: provider summary", "publisher": "US Department of Veterans Affairs and Department of Defense", "url": "https://www.healthquality.va.gov/guidelines/MH/ptsd/VA-DoD-CPG-PTSD-Provider-Summary.pdf", "year": 2023 },
+    { "title": "The effectiveness of narrative exposure therapy: a review, meta-analysis and meta-regression analysis (Lely et al.)", "publisher": "European Journal of Psychotraumatology (DOI)", "url": "https://doi.org/10.1080/20008198.2018.1550344", "year": 2019 },
+    { "title": "Evidence Brief: Narrative Exposure Therapy for Posttraumatic Stress Disorder", "publisher": "Psychological Health Center of Excellence, Military Health System", "url": "https://health.mil/Reference-Center/Publications/2021/04/26/PHCoE-Evidence-Brief-Narrative-Exposure-Therapy-for-Posttraumatic-Stress-Disorder-508", "year": 2021 },
+    { "title": "Post-traumatic stress disorder (NG116)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng116", "year": 2018 },
+    { "title": "Post-Traumatic Stress Disorder (health topic)", "publisher": "National Institute of Mental Health", "url": "https://www.nimh.nih.gov/health/topics/post-traumatic-stress-disorder-ptsd" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

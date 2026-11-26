@@ -1,0 +1,96 @@
+{
+  "id": "interoceptive-exposure",
+  "name": "Interoceptive exposure",
+  "modality": "Exposure - interoceptive",
+  "conditions": ["panic-disorder", "agoraphobia"],
+  "evidenceLevel": "Core component of CBT for panic disorder, which NICE CG113 recommends; APA Division 12 lists CBT for panic with strong research support (check the current rating). A 2018 component network meta-analysis (Pompoli et al.) linked interoceptive exposure with better efficacy and acceptability in panic CBT packages. A 2013 randomized trial (Deacon et al.) found that brief, low-intensity exercises were more often followed by fear sensitization, supporting longer and more intense practice once safety is confirmed.",
+  "minutes": { "min": 30, "max": 50 },
+  "purpose": "Brings on feared body sensations (racing heart, dizziness, breathlessness, feeling unreal) on purpose and in a planned way, so the client learns that the sensations are bearable and not dangerous. It targets fear of the sensations themselves and tests catastrophic predictions directly. Use it after psychoeducation and medical clearance, alongside cognitive work and in-vivo exposure.",
+  "steps": [
+    "Obtain medical clearance and screen for the cautions listed below. Agree in advance which exercises are safe for this client and which to skip.",
+    "Explain the rationale: the goal is to learn that the sensations are safe and bearable, not to make them go away. Before each exercise, ask the client to predict what will happen and rate belief 0-100.",
+    "Run a symptom induction test. The clinician models each exercise first, then the client tries it: shaking the head side to side (about 30 seconds), head between the knees then sitting up quickly, running in place or stepping (about 1 minute), spinning in a swivel chair (about 1 minute), breathing through a thin straw (about 1 to 2 minutes), fast over-breathing (about 1 minute), staring at a light then at a blank wall, or tensing the whole body.",
+    "After each exercise, rate sensation intensity (0-10), anxiety (0-10) and similarity to a real panic attack (0-10). Choose the exercises with the highest similarity and order them from easier to harder.",
+    "Practice the chosen exercise repeatedly, continuing for a planned period after sensations start rather than stopping at the first discomfort. Remove safety behaviors (sitting down early, holding on, sipping water, checking the pulse) during practice.",
+    "After each trial, review the prediction: What did you expect? What happened? What did you learn? Focus on what the client learned more than on how much anxiety dropped.",
+    "Vary the exercises, settings and combinations (standing, alone in the room, at home, two exercises back to back) to strengthen and generalize learning.",
+    "Assign daily home practice of exercises the client has already done safely in session, with predictions and outcomes logged. As the client progresses, add everyday activities that bring on similar sensations (climbing stairs, warm rooms, brisk exercise), if medically appropriate."
+  ],
+  "script": [
+    "Today we are going to bring on some of the feelings you fear, on purpose, here with me.",
+    "That might sound strange. But avoiding these feelings is part of what keeps the fear going.",
+    "Before we start: what do you think will happen? How sure are you, from 0 to 100?",
+    "I will do it first, so you can see. Then it is your turn.",
+    "Keep going, even when the feelings show up. Notice them. Let them be there.",
+    "Okay, stop. How strong were the feelings? How anxious did you feel? How much was it like a panic attack?",
+    "What did you think would happen? What actually happened?",
+    "Your body can handle these feelings. They are uncomfortable, but they pass on their own.",
+    "Let's do it again. This time, try not to hold on to anything or stop early."
+  ],
+  "contraindications": [
+    "Get medical clearance first, and skip or modify exercises for: heart disease or heart rhythm problems; high or low blood pressure; asthma, COPD or other lung disease (avoid straw breathing and over-breathing); seizure disorders (over-breathing can trigger seizures in some people); pregnancy; inner-ear or balance problems (avoid spinning and head shaking); neck or back injuries (avoid head shaking and head-down positions); recent surgery; and a history of fainting.",
+    "Do not start during an active crisis, current suicidal risk, acute intoxication or withdrawal, or acute physical illness. Stabilize and reassess first, and share crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com.",
+    "Older adults and people with limited mobility need gentler, seated exercises and a setting where a fall would be safe.",
+    "Brief, low-dose exercises stopped at the first sensation can increase fear. Once safety is confirmed, plan for sustained practice.",
+    "Stop the exercise and seek medical help if symptoms do not fit the expected anxiety response (for example, chest pain spreading to the arm or jaw, actual fainting, wheezing).",
+    "Do not let breathing, relaxation or grounding become an escape during the exercise; used that way they act as safety behaviors."
+  ],
+  "culturalAdaptations": [
+    "Ask what the client believes the sensations mean (for example, beliefs about 'wind,' a 'weak heart' or spiritual harm) and choose exercises that test that specific belief. Hofmann and Hinton (2014) review culturally adapted CBT that targets culturally meaningful sensations.",
+    "Some exercises (spinning, head shaking, rapid breathing) may feel undignified or conflict with norms about the body. Explain the purpose and offer alternatives that bring on similar sensations.",
+    "Consider modesty and dress when choosing exercises such as running in place, and offer privacy where possible.",
+    "Where family or community members see deliberate discomfort as harmful, explain the rationale carefully and, with the client's consent, involve them in psychoeducation."
+  ],
+  "handoutIds": ["panic-cycle"],
+  "sources": [
+    {
+      "title": "Generalised anxiety disorder and panic disorder in adults: management (CG113)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg113",
+      "year": 2011
+    },
+    {
+      "title": "Psychological Treatments (treatment index)",
+      "publisher": "APA Division 12, Society of Clinical Psychology",
+      "url": "https://div12.org/psychological-treatments/treatments/"
+    },
+    {
+      "title": "Dismantling cognitive-behaviour therapy for panic disorder: a systematic review and component network meta-analysis (Pompoli et al.)",
+      "publisher": "Psychological Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29368665/",
+      "year": 2018
+    },
+    {
+      "title": "Maximizing the efficacy of interoceptive exposure by optimizing inhibitory learning: a randomized controlled trial (Deacon et al.)",
+      "publisher": "Behaviour Research and Therapy (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23872701/",
+      "year": 2013
+    },
+    {
+      "title": "Origins and outlook of interoceptive exposure (Boettcher, Brake & Barlow)",
+      "publisher": "Journal of Behavior Therapy and Experimental Psychiatry (DOI)",
+      "url": "https://doi.org/10.1016/j.jbtep.2015.10.009",
+      "year": 2016
+    },
+    {
+      "title": "Maximizing exposure therapy: an inhibitory learning approach (Craske et al.)",
+      "publisher": "Behaviour Research and Therapy (PubMed Central)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4114726/",
+      "year": 2014
+    },
+    {
+      "title": "Cross-cultural aspects of anxiety disorders (Hofmann & Hinton)",
+      "publisher": "Current Psychiatry Reports (PubMed Central)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4037698/",
+      "year": 2014
+    },
+    {
+      "title": "Panic Disorder: When Fear Overwhelms",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/publications/panic-disorder-when-fear-overwhelms"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

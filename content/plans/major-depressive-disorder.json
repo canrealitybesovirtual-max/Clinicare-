@@ -1,0 +1,159 @@
+{
+  "conditionId": "major-depressive-disorder",
+  "problems": [
+    {
+      "id": "mdd-withdrawal-and-low-mood",
+      "label": "Pulling back from rewarding activity, with low mood and little enjoyment",
+      "definitions": [
+        "Spends most of the day in bed or on the couch on several days a week, or has stopped hobbies, exercise, or faith or community activities that used to matter.",
+        "Describes mood as low, flat or heavy on most days, and says hobbies, food, company or other things that used to feel good now bring little or nothing.",
+        "Has fallen behind on work, study, caregiving or household tasks, for example unpaid bills, piled-up dishes or missed appointments.",
+        "Ignores or declines calls, messages and invitations from friends or family."
+      ],
+      "longTermGoals": [
+        "The client regularly does things that bring enjoyment, a sense of accomplishment or a link to what they value, and mood has lifted enough that daily roles feel manageable.",
+        "The client has a personal plan for spotting early signs that low mood is returning and knows the first steps to take."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "mdd-activity-baseline",
+          "text": "For the first 1 to 2 weeks, keep an hour-by-hour activity log on at least 5 days, rating mood (0-10) and enjoyment and accomplishment (0-10) for each block of time.",
+          "interventionIds": ["behavioral-activation"]
+        },
+        {
+          "id": "mdd-values-map",
+          "text": "By session 4, name at least 3 life areas that matter to the client (for example family, health, faith, work or creativity) and at least 2 specific, doable activities linked to each.",
+          "interventionIds": ["behavioral-activation"]
+        },
+        {
+          "id": "mdd-scheduled-activities",
+          "text": "Over the next 4 weeks, complete at least 3 planned pleasant or meaningful activities per week and rate mood before and after each one, then build up to at least 5 per week by week 8.",
+          "interventionIds": ["behavioral-activation"]
+        },
+        {
+          "id": "mdd-avoidance-swaps",
+          "text": "By week 6, spot at least 2 personal avoidance patterns (for example staying in bed to escape a hard task) and try a planned alternative action for each at least twice a week.",
+          "interventionIds": ["behavioral-activation", "problem-solving"]
+        },
+        {
+          "id": "mdd-reconnect",
+          "text": "By week 8, have at least 2 contacts per week with a supportive person of the client's choosing (a call, a back-and-forth message exchange or time together).",
+          "interventionIds": ["behavioral-activation"]
+        },
+        {
+          "id": "mdd-phq9-tracking",
+          "text": "Complete the PHQ-9 at intake and every 2 to 4 weeks (and the GAD-7 on the same schedule if anxiety is also present), reviewing the total score and the item-by-item responses with the clinician each time. If scores have not improved across 2 check-ins in a row, revisit the plan together, including treatment intensity and referral for a medication evaluation.",
+          "interventionIds": []
+        }
+      ],
+      "measureIds": ["phq-9", "gad-7"]
+    },
+    {
+      "id": "mdd-sleep-and-energy",
+      "label": "Disrupted sleep, low energy and an irregular daily rhythm",
+      "definitions": [
+        "Reports sleeping much more or much less than usual, such as taking over an hour to fall asleep, waking very early, or sleeping 10 or more hours and still feeling unrested.",
+        "Keeps an irregular schedule, with wake-up and meal times shifting by several hours from one day to the next.",
+        "Describes feeling so drained or slowed down that ordinary tasks like showering or cooking take much longer than before or get skipped."
+      ],
+      "longTermGoals": [
+        "The client keeps a steady daily rhythm of sleep, meals and activity that supports more energy during the day."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "mdd-sleep-energy-log",
+          "text": "For 2 weeks, fill in a short sleep and energy log each morning (bedtime, wake time, estimated hours slept, energy 0-10).",
+          "interventionIds": ["behavioral-activation"]
+        },
+        {
+          "id": "mdd-morning-anchor",
+          "text": "From week 3, get up at the same time (within 30 minutes) on at least 6 days a week for 4 weeks, and plan one activity outside the bedroom within an hour of waking.",
+          "interventionIds": ["behavioral-activation"]
+        },
+        {
+          "id": "mdd-movement",
+          "text": "By week 6, add a physical activity the client chooses and has been medically cleared for (for example a 10-minute walk), building up to at least 3 times a week.",
+          "interventionIds": ["behavioral-activation"]
+        },
+        {
+          "id": "mdd-small-steps",
+          "text": "Each week for 6 weeks, break 1 task that feels too big into small steps and finish at least the first 2 steps, rating energy before and after.",
+          "interventionIds": ["behavioral-activation", "problem-solving"]
+        },
+        {
+          "id": "mdd-wind-down",
+          "text": "For 3 weeks, practice a 10 to 15 minute relaxation routine before bed on at least 4 nights a week, rating how relaxed the client feels (0-10) before and after.",
+          "interventionIds": ["progressive-muscle-relaxation"]
+        },
+        {
+          "id": "mdd-sleep-referral",
+          "text": "If sleep problems continue after 4 weeks of a steady routine, the clinician and client discuss a referral by week 8 for a medical review or cognitive behavioral therapy for insomnia.",
+          "interventionIds": []
+        }
+      ],
+      "measureIds": ["phq-9"]
+    },
+    {
+      "id": "mdd-hopelessness-and-self-criticism",
+      "label": "Hopelessness and harsh self-judgment",
+      "definitions": [
+        "Makes frequent self-critical statements in session (for example 'I am a burden' or 'I mess everything up') and can recall few or no recent personal strengths.",
+        "Says the future will not get better or that trying is pointless, and gives this as a reason for not starting tasks or between-session practice.",
+        "Goes over past mistakes for long stretches, often an hour or more, without reaching any decision or plan.",
+        "May report thoughts of death, of not wanting to be alive or of self-harm; these call for direct clinician assessment at the time they come up."
+      ],
+      "longTermGoals": [
+        "The client holds a fairer, more balanced view of themselves and their future, and can name hopes and reasons for living.",
+        "Any suicide risk is noticed early and handled through a safety plan built together with the client, with crisis contacts known and easy to reach."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "mdd-catch-thoughts",
+          "text": "Over the next 3 weeks, write down at least 3 self-critical or hopeless thoughts per week, the situation each came up in, and how strongly each is believed (0-100).",
+          "interventionIds": ["thought-record"]
+        },
+        {
+          "id": "mdd-weigh-thoughts",
+          "text": "Over weeks 4 to 10, complete at least 2 full thought records per week that weigh the evidence and write a fairer alternative thought, then re-rate belief in the original thought.",
+          "interventionIds": ["thought-record"]
+        },
+        {
+          "id": "mdd-strengths-list",
+          "text": "By week 8, list at least 5 personal strengths or recent achievements, with input from a trusted person if the client wishes, and read the list at least twice a week.",
+          "interventionIds": ["thought-record", "behavioral-activation"]
+        },
+        {
+          "id": "mdd-dwelling-to-doing",
+          "text": "For 4 weeks, when the client notices they have been dwelling on a problem for more than 10 minutes, switch to a problem-solving step or a planned activity at least 3 times a week, and note the effect on mood.",
+          "interventionIds": ["problem-solving", "behavioral-activation"]
+        },
+        {
+          "id": "mdd-safety-plan-review",
+          "text": "Whenever risk is present (for example a PHQ-9 item 9 response above 0, or the client describes thoughts of death or self-harm), the clinician assesses risk directly and, in that same session, works with the client to create or review a written safety plan: personal warning signs, coping steps, people and places that help, professional and crisis contacts (call or text 988 in the US, or the local emergency number elsewhere) and agreed steps to limit access to means of harm. Revisit the plan at every session while risk remains. Risk level and next steps are the clinician's decision; this tool never rates risk.",
+          "interventionIds": []
+        }
+      ],
+      "measureIds": ["phq-9"]
+    }
+  ],
+  "collaborativeNote": "These are starting points for clinician review, not a finished plan. Rewrite each goal and objective with the client in their own words, scale the targets to the client's current energy, and record their agreement before anything is added to the plan. Choose activities that fit the client's culture, faith, body, budget and caregiving load. Safety planning is always done together with the client, and the clinician makes every risk decision. Do not add names or other identifying details. Resource only. Not a substitute for clinical judgment.",
+  "sources": [
+    { "title": "Depression in adults: treatment and management (NG222)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng222", "year": 2022 },
+    { "title": "Behavioral Activation for Depression", "publisher": "APA Division 12, Society of Clinical Psychology", "url": "https://div12.org/treatment/behavioral-activation-for-depression/" },
+    { "title": "Diagnosis: Depression (psychological treatments listing)", "publisher": "APA Division 12, Society of Clinical Psychology", "url": "https://div12.org/diagnosis/depression/" },
+    { "title": "Behavioural activation for depression: an update of meta-analysis of effectiveness and sub group analysis (Ekers et al.)", "publisher": "PLoS ONE (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/24936656/", "year": 2014 },
+    { "title": "Problem-solving therapy for adult depression: an updated meta-analysis (Cuijpers et al.)", "publisher": "European Psychiatry", "url": "https://doi.org/10.1016/j.eurpsy.2017.11.006", "year": 2018 },
+    { "title": "Management of Chronic Insomnia Disorder in Adults: A Clinical Practice Guideline From the American College of Physicians (Qaseem et al.)", "publisher": "Annals of Internal Medicine (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/27136449/", "year": 2016 },
+    { "title": "Depression (health topic)", "publisher": "National Institute of Mental Health", "url": "https://www.nimh.nih.gov/health/topics/depression" },
+    { "title": "Suicide Prevention (health topic)", "publisher": "National Institute of Mental Health", "url": "https://www.nimh.nih.gov/health/topics/suicide-prevention" },
+    { "title": "Comparison of the Safety Planning Intervention With Follow-up vs Usual Care of Suicidal Patients Treated in the Emergency Department (Stanley et al.)", "publisher": "JAMA Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/29998307/", "year": 2018 },
+    { "title": "988 Suicide & Crisis Lifeline", "publisher": "988 Lifeline / SAMHSA", "url": "https://988lifeline.org" },
+    { "title": "A Tipping Point for Measurement-Based Care (Fortney et al.)", "publisher": "Psychiatric Services; reprinted in Focus (PubMed Central)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6996080/", "year": 2017 },
+    { "title": "Implementing Measurement-Based Care in Behavioral Health: A Review (Lewis et al.)", "publisher": "JAMA Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/30566197/", "year": 2019 },
+    { "title": "Shared decision making (NG197)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng197", "year": 2021 },
+    { "title": "PHQ and GAD-7 screeners (reproduction terms)", "publisher": "Pfizer / PHQ Screeners", "url": "https://www.phqscreeners.com" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

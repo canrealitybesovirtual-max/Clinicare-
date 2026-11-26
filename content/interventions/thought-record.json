@@ -1,0 +1,108 @@
+{
+  "id": "thought-record",
+  "name": "Thought record (cognitive restructuring)",
+  "modality": "CBT - cognitive restructuring",
+  "conditions": ["major-depressive-disorder", "generalized-anxiety-disorder", "panic-disorder", "agoraphobia"],
+  "evidenceLevel": "Core component of CBT, which NICE NG222 (depression) and NICE CG113 (GAD and panic disorder) recommend. A 2012 review of meta-analyses (Hofmann et al.) found strong overall support for CBT across anxiety and depression. The evidence is for CBT packages; the thought record has not been well tested as a stand-alone treatment.",
+  "minutes": { "min": 20, "max": 40 },
+  "purpose": "Helps the client slow down a moment of strong emotion, catch the automatic thought behind it, weigh the evidence, and arrive at a more balanced view. Over time the client learns to spot common thinking traps (jumping to conclusions, all-or-nothing thinking, mind reading, fortune telling) and to test thoughts instead of treating them as facts.",
+  "steps": [
+    "Introduce the links between situations, thoughts, feelings, body reactions and actions, using a recent example from the client's week.",
+    "Choose one specific moment when the client's mood shifted. Record the situation briefly and factually (what, when, where, who).",
+    "Identify the emotions and rate each 0-100. List the automatic thoughts, then find the 'hot' thought most tied to the strongest emotion and rate belief in it 0-100.",
+    "Use guided discovery (open, curious questions) rather than arguing: What supports this thought? What does not fit? What would you say to a friend? What is most likely to happen, and how would you cope?",
+    "Help the client write an alternative, balanced thought in their own words. It should be believable, not forced positivity.",
+    "Re-rate belief in the original thought and the intensity of the emotion. Discuss even small shifts.",
+    "Name any thinking traps that showed up, framed as common habits of the mind rather than flaws in the client.",
+    "Assign two or three thought records before the next session using the thought-record handout. Review them first at the next visit and praise effort over perfect answers.",
+    "For low mood, pair thought records with behavioral activation. For anxiety, plan behavioral experiments to test the new thought in real life."
+  ],
+  "script": [
+    "Let's look at a moment this week when your mood changed. What was happening?",
+    "What feelings came up? How strong were they, from 0 to 100?",
+    "What was going through your mind right then? What did you tell yourself?",
+    "Which thought made you feel the worst? How much do you believe it, from 0 to 100?",
+    "Let's look at that thought like a detective. What facts support it? What facts do not fit?",
+    "If a friend had this thought, what would you say to them?",
+    "Is there another way to see this that feels fair and true to you?",
+    "Now, how much do you believe the first thought? And how strong is the feeling now?",
+    "The goal is not to think happy thoughts. It is to see the whole picture."
+  ],
+  "contraindications": [
+    "Do not use to dispute realistic concerns such as ongoing abuse, discrimination, financial hardship or unsafe housing. Validate the reality and move to problem-solving, advocacy or safety planning.",
+    "Severe low mood with poor concentration can make written records hard. Simplify (three columns, verbal practice) and lean on behavioral activation first.",
+    "If a thought record brings up hopelessness or thoughts of death or self-harm, stop the exercise, assess risk using your procedures, and review crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com.",
+    "Psychosis, mania or intoxication: defer standard restructuring and refer, or adapt with appropriate supervision.",
+    "Literacy or vision limits: use verbal, pictorial or audio formats. Writing helps but is not required.",
+    "Keep records brief and time-limited for clients prone to worry or rumination, so the exercise does not become reassurance seeking."
+  ],
+  "culturalAdaptations": [
+    "Explore whether the client's culture favors family-focused or collective ways of judging events. Frame balanced thoughts in terms of the client's own values rather than individualistic norms.",
+    "Some clients describe distress as 'thinking too much' or through body-based idioms. Use the client's words and connect thoughts to their own explanation of distress.",
+    "Thoughts about racism or discrimination may be accurate. Validate them and focus on coping and choices, not on whether the experience was real.",
+    "Offer the worksheet in the client's preferred language with simple wording, or work verbally with a professional interpreter.",
+    "Where openly challenging an elder's or the community's views is sensitive, use gentle 'what else might be true?' questions rather than debate."
+  ],
+  "faithIntegrated": {
+    "note": "If the client wishes, they may draw balanced thoughts from their own faith (for example, beliefs about grace, forgiveness, hope or not being alone), or check whether a harsh thought matches what their tradition actually teaches. A 2018 meta-analysis (Captari et al.) found religiously and spiritually integrated therapies reduced distress about as well as standard approaches, with added spiritual well-being, for clients who want this approach.",
+    "consentNote": "Offer only if the client raises faith or spirituality as a resource, and only after informed consent. Explain that the faith element is optional, that the standard version works without it, and that the client can change or stop it at any time. Use the client's own beliefs and words; never introduce or impose religious content. Record the consent discussion in your own clinical record, not in this app. See the AACC Code of Ethics on consent for spiritual interventions and the ACA Code of Ethics on informed consent and not imposing counselor values."
+  },
+  "handoutIds": ["thought-record"],
+  "sources": [
+    {
+      "title": "Depression in adults: treatment and management (NG222)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng222",
+      "year": 2022
+    },
+    {
+      "title": "Generalised anxiety disorder and panic disorder in adults: management (CG113)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg113",
+      "year": 2011
+    },
+    {
+      "title": "The efficacy of cognitive behavioral therapy: a review of meta-analyses (Hofmann et al.)",
+      "publisher": "Cognitive Therapy and Research (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23459093/",
+      "year": 2012
+    },
+    {
+      "title": "Psychological Treatments (treatment index)",
+      "publisher": "APA Division 12, Society of Clinical Psychology",
+      "url": "https://div12.org/psychological-treatments/treatments/"
+    },
+    {
+      "title": "'Thinking too much': a systematic review of a common idiom of distress (Kaiser et al.)",
+      "publisher": "Social Science & Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26584235/",
+      "year": 2015
+    },
+    {
+      "title": "A meta-analysis of cultural adaptations of psychological interventions (Hall et al.)",
+      "publisher": "Behavior Therapy (DOI)",
+      "url": "https://doi.org/10.1016/j.beth.2016.09.005",
+      "year": 2016
+    },
+    {
+      "title": "Integrating clients' religion and spirituality within psychotherapy: a comprehensive meta-analysis (Captari et al.)",
+      "publisher": "Journal of Clinical Psychology (DOI)",
+      "url": "https://doi.org/10.1002/jclp.22681",
+      "year": 2018
+    },
+    {
+      "title": "AACC Code of Ethics",
+      "publisher": "American Association of Christian Counselors",
+      "url": "https://aacc.net/aacc-code-of-ethics/"
+    },
+    {
+      "title": "ACA Code of Ethics (2014) and ethics resources",
+      "publisher": "American Counseling Association",
+      "url": "https://www.counseling.org/resources/ethics",
+      "year": 2014
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

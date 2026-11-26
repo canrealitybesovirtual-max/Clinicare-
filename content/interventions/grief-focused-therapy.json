@@ -1,0 +1,61 @@
+{
+  "id": "grief-focused-therapy",
+  "name": "Grief-focused therapy for prolonged grief: overview and referral",
+  "modality": "Grief-focused therapy (prolonged grief disorder therapy, grief-focused CBT)",
+  "conditions": ["major-depressive-disorder"],
+  "evidenceLevel": "Emerging to moderate RCT evidence. A targeted grief treatment developed by M. Katherine Shear (complicated grief treatment, now called prolonged grief disorder therapy) had a higher response rate than IPT (51% vs 28%) in an RCT (Shear et al., 2005). In a 395-person, four-arm trial it worked with or without citalopram; the medication helped co-occurring depressive symptoms but did not improve grief outcomes (Shear et al., 2016). A meta-analysis of 31 RCTs found that psychological grief interventions reduce grief symptoms, with larger effects when started at least 6 months after the loss (Johannsen et al., 2019). Grief-focused CBT approaches also have trial support (see the 2024 meta-analysis). No NICE recommendation for prolonged grief was found.",
+  "minutes": { "min": 45, "max": 60 },
+  "purpose": "Helps adults whose grief stays intense, all-consuming and impairing long after a death, well beyond what their culture and religion would expect, to accept the reality of the loss while rebuilding a life with purpose and connection. Shear's model sees grief as a natural healing process that has been derailed. It works on two tracks at once: coming to terms with the loss, and restoring a satisfying life (drawing on attachment theory and Stroebe and Schut's dual process model). Most bereaved people do not need treatment; this is for grief that is stuck. This entry is an overview for planning and referral, not a protocol.",
+  "steps": [
+    "Screen and tell apart: ask how long it has been since the death, how strong the yearning or preoccupation is, what the client avoids, how daily life is affected, and what the client's culture and faith expect of mourning. Screen for depression, PTSD (especially after sudden or violent deaths) and suicidal thoughts. See DSM-5-TR and ICD-11 for prolonged grief disorder; this tool does not diagnose.",
+    "Explain grief in plain language: grief is love continuing after loss. It usually softens with time, and sometimes it gets stuck. Normalize moving back and forth between grieving and getting on with daily life.",
+    "Start daily grief monitoring: the client rates grief intensity once a day from 0 to 10 and notes what made it lighter or heavier, which shows that grief varies and reveals patterns.",
+    "Work on restoration: help the client name hopes or values for the future and take small steps toward them, and reconnect with supportive people.",
+    "Work on the loss (trained clinicians only): structured retelling of the story of the death, gradual return to avoided reminders and places, and exercises that support a lasting, comfortable connection with the person who died. These procedures require training and supervision.",
+    "Gently address guilt, blame and other thoughts that keep grief stuck, using cognitive methods.",
+    "Plan ahead for anniversaries, holidays and other hard dates; near the end, review progress and plans for the future."
+  ],
+  "script": [
+    "Grief is how love carries on after someone dies. For most people the pain softens with time. Sometimes it gets stuck, and that is not your fault.",
+    "Many people swing back and forth between missing the person and getting on with the day. Both are part of healthy grieving.",
+    "Would you be willing to rate your grief once a day, from 0 to 10, and jot down what was going on? It helps us see what makes it heavier or lighter.",
+    "If your grief were a little less intense, what would you like to be doing? What mattered to you before, or what might matter now?",
+    "Some places and reminders feel too painful to face right now. We can find small, manageable ways to approach them, at a pace you choose.",
+    "You can keep a bond with your mother and still let yourself enjoy things again. The two do not cancel each other out."
+  ],
+  "contraindications": [
+    "Training is recommended for the full prolonged grief therapy protocol, especially structured retelling of the death. Steps here are overview-level.",
+    "Do not treat normal or culturally expected grief as a disorder, and do not push a timeline for mourning.",
+    "Bereavement raises suicide risk, especially after a suicide or another sudden or violent death. Ask directly about suicidal thoughts and wishes to be with the person who died. This intervention does not assess or decide risk; follow your setting's risk-assessment and safety-planning procedures. Keep crisis options visible: 988 Suicide & Crisis Lifeline (US, call or text), the local emergency number, and findahelpline.com for other countries.",
+    "After a traumatic death, screen for PTSD. Trauma-focused treatment may need to come first or be combined with grief work by a trained clinician.",
+    "Postpone exercises that revisit the death during acute crises, heavy substance use, or when the client has no stable support; stabilize first.",
+    "Medication may help co-occurring depression but has not been shown to treat grief itself (Shear et al., 2016). Refer for a medication evaluation when depression is significant."
+  ],
+  "culturalAdaptations": [
+    "Mourning periods, rituals and ways of showing grief vary widely. Ask what the client's culture and faith expect and what the client wants before judging grief as prolonged.",
+    "Ongoing bonds with the dead, such as talking to them, visiting graves, keeping altars or honoring ancestors, are normal in many cultures. Work with these practices, not against them.",
+    "Consider community-wide losses (war, disasters, pandemics, deaths linked to racism) and grief that others do not recognize, such as for a partner in a hidden relationship, a pregnancy loss, or a death by overdose.",
+    "Include family or community rituals when the client wishes, and use trained interpreters for sessions about the death.",
+    "For refugees and migrants, grief may be complicated by missing the funeral or by many losses at once. Address practical and legal stressors as well."
+  ],
+  "faithIntegrated": {
+    "note": "When the client asks to include faith, explore their beliefs about death and what comes after, prayers or rituals that bring comfort, and spiritual struggles such as anger at God or feeling abandoned, all in the client's own terms. Coordinate with a clergy member or chaplain if the client wants. Do not offer theological reassurance or debate beliefs.",
+    "consentNote": "Offer only if the client raises faith or spirituality and asks to include it. Before starting, explain what a faith-integrated approach involves, that it is optional, that the same intervention is available without religious content, and that the client can change their mind at any time; document the client's informed consent. Follow the client's own tradition and words, and never introduce, impose, endorse or challenge beliefs (AACC Code of Ethics: consent before spiritual interventions, client-led integration; ACA Code of Ethics 2014, A.2 informed consent and A.4.b personal values)."
+  },
+  "trainingRequired": "Prolonged grief disorder therapy (Shear): training is recommended before using the full protocol, particularly structured retelling and imaginal procedures (for example, Columbia Center for Prolonged Grief workshops and consultation). Steps here are an overview.",
+  "handoutIds": ["grief-and-loss", "values-compass", "activity-schedule"],
+  "sources": [
+    { "title": "Treatment of complicated grief: a randomized controlled trial (Shear et al.)", "publisher": "JAMA", "url": "https://doi.org/10.1001/jama.293.21.2601", "year": 2005 },
+    { "title": "Optimizing treatment of complicated grief: a randomized clinical trial (Shear et al.)", "publisher": "JAMA Psychiatry", "url": "https://doi.org/10.1001/jamapsychiatry.2016.0892", "year": 2016 },
+    { "title": "Psychological interventions for grief in adults: a systematic review and meta-analysis of randomized controlled trials (Johannsen et al.)", "publisher": "Journal of Affective Disorders", "url": "https://doi.org/10.1016/j.jad.2019.04.065", "year": 2019 },
+    { "title": "Grief-focused cognitive behavioral therapies for prolonged grief symptoms: a systematic review and meta-analysis", "publisher": "PubMed (National Library of Medicine)", "url": "https://pubmed.ncbi.nlm.nih.gov/38573714/", "year": 2024 },
+    { "title": "Center for Prolonged Grief: resources and training for clinicians", "publisher": "Columbia University School of Social Work", "url": "https://prolongedgrief.columbia.edu/for-clinicians/" },
+    { "title": "Clinical descriptions and diagnostic requirements for ICD-11 mental, behavioural and neurodevelopmental disorders (CDDR)", "publisher": "World Health Organization", "url": "https://www.who.int/publications/i/item/9789240077263", "year": 2024 },
+    { "title": "988 Suicide & Crisis Lifeline", "publisher": "988 Lifeline (SAMHSA-funded)", "url": "https://988lifeline.org/" },
+    { "title": "AACC Code of Ethics", "publisher": "American Association of Christian Counselors", "url": "https://aacc.net/aacc-code-of-ethics/" },
+    { "title": "ACA Code of Ethics (2014) and ethics resources", "publisher": "American Counseling Association", "url": "https://www.counseling.org/resources/ethics", "year": 2014 }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

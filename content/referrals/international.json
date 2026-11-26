@@ -1,0 +1,275 @@
+{
+  "_rule": "Link-out only (G8): nothing here is re-hosted. Descriptions are original. lastVerified is an ISO date only when the official source was checked online that day; otherwise \"unverified\" and a person must confirm it on the official site before release (G9/G10). Adult-only scope (G12). Emergency numbers live in content/crisis-lines.json.",
+  "scope": "international",
+  "sources": [
+    { "title": "Find A Helpline", "publisher": "ThroughLine", "url": "https://findahelpline.com/" },
+    { "title": "Mental Health Gap Action Programme (mhGAP)", "publisher": "World Health Organization", "url": "https://www.who.int/teams/mental-health-and-substance-use/treatment-care/mental-health-gap-action-programme" }
+  ],
+  "license": "original",
+  "lastVerified": null,
+  "compiledOn": "2026-11-26",
+  "reviewedBy": "PENDING",
+  "entries": [
+    {
+      "id": "findahelpline",
+      "name": "Find A Helpline",
+      "description": "Global directory of free, confidential crisis lines and helplines, filterable by country and topic. Use it for any country not listed here.",
+      "url": "https://findahelpline.com/",
+      "region": "INTL",
+      "kind": "directory",
+      "languages": ["en"],
+      "lastVerified": "unverified",
+      "verification": "Directory pages surfaced in web search on 2026-11-26 (findahelpline.com/organizations/...); site not reachable from the build sandbox.",
+      "sources": [{ "title": "Find A Helpline", "publisher": "ThroughLine", "url": "https://findahelpline.com/" }]
+    },
+    {
+      "id": "who-mhgap",
+      "name": "WHO Mental Health Gap Action Programme (mhGAP)",
+      "description": "WHO guidance for scaling up care for mental, neurological and substance use conditions, including the mhGAP Intervention Guide for non-specialist settings. A clinician reference, not a referral service.",
+      "url": "https://www.who.int/teams/mental-health-and-substance-use/treatment-care/mental-health-gap-action-programme",
+      "region": "INTL",
+      "kind": "directory",
+      "languages": ["en"],
+      "lastVerified": "2026-11-26",
+      "verification": "Official WHO page fetched directly on 2026-11-26 (title 'Mental Health, Brain Health and Substance Use'; mhGAP section present).",
+      "sources": [
+        { "title": "Mental Health Gap Action Programme (mhGAP)", "publisher": "World Health Organization", "url": "https://www.who.int/teams/mental-health-and-substance-use/treatment-care/mental-health-gap-action-programme" }
+      ]
+    },
+    {
+      "id": "nhs-111-mental-health",
+      "name": "NHS 111, mental health option (England)",
+      "description": "Urgent mental health help in England: call 111 and choose the mental health option to speak with a trained mental health professional, for yourself or someone else, at any age.",
+      "url": "https://www.nhs.uk/nhs-services/mental-health-services/where-to-get-urgent-help-for-mental-health/",
+      "phone": "111",
+      "phoneNote": "Call 111, then select option 2",
+      "region": "GB-ENG",
+      "kind": "crisis",
+      "languages": ["en"],
+      "hours": "24/7",
+      "notes": ["Immediate risk to life: call 999 or go to A&E.", "Deaf callers can use SignVideo or Relay UK (18001 111)."],
+      "lastVerified": "unverified",
+      "verification": "Option 2, 24/7 availability and relay options cross-checked by web search against NHS England and NHS trust pages (national rollout 2024). The nhs.uk page was not reachable from the build sandbox.",
+      "sources": [
+        { "title": "NHS 111 offering crisis mental health support for the first time", "publisher": "NHS England", "url": "https://www.england.nhs.uk/2024/08/nhs-111-offering-crisis-mental-health-support-for-the-first-time/", "year": 2024 }
+      ]
+    },
+    {
+      "id": "samaritans-uk",
+      "name": "Samaritans (UK)",
+      "description": "Free, confidential listening support by phone for anyone who is struggling to cope, at any time of day or night.",
+      "url": "https://www.samaritans.org/",
+      "phone": "116 123",
+      "region": "GB",
+      "kind": "crisis",
+      "languages": ["en"],
+      "hours": "24/7",
+      "lastVerified": "unverified",
+      "verification": "116 123 cited by Mind's helplines page in web search results; samaritans.org not reachable from the build sandbox.",
+      "sources": [{ "title": "Samaritans", "publisher": "Samaritans", "url": "https://www.samaritans.org/" }]
+    },
+    {
+      "id": "shout-85258",
+      "name": "Shout 85258 (UK)",
+      "description": "Free, confidential text support with a trained volunteer for anyone in the UK who is struggling to cope.",
+      "url": "https://giveusashout.org/",
+      "text": "Text SHOUT to 85258",
+      "region": "GB",
+      "kind": "crisis",
+      "languages": ["en"],
+      "hours": "24/7",
+      "lastVerified": "unverified",
+      "verification": "Keyword and short code cross-checked by web search (NHS trust pages); giveusashout.org not reachable from the build sandbox.",
+      "sources": [{ "title": "Shout 85258", "publisher": "Mental Health Innovations", "url": "https://giveusashout.org/" }]
+    },
+    {
+      "id": "mind-infoline",
+      "name": "Mind Infoline (England and Wales)",
+      "description": "Information line from the mental health charity Mind about conditions, treatment options, rights and local support. Not a crisis service.",
+      "url": "https://www.mind.org.uk/information-support/helplines/",
+      "phone": "0300 123 3393",
+      "text": "Text 86463",
+      "region": "GB",
+      "kind": "helpline",
+      "languages": ["en"],
+      "hours": "Mon-Fri, 9 a.m.-6 p.m. (closed bank holidays)",
+      "notes": ["Interpreting available through Language Line.", "Textphone: 18001 0300 123 3393."],
+      "lastVerified": "unverified",
+      "verification": "Number, hours and text number cross-checked by web search against mind.org.uk helplines pages; site not reachable from the build sandbox.",
+      "sources": [{ "title": "Helplines", "publisher": "Mind", "url": "https://www.mind.org.uk/information-support/helplines/" }]
+    },
+    {
+      "id": "samaritans-ireland",
+      "name": "Samaritans Ireland",
+      "description": "Free, confidential listening support by phone for anyone in Ireland who is finding things hard, at any time.",
+      "url": "https://www.samaritans.org/ireland/",
+      "phone": "116 123",
+      "region": "IE",
+      "kind": "crisis",
+      "languages": ["en"],
+      "hours": "24/7",
+      "lastVerified": "unverified",
+      "verification": "Freephone 116 123 cross-checked by web search against HSE urgent-help pages; samaritans.org not reachable from the build sandbox.",
+      "sources": [
+        { "title": "Get urgent help", "publisher": "HSE (Health Service Executive)", "url": "https://www2.hse.ie/mental-health/services-support/get-urgent-help/" }
+      ]
+    },
+    {
+      "id": "text-50808",
+      "name": "50808 (Ireland)",
+      "description": "Free, anonymous text conversation with a trained volunteer for anyone in Ireland going through a mental health or emotional crisis.",
+      "url": "https://text50808.ie/",
+      "text": "Text HELLO to 50808",
+      "region": "IE",
+      "kind": "crisis",
+      "languages": ["en"],
+      "hours": "24/7",
+      "lastVerified": "unverified",
+      "verification": "Keyword HELLO and number cross-checked by web search against HSE urgent-help pages; text50808.ie not reachable from the build sandbox.",
+      "sources": [
+        { "title": "Get urgent help", "publisher": "HSE (Health Service Executive)", "url": "https://www2.hse.ie/mental-health/services-support/get-urgent-help/" }
+      ]
+    },
+    {
+      "id": "canada-988",
+      "name": "9-8-8: Suicide Crisis Helpline (Canada)",
+      "description": "Canada's national suicide crisis helpline, by call or text, in English and French, for anyone thinking about suicide or worried about someone.",
+      "url": "https://988.ca/",
+      "phone": "988",
+      "text": "Text 988",
+      "region": "CA",
+      "kind": "crisis",
+      "languages": ["en", "fr"],
+      "hours": "24/7",
+      "notes": ["Responders can connect to support in Cree, Ojibway and Inuktitut on request via the Hope for Wellness Helpline."],
+      "lastVerified": "unverified",
+      "verification": "Call/text 9-8-8 (launched November 30, 2023) cross-checked by web search against Government of Canada and CRTC pages; 988.ca not reachable from the build sandbox.",
+      "sources": [
+        { "title": "Government of Canada launches three-digit suicide crisis helpline", "publisher": "Public Health Agency of Canada", "url": "https://www.canada.ca/en/public-health/news/2023/11/government-of-canada-launches-three-digit-suicide-crisis-helpline.html", "year": 2023 }
+      ]
+    },
+    {
+      "id": "hope-for-wellness",
+      "name": "Hope for Wellness Helpline (Canada)",
+      "description": "Immediate counseling and crisis support for First Nations, Inuit and Métis people across Canada, by phone or online chat, with service in Cree, Ojibway and Inuktitut on request.",
+      "url": "https://www.hopeforwellness.ca/",
+      "phone": "1-855-242-3310",
+      "chat": "https://www.hopeforwellness.ca/",
+      "region": "CA",
+      "kind": "crisis",
+      "languages": ["en", "fr", "cr", "oj", "iu"],
+      "hours": "24/7",
+      "lastVerified": "unverified",
+      "verification": "Number and chat cross-checked by web search (Wellness Together Canada transition FAQ and Health Canada notice); hopeforwellness.ca not reachable from the build sandbox.",
+      "sources": [
+        { "title": "Health Canada announces transition of mental health resources from Wellness Together Canada", "publisher": "Health Canada", "url": "https://www.canada.ca/en/health-canada/news/2024/02/health-canada-announces-transition-of-mental-health-resources-from-wellness-together-canada.html", "year": 2024 }
+      ]
+    },
+    {
+      "id": "canada-mental-health-supports",
+      "name": "Government of Canada mental health supports (replaces Wellness Together Canada)",
+      "description": "Federal page listing current mental health and substance use supports in Canada. Wellness Together Canada closed on April 3, 2024, and Health Canada now points people here.",
+      "url": "https://www.canada.ca/mental-health",
+      "region": "CA",
+      "kind": "directory",
+      "languages": ["en", "fr"],
+      "notes": ["Wellness Together Canada is no longer operating; do not refer clients to it."],
+      "lastVerified": "unverified",
+      "verification": "Closure date and the canada.ca/mental-health pointer cross-checked by web search against Health Canada's February 2024 notice and the Wellness Together FAQ; canada.ca not reachable from the build sandbox.",
+      "sources": [
+        { "title": "Health Canada announces transition of mental health resources from Wellness Together Canada", "publisher": "Health Canada", "url": "https://www.canada.ca/en/health-canada/news/2024/02/health-canada-announces-transition-of-mental-health-resources-from-wellness-together-canada.html", "year": 2024 }
+      ]
+    },
+    {
+      "id": "lifeline-australia",
+      "name": "Lifeline Australia",
+      "description": "Crisis support and suicide prevention for anyone in Australia, by phone, text or online chat.",
+      "url": "https://www.lifeline.org.au/",
+      "phone": "13 11 14",
+      "text": "Text 0477 13 11 14",
+      "region": "AU",
+      "kind": "crisis",
+      "languages": ["en"],
+      "hours": "24/7",
+      "lastVerified": "unverified",
+      "verification": "Phone and text numbers cross-checked by web search against AIHW and healthdirect helpline lists; lifeline.org.au not reachable from the build sandbox.",
+      "sources": [
+        { "title": "Crisis helplines and support services", "publisher": "Australian Institute of Health and Welfare", "url": "https://www.aihw.gov.au/suicide-self-harm-monitoring/resources/crisis-helplines-support-services" }
+      ]
+    },
+    {
+      "id": "beyond-blue",
+      "name": "Beyond Blue Support Service (Australia)",
+      "description": "Free short-term counseling and referral by phone or webchat for anxiety, depression and general emotional distress.",
+      "url": "https://www.beyondblue.org.au/",
+      "phone": "1300 22 4636",
+      "region": "AU",
+      "kind": "helpline",
+      "languages": ["en"],
+      "hours": "24/7 by phone",
+      "lastVerified": "unverified",
+      "verification": "Number cross-checked by web search against AIHW and healthdirect helpline lists; beyondblue.org.au not reachable from the build sandbox.",
+      "sources": [{ "title": "Mental health helplines", "publisher": "healthdirect Australia", "url": "https://www.healthdirect.gov.au/mental-health-helplines" }]
+    },
+    {
+      "id": "13yarn",
+      "name": "13YARN (Australia)",
+      "description": "Crisis support line for Aboriginal and Torres Strait Islander people, staffed by Aboriginal and Torres Strait Islander crisis supporters.",
+      "url": "https://www.13yarn.org.au/",
+      "phone": "13 92 76",
+      "region": "AU",
+      "kind": "crisis",
+      "languages": ["en"],
+      "hours": "24/7",
+      "lastVerified": "unverified",
+      "verification": "Number cross-checked by web search against AIHW and healthdirect helpline lists; 13yarn.org.au not reachable from the build sandbox.",
+      "sources": [{ "title": "Mental health helplines", "publisher": "healthdirect Australia", "url": "https://www.healthdirect.gov.au/mental-health-helplines" }]
+    },
+    {
+      "id": "medicare-mental-health",
+      "name": "Medicare Mental Health (formerly Head to Health), Australia",
+      "description": "Free national phone service and website that assesses what kind of mental health support a person needs and connects them to local services. Not a crisis service.",
+      "url": "https://www.medicarementalhealth.gov.au/",
+      "phone": "1800 595 212",
+      "region": "AU",
+      "kind": "helpline",
+      "languages": ["en"],
+      "hours": "Weekdays, 8:30 a.m.-5 p.m. (closed public holidays)",
+      "notes": ["The Head to Health phone service and website were renamed Medicare Mental Health in 2025; the number did not change.", "In an emergency call 000."],
+      "lastVerified": "unverified",
+      "verification": "Rename, number and hours cross-checked by web search against Primary Health Network notices and the medicarementalhealth.gov.au news item; site not reachable from the build sandbox.",
+      "sources": [{ "title": "Medicare Mental Health", "publisher": "Australian Government Department of Health", "url": "https://www.medicarementalhealth.gov.au/" }]
+    },
+    {
+      "id": "nz-1737",
+      "name": "1737, Need to talk? (New Zealand)",
+      "description": "Free call or text support from a trained counselor for anyone in Aotearoa New Zealand feeling stressed, anxious, down or overwhelmed, with a peer-support option.",
+      "url": "https://1737.org.nz/",
+      "phone": "1737",
+      "text": "Text 1737",
+      "region": "NZ",
+      "kind": "crisis",
+      "languages": ["en"],
+      "hours": "24/7",
+      "lastVerified": "unverified",
+      "verification": "Call/text 1737 and the peer-support option cross-checked by web search against Healthpoint and Mental Health Foundation NZ listings; 1737.org.nz not reachable from the build sandbox.",
+      "sources": [{ "title": "Helplines", "publisher": "Mental Health Foundation of New Zealand", "url": "https://mentalhealth.org.nz/helplines" }]
+    },
+    {
+      "id": "lifeline-aotearoa",
+      "name": "Lifeline Aotearoa (New Zealand)",
+      "description": "Free, confidential crisis and suicide prevention support by phone and text for anyone in New Zealand.",
+      "url": "https://www.lifeline.org.nz/",
+      "phone": "0800 543 354",
+      "text": "Text 4357",
+      "region": "NZ",
+      "kind": "crisis",
+      "languages": ["en"],
+      "hours": "24/7",
+      "notes": ["The text number 4357 (HELP) came from older listings; confirm it on the Lifeline site."],
+      "lastVerified": "unverified",
+      "verification": "Phone number cross-checked by web search (several NZ listings); text number found only in an older listing. lifeline.org.nz not reachable from the build sandbox.",
+      "sources": [{ "title": "Helplines", "publisher": "Mental Health Foundation of New Zealand", "url": "https://mentalhealth.org.nz/helplines" }]
+    }
+  ]
+}

@@ -21,7 +21,7 @@ export interface ScoringInput {
   medicalPossible: TriState; // medical condition could explain symptoms
 }
 
-export type SuggestionFlagType = "duration" | "impairment" | "substance" | "medical" | "partial-core";
+export type SuggestionFlagType = "duration" | "impairment" | "substance" | "medical" | "partial-core" | "breadth";
 
 export interface FeatureRef {
   symptomId: string;

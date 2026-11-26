@@ -1,0 +1,56 @@
+{
+  "id": "social-anxiety-cognitive-techniques",
+  "name": "Cognitive therapy techniques for social anxiety (Clark and Wells model): self-focused attention, safety behaviors and video feedback",
+  "modality": "CBT - cognitive therapy for social anxiety disorder",
+  "conditions": ["social-anxiety-disorder"],
+  "evidenceLevel": "Recommended in NICE CG159 (2013): offer adults with social anxiety disorder individual CBT developed specifically for social anxiety, based on the Clark and Wells model or the Heimberg model. A network meta-analysis of 101 trials found that individual CBT had the largest effect and should be regarded as the best initial treatment (Mayo-Wilson et al., 2014). In an RCT, cognitive therapy based on this model outperformed exposure plus applied relaxation, and the advantage held at one year (Clark et al., 2006). APA Division 12 listed CBT for social anxiety disorder with strong research support under its 1998 criteria, with its 2015 re-evaluation shown as pending (check the current page). The techniques below are parts of that package; evidence for each one on its own is limited.",
+  "minutes": { "min": 30, "max": 90 },
+  "purpose": "In the Clark and Wells (1995) cognitive model, people with social anxiety turn their attention inward when they feel watched. They build a distorted picture of how they look from how they feel inside, and they use safety behaviors (rehearsing sentences, avoiding eye contact, gripping a glass, staying quiet) that keep the fears going and can make them seem less warm to others. These techniques let the client test those processes directly: an experiment comparing self-focus with outward focus while dropping safety behaviors, video feedback to correct the distorted self-image, training attention outward, behavioral experiments in real social situations, and work on worry before events and replaying after them. Original description; see the model's developers (David M. Clark, Adrian Wells and colleagues) for treatment materials. Full cognitive therapy for social anxiety is a course of individual sessions over several months. This entry is not a protocol.",
+  "steps": [
+    "Build the client's own version of the model from a recent social situation: the feared outcome, where attention went, how the client imagined they looked, and which safety behaviors they used.",
+    "Self-focus and safety-behavior experiment: role-play a short conversation twice, first while self-focused and using the usual safety behaviors, then with attention on the other person and safety behaviors dropped. After each round, rate anxiety, how anxious the client felt they looked, and how the conversation went.",
+    "Video feedback (with written consent): record the role-plays. Before watching, have the client predict in detail how they will look (for example, how red, how shaky, how long the pauses). Then watch from the outside, as if watching a stranger, and compare the recording with the predictions. Watch for processing biases, such as tuning in to inner feelings while viewing.",
+    "Train outward attention: practice noticing details of the surroundings and the other person in low-stakes settings, then use the skill in social situations.",
+    "Plan behavioral experiments in real social situations to test specific fears (for example, pausing on purpose, letting a small sign of anxiety show, or saying 'I don't know') and observe how others respond. Surveys can ask people how they view such signs.",
+    "Address worry before events and replay after them: identify the pattern, and agree to drop the replay and the over-rehearsal.",
+    "If a recurring negative self-image is linked to early memories, consider imagery work (see the imagery-rescripting entry).",
+    "Record experiments on the social-situations-practice handout and plan regular practice between sessions."
+  ],
+  "script": [
+    "When you feel nervous with people, where does your attention go? Inward, to how you feel and how you look?",
+    "Let's try a short chat twice. First, do what you normally do to stay safe. Then drop those things and put your attention on me.",
+    "Which one felt better? Which one do you think looked better?",
+    "Before we watch the video, let's write down how you think you looked. How red? How shaky? How long were the pauses?",
+    "Now watch it like you are watching someone you don't know. What do you see?",
+    "Feelings on the inside are not a good camera. The video shows what other people really see.",
+    "This week, try to look outward in a conversation. Notice the other person's face and words.",
+    "After a social event, try not to replay it over and over. Replaying tends to make it seem worse than it was."
+  ],
+  "contraindications": [
+    "Get consent before any recording. Keep recordings only in your secure clinical system and delete them under your service's policy. This app has no recording feature and stores nothing.",
+    "Video feedback can upset clients with body-image concerns, a visible difference, or a history of being filmed without consent. Prepare carefully, use predictions first, and offer alternatives (audio, a mirror, or feedback from others).",
+    "Some fears are realistic (for example, discrimination, hate speech or real workplace consequences). Validate them, and design experiments that do not expose the client to harm.",
+    "Screen for depression, drinking or drug use to cope with social events, and suicidal thoughts. Address safety first. This tool does not judge risk. Crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com.",
+    "For autistic clients and others with neurodevelopmental differences, eye contact or small talk may not be meaningful goals. Adapt targets to what the client values.",
+    "Consider referral to a clinician trained in cognitive therapy for social anxiety disorder for the full treatment."
+  ],
+  "culturalAdaptations": [
+    "Norms for eye contact, self-disclosure, speaking up and modesty differ across cultures. Agree on goals that fit the client's community rather than one 'confident' style.",
+    "Some cultural concepts of distress focus on fear of offending or embarrassing others (for example, taijin kyofusho). Explore the client's own explanation and adapt experiments to test those fears.",
+    "Clients speaking a second language may worry about accent or grammar. Separate language-learning goals from social-anxiety targets, and include experiments in the language the client actually uses.",
+    "Clients from marginalized groups may face real scrutiny. Name this, and help the client tell realistic caution apart from fears that go beyond the evidence. Culturally adapted psychotherapies tend to outperform unadapted versions (Hall et al., 2016)."
+  ],
+  "handoutIds": ["social-situations-practice", "behavioral-experiment-record"],
+  "sources": [
+    { "title": "Social anxiety disorder: recognition, assessment and treatment (CG159)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/cg159", "year": 2013 },
+    { "title": "Psychological and pharmacological interventions for social anxiety disorder in adults: a systematic review and network meta-analysis (Mayo-Wilson et al.)", "publisher": "The Lancet Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/26361000/", "year": 2014 },
+    { "title": "Cognitive therapy versus exposure and applied relaxation in social phobia: a randomized controlled trial (Clark et al.)", "publisher": "Journal of Consulting and Clinical Psychology (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/16822113/", "year": 2006 },
+    { "title": "Seeing is believing: using video feedback in cognitive therapy for social anxiety disorder (Warnock-Parkes et al.)", "publisher": "Cognitive and Behavioral Practice (PubMed Central)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5627505/", "year": 2017 },
+    { "title": "Psychological Treatments (treatment index)", "publisher": "APA Division 12, Society of Clinical Psychology", "url": "https://div12.org/psychological-treatments/treatments/" },
+    { "title": "Efficacy of exposure versus cognitive therapy in anxiety disorders: systematic review and meta-analysis (Ougrin)", "publisher": "BMC Psychiatry", "url": "https://bmcpsychiatry.biomedcentral.com/articles/10.1186/1471-244X-11-200", "year": 2011 },
+    { "title": "A meta-analysis of cultural adaptations of psychological interventions (Hall et al.)", "publisher": "Behavior Therapy (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/27993346/", "year": 2016 }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

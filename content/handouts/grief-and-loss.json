@@ -1,0 +1,103 @@
+{
+  "id": "grief-and-loss",
+  "title": "Living With Grief and Loss",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 15,
+  "intro": "Grief is the natural response to losing someone or something you love. It can follow a death. It can also follow a divorce, a lost job, a move, a change in your health, or leaving your home country. There is no right way to grieve and no set timeline. This sheet shares some things many people find helpful. Take what fits you and leave the rest. Reading it takes about 10 to 15 minutes.",
+  "sections": [
+    {
+      "heading": "What grief can feel like",
+      "body": "Grief touches the whole person. You may notice some of these, and they can change from day to day.",
+      "steps": [
+        "Feelings: sadness, longing, anger, guilt, fear, numbness, or even relief. Mixed feelings are common.",
+        "Body: feeling tired, sleeping too much or too little, eating more or less, aches, or a heavy chest.",
+        "Thoughts: trouble focusing, forgetting things, or going over what happened again and again.",
+        "Spirit: questions about meaning, faith, or why this happened."
+      ]
+    },
+    {
+      "heading": "Grief comes in waves",
+      "body": "Many people find that grief moves back and forth. Some days you may feel the loss very strongly. Other days you may focus on daily life, like chores, work, or new routines. Both are part of healing. Taking a break from grief does not mean you have forgotten. Spending time with your grief does not mean you are stuck."
+    },
+    {
+      "heading": "Taking care of yourself",
+      "steps": [
+        "Try to keep simple routines, like regular meals and a set time to get up.",
+        "Get outside or move your body a little each day, if you can.",
+        "Rest when you need to. Grief takes a lot of energy.",
+        "Go easy on alcohol and other drugs. They can make sleep and mood worse.",
+        "Let people help with meals, rides, or chores. Tell them what you need.",
+        "If you can, put off big choices, like moving, until you feel steadier."
+      ]
+    },
+    {
+      "heading": "Staying connected to what you lost",
+      "steps": [
+        "Share stories and memories with people who knew them.",
+        "Keep a photo, an object, or a special place that helps you remember.",
+        "Write a letter to the person, or write about what you miss.",
+        "Take part in customs, prayers, or rituals that matter to you and your family, if you choose.",
+        "Do something they cared about, or something that honors who they were."
+      ]
+    },
+    {
+      "heading": "Planning for hard days",
+      "steps": [
+        "Birthdays, holidays, and anniversaries can bring grief back strongly. This is normal.",
+        "Plan ahead. Decide who you want to be with and what you want to do.",
+        "It is okay to change old traditions or start new ones."
+      ]
+    },
+    {
+      "heading": "Getting support",
+      "steps": [
+        "Talk with people you trust. You can tell them if you just want them to listen.",
+        "Think about a grief support group. Hospitals, hospice programs, and community or faith groups often have them.",
+        "Talk with your counselor or doctor about how you are doing."
+      ]
+    },
+    {
+      "heading": "When to reach out for more help",
+      "body": "Over time, grief often gets easier to carry, even though the loss stays with you. Talk with your counselor or doctor if any of these are true for you.",
+      "steps": [
+        "Many months have passed, and the pain is still so strong that you can't get through the day.",
+        "You can't stop thinking about the person or the loss, or you stay away from anything that reminds you of it.",
+        "You feel that life has no meaning, or that part of you died too.",
+        "You are using alcohol, drugs, or other things just to get through the day.",
+        "You have thoughts of wanting to die or of wanting to be with the person who died. If this happens, reach out right away."
+      ]
+    }
+  ],
+  "practiceLog": {
+    "columns": ["Day", "How grief showed up", "What helped, even a little"],
+    "rows": 7
+  },
+  "safetyNote": "Safety first: If you have thoughts of ending your life, or of wanting to join someone who died, please reach out now. You do not have to wait until it gets worse. In the US, call or text 988 or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sources": [
+    {
+      "title": "Bereavement (health topic)",
+      "publisher": "MedlinePlus, US National Library of Medicine",
+      "url": "https://medlineplus.gov/bereavement.html"
+    },
+    {
+      "title": "Grief (medical encyclopedia)",
+      "publisher": "MedlinePlus, US National Library of Medicine",
+      "url": "https://medlineplus.gov/ency/article/001530.htm"
+    },
+    {
+      "title": "The dual process model of coping with bereavement: a decade on (Stroebe & Schut)",
+      "publisher": "Omega: Journal of Death and Dying (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21058610/",
+      "year": 2010
+    },
+    {
+      "title": "988 Suicide & Crisis Lifeline",
+      "publisher": "988 Lifeline",
+      "url": "https://988lifeline.org"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

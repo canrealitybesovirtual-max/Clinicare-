@@ -1,0 +1,67 @@
+{
+  "id": "compassion-focused-imagery",
+  "name": "Compassion-focused imagery (CFT)",
+  "modality": "Compassion-focused therapy (CFT)",
+  "conditions": [
+    "major-depressive-disorder",
+    "generalized-anxiety-disorder",
+    "ptsd"
+  ],
+  "evidenceLevel": "Emerging evidence; not guideline-recommended as a stand-alone treatment for any condition in this app. CFT was developed by Paul Gilbert for people with high shame and self-criticism (Gilbert, 2009). A meta-analysis found CFT reduced self-criticism and increased the ability to self-soothe (Vidal & Alberti, 2023), and compassion-based interventions show moderate effects on depression and anxiety, mostly in small trials (Kirby et al., 2017). In a related practice, group loving-kindness meditation was noninferior to group cognitive processing therapy for veterans with PTSD, with modest gains in both arms (Kearney et al., 2021).",
+  "minutes": { "min": 15, "max": 30 },
+  "purpose": "Uses guided imagery to help the client strengthen what CFT calls the soothing system. Gilbert describes three emotion systems: a threat system (fear, anger, shame), a drive system (achieving, wanting) and a soothing system (safeness, contentment, connection), and proposes that self-critical, shame-prone people have an overactive threat system and an underused soothing system. Clients build a felt sense of safeness through imagery of a calm place, an ideal compassionate figure who holds wisdom, strength and warmth toward them, or themselves as a compassionate person. The focus is on felt qualities, not on how vivid the image is. Exercises here are original wording and do not reproduce CFT manuals or workbooks. Fit across presentations: Anxiety - soothing practice can calm threat-system arousal and fear of negative judgment, but must not become avoidance during exposure work. Depression - targets self-critical, shame-based processes that keep low mood going. Trauma - may ease shame and self-blame, but imagery can trigger memories, so trauma-sensitive pacing is essential. Substance use - offers a soothing alternative when shame and distress drive urges. Grief - some clients may choose to include a loving memory of the person who died, with care.",
+  "steps": [
+    "Explain the three emotion systems in plain words, and that our brains were shaped to be quick to sense threat, so self-criticism and anxiety are understandable and not the client's fault, while change is still the client's to work on.",
+    "Teach slowed, soothing breathing: ease the breath to a comfortable, slightly slower rhythm, soften the face into a gentle expression and use a warm inner tone of voice (Gilbert calls this soothing rhythm breathing).",
+    "Guide calm-place imagery: the client creates a place, real or imagined, with sensory details, and imagines that the place welcomes them. Eyes-open is fine.",
+    "Guide compassionate-figure imagery: the client designs an image with wisdom, strength and warmth and a real commitment to helping. It can be a person, an animal, light, a place in nature or any figure meaningful to them. It fully accepts the client and wants them to thrive.",
+    "Invite the compassionate figure, or the client's own compassionate self, to speak to a current struggle. Notice what it says, its tone, and how the body responds.",
+    "Debrief: rate warmth or safeness (0-10), and explore blocks. Many clients find receiving kindness hard at first; normalize this.",
+    "Explore fears of compassion gently: what makes kindness from others or oneself feel risky or undeserved?",
+    "Assign 5-10 minutes of practice daily or when self-criticism shows up, and capture the figure's words on the kind-self-talk handout."
+  ],
+  "script": [
+    "Our brains have a few different settings. One is for spotting danger. One is for chasing goals. And one is for feeling safe and cared for. For many people, that last one doesn't get much practice.",
+    "Let's start by slowing your breath a little, to a pace that feels comfortable and soothing. Let your face soften into a small, kind expression.",
+    "Now picture a place where you feel calm and safe. It can be real or made up. What can you see? What can you hear? What do you feel under your feet?",
+    "Now imagine someone or something that is completely on your side. It is wise, strong and warm. It understands what you're going through and wants good things for you. It doesn't have to be a person, and the picture doesn't need to be clear.",
+    "Let that kind presence say something to you about what you're struggling with. What does it say? How does its voice sound?",
+    "If this feels hard or strange, that's very common. We can go slowly. Even a tiny moment of warmth counts."
+  ],
+  "contraindications": [
+    "Imagery can bring up traumatic memories, grief or a sense of threat, especially for clients with abuse histories who never experienced safe caregiving. Offer eyes-open options and short exercises, use grounding, stop if distress climbs, and coordinate with trauma-focused care.",
+    "Avoid imagery work with clients who have active psychosis, severe dissociation or current mania unless a specialist has been consulted.",
+    "Using a deceased loved one as the compassionate figure can deepen or complicate grief. Explore carefully and let the client decide.",
+    "Do not use soothing imagery to escape fear during exposure exercises; that turns it into a safety behavior.",
+    "If suicidal thoughts or self-harm urges come up, follow your risk protocol and safety planning, and keep 988 in the US (call or text), the local emergency number and findahelpline.com visible. The clinician, not this tool, judges risk.",
+    "Substance-use care: screen for withdrawal risk (alcohol or benzodiazepine withdrawal needs medical referral), coordinate with SUD treatment, and keep notes and handouts free of identifying details. 42 CFR Part 2 prohibits unauthorized disclosure of these records."
+  ],
+  "culturalAdaptations": [
+    "Let the client choose all imagery. Compassionate figures may come from family, ancestors, nature, animals, or cultural or spiritual traditions. Do not suggest specific religious figures unless the client asks.",
+    "Calm-place imagery may need adapting for clients who have never had a safe place, such as refugees or people who are unhoused; an imagined place, or simply a quality like warmth or light, can work better.",
+    "Gestures and facial expressions linked to warmth vary across cultures. Follow the client's lead.",
+    "Offer guidance in the client's language, with settings and images that are familiar to them.",
+    "Culturally adapted psychotherapies tend to outperform unadapted versions (Hall et al., 2016)."
+  ],
+  "faithIntegrated": {
+    "note": "If the client wishes, the compassionate figure may come from their own faith (for example God, a prophet, a saint, a bodhisattva or a revered teacher), and the practice may include words from their prayers or scriptures that express love and mercy. The client chooses. The clinician does not introduce religious figures or interpret religious experiences, and refers to a trusted faith leader for spiritual questions.",
+    "consentNote": "Before any faith-integrated variant, explain its purpose and alternatives, confirm the client's right to decline or stop at any time, and document informed consent (AACC Code of Ethics; ACA Code of Ethics). Faith integration is client-led. Never impose beliefs or suggest that distress reflects weak faith."
+  },
+  "trainingRequired": "Brief compassionate imagery can be used by clinicians familiar with CFT. Full compassion-focused therapy requires CFT-specific training (see the Compassionate Mind Foundation).",
+  "handoutIds": ["kind-self-talk"],
+  "sources": [
+    { "title": "Introducing compassion-focused therapy (Gilbert)", "publisher": "Advances in Psychiatric Treatment (Cambridge University Press)", "url": "https://www.cambridge.org/core/journals/advances-in-psychiatric-treatment/article/introducing-compassionfocused-therapy/ECBC8B7B87E90ABB58C4530CDEE04088", "year": 2009 },
+    { "title": "Effect of compassion-focused therapy on self-criticism and self-soothing: a meta-analysis (Vidal & Alberti)", "publisher": "British Journal of Clinical Psychology", "url": "https://doi.org/10.1111/bjc.12394", "year": 2023 },
+    { "title": "A meta-analysis of compassion-based interventions: current state of knowledge and future directions (Kirby, Tellegen & Steindl)", "publisher": "Behavior Therapy (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/29029675/", "year": 2017 },
+    { "title": "Loving-kindness meditation vs cognitive processing therapy for posttraumatic stress disorder among veterans: a randomized clinical trial (Kearney et al.)", "publisher": "JAMA Network Open (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/33861329/", "year": 2021 },
+    { "title": "The Compassionate Mind Foundation (CFT training and resources)", "publisher": "The Compassionate Mind Foundation", "url": "https://www.compassionatemind.co.uk/" },
+    { "title": "A meta-analysis of cultural adaptations of psychological interventions (Hall et al.)", "publisher": "Behavior Therapy (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/27993346/", "year": 2016 },
+    { "title": "AACC Code of Ethics", "publisher": "American Association of Christian Counselors", "url": "https://aacc.net/aacc-code-of-ethics/" },
+    { "title": "The HIPAA Privacy Rule and 42 CFR Part 2", "publisher": "US Department of Health and Human Services", "url": "https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/hipaa-part-2/index.html" },
+    { "title": "988 Suicide & Crisis Lifeline", "publisher": "988 Lifeline", "url": "https://988lifeline.org" },
+    { "title": "Find A Helpline (international directory)", "publisher": "Find A Helpline", "url": "https://findahelpline.com" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

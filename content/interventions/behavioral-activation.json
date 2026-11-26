@@ -1,0 +1,124 @@
+{
+  "id": "behavioral-activation",
+  "name": "Behavioral activation (activity scheduling)",
+  "modality": "Behavioral activation",
+  "conditions": ["major-depressive-disorder"],
+  "evidenceLevel": "Well supported for depression. NICE NG222 lists behavioural activation (group or individual) among treatment options for less severe depression and individual behavioural activation for more severe depression. A 2014 meta-analysis of 26 trials (Ekers et al.) found BA outperformed control conditions. The COBRA trial (Richards et al.) found BA delivered by junior mental health workers was not inferior to CBT and cost less. The VA/DoD 2022 guideline includes BA among psychotherapy options for uncomplicated MDD. APA Division 12 has historically rated BA as having strong research support; the listing is marked pending re-evaluation (check the current page).",
+  "minutes": { "min": 20, "max": 50 },
+  "purpose": "Helps the client break the cycle in which low mood leads to withdrawal and inactivity, which then deepens low mood. The client tracks activities and mood, clarifies personal values, and schedules small, specific activities that bring enjoyment, a sense of achievement or connection, while reducing avoidance. Action comes first; motivation often follows rather than leads.",
+  "steps": [
+    "Explain the cycle of low mood and avoidance using the client's own examples. Emphasize 'action first, motivation follows.'",
+    "Ask the client to track daily activities and rate mood (0-10) for one week on the activity-schedule handout. Review the patterns together: which activities link to better or worse mood?",
+    "Explore values across life areas (relationships, work or study, health, community, faith or meaning, fun). Ask what matters and what the client has stopped doing.",
+    "Brainstorm activities linked to those values, including ones that bring enjoyment, achievement or connection. Break each into small, specific steps (what, when, where, for how long).",
+    "Start with easy activities that are likely to succeed. Schedule one to three for the coming week and make if-then plans for likely obstacles.",
+    "Identify avoidance patterns (staying in bed, ruminating, cancelling plans) and plan an alternative action for those moments.",
+    "Review the schedule each session: what was done, mood before and after, and what got in the way. Treat unfinished tasks as useful information, not failure.",
+    "Gradually increase the number and challenge of activities. Track progress with the PHQ-9 at regular intervals.",
+    "Plan for relapse prevention: early warning signs and the activities that help most."
+  ],
+  "script": [
+    "When we feel low, we often do less. Doing less can make us feel even lower. It becomes a cycle.",
+    "We can break the cycle by doing small things, even before we feel like it.",
+    "This week, write down what you do each day, and rate your mood from 0 to 10.",
+    "What matters to you? What did you use to enjoy, or feel good about doing?",
+    "Let's pick one small thing. What will you do, when, and where? How long will it take?",
+    "What might get in the way? If that happens, what could you do instead?",
+    "After you do it, notice your mood. Even a small change counts.",
+    "If you do not get to it, that's okay. We will look at what got in the way and try again."
+  ],
+  "contraindications": [
+    "Screen for suicide risk before and during BA. If the PHQ-9 item on thoughts of death or self-harm is above zero, or the client reports such thoughts, follow your risk-assessment and safety-planning procedures. Crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com.",
+    "Check for medical limits before scheduling physical activity (heart or lung conditions, pain, pregnancy, mobility limits).",
+    "Watch for signs of an elevated mood state (much less need for sleep, racing thoughts, unusually risky activity). Refer for assessment; increasing activity is not appropriate during an elevated state.",
+    "Severe low mood with psychotic features, high risk, or inability to care for oneself needs psychiatric referral. BA may be part of care, but not the only step.",
+    "Avoid overloading the schedule. Too many tasks too soon can lead to failure and self-criticism.",
+    "Respect real limits from poverty, caregiving, disability or unsafe neighborhoods. Choose low-cost, accessible activities."
+  ],
+  "culturalAdaptations": [
+    "Define 'valued activities' with the client. In more collectivist cultures, family, community and caregiving roles may matter more than individual leisure.",
+    "Include culturally meaningful activities, such as cooking traditional food, music, gardening, community or faith gatherings, or calling relatives abroad.",
+    "Adapt for low literacy with pictures, verbal plans or phone reminders instead of written schedules.",
+    "Consider cost, transport, safety and time. Many valued activities can be free and close to home.",
+    "Physical complaints such as tiredness or pain may be the client's main way of describing low mood. Frame BA as rebuilding energy and strength, in the client's terms."
+  ],
+  "faithIntegrated": {
+    "note": "If the client names faith or spirituality as a value, they may choose to schedule related activities (for example, attending services, set times for prayer or meditation, volunteering through a faith community, or reading sacred texts). The client decides which activities to include and how often.",
+    "consentNote": "Offer only if the client raises faith or spirituality as a resource, and only after informed consent. Explain that the faith element is optional, that the standard version works without it, and that the client can change or stop it at any time. Use the client's own beliefs and words; never introduce or impose religious content. Record the consent discussion in your own clinical record, not in this app. See the AACC Code of Ethics on consent for spiritual interventions and the ACA Code of Ethics on informed consent and not imposing counselor values."
+  },
+  "handoutIds": ["activity-schedule"],
+  "sources": [
+    {
+      "title": "Depression in adults: treatment and management (NG222)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng222",
+      "year": 2022
+    },
+    {
+      "title": "Discussing first-line treatments for more severe depression (NG222 patient decision aid)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://nice.org.uk/guidance/ng222/resources/discussing-firstline-treatments-for-more-severe-depression-pdf-11131007007",
+      "year": 2022
+    },
+    {
+      "title": "Behavioural activation for depression; an update of meta-analysis of effectiveness and sub group analysis (Ekers et al.)",
+      "publisher": "PLoS One (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24936656/",
+      "year": 2014
+    },
+    {
+      "title": "Cost and Outcome of BehaviouRal Activation (COBRA): a randomised controlled trial of behavioural activation versus cognitive-behavioural therapy for depression (Richards et al.)",
+      "publisher": "Health Technology Assessment (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28857042/",
+      "year": 2017
+    },
+    {
+      "title": "VA/DoD Clinical Practice Guideline for the Management of Major Depressive Disorder (version 4.0)",
+      "publisher": "US Department of Veterans Affairs and Department of Defense",
+      "url": "https://www.healthquality.va.gov/guidelines/MH/mdd/VADoDMDDCPGFinal508.pdf",
+      "year": 2022
+    },
+    {
+      "title": "Behavioral Therapy/Behavioral Activation for Major Depressive Disorder (clinician brief)",
+      "publisher": "Psychological Health Center of Excellence, Defense Health Agency",
+      "url": "https://health.mil/Reference-Center/Publications/2023/06/12/Behavioral-Therapy-Behavioral-Activation-for-Major-Depressive-Disorder",
+      "year": 2023
+    },
+    {
+      "title": "Psychological Treatments (treatment index)",
+      "publisher": "APA Division 12, Society of Clinical Psychology",
+      "url": "https://div12.org/psychological-treatments/treatments/"
+    },
+    {
+      "title": "Depression (health topic)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/topics/depression"
+    },
+    {
+      "title": "A meta-analysis of cultural adaptations of psychological interventions (Hall et al.)",
+      "publisher": "Behavior Therapy (DOI)",
+      "url": "https://doi.org/10.1016/j.beth.2016.09.005",
+      "year": 2016
+    },
+    {
+      "title": "Integrating clients' religion and spirituality within psychotherapy: a comprehensive meta-analysis (Captari et al.)",
+      "publisher": "Journal of Clinical Psychology (DOI)",
+      "url": "https://doi.org/10.1002/jclp.22681",
+      "year": 2018
+    },
+    {
+      "title": "AACC Code of Ethics",
+      "publisher": "American Association of Christian Counselors",
+      "url": "https://aacc.net/aacc-code-of-ethics/"
+    },
+    {
+      "title": "ACA Code of Ethics (2014) and ethics resources",
+      "publisher": "American Counseling Association",
+      "url": "https://www.counseling.org/resources/ethics",
+      "year": 2014
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

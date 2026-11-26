@@ -1,0 +1,53 @@
+{
+  "id": "stair-skills-training",
+  "name": "Skills Training in Affective and Interpersonal Regulation (STAIR) - overview and referral",
+  "modality": "Trauma-informed skills training (manualized protocol)",
+  "conditions": ["ptsd"],
+  "evidenceLevel": "Emerging evidence. In an RCT with 104 women with PTSD related to childhood abuse, STAIR followed by narrative exposure work led to greater gains in emotion regulation and interpersonal functioning than comparison sequences, with fewer adverse effects (Cloitre et al., 2010). In a 2024 home-based telehealth RCT with 161 women veterans who had experienced military sexual trauma, STAIR reduced clinician-rated PTSD severity more than present-centered therapy (between-group d = 0.39) and did better on emotion regulation, social support, depression and negative beliefs; psychosocial functioning improved similarly in both arms (Cloitre et al., 2024). The VA/DoD PTSD guideline (2017 clinician summary) listed STAIR among therapies with insufficient evidence to recommend for or against; check the 2023 update.",
+  "minutes": { "min": 10, "max": 20 },
+  "purpose": "STAIR, developed by Marylene Cloitre and colleagues, is a structured skills program for people with trauma histories. It focuses on noticing and managing emotions and on building more effective and satisfying relationships, for example naming feelings, coping with distress, spotting relationship patterns shaped by trauma, and practicing assertiveness and flexibility. It can be delivered alone (individually, in groups, by telehealth, or as a web-based program with coach support) or as a first phase before trauma-memory work. It may suit clients who are not ready for, or do not want, trauma-focused therapy, and clients with marked difficulties with emotions and relationships. This library entry covers overview and referral only, and the time estimate is for that conversation. It deliberately contains no protocol content.",
+  "steps": [
+    "Give brief, plain-language psychoeducation about how trauma can affect emotions and relationships, and introduce STAIR as one option.",
+    "Explain what to expect in general terms: a short course of structured sessions to learn skills for handling strong feelings and relationships, with practice between sessions, often without detailed talk about the trauma.",
+    "Compare options with the client (STAIR, trauma-focused therapies such as CPT, PE or EMDR, combined approaches, referral for medication evaluation) and support an informed choice. Note that trauma-focused therapies carry stronger guideline support for PTSD symptoms.",
+    "Screen for issues that affect timing or level of care: current safety, suicide risk, ongoing abusive relationships, severe dissociation, psychosis and substance problems. Address urgent needs first. Do not record substance-use details in this app.",
+    "If you are not trained in STAIR, refer to a STAIR-trained clinician or program (for example, through VA services or community trauma programs). Share information with the receiving clinician only with the client's consent.",
+    "Offer interim support while the client waits (grounding, breathing practice, sleep basics, safety planning).",
+    "Follow up to confirm that the referral was completed and the client was able to start."
+  ],
+  "script": [
+    "There is a program called STAIR. It helps people after trauma learn skills for handling strong feelings and relationships.",
+    "You learn ways to notice what you feel, calm down when feelings get big, and speak up for what you need.",
+    "You usually don't have to talk about the trauma in detail in STAIR.",
+    "Some people do STAIR on its own. Others do it first, before working on the trauma memories.",
+    "A therapist trained in STAIR leads it. I can help you find one.",
+    "You can take time to decide. We can also talk about other options."
+  ],
+  "contraindications": [
+    "Current safety threats (ongoing abuse, imminent suicide risk) need attention first. Crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com. This tool does not judge risk.",
+    "In an ongoing abusive relationship, practicing assertiveness with the abusive person can raise danger. Safety planning comes first, and the STAIR provider must tailor goals.",
+    "STAIR is not a substitute for trauma-focused therapy when the client wants it and is ready. Discuss both paths openly.",
+    "Active psychosis, an elevated mood state, or severe substance problems may need stabilization or integrated care first. Decide timing with a trained clinician.",
+    "Do not present general coping skills from this app as STAIR. The full program needs training."
+  ],
+  "culturalAdaptations": [
+    "Norms about expressing emotion and asserting needs differ across cultures and genders. Look for a provider who adapts skills to the client's family and community expectations.",
+    "In family-centered cultures, relationship goals may focus on keeping harmony and meeting family duties. Include these goals in the referral.",
+    "STAIR has been adapted for groups including refugees and veterans. Ask about delivery in the client's language and with professional interpreters.",
+    "Clients may prefer a clinician of a particular gender or background, especially after sexual violence. Include this preference in the referral."
+  ],
+  "trainingRequired": "STAIR: trained clinicians only. Deliver only after completing recognized STAIR training with consultation. Otherwise refer.",
+  "handoutIds": ["grounding-5-4-3-2-1", "breathing-practice"],
+  "sources": [
+    { "title": "Treatment for PTSD related to childhood abuse: a randomized controlled trial (Cloitre et al.)", "publisher": "American Journal of Psychiatry (DOI)", "url": "https://doi.org/10.1176/appi.ajp.2010.09081247", "year": 2010 },
+    { "title": "A home-based telehealth randomized controlled trial of Skills Training in Affective and Interpersonal Regulation versus present-centered therapy for women veterans who have experienced military sexual trauma (Cloitre et al.)", "publisher": "Journal of Consulting and Clinical Psychology (DOI)", "url": "https://doi.org/10.1037/ccp0000872", "year": 2024 },
+    { "title": "Clinician's Corner: Skills Training in Affective and Interpersonal Regulation (STAIR), Marylene Cloitre, PhD", "publisher": "International Society for Traumatic Stress Studies", "url": "https://istss.org/clinicians-corner-skills-training-in-affective-and-interpersonal-regulation-stair-marylene-cloitre-phd/" },
+    { "title": "Brief peer-supported webSTAIR compared to enhanced wait list (NCT04286165)", "publisher": "ClinicalTrials.gov", "url": "https://clinicaltrials.gov/study/NCT04286165" },
+    { "title": "Clinician summary of the VA/DoD clinical practice guideline for management of PTSD and acute stress disorder (2017 guideline)", "publisher": "Focus (American Psychiatric Association Publishing)", "url": "https://focus.psychiatryonline.org/doi/10.1176/appi.focus.16408" },
+    { "title": "VA/DoD Clinical Practice Guideline for Management of Posttraumatic Stress Disorder and Acute Stress Disorder", "publisher": "US Department of Veterans Affairs and Department of Defense", "url": "https://www.healthquality.va.gov/guidelines/MH/ptsd/", "year": 2023 },
+    { "title": "Post-Traumatic Stress Disorder (health topic)", "publisher": "National Institute of Mental Health", "url": "https://www.nimh.nih.gov/health/topics/post-traumatic-stress-disorder-ptsd" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

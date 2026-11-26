@@ -1,0 +1,68 @@
+{
+  "id": "act-values-clarification",
+  "name": "ACT: Values clarification",
+  "modality": "Acceptance and Commitment Therapy (ACT)",
+  "conditions": [
+    "major-depressive-disorder",
+    "generalized-anxiety-disorder",
+    "ptsd"
+  ],
+  "evidenceLevel": "Moderate evidence for ACT as a package; emerging evidence for values work as a stand-alone component. In a meta-analysis of 66 laboratory component studies, values components (alone and combined with mindfulness) outperformed inactive comparisons on targeted outcomes (Levin et al., 2012). Full ACT outperforms waitlist and usual care and is broadly comparable to CBT across anxiety, depression and substance use (A-Tjak et al., 2015; Gloster et al., 2020). The 2022 VA/DoD MDD guideline includes ACT among suggested psychotherapies for uncomplicated MDD (weak-for, per guideline summaries; confirm in the CPG). An initial meta-analysis of 10 RCTs found a small-to-medium effect favoring ACT over active comparisons for substance use (Lee et al., 2015). APA Division 12 rating not verified this session; check div12.org.",
+  "minutes": { "min": 20, "max": 45 },
+  "purpose": "Helps the client name freely chosen qualities of action (how they want to live, what they want to stand for, how they want to treat people) across life areas. Values then guide goal setting and give the client a personal reason to approach discomfort. A goal can be finished; a value is a direction that is never used up. Fit across presentations: Anxiety - values supply the 'why' for approaching feared situations and give exposure work personal meaning. Depression - counters loss of meaning and points behavioral activation toward rewarding, values-consistent activities. Trauma - helps clients reconnect with what matters when trauma has narrowed life, and can strengthen motivation to engage in trauma-focused therapy. Substance use - highlights the gap between use and what the client cares about without arguing, and fits well with motivational interviewing. Grief - valued action can honor the person or role that was lost. Theoretical grounding: ACT (Hayes, Strosahl & Wilson).",
+  "steps": [
+    "Explain the difference between values (ongoing directions), goals (things that can be finished) and feelings (which come and go). Use one quick example from the client's life.",
+    "Survey life areas with the client: close relationships, family and caregiving, friendships, work or study, learning, health and body, community and citizenship, spirituality or meaning, and play and rest. Let the client add or drop areas.",
+    "Use open, present-focused prompts: a moment when the client felt most like themselves; what they would want a trusted person to say about how they treat others; what they would keep doing even if no one noticed.",
+    "Separate values from rules and shoulds. Ask whether the client would still choose this value if no one would ever know. Rules handed down by others can be revisited without rejecting the people who gave them.",
+    "Rate each area for importance and for how closely the last two weeks matched it (0-10). Notice the largest gaps with curiosity, not blame.",
+    "Choose one area and turn it into one small, specific action for this week (bridge to committed action).",
+    "Record values and the chosen step on the values-compass handout.",
+    "Revisit values every few sessions; they can shift with life stage, recovery and loss."
+  ],
+  "script": [
+    "Values are like a compass direction. You never arrive at west, but you can always take a step that way.",
+    "When you think about the people who matter most to you, what kind of person do you want to be with them? Not what you want them to do, but what you want to bring.",
+    "Sometimes we mix up values with rules we were handed. If nobody would ever find out, would this still matter to you?",
+    "From 0 to 10, how important is this to you? And how much did the last two weeks match it? A gap is not a failure. It just shows us where to start.",
+    "What is one small thing you could do this week, even on a hard day, that would be a step in that direction?"
+  ],
+  "contraindications": [
+    "Values work can stir grief, guilt or shame when the gap between values and current life is wide. Pace the exercise, validate the pain, and avoid it during an acute crisis.",
+    "Avoid death-focused imagery (for example, imagining one's own funeral or tombstone) with clients who have suicidal thoughts, a recent bereavement or trauma involving death; use present-focused prompts instead.",
+    "If suicidal thoughts come up, assess risk using your clinical protocol and safety planning, and keep 988 in the US (call or text), the local emergency number and findahelpline.com visible. The clinician, not this tool, judges risk.",
+    "Watch for 'values' that are really rigid rules, perfectionism or attempts to please others; clarify these before setting goals.",
+    "With depression, keep the first valued actions very small to avoid setting the client up to fail.",
+    "Substance-use care: screen for withdrawal risk (alcohol or benzodiazepine withdrawal needs medical referral) and coordinate with SUD treatment. Keep notes and handouts free of identifying details. 42 CFR Part 2 prohibits unauthorized disclosure of these records."
+  ],
+  "culturalAdaptations": [
+    "Values may be held collectively (family, clan, community, faith community) rather than individually. Honor relational and communal values and do not frame interdependence as a problem.",
+    "Poverty, immigration status, disability, caregiving duties and discrimination can limit choices. Name real constraints and look for valued actions that are possible within them.",
+    "Use the client's own words for values. Fixed value lists can reflect the clinician's culture; offer examples only if the client gets stuck.",
+    "In grief, mourning customs, prayers, foods, music and anniversaries can themselves be valued actions; ask what the client's community does to honor the dead.",
+    "Culturally adapted psychotherapies tend to outperform unadapted versions (Hall et al., 2016); adapt examples and goals to the client's context."
+  ],
+  "faithIntegrated": {
+    "note": "Clients who wish to may include spiritual or religious values (for example, service, faithfulness, mercy, stewardship, worship or justice) as a life area and link valued actions to practices in their tradition. The client defines these values in their own terms. The clinician does not rank, interpret or judge them.",
+    "consentNote": "Before any faith-integrated variant, explain its purpose and alternatives, confirm the client's right to decline or stop at any time, and document informed consent (AACC Code of Ethics; ACA Code of Ethics). Faith integration is client-led. Never impose beliefs or suggest that distress reflects weak faith."
+  },
+  "handoutIds": ["values-compass"],
+  "sources": [
+    { "title": "Acceptance and commitment therapy: model, processes and outcomes (Hayes, Luoma, Bond, Masuda & Lillis)", "publisher": "Behaviour Research and Therapy (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/16300724/", "year": 2006 },
+    { "title": "Acceptance and Commitment Therapy, Second Edition: The Process and Practice of Mindful Change (Hayes, Strosahl & Wilson)", "publisher": "Guilford Press", "url": "https://www.guilford.com/books/Acceptance-and-Commitment-Therapy/Hayes-Strosahl-Wilson/9781462528943", "year": 2012 },
+    { "title": "The impact of treatment components suggested by the psychological flexibility model: a meta-analysis of laboratory-based component studies (Levin et al.)", "publisher": "Behavior Therapy (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/23046777/", "year": 2012 },
+    { "title": "A meta-analysis of the efficacy of acceptance and commitment therapy for clinically relevant mental and physical health problems (A-Tjak et al.)", "publisher": "Psychotherapy and Psychosomatics (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/25547522/", "year": 2015 },
+    { "title": "The empirical status of acceptance and commitment therapy: a review of meta-analyses (Gloster et al.)", "publisher": "Journal of Contextual Behavioral Science", "url": "https://doi.org/10.1016/j.jcbs.2020.09.009", "year": 2020 },
+    { "title": "An initial meta-analysis of acceptance and commitment therapy for treating substance use disorders (Lee, An, Levin & Twohig)", "publisher": "Drug and Alcohol Dependence", "url": "https://doi.org/10.1016/j.drugalcdep.2015.08.004", "year": 2015 },
+    { "title": "VA/DoD Clinical Practice Guideline: Management of Major Depressive Disorder", "publisher": "US Department of Veterans Affairs and Department of Defense", "url": "https://www.healthquality.va.gov/guidelines/MH/mdd/", "year": 2022 },
+    { "title": "Psychological Treatments (treatment index)", "publisher": "APA Division 12, Society of Clinical Psychology", "url": "https://div12.org/psychological-treatments/treatments/" },
+    { "title": "A meta-analysis of cultural adaptations of psychological interventions (Hall et al.)", "publisher": "Behavior Therapy (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/27993346/", "year": 2016 },
+    { "title": "AACC Code of Ethics", "publisher": "American Association of Christian Counselors", "url": "https://aacc.net/aacc-code-of-ethics/" },
+    { "title": "The HIPAA Privacy Rule and 42 CFR Part 2", "publisher": "US Department of Health and Human Services", "url": "https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/hipaa-part-2/index.html" },
+    { "title": "988 Suicide & Crisis Lifeline", "publisher": "988 Lifeline", "url": "https://988lifeline.org" },
+    { "title": "Find A Helpline (international directory)", "publisher": "Find A Helpline", "url": "https://findahelpline.com" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

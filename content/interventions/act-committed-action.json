@@ -1,0 +1,66 @@
+{
+  "id": "act-committed-action",
+  "name": "ACT: Committed action (values-based action planning)",
+  "modality": "Acceptance and Commitment Therapy (ACT)",
+  "conditions": [
+    "major-depressive-disorder",
+    "generalized-anxiety-disorder",
+    "agoraphobia"
+  ],
+  "evidenceLevel": "Moderate evidence for ACT as a package (A-Tjak et al., 2015; Gloster et al., 2020); committed action has not been tested much as a stand-alone component (emerging evidence). In practice it overlaps with behavioral activation and graded exposure, which have stronger support: NICE NG222 (2022) lists individual and group behavioral activation among first-line options for less severe depression. The 2022 VA/DoD MDD guideline includes ACT among suggested psychotherapies for uncomplicated MDD (weak-for, per guideline summaries; confirm in the CPG). APA Division 12 rating not verified this session; check div12.org.",
+  "minutes": { "min": 15, "max": 30 },
+  "purpose": "Turns values into concrete, repeated behavior and plans ahead for barriers, including the unwanted thoughts, feelings and urges that show up along the way. The focus is on small, specific, observable steps that build into larger patterns, and on recommitting after lapses instead of quitting. Fit across presentations: Anxiety - steps are planned approach behaviors, so this works as a values-anchored form of graded exposure; coordinate with graded-in-vivo-exposure for agoraphobia and phobias. Depression - overlaps closely with behavioral activation and helps counter withdrawal. Trauma - supports re-engaging in safe but avoided parts of life; trauma memory work still belongs in trauma-focused therapy. Substance use - plans valued alternatives to using and treats a slip as a cue to recommit, not as proof of failure. Theoretical grounding: ACT (Hayes, Strosahl & Wilson).",
+  "steps": [
+    "Start from a value the client has already named (see act-values-clarification).",
+    "Shape a goal that is specific, small and scheduled: what, when, where and for how long. It should be within the client's control and doable on a hard day.",
+    "Predict barriers together. Inner barriers: thoughts ('what is the point'), feelings, urges, fatigue. Outer barriers: time, money, transport, childcare, other people.",
+    "Plan for inner barriers using willingness and defusion: decide in advance what the client will do when the barrier thought or feeling shows up.",
+    "Plan for outer barriers with brief problem-solving (see problem-solving).",
+    "Invite the client to state the commitment in their own words and write it down. Sharing it with a supportive person is optional and the client's choice.",
+    "At review, credit every attempt, look at what got in the way, adjust the step size, and recommit. Use the activity-schedule handout to plan and track steps.",
+    "Over several weeks, link steps into patterns (for example, three short walks a week becoming a routine) and add new values areas."
+  ],
+  "script": [
+    "Last time you said being a present parent really matters to you. Let's turn that into something you could actually see on a calendar.",
+    "Make it so small you could do it on a bad day. What will you do, when, where and for how long?",
+    "Let's guess what your mind will say right before you do it. Maybe 'too tired' or 'what is the point.' What could you do with that thought, other than obey it?",
+    "If the week goes sideways and you skip it, that is information, not failure. The skill is noticing and starting again.",
+    "From 0 to 10, how willing are you to take this step, even if anxiety or low mood comes along for the ride?"
+  ],
+  "contraindications": [
+    "Steps that involve feared situations should be graded and planned. With panic, agoraphobia or phobias, coordinate with exposure planning, and get medical clearance when steps involve physical strain.",
+    "Do not encourage steps that could put the client at physical, legal or social risk (for example, confronting an abusive partner) under the label of committed action. Screen for intimate partner violence and other safety issues first.",
+    "With severe depression, high suicide risk or acute crisis, stabilize first. Follow your risk protocol and keep 988 in the US (call or text), the local emergency number and findahelpline.com visible. The clinician, not this tool, judges risk.",
+    "Watch for perfectionistic goals or goals set to meet others' expectations; check that each goal serves the client's own values.",
+    "Substance-use care: agree on drinking goals (reduction or abstinence) collaboratively, screen for withdrawal risk (alcohol or benzodiazepine withdrawal needs medical referral), and keep notes and handouts free of identifying details. 42 CFR Part 2 prohibits unauthorized disclosure of these records."
+  ],
+  "culturalAdaptations": [
+    "Fit steps to the client's work hours, caregiving duties, transport and budget. Free or low-cost actions are often the best first steps.",
+    "In collectivist contexts, shared or family-involved goals can improve follow-through; ask whom the client would like to involve, if anyone.",
+    "Public commitment can feel shaming or risky in some cultures and communities. Let the client choose whether commitments stay private.",
+    "Plan around religious calendars, fasting periods, holidays and community obligations.",
+    "Culturally adapted psychotherapies tend to outperform unadapted versions (Hall et al., 2016); use the client's examples and language."
+  ],
+  "faithIntegrated": {
+    "note": "If the client wishes, valued actions can include taking part in their faith community, acts of service, or spiritual disciplines they already value, and the client may choose to ask a faith leader or community member for support. The clinician supports the client's own plan and does not prescribe religious practices.",
+    "consentNote": "Before any faith-integrated variant, explain its purpose and alternatives, confirm the client's right to decline or stop at any time, and document informed consent (AACC Code of Ethics; ACA Code of Ethics). Faith integration is client-led. Never impose beliefs or suggest that distress reflects weak faith."
+  },
+  "handoutIds": ["values-compass", "activity-schedule"],
+  "sources": [
+    { "title": "Acceptance and Commitment Therapy, Second Edition: The Process and Practice of Mindful Change (Hayes, Strosahl & Wilson)", "publisher": "Guilford Press", "url": "https://www.guilford.com/books/Acceptance-and-Commitment-Therapy/Hayes-Strosahl-Wilson/9781462528943", "year": 2012 },
+    { "title": "Acceptance and commitment therapy: model, processes and outcomes (Hayes, Luoma, Bond, Masuda & Lillis)", "publisher": "Behaviour Research and Therapy (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/16300724/", "year": 2006 },
+    { "title": "A meta-analysis of the efficacy of acceptance and commitment therapy for clinically relevant mental and physical health problems (A-Tjak et al.)", "publisher": "Psychotherapy and Psychosomatics (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/25547522/", "year": 2015 },
+    { "title": "The empirical status of acceptance and commitment therapy: a review of meta-analyses (Gloster et al.)", "publisher": "Journal of Contextual Behavioral Science", "url": "https://doi.org/10.1016/j.jcbs.2020.09.009", "year": 2020 },
+    { "title": "Depression in adults: treatment and management (NG222)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng222", "year": 2022 },
+    { "title": "VA/DoD Clinical Practice Guideline: Management of Major Depressive Disorder", "publisher": "US Department of Veterans Affairs and Department of Defense", "url": "https://www.healthquality.va.gov/guidelines/MH/mdd/", "year": 2022 },
+    { "title": "Psychological Treatments (treatment index)", "publisher": "APA Division 12, Society of Clinical Psychology", "url": "https://div12.org/psychological-treatments/treatments/" },
+    { "title": "A meta-analysis of cultural adaptations of psychological interventions (Hall et al.)", "publisher": "Behavior Therapy (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/27993346/", "year": 2016 },
+    { "title": "AACC Code of Ethics", "publisher": "American Association of Christian Counselors", "url": "https://aacc.net/aacc-code-of-ethics/" },
+    { "title": "The HIPAA Privacy Rule and 42 CFR Part 2", "publisher": "US Department of Health and Human Services", "url": "https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/hipaa-part-2/index.html" },
+    { "title": "988 Suicide & Crisis Lifeline", "publisher": "988 Lifeline", "url": "https://988lifeline.org" },
+    { "title": "Find A Helpline (international directory)", "publisher": "Find A Helpline", "url": "https://findahelpline.com" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

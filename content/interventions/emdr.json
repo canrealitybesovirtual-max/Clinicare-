@@ -1,0 +1,91 @@
+{
+  "id": "emdr",
+  "name": "Eye movement desensitization and reprocessing (EMDR) - overview and referral",
+  "modality": "EMDR (manualized protocol)",
+  "conditions": ["ptsd"],
+  "evidenceLevel": "Recommended by several guidelines, at differing strengths. NICE NG116 recommends EMDR for adults presenting more than 3 months after a non-combat-related trauma, and suggests considering it at 1 to 3 months if the person prefers it. The VA/DoD 2023 guideline strongly recommends individual, manualized trauma-focused psychotherapies, including EMDR. WHO's 2013 stress guidelines list EMDR alongside trauma-focused CBT for adults with PTSD. The APA guideline gave EMDR a conditional recommendation in 2017 and lists it among suggested (not recommended) treatments in its 2025 update; this rating is debated.",
+  "minutes": { "min": 10, "max": 20 },
+  "purpose": "EMDR is a structured, phased therapy. After history-taking and preparation, the client briefly holds a trauma memory in mind while doing bilateral stimulation (usually guided eye movements, sometimes taps or tones), followed by closure and re-evaluation. The number and length of sessions vary by provider and client. This library entry covers overview and referral only, and the time estimate is for that conversation. It deliberately contains no protocol scripts. Deliver EMDR only after formal EMDR training with ongoing consultation.",
+  "steps": [
+    "Give brief, plain-language psychoeducation about trauma reactions and introduce EMDR as one evidence-based option.",
+    "Explain what to expect in general terms: time spent on history and calming skills before any memory work, then short sets of focusing on the memory with eye movements or other bilateral stimulation, and closing each session in a settled state.",
+    "Compare options with the client (EMDR, cognitive processing therapy, prolonged exposure, other trauma-focused CBT, referral for medication evaluation) and support an informed choice. Note that NICE describes EMDR's role as differing by time since the trauma and by combat versus non-combat trauma.",
+    "Screen for issues that affect timing or level of care: current safety, suicide risk, severe dissociation, psychosis, and substance problems. Address urgent needs first. Do not record substance-use details in this app.",
+    "If you are not EMDR-trained, refer to a clinician who has completed recognized EMDR training (for example, EMDRIA-approved basic training or an equivalent national association's training). Share information with the receiving clinician only with the client's consent.",
+    "Offer interim support while the client waits (grounding, sleep basics, safety planning) without starting memory processing.",
+    "Follow up to confirm that the referral was completed and the client was able to start."
+  ],
+  "script": [
+    "There is a treatment called EMDR. It helps many people after trauma.",
+    "In EMDR, you think about part of a hard memory for short periods while you follow the therapist's hand or a light with your eyes, or notice taps or tones.",
+    "The goal is for the memory to feel less upsetting and to have less power over you.",
+    "Before working on memories, the therapist spends time getting to know you and teaching you ways to calm down.",
+    "EMDR must be done by a therapist with special training. I can help you find one.",
+    "You can take time to decide. We can also talk about other options."
+  ],
+  "contraindications": [
+    "Current safety threats (ongoing abuse, imminent suicide risk) need attention first. Crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com.",
+    "Severe dissociation needs careful assessment by the EMDR provider before any memory processing.",
+    "Active psychosis, an elevated mood state, or severe substance problems may need stabilization or integrated care first. NICE NG116 advises against excluding people from PTSD treatment solely because of co-occurring drug or alcohol misuse. Decide timing with a trained clinician.",
+    "With the client's consent, tell the EMDR provider about eye conditions, seizure disorders, pregnancy or other medical issues, so they can choose the type of bilateral stimulation and pacing.",
+    "Do not use eye movements, tapping or other bilateral stimulation in an untrained or improvised way."
+  ],
+  "culturalAdaptations": [
+    "EMDR has been used across many countries and in humanitarian settings. Ask the provider about delivery in the client's language and the use of professional interpreters.",
+    "Some clients may be wary of eye-movement procedures for cultural or religious reasons. Explain the rationale and let the client ask questions before referral.",
+    "Clients may prefer a clinician of a particular gender or background, especially after sexual violence. Include this preference in the referral.",
+    "Consider the client's own understanding of trauma and healing, and look for a provider who will respect it."
+  ],
+  "trainingRequired": "EMDR: trained clinicians only. Deliver only after completing an EMDRIA-approved basic training (which includes required consultation hours) or an equivalent recognized national association training, with ongoing consultation. Otherwise refer.",
+  "handoutIds": [],
+  "sources": [
+    {
+      "title": "Post-traumatic stress disorder (NG116)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng116",
+      "year": 2018
+    },
+    {
+      "title": "The management of posttraumatic stress disorder and acute stress disorder: synopsis of the 2023 VA/DoD clinical practice guideline",
+      "publisher": "Annals of Internal Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38408360/",
+      "year": 2024
+    },
+    {
+      "title": "VA/DoD Clinical Practice Guideline for Management of Posttraumatic Stress Disorder and Acute Stress Disorder",
+      "publisher": "US Department of Veterans Affairs and Department of Defense",
+      "url": "https://www.healthquality.va.gov/guidelines/MH/ptsd/",
+      "year": 2023
+    },
+    {
+      "title": "Guidelines for the management of conditions specifically related to stress",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/publications/i/item/9789241505406",
+      "year": 2013
+    },
+    {
+      "title": "Clinical Practice Guideline for the Treatment of PTSD: treatments",
+      "publisher": "American Psychological Association",
+      "url": "https://www.apa.org/ptsd-guideline/treatments"
+    },
+    {
+      "title": "Monitor on Psychology (July/August 2025): updated APA guideline for treating PTSD",
+      "publisher": "American Psychological Association",
+      "url": "https://www.apa.org/monitor/2025/07-08/guidelines-treating-ptsd-trauma",
+      "year": 2025
+    },
+    {
+      "title": "EMDR Basic Training: policies and requirements",
+      "publisher": "EMDR International Association (EMDRIA)",
+      "url": "https://www.emdria.org/emdr-basic-training-policies-requirements/"
+    },
+    {
+      "title": "Post-Traumatic Stress Disorder (health topic)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/topics/post-traumatic-stress-disorder-ptsd"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

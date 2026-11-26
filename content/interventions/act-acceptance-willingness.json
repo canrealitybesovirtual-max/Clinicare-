@@ -1,0 +1,70 @@
+{
+  "id": "act-acceptance-willingness",
+  "name": "ACT: Acceptance and willingness",
+  "modality": "Acceptance and Commitment Therapy (ACT)",
+  "conditions": [
+    "panic-disorder",
+    "agoraphobia",
+    "generalized-anxiety-disorder",
+    "major-depressive-disorder",
+    "ptsd"
+  ],
+  "evidenceLevel": "Moderate evidence for acceptance-based treatments in anxiety; emerging evidence as a stand-alone component. Acceptance components outperformed inactive comparisons in a meta-analysis of 66 laboratory studies (Levin et al., 2012). In RCTs, an acceptance-based behavior therapy matched applied relaxation for GAD (Hayes-Skelton et al., 2013), ACT matched CBT for social anxiety (Craske et al., 2014), and ACT outperformed relaxation training for OCD (Twohig et al., 2010). ACT for substance use showed a small-to-medium effect over active comparisons in an initial meta-analysis (Lee et al., 2015). The 2023 VA/DoD PTSD guideline found insufficient evidence for or against ACT as a PTSD treatment. APA Division 12 rating not verified this session; check div12.org.",
+  "minutes": { "min": 15, "max": 30 },
+  "purpose": "Acceptance means actively making room for unwanted inner experiences (fear, sadness, urges, body sensations, memories) instead of fighting, suppressing or escaping them, when that struggle is costing the client. Willingness is the choice to have those experiences in the service of valued action. It is not resignation, approval of what happened, or putting up with harmful situations. Fit across presentations: Anxiety - reduces the experiential avoidance and safety behaviors that keep panic, agoraphobia, social anxiety, phobias and OCD going, and pairs naturally with exposure. Depression - helps when efforts to avoid sadness lead to withdrawal, numbing or rumination. Trauma - builds tolerance for trauma reminders inside a trauma-focused plan; go slowly with strong physical arousal. Substance use - practice in feeling cravings and painful emotions without using, once withdrawal safety is addressed; overlaps with urge surfing. Grief - lets grief be felt rather than avoided, which may help prevent grief from getting stuck. Theoretical grounding: ACT (Hayes, Strosahl & Wilson); acceptance-based behavior therapy (Roemer & Orsillo).",
+  "steps": [
+    "Map the struggle: list what the client has tried to get rid of the feeling, how well each strategy worked in the short run and the long run, and what each one cost. Do this with warmth; the aim is to notice that control efforts may be part of the problem, not to blame the client.",
+    "Offer an image of the struggle and invite the client's own. For example: pushing against a heavy door while something pushes back from the other side, and the option of stepping aside and letting it swing open.",
+    "Practice in session for 1 to 3 minutes: invite the feeling, find where it sits in the body, describe its size, shape, temperature and movement, breathe around it, and allow it to stay. Offer eyes-open options.",
+    "Rate two things separately (0-10): how strong the feeling is, and how much the client is struggling with it. Explain that acceptance targets the struggle, and the feeling may or may not change.",
+    "Ask the willingness question for a specific situation and time frame: is the client willing to have this feeling if it means doing a particular thing that matters? Willingness is a yes-or-no choice, not a mood.",
+    "Plan one willingness exercise in daily life tied to a value, and link it with exposure, urge surfing or committed action plans as appropriate.",
+    "Review by tracking willingness and valued action, not symptom reduction. Use the mindful-check-in or values-compass handouts as fits the presentation."
+  ],
+  "script": [
+    "Let's be honest about everything you've tried to make the anxiety go away. What worked in the short run? And what has it cost you over the long run?",
+    "It sounds like the harder you push against this feeling, the harder it pushes back. What if there were another option besides pushing?",
+    "For the next two minutes, let's try something different. Where do you notice the feeling in your body? If it had a shape or a color, what would it be?",
+    "See if you can breathe into the space around it. You don't have to like it. Just let it be there, the way you'd let the weather be there.",
+    "Two numbers: how strong is the feeling, from 0 to 10? And how hard are you fighting it, from 0 to 10? Sometimes the second number drops even when the first one doesn't.",
+    "If saying yes to this feeling meant you could go to your daughter's recital, would you be willing to let it come along?"
+  ],
+  "contraindications": [
+    "Acceptance never means accepting abuse, unsafe housing, discrimination or other harmful situations. Address safety and practical problems directly.",
+    "Body-focused attention can overwhelm clients with trauma histories. Offer eyes-open options, short practice, grounding and the right to stop, and coordinate with trauma-focused care.",
+    "In panic disorder, make sure a medical evaluation has addressed physical causes of symptoms before encouraging the client to allow sensations.",
+    "Willingness to sit with cravings assumes medical safety. Alcohol or benzodiazepine withdrawal can be dangerous and needs medical referral, not acceptance practice.",
+    "Suicidal thoughts are not something to simply accept. Assess risk using your clinical protocol and safety planning, and keep 988 in the US (call or text), the local emergency number and findahelpline.com visible. The clinician, not this tool, judges risk.",
+    "Substance-use care: keep notes and handouts free of identifying details and coordinate with SUD treatment. 42 CFR Part 2 prohibits unauthorized disclosure of these records."
+  ],
+  "culturalAdaptations": [
+    "Some cultures value emotional restraint and others value open expression. Frame acceptance as making room for a feeling, not as having to show it, and respect the client's norms about emotion in session.",
+    "Many clients express distress mainly through the body (headaches, chest pressure, heat, heaviness). Use body language and idioms that match the client's own.",
+    "The word 'acceptance' can sound like giving up or tolerating injustice, especially for clients facing racism or oppression. Clarify that acceptance applies to inner experiences, while acting against injustice can itself be a valued action.",
+    "In grief, respect cultural and religious mourning timelines and rituals. Acceptance of grief does not mean moving on or forgetting.",
+    "Culturally adapted psychotherapies tend to outperform unadapted versions (Hall et al., 2016); adapt metaphors and examples to the client."
+  ],
+  "faithIntegrated": {
+    "note": "Some clients find language for acceptance in their own tradition, such as surrender, trust, patience in hardship, or prayers for serenity. If the client raises these and wants to use them, the clinician can invite the client to connect willingness practice to their own prayers or teachings, while keeping the focus on the client's chosen values.",
+    "consentNote": "Before any faith-integrated variant, explain its purpose and alternatives, confirm the client's right to decline or stop at any time, and document informed consent (AACC Code of Ethics; ACA Code of Ethics). Faith integration is client-led. Never impose beliefs or suggest that distress reflects weak faith."
+  },
+  "handoutIds": ["mindful-check-in", "values-compass"],
+  "sources": [
+    { "title": "Acceptance and Commitment Therapy, Second Edition: The Process and Practice of Mindful Change (Hayes, Strosahl & Wilson)", "publisher": "Guilford Press", "url": "https://www.guilford.com/books/Acceptance-and-Commitment-Therapy/Hayes-Strosahl-Wilson/9781462528943", "year": 2012 },
+    { "title": "The impact of treatment components suggested by the psychological flexibility model: a meta-analysis of laboratory-based component studies (Levin et al.)", "publisher": "Behavior Therapy (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/23046777/", "year": 2012 },
+    { "title": "A randomized clinical trial comparing an acceptance-based behavior therapy to applied relaxation for generalized anxiety disorder (Hayes-Skelton, Roemer & Orsillo)", "publisher": "Journal of Consulting and Clinical Psychology (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/23647281/", "year": 2013 },
+    { "title": "Randomized controlled trial of cognitive behavioral therapy and acceptance and commitment therapy for social phobia (Craske et al.)", "publisher": "Journal of Consulting and Clinical Psychology (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/24999670/", "year": 2014 },
+    { "title": "A randomized clinical trial of acceptance and commitment therapy versus progressive relaxation training for obsessive-compulsive disorder (Twohig et al.)", "publisher": "Journal of Consulting and Clinical Psychology (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/20873905/", "year": 2010 },
+    { "title": "An initial meta-analysis of acceptance and commitment therapy for treating substance use disorders (Lee, An, Levin & Twohig)", "publisher": "Drug and Alcohol Dependence", "url": "https://doi.org/10.1016/j.drugalcdep.2015.08.004", "year": 2015 },
+    { "title": "Clinician summary of the 2023 VA/DoD PTSD clinical practice guideline", "publisher": "Focus (American Psychiatric Association Publishing)", "url": "https://focus.psychiatryonline.org/doi/10.1176/appi.focus.16408" },
+    { "title": "Psychological Treatments (treatment index)", "publisher": "APA Division 12, Society of Clinical Psychology", "url": "https://div12.org/psychological-treatments/treatments/" },
+    { "title": "A meta-analysis of cultural adaptations of psychological interventions (Hall et al.)", "publisher": "Behavior Therapy (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/27993346/", "year": 2016 },
+    { "title": "AACC Code of Ethics", "publisher": "American Association of Christian Counselors", "url": "https://aacc.net/aacc-code-of-ethics/" },
+    { "title": "The HIPAA Privacy Rule and 42 CFR Part 2", "publisher": "US Department of Health and Human Services", "url": "https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/hipaa-part-2/index.html" },
+    { "title": "988 Suicide & Crisis Lifeline", "publisher": "988 Lifeline", "url": "https://988lifeline.org" },
+    { "title": "Find A Helpline (international directory)", "publisher": "Find A Helpline", "url": "https://findahelpline.com" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

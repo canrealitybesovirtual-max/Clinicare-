@@ -1,0 +1,92 @@
+{
+  "id": "mindful-check-in",
+  "title": "Mindful Check-In",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 5,
+  "intro": "A mindful check-in is a short pause in your day. You stop for a few minutes and notice what is going on inside you and around you. You do not try to change anything or make it go away. You just notice, with kindness. This can help you step out of 'autopilot' and choose what to do next. It takes about 3 to 5 minutes. You can do it sitting, standing, or even walking.",
+  "sections": [
+    {
+      "heading": "Getting ready",
+      "steps": [
+        "Find a spot where you can pause for a few minutes. You can keep your eyes open or closed. Do what feels safe and comfortable.",
+        "Sit or stand in a way that feels steady. Notice your feet on the floor."
+      ]
+    },
+    {
+      "heading": "Part 1: What is here right now?",
+      "body": "Take a moment to notice what you find. You don't need to fix it.",
+      "steps": [
+        "Thoughts: What is your mind saying? You can give it a name, like 'planning' or 'worrying.'",
+        "Feelings: What emotions are here? Maybe calm, sad, tense, or a mix.",
+        "Body: What do you feel in your body? Maybe tight shoulders, a warm face, or tired eyes."
+      ]
+    },
+    {
+      "heading": "Part 2: Find your breath",
+      "steps": [
+        "Bring your attention to your breathing. Notice the air moving in and out.",
+        "You do not need to change your breath. Just follow a few breaths, one at a time.",
+        "When your mind wanders, that is normal. Gently bring it back to the next breath.",
+        "If paying attention to your breath feels uncomfortable, focus on your feet, your hands, or the sounds in the room instead."
+      ]
+    },
+    {
+      "heading": "Part 3: Widen your view",
+      "steps": [
+        "Let your attention spread out to your whole body, sitting or standing here.",
+        "Notice the room around you: sounds, light, and the air on your skin.",
+        "Ask yourself, 'What do I need right now?'"
+      ]
+    },
+    {
+      "heading": "Part 4: Choose your next step",
+      "steps": [
+        "Pick one small thing to do next. It might be a glass of water, a stretch, a kind word to yourself, or getting back to a task.",
+        "Move on with your day at your own pace."
+      ]
+    },
+    {
+      "heading": "Tips for practice",
+      "steps": [
+        "Try it 1 to 3 times a day. Link it to something you already do, like after you brush your teeth or before lunch.",
+        "Short is fine. Even 1 minute counts.",
+        "There is no 'right' way to feel after a check-in. The goal is to notice, not to relax.",
+        "If you pray or have a spiritual practice, you may choose to link the check-in to it. That is up to you.",
+        "Tell your counselor or therapist what you notice."
+      ]
+    }
+  ],
+  "practiceLog": {
+    "columns": ["Day", "Time", "What I noticed", "What I chose to do next"],
+    "rows": 7
+  },
+  "safetyNote": "Safety first: Turning inward can sometimes bring up strong feelings or memories. If that happens, open your eyes, look around the room, and feel your feet on the floor. You can stop at any time. Tell your counselor or therapist if a practice often makes you feel worse, panicky, or far away. This sheet is not for emergencies. If you have thoughts of hurting yourself or someone else, call or text 988 in the US, or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sources": [
+    {
+      "title": "Meditation and Mindfulness: Effectiveness and Safety",
+      "publisher": "National Center for Complementary and Integrative Health (NCCIH)",
+      "url": "https://www.nccih.nih.gov/health/meditation-and-mindfulness-effectiveness-and-safety"
+    },
+    {
+      "title": "Efficacy of mindfulness-based cognitive therapy in prevention of relapse: an individual patient data meta-analysis from randomized trials (Kuyken et al.)",
+      "publisher": "JAMA Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27119968/",
+      "year": 2016
+    },
+    {
+      "title": "The impact of treatment components suggested by the psychological flexibility model: a meta-analysis of laboratory-based component studies (Levin et al.)",
+      "publisher": "Behavior Therapy (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23046777/",
+      "year": 2012
+    },
+    {
+      "title": "988 Suicide & Crisis Lifeline",
+      "publisher": "988 Lifeline",
+      "url": "https://988lifeline.org"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

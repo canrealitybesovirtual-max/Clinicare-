@@ -1,0 +1,130 @@
+{
+  "id": "trauma-psychoeducation-and-grounding",
+  "name": "Trauma psychoeducation and stabilization skills",
+  "modality": "Trauma-informed stabilization",
+  "conditions": ["ptsd"],
+  "evidenceLevel": "A supporting step, not a stand-alone PTSD treatment. NICE NG116, the VA/DoD 2023 guideline and the APA PTSD guideline recommend trauma-focused psychotherapies as first-line care. SAMHSA TIP 57 describes psychoeducation and grounding as core trauma-informed skills. Whether a separate stabilization phase is needed before trauma-focused work is debated: NICE NG116 lists stabilization for complex PTSD as a research priority, and De Jongh et al. (2016) argue that routine stabilization phases can delay effective treatment.",
+  "minutes": { "min": 30, "max": 50 },
+  "purpose": "Gives the client a plain-language understanding of common reactions after trauma (re-living, avoidance, feeling on guard, changes in mood and beliefs) as understandable responses to danger, and teaches a few skills for managing distress (grounding, slow breathing, sleep and routine basics). It builds safety, trust and hope, prepares the client for trauma-focused therapy, and supports informed choice among treatment options. It should not replace trauma-focused treatment or delay it without good reason.",
+  "steps": [
+    "Check current safety first: ongoing abuse or threats, suicidal or homicidal thoughts, self-harm, and basic needs. Address urgent safety needs before skills work.",
+    "Explain common reactions after trauma in plain language, using the client's own examples. Present them as the body's alarm system staying switched on, without implying the client is broken or to blame.",
+    "Describe how avoidance brings short-term relief but keeps fear going, and why effective treatments involve working through the memory gradually and with support.",
+    "Teach 5-4-3-2-1 grounding and slow breathing in session, practicing while the client is calm. Give the grounding-5-4-3-2-1 and breathing-practice handouts.",
+    "Identify early signs of becoming overwhelmed and the client's personal reminders (triggers). Agree on a plan for using grounding when flashbacks or dissociation occur.",
+    "Review sleep, daily routine, social support, and any reliance on alcohol or drugs to cope. Do not record substance-use details in this app.",
+    "Explain first-line trauma-focused options (cognitive processing therapy, prolonged exposure, EMDR, other trauma-focused CBT) and how to access them. Support the client's informed choice and pace.",
+    "End each session by returning to the present with grounding and checking the client's distress level before they leave.",
+    "Track progress and plan a referral or move to trauma-focused therapy without unnecessary delay."
+  ],
+  "script": [
+    "What happened to you was not your fault. The reactions you are having are common after trauma.",
+    "When something dangerous happens, the body's alarm system turns on to protect you. Sometimes it stays on, even after the danger has passed.",
+    "That can show up as memories that pop up, bad dreams, feeling jumpy, or staying away from reminders.",
+    "Staying away from reminders makes sense. It helps in the short term. Over time, it can keep the fear going.",
+    "There are treatments that help many people feel better. We can talk about them when you are ready.",
+    "For now, let's practice a skill for when feelings get too big. It helps you come back to the here and now.",
+    "You are in charge of how much you share and when. You can tell me to stop at any time.",
+    "Before you leave today, let's check in. How strong are your feelings now, from 0 to 10?"
+  ],
+  "contraindications": [
+    "Do not ask for a detailed account of the trauma at this stage. Detailed memory work belongs in a structured trauma-focused protocol delivered by a trained clinician.",
+    "If the client is in ongoing danger (for example, domestic violence), prioritize safety planning and referral to advocacy services.",
+    "Suicidal or homicidal thoughts, self-harm or severe dissociation need risk assessment and may require a higher level of care. Crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com.",
+    "NCCIH notes rare reports that relaxation techniques worsen symptoms in people with a trauma history. Keep eyes open, let the client control the pace, and use grounding rather than deep relaxation if needed.",
+    "Do not offer psychologically focused debriefing (a single early session that goes over the event in detail); NICE NG116 advises against it.",
+    "Psychotic symptoms, an elevated mood state or acute intoxication: stabilize and refer for psychiatric assessment."
+  ],
+  "culturalAdaptations": [
+    "Ask how the client understands what happened and how it has affected them (spiritual, moral, family or community meanings). Build the psychoeducation around that explanation.",
+    "Refugees, asylum seekers and others facing ongoing threats may be in real, current danger. Address practical safety and basic needs alongside skills.",
+    "Racism and historical or intergenerational trauma can shape both the trauma and trust in services. Name these openly and without assumptions.",
+    "Let the client choose the gender of the clinician or interpreter where possible, especially after sexual violence.",
+    "Use trained professional interpreters who are briefed on trauma content, not family members.",
+    "Community, family and faith supports can be strong protective resources. Include them as the client wishes."
+  ],
+  "faithIntegrated": {
+    "note": "If the client raises faith, they may draw on spiritual practices that bring comfort (prayer, sacred texts, rituals, community support) as part of stabilization. Trauma can also shake beliefs or cause spiritual distress. Explore this gently, and offer a referral to a trusted faith leader or chaplain if the client wants one. The client leads.",
+    "consentNote": "Offer only if the client raises faith or spirituality as a resource, and only after informed consent. Explain that the faith element is optional, that the standard version works without it, and that the client can change or stop it at any time. Use the client's own beliefs and words; never introduce or impose religious content. Record the consent discussion in your own clinical record, not in this app. See the AACC Code of Ethics on consent for spiritual interventions and the ACA Code of Ethics on informed consent and not imposing counselor values."
+  },
+  "handoutIds": ["grounding-5-4-3-2-1", "breathing-practice"],
+  "sources": [
+    {
+      "title": "Post-traumatic stress disorder (NG116)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng116",
+      "year": 2018
+    },
+    {
+      "title": "NG116 recommendations for research (includes stabilisation for complex PTSD)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng116/resources/research-recommendations-from-an-individual-piece-of-guidance",
+      "year": 2018
+    },
+    {
+      "title": "The management of posttraumatic stress disorder and acute stress disorder: synopsis of the 2023 VA/DoD clinical practice guideline",
+      "publisher": "Annals of Internal Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38408360/",
+      "year": 2024
+    },
+    {
+      "title": "Clinical Practice Guideline for the Treatment of PTSD: treatments",
+      "publisher": "American Psychological Association",
+      "url": "https://www.apa.org/ptsd-guideline/treatments"
+    },
+    {
+      "title": "TIP 57: Trauma-Informed Care in Behavioral Health Services",
+      "publisher": "Substance Abuse and Mental Health Services Administration (SAMHSA)",
+      "url": "https://www.samhsa.gov/resource/dbhis/tip-57-trauma-informed-care-behavioral-health-services",
+      "year": 2014
+    },
+    {
+      "title": "TIP 57, Part 1, Chapter 4: Screening and Assessment (includes an exhibit on grounding techniques)",
+      "publisher": "SAMHSA, via NCBI Bookshelf",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK207188/",
+      "year": 2014
+    },
+    {
+      "title": "ISTSS Prevention and Treatment Guidelines",
+      "publisher": "International Society for Traumatic Stress Studies",
+      "url": "https://istss.org/clinical-resources/trauma-treatment/istss-prevention-and-treatment-guidelines/",
+      "year": 2019
+    },
+    {
+      "title": "Critical analysis of the current treatment guidelines for complex PTSD in adults (De Jongh et al.)",
+      "publisher": "Depression and Anxiety (DOI)",
+      "url": "https://doi.org/10.1002/da.22469",
+      "year": 2016
+    },
+    {
+      "title": "Relaxation Techniques: What You Need To Know",
+      "publisher": "National Center for Complementary and Integrative Health (NCCIH)",
+      "url": "https://www.nccih.nih.gov/health/relaxation-techniques-what-you-need-to-know"
+    },
+    {
+      "title": "Post-Traumatic Stress Disorder (health topic)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/topics/post-traumatic-stress-disorder-ptsd"
+    },
+    {
+      "title": "Integrating clients' religion and spirituality within psychotherapy: a comprehensive meta-analysis (Captari et al.)",
+      "publisher": "Journal of Clinical Psychology (DOI)",
+      "url": "https://doi.org/10.1002/jclp.22681",
+      "year": 2018
+    },
+    {
+      "title": "AACC Code of Ethics",
+      "publisher": "American Association of Christian Counselors",
+      "url": "https://aacc.net/aacc-code-of-ethics/"
+    },
+    {
+      "title": "ACA Code of Ethics (2014) and ethics resources",
+      "publisher": "American Counseling Association",
+      "url": "https://www.counseling.org/resources/ethics",
+      "year": 2014
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

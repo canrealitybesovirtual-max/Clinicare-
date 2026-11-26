@@ -1,0 +1,54 @@
+{
+  "id": "short-term-psychodynamic-exploration",
+  "name": "Short-term psychodynamic exploration: overview and referral",
+  "modality": "Psychodynamic psychotherapy",
+  "conditions": ["major-depressive-disorder", "panic-disorder"],
+  "evidenceLevel": "Listed by APA Division 12 as having modest research support for depression (short-term psychodynamic therapy). NICE NG222 includes short-term psychodynamic psychotherapy (STPP) among options for less severe depression, noting it may be effective but appeared less cost effective on average than higher-ranked options. NICE CG159 suggests considering STPP developed specifically for social anxiety disorder for adults who decline CBT-based and drug treatments, and notes it is less effective than those options. Panic: emerging evidence. One small RCT found panic-focused psychodynamic psychotherapy outperformed applied relaxation (Milrod et al., 2007). Reviews: Shedler (2010); Driessen et al. (2015) meta-analysis update.",
+  "minutes": { "min": 45, "max": 50 },
+  "purpose": "A focused, time-limited exploratory therapy (often about 16 to 30 sessions) that helps clients notice and understand recurring emotional and relationship patterns: feelings they tend to avoid, wishes that pull in opposite directions, and ways earlier experiences shape what they expect from others. These patterns are explored as they show up in daily life and in the therapy relationship. Common methods include identifying a core conflictual relationship theme (Luborsky: what the person wishes for, how they expect others to respond, and how they then react), exploring avoided feelings and the ways the client moves away from them, and using the therapy relationship as a window on patterns. Shedler's review describes these shared features. Overview for planning and referral only.",
+  "steps": [
+    "Assess suitability: ability to reflect on feelings, a focal problem the client wants to understand, and enough stability to tolerate exploratory work. If you are not trained in a specific short-term psychodynamic model, refer.",
+    "Agree on a focus, often a recurring relationship pattern or emotional conflict linked to current symptoms, and on a time frame.",
+    "Gather relationship episodes: ask for specific, recent stories of interactions with others, and listen for a repeating sequence of wish, expected response from others, and the client's own reaction (Luborsky's CCRT idea).",
+    "Attend to feelings, especially ones the client moves away from. Gently notice changes of topic, intellectualizing or minimizing, and invite curiosity about them.",
+    "Link patterns across current relationships, past relationships and, when useful, the therapy relationship. Offer interpretations tentatively and watch the client's response.",
+    "For anxiety, explore the personal meaning of the fear and the feelings and events around its onset (as in panic-focused psychodynamic psychotherapy; trained clinicians only).",
+    "Use the ending of therapy to work through feelings about separation and to consolidate new patterns."
+  ],
+  "script": [
+    "I notice that when you talk about your manager, you smile and change the subject. What do you think happens inside you right before that?",
+    "In each of these stories, you hoped someone would notice how hard you were trying, you expected them to brush you off, and then you pulled back. Does that pattern ring true?",
+    "What would it be like to let yourself feel the anger here with me, without having to do anything about it?",
+    "I wonder if some of that same worry shows up with me, that if you tell me what you really think, I will be disappointed in you.",
+    "Our ending is coming up. People often have mixed feelings about endings. What is coming up for you?"
+  ],
+  "contraindications": [
+    "Formal training and supervision in a specific short-term psychodynamic model are required to deliver it as a therapy. This entry is overview-level.",
+    "For most anxiety disorders and for PTSD, guideline first-line treatments are CBT-based. Offer STPP as an alternative when the client declines or does not benefit, or as described in NICE CG159 for social anxiety.",
+    "Postpone deep exploration during acute crises, active psychosis or mania, heavy substance use, or when the client lacks basic safety and stability; stabilize first.",
+    "Interpretations offered too early or too forcefully can feel blaming. Keep them tentative and repair ruptures promptly.",
+    "This intervention does not assess or decide risk. If suicidal thoughts, self-harm or risk to others come up, shift from exploration to safety and follow your setting's risk-assessment and safety-planning procedures. Keep crisis options visible: 988 Suicide & Crisis Lifeline (US, call or text), the local emergency number, and findahelpline.com for other countries."
+  ],
+  "culturalAdaptations": [
+    "Expectations about privacy, family loyalty and showing anger toward elders differ across cultures. Explore the cultural meaning of a pattern before treating it as a personal conflict.",
+    "Consider how racism, discrimination, migration and money stress shape what clients expect from others. Not every guarded pattern is a defense; some are realistic responses to real danger.",
+    "Notice identity differences between client and clinician, and invite discussion of how they may affect trust and the therapy relationship.",
+    "Clients who expect advice or a more directive healer may need a clear explanation of how exploratory therapy works and why it can help."
+  ],
+  "trainingRequired": "Psychodynamic psychotherapy: graduate training plus supervised practice in a specific short-term model (for example, supportive-expressive therapy, dynamic interpersonal therapy, or panic-focused psychodynamic psychotherapy). Steps here are overview-level only.",
+  "handoutIds": [],
+  "sources": [
+    { "title": "Short-term psychodynamic therapy for depression", "publisher": "APA Division 12, Society of Clinical Psychology", "url": "https://div12.org/treatment/short-term-psychodynamic-therapy-for-depression/" },
+    { "title": "Depression in adults: treatment and management (NG222)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng222", "year": 2022 },
+    { "title": "Depression in adults (NG222): rationale and impact", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng222/chapter/Rationale-and-impact", "year": 2022 },
+    { "title": "Social anxiety disorder: recognition, assessment and treatment (CG159)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/cg159", "year": 2013 },
+    { "title": "Social anxiety disorder (CG159): treatments for adults (information for the public)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/cg159/ifp/chapter/Treatments-for-adults" },
+    { "title": "The efficacy of psychodynamic psychotherapy (Shedler)", "publisher": "American Psychologist (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/20141265/", "year": 2010 },
+    { "title": "The efficacy of short-term psychodynamic psychotherapy for depression: a meta-analysis update (Driessen et al.)", "publisher": "Clinical Psychology Review (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/26281018/", "year": 2015 },
+    { "title": "A randomized controlled clinical trial of psychoanalytic psychotherapy for panic disorder (Milrod et al.)", "publisher": "American Journal of Psychiatry (reprinted in FOCUS)", "url": "https://focus.psychiatryonline.org/doi/10.1176/foc.6.4.foc496", "year": 2007 },
+    { "title": "The Core Conflictual Relationship Theme Method (Luborsky model)", "publisher": "American Psychological Association", "url": "https://www.apa.org/pubs/videos/core-conflictual-relationship-theme-method" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

@@ -1,0 +1,64 @@
+{
+  "id": "motivational-interviewing",
+  "name": "Motivational interviewing (MI)",
+  "modality": "Motivational interviewing",
+  "conditions": ["generalized-anxiety-disorder"],
+  "evidenceLevel": "Recommended in NICE CG115 (2011, reviewed 2019): a motivational intervention that uses the core elements of MI is advised as part of the first assessment for harmful drinking and alcohol dependence. The 2021 VA/DoD substance use disorder guideline gives motivational enhancement therapy, a structured MI-based format, a 'weak for' recommendation for alcohol use disorder (as reported in a Military Health System evidence brief). Meta-analyses show small but consistent effects across many target behaviors (Lundahl et al., 2010), and a review of reviews rated most of the evidence low quality (Frost et al., 2018). Anxiety: emerging evidence. In one allegiance-controlled RCT, four MI sessions before CBT improved 12-month outcomes for severe GAD compared with CBT alone (Westra et al., 2016).",
+  "minutes": { "min": 15, "max": 50 },
+  "purpose": "MI is a collaborative, person-centered way of talking that helps a client build their own motivation and commitment when they feel two ways about a change. The clinician guides rather than directs. They listen for and draw out the client's own desire, ability, reasons and need to change, respond to reluctance without arguing, and leave the decision with the client. It can be used on its own as a brief intervention, or before and alongside structured treatment (for example, before exposure-based CBT or when drinking is a concern) to improve engagement and retention. Developed by William R. Miller and Stephen Rollnick.",
+  "steps": [
+    "Start with the right spirit: work as partners, respect the client's right to choose, show real care for their wellbeing, and stay curious about what they already know. Ask permission before you give information or advice.",
+    "Engage: build a working alliance with open questions, honest affirmations of strengths and effort, accurate reflections, and short summaries (often taught as OARS). Aim to reflect more often than you ask questions.",
+    "Focus: agree together on what to talk about, such as drinking, avoidance, or coming to sessions. If the client has several concerns, offer a short menu and let them choose.",
+    "Evoke: listen for the client's own statements in favor of change and reflect them back on purpose. Use importance and confidence rulers from 0 to 10, and ask why their number is not lower.",
+    "Respond to arguments for the status quo, or to tension between you, without pushing back. Reflect them, stress the client's choice, reframe, or shift focus. Treat pushback as a sign to change your approach, not as a flaw in the client.",
+    "Share information with an ask-offer-ask pattern: ask what the client already knows, offer brief neutral information with permission, then ask what they make of it.",
+    "Plan only when the client shows they are ready. Invite them to set their own goal and first step, then sum up their reasons and plan in their own words. If they are not ready, summarize and leave the door open.",
+    "For alcohol: offer a drinking diary if the client wants to track patterns, screen for withdrawal risk, and refer for medical review when needed. Do not record identifying details in this tool."
+  ],
+  "script": [
+    "Would it be okay if we spent a few minutes on how drinking fits into your life right now? You get to decide what we focus on.",
+    "It sounds like part of you likes how it takes the edge off at night, and part of you is worried about what it is doing to your sleep and your family.",
+    "On a scale from 0 to 10, how important is it to you to make a change? You said a 5. What makes it a 5 and not a 2?",
+    "If things went the way you hope, what would be different a year from now?",
+    "I have some information about what tends to help people cut back. Would you like to hear it? ... What do you make of that?",
+    "Let me check I have this right. You want to be more present with your kids, you are tired of the morning headaches, and you are not sure you could stop completely. Where does that leave you?",
+    "Whatever you decide is up to you. What, if anything, feels like a first step worth trying this week?"
+  ],
+  "contraindications": [
+    "MI is a way of communicating, not a complete treatment for moderate to severe alcohol use disorder. Combine it with evidence-based treatment, mutual-support options and a medication referral when indicated.",
+    "Alcohol withdrawal can be dangerous. Clients who drink heavily every day, or who have had withdrawal symptoms such as shakes, sweats, seizures or hallucinations, need a medical assessment before cutting down quickly. Refer to medical care.",
+    "Do not use MI methods to steer a client toward a goal that serves the clinician, an employer or a court. When you or a third party have a stake in the outcome (for example, mandated care), say so openly.",
+    "Skill level matters. Results are better when practitioners are trained and receive feedback and coaching; consider formal MI training (for example, through MINT trainers).",
+    "This intervention does not assess or decide risk. If suicidal thoughts, self-harm or risk to others come up, set MI aside and follow your setting's risk-assessment and safety-planning procedures. Keep crisis options visible: 988 Suicide & Crisis Lifeline (US, call or text), the local emergency number, and findahelpline.com for other countries.",
+    "Substance-use content: do not enter names, places, dates or other identifying details into this tool; nothing is stored or sent. Any export or note about substance use must carry the notice: 42 CFR Part 2 prohibits unauthorized disclosure of these records."
+  ],
+  "culturalAdaptations": [
+    "In family-centered or collectivist cultures, explore how change would affect family roles and duties, and invite reasons for change that relate to family, community or faith as well as to the individual.",
+    "Adjust how direct you are. Some clients see open disagreement with a professional as disrespectful, so quick agreement or silence may not mean commitment. Check in gently and normalize mixed feelings.",
+    "Use a trained interpreter, and check that rulers and images (such as '0 to 10') make sense in the client's language and comfort with numbers.",
+    "Ask about the cultural meaning of drinking for this client (celebration, hospitality, religious prohibition, ideas about manhood) and about shame or stigma before assuming what change means to them.",
+    "Lundahl et al. (2010) found that client ethnicity moderated MI outcomes. Watch engagement closely instead of assuming the approach fits every group the same way."
+  ],
+  "faithIntegrated": {
+    "note": "If the client says faith is important and asks to include it, invite reasons for change that come from their own beliefs and community (for example, wanting to live in line with their values or return to worship or service). Explore faith-based supports they choose, such as a clergy member or a faith-based recovery group. Reflect the client's own words; do not quote scripture or supply religious arguments for change.",
+    "consentNote": "Offer only if the client raises faith or spirituality and asks to include it. Before starting, explain what a faith-integrated approach involves, that it is optional, that the same intervention is available without religious content, and that the client can change their mind at any time; document the client's informed consent. Follow the client's own tradition and words, and never introduce, impose, endorse or challenge beliefs (AACC Code of Ethics: consent before spiritual interventions, client-led integration; ACA Code of Ethics 2014, A.2 informed consent and A.4.b personal values)."
+  },
+  "handoutIds": ["values-compass"],
+  "sources": [
+    { "title": "Alcohol-use disorders: diagnosis, assessment and management of harmful drinking (high-risk drinking) and alcohol dependence (CG115)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/cg115", "year": 2011 },
+    { "title": "VA/DoD Clinical Practice Guideline for the Management of Substance Use Disorders: provider summary", "publisher": "US Department of Veterans Affairs and Department of Defense", "url": "https://www.healthquality.va.gov/guidelines/MH/sud/VADoDSUDCPGProviderSummary.pdf", "year": 2021 },
+    { "title": "Evidence Brief: Motivational Enhancement Therapy for Alcohol Use Disorder", "publisher": "Psychological Health Center of Excellence, Military Health System", "url": "https://health.mil/Reference-Center/Publications/2021/04/26/PHCoE-Evidence-Brief-Motivational-Enhancement-Therapy-for-AUD-508", "year": 2021 },
+    { "title": "TIP 35: Enhancing Motivation for Change in Substance Use Disorder Treatment (PEP19-02-01-003)", "publisher": "Substance Abuse and Mental Health Services Administration", "url": "https://store.samhsa.gov/product/tip-35-enhancing-motivation-change-substance-use-disorder-treatment/pep19-02-01-003", "year": 2019 },
+    { "title": "A meta-analysis of motivational interviewing: twenty-five years of empirical studies (Lundahl et al.)", "publisher": "Research on Social Work Practice (Utah State University repository)", "url": "https://digitalcommons.usu.edu/sswa_facpubs/199", "year": 2010 },
+    { "title": "Effectiveness of motivational interviewing on adult behaviour change in health and social care settings: a systematic review of reviews (Frost et al.)", "publisher": "PLoS One (PubMed Central)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6193639/", "year": 2018 },
+    { "title": "Integrating motivational interviewing with cognitive-behavioral therapy for severe generalized anxiety disorder: an allegiance-controlled randomized clinical trial (Westra, Constantino and Antony)", "publisher": "Journal of Consulting and Clinical Psychology", "url": "https://doi.org/10.1037/ccp0000098", "year": 2016 },
+    { "title": "Healthcare Professional's Core Resource on Alcohol", "publisher": "National Institute on Alcohol Abuse and Alcoholism", "url": "https://niaaa.nih.gov/health-professionals-communities/core-resource-on-alcohol" },
+    { "title": "Motivational Interviewing Network of Trainers (MINT)", "publisher": "MINT", "url": "https://motivationalinterviewing.org/" },
+    { "title": "AACC Code of Ethics", "publisher": "American Association of Christian Counselors", "url": "https://aacc.net/aacc-code-of-ethics/" },
+    { "title": "ACA Code of Ethics (2014) and ethics resources", "publisher": "American Counseling Association", "url": "https://www.counseling.org/resources/ethics", "year": 2014 }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

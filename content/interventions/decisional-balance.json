@@ -1,0 +1,49 @@
+{
+  "id": "decisional-balance",
+  "name": "Decisional balance (weighing a change)",
+  "modality": "Motivational interviewing / stages of change",
+  "conditions": ["generalized-anxiety-disorder"],
+  "evidenceLevel": "Emerging and mixed evidence. Decisional balance comes from Janis and Mann's (1977) model of decision making and was later used in stages-of-change work. Miller and Rose (2015) separate it from MI: because MI aims to draw out the client's own reasons for change, asking a client to argue against change can work against that goal in people who already feel two ways about it. No NICE or APA Division 12 recommendation for decisional balance as a stand-alone method was found. See Miller and Rose (2015) and SAMHSA TIP 35.",
+  "minutes": { "min": 15, "max": 30 },
+  "purpose": "A structured look at the benefits and costs of keeping things as they are and of making a change. It can help a client who has not yet thought about change see the whole picture, or help a clinician stay neutral when a choice truly belongs to the client (for example, choosing between two treatment options). Because spending time on reasons not to change can strengthen ambivalence, use the full four-part version with care and pair it with MI-style reflections of the client's own reasons for change.",
+  "steps": [
+    "Decide whether it fits. A full four-part balance suits situations where you want to stay neutral about the choice, or where the client has not yet thought about change. For a client who is already torn about a change you are supporting, use MI methods that focus on the client's own reasons for change instead (see Miller and Rose, 2015).",
+    "Ask permission and explain the purpose: to look at the whole picture, not to reach a verdict today.",
+    "Explore the good things about the current pattern first, briefly and without judgment. This usually lowers defensiveness.",
+    "Explore the less good things about the current pattern, then the hoped-for benefits of changing and the worries about changing.",
+    "Reflect and summarize, ending with the client's reasons for change. Ask which items carry the most weight for them; how much an item matters counts more than how many items there are.",
+    "Ask an open question about what they make of it now and whether any small step feels worth trying. Accept 'not yet' as a valid answer.",
+    "Come back to it later. The balance often shifts as life circumstances change."
+  ],
+  "script": [
+    "Can we take a few minutes to look at both sides? There is no right answer, and you do not have to decide anything today.",
+    "What do you like about how things are now? What does drinking, or worrying, do for you?",
+    "And what are the downsides? What bothers you, or the people close to you?",
+    "If you made a change, what might get better? What worries you about changing?",
+    "So on one hand, it helps you unwind and fit in with friends. On the other hand, you are missing mornings with your kids and your doctor is worried about your liver. Which of these matters most to you?",
+    "Looking at all of this, what do you think? Is there something you want to try, or would you like to keep thinking about it?"
+  ],
+  "contraindications": [
+    "Can backfire with clients who are already ambivalent: asking for a detailed list of reasons not to change may lower commitment. In that case, prefer MI-consistent methods that draw out reasons for change.",
+    "Not a treatment on its own. Use it inside MI, CBT or a broader care plan.",
+    "Alcohol withdrawal can be dangerous. Clients who drink heavily every day or have had withdrawal symptoms need a medical assessment before cutting down quickly; refer to medical care.",
+    "This intervention does not assess or decide risk. If suicidal thoughts, self-harm or risk to others come up, pause and follow your setting's risk-assessment and safety-planning procedures. Keep crisis options visible: 988 Suicide & Crisis Lifeline (US, call or text), the local emergency number, and findahelpline.com for other countries.",
+    "Substance-use content: do not enter names, places, dates or other identifying details into this tool, and let the client keep any written balance sheet. Any export or note about substance use must carry the notice: 42 CFR Part 2 prohibits unauthorized disclosure of these records."
+  ],
+  "culturalAdaptations": [
+    "When decisions are made together as a family or community, include the costs and benefits for others, not only for the individual.",
+    "For clients with limited reading or writing, do the balance out loud or with simple drawings instead of a written grid.",
+    "Respect cultural and religious views about alcohol and about discussing personal problems; ask how the client's community would see each option.",
+    "Check that 'pros and cons' translates clearly. Some languages work better with framing such as 'what it gives you' and 'what it takes from you'."
+  ],
+  "handoutIds": ["values-compass"],
+  "sources": [
+    { "title": "Motivational interviewing and decisional balance: contrasting responses to client ambivalence (Miller and Rose)", "publisher": "Behavioural and Cognitive Psychotherapy (Cambridge University Press)", "url": "https://doi.org/10.1017/S1352465813000878", "year": 2015 },
+    { "title": "TIP 35: Enhancing Motivation for Change in Substance Use Disorder Treatment (PEP19-02-01-003)", "publisher": "Substance Abuse and Mental Health Services Administration", "url": "https://store.samhsa.gov/product/tip-35-enhancing-motivation-change-substance-use-disorder-treatment/pep19-02-01-003", "year": 2019 },
+    { "title": "Alcohol-use disorders: diagnosis, assessment and management of harmful drinking (high-risk drinking) and alcohol dependence (CG115)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/cg115", "year": 2011 },
+    { "title": "Healthcare Professional's Core Resource on Alcohol", "publisher": "National Institute on Alcohol Abuse and Alcoholism", "url": "https://niaaa.nih.gov/health-professionals-communities/core-resource-on-alcohol" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

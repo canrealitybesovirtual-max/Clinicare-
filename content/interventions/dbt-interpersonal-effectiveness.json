@@ -1,0 +1,65 @@
+{
+  "id": "dbt-interpersonal-effectiveness",
+  "name": "DBT skills: Interpersonal effectiveness",
+  "modality": "Dialectical Behavior Therapy (DBT) skills",
+  "conditions": [
+    "major-depressive-disorder",
+    "ptsd"
+  ],
+  "evidenceLevel": "Emerging evidence for the interpersonal effectiveness module on its own. It is one of the four skills modules in comprehensive DBT, which has strong evidence for BPD and recurrent self-harm (Cochrane, Storebo et al., 2020); skills-inclusive DBT versions performed comparably to standard DBT on suicide-related outcomes in a component trial (Linehan et al., 2015), and stand-alone DBT skills training has preliminary support across problems (Valentine et al., 2015). Module-specific outcome trials are few.",
+  "minutes": { "min": 25, "max": 50 },
+  "purpose": "Helps the client balance three priorities in hard conversations: getting what they need or saying no, keeping or improving the relationship, and keeping their self-respect. Clients learn to set their main priority before the conversation, use a clear structure for requests and refusals, adjust how firmly they ask to fit the situation, and notice beliefs that block asking ('I don't deserve to ask', 'they will leave if I say no'). Linehan's module uses short memory aids for each priority; this entry describes the ideas in original wording, and her own skills and handouts are in the DBT Skills Training Manual (Linehan, 2015). Fit across presentations: Anxiety - rehearsing requests and refusals is graded exposure for social anxiety. Depression - conflict and isolation maintain low mood; better skills support re-engagement and overlap with interpersonal psychotherapy targets. Trauma - helps the client set boundaries and rebuild trust at a safe pace. Substance use - practice in refusing offers to drink or use and in asking others for recovery support.",
+  "steps": [
+    "Pick one specific upcoming interaction: a request, a refusal, a boundary or a repair.",
+    "Clarify priorities with three questions: What outcome do you want? How do you want the other person to feel about you afterward? How do you want to feel about yourself afterward? Rank them for this situation.",
+    "Decide how firmly to ask or refuse, considering the client's rights, the relationship, timing, what the other person can give, and whether the request is fair.",
+    "Build a short script with the client: the facts without blame, the client's feelings or view using 'I' statements, the clear ask or no, and why agreeing could be good for the other person. Plan how to stay on topic and when to negotiate.",
+    "Plan relationship and self-respect behaviors: how to show warmth, interest and understanding, and how to stay honest, fair and true to one's values without over-apologizing.",
+    "Troubleshoot barriers: unhelpful beliefs, missing skills, strong emotions, or a setting where the other person holds more power.",
+    "Role-play in session with the clinician playing the other person at gradually harder levels, then swap roles. Give specific, kind feedback.",
+    "Assign one real-world practice and record the outcome on the assertive-communication handout, rating effectiveness on each of the three priorities."
+  ],
+  "script": [
+    "Before a hard conversation, it helps to know what matters most right now: getting what you asked for, keeping the relationship, or keeping your self-respect. Sometimes you can have all three, but it helps to know your top one.",
+    "Let's write a short script. Start with just the facts, no blame. Then say how you feel. Then ask clearly. Then say what's in it for them.",
+    "If they push back, you don't have to argue every point. You can calmly come back to your ask, like a song on repeat.",
+    "I'll play your sister. Let's try it. How did that feel? What would you change next time?",
+    "You have the right to ask, and the right to say no. That doesn't guarantee a yes, but it gives you a fair shot and lets you keep your self-respect.",
+    "If someone offers you a drink at the party, what's a short, firm way to say no that still sounds like you?"
+  ],
+  "contraindications": [
+    "Screen for intimate partner violence, elder abuse, coercive control or other unsafe relationships before practicing requests or boundaries with that person. If assertiveness could raise the risk of harm, put a safety plan first and refer to domestic-violence services.",
+    "Do not use role-plays that recreate abusive dynamics with trauma survivors without explicit consent and careful pacing.",
+    "With social anxiety, grade the difficulty of practice and avoid overwhelming first steps.",
+    "These skills do not replace couples or family therapy when relationship distress is severe; refer when indicated.",
+    "If conflict is linked to suicidal crises, follow your risk protocol and safety planning, and keep 988 in the US (call or text), the local emergency number and findahelpline.com visible. The clinician, not this tool, judges risk.",
+    "Substance-use care: screen for withdrawal risk (alcohol or benzodiazepine withdrawal needs medical referral), coordinate with SUD treatment, and keep notes and handouts free of identifying details. 42 CFR Part 2 prohibits unauthorized disclosure of these records."
+  ],
+  "culturalAdaptations": [
+    "Direct requests and refusals are not valued everywhere. In hierarchical or collectivist settings (speaking with elders, in-laws, employers or religious leaders), adapt scripts to indirect, respectful forms that still get the need across.",
+    "Norms for eye contact, tone and posture differ. Choose nonverbal behavior the client sees as confident and respectful in their own culture.",
+    "Gender roles, immigration status and workplace power can raise the real cost of being assertive. Weigh those costs openly with the client.",
+    "Practice in the language the conversation will actually happen in; switching languages may need its own rehearsal.",
+    "Culturally adapted psychotherapies tend to outperform unadapted versions (Hall et al., 2016)."
+  ],
+  "faithIntegrated": {
+    "note": "If the client wishes, they may draw on their tradition's teachings about honesty, humility, justice, forgiveness and care for others to clarify relationship and self-respect goals, or seek a trusted faith leader's support before a hard conversation. The clinician supports the client's choices and never uses religious teachings to pressure the client to stay in, or to forgive, a harmful relationship.",
+    "consentNote": "Before any faith-integrated variant, explain its purpose and alternatives, confirm the client's right to decline or stop at any time, and document informed consent (AACC Code of Ethics; ACA Code of Ethics). Faith integration is client-led. Never impose beliefs or suggest that distress reflects weak faith."
+  },
+  "trainingRequired": "Individual skills can be taught by clinicians competent in DBT skills. Comprehensive DBT (individual therapy, skills group, phone coaching and a consultation team) requires formal DBT training.",
+  "handoutIds": ["assertive-communication"],
+  "sources": [
+    { "title": "DBT Skills Training Manual, Second Edition (Linehan)", "publisher": "Guilford Press", "url": "https://www.guilford.com/books/DBT-Skills-Training-Manual/Marsha-Linehan/9781462516995", "year": 2015 },
+    { "title": "Psychological therapies for people with borderline personality disorder (Storebo et al.)", "publisher": "Cochrane Database of Systematic Reviews", "url": "https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD012955.pub2/full", "year": 2020 },
+    { "title": "Dialectical behavior therapy for high suicide risk in individuals with borderline personality disorder: a randomized clinical trial and component analysis (Linehan et al.)", "publisher": "JAMA Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/25806661/", "year": 2015 },
+    { "title": "The use of dialectical behavior therapy skills training as stand-alone treatment: a systematic review of the treatment outcome literature (Valentine et al.)", "publisher": "Journal of Clinical Psychology (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/25042066/", "year": 2015 },
+    { "title": "A meta-analysis of cultural adaptations of psychological interventions (Hall et al.)", "publisher": "Behavior Therapy (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/27993346/", "year": 2016 },
+    { "title": "AACC Code of Ethics", "publisher": "American Association of Christian Counselors", "url": "https://aacc.net/aacc-code-of-ethics/" },
+    { "title": "The HIPAA Privacy Rule and 42 CFR Part 2", "publisher": "US Department of Health and Human Services", "url": "https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/hipaa-part-2/index.html" },
+    { "title": "988 Suicide & Crisis Lifeline", "publisher": "988 Lifeline", "url": "https://988lifeline.org" },
+    { "title": "Find A Helpline (international directory)", "publisher": "Find A Helpline", "url": "https://findahelpline.com" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

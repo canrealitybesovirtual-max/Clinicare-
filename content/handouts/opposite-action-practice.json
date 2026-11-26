@@ -1,0 +1,98 @@
+{
+  "id": "opposite-action-practice",
+  "title": "Opposite Action Practice",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 15,
+  "intro": "Every feeling comes with an urge to do something. Fear says 'run.' Sadness says 'stay in bed.' Shame says 'hide.' Anger says 'fight.' Sometimes the urge helps you. But sometimes acting on it makes the feeling stronger and keeps you stuck. Opposite action means doing the opposite of what the feeling pushes you to do, when the urge would not help. Doing this again and again can change how you feel. Planning one practice takes about 10 to 15 minutes.",
+  "sections": [
+    {
+      "heading": "Step 1: Name the feeling and the urge",
+      "steps": [
+        "What am I feeling? Give it a name, like scared, sad, ashamed, or angry.",
+        "How strong is it, from 0 to 10?",
+        "What is the feeling pushing me to do?"
+      ]
+    },
+    {
+      "heading": "Step 2: Check the facts",
+      "body": "Ask yourself these questions. Be honest. You can talk them over with someone you trust.",
+      "steps": [
+        "What really happened? Stick to what a camera would see.",
+        "What am I telling myself it means? Is there another way to see it?",
+        "Does this feeling, and how strong it is, fit what happened?",
+        "If I act on the urge, will it help me or make things worse?"
+      ]
+    },
+    {
+      "heading": "Step 3: Choose your path",
+      "steps": [
+        "If the feeling fits the facts and acting on it would help, go ahead. Or work on solving the problem. A problem-solving plan can help.",
+        "If the feeling does not fit the facts, or acting on it would make things worse, try opposite action."
+      ]
+    },
+    {
+      "heading": "Step 4: Pick an opposite action",
+      "body": "Here are some examples. Choose one that fits you and your life.",
+      "steps": [
+        "Fear that does not fit: Move toward what you fear, one small step at a time, instead of avoiding it.",
+        "Sadness or low energy: Get up and get active. Do one small thing, and reach out to someone.",
+        "Shame that does not fit: Stay connected. Keep your head up, and share what happened with someone safe.",
+        "Anger that does not fit: Step away for a bit. Speak softly, try to see the other side, or do something kind."
+      ]
+    },
+    {
+      "heading": "Step 5: Go all the way",
+      "steps": [
+        "Use your whole body. Change your posture, your face, and your tone of voice to match the opposite action.",
+        "Change your self-talk, too. For example, 'I can handle one small step.'",
+        "Keep going. Opposite action works best when you do it fully and repeat it many times."
+      ]
+    },
+    {
+      "heading": "Step 6: Notice what happens",
+      "steps": [
+        "Rate the feeling again, from 0 to 10.",
+        "The feeling may not change right away. That is okay. Try again next time.",
+        "Write what you did in the log below, and bring it to your next visit."
+      ]
+    },
+    {
+      "heading": "When not to use opposite action",
+      "body": "Some feelings warn you that something is truly wrong. If you are afraid of someone who hurts or threatens you, that fear fits the facts. Do not try to push past it. Focus on staying safe and getting help. Talk with your counselor about any big fears before you start to face them."
+    }
+  ],
+  "practiceLog": {
+    "columns": ["Feeling and urge", "Does it fit the facts?", "Opposite action I did", "Before (0-10)", "After (0-10)"],
+    "rows": 6
+  },
+  "safetyNote": "Safety first: Opposite action is not for urges to hurt yourself or someone else. If you have those urges, or thoughts of suicide, use your safety plan and get help now. In the US, call or text 988 or call 911. In other countries, call your local emergency number or visit findahelpline.com. If facing a fear means doing something hard on your body, check with your doctor first. Resource only. This sheet does not replace care from a licensed professional.",
+  "sources": [
+    {
+      "title": "DBT Skills Training Manual, Second Edition (Linehan)",
+      "publisher": "Guilford Press",
+      "url": "https://www.guilford.com/books/DBT-Skills-Training-Manual/Marsha-Linehan/9781462516995",
+      "year": 2015
+    },
+    {
+      "title": "The use of dialectical behavior therapy skills training as stand-alone treatment: a systematic review of the treatment outcome literature (Valentine et al.)",
+      "publisher": "Journal of Clinical Psychology (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25042066/",
+      "year": 2015
+    },
+    {
+      "title": "NICE guideline NG222: treatment and management in adults (includes behavioural activation)",
+      "publisher": "National Institute for Health and Care Excellence (NICE)",
+      "url": "https://www.nice.org.uk/guidance/ng222",
+      "year": 2022
+    },
+    {
+      "title": "988 Suicide & Crisis Lifeline",
+      "publisher": "988 Lifeline",
+      "url": "https://988lifeline.org"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

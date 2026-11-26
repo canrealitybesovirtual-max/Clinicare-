@@ -1,0 +1,100 @@
+{
+  "id": "grounding-5-4-3-2-1",
+  "name": "5-4-3-2-1 sensory grounding",
+  "modality": "Grounding / stabilization skill",
+  "conditions": ["ptsd", "panic-disorder"],
+  "evidenceLevel": "Clinical consensus; little direct trial evidence. SAMHSA TIP 57 describes grounding as a core skill for helping trauma survivors who are overwhelmed by memories or dissociating to reconnect with the present. It is a stabilization skill, not a stand-alone PTSD treatment: NICE NG116 and the VA/DoD 2023 guideline recommend trauma-focused psychotherapies as first-line care.",
+  "minutes": { "min": 3, "max": 10 },
+  "purpose": "Moves attention away from distressing memories, flashbacks, dissociation or spiraling fear and toward what the senses pick up right now: 5 things seen, 4 felt, 3 heard, 2 smelled and 1 tasted. It helps the client re-orient to time and place during high distress and builds a sense of control. Teach it early, practice it when calm, and use it to close sessions that stir up strong feelings.",
+  "steps": [
+    "Explain the purpose: when the mind is pulled into the past or into fear, the senses can anchor the client in the here and now.",
+    "Agree on a 0-10 distress scale. For trauma-related distress, add a simple orientation check (where are you, what day is it).",
+    "Practice first at low distress, so the skill is learned before it is needed.",
+    "Guide the sequence aloud: 5 things you can see, 4 things you can feel or touch, 3 things you can hear, 2 things you can smell, 1 thing you can taste. Encourage detail (color, texture, shape, loud or soft).",
+    "Keep the client's eyes open and speak in a calm, even voice. Invite the client to name items out loud, or silently if they prefer.",
+    "If the client is dissociating, add orientation statements (today's date, the place, 'you are in this room with me right now') and physical anchors (feet pressing into the floor, holding a cool or textured object).",
+    "Re-rate distress. Repeat the sequence, or switch to other senses, if needed.",
+    "Help the client choose personal anchors (a scent, a smooth stone, a photo) and plan when to use the skill. Give the grounding-5-4-3-2-1 handout."
+  ],
+  "script": [
+    "Let's bring your attention back to right here, right now. We will use your senses.",
+    "Keep your eyes open. Look around the room.",
+    "Name 5 things you can see. Take your time. What color are they? What shape?",
+    "Now 4 things you can feel. Maybe your feet on the floor, your back on the chair, the cloth of your sleeve.",
+    "Now 3 things you can hear. It could be a fan, cars outside, or my voice.",
+    "Now 2 things you can smell. If you cannot smell anything, name 2 smells you like.",
+    "Now 1 thing you can taste. Or take a sip of water and notice it.",
+    "You are here in this room with me. Today is [say the day and date].",
+    "How strong is the feeling now, from 0 to 10? We can do another round if you need it."
+  ],
+  "contraindications": [
+    "Not a substitute for trauma-focused treatment or for risk assessment. If the client reports suicidal or homicidal thoughts, follow your risk-assessment procedures and share crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com.",
+    "Some sensory prompts can be trauma reminders (certain smells, tastes, sounds or touch). Ask in advance, let the client skip any sense, and offer neutral substitutes.",
+    "Severe dissociation, psychosis or intoxication may limit benefit. Focus on immediate safety, simple orientation, and medical or psychiatric assessment where needed.",
+    "In panic and exposure work, avoid using grounding as an escape during planned exposure, where it can act as a safety behavior. Use it after exposure tasks, or outside planned practice, unless the client needs it to stay safe.",
+    "Adapt for sensory impairments (for example, low vision or hearing loss) by using the senses available to the client."
+  ],
+  "culturalAdaptations": [
+    "Let the client choose meaningful anchors from their own culture or faith, such as a familiar food taste, a scent, or a piece of cloth or jewelry.",
+    "Some clients prefer not to make eye contact or to speak items aloud; allow silent naming or pointing.",
+    "Ask interpreters to translate 'grounding' as 'coming back to the present' rather than word for word, and use orientation statements that fit the client's own calendar.",
+    "For refugees, people facing domestic violence, or others living with ongoing threats, the present may not be fully safe. Do not promise safety you cannot confirm; pair grounding with practical safety planning.",
+    "Trauma linked to racism, discrimination or community violence can make some settings feel unsafe. Ask what helps the client feel settled in the room (seating, door position, lighting)."
+  ],
+  "faithIntegrated": {
+    "note": "If the client asks for it, they may add a faith anchor: holding a religious object, saying a short prayer or verse that means safety or comfort to them, or naming one thing they are grateful for. The client decides what, if anything, to add.",
+    "consentNote": "Offer only if the client raises faith or spirituality as a resource, and only after informed consent. Explain that the faith element is optional, that the standard version works without it, and that the client can change or stop it at any time. Use the client's own beliefs and words; never introduce or impose religious content. Record the consent discussion in your own clinical record, not in this app. See the AACC Code of Ethics on consent for spiritual interventions and the ACA Code of Ethics on informed consent and not imposing counselor values."
+  },
+  "handoutIds": ["grounding-5-4-3-2-1"],
+  "sources": [
+    {
+      "title": "TIP 57: Trauma-Informed Care in Behavioral Health Services",
+      "publisher": "Substance Abuse and Mental Health Services Administration (SAMHSA)",
+      "url": "https://www.samhsa.gov/resource/dbhis/tip-57-trauma-informed-care-behavioral-health-services",
+      "year": 2014
+    },
+    {
+      "title": "TIP 57, Part 1, Chapter 4: Screening and Assessment (includes an exhibit on grounding techniques)",
+      "publisher": "SAMHSA, via NCBI Bookshelf",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK207188/",
+      "year": 2014
+    },
+    {
+      "title": "Post-traumatic stress disorder (NG116)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng116",
+      "year": 2018
+    },
+    {
+      "title": "The management of posttraumatic stress disorder and acute stress disorder: synopsis of the 2023 VA/DoD clinical practice guideline",
+      "publisher": "Annals of Internal Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38408360/",
+      "year": 2024
+    },
+    {
+      "title": "Post-Traumatic Stress Disorder (health topic)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/topics/post-traumatic-stress-disorder-ptsd"
+    },
+    {
+      "title": "A meta-analysis of cultural adaptations of psychological interventions (Hall et al.)",
+      "publisher": "Behavior Therapy (DOI)",
+      "url": "https://doi.org/10.1016/j.beth.2016.09.005",
+      "year": 2016
+    },
+    {
+      "title": "AACC Code of Ethics",
+      "publisher": "American Association of Christian Counselors",
+      "url": "https://aacc.net/aacc-code-of-ethics/"
+    },
+    {
+      "title": "ACA Code of Ethics (2014) and ethics resources",
+      "publisher": "American Counseling Association",
+      "url": "https://www.counseling.org/resources/ethics",
+      "year": 2014
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

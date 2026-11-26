@@ -1,0 +1,52 @@
+{
+  "id": "sleep-hygiene-education",
+  "name": "Sleep habits education (sleep hygiene) - adjunct only",
+  "modality": "Psychoeducation - sleep habits (complementary and integrative; adjunct)",
+  "conditions": ["insomnia-disorder", "major-depressive-disorder", "generalized-anxiety-disorder", "ptsd"],
+  "evidenceLevel": "Adjunct only. The AASM 2021 guideline suggests that clinicians not use sleep hygiene as a single-component therapy for chronic insomnia (conditional recommendation against). Multicomponent CBT-I, which may include sleep education, is strongly recommended (Edinger et al., 2021). The AASM patient guide notes that most people with chronic insomnia need more than basic sleep-hygiene advice, and NCCIH notes that the strongest evidence for chronic insomnia supports CBT-I.",
+  "minutes": { "min": 10, "max": 20 },
+  "purpose": "Brief education about daily habits and the sleep setting that can support sleep: a regular rise time, daylight and activity during the day, less caffeine later in the day, avoiding alcohol and nicotine near bedtime, avoiding heavy meals late at night, a wind-down routine, a dark, quiet, comfortable room, and keeping screens and work out of bed. It is useful as general health information and as one part of CBT-I, but it is not an effective stand-alone treatment for chronic insomnia. When insomnia persists, offer CBT-I or refer for it.",
+  "steps": [
+    "Ask about current habits using the sleep diary: caffeine, alcohol and nicotine timing, naps, exercise timing, screens, the bedroom, and work or caregiving schedules. Do not record substance-use details in this app.",
+    "Choose two or three changes the client is willing to try rather than handing over a long list of rules.",
+    "Explain each change in plain language and link it to the client's own diary (for example, late coffee and taking a long time to fall asleep).",
+    "Give the sleep-habits handout and agree on when you will review it.",
+    "Make clear that habits alone usually do not fix long-standing insomnia, and offer CBT-I (see cbti-stimulus-control and cbti-sleep-restriction) or a referral.",
+    "Screen for, and refer for medical evaluation of, signs of sleep apnea, restless legs or other sleep disorders, and medicines that may be affecting sleep.",
+    "Watch for 'trying too hard' to sleep. If the client becomes anxious about following rules perfectly, shift the focus to CBT-I and to accepting that some nights vary."
+  ],
+  "script": [
+    "Small daily habits can help your sleep a bit. They are a good start, but often not the whole answer.",
+    "Let's pick two or three things to try, not ten.",
+    "Getting up at the same time every day helps set your body clock.",
+    "Try to get some daylight in the morning and move your body during the day.",
+    "Caffeine can stay in your body for many hours. Try to have it earlier in the day.",
+    "Alcohol may help you fall asleep, but it often wakes you up later in the night.",
+    "If your sleep problems keep going, there is a treatment called CBT for insomnia. It works better than tips alone."
+  ],
+  "contraindications": [
+    "Do not use sleep hygiene as the only treatment for chronic insomnia (AASM 2021). Offer CBT-I or refer.",
+    "Rigid rules can raise anxiety about sleep. Keep advice flexible and focused on the client's chosen changes.",
+    "Alcohol: clients who drink heavily every day, or who have had withdrawal symptoms, need medical assessment before cutting down quickly, because alcohol withdrawal can be dangerous. Do not record substance-use details in this tool.",
+    "Exercise advice should respect medical limits. Check with the client's medical provider when there are heart, lung or mobility concerns.",
+    "Persistent insomnia with low mood, hopelessness or suicidal thoughts needs safety assessment. This tool does not judge risk. Crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com."
+  ],
+  "culturalAdaptations": [
+    "Tea, coffee and other caffeinated drinks can be central to hospitality and daily life. Discuss timing and amount rather than asking the client to give them up.",
+    "Afternoon rest is valued in many cultures. Agree on a nap plan that respects this.",
+    "Shared rooms, noise and limited money for curtains or bedding are common. Suggest low-cost options and problem-solve with the client.",
+    "Night prayer, religious fasting and shift work shape sleep routines. Build advice around the client's schedule. Translate handouts or use a professional interpreter when needed."
+  ],
+  "handoutIds": ["sleep-habits", "sleep-diary"],
+  "sources": [
+    { "title": "Behavioral and psychological treatments for chronic insomnia disorder in adults: an American Academy of Sleep Medicine clinical practice guideline (Edinger et al.)", "publisher": "Journal of Clinical Sleep Medicine (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/33164742/", "year": 2021 },
+    { "title": "Behavioral and Psychological Treatments for Insomnia: patient guide", "publisher": "American Academy of Sleep Medicine", "url": "https://aasm.org/wp-content/uploads/2021/08/Behavioral-and-Psychological-Treatments-for-Insomnia-Patient-Guide.pdf", "year": 2021 },
+    { "title": "New guideline supports behavioral and psychological treatments for insomnia", "publisher": "American Academy of Sleep Medicine", "url": "https://aasm.org/new-guideline-supports-behavioral-psychological-treatments-for-insomnia/", "year": 2021 },
+    { "title": "Sleep Disorders and Complementary Health Approaches", "publisher": "National Center for Complementary and Integrative Health (NCCIH)", "url": "https://www.nccih.nih.gov/health/sleep-disorders-and-complementary-health-approaches" },
+    { "title": "Healthy Sleep (health topic)", "publisher": "MedlinePlus, National Library of Medicine", "url": "https://medlineplus.gov/healthysleep.html" },
+    { "title": "Management of chronic insomnia disorder in adults: a clinical practice guideline from the American College of Physicians (Qaseem et al.)", "publisher": "Annals of Internal Medicine (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/27136449/", "year": 2016 }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

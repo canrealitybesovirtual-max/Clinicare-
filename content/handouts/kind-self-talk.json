@@ -1,0 +1,89 @@
+{
+  "id": "kind-self-talk",
+  "title": "Kind Self-Talk",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 10,
+  "intro": "Many people have a harsh inner voice. It may call you names or tell you that you always mess up. This voice often tries to protect you, but it can make you feel worse. It can also make it harder to try again. Kind self-talk means talking to yourself the way you would talk to a good friend who is having a hard time. It is honest, warm, and helpful. It is not about pretending everything is fine. Each practice takes about 5 to 10 minutes.",
+  "sections": [
+    {
+      "heading": "Notice the inner critic",
+      "steps": [
+        "Pay attention to what you say to yourself when something goes wrong.",
+        "Write down the exact words. Notice the tone, too. Is it loud, cold, or mean?",
+        "Ask: What is this voice trying to protect me from? Maybe failing, getting hurt, or letting someone down."
+      ]
+    },
+    {
+      "heading": "The good-friend check",
+      "body": "Picture a good friend in the same spot. What would you say to them? How would you say it? Now notice how that is different from what you say to yourself."
+    },
+    {
+      "heading": "Three kind steps",
+      "body": "When you notice the critic, try these three steps. Say them out loud or in your head.",
+      "steps": [
+        "Name what is hard. Be honest and plain, like 'I'm really upset right now' or 'Today did not go the way I hoped.'",
+        "Remember you are not alone. Other people feel this way too. For example, 'Lots of people make mistakes like this' or 'Anyone would find this hard.'",
+        "Offer kind and useful words, the way you would to a friend. For example, 'I can be patient with myself' or 'I made a mistake, and I can learn from it.'"
+      ]
+    },
+    {
+      "heading": "Add comfort if it helps",
+      "steps": [
+        "Some people like to rest a hand on their chest or arm, or wrap up in a soft blanket. Others like a warm drink or a slow breath.",
+        "Use a warm, gentle tone, like you would with someone you care about.",
+        "If any of this feels strange or uncomfortable, that is common at first. Skip what does not work for you."
+      ]
+    },
+    {
+      "heading": "Write your own kind words",
+      "body": "Write two or three lines in your own words that feel true and kind. Keep them on a card or in your wallet. Here are a few ideas to get you started.",
+      "steps": [
+        "'This is hard, and I am doing my best.'",
+        "'I don't have to be perfect to be worth caring about.'",
+        "'One step at a time is enough.'"
+      ]
+    },
+    {
+      "heading": "What kind self-talk is not",
+      "steps": [
+        "It is not letting yourself off the hook. You can be kind and still take responsibility.",
+        "It is not lying to yourself. Kind words can be honest.",
+        "It is not selfish. Caring for yourself can give you more strength to care for others."
+      ]
+    }
+  ],
+  "practiceLog": {
+    "columns": ["What happened", "What my critic said", "What I said to myself instead", "How I felt after (0-10)"],
+    "rows": 6
+  },
+  "safetyNote": "Safety first: Being kind to yourself can sometimes stir up sad or painful feelings, especially if people were harsh with you in the past. Go slowly, and talk about it with your counselor or therapist. If your inner voice tells you to hurt yourself, or that you would be better off dead, do not wait. Get help now. In the US, call or text 988 or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sources": [
+    {
+      "title": "Introducing compassion-focused therapy (Gilbert)",
+      "publisher": "Advances in Psychiatric Treatment (Cambridge University Press)",
+      "url": "https://www.cambridge.org/core/journals/advances-in-psychiatric-treatment/article/introducing-compassionfocused-therapy/ECBC8B7B87E90ABB58C4530CDEE04088",
+      "year": 2009
+    },
+    {
+      "title": "A meta-analysis of compassion-based interventions: current state of knowledge and future directions (Kirby, Tellegen & Steindl)",
+      "publisher": "Behavior Therapy (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29029675/",
+      "year": 2017
+    },
+    {
+      "title": "Self-compassion interventions and psychosocial outcomes: a meta-analysis of RCTs (Ferrari et al.)",
+      "publisher": "Mindfulness (Springer)",
+      "url": "https://doi.org/10.1007/s12671-019-01134-6",
+      "year": 2019
+    },
+    {
+      "title": "988 Suicide & Crisis Lifeline",
+      "publisher": "988 Lifeline",
+      "url": "https://988lifeline.org"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

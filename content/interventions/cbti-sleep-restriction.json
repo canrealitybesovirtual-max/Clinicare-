@@ -1,0 +1,55 @@
+{
+  "id": "cbti-sleep-restriction",
+  "name": "CBT-I: Sleep restriction therapy (limiting time in bed)",
+  "modality": "CBT for insomnia (CBT-I) - behavioral component",
+  "conditions": ["insomnia-disorder", "major-depressive-disorder"],
+  "evidenceLevel": "The AASM 2021 guideline gives sleep restriction therapy a conditional recommendation as a single-component treatment and strongly recommends multicomponent CBT-I, which usually includes it (Edinger et al., 2021). The guideline notes harms, including temporary daytime sleepiness and reduced concentration, and possible contraindications in high-risk occupations and in people prone to mania or seizures. The American College of Physicians (2016) recommends CBT-I as the initial treatment for chronic insomnia disorder. In a mixed-methods study, side effects such as fatigue, sleepiness, low energy and headache were very common during sleep restriction (Kyle et al., 2011).",
+  "minutes": { "min": 15, "max": 45 },
+  "purpose": "Sleep restriction, developed by Arthur Spielman and colleagues, temporarily limits time in bed to about the client's current average sleep time (based on a sleep diary), with a minimum floor and a fixed rise time. This builds sleep drive, makes sleep deeper and more continuous, and cuts down time awake in bed. Time in bed is then adjusted step by step, based on diary data. Because it causes short-term sleepiness and needs careful adjustment, it should be delivered by clinicians trained in CBT-I. This entry describes principles only. Follow your CBT-I protocol for sleep windows, floors and adjustment rules.",
+  "steps": [
+    "Screen before starting: possible sleep apnea or other sleep disorders, bipolar disorder or past mania, seizure disorders, driving or safety-sensitive work, falls risk, pregnancy, major illness or recent surgery. Get medical input when any are present.",
+    "Collect 1 to 2 weeks of sleep diary data on the sleep-diary handout.",
+    "Explain the rationale and the expected short-term side effects, and get the client's informed agreement.",
+    "Using the protocol you were trained in, set a temporary sleep window from the diary data, never below your protocol's minimum, with a fixed rise time the client chooses.",
+    "Combine with stimulus control (see cbti-stimulus-control). Plan how the client will stay awake until the window starts, for example light activity rather than dozing on the couch.",
+    "Review the diary weekly and adjust the window by your protocol's rules, widening it gradually as sleep becomes more solid.",
+    "Check sleepiness at every contact. Give clear advice on driving and safety-sensitive tasks. For clients who cannot tolerate full restriction, consider a gentler, gradual version (sleep compression) within your protocol.",
+    "If you are not trained in CBT-I, refer to a behavioral sleep medicine or CBT-I provider. Meanwhile, offer the sleep diary and the sleep-habits handout."
+  ],
+  "script": [
+    "Right now you spend a lot of time in bed awake. We want to shrink that time so your time in bed is mostly sleep.",
+    "For a short while, your time in bed will be a bit shorter than you're used to. This builds up your sleep drive.",
+    "You will probably feel more tired for the first week or two. That is expected, and it usually passes.",
+    "Please be careful driving or doing risky tasks when you feel sleepy. If you feel drowsy, don't drive.",
+    "Each week we'll look at your sleep diary. As your sleep gets more solid, we'll give you more time in bed.",
+    "Get up at the same time every day, no matter how you slept."
+  ],
+  "contraindications": [
+    "Bipolar disorder or a history of mania or hypomania: sleep loss can trigger mood episodes, and the AASM notes possible contraindication. Avoid, or use only with prescriber coordination and close monitoring.",
+    "Seizure disorders: sleep loss can make seizures more likely. Avoid, or coordinate with the treating neurologist or medical provider.",
+    "Untreated sleep apnea or other conditions causing marked daytime sleepiness: refer for medical evaluation first.",
+    "High-risk work (for example, commercial driving, operating machinery, healthcare shifts) and drowsy driving: the AASM notes possible contraindication. Plan around this, use a gentler approach, or defer.",
+    "Falls risk, frailty, pregnancy, major medical illness or recent surgery: get medical input before starting.",
+    "Common side effects include fatigue, sleepiness, low energy and headache (Kyle et al., 2011). Monitor them, support the client and watch adherence.",
+    "Depression with suicidal thoughts: address safety first, because sleep loss can worsen mood. This tool does not judge risk. Crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com."
+  ],
+  "culturalAdaptations": [
+    "Night prayer, religious fasting periods and family routines can shape the sleep window. Set the rise time and window around the client's real life.",
+    "Shift workers, people with more than one job and caregivers of infants or ill relatives may need a modified approach or a different CBT-I component.",
+    "Explain the idea of 'less time in bed to sleep better' with care, because it can feel strange or harsh. Check understanding, and use a professional interpreter when needed.",
+    "Shared beds and rooms are common. Agree on a plan that respects household members, for example where the client will wait until the sleep window starts."
+  ],
+  "trainingRequired": "CBT-I sleep restriction: deliver only with CBT-I training (for example, behavioral sleep medicine training) or under supervision of a CBT-I-trained clinician. Otherwise refer to a behavioral sleep medicine provider or a supervised CBT-I program.",
+  "handoutIds": ["sleep-diary", "sleep-habits"],
+  "sources": [
+    { "title": "Behavioral and psychological treatments for chronic insomnia disorder in adults: an American Academy of Sleep Medicine clinical practice guideline (Edinger et al.)", "publisher": "Journal of Clinical Sleep Medicine (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/33164742/", "year": 2021 },
+    { "title": "Behavioral and psychological treatments for chronic insomnia disorder in adults: an AASM systematic review, meta-analysis and GRADE assessment", "publisher": "Journal of Clinical Sleep Medicine (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/33164741/", "year": 2021 },
+    { "title": "New guideline supports behavioral and psychological treatments for insomnia", "publisher": "American Academy of Sleep Medicine", "url": "https://aasm.org/new-guideline-supports-behavioral-psychological-treatments-for-insomnia/", "year": 2021 },
+    { "title": "Management of chronic insomnia disorder in adults: a clinical practice guideline from the American College of Physicians (Qaseem et al.)", "publisher": "Annals of Internal Medicine (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/27136449/", "year": 2016 },
+    { "title": "No pain, no gain: an exploratory within-subjects mixed-methods evaluation of the patient experience of sleep restriction therapy for insomnia (Kyle, Morgan, Spiegelhalder and Espie)", "publisher": "Sleep Medicine (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/21907616/", "year": 2011 },
+    { "title": "New clinical practice guideline recognizes insomnia and sleep apnea can occur together (2025 VA/DoD guideline)", "publisher": "Military Health System", "url": "https://health.mil/News/Dvids-Articles/2026/01/22/news556510", "year": 2026 }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

@@ -1,0 +1,55 @@
+{
+  "id": "person-centered-reflective-listening",
+  "name": "Person-centered reflective listening",
+  "modality": "Person-centered / humanistic",
+  "conditions": ["major-depressive-disorder"],
+  "evidenceLevel": "NICE NG222 includes counselling among options for less severe depression, noting it may be effective but appeared less cost effective on average than higher-ranked options. Across therapy types, therapist empathy is a moderately strong predictor of outcome (Elliott et al., 2018 meta-analysis: mean r = .28 across 82 samples). Rogers (1957) proposed the core conditions; later research supports them as helpful, but not as sufficient on their own. For anxiety disorders, PTSD, OCD and insomnia, use it as the relationship base alongside guideline-recommended treatments.",
+  "minutes": { "min": 10, "max": 50 },
+  "purpose": "A way of being with clients, rooted in Carl Rogers' client-centered therapy, that offers accurate empathy, unconditional positive regard and genuineness so that clients feel understood and can explore their experience in their own way. Reflective listening, which means carefully checking your understanding of what the client means and feels, is the core skill. It is the base for the therapeutic alliance in every approach in this library (including MI), and a stand-alone counselling option for some clients with less severe depression or adjustment difficulties.",
+  "steps": [
+    "Set your agenda aside for a few minutes. Give full attention, with a relaxed posture, eye contact that fits the client's culture, and few interruptions.",
+    "Open with a broad invitation, then listen for content, feeling and meaning.",
+    "Reflect: offer a short statement (not a question) of what you understood. Range from simple restating to deeper reflections of feeling or meaning. Let your voice go down at the end so it does not sound like a question.",
+    "Check accuracy and welcome correction. A 'not quite' is useful information, not a failure.",
+    "Hold positive regard: accept the person even when you do not agree with a behavior, and avoid both praise and blame.",
+    "Be genuine: when it helps, share your honest reaction briefly and kindly, without taking over the conversation.",
+    "Allow silence, summarize from time to time, and let the client lead the direction of exploration."
+  ],
+  "script": [
+    "What feels most important to talk about today?",
+    "You've been holding everything together for everyone, and nobody seems to notice how tired you are.",
+    "So it's not so much the move itself. It's feeling like you lost the person you used to be.",
+    "Did I get that right, or is it something different?",
+    "It sounds like part of you is angry, and part of you feels guilty for being angry.",
+    "Take your time. I'm here."
+  ],
+  "contraindications": [
+    "Not a substitute for guideline-recommended treatments for moderate to severe depression, anxiety disorders, PTSD, OCD or insomnia. Use it as the relationship base and add specific methods.",
+    "Purely non-directive listening may be too unstructured for clients in acute crisis, with psychosis or mania, or who need practical problem-solving right now. Adjust and add structure.",
+    "Reflections that go beyond what the client has said can feel intrusive. Keep deeper reflections tentative.",
+    "Listening does not replace risk assessment. This intervention does not assess or decide risk. If suicidal thoughts, self-harm or risk to others come up, ask directly and follow your setting's risk-assessment and safety-planning procedures. Keep crisis options visible: 988 Suicide & Crisis Lifeline (US, call or text), the local emergency number, and findahelpline.com for other countries."
+  ],
+  "culturalAdaptations": [
+    "Eye contact, silence, touch and emotional expression carry different meanings across cultures. Follow the client's cues.",
+    "Some clients expect an expert who gives advice. Explain that listening first helps you understand them, and add guidance where it fits.",
+    "Reflect the client's own words and idioms for distress (for example, 'nerves' or 'a heavy heart') rather than translating them into clinical terms.",
+    "When working with an interpreter, speak directly to the client, keep reflections short, and check that feeling words carry the same meaning.",
+    "Acknowledge experiences of racism, discrimination or exclusion when the client raises them, without minimizing or over-interpreting."
+  ],
+  "faithIntegrated": {
+    "note": "If the client brings faith or spirituality into the conversation and wants to explore it, reflect their spiritual language and meaning as carefully as any other experience, and let them lead how far to go. Do not add your own religious views.",
+    "consentNote": "Offer only if the client raises faith or spirituality and asks to include it. Before starting, explain what a faith-integrated approach involves, that it is optional, that the same intervention is available without religious content, and that the client can change their mind at any time; document the client's informed consent. Follow the client's own tradition and words, and never introduce, impose, endorse or challenge beliefs (AACC Code of Ethics: consent before spiritual interventions, client-led integration; ACA Code of Ethics 2014, A.2 informed consent and A.4.b personal values)."
+  },
+  "handoutIds": [],
+  "sources": [
+    { "title": "The necessary and sufficient conditions of therapeutic personality change (Rogers)", "publisher": "Journal of Consulting Psychology", "url": "https://doi.org/10.1037/h0045357", "year": 1957 },
+    { "title": "Therapist empathy and client outcome: an updated meta-analysis (Elliott, Bohart, Watson and Murphy)", "publisher": "Psychotherapy (author manuscript, University of Strathclyde)", "url": "https://strathprints.strath.ac.uk/66200/", "year": 2018 },
+    { "title": "Depression in adults: treatment and management (NG222)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng222", "year": 2022 },
+    { "title": "Depression in adults (NG222): rationale and impact", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng222/chapter/Rationale-and-impact", "year": 2022 },
+    { "title": "AACC Code of Ethics", "publisher": "American Association of Christian Counselors", "url": "https://aacc.net/aacc-code-of-ethics/" },
+    { "title": "ACA Code of Ethics (2014) and ethics resources", "publisher": "American Counseling Association", "url": "https://www.counseling.org/resources/ethics", "year": 2014 }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

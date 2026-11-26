@@ -1,0 +1,68 @@
+{
+  "id": "dbt-emotion-regulation-opposite-action",
+  "name": "DBT skills: Emotion regulation and opposite action",
+  "modality": "Dialectical Behavior Therapy (DBT) skills",
+  "conditions": [
+    "major-depressive-disorder",
+    "agoraphobia",
+    "generalized-anxiety-disorder",
+    "ptsd"
+  ],
+  "evidenceLevel": "Emerging evidence for opposite action as a stand-alone skill: a small single-case pilot reduced event-specific shame in women with BPD (Rizvi & Linehan, 2005), and a laboratory alternating-treatment study tested acting opposite to emotion urges in BPD (Sauer-Zavala et al., 2019). The emotion regulation module is part of comprehensive DBT, which has strong evidence for BPD and recurrent self-harm (Cochrane, Storebo et al., 2020), and stand-alone DBT skills training has preliminary support (Valentine et al., 2015). Opposite action to unjustified fear works like exposure, and opposite action to sadness works like behavioral activation; those parent approaches have stronger support (for example, NICE NG222 lists behavioral activation for depression).",
+  "minutes": { "min": 20, "max": 40 },
+  "purpose": "Teaches the client to understand emotions (what sets them off, how they feel in the body, the urges they bring), to check whether an emotion and its strength fit the facts of the situation, and, when acting on the urge would not help, to act deliberately and fully opposite to that urge, again and again, until the emotion shifts. The module also covers lowering emotional vulnerability through sleep, eating, physical health care, avoiding alcohol and drugs, exercise, and building positive experiences. Wording here is original; for Linehan's skills and handouts, see the DBT Skills Training Manual (Linehan, 2015). Fit across presentations: Anxiety - opposite action to fear that does not fit the facts is approach, which functions like exposure; plan it as graded exposure. Depression - opposite action to sadness and low energy is getting active, which overlaps with behavioral activation. Trauma - helps with trauma-related shame and guilt that do not fit the facts, and with avoidance; coordinate with trauma-focused therapy. Substance use - lowers emotional vulnerability and gives alternatives to using in order to escape feelings.",
+  "steps": [
+    "Teach that emotions have jobs and each comes with an action urge: fear pushes toward escape, sadness toward withdrawal, shame toward hiding, anger toward attack.",
+    "Walk through one recent emotion together: the prompting event, the client's interpretation, body sensations, the urge, what the client did, and what happened afterward.",
+    "Check the facts: does the emotion, and its intensity, fit what actually happened? Is the interpretation accurate? Would acting on the urge serve the client's goals? (Linehan calls this checking the facts; describe it in your own words.)",
+    "Decide the path: if the emotion fits the facts and acting on it is effective, move to problem-solving. If it does not fit, or acting on it would make things worse, plan opposite action.",
+    "Design the opposite action in specific terms, including posture, facial expression, tone of voice and self-talk. Examples: for shame that does not fit, share with a safe person and keep the head up; for sadness, get active and approach; for fear, approach the feared situation in planned steps; for anger that does not fit, step away gently and do something kind.",
+    "Rehearse it in session, then plan to do it fully and repeatedly in daily life until the emotion changes. Rate emotion intensity (0-10) before and after.",
+    "Review vulnerability factors: sleep, regular meals, care for physical illness, alcohol and drug use, and exercise. Choose one change and plan some positive experiences (the activity-schedule handout can help).",
+    "Assign the opposite-action-practice handout and review the ratings at the next session."
+  ],
+  "script": [
+    "Every emotion comes with a push to do something. Fear says run. Shame says hide. Sadness says pull the covers over your head.",
+    "Let's check the facts. What actually happened, and what did you tell yourself it meant? Is there another way to see it?",
+    "If the feeling fits the facts, we'll work on solving the problem. If it doesn't fit, or acting on it would make things worse, we can try doing the opposite of what it's pushing you to do.",
+    "Opposite action works best when you go all the way. That means your body, your face and your voice too, not just gritting your teeth.",
+    "Shame says hide. If it doesn't fit the facts, the opposite might be telling someone you trust, keeping your head up and looking them in the eye.",
+    "Keep doing it, again and again, and watch what happens to the feeling over time. Rate it before and after so we can see the change together."
+  ],
+  "contraindications": [
+    "Do not use opposite action when the emotion fits the facts and signals real danger (for example, fear of an abusive partner or anger at ongoing mistreatment). Problem-solve and address safety instead.",
+    "Opposite action to fear is a form of exposure. For panic, agoraphobia, phobias and PTSD, plan graded steps and coordinate with exposure-based treatment; get medical clearance when feared activities involve physical strain.",
+    "Shame and guilt after trauma may reflect real moral injury or real harm done. Explore carefully instead of labeling them unjustified, and coordinate with trauma-focused care.",
+    "Suicidal urges are not targets for opposite action alone. Follow your risk protocol and safety planning, and keep 988 in the US (call or text), the local emergency number and findahelpline.com visible. The clinician, not this tool, judges risk.",
+    "Substance-use care: screen for withdrawal risk (alcohol or benzodiazepine withdrawal needs medical referral), coordinate with SUD treatment, and keep notes and handouts free of identifying details. 42 CFR Part 2 prohibits unauthorized disclosure of these records."
+  ],
+  "culturalAdaptations": [
+    "Rules about showing emotion differ. In some cultures, showing anger to elders or sadness in public is discouraged. Choose opposite actions that are culturally fitting and safe in the client's setting.",
+    "Checking the facts must include the facts of discrimination and structural barriers. Do not label culturally realistic fear or anger as distorted.",
+    "Shame is shaped by family honor and community norms in many cultures. Explore whose eyes the shame is felt in, and who would be safe to share with.",
+    "Vulnerability factors (food, sleep, health care) depend on resources. Fit plans to the client's budget, work hours and access to care.",
+    "Culturally adapted psychotherapies tend to outperform unadapted versions (Hall et al., 2016)."
+  ],
+  "faithIntegrated": {
+    "note": "If the client wishes, opposite actions can draw on their tradition: for example, acts of kindness or forgiveness when anger does not fit the facts, joining communal worship when sadness urges withdrawal, or confession, prayer or spiritual counsel when guilt fits the facts and repair is needed. The client chooses. The clinician does not direct religious acts.",
+    "consentNote": "Before any faith-integrated variant, explain its purpose and alternatives, confirm the client's right to decline or stop at any time, and document informed consent (AACC Code of Ethics; ACA Code of Ethics). Faith integration is client-led. Never impose beliefs or suggest that distress reflects weak faith."
+  },
+  "trainingRequired": "Individual skills can be taught by clinicians competent in DBT skills. Comprehensive DBT (individual therapy, skills group, phone coaching and a consultation team) requires formal DBT training.",
+  "handoutIds": ["opposite-action-practice", "activity-schedule"],
+  "sources": [
+    { "title": "DBT Skills Training Manual, Second Edition (Linehan)", "publisher": "Guilford Press", "url": "https://www.guilford.com/books/DBT-Skills-Training-Manual/Marsha-Linehan/9781462516995", "year": 2015 },
+    { "title": "Treatment of shame in borderline personality disorder (Rizvi, doctoral dissertation; basis of the Rizvi & Linehan 2005 opposite-action pilot in Cognitive and Behavioral Practice)", "publisher": "University of Washington ResearchWorks", "url": "https://digital.lib.washington.edu/researchworks/handle/1773/9125", "year": 2004 },
+    { "title": "Isolating the effect of opposite action in borderline personality disorder: a laboratory-based alternating treatment design (Sauer-Zavala et al.)", "publisher": "Behaviour Research and Therapy (PubMed Central)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6467696/", "year": 2019 },
+    { "title": "Psychological therapies for people with borderline personality disorder (Storebo et al.)", "publisher": "Cochrane Database of Systematic Reviews", "url": "https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD012955.pub2/full", "year": 2020 },
+    { "title": "The use of dialectical behavior therapy skills training as stand-alone treatment: a systematic review of the treatment outcome literature (Valentine et al.)", "publisher": "Journal of Clinical Psychology (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/25042066/", "year": 2015 },
+    { "title": "Depression in adults: treatment and management (NG222)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng222", "year": 2022 },
+    { "title": "A meta-analysis of cultural adaptations of psychological interventions (Hall et al.)", "publisher": "Behavior Therapy (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/27993346/", "year": 2016 },
+    { "title": "AACC Code of Ethics", "publisher": "American Association of Christian Counselors", "url": "https://aacc.net/aacc-code-of-ethics/" },
+    { "title": "The HIPAA Privacy Rule and 42 CFR Part 2", "publisher": "US Department of Health and Human Services", "url": "https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/hipaa-part-2/index.html" },
+    { "title": "988 Suicide & Crisis Lifeline", "publisher": "988 Lifeline", "url": "https://988lifeline.org" },
+    { "title": "Find A Helpline (international directory)", "publisher": "Find A Helpline", "url": "https://findahelpline.com" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

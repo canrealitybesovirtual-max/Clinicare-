@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0",
+  "version": "1.1.0",
   "symptoms": [
     {
       "id": "panic-attacks-unexpected",
@@ -18,7 +18,24 @@
         "spontaneous panic",
         "woke up in a panic",
         "nocturnal panic",
-        "attacks out of nowhere"
+        "attacks out of nowhere",
+        "anxiety attack",
+        "anxiety attacks",
+        "unexpected panic attacks",
+        "uncued panic attacks",
+        "come out of nowhere",
+        "came out of nowhere",
+        "comes out of nowhere",
+        "out of the blue",
+        "panic attacks for no reason",
+        "wakes up panicking",
+        "waking up in a panic",
+        "panic episodes",
+        "episodes of panic",
+        "panicky episodes",
+        "random freak outs",
+        "sudden surges of fear",
+        "sudden terror"
       ]
     },
     {
@@ -33,11 +50,26 @@
         "panic in crowds",
         "panic in elevators",
         "panic when i leave the house",
-        "panic when reminded",
         "only panic in certain places",
         "cued panic",
         "situational panic",
-        "expected panic attack"
+        "expected panic attack",
+        "panic attacks in crowds",
+        "panic attacks in stores",
+        "panic attacks in the store",
+        "panic attacks at the store",
+        "panic attacks at the mall",
+        "panic attacks in the mall",
+        "panic attacks on the bus",
+        "panic attacks on the train",
+        "panic attacks in elevators",
+        "panic attacks while driving",
+        "panic attacks when driving",
+        "panic attacks on the highway",
+        "panic attacks in traffic",
+        "panic attacks in certain places",
+        "panic attacks in certain situations",
+        "situational panic attacks"
       ]
     },
     {
@@ -46,7 +78,6 @@
       "clientLabel": "Feeling sure you are about to die during an attack",
       "category": "panic",
       "synonyms": [
-        "thought i was dying",
         "felt like i was dying",
         "felt like i was going to die",
         "thought i was having a heart attack",
@@ -55,7 +86,24 @@
         "afraid i will die",
         "fear of dying",
         "sure i was dying",
-        "called 911 thinking i was dying"
+        "called 911 thinking i was dying",
+        "scared of dying",
+        "afraid of dying",
+        "terrified of dying",
+        "felt like i would die",
+        "convinced i was dying",
+        "thought i was going to die",
+        "sure i was going to die",
+        "afraid i was dying",
+        "thought i would die",
+        "thought my heart would stop",
+        "afraid of having a heart attack",
+        "fear of having a heart attack",
+        "thinks im having a heart attack",
+        "feel like im going to die",
+        "feel like im dying",
+        "feels like dying",
+        "thought i was|thought i am|thought i might be|was sure i was ... dying"
       ]
     },
     {
@@ -73,7 +121,15 @@
         "losing it",
         "afraid i will snap",
         "thought i would lose my mind",
-        "scared i will do something crazy"
+        "scared i will do something crazy",
+        "losing control",
+        "lose control",
+        "scared of going crazy",
+        "feels like going crazy",
+        "going insane",
+        "thought i was going crazy",
+        "thought i was losing my mind",
+        "afraid of losing my mind"
       ]
     },
     {
@@ -90,7 +146,31 @@
         "always worried i will panic",
         "dread having another attack",
         "what if it happens again",
-        "afraid of having a panic attack"
+        "afraid of having a panic attack",
+        "worried about the next attack",
+        "worried about another attack",
+        "worry about another attack",
+        "worried about having another attack",
+        "afraid of the next attack",
+        "scared of having another attack",
+        "scared of another attack",
+        "terrified of having another one",
+        "terrified of another attack",
+        "fear of another attack",
+        "fear of having another attack",
+        "afraid it will happen again",
+        "worried it will happen again",
+        "anticipating the next attack",
+        "always waiting for the next one",
+        "worried about having more attacks",
+        "worried about more attacks",
+        "fear of future attacks",
+        "worried about future attacks",
+        "afraid of having another one",
+        "worried about having another one",
+        "scared itll happen again",
+        "afraid itll happen again",
+        "worried itll happen again"
       ]
     },
     {
@@ -108,7 +188,29 @@
         "check my pulse",
         "keep water with me in case",
         "stopped going to the gym",
-        "only go places near a hospital"
+        "only go places near a hospital",
+        "avoids caffeine",
+        "cut out caffeine",
+        "stopped drinking coffee",
+        "avoids exercise",
+        "stopped working out",
+        "quit the gym",
+        "carries xanax everywhere",
+        "carry my pills",
+        "carries a benzo",
+        "always carries water",
+        "carries a water bottle everywhere",
+        "monitors my heart rate",
+        "checks my heart rate",
+        "sits near the exit",
+        "repeated er visits",
+        "multiple er visits",
+        "keeps going to the er",
+        "changed my routine to avoid attacks",
+        "dont go to the gym",
+        "dont go to the gym anymore",
+        "avoids the gym",
+        "dont work out anymore"
       ]
     },
     {
@@ -124,7 +226,13 @@
         "worked up beforehand",
         "dreading it all week",
         "sick with nerves before",
-        "cant sleep the night before"
+        "cant sleep the night before",
+        "anxious for days beforehand",
+        "dreads it for days",
+        "worried for days before",
+        "nervous for days before",
+        "anticipatory worry",
+        "dreads leaving days in advance"
       ]
     },
     {
@@ -143,7 +251,14 @@
         "heart skipping beats",
         "heart fluttering",
         "tachycardia",
-        "heart was going a mile a minute"
+        "heart was going a mile a minute",
+        "heart beating fast",
+        "fast heartbeat",
+        "heart going crazy",
+        "heart beating so fast",
+        "pounding in my chest",
+        "hart racing",
+        "heart rate goes up"
       ]
     },
     {
@@ -160,7 +275,11 @@
         "cold sweat",
         "diaphoresis",
         "diaphoretic",
-        "sweating buckets"
+        "sweating buckets",
+        "sweats",
+        "sweaty",
+        "drenched",
+        "sweating profusely"
       ]
     },
     {
@@ -176,7 +295,11 @@
         "couldnt stop shaking",
         "tremors",
         "jittery",
-        "body was shaking"
+        "body was shaking",
+        "trembles",
+        "tremulous",
+        "hands tremble",
+        "shaky hands"
       ]
     },
     {
@@ -196,7 +319,15 @@
         "gasping for air",
         "air hunger",
         "dyspnea",
-        "not getting enough air"
+        "not getting enough air",
+        "trouble breathing",
+        "difficulty breathing",
+        "hard to breathe",
+        "struggling to breathe",
+        "suffocating",
+        "feel like im suffocating",
+        "breathless",
+        "cant get enough air"
       ]
     },
     {
@@ -212,7 +343,11 @@
         "throat tight",
         "something stuck in my throat",
         "cant swallow",
-        "globus"
+        "globus",
+        "feels like choking",
+        "choking feeling",
+        "throat closes up",
+        "throat closing up"
       ]
     },
     {
@@ -229,7 +364,11 @@
         "elephant on my chest",
         "chest hurts",
         "pain in my chest",
-        "chest discomfort"
+        "chest discomfort",
+        "chest pains",
+        "chest feels tight",
+        "tightness in my chest",
+        "chest is tight"
       ]
     },
     {
@@ -247,7 +386,12 @@
         "felt like throwing up",
         "queasy",
         "stomach churning",
-        "gi upset"
+        "gi upset",
+        "nauseated",
+        "stomach upset",
+        "stomach aches",
+        "stomachache",
+        "feels sick to her stomach"
       ]
     },
     {
@@ -265,7 +409,15 @@
         "unsteady on my feet",
         "off balance",
         "vertigo",
-        "like i might pass out"
+        "like i might pass out",
+        "dizziness",
+        "lightheadedness",
+        "light headedness",
+        "feels faint",
+        "about to faint",
+        "felt like passing out",
+        "feels like passing out",
+        "spinning"
       ]
     },
     {
@@ -282,7 +434,10 @@
         "cold chills",
         "waves of heat",
         "face got hot",
-        "goosebumps"
+        "goosebumps",
+        "hot flushes",
+        "feels hot",
+        "hot flash"
       ]
     },
     {
@@ -300,7 +455,9 @@
         "paresthesias",
         "face went numb",
         "numb lips",
-        "tingly"
+        "tingly",
+        "numbness",
+        "tingly hands"
       ]
     },
     {
@@ -319,7 +476,17 @@
         "derealization",
         "depersonalization",
         "like watching a movie of my life",
-        "world looked strange"
+        "world looked strange",
+        "feels unreal",
+        "unreal",
+        "spaced out",
+        "zoned out",
+        "dreamlike",
+        "outside of my body",
+        "out of body experience",
+        "depersonalized",
+        "derealized",
+        "things feel unreal"
       ]
     },
     {
@@ -337,7 +504,14 @@
         "fear of public transport",
         "afraid to fly",
         "avoid planes",
-        "cant ride the train"
+        "cant ride the train",
+        "cant take the bus",
+        "wont take the bus",
+        "stopped taking the bus",
+        "fear of flying",
+        "wont fly",
+        "cant fly",
+        "avoid|avoids|avoiding|avoidance of|afraid of|scared of|fear of|fears|terrified of|dread|dreads|cant stand|cant handle|cant tolerate|anxious in|anxious on|anxious at|nervous in|nervous on|panic in|panics in|panic on|panics on|panic at|panic attacks in|panic attacks on|panic attacks at|panicky in|panicky on|wont go to|wont go in|wont go on|cant go to|cant go in|cant go on|stopped going to|stopped going on|stays away from|cant ride|wont ride|cant use|wont use ... bus|buses|trains|train|subway|subways|metro|public transport|public transportation|airplanes|flying|ferries|ferry|trams|tram|light rail|streetcars"
       ]
     },
     {
@@ -347,13 +521,11 @@
       "category": "avoidance",
       "synonyms": [
         "afraid of open spaces",
-        "big parking lots",
-        "wide open areas",
         "afraid of bridges",
         "empty fields scare me",
-        "large open places",
         "fear of open places",
-        "open areas make me panic"
+        "open areas make me panic",
+        "avoid|avoids|avoiding|avoidance of|afraid of|scared of|fear of|fears|terrified of|dread|dreads|cant stand|cant handle|cant tolerate|anxious in|anxious on|anxious at|nervous in|nervous on|panic in|panics in|panic on|panics on|panic at|panic attacks in|panic attacks on|panic attacks at|panicky in|panicky on|wont go to|wont go in|wont go on|cant go to|cant go in|cant go on|stopped going to|stopped going on|stays away from|cant ride|wont ride|cant use|wont use ... open spaces|open space|open areas|wide open spaces|wide open places|parking lots|parking lot|bridges|bridge|open fields|outdoor markets|big open places|large open places"
       ]
     },
     {
@@ -371,7 +543,10 @@
         "claustrophobic",
         "cant go to the mall",
         "afraid of tunnels",
-        "feel trapped in small rooms"
+        "feel trapped in small rooms",
+        "claustrophobia",
+        "afraid of the mall",
+        "avoid|avoids|avoiding|avoidance of|afraid of|scared of|fear of|fears|terrified of|dread|dreads|cant stand|cant handle|cant tolerate|anxious in|anxious on|anxious at|nervous in|nervous on|panic in|panics in|panic on|panics on|panic at|panic attacks in|panic attacks on|panic attacks at|panicky in|panicky on|wont go to|wont go in|wont go on|cant go to|cant go in|cant go on|stopped going to|stopped going on|stays away from|cant ride|wont ride|cant use|wont use ... elevators|elevator|tunnels|tunnel|stores|store|shops|malls|mall|shopping centers|movie theaters|movie theatres|theaters|theatres|cinemas|small rooms|enclosed spaces|enclosed places|closed spaces|grocery stores|grocery store|supermarkets|supermarket|church|churches"
       ]
     },
     {
@@ -380,15 +555,19 @@
       "clientLabel": "Fear of crowds or waiting in line",
       "category": "avoidance",
       "synonyms": [
-        "crowds",
         "avoid crowds",
         "cant stand in line",
         "crowded places",
-        "busy places",
         "too many people",
         "waiting in line",
         "packed stores",
-        "grocery store lines"
+        "grocery store lines",
+        "crowds make me anxious",
+        "crowds make me panic",
+        "crowds scare me",
+        "hates crowds",
+        "cant handle crowds",
+        "avoid|avoids|avoiding|avoidance of|afraid of|scared of|fear of|fears|terrified of|dread|dreads|cant stand|cant handle|cant tolerate|anxious in|anxious on|anxious at|nervous in|nervous on|panic in|panics in|panic on|panics on|panic at|panic attacks in|panic attacks on|panic attacks at|panicky in|panicky on|wont go to|wont go in|wont go on|cant go to|cant go in|cant go on|stopped going to|stopped going on|stays away from|cant ride|wont ride|cant use|wont use ... crowds|crowd|crowded places|crowded stores|crowded rooms|lines|long lines|waiting in line|standing in line|queues|busy places|concerts|stadiums|packed places|busy stores"
       ]
     },
     {
@@ -406,7 +585,18 @@
         "havent left the house",
         "scared to go out alone",
         "dont go out anymore",
-        "afraid to leave home alone"
+        "afraid to leave home alone",
+        "wont leave the house",
+        "rarely leaves the house",
+        "barely leaves the house",
+        "dont leave the house",
+        "cant go out alone",
+        "wont go out alone",
+        "afraid to go out alone",
+        "stuck in the house",
+        "rarely leaves home",
+        "cant leave home alone",
+        "avoid|avoids|avoiding|afraid of|scared of|fear of|fears|terrified of|dread|dreads|dreading|anxious about|nervous about|panics when|panic when|panics about ... leaving the house|leaving my house|leaving home|leaving my apartment|going out alone|going out by myself|being out alone|being away from home|going anywhere alone|going outside|going out|going out of the house"
       ]
     },
     {
@@ -423,7 +613,14 @@
         "need a safe person",
         "my safe person",
         "someone has to come with me",
-        "only with a friend"
+        "only with a friend",
+        "always needs someone with me",
+        "needs a companion",
+        "cant go anywhere without someone",
+        "wont go anywhere without someone",
+        "only go out with someone",
+        "has to have someone with me",
+        "only go out|only goes out|only leave the house|only leaves the house|only leave home|only leaves home|only go places|only goes places|only drive|only drives|only shop|only shops|only travel|only travels ... with my husband|with my wife|with my partner|with my boyfriend|with my girlfriend|with my mom|with my mother|with my dad|with my father|with my sister|with my brother|with my daughter|with my son|with a friend|with someone|with family|if someone comes with me|if someone is with me"
       ]
     },
     {
@@ -440,7 +637,26 @@
         "afraid i will embarrass myself",
         "afraid i will pass out in public",
         "what if i lose control of my bladder",
-        "feel trapped in public"
+        "feel trapped in public",
+        "wont be able to get out",
+        "cant get out",
+        "might not be able to get out",
+        "afraid of getting trapped",
+        "feels trapped",
+        "no way out",
+        "cant escape",
+        "nowhere to escape",
+        "no escape",
+        "help wont be available",
+        "no one will help",
+        "cant get help",
+        "wont be able to get help",
+        "afraid of fainting in public",
+        "pass out in public",
+        "embarrass myself",
+        "making a scene",
+        "afraid of having an attack in public",
+        "afraid of panicking in public"
       ]
     },
     {
@@ -460,7 +676,31 @@
         "worst case scenario",
         "overthinking",
         "chronic worrier",
-        "worry about little things"
+        "worry about little things",
+        "worrying about everything",
+        "worries a lot",
+        "worry a lot",
+        "worrying a lot",
+        "worries constantly",
+        "constantly worrying",
+        "worried all the time",
+        "worries all day",
+        "excessive worrying",
+        "worries about many things",
+        "worries about lots of things",
+        "worries about all kinds of things",
+        "worry about every little thing",
+        "stressing about everything",
+        "stresses about everything",
+        "always stressing",
+        "generalized worry",
+        "pervasive worry",
+        "chronic worry",
+        "chronic worrying",
+        "catastrophizing",
+        "always expecting the worst",
+        "expects the worst",
+        "excessive|pervasive ... worry|worries|worrying"
       ]
     },
     {
@@ -478,7 +718,57 @@
         "worry spirals",
         "mind racing",
         "cant stop thinking about it",
-        "worry keeps me up"
+        "worry keeps me up",
+        "difficulty controlling worry",
+        "difficulty controlling the worry",
+        "hard to control the worry",
+        "hard to control worry",
+        "uncontrollable worry",
+        "cant stop the worry",
+        "cant shut off my brain",
+        "cant turn off my brain",
+        "cant turn off my mind",
+        "cant shut my mind off",
+        "cant shut my brain off",
+        "brain wont shut off",
+        "mind wont shut off",
+        "mind wont turn off",
+        "cant switch off",
+        "cant switch my brain off",
+        "cant quiet my mind",
+        "cant stop overthinking",
+        "worry wont stop",
+        "cant let it go",
+        "worry|worries|worrying ... hard to control|difficult to control|hard to stop|difficult to stop"
+      ]
+    },
+    {
+      "id": "subjective-anxiety-stress",
+      "label": "Non-specific feeling of nervousness, stress or being overwhelmed (clinician to clarify the focus and pattern)",
+      "clientLabel": "Feeling nervous, stressed or overwhelmed",
+      "category": "anxiety",
+      "synonyms": [
+        "anxious",
+        "anxiety",
+        "nervous",
+        "feels anxious",
+        "anxious all the time",
+        "always anxious",
+        "nervous all the time",
+        "always nervous",
+        "nervous wreck",
+        "stressed",
+        "stressed out",
+        "stress",
+        "under a lot of stress",
+        "overwhelmed",
+        "feels overwhelmed",
+        "under pressure",
+        "under a lot of pressure",
+        "frazzled",
+        "freaking out",
+        "high anxiety",
+        "worried"
       ]
     },
     {
@@ -497,7 +787,14 @@
         "edgy",
         "cant relax",
         "nervous energy",
-        "tense all the time"
+        "tense all the time",
+        "restlessness",
+        "feels on edge",
+        "always tense",
+        "feels tense",
+        "tense",
+        "cant settle",
+        "keyed up all the time"
       ]
     },
     {
@@ -516,7 +813,22 @@
         "wiped out",
         "always tired",
         "run down",
-        "tire easily"
+        "tire easily",
+        "tired",
+        "fatigued",
+        "lethargic",
+        "lethargy",
+        "decreased energy",
+        "reduced energy",
+        "energy is low",
+        "zero energy",
+        "always exhausted",
+        "feels tired",
+        "tires easily",
+        "easily fatigued",
+        "running on empty",
+        "dead tired",
+        "so tired"
       ]
     },
     {
@@ -535,7 +847,20 @@
         "indecisive",
         "cant think straight",
         "lose my train of thought",
-        "foggy"
+        "foggy",
+        "difficulty concentrating",
+        "trouble concentrating",
+        "hard to concentrate",
+        "poor focus",
+        "decreased concentration",
+        "distracted",
+        "easily distracted",
+        "forgetful",
+        "cant think clearly",
+        "losing focus",
+        "concentration is poor",
+        "problems concentrating",
+        "cant focus at work"
       ]
     },
     {
@@ -553,7 +878,18 @@
         "angry outbursts",
         "lose my temper",
         "blow up at people",
-        "snappy"
+        "snappy",
+        "irritability",
+        "short tempered",
+        "short temper",
+        "quick to anger",
+        "angry all the time",
+        "gets angry easily",
+        "snapping at everyone",
+        "snaps at people",
+        "snaps at my family",
+        "snapping at my kids",
+        "grumpy"
       ]
     },
     {
@@ -571,7 +907,16 @@
         "tension headaches",
         "knots in my shoulders",
         "grinding my teeth",
-        "body feels tight"
+        "body feels tight",
+        "tight muscles",
+        "muscle aches",
+        "sore muscles",
+        "tension in my shoulders",
+        "tension in my neck",
+        "neck and shoulder tension",
+        "tense shoulders",
+        "clenched jaw",
+        "muscles are tight"
       ]
     },
     {
@@ -590,7 +935,40 @@
         "wake up too early",
         "toss and turn",
         "restless sleep",
-        "poor sleep"
+        "poor sleep",
+        "difficulty sleeping",
+        "difficulty falling asleep",
+        "difficulty staying asleep",
+        "trouble falling asleep",
+        "trouble staying asleep",
+        "cant stay asleep",
+        "sleep problems",
+        "sleep issues",
+        "sleep disturbance",
+        "disrupted sleep",
+        "broken sleep",
+        "sleeping poorly",
+        "sleeps poorly",
+        "not sleeping well",
+        "sleep is poor",
+        "bad sleep",
+        "early waking",
+        "waking early",
+        "wakes up early",
+        "waking up early",
+        "early morning waking",
+        "early morning awakening",
+        "cant get back to sleep",
+        "cant go back to sleep",
+        "waking up at 4am",
+        "up at 4am",
+        "initial insomnia",
+        "middle insomnia",
+        "terminal insomnia",
+        "sleeplessness",
+        "sleepless nights",
+        "not sleeping",
+        "insomia"
       ]
     },
     {
@@ -607,7 +985,15 @@
         "hypersomnia",
         "napping all the time",
         "stay in bed all day",
-        "sleeping more than usual"
+        "sleeping more than usual",
+        "sleeping a lot",
+        "sleeps a lot",
+        "sleeping too much",
+        "sleeps all day",
+        "oversleeps",
+        "increased sleep",
+        "sleeping more",
+        "in bed all day"
       ]
     },
     {
@@ -628,7 +1014,29 @@
         "tearful",
         "feel like crying",
         "heavy heart",
-        "miserable"
+        "miserable",
+        "feeling low",
+        "feels low",
+        "mood is low",
+        "feels sad",
+        "sadness",
+        "very sad",
+        "sad most days",
+        "sad mood",
+        "dysphoric",
+        "dysphoria",
+        "feeling blue",
+        "the blues",
+        "in a funk",
+        "bummed out",
+        "hopelessness",
+        "crying spells",
+        "cries a lot",
+        "depresed",
+        "depressive symptoms",
+        "mood is down",
+        "down most days",
+        "feeling depressed"
       ]
     },
     {
@@ -647,7 +1055,31 @@
         "stopped doing my hobbies",
         "nothing excites me",
         "nothing matters anymore",
-        "lost my spark"
+        "lost my spark",
+        "loss of interest",
+        "lost interest in everything",
+        "no longer enjoys",
+        "nothing brings joy",
+        "no joy",
+        "nothing feels good",
+        "no motivation",
+        "lack of motivation",
+        "unmotivated",
+        "lost motivation",
+        "cant get motivated",
+        "cant be bothered",
+        "dont feel like doing anything",
+        "no desire to do anything",
+        "stopped enjoying",
+        "lost interest in hobbies",
+        "dont want to do anything",
+        "apathy",
+        "apathetic",
+        "anhedonic",
+        "not enjoying things",
+        "not enjoying anything",
+        "not enjoying life",
+        "no longer enjoying"
       ]
     },
     {
@@ -666,7 +1098,22 @@
         "stress eating",
         "comfort eating",
         "appetite changes",
-        "forget to eat"
+        "forget to eat",
+        "decreased appetite",
+        "increased appetite",
+        "appetite is down",
+        "appetite is poor",
+        "not hungry",
+        "never hungry",
+        "not eating much",
+        "eating less",
+        "eating more",
+        "weight loss",
+        "weight gain",
+        "lost weight",
+        "change in appetite",
+        "appetite change",
+        "lost|dropped|gained|has lost|has gained ... pounds|lbs|lb|kg|kilos"
       ]
     },
     {
@@ -684,7 +1131,14 @@
         "cant stop pacing",
         "wringing my hands",
         "psychomotor retardation",
-        "psychomotor agitation"
+        "psychomotor agitation",
+        "moving slowly",
+        "slowed movements",
+        "restless and pacing",
+        "agitated",
+        "agitation",
+        "psychomotor slowing",
+        "slow speech"
       ]
     },
     {
@@ -703,7 +1157,22 @@
         "feel like a failure",
         "not good enough",
         "excessive guilt",
-        "no good to anyone"
+        "no good to anyone",
+        "feels worthless",
+        "worthlessness",
+        "guilty",
+        "feels guilty",
+        "guilt",
+        "lots of guilt",
+        "feels like a burden",
+        "being a burden",
+        "a burden to everyone",
+        "self loathing",
+        "self hatred",
+        "low self worth",
+        "low self esteem",
+        "blames myself for everything",
+        "such a failure"
       ]
     },
     {
@@ -721,7 +1190,16 @@
         "withdrawn",
         "keep to myself",
         "stopped calling friends",
-        "social withdrawal"
+        "social withdrawal",
+        "withdrawing from friends",
+        "avoids friends",
+        "avoiding friends",
+        "stopped seeing friends",
+        "not seeing friends",
+        "isolates",
+        "isolating at home",
+        "dont want to see anyone",
+        "pulled away from friends"
       ]
     },
     {
@@ -741,7 +1219,22 @@
         "passive si",
         "thoughts of death",
         "tired of living",
-        "everyone would be better off without me"
+        "everyone would be better off without me",
+        "passive death wish",
+        "passive suicidal ideation",
+        "go to sleep and not wake up",
+        "dont want to wake up",
+        "dont want to live",
+        "dont want to live anymore",
+        "dont want to be alive",
+        "want to die",
+        "no reason to live",
+        "nothing to live for",
+        "life is not worth living",
+        "whats the point of living",
+        "morbid thoughts",
+        "death wish",
+        "thoughts of|thinking of|thinking about|thinks about|thinks of ... dying|death|being dead"
       ]
     },
     {
@@ -763,7 +1256,20 @@
         "si",
         "active si",
         "suicide plan",
-        "plan to kill myself"
+        "plan to kill myself",
+        "thoughts of suicide",
+        "thoughts of killing myself",
+        "kms",
+        "unalive",
+        "unalive myself",
+        "want to unalive myself",
+        "sucidal",
+        "suicidle",
+        "planning suicide",
+        "thinking of ending my life",
+        "thoughts of ending my life",
+        "want to end my life",
+        "thinking about killing myself"
       ]
     },
     {
@@ -782,7 +1288,17 @@
         "nssi",
         "self injury",
         "hitting myself",
-        "scratching until i bleed"
+        "scratching until i bleed",
+        "harming myself",
+        "self injurious behavior",
+        "self injurious",
+        "nonsuicidal self injury",
+        "superficial cuts",
+        "scratching myself",
+        "cuts on her arms",
+        "thoughts of hurting myself",
+        "thoughts of harming myself",
+        "urges to cut"
       ]
     },
     {
@@ -799,7 +1315,15 @@
         "tried to end my life",
         "took a bunch of pills",
         "tried to hang myself",
-        "prior suicide attempt"
+        "prior suicide attempt",
+        "history of suicide attempts",
+        "past suicide attempt",
+        "previous suicide attempt",
+        "overdose attempt",
+        "intentional overdose",
+        "tried to overdose",
+        "tried to end it",
+        "attempted to kill myself"
       ]
     },
     {
@@ -813,12 +1337,26 @@
         "thoughts of hurting someone",
         "homicidal",
         "homicidal ideation",
-        "want to hurt him",
-        "want to hurt her",
         "going to hurt somebody",
         "thinking about killing",
         "urge to hurt people",
-        "plan to hurt someone"
+        "plan to hurt someone",
+        "homicidal thoughts",
+        "thoughts of killing someone",
+        "wants to hurt someone",
+        "thoughts of harming others",
+        "thoughts of hurting others",
+        "urges to hurt someone",
+        "thoughts of hurting",
+        "thoughts of harming",
+        "thoughts of killing",
+        "urges to hurt",
+        "hi toward",
+        "hi towards",
+        "homicidal ideation toward",
+        "wants to kill her ex",
+        "wants to kill his ex",
+        "threatened to kill"
       ]
     },
     {
@@ -837,7 +1375,14 @@
         "hearing things that arent there",
         "hallucinations",
         "hallucinating",
-        "command hallucinations"
+        "command hallucinations",
+        "hearing things",
+        "seeing things",
+        "avh",
+        "auditory hallucinations",
+        "visual hallucinations",
+        "responding to internal stimuli",
+        "talking to people who arent there"
       ]
     },
     {
@@ -848,7 +1393,6 @@
       "redFlag": "psychosis",
       "synonyms": [
         "people are watching me",
-        "being followed",
         "paranoid",
         "someone is out to get me",
         "they are after me",
@@ -858,7 +1402,19 @@
         "messages from the tv",
         "thoughts are being controlled",
         "delusions",
-        "delusional"
+        "delusional",
+        "paranoia",
+        "feels watched",
+        "people are after me",
+        "being poisoned",
+        "conspiracy against me",
+        "fixed false beliefs",
+        "is being followed",
+        "is being watched",
+        "someone is following me",
+        "people following me",
+        "followed everywhere",
+        "afraid of being followed"
       ]
     },
     {
@@ -875,7 +1431,11 @@
         "up for days and not tired",
         "full of energy without sleep",
         "havent slept in days but feel great",
-        "slept three hours and feel amazing"
+        "slept three hours and feel amazing",
+        "decreased need for sleep",
+        "reduced need for sleep",
+        "little need for sleep",
+        "havent slept|not sleeping|barely sleeping|barely slept|no sleep|up all night|awake all night|only sleeping|only sleeps|only slept|sleeping only|sleeps only|slept only ... but full of energy|full of energy|but not tired|not tired|tons of energy|so much energy|lots of energy|feels great|feel great|feels amazing|wired|still energetic|but energized|energized|feels rested|feel rested"
       ]
     },
     {
@@ -898,7 +1458,16 @@
         "maxed out my credit cards",
         "manic",
         "hypomanic",
-        "big plans to change the world"
+        "big plans to change the world",
+        "elevated mood",
+        "expansive mood",
+        "spent all my savings",
+        "impulsive spending",
+        "rapid speech",
+        "talking fast",
+        "mania",
+        "manic episode",
+        "hypomania"
       ]
     },
     {
@@ -917,7 +1486,8 @@
         "rapid weight loss",
         "restricting food",
         "restricting calories",
-        "only eat 500 calories"
+        "only eat 500 calories",
+        "restricting|restricts|restricting to|eating only|eats only|only eating|only eats ... calories"
       ]
     },
     {
@@ -958,7 +1528,18 @@
         "stopped my xanax",
         "ran out of my klonopin",
         "coming off benzos",
-        "detoxing"
+        "detoxing",
+        "morning shakes",
+        "needs a drink in the morning",
+        "eye opener",
+        "drinks to stop the shakes",
+        "etoh withdrawal",
+        "withdrawal from alcohol",
+        "benzodiazepine withdrawal",
+        "withdrawal from benzos",
+        "history of withdrawal seizures",
+        "history of dts",
+        "the shakes|shakes|shaky|shaking|tremors|tremor|sweats|seizure|seizures ... when i stop drinking|when i stopped drinking|if i stop drinking|after i stop drinking|after i stopped drinking|when stopping drinking|after stopping drinking|after quitting drinking|when i quit drinking|without a drink|without alcohol|when i cut back on drinking|when i cut down on drinking|when i try to stop drinking|when i stop my benzos|when i run out of xanax|when i run out of klonopin|when i run out of my pills|coming off benzos"
       ]
     },
     {
@@ -980,7 +1561,48 @@
         "witnessed a death",
         "was mugged",
         "witnessed a shooting",
-        "natural disaster"
+        "natural disaster",
+        "assaulted",
+        "physically assaulted",
+        "sexually assaulted",
+        "assault",
+        "rape survivor",
+        "raped by",
+        "been raped",
+        "got raped",
+        "attacked by",
+        "got attacked",
+        "physically attacked",
+        "beaten up",
+        "got beat up",
+        "robbed at gunpoint",
+        "held at gunpoint",
+        "mva",
+        "motor vehicle accident",
+        "car crash",
+        "car wreck",
+        "serious accident",
+        "bad accident",
+        "the accident",
+        "house fire",
+        "combat veteran",
+        "deployment",
+        "ied blast",
+        "military sexual trauma",
+        "abused as a child",
+        "physical abuse",
+        "intimate partner violence",
+        "ipv",
+        "witnessed violence",
+        "saw someone get shot",
+        "saw someone die",
+        "trauma history",
+        "history of trauma",
+        "traumatic experience",
+        "mass shooting",
+        "hurricane",
+        "earthquake",
+        "wildfire"
       ]
     },
     {
@@ -998,7 +1620,21 @@
         "images of what happened",
         "cant get it out of my head",
         "memories of the attack",
-        "memories of the accident"
+        "memories of the accident",
+        "intrusive thoughts about the assault",
+        "intrusive thoughts about the accident",
+        "intrusive thoughts about what happened",
+        "intrusive images",
+        "unwanted images",
+        "memories of the assault",
+        "memories of what happened",
+        "keeps thinking about the accident",
+        "keeps thinking about the assault",
+        "replays it in my head",
+        "cant stop thinking about the assault",
+        "cant stop thinking about the accident",
+        "intrusions",
+        "intrusive recollections"
       ]
     },
     {
@@ -1014,7 +1650,14 @@
         "wake up screaming",
         "dreams about what happened",
         "same nightmare",
-        "nightmare every night"
+        "nightmare every night",
+        "night mares",
+        "bad dreams about it",
+        "nightmares about the assault",
+        "nightmares about the accident",
+        "trauma nightmares",
+        "distressing dreams",
+        "wakes up from nightmares"
       ]
     },
     {
@@ -1031,7 +1674,11 @@
         "like i was back in",
         "reexperiencing",
         "re experiencing",
-        "lose track of where i am"
+        "lose track of where i am",
+        "flash backs",
+        "relives it",
+        "feels like it is happening again",
+        "like it was happening all over again"
       ]
     },
     {
@@ -1048,7 +1695,14 @@
         "sounds remind me",
         "anniversary reaction",
         "freeze when reminded",
-        "my body reacts to reminders"
+        "my body reacts to reminders",
+        "gets triggered",
+        "upset when reminded",
+        "distressed by reminders",
+        "panics when reminded",
+        "physical reaction to reminders",
+        "heart races when reminded",
+        "shaky when reminded"
       ]
     },
     {
@@ -1065,7 +1719,19 @@
         "push the memories away",
         "avoid anything that reminds me",
         "keep busy so i dont think about it",
-        "avoid the news"
+        "avoid the news",
+        "avoids reminders",
+        "avoiding reminders",
+        "avoids the area",
+        "avoids that area",
+        "avoids places that remind me",
+        "avoids people who remind me",
+        "wont talk about the assault",
+        "wont talk about the accident",
+        "stopped driving after the accident",
+        "avoid|avoids|avoiding|stays away from|stay away from|wont go near|cant go near|wont go back to|cant go back to|refuses to go near|wont drive past|avoids driving past ... where it happened|where the accident happened|where i was attacked|where i was assaulted|the area|that area|the street|that street|the neighborhood|that neighborhood|the intersection|the scene|the place|that place|reminders|anything that reminds me|people who remind me|talking about it|talking about what happened|thinking about it|thinking about what happened|the news|news coverage",
+        "wont drive",
+        "avoids driving"
       ]
     },
     {
@@ -1084,7 +1750,12 @@
         "self blame",
         "im broken",
         "permanently damaged",
-        "shame about what happened"
+        "shame about what happened",
+        "blames myself",
+        "feels it was my fault",
+        "no one is safe",
+        "people cant be trusted",
+        "ashamed of what happened"
       ]
     },
     {
@@ -1102,7 +1773,14 @@
         "detached from people",
         "disconnected from everyone",
         "shut down emotionally",
-        "feel flat"
+        "feel flat",
+        "feels numb",
+        "emotionally flat",
+        "cant feel emotions",
+        "feels disconnected from others",
+        "detached from others",
+        "distant from family",
+        "cant feel close to anyone"
       ]
     },
     {
@@ -1119,7 +1797,13 @@
         "on high alert",
         "cant let my guard down",
         "always watching for danger",
-        "watching everyone"
+        "watching everyone",
+        "on guard",
+        "constantly on guard",
+        "always alert",
+        "hyper vigilant",
+        "hyperaware",
+        "looking over my shoulder"
       ]
     },
     {
@@ -1135,7 +1819,11 @@
         "jump out of my skin",
         "loud noises scare me",
         "hit the ground at loud noises",
-        "startle response"
+        "startle response",
+        "exaggerated startle",
+        "startled by loud noises",
+        "easily spooked",
+        "flinches at noises"
       ]
     },
     {

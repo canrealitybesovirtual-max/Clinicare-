@@ -1,0 +1,72 @@
+{
+  "id": "act-cognitive-defusion",
+  "name": "ACT: Cognitive defusion (unhooking from thoughts)",
+  "modality": "Acceptance and Commitment Therapy (ACT)",
+  "conditions": [
+    "generalized-anxiety-disorder",
+    "panic-disorder",
+    "major-depressive-disorder",
+    "ptsd"
+  ],
+  "evidenceLevel": "Moderate evidence for ACT as a package; emerging evidence for defusion as a stand-alone component. A meta-analysis of 66 laboratory component studies found defusion components outperformed inactive comparisons on targeted outcomes (Levin et al., 2012). Meta-analyses of full ACT found it more effective than waitlist, placebo and usual care and broadly comparable to CBT across anxiety, depression and substance use (A-Tjak et al., 2015; Gloster et al., 2020 review of 20 meta-analyses). The 2022 VA/DoD MDD guideline includes ACT among the psychotherapies it suggests for uncomplicated MDD (weak-for, per guideline summaries; confirm in the CPG). An RCT found ACT without in-session exposure outperformed relaxation training for OCD (Twohig et al., 2010). The 2023 VA/DoD PTSD guideline found insufficient evidence for or against ACT as a PTSD treatment. APA Division 12 lists ACT for several conditions; the current rating was not verified this session, so check div12.org.",
+  "minutes": { "min": 10, "max": 25 },
+  "purpose": "Defusion helps the client notice thoughts as passing mental events (words, pictures, predictions) instead of commands or facts, so a thought has less pull over behavior. Unlike cognitive restructuring, the aim is not to dispute or replace the content but to change the client's relationship to it, so the client can act on values while the thought is still present. Fit across presentations: Anxiety - loosens the grip of 'what if' chains in GAD, feared-judgment thoughts in social anxiety and catastrophic body-sensation thoughts in panic; in OCD, use it alongside exposure and response prevention and never as a neutralizing ritual. Depression - targets rumination and harsh self-labels ('I am a failure') that drive withdrawal. Trauma - an adjunct for self-blame and 'I am broken' stories within trauma-focused care, not a replacement for it. Substance use - helps the client spot craving-linked permission thoughts ('one will not hurt') and let them pass without acting. Theoretical grounding: the ACT psychological flexibility model and relational frame theory (Hayes, Strosahl & Wilson; Hayes et al., 2006).",
+  "steps": [
+    "Ask the client to name one sticky thought that shows up often and is tied to a problem behavior (avoiding, withdrawing, drinking, checking). Write it down in the client's exact words.",
+    "Look at workability, not truth: ask what the client usually does when the thought shows up, and whether doing that has moved life in a direction they care about. Validate that the thought makes sense given their history.",
+    "Introduce noticing thoughts as thoughts. Have the client say the thought with a lead-in such as 'I am noticing the thought that...' and rate how believable it feels and how heavy it feels (0-10) before and after.",
+    "Try one or two experiential exercises chosen to fit the client: saying the thought very slowly, writing it on a card and holding it close to the face and then at arm's length, picturing it as a caption on a screen, or saying it in a different voice. Keep the tone respectful; never make fun of the client's pain.",
+    "Name the story: invite the client to give a recurring theme a short title (for example, 'the not-good-enough story') so they can recognize it quickly in daily life.",
+    "Link to action: ask what the client would do in the next real situation if the thought came along for the ride instead of steering. Agree on one small step.",
+    "Assign practice: the client notices and names the target thought at least once a day and records believability and what they chose to do. Use the unhooking-from-thoughts handout; a coping card with the story title can help.",
+    "Next session, review workability rather than whether the thought went away. Normalize that thoughts come back; the skill is unhooking faster each time."
+  ],
+  "script": [
+    "Our minds are word machines. They make predictions, judgments and stories all day long, and some of those stories get really loud.",
+    "Today we are not going to argue with this thought or try to prove it wrong. We are going to practice seeing it for what it is: a thought your mind is handing you.",
+    "Try saying it this way: 'I am noticing my mind telling me that I will mess this up.' What changes, even a little, when you add those words?",
+    "From 0 to 10, how much does the thought grab you right now? Now hold the card out at arm's length. What number is it now?",
+    "The thought may still be here, and that is fine. The question is whether it can ride in the back seat while you keep driving toward what matters to you.",
+    "This week, when it shows up, just name it, like 'there is the not-good-enough story,' and then choose your next step on purpose."
+  ],
+  "contraindications": [
+    "Do not use defusion to brush aside realistic concerns such as real safety threats, discrimination or a financial crisis. Problem-solve those directly.",
+    "Playful techniques (silly voices, singing a thought) can feel invalidating, especially with recent trauma, grief or strong shame. Build rapport first and choose gentler formats.",
+    "Thoughts of suicide or of harming others are not targets for defusion alone. Assess risk using your clinical protocol, use collaborative safety planning, and keep crisis resources visible: 988 in the US (call or text), the local emergency number, and findahelpline.com. The clinician, not this tool, judges risk.",
+    "In OCD, watch that defusion phrases do not turn into mental rituals or reassurance seeking; combine with exposure and response prevention.",
+    "With active psychosis, current mania, severe dissociation or cognitive impairment, keep language concrete or defer, and consult; abstract exercises may confuse or destabilize.",
+    "Substance-use care: screen for withdrawal risk (alcohol or benzodiazepine withdrawal needs medical referral) and coordinate with SUD treatment. Keep notes and handouts free of identifying details. 42 CFR Part 2 prohibits unauthorized disclosure of these records."
+  ],
+  "culturalAdaptations": [
+    "ACT relies on metaphor. Swap in images from the client's world (market sellers calling out, radio stations, a social-media feed, weather) and invite the client to suggest their own.",
+    "Where thoughts are believed to carry moral or spiritual weight (for example, intrusive taboo or blasphemous thoughts), talk through the client's beliefs about thoughts respectfully before defusing, and involve a religious leader the client trusts only if they ask.",
+    "Work in the client's preferred language. Defusion phrases can lose their effect in translation, so let bilingual clients practice in the language the thought actually shows up in.",
+    "In collectivist contexts, thoughts about family duty may express values rather than unhelpful thinking. Separate the value (caring for family) from the rigid rule ('I can never say no') together with the client.",
+    "Culturally adapted psychotherapies tend to outperform unadapted versions (Hall et al., 2016); adapt examples, goals and delivery, not just the translation."
+  ],
+  "faithIntegrated": {
+    "note": "If the client asks for it, they may connect defusion to practices in their own tradition, such as noticing a thought and gently returning attention to prayer, a sacred word or scripture, or to teachings about not being ruled by every passing thought. The client decides whether and how to do this. The clinician does not introduce doctrine or judge the correctness of beliefs.",
+    "consentNote": "Before any faith-integrated variant, explain its purpose and alternatives, confirm the client's right to decline or stop at any time, and document informed consent (AACC Code of Ethics; ACA Code of Ethics). Faith integration is client-led. Never impose beliefs or suggest that distress reflects weak faith."
+  },
+  "handoutIds": ["unhooking-from-thoughts", "coping-cards"],
+  "sources": [
+    { "title": "Acceptance and commitment therapy: model, processes and outcomes (Hayes, Luoma, Bond, Masuda & Lillis)", "publisher": "Behaviour Research and Therapy (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/16300724/", "year": 2006 },
+    { "title": "Acceptance and Commitment Therapy, Second Edition: The Process and Practice of Mindful Change (Hayes, Strosahl & Wilson)", "publisher": "Guilford Press", "url": "https://www.guilford.com/books/Acceptance-and-Commitment-Therapy/Hayes-Strosahl-Wilson/9781462528943", "year": 2012 },
+    { "title": "The impact of treatment components suggested by the psychological flexibility model: a meta-analysis of laboratory-based component studies (Levin et al.)", "publisher": "Behavior Therapy (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/23046777/", "year": 2012 },
+    { "title": "A meta-analysis of the efficacy of acceptance and commitment therapy for clinically relevant mental and physical health problems (A-Tjak et al.)", "publisher": "Psychotherapy and Psychosomatics (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/25547522/", "year": 2015 },
+    { "title": "The empirical status of acceptance and commitment therapy: a review of meta-analyses (Gloster et al.)", "publisher": "Journal of Contextual Behavioral Science", "url": "https://doi.org/10.1016/j.jcbs.2020.09.009", "year": 2020 },
+    { "title": "A randomized clinical trial of acceptance and commitment therapy versus progressive relaxation training for obsessive-compulsive disorder (Twohig et al.)", "publisher": "Journal of Consulting and Clinical Psychology (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/20873905/", "year": 2010 },
+    { "title": "VA/DoD Clinical Practice Guideline: Management of Major Depressive Disorder", "publisher": "US Department of Veterans Affairs and Department of Defense", "url": "https://www.healthquality.va.gov/guidelines/MH/mdd/", "year": 2022 },
+    { "title": "The management of major depressive disorder: synopsis of the 2022 VA/DoD clinical practice guideline", "publisher": "Annals of Internal Medicine (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/36122380/", "year": 2022 },
+    { "title": "Clinician summary of the 2023 VA/DoD PTSD clinical practice guideline", "publisher": "Focus (American Psychiatric Association Publishing)", "url": "https://focus.psychiatryonline.org/doi/10.1176/appi.focus.16408" },
+    { "title": "Psychological Treatments (treatment index)", "publisher": "APA Division 12, Society of Clinical Psychology", "url": "https://div12.org/psychological-treatments/treatments/" },
+    { "title": "A meta-analysis of cultural adaptations of psychological interventions (Hall et al.)", "publisher": "Behavior Therapy (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/27993346/", "year": 2016 },
+    { "title": "AACC Code of Ethics", "publisher": "American Association of Christian Counselors", "url": "https://aacc.net/aacc-code-of-ethics/" },
+    { "title": "The HIPAA Privacy Rule and 42 CFR Part 2", "publisher": "US Department of Health and Human Services", "url": "https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/hipaa-part-2/index.html" },
+    { "title": "988 Suicide & Crisis Lifeline", "publisher": "988 Lifeline", "url": "https://988lifeline.org" },
+    { "title": "Find A Helpline (international directory)", "publisher": "Find A Helpline", "url": "https://findahelpline.com" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

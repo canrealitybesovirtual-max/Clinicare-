@@ -1,0 +1,79 @@
+{
+  "id": "mindfulness-meditation",
+  "name": "Mindfulness meditation practice (MBCT/MBSR-informed)",
+  "modality": "Mindfulness-based (MBCT/MBSR); complementary and integrative",
+  "conditions": [
+    "major-depressive-disorder",
+    "generalized-anxiety-disorder",
+    "panic-disorder",
+    "agoraphobia",
+    "ptsd"
+  ],
+  "evidenceLevel": "Depression: recommended in NICE NG222 (2022), which lists group mindfulness and meditation (such as an 8-session MBCT programme designed for depression) among treatment options for less severe depression and names MBCT among relapse-prevention options for people at higher risk of relapse (NICE QS8). An individual patient data meta-analysis found MBCT cut relapse risk versus non-MBCT controls (hazard ratio 0.69; Kuyken et al., 2016). The 2022 VA/DoD MDD guideline includes MBCT among suggested psychotherapies for uncomplicated MDD (summaries differ on strength; confirm in the CPG). Anxiety: an RCT found 8-week MBSR noninferior to escitalopram for adult anxiety disorders (Hoge et al., 2023). PTSD: the 2023 VA/DoD guideline gives MBSR a weak-for recommendation; trauma-focused psychotherapy remains first-line. Substance use: mindfulness-based relapse prevention reduced relapse risk versus treatment as usual (Bowen et al., 2014). NCCIH evidence note: results for anxiety and depression are mixed and much research is preliminary; mindfulness improved sleep quality more than education-based treatments but not more than CBT or exercise; practices are generally low risk, but few studies have examined harms.",
+  "minutes": { "min": 10, "max": 45 },
+  "purpose": "Teaches formal meditation practices (sitting with the breath, a body scan, mindful movement, open awareness) that train the client to notice thoughts, emotions and sensations with curiosity instead of automatic reaction. In MBCT (Segal, Williams & Teasdale) this is combined with cognitive therapy ideas so clients learn to spot early signs of a depressive slide and relate to thoughts as mental events; MBSR (Kabat-Zinn) and MBRP (Bowen, Chawla & Marlatt) are related 8-week group programs. In session, the clinician introduces short practices and supports home practice, and refers to a trained teacher for a full program. Script wording here is original and does not reproduce program scripts. Fit across presentations: Anxiety - reduces worry and reactivity; frame practice as noticing, not as a way to force calm. Depression - strongest evidence is for preventing relapse in recurrent depression after recovery; during acute, severe depression, concentration may be limited, so start brief. Trauma - trauma-sensitive adaptations are essential; a complement to, not a substitute for, trauma-focused therapy. Substance use - MBRP pairs mindfulness with relapse prevention to work with cravings and triggers. Sleep - can support sleep quality alongside CBT for insomnia.",
+  "steps": [
+    "Assess fit: current symptoms and severity, trauma history, dissociation, any history of psychosis or mania, prior meditation experience, beliefs about meditation, and practical barriers to home practice.",
+    "Explain the rationale in plain language: attention can be trained like a muscle by noticing where it goes and bringing it back. The goal is not an empty mind or forced relaxation.",
+    "Lead a short practice (5-10 minutes), such as breath-focused sitting or a shortened body scan. Offer choices about eyes open or closed and posture, and the freedom to stop at any time.",
+    "Debrief with open curiosity: what did the client notice (sensations, thoughts, reactions) and how did they relate to it? Normalize mind-wandering and difficulty.",
+    "Agree on realistic home practice (often 5-15 minutes a day at first), with a set time and place. Guided audio can come from reputable free sources or a clinician recording that contains no client information.",
+    "At each session, ask about unwanted effects (more anxiety, intrusive memories, dissociation, sleep changes, low mood) and adjust or pause practice as needed.",
+    "Refer to a full MBCT, MBSR or MBRP group with a trained teacher when a structured program fits, for example recurrent depression currently in remission.",
+    "Track outcomes with built-in measures where relevant (PHQ-9, GAD-7) alongside the client's own report."
+  ],
+  "script": [
+    "Meditation here isn't about stopping your thoughts or reaching a special state. It's practice in noticing where your attention goes and gently bringing it back.",
+    "Sit in a way that feels steady and comfortable. You can keep your eyes open and rest them on the floor, or close them if that feels okay.",
+    "Notice the feeling of breathing wherever it's easiest to feel, like the nose, the chest or the belly. You don't need to change it.",
+    "When you notice your mind has wandered, that moment of noticing is the practice. Gently come back to the breath, again and again, with patience.",
+    "If at any point it feels like too much, open your eyes, look around the room, feel your feet, and stop if you need to. You're in charge.",
+    "What did you notice? Lots of people notice their mind is really busy. That isn't doing it wrong. That's exactly what we're learning to see."
+  ],
+  "contraindications": [
+    "Meditation can bring up distressing experiences for some people, including anxiety, traumatic memories, dissociation or low mood; in one MBCT study, many participants reported at least one meditation-related adverse effect (Britton et al., 2021), and NCCIH notes that few studies have examined harms. Ask about unwanted effects, offer trauma-sensitive options, and reduce or pause practice if needed.",
+    "With acute severe depression, active psychosis, current mania, severe dissociation or very recent trauma, defer intensive or long practices and consult. MBCT was developed mainly for people in remission from recurrent depression.",
+    "Intensive retreats or long sessions are not advised for clients with unstable mental health without specialist input.",
+    "Meditation does not replace first-line treatment (for example, trauma-focused therapy for PTSD) or a medication evaluation when indicated.",
+    "This is not a crisis response. If suicidal thoughts are present, follow your risk protocol and safety planning, and keep 988 in the US (call or text), the local emergency number and findahelpline.com visible. The clinician, not this tool, judges risk.",
+    "Clients with physical limits should adapt mindful movement and posture, and check with their medical provider when needed.",
+    "Substance-use care: screen for withdrawal risk (alcohol or benzodiazepine withdrawal needs medical referral), coordinate with SUD treatment, and keep notes and handouts free of identifying details. 42 CFR Part 2 prohibits unauthorized disclosure of these records."
+  ],
+  "culturalAdaptations": [
+    "Mindfulness meditation comes from Buddhist traditions and has been secularized in MBSR and MBCT. Be open about these roots, offer secular framing, and respect clients for whom this raises religious concerns.",
+    "Faith-adapted versions exist; for example, a randomized study tested a Christian-accommodative mindfulness program (Ford & Garzon, 2017). Some clients will prefer contemplative practices from their own tradition.",
+    "Provide guidance in the client's language and, where possible, from a voice the client relates to. Group programs may need culturally matched facilitators or adapted content (Hall et al., 2016).",
+    "Posture and practice norms vary. Sitting on the floor, closing the eyes, or sitting in silence with strangers can feel uncomfortable or culturally inappropriate, so offer choices.",
+    "Plan home practice around real living conditions such as shared rooms, noise and shift work."
+  ],
+  "faithIntegrated": {
+    "note": "If the client wishes, meditation can be adapted to their tradition, for example contemplative or centering prayer, meditation on a short passage of scripture, repetition of a sacred name or phrase, or silent remembrance practices. The client chooses the form and content. The clinician supports the attention training without teaching doctrine, and refers to a faith leader if the client wants religious guidance.",
+    "consentNote": "Before any faith-integrated variant, explain its purpose and alternatives, confirm the client's right to decline or stop at any time, and document informed consent (AACC Code of Ethics; ACA Code of Ethics). Faith integration is client-led. Never impose beliefs or suggest that distress reflects weak faith."
+  },
+  "trainingRequired": "Brief in-session practices can be taught by clinicians who have a regular personal practice and training in mindfulness-based interventions. Delivering a full MBCT, MBSR or MBRP program requires teacher training in that program; NICE describes group mindfulness for depression as delivered preferably by 2 practitioners, at least 1 with therapy-specific training.",
+  "handoutIds": ["mindful-check-in", "breathing-practice"],
+  "sources": [
+    { "title": "Depression in adults: treatment and management (NG222)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng222", "year": 2022 },
+    { "title": "Depression in adults quality standard (QS8), statement 3: preventing relapse", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/qs8/chapter/Quality-statement-3-Preventing-relapse" },
+    { "title": "Mindfulness-Based Cognitive Therapy for Depression, Second Edition (Segal, Williams & Teasdale)", "publisher": "Guilford Press", "url": "https://www.guilford.com/books/Mindfulness-Based-Cognitive-Therapy-for-Depression/Segal-Williams-Teasdale/9781462537037", "year": 2013 },
+    { "title": "Prevention of relapse/recurrence in major depression by mindfulness-based cognitive therapy (Teasdale et al.)", "publisher": "Journal of Consulting and Clinical Psychology (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/10965637/", "year": 2000 },
+    { "title": "Efficacy of mindfulness-based cognitive therapy in prevention of depressive relapse: an individual patient data meta-analysis from randomized trials (Kuyken et al.)", "publisher": "JAMA Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/27119968/", "year": 2016 },
+    { "title": "VA/DoD Clinical Practice Guideline: Management of Major Depressive Disorder", "publisher": "US Department of Veterans Affairs and Department of Defense", "url": "https://www.healthquality.va.gov/guidelines/MH/mdd/", "year": 2022 },
+    { "title": "Mindfulness-based stress reduction vs escitalopram for the treatment of adults with anxiety disorders: a randomized clinical trial (Hoge et al.)", "publisher": "JAMA Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/36350591/", "year": 2023 },
+    { "title": "VA/DoD Clinical Practice Guideline: Management of Posttraumatic Stress Disorder and Acute Stress Disorder", "publisher": "US Department of Veterans Affairs and Department of Defense", "url": "https://www.healthquality.va.gov/guidelines/MH/ptsd/", "year": 2023 },
+    { "title": "The management of PTSD and acute stress disorder: synopsis of the 2023 VA/DoD clinical practice guideline", "publisher": "Annals of Internal Medicine (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/38408360/", "year": 2024 },
+    { "title": "Mindfulness-based stress reduction for posttraumatic stress disorder among veterans: a randomized clinical trial (Polusny et al.)", "publisher": "JAMA", "url": "https://doi.org/10.1001/jama.2015.8361", "year": 2015 },
+    { "title": "Relative efficacy of mindfulness-based relapse prevention, standard relapse prevention, and treatment as usual for substance use disorders: a randomized clinical trial (Bowen et al.)", "publisher": "JAMA Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/24647726/", "year": 2014 },
+    { "title": "Meditation and Mindfulness: Effectiveness and Safety", "publisher": "National Center for Complementary and Integrative Health (NCCIH)", "url": "https://www.nccih.nih.gov/health/meditation-and-mindfulness-effectiveness-and-safety" },
+    { "title": "Defining and measuring meditation-related adverse effects in mindfulness-based programs (Britton et al.)", "publisher": "Clinical Psychological Science (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/35174010/", "year": 2021 },
+    { "title": "Research note: a randomized investigation of evangelical Christian accommodative mindfulness (Ford & Garzon)", "publisher": "Spirituality in Clinical Practice (Liberty University record)", "url": "https://facultyshare.liberty.edu/en/publications/research-note-a-randomized-investigation-of-evangelical-christian/", "year": 2017 },
+    { "title": "A meta-analysis of cultural adaptations of psychological interventions (Hall et al.)", "publisher": "Behavior Therapy (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/27993346/", "year": 2016 },
+    { "title": "AACC Code of Ethics", "publisher": "American Association of Christian Counselors", "url": "https://aacc.net/aacc-code-of-ethics/" },
+    { "title": "The HIPAA Privacy Rule and 42 CFR Part 2", "publisher": "US Department of Health and Human Services", "url": "https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/hipaa-part-2/index.html" },
+    { "title": "988 Suicide & Crisis Lifeline", "publisher": "988 Lifeline", "url": "https://988lifeline.org" },
+    { "title": "Find A Helpline (international directory)", "publisher": "Find A Helpline", "url": "https://findahelpline.com" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

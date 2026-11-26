@@ -1,0 +1,60 @@
+{
+  "id": "imagery-rescripting",
+  "name": "Imagery rescripting (ImRs)",
+  "modality": "CBT - imagery-based technique",
+  "conditions": ["ptsd", "social-anxiety-disorder", "major-depressive-disorder"],
+  "evidenceLevel": "Emerging evidence. A 2017 meta-analysis of 19 trials (7 RCTs, 363 adults) covering PTSD, social anxiety, depression, body dysmorphic disorder, bulimia and OCD found large pre-post effects and a large effect versus passive control conditions, but most analyses were pre-post and there were few RCTs (Morina, Lancee and Arntz, 2017). An updated meta-analysis limited to RCTs was published in 2023 (Kip, Schoppe, Arntz and Morina). For PTSD, guideline first-line treatments are the trauma-focused protocols (for example, CPT, PE and EMDR in the VA/DoD 2023 guideline); use imagery rescripting of trauma memories only within trained, trauma-focused care.",
+  "minutes": { "min": 30, "max": 90 },
+  "purpose": "Imagery rescripting works with a distressing memory or a recurring image, for example a humiliating school memory behind a social-anxiety self-image, an intrusive memory in depression, or a trauma memory. The client briefly brings the image to mind in the present tense, then changes how it unfolds so that unmet needs are met. For instance, the adult self or a trusted helper steps in to protect, comfort, or say what needed to be said. The aim is to change the meaning the memory carries (for example, 'it was my fault' or 'I am defective'), not to deny what happened. The technique is associated with Arnoud Arntz, Ann Hackmann, Emily Holmes and colleagues; it is described here in original wording.",
+  "steps": [
+    "Formulate first: identify the recurring image or memory, the emotion it carries, and the belief linked to it. Agree with the client that this image is worth working on.",
+    "Explain the rationale and get consent. Agree on a stop signal and a grounding plan, and check for dissociation.",
+    "Ask the client to close their eyes or lower their gaze (eyes open is fine). Have them describe the memory briefly, in the present tense, up to the point just before the worst moment. Keep this phase short.",
+    "Invite a change: ask what the person in the memory needed. The client (as their adult self) or a helper they choose enters the scene to protect, comfort, set limits or correct the message. The client decides what happens; the clinician guides with open questions.",
+    "Let the client take in the new version fully, including the felt sense of being protected or understood. Ask what the younger self or the self-image now believes.",
+    "Return to the present with grounding. Debrief: What changed in feeling and in the belief? Re-rate how strongly the client holds the belief.",
+    "Repeat in later sessions as needed. If your clinical system allows secure recording, some clients listen back to the rescripted image. This app does not record.",
+    "Monitor distress and intrusive memories between sessions and coordinate with the wider treatment plan."
+  ],
+  "script": [
+    "Some memories stick with us and still shape how we feel about ourselves today.",
+    "We will look at the memory for a short time. Then you get to change what happens next.",
+    "You can stop at any time. Just raise your hand, and we will come back to the room.",
+    "Tell me what you see, as if it is happening now. Where are you? Who is there?",
+    "What did the younger you need right then?",
+    "Imagine your adult self stepping in. What do you do or say?",
+    "How does the younger you feel now? What do they believe about themselves now?",
+    "Let's come back to the room. Feel your feet on the floor. Name three things you can see."
+  ],
+  "contraindications": [
+    "Defer or refer if the client is in crisis, at current suicide risk, actively psychotic, manic or intoxicated. This tool does not judge risk. Crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com.",
+    "Severe dissociation, very high distress during recall, or an unsafe living situation (for example, ongoing abuse) calls for stabilization and specialist trauma care first.",
+    "Do not use imagery to 'recover' memories or to suggest events the client does not remember. Work only with what the client brings.",
+    "Rescripted images change meaning, not facts. They do not replace real safety planning, reporting duties or legal steps.",
+    "Some clients cannot picture images or prefer not to. Offer verbal or written alternatives."
+  ],
+  "culturalAdaptations": [
+    "Let the client choose helpers who fit their world (for example, a grandparent, an elder, an ancestor, a religious figure, or a protector from a favorite story).",
+    "In family-centered cultures, confronting a parent or elder, even in imagery, can feel disloyal. Explore this, and allow protective or comforting rescripts that do not require confrontation.",
+    "Use the client's words for the memory, especially for shame-related content, and use a professional interpreter rather than family members.",
+    "Respect cultural views about the meaning of dreams, images and people who have died when the imagery involves a deceased person."
+  ],
+  "faithIntegrated": {
+    "note": "If the client wishes, a protective figure from their own faith tradition (for example, a saint, a prophet, an angel, or God as the client understands God) can enter the rescripted image, or the client can bring a prayer or blessing into the scene. The client chooses the figure and the words; the clinician does not suggest specific religious content.",
+    "consentNote": "Offer only if the client raises faith or spirituality and asks to include it. Before starting, explain what the faith-integrated option involves, that it is optional, that the same intervention is available without religious content, and that the client can change their mind at any time; document informed consent. Follow the client's own tradition and words, and never introduce, impose, endorse or challenge beliefs (AACC Code of Ethics: informed consent before spiritual interventions, client-led integration; ACA Code of Ethics 2014, A.2 informed consent and A.4.b personal values)."
+  },
+  "trainingRequired": "Use imagery rescripting of trauma memories only with training and supervision in imagery rescripting or trauma-focused CBT, as part of a trauma-focused treatment plan, not as a stand-alone improvised technique. Rescripting of non-trauma social or depressive images also benefits from training and supervision.",
+  "handoutIds": ["grounding-5-4-3-2-1"],
+  "sources": [
+    { "title": "Imagery rescripting as a clinical intervention for aversive memories: a meta-analysis (Morina, Lancee and Arntz)", "publisher": "Journal of Behavior Therapy and Experimental Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/27855298/", "year": 2017 },
+    { "title": "Efficacy of imagery rescripting in treating mental disorders associated with aversive memories: an updated meta-analysis (Kip, Schoppe, Arntz and Morina)", "publisher": "Journal of Anxiety Disorders (University of Amsterdam repository)", "url": "https://dare.uva.nl/id/73f388d6-dbb7-4c73-aa50-534f771acb18", "year": 2023 },
+    { "title": "Social anxiety disorder: recognition, assessment and treatment (CG159)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/cg159", "year": 2013 },
+    { "title": "The management of posttraumatic stress disorder and acute stress disorder: synopsis of the 2023 VA/DoD clinical practice guideline", "publisher": "Annals of Internal Medicine (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/38408360/", "year": 2024 },
+    { "title": "Post-traumatic stress disorder (NG116)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng116", "year": 2018 },
+    { "title": "AACC Code of Ethics", "publisher": "American Association of Christian Counselors", "url": "https://aacc.net/aacc-code-of-ethics/" },
+    { "title": "ACA Code of Ethics (2014) and ethics resources", "publisher": "American Counseling Association", "url": "https://www.counseling.org/resources/ethics", "year": 2014 }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

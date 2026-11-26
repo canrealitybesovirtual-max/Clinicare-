@@ -1,0 +1,84 @@
+{
+  "id": "unhooking-from-thoughts",
+  "title": "Unhooking From Sticky Thoughts",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 10,
+  "intro": "Our minds talk to us all day. They make guesses, judge, and tell stories. Some thoughts help. Others are harsh or scary, like 'I'll mess this up' or 'Nobody likes me.' When a thought hooks you, it can feel like a fact or an order. Then it can push you to avoid things or give up. Unhooking does not mean arguing with the thought or making it go away. It means seeing a thought as a thought, so you can choose what to do next. Each practice takes about 5 to 10 minutes.",
+  "sections": [
+    {
+      "heading": "Step 1: Catch the thought",
+      "steps": [
+        "Notice when a thought shows up that pulls you down or holds you back.",
+        "Write it down in your own words, just the way your mind says it.",
+        "Rate how much it grabs you right now, from 0 to 10. A 0 means not at all. A 10 means it feels totally true."
+      ]
+    },
+    {
+      "heading": "Step 2: Add a few words in front",
+      "body": "Say the thought again, but put a few words in front of it. For example, 'I'll mess this up' becomes 'My mind is telling me that I'll mess this up.' Or try 'I notice I'm having the thought that...' Say it slowly. Notice if anything shifts, even a little."
+    },
+    {
+      "heading": "Step 3: Try a new way to see it",
+      "body": "Pick one of these. Some work better for some people. Skip any that feel silly or unkind to you.",
+      "steps": [
+        "Write the thought on a card. Hold it close to your face. Then hold it out at arm's length. Notice how much more you can see around it.",
+        "Picture the words on a sign by the road, or on a cloud drifting by. Let it pass at its own speed.",
+        "Say the thought very slowly, one word at a time.",
+        "Answer your mind the way you would a worried friend: 'I hear you. Thanks for trying to help.' Then turn back to what you were doing.",
+        "Give the story a short name, like 'the not-good-enough story.' When it shows up, just say, 'There's that story again.'"
+      ]
+    },
+    {
+      "heading": "Step 4: Choose your next step",
+      "steps": [
+        "Ask: If this thought came along for the ride, what would I do right now that matters to me?",
+        "Take one small step, even with the thought still there.",
+        "Rate again how much the thought grabs you, from 0 to 10."
+      ]
+    },
+    {
+      "heading": "Good to know",
+      "steps": [
+        "The thought may come back. That is normal. Each time you unhook, you get a bit faster.",
+        "You do not have to like a thought or believe it. You just notice it.",
+        "Some worries are about real problems, like money or safety. For those, make a plan or ask for help.",
+        "Practice with small thoughts first, before you try it with the hardest ones.",
+        "Bring your log to your next visit."
+      ]
+    }
+  ],
+  "practiceLog": {
+    "columns": ["Day", "The thought", "Grab before (0-10)", "What I did next", "Grab after (0-10)"],
+    "rows": 7
+  },
+  "safetyNote": "Safety first: This skill is for everyday sticky thoughts. Thoughts about ending your life or hurting someone are not something to handle on your own with this sheet. If you have thoughts like that, reach out right away. In the US, call or text 988 or call 911. In other countries, call your local emergency number or visit findahelpline.com. If some thoughts feel very upsetting, or keep you stuck doing the same things over and over, tell your counselor or therapist. Resource only. This sheet does not replace care from a licensed professional.",
+  "sources": [
+    {
+      "title": "Acceptance and commitment therapy: model, processes and outcomes (Hayes, Luoma, Bond, Masuda & Lillis)",
+      "publisher": "Behaviour Research and Therapy (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16300724/",
+      "year": 2006
+    },
+    {
+      "title": "The impact of treatment components suggested by the psychological flexibility model: a meta-analysis of laboratory-based component studies (Levin et al.)",
+      "publisher": "Behavior Therapy (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23046777/",
+      "year": 2012
+    },
+    {
+      "title": "A meta-analysis of the efficacy of acceptance and commitment therapy for clinically relevant mental and physical health problems (A-Tjak et al.)",
+      "publisher": "Psychotherapy and Psychosomatics (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25547522/",
+      "year": 2015
+    },
+    {
+      "title": "988 Suicide & Crisis Lifeline",
+      "publisher": "988 Lifeline",
+      "url": "https://988lifeline.org"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

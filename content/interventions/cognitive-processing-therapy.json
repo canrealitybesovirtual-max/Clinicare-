@@ -1,0 +1,89 @@
+{
+  "id": "cognitive-processing-therapy",
+  "name": "Cognitive processing therapy (CPT) - overview and referral",
+  "modality": "Trauma-focused CBT (manualized protocol)",
+  "conditions": ["ptsd"],
+  "evidenceLevel": "First-line trauma-focused psychotherapy. The VA/DoD 2023 guideline strongly recommends individual, manualized trauma-focused psychotherapies, including CPT. The APA PTSD guideline (2017; updated 2025) recommends CPT. NICE NG116 recommends individual trauma-focused CBT, a category that includes CPT, for adults presenting more than one month after a trauma.",
+  "minutes": { "min": 10, "max": 20 },
+  "purpose": "CPT is a manualized trauma-focused CBT protocol in which the client identifies and revises 'stuck' beliefs about the trauma and its meaning, especially beliefs about blame, safety, trust, power, esteem and intimacy. It is commonly delivered in about 12 weekly sessions, with or without a written account of the trauma. This library entry covers overview and referral only, and the time estimate is for that conversation. It deliberately contains no protocol content. Deliver CPT only after formal training with ongoing consultation.",
+  "steps": [
+    "Give brief, plain-language psychoeducation about trauma reactions and introduce CPT as one first-line option.",
+    "Explain what to expect in general terms: a set number of structured weekly sessions, practice worksheets between sessions, and a focus on how the trauma changed the client's beliefs.",
+    "Compare options with the client (CPT, prolonged exposure, EMDR, other trauma-focused CBT, referral for medication evaluation) and support an informed choice.",
+    "Screen for issues that affect timing or level of care: current safety, suicide risk, severe dissociation, psychosis, and substance problems. Address urgent needs first. Do not record substance-use details in this app.",
+    "If you are not trained in CPT, refer to a CPT-trained clinician (for example, through VA or community trauma services, or provider listings from the treatment developers). Share information with the receiving clinician only with the client's consent.",
+    "Offer interim support while the client waits (grounding, sleep basics, safety planning) without starting trauma processing.",
+    "Follow up to confirm that the referral was completed and the client was able to start."
+  ],
+  "script": [
+    "There is a treatment called cognitive processing therapy, or CPT. It helps many people after trauma.",
+    "In CPT, you look at how the trauma changed the way you see yourself, other people and the world.",
+    "You learn to notice thoughts that keep you stuck, like blaming yourself, and to look at them in a new way.",
+    "It often takes about 12 weekly sessions, with some practice sheets to do between sessions.",
+    "It is done by a therapist with special training. I can help you find one.",
+    "You can take time to decide. We can also talk about other options."
+  ],
+  "contraindications": [
+    "Current safety threats (ongoing abuse, imminent suicide risk) need attention first. Crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com.",
+    "Active psychosis, an elevated mood state, or severe substance problems may need stabilization or integrated care first. NICE NG116 advises against excluding people from PTSD treatment solely because of co-occurring drug or alcohol misuse. Decide timing with a trained clinician.",
+    "Significant cognitive impairment or very limited literacy may call for adapted formats; discuss with the CPT provider.",
+    "Do not deliver CPT components without formal training and consultation."
+  ],
+  "culturalAdaptations": [
+    "CPT has been delivered in many languages and settings. Ask the provider about adapted versions and the use of professional interpreters.",
+    "Beliefs about blame, honor, fate or spiritual meaning may be central to the client's experience. Look for a provider who will explore these respectfully.",
+    "Clients may prefer a clinician of a particular gender or background. Include this preference in the referral.",
+    "Telehealth delivery may help where access, transport or stigma are barriers."
+  ],
+  "trainingRequired": "CPT: trained clinicians only. Deliver only after completing a recognized CPT training (for example, a workshop by an approved trainer plus case consultation through the treatment developers' training program). Otherwise refer.",
+  "handoutIds": [],
+  "sources": [
+    {
+      "title": "The management of posttraumatic stress disorder and acute stress disorder: synopsis of the 2023 VA/DoD clinical practice guideline",
+      "publisher": "Annals of Internal Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38408360/",
+      "year": 2024
+    },
+    {
+      "title": "VA/DoD Clinical Practice Guideline for Management of Posttraumatic Stress Disorder and Acute Stress Disorder",
+      "publisher": "US Department of Veterans Affairs and Department of Defense",
+      "url": "https://www.healthquality.va.gov/guidelines/MH/ptsd/",
+      "year": 2023
+    },
+    {
+      "title": "Clinical Practice Guideline for the Treatment of PTSD: treatments",
+      "publisher": "American Psychological Association",
+      "url": "https://www.apa.org/ptsd-guideline/treatments"
+    },
+    {
+      "title": "Monitor on Psychology (July/August 2025): updated APA guideline for treating PTSD",
+      "publisher": "American Psychological Association",
+      "url": "https://www.apa.org/monitor/2025/07-08/guidelines-treating-ptsd-trauma",
+      "year": 2025
+    },
+    {
+      "title": "Post-traumatic stress disorder (NG116)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng116",
+      "year": 2018
+    },
+    {
+      "title": "Cognitive Processing Therapy (treatment materials and provider status)",
+      "publisher": "International Society for Traumatic Stress Studies",
+      "url": "https://istss.org/clinical-resources/trauma-treatment/treatment-materials/cognitive-processing-therapy/"
+    },
+    {
+      "title": "Cognitive Processing Therapy: provider training and certification",
+      "publisher": "CPT for PTSD (treatment developers' training site)",
+      "url": "https://cptforptsd.com/"
+    },
+    {
+      "title": "Post-Traumatic Stress Disorder (health topic)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/topics/post-traumatic-stress-disorder-ptsd"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

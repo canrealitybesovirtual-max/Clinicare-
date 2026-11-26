@@ -1,0 +1,56 @@
+{
+  "id": "contingency-management",
+  "name": "Contingency management (CM) - program-based overview and referral",
+  "modality": "Behavioral - contingency management (incentive-based)",
+  "conditions": ["alcohol-use-disorder"],
+  "evidenceLevel": "The strongest evidence is for drug use, especially stimulants. A 2006 meta-analysis across drug, alcohol and tobacco use found that CM improves abstinence (Prendergast et al., 2006), and a 2023 HHS ASPE report describes evidence for CM in alcohol, cannabis and tobacco use disorders as well. For alcohol use disorder specifically, evidence is emerging. In an RCT with outpatients who had serious mental illness and alcohol dependence, people earning incentives for alcohol-negative urine tests (ethyl glucuronide, EtG) were about three times as likely to test negative during treatment (McDonell et al., 2017). A Military Health System evidence brief, however, rated the evidence insufficient for CM as a primary AUD treatment and questionable as an adjunct in early recovery. Offer CM only within an established program.",
+  "minutes": { "min": 10, "max": 30 },
+  "purpose": "CM gives tangible, immediate rewards (for example, vouchers or prize draws) when a client shows an objectively checked target behavior, usually a test showing no recent alcohol or drug use, or attending sessions. Rewards come right away and consistently, often grow with continued success, and reset after a positive or missed test. CM works by making the healthy choice more rewarding in the short term. It was pioneered by Stephen Higgins, Nancy Petry and colleagues. CM must be run as a structured program with reliable testing, a budget, trained staff and attention to legal limits on patient incentives; a solo clinician should not improvise it. This entry is an overview so clinicians can explain CM and refer.",
+  "steps": [
+    "Explain CM in plain language and ask whether the client is interested.",
+    "Find local programs that offer CM (for example, through substance use treatment services; FindTreatment.gov lists facilities). Refer only with the client's written consent, and follow 42 CFR Part 2 for any disclosure.",
+    "Within a program: agree on the target behavior and how it will be checked. For alcohol, EtG urine tests can detect drinking over the past several days, while breath tests detect only very recent drinking.",
+    "Explain the schedule clearly and in writing: how often tests happen, what can be earned, how rewards grow, and what happens after a positive or missed test (a reset, not a punishment).",
+    "Give rewards right away and consistently, praise effort, and never withhold rewards that were earned.",
+    "Combine CM with other care (motivational interviewing, CBT, relapse-prevention planning, medication referral) and plan how to keep changes going when incentives end.",
+    "Watch for unintended effects (for example, switching to substances that are not tested) and review the plan regularly."
+  ],
+  "script": [
+    "There is a program where you can earn rewards for days without drinking.",
+    "You'd do a simple test at each visit. If it shows no recent drinking, you earn a reward right away.",
+    "The rewards get bigger the longer you keep going.",
+    "If a test is positive, you don't get in trouble. The rewards just start over, and you can build back up.",
+    "Many people find the rewards help in the early weeks, while other changes take hold.",
+    "Would you like me to help you find a program near you?"
+  ],
+  "contraindications": [
+    "Alcohol withdrawal can be dangerous. Clients who drink heavily every day, or who have had withdrawal symptoms such as shakes, sweats, seizures or hallucinations, need a medical assessment before stopping quickly.",
+    "Testing must be reliable and fair. Low-level positives can come from incidental alcohol exposure (for example, some hand sanitizers or mouthwash), so programs need clear, written rules.",
+    "Incentive programs must follow federal and state rules on patient incentives and payer policies. The program, not the individual clinician, should manage this.",
+    "Do not use CM to coerce, and do not tie rewards to legal or job consequences without the client's informed agreement.",
+    "For clients with gambling problems, prize-draw formats may be inappropriate; programs can use fixed vouchers instead.",
+    "This tool does not judge risk. If suicidal thoughts or other risks come up, follow your setting's procedures. Crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com.",
+    "Test results and attendance are substance use disorder records. Do not enter identifying details into this tool; nothing is stored or sent. Any note or export about substance use must carry this notice: 42 CFR Part 2 prohibits unauthorized disclosure of these records."
+  ],
+  "culturalAdaptations": [
+    "Choose rewards that are meaningful and acceptable in the client's culture and circumstances (for example, grocery or transport vouchers, or items for children).",
+    "Some clients may see rewards as patronizing or as payment for 'being good'. Frame CM as a short-term support that many adults find helpful.",
+    "CM has been studied with Native adults with alcohol use disorder. When designing programs, involve community partners and respect local values.",
+    "Observed urine collection may conflict with modesty norms or trauma histories. Discuss options within program rules and offer same-gender staff when possible."
+  ],
+  "trainingRequired": "Contingency management: deliver only within a structured program with staff trained in CM, reliable biochemical testing, a funded incentive system, and compliance review of federal and state rules on patient incentives. Otherwise refer to a program that offers CM.",
+  "handoutIds": ["drinking-diary"],
+  "sources": [
+    { "title": "Contingency management for treatment of substance use disorders: a meta-analysis (Prendergast et al.)", "publisher": "Addiction (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/17034434/", "year": 2006 },
+    { "title": "Ethyl glucuronide-based contingency management for outpatients with co-occurring alcohol use disorders and serious mental illness (McDonell et al.)", "publisher": "American Journal of Psychiatry (DOI)", "url": "https://doi.org/10.1176/appi.ajp.2016.16050627", "year": 2017 },
+    { "title": "Evidence Brief: Contingency Management for Alcohol Use Disorder", "publisher": "Psychological Health Center of Excellence, Military Health System", "url": "https://health.mil/Reference-Center/Publications/2021/04/26/PHCoE-Evidence-Brief-Contingency-Management-for-AUD-2021-508" },
+    { "title": "Contingency management for substance use disorder treatment (report)", "publisher": "Office of the Assistant Secretary for Planning and Evaluation, US Department of Health and Human Services", "url": "https://aspe.hhs.gov/sites/default/files/documents/72bda5309911c29cd1ba3202c9ee0e03/contingency-management-sub-treatment.pdf", "year": 2023 },
+    { "title": "The management of substance use disorders: synopsis of the 2021 US Department of Veterans Affairs and US Department of Defense clinical practice guideline", "publisher": "Annals of Internal Medicine (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/35313113/", "year": 2022 },
+    { "title": "FindTreatment.gov", "publisher": "Substance Abuse and Mental Health Services Administration", "url": "https://findtreatment.gov" },
+    { "title": "The HIPAA Privacy Rule and 42 CFR Part 2", "publisher": "US Department of Health and Human Services", "url": "https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/hipaa-part-2/index.html" },
+    { "title": "988 Suicide & Crisis Lifeline", "publisher": "988 Lifeline", "url": "https://988lifeline.org" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

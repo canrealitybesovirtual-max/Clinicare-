@@ -1,0 +1,150 @@
+{
+  "conditionId": "ptsd",
+  "problems": [
+    {
+      "id": "ptsd-intrusions-and-reminders",
+      "label": "Unwanted trauma memories, nightmares and strong reactions to reminders",
+      "definitions": [
+        "Reports unwanted memories or images of the traumatic event breaking into daily activities several times a week.",
+        "Has nightmares about the event or its themes on one or more nights a week, sometimes waking sweaty, shaking or with a racing heart.",
+        "Shows strong body or emotional reactions (trembling, sweating, freezing or tearfulness) when reminded of the event, in session or in daily life.",
+        "Describes flashback moments when the event seems to be replaying in the present, or times of losing track of where they are."
+      ],
+      "longTermGoals": [
+        "Memories of the event can be recalled when the client chooses, feel like part of the past rather than the present, and no longer take over daily life."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "ptsd-reactions-explained",
+          "text": "By session 3, describe in their own words at least 3 common trauma reactions they recognize in themselves and why reminders can set off the body's alarm system.",
+          "interventionIds": ["trauma-psychoeducation-and-grounding"]
+        },
+        {
+          "id": "ptsd-grounding-daily",
+          "text": "Within 2 weeks, learn at least 1 grounding skill (for example naming things seen, heard and felt in the room) and then use it at least once a day for 3 weeks, rating distress (0-10) before and after.",
+          "interventionIds": ["grounding-5-4-3-2-1", "trauma-psychoeducation-and-grounding"]
+        },
+        {
+          "id": "ptsd-choose-trauma-therapy",
+          "text": "By week 4, the client and clinician agree on a trauma-focused therapy (for example cognitive processing therapy, prolonged exposure or EMDR), delivered only by a clinician trained in that method or through referral to one, and the client attends at least 80 percent of scheduled sessions.",
+          "interventionIds": ["cognitive-processing-therapy", "prolonged-exposure", "emdr"]
+        },
+        {
+          "id": "ptsd-between-session-work",
+          "text": "During the agreed trauma-focused therapy, complete the assigned between-session practice (for example written accounts, worksheets or listening to a session recording) on at least 4 days a week, and bring it to the next session.",
+          "interventionIds": ["cognitive-processing-therapy", "prolonged-exposure"]
+        },
+        {
+          "id": "ptsd-score-tracking",
+          "text": "Complete the PHQ-9 and GAD-7 at intake and every 2 to 4 weeks, along with any PTSD-specific checklist the practice is licensed to use outside this app. Review the trend together, and revisit the plan or treatment choice if scores have not improved across 2 check-ins in a row.",
+          "interventionIds": []
+        }
+      ],
+      "measureIds": ["phq-9", "gad-7"]
+    },
+    {
+      "id": "ptsd-avoidance-and-disconnection",
+      "label": "Avoiding reminders and pulling away from people",
+      "definitions": [
+        "Avoids specific places, people, conversations, smells, sounds, news or media linked to the event, and can list them when asked.",
+        "Changes routes, routines or work to stay away from reminders, or will not discuss the event even when this gets in the way of care.",
+        "Reports feeling cut off from others or emotionally numb, and spends less time with friends, family or community than before the event.",
+        "Holds rigid beliefs tied to the event, such as 'I should have stopped it', 'people always let you down' or 'danger is around every corner'."
+      ],
+      "longTermGoals": [
+        "The client can approach safe reminders and situations they have been avoiding, and reconnects with people and activities that matter to them.",
+        "Beliefs about blame, safety and trust become more balanced and fit the facts of what happened."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "ptsd-avoided-list",
+          "text": "Within 3 weeks, list at least 8 avoided situations, people or reminders that the client and clinician agree are safe now, rating each 0-100 for expected distress.",
+          "interventionIds": ["prolonged-exposure"]
+        },
+        {
+          "id": "ptsd-approach-practice",
+          "text": "Over weeks 4 to 12, practice approaching at least 2 listed safe reminders per week, staying until the planned end of each practice, and record distress at the start and at the end.",
+          "interventionIds": ["prolonged-exposure"]
+        },
+        {
+          "id": "ptsd-trauma-beliefs",
+          "text": "By week 6, write down at least 3 beliefs about why the event happened or what it means about self, others or the world, then re-rate how strongly each is believed (0-100) every 2 weeks for the next 6 weeks.",
+          "interventionIds": ["cognitive-processing-therapy"]
+        },
+        {
+          "id": "ptsd-reconnect",
+          "text": "By week 10, take part in at least 1 social, community, faith or leisure activity per week that the client has chosen.",
+          "interventionIds": ["behavioral-activation"]
+        }
+      ],
+      "measureIds": ["phq-9"]
+    },
+    {
+      "id": "ptsd-on-guard-sleep-and-safety",
+      "label": "Staying on high alert, broken sleep and risks to safety",
+      "definitions": [
+        "Checks locks, exits or surroundings many times a day, sits facing the door, or scans crowds for danger.",
+        "Startles strongly at sudden noises or touch, as seen in session or reported by others.",
+        "Loses their temper or argues with others more often than before the event, by self or collateral report.",
+        "Gets short or broken sleep on most nights, or puts off going to bed to avoid nightmares.",
+        "At times takes serious risks with their safety (for example very fast driving or picking fights), or reports thoughts of death or suicide; these call for direct clinician assessment at the time they come up."
+      ],
+      "longTermGoals": [
+        "The client's body spends less time on high alert, sleep is more restful, and anger is expressed in ways that do not damage relationships.",
+        "Any risk to the client's safety is noticed early and handled through a safety plan built together with the client, with crisis contacts known and easy to reach."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "ptsd-current-safety-check",
+          "text": "Within the first 2 sessions, review current safety with the client (for example ongoing contact with a person who caused harm, or unsafe housing) and connect them with protective or practical resources if needed, before trauma-focused work begins.",
+          "interventionIds": ["trauma-psychoeducation-and-grounding"]
+        },
+        {
+          "id": "ptsd-calming-practice",
+          "text": "For 4 weeks, practice slow breathing or progressive muscle relaxation for at least 10 minutes a day on 5 or more days a week, rating tension 0-10 before and after.",
+          "interventionIds": ["diaphragmatic-breathing", "progressive-muscle-relaxation", "trauma-psychoeducation-and-grounding"]
+        },
+        {
+          "id": "ptsd-sleep-log",
+          "text": "For 4 weeks, keep a morning sleep log (hours slept, nightmares, how rested 0-10), keep a regular wake-up time on at least 5 days a week and use a grounding skill after waking from a nightmare. If nightmares or poor sleep continue, discuss a medical or sleep referral by week 8.",
+          "interventionIds": ["grounding-5-4-3-2-1", "trauma-psychoeducation-and-grounding"]
+        },
+        {
+          "id": "ptsd-anger-plan",
+          "text": "Over weeks 3 to 10, log anger episodes (trigger, body signs, what was done) and use a planned time-out or calming skill in at least half of the logged episodes.",
+          "interventionIds": ["diaphragmatic-breathing", "grounding-5-4-3-2-1"]
+        },
+        {
+          "id": "ptsd-fewer-checks",
+          "text": "By week 10, cut daily safety checks (locks, windows, scanning) to half of the baseline count or fewer, only in settings the client and clinician agree are currently safe.",
+          "interventionIds": ["safety-behavior-reduction"]
+        },
+        {
+          "id": "ptsd-safety-plan-review",
+          "text": "Whenever risk is present (for example a PHQ-9 item 9 response above 0, thoughts of suicide or self-harm, or reckless acts that could cause serious injury), the clinician assesses risk directly and, in that same session, works with the client to create or review a written safety plan: personal warning signs, coping and grounding steps, people and places that help, professional and crisis contacts (call or text 988 in the US, or the local emergency number elsewhere) and agreed steps to limit access to means of harm. Revisit the plan at every session while risk remains, and pace trauma-focused work around it. Risk level and next steps are the clinician's decision; this tool never rates risk.",
+          "interventionIds": []
+        }
+      ],
+      "measureIds": ["phq-9", "gad-7"]
+    }
+  ],
+  "collaborativeNote": "These are starting points for clinician review, not a finished plan. Rewrite each goal and objective with the client in their own words, let the client set the pace and how much detail they share about the event, and record their agreement before anything is added to the plan. Cognitive processing therapy, prolonged exposure and EMDR are for clinicians trained in each method; otherwise refer. Exposure goals apply only to situations that are safe now. Safety planning is always done together with the client, and the clinician makes every risk decision. Do not add names or other identifying details. Resource only. Not a substitute for clinical judgment.",
+  "sources": [
+    { "title": "Post-traumatic stress disorder (NG116)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng116", "year": 2018 },
+    { "title": "Clinical Practice Guideline for the Treatment of PTSD: treatments", "publisher": "American Psychological Association", "url": "https://www.apa.org/ptsd-guideline/treatments" },
+    { "title": "Prolonged Exposure (PE) (PTSD guideline treatment page)", "publisher": "American Psychological Association", "url": "https://www.apa.org/ptsd-guideline/treatments/prolonged-exposure" },
+    { "title": "The management of posttraumatic stress disorder and acute stress disorder: synopsis of the 2023 VA/DoD clinical practice guideline", "publisher": "Annals of Internal Medicine (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/38408360/", "year": 2024 },
+    { "title": "Psychological Treatments (treatment index; filter by PTSD)", "publisher": "APA Division 12, Society of Clinical Psychology", "url": "https://div12.org/psychological-treatments/treatments/" },
+    { "title": "Post-Traumatic Stress Disorder (health topic)", "publisher": "National Institute of Mental Health", "url": "https://www.nimh.nih.gov/health/topics/post-traumatic-stress-disorder-ptsd" },
+    { "title": "Suicide Prevention (health topic)", "publisher": "National Institute of Mental Health", "url": "https://www.nimh.nih.gov/health/topics/suicide-prevention" },
+    { "title": "Comparison of the Safety Planning Intervention With Follow-up vs Usual Care of Suicidal Patients Treated in the Emergency Department (Stanley et al.)", "publisher": "JAMA Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/29998307/", "year": 2018 },
+    { "title": "988 Suicide & Crisis Lifeline", "publisher": "988 Lifeline / SAMHSA", "url": "https://988lifeline.org" },
+    { "title": "A Tipping Point for Measurement-Based Care (Fortney et al.)", "publisher": "Psychiatric Services; reprinted in Focus (PubMed Central)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6996080/", "year": 2017 },
+    { "title": "Implementing Measurement-Based Care in Behavioral Health: A Review (Lewis et al.)", "publisher": "JAMA Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/30566197/", "year": 2019 },
+    { "title": "Shared decision making (NG197)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng197", "year": 2021 },
+    { "title": "PHQ and GAD-7 screeners (reproduction terms)", "publisher": "Pfizer / PHQ Screeners", "url": "https://www.phqscreeners.com" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

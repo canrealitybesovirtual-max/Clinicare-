@@ -1,0 +1,69 @@
+{
+  "id": "dbt-distress-tolerance",
+  "name": "DBT skills: Distress tolerance (getting through a crisis)",
+  "modality": "Dialectical Behavior Therapy (DBT) skills",
+  "conditions": [
+    "ptsd",
+    "major-depressive-disorder"
+  ],
+  "evidenceLevel": "Strong evidence for comprehensive DBT in borderline personality disorder and recurrent self-harm (Cochrane review, Storebo et al., 2020); BPD is outside this app's current condition list. In a component trial with highly suicidal clients, DBT versions that included skills training performed comparably to standard DBT on suicide-related outcomes (Linehan et al., 2015). A systematic review of 17 trials found preliminary support for stand-alone DBT skills training across a range of problems (Valentine et al., 2015). A specialized program, DBT-PTSD, outperformed CPT for women with childhood-abuse PTSD and marked emotion dysregulation (Bohus et al., 2020). The 2023 VA/DoD PTSD guideline found insufficient evidence for or against DBT as a PTSD treatment. Distress tolerance as an isolated module: emerging evidence.",
+  "minutes": { "min": 20, "max": 45 },
+  "purpose": "Teaches the client to get through acute emotional crises without making things worse (self-harm, drinking or using, aggression, impulsive decisions) when the problem cannot be solved right away. Linehan groups these crisis skills into families: fast body-based ways to bring arousal down, distracting and self-soothing, pausing before acting, weighing the pros and cons of acting on an urge, and radically accepting realities that cannot be changed right now. This entry describes those ideas in original wording; for the full skill set and Linehan's own handouts, see the DBT Skills Training Manual (Linehan, 2015). Fit across presentations: Anxiety - brief arousal reduction can help with acute surges, but must not become routine avoidance or a safety behavior during panic or anxiety treatment. Depression - helps the client ride out spikes of hopelessness and urges to withdraw or self-harm, alongside a safety plan. Trauma - supports stabilization and managing trigger-driven surges before and during trauma-focused therapy. Substance use - offers alternatives when cravings and distress spike, and pairs with urge surfing and relapse prevention planning.",
+  "steps": [
+    "Orient the client: crisis skills are for short-term survival when a problem cannot be solved right now. They do not fix the problem and are not meant for everyday avoidance.",
+    "Map a recent crisis step by step: trigger, emotion and intensity, urge, action, and short- and long-term consequences. Find the earliest warning signs and the point where things tipped.",
+    "Teach a pause-before-acting routine the client can do in a few seconds when an urge peaks, and rehearse it aloud in session.",
+    "Teach fast, body-based ways to bring arousal down that suit the client's health, such as cool water on the face or a cold pack, slow breathing with a long out-breath, brief vigorous movement if medically cleared, or tensing and releasing muscle groups. Linehan calls this family the TIP skills; see the manual for her version.",
+    "Build a personal list of distractions and self-soothing options that use all five senses and real activities, with the client's own ideas first. Put the best ones on coping cards.",
+    "When the client is calm, write out the pros and cons of acting on the urge versus riding it out, short and long term. The client keeps it for crisis moments.",
+    "Introduce radical acceptance at an overview level for realities that cannot be changed right now, and make clear that accepting a fact is not the same as approving of it.",
+    "Fold the skills into the hard-moment-plan handout. When risk is present, build or update a collaborative safety plan (safety-plan handout) that lists 988 in the US (call or text), the local emergency number and findahelpline.com.",
+    "Rehearse skills in session at moderate distress, assign practice at moderate distress (not only in crisis), and review how well each skill worked (0-10)."
+  ],
+  "script": [
+    "These skills are like a fire extinguisher. They don't rebuild the house, but they keep things from getting worse while the fire is hot.",
+    "Let's walk through the last really hard night, step by step. Where did things start to tip? What was the very first sign?",
+    "When a feeling is at a 9 or 10, thinking clearly is really hard. So we'll practice things that work on your body first, like cool water on your face or slow breathing with a long breath out.",
+    "Let's make a list of things that help you get through even ten minutes. Things to see, hear, smell, taste, touch and do. We'll put the best ones on a card you can carry.",
+    "While you're calm, let's write down what happens when you act on the urge and what happens when you ride it out. Future you can read it when things get hard.",
+    "Some things can't be changed tonight. Accepting that doesn't mean it's okay. It means you stop spending energy fighting what is, so you have energy for what comes next.",
+    "If you are ever thinking about ending your life or don't feel safe, these skills are not enough on their own. In the US, call or text 988, call your local emergency number, or find a line at findahelpline.com, and use your safety plan."
+  ],
+  "contraindications": [
+    "Distress tolerance never replaces suicide or self-harm risk assessment. The clinician assesses risk and decides on level of care; use collaborative safety planning and keep 988 in the US (call or text), the local emergency number and findahelpline.com visible. This tool does not judge risk.",
+    "Cold-water and intense-exercise techniques can change heart rate and blood pressure. Screen for heart problems, eating disorders with medical instability, pregnancy, Raynaud's and other medical issues, ask the client's medical provider when unsure, and use gentler options.",
+    "In anxiety disorders, crisis skills used routinely can become safety behaviors that keep fear going. Save them for real crises and pair them with exposure-based treatment.",
+    "Radical acceptance must never be applied to ongoing abuse or danger. Screen for intimate partner violence and unsafe living situations, and address safety first.",
+    "Comprehensive DBT (individual therapy, skills group, between-session coaching and a therapist consultation team) is indicated for chronic, high-risk self-harm. Refer when skills-only work is not enough.",
+    "Substance-use care: screen for withdrawal risk (alcohol or benzodiazepine withdrawal needs medical referral), coordinate with SUD treatment, and keep notes and handouts free of identifying details. 42 CFR Part 2 prohibits unauthorized disclosure of these records."
+  ],
+  "culturalAdaptations": [
+    "Build distraction and self-soothe lists from the client's culture and means: music, foods, scents, textures, crafts, community spaces. Avoid suggestions that cost money the client does not have.",
+    "Some clients see self-soothing as selfish or indulgent. Frame it as restoring the strength to care for others and meet responsibilities.",
+    "Radical acceptance can echo cultural or religious ideas about acceptance, and it can also sound like being told to tolerate injustice. Ask how it lands, especially for clients facing racism, poverty or oppression.",
+    "DBT has been adapted for several cultural groups and settings; adapt examples and language, and use a professional interpreter rather than family members when needed. Culturally adapted psychotherapies tend to outperform unadapted versions (Hall et al., 2016)."
+  ],
+  "faithIntegrated": {
+    "note": "If the client chooses, prayer, reading sacred texts, religious music, a short devotional phrase, or contacting a trusted faith leader can go on the distraction and self-soothe list, and the client may connect acceptance of unchangeable realities to their own tradition's teachings. The client leads. The clinician does not prescribe religious coping or suggest that a crisis reflects a lack of faith.",
+    "consentNote": "Before any faith-integrated variant, explain its purpose and alternatives, confirm the client's right to decline or stop at any time, and document informed consent (AACC Code of Ethics; ACA Code of Ethics). Faith integration is client-led. Never impose beliefs or suggest that distress reflects weak faith."
+  },
+  "trainingRequired": "Individual skills can be taught by clinicians competent in DBT skills. Comprehensive DBT (individual therapy, skills group, phone coaching and a consultation team) requires formal DBT training; DBT-PTSD is a separate specialized protocol with its own training.",
+  "handoutIds": ["hard-moment-plan", "coping-cards", "grounding-5-4-3-2-1", "breathing-practice", "safety-plan"],
+  "sources": [
+    { "title": "DBT Skills Training Manual, Second Edition (Linehan)", "publisher": "Guilford Press", "url": "https://www.guilford.com/books/DBT-Skills-Training-Manual/Marsha-Linehan/9781462516995", "year": 2015 },
+    { "title": "Psychological therapies for people with borderline personality disorder (Storebo et al.)", "publisher": "Cochrane Database of Systematic Reviews", "url": "https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD012955.pub2/full", "year": 2020 },
+    { "title": "Dialectical behavior therapy for high suicide risk in individuals with borderline personality disorder: a randomized clinical trial and component analysis (Linehan et al.)", "publisher": "JAMA Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/25806661/", "year": 2015 },
+    { "title": "The use of dialectical behavior therapy skills training as stand-alone treatment: a systematic review of the treatment outcome literature (Valentine et al.)", "publisher": "Journal of Clinical Psychology (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/25042066/", "year": 2015 },
+    { "title": "Dialectical behavior therapy for posttraumatic stress disorder (DBT-PTSD) compared with cognitive processing therapy in women survivors of childhood abuse (Bohus et al.)", "publisher": "JAMA Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/32697288/", "year": 2020 },
+    { "title": "Clinician summary of the 2023 VA/DoD PTSD clinical practice guideline", "publisher": "Focus (American Psychiatric Association Publishing)", "url": "https://focus.psychiatryonline.org/doi/10.1176/appi.focus.16408" },
+    { "title": "VA/DoD Clinical Practice Guideline: Management of Posttraumatic Stress Disorder and Acute Stress Disorder", "publisher": "US Department of Veterans Affairs and Department of Defense", "url": "https://www.healthquality.va.gov/guidelines/MH/ptsd/", "year": 2023 },
+    { "title": "A meta-analysis of cultural adaptations of psychological interventions (Hall et al.)", "publisher": "Behavior Therapy (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/27993346/", "year": 2016 },
+    { "title": "AACC Code of Ethics", "publisher": "American Association of Christian Counselors", "url": "https://aacc.net/aacc-code-of-ethics/" },
+    { "title": "The HIPAA Privacy Rule and 42 CFR Part 2", "publisher": "US Department of Health and Human Services", "url": "https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/hipaa-part-2/index.html" },
+    { "title": "988 Suicide & Crisis Lifeline", "publisher": "988 Lifeline", "url": "https://988lifeline.org" },
+    { "title": "Find A Helpline (international directory)", "publisher": "Find A Helpline", "url": "https://findahelpline.com" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

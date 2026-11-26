@@ -1,0 +1,66 @@
+{
+  "id": "mindful-check-in",
+  "name": "Brief mindful check-in (three-step pause)",
+  "modality": "Mindfulness-based (MBCT-informed)",
+  "conditions": [
+    "generalized-anxiety-disorder",
+    "panic-disorder",
+    "major-depressive-disorder",
+    "ptsd"
+  ],
+  "evidenceLevel": "Emerging evidence as a stand-alone brief practice. It is adapted from the idea of the short breathing-space practice in mindfulness-based cognitive therapy (Segal, Williams & Teasdale). The full 8-session MBCT program has strong evidence for preventing depressive relapse (individual patient data meta-analysis: hazard ratio 0.69 vs non-MBCT controls; Kuyken et al., 2016), and NICE NG222 (2022) lists group mindfulness programmes such as MBCT among options for less severe depression and names MBCT among relapse-prevention options (NICE QS8). The benefit of the brief check-in on its own has not been established. NCCIH: mindfulness research is mixed and often preliminary; generally low risk.",
+  "minutes": { "min": 3, "max": 10 },
+  "purpose": "A roughly three-minute structured pause the client can use several times a day: (1) notice what is here now, including thoughts, feelings, body sensations and urges, without trying to change them; (2) gather attention onto one anchor such as the breath, the feet or the hands; (3) widen attention to the whole body and the setting, then choose the next action on purpose. It interrupts autopilot reactions and bridges formal practice and daily life. Wording here is original and does not reproduce MBCT program scripts. Fit across presentations: Anxiety - a quick way to step out of a worry chain or catch early tension; in panic, frame it as noticing, not as a way to make sensations stop. Depression - catches the early slide into rumination and helps the client choose one small activating step. Trauma - use eyes-open, outward-anchored versions; helps the client notice early trigger responses. Substance use - a pause between trigger and use, to notice the urge and choose. Sleep - a short wind-down before bed, as an add-on to CBT for insomnia rather than a replacement.",
+  "steps": [
+    "Explain the rationale: much of the day runs on autopilot, and a short pause creates a moment of choice.",
+    "Guide the full practice once in session (about three minutes) so the client knows how it feels.",
+    "Step one: notice and name what is present (thoughts, feelings, sensations, urges), briefly, like taking a weather report.",
+    "Step two: gather attention onto one anchor for a few breaths, such as the breath moving or the feet on the floor.",
+    "Step three: widen attention to the whole body, posture and the space around, then ask 'what would help right now?' and choose a next step.",
+    "Debrief: what did the client notice, and was any part uncomfortable? Adjust the anchor if needed.",
+    "Plan cues: tie the check-in to existing routines (before meals, after phone calls, at a red light) and to moments of stress, two or three times a day.",
+    "Track practice on the mindful-check-in handout and review it next session."
+  ],
+  "script": [
+    "This is a three-minute pause you can do almost anywhere. Think of it as checking the weather inside you.",
+    "First, just notice what's here. Any thoughts? Any feelings? Anything in your body? No need to fix anything. Just name it.",
+    "Now bring your attention to one spot, like your feet on the floor or your breath going in and out. Stay with it for a few breaths.",
+    "Now let your attention open up to your whole body, how you're sitting, and the room around you.",
+    "Last, ask yourself what would be helpful right now. Then pick your next step on purpose.",
+    "Try it three times a day this week, like before lunch, after a hard call, or when you notice your shoulders creeping up toward your ears."
+  ],
+  "contraindications": [
+    "If attention to the breath or body raises panic or trauma symptoms, use eyes-open, outside anchors (sounds, an object, the feet) and shorten the practice.",
+    "In panic treatment, do not let the check-in become a way to escape or suppress sensations (a safety behavior).",
+    "This is not a crisis intervention. If suicidal thoughts are present, follow your risk protocol and safety planning, and keep 988 in the US (call or text), the local emergency number and findahelpline.com visible. The clinician, not this tool, judges risk.",
+    "For insomnia, use it alongside CBT for insomnia components such as stimulus control, not instead of them.",
+    "Substance-use care: screen for withdrawal risk (alcohol or benzodiazepine withdrawal needs medical referral), coordinate with SUD treatment, and keep notes and handouts free of identifying details. 42 CFR Part 2 prohibits unauthorized disclosure of these records."
+  ],
+  "culturalAdaptations": [
+    "Let the client choose an anchor that feels natural: a word, a sound, a texture, prayer beads or a small object can work better than the breath for some people.",
+    "The practice is short and needs no special place, so it fits shift work, caregiving and crowded homes.",
+    "Offer the guidance in the client's language. If the client wants a recording, the clinician can record their own voice guiding the steps, with no client information in it.",
+    "For clients wary of religious associations, explain that attention practices appear in many cultures and are used in secular health care.",
+    "Culturally adapted psychotherapies tend to outperform unadapted versions (Hall et al., 2016)."
+  ],
+  "faithIntegrated": {
+    "note": "If the client wishes, the anchor in step two can be a short prayer, sacred word or phrase from their tradition, and step three can include a moment of gratitude or of asking for guidance. The client chooses the words. The clinician does not supply religious content unless the client asks.",
+    "consentNote": "Before any faith-integrated variant, explain its purpose and alternatives, confirm the client's right to decline or stop at any time, and document informed consent (AACC Code of Ethics; ACA Code of Ethics). Faith integration is client-led. Never impose beliefs or suggest that distress reflects weak faith."
+  },
+  "handoutIds": ["mindful-check-in"],
+  "sources": [
+    { "title": "Mindfulness-Based Cognitive Therapy for Depression, Second Edition (Segal, Williams & Teasdale)", "publisher": "Guilford Press", "url": "https://www.guilford.com/books/Mindfulness-Based-Cognitive-Therapy-for-Depression/Segal-Williams-Teasdale/9781462537037", "year": 2013 },
+    { "title": "Efficacy of mindfulness-based cognitive therapy in prevention of depressive relapse: an individual patient data meta-analysis from randomized trials (Kuyken et al.)", "publisher": "JAMA Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/27119968/", "year": 2016 },
+    { "title": "Depression in adults: treatment and management (NG222)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng222", "year": 2022 },
+    { "title": "Depression in adults quality standard (QS8), statement 3: preventing relapse", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/qs8/chapter/Quality-statement-3-Preventing-relapse" },
+    { "title": "Meditation and Mindfulness: Effectiveness and Safety", "publisher": "National Center for Complementary and Integrative Health (NCCIH)", "url": "https://www.nccih.nih.gov/health/meditation-and-mindfulness-effectiveness-and-safety" },
+    { "title": "A meta-analysis of cultural adaptations of psychological interventions (Hall et al.)", "publisher": "Behavior Therapy (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/27993346/", "year": 2016 },
+    { "title": "AACC Code of Ethics", "publisher": "American Association of Christian Counselors", "url": "https://aacc.net/aacc-code-of-ethics/" },
+    { "title": "The HIPAA Privacy Rule and 42 CFR Part 2", "publisher": "US Department of Health and Human Services", "url": "https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/hipaa-part-2/index.html" },
+    { "title": "988 Suicide & Crisis Lifeline", "publisher": "988 Lifeline", "url": "https://988lifeline.org" },
+    { "title": "Find A Helpline (international directory)", "publisher": "Find A Helpline", "url": "https://findahelpline.com" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

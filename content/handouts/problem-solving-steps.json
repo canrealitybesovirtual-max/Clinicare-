@@ -1,0 +1,110 @@
+{
+  "id": "problem-solving-steps",
+  "title": "Problem-Solving Steps",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 20,
+  "intro": "When problems pile up, it can be hard to know where to start. You may feel stuck, or keep going over a problem in your head without doing anything about it. These steps help you break a problem down and try a plan. You work on one problem at a time. Making a plan takes about 20 minutes.",
+  "sections": [
+    {
+      "heading": "Step 1: List and choose",
+      "steps": [
+        "Write down the problems that are on your mind.",
+        "Sort them. Which ones can you do something about, even a little? Which ones are out of your control right now?",
+        "Pick one problem you can work on. Start with one that is not the hardest."
+      ]
+    },
+    {
+      "heading": "Step 2: Describe the problem",
+      "steps": [
+        "Write the problem in one or two sentences. Be specific. Say what, when, where, and who.",
+        "For example, instead of 'money is a mess,' write 'I run out of money before payday most months.'"
+      ]
+    },
+    {
+      "heading": "Step 3: Set a goal",
+      "steps": [
+        "What would be a little better? Make the goal small and real.",
+        "For example, 'Have $20 left at the end of the month.'"
+      ]
+    },
+    {
+      "heading": "Step 4: List ideas",
+      "steps": [
+        "Write down as many ways to reach the goal as you can. Do not judge them yet.",
+        "Silly or far-out ideas are okay. They can lead to good ones.",
+        "Ask yourself: What have I tried before? What would a friend suggest? Who could help?"
+      ]
+    },
+    {
+      "heading": "Step 5: Weigh your ideas",
+      "steps": [
+        "For each idea, list the pros and cons. Use the log at the end of this sheet.",
+        "Ask: Can I really do this? What will it cost in time, money, and energy? How will it affect others?",
+        "Pick the best idea, or mix two ideas together."
+      ]
+    },
+    {
+      "heading": "Step 6: Make a plan",
+      "steps": [
+        "Break the idea into small steps.",
+        "Write what you will do, when, and where. List anything you need.",
+        "Think about what might get in the way, and how you could handle it."
+      ]
+    },
+    {
+      "heading": "Step 7: Try it and check",
+      "steps": [
+        "Do the first step.",
+        "Afterward, ask: What went well? What did not? Did I get closer to my goal?",
+        "If it did not work, that is useful to know. Go back to your list and try another idea.",
+        "Give yourself credit for trying, no matter how it turned out."
+      ]
+    },
+    {
+      "heading": "Tips",
+      "steps": [
+        "Some problems are too big to fix alone, like housing, bills, or the cost of health care. Ask your counselor about help in your community. In the US, you can also call 211 or visit 211.org to find local services.",
+        "If the problem involves another person, plan what you want to say ahead of time.",
+        "Bring your plan to your next visit."
+      ]
+    }
+  ],
+  "practiceLog": {
+    "columns": ["Idea", "Pros", "Cons", "Try it? (yes or no)"],
+    "rows": 6
+  },
+  "safetyNote": "Safety first: Some problems need help right away, such as not having a safe place to stay, someone hurting you, or a medical problem. Do not wait to solve those on your own. Reach out for help now. If you feel hopeless, or have thoughts of hurting yourself or someone else, call or text 988 in the US, or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sources": [
+    {
+      "title": "Problem-solving therapy: a meta-analysis (Bell & D'Zurilla)",
+      "publisher": "Clinical Psychology Review (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19299058/",
+      "year": 2009
+    },
+    {
+      "title": "Problem-solving therapy for adults: an updated meta-analysis (Cuijpers et al.)",
+      "publisher": "European Psychiatry",
+      "url": "https://doi.org/10.1016/j.eurpsy.2017.11.006",
+      "year": 2018
+    },
+    {
+      "title": "Problem Management Plus (PM+): individual psychological help for adults impaired by distress in communities exposed to adversity",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/publications/i/item/problem-management-plus-(-pm-)-individual-psychological-help-for-adults-impaired-by-distress-in-communities-exposed-to-adversity"
+    },
+    {
+      "title": "211: free, confidential help finding local services",
+      "publisher": "211.org (United Way)",
+      "url": "https://211.org/"
+    },
+    {
+      "title": "988 Suicide & Crisis Lifeline",
+      "publisher": "988 Lifeline",
+      "url": "https://988lifeline.org"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

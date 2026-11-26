@@ -1,0 +1,57 @@
+{
+  "id": "solution-focused-questions",
+  "name": "Solution-focused questions (SFBT)",
+  "modality": "Solution-focused brief therapy",
+  "conditions": ["major-depressive-disorder"],
+  "evidenceLevel": "Emerging evidence. A systematic review of controlled outcome studies found the strongest support for SFBT in adults with depressive symptoms, where several studies found it comparable to established treatments, though study quality varied (Gingerich and Peterson, 2013). A 2024 umbrella review summarizes later reviews. No NICE or APA Division 12 recommendation was found for these conditions. Use it alongside guideline-recommended care.",
+  "minutes": { "min": 10, "max": 50 },
+  "purpose": "A brief, strengths-based approach developed by Steve de Shazer, Insoo Kim Berg and colleagues. Most of the conversation is spent on what the client wants instead of the problem, on times when the problem is absent or smaller (exceptions), and on the resources the client already has. Questions help the client describe a preferred future in concrete, observable terms and notice small steps toward it. Useful for building hope and goals early in care, for clients who prefer brief work, and as a framing tool inside other treatments.",
+  "steps": [
+    "Ask about best hopes: what the client would like to be different as a result of coming.",
+    "Invite a picture of the preferred future (the technique often called the miracle question): imagine the problem were resolved overnight. What would be the first small signs the next morning, and who would notice?",
+    "Make the picture concrete and observable: what the client would be doing, not only what they would stop doing.",
+    "Look for exceptions: recent times when the problem was absent or a bit smaller. Ask what was different and what the client did to help make that happen.",
+    "Use scaling: from 0 to 10, where are things now, what keeps the number from being lower, and what would one point higher look like?",
+    "When things are very hard, ask coping questions: how the client has kept going, and what helps them get through.",
+    "Give honest compliments about real strengths, then suggest a small experiment: notice, or do more of, what already works.",
+    "In later sessions, start with 'What is better, even a little?' and build on the answer."
+  ],
+  "script": [
+    "What are your best hopes from our work together?",
+    "Imagine that while you sleep tonight, the problems that brought you here get sorted out, but nobody tells you. Tomorrow morning, what is the first small sign you'd spot that things had changed?",
+    "When was the last time you had a day that was even a little bit like that? What was different?",
+    "On a scale from 0 to 10, where 10 is that better day and 0 is the worst things have been, where are you today? What puts you at a 3 and not a 0?",
+    "Given how hard this has been, how have you managed to keep going?",
+    "This week, would you be willing to notice the times things are a little better, and what you were doing then?"
+  ],
+  "contraindications": [
+    "Moving to solutions too quickly can feel dismissive to clients who need to be heard first, especially after trauma or loss. Acknowledge the problem before shifting the focus.",
+    "Not a stand-alone treatment for moderate to severe depression, PTSD, OCD or alcohol use disorder. Combine with guideline-recommended care.",
+    "Scaling and preferred-future questions can be hard for clients with severe depression or memory and thinking problems. Simplify, and lean on coping questions.",
+    "Alcohol withdrawal can be dangerous. Clients who drink heavily every day or have had withdrawal symptoms need a medical assessment before cutting down quickly; refer to medical care.",
+    "Coping questions do not replace risk assessment. This intervention does not assess or decide risk. If suicidal thoughts, self-harm or risk to others come up, pause and follow your setting's risk-assessment and safety-planning procedures. Keep crisis options visible: 988 Suicide & Crisis Lifeline (US, call or text), the local emergency number, and findahelpline.com for other countries.",
+    "Substance-use content: do not enter names, places, dates or other identifying details into this tool; nothing is stored or sent. Any export or note about substance use must carry the notice: 42 CFR Part 2 prohibits unauthorized disclosure of these records."
+  ],
+  "culturalAdaptations": [
+    "The word 'miracle' has religious meaning for some clients. Use neutral wording such as 'imagine things got better', or the client's own preferred image.",
+    "A preferred future may center on family harmony, community roles or spiritual life rather than personal achievement. Follow the client's goals.",
+    "Explain scaling with familiar images (steps, a ladder, a cup filling up) when numbers feel unfamiliar.",
+    "Acknowledge structural barriers such as poverty, racism or immigration status. Strengths-based work should never suggest that a client can solve systemic problems alone."
+  ],
+  "faithIntegrated": {
+    "note": "If the client asks to include faith, invite them to describe what their faith life or faith community would look like in the preferred future, and to look for exceptions linked to spiritual practices or support. Use their own words, and do not frame change as a miracle in a religious sense unless the client does.",
+    "consentNote": "Offer only if the client raises faith or spirituality and asks to include it. Before starting, explain what a faith-integrated approach involves, that it is optional, that the same intervention is available without religious content, and that the client can change their mind at any time; document the client's informed consent. Follow the client's own tradition and words, and never introduce, impose, endorse or challenge beliefs (AACC Code of Ethics: consent before spiritual interventions, client-led integration; ACA Code of Ethics 2014, A.2 informed consent and A.4.b personal values)."
+  },
+  "handoutIds": ["values-compass", "coping-cards"],
+  "sources": [
+    { "title": "Effectiveness of solution-focused brief therapy: a systematic qualitative review of controlled outcome studies (Gingerich and Peterson)", "publisher": "Research on Social Work Practice (SAGE)", "url": "https://staticssl.sagepub.com/sites/default/files/Gingerich%20and%20Peterson%20%282013%29%20Effectiveness%20of%20solution-focused%20brief%20therapy.pdf", "year": 2013 },
+    { "title": "Effectiveness of solution-focused brief therapy: an umbrella review of systematic reviews and meta-analyses", "publisher": "Psychotherapy Research", "url": "https://doi.org/10.1080/10503307.2024.2406540", "year": 2024 },
+    { "title": "Solution focused brief therapy: a systematic review and meta-summary of process research", "publisher": "PubMed (National Library of Medicine)", "url": "https://pubmed.ncbi.nlm.nih.gov/27757976/" },
+    { "title": "Healthcare Professional's Core Resource on Alcohol", "publisher": "National Institute on Alcohol Abuse and Alcoholism", "url": "https://niaaa.nih.gov/health-professionals-communities/core-resource-on-alcohol" },
+    { "title": "AACC Code of Ethics", "publisher": "American Association of Christian Counselors", "url": "https://aacc.net/aacc-code-of-ethics/" },
+    { "title": "ACA Code of Ethics (2014) and ethics resources", "publisher": "American Counseling Association", "url": "https://www.counseling.org/resources/ethics", "year": 2014 }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

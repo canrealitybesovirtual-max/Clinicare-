@@ -1,0 +1,94 @@
+{
+  "id": "worry-time",
+  "name": "Worry time (stimulus control for worry)",
+  "modality": "CBT - stimulus control",
+  "conditions": ["generalized-anxiety-disorder"],
+  "evidenceLevel": "Limited but supportive; best used within a CBT package. Early trials (Borkovec et al., 1983) found that limiting worry to a set time and place reduced worry. A 2013 randomized trial (McGowan & Behar) found that two weeks of a daily 30-minute worry period reduced worry, anxiety and insomnia in people with high levels of worry. NICE CG113 recommends CBT for GAD; worry postponement is a common element of CBT, not a stand-alone guideline recommendation.",
+  "minutes": { "min": 15, "max": 25 },
+  "purpose": "Helps the client gain a sense of control over worry by postponing daytime worries to a short, scheduled 'worry time' in a set place. During worry time the client sorts worries into ones they can act on and ones they cannot, which leads either to problem-solving or to letting go. Over time many worries lose their urgency before worry time arrives.",
+  "steps": [
+    "Explain the idea: worry tends to spread across the day and into bedtime. Postponing it shows the client that worry can wait and is more controllable than it feels.",
+    "Choose a daily worry time of about 15 to 30 minutes, at the same time and place each day, away from the bedroom and not close to bedtime.",
+    "During the day, when a worry shows up, the client writes it down in a few words on the worry-log handout and gently returns attention to the task at hand.",
+    "At worry time, the client reviews the list and worries on purpose. For each worry, ask: Is this something I can act on now?",
+    "Worries the client can act on go to problem-solving (write one small next step; see the problem-solving entry). Worries outside the client's control are noted, and the client practices letting them go, for example by noticing the thought without engaging with it.",
+    "When worry time ends, the client stops and moves to a planned activity, even if not finished.",
+    "Review the log in session: How many worries still felt important by worry time? What happened with the ones the client acted on?",
+    "Troubleshoot: if postponing feels impossible, start with short delays (for example, 30 minutes) and build up."
+  ],
+  "script": [
+    "Worry can show up all day long. Let's try giving worry its own time.",
+    "Pick a time each day, about 15 to 30 minutes, for worrying on purpose. Pick a place that is not your bed.",
+    "When a worry comes up during the day, write it down in a few words. Tell yourself, 'I will think about this later.'",
+    "Then bring your attention back to what you were doing.",
+    "At worry time, look at your list. For each worry, ask: Can I do something about this?",
+    "If yes, write down one small step. If no, see if you can let it go for now.",
+    "When the time is up, stop and do something else you planned.",
+    "Many people find that some worries do not seem as big by the time worry time comes."
+  ],
+  "contraindications": [
+    "Do not postpone urgent safety concerns or thoughts of self-harm. If the client reports these, follow your risk-assessment procedures. Crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com.",
+    "Do not schedule worry time close to bedtime or in bed, which can make sleep worse.",
+    "Some clients use the log to ruminate or seek certainty. Keep entries to a few words and keep worry time strictly time-limited.",
+    "Real, current problems (job loss, illness, unsafe housing) need practical help. Link actionable worries to problem-solving and resources rather than postponement alone.",
+    "Intrusive, unwanted thoughts that drive rituals may need a different approach; assess before using worry postponement."
+  ],
+  "culturalAdaptations": [
+    "In some cultures, worrying about family is seen as a sign of love or responsibility. Frame worry time as caring for the family in a more focused way, not as caring less.",
+    "Idioms such as 'thinking too much' may describe worry. Use the client's own terms.",
+    "In shared or crowded homes, help the client find a private time and place, or use a walk as worry time.",
+    "For clients with low literacy, use voice notes or simple symbols instead of writing.",
+    "Worries tied to discrimination, immigration status or community violence may be realistic. Validate them and link the client to practical support."
+  ],
+  "faithIntegrated": {
+    "note": "If the client wishes, worry time can end with a brief prayer, reflection, or act of handing over worries that are outside their control, in the way their own tradition practices. The client decides whether and how to include this.",
+    "consentNote": "Offer only if the client raises faith or spirituality as a resource, and only after informed consent. Explain that the faith element is optional, that the standard version works without it, and that the client can change or stop it at any time. Use the client's own beliefs and words; never introduce or impose religious content. Record the consent discussion in your own clinical record, not in this app. See the AACC Code of Ethics on consent for spiritual interventions and the ACA Code of Ethics on informed consent and not imposing counselor values."
+  },
+  "handoutIds": ["worry-log"],
+  "sources": [
+    {
+      "title": "Stimulus control applications to the treatment of worry (Borkovec et al.)",
+      "publisher": "Behaviour Research and Therapy (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/6615390/",
+      "year": 1983
+    },
+    {
+      "title": "A preliminary investigation of stimulus control training for worry: effects on anxiety and insomnia (McGowan & Behar)",
+      "publisher": "Behavior Modification (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22977265/",
+      "year": 2013
+    },
+    {
+      "title": "Generalised anxiety disorder and panic disorder in adults: management (CG113)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg113",
+      "year": 2011
+    },
+    {
+      "title": "'Thinking too much': a systematic review of a common idiom of distress (Kaiser et al.)",
+      "publisher": "Social Science & Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26584235/",
+      "year": 2015
+    },
+    {
+      "title": "A meta-analysis of cultural adaptations of psychological interventions (Hall et al.)",
+      "publisher": "Behavior Therapy (DOI)",
+      "url": "https://doi.org/10.1016/j.beth.2016.09.005",
+      "year": 2016
+    },
+    {
+      "title": "AACC Code of Ethics",
+      "publisher": "American Association of Christian Counselors",
+      "url": "https://aacc.net/aacc-code-of-ethics/"
+    },
+    {
+      "title": "ACA Code of Ethics (2014) and ethics resources",
+      "publisher": "American Counseling Association",
+      "url": "https://www.counseling.org/resources/ethics",
+      "year": 2014
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}
