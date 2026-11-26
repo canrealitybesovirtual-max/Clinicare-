@@ -1,0 +1,173 @@
+[
+  {
+    "name": "NLM Clinical Tables: ICD-10-CM",
+    "category": "Codes",
+    "endpoint": "https://clinicaltables.nlm.nih.gov/api/icd10cm/v3/search",
+    "access": "Free, no key, provided \"as is\" (2026 data)",
+    "use": "Code lookup and autocomplete on the Diagnoses screen",
+    "phase": "2",
+    "privacyRule": "Send code or standard term only"
+  },
+  {
+    "name": "WHO ICD-API (ICD-11)",
+    "category": "Codes",
+    "endpoint": "https://id.who.int (register at https://icd.who.int/icdapi)",
+    "access": "Free after registration. OAuth2 client credentials. Can also run as a local container",
+    "use": "ICD-11 codes and multilingual titles for international users",
+    "phase": "3",
+    "privacyRule": "Secret stays server-side. Local container option for offline use"
+  },
+  {
+    "name": "LOINC",
+    "category": "Measures",
+    "endpoint": "https://loinc.org (GAD-7 panel 69737-5, total 70274-6; PHQ-9 panel 44249-1)",
+    "access": "Free LOINC license",
+    "use": "Tag measures for standards-based export",
+    "phase": "4",
+    "privacyRule": "Codes only"
+  },
+  {
+    "name": "HL7 FHIR Questionnaire",
+    "category": "Interop",
+    "endpoint": "https://hl7.org/fhir (PCO IG has a GAD-7 Questionnaire)",
+    "access": "Open standard",
+    "use": "Export a scored measure as a FHIR QuestionnaireResponse with no identifiers",
+    "phase": "4",
+    "privacyRule": "No identifiers in resources"
+  },
+  {
+    "name": "MedlinePlus Connect",
+    "category": "Psychoeducation",
+    "endpoint": "https://connect.medlineplus.gov/service",
+    "access": "Free. Credit MedlinePlus.gov; no logo or implied endorsement",
+    "use": "Plain-language pages matched by ICD-10-CM code, in English or Spanish",
+    "phase": "2",
+    "privacyRule": "Send code only"
+  },
+  {
+    "name": "MedlinePlus Health Topics web service",
+    "category": "Psychoeducation",
+    "endpoint": "https://medlineplus.gov/about/developers/webservices/",
+    "access": "Free",
+    "use": "Keyword search of health topics for client mode",
+    "phase": "2",
+    "privacyRule": "Curated keywords only"
+  },
+  {
+    "name": "RxNorm / RxTerms (NLM)",
+    "category": "Medications",
+    "endpoint": "https://rxnav.nlm.nih.gov/REST",
+    "access": "Free",
+    "use": "Psychotropic names for medication-referral education (clinician mode)",
+    "phase": "3",
+    "privacyRule": "Drug names only"
+  },
+  {
+    "name": "openFDA drug labels",
+    "category": "Medications",
+    "endpoint": "https://api.fda.gov/drug/label.json",
+    "access": "Free; API key optional",
+    "use": "Boxed warnings and label info for clinician reference",
+    "phase": "3",
+    "privacyRule": "Drug names only"
+  },
+  {
+    "name": "NPPES NPI Registry",
+    "category": "Referrals",
+    "endpoint": "https://npiregistry.cms.hhs.gov/api/?version=2.1",
+    "access": "Free. Max 200 results per request, 1,200 per query",
+    "use": "Find psychiatrists, psychiatric NPs, psychologists, LPCs, LCSWs and LMFTs by taxonomy and ZIP",
+    "phase": "2",
+    "privacyRule": "ZIP or city only"
+  },
+  {
+    "name": "FindTreatment.gov API (SAMHSA)",
+    "category": "Referrals",
+    "endpoint": "https://findtreatment.gov/assets/FindTreatment-Developer-Guide.pdf",
+    "access": "Documented for approved users. Request access",
+    "use": "Mental-health and SUD treatment facilities near a location",
+    "phase": "2",
+    "privacyRule": "Location only. Show a \"call to confirm\" note (known data-quality issues)"
+  },
+  {
+    "name": "HRSA data.hrsa.gov web services",
+    "category": "Referrals",
+    "endpoint": "https://data.hrsa.gov/data/services",
+    "access": "Free with registration",
+    "use": "Sliding-fee health centers by state, county or ZIP",
+    "phase": "2",
+    "privacyRule": "Location only"
+  },
+  {
+    "name": "988 Lifeline / findahelpline.com",
+    "category": "Crisis",
+    "endpoint": "https://988lifeline.org; https://findahelpline.com",
+    "access": "Link out (API by partnership)",
+    "use": "Crisis button, US and international",
+    "phase": "1",
+    "privacyRule": "No data sent"
+  },
+  {
+    "name": "WHO Global Health Observatory",
+    "category": "Statistics",
+    "endpoint": "https://www.who.int/data/gho/info/gho-odata-api",
+    "access": "Public OData API. WHO announced a replacement implementation; confirm the current endpoint",
+    "use": "Global statistic cards",
+    "phase": "3",
+    "privacyRule": "No data sent"
+  },
+  {
+    "name": "NIMH statistics / SAMHSA NSDUH",
+    "category": "Statistics",
+    "endpoint": "https://www.nimh.nih.gov/health/statistics",
+    "access": "Public domain",
+    "use": "US statistic cards (curated, dated)",
+    "phase": "1",
+    "privacyRule": "Static content"
+  },
+  {
+    "name": "PubMed E-utilities",
+    "category": "Evidence",
+    "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/",
+    "access": "Free; API key raises rate limit",
+    "use": "Evidence links on each intervention (clinician mode)",
+    "phase": "3",
+    "privacyRule": "Curated search terms only"
+  },
+  {
+    "name": "ClinicalTrials.gov API v2",
+    "category": "Evidence",
+    "endpoint": "https://clinicaltrials.gov/api/v2/studies",
+    "access": "Free",
+    "use": "Recruiting trials by condition (clinician mode)",
+    "phase": "3",
+    "privacyRule": "Condition term only"
+  },
+  {
+    "name": "NICE, APA Div. 12, WHO mhGAP, NCCIH",
+    "category": "Evidence",
+    "endpoint": "nice.org.uk; div12.org; who.int/mhgap; nccih.nih.gov",
+    "access": "Link only",
+    "use": "Evidence ratings, global guidance, complementary-care evidence",
+    "phase": "2\u20133",
+    "privacyRule": "Link only"
+  },
+  {
+    "name": "TherapistAid, CCI, Get Self Help, PHQ Screeners",
+    "category": "Worksheets",
+    "endpoint": "therapistaid.com; cci.health.wa.gov.au; getselfhelp.co.uk; phqscreeners.com",
+    "access": "Link only (each site's terms)",
+    "use": "Handout link-outs",
+    "phase": "2",
+    "privacyRule": "Link only"
+  },
+  {
+    "name": "Vercel hosting",
+    "category": "Infrastructure",
+    "endpoint": "https://vercel.com",
+    "access": "HIPAA BAA for Pro teams as a paid add-on",
+    "use": "Hosting once accounts exist",
+    "phase": "4",
+    "privacyRule": "BAA before any account data"
+  }
+]

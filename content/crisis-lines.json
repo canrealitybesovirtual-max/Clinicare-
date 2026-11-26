@@ -1,0 +1,12 @@
+{
+  "_rule": "Guardrail G9/G10: every entry must be re-verified against the official site before release. lastVerified is null until a person checks it.",
+  "international": { "name": "Find A Helpline (global directory)", "url": "https://findahelpline.com", "lastVerified": null },
+  "countries": [
+    { "country": "US", "emergency": "911", "crisis": "988 Suicide & Crisis Lifeline (call or text 988)", "url": "https://988lifeline.org", "lastVerified": null },
+    { "country": "CA", "emergency": "911", "crisis": "9-8-8 Suicide Crisis Helpline (call or text)", "url": "https://988.ca", "lastVerified": null },
+    { "country": "GB", "emergency": "999", "crisis": "Samaritans 116 123", "url": "https://www.samaritans.org", "lastVerified": null },
+    { "country": "IE", "emergency": "112 / 999", "crisis": "Samaritans 116 123", "url": "https://www.samaritans.org/ireland", "lastVerified": null },
+    { "country": "AU", "emergency": "000", "crisis": "Lifeline 13 11 14", "url": "https://www.lifeline.org.au", "lastVerified": null },
+    { "country": "NZ", "emergency": "111", "crisis": "Need to talk? Call or text 1737", "url": "https://1737.org.nz", "lastVerified": null }
+  ]
+}

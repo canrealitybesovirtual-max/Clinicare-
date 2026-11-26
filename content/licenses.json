@@ -1,0 +1,19 @@
+{
+  "_rule": "Guardrail G7: only items with status 'confirmed' may be built into the app. Everything else is link-out only until the owner confirms terms in writing.",
+  "items": {
+    "PHQ-9": { "status": "confirmed", "terms": "No permission required to reproduce, translate, display or distribute (Pfizer).", "source": "https://www.phqscreeners.com", "loinc": "44249-1", "lastVerified": "2026-11-26" },
+    "GAD-7": { "status": "confirmed", "terms": "No permission required to reproduce, translate, display or distribute (Pfizer).", "source": "https://www.phqscreeners.com", "loinc": "69737-5", "loincTotalScore": "70274-6", "lastVerified": "2026-11-26" },
+    "ICD-10-CM": { "status": "confirmed", "terms": "US government code set (CDC/CMS). NLM Clinical Tables API is free and provided as-is.", "source": "https://clinicaltables.nlm.nih.gov/apidoc/icd10cm/v3/doc.html", "lastVerified": "2026-11-26" },
+    "ICD-11": { "status": "confirmed-with-terms", "terms": "Free; ICD-API requires registration and OAuth2 client credentials. Follow WHO licensing terms.", "source": "https://icd.who.int/icdapi", "lastVerified": "2026-11-26" },
+    "PCL-5": { "status": "pending", "terms": "Believed free from the National Center for PTSD. Confirm before building in.", "source": "https://www.ptsd.va.gov", "lastVerified": null },
+    "AUDIT": { "status": "pending", "terms": "WHO instrument, believed free. Confirm before building in.", "source": "https://www.who.int", "lastVerified": null },
+    "PDSS": { "status": "pending", "terms": "Check permission for commercial software.", "source": null, "lastVerified": null },
+    "ISI": { "status": "pending", "terms": "Copyrighted; license likely required for commercial software.", "source": null, "lastVerified": null },
+    "Y-BOCS": { "status": "pending", "terms": "Check permission for commercial software.", "source": null, "lastVerified": null },
+    "SPIN": { "status": "pending", "terms": "Check permission for commercial software.", "source": null, "lastVerified": null },
+    "C-SSRS": { "status": "pending", "terms": "Check permission terms for software use.", "source": "https://cssrs.columbia.edu", "lastVerified": null },
+    "Stanley-Brown Safety Plan": { "status": "pending", "terms": "Check permission terms for software use.", "source": null, "lastVerified": null },
+    "DSM-5-TR text": { "status": "not-licensed", "terms": "APA copyright. Software license required; no input into AI tools without written permission.", "source": "https://appi.org/customer-service/permissions", "lastVerified": "2026-11-26" },
+    "Wiley PracticePlanners": { "status": "not-licensed", "terms": "Wiley copyright; licensed commercially to EHRs.", "source": "https://www.wiley.com", "lastVerified": "2026-11-26" }
+  }
+}
