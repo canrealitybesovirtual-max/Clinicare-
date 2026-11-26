@@ -1,0 +1,93 @@
+{
+  "id": "agoraphobia",
+  "name": "Agoraphobia",
+  "icd10cm": [
+    { "code": "F40.00", "label": "Agoraphobia, unspecified" },
+    { "code": "F40.01", "label": "Agoraphobia with panic disorder" },
+    { "code": "F40.02", "label": "Agoraphobia without panic disorder" }
+  ],
+  "icd11": [
+    { "code": "6B02", "label": "Agoraphobia" }
+  ],
+  "dsmPointer": "See DSM-5-TR: Anxiety Disorders — Agoraphobia",
+  "summary": "Strong fear and avoidance spanning several kinds of everyday settings, such as buses and trains, wide-open or closed-in places, crowds and lines, or being away from home alone. The driving concern is being stuck, or left without help, if sudden alarming or humiliating symptoms hit. People may steer clear of these places, push through them while very distressed, or go only when someone they trust comes along, and the level of fear goes well beyond any real threat. It can occur with or without panic disorder; assess each separately. For clinician review only; this is not a diagnosis.",
+  "features": [
+    { "symptomId": "fear-escape-help-unavailable", "kind": "core", "weight": 5 },
+    { "symptomId": "avoid-public-transport", "kind": "core", "weight": 4 },
+    { "symptomId": "avoid-open-spaces", "kind": "core", "weight": 4 },
+    { "symptomId": "avoid-enclosed-spaces", "kind": "core", "weight": 4 },
+    { "symptomId": "avoid-crowds-lines", "kind": "core", "weight": 4 },
+    { "symptomId": "avoid-leaving-home-alone", "kind": "core", "weight": 4 },
+    { "symptomId": "needs-companion", "kind": "associated", "weight": 2 },
+    { "symptomId": "anticipatory-anxiety", "kind": "associated", "weight": 2 },
+    { "symptomId": "panic-attack-cued", "kind": "associated", "weight": 2 },
+    { "symptomId": "panic-attacks-unexpected", "kind": "associated", "weight": 1 },
+    { "symptomId": "behavior-change-avoid-attacks", "kind": "associated", "weight": 1 },
+    { "symptomId": "fear-losing-control", "kind": "associated", "weight": 1 }
+  ],
+  "minCore": 2,
+  "durationGate": {
+    "minWeeks": 26,
+    "note": "Expect a long-standing pattern, generally half a year or more. Briefer avoidance may reflect an adjustment reaction or a medical issue. Confirm the timing requirement in DSM-5-TR."
+  },
+  "impairmentRequired": true,
+  "ruleOuts": [
+    { "label": "Medical conditions that make the concern realistic", "type": "medical", "note": "With conditions such as inflammatory bowel disease, Parkinson's disease, cardiac disease or a history of falls, some worry about being away from help is reasonable. Consider agoraphobia only if the fear or avoidance is clearly out of proportion." },
+    { "label": "Vestibular or balance disorders", "type": "medical", "note": "Dizziness in open spaces or crowds can reflect a vestibular problem; consider ENT or neurology referral when dizziness is prominent." },
+    { "label": "Substance or medication effects", "type": "substance", "note": "Stimulants, caffeine, withdrawal states or medication side effects can drive panic-like symptoms that feed avoidance." },
+    { "label": "Avoidance explained by another mental health condition", "type": "psychiatric", "note": "Avoidance limited to social scrutiny, one specific feared situation, trauma reminders, obsessional fears, separation from attachment figures, or paranoid beliefs points to other conditions." },
+    { "label": "Low mood or loss of interest", "type": "psychiatric", "note": "Staying home because of low energy or loss of interest, rather than fear, suggests depression." }
+  ],
+  "specifiers": [
+    { "label": "With panic disorder (ICD-10-CM F40.01)", "note": "ICD-10-CM option when panic disorder is also present. DSM-5-TR instead codes agoraphobia (F40.00) and panic disorder (F41.0) separately. Confirm the convention your setting and payer use." },
+    { "label": "Without panic disorder (ICD-10-CM F40.02)", "note": "Use when the client has never met the full pattern of panic disorder; limited-symptom attacks may still be present." },
+    { "label": "Severity tracking (descriptive)", "note": "Track the number of avoided situation types, reliance on a companion and time spent housebound over the course of treatment." }
+  ],
+  "differentials": [
+    { "label": "Specific phobia, situational type (ICD-10-CM title: Other situational type phobia)", "icd10cm": "F40.248", "distinguishing": "Fear is confined to one type of situation (e.g., only flying or only elevators) and centers on that situation itself, not on being unable to escape or get help." },
+    { "label": "Social anxiety disorder (ICD-10-CM title: Social phobia, unspecified)", "icd10cm": "F40.10", "distinguishing": "Avoidance is driven by fear of being judged or humiliated by others rather than by fear of being trapped or without help." },
+    { "label": "Separation anxiety disorder (ICD-10-CM title: Separation anxiety disorder of childhood)", "icd10cm": "F93.0", "distinguishing": "Staying home is driven by fear of being apart from attachment figures, not by fear of panic-like symptoms. Adult presentations exist; confirm adult code use against current coding guidance." },
+    { "label": "Posttraumatic stress disorder", "icd10cm": "F43.10", "distinguishing": "Avoidance is limited to places or cues linked to a traumatic event, with re-experiencing symptoms." },
+    { "label": "Panic disorder without agoraphobia", "icd10cm": "F41.0", "distinguishing": "Recurrent unexpected attacks and worry about them, without avoidance of two or more kinds of situations." }
+  ],
+  "comorbidities": [
+    { "conditionId": "panic-disorder", "label": "Panic disorder", "note": "Agoraphobic avoidance often develops after repeated panic attacks, but it can also occur without them. Assess panic disorder separately." },
+    { "conditionId": "major-depressive-disorder", "label": "Major depressive disorder", "note": "Being housebound can shrink a person's world and lead to low mood; screen for depression and suicidal thoughts." },
+    { "conditionId": "generalized-anxiety-disorder", "label": "Generalized anxiety disorder", "note": "Broad worry can coexist with situational avoidance; clarify which fears drive which behaviors." }
+  ],
+  "measures": ["gad-7"],
+  "measuresPending": [
+    { "name": "Panic Disorder Severity Scale (PDSS), includes agoraphobic avoidance items", "url": "https://pubmed.ncbi.nlm.nih.gov/9356566/", "note": "License pending — link out only" },
+    { "name": "APA Severity Measure for Agoraphobia — Adult", "url": "https://www.psychiatry.org/psychiatrists/practice/dsm/educational-resources/assessment-measures", "note": "License pending — link out only" }
+  ],
+  "interventions": [
+    { "name": "Graded in-vivo exposure (exposure hierarchy)", "evidence": "Core component of CBT for panic disorder with or without agoraphobia, which NICE CG113 recommends. APA Division 12 lists CBT for panic (check the current rating).", "note": "Build a ladder of avoided situations with the client and practice them step by step, without safety behaviors, until fear lessens. Start with a companion if needed, then fade the companion's role." },
+    { "name": "CBT for panic with agoraphobia", "evidence": "NICE CG113 recommends CBT for panic disorder, including when agoraphobia is present.", "note": "Combines psychoeducation, interoceptive exposure, cognitive restructuring and in-vivo exposure. Home-based or telehealth sessions can help clients who cannot yet reach the clinic." },
+    { "name": "Referral for medication evaluation", "evidence": "NICE CG113 names an SSRI as the first-line medication for panic disorder and advises against benzodiazepines for this condition.", "note": "Refer to psychiatry, a primary care provider or a psychiatric nurse practitioner. Prescribing decisions rest with the prescriber." }
+  ],
+  "handouts": [],
+  "statIds": ["us-agoraphobia-past-year", "us-any-anxiety-past-year", "global-anxiety-disorders-2021"],
+  "culturalNotes": [
+    "Before labeling avoidance as excessive, check whether staying close to home is expected or protective in the client's setting, for example due to gender norms, immigration status, discrimination, neighborhood violence or disability access.",
+    "Some clients explain fear of leaving home through cultural idioms such as 'nervios' or wind-related illness (e.g., khyal). Ask what the client believes will happen if they go out.",
+    "Relying on a family member to go out may be culturally normal. Involve family in exposure planning when the client wants that, and agree on how the companion's role will fade.",
+    "Use a trained professional interpreter, not family members, especially when family members also act as the client's companion.",
+    "If the client uses prayer or other spiritual practices to face feared places, explore this respectfully. Use spiritual or faith-integrated approaches only when the client asks for them and after informed consent (see the AACC Code of Ethics for faith-based counselors)."
+  ],
+  "sud": false,
+  "licensedDsm": false,
+  "wileyLicensed": false,
+  "sources": [
+    { "title": "Anxiety Disorders (health topic)", "publisher": "National Institute of Mental Health", "url": "https://www.nimh.nih.gov/health/topics/anxiety-disorders" },
+    { "title": "Generalised anxiety disorder and panic disorder in adults: management (CG113)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/cg113", "year": 2011 },
+    { "title": "ICD-11 MMS: 6B02 Agoraphobia", "publisher": "World Health Organization", "url": "https://icd.who.int/browse/latest-release/mms/en#530592394" },
+    { "title": "ICD-10-CM (official code set)", "publisher": "CDC National Center for Health Statistics", "url": "https://www.cdc.gov/nchs/icd/icd-10-cm/index.html" },
+    { "title": "The epidemiology of panic attacks, panic disorder, and agoraphobia in the National Comorbidity Survey Replication (Kessler et al.)", "publisher": "Archives of General Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/16585471/", "year": 2006 },
+    { "title": "Psychological Treatments (treatment index)", "publisher": "APA Division 12, Society of Clinical Psychology", "url": "https://div12.org/psychological-treatments/treatments/" },
+    { "title": "Cross-cultural aspects of anxiety disorders (Hofmann & Hinton)", "publisher": "Current Psychiatry Reports (PubMed Central)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4037698/", "year": 2014 },
+    { "title": "AACC Code of Ethics", "publisher": "American Association of Christian Counselors", "url": "https://aacc.net/aacc-code-of-ethics/" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

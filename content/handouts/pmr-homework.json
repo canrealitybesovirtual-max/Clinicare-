@@ -1,0 +1,105 @@
+{
+  "id": "pmr-homework",
+  "title": "Muscle Relaxation Practice at Home",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 20,
+  "intro": "This sheet will help you practice a skill called progressive muscle relaxation. You will tighten one group of muscles, hold them for a few seconds, and then let them go. Then you move on to the next group. This helps your body learn the difference between feeling tense and feeling relaxed. With practice, many people find they can calm their body faster when they feel stressed or worried. One practice takes about 15 to 20 minutes.",
+  "sections": [
+    {
+      "heading": "Getting ready",
+      "steps": [
+        "Pick a quiet place where no one will bother you for about 20 minutes.",
+        "Sit in a comfortable chair with your feet on the floor, or lie down on your back.",
+        "Loosen any tight clothes. You can take off your shoes and glasses.",
+        "Turn your phone to silent.",
+        "Close your eyes, or rest your eyes on one spot in front of you.",
+        "Take three slow breaths. Breathe in through your nose. Breathe out slowly through your mouth."
+      ]
+    },
+    {
+      "heading": "How each step works",
+      "body": "For each muscle group, do the same four things. 1) Breathe in and tighten the muscles for about 5 seconds. Squeeze firmly, but not so hard that it hurts. 2) Breathe out and let the muscles go all at once. 3) Rest for about 15 seconds. 4) Notice how the muscles feel now. Pay attention to the difference between tight and loose."
+    },
+    {
+      "heading": "The 12 muscle groups",
+      "steps": [
+        "Hands – Make a fist with both hands. Squeeze for about 5 seconds. Let go. Rest for about 15 seconds and notice how your hands feel.",
+        "Upper arms – Bend your elbows and tighten the muscles in your upper arms. Hold for about 5 seconds. Let your arms drop and relax. Rest and notice the change.",
+        "Forehead – Raise your eyebrows as high as you can. Hold for about 5 seconds. Let your forehead go smooth. Rest and notice.",
+        "Eyes and nose – Shut your eyes tight and wrinkle your nose. Hold for about 5 seconds. Let your face go soft. Rest and notice.",
+        "Mouth and jaw – Press your lips together and gently bite down. Hold for about 5 seconds. Let your jaw hang loose. Rest and notice.",
+        "Neck – Slowly and gently tip your chin down toward your chest. Do not twist your neck. Hold for about 5 seconds. Lift your head back up and relax. Rest and notice.",
+        "Shoulders – Lift your shoulders up toward your ears. Hold for about 5 seconds. Let them drop. Rest and notice how heavy and loose they feel.",
+        "Upper back – Pull your shoulder blades back and toward each other. Hold for about 5 seconds. Let go. Rest and notice.",
+        "Belly – Pull your belly in tight. Hold for about 5 seconds. Let go and let your breathing be easy. Rest and notice.",
+        "Hips and bottom – Squeeze the muscles in your bottom together. Hold for about 5 seconds. Let go. Rest and notice.",
+        "Upper legs – Press your knees together and tighten your thighs. Hold for about 5 seconds. Let go. Rest and notice.",
+        "Lower legs and feet – Pull your toes up toward your face. Hold for about 5 seconds. Let go. Rest and notice how your legs and feet feel."
+      ]
+    },
+    {
+      "heading": "Finishing",
+      "steps": [
+        "Sit or lie quietly for a minute. Breathe slowly.",
+        "Think about your body from head to toe. If one spot still feels tight, tighten and relax it one more time.",
+        "Count slowly from 1 to 5. Wiggle your fingers and toes.",
+        "Open your eyes. Stand up slowly. You may feel a little light-headed at first.",
+        "Write your numbers in the practice log below."
+      ]
+    },
+    {
+      "heading": "Tips for practice",
+      "steps": [
+        "Try to practice once or twice a day. Most people get better at it after one or two weeks of daily practice.",
+        "Pick the same time each day, like after dinner or before bed.",
+        "Try not to practice right after a big meal.",
+        "If your mind wanders, that is okay. Gently bring your attention back to your muscles.",
+        "Some people feel more nervous the first few times they relax. This is common and often fades with practice. If it happens, open your eyes, breathe slowly, and try a shorter practice next time. Tell your therapist or counselor about it.",
+        "Once you know the steps well, try a shorter version. Tighten and relax bigger areas together: arms, then face, then shoulders and belly, then legs.",
+        "Bring this sheet to your next visit so you can talk about how it went."
+      ]
+    },
+    {
+      "heading": "How to use the practice log",
+      "body": "Before you start, rate how tense your body feels from 0 to 10. A 0 means fully relaxed. A 10 means the most tense you can imagine. Rate it again when you finish. In the notes, write anything you noticed, like where you felt tight or what helped."
+    },
+    {
+      "heading": "If you need help right away",
+      "body": "This skill is not for emergencies. If you are thinking about hurting yourself or someone else, or you do not feel safe, get help now. In the US, call or text 988 (Suicide & Crisis Lifeline) or call 911. In other countries, call your local emergency number or find a helpline at findahelpline.com."
+    }
+  ],
+  "practiceLog": {
+    "columns": ["Day", "Time", "Tension before (0-10)", "Tension after (0-10)", "Notes"],
+    "rows": 7
+  },
+  "safetyNote": "Safety first: Tighten your muscles firmly, but never so hard that it hurts. Skip any body part that has pain, an injury, or a recent surgery, or tighten it only a little. If you are pregnant, or you have a health problem such as heart trouble, high blood pressure, or back or neck problems, ask your doctor before you start. If you get a cramp, stop tightening that area and stretch it gently. This skill is not for emergencies. In the US, call or text 988 or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sources": [
+    {
+      "title": "Relaxation Techniques: What You Need To Know",
+      "publisher": "National Center for Complementary and Integrative Health (NCCIH)",
+      "url": "https://www.nccih.nih.gov/health/relaxation-techniques-what-you-need-to-know"
+    },
+    {
+      "title": "Generalised anxiety disorder and panic disorder in adults: management (CG113) – applied relaxation",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg113",
+      "year": 2011
+    },
+    {
+      "title": "A contemporary view of applied relaxation for generalized anxiety disorder (Hayes-Skelton et al.)",
+      "publisher": "Cognitive Behaviour Therapy (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23731329/",
+      "year": 2013
+    },
+    {
+      "title": "Relaxation training for anxiety: a ten-years systematic review with meta-analysis (Manzoni et al.)",
+      "publisher": "BMC Psychiatry (PubMed Central)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2427027/",
+      "year": 2008
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

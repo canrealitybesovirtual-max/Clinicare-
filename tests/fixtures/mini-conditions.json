@@ -1,0 +1,136 @@
+[
+  {
+    "id": "fx-surge",
+    "name": "Surge pattern (fixture)",
+    "icd10cm": [{ "code": "X00.1", "label": "Fixture code, not a real classification" }],
+    "icd11": [{ "code": "XX01", "label": "Fixture code, not a real classification" }],
+    "dsmPointer": "See DSM-5-TR (fixture pointer)",
+    "summary": "Test-only pattern used by unit tests of the scoring engine. Not clinical content and never shown to users.",
+    "features": [
+      { "symptomId": "panic-attacks", "kind": "core", "weight": 5 },
+      { "symptomId": "fear-of-attacks", "kind": "core", "weight": 4 },
+      { "symptomId": "palpitations", "kind": "associated", "weight": 2 },
+      { "symptomId": "restlessness", "kind": "associated", "weight": 1 },
+      { "symptomId": "insomnia", "kind": "associated", "weight": 1 }
+    ],
+    "minCore": 2,
+    "durationGate": { "minWeeks": 4, "note": "Fixture note: usually present for about a month or more." },
+    "impairmentRequired": true,
+    "ruleOuts": [
+      { "label": "Stimulant or caffeine effects (fixture)", "type": "substance", "note": "Fixture rule-out note." },
+      { "label": "Thyroid or cardiac causes (fixture)", "type": "medical", "note": "Fixture rule-out note." }
+    ],
+    "specifiers": [],
+    "differentials": [
+      { "label": "Avoidance pattern (fixture)", "distinguishing": "Fixture distinguishing note." },
+      { "label": "Low mood pattern (fixture)", "distinguishing": "Fixture distinguishing note." }
+    ],
+    "comorbidities": [
+      { "conditionId": "fx-avoid", "label": "Avoidance pattern (fixture)", "note": "Fixture: these two patterns are often seen together." }
+    ],
+    "measures": [],
+    "measuresPending": [],
+    "interventions": [{ "name": "Fixture intervention", "evidence": "n/a", "note": "Fixture note." }],
+    "handouts": [],
+    "statIds": [],
+    "culturalNotes": ["Fixture cultural note used only by tests."],
+    "sud": false,
+    "licensedDsm": false,
+    "wileyLicensed": false,
+    "sources": [
+      { "title": "Unit test fixture (not clinical content)", "publisher": "Clinician Resource Companion tests", "url": "https://example.org/fixture" }
+    ],
+    "license": "original",
+    "lastVerified": "2026-11-26",
+    "reviewedBy": "PENDING"
+  },
+  {
+    "id": "fx-avoid",
+    "name": "Avoidance pattern (fixture)",
+    "icd10cm": [{ "code": "X00.2", "label": "Fixture code, not a real classification" }],
+    "icd11": [{ "code": "XX02", "label": "Fixture code, not a real classification" }],
+    "dsmPointer": "See DSM-5-TR (fixture pointer)",
+    "summary": "Test-only pattern used by unit tests of the scoring engine. Not clinical content and never shown to users.",
+    "features": [
+      { "symptomId": "avoid-leaving-home", "kind": "core", "weight": 5 },
+      { "symptomId": "fear-of-attacks", "kind": "core", "weight": 3 },
+      { "symptomId": "panic-attacks", "kind": "associated", "weight": 2 },
+      { "symptomId": "palpitations", "kind": "associated", "weight": 1 }
+    ],
+    "minCore": 1,
+    "durationGate": { "minWeeks": 26, "note": "Fixture note: usually present for six months or more." },
+    "impairmentRequired": true,
+    "ruleOuts": [
+      { "label": "Medical condition limiting mobility (fixture)", "type": "medical", "note": "Fixture rule-out note." }
+    ],
+    "specifiers": [],
+    "differentials": [
+      { "label": "Surge pattern (fixture)", "distinguishing": "Fixture distinguishing note." },
+      { "label": "Low mood pattern (fixture)", "distinguishing": "Fixture distinguishing note." }
+    ],
+    "comorbidities": [
+      { "conditionId": "fx-surge", "label": "Surge pattern (fixture)", "note": "Fixture: avoidance often follows repeated surges." }
+    ],
+    "measures": [],
+    "measuresPending": [],
+    "interventions": [{ "name": "Fixture intervention", "evidence": "n/a", "note": "Fixture note." }],
+    "handouts": [],
+    "statIds": [],
+    "culturalNotes": ["Fixture cultural note used only by tests."],
+    "sud": false,
+    "licensedDsm": false,
+    "wileyLicensed": false,
+    "sources": [
+      { "title": "Unit test fixture (not clinical content)", "publisher": "Clinician Resource Companion tests", "url": "https://example.org/fixture" }
+    ],
+    "license": "original",
+    "lastVerified": "2026-11-26",
+    "reviewedBy": "PENDING"
+  },
+  {
+    "id": "fx-low-mood",
+    "name": "Low mood pattern (fixture)",
+    "icd10cm": [{ "code": "X00.3", "label": "Fixture code, not a real classification" }],
+    "icd11": [{ "code": "XX03", "label": "Fixture code, not a real classification" }],
+    "dsmPointer": "See DSM-5-TR (fixture pointer)",
+    "summary": "Test-only pattern used by unit tests of the scoring engine. Not clinical content and never shown to users.",
+    "features": [
+      { "symptomId": "depressed-mood", "kind": "core", "weight": 5 },
+      { "symptomId": "anhedonia", "kind": "core", "weight": 5 },
+      { "symptomId": "insomnia", "kind": "associated", "weight": 2 },
+      { "symptomId": "fatigue", "kind": "associated", "weight": 2 },
+      { "symptomId": "suicidal-ideation", "kind": "associated", "weight": 2 },
+      { "symptomId": "concentration", "kind": "associated", "weight": 1 }
+    ],
+    "minCore": 1,
+    "durationGate": { "minWeeks": 2, "note": "Fixture note: usually present most days for two weeks or more." },
+    "impairmentRequired": true,
+    "ruleOuts": [
+      { "label": "Medication or alcohol effects (fixture)", "type": "substance", "note": "Fixture rule-out note." },
+      { "label": "Thyroid or other medical causes (fixture)", "type": "medical", "note": "Fixture rule-out note." }
+    ],
+    "specifiers": [],
+    "differentials": [
+      { "label": "Surge pattern (fixture)", "distinguishing": "Fixture distinguishing note." },
+      { "label": "Avoidance pattern (fixture)", "distinguishing": "Fixture distinguishing note." }
+    ],
+    "comorbidities": [
+      { "label": "Unlinked comorbidity (fixture)", "note": "Fixture note without a condition id." }
+    ],
+    "measures": [],
+    "measuresPending": [],
+    "interventions": [{ "name": "Fixture intervention", "evidence": "n/a", "note": "Fixture note." }],
+    "handouts": [],
+    "statIds": [],
+    "culturalNotes": ["Fixture cultural note used only by tests."],
+    "sud": false,
+    "licensedDsm": false,
+    "wileyLicensed": false,
+    "sources": [
+      { "title": "Unit test fixture (not clinical content)", "publisher": "Clinician Resource Companion tests", "url": "https://example.org/fixture" }
+    ],
+    "license": "original",
+    "lastVerified": "2026-11-26",
+    "reviewedBy": "PENDING"
+  }
+]

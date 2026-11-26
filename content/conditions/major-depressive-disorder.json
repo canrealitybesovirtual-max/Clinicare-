@@ -1,0 +1,127 @@
+{
+  "id": "major-depressive-disorder",
+  "name": "Major depressive disorder",
+  "icd10cm": [
+    { "code": "F32.0", "label": "Major depressive disorder, single episode, mild" },
+    { "code": "F32.1", "label": "Major depressive disorder, single episode, moderate" },
+    { "code": "F32.2", "label": "Major depressive disorder, single episode, severe without psychotic features" },
+    { "code": "F32.3", "label": "Major depressive disorder, single episode, severe with psychotic features" },
+    { "code": "F32.4", "label": "Major depressive disorder, single episode, in partial remission" },
+    { "code": "F32.5", "label": "Major depressive disorder, single episode, in full remission" },
+    { "code": "F32.9", "label": "Major depressive disorder, single episode, unspecified" },
+    { "code": "F33.0", "label": "Major depressive disorder, recurrent, mild" },
+    { "code": "F33.1", "label": "Major depressive disorder, recurrent, moderate" },
+    { "code": "F33.2", "label": "Major depressive disorder, recurrent severe without psychotic features" },
+    { "code": "F33.3", "label": "Major depressive disorder, recurrent, severe with psychotic symptoms" },
+    { "code": "F33.41", "label": "Major depressive disorder, recurrent, in partial remission" },
+    { "code": "F33.42", "label": "Major depressive disorder, recurrent, in full remission" },
+    { "code": "F33.9", "label": "Major depressive disorder, recurrent, unspecified" }
+  ],
+  "icd11": [
+    { "code": "6A70", "label": "Single episode depressive disorder" },
+    { "code": "6A71", "label": "Recurrent depressive disorder" }
+  ],
+  "dsmPointer": "See DSM-5-TR: Depressive Disorders — Major Depressive Disorder",
+  "summary": "One or more distinct periods of persistently low mood and/or loss of interest or enjoyment, together with changes in sleep, appetite, energy, movement, concentration and self-worth, and sometimes thoughts of death or suicide. Episodes differ noticeably from how the person usually is and persist for a couple of weeks or more. Always ask about past periods of unusually high mood or energy (possible bipolar disorder), and ask directly about suicidal thoughts; this app never rates risk. For clinician review only; this is not a diagnosis.",
+  "features": [
+    { "symptomId": "depressed-mood", "kind": "core", "weight": 5 },
+    { "symptomId": "anhedonia", "kind": "core", "weight": 5 },
+    { "symptomId": "appetite-change", "kind": "associated", "weight": 2 },
+    { "symptomId": "insomnia", "kind": "associated", "weight": 2 },
+    { "symptomId": "hypersomnia", "kind": "associated", "weight": 2 },
+    { "symptomId": "psychomotor-change", "kind": "associated", "weight": 2 },
+    { "symptomId": "fatigue", "kind": "associated", "weight": 2 },
+    { "symptomId": "worthlessness-guilt", "kind": "associated", "weight": 2 },
+    { "symptomId": "concentration-difficulty", "kind": "associated", "weight": 2 },
+    { "symptomId": "passive-death-wish", "kind": "associated", "weight": 2 },
+    { "symptomId": "suicidal-ideation-active", "kind": "associated", "weight": 2 },
+    { "symptomId": "social-withdrawal", "kind": "associated", "weight": 1 },
+    { "symptomId": "irritability", "kind": "associated", "weight": 1 }
+  ],
+  "minCore": 1,
+  "durationGate": {
+    "minWeeks": 2,
+    "note": "Symptoms cluster together for about two weeks or longer and are present on most days. Confirm the required symptom count and timing in DSM-5-TR."
+  },
+  "impairmentRequired": true,
+  "ruleOuts": [
+    { "label": "Hypothyroidism", "type": "medical", "note": "Can cause fatigue, low mood, weight gain, slowed thinking and excess sleep. Consider thyroid testing through the client's medical provider." },
+    { "label": "Anemia or vitamin deficiencies", "type": "medical", "note": "Iron, B12 or folate deficiency can cause fatigue, poor focus and low mood. Ask about recent blood work." },
+    { "label": "Obstructive sleep apnea", "type": "medical", "note": "Loud snoring, witnessed pauses in breathing and daytime sleepiness suggest a sleep evaluation." },
+    { "label": "Neurological and other medical illness", "type": "medical", "note": "Stroke, Parkinson's disease, multiple sclerosis, dementia, chronic pain, cancer and post-viral illness can cause or mimic depressive symptoms." },
+    { "label": "Medication effects", "type": "substance", "note": "Some medicines, such as corticosteroids, interferon, isotretinoin and certain hormonal treatments, have been linked to mood changes. Review the medication list with the prescriber." },
+    { "label": "Alcohol, sedative or stimulant effects", "type": "substance", "note": "Heavy use, intoxication or withdrawal (e.g., a stimulant crash) can produce depressive symptoms. This app does not store substance-use information." },
+    { "label": "History of manic or hypomanic episodes", "type": "psychiatric", "note": "Ask about past periods of high energy, little need for sleep, racing ideas or risky spending. Such a history points toward bipolar disorder and changes treatment; refer for psychiatric evaluation." },
+    { "label": "Bereavement and expected grief", "type": "psychiatric", "note": "Sadness after a death is expected. Look for pervasive loss of self-worth, constant low mood unrelated to reminders of the loss, or suicidal thinking, which suggest a depressive episode." },
+    { "label": "Psychotic disorders", "type": "psychiatric", "note": "Hallucinations or delusions that occur outside mood episodes suggest a primary psychotic or schizoaffective disorder." }
+  ],
+  "specifiers": [
+    { "label": "Severity: mild, moderate or severe", "note": "Severity sets the ICD-10-CM fourth character (F32.0 to F32.2 or F33.0 to F33.2). Base it on symptom number and intensity and on functional impact." },
+    { "label": "With psychotic features", "note": "Coded F32.3 or F33.3. Warrants urgent psychiatric referral." },
+    { "label": "In partial or full remission", "note": "Coded F32.4 / F32.5 (single episode) or F33.41 / F33.42 (recurrent)." },
+    { "label": "Single episode vs. recurrent", "note": "Use the recurrent codes (F33.x; ICD-11 6A71) when there has been an earlier, separate episode with a period of improvement in between. See DSM-5-TR for the required interval." },
+    { "label": "With anxious distress", "note": "Marked tension, restlessness or dread during the episode. Linked to higher risk and slower response; screen for anxiety disorders and assess suicidal thinking." },
+    { "label": "With mixed features", "note": "Some manic or hypomanic symptoms during a depressive episode. Raises concern for bipolar spectrum illness; refer for psychiatric evaluation." },
+    { "label": "With melancholic features", "note": "Near-total loss of pleasure, mood that does not lift with good events, early waking and marked slowing or agitation." },
+    { "label": "With atypical features", "note": "Mood that brightens with good events, plus long sleep, increased appetite, a heavy, weighed-down feeling in the arms or legs, or strong sensitivity to rejection." },
+    { "label": "With peripartum onset", "note": "Onset during pregnancy or after delivery. Coordinate with obstetric or primary care and screen for risk to the parent and infant." },
+    { "label": "With seasonal pattern", "note": "Episodes that start and end at about the same time of year, often in fall or winter." }
+  ],
+  "differentials": [
+    { "label": "Persistent depressive disorder (ICD-10-CM title: Dysthymic disorder)", "icd10cm": "F34.1", "distinguishing": "Long-lasting, often milder low mood present for years (two or more in adults). Major episodes can occur on top of it." },
+    { "label": "Bipolar II disorder", "icd10cm": "F31.81", "distinguishing": "At least one past hypomanic period alongside depressive episodes. Screen before starting antidepressants." },
+    { "label": "Bipolar disorder, unspecified", "icd10cm": "F31.9", "distinguishing": "Any history of mania or hypomania that is not yet fully characterized. Refer for psychiatric evaluation." },
+    { "label": "Adjustment disorder with depressed mood", "icd10cm": "F43.21", "distinguishing": "Low mood clearly tied to an identifiable stressor, without the full depressive episode pattern." },
+    { "label": "Prolonged grief disorder", "icd10cm": "F43.81", "distinguishing": "Intense longing for, or preoccupation with, a person who has died, lasting well beyond what is expected in the client's culture. It can co-occur with a depressive episode." },
+    { "label": "Depressive symptoms due to a medical condition, substance or medication", "distinguishing": "Onset and course track the illness, substance or medication. See the rule-out list." }
+  ],
+  "comorbidities": [
+    { "conditionId": "generalized-anxiety-disorder", "label": "Generalized anxiety disorder", "note": "Depression and GAD often occur together and share poor sleep, fatigue and poor focus. Treat both, and consider GAD-7 alongside PHQ-9." },
+    { "conditionId": "ptsd", "label": "Posttraumatic stress disorder", "note": "Depression frequently accompanies PTSD and adds to suicide risk. Ask about trauma history." },
+    { "conditionId": "panic-disorder", "label": "Panic disorder", "note": "Panic attacks during a depressive episode are linked to more severe illness; assess panic separately." },
+    { "conditionId": "agoraphobia", "label": "Agoraphobia", "note": "Staying home may reflect fear-based avoidance rather than low energy; clarify the reason." },
+    { "label": "Alcohol or other substance use", "note": "Substance use often co-occurs with depression and raises risk. Screen and refer as needed. This app does not store or transmit substance-use information." }
+  ],
+  "measures": ["phq-9", "gad-7"],
+  "measuresPending": [
+    { "name": "Columbia Suicide Severity Rating Scale (C-SSRS)", "url": "https://cssrs.columbia.edu", "note": "License pending — link out only" }
+  ],
+  "interventions": [
+    { "name": "Behavioral activation (individual or group)", "evidence": "NICE NG222 (2022) lists individual and group behavioral activation among first-line options for less severe depression, and individual behavioral activation for more severe depression. APA Division 12 lists behavior therapy / behavioral activation for depression (check the current rating).", "note": "Schedule valued and mastery activities, track mood alongside activity, and reduce avoidance. Works well with an activity log." },
+    { "name": "Cognitive behavioral therapy (CBT)", "evidence": "NICE NG222 lists group or individual CBT for less severe depression, and individual CBT, alone or combined with an antidepressant, for more severe depression.", "note": "Targets negative thinking patterns and avoidance. Session count depends on severity." },
+    { "name": "Interpersonal psychotherapy (IPT)", "evidence": "NICE NG222 lists IPT among treatment options for depression.", "note": "Focuses on role changes, conflicts, grief and social isolation linked to mood." },
+    { "name": "Guided self-help", "evidence": "NICE NG222 suggests considering guided self-help first for most people with less severe depression.", "note": "Uses structured CBT-based materials with brief support sessions." },
+    { "name": "Group exercise", "evidence": "NICE NG222 lists group exercise among options for less severe depression.", "note": "Check for medical limits on activity. Choose formats that fit the client's culture, body and budget." },
+    { "name": "Suicide risk screening and safety planning", "evidence": "Clinical standard of care. If PHQ-9 item 9 is above 0 or the client reports suicidal thoughts, follow up with a structured screen (e.g., C-SSRS, link-out only) and safety-planning resources.", "note": "The clinician decides on risk level and next steps. Crisis resources (988, local emergency number, findahelpline.com) stay visible on every screen." },
+    { "name": "Referral for medication evaluation", "evidence": "NICE NG222 advises against routinely offering antidepressants first-line for less severe depression unless the person prefers them; for more severe depression a combination of individual CBT and an antidepressant may be offered.", "note": "Refer to psychiatry, a primary care provider or a psychiatric nurse practitioner, especially with psychotic features, mixed features, a bipolar history or high risk." }
+  ],
+  "handouts": [],
+  "statIds": ["us-mde-past-year-2025", "us-mde-past-year-2021", "global-depression-2021", "global-mental-health-conditions"],
+  "culturalNotes": [
+    "Many clients, especially from cultures where emotional distress carries stigma, present depression through the body: fatigue, pain, headaches, poor sleep or a 'heavy heart'. Ask about mood and interest directly, in the client's own words.",
+    "Idioms such as 'thinking too much', 'nervios' or 'my spirit is tired' may describe depression, anxiety or trauma responses, or none of these. Explore what the phrase means before mapping it to a symptom.",
+    "Grief customs and how long mourning is expected to last vary widely. Consider cultural and religious norms before judging grief as prolonged or a depressive episode.",
+    "The PHQ-9 has been validated in many languages and countries, but best cut-offs and item performance (e.g., the sleep, appetite and suicide items) can differ across groups and medical settings. Use validated translations and interpret scores with the interview.",
+    "Use a trained professional interpreter, not family members, especially when asking about suicidal thoughts.",
+    "Religious or spiritual beliefs can be a source of hope and support, and for some clients a source of guilt or stigma about suicide or depression. Explore these respectfully. Use spiritual or faith-integrated approaches only when the client asks for them and after informed consent (see the AACC Code of Ethics for faith-based counselors)."
+  ],
+  "sud": false,
+  "licensedDsm": false,
+  "wileyLicensed": false,
+  "sources": [
+    { "title": "Depression (health topic)", "publisher": "National Institute of Mental Health", "url": "https://www.nimh.nih.gov/health/topics/depression" },
+    { "title": "Depression in adults: treatment and management (NG222)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng222", "year": 2022 },
+    { "title": "ICD-11 MMS: 6A70 Single episode depressive disorder", "publisher": "World Health Organization", "url": "https://icd.who.int/browse/latest-release/mms/en#578635574" },
+    { "title": "ICD-11 MMS: 6A71 Recurrent depressive disorder", "publisher": "World Health Organization", "url": "https://icd.who.int/browse/latest-release/mms/en#1194756772" },
+    { "title": "ICD-10-CM (official code set)", "publisher": "CDC National Center for Health Statistics", "url": "https://www.cdc.gov/nchs/icd/icd-10-cm/index.html" },
+    { "title": "Depressive disorder (depression) (fact sheet)", "publisher": "World Health Organization", "url": "https://www.who.int/news-room/fact-sheets/detail/depression", "year": 2025 },
+    { "title": "Psychological Treatments (treatment index)", "publisher": "APA Division 12, Society of Clinical Psychology", "url": "https://div12.org/psychological-treatments/treatments/" },
+    { "title": "'Thinking too much': a systematic review of a common idiom of distress (Kaiser et al.)", "publisher": "Social Science & Medicine (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/26584235/", "year": 2015 },
+    { "title": "On dimensionality, measurement invariance, and suitability of sum scores for the PHQ-9 and the GAD-7", "publisher": "PubMed (National Library of Medicine)", "url": "https://pubmed.ncbi.nlm.nih.gov/33269612/" },
+    { "title": "The Columbia Lighthouse Project (C-SSRS)", "publisher": "Columbia University", "url": "https://cssrs.columbia.edu" },
+    { "title": "AACC Code of Ethics", "publisher": "American Association of Christian Counselors", "url": "https://aacc.net/aacc-code-of-ethics/" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

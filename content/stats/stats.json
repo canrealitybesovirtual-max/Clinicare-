@@ -1,0 +1,222 @@
+{
+  "stats": [
+    {
+      "id": "us-any-anxiety-past-year",
+      "text": "An estimated 19.1% of US adults had an anxiety disorder in the past year. The rate was higher in women (23.4%) than in men (14.3%). These figures come from interviews done in 2001–2003, so the data are more than 20 years old.",
+      "value": "19.1%",
+      "region": "US",
+      "dataYear": "2001-2003",
+      "publisher": "National Institute of Mental Health (NIMH), using National Comorbidity Survey Replication (NCS-R) data",
+      "url": "https://www.nimh.nih.gov/health/statistics/any-anxiety-disorder",
+      "sources": [
+        {
+          "title": "Any Anxiety Disorder (statistics)",
+          "publisher": "National Institute of Mental Health",
+          "url": "https://www.nimh.nih.gov/health/statistics/any-anxiety-disorder"
+        }
+      ],
+      "license": "Public domain (US government); paraphrased",
+      "lastVerified": "2026-11-26",
+      "reviewedBy": "PENDING"
+    },
+    {
+      "id": "us-panic-disorder-past-year",
+      "text": "About 2.7% of US adults had panic disorder in the past year, with a higher rate in women (3.8%) than in men (1.6%). These figures come from NCS-R interviews done in 2001–2003, so the data are more than 20 years old.",
+      "value": "2.7%",
+      "region": "US",
+      "dataYear": "2001-2003",
+      "publisher": "National Institute of Mental Health (NIMH), using National Comorbidity Survey Replication (NCS-R) data",
+      "url": "https://www.nimh.nih.gov/health/statistics/panic-disorder",
+      "sources": [
+        {
+          "title": "Panic Disorder (statistics)",
+          "publisher": "National Institute of Mental Health",
+          "url": "https://www.nimh.nih.gov/health/statistics/panic-disorder"
+        },
+        {
+          "title": "The epidemiology of panic attacks, panic disorder, and agoraphobia in the National Comorbidity Survey Replication (Kessler et al.)",
+          "publisher": "Archives of General Psychiatry (PubMed)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/16585471/",
+          "year": 2006
+        }
+      ],
+      "license": "Public domain (US government); paraphrased",
+      "lastVerified": "2026-11-26",
+      "reviewedBy": "PENDING"
+    },
+    {
+      "id": "us-agoraphobia-past-year",
+      "text": "About 0.9% of US adults had agoraphobia in the past year. This figure comes from NCS-R interviews done in 2001–2003, so the data are more than 20 years old.",
+      "value": "0.9%",
+      "region": "US",
+      "dataYear": "2001-2003",
+      "publisher": "National Institute of Mental Health (NIMH), using National Comorbidity Survey Replication (NCS-R) data",
+      "url": "https://www.nimh.nih.gov/health/statistics/agoraphobia",
+      "sources": [
+        {
+          "title": "Agoraphobia (statistics)",
+          "publisher": "National Institute of Mental Health",
+          "url": "https://www.nimh.nih.gov/health/statistics/agoraphobia"
+        }
+      ],
+      "license": "Public domain (US government); paraphrased",
+      "lastVerified": "2026-11-26",
+      "reviewedBy": "PENDING"
+    },
+    {
+      "id": "us-gad-past-year",
+      "text": "About 2.7% of US adults had generalized anxiety disorder in the past year, with a higher rate in women (3.4%) than in men (1.9%). These figures come from NCS-R interviews done in 2001–2003, so the data are more than 20 years old.",
+      "value": "2.7%",
+      "region": "US",
+      "dataYear": "2001-2003",
+      "publisher": "National Institute of Mental Health (NIMH), using National Comorbidity Survey Replication (NCS-R) data",
+      "url": "https://www.nimh.nih.gov/health/statistics/generalized-anxiety-disorder",
+      "sources": [
+        {
+          "title": "Generalized Anxiety Disorder (statistics)",
+          "publisher": "National Institute of Mental Health",
+          "url": "https://www.nimh.nih.gov/health/statistics/generalized-anxiety-disorder"
+        }
+      ],
+      "license": "Public domain (US government); paraphrased",
+      "lastVerified": "2026-11-26",
+      "reviewedBy": "PENDING"
+    },
+    {
+      "id": "us-ptsd-past-year",
+      "text": "About 3.6% of US adults had PTSD in the past year, with a higher rate in women (5.2%) than in men (1.8%). These figures come from NCS-R interviews done in 2001–2003, so the data are more than 20 years old.",
+      "value": "3.6%",
+      "region": "US",
+      "dataYear": "2001-2003",
+      "publisher": "National Institute of Mental Health (NIMH), using National Comorbidity Survey Replication (NCS-R) data",
+      "url": "https://www.nimh.nih.gov/health/statistics/post-traumatic-stress-disorder-ptsd",
+      "sources": [
+        {
+          "title": "Post-Traumatic Stress Disorder (PTSD) (statistics)",
+          "publisher": "National Institute of Mental Health",
+          "url": "https://www.nimh.nih.gov/health/statistics/post-traumatic-stress-disorder-ptsd"
+        }
+      ],
+      "license": "Public domain (US government); paraphrased",
+      "lastVerified": "2026-11-26",
+      "reviewedBy": "PENDING"
+    },
+    {
+      "id": "us-mde-past-year-2021",
+      "text": "In 2021, about 21.0 million US adults (8.3%) had at least one major depressive episode in the past year, based on NSDUH data summarized by NIMH. The rate was higher in women (10.3%) than in men (6.2%). A newer 2025 estimate is available on a separate card.",
+      "value": "8.3%",
+      "region": "US",
+      "dataYear": "2021",
+      "publisher": "National Institute of Mental Health (NIMH), using National Survey on Drug Use and Health (NSDUH) data",
+      "url": "https://www.nimh.nih.gov/health/statistics/major-depression",
+      "sources": [
+        {
+          "title": "Major Depression (statistics)",
+          "publisher": "National Institute of Mental Health",
+          "url": "https://www.nimh.nih.gov/health/statistics/major-depression"
+        }
+      ],
+      "license": "Public domain (US government); paraphrased",
+      "lastVerified": "2026-11-26",
+      "reviewedBy": "PENDING"
+    },
+    {
+      "id": "us-mde-past-year-2025",
+      "text": "In 2025, about 7.4% of US adults aged 18 or older (roughly 19.7 million people) had a major depressive episode in the past year, according to the National Survey on Drug Use and Health. This is the newest national figure (data about one year old). Survey methods change over time, so compare years with care.",
+      "value": "7.4%",
+      "region": "US",
+      "dataYear": "2025",
+      "publisher": "Substance Abuse and Mental Health Services Administration (SAMHSA), National Survey on Drug Use and Health (NSDUH)",
+      "url": "https://www.samhsa.gov/data/sites/default/files/reports/rpt57150/2025-nsduh-annual-national-report.pdf",
+      "sources": [
+        {
+          "title": "Key Substance Use and Mental Health Indicators in the United States: Results from the 2025 National Survey on Drug Use and Health",
+          "publisher": "SAMHSA",
+          "url": "https://www.samhsa.gov/data/sites/default/files/reports/rpt57150/2025-nsduh-annual-national-report.pdf",
+          "year": 2026
+        },
+        {
+          "title": "Release of the 2025 National Survey on Drug Use and Health",
+          "publisher": "SAMHSA",
+          "url": "https://www.samhsa.gov/blog/release-2025-nsduh-using-data-to-drive-great-american-recovery",
+          "year": 2026
+        }
+      ],
+      "license": "Public domain (US government); paraphrased",
+      "lastVerified": "2026-11-26",
+      "reviewedBy": "PENDING"
+    },
+    {
+      "id": "global-mental-health-conditions",
+      "text": "More than 1 billion people around the world were living with a mental health condition, the World Health Organization reported in September 2025. Anxiety and depression were the most common. The estimate is based on 2021 data.",
+      "value": "Over 1 billion",
+      "region": "Global",
+      "dataYear": "2021",
+      "publisher": "World Health Organization (WHO)",
+      "url": "https://www.who.int/news/item/02-09-2025-over-a-billion-people-living-with-mental-health-conditions-services-require-urgent-scale-up",
+      "sources": [
+        {
+          "title": "Over a billion people living with mental health conditions – services require urgent scale-up (news release)",
+          "publisher": "World Health Organization",
+          "url": "https://www.who.int/news/item/02-09-2025-over-a-billion-people-living-with-mental-health-conditions-services-require-urgent-scale-up",
+          "year": 2025
+        },
+        {
+          "title": "World mental health today: latest data",
+          "publisher": "World Health Organization",
+          "url": "https://www.who.int/publications/i/item/9789240113817",
+          "year": 2025
+        }
+      ],
+      "license": "WHO; paraphrased with citation",
+      "lastVerified": "2026-11-26",
+      "reviewedBy": "PENDING"
+    },
+    {
+      "id": "global-anxiety-disorders-2021",
+      "text": "In 2021, about 359 million people worldwide were living with an anxiety disorder, including about 72 million children and adolescents. WHO describes anxiety disorders as the most common mental disorders in the world (WHO fact sheets, 2025).",
+      "value": "359 million",
+      "region": "Global",
+      "dataYear": "2021",
+      "publisher": "World Health Organization (WHO)",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/anxiety-disorders",
+      "sources": [
+        {
+          "title": "Anxiety disorders (fact sheet)",
+          "publisher": "World Health Organization",
+          "url": "https://www.who.int/news-room/fact-sheets/detail/anxiety-disorders",
+          "year": 2025
+        },
+        {
+          "title": "Mental disorders (fact sheet)",
+          "publisher": "World Health Organization",
+          "url": "https://www.who.int/news-room/fact-sheets/detail/mental-disorders",
+          "year": 2025
+        }
+      ],
+      "license": "WHO; paraphrased with citation",
+      "lastVerified": "2026-11-26",
+      "reviewedBy": "PENDING"
+    },
+    {
+      "id": "global-depression-2021",
+      "text": "WHO estimates that about 332 million people worldwide live with depression, or roughly 5.7% of adults (4.6% of men and 6.9% of women). The estimate is based on 2021 data (WHO fact sheet, 2025).",
+      "value": "332 million",
+      "region": "Global",
+      "dataYear": "2021",
+      "publisher": "World Health Organization (WHO)",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/depression",
+      "sources": [
+        {
+          "title": "Depressive disorder (depression) (fact sheet)",
+          "publisher": "World Health Organization",
+          "url": "https://www.who.int/news-room/fact-sheets/detail/depression",
+          "year": 2025
+        }
+      ],
+      "license": "WHO; paraphrased with citation",
+      "lastVerified": "2026-11-26",
+      "reviewedBy": "PENDING"
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "id": "ptsd",
+  "name": "Posttraumatic stress disorder (PTSD)",
+  "icd10cm": [
+    { "code": "F43.10", "label": "Post-traumatic stress disorder, unspecified" },
+    { "code": "F43.11", "label": "Post-traumatic stress disorder, acute" },
+    { "code": "F43.12", "label": "Post-traumatic stress disorder, chronic" }
+  ],
+  "icd11": [
+    { "code": "6B40", "label": "Post traumatic stress disorder" }
+  ],
+  "dsmPointer": "See DSM-5-TR: Trauma- and Stressor-Related Disorders — Posttraumatic Stress Disorder",
+  "summary": "A pattern that can follow a traumatic event such as assault, combat, a serious accident, disaster or sudden violent loss. It involves re-living the event (unwanted memories, nightmares, flashbacks, strong reactions to reminders), avoiding reminders, lasting negative shifts in beliefs and mood, and a body stuck on alert (scanning for danger, startling easily, poor sleep and focus). Symptoms last beyond the first month after the event. ICD-11 builds PTSD around a smaller core of re-experiencing in the present, avoidance and an ongoing sense of threat; complex PTSD (6B41) adds problems with emotion regulation, self-worth and relationships. For clinician review only; this is not a diagnosis.",
+  "features": [
+    { "symptomId": "traumatic-event-exposure", "kind": "core", "weight": 5 },
+    { "symptomId": "intrusive-memories", "kind": "core", "weight": 4 },
+    { "symptomId": "flashbacks", "kind": "core", "weight": 4 },
+    { "symptomId": "avoidance-trauma-reminders", "kind": "core", "weight": 4 },
+    { "symptomId": "nightmares", "kind": "core", "weight": 3 },
+    { "symptomId": "cue-reactivity", "kind": "core", "weight": 3 },
+    { "symptomId": "negative-beliefs", "kind": "associated", "weight": 2 },
+    { "symptomId": "emotional-numbing-detachment", "kind": "associated", "weight": 2 },
+    { "symptomId": "hypervigilance", "kind": "associated", "weight": 2 },
+    { "symptomId": "startle", "kind": "associated", "weight": 2 },
+    { "symptomId": "irritability", "kind": "associated", "weight": 1 },
+    { "symptomId": "concentration-difficulty", "kind": "associated", "weight": 1 },
+    { "symptomId": "insomnia", "kind": "associated", "weight": 1 },
+    { "symptomId": "trauma-memory-gaps", "kind": "associated", "weight": 1 },
+    { "symptomId": "reckless-self-destructive", "kind": "associated", "weight": 1 },
+    { "symptomId": "anhedonia", "kind": "associated", "weight": 1 },
+    { "symptomId": "derealization-depersonalization", "kind": "associated", "weight": 1 }
+  ],
+  "minCore": 3,
+  "durationGate": {
+    "minWeeks": 4,
+    "note": "Symptoms continue past the first month after the event. Under a month, consider an acute stress reaction instead. A full picture can also first appear many months later. Confirm the timing requirement in DSM-5-TR."
+  },
+  "impairmentRequired": true,
+  "ruleOuts": [
+    { "label": "Traumatic brain injury", "type": "medical", "note": "Head injury during the event can cause poor focus, irritability, headaches, memory gaps and sleep problems. Ask about loss of consciousness and refer for neurological assessment when indicated." },
+    { "label": "Medical effects of the injury or event", "type": "medical", "note": "Chronic pain, sleep disruption from injuries, or medication side effects can overlap with arousal and sleep symptoms." },
+    { "label": "Substance or medication effects", "type": "substance", "note": "Intoxication or withdrawal can cause flashback-like states, dissociation, poor sleep or irritability. This app does not store substance-use information." },
+    { "label": "Acute stress reaction (less than about 1 month)", "type": "psychiatric", "note": "Similar symptoms in the first month after the event are better considered as an acute stress reaction; reassess after one month." },
+    { "label": "Adjustment disorder", "type": "psychiatric", "note": "Distress after a stressor that is not a traumatic event in the clinical sense, or that lacks the full re-experiencing and avoidance pattern." },
+    { "label": "Psychotic disorders", "type": "psychiatric", "note": "Flashbacks are tied to the event and the person usually knows they are memories; hallucinations or delusions unrelated to the trauma suggest a psychotic process." }
+  ],
+  "specifiers": [
+    { "label": "With dissociative symptoms", "note": "The client also has repeated episodes of feeling unreal or outside their own body. Rule out substance and medical causes first." },
+    { "label": "With delayed expression", "note": "For presentations where the complete picture only emerged half a year or more after the event; partial symptoms may have shown up sooner." },
+    { "label": "Acute vs. chronic status (ICD-10-CM F43.11 / F43.12)", "note": "ICD-10-CM fifth characters for status; F43.10 is the fallback when status is not documented. Confirm the duration convention your coding guidance or payer uses." },
+    { "label": "Complex PTSD (ICD-11 6B41)", "note": "ICD-11 only. Adds lasting problems with emotion regulation, a negative sense of self and relationship difficulties, usually after prolonged or repeated trauma. There is no separate ICD-10-CM code." }
+  ],
+  "differentials": [
+    { "label": "Acute stress disorder (ICD-10-CM title: Acute stress reaction)", "icd10cm": "F43.0", "distinguishing": "Similar symptoms that begin after the event but last less than about one month." },
+    { "label": "Adjustment disorder, unspecified", "icd10cm": "F43.20", "distinguishing": "Distress after a life stressor that does not meet the trauma-exposure threshold or the full PTSD pattern." },
+    { "label": "Prolonged grief disorder", "icd10cm": "F43.81", "distinguishing": "After a death, the focus is on longing for the person and difficulty accepting the loss, rather than fear-based re-experiencing. Both can follow a traumatic loss." },
+    { "label": "Panic disorder", "icd10cm": "F41.0", "distinguishing": "Attacks arise unexpectedly rather than mainly in response to trauma reminders." },
+    { "label": "Major depressive disorder", "distinguishing": "Low mood and loss of interest without trauma-linked re-experiencing and avoidance. Often co-occurs with PTSD." },
+    { "label": "Complex PTSD (ICD-11 6B41; no separate ICD-10-CM code)", "distinguishing": "PTSD features plus pervasive problems with emotion regulation, self-concept and relationships." }
+  ],
+  "comorbidities": [
+    { "conditionId": "major-depressive-disorder", "label": "Major depressive disorder", "note": "Depression often accompanies PTSD and raises suicide risk. Screen with PHQ-9 and ask directly about suicidal thoughts." },
+    { "conditionId": "panic-disorder", "label": "Panic disorder", "note": "Panic attacks are common in PTSD, both cued by reminders and unexpected. Assess panic disorder separately." },
+    { "conditionId": "generalized-anxiety-disorder", "label": "Generalized anxiety disorder", "note": "Broad worry about safety may reflect PTSD or co-occurring GAD." },
+    { "label": "Alcohol or other substance use", "note": "Some people use substances to manage arousal or sleep. Screen and refer for integrated care as needed. This app does not store or transmit substance-use information." },
+    { "label": "Traumatic brain injury", "note": "Common after assaults, blasts and vehicle crashes; can complicate assessment and treatment pacing." }
+  ],
+  "measures": ["phq-9"],
+  "measuresPending": [
+    { "name": "PTSD Checklist for DSM-5 (PCL-5)", "url": "https://www.ptsd.va.gov/professional/assessment/adult-sr/ptsd-checklist.asp", "note": "License pending — link out only" },
+    { "name": "Columbia Suicide Severity Rating Scale (C-SSRS)", "url": "https://cssrs.columbia.edu", "note": "License pending — link out only" }
+  ],
+  "interventions": [
+    { "name": "Trauma-focused cognitive behavioral therapy", "evidence": "NICE NG116 (2018): offer individual trauma-focused CBT to adults who present more than a month after a trauma. The VA/DoD 2023 guideline strongly recommends manualized trauma-focused psychotherapies.", "note": "Umbrella term that includes cognitive processing therapy, prolonged exposure and cognitive therapy for PTSD. Stabilize acute safety concerns first." },
+    { "name": "Cognitive processing therapy (CPT) — trained clinicians only", "evidence": "VA/DoD 2023: strong recommendation. APA clinical practice guideline (2017; updated 2025) recommends CPT.", "note": "Structured protocol that examines and revises trauma-related beliefs about safety, trust, power, esteem and intimacy. Requires formal training and consultation." },
+    { "name": "Prolonged exposure (PE) — trained clinicians only", "evidence": "VA/DoD 2023: strong recommendation. APA clinical practice guideline (2017; updated 2025) recommends PE.", "note": "Combines imaginal exposure to the trauma memory with graded in-vivo exposure to avoided situations. Requires formal training and consultation." },
+    { "name": "Eye movement desensitization and reprocessing (EMDR) — trained clinicians only", "evidence": "NICE NG116: offer EMDR to adults presenting more than 3 months after a non-combat trauma, and consider it at 1 to 3 months if the person prefers it. VA/DoD 2023: strong recommendation. APA 2017: conditional recommendation; the 2025 rating is debated.", "note": "Requires formal EMDR training and consultation." },
+    { "name": "Grounding skills (e.g., 5-4-3-2-1 senses)", "evidence": "Stabilization skill used within trauma-focused care; not a stand-alone PTSD treatment.", "note": "Helps clients reorient during flashbacks or dissociation. Teach early and practice in session." },
+    { "name": "Referral for medication evaluation", "evidence": "NICE NG116 suggests considering venlafaxine or an SSRI such as sertraline for adults, based on preference. The VA/DoD 2023 guideline recommends against benzodiazepines for PTSD.", "note": "Refer to psychiatry, a primary care provider or a psychiatric nurse practitioner. Prescribing decisions rest with the prescriber." }
+  ],
+  "handouts": [],
+  "statIds": ["us-ptsd-past-year", "global-mental-health-conditions"],
+  "culturalNotes": [
+    "Refugees, asylum seekers and people from war-affected areas may have repeated or ongoing trauma and current threats such as immigration risk or unsafe housing. Address current safety and basic needs alongside trauma-focused work.",
+    "Racism, discrimination and historical or intergenerational trauma can shape both trauma exposure and trust in services. Ask about these experiences openly and without assumptions.",
+    "Some clients describe trauma reactions through the body (pain, fatigue, 'heart' or 'nerve' complaints) or through cultural idioms such as 'thinking too much' or 'ataque de nervios'. Explore the client's own explanation.",
+    "Disclosure of sexual violence may be affected by shame, gender norms, family honor or legal fears. Let the client control the pace and amount of detail, and offer a clinician of a preferred gender when possible.",
+    "Use a trained professional interpreter who is briefed on trauma content, not family members. Check that the interpreter is comfortable with the material.",
+    "Faith and spiritual meaning-making can support recovery, but trauma can also shake beliefs or cause spiritual distress. Explore this respectfully. Use spiritual or faith-integrated approaches only when the client asks for them and after informed consent (see the AACC Code of Ethics for faith-based counselors)."
+  ],
+  "sud": false,
+  "licensedDsm": false,
+  "wileyLicensed": false,
+  "sources": [
+    { "title": "Post-Traumatic Stress Disorder (health topic)", "publisher": "National Institute of Mental Health", "url": "https://www.nimh.nih.gov/health/topics/post-traumatic-stress-disorder-ptsd" },
+    { "title": "Post-traumatic stress disorder (NG116)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng116", "year": 2018 },
+    { "title": "ICD-11 MMS: 6B40 Post traumatic stress disorder", "publisher": "World Health Organization", "url": "https://icd.who.int/browse/latest-release/mms/en#2070699808" },
+    { "title": "ICD-10-CM (official code set)", "publisher": "CDC National Center for Health Statistics", "url": "https://www.cdc.gov/nchs/icd/icd-10-cm/index.html" },
+    { "title": "The management of posttraumatic stress disorder and acute stress disorder: synopsis of the 2023 VA/DoD clinical practice guideline", "publisher": "Annals of Internal Medicine (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/38408360/", "year": 2024 },
+    { "title": "Clinical Practice Guideline for the Treatment of PTSD: treatments", "publisher": "American Psychological Association", "url": "https://www.apa.org/ptsd-guideline/treatments" },
+    { "title": "Summary of the clinical practice guideline for the treatment of PTSD in adults", "publisher": "American Psychologist (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/31305099/", "year": 2019 },
+    { "title": "PTSD Checklist for DSM-5 (PCL-5)", "publisher": "National Center for PTSD, US Department of Veterans Affairs", "url": "https://www.ptsd.va.gov/professional/assessment/adult-sr/ptsd-checklist.asp" },
+    { "title": "'Thinking too much': a systematic review of a common idiom of distress (Kaiser et al.)", "publisher": "Social Science & Medicine (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/26584235/", "year": 2015 },
+    { "title": "The Columbia Lighthouse Project (C-SSRS)", "publisher": "Columbia University", "url": "https://cssrs.columbia.edu" },
+    { "title": "AACC Code of Ethics", "publisher": "American Association of Christian Counselors", "url": "https://aacc.net/aacc-code-of-ethics/" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

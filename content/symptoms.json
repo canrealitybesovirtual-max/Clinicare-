@@ -1,0 +1,1216 @@
+{
+  "version": "1.0.0",
+  "symptoms": [
+    {
+      "id": "panic-attacks-unexpected",
+      "label": "Recurrent sudden fear surges that arise without an obvious trigger (uncued panic attacks)",
+      "clientLabel": "Sudden waves of strong fear that seem to come out of nowhere",
+      "category": "panic",
+      "synonyms": [
+        "panic attack",
+        "panic attacks",
+        "panic out of nowhere",
+        "panic for no reason",
+        "came out of the blue",
+        "random panic attacks",
+        "sudden panic",
+        "uncued panic",
+        "spontaneous panic",
+        "woke up in a panic",
+        "nocturnal panic",
+        "attacks out of nowhere"
+      ]
+    },
+    {
+      "id": "panic-attack-cued",
+      "label": "Panic surges set off by specific situations, objects or reminders (cued or expected attacks)",
+      "clientLabel": "Waves of strong fear that happen in certain places or situations",
+      "category": "panic",
+      "synonyms": [
+        "panic when i drive",
+        "panic in the store",
+        "panic on the highway",
+        "panic in crowds",
+        "panic in elevators",
+        "panic when i leave the house",
+        "panic when reminded",
+        "only panic in certain places",
+        "cued panic",
+        "situational panic",
+        "expected panic attack"
+      ]
+    },
+    {
+      "id": "fear-of-dying",
+      "label": "Dread of imminent death or medical catastrophe during an episode",
+      "clientLabel": "Feeling sure you are about to die during an attack",
+      "category": "panic",
+      "synonyms": [
+        "thought i was dying",
+        "felt like i was dying",
+        "felt like i was going to die",
+        "thought i was having a heart attack",
+        "thought it was a heart attack",
+        "thought i was having a stroke",
+        "afraid i will die",
+        "fear of dying",
+        "sure i was dying",
+        "called 911 thinking i was dying"
+      ]
+    },
+    {
+      "id": "fear-losing-control",
+      "label": "Dread of losing control, acting strangely or 'losing one's mind' during an episode",
+      "clientLabel": "Feeling afraid you will lose control or go crazy",
+      "category": "panic",
+      "synonyms": [
+        "going crazy",
+        "losing my mind",
+        "afraid i will lose control",
+        "fear of losing control",
+        "felt like i was going insane",
+        "afraid of going crazy",
+        "losing it",
+        "afraid i will snap",
+        "thought i would lose my mind",
+        "scared i will do something crazy"
+      ]
+    },
+    {
+      "id": "persistent-concern-future-attacks",
+      "label": "Ongoing dread of further attacks or of what they might mean (e.g., heart disease, humiliation)",
+      "clientLabel": "Worrying a lot about having another attack",
+      "category": "panic",
+      "synonyms": [
+        "afraid of another attack",
+        "worried about the next panic attack",
+        "scared it will happen again",
+        "fear of fear",
+        "waiting for the next attack",
+        "always worried i will panic",
+        "dread having another attack",
+        "what if it happens again",
+        "afraid of having a panic attack"
+      ]
+    },
+    {
+      "id": "behavior-change-avoid-attacks",
+      "label": "Changes in routine made to prevent or manage attacks (safety behaviors, avoiding exertion or caffeine, carrying rescue items)",
+      "clientLabel": "Changing what you do to keep attacks from happening",
+      "category": "behavioral",
+      "synonyms": [
+        "stopped exercising so my heart wont race",
+        "carry my pills everywhere",
+        "always sit near the exit",
+        "avoid coffee because of panic",
+        "avoid anything that makes my heart race",
+        "safety behaviors",
+        "check my pulse",
+        "keep water with me in case",
+        "stopped going to the gym",
+        "only go places near a hospital"
+      ]
+    },
+    {
+      "id": "anticipatory-anxiety",
+      "label": "Anticipatory anxiety that builds before feared situations or events",
+      "clientLabel": "Feeling nervous for a long time before something you fear",
+      "category": "anxiety",
+      "synonyms": [
+        "dread before going out",
+        "anxious for days before",
+        "nervous before events",
+        "anticipatory anxiety",
+        "worked up beforehand",
+        "dreading it all week",
+        "sick with nerves before",
+        "cant sleep the night before"
+      ]
+    },
+    {
+      "id": "palpitations",
+      "label": "Racing, pounding or irregular-feeling heartbeat (palpitations)",
+      "clientLabel": "Heart racing or pounding",
+      "category": "somatic",
+      "synonyms": [
+        "heart pounding",
+        "heart racing",
+        "racing heart",
+        "pounding heart",
+        "heart beating out of my chest",
+        "palpitations",
+        "rapid heartbeat",
+        "heart skipping beats",
+        "heart fluttering",
+        "tachycardia",
+        "heart was going a mile a minute"
+      ]
+    },
+    {
+      "id": "sweating",
+      "label": "Episodes of heavy sweating or clamminess",
+      "clientLabel": "Sweating a lot",
+      "category": "somatic",
+      "synonyms": [
+        "sweating",
+        "drenched in sweat",
+        "sweaty palms",
+        "clammy",
+        "break out in a sweat",
+        "cold sweat",
+        "diaphoresis",
+        "diaphoretic",
+        "sweating buckets"
+      ]
+    },
+    {
+      "id": "trembling",
+      "label": "Shaking or trembling of the hands or body",
+      "clientLabel": "Shaking or trembling",
+      "category": "somatic",
+      "synonyms": [
+        "shaking",
+        "trembling",
+        "shaky",
+        "hands shaking",
+        "couldnt stop shaking",
+        "tremors",
+        "jittery",
+        "body was shaking"
+      ]
+    },
+    {
+      "id": "shortness-of-breath",
+      "label": "Breathlessness, air hunger or a smothering sensation",
+      "clientLabel": "Feeling like you cannot get enough air",
+      "category": "somatic",
+      "synonyms": [
+        "cant breathe",
+        "couldnt breathe",
+        "short of breath",
+        "shortness of breath",
+        "sob",
+        "smothering",
+        "cant catch my breath",
+        "hyperventilating",
+        "gasping for air",
+        "air hunger",
+        "dyspnea",
+        "not getting enough air"
+      ]
+    },
+    {
+      "id": "choking-sensation",
+      "label": "Throat tightness or a sensation of choking",
+      "clientLabel": "Feeling like you are choking",
+      "category": "somatic",
+      "synonyms": [
+        "choking",
+        "throat closing",
+        "lump in my throat",
+        "felt like i was choking",
+        "throat tight",
+        "something stuck in my throat",
+        "cant swallow",
+        "globus"
+      ]
+    },
+    {
+      "id": "chest-pain",
+      "label": "Chest tightness, pressure or pain",
+      "clientLabel": "Chest pain or a tight chest",
+      "category": "somatic",
+      "synonyms": [
+        "chest pain",
+        "chest tightness",
+        "tight chest",
+        "chest pressure",
+        "pressure on my chest",
+        "elephant on my chest",
+        "chest hurts",
+        "pain in my chest",
+        "chest discomfort"
+      ]
+    },
+    {
+      "id": "nausea-abdominal-distress",
+      "label": "Nausea, stomach churning or abdominal upset",
+      "clientLabel": "Upset stomach or feeling sick",
+      "category": "somatic",
+      "synonyms": [
+        "nausea",
+        "nauseous",
+        "sick to my stomach",
+        "stomach in knots",
+        "butterflies in my stomach",
+        "upset stomach",
+        "felt like throwing up",
+        "queasy",
+        "stomach churning",
+        "gi upset"
+      ]
+    },
+    {
+      "id": "dizziness",
+      "label": "Light-headedness, dizziness, unsteadiness or near-fainting",
+      "clientLabel": "Feeling dizzy or light-headed",
+      "category": "somatic",
+      "synonyms": [
+        "dizzy",
+        "lightheaded",
+        "light headed",
+        "felt faint",
+        "room spinning",
+        "woozy",
+        "unsteady on my feet",
+        "off balance",
+        "vertigo",
+        "like i might pass out"
+      ]
+    },
+    {
+      "id": "chills-heat-sensations",
+      "label": "Sudden hot flushes or chills",
+      "clientLabel": "Feeling suddenly hot or cold",
+      "category": "somatic",
+      "synonyms": [
+        "hot flashes",
+        "chills",
+        "hot and cold",
+        "flushed",
+        "burning up",
+        "cold chills",
+        "waves of heat",
+        "face got hot",
+        "goosebumps"
+      ]
+    },
+    {
+      "id": "numbness-tingling",
+      "label": "Tingling or numbness, often in the hands, feet or face (paresthesias)",
+      "clientLabel": "Tingling or numb hands, feet or face",
+      "category": "somatic",
+      "synonyms": [
+        "tingling",
+        "pins and needles",
+        "hands went numb",
+        "numb fingers",
+        "tingling in my hands",
+        "paresthesia",
+        "paresthesias",
+        "face went numb",
+        "numb lips",
+        "tingly"
+      ]
+    },
+    {
+      "id": "derealization-depersonalization",
+      "label": "Sense of unreality, or of being detached from one's own body or thoughts",
+      "clientLabel": "Feeling unreal, like in a dream, or outside your body",
+      "category": "cognitive",
+      "synonyms": [
+        "felt unreal",
+        "like in a dream",
+        "detached from myself",
+        "out of body",
+        "outside my body",
+        "watching myself from outside",
+        "everything felt fake",
+        "derealization",
+        "depersonalization",
+        "like watching a movie of my life",
+        "world looked strange"
+      ]
+    },
+    {
+      "id": "avoid-public-transport",
+      "label": "Dread or avoidance of public transport (e.g., buses, trains, ferries, planes)",
+      "clientLabel": "Fear of buses, trains or planes",
+      "category": "avoidance",
+      "synonyms": [
+        "afraid of buses",
+        "cant ride the bus",
+        "cant take the subway",
+        "avoid trains",
+        "scared of the metro",
+        "avoid public transportation",
+        "fear of public transport",
+        "afraid to fly",
+        "avoid planes",
+        "cant ride the train"
+      ]
+    },
+    {
+      "id": "avoid-open-spaces",
+      "label": "Dread or avoidance of wide-open areas (e.g., large car parks, fields, plazas)",
+      "clientLabel": "Fear of big open places",
+      "category": "avoidance",
+      "synonyms": [
+        "afraid of open spaces",
+        "big parking lots",
+        "wide open areas",
+        "afraid of bridges",
+        "empty fields scare me",
+        "large open places",
+        "fear of open places",
+        "open areas make me panic"
+      ]
+    },
+    {
+      "id": "avoid-enclosed-spaces",
+      "label": "Dread or avoidance of enclosed or hard-to-exit places (e.g., elevators, tunnels, malls, small rooms)",
+      "clientLabel": "Fear of closed-in places like elevators, stores or tunnels",
+      "category": "avoidance",
+      "synonyms": [
+        "enclosed spaces",
+        "afraid of elevators",
+        "cant go in stores",
+        "avoid movie theaters",
+        "trapped in small spaces",
+        "closed in",
+        "claustrophobic",
+        "cant go to the mall",
+        "afraid of tunnels",
+        "feel trapped in small rooms"
+      ]
+    },
+    {
+      "id": "avoid-crowds-lines",
+      "label": "Dread or avoidance of crowds or waiting in lines",
+      "clientLabel": "Fear of crowds or waiting in line",
+      "category": "avoidance",
+      "synonyms": [
+        "crowds",
+        "avoid crowds",
+        "cant stand in line",
+        "crowded places",
+        "busy places",
+        "too many people",
+        "waiting in line",
+        "packed stores",
+        "grocery store lines"
+      ]
+    },
+    {
+      "id": "avoid-leaving-home-alone",
+      "label": "Dread or avoidance of being away from home by oneself",
+      "clientLabel": "Fear of leaving the house alone",
+      "category": "avoidance",
+      "synonyms": [
+        "cant leave the house",
+        "cant leave home",
+        "stuck at home",
+        "housebound",
+        "homebound",
+        "afraid to go outside",
+        "havent left the house",
+        "scared to go out alone",
+        "dont go out anymore",
+        "afraid to leave home alone"
+      ]
+    },
+    {
+      "id": "needs-companion",
+      "label": "Relies on a trusted companion to face feared places",
+      "clientLabel": "Needing someone with you to go places",
+      "category": "avoidance",
+      "synonyms": [
+        "need someone with me",
+        "only go out with my husband",
+        "only go out with my wife",
+        "need my partner with me",
+        "cant go anywhere alone",
+        "need a safe person",
+        "my safe person",
+        "someone has to come with me",
+        "only with a friend"
+      ]
+    },
+    {
+      "id": "fear-escape-help-unavailable",
+      "label": "Belief that one could be stuck, or left without help, if sudden bodily alarm or an embarrassing loss of control occurred",
+      "clientLabel": "Worry that you could not get out or get help if you felt sick or panicky",
+      "category": "cognitive",
+      "synonyms": [
+        "afraid i cant get out",
+        "what if i cant escape",
+        "no one would help me",
+        "fear of being trapped",
+        "need to know where the exits are",
+        "afraid i will embarrass myself",
+        "afraid i will pass out in public",
+        "what if i lose control of my bladder",
+        "feel trapped in public"
+      ]
+    },
+    {
+      "id": "worry-excessive",
+      "label": "Broad, out-of-proportion worry about routine life matters, present much of the time",
+      "clientLabel": "Worrying a lot about many everyday things",
+      "category": "anxiety",
+      "synonyms": [
+        "worry about everything",
+        "worried about everything",
+        "constant worry",
+        "worry all the time",
+        "excessive worry",
+        "always worried",
+        "worrywart",
+        "what ifs",
+        "worst case scenario",
+        "overthinking",
+        "chronic worrier",
+        "worry about little things"
+      ]
+    },
+    {
+      "id": "worry-hard-to-control",
+      "label": "Worry that feels difficult to stop, shift or set aside",
+      "clientLabel": "Worry that is hard to turn off",
+      "category": "anxiety",
+      "synonyms": [
+        "cant stop worrying",
+        "cant turn my brain off",
+        "cant shut off my mind",
+        "worry takes over",
+        "mind wont stop",
+        "cant control the worry",
+        "worry spirals",
+        "mind racing",
+        "cant stop thinking about it",
+        "worry keeps me up"
+      ]
+    },
+    {
+      "id": "restlessness",
+      "label": "Inner restlessness; feeling wound up or tense and unable to settle",
+      "clientLabel": "Feeling restless or on edge",
+      "category": "anxiety",
+      "synonyms": [
+        "on edge",
+        "keyed up",
+        "restless",
+        "cant sit still",
+        "wound up",
+        "antsy",
+        "fidgety",
+        "edgy",
+        "cant relax",
+        "nervous energy",
+        "tense all the time"
+      ]
+    },
+    {
+      "id": "fatigue",
+      "label": "Low energy, tiring easily or persistent tiredness",
+      "clientLabel": "Feeling tired or low on energy",
+      "category": "somatic",
+      "synonyms": [
+        "tired all the time",
+        "exhausted",
+        "no energy",
+        "worn out",
+        "drained",
+        "low energy",
+        "fatigue",
+        "wiped out",
+        "always tired",
+        "run down",
+        "tire easily"
+      ]
+    },
+    {
+      "id": "concentration-difficulty",
+      "label": "Trouble focusing, slowed or foggy thinking, blanking out or indecision",
+      "clientLabel": "Trouble focusing or making decisions",
+      "category": "cognitive",
+      "synonyms": [
+        "cant concentrate",
+        "cant focus",
+        "mind goes blank",
+        "brain fog",
+        "trouble focusing",
+        "poor concentration",
+        "cant make decisions",
+        "indecisive",
+        "cant think straight",
+        "lose my train of thought",
+        "foggy"
+      ]
+    },
+    {
+      "id": "irritability",
+      "label": "Irritability, short temper or angry outbursts",
+      "clientLabel": "Getting annoyed or angry easily",
+      "category": "mood",
+      "synonyms": [
+        "irritable",
+        "short fuse",
+        "snapping at people",
+        "cranky",
+        "easily annoyed",
+        "everything gets on my nerves",
+        "angry outbursts",
+        "lose my temper",
+        "blow up at people",
+        "snappy"
+      ]
+    },
+    {
+      "id": "muscle-tension",
+      "label": "Muscle tightness, aching or tension (e.g., jaw, neck, shoulders)",
+      "clientLabel": "Tight or sore muscles",
+      "category": "somatic",
+      "synonyms": [
+        "muscle tension",
+        "tense muscles",
+        "tight shoulders",
+        "clenching my jaw",
+        "jaw clenching",
+        "neck tension",
+        "tension headaches",
+        "knots in my shoulders",
+        "grinding my teeth",
+        "body feels tight"
+      ]
+    },
+    {
+      "id": "insomnia",
+      "label": "Trouble falling asleep, staying asleep, early waking or unrefreshing sleep",
+      "clientLabel": "Trouble falling asleep or staying asleep",
+      "category": "sleep",
+      "synonyms": [
+        "cant sleep",
+        "trouble sleeping",
+        "cant fall asleep",
+        "wake up in the middle of the night",
+        "waking up at 3am",
+        "insomnia",
+        "lie awake",
+        "wake up too early",
+        "toss and turn",
+        "restless sleep",
+        "poor sleep"
+      ]
+    },
+    {
+      "id": "hypersomnia",
+      "label": "Sleeping much more than usual or spending prolonged time in bed",
+      "clientLabel": "Sleeping a lot more than usual",
+      "category": "sleep",
+      "synonyms": [
+        "sleeping all day",
+        "sleep too much",
+        "cant get out of bed",
+        "oversleeping",
+        "sleeping 12 hours",
+        "hypersomnia",
+        "napping all the time",
+        "stay in bed all day",
+        "sleeping more than usual"
+      ]
+    },
+    {
+      "id": "depressed-mood",
+      "label": "Persistently low, sad, empty or hopeless mood",
+      "clientLabel": "Feeling sad, down or empty",
+      "category": "mood",
+      "synonyms": [
+        "depressed",
+        "depression",
+        "feeling down",
+        "sad all the time",
+        "feel empty",
+        "hopeless",
+        "low mood",
+        "down in the dumps",
+        "crying all the time",
+        "tearful",
+        "feel like crying",
+        "heavy heart",
+        "miserable"
+      ]
+    },
+    {
+      "id": "anhedonia",
+      "label": "Loss of interest or enjoyment in usual activities (anhedonia)",
+      "clientLabel": "Not enjoying things you used to like",
+      "category": "mood",
+      "synonyms": [
+        "no interest",
+        "lost interest",
+        "anhedonia",
+        "nothing is fun anymore",
+        "dont enjoy anything",
+        "dont care about anything",
+        "no pleasure",
+        "stopped doing my hobbies",
+        "nothing excites me",
+        "nothing matters anymore",
+        "lost my spark"
+      ]
+    },
+    {
+      "id": "appetite-change",
+      "label": "Notable change in appetite or weight not explained by intentional dieting",
+      "clientLabel": "Eating much more or much less than usual",
+      "category": "somatic",
+      "synonyms": [
+        "no appetite",
+        "lost my appetite",
+        "poor appetite",
+        "lost weight without trying",
+        "gained weight",
+        "eating too much",
+        "overeating",
+        "stress eating",
+        "comfort eating",
+        "appetite changes",
+        "forget to eat"
+      ]
+    },
+    {
+      "id": "psychomotor-change",
+      "label": "Observable slowing or agitation of movement and speech",
+      "clientLabel": "Moving or talking much slower, or feeling unable to stop moving",
+      "category": "behavioral",
+      "synonyms": [
+        "slowed down",
+        "moving in slow motion",
+        "talking slowly",
+        "slowed speech",
+        "sluggish",
+        "pacing",
+        "cant stop pacing",
+        "wringing my hands",
+        "psychomotor retardation",
+        "psychomotor agitation"
+      ]
+    },
+    {
+      "id": "worthlessness-guilt",
+      "label": "Harsh self-criticism, sense of worthlessness or outsized guilt",
+      "clientLabel": "Feeling worthless or very guilty",
+      "category": "cognitive",
+      "synonyms": [
+        "worthless",
+        "feel useless",
+        "guilty all the time",
+        "its all my fault",
+        "im a burden",
+        "hate myself",
+        "im a failure",
+        "feel like a failure",
+        "not good enough",
+        "excessive guilt",
+        "no good to anyone"
+      ]
+    },
+    {
+      "id": "social-withdrawal",
+      "label": "Pulling away from friends, family or social activities",
+      "clientLabel": "Pulling away from people",
+      "category": "behavioral",
+      "synonyms": [
+        "isolating",
+        "isolating myself",
+        "dont see friends anymore",
+        "stay in my room",
+        "pulled away from everyone",
+        "avoid people",
+        "withdrawn",
+        "keep to myself",
+        "stopped calling friends",
+        "social withdrawal"
+      ]
+    },
+    {
+      "id": "passive-death-wish",
+      "label": "Passive death wish: thoughts of death or of not wanting to be alive",
+      "clientLabel": "Wishing you were not alive, or thinking a lot about death",
+      "category": "safety",
+      "redFlag": "suicidality",
+      "synonyms": [
+        "wish i were dead",
+        "wish i was dead",
+        "wish i could disappear",
+        "wish i wouldnt wake up",
+        "better off dead",
+        "dont want to be here anymore",
+        "life isnt worth living",
+        "passive si",
+        "thoughts of death",
+        "tired of living",
+        "everyone would be better off without me"
+      ]
+    },
+    {
+      "id": "suicidal-ideation-active",
+      "label": "Active suicidal thoughts, with or without a plan, intent or preparatory steps",
+      "clientLabel": "Thinking about ending your life",
+      "category": "safety",
+      "redFlag": "suicidality",
+      "synonyms": [
+        "suicidal",
+        "suicidal thoughts",
+        "suicidal ideation",
+        "thinking about suicide",
+        "want to kill myself",
+        "kill myself",
+        "end my life",
+        "end it all",
+        "take my own life",
+        "si",
+        "active si",
+        "suicide plan",
+        "plan to kill myself"
+      ]
+    },
+    {
+      "id": "self-harm",
+      "label": "Deliberate self-injury (e.g., cutting, burning), with or without suicidal intent",
+      "clientLabel": "Hurting yourself on purpose",
+      "category": "safety",
+      "redFlag": "suicidality",
+      "synonyms": [
+        "cutting myself",
+        "cut myself",
+        "self harm",
+        "self harming",
+        "hurting myself",
+        "burning myself",
+        "nssi",
+        "self injury",
+        "hitting myself",
+        "scratching until i bleed"
+      ]
+    },
+    {
+      "id": "suicide-attempt-history",
+      "label": "Recent or past suicide attempt, including interrupted or aborted attempts",
+      "clientLabel": "Having tried to end your life",
+      "category": "safety",
+      "redFlag": "suicidality",
+      "synonyms": [
+        "tried to kill myself",
+        "suicide attempt",
+        "attempted suicide",
+        "overdosed on purpose",
+        "tried to end my life",
+        "took a bunch of pills",
+        "tried to hang myself",
+        "prior suicide attempt"
+      ]
+    },
+    {
+      "id": "homicidal-ideation",
+      "label": "Thoughts, urges or plans to seriously harm or kill another person",
+      "clientLabel": "Thoughts of seriously hurting someone else",
+      "category": "safety",
+      "redFlag": "homicidality",
+      "synonyms": [
+        "want to kill someone",
+        "thoughts of hurting someone",
+        "homicidal",
+        "homicidal ideation",
+        "want to hurt him",
+        "want to hurt her",
+        "going to hurt somebody",
+        "thinking about killing",
+        "urge to hurt people",
+        "plan to hurt someone"
+      ]
+    },
+    {
+      "id": "hallucinations",
+      "label": "Perceptual disturbances, such as hearing voices or seeing things others do not",
+      "clientLabel": "Hearing or seeing things other people do not",
+      "category": "safety",
+      "redFlag": "psychosis",
+      "synonyms": [
+        "hearing voices",
+        "hear voices",
+        "voices telling me",
+        "voices talk to me",
+        "seeing things that arent there",
+        "seeing people who arent there",
+        "hearing things that arent there",
+        "hallucinations",
+        "hallucinating",
+        "command hallucinations"
+      ]
+    },
+    {
+      "id": "paranoia-delusions",
+      "label": "Paranoid or fixed unusual beliefs (e.g., being watched, followed, controlled or targeted)",
+      "clientLabel": "Strong beliefs that people are watching, following or plotting against you",
+      "category": "safety",
+      "redFlag": "psychosis",
+      "synonyms": [
+        "people are watching me",
+        "being followed",
+        "paranoid",
+        "someone is out to get me",
+        "they are after me",
+        "plotting against me",
+        "being spied on",
+        "cameras watching me",
+        "messages from the tv",
+        "thoughts are being controlled",
+        "delusions",
+        "delusional"
+      ]
+    },
+    {
+      "id": "decreased-need-for-sleep",
+      "label": "Markedly reduced need for sleep with high energy (not tired despite little sleep)",
+      "clientLabel": "Barely sleeping but still feeling full of energy",
+      "category": "safety",
+      "redFlag": "mania",
+      "synonyms": [
+        "dont need sleep",
+        "dont need to sleep",
+        "no need to sleep",
+        "only need two hours of sleep",
+        "up for days and not tired",
+        "full of energy without sleep",
+        "havent slept in days but feel great",
+        "slept three hours and feel amazing"
+      ]
+    },
+    {
+      "id": "grandiosity-elevated-mood",
+      "label": "Elevated or expansive mood with grandiosity, pressured speech or impulsive spending",
+      "clientLabel": "Feeling unusually high, powerful or special, with lots of big plans",
+      "category": "safety",
+      "redFlag": "mania",
+      "synonyms": [
+        "on top of the world",
+        "feel invincible",
+        "special powers",
+        "the chosen one",
+        "grandiose",
+        "grandiosity",
+        "euphoric",
+        "talking a mile a minute",
+        "pressured speech",
+        "spending sprees",
+        "maxed out my credit cards",
+        "manic",
+        "hypomanic",
+        "big plans to change the world"
+      ]
+    },
+    {
+      "id": "severe-food-restriction",
+      "label": "Severe food restriction or rapid weight loss with possible medical instability",
+      "clientLabel": "Eating very little or losing weight very fast",
+      "category": "safety",
+      "redFlag": "eating-disorder-medical",
+      "synonyms": [
+        "starving myself",
+        "barely eating",
+        "eating almost nothing",
+        "skipping meals to lose weight",
+        "not eating for days",
+        "afraid to eat",
+        "rapid weight loss",
+        "restricting food",
+        "restricting calories",
+        "only eat 500 calories"
+      ]
+    },
+    {
+      "id": "purging-or-fainting",
+      "label": "Purging behaviors or medical warning signs such as fainting",
+      "clientLabel": "Throwing up on purpose, using laxatives to lose weight, or fainting",
+      "category": "safety",
+      "redFlag": "eating-disorder-medical",
+      "synonyms": [
+        "making myself throw up",
+        "throwing up after eating",
+        "vomiting after meals",
+        "purging",
+        "binge and purge",
+        "laxatives to lose weight",
+        "diet pills",
+        "fainted",
+        "fainting",
+        "passing out"
+      ]
+    },
+    {
+      "id": "alcohol-benzo-withdrawal",
+      "label": "Withdrawal signs (tremor, sweating, agitation, confusion, seizure risk) after cutting down or stopping alcohol or benzodiazepines",
+      "clientLabel": "Shakes, sweats or seizures after stopping alcohol or nerve pills",
+      "category": "safety",
+      "redFlag": "withdrawal",
+      "synonyms": [
+        "the shakes",
+        "shakes when i stop drinking",
+        "need a drink to stop shaking",
+        "alcohol withdrawal",
+        "benzo withdrawal",
+        "dts",
+        "delirium tremens",
+        "withdrawal seizure",
+        "seizure after stopping drinking",
+        "stopped my xanax",
+        "ran out of my klonopin",
+        "coming off benzos",
+        "detoxing"
+      ]
+    },
+    {
+      "id": "traumatic-event-exposure",
+      "label": "Context: history of a traumatic event (e.g., assault, combat, serious accident, disaster, sudden violent loss); clinician to clarify the type of exposure",
+      "clientLabel": "Living through or seeing something very frightening or violent",
+      "category": "context",
+      "synonyms": [
+        "traumatic event",
+        "was assaulted",
+        "sexual assault",
+        "was raped",
+        "car accident",
+        "combat",
+        "was attacked",
+        "childhood abuse",
+        "sexual abuse",
+        "domestic violence",
+        "witnessed a death",
+        "was mugged",
+        "witnessed a shooting",
+        "natural disaster"
+      ]
+    },
+    {
+      "id": "intrusive-memories",
+      "label": "Unwanted, upsetting memories of the event that push into awareness",
+      "clientLabel": "Upsetting memories that pop up when you do not want them",
+      "category": "trauma",
+      "synonyms": [
+        "intrusive memories",
+        "memories keep popping up",
+        "cant stop thinking about what happened",
+        "keeps replaying in my head",
+        "replaying the event",
+        "unwanted memories",
+        "images of what happened",
+        "cant get it out of my head",
+        "memories of the attack",
+        "memories of the accident"
+      ]
+    },
+    {
+      "id": "nightmares",
+      "label": "Trauma-themed nightmares or upsetting dreams",
+      "clientLabel": "Bad dreams about what happened",
+      "category": "trauma",
+      "synonyms": [
+        "nightmares",
+        "bad dreams",
+        "night terrors",
+        "dream about it",
+        "wake up screaming",
+        "dreams about what happened",
+        "same nightmare",
+        "nightmare every night"
+      ]
+    },
+    {
+      "id": "flashbacks",
+      "label": "Flashback episodes: feeling or acting as though the event is happening again",
+      "clientLabel": "Feeling like the bad event is happening again right now",
+      "category": "trauma",
+      "synonyms": [
+        "flashbacks",
+        "flashback",
+        "feels like its happening again",
+        "reliving it",
+        "back there again",
+        "like i was back in",
+        "reexperiencing",
+        "re experiencing",
+        "lose track of where i am"
+      ]
+    },
+    {
+      "id": "cue-reactivity",
+      "label": "Strong emotional or bodily reactions when reminded of the event",
+      "clientLabel": "Strong upset or body reactions when something reminds you of it",
+      "category": "trauma",
+      "synonyms": [
+        "triggered",
+        "trauma triggers",
+        "reminders set me off",
+        "fall apart when reminded",
+        "smells bring it back",
+        "sounds remind me",
+        "anniversary reaction",
+        "freeze when reminded",
+        "my body reacts to reminders"
+      ]
+    },
+    {
+      "id": "avoidance-trauma-reminders",
+      "label": "Efforts to avoid trauma-linked thoughts, feelings, conversations, people or places",
+      "clientLabel": "Staying away from things that remind you of what happened",
+      "category": "avoidance",
+      "synonyms": [
+        "avoid thinking about it",
+        "dont want to talk about it",
+        "avoid the place where it happened",
+        "stay away from reminders",
+        "wont drive since the accident",
+        "push the memories away",
+        "avoid anything that reminds me",
+        "keep busy so i dont think about it",
+        "avoid the news"
+      ]
+    },
+    {
+      "id": "negative-beliefs",
+      "label": "Lasting negative beliefs about self, others or the world, or distorted blame for the event",
+      "clientLabel": "Strong negative thoughts about yourself, other people or the world since it happened",
+      "category": "cognitive",
+      "synonyms": [
+        "world is dangerous",
+        "nowhere is safe",
+        "cant trust anyone",
+        "no one can be trusted",
+        "my fault it happened",
+        "should have stopped it",
+        "blame myself for what happened",
+        "self blame",
+        "im broken",
+        "permanently damaged",
+        "shame about what happened"
+      ]
+    },
+    {
+      "id": "emotional-numbing-detachment",
+      "label": "Emotional numbing or feeling cut off from others; difficulty feeling positive emotions",
+      "clientLabel": "Feeling numb or cut off from people",
+      "category": "mood",
+      "synonyms": [
+        "emotionally numb",
+        "feel numb inside",
+        "cant feel anything",
+        "feel nothing",
+        "cant feel happy",
+        "cant feel love",
+        "detached from people",
+        "disconnected from everyone",
+        "shut down emotionally",
+        "feel flat"
+      ]
+    },
+    {
+      "id": "hypervigilance",
+      "label": "Heightened alertness and constant scanning for danger",
+      "clientLabel": "Always watching for danger",
+      "category": "trauma",
+      "synonyms": [
+        "always on guard",
+        "hypervigilant",
+        "hypervigilance",
+        "scanning the room",
+        "back to the wall",
+        "on high alert",
+        "cant let my guard down",
+        "always watching for danger",
+        "watching everyone"
+      ]
+    },
+    {
+      "id": "startle",
+      "label": "Startles easily and strongly",
+      "clientLabel": "Jumping at sudden noises",
+      "category": "trauma",
+      "synonyms": [
+        "jumpy",
+        "startle easily",
+        "easily startled",
+        "jump at loud noises",
+        "jump out of my skin",
+        "loud noises scare me",
+        "hit the ground at loud noises",
+        "startle response"
+      ]
+    },
+    {
+      "id": "trauma-memory-gaps",
+      "label": "Gaps in memory for key parts of the event (not explained by head injury, alcohol or drugs)",
+      "clientLabel": "Not being able to remember parts of what happened",
+      "category": "trauma",
+      "synonyms": [
+        "cant remember parts of it",
+        "blank spots in my memory",
+        "memory gaps about what happened",
+        "cant remember what happened",
+        "pieces are missing",
+        "dont remember most of it",
+        "parts are blank"
+      ]
+    },
+    {
+      "id": "reckless-self-destructive",
+      "label": "Risk-taking or self-endangering behavior",
+      "clientLabel": "Doing risky or dangerous things",
+      "category": "behavioral",
+      "synonyms": [
+        "driving recklessly",
+        "speeding on purpose",
+        "dont care if i get hurt",
+        "risky behavior",
+        "taking dangerous risks",
+        "reckless",
+        "picking fights",
+        "unsafe sex"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Anxiety Disorders (health topic)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/topics/anxiety-disorders"
+    },
+    {
+      "title": "Depression (health topic)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/topics/depression"
+    },
+    {
+      "title": "Post-Traumatic Stress Disorder (health topic)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/topics/post-traumatic-stress-disorder-ptsd"
+    },
+    {
+      "title": "ICD-11 for Mortality and Morbidity Statistics (browser)",
+      "publisher": "World Health Organization",
+      "url": "https://icd.who.int/browse/latest-release/mms/en"
+    },
+    {
+      "title": "Generalised anxiety disorder and panic disorder in adults: management (CG113)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg113",
+      "year": 2011
+    },
+    {
+      "title": "The epidemiology of panic attacks, panic disorder, and agoraphobia in the National Comorbidity Survey Replication (Kessler et al.)",
+      "publisher": "Archives of General Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16585471/",
+      "year": 2006
+    },
+    {
+      "title": "'Thinking too much': a systematic review of a common idiom of distress (Kaiser et al.)",
+      "publisher": "Social Science & Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26584235/",
+      "year": 2015
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

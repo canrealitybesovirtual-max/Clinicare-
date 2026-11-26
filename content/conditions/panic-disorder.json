@@ -1,0 +1,108 @@
+{
+  "id": "panic-disorder",
+  "name": "Panic disorder",
+  "icd10cm": [
+    { "code": "F41.0", "label": "Panic disorder [episodic paroxysmal anxiety]" }
+  ],
+  "icd11": [
+    { "code": "6B01", "label": "Panic disorder" }
+  ],
+  "dsmPointer": "See DSM-5-TR: Anxiety Disorders — Panic Disorder",
+  "summary": "Repeated, abrupt episodes of intense fear or physical alarm that are not reliably tied to a trigger, followed by ongoing apprehension about further episodes and/or changes in behavior meant to prevent them. Episodes usually bring strong cardiopulmonary and other bodily sensations that the person reads as a medical emergency, so many first present to primary or emergency care. Medical and substance-related causes should be considered before treating the picture as a primary anxiety condition. For clinician review only; this is not a diagnosis.",
+  "features": [
+    { "symptomId": "panic-attacks-unexpected", "kind": "core", "weight": 5 },
+    { "symptomId": "persistent-concern-future-attacks", "kind": "core", "weight": 4 },
+    { "symptomId": "behavior-change-avoid-attacks", "kind": "core", "weight": 3 },
+    { "symptomId": "palpitations", "kind": "associated", "weight": 2 },
+    { "symptomId": "shortness-of-breath", "kind": "associated", "weight": 2 },
+    { "symptomId": "chest-pain", "kind": "associated", "weight": 2 },
+    { "symptomId": "dizziness", "kind": "associated", "weight": 2 },
+    { "symptomId": "fear-of-dying", "kind": "associated", "weight": 2 },
+    { "symptomId": "fear-losing-control", "kind": "associated", "weight": 2 },
+    { "symptomId": "sweating", "kind": "associated", "weight": 1 },
+    { "symptomId": "trembling", "kind": "associated", "weight": 1 },
+    { "symptomId": "choking-sensation", "kind": "associated", "weight": 1 },
+    { "symptomId": "nausea-abdominal-distress", "kind": "associated", "weight": 1 },
+    { "symptomId": "chills-heat-sensations", "kind": "associated", "weight": 1 },
+    { "symptomId": "numbness-tingling", "kind": "associated", "weight": 1 },
+    { "symptomId": "derealization-depersonalization", "kind": "associated", "weight": 1 },
+    { "symptomId": "anticipatory-anxiety", "kind": "associated", "weight": 1 }
+  ],
+  "minCore": 2,
+  "durationGate": {
+    "minWeeks": 4,
+    "note": "The worry about further attacks, or the behavior changes made to head them off, usually last a month or longer. Confirm the exact timing requirement in DSM-5-TR."
+  },
+  "impairmentRequired": true,
+  "ruleOuts": [
+    { "label": "Hyperthyroidism", "type": "medical", "note": "Can produce palpitations, tremor, heat intolerance and anxiety. Consider thyroid testing through the client's medical provider." },
+    { "label": "Cardiac arrhythmia or other heart disease", "type": "medical", "note": "Chest pain, palpitations and breathlessness need medical evaluation first, especially with exertional symptoms, fainting, age or cardiac risk factors." },
+    { "label": "Asthma or COPD", "type": "medical", "note": "Breathlessness and air hunger may reflect a respiratory condition or its treatment (e.g., beta-agonist inhalers)." },
+    { "label": "Hypoglycemia", "type": "medical", "note": "Shakiness, sweating and dread linked to missed meals or diabetes treatment suggest checking blood glucose patterns." },
+    { "label": "Vestibular, seizure or rare endocrine causes", "type": "medical", "note": "Episodic dizziness, stereotyped spells or paroxysmal hypertension (e.g., pheochromocytoma) warrant medical work-up." },
+    { "label": "Caffeine, stimulants or decongestants", "type": "substance", "note": "High caffeine intake, energy drinks, prescribed or illicit stimulants and some cold medicines can trigger panic-like episodes." },
+    { "label": "Alcohol or benzodiazepine withdrawal", "type": "substance", "note": "Rebound anxiety, tremor and sweating after cutting down can mimic panic and may be medically dangerous; refer for medical assessment." },
+    { "label": "Cannabis or other substance effects", "type": "substance", "note": "Acute intoxication or withdrawal from several substances can provoke attacks. This app does not store substance-use information." },
+    { "label": "Attacks better explained by another mental health condition", "type": "psychiatric", "note": "If attacks occur only with social scrutiny, a specific feared object or situation, trauma reminders, obsessions or separation, consider those conditions first." }
+  ],
+  "specifiers": [
+    { "label": "Nocturnal panic (descriptive)", "note": "Attacks that wake the person from sleep. Ask about them directly and consider sleep-related differentials such as sleep apnea or reflux." },
+    { "label": "Limited-symptom attacks (descriptive)", "note": "Episodes with fewer bodily sensations than a full attack. Track them, since they often keep avoidance going." },
+    { "label": "Co-occurring agoraphobia", "note": "DSM-5-TR assesses and codes agoraphobia separately. ICD-10-CM also offers F40.01 (agoraphobia with panic disorder) and lists panic disorder with agoraphobia under that code. Confirm which convention your setting and payer use." }
+  ],
+  "differentials": [
+    { "label": "Social anxiety disorder (ICD-10-CM title: Social phobia, unspecified)", "icd10cm": "F40.10", "distinguishing": "Attacks occur mainly in social or performance settings, and the core fear is being judged or embarrassed rather than the attack itself." },
+    { "label": "Specific phobia, situational type (ICD-10-CM title: Other situational type phobia)", "icd10cm": "F40.248", "distinguishing": "Attacks are limited to one narrow trigger (e.g., flying, driving, heights) rather than also arising unexpectedly." },
+    { "label": "Illness anxiety disorder (ICD-10-CM title: Hypochondriasis)", "icd10cm": "F45.21", "distinguishing": "Ongoing preoccupation with having a serious illness and repeated checking or reassurance seeking, without discrete fear surges as the main problem." },
+    { "label": "Anxiety disorder due to another medical condition", "icd10cm": "F06.4", "distinguishing": "Episodes are a direct physiological effect of a medical condition (e.g., thyroid, cardiac or respiratory disease); onset and course track that condition." },
+    { "label": "Generalized anxiety disorder", "icd10cm": "F41.1", "distinguishing": "Chronic, diffuse worry and tension rather than abrupt, time-limited surges. The two often co-occur." },
+    { "label": "Posttraumatic stress disorder", "icd10cm": "F43.10", "distinguishing": "Attacks set off by trauma reminders, together with re-experiencing and avoidance of reminders, point toward PTSD." }
+  ],
+  "comorbidities": [
+    { "conditionId": "agoraphobia", "label": "Agoraphobia", "note": "Avoidance of places where escape or help feels hard to reach often develops after repeated attacks. Assess both; they are now separate diagnoses." },
+    { "conditionId": "major-depressive-disorder", "label": "Major depressive disorder", "note": "Depression commonly follows or accompanies panic disorder, and their combination is linked to more impairment. Screen for low mood and ask directly about suicidal thoughts." },
+    { "conditionId": "ptsd", "label": "Posttraumatic stress disorder", "note": "Panic attacks are frequent in PTSD. Ask about trauma history when attacks cluster around reminders." },
+    { "conditionId": "generalized-anxiety-disorder", "label": "Generalized anxiety disorder", "note": "Broad everyday worry can coexist with panic attacks; treatment plans can address both." },
+    { "label": "Alcohol or sedative use to cope", "note": "Some clients use alcohol or sedatives to dampen attacks. Screen gently and refer as needed. This app does not store or transmit substance-use information." }
+  ],
+  "measures": ["gad-7"],
+  "measuresPending": [
+    { "name": "Panic Disorder Severity Scale (PDSS)", "url": "https://pubmed.ncbi.nlm.nih.gov/9356566/", "note": "License pending — link out only" },
+    { "name": "APA Severity Measure for Panic Disorder — Adult", "url": "https://www.psychiatry.org/psychiatrists/practice/dsm/educational-resources/assessment-measures", "note": "License pending — link out only" }
+  ],
+  "interventions": [
+    { "name": "Cognitive behavioral therapy (CBT) for panic disorder", "evidence": "NICE CG113 (2011; 2020 surveillance kept the recommendations): CBT is a recommended first-line psychological treatment for panic disorder. APA Division 12 has listed CBT for panic with strong research support; its page notes re-evaluation, so check the current rating.", "note": "Usually includes psychoeducation about the panic cycle, interoceptive exposure, in-vivo exposure and restructuring of catastrophic misreadings of body sensations." },
+    { "name": "Interoceptive exposure", "evidence": "Core component of CBT protocols for panic (see NICE CG113; APA Division 12 CBT listing).", "note": "Deliberately brings on feared sensations (e.g., spinning, breathing through a straw). Get medical clearance first for cardiac, respiratory, seizure or vestibular conditions, pregnancy, or other medical concerns." },
+    { "name": "CBT-based self-help (guided or unguided)", "evidence": "NICE CG113 lists self-help based on CBT principles as a lower-intensity option within stepped care.", "note": "Useful while waiting for therapy or for milder presentations; review progress regularly." },
+    { "name": "Applied relaxation", "evidence": "APA Division 12 has listed applied relaxation for panic with modest research support (verify the current rating).", "note": "Second-line or adjunctive option. Some clients feel more anxious when they first relax; prepare them for this." },
+    { "name": "Referral for medication evaluation", "evidence": "NICE CG113 names an SSRI as the first-line medication for panic disorder and advises against benzodiazepines for this condition.", "note": "Refer to psychiatry, a primary care provider or a psychiatric nurse practitioner. Prescribing decisions rest with the prescriber." }
+  ],
+  "handouts": [],
+  "statIds": ["us-panic-disorder-past-year", "us-any-anxiety-past-year", "global-anxiety-disorders-2021"],
+  "culturalNotes": [
+    "Some Caribbean and other Latino clients may describe an 'ataque de nervios': an episode of shouting, crying, trembling, heat, and sometimes dissociation or aggression, often after family conflict or loss. It overlaps with panic attacks only in part; ask what happened before the episode and what it means to the client.",
+    "Some Cambodian clients may describe 'khyal cap' (wind attacks): dizziness, palpitations and breathlessness explained as wind-like substance rising in the body, sometimes with fear of fainting or death. Explore the client's own explanation before reframing symptoms.",
+    "Many clients first describe panic in purely physical terms (heart, stomach, 'nerves'). Respect the bodily explanation, coordinate with medical care, and introduce the panic cycle as an added way of understanding, not a replacement.",
+    "Use a trained professional interpreter, not family members, when assessing in a language other than English; idioms for fear and bodily alarm translate poorly.",
+    "GAD-7 scores do not measure panic severity directly, and cut-offs may perform differently across languages and cultural groups. Interpret scores alongside the interview.",
+    "If a client draws on faith or spiritual practices to cope with attacks, explore this respectfully. Use spiritual or faith-integrated approaches only when the client asks for them and after informed consent (see the AACC Code of Ethics for faith-based counselors)."
+  ],
+  "sud": false,
+  "licensedDsm": false,
+  "wileyLicensed": false,
+  "sources": [
+    { "title": "Panic Disorder: When Fear Overwhelms", "publisher": "National Institute of Mental Health", "url": "https://www.nimh.nih.gov/health/publications/panic-disorder-when-fear-overwhelms" },
+    { "title": "Anxiety Disorders (health topic)", "publisher": "National Institute of Mental Health", "url": "https://www.nimh.nih.gov/health/topics/anxiety-disorders" },
+    { "title": "Generalised anxiety disorder and panic disorder in adults: management (CG113)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/cg113", "year": 2011 },
+    { "title": "ICD-11 MMS: 6B01 Panic disorder", "publisher": "World Health Organization", "url": "https://icd.who.int/browse/latest-release/mms/en#56162827" },
+    { "title": "ICD-10-CM (official code set)", "publisher": "CDC National Center for Health Statistics", "url": "https://www.cdc.gov/nchs/icd/icd-10-cm/index.html" },
+    { "title": "Psychological Treatments (treatment index)", "publisher": "APA Division 12, Society of Clinical Psychology", "url": "https://div12.org/psychological-treatments/treatments/" },
+    { "title": "The epidemiology of panic attacks, panic disorder, and agoraphobia in the National Comorbidity Survey Replication (Kessler et al.)", "publisher": "Archives of General Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/16585471/", "year": 2006 },
+    { "title": "Cross-cultural aspects of anxiety disorders (Hofmann & Hinton)", "publisher": "Current Psychiatry Reports (PubMed Central)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4037698/", "year": 2014 },
+    { "title": "Multicenter collaborative Panic Disorder Severity Scale (Shear et al.)", "publisher": "American Journal of Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/9356566/", "year": 1997 },
+    { "title": "AACC Code of Ethics", "publisher": "American Association of Christian Counselors", "url": "https://aacc.net/aacc-code-of-ethics/" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

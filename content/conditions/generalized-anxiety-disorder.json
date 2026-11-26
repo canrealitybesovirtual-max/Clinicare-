@@ -1,0 +1,100 @@
+{
+  "id": "generalized-anxiety-disorder",
+  "name": "Generalized anxiety disorder",
+  "icd10cm": [
+    { "code": "F41.1", "label": "Generalized anxiety disorder" }
+  ],
+  "icd11": [
+    { "code": "6B00", "label": "Generalised anxiety disorder" }
+  ],
+  "dsmPointer": "See DSM-5-TR: Anxiety Disorders — Generalized Anxiety Disorder",
+  "summary": "Long-running, broad worry about ordinary life areas such as work, health, family and money that the person struggles to rein in, together with bodily tension and arousal: restlessness, tiring easily, poor focus, irritability, tight muscles and broken sleep. The worry is larger than the actual risk and is present much of the time over many months. Some clients describe mainly physical complaints. It often co-occurs with depression and other anxiety conditions. For clinician review only; this is not a diagnosis.",
+  "features": [
+    { "symptomId": "worry-excessive", "kind": "core", "weight": 5 },
+    { "symptomId": "worry-hard-to-control", "kind": "core", "weight": 4 },
+    { "symptomId": "restlessness", "kind": "associated", "weight": 2 },
+    { "symptomId": "fatigue", "kind": "associated", "weight": 2 },
+    { "symptomId": "concentration-difficulty", "kind": "associated", "weight": 2 },
+    { "symptomId": "irritability", "kind": "associated", "weight": 2 },
+    { "symptomId": "muscle-tension", "kind": "associated", "weight": 2 },
+    { "symptomId": "insomnia", "kind": "associated", "weight": 2 },
+    { "symptomId": "nausea-abdominal-distress", "kind": "associated", "weight": 1 }
+  ],
+  "minCore": 2,
+  "durationGate": {
+    "minWeeks": 26,
+    "note": "Expect worry that is present much of the time over a long period, roughly six months or more. ICD-11 asks for at least several months. Confirm the timing requirement in DSM-5-TR."
+  },
+  "impairmentRequired": true,
+  "ruleOuts": [
+    { "label": "Hyperthyroidism", "type": "medical", "note": "Can cause restlessness, tremor, poor sleep and anxiety. Consider thyroid testing through the client's medical provider." },
+    { "label": "Other medical conditions with anxiety as a direct effect", "type": "medical", "note": "For example cardiac arrhythmia, chronic lung disease, uncontrolled diabetes or neurological illness. Coordinate with medical care when onset is late in life or tied to a new illness." },
+    { "label": "Medication effects", "type": "substance", "note": "Corticosteroids, stimulants, bronchodilators, thyroid hormone and some other medicines can cause anxiety or insomnia. Review the medication list with the prescriber." },
+    { "label": "Caffeine, stimulants or nicotine", "type": "substance", "note": "High intake can mimic or worsen chronic tension and poor sleep." },
+    { "label": "Alcohol or sedative withdrawal", "type": "substance", "note": "Daily rebound anxiety between drinks or doses can look like generalized worry. Refer for medical assessment if withdrawal is possible. This app does not store substance-use information." },
+    { "label": "Worry better explained by another mental health condition", "type": "psychiatric", "note": "Consider obsessions (OCD), health-focused worry (illness anxiety), social-evaluation fears, trauma-related fear, or depressive rumination." }
+  ],
+  "specifiers": [
+    { "label": "Predominantly somatic presentation (descriptive)", "note": "Some clients report muscle pain, headaches, stomach upset or fatigue rather than 'worry'. Ask about the content of their thoughts and how much time they spend thinking about problems." },
+    { "label": "Late-life onset (descriptive)", "note": "New generalized anxiety after mid-life calls for a careful medical and medication review." }
+  ],
+  "differentials": [
+    { "label": "Illness anxiety disorder (ICD-10-CM title: Hypochondriasis)", "icd10cm": "F45.21", "distinguishing": "Worry focuses mainly on having or getting a serious disease, with checking or reassurance seeking." },
+    { "label": "Obsessive-compulsive disorder (ICD-10-CM title: Mixed obsessional thoughts and acts)", "icd10cm": "F42.2", "distinguishing": "Intrusive, unwanted thoughts or images that feel foreign to the person, often paired with compulsions, rather than worries about real-life problems." },
+    { "label": "Adjustment disorder with anxiety", "icd10cm": "F43.22", "distinguishing": "Anxiety clearly started after an identifiable stressor and is expected to ease once the stressor or its effects end." },
+    { "label": "Anxiety disorder due to another medical condition", "icd10cm": "F06.4", "distinguishing": "Anxiety is a direct physiological effect of a medical condition, and its course follows that condition." },
+    { "label": "Social anxiety disorder (ICD-10-CM title: Social phobia, unspecified)", "icd10cm": "F40.10", "distinguishing": "Worry centers on being judged or embarrassed by others." },
+    { "label": "Major depressive disorder", "distinguishing": "Repetitive thinking is mostly about past failures, guilt or worthlessness, alongside low mood or loss of interest. Both conditions often co-occur." }
+  ],
+  "comorbidities": [
+    { "conditionId": "major-depressive-disorder", "label": "Major depressive disorder", "note": "GAD and depression co-occur often and share features such as poor sleep, fatigue and poor focus. Screen for both, and ask directly about suicidal thoughts." },
+    { "conditionId": "panic-disorder", "label": "Panic disorder", "note": "Some clients with chronic worry also have unexpected panic attacks. Assess panic separately." },
+    { "conditionId": "ptsd", "label": "Posttraumatic stress disorder", "note": "Worry that centers on safety after a traumatic event may reflect PTSD. Ask about trauma history." },
+    { "label": "Insomnia", "note": "Sleep problems are common and may need their own treatment, such as CBT for insomnia." }
+  ],
+  "measures": ["gad-7", "phq-9"],
+  "measuresPending": [
+    { "name": "Penn State Worry Questionnaire (PSWQ)", "url": "https://pubmed.ncbi.nlm.nih.gov/2076086/", "note": "License pending — link out only" },
+    { "name": "APA Severity Measure for Generalized Anxiety Disorder — Adult", "url": "https://www.psychiatry.org/psychiatrists/practice/dsm/educational-resources/assessment-measures", "note": "License pending — link out only" }
+  ],
+  "interventions": [
+    { "name": "Cognitive behavioral therapy (CBT) for GAD", "evidence": "NICE CG113 (2011; 2020 surveillance kept the recommendations): individual high-intensity CBT is a recommended option at step 3 of stepped care. APA Division 12 lists CBT for GAD (check the current rating).", "note": "Targets worry processes, intolerance of uncertainty and avoidance. NICE describes weekly sessions over about 3 to 4 months." },
+    { "name": "Applied relaxation", "evidence": "NICE CG113 lists applied relaxation as an alternative high-intensity psychological intervention to CBT at step 3. A 2013 review (Hayes-Skelton et al.) describes it as one of the efficacious treatments for GAD.", "note": "Teaches clients to spot early signs of tension and relax quickly in daily situations. Progressive muscle relaxation is the first skill; the PMR home-practice handout supports this." },
+    { "name": "Progressive muscle relaxation home practice", "evidence": "Component of applied relaxation (NICE CG113). Relaxation training shows moderate effects on anxiety in a meta-analysis (Manzoni et al., 2008). NCCIH: relaxation techniques are generally safe for healthy people, though a few people report more anxiety.", "note": "Short daily practice with a tension log. Adjust for pain, injury, pregnancy or medical conditions. Warn clients that relaxing can briefly increase anxiety for some people." },
+    { "name": "Low-intensity options: guided self-help and psychoeducational groups", "evidence": "NICE CG113 step 2 options for GAD.", "note": "Suitable for milder presentations or while waiting for therapy. Review progress and step up if there is no improvement." },
+    { "name": "Worry time (worry postponement)", "evidence": "Common component of CBT protocols for GAD; limited evidence as a stand-alone technique.", "note": "The client sets aside a short daily time to worry and postpones worries until then. Pair it with a worry log." },
+    { "name": "Mindfulness-based approaches (complementary)", "evidence": "NCCIH notes evidence that mindfulness and meditation may help anxiety, including a 2023 randomized trial in which MBSR was noninferior to escitalopram.", "note": "Offer as an adjunct or alternative based on client preference. Adapt for trauma history (e.g., eyes-open options)." },
+    { "name": "Referral for medication evaluation", "evidence": "NICE CG113 names an SSRI (sertraline) as the first-line medication for GAD at step 3.", "note": "Refer to psychiatry, a primary care provider or a psychiatric nurse practitioner. Prescribing decisions rest with the prescriber." }
+  ],
+  "handouts": ["pmr-homework"],
+  "statIds": ["us-gad-past-year", "us-any-anxiety-past-year", "global-anxiety-disorders-2021"],
+  "culturalNotes": [
+    "In many settings, chronic worry is described through idioms like 'thinking too much', 'nerves' or 'nervios'. These overlap only in part with GAD, depression or PTSD; ask what the phrase means for the client rather than treating it as a symptom label.",
+    "Clients from cultures that discourage talking about emotions may present with headaches, stomach upset, fatigue or body pain. Ask about worry content and daily functioning, and coordinate with medical care.",
+    "Some worry is a realistic response to poverty, discrimination, immigration stress or unsafe housing. Separate realistic concerns, which may need practical help or referral, from worry that is out of proportion.",
+    "GAD-7 has been studied in many countries and languages, but cut-offs and item performance can differ across groups. Use validated translations and interpret scores alongside the interview.",
+    "Use a trained professional interpreter, not family members, for assessment in a language other than English.",
+    "If a client draws on prayer, scripture, meditation or other spiritual practices to manage worry, explore this respectfully. Use spiritual or faith-integrated approaches only when the client asks for them and after informed consent (see the AACC Code of Ethics for faith-based counselors)."
+  ],
+  "sud": false,
+  "licensedDsm": false,
+  "wileyLicensed": false,
+  "sources": [
+    { "title": "Anxiety Disorders (health topic)", "publisher": "National Institute of Mental Health", "url": "https://www.nimh.nih.gov/health/topics/anxiety-disorders" },
+    { "title": "Generalised anxiety disorder and panic disorder in adults: management (CG113)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/cg113", "year": 2011 },
+    { "title": "ICD-11 MMS: 6B00 Generalised anxiety disorder", "publisher": "World Health Organization", "url": "https://icd.who.int/browse/latest-release/mms/en" },
+    { "title": "ICD-10-CM (official code set)", "publisher": "CDC National Center for Health Statistics", "url": "https://www.cdc.gov/nchs/icd/icd-10-cm/index.html" },
+    { "title": "A contemporary view of applied relaxation for generalized anxiety disorder (Hayes-Skelton et al.)", "publisher": "Cognitive Behaviour Therapy (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/23731329/", "year": 2013 },
+    { "title": "Relaxation training for anxiety: a ten-years systematic review with meta-analysis (Manzoni et al.)", "publisher": "BMC Psychiatry (PubMed Central)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2427027/", "year": 2008 },
+    { "title": "Relaxation Techniques: What You Need To Know", "publisher": "National Center for Complementary and Integrative Health (NCCIH)", "url": "https://www.nccih.nih.gov/health/relaxation-techniques-what-you-need-to-know" },
+    { "title": "Mind and Body Approaches for Stress and Anxiety: What the Science Says", "publisher": "National Center for Complementary and Integrative Health (NCCIH)", "url": "https://www.nccih.nih.gov/health/providers/digest/mind-and-body-approaches-for-stress-science" },
+    { "title": "Development and validation of the Penn State Worry Questionnaire (Meyer et al.)", "publisher": "Behaviour Research and Therapy (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/2076086/", "year": 1990 },
+    { "title": "'Thinking too much': a systematic review of a common idiom of distress (Kaiser et al.)", "publisher": "Social Science & Medicine (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/26584235/", "year": 2015 },
+    { "title": "On dimensionality, measurement invariance, and suitability of sum scores for the PHQ-9 and the GAD-7", "publisher": "PubMed (National Library of Medicine)", "url": "https://pubmed.ncbi.nlm.nih.gov/33269612/" },
+    { "title": "Psychological Treatments (treatment index)", "publisher": "APA Division 12, Society of Clinical Psychology", "url": "https://div12.org/psychological-treatments/treatments/" },
+    { "title": "AACC Code of Ethics", "publisher": "American Association of Christian Counselors", "url": "https://aacc.net/aacc-code-of-ethics/" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

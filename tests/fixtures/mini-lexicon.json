@@ -1,0 +1,123 @@
+{
+  "version": "fixture-1",
+  "symptoms": [
+    {
+      "id": "panic-attacks",
+      "label": "Sudden surges of intense fear with strong body alarm",
+      "clientLabel": "Sudden waves of strong fear",
+      "category": "panic",
+      "synonyms": ["panic attack", "panic attacks", "panic out of nowhere", "sudden panic"]
+    },
+    {
+      "id": "fear-of-attacks",
+      "label": "Ongoing apprehension about having further fear surges",
+      "clientLabel": "Worrying that another attack will happen",
+      "category": "panic",
+      "synonyms": ["afraid of another attack", "worried about having another panic attack"]
+    },
+    {
+      "id": "worry-excessive",
+      "label": "Broad worry that is hard to switch off",
+      "clientLabel": "Worrying too much and not being able to stop",
+      "category": "anxiety",
+      "synonyms": ["worry all the time", "constant worry", "cant stop worrying"]
+    },
+    {
+      "id": "restlessness",
+      "label": "Restlessness or feeling keyed up",
+      "clientLabel": "Feeling on edge",
+      "category": "anxiety",
+      "synonyms": ["restless", "keyed up", "wound up"]
+    },
+    {
+      "id": "avoid-leaving-home",
+      "label": "Avoidance of leaving home or being in public places",
+      "clientLabel": "Staying home to avoid feeling afraid",
+      "category": "avoidance",
+      "synonyms": ["cant leave the house", "avoids going out", "stays home"]
+    },
+    {
+      "id": "depressed-mood",
+      "label": "Persistently low or sad mood",
+      "clientLabel": "Feeling down or sad most days",
+      "category": "mood",
+      "synonyms": ["feeling down", "sad all the time", "depressed"]
+    },
+    {
+      "id": "anhedonia",
+      "label": "Loss of interest or pleasure in usual activities",
+      "clientLabel": "Not enjoying things you used to like",
+      "category": "mood",
+      "synonyms": ["no interest in anything", "lost interest", "nothing is fun anymore"]
+    },
+    {
+      "id": "insomnia",
+      "label": "Difficulty falling or staying asleep",
+      "clientLabel": "Trouble getting to sleep or staying asleep",
+      "category": "sleep",
+      "synonyms": ["cant sleep", "trouble sleeping", "not sleeping"]
+    },
+    {
+      "id": "fatigue",
+      "label": "Low energy or fatigue",
+      "clientLabel": "Feeling tired or drained",
+      "category": "somatic",
+      "synonyms": ["no energy", "tired all the time", "exhausted"]
+    },
+    {
+      "id": "concentration",
+      "label": "Difficulty concentrating or mind going blank",
+      "clientLabel": "Hard to focus",
+      "category": "cognitive",
+      "synonyms": ["cant concentrate", "trouble focusing", "mind goes blank"]
+    },
+    {
+      "id": "palpitations",
+      "label": "Racing or pounding heartbeat",
+      "clientLabel": "Heart racing or pounding",
+      "category": "somatic",
+      "synonyms": ["heart racing", "heart pounding", "racing heart"]
+    },
+    {
+      "id": "nightmares",
+      "label": "Recurrent distressing dreams",
+      "clientLabel": "Bad dreams that keep coming back",
+      "category": "trauma",
+      "synonyms": ["nightmares", "bad dreams"]
+    },
+    {
+      "id": "suicidal-ideation",
+      "label": "Thoughts of ending one's own life",
+      "clientLabel": "Thoughts of not wanting to be alive",
+      "category": "safety",
+      "synonyms": ["si", "suicidal thoughts", "want to die"],
+      "redFlag": "suicidality"
+    },
+    {
+      "id": "homicidal-ideation",
+      "label": "Thoughts of seriously harming another person",
+      "clientLabel": "Thoughts of hurting someone else",
+      "category": "safety",
+      "synonyms": ["hi", "homicidal thoughts", "thoughts of hurting others"],
+      "redFlag": "homicidality"
+    },
+    {
+      "id": "hearing-voices",
+      "label": "Perceptual disturbances such as hearing voices others do not hear",
+      "clientLabel": "Hearing or seeing things other people do not",
+      "category": "safety",
+      "synonyms": ["hearing voices", "auditory hallucinations", "avh"],
+      "redFlag": "psychosis"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Unit test fixture (not clinical content)",
+      "publisher": "Clinician Resource Companion tests",
+      "url": "https://example.org/fixture"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

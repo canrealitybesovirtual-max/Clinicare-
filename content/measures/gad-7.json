@@ -1,0 +1,76 @@
+{
+  "id": "gad-7",
+  "name": "Generalized Anxiety Disorder 7-item scale (GAD-7)",
+  "shortName": "GAD-7",
+  "licenseKey": "GAD-7",
+  "instructions": "Over the last 2 weeks, how often have you been bothered by the following problems?",
+  "items": [
+    { "id": "1", "text": "Feeling nervous, anxious, or on edge" },
+    { "id": "2", "text": "Not being able to stop or control worrying" },
+    { "id": "3", "text": "Worrying too much about different things" },
+    { "id": "4", "text": "Trouble relaxing" },
+    { "id": "5", "text": "Being so restless that it is hard to sit still" },
+    { "id": "6", "text": "Becoming easily annoyed or irritable" },
+    { "id": "7", "text": "Feeling afraid, as if something awful might happen" }
+  ],
+  "options": [
+    { "value": 0, "label": "Not at all" },
+    { "value": 1, "label": "Several days" },
+    { "value": 2, "label": "More than half the days" },
+    { "value": 3, "label": "Nearly every day" }
+  ],
+  "functionalItem": {
+    "text": "If you checked off any problems, how difficult have these problems made it for you to do your work, take care of things at home, or get along with other people?",
+    "options": ["Not difficult at all", "Somewhat difficult", "Very difficult", "Extremely difficult"]
+  },
+  "scoring": {
+    "min": 0,
+    "max": 21,
+    "bands": [
+      {
+        "min": 0,
+        "max": 4,
+        "label": "Minimal anxiety",
+        "clinicianNote": "Total falls in the minimal range. A low total does not rule out an anxiety-related concern, so consider it alongside the interview and history; clinical judgment decides."
+      },
+      {
+        "min": 5,
+        "max": 9,
+        "label": "Mild anxiety",
+        "clinicianNote": "Total falls in the mild range. Consider watchful monitoring and repeating the scale over time to see the trend; clinical judgment decides."
+      },
+      {
+        "min": 10,
+        "max": 14,
+        "label": "Moderate anxiety",
+        "clinicianNote": "Total falls in the moderate range. A total of 10 or more is the commonly cited cutoff that calls for further evaluation, so consider a fuller assessment of anxiety and related conditions; clinical judgment decides."
+      },
+      {
+        "min": 15,
+        "max": 21,
+        "label": "Severe anxiety",
+        "clinicianNote": "Total falls in the severe range, above the cutoff of 10 for further evaluation. Consider a prompt, thorough assessment and a discussion of care options with the client; clinical judgment decides."
+      }
+    ]
+  },
+  "riskItems": [],
+  "citation": "Spitzer RL, Kroenke K, Williams JBW, Löwe B. A brief measure for assessing generalized anxiety disorder: the GAD-7. Arch Intern Med. 2006;166(10):1092-1097.",
+  "copyright": "Developed by Drs. Robert L. Spitzer, Janet B.W. Williams, Kurt Kroenke and colleagues, with an educational grant from Pfizer Inc. No permission required to reproduce, translate, display or distribute.",
+  "loinc": { "panel": "69737-5", "total": "70274-6" },
+  "sources": [
+    {
+      "title": "Patient Health Questionnaire (PHQ) Screeners: GAD-7",
+      "publisher": "Pfizer Inc. (phqscreeners.com)",
+      "url": "https://www.phqscreeners.com/"
+    },
+    {
+      "title": "A brief measure for assessing generalized anxiety disorder: the GAD-7 (PMID 16717171)",
+      "publisher": "Archives of Internal Medicine, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16717171/",
+      "year": 2006
+    }
+  ],
+  "license": "No permission required to reproduce, translate, display or distribute (developed with an educational grant from Pfizer Inc.).",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}
