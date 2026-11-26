@@ -1,0 +1,74 @@
+{
+  "id": "ccpa-code-of-ethics",
+  "name": "CCPA Code of Ethics",
+  "shortName": "CCPA Code",
+  "organization": "Canadian Counselling and Psychotherapy Association",
+  "edition": 2020,
+  "editionLabel": "2020 Code of Ethics (read with the Standards of Practice, 6th edition, 2021)",
+  "editionStatus": "current",
+  "appliesTo": ["counselor", "psychotherapist"],
+  "countries": ["CA"],
+  "scope": "national",
+  "summary": "The CCPA Code of Ethics applies to members of the Canadian Counselling and Psychotherapy Association, including Canadian Certified Counsellors. It rests on a short list of ethical principles (beneficence, fidelity, nonmaleficence, autonomy, justice and societal interest) and sets standards on professional responsibility, counselling relationships, consulting and private practice, evaluation and assessment, research, and counsellor education and supervision. CCPA's Standards of Practice explain how to apply it. Regulation of counselling and psychotherapy is provincial, so a provincial college's code may also apply. This is a summary in the app's own words. It is information, not legal advice.",
+  "keyReminders": [
+    {
+      "topic": "Informed consent",
+      "text": "Explain the purpose, methods, limits of confidentiality, fees and the client's right to withdraw, and revisit consent when the work or the format changes.",
+      "tags": ["informed-consent"]
+    },
+    {
+      "topic": "Provincial law first",
+      "text": "Privacy, duty-to-protect and record rules differ by province and territory. Check the law in the client's province, including for virtual sessions.",
+      "tags": ["confidentiality", "duty-to-warn", "telehealth"]
+    },
+    {
+      "topic": "Indigenous and multicultural practice",
+      "text": "Respect clients' cultural identities and worldviews, consider culturally safe approaches with Indigenous clients, and seek consultation when a client's culture is unfamiliar to you.",
+      "tags": ["cultural-competence"]
+    },
+    {
+      "topic": "Technology-assisted counselling",
+      "text": "Use secure platforms, explain the risks of electronic communication, and plan for emergencies in the client's location.",
+      "tags": ["technology", "telehealth"]
+    },
+    {
+      "topic": "Assessment",
+      "text": "Use assessment tools only within your competence and with norms suited to the client, and share results in a way the client can understand.",
+      "tags": ["assessment"]
+    },
+    {
+      "topic": "Dual relationships",
+      "text": "Avoid dual relationships that could impair judgment or risk harm, and take extra care in small and rural communities where they are hard to avoid.",
+      "tags": ["dual-relationships"]
+    }
+  ],
+  "whenRelevant": ["informed-consent", "confidentiality", "duty-to-warn", "telehealth", "cultural-competence", "technology", "assessment", "dual-relationships"],
+  "regulatorNote": "Counselling or psychotherapy is a regulated profession in some provinces, through a provincial college of registered psychotherapists or counselling therapists, and unregulated in others. Check the college in the client's province.",
+  "officialUrl": "https://www.ccpa-accp.ca/ethics/",
+  "relatedLinks": [
+    { "title": "CCPA 2020 Code of Ethics (PDF)", "url": "https://www.ccpa-accp.ca/wp-content/uploads/2020/05/CCPA-2020-Code-of-Ethics-E-Book-EN.pdf" },
+    { "title": "CCPA Standards of Practice, 6th edition (PDF)", "url": "https://ccpa-accp.ca/wp-content/uploads/2021/09/CCPA-Standards-of-Practice_Final_Digital_2021_EN.pdf" }
+  ],
+  "verification": {
+    "method": "search-index",
+    "note": "The 2020 edition, the code PDF path (linked from CCPA's 2023 complaints procedures) and the 2021 Standards of Practice were confirmed through search results indexing ccpa-accp.ca. No newer edition was found. The six-principle list follows the code's long-standing structure and was not re-read in the 2020 text. A person must load the official pages before release."
+  },
+  "sources": [
+    { "title": "Ethics", "publisher": "Canadian Counselling and Psychotherapy Association", "url": "https://www.ccpa-accp.ca/ethics/" },
+    {
+      "title": "CCPA Code of Ethics (2020)",
+      "publisher": "Canadian Counselling and Psychotherapy Association",
+      "url": "https://www.ccpa-accp.ca/wp-content/uploads/2020/05/CCPA-2020-Code-of-Ethics-E-Book-EN.pdf",
+      "year": 2020
+    },
+    {
+      "title": "Standards of Practice, 6th edition",
+      "publisher": "Canadian Counselling and Psychotherapy Association",
+      "url": "https://ccpa-accp.ca/wp-content/uploads/2021/09/CCPA-Standards-of-Practice_Final_Digital_2021_EN.pdf",
+      "year": 2021
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

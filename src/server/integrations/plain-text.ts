@@ -37,20 +37,35 @@ export function decodeEntities(s: string): string {
   });
 }
 
+function stripMarkup(html: string): string {
+  return html
+    .replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1")
+    .replace(/<!--[\s\S]*?-->/g, " ")
+    .replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1\s*>/gi, " ")
+    // Block-level tags separate words; inline tags (e.g. search-highlight <span>s) must not add spaces.
+    .replace(/<\/?(?:p|br|hr|li|ul|ol|dl|dt|dd|h[1-6]|div|section|article|header|footer|table|thead|tbody|tr|td|th|blockquote|pre|figure|figcaption)\b[^<>]*>/gi, " ")
+    .replace(/<\/?[A-Za-z][^<>]*>/g, "");
+}
+
+/** Anything still shaped like a tag after decoding (e.g. "< script>", "<!x") is neutralised: '<' becomes '‹'. */
+export function neutralizeMarkup(text: string): string {
+  return text.replace(/<(?=\s*[A-Za-z/!?])/g, "‹");
+}
+
 /**
- * HTML fragment -> plain text: drops script/style/comments, strips every tag, decodes entities,
- * removes control characters and collapses whitespace.
+ * HTML fragment -> plain text: drops script/style/comments, strips every tag, decodes entities, removes control
+ * characters and collapses whitespace. Idempotent and safe against entity-encoded markup: strip + decode repeats
+ * until nothing changes (so "&lt;script&gt;" cannot come back out as a live tag), and any tag-shaped remainder is
+ * neutralised. The result never matches /<\s*\/?[a-z]/i.
  */
 export function htmlToPlainText(html: string): string {
-  return decodeEntities(
-    html
-      .replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1")
-      .replace(/<!--[\s\S]*?-->/g, " ")
-      .replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1\s*>/gi, " ")
-      // Block-level tags separate words; inline tags (e.g. search-highlight <span>s) must not add spaces.
-      .replace(/<\/?(?:p|br|hr|li|ul|ol|dl|dt|dd|h[1-6]|div|section|article|header|footer|table|thead|tbody|tr|td|th|blockquote|pre|figure|figcaption)\b[^<>]*>/gi, " ")
-      .replace(/<\/?[A-Za-z][^<>]*>/g, ""),
-  )
+  let s = html;
+  for (let i = 0; i < 4; i++) {
+    const next = decodeEntities(stripMarkup(s));
+    if (next === s) break;
+    s = next;
+  }
+  return neutralizeMarkup(stripMarkup(s))
     .replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f\u007f-\u009f]/g, "")
     .replace(/\s+/g, " ")
     .trim();

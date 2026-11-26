@@ -1,0 +1,70 @@
+{
+  "id": "42-cfr-part-2",
+  "title": "42 CFR Part 2: confidentiality of substance use disorder records",
+  "jurisdiction": "US-federal",
+  "summary": "42 CFR Part 2 is a federal regulation that protects records of substance use disorder (SUD) diagnosis, treatment or referral created by federally assisted programs that hold themselves out as providing SUD care, and records that others receive from those programs. It is stricter than HIPAA in key ways, especially on using records against the patient in legal proceedings. The 2024 final rule (published February 16, 2024, effective April 16, 2024) brought Part 2 closer to HIPAA, and the compliance date was February 16, 2026. HHS's Office for Civil Rights (OCR) now takes complaints and enforces Part 2 using the HIPAA enforcement framework. This page is information, not legal advice.",
+  "keyPoints": [
+    "Who is covered: federally assisted programs (federal assistance includes things like Medicare or Medicaid participation, federal grants, tax-exempt status and DEA registration) that provide SUD diagnosis, treatment or referral and present themselves as doing so, plus lawful holders who receive Part 2 records. A general medical practice is usually covered only for an identified SUD unit or staff whose main role is SUD care.",
+    "Consent: under the 2024 rule a patient may give one written consent for all future uses and disclosures for treatment, payment and health care operations. A recipient that is a HIPAA covered entity or business associate may then redisclose as HIPAA allows.",
+    "Legal proceedings: Part 2 records, and testimony about them, cannot be used against the patient in civil, criminal, administrative or legislative proceedings without the patient's specific consent or a court order that follows Part 2's procedures.",
+    "SUD counseling notes: the 2024 rule created a protected category for a clinician's separately kept notes analyzing session conversations. Like psychotherapy notes under HIPAA, they need their own specific consent.",
+    "Breaches and penalties: HIPAA breach notification rules now apply to Part 2 records, and civil and criminal penalties follow the HIPAA enforcement framework (45 CFR part 160, subparts C, D and E). Since February 16, 2026 anyone can file a Part 2 complaint with OCR.",
+    "Notices: each disclosure made with the patient's consent must carry a written notice (the short form is shown below). Part 2 programs must give patients a notice of their rights, and HIPAA covered entities that create or keep Part 2 records had to update their Notice of Privacy Practices by February 16, 2026.",
+    "Child abuse reporting: Part 2 allows an initial report of suspected child abuse or neglect under state law, but not use of the records in a later prosecution without proper authority.",
+    "Part 2 sits on top of HIPAA and state law. When rules conflict, the more protective rule usually controls; state SUD confidentiality laws may add requirements."
+  ],
+  "whatToDo": [
+    "Do not enter substance use details, names or other identifiers into this app; it is not built to hold Part 2 records.",
+    "Find out whether your program is a Part 2 program or a lawful holder of Part 2 records, and which consent forms your organization uses.",
+    "Before any disclosure, confirm a valid Part 2 consent or a specific Part 2 exception applies, and attach the required notice.",
+    "If you keep SUD counseling notes, store them separately and check that your Notice of Privacy Practices reflects the 2024 rule.",
+    "Consult your licensing board, your program's privacy officer or a healthcare attorney about Part 2 questions in your setting."
+  ],
+  "officialLinks": [
+    { "title": "eCFR: 42 CFR Part 2 (current text)", "url": "https://www.ecfr.gov/current/title-42/chapter-I/subchapter-A/part-2" },
+    { "title": "eCFR: 42 CFR Part 2, Subpart C (disclosures with patient consent, including the notice in 2.32)", "url": "https://www.ecfr.gov/current/title-42/chapter-I/subchapter-A/part-2/subpart-C" },
+    { "title": "HHS: Fact sheet on the 42 CFR Part 2 final rule", "url": "https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/fact-sheet-42-cfr-part-2-final-rule/index.html" },
+    { "title": "HHS: HIPAA and Part 2", "url": "https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/hipaa-part-2/index.html" },
+    { "title": "HHS OCR: Part 2 (complaints and information)", "url": "https://www.hhs.gov/hipaa/part-2/" },
+    {
+      "title": "Federal Register: Confidentiality of Substance Use Disorder (SUD) Patient Records, final rule (February 16, 2024)",
+      "url": "https://www.federalregister.gov/documents/2024/02/16/2024-02544/confidentiality-of-substance-use-disorder-sud-patient-records"
+    }
+  ],
+  "requiredText": [
+    {
+      "label": "Short-form notice to accompany each disclosure made with patient consent (2024 rule)",
+      "text": "42 CFR part 2 prohibits unauthorized use or disclosure of these records.",
+      "citation": "42 CFR 2.32(a)(2), as amended February 16, 2024 (89 FR 12472)",
+      "sourceUrl": "https://www.ecfr.gov/current/title-42/chapter-I/subchapter-A/part-2/subpart-C",
+      "note": "The 2024 Federal Register preamble says this short notice was modified to add the word \"use\". The app spec (docs/SPEC.md section 6 and G6), CLAUDE.md, src/lib/referral-links.ts (PART2_NOTICE) and many content files still print the older 2018 wording, \"42 CFR Part 2 prohibits unauthorized disclosure of these records.\" The owner and a healthcare attorney should confirm the exact current text on eCFR and update the export notice everywhere at once. Section 2.32(a)(1) offers a longer alternative notice."
+    }
+  ],
+  "appPositioning": "The app never stores or transmits substance use information (42 CFR Part 2 and CLAUDE.md). Substance-use screens show a Part 2 banner, and substance-use exports print a Part 2 notice; the owner must align that notice with the current regulatory text shown here.",
+  "whenRelevant": ["sud", "confidentiality", "privacy", "records"],
+  "changesOften": true,
+  "statusAsOf": "2026-11-26",
+  "verification": {
+    "method": "search-index",
+    "note": "ecfr.gov, hhs.gov and federalregister.gov were not loaded directly. The effective date (April 16, 2024), compliance date (February 16, 2026, per the HHS fact sheet updated January 30, 2026), OCR enforcement and the short-form notice wording (shown on Cornell LII's copy of 42 CFR 2.32 and described in the Federal Register preamble) were confirmed through search results. The exact 2.32(a)(2) text must be re-read on eCFR before release."
+  },
+  "sources": [
+    {
+      "title": "Fact Sheet: 42 CFR Part 2 Final Rule",
+      "publisher": "US Department of Health and Human Services, Office for Civil Rights",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/fact-sheet-42-cfr-part-2-final-rule/index.html",
+      "year": 2026
+    },
+    {
+      "title": "Confidentiality of Substance Use Disorder (SUD) Patient Records (final rule)",
+      "publisher": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2024/02/16/2024-02544/confidentiality-of-substance-use-disorder-sud-patient-records",
+      "year": 2024
+    },
+    { "title": "42 CFR Part 2", "publisher": "Electronic Code of Federal Regulations (eCFR)", "url": "https://www.ecfr.gov/current/title-42/chapter-I/subchapter-A/part-2" },
+    { "title": "42 CFR 2.32: Notice and copy of consent to accompany disclosure", "publisher": "Legal Information Institute, Cornell Law School", "url": "https://www.law.cornell.edu/cfr/text/42/2.32" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

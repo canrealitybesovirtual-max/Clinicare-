@@ -5,17 +5,19 @@ import "server-only";
  *   ESummary then receives the PMIDs ESearch just returned (upstream-derived numbers, validated as /^\d{1,9}$/;
  *   never caller input). No abstracts are fetched: titles, journal, year and publication types only.
  * - Terms (NCBI usage guidelines): at most 3 requests/second per IP without an API key, 10/second with one; send
- *   `tool` (and `email` if the operator configures one). Our bucket allows exactly that, with no burst above it.
+ *   `tool` (and `email` if the operator configures one). A sliding window enforces that exactly (3 or 10 in any
+ *   1.1 s, a small margin); a token bucket alone would allow burst + rate in one second. One search = 2 requests.
  * - Secrets: NCBI_API_KEY (optional) and NCBI_EMAIL (optional) come only from server env. The key must travel as
  *   a query parameter (NCBI accepts no header), so cache keys are built WITHOUT it, and core never logs URLs.
  * - Results are cached 24 h; PubMed indexing changes daily at most.
  */
 import { z } from "zod";
 import evidenceJson from "@content/evidence-queries.json";
-import { assertNoPHI, curated } from "@/lib/outbound";
+import { assertNoPHI } from "@/lib/outbound";
 import { EvidenceQueriesFileSchema, type EvidenceQuery } from "@/lib/schemas-evidence";
-import { UpstreamError, setRateLimit, upstreamFetch } from "@/server/core";
+import { UpstreamError, assertSudLookupAllowed, setRateLimit, upstreamFetch } from "@/server/core";
 import { clip, htmlToPlainText, xmlEscapedHtmlToPlainText } from "./plain-text";
+import { strictCurated } from "./strict-input";
 
 /* ---------------- curated strategies ---------------- */
 export const evidenceQueriesFile = EvidenceQueriesFileSchema.parse(evidenceJson);
@@ -26,7 +28,8 @@ export const PUBMED_FILTER_LABEL = evidenceQueriesFile.pubmed.filterLabel;
 
 /** The full PubMed term for a curated strategy: topic AND the shared design/date/adult-scope filter. */
 export function pubmedTerm(queryId: string): string {
-  const q = EVIDENCE_QUERIES[queryId];
+  // Own keys only: a plain-object lookup would resolve "constructor", "toString" and other prototype keys.
+  const q = typeof queryId === "string" && Object.hasOwn(EVIDENCE_QUERIES, queryId) ? EVIDENCE_QUERIES[queryId] : undefined;
   if (!q) throw new z.ZodError([{ code: "custom", message: "not in curated list", path: ["queryId"], input: undefined }]);
   return `(${q.query}) AND ${PUBMED_FILTER}`;
 }
@@ -55,16 +58,16 @@ export function ncbiConfig(): NcbiConfig {
   };
 }
 
-/** NCBI: 3 requests/second without a key, 10 with one. Burst equals the per-second limit (never above it). */
+/** NCBI: 3 requests/second without a key, 10 with one, enforced by a sliding window (never above it). */
 export function configurePubmedRateLimit() {
   const rps = ncbiConfig().apiKey ? 10 : 3;
-  setRateLimit(PUBMED_UPSTREAM, rps, rps);
+  setRateLimit(PUBMED_UPSTREAM, rps, rps, { max: rps, ms: 1100 });
 }
 configurePubmedRateLimit();
 
 /* ---------------- input / output ---------------- */
 export const PubmedInput = z.strictObject({
-  queryId: curated(EVIDENCE_QUERY_IDS),
+  queryId: strictCurated(EVIDENCE_QUERY_IDS),
   max: z.number().int().min(1).max(PUBMED_RETMAX).default(PUBMED_RETMAX),
 });
 export type PubmedInput = z.input<typeof PubmedInput>;
@@ -96,6 +99,9 @@ export function pubmedSearchLink(queryId: string): string {
 }
 
 export function pubmedArticleUrl(pmid: string): string {
+  if (typeof pmid !== "string" || !/^\d{1,9}$/.test(pmid)) {
+    throw new z.ZodError([{ code: "custom", message: "PMID", path: ["pmid"], input: undefined }]);
+  }
   return `${PUBMED_SOURCE}${pmid}/`;
 }
 
@@ -240,6 +246,7 @@ export async function searchPubmed(raw: PubmedInput): Promise<PubmedResult> {
   // Every caller-influenced outgoing string goes through the scrubber (curated values must pass it too).
   for (const v of params.values()) assertNoPHI(v);
   assertNoPHI(input.queryId);
+  assertSudLookupAllowed(strategy.sud); // 42 CFR Part 2 owner switch (core.ts), before any fetch
 
   const search = EsearchResponse.safeParse(await eutils<unknown>("esearch", params));
   if (!search.success || search.data.esearchresult.ERROR) {

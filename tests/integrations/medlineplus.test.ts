@@ -38,6 +38,7 @@ const json = (body: unknown, status = 200) =>
 
 let fetchMock: ReturnType<typeof vi.fn<(url: string, init?: RequestInit) => Promise<Response>>>;
 beforeEach(() => {
+  vi.stubEnv("ALLOW_SUD_REFERENCE_LOOKUPS", "true"); // 42 CFR Part 2 owner switch; default (off) is tested in hardening.test.ts
   __resetCoreForTests();
   configureConnectRateLimit();
   phi.force = false;
@@ -50,7 +51,7 @@ afterEach(() => {
 
 const urlOf = (i = 0) => new URL(String(fetchMock.mock.calls[i]![0]));
 const post = (body: unknown) =>
-  POST(new Request("http://localhost/api/medlineplus", { method: "POST", body: typeof body === "string" ? body : JSON.stringify(body) }));
+  POST(new Request("http://localhost/api/medlineplus", { method: "POST", headers: { "content-type": "application/json" }, body: typeof body === "string" ? body : JSON.stringify(body) }));
 
 describe("medlineplus connect: outbound URL carries only the code, the code system and a language", () => {
   it("builds the exact upstream URL (English default)", async () => {

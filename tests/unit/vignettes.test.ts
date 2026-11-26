@@ -252,8 +252,8 @@ const VIGNETTES: Vignette[] = [
       top: ["generalized-anxiety-disorder"],
       strength: { "generalized-anxiety-disorder": "moderate" },
       flags: { "generalized-anxiety-disorder": ["breadth"] },
-      negated: ["panic-attacks-unexpected", "flashbacks"],
-      notMatched: ["panic-attacks-unexpected", "flashbacks"],
+      negated: ["panic-attacks-unspecified", "flashbacks"],
+      notMatched: ["panic-attacks-unexpected", "panic-attacks-unspecified", "flashbacks"],
       excludes: ["panic-disorder", "ptsd"],
     },
   },
@@ -371,7 +371,7 @@ const VIGNETTES: Vignette[] = [
     text: "Denies panic attacks. No nightmares. Denies SI/HI. No history of trauma.",
     expect: {
       status: "empty",
-      negated: ["panic-attacks-unexpected", "nightmares", "suicidal-ideation-active", "traumatic-event-exposure"],
+      negated: ["panic-attacks-unspecified", "nightmares", "suicidal-ideation-active", "traumatic-event-exposure"],
     },
   },
 

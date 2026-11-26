@@ -3,6 +3,8 @@
  * Memory-only session state (G5). Nothing here is written to any browser storage, URL, cookie or log.
  * Wiped on reload/close (it only lives in React memory) and after IDLE_MS without interaction.
  * Free text stored here has ALREADY passed the PHI scrubber.
+ * Components that keep their own text state (search boxes, field drafts) remount on `resetCount`, so
+ * Clear session and the idle wipe clear them as well.
  */
 import * as React from "react";
 import type { DurationBand, Onset, TriState } from "@/lib/types";
@@ -86,6 +88,8 @@ interface SessionCtx {
   reset: () => void;
   idleCleared: boolean;
   dismissIdleNotice: () => void;
+  /** Increments on every reset (Clear session or idle wipe). Key local UI state on it so it clears too. */
+  resetCount: number;
 }
 
 const Ctx = React.createContext<SessionCtx | null>(null);
@@ -93,6 +97,7 @@ const Ctx = React.createContext<SessionCtx | null>(null);
 export function SessionProvider({ children, idleMs = IDLE_MS }: { children: React.ReactNode; idleMs?: number }) {
   const [state, dispatch] = React.useReducer(reducer, initialSession);
   const [idleCleared, setIdleCleared] = React.useState(false);
+  const [resetCount, setResetCount] = React.useState(0);
 
   React.useEffect(() => {
     let timer: ReturnType<typeof setTimeout>;
@@ -100,6 +105,7 @@ export function SessionProvider({ children, idleMs = IDLE_MS }: { children: Reac
       clearTimeout(timer);
       timer = setTimeout(() => {
         dispatch({ type: "reset", keepCountry: true });
+        setResetCount((n) => n + 1);
         setIdleCleared(true);
       }, idleMs);
     };
@@ -120,11 +126,15 @@ export function SessionProvider({ children, idleMs = IDLE_MS }: { children: Reac
       answer: (measureId, index, value, itemCount) => dispatch({ type: "answer", measureId, index, value, itemCount }),
       setFunctional: (measureId, value) => dispatch({ type: "functional", measureId, value }),
       clearMeasure: (measureId) => dispatch({ type: "clearMeasure", measureId }),
-      reset: () => dispatch({ type: "reset", keepCountry: true }),
+      reset: () => {
+        dispatch({ type: "reset", keepCountry: true });
+        setResetCount((n) => n + 1);
+      },
       idleCleared,
       dismissIdleNotice: () => setIdleCleared(false),
+      resetCount,
     }),
-    [state, idleCleared],
+    [state, idleCleared, resetCount],
   );
 
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;

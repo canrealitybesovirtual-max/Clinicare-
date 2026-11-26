@@ -1,0 +1,60 @@
+{
+  "id": "universal-declaration-ethical-principles-psychologists",
+  "name": "Universal Declaration of Ethical Principles for Psychologists",
+  "shortName": "Universal Declaration",
+  "organization": "International Union of Psychological Science (IUPsyS) and International Association of Applied Psychology (IAAP)",
+  "edition": 2008,
+  "editionLabel": "Adopted July 22, 2008 (IUPsyS General Assembly) and July 26, 2008 (IAAP Board), Berlin",
+  "editionStatus": "current",
+  "appliesTo": ["psychologist"],
+  "countries": ["INTL"],
+  "scope": "global",
+  "summary": "The Universal Declaration is a global moral framework for psychology, not an enforceable code. Adopted in 2008 by the International Union of Psychological Science and the International Association of Applied Psychology, it describes four principles, each with associated values: respect for the dignity of persons and peoples, competent caring for the well-being of persons and peoples, integrity, and professional and scientific responsibilities to society. Psychology associations around the world use it to build and check their own codes. This is a summary in the app's own words. It is information, not legal advice.",
+  "keyReminders": [
+    {
+      "topic": "Dignity of persons and peoples",
+      "text": "Respect individuals and the communities and cultures they belong to, including collective as well as individual values.",
+      "tags": ["cultural-competence"]
+    },
+    {
+      "topic": "Competent caring",
+      "text": "Work for the well-being of the people you serve, use methods you are competent in, and weigh benefits against possible harm.",
+      "tags": ["assessment"]
+    },
+    {
+      "topic": "Integrity",
+      "text": "Be honest and transparent with clients and the public, and manage conflicts of interest openly.",
+      "tags": ["dual-relationships"]
+    },
+    {
+      "topic": "Local code first",
+      "text": "Follow the code and law of the country where you practise; the Declaration explains shared values behind those codes.",
+      "tags": ["informed-consent"]
+    }
+  ],
+  "whenRelevant": ["cultural-competence", "assessment", "dual-relationships", "informed-consent"],
+  "regulatorNote": "Psychology is regulated nationally, or by state or province. The national regulator and association code take precedence over this framework.",
+  "officialUrl": "https://iaapsy.org/about/iaap-ethics/global",
+  "relatedLinks": [
+    {
+      "title": "Universal Declaration of Ethical Principles for Psychologists (IAAP PDF)",
+      "url": "https://iaapsy.org/site/assets/files/2090/universal_declaration_of_ethicalprinciples_for_psychologists_13_11_20.pdf"
+    }
+  ],
+  "verification": {
+    "method": "search-index",
+    "note": "The July 2008 adoption by IUPsyS and IAAP and the four-principle structure were confirmed through search results indexing iaapsy.org and a CPA-hosted article. The principle names were not re-read in the official PDF. A person must load the official page before release."
+  },
+  "sources": [
+    { "title": "IAAP Ethics: Global", "publisher": "International Association of Applied Psychology", "url": "https://iaapsy.org/about/iaap-ethics/global" },
+    {
+      "title": "Universal Declaration of Ethical Principles for Psychologists",
+      "publisher": "International Association of Applied Psychology",
+      "url": "https://iaapsy.org/site/assets/files/2090/universal_declaration_of_ethicalprinciples_for_psychologists_13_11_20.pdf",
+      "year": 2008
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

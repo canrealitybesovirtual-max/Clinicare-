@@ -1,0 +1,68 @@
+{
+  "id": "hcpc-standards-conduct-performance-ethics",
+  "name": "HCPC Standards of Conduct, Performance and Ethics",
+  "shortName": "HCPC Standards",
+  "organization": "Health and Care Professions Council (UK)",
+  "edition": 2024,
+  "editionLabel": "Revised standards in force from 1 September 2024",
+  "effectiveDate": "2024-09-01",
+  "editionStatus": "current",
+  "appliesTo": ["psychologist", "allied-health"],
+  "countries": ["GB"],
+  "scope": "national",
+  "summary": "The HCPC is the UK statutory regulator for 15 health and care professions, including practitioner psychologists such as clinical, counselling and health psychologists. Its standards of conduct, performance and ethics apply to every registrant and applicant, and the HCPC uses them when it considers fitness-to-practise concerns. The revised standards in force since 1 September 2024 strengthen expectations on equality, diversity and inclusion, speaking up about safety concerns, professional boundaries and social media. This is a summary in the app's own words. It is information, not legal advice.",
+  "keyReminders": [
+    {
+      "topic": "Consent and communication",
+      "text": "Get valid consent before care, communicate in ways people understand, and support people with communication needs or limited English.",
+      "tags": ["informed-consent", "cultural-competence"]
+    },
+    {
+      "topic": "Confidentiality",
+      "text": "Keep information confidential and share it only when the law allows, there is consent, or it is needed to protect someone from serious harm.",
+      "tags": ["confidentiality", "duty-to-warn"]
+    },
+    {
+      "topic": "Boundaries",
+      "text": "Keep professional boundaries with service users and carers, including on social media and other online platforms.",
+      "tags": ["dual-relationships", "technology"]
+    },
+    {
+      "topic": "Equality and fairness",
+      "text": "Challenge discrimination, make reasonable adjustments, and do not let personal views affect the care you give.",
+      "tags": ["cultural-competence"]
+    },
+    {
+      "topic": "Speaking up",
+      "text": "Report and escalate concerns about the safety or wellbeing of service users, and be open when something goes wrong."
+    }
+  ],
+  "whenRelevant": ["informed-consent", "cultural-competence", "confidentiality", "duty-to-warn", "dual-relationships", "technology"],
+  "regulatorNote": "The HCPC is itself the statutory regulator for practitioner psychologists in the UK. Counsellors and psychotherapists are usually on voluntary registers instead, such as BACP's.",
+  "officialUrl": "https://www.hcpc-uk.org/standards/standards-of-conduct-performance-and-ethics/",
+  "relatedLinks": [
+    { "title": "HCPC Standards of conduct, performance and ethics (PDF)", "url": "https://www.hcpc-uk.org/globalassets/resources/standards/standards-of-conduct-performance-and-ethics.pdf" },
+    { "title": "HCPC: Revised standards now in effect (2024)", "url": "https://www.hcpc-uk.org/news-and-events/news/2024/revised-standards-of-conduct-performance-and-ethics-now-in-effect/" }
+  ],
+  "verification": {
+    "method": "search-index",
+    "note": "The 1 September 2024 effective date and coverage of all 15 professions were confirmed through search results indexing hcpc-uk.org. Individual standard numbers were not read. A person must load the official page before release."
+  },
+  "sources": [
+    {
+      "title": "Standards of conduct, performance and ethics",
+      "publisher": "Health and Care Professions Council",
+      "url": "https://www.hcpc-uk.org/standards/standards-of-conduct-performance-and-ethics/",
+      "year": 2024
+    },
+    {
+      "title": "Revised standards of conduct, performance and ethics now in effect",
+      "publisher": "Health and Care Professions Council",
+      "url": "https://www.hcpc-uk.org/news-and-events/news/2024/revised-standards-of-conduct-performance-and-ethics-now-in-effect/",
+      "year": 2024
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

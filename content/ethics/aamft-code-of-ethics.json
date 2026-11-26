@@ -1,0 +1,75 @@
+{
+  "id": "aamft-code-of-ethics",
+  "name": "AAMFT Code of Ethics",
+  "shortName": "AAMFT Code",
+  "organization": "American Association for Marriage and Family Therapy",
+  "edition": 2026,
+  "editionLabel": "Revised code effective January 1, 2026 (replaces the 2015 code)",
+  "effectiveDate": "2026-01-01",
+  "editionStatus": "current",
+  "editionNote": "The app spec lists the 2015 code. AAMFT's revised code took effect January 1, 2026. Several state rules still incorporate the 2015 code by date, so check which edition your state board names.",
+  "appliesTo": ["mft"],
+  "countries": ["US"],
+  "scope": "national",
+  "summary": "The AAMFT Code of Ethics binds members of the American Association for Marriage and Family Therapy and is referenced by a number of state MFT boards. It covers responsibility to clients, confidentiality, professional competence and integrity, responsibility to students and supervisees, research, technology-assisted services, financial arrangements and advertising. Because couple and family therapy often has more than one person in the room, the code pays close attention to how consent, confidentiality and loyalty work when a relationship or family is the client. The revised code took effect January 1, 2026. This is a summary in the app's own words; confirm section numbers in the 2026 text. It is information, not legal advice.",
+  "keyReminders": [
+    {
+      "topic": "Who is the client",
+      "text": "When several people attend, agree at the start on who the client is, how goals will be set, and what you will do if members' goals conflict or one person wants to stop.",
+      "tags": ["informed-consent"]
+    },
+    {
+      "topic": "Individual disclosures in conjoint work",
+      "text": "Explain before therapy begins how you will handle information one member shares privately, and get each adult's agreement to that policy, preferably in writing.",
+      "tags": ["confidentiality", "informed-consent"]
+    },
+    {
+      "topic": "Technology-assisted services",
+      "text": "Before remote work, confirm it is lawful where each client is located, that the platform protects confidentiality, and that clients understand the risks. Hold remote work to the same standard of care as in-person work.",
+      "tags": ["technology", "telehealth"]
+    },
+    {
+      "topic": "Systemic assessment",
+      "text": "Assess and diagnose within relationships and context. Avoid labeling one family member as the problem without considering patterns, power and safety in the system, including screening for partner violence before conjoint sessions.",
+      "tags": ["assessment"]
+    },
+    {
+      "topic": "Multiple relationships",
+      "text": "Avoid relationships with clients or their family members that could impair judgment or risk exploitation. If contact is unavoidable, take precautions and document them.",
+      "tags": ["dual-relationships"]
+    },
+    {
+      "topic": "Non-discrimination",
+      "text": "Provide services without discrimination based on race, ethnicity, religion, gender identity, sexual orientation, disability, age or other identities, and seek consultation when values differ.",
+      "tags": ["cultural-competence"]
+    }
+  ],
+  "whenRelevant": ["informed-consent", "confidentiality", "technology", "telehealth", "assessment", "dual-relationships", "cultural-competence"],
+  "regulatorNote": "Marriage and family therapists are licensed by state boards. Many boards reference the AAMFT code, sometimes a specific edition; the board's rules and state law control.",
+  "officialUrl": "https://www.aamft.org/web/Action-Advocacy/Code-of-Ethics-New.aspx",
+  "relatedLinks": [
+    { "title": "AAMFT Code of Ethics (PDF)", "url": "https://www.aamft.org/common/Uploaded%20files/Legal%20Ethics/AAMFT%20Code%20of%20Ethics.pdf" }
+  ],
+  "verification": {
+    "method": "search-index",
+    "note": "aamft.org could not be loaded from this session. The January 1, 2026 effective date was confirmed through search results indexing AAMFT's code page and PDF, plus CAMFT and NJAMFT materials referring to the 2026 code. The standard titles of the 2026 code were not confirmed. A person must load the official PDF before release."
+  },
+  "sources": [
+    { "title": "Code of Ethics", "publisher": "American Association for Marriage and Family Therapy", "url": "https://www.aamft.org/web/Action-Advocacy/Code-of-Ethics-New.aspx", "year": 2026 },
+    {
+      "title": "AAMFT Code of Ethics (PDF)",
+      "publisher": "American Association for Marriage and Family Therapy",
+      "url": "https://www.aamft.org/common/Uploaded%20files/Legal%20Ethics/AAMFT%20Code%20of%20Ethics.pdf",
+      "year": 2026
+    },
+    {
+      "title": "Ethics in Action: Applying the 2026 AAMFT Code to Technology, Law, Culture and Advocacy",
+      "publisher": "New Jersey Association for Marriage and Family Therapy",
+      "url": "https://njamft.app.neoncrm.com/np/clients/njamft/event.jsp?event=7414",
+      "year": 2026
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

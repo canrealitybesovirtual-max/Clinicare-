@@ -1,0 +1,63 @@
+{
+  "id": "ana-code-of-ethics-nurses",
+  "name": "Code of Ethics for Nurses with Interpretive Statements",
+  "shortName": "ANA Code (nursing)",
+  "organization": "American Nurses Association",
+  "edition": 2025,
+  "editionLabel": "2025 edition (released January 2025; replaces the 2015 code)",
+  "editionStatus": "current",
+  "appliesTo": ["psychiatric-nurse"],
+  "countries": ["US"],
+  "scope": "national",
+  "summary": "The ANA Code of Ethics is the ethical standard for registered nurses in the United States, including psychiatric-mental health nurses and psychiatric-mental health nurse practitioners. Each provision comes with interpretive statements that give practical guidance. The 2025 revision updates the 2015 code and gives more attention to themes such as racism, global health and the nurse's duties to self and others. ANA offers free online access to the code. This is a summary in the app's own words. It is information, not legal advice.",
+  "keyReminders": [
+    {
+      "topic": "Respect and dignity",
+      "text": "Respect the dignity, rights and values of every patient without prejudice, and support the patient's own decisions about care.",
+      "tags": ["informed-consent", "cultural-competence"]
+    },
+    {
+      "topic": "Privacy and confidentiality",
+      "text": "Protect patient information in every setting, including electronic records and conversations, and share it only with those who need it for care or as the law requires.",
+      "tags": ["confidentiality", "technology"]
+    },
+    {
+      "topic": "Professional boundaries",
+      "text": "Keep relationships with patients therapeutic, and avoid personal, financial or social relationships that blur professional roles.",
+      "tags": ["dual-relationships"]
+    },
+    {
+      "topic": "Prescribing and scope",
+      "text": "Practice within your state's nurse practitioner scope rules, including any collaboration or supervision requirements and DEA rules for controlled substances.",
+      "tags": ["sud"]
+    },
+    {
+      "topic": "Accountability and evidence",
+      "text": "Use evidence and your own assessment to guide care; tools, measures and apps support but do not replace nursing judgment.",
+      "tags": ["assessment"]
+    }
+  ],
+  "whenRelevant": ["informed-consent", "cultural-competence", "confidentiality", "technology", "dual-relationships", "sud", "assessment"],
+  "regulatorNote": "Nurses and nurse practitioners are licensed by state boards of nursing, which also set NP prescribing and practice authority. Board rules and state law control.",
+  "officialUrl": "https://codeofethics.ana.org/about",
+  "relatedLinks": [
+    { "title": "ANA news release: Code of Ethics for Nurses (2025)", "url": "https://www.nursingworld.org/news/news-releases/2025/code-of-ethics-for-nurses/" }
+  ],
+  "verification": {
+    "method": "search-index",
+    "note": "The January 2025 release and free online access were confirmed through search results indexing nursingworld.org, codeofethics.ana.org and OJIN (January 2026). Sources disagree on whether the 2025 code has nine or ten provisions, so no count is stated. A person must load the official pages before release."
+  },
+  "sources": [
+    { "title": "Code of Ethics for Nurses (about)", "publisher": "American Nurses Association", "url": "https://codeofethics.ana.org/about", "year": 2025 },
+    { "title": "Code of Ethics for Nurses (news release)", "publisher": "American Nurses Association", "url": "https://www.nursingworld.org/news/news-releases/2025/code-of-ethics-for-nurses/", "year": 2025 },
+    {
+      "title": "Ethics: Revised and Relevant: Ethical Themes for a Changing Profession",
+      "publisher": "Online Journal of Issues in Nursing",
+      "url": "https://ojin.nursingworld.org/table-of-contents/volume-31-2026/number-1-january-2026/ethics-revised-and-relevant/",
+      "year": 2026
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

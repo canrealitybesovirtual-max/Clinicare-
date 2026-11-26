@@ -234,6 +234,87 @@ describe("scrubPHI negatives (must not redact clinical text)", () => {
 });
 
 /* ------------------------------------------------------------------ */
+/* Review regressions: misses and over-redactions                      */
+/* ------------------------------------------------------------------ */
+
+const REVIEW_POSITIVES: [PhiType, string, string][] = [
+  // Accented names (folded before the list lookup)
+  ["NAME", "José García reports low mood", "José García"],
+  ["NAME", "Muñoz family reports conflict", "Muñoz"],
+  ["NAME", "Renée says she is anxious", "Renée"],
+  ["NAME", "Jose\u0301 Garci\u0301a (decomposed accents) reports low mood", "Jose\u0301 Garci\u0301a"],
+  ["NAME", "Łukasz Nowak attended the group", "Łukasz Nowak"],
+  // Ages over 89
+  ["AGE_OVER_89", "She is 93 and lives alone", "93"],
+  ["AGE_OVER_89", "93 years and still driving", "93"],
+  ["AGE_OVER_89", "a woman in her nineties", "nineties"],
+  ["AGE_OVER_89", "ninety-two years old", "ninety-two"],
+  ["AGE_OVER_89", "turned one hundred last spring", "one hundred"],
+  // Lower-case or uncued names and places
+  ["NAME", "john smith reports panic attacks", "john smith"],
+  ["ADDRESS", "lives at 123 main street", "123 main street"],
+  ["ADDRESS", "She lives in springfield", "springfield"],
+  ["ADDRESS", "Springfield, IL and nearby", "Springfield"],
+  ["ADDRESS", "Works at the Kroger in Dayton.", "Dayton"],
+  ["ADDRESS", "Dayton OH 45402", "Dayton"],
+  ["ZIP", "Dayton OH 45402", "45402"],
+  // Phone, email and handle formats
+  ["PHONE", "call her at 555–123–4567", "555–123–4567"],
+  ["PHONE", "phone 555 1234", "555 1234"],
+  ["EMAIL", "email jdoe(at)gmail.com", "jdoe(at)gmail.com"],
+  ["EMAIL", "write to jdoe at gmail dot com", "jdoe at gmail dot com"],
+  ["EMAIL", "jdoe [at] gmail [dot] com", "jdoe [at] gmail [dot] com"],
+  ["URL", "her blog janesmithwrites.com", "janesmithwrites.com"],
+  ["URL", "IG: janedoe92", "janedoe92"],
+  ["URL", "tiktok jane_d_writes", "jane_d_writes"],
+  // Remaining misses
+  ["NAME", "Xochitl reports trouble sleeping", "Xochitl"],
+  ["NAME", "Saoirse O'Brien attended", "Saoirse O'Brien"],
+  ["NAME", "Jean-Luc reports worry", "Jean-Luc"],
+  ["NAME", "client stated that Bob hit her", "Bob"],
+  ["NAME", "Grace reports panic since the divorce", "Grace"],
+  ["NAME", "Pt initials JD", "JD"],
+  ["DATE", "seen on march 3rd", "march 3rd"],
+  ["DATE", "Things got worse around Christmas 2023", "Christmas 2023"],
+  ["SSN", "SSN last four 6789", "6789"],
+  ["MRN", "chart 4421", "4421"],
+  ["ADDRESS", "Teacher at Lincoln Elementary School", "Lincoln Elementary School"],
+];
+
+const REVIEW_NEGATIVES: [string, string][] = [
+  ["eponym diseases", "History of Addison's disease and Wilson's disease."],
+  ["eponym syndrome", "Rash concerning for Stevens Johnson syndrome."],
+  ["herbal", "Takes St John's wort daily."],
+  ["named storm", "Lost her home in Hurricane Maria."],
+  ["named scale", "Scored high on the Taylor Manifest Anxiety Scale."],
+  ["named life-events scale", "Holmes and Rahe stress scale reviewed."],
+  ["theorist with title", "Explained Dr. Beck's cognitive model."],
+  ["drug slang", "Took Molly at a party."],
+  ["object", "Keeps savings in a Mason jar."],
+  ["holiday", "Office closed for Martin Luther King Day."],
+  ["dose fraction", "Began 1/2 tablet at night. Started 1/2 dose."],
+  ["shared event", "Anxious since 9/11."],
+  ["salary", "Earns 45000 a year."],
+  ["LOINC code", "LOINC 44249-1 for the PHQ-9 panel."],
+  ["ways of living", "She lives in fear of another attack and lives in constant fear."],
+  ["vital sign", "Pulse was 92 today; PHQ-9 is 24 now."],
+  ["distances", "Drove 20 miles on the highway and walked 3 blocks down the road."],
+  ["not a handle", "Scrolls on instagram every night."],
+  ["capitalized word after in", "In General she sleeps poorly."],
+];
+
+describe("review regressions: identifiers the scrubber used to miss", () => {
+  it.each(REVIEW_POSITIVES)("%s: %s", (type, text, secret) => {
+    const r = expectRedacted(text, secret, type);
+    expectConsistent(text, r);
+  });
+});
+
+describe("review regressions: clinical text the scrubber used to over-redact", () => {
+  it.each(REVIEW_NEGATIVES)("%s", (_label, text) => expectClean(text));
+});
+
+/* ------------------------------------------------------------------ */
 /* Realistic mixed paragraph                                           */
 /* ------------------------------------------------------------------ */
 

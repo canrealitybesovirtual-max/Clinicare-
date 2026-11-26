@@ -1,0 +1,59 @@
+{
+  "id": "efpa-meta-code-of-ethics",
+  "name": "EFPA Meta-Code of Ethics",
+  "shortName": "EFPA Meta-Code",
+  "organization": "European Federation of Psychologists' Associations",
+  "edition": 2025,
+  "editionLabel": "2025 revision (first accepted 1995 in Athens, revised 2005 in Granada, fully reviewed and updated 2025)",
+  "editionStatus": "current",
+  "appliesTo": ["psychologist"],
+  "countries": ["AT", "BE", "BG", "HR", "CY", "CZ", "DK", "EE", "FI", "FR", "DE", "GR", "HU", "IE", "IT", "LV", "LT", "LU", "MT", "NL", "PL", "PT", "RO", "SK", "SI", "ES", "SE", "IS", "LI", "NO", "CH", "GB"],
+  "scope": "regional",
+  "regionLabel": "Europe (country list is a geographic relevance filter; membership is through each national psychology association)",
+  "summary": "The EFPA Meta-Code is not a code for individual psychologists to sign. It is the template that EFPA member associations across Europe must reflect in their own national codes. Its 2005 version was built on four principles: respect for a person's rights and dignity, competence, responsibility and integrity. EFPA fully reviewed and updated it in 2025. A psychologist in Europe follows the national association's code and national law, which should be consistent with the Meta-Code, and can complain through the national association. This is a summary in the app's own words. It is information, not legal advice.",
+  "keyReminders": [
+    {
+      "topic": "Use your national code",
+      "text": "Read the code of your national psychology association first; the Meta-Code explains what that code should contain, not your day-to-day duties.",
+      "tags": ["informed-consent"]
+    },
+    {
+      "topic": "Respect and self-determination",
+      "text": "Protect privacy and confidentiality, get informed consent, and respect clients' autonomy within the limits of national law.",
+      "tags": ["informed-consent", "confidentiality"]
+    },
+    {
+      "topic": "Competence",
+      "text": "Practise within your education and training, keep skills current, and recognize the limits of methods and tests, including across languages and cultures.",
+      "tags": ["assessment", "cultural-competence"]
+    },
+    {
+      "topic": "Data protection",
+      "text": "Health data is special category data under the GDPR. Use a lawful basis and an Article 9 condition, and meet national rules on records and secrecy.",
+      "tags": ["confidentiality", "technology"]
+    },
+    {
+      "topic": "Integrity and boundaries",
+      "text": "Be honest about your qualifications and methods, and avoid conflicts of interest and relationships that could exploit clients.",
+      "tags": ["dual-relationships"]
+    }
+  ],
+  "whenRelevant": ["informed-consent", "confidentiality", "assessment", "cultural-competence", "technology", "dual-relationships"],
+  "regulatorNote": "Psychology regulation is national in Europe, statutory in many countries and through associations in others. Check the national regulator or psychology association, and EuroPsy if you work across borders.",
+  "officialUrl": "https://www.efpa.eu/meta-code-ethics",
+  "relatedLinks": [
+    { "title": "EFPA resource: Meta-Code of Ethics", "url": "https://www.efpa.eu/resource/meta-code-of-ethics/" },
+    { "title": "EFPA Meta-Code of Ethics 2025 (PDF)", "url": "https://www.efpa.eu/sites/default/files/2025-06/2025-06-03_efpa-meta-code-of-ethics.pdf" }
+  ],
+  "verification": {
+    "method": "search-index",
+    "note": "The 2025 full review and update and the URLs were confirmed through search results indexing efpa.eu; the 2025 PDF link came from a national association's July 2025 press release and was not opened. The four principles are stated as they appear in the 2005 version; confirm the 2025 structure. A person must load the official pages before release."
+  },
+  "sources": [
+    { "title": "Meta-Code of Ethics", "publisher": "European Federation of Psychologists' Associations", "url": "https://www.efpa.eu/meta-code-ethics", "year": 2025 },
+    { "title": "Meta-Code of Ethics (resource page)", "publisher": "European Federation of Psychologists' Associations", "url": "https://www.efpa.eu/resource/meta-code-of-ethics/", "year": 2025 }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

@@ -10,7 +10,8 @@
   "dsmPointer": "See DSM-5-TR: Anxiety Disorders — Panic Disorder",
   "summary": "Repeated, abrupt episodes of intense fear or physical alarm that are not reliably tied to a trigger, followed by ongoing apprehension about further episodes and/or changes in behavior meant to prevent them. Episodes usually bring strong cardiopulmonary and other bodily sensations that the person reads as a medical emergency, so many first present to primary or emergency care. Medical and substance-related causes should be considered before treating the picture as a primary anxiety condition. For clinician review only; this is not a diagnosis.",
   "features": [
-    { "symptomId": "panic-attacks-unexpected", "kind": "core", "weight": 5 },
+    { "symptomId": "panic-attacks-unexpected", "kind": "core", "weight": 5, "group": "attacks" },
+    { "symptomId": "panic-attacks-unspecified", "kind": "core", "weight": 4, "group": "attacks" },
     { "symptomId": "persistent-concern-future-attacks", "kind": "core", "weight": 4 },
     { "symptomId": "behavior-change-avoid-attacks", "kind": "core", "weight": 3 },
     { "symptomId": "palpitations", "kind": "associated", "weight": 2 },
@@ -54,7 +55,7 @@
     { "label": "Social anxiety disorder (ICD-10-CM title: Social phobia, unspecified)", "icd10cm": "F40.10", "distinguishing": "Attacks occur mainly in social or performance settings, and the core fear is being judged or embarrassed rather than the attack itself." },
     { "label": "Specific phobia, situational type (ICD-10-CM title: Other situational type phobia)", "icd10cm": "F40.248", "distinguishing": "Attacks are limited to one narrow trigger (e.g., flying, driving, heights) rather than also arising unexpectedly." },
     { "label": "Illness anxiety disorder (ICD-10-CM title: Hypochondriasis)", "icd10cm": "F45.21", "distinguishing": "Ongoing preoccupation with having a serious illness and repeated checking or reassurance seeking, without discrete fear surges as the main problem." },
-    { "label": "Anxiety disorder due to another medical condition", "icd10cm": "F06.4", "distinguishing": "Episodes are a direct physiological effect of a medical condition (e.g., thyroid, cardiac or respiratory disease); onset and course track that condition." },
+    { "label": "Anxiety disorder due to another medical condition (ICD-10-CM title: Anxiety disorder due to known physiological condition)", "icd10cm": "F06.4", "distinguishing": "Episodes are a direct physiological effect of a medical condition (e.g., thyroid, cardiac or respiratory disease); onset and course track that condition." },
     { "label": "Generalized anxiety disorder", "icd10cm": "F41.1", "distinguishing": "Chronic, diffuse worry and tension rather than abrupt, time-limited surges. The two often co-occur." },
     { "label": "Posttraumatic stress disorder", "icd10cm": "F43.10", "distinguishing": "Attacks set off by trauma reminders, together with re-experiencing and avoidance of reminders, point toward PTSD." }
   ],
@@ -67,8 +68,8 @@
   ],
   "measures": ["gad-7"],
   "measuresPending": [
-    { "name": "Panic Disorder Severity Scale (PDSS)", "url": "https://pubmed.ncbi.nlm.nih.gov/9356566/", "note": "License pending — link out only" },
-    { "name": "APA Severity Measure for Panic Disorder — Adult", "url": "https://www.psychiatry.org/psychiatrists/practice/dsm/educational-resources/assessment-measures", "note": "License pending — link out only" }
+    { "name": "Panic Disorder Severity Scale (PDSS)", "url": "https://pubmed.ncbi.nlm.nih.gov/9356566/", "note": "License pending — link out only", "licenseKey": "PDSS" },
+    { "name": "APA Severity Measure for Panic Disorder — Adult", "url": "https://www.psychiatry.org/psychiatrists/practice/dsm/educational-resources/assessment-measures", "note": "License pending — link out only", "licenseKey": "APA Severity Measures" }
   ],
   "interventions": [
     { "name": "Cognitive behavioral therapy (CBT) for panic disorder", "evidence": "NICE CG113 (2011; 2020 surveillance kept the recommendations): CBT is a recommended first-line psychological treatment for panic disorder. APA Division 12 has listed CBT for panic with strong research support; its page notes re-evaluation, so check the current rating.", "note": "Usually includes psychoeducation about the panic cycle, interoceptive exposure, in-vivo exposure and restructuring of catastrophic misreadings of body sensations." },
@@ -88,6 +89,13 @@
     "If a client draws on faith or spiritual practices to cope with attacks, explore this respectfully. Use spiritual or faith-integrated approaches only when the client asks for them and after informed consent (see the AACC Code of Ethics for faith-based counselors)."
   ],
   "sud": false,
+  "requiredFeatures": [
+    { "symptomId": "panic-attacks-unexpected", "note": "Attacks that come without warning are not documented; this pattern needs at least some of them (see DSM-5-TR). Clarify whether the attacks are unexpected or happen only in set situations." }
+  ],
+  "redFlagRules": [
+    {"type": "mania", "message": "Manic or hypomanic signs are documented in this input. Screen for bipolar disorder (ICD-10-CM F31.x) and refer for psychiatric evaluation before treatment planning."},
+    {"type": "psychosis", "message": "Psychotic symptoms are documented in this input and are not part of this pattern. Consider a psychotic disorder, substance effects or a medical cause, and refer for an urgent psychiatric evaluation."}
+  ],
   "licensedDsm": false,
   "wileyLicensed": false,
   "sources": [

@@ -50,6 +50,7 @@ export const SymptomCategory = z.enum([
   "behavioral",
   "safety",
   "context",
+  "cultural", // cultural concepts of distress: recognized and shown, never scored or mapped to a condition
 ]);
 
 /** One entry in the global symptom lexicon. Conditions reference these ids. */
@@ -76,6 +77,11 @@ export const ConditionFeatureSchema = z.object({
   symptomId: slug,
   kind: z.enum(["core", "associated"]),
   weight: z.number().int().min(1).max(5),
+  // Features sharing a group fill ONE slot worth its highest weight (e.g. insomnia / hypersomnia, or
+  // unexpected / not-yet-clarified panic attacks), so one symptom area is never counted twice.
+  group: slug.optional(),
+  // Counts toward strongMinAreas: a distinct symptom area of this pattern, not a nonspecific feature.
+  breadthArea: z.boolean().optional(),
 });
 export type ConditionFeature = z.infer<typeof ConditionFeatureSchema>;
 
@@ -111,7 +117,8 @@ export const ConditionSchema = z.object({
     .min(2),
   comorbidities: z.array(z.object({ conditionId: slug.optional(), label: z.string(), note: z.string() })),
   measures: z.array(slug), // built-in measure ids (license confirmed)
-  measuresPending: z.array(z.object({ name: z.string(), url: z.url(), note: z.string() })), // link-out, "license pending"
+  // Link-out, "license pending". licenseKey traces the status in content/licenses.json (G7).
+  measuresPending: z.array(z.object({ name: z.string(), url: z.url(), note: z.string(), licenseKey: z.string().min(2) })),
   interventions: z
     .array(z.object({ name: z.string(), evidence: z.string(), note: z.string() }))
     .min(1),
@@ -119,6 +126,14 @@ export const ConditionSchema = z.object({
   statIds: z.array(slug),
   culturalNotes: z.array(z.string().min(10)).min(1),
   sud: z.boolean().default(false), // 42 CFR Part 2 banner + export notice when true (G6)
+  // Features the pattern cannot do without (e.g. trauma exposure for PTSD). Missing => held at "moderate" + flag.
+  requiredFeatures: z.array(z.object({ symptomId: slug, note: z.string().min(10) })).default([]),
+  // "strong" needs at least this many distinct breadthArea slots matched; otherwise held at "moderate" + flag.
+  strongMinAreas: z.number().int().min(1).optional(),
+  // Red flags documented in the same input attach a flag here (and may cap the strength).
+  redFlagRules: z
+    .array(z.object({ type: RedFlagType, capAt: z.enum(["moderate", "possible"]).optional(), message: z.string().min(20) }))
+    .default([]),
   licensedDsm: z.literal(false).default(false), // G1 feature flag, off
   wileyLicensed: z.literal(false).default(false), // G2 feature flag, off
   ...governance,
@@ -161,6 +176,7 @@ export const HandoutSchema = z.object({
     .min(1),
   practiceLog: z.object({ columns: z.array(z.string()).min(2), rows: z.number().int().min(1) }).optional(),
   safetyNote: z.string(),
+  sud: z.boolean().default(false), // substance-use content: PDF footer carries the 42 CFR Part 2 notice on every page (G6)
   ...governance,
 });
 export type Handout = z.infer<typeof HandoutSchema>;
@@ -186,15 +202,22 @@ export const LicensesSchema = z.object({
   ),
 });
 
+/**
+ * Crisis lines (G9, G10). lastVerified stays null until a PERSON loads the official site and checks the
+ * numbers; `npm run validate:content -- --release` fails while any entry is unverified.
+ */
 export const CrisisLinesSchema = z.object({
-  international: z.object({ name: z.string(), url: z.url(), lastVerified: z.string().nullable() }),
+  sources: z.array(SourceSchema).min(1),
+  license: z.string().min(2),
+  reviewedBy: z.string().min(1),
+  international: z.object({ name: z.string(), url: z.url(), lastVerified: isoDate.nullable() }),
   countries: z.array(
     z.object({
       country: z.string().length(2),
       emergency: z.string(),
       crisis: z.string(),
       url: z.url(),
-      lastVerified: z.string().nullable(),
+      lastVerified: isoDate.nullable(),
     }),
   ),
 });

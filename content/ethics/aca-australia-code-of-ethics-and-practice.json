@@ -1,0 +1,58 @@
+{
+  "id": "aca-australia-code-of-ethics-and-practice",
+  "name": "ACA Code of Ethics and Practice (Australia)",
+  "shortName": "ACA (Australia) Code",
+  "organization": "Australian Counselling Association",
+  "edition": 2025,
+  "editionLabel": "Version 16 (posted to ACA's public resource library in August 2025)",
+  "editionStatus": "edition-unconfirmed",
+  "editionNote": "ACA's public resource library lists Code of Ethics and Practice v16, uploaded 22 August 2025; version 15 was dated March 2019. The document itself could not be opened to confirm its own date or any later version.",
+  "appliesTo": ["counselor", "psychotherapist"],
+  "countries": ["AU"],
+  "scope": "national",
+  "summary": "The Australian Counselling Association code applies to ACA members and registrants. It sets ethical principles and practice standards for counsellors and psychotherapists, including client welfare, informed consent, confidentiality and privacy, competence and scope of practice, supervision, boundaries and professional conduct, and ACA enforces it through its complaints process. It is a different body from the American Counseling Association, which shares the same initials. This is a summary in the app's own words. It is information, not legal advice.",
+  "keyReminders": [
+    {
+      "topic": "Informed consent",
+      "text": "Explain how counselling works, fees, record keeping and the limits of confidentiality at the start, in plain language, and confirm the client agrees.",
+      "tags": ["informed-consent"]
+    },
+    {
+      "topic": "Privacy",
+      "text": "Treat all health information as sensitive information under the Australian Privacy Principles and share it only with consent or legal authority.",
+      "tags": ["confidentiality"]
+    },
+    {
+      "topic": "Scope of practice and referral",
+      "text": "Work within your training and registration level, and refer to a GP, psychiatrist or psychologist when a client needs assessment or treatment outside your scope.",
+      "tags": ["assessment"]
+    },
+    {
+      "topic": "Suicide risk",
+      "text": "ACA publishes separate guidelines for working with suicidal clients. Have a risk response plan and know local crisis numbers, including Lifeline 13 11 14 and 000.",
+      "tags": ["duty-to-warn"]
+    },
+    {
+      "topic": "Cultural respect",
+      "text": "Adapt practice to the client's culture and community, including culturally safe care for Aboriginal and Torres Strait Islander clients.",
+      "tags": ["cultural-competence"]
+    }
+  ],
+  "whenRelevant": ["informed-consent", "confidentiality", "assessment", "duty-to-warn", "cultural-competence"],
+  "regulatorNote": "Counselling is self-regulated in Australia: ACA and PACFA run professional registers, while psychologists are regulated by the Psychology Board of Australia through Ahpra.",
+  "officialUrl": "https://theaca.net.au/viewdocument/code-of-ethics-and-practice-1",
+  "relatedLinks": [
+    { "title": "ACA Suicidal Client Guidelines (PDF)", "url": "https://www.theaca.net.au/documents/ACA%20Suicidal%20Client%20Guidelines%20Ver%202.pdf" }
+  ],
+  "verification": {
+    "method": "search-index",
+    "note": "theaca.net.au was not loaded directly. Version 16 and its August 2025 upload date were found in search results for ACA's public resource library. A person must open the official document and confirm its version and date before release."
+  },
+  "sources": [
+    { "title": "Code of Ethics and Practice (public resource library)", "publisher": "Australian Counselling Association", "url": "https://theaca.net.au/viewdocument/code-of-ethics-and-practice-1", "year": 2025 },
+    { "title": "ACA Suicidal Client Guidelines", "publisher": "Australian Counselling Association", "url": "https://www.theaca.net.au/documents/ACA%20Suicidal%20Client%20Guidelines%20Ver%202.pdf" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

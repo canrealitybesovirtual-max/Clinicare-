@@ -1,0 +1,67 @@
+{
+  "id": "informed-consent-technology",
+  "title": "Informed consent for telehealth and technology",
+  "jurisdiction": "US-state-varies",
+  "summary": "Consent for telehealth and other technology adds topics to the usual consent conversation: how the platform protects information and what its risks are, privacy at both ends of the call, what happens if the connection fails or a crisis occurs, how to reach you between sessions, whether anything is recorded or processed by AI tools, and how electronic records and messages are kept. Many states require specific telehealth consent, sometimes in writing or documented in the record, and professional codes and guidelines add their own expectations. This page is information, not legal advice.",
+  "keyPoints": [
+    "A complete telehealth consent usually covers: the platform and its security; privacy on both ends; identity and location checks; the emergency plan and local resources; the backup plan if technology fails; rules for email, text and response times; recording policy; fees and insurance; the limits of confidentiality; and the client's right to choose in-person care where available.",
+    "HHS's telehealth guidance for behavioral health says most states require the patient's informed consent before treatment by telehealth. The Center for Connected Health Policy tracks state consent rules.",
+    "The 2017 Standards for Technology in Social Work Practice (NASW, ASWB, CSWE and CSWA) address consent for electronic services, checking the client's ability to use technology safely, and asking consent before searching for clients online.",
+    "APA's 2024 Guidelines for the Practice of Telepsychology (aspirational) cover consent, data security, remote testing and practicing across jurisdictions.",
+    "AI tools such as note-taking assistants process client information. Tell clients, get consent where required, use only tools covered by a BAA when HIPAA applies, and check state laws, which are changing quickly in this area.",
+    "OCR's 2022 guidance allows audio-only telehealth under HIPAA with reasonable safeguards, such as checking that the client can talk without being overheard.",
+    "If a client prefers unencrypted email or text, explain the risks first and document the client's choice; check current HHS guidance and your state's rules."
+  ],
+  "whatToDo": [
+    "Use a written consent or script that covers platform, privacy, emergencies, backup contact and communication rules, and go over it aloud with the client.",
+    "Check whether the client's state requires written, verbal or recorded telehealth consent, and document consent in the record.",
+    "Tell clients about any recording or AI tools before you use them, and get their consent; do not use tools without a BAA when HIPAA applies.",
+    "Review consent again when you change platforms or when the client's situation, location or capacity changes.",
+    "Consult your licensing board or a healthcare attorney about consent requirements in each state where your clients are located."
+  ],
+  "officialLinks": [
+    { "title": "HHS Telehealth: Obtaining informed consent", "url": "https://telehealth.hhs.gov/providers/preparing-patients-for-telehealth/obtaining-informed-consent" },
+    {
+      "title": "HHS Telehealth: Informed consent for telebehavioral health",
+      "url": "https://telehealth.hhs.gov/providers/telehealth-for-behavioral-health/preparing-patients-for-telebehavioral-health/informed-consent-for-telebehavioral-health/"
+    },
+    {
+      "title": "NASW: Standards for Technology in Social Work Practice",
+      "url": "https://www.socialworkers.org/Practice/NASW-Practice-Standards-Guidelines/Standards-for-Technology-in-Social-Work-Practice"
+    },
+    { "title": "APA: Guidelines for the Practice of Telepsychology (2024)", "url": "https://www.apa.org/about/policy/telepsychology-revisions" },
+    { "title": "HHS: HIPAA and audio-only telehealth", "url": "https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/hipaa-audio-telehealth/index.html" },
+    { "title": "Center for Connected Health Policy: Consent requirements by state", "url": "https://cchpca.org/topic/consent-requirements-professional-requirements" }
+  ],
+  "appPositioning": "This app sends no typed clinical text to any server or AI service and stores nothing after the session, so it adds no recording or data-retention risk to a telehealth visit. Clinicians still need consent for their own telehealth platform and any other tools they use.",
+  "whenRelevant": ["informed-consent", "technology", "telehealth", "privacy"],
+  "changesOften": true,
+  "statusAsOf": "2026-11-26",
+  "verification": {
+    "method": "search-index",
+    "note": "telehealth.hhs.gov, socialworkers.org, apa.org, hhs.gov and cchpca.org were not loaded directly; the pages and the points summarized here were confirmed through search results. The point on unencrypted email reflects long-standing HHS FAQ guidance that was not re-read in this session. A person must load the official pages before release."
+  },
+  "sources": [
+    {
+      "title": "Informed consent for telebehavioral health",
+      "publisher": "US Department of Health and Human Services (telehealth.hhs.gov)",
+      "url": "https://telehealth.hhs.gov/providers/telehealth-for-behavioral-health/preparing-patients-for-telebehavioral-health/informed-consent-for-telebehavioral-health/"
+    },
+    {
+      "title": "Standards for Technology in Social Work Practice",
+      "publisher": "National Association of Social Workers",
+      "url": "https://www.socialworkers.org/Practice/NASW-Practice-Standards-Guidelines/Standards-for-Technology-in-Social-Work-Practice",
+      "year": 2017
+    },
+    { "title": "Guidelines for the Practice of Telepsychology", "publisher": "American Psychological Association", "url": "https://www.apa.org/about/policy/telepsychology-revisions", "year": 2024 },
+    {
+      "title": "Guidance on How the HIPAA Rules Permit Covered Health Care Providers and Health Plans to Use Remote Communication Technologies for Audio-Only Telehealth",
+      "publisher": "US Department of Health and Human Services, Office for Civil Rights",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/hipaa-audio-telehealth/index.html",
+      "year": 2022
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

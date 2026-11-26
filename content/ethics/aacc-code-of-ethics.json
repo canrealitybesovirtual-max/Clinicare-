@@ -1,0 +1,75 @@
+{
+  "id": "aacc-code-of-ethics",
+  "name": "AACC Code of Ethics (Christian Counseling Code of Ethics)",
+  "shortName": "AACC Code",
+  "organization": "American Association of Christian Counselors",
+  "edition": 2023,
+  "editionLabel": "Y-2023 Code of Ethics (successor to the 2014 Christian Counseling Code of Ethics)",
+  "editionStatus": "edition-unconfirmed",
+  "editionNote": "The app spec names the 2014 AACC code. AACC's site now hosts a Y-2023 code: an English PDF labeled working draft and a Spanish edition (Codigo de Etica de la AACC Y-2023) posted in April 2025. Which edition AACC currently designates as binding could not be confirmed. Check aacc.net before citing section numbers.",
+  "appliesTo": ["faith-based-counselor", "counselor"],
+  "countries": ["US"],
+  "scope": "national",
+  "summary": "The AACC code is a voluntary ethical standard for Christian counselors, from licensed clinicians to pastoral and lay helpers. It is meant to sit alongside, never replace, the law and the professional code that govern a licensed clinician. It joins biblical and professional foundations and covers competence, consent, confidentiality, boundaries and the responsible use of spiritual practices in care. For licensed clinicians, the most practical point is that spiritual or religious interventions need the client's informed and freely given consent, must follow the client's own goals and beliefs, and must never be imposed. This is a summary in the app's own words. It is information, not legal advice.",
+  "keyReminders": [
+    {
+      "topic": "Consent before spiritual interventions",
+      "text": "Before using prayer, scripture or another spiritual practice in session, explain what you propose, why, and the alternatives, then get the client's explicit agreement and note it in the record.",
+      "tags": ["faith-based", "informed-consent"]
+    },
+    {
+      "topic": "Client-led integration",
+      "text": "Let the client decide whether, when and how faith enters the work, and check in again over time. A client may welcome some practices and decline others, and may change their mind.",
+      "tags": ["faith-based", "informed-consent"]
+    },
+    {
+      "topic": "Never impose beliefs",
+      "text": "Do not pressure clients toward your beliefs or treat different beliefs, or no belief, as a problem to fix. Offer the same quality of care to clients of every faith and none.",
+      "tags": ["faith-based", "cultural-competence"]
+    },
+    {
+      "topic": "Licensure comes first",
+      "text": "Where your state law or your profession's code (for example ACA, NASW or AAMFT) is stricter, that standard controls. The AACC code adds duties; it never lowers them.",
+      "tags": ["faith-based"]
+    },
+    {
+      "topic": "Competence and referral",
+      "text": "Use only spiritual interventions you are trained to provide. Refer to clergy or pastoral care when a request is outside your clinical role, and coordinate only with the client's consent.",
+      "tags": ["faith-based", "confidentiality"]
+    },
+    {
+      "topic": "Church and community settings",
+      "text": "In congregations and small faith communities, plan for overlapping roles, such as counseling fellow members, and set clear boundaries about contact outside sessions.",
+      "tags": ["dual-relationships"]
+    }
+  ],
+  "whenRelevant": ["faith-based", "informed-consent", "cultural-competence", "confidentiality", "dual-relationships"],
+  "regulatorNote": "AACC membership is not a license. Licensed clinicians remain bound by their state board's rules and their own profession's code when they integrate faith into care.",
+  "officialUrl": "https://aacc.net/aacc-code-of-ethics/",
+  "relatedLinks": [
+    { "title": "AACC Y-2023 Code of Ethics (English working draft PDF)", "url": "https://aacc.net/wp-content/uploads/2022/09/AACC-Y-2023-Code-of-Ethics-Working-Draft.pdf" },
+    { "title": "Codigo de Etica de la AACC Y-2023 (Spanish PDF)", "url": "https://aacc.net/wp-content/uploads/2025/04/Codigo-de-Etica-de-la-AACC-2023.pdf" }
+  ],
+  "verification": {
+    "method": "search-index",
+    "note": "aacc.net could not be loaded from this session. The code page, the Y-2023 working-draft PDF and the Spanish Y-2023 PDF were found only through search results. The wording of the Y-2023 consent standards for spiritual interventions (indexed as ES1-330 and ES1-340) was not read. A person must load the official pages and confirm the current edition before release."
+  },
+  "sources": [
+    { "title": "Code of Ethics", "publisher": "American Association of Christian Counselors", "url": "https://aacc.net/aacc-code-of-ethics/" },
+    {
+      "title": "AACC Y-2023 Code of Ethics (working draft)",
+      "publisher": "American Association of Christian Counselors",
+      "url": "https://aacc.net/wp-content/uploads/2022/09/AACC-Y-2023-Code-of-Ethics-Working-Draft.pdf",
+      "year": 2023
+    },
+    {
+      "title": "Codigo de Etica de la AACC Y-2023",
+      "publisher": "American Association of Christian Counselors",
+      "url": "https://aacc.net/wp-content/uploads/2025/04/Codigo-de-Etica-de-la-AACC-2023.pdf",
+      "year": 2023
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

@@ -1,0 +1,52 @@
+{
+  "id": "mandatory-reporting",
+  "title": "Mandatory reporting of child, elder and dependent adult abuse",
+  "jurisdiction": "US-state-varies",
+  "summary": "Every US state requires certain professionals, including mental health clinicians, to report suspected child abuse or neglect; the federal Child Abuse Prevention and Treatment Act (CAPTA) requires states to have these laws. Most states also require or allow reports of abuse, neglect or financial exploitation of older adults and adults with disabilities (often called vulnerable or dependent adults) to Adult Protective Services. Who must report, what triggers a report, deadlines and where to report all vary by state. This page is information, not legal advice.",
+  "keyPoints": [
+    "The usual standard is reasonable suspicion or reasonable cause to believe, not proof. Reporters are not expected to investigate; that is the agency's job.",
+    "Even though this app is for adult clients, adult clients may disclose abuse of a child they care for or know about, or abuse they experienced as children. Whether a past-abuse disclosure by an adult must be reported depends on the state and on whether a child may still be at risk.",
+    "Elder and dependent adult reporting goes to Adult Protective Services (APS) or another named agency. Some states make every person a mandated reporter; others name specific professions.",
+    "Reports made in good faith are generally protected from liability. Failing to report when required can bring fines, jail time or licensing action.",
+    "HIPAA permits disclosures that the law requires and specific disclosures about abuse, neglect or domestic violence (45 CFR 164.512). 42 CFR Part 2 allows an initial report of suspected child abuse or neglect under state law.",
+    "Intimate partner violence against a competent adult is usually not a mandatory report for mental health clinicians, but a few states require health practitioners to report certain injuries. Check your state.",
+    "Several professional codes encourage telling the client about a required report when it is safe to do so, and keeping the relationship as supportive as possible."
+  ],
+  "whatToDo": [
+    "Learn your state's reporting rules for children, older adults and dependent adults, including deadlines, hotlines and online portals.",
+    "Explain reporting duties at intake as a limit of confidentiality.",
+    "When you have reasonable suspicion, report promptly through the official channel; do not wait for proof.",
+    "Document what you saw or heard, when and how you reported, to whom, and any report number.",
+    "Consult your licensing board, a supervisor or a healthcare attorney about unclear situations, such as past abuse disclosed by an adult."
+  ],
+  "officialLinks": [
+    {
+      "title": "Child Welfare Information Gateway: Mandatory Reporting of Child Abuse and Neglect (state statutes)",
+      "url": "https://www.childwelfare.gov/topics/systemwide/laws-policies/statutes/manda/"
+    },
+    { "title": "NAPSA: Find Adult Protective Services in your area", "url": "https://www.napsa-now.org/help-in-your-area/" },
+    { "title": "Eldercare Locator (Administration for Community Living)", "url": "https://eldercare.acl.gov" },
+    { "title": "ACL and NCEA: Adult Protective Services fact sheet (PDF)", "url": "https://pfs2.acl.gov/strapib/assets/APS_Fact_Sheet_bcdf42a748.pdf" }
+  ],
+  "appPositioning": "The app makes no reporting decisions and stores nothing about clients. It links to official state reporting information and keeps crisis resources on every screen.",
+  "whenRelevant": ["abuse-reporting", "confidentiality", "duty-to-warn"],
+  "changesOften": false,
+  "statusAsOf": "2026-11-26",
+  "verification": {
+    "method": "search-index",
+    "note": "childwelfare.gov, napsa-now.org and acl.gov were not loaded directly; the pages were confirmed through search results. The Child Welfare Information Gateway's mandatory reporting publication was described as current through May 31, 2023, so state details may be older than that. A person must check each state summary before relying on it."
+  },
+  "sources": [
+    {
+      "title": "Mandatory Reporting of Child Abuse and Neglect",
+      "publisher": "Child Welfare Information Gateway, US Department of Health and Human Services",
+      "url": "https://www.childwelfare.gov/topics/systemwide/laws-policies/statutes/manda/",
+      "year": 2023
+    },
+    { "title": "Help in Your Area", "publisher": "National Adult Protective Services Association", "url": "https://www.napsa-now.org/help-in-your-area/" },
+    { "title": "Adult Protective Services fact sheet", "publisher": "Administration for Community Living, National Center on Elder Abuse", "url": "https://pfs2.acl.gov/strapib/assets/APS_Fact_Sheet_bcdf42a748.pdf" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

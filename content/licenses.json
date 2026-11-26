@@ -11,6 +11,8 @@
     "ISI": { "status": "pending", "terms": "Copyrighted; license likely required for commercial software.", "source": null, "lastVerified": null },
     "Y-BOCS": { "status": "pending", "terms": "Check permission for commercial software.", "source": null, "lastVerified": null },
     "SPIN": { "status": "pending", "terms": "Check permission for commercial software.", "source": null, "lastVerified": null },
+    "PSWQ": { "status": "pending", "terms": "Penn State Worry Questionnaire (Meyer et al., 1990). Terms for software use not confirmed; link out only.", "source": "https://pubmed.ncbi.nlm.nih.gov/2076086/", "lastVerified": null },
+    "APA Severity Measures": { "status": "pending", "terms": "APA online assessment measures, including the disorder-specific severity measures (panic, agoraphobia, generalized anxiety). Terms for software use not confirmed; link out only.", "source": "https://www.psychiatry.org/psychiatrists/practice/dsm/educational-resources/assessment-measures", "lastVerified": null },
     "C-SSRS": { "status": "pending", "terms": "Check permission terms for software use.", "source": "https://cssrs.columbia.edu", "lastVerified": null },
     "Stanley-Brown Safety Plan": { "status": "pending", "terms": "Check permission terms for software use.", "source": null, "lastVerified": null },
     "DSM-5-TR text": { "status": "not-licensed", "terms": "APA copyright. Software license required; no input into AI tools without written permission.", "source": "https://appi.org/customer-service/permissions", "lastVerified": "2026-11-26" },

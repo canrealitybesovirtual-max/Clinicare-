@@ -13,3 +13,8 @@ test-results/
 .vercel
 next-env.d.ts
 *.tsbuildinfo
+
+# Third-party binaries never belong in the repo
+*.whl
+*.whl
+__pycache__/

@@ -7,7 +7,7 @@ import { buttonVariants } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Notice } from "@/components/ui/notice";
 import { useSymptomAnalysis } from "@/components/symptoms/analysis";
-import { RedFlagBanner } from "@/components/symptoms/red-flag-banner";
+import { RedFlagBanner, RiskMissNote } from "@/components/symptoms/red-flag-banner";
 import { Under18Notice } from "@/components/symptoms/under18-notice";
 import { durationLabel, triLabel } from "@/components/symptoms/symptom-meta";
 import { SuggestionCard } from "./suggestion-card";
@@ -55,6 +55,7 @@ export function DiagnosesView() {
   return (
     <>
       <RedFlagBanner flags={analysis.redFlags} />
+      <RiskMissNote />
 
       <Card className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <div className="text-sm">
@@ -84,7 +85,11 @@ export function DiagnosesView() {
         <Under18Notice />
       ) : result.status === "empty" ? (
         <>
-          <Notice tone="neutral" icon={ListChecks} title="No symptoms entered yet">
+          <Notice
+            tone="neutral"
+            icon={ListChecks}
+            title={state.symptomText.trim() ? "No recognized symptoms yet" : "No symptoms entered yet"}
+          >
             <p>{result.message}</p>
             <Link href="/symptoms" className={buttonVariants({ variant: "primary", className: "mt-2" })}>
               Go to Symptom Finder

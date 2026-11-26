@@ -48,6 +48,7 @@ export const PlanLibrarySchema = z.object({
   conditionId: slug,
   problems: z.array(PlanProblemSchema).min(1),
   collaborativeNote: z.string().min(20), // reminder to write goals with the client in their own words
+  sud: z.boolean().default(false), // substance-use plan: every export must carry the 42 CFR Part 2 notice (G6)
   ...governance,
 });
 export type PlanLibrary = z.infer<typeof PlanLibrarySchema>;

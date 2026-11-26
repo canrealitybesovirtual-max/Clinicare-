@@ -82,3 +82,16 @@ export function RedFlagBanner({ flags }: { flags: { type: RedFlagType; symptoms:
     </div>
   );
 }
+
+/** Shown on every screen that matches text (G9): a missing banner must never read as "no risk". */
+export const RISK_MISS_NOTE =
+  "Text matching can miss risk statements; always ask directly about suicide risk. No banner does not mean no risk.";
+
+export function RiskMissNote({ className }: { className?: string }) {
+  return (
+    <p className={`mb-6 flex items-start gap-2 rounded-lg border border-border bg-surface-2 px-3 py-2 text-sm text-text ${className ?? ""}`}>
+      <ShieldAlert aria-hidden className="mt-0.5 size-4 shrink-0 text-crisis" />
+      <span>{RISK_MISS_NOTE}</span>
+    </p>
+  );
+}

@@ -1,0 +1,70 @@
+{
+  "id": "naadac-ncc-ap-code-of-ethics",
+  "name": "NAADAC/NCC AP Code of Ethics",
+  "shortName": "NAADAC Code",
+  "organization": "NAADAC, the Association for Addiction Professionals, and the National Certification Commission for Addiction Professionals (NCC AP)",
+  "edition": 2025,
+  "editionLabel": "2025 edition, effective June 1, 2025 (replaces the 2021 code)",
+  "effectiveDate": "2025-06-01",
+  "editionStatus": "current",
+  "appliesTo": ["addiction-professional", "peer-recovery-specialist"],
+  "countries": ["US"],
+  "scope": "national",
+  "summary": "The NAADAC/NCC AP Code of Ethics applies to NAADAC members and to people who hold NCC AP addiction credentials, including counselors, supervisors, prevention specialists and peer recovery support specialists. NAADAC describes the 2025 edition as a new document rather than an edit of the 2021 code, organized as principles that each address the clinician, the supervisor and other roles. Addiction work adds federal confidentiality rules for substance use disorder records (42 CFR Part 2) on top of HIPAA, so record handling and consent need extra care. This is a summary in the app's own words. It is information, not legal advice.",
+  "keyReminders": [
+    {
+      "topic": "Part 2 confidentiality",
+      "text": "Records from a federally assisted substance use program that identify someone as having a substance use disorder usually need the patient's written consent before disclosure, and disclosed records must carry the Part 2 notice.",
+      "tags": ["sud", "confidentiality"]
+    },
+    {
+      "topic": "Recovery-community boundaries",
+      "text": "Clients may share meetings, workplaces or social circles with you. Plan ahead for chance meetings, keep your recovery and professional roles separate, and avoid any relationship that could exploit or confuse the client.",
+      "tags": ["dual-relationships", "sud"]
+    },
+    {
+      "topic": "Sharing lived experience",
+      "text": "If you share your own recovery story, keep it brief, use it only when it serves the client's goals, and never to meet your own needs.",
+      "tags": ["sud", "dual-relationships"]
+    },
+    {
+      "topic": "Technology",
+      "text": "Apply the same confidentiality and consent standards to telehealth, texting, social media, electronic notes and any software, including AI tools, that touches client information.",
+      "tags": ["technology", "telehealth", "confidentiality"]
+    },
+    {
+      "topic": "Scope and referral",
+      "text": "Stay within your credential. Refer for medically supervised withdrawal, medications for addiction treatment and co-occurring mental health care, and screen for alcohol or benzodiazepine withdrawal risk, which needs medical care.",
+      "tags": ["sud", "assessment"]
+    },
+    {
+      "topic": "Stigma-free, culturally responsive care",
+      "text": "Use person-first, non-stigmatizing language and adapt care to the client's culture, language, identity and recovery path.",
+      "tags": ["cultural-competence", "sud"]
+    }
+  ],
+  "whenRelevant": ["sud", "confidentiality", "dual-relationships", "technology", "telehealth", "assessment", "cultural-competence"],
+  "regulatorNote": "Addiction counselors are licensed or certified by state boards or state certification bodies, with very different titles by state. State rules and 42 CFR Part 2 control.",
+  "officialUrl": "https://www.naadac.org/code-of-ethics",
+  "relatedLinks": [
+    { "title": "HHS: HIPAA and Part 2", "url": "https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/hipaa-part-2/index.html" },
+    { "title": "NAADAC/NCC AP Code of Ethics (copy hosted by South Dakota DSS)", "url": "https://dss.sd.gov/docs/licensing/bapp/NAADAC_NCC_AP_Code_of_Ethics.pdf" }
+  ],
+  "verification": {
+    "method": "search-index",
+    "note": "The June 1, 2025 effective date and the statement that the 2025 code replaces the 2021 code were confirmed through search results indexing naadac.org and a South Dakota DSS copy dated 06.01.2025. The number of principles (reported as eleven) and any AI-specific language came only from secondary sources and are not stated here. A person must load naadac.org before release."
+  },
+  "sources": [
+    { "title": "Code of Ethics", "publisher": "NAADAC, the Association for Addiction Professionals", "url": "https://www.naadac.org/code-of-ethics", "year": 2025 },
+    {
+      "title": "NAADAC/NCC AP Code of Ethics (state-hosted copy)",
+      "publisher": "South Dakota Department of Social Services",
+      "url": "https://dss.sd.gov/docs/licensing/bapp/NAADAC_NCC_AP_Code_of_Ethics.pdf",
+      "year": 2025
+    },
+    { "title": "HIPAA and Part 2", "publisher": "US Department of Health and Human Services", "url": "https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/hipaa-part-2/index.html" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

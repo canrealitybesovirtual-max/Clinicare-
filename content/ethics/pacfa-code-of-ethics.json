@@ -1,0 +1,81 @@
+{
+  "id": "pacfa-code-of-ethics",
+  "name": "PACFA Code of Ethics",
+  "shortName": "PACFA Code",
+  "organization": "Psychotherapy and Counselling Federation of Australia",
+  "edition": 2017,
+  "editionLabel": "December 2017 code (supersedes the 2010, 2011, 2014 and interim 2015 codes)",
+  "editionStatus": "edition-unconfirmed",
+  "editionNote": "PACFA's Ethics Committee reviews the code at least every five years, and PACFA updated its Professional Conduct Procedures in 2024. No newer full code was found on 2026-11-26, but a revision may exist. Check pacfa.org.au before release.",
+  "appliesTo": ["counselor", "psychotherapist"],
+  "countries": ["AU"],
+  "scope": "national",
+  "summary": "The PACFA Code of Ethics sets the ethical framework for counsellors and psychotherapists on the PACFA register, and PACFA member associations must have codes that align with it. It is framed as a commitment to clients and combines ethical principles with personal qualities expected of practitioners. It drew on earlier APA and BACP codes. Counselling and psychotherapy are self-regulated in Australia, so the code and PACFA's Professional Conduct Procedures take the place of a statutory register. This is a summary in the app's own words. It is information, not legal advice.",
+  "keyReminders": [
+    {
+      "topic": "Commitment to clients",
+      "text": "Put the client's wellbeing and autonomy at the center, agree the terms of the work openly, and end or refer when the work no longer helps.",
+      "tags": ["informed-consent"]
+    },
+    {
+      "topic": "Privacy and confidentiality",
+      "text": "Explain confidentiality and its legal limits at the start, and handle health information under the Australian Privacy Principles and any state health records law.",
+      "tags": ["confidentiality"]
+    },
+    {
+      "topic": "Cultural safety",
+      "text": "Practise in culturally safe ways, especially with Aboriginal and Torres Strait Islander clients, and let the client define what feels safe and respectful.",
+      "tags": ["cultural-competence"]
+    },
+    {
+      "topic": "Boundaries",
+      "text": "Avoid dual relationships that could exploit or confuse the client, and use supervision when roles overlap in small communities.",
+      "tags": ["dual-relationships"]
+    },
+    {
+      "topic": "Online practice",
+      "text": "For online sessions, check privacy and security of the platform, agree on an emergency plan, and confirm where the client is located.",
+      "tags": ["telehealth", "technology"]
+    }
+  ],
+  "whenRelevant": ["informed-consent", "confidentiality", "cultural-competence", "dual-relationships", "telehealth", "technology"],
+  "regulatorNote": "Australia has no national statutory register for counsellors and psychotherapists; registered psychologists are regulated by the Psychology Board of Australia through Ahpra. The Australian Government has been developing national standards for counsellors and psychotherapists.",
+  "officialUrl": "https://www.pacfa.org.au/common/Uploaded%20files/PACFA-Code-of-Ethics-2017%20(6).pdf",
+  "relatedLinks": [
+    {
+      "title": "PACFA Professional Conduct Procedures 2024 (PDF)",
+      "url": "https://www.pacfa.org.au/common/Uploaded%20files/PCFA/Documents/PACFA%20Professional%20Conduct%20Procedures%202024.pdf"
+    },
+    {
+      "title": "Australian Government: National standards for counsellors and psychotherapists, summary report (2025)",
+      "url": "https://www.health.gov.au/sites/default/files/2025-10/national-standards-for-counsellors-and-psychotherapists-summary-report_1.pdf"
+    }
+  ],
+  "verification": {
+    "method": "search-index",
+    "note": "The December 2017 code PDF, its supersession of earlier codes and the 2024 Professional Conduct Procedures were found through search results indexing pacfa.org.au. Currency of the 2017 code could not be confirmed. A person must load pacfa.org.au before release."
+  },
+  "sources": [
+    {
+      "title": "PACFA Code of Ethics 2017",
+      "publisher": "Psychotherapy and Counselling Federation of Australia",
+      "url": "https://www.pacfa.org.au/common/Uploaded%20files/PACFA-Code-of-Ethics-2017%20(6).pdf",
+      "year": 2017
+    },
+    {
+      "title": "PACFA Professional Conduct Procedures 2024",
+      "publisher": "Psychotherapy and Counselling Federation of Australia",
+      "url": "https://www.pacfa.org.au/common/Uploaded%20files/PCFA/Documents/PACFA%20Professional%20Conduct%20Procedures%202024.pdf",
+      "year": 2024
+    },
+    {
+      "title": "National standards for counsellors and psychotherapists: summary report",
+      "publisher": "Australian Government Department of Health, Disability and Ageing",
+      "url": "https://www.health.gov.au/sites/default/files/2025-10/national-standards-for-counsellors-and-psychotherapists-summary-report_1.pdf",
+      "year": 2025
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

@@ -1,0 +1,55 @@
+{
+  "id": "duty-to-warn-protect",
+  "title": "Duty to warn or protect third parties",
+  "jurisdiction": "US-state-varies",
+  "summary": "Whether a clinician must, may, or may not break confidentiality to protect a person threatened by a client depends on state law. The idea traces to the California Tarasoff decisions of the 1970s. States fall roughly into three groups: a mandatory duty (you must act when the legal conditions are met), a permissive duty (you may disclose but are not required to), and states with no statute or unclear case law. Triggers, the actions that satisfy the duty, which professionals are covered and immunity all vary, and laws keep changing, especially around firearms. This page is information, not legal advice.",
+  "keyPoints": [
+    "A typical trigger is a serious threat of physical violence against a reasonably identifiable person, communicated by the client. Some states also count threats reported by the client's family, or threats to property.",
+    "In many mandatory states the statute lists ways to discharge the duty, such as warning the intended victim, notifying law enforcement or starting hospitalization. Taking a listed action usually brings immunity from liability.",
+    "Permissive states allow a protective disclosure without requiring it. Where there is no statute, case law or general confidentiality law decides what you may share.",
+    "HIPAA permits disclosures that you believe in good faith are needed to prevent or lessen a serious and imminent threat to a person or the public, when consistent with law and ethics (45 CFR 164.512(j)). HIPAA permits; state law decides whether you must.",
+    "Professional codes (for example ACA, NASW, APA and AAMFT) allow breaking confidentiality to prevent serious, foreseeable harm and expect you to explain this limit at the start of services.",
+    "Published reviews have counted roughly two dozen states with a mandatory duty, but counts depend on the year and definitions used. Use the NCSL table and your state statute, not a count.",
+    "Many states also have extreme risk protection order laws and clinician reporting rules about firearms that interact with the duty to protect."
+  ],
+  "whatToDo": [
+    "Explain the limits of confidentiality, including threats to others, at intake and in your written consent.",
+    "Know your state's rule now: who is covered, what triggers a duty, and which actions satisfy it.",
+    "When a threat comes up, assess risk, follow your crisis protocol, consult a colleague or supervisor, and document your reasoning and every action.",
+    "In an emergency, call 911 or local emergency services; 988 can support crisis assessment and safety planning.",
+    "Consult your licensing board, your malpractice carrier's risk line or a healthcare attorney about your state's current law."
+  ],
+  "officialLinks": [
+    { "title": "NCSL: Mental health professionals' duty to warn (state table)", "url": "https://www.ncsl.org/health/mental-health-professionals-duty-to-warn" },
+    { "title": "JAAPL: The Tarasoff Rule: The Implications of Interstate Variation and Gaps in Professional Training", "url": "https://jaapl.org/content/42/4/469" },
+    {
+      "title": "American Psychiatric Association practice handbook: Duty to warn",
+      "url": "https://www.psychiatry.org/File%20Library/Psychiatrists/Practice/Practice-Management/Starting-a-Practice/Online-Practice-Handbook/PatientCare-DutyToWarn.pdf"
+    }
+  ],
+  "appPositioning": "The app never decides risk and never hides crisis information. It shows 988, local emergency numbers and findahelpline.com on every screen and points to this information; every decision stays with the clinician.",
+  "whenRelevant": ["duty-to-warn", "confidentiality", "crisis"],
+  "changesOften": true,
+  "statusAsOf": "2026-11-26",
+  "verification": {
+    "method": "search-index",
+    "note": "ncsl.org was not loaded directly; the NCSL page and its three-category framing (mandatory, permissive, no duty) were confirmed through search results, which also showed one citation dating the NCSL page to March 2022. State counts come from JAAPL articles and vary by year. A person must open the NCSL table, note its date and confirm it is still maintained before release."
+  },
+  "sources": [
+    { "title": "Mental Health Professionals' Duty to Warn", "publisher": "National Conference of State Legislatures", "url": "https://www.ncsl.org/health/mental-health-professionals-duty-to-warn" },
+    {
+      "title": "The Tarasoff Rule: The Implications of Interstate Variation and Gaps in Professional Training",
+      "publisher": "Journal of the American Academy of Psychiatry and the Law",
+      "url": "https://jaapl.org/content/42/4/469",
+      "year": 2014
+    },
+    {
+      "title": "Duty to Warn (Online Practice Handbook)",
+      "publisher": "American Psychiatric Association",
+      "url": "https://www.psychiatry.org/File%20Library/Psychiatrists/Practice/Practice-Management/Starting-a-Practice/Online-Practice-Handbook/PatientCare-DutyToWarn.pdf"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

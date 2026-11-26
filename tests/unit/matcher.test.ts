@@ -64,8 +64,8 @@ describe("stem", () => {
 
 describe("matchSymptoms: phrases, stemming, stopwords", () => {
   it("returns nothing for empty text or an empty lexicon", () => {
-    expect(run("")).toEqual({ matches: [], negated: [] });
-    expect(run("panic attacks", [])).toEqual({ matches: [], negated: [] });
+    expect(run("")).toEqual({ matches: [], negated: [], attributed: [] });
+    expect(run("panic attacks", [])).toEqual({ matches: [], negated: [], attributed: [] });
   });
 
   it("matches a synonym through stemming (worrying ~ worry)", () => {
@@ -160,10 +160,26 @@ describe("matchSymptoms: negation", () => {
     expect(ids(run("Denies SI/HI").negated)).toEqual(["suicidal-ideation", "homicidal-ideation"]);
   });
 
-  it("bare 'no' only reaches the next phrase: 'no SI or HI' keeps HI positive", () => {
+  it("bare 'no' covers a plain list of phrases: 'no SI or HI' negates both", () => {
     const r = run("no SI or HI");
-    expect(ids(r.negated)).toEqual(["suicidal-ideation"]);
-    expect(ids(r.matches)).toEqual(["homicidal-ideation"]);
+    expect(ids(r.negated)).toEqual(["suicidal-ideation", "homicidal-ideation"]);
+    expect(r.matches).toEqual([]);
+  });
+
+  it("a list stops at a new predicate: 'no SI and hears voices' keeps the voices positive", () => {
+    for (const text of ["no SI and hears voices", "No SI and has been hearing voices at night", "no SI, hearing voices"]) {
+      const r = run(text);
+      expect(ids(r.negated), text).toEqual(["suicidal-ideation"]);
+      expect(ids(r.matches), text).toEqual(["hearing-voices"]);
+    }
+  });
+
+  it("a comma list carries a leading negation only across short abbreviations ('No SI, HI, or AVH')", () => {
+    const r = run("No SI, HI, or AVH.");
+    expect(ids(r.negated)).toEqual(["suicidal-ideation", "homicidal-ideation", "hearing-voices"]);
+    expect(r.matches).toEqual([]);
+    // A whole phrase after a comma is a new statement, not a list item.
+    expect(ids(run("Denied nightmares, hearing voices at night").matches)).toEqual(["hearing-voices"]);
   });
 
   it("bare 'no' does not reach past a content word ('no recent nightmares' stays positive)", () => {

@@ -1,0 +1,55 @@
+{
+  "id": "record-retention-overview",
+  "title": "How long to keep clinical records",
+  "jurisdiction": "US-state-varies",
+  "summary": "HIPAA does not say how long clinical records must be kept. State law, licensing board rules, payer contracts and facility policies do, and they differ by state, profession and setting. HIPAA does require that records be protected for as long as they are kept and when they are destroyed, and that HIPAA compliance documentation such as policies and risk analyses be kept for six years. Professional guidance fills gaps: APA's Record Keeping Guidelines have suggested keeping complete adult records for at least seven years after the last service when no law sets a longer period. Rules for minors, deceased clients and substance use programs differ. This page is information, not legal advice.",
+  "keyPoints": [
+    "HHS says the Privacy Rule has no medical record retention period. Safeguards apply for as long as records are kept, including at disposal (45 CFR 164.530(c)).",
+    "HIPAA policies, procedures and other required compliance documentation must be kept for six years from creation or last effective date (45 CFR 164.316(b)(2) and 164.530(j)). This is not a rule about clinical charts.",
+    "State periods vary. Examples found for psychologists include seven years after the last service for adults in Georgia and Colorado, at least eight years after last contact in Washington, and at least six years in New York. Confirm the rule for your license and state.",
+    "APA's Record Keeping Guidelines (approved 2007) recommend at least seven years after the last service for adults where law is silent. They were set to expire after ten years, so check apa.org for their current status.",
+    "Records of minors are usually kept longer, often until a set number of years after the age of majority. This app is for adult clients only, but your records may not be.",
+    "42 CFR Part 2 sets its own rules for disposing of records when a substance use program closes or is taken over (42 CFR 2.19).",
+    "When you close a practice, retire or die, someone must be able to keep, release and finally destroy records properly. Many boards expect a written plan and a named records custodian."
+  ],
+  "whatToDo": [
+    "Look up the retention rule for your license type, state and setting, and follow the longest period that applies.",
+    "Write a retention and secure destruction policy, and keep a log of what was destroyed, when and how.",
+    "Name a records custodian and put the plan in writing in case you cannot continue practicing.",
+    "Remember that this app keeps nothing after the session ends; your record lives in your own EHR or files.",
+    "Consult your licensing board or a healthcare attorney to confirm the retention periods that apply to you."
+  ],
+  "officialLinks": [
+    {
+      "title": "HHS FAQ: Does HIPAA require covered entities to keep medical records for any period of time?",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/faq/580/does-hipaa-require-covered-entities-to-keep-medical-records-for-any-period/index.html"
+    },
+    { "title": "HHS FAQ: Disposal of protected health information", "url": "https://www.hhs.gov/ocr/privacy/hipaa/faq/disposal_of_protected_health_information/" },
+    { "title": "APA: Record Keeping Guidelines", "url": "https://www.apa.org/practice/guidelines/record-keeping" },
+    { "title": "New York Office of the Professions: Recordkeeping guidelines for psychologists", "url": "https://www.op.nysed.gov/professions/psychology/professional-practice/recordkeeping-guidelines-psychologists" }
+  ],
+  "appPositioning": "The app is not a record system. It stores no client data and keeps session content in memory only, so clinicians must keep their official record in their own EHR or files.",
+  "whenRelevant": ["records", "privacy", "sud"],
+  "changesOften": false,
+  "statusAsOf": "2026-11-26",
+  "verification": {
+    "method": "search-index",
+    "note": "hhs.gov, apa.org and state board pages were not loaded directly. The HHS position (no Privacy Rule retention period) and the six-year documentation rule were confirmed through search results quoting HHS and secondary sources. State examples come from search results of state rules (Georgia, Colorado, Washington, New York) and may be out of date. APA guideline status after 2017 was not confirmed."
+  },
+  "sources": [
+    {
+      "title": "Does the HIPAA Privacy Rule require covered entities to keep patients' medical records for any period of time?",
+      "publisher": "US Department of Health and Human Services, Office for Civil Rights",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/faq/580/does-hipaa-require-covered-entities-to-keep-medical-records-for-any-period/index.html"
+    },
+    { "title": "Record Keeping Guidelines", "publisher": "American Psychological Association", "url": "https://www.apa.org/practice/guidelines/record-keeping", "year": 2007 },
+    {
+      "title": "Recordkeeping Guidelines for Psychologists",
+      "publisher": "New York State Education Department, Office of the Professions",
+      "url": "https://www.op.nysed.gov/professions/psychology/professional-practice/recordkeeping-guidelines-psychologists"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

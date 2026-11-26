@@ -1,0 +1,72 @@
+{
+  "id": "apa-ethical-principles-psychologists",
+  "name": "Ethical Principles of Psychologists and Code of Conduct",
+  "shortName": "APA Ethics Code (psychology)",
+  "organization": "American Psychological Association",
+  "edition": 2002,
+  "editionLabel": "2002 code, amended effective June 1, 2010 and January 1, 2017 (the 2016 amendment)",
+  "effectiveDate": "2017-01-01",
+  "editionStatus": "revision-in-progress",
+  "editionNote": "APA's Ethics Code Task Force released a revised draft for public comment (the comment period ended in 2025). No adopted replacement code or effective date was found on 2026-11-26. Keep the amended 2002 code until APA announces a new one.",
+  "appliesTo": ["psychologist"],
+  "countries": ["US"],
+  "scope": "national",
+  "summary": "The APA Ethics Code applies to members of the American Psychological Association, and many state psychology boards adopt or reference it. It pairs five aspirational general principles (beneficence and nonmaleficence; fidelity and responsibility; integrity; justice; respect for people's rights and dignity) with ten sections of enforceable standards. Those sections include resolving ethical issues, competence, human relations, privacy and confidentiality, advertising, record keeping and fees, education and training, research, assessment (Standard 9) and therapy. This is a summary in the app's own words. It is information, not legal advice; read the official code and your board's rules.",
+  "keyReminders": [
+    {
+      "topic": "Assessment basis (Standard 9)",
+      "text": "Base opinions and recommendations on assessment that is adequate for the question. Use instruments whose reliability and validity are established for the people being tested, and state the limits when they are not.",
+      "tags": ["assessment"]
+    },
+    {
+      "topic": "Interpreting results",
+      "text": "Interpret scores in light of language, culture, disability and the testing situation. Automated or app-generated interpretations are aids; you remain responsible for the interpretation you give.",
+      "tags": ["assessment", "cultural-competence", "technology"]
+    },
+    {
+      "topic": "Informed consent to therapy",
+      "text": "As early as you can, explain the nature and expected course of therapy, fees, any third-party involvement and the limits of confidentiality, and give room for questions. Say so when a treatment is still developing.",
+      "tags": ["informed-consent"]
+    },
+    {
+      "topic": "Privacy and confidentiality",
+      "text": "Discuss the limits of confidentiality at the outset, and in reports or consultations include only what is relevant to the purpose.",
+      "tags": ["confidentiality"]
+    },
+    {
+      "topic": "Multiple relationships",
+      "text": "Avoid a multiple relationship when it could reasonably impair objectivity or risk exploitation or harm. Not every multiple relationship is unethical, so document why one that you accept is safe.",
+      "tags": ["dual-relationships"]
+    },
+    {
+      "topic": "Competence and diversity",
+      "text": "Work within the limits of your training, and get training, consultation or supervision, or refer, when age, culture, language, disability or other factors are essential to effective care and outside your experience.",
+      "tags": ["cultural-competence"]
+    },
+    {
+      "topic": "Telepsychology",
+      "text": "APA's 2024 Guidelines for the Practice of Telepsychology (aspirational, not enforceable) cover jurisdiction, consent, security and testing when services are delivered remotely.",
+      "tags": ["telehealth", "technology"]
+    }
+  ],
+  "whenRelevant": ["assessment", "cultural-competence", "technology", "informed-consent", "confidentiality", "dual-relationships", "telehealth"],
+  "regulatorNote": "Psychologists are licensed by state boards. The Association of State and Provincial Psychology Boards (ASPPB) coordinates boards, and PSYPACT authorizes some interstate telepsychology. Board rules and state law control.",
+  "officialUrl": "https://www.apa.org/ethics/code",
+  "relatedLinks": [
+    { "title": "APA Ethics Code Task Force (revision status)", "url": "https://www.apa.org/ethics/task-force" },
+    { "title": "APA Guidelines for the Practice of Telepsychology (2024)", "url": "https://www.apa.org/about/policy/telepsychology-revisions" },
+    { "title": "APA Record Keeping Guidelines", "url": "https://www.apa.org/practice/guidelines/record-keeping" }
+  ],
+  "verification": {
+    "method": "search-index",
+    "note": "apa.org was not loaded directly. The 2002 code with amendments effective June 1, 2010 and January 1, 2017, the task force revision status and the August 2024 telepsychology guidelines were confirmed through search results indexing apa.org pages and APA division reports. A person must load the official pages before release."
+  },
+  "sources": [
+    { "title": "Ethical Principles of Psychologists and Code of Conduct", "publisher": "American Psychological Association", "url": "https://www.apa.org/ethics/code", "year": 2017 },
+    { "title": "Ethics Code Task Force", "publisher": "American Psychological Association", "url": "https://www.apa.org/ethics/task-force" },
+    { "title": "Guidelines for the Practice of Telepsychology (revision)", "publisher": "American Psychological Association", "url": "https://www.apa.org/about/policy/telepsychology-revisions", "year": 2024 }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

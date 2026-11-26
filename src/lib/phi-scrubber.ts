@@ -122,7 +122,9 @@ Connie Marie Paula Sylvia Irene Lillian Helen Anne Ellen Eleanor Josephine There
 Doris Mildred Gladys Edna Esther Kathy Vicki Gina Lydia Naomi Miriam Leslie Jill Joanne Bethany Molly
 Maggie Abby Ellie Nora Layla Riley Scarlett Penelope Sienna Gianna Maya Kylie Brianna Alyssa Jada Imani Nia
 Zara Leila Yasmin Ana Isabel Daniela Paola Marisol Pilar Ingrid Greta Heidi Olga Svetlana Anya Natasha
-Tatiana Nadia Mariam Noor Ling Jia Hana Sakura Ayesha Brooke Kim
+Tatiana Nadia Mariam Noor Ling Jia Hana Sakura Ayesha Brooke Kim Renee Xochitl Saoirse Siobhan Niamh Aoife
+Itzel Yesenia Maribel Araceli Esmeralda Rocio Consuelo Graciela Joaquin Ignacio Agustin Andres Ruben
+Nicolas Sebastian Tomas Matias Martina Agustina Valeria Jimena Florencia Beatriz Ines Raul Oscar Cesar Hugo
 `);
 
 /**
@@ -260,7 +262,7 @@ Mr Mrs Ms Mx Dr Prof Rev Fr Sr Jr Sra Srta Miss Mister Madam Sir
 `);
 
 /** Words after "Virgin", "Hail", "Saint" etc. are religious references, not people. */
-const RELIGIOUS_PREFIX = /(?:Virgin|Hail|Saint|St\.|Holy|Blessed|Book of|Gospel of|Prophet|Apostle)\s+$/;
+const RELIGIOUS_PREFIX = /(?:Virgin|Hail|Saint|St\.?|Holy|Blessed|Book of|Gospel of|Prophet|Apostle)\s+$/;
 /** Scripture references such as "John 3:16" or "Isaiah 41:10". */
 const SCRIPTURE_REF = /\s*\d{1,3}:\d{1,3}|\s+(?:chapter|ch\.)\s*\d/y;
 
@@ -303,17 +305,22 @@ function each(text: string, re: RegExp, fn: (m: RegExpExecArray) => void): void 
 
 const capitalize = (w: string): string => w.charAt(0).toUpperCase() + w.slice(1);
 const digitCount = (s: string): number => s.replace(/\D/g, "").length;
-const isSurname = (t: string): boolean => DISTINCTIVE_SURNAMES.has(t) || PAIR_ONLY_SURNAMES.has(t);
+/** O'Brien, McCarthy, MacArthur: surname shapes, trusted after a given name ("Saoirse O'Brien"). */
+const SURNAME_SHAPE = /^(?:O['’]\p{Lu}\p{Ll}+|Mc\p{Lu}\p{Ll}+|Mac\p{Lu}\p{Ll}{3,})$/u;
+const NOT_SURNAME_SHAPE = words("MacBook MacOS");
+const distinctiveSurname = (t: string): boolean =>
+  DISTINCTIVE_SURNAMES.has(t) || (SURNAME_SHAPE.test(t) && !NOT_SURNAME_SHAPE.has(t));
+const isSurname = (t: string): boolean => distinctiveSurname(t) || PAIR_ONLY_SURNAMES.has(t);
 const wordLike = (t: string): boolean => WORDLIKE_SUFFIX.test(t.toLowerCase());
 
 /* ------------------------------------------------------------------ */
 /* NAME                                                                 */
 /* ------------------------------------------------------------------ */
 
-const NAME_TOKEN_SRC = "(?:[A-Z]['’])?[A-Z][a-z]+(?:[A-Z][a-z]+)?(?:-[A-Z][a-z]+)?";
-const NAME_TOKEN_G = new RegExp(`(?<![A-Za-z0-9'’-])${NAME_TOKEN_SRC}(?![A-Za-z0-9])`, "g");
-const NAME_TOKEN_Y = new RegExp(`${NAME_TOKEN_SRC}(?![A-Za-z0-9])`, "y");
-const LOWER_TOKEN_Y = /[a-z]+(?![A-Za-z0-9])/y;
+const NAME_TOKEN_SRC = "(?:\\p{Lu}['’])?\\p{Lu}\\p{Ll}+(?:\\p{Lu}\\p{Ll}+)?(?:-\\p{Lu}\\p{Ll}+)?";
+const NAME_TOKEN_G = new RegExp(`(?<![\\p{L}\\p{N}'’-])${NAME_TOKEN_SRC}(?![\\p{L}\\p{N}])`, "gu");
+const NAME_TOKEN_Y = new RegExp(`${NAME_TOKEN_SRC}(?![\\p{L}\\p{N}])`, "yu");
+const LOWER_TOKEN_Y = /\p{Ll}+(?![\p{L}\p{N}])/yu;
 /** Same-line gap between name parts, with an optional middle initial ("John Q. Public"). */
 const GAP_Y = /[ \t]+(?:[A-Z]\.[ \t]+)?/y;
 
@@ -381,7 +388,37 @@ function readCuedName(text: string, pos: number): number {
   return extendName(text, end, 2);
 }
 
-function detectNames(text: string, add: Add): void {
+/**
+ * Eponyms, named scales, holidays and named events are not people: "Addison's disease", "Stevens
+ * Johnson syndrome", "Taylor Manifest Anxiety Scale", "Martin Luther King Day", "Holmes and Rahe",
+ * "Dr. Beck's cognitive model", "Hurricane Maria", "Mason jar".
+ */
+const EPONYM_AFTER_RE =
+  /^(?:['’]s?[ \t]+(?:\p{Ll}+[ \t]+){0,2}(?:disease|syndrome|wort|palsy|disorder|phenomenon|sign|law|model|theory|triad|scale|inventory|questionnaire|method|technique|approach|protocol|paradox|effect|hierarchy|stages|curve|test)\b|(?:[ \t]+\p{Lu}\p{Ll}+){0,3}[ \t]+(?:Syndrome|Disease|Scale|Inventory|Questionnaire|Index|Test|Model|Method|Technique|Protocol|Palsy|Day)\b|(?:[ \t]+\p{Lu}\p{Ll}+){0,2}[ \t]+(?:syndrome|disease|palsy|jars?)\b|[ \t]+and[ \t]+Rahe\b)/u;
+const EPONYM_BEFORE_RE = /(?:Hurricane|Tropical[ \t]+Storm|Storm|Typhoon|Cyclone)[ \t]+$/;
+/** Street names for drugs ("took Molly"). Only after a use verb. */
+const SLANG_NAMES = words("Molly Tina Charlie");
+const SLANG_BEFORE_RE = /(?:took|take|takes|taking|on|using|uses|used|did|doing|popped|pops|tried|snorted|smoked|some|rolling[ \t]+on)[ \t]+$/i;
+
+function notAPerson(text: string, start: number, end: number): boolean {
+  if (EPONYM_AFTER_RE.test(text.slice(end, end + 60))) return true;
+  const before = text.slice(Math.max(0, start - 24), start);
+  if (EPONYM_BEFORE_RE.test(before)) return true;
+  const first = text.slice(start, end).split(/[ \t]/)[0] ?? "";
+  return SLANG_NAMES.has(first) && SLANG_BEFORE_RE.test(before);
+}
+
+/** Ambiguous given names ("Grace", "Bob") count as names right before a reporting or action verb. */
+const NAME_VERB_AFTER_RE =
+  /^[ \t]+(?:reports|reported|says|said|states|stated|denies|denied|endorses|endorsed|describes|described|admits|admitted|complains|complained|told|tells|hit|hits|punched|slapped|kicked|yelled|screamed|threatened|texted|cheated)\b/;
+const NOT_NAME_BEFORE_RE = /(?:^|[^A-Za-z])(?:in|on|since|by|until|last|next|of|this|early|late|mid)[ \t]+$/i;
+const LOWER_WORD_G = /(?<![\p{L}\p{N}'’-])\p{Ll}+(?![\p{L}\p{N}])/gu;
+const INITIALS_RE = /(?<![A-Za-z])initials?[ \t]*(?:are|is|=|:|-)?[ \t]*([A-Z]\.?[ \t]?[A-Z](?:\.?[ \t]?[A-Z])?\.?)(?![A-Za-z])/g;
+
+function detectNames(text: string, rawAdd: Add): void {
+  const add: Add = (type, start, end, bonus) => {
+    if (type !== "NAME" || !notAPerson(text, start, end)) rawAdd(type, start, end, bonus);
+  };
   for (const cue of NAME_CUES) {
     each(text, cue, (m) => {
       const pos = m.index + m[0].length;
@@ -389,6 +426,10 @@ function detectNames(text: string, add: Add): void {
       if (end > pos) add("NAME", pos, end);
     });
   }
+  each(text, INITIALS_RE, (m) => {
+    const end = m.index + m[0].length;
+    add("NAME", end - m[1]!.length, end);
+  });
 
   const toks: { s: number; e: number; t: string }[] = [];
   each(text, NAME_TOKEN_G, (m) => toks.push({ s: m.index, e: m.index + m[0].length, t: m[0] }));
@@ -400,7 +441,7 @@ function detectNames(text: string, add: Add): void {
     const gap = at(text, GAP_Y, t.e);
     const adjacent = nxt !== undefined && gap !== null && t.e + gap[0].length === nxt.s;
 
-    if (FIRST_NAMES.has(t.t)) {
+    if (FIRST_NAMES.has(t.t) || (t.t.includes("-") && t.t.split("-").some((part) => FIRST_NAMES.has(part)))) {
       add("NAME", t.s, extendName(text, t.e, 2));
       continue;
     }
@@ -408,7 +449,7 @@ function detectNames(text: string, add: Add): void {
     // listed surname) are pairs; "Uses Clark's model" (verb + theorist/word-like surname) is not.
     if (
       adjacent &&
-      (DISTINCTIVE_SURNAMES.has(nxt.t) || (AMBIGUOUS_NAMES.has(t.t) && PAIR_ONLY_SURNAMES.has(nxt.t))) &&
+      (distinctiveSurname(nxt.t) || (AMBIGUOUS_NAMES.has(t.t) && PAIR_ONLY_SURNAMES.has(nxt.t))) &&
       !NON_NAME_WORDS.has(t.t) &&
       !GEO_TOKENS.has(t.t) &&
       !wordLike(t.t) &&
@@ -418,7 +459,28 @@ function detectNames(text: string, add: Add): void {
       i++;
       continue;
     }
-    if (DISTINCTIVE_SURNAMES.has(t.t)) add("NAME", t.s, t.e);
+    // Alone, only listed surnames: O'/Mc shapes are also city names ("O'Fallon", "McKinney").
+    if (DISTINCTIVE_SURNAMES.has(t.t)) {
+      add("NAME", t.s, t.e);
+      continue;
+    }
+    if (
+      AMBIGUOUS_NAMES.has(t.t) &&
+      NAME_VERB_AFTER_RE.test(text.slice(t.e, t.e + 16)) &&
+      !NOT_NAME_BEFORE_RE.test(text.slice(Math.max(0, t.s - 10), t.s))
+    ) {
+      add("NAME", t.s, t.e);
+    }
+  }
+
+  // Lower-case typing: "john smith" (listed given name + distinctive surname).
+  const low: { s: number; e: number; t: string }[] = [];
+  each(text, LOWER_WORD_G, (m) => low.push({ s: m.index, e: m.index + m[0].length, t: m[0] }));
+  for (let i = 0; i + 1 < low.length; i++) {
+    const a = low[i]!;
+    const b = low[i + 1]!;
+    if (!/^[ \t]+$/.test(text.slice(a.e, b.s))) continue;
+    if (FIRST_NAMES.has(capitalize(a.t)) && DISTINCTIVE_SURNAMES.has(capitalize(b.t))) add("NAME", a.s, b.e);
   }
 
   // ALL-CAPS typing ("JOHN SMITH"). 4+ letters and listed names only, so acronyms (PTSD, SNRI, CAPS) are safe.
@@ -451,7 +513,7 @@ const STREET_RE = new RegExp(
 );
 const PO_BOX_RE = /\b(?:P\.?[ \t]?O\.?|Post[ \t]+Office)[ \t]*Box[ \t]+\d{1,8}\b/gi;
 const UNIT_RE = new RegExp(`(?<![A-Za-z])${UNIT_WORD}\\.?[ \\t]*#?[ \\t]*${UNIT_VALUE}`, "g");
-const COUNTY_RE = /(?<![A-Za-z])(?:[A-Z][a-z]+[ \t]+){1,3}(?:County|Parish|Borough|Township)\b/g;
+const COUNTY_RE = /(?<!\p{L})(?:\p{Lu}\p{Ll}+[ \t]+){1,3}(?:County|Parish|Borough|Township)\b/gu;
 
 const LOCATION_CUE_RE =
   /\b(?:(?:lives?|living|lived|resides?|residing|resided|moved|moves|moving|relocated|relocating|relocate|stays|staying|stayed|grew[ \t]+up|raised|born|originally)[ \t]+(?:in|at|to|from|near|outside(?:[ \t]+of)?|back[ \t]+to)|is[ \t]+from|comes[ \t]+from|came[ \t]+from|hometown(?:[ \t]+is|[ \t]+of)?)[ \t]+(?:the[ \t]+)?/gi;
@@ -463,7 +525,7 @@ const PLACE_WORDS = words(
     "Lower Glen Palm Point Cape Bay Falls Beach Park Springs City Heights Valley Rock Hills Haven Beach Village " +
     "Town Center Island",
 );
-const PLACE_TOKEN_Y = /(?:St\.|Mt\.|[A-Z][a-z]+(?:-[A-Z][a-z]+)?)(?![A-Za-z0-9])/y;
+const PLACE_TOKEN_Y = /(?:St\.|Mt\.|\p{Lu}\p{Ll}+(?:-\p{Lu}\p{Ll}+)?)(?![\p{L}\p{N}])/yu;
 
 /** Reads a capitalized place name (1-4 tokens) at `pos`; -1 if none or if it is a state/country. */
 function readPlace(text: string, pos: number, strict: boolean): number {
@@ -497,11 +559,68 @@ function readPlace(text: string, pos: number, strict: boolean): number {
 
 const STATE_CODE_ALT = STATE_CODES.split(" ").join("|");
 const STATE_NAME_ALT = US_STATES.join("|");
+/** State codes that are also English words: only trusted before a ZIP or at the end of a clause. */
+const WORDLIKE_STATE_CODES = "OK|OR|IN|ME|HI|OH|DE|LA|MA|PA|AL|CO|ID|MS";
+const PLAIN_STATE_CODES = STATE_CODES.split(" ")
+  .filter((c) => !WORDLIKE_STATE_CODES.split("|").includes(c))
+  .join("|");
 const CITY_STATE_RE = new RegExp(
-  `(?<![A-Za-z])((?:(?:St\\.|[A-Z][a-z]+)[ \\t]+){0,2}(?:St\\.|[A-Z][a-z]+)),[ \\t]*` +
-    `(?:(?:${STATE_NAME_ALT})(?![A-Za-z])|(?:${STATE_CODE_ALT})(?=[ \\t]+\\d{5}|[ \\t]*(?:$|[.;)\\n])))`,
-  "gm",
+  `(?<!\\p{L})((?:(?:St\\.|\\p{Lu}\\p{Ll}+)[ \\t]+){0,2}(?:St\\.|\\p{Lu}\\p{Ll}+)),[ \\t]*` +
+    `(?:(?:${STATE_NAME_ALT})(?![A-Za-z])|(?:${PLAIN_STATE_CODES})(?![A-Za-z])|(?:${WORDLIKE_STATE_CODES})(?=[ \\t]+\\d{5}|[ \\t]*(?:$|[.;)\\n])))`,
+  "gmu",
 );
+/** "Dayton OH 45402": city, state code and ZIP without a comma. */
+const CITY_STATE_ZIP_RE = new RegExp(
+  `(?<!\\p{L})((?:\\p{Lu}\\p{Ll}+[ \\t]+){0,2}\\p{Lu}\\p{Ll}+)[ \\t]+(?:${STATE_CODE_ALT})[ \\t]+\\d{5}(?:-\\d{4})?(?!\\d)`,
+  "gu",
+);
+/** "123 main street": a lower-case street line (number + 1-3 words + street suffix). */
+const LOWER_STREET_RE = new RegExp(
+  `\\b\\d{1,6}[a-z]?((?:[ \\t]+[a-z][a-z'.-]*){1,3}?)[ \\t]+(?:${STREET_SUFFIX.toLowerCase()})\\b`,
+  "g",
+);
+/** Words that make "<number> ... road/way/drive" a distance or count, not a street line. */
+const NOT_STREET_WORDS = words(`
+the a an of in on at to for by with from down up across along around over under near past through into onto
+out off back front side end more few many other times time steps step miles mile blocks block minutes minute
+mins hours hour days day weeks week months month years year feet foot yards km kms meters laps pills mg people
+things thing ways kids cars houses doors my her his their our your its this that and or but is was are were
+be am not no so very just really long short big small good bad first last next same different whole half
+`);
+/** Single lower-case words after a location cue that are states of life, not places ("lives in fear"). */
+const NOT_LOWER_PLACE = words(`
+fear denial poverty pain shame terror dread isolation silence peace chaos squalor hell limbo constant shelter
+shelters apartment apartments house houses home homes car cars motel hotel basement tent van town city country
+area state community group foster care recovery rehab treatment jail prison sober halfway assisted nursing
+public housing section dorm dorms campus barracks base rural urban suburbs suburb debt survival crisis
+transition between unit ward hospital residential there here which what with her his their my our your an a
+the one two three several many few mother father mom dad parents family grandmother grandparents aunt uncle
+sister brother friend friends boyfriend girlfriend husband wife partner son daughter kids children roommate
+roommates same different another other order front back middle part fact general particular place places
+south north east west fact time line bed love tears shock spite turn mind control charge light private secret
+`);
+/** Capitalized words after "in" that are not places ("in General", "in Group"). */
+const NOT_PLACE_AFTER_IN = words(
+  "General Particular Fact Total Contrast Short Brief Person Detail Group Private Public Recovery Remission " +
+    "Reality Theory Practice Response Case Past Future Advance Return Order Time Class Love Pain Fear Bed Line " +
+    "Charge Control Spite Light Tears Shock Denial Turn Common Mind Front Back Between Addition Part Writing " +
+    "Hurricane Storm Typhoon Cyclone Tropical Wildfire",
+);
+const BARE_IN_RE = /(?<![A-Za-z])[Ii]n[ \t]+(?:the[ \t]+)?/g;
+const LOWER_PLACE_Y = /\p{Ll}{3,}(?![\p{L}\p{N}])/yu;
+/** "Lincoln Elementary School", "Roosevelt High School". */
+const SCHOOL_RE =
+  /(?<!\p{L})(?:\p{Lu}\p{Ll}+[ \t]+){1,3}(?:Elementary|Middle|High|Junior[ \t]+High|Intermediate|Primary)[ \t]+School\b/gu;
+
+/** A single lower-case place word after a location cue ("lives in springfield"), or -1. */
+function readLowerPlace(text: string, pos: number): number {
+  const m = at(text, LOWER_PLACE_Y, pos);
+  if (!m) return -1;
+  const tok = m[0];
+  const cap = capitalize(tok);
+  if (NOT_LOWER_PLACE.has(tok) || wordLike(tok) || GEO_TOKENS.has(cap) || NON_NAME_WORDS.has(cap)) return -1;
+  return pos + tok.length;
+}
 
 function detectAddresses(text: string, add: Add): void {
   each(text, STREET_RE, (m) => {
@@ -536,7 +655,35 @@ function detectAddresses(text: string, add: Add): void {
     }
     const end = readPlace(text, pos, false);
     if (end > 0) add("ADDRESS", pos, end);
+    else {
+      const lowEnd = readLowerPlace(text, pos); // "she lives in springfield"
+      if (lowEnd > 0) add("ADDRESS", pos, lowEnd);
+    }
   });
+  each(text, BARE_IN_RE, (m) => {
+    // "the Kroger in Dayton": a capitalized place after a bare "in" (strict: not a name or ordinary word).
+    const pos = m.index + m[0].length;
+    const tok = at(text, PLACE_TOKEN_Y, pos);
+    if (!tok || NOT_PLACE_AFTER_IN.has(tok[0])) return;
+    const end = readPlace(text, pos, true);
+    if (end > 0) add("ADDRESS", pos, end);
+  });
+  each(text, LOWER_STREET_RE, (m) => {
+    const toks = (m[1] ?? "").trim().split(/[ \t]+/);
+    if (toks.some((t) => NOT_STREET_WORDS.has(t))) return;
+    add("ADDRESS", m.index, m.index + m[0].length);
+  });
+  each(text, CITY_STATE_ZIP_RE, (m) => {
+    const toks = m[1]!.split(/[ \t]+/);
+    let start = m.index;
+    while (toks.length > 0 && NON_NAME_WORDS.has(toks[0]!) && !PLACE_WORDS.has(toks[0]!)) {
+      start += toks[0]!.length;
+      toks.shift();
+      while (/[ \t]/.test(text.charAt(start))) start++;
+    }
+    if (toks.length > 0 && !GEO_ALLOWED.has(toks.join(" "))) add("ADDRESS", start, m.index + m[1]!.length);
+  });
+  each(text, SCHOOL_RE, (m) => add("ADDRESS", m.index, m.index + m[0].length));
   each(text, BARE_FROM_RE, (m) => {
     const pos = m.index + m[0].length;
     const end = readPlace(text, pos, true);
@@ -560,12 +707,16 @@ function detectAddresses(text: string, add: Add): void {
 
 const ZIP_RE = /(?<![\w$#.,/:-])\d{5}(?:-\d{4})?(?![\w]|[.,:/]\d|-\d)/g;
 const NOT_ZIP_AFTER =
-  /^[ \t]*(?:mg|mcg|ug|ml|g|kg|lbs?|steps|calories|kcal|feet|ft|miles|mi|km|meters|words|people|persons|adults|patients|participants|cases|deaths|dollars|usd|units|iu|cells|copies|times)\b/i;
+  /^[ \t]*(?:mg|mcg|ug|ml|g|kg|lbs?|steps|calories|kcal|feet|ft|miles|mi|km|meters|words|people|persons|adults|patients|participants|cases|deaths|dollars|usd|units|iu|cells|copies|times|a[ \t]+(?:year|yr|month|week)|per[ \t]+(?:year|yr|month|week|hour)|\/[ \t]*(?:yr|year|mo|month)|annually|yearly|monthly|salary|income|in[ \t]+(?:savings|debt|bills))\b/i;
+/** Money, not a ZIP: "earns 45000", "owes 12000". */
+const NOT_ZIP_BEFORE = /(?:earns?|earning|makes|made|salary|income|paid|pays|owes|owed|debt|rent|saved|savings)[ \t]+(?:about|around|over|under|roughly)?[ \t]*$/i;
 
 function detectZips(text: string, add: Add): void {
   each(text, ZIP_RE, (m) => {
     const end = m.index + m[0].length;
-    if (!NOT_ZIP_AFTER.test(text.slice(end, end + 14))) add("ZIP", m.index, end);
+    if (NOT_ZIP_AFTER.test(text.slice(end, end + 20))) return;
+    if (NOT_ZIP_BEFORE.test(text.slice(Math.max(0, m.index - 24), m.index))) return;
+    add("ZIP", m.index, end);
   });
 }
 
@@ -602,7 +753,10 @@ const YEAR_MONTH_RE = /(?<![\d/.-])(?:19|20)\d{2}-(?:0[1-9]|1[0-2])(?!\d|[/.-]\d
 const CUED_SHORT_DATE_RE =
   /(?<![A-Za-z])(?:on|since|born|dated?|DOB|D\.O\.B\.?|as[ \t]+of|admitted|discharged|effective|starting|started|began|beginning|seen|visit|appt|appointment|scheduled)(?![A-Za-z])[ \t]*:?[ \t]*(?:on[ \t]+)?(\d{1,2})[/-](\d{1,2})(?!\d|[/.-]\d)/gi;
 const NOT_SHORT_DATE_AFTER =
-  /^[ \t]*(?:days?|nights?|weeks?|months?|times|occasions|items|questions|sessions|scale|of|on|anxiety|pain|mood|distress|depression|suds)\b/i;
+  /^[ \t]*(?:days?|nights?|weeks?|months?|times|occasions|items|questions|sessions|scale|of|on|anxiety|pain|mood|distress|depression|suds|tablets?|tabs?|doses?|pills?|mg|capsules?|caps?|strength)\b/i;
+/** A holiday with a year is a date ("Christmas 2023"). */
+const HOLIDAY_YEAR_RE =
+  /\b(?:Christmas(?:[ \t]+(?:Eve|Day))?|Thanksgiving|Easter|Halloween|Hanukkah|Passover|Ramadan|Diwali|Eid(?:[ \t]+al-\w+)?|Kwanzaa|Lunar[ \t]+New[ \t]+Year|New[ \t]+Year['’]?s(?:[ \t]+(?:Eve|Day))?|Valentine['’]?s[ \t]+Day|Independence[ \t]+Day|Fourth[ \t]+of[ \t]+July|July[ \t]+4th|Memorial[ \t]+Day|Labor[ \t]+Day|Mother['’]?s[ \t]+Day|Father['’]?s[ \t]+Day)[ \t,]+(?:of[ \t]+)?(?:19|20)\d{2}\b/gi;
 const BIRTH_CUE_RE =
   /(?<![A-Za-z])(?:DOB|D\.O\.B\.?|date[ \t]+of[ \t]+birth|birth[ \t]*date|birthday|b-?day|born(?:[ \t]+on)?)(?![A-Za-z])[ \t]*(?:is|was|=|:|-)?[ \t]*/gi;
 const BIRTH_VALUE_Y = new RegExp(
@@ -613,8 +767,11 @@ const BIRTH_VALUE_Y = new RegExp(
 function detectDates(text: string, add: Add): void {
   each(text, MONTH_DAY_RE, (m) => {
     const end = m.index + m[0].length;
-    if (monthOk(m[1]!) && dayOk(m[2]!) && !NOT_DATE_AFTER.test(text.slice(end, end + 8))) add("DATE", m.index, end);
+    // A lower-case "may" / "march" is a month only with an ordinal day ("seen on march 3rd").
+    const ordinal = /^\.?[ \t]+\d{1,2}(?:st|nd|rd|th)\b/i.test(m[0].slice(m[1]!.length));
+    if ((monthOk(m[1]!) || ordinal) && dayOk(m[2]!) && !NOT_DATE_AFTER.test(text.slice(end, end + 8))) add("DATE", m.index, end);
   });
+  each(text, HOLIDAY_YEAR_RE, (m) => add("DATE", m.index, m.index + m[0].length));
   each(text, DAY_MONTH_RE, (m) => {
     if (monthOk(m[2]!) && dayOk(m[1]!)) add("DATE", m.index, m.index + m[0].length);
   });
@@ -632,6 +789,7 @@ function detectDates(text: string, add: Add): void {
   each(text, CUED_SHORT_DATE_RE, (m) => {
     const end = m.index + m[0].length;
     const start = end - (m[1]!.length + 1 + m[2]!.length);
+    if (m[1] === "9" && m[2] === "11") return; // "since 9/11": an event everyone shares, not a personal date
     if (monthDayOk(m[1]!, m[2]!) && !NOT_SHORT_DATE_AFTER.test(text.slice(end, end + 14))) add("DATE", start, end);
   });
   each(text, BIRTH_CUE_RE, (m) => {
@@ -648,11 +806,41 @@ const AGE_YEARS_OLD_RE = new RegExp(
 );
 const AGE_YO_RE = new RegExp(`\\b${AGE_NUM}[ \\t]*(?:yo|y/o|y\\.o\\.?|yoa)(?![A-Za-z])`, "gi");
 const AGE_CUE_RE = new RegExp(`\\b(?:age|aged|ages|turned|turning)\\b[ \\t]*:?[ \\t]*${AGE_NUM}\\b(?![/.]\\d)`, "gi");
-const NOT_AGE_AFTER = /^[ \t]*(?:%|percent|days?|weeks?|months?|minutes?|mins?|hours?|mg|mcg|ml)\b|^[ \t]*%/i;
+const NOT_AGE_AFTER =
+  /^[ \t]*(?:%|percent|days?|weeks?|months?|minutes?|mins?|hours?|mg|mcg|ml|lbs?|pounds|kg|bpm|degrees|points|times|out[ \t]+of|\/|cm|mm|ms|seconds?|dollars|people)\b|^[ \t]*[%/]/i;
 const AGE_DECADE_RE =
-  /\b(?:in|into)[ \t]+(?:his|her|their|my|your)[ \t]+((?:early[ \t]+|mid[ \t-]*|late[ \t]+)?(?:90|100)'?s)\b/gi;
+  /\b(?:in|into)[ \t]+(?:his|her|their|my|your)[ \t]+((?:early[ \t]+|mid[ \t-]*|late[ \t]+)?(?:(?:90|100)'?s|nineties))\b/gi;
+/** "She is 93", "now 91", "turns 95": a bare number after a person verb (not a vital sign or score). */
+const AGE_VERB_RE = new RegExp(`\\b(?:is|was|now|currently|turns|turned|turning)[ \\t]+${AGE_NUM}\\b(?![/.]\\d)`, "gi");
+const NOT_AGE_BEFORE =
+  /\b(?:pulse|heart[ \t]+rate|hr|bp|o2|spo2|sat|sats|saturation|score|weight|temp|temperature|glucose|sugar|level|rate|iq|percentile|grade|average|total|count|cholesterol|a1c|bmi|reading|result|phq-?9|gad-?7)\b[^.;\n]{0,12}$/i;
+/** What may follow "is 93": the end of a clause or a few connecting words (never "123 Main Street"). */
+const AGE_VERB_AFTER_OK =
+  /^(?:[ \t]*(?:$|[.,;:!?)])|[ \t]+(?:and|but|so|now|today|this|with|who|still|living|lives|years?|yrs?|yo|y\/o)\b)/i;
+/** "93 years and still driving": years without "old". */
+const AGE_YEARS_RE = new RegExp(`\\b${AGE_NUM}[ \\t]*-?[ \\t]*(?:years?|yrs?)(?![A-Za-z])(?![ \\t]+ago)`, "gi");
+const AGE_WORD =
+  "(?:ninety(?:[ \\t-](?:one|two|three|four|five|six|seven|eight|nine))?|(?:a|one)[ \\t]+hundred(?:[ \\t]+(?:and[ \\t]+)?(?:one|two|three|four|five|six|seven|eight|nine|ten))?)";
+const AGE_WORD_RE = new RegExp(
+  `\\b(?:(?:age|aged|turned|turning|turns|is|was|now)[ \\t]+${AGE_WORD}\\b|${AGE_WORD}[ \\t]*-?[ \\t]*(?:years?|yrs?)(?![A-Za-z]))`,
+  "gi",
+);
 
 function detectAges(text: string, add: Add): void {
+  each(text, AGE_VERB_RE, (m) => {
+    const end = m.index + m[0].length;
+    if (!AGE_VERB_AFTER_OK.test(text.slice(end, end + 12)) || NOT_AGE_AFTER.test(text.slice(end, end + 12))) return;
+    if (NOT_AGE_BEFORE.test(text.slice(Math.max(0, m.index - 30), m.index))) return;
+    add("AGE_OVER_89", end - m[1]!.length, end);
+  });
+  each(text, AGE_YEARS_RE, (m) => add("AGE_OVER_89", m.index, m.index + m[1]!.length));
+  each(text, AGE_WORD_RE, (m) => {
+    const num = /(?:ninety|hundred)(?:[ \t-](?:and[ \t]+)?(?:one|two|three|four|five|six|seven|eight|nine|ten))?/i.exec(m[0]);
+    const lead = /^(?:a|one)[ \t]+/i.exec(m[0].slice(num ? num.index - 4 : 0, num ? num.index : 0));
+    if (!num) return;
+    const start = m.index + num.index - (lead ? lead[0].length : 0);
+    add("AGE_OVER_89", start, m.index + num.index + num[0].length);
+  });
   each(text, AGE_YEARS_OLD_RE, (m) => add("AGE_OVER_89", m.index, m.index + m[1]!.length));
   each(text, AGE_YO_RE, (m) => add("AGE_OVER_89", m.index, m.index + m[1]!.length));
   each(text, AGE_CUE_RE, (m) => {
@@ -684,7 +872,15 @@ const PHONE7_RE = /(?<![\w./-])\d{3}[-.]\d{4}(?!\w|[./-]\d)/g;
 const FAX_BEFORE =
   /(?:fax|facsimile|telefax)(?:[ \t]*(?:number|no\.?|#))?[ \t]*[:#=-]?[ \t]*$|(?<![A-Za-z])F[ \t]*:[ \t]*$/i;
 
+/** "phone 555 1234", "call her at 555 1234": a 7-digit number with a space needs a phone cue. */
+const PHONE_CUED7_RE =
+  /(?<![A-Za-z])(?:phone|cell|mobile|tel|telephone|call|text|number|reach(?:ed)?)(?:[ \t]+(?:her|him|them|me|number|no\.?|#))?(?:[ \t]+at)?[ \t]*[:#-]?[ \t]*(\d{3}[ .-]\d{4})(?![\d])/gi;
+
 function detectPhones(text: string, add: Add): void {
+  each(text, PHONE_CUED7_RE, (m) => {
+    const end = m.index + m[0].length;
+    add(FAX_BEFORE.test(text.slice(Math.max(0, m.index - 24), m.index)) ? "FAX" : "PHONE", end - m[1]!.length, end, CUED_BONUS);
+  });
   const push = (start: number, end: number): void => {
     const before = text.slice(Math.max(0, start - 24), start);
     add(FAX_BEFORE.test(before) ? "FAX" : "PHONE", start, end);
@@ -730,6 +926,23 @@ function detectEmailsAndHandles(text: string, add: Add): void {
   }
 }
 
+/** "jdoe(at)gmail.com", "jdoe [at] gmail [dot] com", "jdoe at gmail dot com". */
+const OBFUSCATED_EMAIL_RE =
+  /(?<![A-Za-z0-9._%+-])[A-Za-z0-9][A-Za-z0-9._%+-]{0,63}[ \t]*(?:\((?:at)\)|\[(?:at)\]|\{(?:at)\}|[ \t]at[ \t])[ \t]*[A-Za-z0-9-]{1,63}(?:[ \t]*(?:\.|\(dot\)|\[dot\]|[ \t]dot[ \t])[ \t]*[A-Za-z0-9-]{1,63}){0,3}[ \t]*(?:\.|\(dot\)|\[dot\]|[ \t]dot[ \t])[ \t]*(?:com|org|net|edu|gov|io|co|us|me|info|uk|ca|au)(?![A-Za-z0-9])/gi;
+/** "her blog janesmithwrites.com": a bare domain with no path (label of 6+ characters). */
+const BARE_DOMAIN_RE =
+  /(?<![\w@.\/-])([A-Za-z0-9][A-Za-z0-9-]{5,62})\.(?:com|org|net|io|co|us|info|biz|me|blog|app|site|online|page|tv|xyz)(?![\w-]|\.[A-Za-z0-9])/gi;
+/** Public resources and big platforms: naming them identifies no one. */
+const PUBLIC_DOMAINS = words(
+  "findahelpline 988lifeline crisistextline therapistaid psychologytoday nami samhsa google facebook instagram " +
+    "youtube amazon reddit tiktok twitter wikipedia webmd mayoclinic healthline betterhelp talkspace headspace " +
+    "calm zoom gmail yahoo outlook hotmail icloud linkedin spotify netflix walmart target pinterest discord " +
+    "whatsapp telegram snapchat phqscreeners getselfhelp",
+);
+/** "IG: janedoe92", "tiktok @jane_d", "username is jdoe". */
+const HANDLE_CUE_RE =
+  /(?<![A-Za-z])(?:IG|insta|instagram|tiktok|tik[ \t]+tok|snap|snapchat|twitter|threads|username|user[ \t]+name|handle|screen[ \t]?name|gamertag|discord|reddit|fb|facebook)(?![A-Za-z])(?:[ \t]*(is|:|=|@|-)[ \t]*|[ \t]+(?:(?:handle|name|account|id)[ \t]*(?:is|:)?[ \t]*)?)@?([A-Za-z0-9_][A-Za-z0-9_.]{2,29})/gi;
+
 const URL_CHARS = "[^\\s<>\"'`\\[\\]{}|\\\\^]";
 const URL_RE = new RegExp(`\\b(?:https?://|www\\.)${URL_CHARS}+`, "gi");
 const BARE_URL_RE = new RegExp(
@@ -739,6 +952,17 @@ const BARE_URL_RE = new RegExp(
 );
 
 function detectUrls(text: string, add: Add): void {
+  each(text, OBFUSCATED_EMAIL_RE, (m) => add("EMAIL", m.index, m.index + m[0].length));
+  each(text, BARE_DOMAIN_RE, (m) => {
+    if (!PUBLIC_DOMAINS.has(m[1]!.toLowerCase())) add("URL", m.index, m.index + m[0].length);
+  });
+  each(text, HANDLE_CUE_RE, (m) => {
+    const value = m[2]!.replace(/\.+$/, "");
+    // With an explicit separator ("IG: jane") any value counts; otherwise it must look like a handle.
+    if (!m[1] && !/[\d_.]/.test(value)) return;
+    const end = m.index + m[0].length - (m[2]!.length - value.length);
+    add("URL", end - value.length, end, CUED_BONUS);
+  });
   for (const re of [URL_RE, BARE_URL_RE]) {
     each(text, re, (m) => {
       let end = m.index + m[0].length;
@@ -816,9 +1040,14 @@ const CUE_SPECS: readonly CueSpec[] = [
     value: SSN_VALUE_Y,
   },
   {
+    type: "SSN",
+    re: cue("(?:SSN|SS#|soc(?:ial)?[ \\t]+sec(?:urity)?(?:[ \\t]+(?:number|no))?)[ \\t]+(?:last[ \\t]+(?:four|4)(?:[ \\t]+digits)?|ending[ \\t]+(?:in|with))"),
+    value: SSN_VALUE_Y,
+  },
+  {
     type: "MRN",
     re: cue(
-      "MRN|MR#|med(?:ical)?\\.?[ \\t]*rec(?:ord)?s?[ \\t]*(?:number|no|num|#)|medical[ \\t]+records?|chart[ \\t]*(?:number|no|num|#|id)|record[ \\t]*(?:number|no|num|#)|patient[ \\t]+(?:id|number|no|#)|pt\\.?[ \\t]*(?:id|#)|encounter[ \\t]+(?:id|number|no|#)|case[ \\t]+(?:number|no|#|id)|accession[ \\t]+(?:number|no|#)|hospital[ \\t]+(?:id|number|no|#)",
+      "MRN|MR#|med(?:ical)?\\.?[ \\t]*rec(?:ord)?s?[ \\t]*(?:number|no|num|#)|medical[ \\t]+records?|chart(?:[ \\t]*(?:number|no|num|#|id))?|record[ \\t]*(?:number|no|num|#)|patient[ \\t]+(?:id|number|no|#)|pt\\.?[ \\t]*(?:id|#)|encounter[ \\t]+(?:id|number|no|#)|case[ \\t]+(?:number|no|#|id)|accession[ \\t]+(?:number|no|#)|hospital[ \\t]+(?:id|number|no|#)",
     ),
   },
   {
@@ -924,6 +1153,7 @@ function detectOtherIds(text: string, add: Add): void {
     if (MBI_TOKEN.test(tok)) return add("HEALTH_PLAN_ID", start, end);
     if (CLINICAL_TOKEN.test(tok) || DOSE_TOKEN.test(tok)) return;
 
+    if (/^\d{4,5}-\d$/.test(tok)) return; // LOINC codes ("44249-1") are clinical
     const segs = tok.split("-");
     if (segs.length <= 2 && segs.every((s) => /^\d{1,4}$/.test(s) || DOSE_TOKEN.test(s))) return; // ranges "100-200", "2019-2021"
     if (!hasLetter) {
@@ -977,21 +1207,61 @@ function resolve(cands: Candidate[], length: number): PhiFinding[] {
   return accepted.sort((a, b) => a.start - b.start);
 }
 
+const UNICODE_DASH = /[\u2010-\u2015\u2212\uFE58\uFE63\uFF0D]/;
+const UNICODE_SPACE = /[\u00A0\u1680\u2000-\u200A\u202F\u205F\u3000]/;
+const COMBINING = /\p{M}/u;
+
+/**
+ * The text the detectors see: accented letters folded to their base letter ("José García" ->
+ * "Jose Garcia", so the name lists match, whether the accent was typed precomposed or as a separate
+ * combining mark), Unicode dashes -> "-" and Unicode spaces -> " " ("555–123–4567"). Letters that do
+ * not decompose (e.g. "Ł") are kept; the name regexes are Unicode-aware. `map[i]` is the index in the
+ * original text of scan character i (map[scan.length] = text.length), so findings point at the original.
+ */
+export function scanView(text: string): { scan: string; map: number[] } {
+  let scan = "";
+  const map: number[] = [];
+  for (let i = 0; i < text.length; ) {
+    const ch = text.charAt(i);
+    const code = ch.charCodeAt(0);
+    let next = i + 1;
+    let out = ch;
+    if (code >= 0xd800 && code <= 0xdfff) out = ch; // surrogate halves stay one for one
+    else if (UNICODE_DASH.test(ch)) out = "-";
+    else if (UNICODE_SPACE.test(ch)) out = " ";
+    else if (/\p{L}/u.test(ch)) {
+      // A letter and any combining marks typed after it form one scan character.
+      while (next < text.length && COMBINING.test(text.charAt(next))) next++;
+      const base = text.slice(i, next).normalize("NFD").replace(/\p{M}/gu, "");
+      out = base.length === 1 ? base : ch;
+      if (base.length !== 1) next = i + 1;
+    }
+    scan += out;
+    map.push(i);
+    i = next;
+  }
+  map.push(text.length);
+  return { scan, map };
+}
+
 /**
  * Detects and redacts Safe Harbor identifiers. Pure and synchronous.
  * `findings` index into the ORIGINAL text; `clean` swaps each finding for `[TYPE]`.
  */
 export function scrubPHI(text: string): ScrubResult {
   if (typeof text !== "string" || text.length === 0) return { clean: typeof text === "string" ? text : "", findings: [] };
+  const { scan, map } = scanView(text);
   const cands: Candidate[] = [];
   const add: Add = (type, start, end, bonus = 0) => {
     let s = start;
     let e = end;
-    while (s < e && /\s/.test(text.charAt(s))) s++;
-    while (e > s && /\s/.test(text.charAt(e - 1))) e--;
-    if (e > s) cands.push({ type, start: s, end: e, priority: PRIORITY[type] + bonus });
+    while (s < e && /\s/.test(scan.charAt(s))) s++;
+    while (e > s && /\s/.test(scan.charAt(e - 1))) e--;
+    const os = map[s] ?? text.length;
+    const oe = map[e] ?? text.length;
+    if (oe > os) cands.push({ type, start: os, end: oe, priority: PRIORITY[type] + bonus });
   };
-  for (const detect of DETECTORS) detect(text, add);
+  for (const detect of DETECTORS) detect(scan, add);
 
   const findings = resolve(cands, text.length);
   let clean = "";

@@ -93,6 +93,7 @@
     "rows": 6
   },
   "safetyNote": "Safety first: If you drink a lot, or take certain pills like sleeping pills or pills for nerves every day, stopping all at once can be dangerous. Talk with a doctor first. After a break from opioids or other drugs, your body can't handle as much as before. Using the amount you used to can cause an overdose. If you do use, don't use alone, and keep naloxone, a medicine that can reverse an opioid overdose, close by. If someone may have overdosed, call 911. For free, confidential help finding treatment in the US, call the SAMHSA National Helpline at 1-800-662-4357, any time, in English or Spanish. If you have thoughts of hurting yourself or someone else, call or text 988 in the US, or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sud": true,
   "sources": [
     {
       "title": "Relapse prevention for alcohol and drug problems: that was Zen, this is Tao (Witkiewitz and Marlatt)",

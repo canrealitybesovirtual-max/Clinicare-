@@ -21,7 +21,15 @@ export interface ScoringInput {
   medicalPossible: TriState; // medical condition could explain symptoms
 }
 
-export type SuggestionFlagType = "duration" | "impairment" | "substance" | "medical" | "partial-core" | "breadth";
+export type SuggestionFlagType =
+  | "duration"
+  | "impairment"
+  | "substance"
+  | "medical"
+  | "partial-core"
+  | "breadth"
+  | "required" // a feature the pattern cannot do without is not documented
+  | "red-flag"; // a red flag in the same input changes how to read this suggestion
 
 export interface FeatureRef {
   symptomId: string;

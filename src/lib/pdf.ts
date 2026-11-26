@@ -8,6 +8,10 @@
  * - The only personal field is a blank handwritten "Name" line. No other identifier fields (G5).
  * - Every page carries the disclaimer footer (G14), the app name and "Page x of y".
  * - Every PDF that reaches a client carries the crisis box (988 / local emergency / findahelpline.com) (G9).
+ * - Substance-use handouts (sud: true) carry the 42 CFR Part 2 notice in every page footer (G6).
+ * - Client handouts never name a diagnosis: source credits pass the client-safe filter (G3).
+ * - Blank measure forms: page 1 is the client's form; the scoring key and risk-item notes are on a
+ *   separate clinician page.
  *
  * Layout is pure and synchronous (measurePdfLayout / handoutPdfLayout), using the standard-font metrics
  * from pdf-lib, so tests can assert content without decompressing PDF streams. The create* functions
@@ -15,12 +19,18 @@
  */
 import { PDFDocument, StandardFontEmbedder, StandardFonts, rgb } from "pdf-lib";
 import type { Handout, Measure } from "./schemas";
+import { clientSourceCredits } from "./client-safe";
+import { PART2_NOTICE } from "./referral-links";
 
 export const PDF_APP_NAME = "Clinician Resource Companion";
 export const PDF_DISCLAIMER = "Resource only. Not a substitute for clinical judgment.";
 export const PDF_CRISIS_HEADING = "Need help now?";
 export const PDF_CRISIS_LINE = "US: call or text 988 · Emergency: 911 or your local number · Other countries: findahelpline.com";
 export const PDF_NAME_LINE = "Name: ________________________________________";
+export const PDF_CLINICIAN_PAGE_NOTE =
+  "Clinician page: keep this page. Give the client only the form on page 1.";
+/** G6: printed in the footer of every page of a substance-use (sud) export. Exact SPEC wording. */
+export const PDF_PART2_NOTICE = PART2_NOTICE;
 
 /* ---------------------------------------------------------------- page geometry (points) */
 
@@ -185,11 +195,22 @@ interface TextStyle {
   lineHeight?: number; // multiple of size
 }
 
+const NOTICE_SIZE = 7.5;
+const NOTICE_LH = 9.5;
+
 class LayoutBuilder {
   readonly pages: PdfPageLayout[] = [];
   y = TOP;
+  /** Lowest y content may reach; raised when a footer notice needs room. */
+  readonly bottom: number;
+  private readonly noticeLines: string[];
 
-  constructor(readonly title: string) {
+  constructor(
+    readonly title: string,
+    opts: { footerNotice?: string } = {},
+  ) {
+    this.noticeLines = opts.footerNotice ? wrapText(opts.footerNotice, NOTICE_SIZE, CONTENT_W, true) : [];
+    this.bottom = BOTTOM + (this.noticeLines.length ? this.noticeLines.length * NOTICE_LH + 6 : 0);
     this.newPage();
   }
 
@@ -210,7 +231,7 @@ class LayoutBuilder {
 
   /** Start a new page when `height` does not fit (never loops on blocks taller than a page). */
   ensure(height: number): boolean {
-    if (this.y - height < BOTTOM && !this.atTop) {
+    if (this.y - height < this.bottom && !this.atTop) {
       this.newPage();
       return true;
     }
@@ -295,6 +316,10 @@ class LayoutBuilder {
   finish(): PdfLayout {
     const n = this.pages.length;
     this.pages.forEach((page, i) => {
+      // Footer notice (e.g. 42 CFR Part 2 on substance-use exports, G6): above the separator, every page.
+      this.noticeLines.forEach((l, j) => {
+        page.ops.push({ kind: "text", text: l, x: LEFT, y: this.bottom - 4 - NOTICE_SIZE - j * NOTICE_LH, size: NOTICE_SIZE, bold: true, color: "text" });
+      });
       const sep = BOTTOM - 8;
       page.ops.push({ kind: "line", x1: LEFT, y1: sep, x2: RIGHT, y2: sep, color: "border", lineWidth: 0.5 });
       page.ops.push({ kind: "text", text: PDF_DISCLAIMER, x: LEFT, y: sep - 11, size: 8.5, bold: true, color: "text" });
@@ -429,7 +454,20 @@ export function measurePdfLayout(measure: Measure): PdfLayout {
     b.y -= lh + 4;
   }
 
-  // ---- scoring key for the clinician: one cell per severity band
+  // ---- page 1 ends with the crisis box and the copyright/citation: this is the page the client fills in.
+  b.crisisBox();
+  b.y -= 6;
+  b.paragraph(measure.copyright, { size: 7, color: "muted", lineHeight: 1.3 });
+  const loinc = measure.loinc
+    ? ` LOINC: panel ${measure.loinc.panel}${measure.loinc.total ? `, total score ${measure.loinc.total}` : ""}.`
+    : "";
+  b.paragraph(`Citation: ${measure.citation}${loinc}`, { size: 7, color: "muted", lineHeight: 1.3 });
+
+  // ---- clinician page: severity bands and risk-item notes stay off the client's page.
+  b.newPage();
+  b.paragraph(`${measure.shortName} scoring key (for clinician use)`, { size: 14, bold: true, lineHeight: 1.3 });
+  b.paragraph(PDF_CLINICIAN_PAGE_NOTE, { size: 9, color: "muted", lineHeight: 1.3 });
+  b.y -= 8;
   const bands = [...measure.scoring.bands].sort((p, q) => p.min - q.min);
   const bandW = CONTENT_W / bands.length;
   const bandLabelLines = bands.map((band) => wrapText(band.label, 8.5, bandW - 2 * pad));
@@ -454,16 +492,7 @@ export function measurePdfLayout(measure: Measure): PdfLayout {
   );
   for (const r of measure.riskItems) b.paragraph(r.message, { size: 8.5, bold: true, lineHeight: 1.3 });
   b.y -= 6;
-
   b.crisisBox();
-  b.y -= 6;
-
-  // ---- copyright and citation
-  b.paragraph(measure.copyright, { size: 7, color: "muted", lineHeight: 1.3 });
-  const loinc = measure.loinc
-    ? ` LOINC: panel ${measure.loinc.panel}${measure.loinc.total ? `, total score ${measure.loinc.total}` : ""}.`
-    : "";
-  b.paragraph(`Citation: ${measure.citation}${loinc}`, { size: 7, color: "muted", lineHeight: 1.3 });
 
   return b.finish();
 }
@@ -471,7 +500,7 @@ export function measurePdfLayout(measure: Measure): PdfLayout {
 /* ---------------------------------------------------------------- client handout */
 
 export function handoutPdfLayout(handout: Handout): PdfLayout {
-  const b = new LayoutBuilder(toWinAnsi(handout.title));
+  const b = new LayoutBuilder(toWinAnsi(handout.title), handout.sud ? { footerNotice: PDF_PART2_NOTICE } : {});
   const body = 11;
 
   b.paragraph(handout.title, { size: 18, bold: true, lineHeight: 1.25 });
@@ -532,9 +561,10 @@ export function handoutPdfLayout(handout: Handout): PdfLayout {
   b.crisisBox();
   b.y -= 12;
 
-  // ---- sources
-  const sources = handout.sources.map((s) => `${s.title} (${s.publisher}${s.year ? `, ${s.year}` : ""})`);
-  b.paragraph(`Sources: ${sources.join("; ")}.`, { size: 7.5, color: "muted" });
+  // ---- sources: client-safe credits only (G3). Titles that name a condition are reduced to the
+  // publisher, the same rule the client screen applies, so a printed sheet never names a diagnosis.
+  const credits = clientSourceCredits(handout.sources);
+  if (credits.length > 0) b.paragraph(`Based on information from: ${credits.join("; ")}.`, { size: 7.5, color: "muted" });
   b.paragraph("Talk with your counselor or therapist about any questions on this sheet.", { size: 7.5, color: "muted" });
 
   return b.finish();

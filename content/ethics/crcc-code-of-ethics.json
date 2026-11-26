@@ -1,0 +1,55 @@
+{
+  "id": "crcc-code-of-ethics",
+  "name": "Code of Professional Ethics for Certified Rehabilitation Counselors",
+  "shortName": "CRCC Code",
+  "organization": "Commission on Rehabilitation Counselor Certification",
+  "edition": 2023,
+  "editionLabel": "2023 code, adopted September 2022, effective January 1, 2023 (the 2017 code covers earlier conduct)",
+  "effectiveDate": "2023-01-01",
+  "editionStatus": "current",
+  "appliesTo": ["rehabilitation-counselor"],
+  "countries": ["US"],
+  "scope": "national",
+  "summary": "The CRCC code applies to Certified Rehabilitation Counselors (CRCs) and CRCC applicants. It focuses on the rights, autonomy and full participation of people with disabilities, and covers topics such as the counseling relationship, confidentiality and privacy, advocacy and accessibility, multicultural considerations (a section added in the 2023 revision), professional responsibility, forensic services, assessment, supervision and teaching, research, technology and distance counseling, and business practices. CRCC applies the 2023 code to conduct on or after January 1, 2023. This is a summary in the app's own words. It is information, not legal advice.",
+  "keyReminders": [
+    {
+      "topic": "Advocacy and accessibility",
+      "text": "Make services, documents and offices usable by people with disabilities, and advocate with clients against barriers in services, employment and the community.",
+      "tags": ["cultural-competence"]
+    },
+    {
+      "topic": "Disability-aware assessment",
+      "text": "Choose assessment methods that account for disability, use accommodations that do not change what is being measured, and say so in reports when standard norms may not fit.",
+      "tags": ["assessment"]
+    },
+    {
+      "topic": "Consent and capacity",
+      "text": "Support people with cognitive or communication disabilities to take part in consent decisions, using accessible formats, and involve legal representatives only as the law requires.",
+      "tags": ["informed-consent"]
+    },
+    {
+      "topic": "Forensic and third-party roles",
+      "text": "When you evaluate for a court, insurer or employer, explain your role, who will receive the findings and what will not stay confidential before you begin.",
+      "tags": ["confidentiality", "dual-relationships"]
+    },
+    {
+      "topic": "Technology and distance counseling",
+      "text": "Check that remote services and assistive technology are accessible, secure and lawful where the client is, and give clients an alternative when technology does not work for them.",
+      "tags": ["technology", "telehealth"]
+    }
+  ],
+  "whenRelevant": ["cultural-competence", "assessment", "informed-consent", "confidentiality", "dual-relationships", "technology", "telehealth"],
+  "regulatorNote": "CRC certification is a national credential. Rehabilitation counselors who also hold a state counseling license must follow that state board's rules as well.",
+  "officialUrl": "https://crccertification.com/code-of-ethics/",
+  "verification": {
+    "method": "search-index",
+    "note": "The 2023 edition (adopted September 2022, effective January 1, 2023) and the new multicultural section were confirmed through search results indexing crccertification.com and a Rehabilitation Counseling Bulletin article (vol. 66, 2023). The full section list of the 2023 code was not read. A person must load the official page before release."
+  },
+  "sources": [
+    { "title": "Code of Ethics", "publisher": "Commission on Rehabilitation Counselor Certification", "url": "https://crccertification.com/code-of-ethics/", "year": 2023 },
+    { "title": "Professional Ethics Standards", "publisher": "Commission on Rehabilitation Counselor Certification", "url": "https://crccertification.com/professional-ethics-standards/" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

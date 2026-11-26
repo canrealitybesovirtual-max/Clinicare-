@@ -1,0 +1,67 @@
+{
+  "id": "ifsw-global-statement-ethical-principles",
+  "name": "Global Social Work Statement of Ethical Principles",
+  "shortName": "IFSW Global Statement",
+  "organization": "International Federation of Social Workers (with the International Association of Schools of Social Work)",
+  "edition": 2018,
+  "editionLabel": "Adopted July 2018 in Dublin (IFSW General Meeting; IASSW adopted its version on 5 July 2018)",
+  "editionStatus": "current",
+  "appliesTo": ["social-worker"],
+  "countries": ["INTL"],
+  "scope": "global",
+  "summary": "The IFSW statement is a short global framework for social work ethics, designed to be expanded by each country's own code. Its principles cover recognizing the inherent dignity of every person, promoting human rights and social justice, the right to self-determination and to take part in decisions, treating each person as a whole within family, community and environment, ethical use of technology and social media, and professional integrity. It sees social work as both direct practice and work for structural change. This is a summary in the app's own words. It is information, not legal advice.",
+  "keyReminders": [
+    {
+      "topic": "Dignity and human rights",
+      "text": "Treat every person with respect regardless of status, and recognize that poverty, discrimination and exclusion are human rights issues, not only personal problems.",
+      "tags": ["cultural-competence"]
+    },
+    {
+      "topic": "Participation and self-determination",
+      "text": "Build on people's strengths and include them fully in decisions that affect their lives, including how services are designed.",
+      "tags": ["informed-consent"]
+    },
+    {
+      "topic": "Challenging discrimination",
+      "text": "Notice and challenge discrimination and unjust policies, and work with communities as partners rather than for them.",
+      "tags": ["cultural-competence"]
+    },
+    {
+      "topic": "Confidentiality and privacy",
+      "text": "Protect privacy and explain the limits of confidentiality set by law in your country before people share sensitive information.",
+      "tags": ["confidentiality"]
+    },
+    {
+      "topic": "Technology and social media",
+      "text": "Apply the same ethics online as face to face, and take care with consent, privacy, boundaries and the risk that information spreads beyond its purpose.",
+      "tags": ["technology"]
+    }
+  ],
+  "whenRelevant": ["cultural-competence", "informed-consent", "confidentiality", "technology"],
+  "regulatorNote": "Social work is licensed or registered nationally, for example by US state boards, provincial colleges in Canada or Social Work England. The national code, law and regulator take precedence.",
+  "officialUrl": "https://www.ifsw.org/global-social-work-statement-of-ethical-principles/",
+  "relatedLinks": [
+    { "title": "IASSW: Global Social Work Statement of Ethical Principles", "url": "https://www.iassw-aiets.org/2018/04/18/global-social-work-statement-of-ethical-principles-iassw" }
+  ],
+  "verification": {
+    "method": "search-index",
+    "note": "The 2018 adoption (IFSW General Meeting and IASSW General Assembly, Dublin, July 2018) and the URL were confirmed through search results indexing ifsw.org and iassw-aiets.org. A person must load the official page before release."
+  },
+  "sources": [
+    {
+      "title": "Global Social Work Statement of Ethical Principles",
+      "publisher": "International Federation of Social Workers",
+      "url": "https://www.ifsw.org/global-social-work-statement-of-ethical-principles/",
+      "year": 2018
+    },
+    {
+      "title": "Global Social Work Statement of Ethical Principles (IASSW)",
+      "publisher": "International Association of Schools of Social Work",
+      "url": "https://www.iassw-aiets.org/2018/04/18/global-social-work-statement-of-ethical-principles-iassw",
+      "year": 2018
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

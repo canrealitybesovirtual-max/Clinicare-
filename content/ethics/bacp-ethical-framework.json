@@ -1,0 +1,78 @@
+{
+  "id": "bacp-ethical-framework",
+  "name": "Ethical Framework for the Counselling Professions",
+  "shortName": "BACP Ethical Framework",
+  "organization": "British Association for Counselling and Psychotherapy",
+  "edition": 2026,
+  "editionLabel": "2026 edition, in force from November 2026 (replaces the 2018 framework)",
+  "editionStatus": "current",
+  "editionNote": "BACP's sources give slightly different start dates: the 2026 framework PDF says it takes effect from 1 November 2026, while a BACP page says members remained bound by the 2018 framework until midday on 3 November 2026. Either way the 2026 framework is in force on 2026-11-26.",
+  "appliesTo": ["counselor", "psychotherapist"],
+  "countries": ["GB"],
+  "scope": "national",
+  "summary": "BACP's Ethical Framework sets the standards for members of the British Association for Counselling and Psychotherapy and for practitioners on its register. The 2026 edition replaces the 2018 framework after a review that ran from 2022 to 2026. It is organized around working ethically within relationships, ethical principles and core responsibilities, and gives new attention to relational ethics, working across borders, safeguarding, social media and AI. Counselling and psychotherapy are not statutory professions in the UK, so the framework works alongside BACP's accredited register and UK law, including UK GDPR. This is a summary in the app's own words. It is information, not legal advice.",
+  "keyReminders": [
+    {
+      "topic": "The client's wellbeing and choice",
+      "text": "Put the client's safety and wellbeing first, agree the terms of the work clearly at the start, and respect the client's right to make informed choices about it.",
+      "tags": ["informed-consent"]
+    },
+    {
+      "topic": "Working across borders",
+      "text": "For online work with clients in another country, check the law, regulation and insurance that apply where the client is, not only where you are.",
+      "tags": ["telehealth", "technology"]
+    },
+    {
+      "topic": "Safeguarding",
+      "text": "Know your safeguarding duties and local procedures for adults and children at risk, and explain the limits of confidentiality before they arise.",
+      "tags": ["confidentiality", "duty-to-warn"]
+    },
+    {
+      "topic": "AI and digital tools",
+      "text": "Before using AI or other digital tools with client material, check data protection law, tell clients what you use, and keep your own professional judgment in charge.",
+      "tags": ["technology", "confidentiality"]
+    },
+    {
+      "topic": "Relational ethics and boundaries",
+      "text": "Attend to power in the relationship, avoid dual relationships that could harm the client, and use supervision to think through boundary questions.",
+      "tags": ["dual-relationships"]
+    },
+    {
+      "topic": "Diversity and equality",
+      "text": "Work in ways that respect clients' identities, cultures and beliefs, and address your own assumptions in supervision and training.",
+      "tags": ["cultural-competence"]
+    }
+  ],
+  "whenRelevant": ["informed-consent", "telehealth", "technology", "confidentiality", "duty-to-warn", "dual-relationships", "cultural-competence"],
+  "regulatorNote": "In the UK, counsellor and psychotherapist are not protected titles; voluntary registers such as BACP's are accredited by the Professional Standards Authority. Practitioner psychologists are regulated by the HCPC.",
+  "officialUrl": "https://www.bacp.co.uk/events-and-resources/ethics-and-standards/ethical-framework-for-the-counselling-professions/",
+  "relatedLinks": [
+    { "title": "BACP Ethical Framework 2026 (PDF)", "url": "https://www.bacp.co.uk/media/26472/bacp-ethical-framework-for-the-counselling-professions-2026.pdf" },
+    {
+      "title": "BACP: Preparing for the 2026 Ethical Framework",
+      "url": "https://www.bacp.co.uk/events-and-resources/ethics-and-standards/ethical-framework-for-the-counselling-professions/preparing-for-the-2026-ethical-framework/"
+    },
+    { "title": "BACP Ethical Framework 2018 (previous edition, PDF)", "url": "https://www.bacp.co.uk/media/3103/bacp-ethical-framework-for-the-counselling-professions-2018.pdf" }
+  ],
+  "verification": {
+    "method": "search-index",
+    "note": "bacp.co.uk was not loaded directly. The 2026 edition, its structure and the November 2026 start date were confirmed through search results indexing the BACP framework PDF, the preparing-for-2026 page and BACP's impact assessment. A person must load the official pages before release."
+  },
+  "sources": [
+    {
+      "title": "Ethical Framework for the Counselling Professions 2026",
+      "publisher": "British Association for Counselling and Psychotherapy",
+      "url": "https://www.bacp.co.uk/media/26472/bacp-ethical-framework-for-the-counselling-professions-2026.pdf",
+      "year": 2026
+    },
+    {
+      "title": "Preparing for the 2026 Ethical Framework",
+      "publisher": "British Association for Counselling and Psychotherapy",
+      "url": "https://www.bacp.co.uk/events-and-resources/ethics-and-standards/ethical-framework-for-the-counselling-professions/preparing-for-the-2026-ethical-framework/",
+      "year": 2026
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

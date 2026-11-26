@@ -15,15 +15,15 @@ import "server-only";
  * healthCenterLink() instead. HRSA's public ArcGIS layers (gisportal.hrsa.gov) were not reachable from the
  * build sandbox and were not used.
  *
- * Outbound (G5/G17): a coarse point (0.01 degree) derived from the ZIP/city, or the ZIP, or a state FIPS code,
- * plus the radius. Never anything typed by the clinician.
+ * Outbound (G5/G17): a coarse point (0.01 degree) derived locally from the ZIP/city, or (for a ZIP with no Census
+ * point) the ZIP itself, plus the radius. Never anything typed by the clinician.
  */
 import { z } from "zod";
 import { describeLocation, healthCenterLink, type FinderLink } from "@/lib/referral-links";
 import { NotConfigured, UpstreamError, setRateLimit, upstreamFetch } from "@/server/core";
+import { PLACES_ATTRIBUTION } from "./places";
 import {
   RadiusMiles,
-  STATE_FIPS,
   StrictLocation,
   assertSafeBody,
   cleanText,
@@ -41,8 +41,7 @@ export { healthCenterLink } from "@/lib/referral-links";
 export const HRSA_UPSTREAM = "hrsa-hdw";
 export const HRSA_API_BASE = "https://data.hrsa.gov/HDWAPI3_External/api/v1";
 export const HRSA_SOURCE_URL = "https://data.hrsa.gov/tools/web-services";
-export const HRSA_ATTRIBUTION =
-  "Data: HRSA Data Warehouse (data.HRSA.gov), Health Center Service Delivery Sites. Listing is not an endorsement; call to confirm services, hours and fees.";
+export const HRSA_ATTRIBUTION = `Data: HRSA Data Warehouse (data.HRSA.gov), Health Center Service Delivery Sites. Listing is not an endorsement; call to confirm services, hours and fees. City names: ${PLACES_ATTRIBUTION}.`;
 
 /** Original wording. HRSA-funded health centers must offer a sliding fee discount and serve patients regardless of ability to pay. */
 export const SLIDING_FEE_NOTE =
@@ -74,8 +73,8 @@ export interface HealthCenterSite {
 
 export interface HealthCentersResult {
   location: string;
-  /** "distance": radius search from the ZIP/city point; "zip": sites in that ZIP; "state-city": sites listed in that city. */
-  method: "distance" | "zip" | "state-city";
+  /** "distance": radius search from the ZIP/city point; "zip": sites in that ZIP (ZIP with no Census point). */
+  method: "distance" | "zip";
   radiusMiles: number | null;
   sites: HealthCenterSite[];
   slidingFeeNote: string;
@@ -108,7 +107,10 @@ type HrsaRequest =
   | { method: "GetHealthCentersAroundALocation"; body: Record<string, string | number>; cacheKey: string }
   | { method: "GetHealthCentersByArea"; body: Record<string, string | number>; cacheKey: string };
 
-/** The exact request for a validated query (exported for tests). The token is added by the caller, never cached. */
+/**
+ * The exact request for a validated query (exported for tests). The token is added by the caller, never cached.
+ * A city always has a point (gazetteer); only a ZIP outside the Census ZCTA table falls back to an area search.
+ */
 export function buildHrsaRequest(
   q: z.output<typeof HealthCentersInput>,
   point: GeoPoint | null,
@@ -127,8 +129,7 @@ export function buildHrsaRequest(
   if ("zip" in q.location) {
     return { method: "GetHealthCentersByArea", body: { ZipCode: q.location.zip }, cacheKey: `zip:${q.location.zip}` };
   }
-  const fips = STATE_FIPS[q.location.state];
-  return { method: "GetHealthCentersByArea", body: { StateFipsCode: fips }, cacheKey: `state:${fips}` };
+  throw new UpstreamError(HRSA_UPSTREAM, 502, "Location could not be resolved"); // unreachable: cities always resolve
 }
 
 function normalize(row: HccRow): HealthCenterSite | null {
@@ -159,9 +160,9 @@ export async function searchHealthCenters(input: HealthCentersInput): Promise<He
 
   let point: GeoPoint | null = null;
   try {
-    point = await resolvePoint(q.location);
+    point = await resolvePoint(q.location); // local tables only, no network
   } catch (e) {
-    if (!(e instanceof UpstreamError)) throw e; // unknown ZIP or geocoder down: fall back to an area search
+    if (!(e instanceof UpstreamError)) throw e; // ZIP missing from the Census table: fall back to a ZIP area search
   }
   const req = buildHrsaRequest(q, point);
   assertSafeBody(req.body, { zipKeys: ["ZipCode"] });
@@ -185,14 +186,12 @@ export async function searchHealthCenters(input: HealthCentersInput): Promise<He
   }
   if (!res || typeof res !== "object" || res.Error) throw new UpstreamError(HRSA_UPSTREAM, 502, "The HRSA health center service could not run this search");
 
-  const method: HealthCentersResult["method"] = point ? "distance" : "zip" in q.location ? "zip" : "state-city";
-  const cityFilter = "city" in q.location ? q.location.city.toLowerCase() : null;
+  const method: HealthCentersResult["method"] = point ? "distance" : "zip";
   const seen = new Set<string>();
   const sites: HealthCenterSite[] = [];
-  for (const row of Array.isArray(res.HCC) ? res.HCC : []) {
+  for (const row of (Array.isArray(res.HCC) ? res.HCC : []).slice(0, 500)) {
     const site = normalize(row);
     if (!site || seen.has(site.id)) continue;
-    if (method === "state-city" && site.address.city.toLowerCase() !== cityFilter) continue;
     seen.add(site.id);
     sites.push(site);
   }

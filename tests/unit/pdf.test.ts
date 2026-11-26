@@ -8,7 +8,9 @@ import {
   PAGE_MARGIN,
   PAGE_WIDTH,
   PDF_APP_NAME,
+  PDF_CLINICIAN_PAGE_NOTE,
   PDF_CRISIS_HEADING,
+  PDF_PART2_NOTICE,
   PDF_CRISIS_LINE,
   PDF_DISCLAIMER,
   createBlankMeasurePdf,
@@ -24,6 +26,11 @@ import {
 } from "@/lib/pdf";
 import { downloadBytes, safeFilename } from "@/lib/download";
 import handoutJson from "../fixtures/pdf-handout.json";
+import pmrJson from "@content/handouts/pmr-homework.json";
+import drinkingJson from "@content/handouts/drinking-diary.json";
+import urgeJson from "@content/handouts/urge-surfing-log.json";
+import { conditions } from "@/lib/content";
+import { CLINICAL_TERMS_RE, clientSourceCredits } from "@/lib/client-safe";
 
 const gad7: Measure = MeasureSchema.parse(gad7Json);
 const phq9: Measure = MeasureSchema.parse(phq9Json);
@@ -141,8 +148,24 @@ describe.each([
     await expectValidPdf(bytes, measurePdfLayout(measure), measure.name);
   });
 
-  it("fits on one page like the official form", () => {
-    expect(measurePdfLayout(measure).pages).toHaveLength(1);
+  it("puts the client form on one page and the scoring key and risk notes on a separate clinician page", () => {
+    const pages = layoutPageLines(measurePdfLayout(measure));
+    expect(pages).toHaveLength(2);
+    const [form = [], key = []] = pages;
+    const formText = joined(form);
+    const keyText = joined(key);
+    // Page 1: what the client fills in (items, totals, crisis box), nothing clinician-facing.
+    for (const item of measure.items) expect(formText).toContain(`${item.id}. ${toWinAnsi(item.text).slice(0, 20)}`);
+    expect(formText).toContain(PDF_CRISIS_LINE);
+    expect(formText).not.toContain("Scoring key");
+    for (const b of measure.scoring.bands) expect(form, b.label).not.toContain(b.label);
+    for (const r of measure.riskItems) expect(formText).not.toContain(toWinAnsi(r.message).slice(0, 40));
+    // Page 2: the clinician key, labeled as such, with the risk-item notes and its own crisis box.
+    expect(keyText).toContain(PDF_CLINICIAN_PAGE_NOTE);
+    expect(key).toContain("Scoring key (for clinician use)");
+    for (const b of measure.scoring.bands) expect(key).toContain(b.label);
+    for (const r of measure.riskItems) expect(keyText).toContain(toWinAnsi(r.message));
+    expect(keyText).toContain(PDF_CRISIS_LINE);
   });
 
   it("has the footer on every page and stays inside the 0.75in margins", () => {
@@ -239,6 +262,73 @@ describe("handout PDF (fixture)", () => {
     const pages = layoutPageLines(handoutPdfLayout(big));
     const withLog = pages.filter((p) => p.includes("Minutes"));
     expect(withLog.length).toBeGreaterThanOrEqual(2);
+  });
+});
+
+describe("client handout PDF: no diagnosis names (G3)", () => {
+  const pmr = HandoutSchema.parse(pmrJson);
+
+  it("the PMR sheet names no condition, code or diagnosis word, even though its sources do", () => {
+    // The content's own source titles name conditions; the printed sheet must not.
+    expect(pmr.sources.some((s) => CLINICAL_TERMS_RE.test(s.title))).toBe(true);
+    const text = joined(handoutPdfLines(pmr));
+    for (const c of conditions) {
+      expect(text.toLowerCase()).not.toContain(c.name.toLowerCase());
+      for (const code of [...c.icd10cm, ...c.icd11]) expect(text).not.toContain(code.code);
+    }
+    expect(text).not.toMatch(/F\d\d\.|\b6[AB]\d\d\b/);
+    expect(text).not.toMatch(/disorder|diagnos|anxiety|depress|panic|ptsd|phobia|\bCG113\b/i);
+    // Sources are still credited, by publisher when the title is clinical.
+    expect(text).toContain("Based on information from:");
+    expect(text).toContain("National Institute for Health and Care Excellence");
+    expect(text).toContain("Relaxation Techniques: What You Need To Know");
+  });
+
+  it("clientSourceCredits keeps safe titles, falls back to the publisher, and drops unsafe publishers", () => {
+    const credits = clientSourceCredits([
+      { title: "Breathing basics", publisher: "Health Agency", url: "https://example.org/a", year: 2020 },
+      { title: "Panic disorder treatment", publisher: "Health Agency", url: "https://example.org/b" },
+      { title: "Depression care", publisher: "Depression Society", url: "https://example.org/c" },
+      { title: "Panic disorder treatment 2", publisher: "Health Agency", url: "https://example.org/d" },
+    ]);
+    expect(credits).toEqual(["Breathing basics (Health Agency, 2020)", "Health Agency"]);
+  });
+});
+
+describe("substance-use handout PDF: 42 CFR Part 2 notice (G6)", () => {
+  it.each([
+    ["drinking diary", drinkingJson],
+    ["urge surfing log", urgeJson],
+  ] as const)("the %s is flagged sud and carries the notice in every page footer", (_n, json) => {
+    const h = HandoutSchema.parse(json);
+    expect(h.sud).toBe(true);
+    const layout = handoutPdfLayout(h);
+    const pages = layoutPageLines(layout);
+    pages.forEach((lines, i) => expect(joined(lines), `page ${i + 1}`).toContain(PDF_PART2_NOTICE));
+    expectFooterOnEveryPage(layout);
+    expectInsideMargins(layout);
+  });
+
+  it("a long sud handout repeats the notice on every page and nothing overlaps it", () => {
+    const big = HandoutSchema.parse({ ...handoutJson, sud: true });
+    const layout = handoutPdfLayout(big);
+    expect(layout.pages.length).toBeGreaterThanOrEqual(2);
+    for (const page of layout.pages) {
+      const notice = page.ops.filter((op) => op.kind === "text" && PDF_PART2_NOTICE.startsWith(op.text.slice(0, 10)));
+      expect(notice.length).toBeGreaterThanOrEqual(1);
+      const noticeTop = Math.max(...notice.map((op) => (op.kind === "text" ? op.y + op.size : 0)));
+      // Body text never runs into the notice area.
+      for (const op of page.ops) {
+        if (op.kind !== "text" || notice.includes(op) || op.y < noticeTop - 20) continue;
+        expect(op.y, op.text).toBeGreaterThan(noticeTop);
+      }
+    }
+    expectInsideMargins(layout);
+  });
+
+  it("non-sud handouts have no Part 2 notice", () => {
+    expect(handout.sud).toBe(false);
+    expect(joined(handoutPdfLines(handout))).not.toContain("42 CFR Part 2");
   });
 });
 

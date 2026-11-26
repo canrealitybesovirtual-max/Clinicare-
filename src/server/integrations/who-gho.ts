@@ -13,10 +13,11 @@ import "server-only";
  */
 import { z } from "zod";
 import ghoJson from "@content/gho-indicators.json";
-import { assertNoPHI, curated } from "@/lib/outbound";
+import { assertNoPHI } from "@/lib/outbound";
 import { GhoIndicatorsFileSchema, ghoIndicatorCode, type GhoArea, type GhoIndicator } from "@/lib/schemas-evidence";
 import { UpstreamError, setRateLimit, upstreamFetch } from "@/server/core";
-import { clip, safeHttpsUrl } from "./plain-text";
+import { clip, htmlToPlainText, safeHttpsUrl } from "./plain-text";
+import { strictCurated } from "./strict-input";
 
 /* ---------------- curated content ---------------- */
 export const ghoFile = GhoIndicatorsFileSchema.parse(ghoJson);
@@ -59,8 +60,8 @@ export function ghoApiBase(): string {
 
 /* ---------------- input / output ---------------- */
 export const GhoInput = z.strictObject({
-  indicator: curated(GHO_INDICATOR_KEYS).transform((k) => indicatorByKey.get(k.toLowerCase())!),
-  country: curated(GHO_AREAS.map((a) => a.code)),
+  indicator: strictCurated(GHO_INDICATOR_KEYS).transform((k) => indicatorByKey.get(k.toLowerCase())!),
+  country: strictCurated(GHO_AREAS.map((a) => a.code)),
 });
 export type GhoInput = z.input<typeof GhoInput>;
 type ParsedGhoInput = z.output<typeof GhoInput>;
@@ -91,7 +92,7 @@ export interface GhoResult {
 
 /** Link-out for the UI when the API is unavailable: the WHO indicator page. */
 export function ghoIndicatorLink(indicatorKey: string): string {
-  const id = indicatorByKey.get(indicatorKey.toLowerCase());
+  const id = typeof indicatorKey === "string" ? indicatorByKey.get(indicatorKey.toLowerCase()) : undefined;
   return id ? GHO_INDICATORS[id]!.page : GHO_SOURCE;
 }
 
@@ -179,7 +180,7 @@ function toValue(r: Row, ind: GhoIndicator): GhoValue | null {
   const dims = dimensionsOf(r);
   const headline = isHeadline(dims, ind.headline);
   if (ind.valueType === "text") {
-    const t = clip((r.Value ?? "").replace(/[\u0000-\u001f\u007f-\u009f]/g, " ").replace(/\s+/g, " ").trim(), 60);
+    const t = clip(htmlToPlainText((r.Value ?? "").replace(/[\u0000-\u001f\u007f-\u009f]/g, " ")), 60);
     if (!t) return null;
     return { year: r.TimeDim, value: null, text: t, low: null, high: null, dimensions: dims, headline };
   }

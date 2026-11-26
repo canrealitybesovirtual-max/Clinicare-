@@ -1,10 +1,10 @@
 /**
  * Re-derives the arithmetic behind a suggestion's score for the "Why suggested" panel, using the
- * same constants and rules as src/lib/scoring.ts. Display only; the score shown is always the
- * engine's own suggestion.score.
+ * engine's own breakdown (src/lib/scoring.ts scoreBreakdown: grouped features count once). Display
+ * only; the score shown is always the engine's own suggestion.score, including any hold.
  */
 import type { Condition } from "@/lib/schemas";
-import { SCORING } from "@/lib/scoring";
+import { SCORING, scoreBreakdown } from "@/lib/scoring";
 import { DURATION_BANDS, type ScoringInput, type Suggestion } from "@/lib/types";
 
 export interface ScoreExplanation {
@@ -14,22 +14,24 @@ export interface ScoreExplanation {
   assocMatched: number;
   base: number;
   gates: { label: string; multiplier: number }[];
+  /** round(base x gates), clamped to 0-100, before any hold. */
+  raw: number;
+  /** Set when the engine held the score below `raw` (breadth, required feature, red flag). */
+  heldAt?: number;
+  holdReasons: string[];
   coreCount: number;
   coreHits: number;
   minCore: number;
 }
 
+const HOLD_LABEL: Partial<Record<Suggestion["flags"][number]["type"], string>> = {
+  breadth: "too few supporting features or symptom areas documented",
+  required: "a required feature is not documented",
+  "red-flag": "a red flag in the same input",
+};
+
 export function explainScore(cond: Condition, s: Suggestion, input: Omit<ScoringInput, "symptomIds">): ScoreExplanation {
-  const all = [...s.matched, ...s.missing];
-  const sum = (list: typeof all) => list.reduce((n, f) => n + f.weight, 0);
-  const coreTotal = sum(all.filter((f) => f.kind === "core"));
-  const assocTotal = sum(all.filter((f) => f.kind === "associated"));
-  const coreMatched = sum(s.matched.filter((f) => f.kind === "core"));
-  const assocMatched = sum(s.matched.filter((f) => f.kind === "associated"));
-  const base =
-    assocTotal > 0
-      ? 100 * (SCORING.coreShare * (coreMatched / coreTotal) + SCORING.associatedShare * (assocMatched / assocTotal))
-      : 100 * (coreMatched / coreTotal);
+  const bd = scoreBreakdown(cond, new Set(s.matched.map((f) => f.symptomId)));
 
   const gates: ScoreExplanation["gates"] = [];
   if (input.duration !== "unknown") {
@@ -44,15 +46,25 @@ export function explainScore(cond: Condition, s: Suggestion, input: Omit<Scoring
   if (input.medicalPossible === "yes")
     gates.push({ label: "Medical condition could explain", multiplier: SCORING.medicalMultiplier });
 
+  const product = gates.reduce((n, g) => n * g.multiplier, 1);
+  const raw = Math.min(100, Math.max(0, Math.round(bd.base * product)));
+  const held = s.score < raw;
+  const holdReasons = held
+    ? [...new Set(s.flags.flatMap((f) => (HOLD_LABEL[f.type] ? [HOLD_LABEL[f.type] as string] : [])))]
+    : [];
+
   return {
-    coreTotal,
-    coreMatched,
-    assocTotal,
-    assocMatched,
-    base,
+    coreTotal: bd.coreTotal,
+    coreMatched: bd.coreMatched,
+    assocTotal: bd.assocTotal,
+    assocMatched: bd.assocMatched,
+    base: bd.base,
     gates,
-    coreCount: all.filter((f) => f.kind === "core").length,
-    coreHits: s.matched.filter((f) => f.kind === "core").length,
+    raw,
+    heldAt: held ? s.score : undefined,
+    holdReasons,
+    coreCount: bd.coreSlots,
+    coreHits: bd.coreHits,
     minCore: cond.minCore,
   };
 }

@@ -72,6 +72,7 @@ const ENV_KEYS = ["NCBI_API_KEY", "NCBI_EMAIL"] as const;
 const savedEnv: Partial<Record<(typeof ENV_KEYS)[number], string | undefined>> = {};
 
 beforeEach(() => {
+  vi.stubEnv("ALLOW_SUD_REFERENCE_LOOKUPS", "true"); // 42 CFR Part 2 owner switch; default (off) is tested in hardening.test.ts
   for (const k of ENV_KEYS) {
     savedEnv[k] = process.env[k];
     delete process.env[k];
@@ -100,7 +101,7 @@ afterEach(() => {
 
 const urlOf = (i: number) => new URL(String(fetchMock.mock.calls[i]![0]));
 const post = (body: unknown) =>
-  POST(new Request("http://localhost/api/pubmed", { method: "POST", body: typeof body === "string" ? body : JSON.stringify(body) }));
+  POST(new Request("http://localhost/api/pubmed", { method: "POST", headers: { "content-type": "application/json" }, body: typeof body === "string" ? body : JSON.stringify(body) }));
 
 const REQUIRED_CONDITIONS = [
   "panic-disorder",
@@ -288,7 +289,7 @@ describe("PubMed: free text and identifiers are rejected before any fetch", () =
   it("route: invalid / oversized bodies are 400 and never echoed", async () => {
     for (const body of [{ queryId: "patient John Smith DOB 01/02/1960" }, "not json", JSON.stringify({ queryId: "x".repeat(3000) })]) {
       const res = await post(body);
-      expect(res.status).toBe(400);
+      expect([400, 413]).toContain(res.status); // 413: body over the 2 KB cap
       const text = await res.text();
       expect(text).not.toContain("John");
       expect(text).not.toContain("xxxx");

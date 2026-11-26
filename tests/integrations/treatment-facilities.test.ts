@@ -13,8 +13,6 @@ import {
 } from "@/server/integrations/findtreatment";
 import {
   StrictLocation,
-  TIGERWEB_MAPSERVER,
-  applyGeoRateLimit,
   assertSafeBody,
   cleanText,
   coarse,
@@ -78,14 +76,14 @@ const ROWS = {
 const json = (body: unknown, status = 200) => new Response(JSON.stringify(body), { status, headers: { "Content-Type": "application/json" } });
 let fetchMock: ReturnType<typeof vi.fn>;
 const calledUrl = (i = 0) => new URL(String(fetchMock.mock.calls[i]![0]));
-const route = (body: unknown) => POST(new Request("http://localhost/api/treatment-facilities", { method: "POST", body: JSON.stringify(body) }));
+const route = (body: unknown) => POST(new Request("http://localhost/api/treatment-facilities", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) }));
 const reset = () => {
   __resetCoreForTests();
   applyFindTreatmentRateLimit();
-  applyGeoRateLimit();
 };
 
 beforeEach(() => {
+  vi.stubEnv("ALLOW_SUD_REFERENCE_LOOKUPS", "true"); // 42 CFR Part 2 owner switch; default (off) is tested in hardening.test.ts
   reset();
   fetchMock = vi.fn(async () => json(ROWS));
   vi.stubGlobal("fetch", fetchMock);
@@ -107,10 +105,13 @@ describe("FindTreatment.gov: gated on SAMHSA approval", () => {
     expect(fetchMock).not.toHaveBeenCalled();
   });
 
-  it("only accepts a .gov host override", async () => {
+  it("only accepts findtreatment.gov or a SAMHSA host as an override (not any .gov host)", async () => {
     vi.stubEnv("FINDTREATMENT_ACCESS_APPROVED", "true");
-    vi.stubEnv("FINDTREATMENT_API_HOST", "evil.example.com");
-    await expect(searchTreatmentFacilities({ location: { zip: "20877" }, facilityType: "mental-health" })).rejects.toBeInstanceOf(NotConfigured);
+    for (const host of ["evil.example.com", "attacker-controlled.gov", "findtreatment.gov.evil.com", "evilfindtreatment.gov", "samhsa.gov.example.com"]) {
+      vi.stubEnv("FINDTREATMENT_API_HOST", host);
+      await expect(searchTreatmentFacilities({ location: { zip: "20877" }, facilityType: "mental-health" })).rejects.toBeInstanceOf(NotConfigured);
+    }
+    expect(fetchMock).not.toHaveBeenCalled();
     vi.stubEnv("FINDTREATMENT_API_HOST", "api.findtreatment.gov");
     await searchTreatmentFacilities({ location: { zip: "20877" }, facilityType: "mental-health" });
     expect(calledUrl().origin).toBe("https://api.findtreatment.gov");
@@ -152,25 +153,17 @@ describe("FindTreatment.gov: outbound query is location + facility type only", (
     expect(Object.fromEntries(calledUrl(1).searchParams)).toMatchObject({ sType: "both", limitValue: "80467.2", page: "2", pageSize: "10" });
   });
 
-  it("city + state geocodes via TIGERweb with only city + state FIPS, then sends the coarse point", async () => {
-    fetchMock.mockImplementation(async (u: string) => {
-      if (u.startsWith(`${TIGERWEB_MAPSERVER}?`)) return json({ layers: [{ id: 28, name: "Incorporated Places" }, { id: 30, name: "Census Designated Places" }] });
-      if (u.startsWith(`${TIGERWEB_MAPSERVER}/28/query?`)) return json({ features: [] }); // not incorporated
-      if (u.startsWith(`${TIGERWEB_MAPSERVER}/30/query?`)) return json({ features: [{ attributes: { INTPTLAT: "+39.0840", INTPTLON: "-077.1528" } }] });
-      return json(ROWS);
-    });
+  it("city + state uses the local gazetteer point (no geocoding request), then sends only the coarse point", async () => {
     await searchTreatmentFacilities({ location: { city: "Bethesda", state: "MD" }, facilityType: "mental-health" });
-    expect(new URL(String(fetchMock.mock.calls[2]![0])).searchParams.get("where")).toBe("STATE='24' AND UPPER(BASENAME)='BETHESDA'");
-    expect(calledUrl(3).searchParams.get("sAddr")).toBe("39.08,-77.15");
+    expect(fetchMock).toHaveBeenCalledTimes(1);
+    expect(calledUrl(0).searchParams.get("sAddr")).toBe("39.04,-77.15");
+    expect(String(fetchMock.mock.calls[0]![0])).not.toMatch(/bethesda/i);
   });
 
-  it("an unknown place or ZIP is a safe error, not a guess", async () => {
-    fetchMock.mockImplementation(async (u: string) =>
-      u.startsWith(`${TIGERWEB_MAPSERVER}?`) ? json({ layers: [{ id: 28, name: "Incorporated Places" }] }) : json({ features: [] }),
-    );
-    await expect(searchTreatmentFacilities({ location: { city: "Nowhereville", state: "MD" }, facilityType: "both" })).rejects.toMatchObject({ status: 404 });
-    await expect(searchTreatmentFacilities({ location: { zip: "00000" }, facilityType: "both" })).rejects.toMatchObject({ status: 404 });
-    expect(fetchMock.mock.calls.every(([u]) => String(u).startsWith(TIGERWEB_MAPSERVER))).toBe(true);
+  it("an unknown place or ZIP is a safe error, not a guess, and nothing is fetched", async () => {
+    await expect(searchTreatmentFacilities({ location: { city: "Nowhereville", state: "MD" }, facilityType: "mental-health" })).rejects.toBeInstanceOf(ZodError);
+    await expect(searchTreatmentFacilities({ location: { zip: "00000" }, facilityType: "mental-health" })).rejects.toMatchObject({ status: 404 });
+    expect(fetchMock).not.toHaveBeenCalled();
   });
 
   const bad: [string, unknown][] = [
@@ -191,8 +184,10 @@ describe("FindTreatment.gov: outbound query is location + facility type only", (
     });
   }
 
-  it("rejects a name-like city with OutboundRejected and the route never echoes it", async () => {
-    await expect(searchTreatmentFacilities({ location: { city: "Jane Doe", state: "MD" }, facilityType: "both" })).rejects.toBeInstanceOf(OutboundRejected);
+  it("rejects a name-like city (not a place in that state) and the route never echoes it", async () => {
+    await expect(searchTreatmentFacilities({ location: { city: "Jane Doe", state: "MD" }, facilityType: "both" })).rejects.toSatisfy(
+      (e) => e instanceof ZodError || e instanceof OutboundRejected,
+    );
     const res = await route({ location: { city: "Jane Doe", state: "MD" }, facilityType: "both" });
     expect(res.status).toBe(400);
     expect(await res.text()).not.toContain("Jane Doe");
@@ -291,8 +286,12 @@ describe("FindTreatment.gov: results, Part 2 metadata, errors, caching, rate lim
 });
 
 describe("referral-common helpers", () => {
-  it("StrictLocation rejects unknown keys instead of stripping them", () => {
+  it("StrictLocation rejects unknown keys instead of stripping them, and canonicalises cities", () => {
     expect(StrictLocation.parse({ zip: "20877" })).toEqual({ zip: "20877" });
+    expect(StrictLocation.parse({ city: " st. paul ", state: "MN" })).toEqual({ city: "Saint Paul", state: "MN" });
+    expect(StrictLocation.parse({ city: "Ft Worth", state: "TX" })).toEqual({ city: "Fort Worth", state: "TX" });
+    expect(StrictLocation.parse({ city: "Cañon City", state: "CO" })).toEqual({ city: "Canon City", state: "CO" });
+    expect(() => StrictLocation.parse({ city: "Hears Voices At Night", state: "MD" })).toThrow(ZodError);
     expect(() => StrictLocation.parse({ zip: "20877", extra: "x" })).toThrow(ZodError);
     expect(() => StrictLocation.parse({ city: "Gaithersburg", state: "MD", zip: "20877" })).toThrow(ZodError);
   });
@@ -304,6 +303,9 @@ describe("referral-common helpers", () => {
     expect(() => safeParams({ q: "call 555-123-4567" })).toThrow(OutboundRejected);
     expect(() => assertSafeBody({ ZipCode: "20877", Token: "A1B2C3D4E5F6G7H8" }, { zipKeys: ["ZipCode"], secretKeys: ["Token"] })).not.toThrow();
     expect(() => assertSafeBody({ Note: "John Smith" })).toThrow(OutboundRejected);
+    // canonical gazetteer names are exempt from the name scrubber; anything else is refused
+    expect(String(safeParams({ city: "Charlotte" }, [], ["city"]))).toBe("city=Charlotte");
+    expect(() => safeParams({ city: "Opioid Withdrawal" }, [], ["city"])).toThrow(ZodError);
   });
 
   it("normalisers strip markup and unsafe values", () => {

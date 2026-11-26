@@ -90,7 +90,13 @@ describe("explainScore", () => {
                 const cond = conditions.find((c) => c.id === s.conditionId)!;
                 const ex2 = explainScore(cond, s, ctx);
                 const product = ex2.gates.reduce((n, g) => n * g.multiplier, 1);
-                expect(Math.min(100, Math.max(0, Math.round(ex2.base * product)))).toBe(s.score);
+                expect(Math.min(100, Math.max(0, Math.round(ex2.base * product)))).toBe(ex2.raw);
+                // The engine's score is the raw score, or a hold below it that the flags explain.
+                expect(ex2.heldAt ?? ex2.raw).toBe(s.score);
+                if (ex2.heldAt !== undefined) {
+                  expect(ex2.heldAt).toBeLessThan(ex2.raw);
+                  expect(ex2.holdReasons.length).toBeGreaterThan(0);
+                }
                 checked++;
               }
             }

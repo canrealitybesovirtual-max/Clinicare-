@@ -68,6 +68,7 @@ const json = (v: unknown, status = 200) => new Response(JSON.stringify(v), { sta
 
 let fetchMock: ReturnType<typeof vi.fn<(url: string, init?: RequestInit) => Promise<Response>>>;
 beforeEach(() => {
+  vi.stubEnv("ALLOW_SUD_REFERENCE_LOOKUPS", "true"); // 42 CFR Part 2 owner switch; default (off) is tested in hardening.test.ts
   __resetCoreForTests();
   configureOpenFdaRateLimit();
   __resetOpenFdaForTests();
@@ -86,7 +87,7 @@ const urlOf = (i = 0) => new URL(String(fetchMock.mock.calls[i]![0]));
 const paramsOf = (i = 0) => Object.fromEntries(urlOf(i).searchParams);
 const headersOf = (i = 0) => new Headers(fetchMock.mock.calls[i]![1]!.headers);
 const post = (body: unknown) =>
-  POST(new Request("http://localhost/api/drug-label", { method: "POST", body: typeof body === "string" ? body : JSON.stringify(body) }));
+  POST(new Request("http://localhost/api/drug-label", { method: "POST", headers: { "content-type": "application/json" }, body: typeof body === "string" ? body : JSON.stringify(body) }));
 
 describe("drug-label: outbound URL carries only curated drug names, brand names and routes", () => {
   it("reference brand first: exact params, nothing else", async () => {

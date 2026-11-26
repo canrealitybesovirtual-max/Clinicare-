@@ -66,6 +66,7 @@ function defaultRoutes(rxcui = "36437"): Record<string, Handler> {
 }
 
 beforeEach(() => {
+  vi.stubEnv("ALLOW_SUD_REFERENCE_LOOKUPS", "true"); // 42 CFR Part 2 owner switch; default (off) is tested in hardening.test.ts
   __resetCoreForTests();
   configureRxNormRateLimit();
   phi.force = false;
@@ -84,7 +85,7 @@ afterEach(() => {
 
 const urls = () => fetchMock.mock.calls.map((c) => new URL(String(c[0])));
 const post = (body: unknown) =>
-  POST(new Request("http://localhost/api/rxnorm", { method: "POST", body: typeof body === "string" ? body : JSON.stringify(body) }));
+  POST(new Request("http://localhost/api/rxnorm", { method: "POST", headers: { "content-type": "application/json" }, body: typeof body === "string" ? body : JSON.stringify(body) }));
 
 describe("rxnorm: outbound URLs carry only a curated drug name or an RxNav-issued RxCUI", () => {
   it("builds exactly four upstream URLs with exact query params", async () => {
@@ -159,7 +160,7 @@ describe("rxnorm: outbound URLs carry only a curated drug name or an RxNav-issue
     expect(text).not.toMatch(/Jane|555/);
     expect(JSON.parse(text)).toEqual({ ok: false, error: "Invalid input", code: "invalid" });
     const big = await post(JSON.stringify({ drug: "a".repeat(3000) }));
-    expect(big.status).toBe(400);
+    expect(big.status).toBe(413); // over the 2 KB cap
   });
 });
 

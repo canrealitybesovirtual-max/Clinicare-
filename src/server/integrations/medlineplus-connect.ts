@@ -9,10 +9,11 @@ import "server-only";
  * - Attribution: "Information from MedlinePlus.gov". No MedlinePlus logo; no implied NLM endorsement.
  */
 import { z } from "zod";
-import { Icd10CmCode, assertNoPHI } from "@/lib/outbound";
-import { UpstreamError, setRateLimit, upstreamFetch } from "@/server/core";
+import { assertNoPHI } from "@/lib/outbound";
+import { UpstreamError, assertSudLookupAllowed, setRateLimit, upstreamFetch } from "@/server/core";
 import { isSudIcd10cm } from "./nlm-icd10cm";
 import { clip, htmlToPlainText, safeHttpsUrl } from "./plain-text";
+import { StrictIcd10CmCode } from "./strict-input";
 
 export const CONNECT_UPSTREAM = "medlineplus-connect";
 export const CONNECT_ENDPOINT = "https://connect.medlineplus.gov/service";
@@ -26,13 +27,14 @@ export const SUMMARY_MAX_CHARS = 400;
 const ALLOWED_HOSTS = ["medlineplus.gov", "nlm.nih.gov"] as const;
 
 export function configureConnectRateLimit() {
-  setRateLimit(CONNECT_UPSTREAM, 1, 5);
+  // Published: 100 requests/minute per IP. Bucket 1/s burst 5 (<= 65 in a minute); the window is a hard cap of 90.
+  setRateLimit(CONNECT_UPSTREAM, 1, 5, { max: 90, ms: 60_000 });
 }
 configureConnectRateLimit();
 
 export const MedlinePlusLang = z.enum(["en", "es"]);
 export const MedlinePlusConnectInput = z.strictObject({
-  code: Icd10CmCode,
+  code: StrictIcd10CmCode,
   lang: MedlinePlusLang.default("en"),
 });
 export type MedlinePlusConnectInput = z.input<typeof MedlinePlusConnectInput>;
@@ -75,6 +77,7 @@ export function connectUrl(code: string, lang: "en" | "es"): string {
 export async function medlinePlusByCode(raw: MedlinePlusConnectInput): Promise<MedlinePlusConnectResult> {
   const input = MedlinePlusConnectInput.parse(raw);
   assertNoPHI(input.code, input.lang);
+  assertSudLookupAllowed(isSudIcd10cm(input.code)); // 42 CFR Part 2 owner switch (core.ts), before any fetch
 
   const json = await upstreamFetch<unknown>(connectUrl(input.code, input.lang), { upstream: CONNECT_UPSTREAM, ttlMs: CONNECT_TTL_MS });
   const feed = Feed.safeParse(json);

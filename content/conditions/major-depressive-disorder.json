@@ -24,17 +24,17 @@
   "dsmPointer": "See DSM-5-TR: Depressive Disorders — Major Depressive Disorder",
   "summary": "One or more distinct periods of persistently low mood and/or loss of interest or enjoyment, together with changes in sleep, appetite, energy, movement, concentration and self-worth, and sometimes thoughts of death or suicide. Episodes differ noticeably from how the person usually is and persist for a couple of weeks or more. Always ask about past periods of unusually high mood or energy (possible bipolar disorder), and ask directly about suicidal thoughts; this app never rates risk. For clinician review only; this is not a diagnosis.",
   "features": [
-    { "symptomId": "depressed-mood", "kind": "core", "weight": 5 },
-    { "symptomId": "anhedonia", "kind": "core", "weight": 5 },
-    { "symptomId": "appetite-change", "kind": "associated", "weight": 2 },
-    { "symptomId": "insomnia", "kind": "associated", "weight": 2 },
-    { "symptomId": "hypersomnia", "kind": "associated", "weight": 2 },
-    { "symptomId": "psychomotor-change", "kind": "associated", "weight": 2 },
-    { "symptomId": "fatigue", "kind": "associated", "weight": 2 },
-    { "symptomId": "worthlessness-guilt", "kind": "associated", "weight": 2 },
-    { "symptomId": "concentration-difficulty", "kind": "associated", "weight": 2 },
-    { "symptomId": "passive-death-wish", "kind": "associated", "weight": 2 },
-    { "symptomId": "suicidal-ideation-active", "kind": "associated", "weight": 2 },
+    { "symptomId": "depressed-mood", "kind": "core", "weight": 5, "breadthArea": true },
+    { "symptomId": "anhedonia", "kind": "core", "weight": 5, "breadthArea": true },
+    { "symptomId": "appetite-change", "kind": "associated", "weight": 2, "breadthArea": true },
+    { "symptomId": "insomnia", "kind": "associated", "weight": 2, "group": "sleep", "breadthArea": true },
+    { "symptomId": "hypersomnia", "kind": "associated", "weight": 2, "group": "sleep", "breadthArea": true },
+    { "symptomId": "psychomotor-change", "kind": "associated", "weight": 2, "breadthArea": true },
+    { "symptomId": "fatigue", "kind": "associated", "weight": 2, "breadthArea": true },
+    { "symptomId": "worthlessness-guilt", "kind": "associated", "weight": 2, "breadthArea": true },
+    { "symptomId": "concentration-difficulty", "kind": "associated", "weight": 2, "breadthArea": true },
+    { "symptomId": "passive-death-wish", "kind": "associated", "weight": 2, "group": "death-thoughts", "breadthArea": true },
+    { "symptomId": "suicidal-ideation-active", "kind": "associated", "weight": 2, "group": "death-thoughts", "breadthArea": true },
     { "symptomId": "social-withdrawal", "kind": "associated", "weight": 1 },
     { "symptomId": "irritability", "kind": "associated", "weight": 1 }
   ],
@@ -72,7 +72,7 @@
     { "label": "Bipolar II disorder", "icd10cm": "F31.81", "distinguishing": "At least one past hypomanic period alongside depressive episodes. Screen before starting antidepressants." },
     { "label": "Bipolar disorder, unspecified", "icd10cm": "F31.9", "distinguishing": "Any history of mania or hypomania that is not yet fully characterized. Refer for psychiatric evaluation." },
     { "label": "Adjustment disorder with depressed mood", "icd10cm": "F43.21", "distinguishing": "Low mood clearly tied to an identifiable stressor, without the full depressive episode pattern." },
-    { "label": "Prolonged grief disorder", "icd10cm": "F43.81", "distinguishing": "Intense longing for, or preoccupation with, a person who has died, lasting well beyond what is expected in the client's culture. It can co-occur with a depressive episode." },
+    { "label": "Prolonged grief disorder", "icd10cm": "F43.81", "distinguishing": "Intense longing for, or preoccupation with, a person who has died, lasting well beyond what is expected in the client's culture. ICD-11 uses at least 6 months after the death; DSM-5-TR uses about 12 months for adults (confirm the duration in DSM-5-TR). It can co-occur with a depressive episode." },
     { "label": "Depressive symptoms due to a medical condition, substance or medication", "distinguishing": "Onset and course track the illness, substance or medication. See the rule-out list." }
   ],
   "comorbidities": [
@@ -84,7 +84,7 @@
   ],
   "measures": ["phq-9", "gad-7"],
   "measuresPending": [
-    { "name": "Columbia Suicide Severity Rating Scale (C-SSRS)", "url": "https://cssrs.columbia.edu", "note": "License pending — link out only" }
+    { "name": "Columbia Suicide Severity Rating Scale (C-SSRS)", "url": "https://cssrs.columbia.edu", "note": "License pending — link out only", "licenseKey": "C-SSRS" }
   ],
   "interventions": [
     { "name": "Behavioral activation (individual or group)", "evidence": "NICE NG222 (2022) lists individual and group behavioral activation among first-line options for less severe depression, and individual behavioral activation for more severe depression. APA Division 12 lists behavior therapy / behavioral activation for depression (check the current rating).", "note": "Schedule valued and mastery activities, track mood alongside activity, and reduce avoidance. Works well with an activity log." },
@@ -106,6 +106,11 @@
     "Religious or spiritual beliefs can be a source of hope and support, and for some clients a source of guilt or stigma about suicide or depression. Explore these respectfully. Use spiritual or faith-integrated approaches only when the client asks for them and after informed consent (see the AACC Code of Ethics for faith-based counselors)."
   ],
   "sud": false,
+  "strongMinAreas": 5,
+  "redFlagRules": [
+    {"type": "mania", "capAt": "moderate", "message": "Manic or hypomanic signs are documented in this input: consider bipolar disorder (ICD-10-CM F31.x) rather than unipolar depression, and refer for psychiatric evaluation before starting treatment."},
+    {"type": "psychosis", "message": "Psychotic symptoms are documented in this input: consider a depressive episode with psychotic features (ICD-10-CM F32.3 / F33.3) or a primary psychotic disorder, and refer for an urgent psychiatric evaluation."}
+  ],
   "licensedDsm": false,
   "wileyLicensed": false,
   "sources": [

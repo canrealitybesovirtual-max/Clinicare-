@@ -1,0 +1,67 @@
+{
+  "id": "telehealth-jurisdiction",
+  "title": "Telehealth across state and national lines: licensure and compacts",
+  "jurisdiction": "US-state-varies",
+  "summary": "For US clinicians the general rule is that you practice where the client is physically located during the session, so you usually need a license or other legal authority in that state, not only in your own. Options include a full license in the client's state, temporary or telehealth registrations that some states offer, and interstate compacts. The mental health compacts are at different stages: PSYPACT is operating for psychologists, the Counseling Compact began issuing privileges in 2025 and more states keep going live, and the Social Work Licensure Compact is enacted in many states but was not yet issuing multistate licenses. Status changes often. This page is information, not legal advice.",
+  "keyPoints": [
+    "The client's location at the time of the session controls. A client who travels, moves or attends from work in another state can change which state's law applies to that session.",
+    "PSYPACT: a psychologist with an ASPPB E.Passport and a PSYPACT Authority to Practice Interjurisdictional Telepsychology (APIT) may provide telepsychology into participating states. PSYPACT's October 2026 newsletter reported 46 enacted and 44 effective jurisdictions, with Iowa and Louisiana enacted but not yet effective.",
+    "Counseling Compact: a licensed professional counselor with an unencumbered license in a member home state can buy a privilege to practice in each live remote state through CompactConnect. The Commission began issuing privileges in September 2025. Secondary sources counted 11 live states as of November 2026; enactment alone does not mean a state is issuing privileges.",
+    "Social Work Licensure Compact: enacted in more than 30 states, but late-2026 reports said multistate licenses were not yet available while the Commission finished rules and its data system. Check swcompact.org before relying on it.",
+    "Marriage and family therapists: an MFT compact was being developed, but no operating MFT compact was confirmed here. Expect to need a license or temporary authority in the client's state.",
+    "Prescribers: DEA telemedicine flexibilities for controlled substances were extended through December 31, 2026, while a special registration rule remained pending. State prescribing rules also apply.",
+    "Clients in another country: the law and professional rules of the client's country may apply. Many professional bodies advise checking local regulation and your insurance before working across borders.",
+    "Malpractice insurance and payer rules can differ by state and country; confirm coverage for each location you serve."
+  ],
+  "whatToDo": [
+    "Confirm and document the client's physical location and a local emergency contact at the start of every telehealth session.",
+    "Before the session, hold a license, registration or compact privilege that is valid in that state; check the compact's live-state map, not only the list of states that passed the law.",
+    "Know local crisis resources for the client's location, including 988 in the US and the local emergency number elsewhere.",
+    "Confirm your malpractice insurance covers telehealth for that state or country.",
+    "Consult your licensing board, the board in the client's state, or a healthcare attorney before practicing across state or national lines."
+  ],
+  "officialLinks": [
+    { "title": "HHS Telehealth: Licensing across state lines", "url": "https://telehealth.hhs.gov/licensure/licensing-across-state-lines" },
+    { "title": "Counseling Compact Commission", "url": "https://counselingcompact.gov/" },
+    { "title": "Counseling Compact: application information", "url": "https://counselingcompact.gov/application/" },
+    { "title": "PSYPACT: participating states map", "url": "https://psypact.org/mpage/psypactmap" },
+    { "title": "PSYPACT: Authority to Practice Interjurisdictional Telepsychology (APIT) portal", "url": "https://authorizations.psypact.gov" },
+    { "title": "ASPPB: E.Passport", "url": "https://asppb.net/credentials-related-records/epassport/" },
+    { "title": "Social Work Licensure Compact", "url": "https://swcompact.org/" },
+    { "title": "Social Work Licensure Compact: member state map", "url": "https://swcompact.org/compact-map/" },
+    { "title": "DEA: Telemedicine flexibilities extended through 2026", "url": "https://www.dea.gov/press-releases/2025/12/31/dea-extends-telemedicine-flexibilities-ensure-continued-access-care" }
+  ],
+  "appPositioning": "The app shows a jurisdiction reminder whenever telehealth comes up and never checks or stores anyone's license. Licensure decisions stay with the clinician.",
+  "whenRelevant": ["telehealth", "licensure", "technology"],
+  "changesOften": true,
+  "statusAsOf": "2026-11-26",
+  "verification": {
+    "method": "search-index",
+    "note": "None of the compact sites were loaded directly. PSYPACT counts come from the PSYPACT Commission's October 2026 newsletter as indexed by search. The Counseling Compact's September 2025 start comes from counselingcompact.gov as indexed; the count of 11 live states (November 1, 2026) comes from a secondary guide. Social Work Compact status comes from ASWB, NASW and secondary 2026 reports. The DEA extension comes from dea.gov and the Federal Register (December 31, 2025). PSYPACT uses both psypact.org and psypact.gov; confirm the canonical domain. Re-check all counts before release and at least quarterly."
+  },
+  "sources": [
+    { "title": "Licensing across state lines", "publisher": "US Department of Health and Human Services (telehealth.hhs.gov)", "url": "https://telehealth.hhs.gov/licensure/licensing-across-state-lines" },
+    { "title": "Counseling Compact", "publisher": "Counseling Compact Commission", "url": "https://counselingcompact.gov/" },
+    { "title": "PSYPACT Commission newsletter, vol. 7 issue 3", "publisher": "PSYPACT Commission", "url": "https://cdn.ymaws.com/psypact.gov/resource/resmgr/newsletters/vol._7_issue_3.pdf", "year": 2026 },
+    {
+      "title": "Social Work Licensure Compact on track for implementation timeline",
+      "publisher": "Association of Social Work Boards",
+      "url": "https://www.aswb.org/social-work-licensure-compact-on-track-for-implementation-timeline/"
+    },
+    {
+      "title": "Social Work Licensure Compact Expected to be Active in 2026",
+      "publisher": "National Association of Social Workers",
+      "url": "https://www.socialworkers.org/News/Social-Work-Advocates/2026-Spring-Issue/Social-Work-Licensure-Compact-Expected-to-be-active-in-2026",
+      "year": 2026
+    },
+    {
+      "title": "DEA Extends Telemedicine Flexibilities to Ensure Continued Access to Care",
+      "publisher": "US Drug Enforcement Administration",
+      "url": "https://www.dea.gov/press-releases/2025/12/31/dea-extends-telemedicine-flexibilities-ensure-continued-access-care",
+      "year": 2025
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

@@ -1,0 +1,98 @@
+{
+  "id": "hipaa-privacy-basics",
+  "title": "HIPAA Privacy Rule basics for clinicians",
+  "jurisdiction": "US-federal",
+  "summary": "HIPAA's Privacy Rule sets federal rules for how covered entities (health plans, health care clearinghouses and providers who conduct standard electronic transactions such as billing) and their business associates use and disclose protected health information (PHI). The Security Rule adds safeguards for electronic PHI. Three ideas matter most when you use any tool: share only the minimum necessary, de-identify whenever you can, and let a vendor handle PHI only under a business associate agreement (BAA). There is no official government credential for HIPAA compliance, and HHS does not certify people or products as compliant. This page is information, not legal advice.",
+  "keyPoints": [
+    "Minimum necessary (45 CFR 164.502(b) and 164.514(d)): for most uses, disclosures and requests, limit PHI to the least needed for the purpose. It does not apply to disclosures to the client, to another provider for treatment, under the client's authorization, or as required by law.",
+    "De-identified information is not PHI. HIPAA allows two methods: Safe Harbor (remove 18 kinds of identifiers and have no actual knowledge that the rest could identify the person) or Expert Determination (a qualified expert finds the risk of re-identification very small).",
+    "The Safe Harbor identifiers, for the client and their relatives, employers and household members, are: names; geographic units smaller than a state (the first three ZIP digits may stay if that area holds more than 20,000 people); all date elements except the year, and ages over 89; phone and fax numbers; email addresses; Social Security numbers; medical record numbers; health plan beneficiary numbers; account numbers; certificate or license numbers.",
+    "The remaining Safe Harbor identifiers are: vehicle identifiers and plates; device identifiers and serial numbers; web URLs; IP addresses; biometric identifiers such as fingerprints and voiceprints; full-face photos and comparable images; and any other unique identifying number, characteristic or code. Narrative notes often hide names, dates and places, so free text needs the most care.",
+    "Business associates: a vendor that creates, receives, maintains or transmits PHI for you is a business associate and needs a written BAA before it handles PHI. HHS publishes sample BAA provisions, which HHS itself says do not replace legal review or state-law requirements.",
+    "No official credential: HHS says the Security Rule does not require any certification, HHS does not endorse private compliance seals, and an outside assessment does not stop HHS from later finding a violation. Honest vendors say their product is built for HIPAA compliance and offer a BAA.",
+    "Psychotherapy notes kept separate from the rest of the record get extra protection: most uses and disclosures need the client's specific authorization, and HIPAA's general right of access does not extend to them. State law may give clients more access or give the notes more protection.",
+    "Telehealth: the COVID-19 telehealth enforcement discretion ended, with a transition period that closed on August 9, 2023. Platforms that handle PHI now need normal HIPAA safeguards and usually a BAA. OCR's 2022 guidance on audio-only telehealth remains available.",
+    "New rules: HHS issued a Privacy Rule final rule in November 2026 on individual access and care coordination, including shorter deadlines to answer access requests; law firms report an effective date of January 18, 2027 and a compliance date of July 17, 2027. A proposed Security Rule overhaul (January 2025) was not final, and the federal agenda projected final action for July 2027.",
+    "A federal court vacated most of the 2024 reproductive health privacy amendments in June 2025 (Purl v. HHS). The Notice of Privacy Practices updates tied to 42 CFR Part 2 records survived, with a February 16, 2026 compliance date.",
+    "HIPAA sets a floor. State laws that protect health or mental health information more strictly still apply; see the international and state privacy topic."
+  ],
+  "whatToDo": [
+    "Do not type names, dates, contact details or any other identifier into this app; describe the situation in general terms instead.",
+    "Before any tool or vendor touches PHI, confirm it will sign a BAA, check its security, and keep a copy of the agreement.",
+    "Share only the minimum necessary in referrals, consultation and supervision, and de-identify case examples using the Safe Harbor list.",
+    "Keep your Notice of Privacy Practices current, including the Part 2 changes and, by its compliance date, the 2026 Privacy Rule changes.",
+    "Consult your licensing board, your organization's privacy officer or a healthcare attorney about questions specific to your practice."
+  ],
+  "officialLinks": [
+    { "title": "HHS: HIPAA Privacy Rule guidance", "url": "https://www.hhs.gov/hipaa/for-professionals/privacy/guidance" },
+    { "title": "HHS: Minimum necessary requirement", "url": "https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/minimum-necessary-requirement/index.html" },
+    { "title": "HHS: Guidance on de-identification of PHI (Safe Harbor and Expert Determination)", "url": "https://www.hhs.gov/hipaa/for-professionals/special-topics/de-identification/index.html" },
+    { "title": "HHS: Sample business associate agreement provisions", "url": "https://www.hhs.gov/hipaa/for-professionals/covered-entities/sample-business-associate-agreement-provisions/" },
+    { "title": "HHS FAQ: Business associates", "url": "https://www.hhs.gov/hipaa/for-professionals/faq/business-associates/" },
+    {
+      "title": "HHS FAQ: Are we required to certify our organization's compliance with the standards?",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/faq/2003/are-we-required-to-certify-our-organizations-compliance-with-the-standards/"
+    },
+    { "title": "HHS: HIPAA and telehealth", "url": "https://www.hhs.gov/hipaa/for-professionals/special-topics/telehealth/index.html" },
+    { "title": "HHS: Guidance on HIPAA and audio-only telehealth", "url": "https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/hipaa-audio-telehealth/index.html" },
+    { "title": "HHS: 2026 HIPAA Privacy Rule final rule", "url": "https://www.hhs.gov/hipaa/for-professionals/privacy/2026-privacy-final-rule/index.html" }
+  ],
+  "appPositioning": "The app is designed so PHI never needs to be entered: there are no identifier fields, a browser-side scrubber flags the 18 Safe Harbor identifiers before anything is processed, session data lives in memory only, and typed clinical text is never sent to any server or API. Product wording says built for HIPAA compliance, BAA available, and never claims a government seal.",
+  "whenRelevant": ["privacy", "confidentiality", "technology", "telehealth", "records"],
+  "changesOften": true,
+  "statusAsOf": "2026-11-26",
+  "verification": {
+    "method": "search-index",
+    "note": "hhs.gov pages were not loaded directly; the minimum necessary, de-identification, BAA, certification FAQ, telehealth and audio-only pages were confirmed through search results indexing hhs.gov. The November 2026 Privacy Rule dates (effective January 18, 2027; compliance July 17, 2027) come from law-firm summaries and must be checked against the Federal Register. The Purl v. HHS outcome comes from law-firm and university summaries. The Safe Harbor list follows 45 CFR 164.514(b)(2) from the regulation's structure; re-check it against the HHS de-identification guidance."
+  },
+  "sources": [
+    {
+      "title": "Guidance Regarding Methods for De-identification of Protected Health Information",
+      "publisher": "US Department of Health and Human Services, Office for Civil Rights",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/special-topics/de-identification/index.html"
+    },
+    {
+      "title": "Minimum Necessary Requirement",
+      "publisher": "US Department of Health and Human Services, Office for Civil Rights",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/minimum-necessary-requirement/index.html"
+    },
+    {
+      "title": "Sample Business Associate Agreement Provisions",
+      "publisher": "US Department of Health and Human Services, Office for Civil Rights",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/covered-entities/sample-business-associate-agreement-provisions/",
+      "year": 2013
+    },
+    {
+      "title": "FAQ 2003: Are we required to certify our organization's compliance with the standards?",
+      "publisher": "US Department of Health and Human Services, Office for Civil Rights",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/faq/2003/are-we-required-to-certify-our-organizations-compliance-with-the-standards/"
+    },
+    {
+      "title": "HIPAA Privacy Rule: Changes to Support Coordinated Care and Individual Engagement and Reduce Regulatory Burdens (2026 final rule)",
+      "publisher": "US Department of Health and Human Services, Office for Civil Rights",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/privacy/2026-privacy-final-rule/index.html",
+      "year": 2026
+    },
+    {
+      "title": "At Last: Final HIPAA Rules to Promote Coordinated Care",
+      "publisher": "Holland and Knight",
+      "url": "https://www.hklaw.com/en/insights/publications/2026/11/at-last-final-hipaa-rules-to-promote-coordinated-care",
+      "year": 2026
+    },
+    {
+      "title": "Federal Court Vacates 2024 HIPAA Reproductive Health Privacy Rule",
+      "publisher": "Husch Blackwell",
+      "url": "https://huschblackwell.com/newsandinsights/federal-court-vacates-2024-hipaa-reproductive-health-privacy-rule-key-impacts-for-covered-entities-and-npp-compliance",
+      "year": 2025
+    },
+    {
+      "title": "Feds push back HIPAA security rule overhaul to July 2027",
+      "publisher": "Fierce Healthcare",
+      "url": "https://www.fiercehealthcare.com/health-tech/feds-push-back-hipaa-security-rule-overhaul-july-2027",
+      "year": 2026
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

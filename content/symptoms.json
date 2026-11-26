@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "1.2.0",
   "symptoms": [
     {
       "id": "panic-attacks-unexpected",
@@ -7,8 +7,6 @@
       "clientLabel": "Sudden waves of strong fear that seem to come out of nowhere",
       "category": "panic",
       "synonyms": [
-        "panic attack",
-        "panic attacks",
         "panic out of nowhere",
         "panic for no reason",
         "came out of the blue",
@@ -19,8 +17,6 @@
         "woke up in a panic",
         "nocturnal panic",
         "attacks out of nowhere",
-        "anxiety attack",
-        "anxiety attacks",
         "unexpected panic attacks",
         "uncued panic attacks",
         "come out of nowhere",
@@ -30,12 +26,32 @@
         "panic attacks for no reason",
         "wakes up panicking",
         "waking up in a panic",
+        "random freak outs",
+        "sudden surges of fear",
+        "sudden terror",
+        "unexpected attacks",
+        "unprovoked panic",
+        "unprovoked panic attacks",
+        "attacks without warning",
+        "panic attacks without warning"
+      ]
+    },
+    {
+      "id": "panic-attacks-unspecified",
+      "label": "Panic attacks mentioned without saying whether they come without warning or in set situations (clarify which)",
+      "clientLabel": "Sudden waves of strong fear or panic",
+      "category": "panic",
+      "synonyms": [
+        "panic attack",
+        "panic attacks",
+        "anxiety attack",
+        "anxiety attacks",
         "panic episodes",
         "episodes of panic",
         "panicky episodes",
-        "random freak outs",
-        "sudden surges of fear",
-        "sudden terror"
+        "bouts of panic",
+        "attacks of panic",
+        "has panic attacks"
       ]
     },
     {
@@ -69,7 +85,40 @@
         "panic attacks in traffic",
         "panic attacks in certain places",
         "panic attacks in certain situations",
-        "situational panic attacks"
+        "situational panic attacks",
+        "panic attack only when",
+        "panic attack only in",
+        "panic attack only during",
+        "panic attack only before",
+        "panic attack only at",
+        "panic attack only on",
+        "panic attack only around",
+        "panic attack before",
+        "panic attack whenever",
+        "panic attack every time",
+        "panic attack triggered by",
+        "anxiety attack only when",
+        "anxiety attack only in",
+        "anxiety attack only during",
+        "anxiety attack only before",
+        "anxiety attack only at",
+        "anxiety attack only on",
+        "anxiety attack only around",
+        "anxiety attack before",
+        "anxiety attack whenever",
+        "anxiety attack every time",
+        "anxiety attack triggered by",
+        "panic only when",
+        "panic only in",
+        "panic only during",
+        "panic only before",
+        "panic only at",
+        "panic only on",
+        "panic only around",
+        "panic before",
+        "panic whenever",
+        "panic every time",
+        "panic triggered by"
       ]
     },
     {
@@ -170,7 +219,8 @@
         "worried about having another one",
         "scared itll happen again",
         "afraid itll happen again",
-        "worried itll happen again"
+        "worried itll happen again",
+        "concern|concerned|worry|worries|worried|fear|fears|afraid|scared|anxious|apprehension|apprehensive ... additional attacks|further attacks|more attacks|future attacks|another attack|the next attack|having another"
       ]
     },
     {
@@ -417,7 +467,14 @@
         "about to faint",
         "felt like passing out",
         "feels like passing out",
-        "spinning"
+        "spinning",
+        "passing out",
+        "fainted",
+        "fainting",
+        "afraid of passing out",
+        "afraid of fainting",
+        "fear of fainting",
+        "near fainting"
       ]
     },
     {
@@ -596,7 +653,10 @@
         "stuck in the house",
         "rarely leaves home",
         "cant leave home alone",
-        "avoid|avoids|avoiding|afraid of|scared of|fear of|fears|terrified of|dread|dreads|dreading|anxious about|nervous about|panics when|panic when|panics about ... leaving the house|leaving my house|leaving home|leaving my apartment|going out alone|going out by myself|being out alone|being away from home|going anywhere alone|going outside|going out|going out of the house"
+        "avoid|avoids|avoiding|afraid of|scared of|fear of|fears|terrified of|dread|dreads|dreading|anxious about|nervous about|panics when|panic when|panics about ... leaving the house|leaving my house|leaving home|leaving my apartment|going out alone|going out by myself|being out alone|being away from home|going anywhere alone|going outside|going out|going out of the house",
+        "outside the home alone",
+        "away from home alone",
+        "leaving home alone"
       ]
     },
     {
@@ -620,7 +680,12 @@
         "wont go anywhere without someone",
         "only go out with someone",
         "has to have someone with me",
-        "only go out|only goes out|only leave the house|only leaves the house|only leave home|only leaves home|only go places|only goes places|only drive|only drives|only shop|only shops|only travel|only travels ... with my husband|with my wife|with my partner|with my boyfriend|with my girlfriend|with my mom|with my mother|with my dad|with my father|with my sister|with my brother|with my daughter|with my son|with a friend|with someone|with family|if someone comes with me|if someone is with me"
+        "only go out|only goes out|only leave the house|only leaves the house|only leave home|only leaves home|only go places|only goes places|only drive|only drives|only shop|only shops|only travel|only travels ... with my husband|with my wife|with my partner|with my boyfriend|with my girlfriend|with my mom|with my mother|with my dad|with my father|with my sister|with my brother|with my daughter|with my son|with a friend|with someone|with family|if someone comes with me|if someone is with me",
+        "requires a companion",
+        "needs to be accompanied",
+        "needs someone to accompany",
+        "must be accompanied",
+        "only goes out accompanied"
       ]
     },
     {
@@ -656,7 +721,15 @@
         "embarrass myself",
         "making a scene",
         "afraid of having an attack in public",
-        "afraid of panicking in public"
+        "afraid of panicking in public",
+        "escape might be difficult",
+        "escape would be difficult",
+        "difficult to escape",
+        "hard to escape",
+        "help might not be available",
+        "help would not be available",
+        "help might be unavailable",
+        "help would be unavailable"
       ]
     },
     {
@@ -739,7 +812,10 @@
         "cant stop overthinking",
         "worry wont stop",
         "cant let it go",
-        "worry|worries|worrying ... hard to control|difficult to control|hard to stop|difficult to stop"
+        "worry|worries|worrying ... hard to control|difficult to control|hard to stop|difficult to stop",
+        "finds it difficult to control",
+        "finds it hard to control",
+        "difficult to control the worry"
       ]
     },
     {
@@ -828,7 +904,10 @@
         "easily fatigued",
         "running on empty",
         "dead tired",
-        "so tired"
+        "so tired",
+        "fatigability",
+        "easy fatigability",
+        "fatigues easily"
       ]
     },
     {
@@ -1234,7 +1313,29 @@
         "whats the point of living",
         "morbid thoughts",
         "death wish",
-        "thoughts of|thinking of|thinking about|thinks about|thinks of ... dying|death|being dead"
+        "thoughts of|thinking of|thinking about|thinks about|thinks of ... dying|death|being dead",
+        "no longer wants to live",
+        "no longer want to be alive",
+        "not want to be alive",
+        "not want to live",
+        "wish i would not wake up",
+        "hope i dont wake up",
+        "hope i wont wake up",
+        "wish i could die",
+        "wish i were never born",
+        "wish i was never born",
+        "rather be dead",
+        "dont care if i die",
+        "dont care if i live or die",
+        "wish it would all end",
+        "want it all to end",
+        "want to go to sleep forever",
+        "sleep forever",
+        "wouldnt mind dying",
+        "ready to die",
+        "wish god would take me",
+        "pray to die",
+        "praying to die"
       ]
     },
     {
@@ -1259,7 +1360,6 @@
         "plan to kill myself",
         "thoughts of suicide",
         "thoughts of killing myself",
-        "kms",
         "unalive",
         "unalive myself",
         "want to unalive myself",
@@ -1269,7 +1369,30 @@
         "thinking of ending my life",
         "thoughts of ending my life",
         "want to end my life",
-        "thinking about killing myself"
+        "thinking about killing myself",
+        "suicidality",
+        "suicide note",
+        "wrote a suicide note",
+        "goodbye letters",
+        "goodbye letter",
+        "gave away belongings",
+        "giving away belongings",
+        "gave away possessions",
+        "giving away possessions",
+        "gave away my things",
+        "jump off a bridge",
+        "jump off a building",
+        "jump off the roof",
+        "jump in front of a train",
+        "jump in front of a car",
+        "jump in front of traffic",
+        "overdose on pills",
+        "overdose on my pills",
+        "hang myself",
+        "shoot myself",
+        "slit my wrists",
+        "considering|contemplating|thinking of|thinking about|planning|considers|contemplates ... suicide|overdosing|an overdose|jumping off|jumping in front of|hanging myself|killing myself|ending my life|taking my life|shooting myself",
+        "bought a gun|got a gun|has a gun|stockpiling pills|saving up pills|saved up pills ... end things|end it|end my life|end it all|kill myself"
       ]
     },
     {
@@ -1298,7 +1421,10 @@
         "cuts on her arms",
         "thoughts of hurting myself",
         "thoughts of harming myself",
-        "urges to cut"
+        "urges to cut",
+        "thoughts of self harm",
+        "urges to self harm",
+        "self harm urges"
       ]
     },
     {
@@ -1356,7 +1482,10 @@
         "homicidal ideation toward",
         "wants to kill her ex",
         "wants to kill his ex",
-        "threatened to kill"
+        "threatened to kill",
+        "hi",
+        "homicidality",
+        "want to|plan to|planning to|going to|gonna|threatening to|threatened to|threatens to|intend to|urge to|urges to|thoughts of|thinking about|fantasize about|fantasizing about ... kill my husband|kill my wife|kill my partner|kill my boyfriend|kill my girlfriend|kill my ex|kill my boss|kill my coworker|kill my co worker|kill my manager|kill my supervisor|kill my neighbor|kill my father|kill my mother|kill my dad|kill my mom|kill my brother|kill my sister|kill my son|kill my daughter|kill my kids|kill my children|kill my roommate|kill my teacher|kill my landlord|kill my family|kill my stepfather|kill my stepmother|hurt my husband|hurt my wife|hurt my partner|hurt my boyfriend|hurt my girlfriend|hurt my ex|hurt my boss|hurt my coworker|hurt my co worker|hurt my manager|hurt my supervisor|hurt my neighbor|hurt my father|hurt my mother|hurt my dad|hurt my mom|hurt my brother|hurt my sister|hurt my son|hurt my daughter|hurt my kids|hurt my children|hurt my roommate|hurt my teacher|hurt my landlord|hurt my family|hurt my stepfather|hurt my stepmother|shoot my husband|shoot my wife|shoot my partner|shoot my boyfriend|shoot my girlfriend|shoot my ex|shoot my boss|shoot my coworker|shoot my co worker|shoot my manager|shoot my supervisor|shoot my neighbor|shoot my father|shoot my mother|shoot my dad|shoot my mom|shoot my brother|shoot my sister|shoot my son|shoot my daughter|shoot my kids|shoot my children|shoot my roommate|shoot my teacher|shoot my landlord|shoot my family|shoot my stepfather|shoot my stepmother|stab my husband|stab my wife|stab my partner|stab my boyfriend|stab my girlfriend|stab my ex|stab my boss|stab my coworker|stab my co worker|stab my manager|stab my supervisor|stab my neighbor|stab my father|stab my mother|stab my dad|stab my mom|stab my brother|stab my sister|stab my son|stab my daughter|stab my kids|stab my children|stab my roommate|stab my teacher|stab my landlord|stab my family|stab my stepfather|stab my stepmother|harm my husband|harm my wife|harm my partner|harm my boyfriend|harm my girlfriend|harm my ex|harm my boss|harm my coworker|harm my co worker|harm my manager|harm my supervisor|harm my neighbor|harm my father|harm my mother|harm my dad|harm my mom|harm my brother|harm my sister|harm my son|harm my daughter|harm my kids|harm my children|harm my roommate|harm my teacher|harm my landlord|harm my family|harm my stepfather|harm my stepmother|strangle my husband|strangle my wife|strangle my partner|strangle my boyfriend|strangle my girlfriend|strangle my ex|strangle my boss|strangle my coworker|strangle my co worker|strangle my manager|strangle my supervisor|strangle my neighbor|strangle my father|strangle my mother|strangle my dad|strangle my mom|strangle my brother|strangle my sister|strangle my son|strangle my daughter|strangle my kids|strangle my children|strangle my roommate|strangle my teacher|strangle my landlord|strangle my family|strangle my stepfather|strangle my stepmother|kill someone|kill somebody|kill people|kill everyone|kill anyone|kill others|hurt someone|hurt somebody|hurt people|hurt everyone|hurt anyone|hurt others|shoot someone|shoot somebody|shoot people|shoot everyone|shoot anyone|shoot others|stab someone|stab somebody|stab people|stab everyone|stab anyone|stab others|harm someone|harm somebody|harm people|harm everyone|harm anyone|harm others|strangle someone|strangle somebody|strangle people|strangle everyone|strangle anyone|strangle others"
       ]
     },
     {
@@ -1376,13 +1505,18 @@
         "hallucinations",
         "hallucinating",
         "command hallucinations",
-        "hearing things",
-        "seeing things",
         "avh",
         "auditory hallucinations",
         "visual hallucinations",
         "responding to internal stimuli",
-        "talking to people who arent there"
+        "talking to people who arent there",
+        "hearing things others cant hear",
+        "seeing things others cant see",
+        "responds to voices",
+        "responding to voices",
+        "command voices",
+        "ah vh",
+        "auditory or visual hallucinations"
       ]
     },
     {
@@ -1414,7 +1548,17 @@
         "someone is following me",
         "people following me",
         "followed everywhere",
-        "afraid of being followed"
+        "afraid of being followed",
+        "read my thoughts",
+        "reading my thoughts",
+        "thought broadcasting",
+        "thought insertion",
+        "thoughts are being broadcast",
+        "thoughts being put in my head",
+        "tv is talking to me",
+        "tv talks to me",
+        "radio is talking to me",
+        "tv is sending me messages"
       ]
     },
     {
@@ -1504,9 +1648,8 @@
         "binge and purge",
         "laxatives to lose weight",
         "diet pills",
-        "fainted",
-        "fainting",
-        "passing out"
+        "restricting|starving|not eating|barely eating|skipping meals|purging|throwing up|vomiting|laxatives|calories|lb|lbs|pounds|kg|lost weight ... fainted|fainting|passed out|passing out|blacked out",
+        "fainted|fainting|passed out|passing out|blacked out ... from not eating|after not eating|after purging|after throwing up|from starving|after skipping meals|from hunger"
       ]
     },
     {
@@ -1531,7 +1674,6 @@
         "detoxing",
         "morning shakes",
         "needs a drink in the morning",
-        "eye opener",
         "drinks to stop the shakes",
         "etoh withdrawal",
         "withdrawal from alcohol",
@@ -1539,7 +1681,13 @@
         "withdrawal from benzos",
         "history of withdrawal seizures",
         "history of dts",
-        "the shakes|shakes|shaky|shaking|tremors|tremor|sweats|seizure|seizures ... when i stop drinking|when i stopped drinking|if i stop drinking|after i stop drinking|after i stopped drinking|when stopping drinking|after stopping drinking|after quitting drinking|when i quit drinking|without a drink|without alcohol|when i cut back on drinking|when i cut down on drinking|when i try to stop drinking|when i stop my benzos|when i run out of xanax|when i run out of klonopin|when i run out of my pills|coming off benzos"
+        "the shakes|shakes|shaky|shaking|tremors|tremor|sweats|seizure|seizures ... when i stop drinking|when i stopped drinking|if i stop drinking|after i stop drinking|after i stopped drinking|when stopping drinking|after stopping drinking|after quitting drinking|when i quit drinking|without a drink|without alcohol|when i cut back on drinking|when i cut down on drinking|when i try to stop drinking|when i stop my benzos|when i run out of xanax|when i run out of klonopin|when i run out of my pills|coming off benzos",
+        "needs an eye opener",
+        "eye opener in the morning",
+        "morning eye opener",
+        "drink as an eye opener",
+        "stopped drinking|quit drinking|cut back on drinking|cut down on drinking|last drink|stopped my xanax|stopped my benzos|stopped her xanax ... tremulous|confused|confusion|seizure|seized|seizures|tremors|shaking|hallucinating|delirious|seeing bugs",
+        "stopped|quit ... tremulous|seizure|seized|delirious|dts"
       ]
     },
     {
@@ -1731,7 +1879,13 @@
         "stopped driving after the accident",
         "avoid|avoids|avoiding|stays away from|stay away from|wont go near|cant go near|wont go back to|cant go back to|refuses to go near|wont drive past|avoids driving past ... where it happened|where the accident happened|where i was attacked|where i was assaulted|the area|that area|the street|that street|the neighborhood|that neighborhood|the intersection|the scene|the place|that place|reminders|anything that reminds me|people who remind me|talking about it|talking about what happened|thinking about it|thinking about what happened|the news|news coverage",
         "wont drive",
-        "avoids driving"
+        "avoids driving",
+        "avoidance of trauma related stimuli",
+        "avoidance of trauma reminders",
+        "avoids trauma reminders",
+        "avoidance of reminders",
+        "avoids trauma related cues",
+        "avoidance of trauma cues"
       ]
     },
     {
@@ -1803,7 +1957,10 @@
         "always alert",
         "hyper vigilant",
         "hyperaware",
-        "looking over my shoulder"
+        "looking over my shoulder",
+        "hyperarousal",
+        "hyper arousal",
+        "hyperaroused"
       ]
     },
     {
@@ -1856,6 +2013,27 @@
         "picking fights",
         "unsafe sex"
       ]
+    },
+    {
+      "id": "cultural-idiom-of-distress",
+      "label": "Cultural idiom of distress named (for example ataque de nervios or thinking too much); explore its meaning with the client",
+      "clientLabel": "Words from your culture for stress or distress",
+      "category": "cultural",
+      "synonyms": [
+        "ataque de nervios",
+        "ataques de nervios",
+        "nervios",
+        "thinking too much",
+        "thinks too much",
+        "khyal cap",
+        "khyal attack",
+        "wind attack",
+        "kufungisisa",
+        "susto",
+        "hwa byung",
+        "hwabyung",
+        "my spirit is tired"
+      ]
     }
   ],
   "sources": [
@@ -1896,6 +2074,17 @@
       "publisher": "Social Science & Medicine (PubMed)",
       "url": "https://pubmed.ncbi.nlm.nih.gov/26584235/",
       "year": 2015
+    },
+    {
+      "title": "Online assessment measures, including the Cultural Formulation Interview (CFI)",
+      "publisher": "American Psychiatric Association",
+      "url": "https://www.psychiatry.org/psychiatrists/practice/dsm/educational-resources/assessment-measures"
+    },
+    {
+      "title": "Cross-cultural aspects of anxiety disorders (Hofmann & Hinton)",
+      "publisher": "Current Psychiatry Reports (PubMed Central)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4037698/",
+      "year": 2014
     }
   ],
   "license": "original",

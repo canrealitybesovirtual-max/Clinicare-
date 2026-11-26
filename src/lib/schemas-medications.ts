@@ -145,8 +145,22 @@ for (const m of MEDICATIONS) for (const k of [m.id, m.generic]) byKey.set(k.toLo
 export const MEDICATION_KEYS: readonly string[] = [...new Set(MEDICATIONS.flatMap((m) => [m.generic, m.id]))];
 export const MEDICATION_GENERICS: readonly string[] = MEDICATIONS.map((m) => m.generic);
 
-/** Outbound validator for a medication: curated generic name or id, case-insensitive; resolves to the medication id. */
-export const MedicationDrug = curated(MEDICATION_KEYS).transform((k) => byKey.get(k.toLowerCase())!.id);
+/**
+ * Outbound validator for a medication: curated generic name or id, case-insensitive; resolves to the medication id.
+ * Printable ASCII is required BEFORE the case-insensitive match, so a Unicode look-alike (e.g. the Kelvin sign)
+ * can never be case-mapped into a curated name.
+ */
+export const MedicationDrug = z
+  .string()
+  .max(120)
+  .regex(/^[\x20-\x7E]*$/, "ASCII only")
+  .pipe(curated(MEDICATION_KEYS))
+  .transform((k) => byKey.get(k.toLowerCase())!.id);
+
+/** Medications whose use is substance-use treatment (42 CFR Part 2 owner switch in src/server/core.ts). */
+export function isSudTreatment(med: Pick<Medication, "category">): boolean {
+  return med.category === "aud";
+}
 
 export function getMedication(key: string): Medication | undefined {
   return byKey.get(key.trim().toLowerCase());
@@ -160,9 +174,14 @@ export function medicationsByCategory(category: MedicationCategory): Medication[
 export const NIMH_MEDICATIONS_URL = "https://www.nimh.nih.gov/health/topics/mental-health-medications";
 const SET_ID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
 
-/** DailyMed search for a curated generic name (fallback when the label API is unavailable). */
+/**
+ * DailyMed search for a curated generic name (fallback when the label API is unavailable). Only a curated generic
+ * name (or medication id, resolved to its generic) is accepted, so typed text can never end up in the URL.
+ */
 export function dailyMedSearchUrl(generic: string): string {
-  return `https://dailymed.nlm.nih.gov/dailymed/search.cfm?${new URLSearchParams({ labeltype: "all", query: generic })}`;
+  const med = typeof generic === "string" && /^[\x20-\x7E]{1,120}$/.test(generic) ? byKey.get(generic.trim().toLowerCase()) : undefined;
+  if (!med) throw new z.ZodError([{ code: "custom", message: "not a curated medication", path: ["generic"], input: undefined }]);
+  return `https://dailymed.nlm.nih.gov/dailymed/search.cfm?${new URLSearchParams({ labeltype: "all", query: med.generic })}`;
 }
 
 /** DailyMed page for one label (SPL set id). Returns null for anything that is not a set id. */

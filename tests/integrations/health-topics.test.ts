@@ -52,6 +52,7 @@ const PANIC = xml(8, [
 
 let fetchMock: ReturnType<typeof vi.fn<(url: string, init?: RequestInit) => Promise<Response>>>;
 beforeEach(() => {
+  vi.stubEnv("ALLOW_SUD_REFERENCE_LOOKUPS", "true"); // 42 CFR Part 2 owner switch; default (off) is tested in hardening.test.ts
   __resetCoreForTests();
   configureHealthTopicsRateLimit();
   phi.force = false;
@@ -64,7 +65,7 @@ afterEach(() => {
 
 const urlOf = (i = 0) => new URL(String(fetchMock.mock.calls[i]![0]));
 const post = (body: unknown) =>
-  POST(new Request("http://localhost/api/health-topics", { method: "POST", body: typeof body === "string" ? body : JSON.stringify(body) }));
+  POST(new Request("http://localhost/api/health-topics", { method: "POST", headers: { "content-type": "application/json" }, body: typeof body === "string" ? body : JSON.stringify(body) }));
 
 describe("content/topics.json", () => {
   it("validates, with governance fields (G10)", () => {

@@ -2,7 +2,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { ZodError } from "zod";
 import { OutboundRejected } from "@/lib/outbound";
 import { PART2_NOTICE } from "@/lib/referral-links";
-import { USER_AGENT, UpstreamError, __resetCoreForTests } from "@/server/core";
+import { NotConfigured, USER_AGENT, UpstreamError, __resetCoreForTests } from "@/server/core";
 import {
   NPPES_ATTRIBUTION,
   NPPES_SOURCE_URL,
@@ -11,7 +11,6 @@ import {
   applyNppesRateLimit,
   searchProviders,
 } from "@/server/integrations/nppes";
-import { applyGeoRateLimit } from "@/server/integrations/referral-common";
 import { POST, runtime } from "@/server/routes/providers";
 
 /* Shapes copied from a live NPPES v2.1 response (2026-11-26), with invented names/numbers. */
@@ -49,12 +48,12 @@ const json = (body: unknown, status = 200) => new Response(JSON.stringify(body),
 let fetchMock: ReturnType<typeof vi.fn>;
 const calledUrl = (i = 0) => new URL(String(fetchMock.mock.calls[i]![0]));
 const route = (body: unknown) =>
-  POST(new Request("http://localhost/api/providers", { method: "POST", body: typeof body === "string" ? body : JSON.stringify(body) }));
+  POST(new Request("http://localhost/api/providers", { method: "POST", headers: { "content-type": "application/json" }, body: typeof body === "string" ? body : JSON.stringify(body) }));
 
 beforeEach(() => {
   __resetCoreForTests();
   applyNppesRateLimit();
-  applyGeoRateLimit();
+  vi.stubEnv("ALLOW_SUD_REFERENCE_LOOKUPS", "true"); // owner switch; its default (off) is tested below
   fetchMock = vi.fn(async () => json(FIXTURE));
   vi.stubGlobal("fetch", fetchMock);
 });
@@ -143,9 +142,38 @@ describe("NPPES providers: free text and identifiers are rejected before any fet
     });
   }
 
-  it("rejects a person's name in the city field with OutboundRejected (PHI scrubber)", async () => {
-    await expect(searchProviders({ providerType: "psychiatrist", location: { city: "John Smith", state: "MD" } })).rejects.toBeInstanceOf(OutboundRejected);
+  it("rejects a person's name in the city field (not a place in that state)", async () => {
+    await expect(searchProviders({ providerType: "psychiatrist", location: { city: "John Smith", state: "MD" } })).rejects.toSatisfy(
+      (e) => e instanceof ZodError || e instanceof OutboundRejected,
+    );
     expect(fetchMock).not.toHaveBeenCalled();
+  });
+
+  for (const city of ["Suicidal Ideation", "Hears Voices At Night", "Opioid Withdrawal", "Alcohol Relapse", "Uses Meth Daily"]) {
+    it(`never sends letters-only clinical or substance-use text as city= ("${city}")`, async () => {
+      await expect(
+        searchProviders({ providerType: "addiction-counselor", location: { city, state: "OH" } }),
+      ).rejects.toBeInstanceOf(ZodError);
+      expect(fetchMock).not.toHaveBeenCalled();
+    });
+  }
+
+  it("sends the canonical gazetteer spelling, not the typed text", async () => {
+    await searchProviders({ providerType: "psychiatrist", location: { city: "st. louis", state: "MO" } });
+    await searchProviders({ providerType: "psychiatrist", location: { city: "CHARLOTTE", state: "NC" } });
+    expect(calledUrl(0).searchParams.get("city")).toBe("Saint Louis");
+    expect(calledUrl(1).searchParams.get("city")).toBe("Charlotte");
+  });
+
+  it("addiction-counselor searches stay off until the owner enables SUD reference lookups (42 CFR Part 2)", async () => {
+    vi.stubEnv("ALLOW_SUD_REFERENCE_LOOKUPS", "");
+    await expect(searchProviders({ providerType: "addiction-counselor", location: { zip: "20877" } })).rejects.toBeInstanceOf(NotConfigured);
+    const res = await route({ providerType: "addiction-counselor", location: { zip: "20877" } });
+    expect(res.status).toBe(503);
+    expect((await res.json()).code).toBe("not-configured");
+    expect(fetchMock).not.toHaveBeenCalled();
+    await searchProviders({ providerType: "psychiatrist", location: { zip: "20877" } }); // non-SUD types unaffected
+    expect(fetchMock).toHaveBeenCalledTimes(1);
   });
 
   it("route answers 400 without echoing the planted identifiers", async () => {
@@ -156,7 +184,7 @@ describe("NPPES providers: free text and identifiers are rejected before any fet
       expect(await res.text()).not.toContain(p);
     }
     const big = await route(JSON.stringify({ providerType: "psychiatrist", location: { zip: "20877" }, pad: "x".repeat(3000) }));
-    expect(big.status).toBe(400);
+    expect(big.status).toBe(413);
     expect(fetchMock).not.toHaveBeenCalled();
   });
 });

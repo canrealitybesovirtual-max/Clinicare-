@@ -12,7 +12,7 @@ import {
   healthCenterLink,
   searchHealthCenters,
 } from "@/server/integrations/hrsa";
-import { TIGERWEB_MAPSERVER, applyGeoRateLimit, zipCentroid } from "@/server/integrations/referral-common";
+import { zipCentroid } from "@/server/integrations/referral-common";
 import { POST, runtime } from "@/server/routes/health-centers";
 
 /* Shape from the HRSA Developer Guide sample (GetHealthCentersAroundALocation), invented values. */
@@ -51,11 +51,10 @@ const call = (i = 0) => {
   const [url, init] = fetchMock.mock.calls[i]! as [string, RequestInit];
   return { url: String(url), init, body: init.body ? JSON.parse(String(init.body)) : undefined };
 };
-const route = (body: unknown) => POST(new Request("http://localhost/api/health-centers", { method: "POST", body: JSON.stringify(body) }));
+const route = (body: unknown) => POST(new Request("http://localhost/api/health-centers", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify(body) }));
 const reset = () => {
   __resetCoreForTests();
   applyHrsaRateLimit();
-  applyGeoRateLimit();
 };
 
 beforeEach(() => {
@@ -112,44 +111,46 @@ describe("HRSA health centers: outbound request", () => {
     expect(r.radiusMiles).toBeNull();
   });
 
-  it("city + state -> TIGERweb place point (city + state FIPS only) -> radius search", async () => {
-    fetchMock.mockImplementation(async (u: string) => {
-      if (u.startsWith(`${TIGERWEB_MAPSERVER}?`)) return json({ layers: [{ id: 28, name: "Incorporated Places" }, { id: 29, name: "Incorporated Places Labels" }, { id: 30, name: "Census Designated Places" }] });
-      if (u.startsWith(`${TIGERWEB_MAPSERVER}/28/query?`)) return json({ features: [{ attributes: { BASENAME: "Gaithersburg", STATE: "24", INTPTLAT: "+39.1346176", INTPTLON: "-077.2131346" } }] });
-      return json(HCC);
-    });
-    const r = await searchHealthCenters({ location: { city: "Gaithersburg", state: "MD" }, radiusMiles: 25 });
-    expect(fetchMock).toHaveBeenCalledTimes(3);
-    expect(Object.fromEntries(new URL(call(0).url).searchParams)).toEqual({ f: "json" });
-    expect(Object.fromEntries(new URL(call(1).url).searchParams)).toEqual({
-      where: "STATE='24' AND UPPER(BASENAME)='GAITHERSBURG'",
-      outFields: "BASENAME,STATE,INTPTLAT,INTPTLON",
-      returnGeometry: "false",
-      f: "json",
-    });
-    expect(call(2).body).toMatchObject({ Latitude: 39.13, Longitude: -77.21, Radius: 25, MaxRadius: 25 });
+  it("city + state -> local gazetteer point (no geocoding request) -> radius search", async () => {
+    const r = await searchHealthCenters({ location: { city: "gaithersburg", state: "MD" }, radiusMiles: 25 });
+    expect(fetchMock).toHaveBeenCalledTimes(1); // only HRSA: the city never leaves the server for geocoding
+    expect(call(0).url).toBe(`${HRSA_API_BASE}/GetHealthCentersAroundALocation`);
+    expect(call(0).body).toEqual({ Latitude: 39.15, Longitude: -77.2, Radius: 25, MinRecs: 20, MaxRadius: 25, RadiusIncrement: 5, Token: "test-hdw-token" });
     expect(r.method).toBe("distance");
-    expect(r.location).toBe("Gaithersburg, MD");
+    expect(r.location).toBe("Gaithersburg, MD"); // canonical spelling, not the typed text
   });
 
-  it("escapes apostrophes in city names for the ArcGIS where clause", async () => {
-    fetchMock.mockImplementation(async (u: string) => {
-      if (u.startsWith(`${TIGERWEB_MAPSERVER}?`)) return json({ layers: [{ id: 28, name: "Incorporated Places" }] });
-      if (u.includes("/query?")) return json({ features: [{ attributes: { INTPTLAT: "38.8", INTPTLON: "-90.7" } }] });
-      return json(HCC);
+  it("matches USPS spellings: O'Fallon = O Fallon, St. Louis = Saint Louis, accents folded", async () => {
+    const a = await searchHealthCenters({ location: { city: "O'Fallon", state: "MO" } });
+    expect(a.location).toBe("O Fallon, MO");
+    reset(); // HRSA bucket: burst 2
+    const b = await searchHealthCenters({ location: { city: "St. Louis", state: "MO" } });
+    expect(b.location).toBe("Saint Louis, MO");
+    reset();
+    const c = await searchHealthCenters({ location: { city: "Mayagüez", state: "PR" } });
+    expect(c.location).toBe("Mayaguez, PR");
+    expect(fetchMock.mock.calls.every(([u]) => String(u).startsWith(HRSA_API_BASE))).toBe(true);
+  });
+
+  it("a real city the name scrubber would flag (Charlotte) is accepted as its canonical gazetteer name", async () => {
+    const r = await searchHealthCenters({ location: { city: "Charlotte", state: "NC" } });
+    expect(r.location).toBe("Charlotte, NC");
+    expect(call(0).body).toMatchObject({ Latitude: 35.23, Longitude: -80.82 });
+  });
+
+  for (const city of ["Suicidal Ideation", "Hears Voices At Night", "Opioid Withdrawal", "Took Overdose", "Drinks Daily"]) {
+    it(`rejects letters-only clinical text as a city ("${city}") before any fetch`, async () => {
+      await expect(searchHealthCenters({ location: { city, state: "OH" } })).rejects.toBeInstanceOf(ZodError);
+      const res = await route({ location: { city, state: "OH" } });
+      expect(res.status).toBe(400);
+      expect(JSON.stringify(await res.json())).not.toContain(city);
+      expect(fetchMock).not.toHaveBeenCalled();
     });
-    await searchHealthCenters({ location: { city: "O'Fallon", state: "MO" } });
-    expect(new URL(call(1).url).searchParams.get("where")).toBe("STATE='29' AND UPPER(BASENAME)='O''FALLON'");
-  });
+  }
 
-  it("if the place lookup fails, falls back to a state-wide area search filtered to the city", async () => {
-    fetchMock.mockImplementation(async (u: string) => (u.startsWith(TIGERWEB_MAPSERVER) ? new Response("down", { status: 503 }) : json(HCC)));
-    const r = await searchHealthCenters({ location: { city: "Rockville", state: "MD" } });
-    const last = call(fetchMock.mock.calls.length - 1);
-    expect(last.url).toBe(`${HRSA_API_BASE}/GetHealthCentersByArea`);
-    expect(last.body).toEqual({ StateFipsCode: "24", Token: "test-hdw-token" });
-    expect(r.method).toBe("state-city");
-    expect(r.sites.map((s) => s.name)).toEqual(["Rockville Site"]);
+  it("a real city in the wrong state is rejected before any fetch", async () => {
+    await expect(searchHealthCenters({ location: { city: "Gaithersburg", state: "AK" } })).rejects.toBeInstanceOf(ZodError);
+    expect(fetchMock).not.toHaveBeenCalled();
   });
 
   const bad: [string, unknown][] = [
@@ -169,8 +170,10 @@ describe("HRSA health centers: outbound request", () => {
     });
   }
 
-  it("rejects a name-like city with OutboundRejected before any fetch", async () => {
-    await expect(searchHealthCenters({ location: { city: "John Smith", state: "MD" } })).rejects.toBeInstanceOf(OutboundRejected);
+  it("rejects a name-like city (not a place in that state) before any fetch", async () => {
+    await expect(searchHealthCenters({ location: { city: "John Smith", state: "MD" } })).rejects.toSatisfy(
+      (e) => e instanceof ZodError || e instanceof OutboundRejected,
+    );
     expect(fetchMock).not.toHaveBeenCalled();
   });
 

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Ban, EyeOff, FileLock2, LockKeyhole, ScanSearch, ServerOff, ShieldCheck, TimerReset } from "lucide-react";
+import { Ban, EyeOff, FileLock2, LockKeyhole, ScanSearch, ServerOff, ShieldCheck, SpellCheck2, TimerReset } from "lucide-react";
 import { conditions, crisisLines, handouts, lexicon, licenses, measures, stats } from "@/lib/content";
 import type { Source } from "@/lib/schemas";
 import { Badge } from "@/components/ui/badge";
@@ -18,10 +18,11 @@ const PRIVACY = [
   { icon: EyeOff, title: "No analytics or trackers", body: "No analytics, advertising or tracking scripts, and fonts and images are served from this app." },
   { icon: ServerOff, title: "No third-party connections", body: "A Content Security Policy (connect-src 'self') blocks the browser from sending data to any other host. Phase 1 makes no external API calls; outside links are plain page visits that carry nothing you typed." },
   { icon: FileLock2, title: "PDFs on the device", body: "Handouts and blank forms are generated in the browser. Nothing is uploaded, and no answers or scores are written into a PDF." },
+  { icon: SpellCheck2, title: "Turn off cloud spellcheckers", body: "Text boxes here ask the browser not to spellcheck and opt out of Grammarly-style assistants, but browser “enhanced” spellcheck (for example in Chrome or Microsoft Edge) and writing-assistant extensions can still send what you type to their vendors. Turn them off for this site before typing anything." },
 ] as const;
 
 const GUARDRAILS = [
-  "DSM-5-TR text is never reproduced or closely paraphrased; features are original wording with a “See DSM-5-TR” pointer.",
+  "DSM-5-TR text is not reproduced. Features are written in original clinical wording with a “See DSM-5-TR” pointer; wording that may track criteria too closely is being revised and awaits licensed-clinician and legal review.",
   "Wiley PracticePlanners wording is not used.",
   "No final diagnosis is ever stated; every suggestion is labeled “For clinician review” with matched and missing features.",
   "Client mode shows no diagnosis names, codes or scores.",
@@ -29,7 +30,7 @@ const GUARDRAILS = [
   "Only measures with a confirmed license are built in; others are link-out only and marked “License pending”.",
   "Third-party worksheets are linked, never copied or re-hosted.",
   "Substance-use information is never stored or transmitted (42 CFR Part 2).",
-  "Phase 1 is adult-only; a client-under-18 toggle hides suggestions and shows referral links.",
+  "Phase 1 is adult-only; a client-under-18 toggle hides suggestions and adult measures and shows referral links.",
   "Statistics always show their source and data year, and data older than 5 years are flagged.",
   "No AI or LLM services are used.",
   "Unproven treatments are not listed; interventions cite their evidence source.",
@@ -109,8 +110,8 @@ export default function AboutPage() {
             responsible for your own practice and documentation.
           </p>
           <p>
-            Substance-use information is never stored or transmitted. Any future export that touches substance-use
-            content will carry the notice: 42 CFR Part 2 prohibits unauthorized disclosure of these records.
+            Substance-use information is never stored or transmitted. Every printable sheet about substance use carries
+            this notice in the footer of each page: 42 CFR Part 2 prohibits unauthorized disclosure of these records.
           </p>
         </Card>
       </section>

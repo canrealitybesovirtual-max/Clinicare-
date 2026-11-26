@@ -1,0 +1,67 @@
+{
+  "id": "nbcc-code-of-ethics",
+  "name": "NBCC Code of Ethics",
+  "shortName": "NBCC Code",
+  "organization": "National Board for Certified Counselors",
+  "edition": 2023,
+  "editionLabel": "2023 edition (launched May 2023, revised August 24, 2023; replaced the 2016 code)",
+  "editionStatus": "current",
+  "appliesTo": ["counselor"],
+  "countries": ["US"],
+  "scope": "national",
+  "summary": "The NBCC Code of Ethics applies to National Certified Counselors (NCCs), other NBCC credential holders and applicants. NBCC uses it when it reviews complaints about certificants. The 2023 edition added a statement of core values, regrouped the directives into topic subsections so they are easier to find, and expanded the provisions on telemental health. Because it is a credentialing code, it applies in addition to state licensure rules and, for ACA members, the ACA code. This is a summary in the app's own words. It is information, not legal advice.",
+  "keyReminders": [
+    {
+      "topic": "Telemental health",
+      "text": "For remote services, confirm you are authorized where the client is located, verify identity and location each session, agree on an emergency plan and local resources, and use secure, encrypted platforms.",
+      "tags": ["telehealth", "technology"]
+    },
+    {
+      "topic": "Informed consent",
+      "text": "Give clients clear information about services, fees, record keeping, technology use and confidentiality limits before services start, and document their agreement.",
+      "tags": ["informed-consent"]
+    },
+    {
+      "topic": "Assessment",
+      "text": "Use only assessments you are trained to give and interpret, choose tools suited to the client's culture and language, and explain results in plain terms.",
+      "tags": ["assessment", "cultural-competence"]
+    },
+    {
+      "topic": "Confidentiality and records",
+      "text": "Protect records on every device and service you use, share information only with consent or legal authority, and plan for records if you close your practice.",
+      "tags": ["confidentiality", "technology"]
+    },
+    {
+      "topic": "Boundaries",
+      "text": "Avoid relationships with clients that could harm them or impair your judgment, including online contact through personal social media accounts.",
+      "tags": ["dual-relationships", "technology"]
+    },
+    {
+      "topic": "Cooperation with NBCC",
+      "text": "Credential holders are expected to cooperate with NBCC ethics reviews. Read the current code for any duty to tell NBCC about legal or licensure actions."
+    }
+  ],
+  "whenRelevant": ["telehealth", "technology", "informed-consent", "assessment", "cultural-competence", "confidentiality", "dual-relationships"],
+  "regulatorNote": "NBCC certification is a national credential, not a license to practice. State counseling boards license counselors, and their rules control.",
+  "officialUrl": "https://www.nbcc.org/assets/ethics/nbcccodeofethics.pdf",
+  "relatedLinks": [
+    { "title": "NBCC Ethics Policies and Procedures", "url": "https://nbcc.org/Ethics" },
+    { "title": "NBCC: The 2023 NBCC Code of Ethics launch", "url": "https://www.nbcc.org/resources/nccs/newsletter/the-2023-nbcc-code-of-ethics-launch" }
+  ],
+  "verification": {
+    "method": "search-index",
+    "note": "The 2023 edition (approved May 2023, revised August 24, 2023) and the PDF URL were confirmed through search results indexing nbcc.org. The exact wording of the telemental health directives was not read. A person must load the official PDF before release."
+  },
+  "sources": [
+    { "title": "NBCC Code of Ethics", "publisher": "National Board for Certified Counselors", "url": "https://www.nbcc.org/assets/ethics/nbcccodeofethics.pdf", "year": 2023 },
+    {
+      "title": "The 2023 NBCC Code of Ethics Launch",
+      "publisher": "National Board for Certified Counselors",
+      "url": "https://www.nbcc.org/resources/nccs/newsletter/the-2023-nbcc-code-of-ethics-launch",
+      "year": 2023
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

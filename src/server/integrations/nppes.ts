@@ -15,20 +15,23 @@ import "server-only";
  * live NPPES records on 2026-11-26 (NPPES stores the NUCC Health Care Provider Taxonomy code set).
  */
 import { z } from "zod";
-import { curated } from "@/lib/outbound";
 import { PART2_REMINDER, describeLocation, providerRegistryLink, type FinderLink } from "@/lib/referral-links";
-import { UpstreamError, setRateLimit, upstreamFetch } from "@/server/core";
+import { UpstreamError, assertSudLookupAllowed, setRateLimit, upstreamFetch } from "@/server/core";
+import { PLACES_ATTRIBUTION } from "./places";
 import { StrictLocation, cleanText, formatPhone, safeParams, titleCase, zip5 } from "./referral-common";
+import { strictCurated } from "./strict-input";
 
 export const NPPES_UPSTREAM = "cms-nppes";
 export const NPPES_ENDPOINT = "https://npiregistry.cms.hhs.gov/api/";
 export const NPPES_SOURCE_URL = "https://npiregistry.cms.hhs.gov/";
-export const NPPES_ATTRIBUTION =
-  "Data: CMS NPPES NPI Registry. Listing is not an endorsement; verify licensure and availability.";
+export const NPPES_ATTRIBUTION = `Data: CMS NPPES NPI Registry. Listing is not an endorsement; verify licensure and availability. City names: ${PLACES_ATTRIBUTION}.`;
 
-/** Requested by the project brief: at most 2 requests per second to NPPES. */
+/**
+ * Requested by the project brief: at most 2 requests per second to NPPES (CMS publishes no number). The sliding
+ * window enforces it exactly (2 in any 1.1 s); the bucket alone would allow burst + rate = 4 in one second.
+ */
 export function applyNppesRateLimit() {
-  setRateLimit(NPPES_UPSTREAM, 2, 2);
+  setRateLimit(NPPES_UPSTREAM, 2, 2, { max: 2, ms: 1100 });
 }
 applyNppesRateLimit();
 
@@ -114,7 +117,7 @@ export const NPPES_MAX_UPSTREAM_LIMIT = 200;
 export const NPPES_MAX_SKIP = 1000;
 
 export const ProvidersInput = z.strictObject({
-  providerType: curated(PROVIDER_TYPES),
+  providerType: strictCurated(PROVIDER_TYPES),
   location: StrictLocation,
   limit: z.number().int().min(1).max(50).default(20),
   skip: z.number().int().min(0).max(NPPES_MAX_SKIP).default(0),
@@ -194,7 +197,8 @@ export function buildNppesUrl(q: z.output<typeof ProvidersInput>): string {
     values.city = q.location.city;
     values.state = q.location.state;
   }
-  return `${NPPES_ENDPOINT}?${safeParams(values, ["postal_code"])}`;
+  // city is the canonical gazetteer name (StrictLocation), never the typed text
+  return `${NPPES_ENDPOINT}?${safeParams(values, ["postal_code"], ["city"])}`;
 }
 
 /** Ask for more than we show: results are filtered to exact NUCC codes after they arrive. */
@@ -258,6 +262,7 @@ function normalize(rec: NppesRecord, codes: readonly TaxonomyCode[]): ProviderRe
 export async function searchProviders(input: ProvidersInput): Promise<ProvidersResult> {
   const q = ProvidersInput.parse(input); // re-validate: callers other than the route cannot bypass the schema
   const spec = PROVIDER_TAXONOMIES[q.providerType];
+  assertSudLookupAllowed(spec.part2 === true); // 42 CFR Part 2 owner switch (core.ts), before any fetch
   const url = buildNppesUrl(q);
   const body = await upstreamFetch<NppesResponse>(url, { upstream: NPPES_UPSTREAM, ttlMs: 24 * 60 * 60 * 1000 });
   if (!body || typeof body !== "object") throw new UpstreamError(NPPES_UPSTREAM, 502, "Unexpected response from the NPI Registry");

@@ -57,11 +57,11 @@ function OptionRow({
   );
 }
 
-function RiskPanel({ message }: { message: string }) {
+function RiskPanel({ itemId, message }: { itemId: string; message: string }) {
   return (
     <div className="mt-3 rounded-xl border border-crisis/40 border-l-[6px] border-l-crisis bg-surface p-4">
       <p className="flex items-center gap-2 font-bold text-crisis">
-        <ShieldAlert aria-hidden className="size-5" /> Follow up on item 9 now
+        <ShieldAlert aria-hidden className="size-5" /> Follow up on item {itemId} now
       </p>
       <p className="mt-2 text-sm leading-relaxed">{message}</p>
       <ul className="mt-2 list-disc space-y-1 pl-5 text-sm">
@@ -179,7 +179,7 @@ export function MeasureForm({ measure }: { measure: Measure }) {
                     onChange={(v) => answer(measure.id, i, v, n)}
                   />
                 </fieldset>
-                <div role="alert">{flagged.has(item.id) ? <RiskPanel message={flagged.get(item.id) ?? ""} /> : null}</div>
+                <div role="alert">{flagged.has(item.id) ? <RiskPanel itemId={item.id} message={flagged.get(item.id) ?? ""} /> : null}</div>
               </li>
             ))}
           </ol>

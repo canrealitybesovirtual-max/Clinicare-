@@ -21,7 +21,8 @@
     { "symptomId": "needs-companion", "kind": "associated", "weight": 2 },
     { "symptomId": "anticipatory-anxiety", "kind": "associated", "weight": 2 },
     { "symptomId": "panic-attack-cued", "kind": "associated", "weight": 2 },
-    { "symptomId": "panic-attacks-unexpected", "kind": "associated", "weight": 1 },
+    { "symptomId": "panic-attacks-unexpected", "kind": "associated", "weight": 1, "group": "attacks" },
+    { "symptomId": "panic-attacks-unspecified", "kind": "associated", "weight": 1, "group": "attacks" },
     { "symptomId": "behavior-change-avoid-attacks", "kind": "associated", "weight": 1 },
     { "symptomId": "fear-losing-control", "kind": "associated", "weight": 1 }
   ],
@@ -57,8 +58,8 @@
   ],
   "measures": ["gad-7"],
   "measuresPending": [
-    { "name": "Panic Disorder Severity Scale (PDSS), includes agoraphobic avoidance items", "url": "https://pubmed.ncbi.nlm.nih.gov/9356566/", "note": "License pending — link out only" },
-    { "name": "APA Severity Measure for Agoraphobia — Adult", "url": "https://www.psychiatry.org/psychiatrists/practice/dsm/educational-resources/assessment-measures", "note": "License pending — link out only" }
+    { "name": "Panic Disorder Severity Scale (PDSS), includes agoraphobic avoidance items", "url": "https://pubmed.ncbi.nlm.nih.gov/9356566/", "note": "License pending — link out only", "licenseKey": "PDSS" },
+    { "name": "APA Severity Measure for Agoraphobia — Adult", "url": "https://www.psychiatry.org/psychiatrists/practice/dsm/educational-resources/assessment-measures", "note": "License pending — link out only", "licenseKey": "APA Severity Measures" }
   ],
   "interventions": [
     { "name": "Graded in-vivo exposure (exposure hierarchy)", "evidence": "Core component of CBT for panic disorder with or without agoraphobia, which NICE CG113 recommends. APA Division 12 lists CBT for panic (check the current rating).", "note": "Build a ladder of avoided situations with the client and practice them step by step, without safety behaviors, until fear lessens. Start with a companion if needed, then fade the companion's role." },
@@ -75,6 +76,10 @@
     "If the client uses prayer or other spiritual practices to face feared places, explore this respectfully. Use spiritual or faith-integrated approaches only when the client asks for them and after informed consent (see the AACC Code of Ethics for faith-based counselors)."
   ],
   "sud": false,
+  "redFlagRules": [
+    {"type": "mania", "message": "Manic or hypomanic signs are documented in this input. Screen for bipolar disorder (ICD-10-CM F31.x) and refer for psychiatric evaluation before treatment planning."},
+    {"type": "psychosis", "message": "Psychotic symptoms are documented in this input and are not part of this pattern. Consider a psychotic disorder, substance effects or a medical cause, and refer for an urgent psychiatric evaluation."}
+  ],
   "licensedDsm": false,
   "wileyLicensed": false,
   "sources": [

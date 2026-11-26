@@ -1,0 +1,55 @@
+{
+  "id": "amhca-code-of-ethics",
+  "name": "AMHCA Code of Ethics",
+  "shortName": "AMHCA Code",
+  "organization": "American Mental Health Counselors Association",
+  "edition": 2020,
+  "editionLabel": "2020 revision (with a separate AI addendum published in 2023)",
+  "editionStatus": "edition-unconfirmed",
+  "editionNote": "The 2020 revision is the newest full edition found; AMHCA's Ethics Committee revises the code periodically. A newer edition after 2020 could not be ruled out on 2026-11-26.",
+  "appliesTo": ["counselor"],
+  "countries": ["US"],
+  "scope": "national",
+  "summary": "The AMHCA code is written specifically for clinical mental health counselors, from students in supervised internships to licensed clinicians. It is organized in six sections that begin with commitment to clients, and AMHCA has added a separate addendum on the use of artificial intelligence. Many clinical mental health counselors follow it alongside the ACA code and their state board rules. This is a summary in the app's own words. It is information, not legal advice.",
+  "keyReminders": [
+    {
+      "topic": "Clinical scope",
+      "text": "Diagnose and treat only within your license, training and supervision status, and refer for medical, psychiatric or specialty care when needed.",
+      "tags": ["assessment"]
+    },
+    {
+      "topic": "Informed consent",
+      "text": "Explain the nature of clinical services, diagnosis and its uses (including insurance billing), confidentiality limits and the client's rights before treatment.",
+      "tags": ["informed-consent", "confidentiality"]
+    },
+    {
+      "topic": "Artificial intelligence",
+      "text": "Before using AI with clinical material, check privacy law and BAAs, tell clients, review every AI output yourself, and never let a tool make clinical decisions.",
+      "tags": ["technology", "confidentiality"]
+    },
+    {
+      "topic": "Culture and identity",
+      "text": "Consider culture, identity and social context in assessment and treatment planning, and avoid diagnosing differences as disorders.",
+      "tags": ["cultural-competence", "assessment"]
+    },
+    {
+      "topic": "Boundaries",
+      "text": "Avoid dual relationships that could impair judgment or harm the client, and document any unavoidable overlap and how you manage it.",
+      "tags": ["dual-relationships"]
+    }
+  ],
+  "whenRelevant": ["assessment", "informed-consent", "confidentiality", "technology", "cultural-competence", "dual-relationships"],
+  "regulatorNote": "Clinical mental health counselors are licensed by state boards (titles include LPC, LPCC, LMHC and LCPC). Board rules and state law control.",
+  "officialUrl": "https://www.amhca.org/publications/ethics",
+  "verification": {
+    "method": "search-index",
+    "note": "The 2020 revision, its six-section structure and the 2023 AI addendum were found through search results (a state regulation, AMHCA's publication page and CE listings). amhca.org was not loaded. A person must confirm the current edition before release."
+  },
+  "sources": [
+    { "title": "AMHCA Code of Ethics", "publisher": "American Mental Health Counselors Association", "url": "https://www.amhca.org/publications/ethics", "year": 2020 },
+    { "title": "AMHCA Code of Ethics (community page)", "publisher": "American Mental Health Counselors Association", "url": "https://amhca.connectedcommunity.org/events/publications/ethics" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

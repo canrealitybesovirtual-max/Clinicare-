@@ -39,6 +39,7 @@ const json = (body: unknown, status = 200) =>
 
 let fetchMock: ReturnType<typeof vi.fn<(url: string, init?: RequestInit) => Promise<Response>>>;
 beforeEach(() => {
+  vi.stubEnv("ALLOW_SUD_REFERENCE_LOOKUPS", "true"); // 42 CFR Part 2 owner switch; default (off) is tested in hardening.test.ts
   __resetCoreForTests();
   configureIcd10cmRateLimit();
   phi.force = false;
@@ -147,7 +148,7 @@ describe("icd10cm: free text, identifiers and long strings never leave the serve
   });
 
   it("route rejects oversized and malformed bodies", async () => {
-    expect((await post(JSON.stringify({ term: "x".repeat(3000) }))).status).toBe(400);
+    expect((await post(JSON.stringify({ term: "x".repeat(3000) }))).status).toBe(413); // over the 2 KB cap
     expect((await post("{not json")).status).toBe(400);
     expect(fetchMock).not.toHaveBeenCalled();
   });

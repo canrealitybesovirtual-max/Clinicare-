@@ -19,6 +19,7 @@ import {
   gotoReady,
   loadConditions,
   navLink,
+  pdfText,
 } from "./helpers";
 
 /** Original practice wording (no identifiers) that reads as a worry-predominant presentation. */
@@ -164,11 +165,20 @@ test.describe("client mode (G3)", () => {
     await expect(page.getByRole("navigation", { name: "Main" })).toHaveCount(0);
   });
 
-  test("client handout downloads a PDF", async ({ page }) => {
+  test("client handout downloads a PDF that names no diagnosis or code", async ({ page }) => {
     await gotoReady(page, "/client");
     const { bytes, name } = await downloadVia(page, page.getByRole("button", { name: "Download to print" }));
     expect(bytes.subarray(0, 4).toString("latin1")).toBe("%PDF");
     expect(name).toMatch(/\.pdf$/);
+    const { drawn } = pdfText(bytes);
+    expect(drawn).toContain("Muscle Relaxation"); // extraction works
+    expect(drawn).toContain("Based on information from:");
+    for (const c of loadConditions()) {
+      expect(drawn.toLowerCase()).not.toContain(c.name.toLowerCase());
+      for (const code of [...c.icd10cm, ...c.icd11]) expect(drawn).not.toContain(code.code);
+    }
+    expect(drawn).not.toMatch(ICD_CODE_RE);
+    expect(drawn).not.toMatch(/disorder|diagnos|anxiety|depress|panic|ptsd|phobia/i);
   });
 });
 
@@ -199,6 +209,128 @@ test.describe("adult-only scope (G12)", () => {
     await choose(page, "Client is under 18", "No (adult)");
     await page.getByRole("link", { name: /^See possible diagnoses/ }).filter({ visible: true }).first().click();
     await expect(page.getByRole("article", { name: "Generalized anxiety disorder" })).toBeVisible();
+  });
+});
+
+test.describe("adult-only measures (G12)", () => {
+  test("with the under-18 toggle on, the measure list, blank-form buttons and measure forms are hidden", async ({ page }) => {
+    // Open a measure as an adult first, so the browser history holds it for a client-side "back".
+    await gotoReady(page, "/measures");
+    await page.getByRole("link", { name: "Run PHQ-9" }).click();
+    await expect(page).toHaveURL(/\/measures\/phq-9$/);
+    await expect(page.getByRole("group", { name: /^Item 1 of 9:/ })).toBeVisible();
+
+    await navLink(page, "Symptoms").click();
+    await choose(page, "Client is under 18", "Yes, under 18");
+
+    // Back (client-side, so the memory-only session survives) to the PHQ-9 screen.
+    await page.goBack();
+    await expect(page).toHaveURL(/\/measures\/phq-9$/);
+    await expect(page.getByText("Adult content only", { exact: true })).toBeVisible();
+    await expect(page.getByRole("group", { name: /^Item \d+ of 9:/ })).toHaveCount(0);
+    await expect(page.getByRole("radio", { name: "Several days" })).toHaveCount(0);
+    await expect(page.getByRole("button", { name: "Download blank PDF" })).toHaveCount(0);
+
+    // Measures list: no built-in or link-out adult measures.
+    await page.getByRole("link", { name: "All measures" }).click();
+    await expect(page).toHaveURL(/\/measures$/);
+    await expect(page.getByText("Adult content only", { exact: true })).toBeVisible();
+    await expect(page.getByRole("link", { name: /^Run / })).toHaveCount(0);
+    await expect(page.getByRole("button", { name: /Blank PDF/ })).toHaveCount(0);
+    await expect(page.getByRole("heading", { name: /License pending/ })).toHaveCount(0);
+
+    // Handouts: the client handout stays, the blank measure forms go.
+    await navLink(page, "Handouts").click();
+    await expect(page).toHaveURL(/\/handouts$/);
+    await expect(page.getByText(/adult measures and their blank forms are not shown/)).toBeVisible();
+    await expect(page.getByRole("button", { name: /blank PDF/ })).toHaveCount(0);
+    await expect(page.getByRole("button", { name: "Download PDF" }).first()).toBeVisible();
+
+    // The gate is a toggle: switching back to adult restores the measures.
+    await navLink(page, "Measures").click();
+    // The toggle unmounts with the gate, so click it directly rather than via choose().
+    await page.getByRole("group", { name: "Client is under 18" }).locator("label").filter({ hasText: "No (adult)" }).click();
+    await expect(page.getByRole("link", { name: "Run PHQ-9" })).toBeVisible();
+  });
+});
+
+test.describe("typed text stays on the device (G5/G17)", () => {
+  test("free-text fields opt out of spellcheck, autocorrect and writing assistants", async ({ page }) => {
+    await gotoReady(page, "/symptoms");
+    const fields = page.locator("textarea, input:not([type=radio]):not([type=checkbox])");
+    expect(await fields.count()).toBeGreaterThanOrEqual(2);
+    const attrs = await fields.evaluateAll((els) =>
+      els.map((el) => ({
+        id: el.id,
+        spellcheck: el.getAttribute("spellcheck"),
+        autocorrect: el.getAttribute("autocorrect"),
+        autocapitalize: el.getAttribute("autocapitalize"),
+        autocomplete: el.getAttribute("autocomplete"),
+        gramm: el.getAttribute("data-gramm"),
+        grammEditor: el.getAttribute("data-gramm_editor"),
+        grammarly: el.getAttribute("data-enable-grammarly"),
+      })),
+    );
+    for (const a of attrs) {
+      expect(a, a.id).toEqual({
+        id: a.id,
+        spellcheck: "false",
+        autocorrect: "off",
+        autocapitalize: "off",
+        autocomplete: "off",
+        gramm: "false",
+        grammEditor: "false",
+        grammarly: "false",
+      });
+    }
+    expect(attrs.map((a) => a.id)).toEqual(expect.arrayContaining(["symptom-text", "symptom-search"]));
+  });
+
+  test("Clear session empties the symptom search box and its results, not only the text box", async ({ page }) => {
+    await gotoReady(page, "/symptoms");
+    const search = page.getByLabel("Search symptoms");
+    await search.fill("sleep");
+    await search.blur();
+    await expect(search).toHaveValue("sleep");
+    await expect(page.getByText(/^\d+ matching symptoms?$/)).toBeAttached();
+    await enterSymptomText(page, WORRY_TEXT);
+
+    await page.getByRole("button", { name: "Clear session" }).click();
+    await expect(page.getByText("Session cleared. Nothing was saved.")).toBeVisible();
+    await expect(page.getByLabel("Search symptoms")).toHaveValue("");
+    await expect(page.getByText(/^\d+ matching symptoms?$/)).toHaveCount(0);
+    await expect(page.getByLabel(/^Symptoms and behaviors/)).toHaveValue("");
+  });
+
+  test("the 15-minute idle wipe empties the symptom search box too", async ({ page }) => {
+    await page.clock.install();
+    await gotoReady(page, "/symptoms");
+    const search = page.getByLabel("Search symptoms");
+    await search.fill("worry");
+    await search.blur();
+    await expect(page.getByText(/^\d+ matching symptoms?$/)).toBeAttached();
+
+    await page.clock.fastForward("16:00");
+    await expect(page.getByText(/cleared after 15 minutes without activity/)).toBeVisible();
+    await expect(page.getByLabel("Search symptoms")).toHaveValue("");
+    await expect(page.getByText(/^\d+ matching symptoms?$/)).toHaveCount(0);
+  });
+});
+
+test.describe("text matching never reads as 'no risk' (G9)", () => {
+  test("the Symptom Finder and Diagnoses screens always say to ask directly about suicide risk", async ({ page }) => {
+    const note = "Text matching can miss risk statements; always ask directly about suicide risk.";
+    await gotoReady(page, "/symptoms");
+    await expect(page.getByText(note)).toBeVisible();
+    await navLink(page, "Diagnoses").click();
+    await expect(page).toHaveURL(/\/diagnoses$/);
+    await expect(page.getByText(note)).toBeVisible();
+  });
+
+  test("a passive death wish typed in everyday words raises the suicidality banner", async ({ page }) => {
+    await gotoReady(page, "/symptoms");
+    await enterSymptomText(page, "Denies SI but says she wishes she would not wake up.");
+    await expect(page.getByRole("region", { name: "Safety red flags" })).toContainText("Possible suicide risk noted");
   });
 });
 

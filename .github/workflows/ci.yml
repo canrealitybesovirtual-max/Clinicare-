@@ -19,11 +19,13 @@ jobs:
       - run: npm ci
       - name: Guardrail scan (G1-G17 patterns)
         run: bash scripts/guardrail-scan.sh
-      - name: Content validation (G7, G10, G13)
+      - name: Content validation (G7, G10, G13) - every file under content/
         run: npm run validate:content
       - run: npx tsc --noEmit
       - name: Unit tests (scoring, measures, PHI scrubber, content, vignettes)
         run: npx vitest run
+      - name: Integration tests (server adapters, outbound allowlists, API PHI-leak)
+        run: npx vitest run -c vitest.integrations.config.ts
       - run: npm run build
       - run: npx playwright install --with-deps chromium
       - name: E2E (PHI-leak, axe accessibility, flow)

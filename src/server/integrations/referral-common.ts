@@ -5,27 +5,53 @@ import "server-only";
  * Location rule: a referral search may carry ONLY a 5-digit ZIP or a city + state (src/lib/outbound.ts).
  * - ZIP -> coarse point from a static Census ZCTA table (content/referrals/zcta-centroids.json, rounded to
  *   0.01 degree, about 1 km). No network call, so the ZIP never leaves the server for geocoding.
- * - City + state -> point from the US Census TIGERweb map service (keyless, public domain). Only the
- *   validated city name and the state FIPS code are sent.
+ * - City + state -> the city must be a REAL place in that state (content/referrals/us-places.json, see
+ *   ./places.ts). The typed value is replaced by the canonical gazetteer name, and the coarse point comes from the
+ *   same file. No network call: a city is never sent anywhere for geocoding, and letters-only clinical text
+ *   ("Opioid Withdrawal") can never pass as a city.
  * Coordinates sent onward are rounded to 2 decimals, so they are never finer than the ZIP or city itself.
  *
- * PHI rule: every outgoing value passes assertNoPHI, EXCEPT a ZIP. A ZIP is itself one of the 18 Safe Harbor
- * identifier types, so the scrubber always flags it; it is the one location value docs/RESOURCES.md allows,
- * and it is accepted only through the strict 5-digit UsZip regex (nothing else can pass that regex).
+ * PHI rule: every outgoing value passes assertNoPHI, EXCEPT (a) a ZIP, which is itself a Safe Harbor identifier
+ * type that the scrubber always flags; it is the one location value docs/RESOURCES.md allows and passes only the
+ * strict 5-digit UsZip regex; and (b) a canonical gazetteer city name, which is curated data from our own file
+ * (the scrubber flags real cities such as Charlotte or Jackson as first names).
  */
 import { z } from "zod";
 import zcta from "@content/referrals/zcta-centroids.json";
-import { City, UsState, UsZip, assertNoPHI, type Location } from "@/lib/outbound";
-import { UpstreamError, setRateLimit, upstreamFetch } from "@/server/core";
+import { UsState, UsZip, assertNoPHI, type Location } from "@/lib/outbound";
+import { UpstreamError } from "@/server/core";
+import { findPlace, isCanonicalPlaceName } from "./places";
+import { htmlToPlainText } from "./plain-text";
 
 /* ---------------- input ---------------- */
 
-/** Same validators as outbound.ts Location, but unknown keys are REJECTED instead of silently stripped. */
+/**
+ * City as typed: letters (accents allowed), spaces, periods, apostrophes, hyphens; 2-40 characters. Shape only;
+ * StrictLocation then requires a gazetteer match for the state and swaps in the canonical name.
+ */
+export const CityInput = z
+  .string()
+  .trim()
+  .min(2)
+  .max(40)
+  .regex(/^[\p{L}][\p{L}\p{M} .'\u2019-]*$/u, "city name");
+
+/**
+ * Same shape as outbound.ts Location, but unknown keys are REJECTED instead of silently stripped, and a city must
+ * be a real place in that state. Output carries the canonical gazetteer spelling, never the typed text.
+ */
 export const StrictLocation = z.union([
   z.strictObject({ zip: UsZip }),
-  z.strictObject({ city: City, state: UsState }),
+  z.strictObject({ city: CityInput, state: UsState }).transform((loc, ctx) => {
+    const place = findPlace(loc.city, loc.state);
+    if (!place) {
+      ctx.addIssue({ code: "custom", message: "not a recognised city in that state; try a ZIP code", path: ["city"] });
+      return z.NEVER;
+    }
+    return { city: place.name, state: loc.state };
+  }),
 ]);
-export type StrictLocation = z.infer<typeof StrictLocation>;
+export type StrictLocation = z.output<typeof StrictLocation>;
 
 /** Search radii offered in the UI (miles). Numbers only, never free text. */
 export const RADIUS_MILES = [5, 10, 25, 50] as const;
@@ -36,17 +62,28 @@ export type RadiusMiles = z.infer<typeof RadiusMiles>;
 
 /**
  * Build URLSearchParams where every value passes the PHI check, except keys listed in `zipKeys`, which must
- * match the strict 5-digit ZIP regex instead (see the PHI rule above). Throws before anything is fetched.
+ * match the strict 5-digit ZIP regex instead, and keys in `placeKeys`, which must be a canonical gazetteer city
+ * name (see the PHI rule above). Throws before anything is fetched.
  */
-export function safeParams(values: Record<string, string | number>, zipKeys: readonly string[] = []): URLSearchParams {
+export function safeParams(
+  values: Record<string, string | number>,
+  zipKeys: readonly string[] = [],
+  placeKeys: readonly string[] = [],
+): URLSearchParams {
   const params = new URLSearchParams();
   for (const [key, raw] of Object.entries(values)) {
     const value = String(raw);
     if (zipKeys.includes(key)) UsZip.parse(value);
+    else if (placeKeys.includes(key)) assertCanonicalPlace(value);
     else assertNoPHI(value);
     params.set(key, value);
   }
   return params;
+}
+
+/** A city about to leave the server must be a canonical gazetteer name (never text the clinician typed). */
+export function assertCanonicalPlace(value: string): void {
+  if (!isCanonicalPlaceName(value)) throw new z.ZodError([{ code: "custom", message: "not a canonical place name", path: ["city"], input: undefined }]);
 }
 
 /** Same check for values that go into a JSON body. `secretKeys` (server-side tokens) are not user input. */
@@ -80,10 +117,10 @@ export const STATE_FIPS: Record<UsStateCode, string> = {
 export interface GeoPoint {
   lat: number;
   lng: number;
-  source: "census-zcta" | "census-place";
+  source: "census-zcta" | "place-gazetteer";
 }
 
-/** A ZIP or city that the Census tables do not know. Maps to a safe "upstream" error, never echoes input. */
+/** A ZIP that the Census tables do not know. Maps to a safe "upstream" error, never echoes input. */
 export class LocationNotFound extends UpstreamError {
   constructor() {
     super("location", 404, "That ZIP code or city was not found. Try a nearby ZIP code.");
@@ -117,68 +154,14 @@ export function zipCentroid(zip: string): GeoPoint | null {
   return hit ? { lat: coarse(hit[0]), lng: coarse(hit[1]), source: "census-zcta" } : null;
 }
 
-export const TIGERWEB_UPSTREAM = "census-tigerweb";
-export const TIGERWEB_MAPSERVER = "https://tigerweb.geo.census.gov/arcgis/rest/services/TIGERweb/tigerWMS_Current/MapServer";
-const DAY = 24 * 60 * 60 * 1000;
-
-/**
- * TIGERweb publishes no numeric limit; stay well below anything abusive: 1 request/s. Burst 4 because one cold
- * city lookup can take 3 calls (layer list, incorporated places, census-designated places); results are cached
- * for 30 days and the layer list for 7, so steady-state traffic is far lower.
- */
-export function applyGeoRateLimit() {
-  setRateLimit(TIGERWEB_UPSTREAM, 1, 4);
-}
-applyGeoRateLimit();
-
-interface ArcLayerList { layers?: { id?: unknown; name?: unknown }[]; error?: unknown }
-interface ArcQueryResult { features?: { attributes?: Record<string, unknown> }[]; error?: unknown }
-
-/** Discover the place layers by name (layer ids change between TIGERweb vintages). Cached 7 days. */
-async function placeLayerIds(): Promise<number[]> {
-  const meta = await upstreamFetch<ArcLayerList>(`${TIGERWEB_MAPSERVER}?${safeParams({ f: "json" })}`, {
-    upstream: TIGERWEB_UPSTREAM,
-    ttlMs: 7 * DAY,
-  });
-  if (!meta || meta.error || !Array.isArray(meta.layers)) throw new UpstreamError(TIGERWEB_UPSTREAM, 502, "Place lookup unavailable");
-  const ids: number[] = [];
-  for (const pattern of [/^incorporated places$/i, /^census designated places$/i]) {
-    const layer = meta.layers.find((l) => typeof l.name === "string" && pattern.test(l.name.trim()));
-    if (layer && typeof layer.id === "number") ids.push(layer.id);
-  }
-  if (!ids.length) throw new UpstreamError(TIGERWEB_UPSTREAM, 502, "Place lookup unavailable");
-  return ids;
+/** Coarse point for a city + state from the local gazetteer (no network). Throws LocationNotFound if unknown. */
+export function placeCentroid(city: string, state: string): GeoPoint {
+  const place = findPlace(city, UsState.parse(state));
+  if (!place) throw new LocationNotFound();
+  return { lat: coarse(place.lat), lng: coarse(place.lng), source: "place-gazetteer" };
 }
 
-function coord(value: unknown, max: number): number | null {
-  if (typeof value !== "number" && (typeof value !== "string" || value.trim() === "")) return null; // Number("") is 0
-  const n = typeof value === "number" ? value : Number(value.trim());
-  return Number.isFinite(n) && Math.abs(n) <= max ? n : null;
-}
-
-/** Census place (incorporated place, then census-designated place) internal point for a city + state. */
-export async function placeCentroid(city: string, state: string): Promise<GeoPoint> {
-  const name = City.parse(city);
-  const st = UsState.parse(state);
-  assertNoPHI(name);
-  // City allows only letters, spaces, . ' - ; apostrophes are doubled for the ArcGIS SQL literal.
-  const where = `STATE='${STATE_FIPS[st]}' AND UPPER(BASENAME)='${name.toUpperCase().replace(/'/g, "''")}'`;
-  for (const id of await placeLayerIds()) {
-    const params = safeParams({ where, outFields: "BASENAME,STATE,INTPTLAT,INTPTLON", returnGeometry: "false", f: "json" });
-    const res = await upstreamFetch<ArcQueryResult>(`${TIGERWEB_MAPSERVER}/${id}/query?${params}`, {
-      upstream: TIGERWEB_UPSTREAM,
-      ttlMs: 30 * DAY,
-    });
-    if (!res || res.error) throw new UpstreamError(TIGERWEB_UPSTREAM, 502, "Place lookup unavailable");
-    const attrs = res.features?.[0]?.attributes;
-    const lat = coord(attrs?.INTPTLAT, 90);
-    const lng = coord(attrs?.INTPTLON, 180);
-    if (lat !== null && lng !== null) return { lat: coarse(lat), lng: coarse(lng), source: "census-place" };
-  }
-  throw new LocationNotFound();
-}
-
-/** ZIP -> local table; city + state -> TIGERweb. Throws LocationNotFound or UpstreamError. */
+/** ZIP -> Census ZCTA table; city + state -> gazetteer. Both local. Throws LocationNotFound for an unknown ZIP. */
 export async function resolvePoint(location: Location): Promise<GeoPoint> {
   if ("zip" in location) {
     const point = zipCentroid(location.zip);
@@ -192,17 +175,10 @@ export const MILES_TO_METERS = 1609.344;
 
 /* ---------------- response normalisation ---------------- */
 
-const ENTITIES: Record<string, string> = { amp: "&", lt: "<", gt: ">", quot: '"', apos: "'", nbsp: " ", "#39": "'" };
-
-/** Strip HTML tags, decode the common entities, drop control characters, collapse whitespace, cap length. */
+/** Upstream text -> plain text (tags stripped, entities decoded, markup neutralised), no "no data" markers, capped. */
 export function cleanText(value: unknown, max = 160): string {
   if (value === null || value === undefined) return "";
-  let s = String(value)
-    .replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1\s*>/gi, "")
-    .replace(/<[^>]*>/g, " ")
-    .replace(/&(#39|amp|lt|gt|quot|apos|nbsp);/g, (_, e: string) => ENTITIES[e] ?? " ");
-  // eslint-disable-next-line no-control-regex
-  s = s.replace(/[\u0000-\u001f\u007f]/g, " ").replace(/\s+/g, " ").trim();
+  const s = htmlToPlainText(String(value));
   if (/^\[?no data\]?$/i.test(s) || /^(null|undefined|n\/a)$/i.test(s)) return "";
   return s.length > max ? `${s.slice(0, max - 1).trimEnd()}…` : s;
 }

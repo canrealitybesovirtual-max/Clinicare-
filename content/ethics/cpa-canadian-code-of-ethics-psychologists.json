@@ -1,0 +1,57 @@
+{
+  "id": "cpa-canadian-code-of-ethics-psychologists",
+  "name": "Canadian Code of Ethics for Psychologists",
+  "shortName": "CPA Code",
+  "organization": "Canadian Psychological Association",
+  "edition": 2017,
+  "editionLabel": "Fourth edition, approved by the CPA Board of Directors on January 30, 2017",
+  "editionStatus": "current",
+  "appliesTo": ["psychologist"],
+  "countries": ["CA"],
+  "scope": "national",
+  "summary": "The Canadian Code of Ethics for Psychologists is used by the Canadian Psychological Association and adopted or referenced by many provincial and territorial regulators. It is organized around four ethical principles, ranked to help when they conflict: respect for the dignity of persons and peoples, responsible caring, integrity in relationships, and responsibility to society. Each principle is followed by values and standards, and the code describes a step-by-step ethical decision-making process. A companion manual (fourth edition, 2018) explains its use. This is a summary in the app's own words. It is information, not legal advice.",
+  "keyReminders": [
+    {
+      "topic": "Dignity of persons and peoples",
+      "text": "Respect the rights, dignity and cultural identity of individuals and communities, including Indigenous peoples, and seek free and informed consent.",
+      "tags": ["informed-consent", "cultural-competence"]
+    },
+    {
+      "topic": "Responsible caring",
+      "text": "Use only methods you are competent in, weigh likely benefits and harms, and use assessment tools appropriate to the person.",
+      "tags": ["assessment"]
+    },
+    {
+      "topic": "Integrity and boundaries",
+      "text": "Be honest and open, and avoid conflicts of interest and dual relationships that could reduce objectivity or harm the client.",
+      "tags": ["dual-relationships"]
+    },
+    {
+      "topic": "Confidentiality",
+      "text": "Explain confidentiality and its legal limits in the client's province or territory, and share only what is needed when disclosure is required.",
+      "tags": ["confidentiality", "duty-to-warn"]
+    },
+    {
+      "topic": "Using the decision process",
+      "text": "When principles conflict, work through the code's decision steps, consult colleagues, and document the reasoning for your choice."
+    }
+  ],
+  "whenRelevant": ["informed-consent", "cultural-competence", "assessment", "dual-relationships", "confidentiality", "duty-to-warn"],
+  "regulatorNote": "Psychology is regulated by provincial and territorial regulatory bodies, which may adopt this code or their own standards. Check the regulator where the client is located.",
+  "officialUrl": "https://cpa.ca/?p=2491",
+  "relatedLinks": [
+    { "title": "CPA Publications (code PDF downloads)", "url": "https://cpa.ca/?p=1364" },
+    { "title": "Companion Manual to the Canadian Code of Ethics", "url": "https://cpa.ca/?p=2498" }
+  ],
+  "verification": {
+    "method": "search-index",
+    "note": "The fourth edition (approved January 30, 2017) was confirmed through search results indexing cpa.ca pages and a regulator-hosted copy. The CPA code page appears in the index only under a numeric page address (cpa.ca/?p=2491); a person should replace it with the canonical URL and confirm no fifth edition exists."
+  },
+  "sources": [
+    { "title": "Canadian Code of Ethics for Psychologists (code page)", "publisher": "Canadian Psychological Association", "url": "https://cpa.ca/?p=2491", "year": 2017 },
+    { "title": "CPA Publications", "publisher": "Canadian Psychological Association", "url": "https://cpa.ca/?p=1364" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

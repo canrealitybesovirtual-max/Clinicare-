@@ -5,9 +5,11 @@
  * considerations "for clinician review" with matched and missing features; it never states a diagnosis
  * and never decides risk.
  *
- * Per condition (features de-duplicated by symptomId, first entry wins):
- *   C  = total weight of core features        mc = weight of matched core features
- *   A  = total weight of associated features  ma = weight of matched associated features
+ * Per condition (features de-duplicated by symptomId, first entry wins). Features that share a `group`
+ * form ONE slot worth the group's highest weight (matched: the highest matched weight), so one symptom
+ * area never counts twice (sleeping too little / too much; unexpected / not-yet-clarified attacks):
+ *   C  = total weight of core slots           mc = matched weight of core slots
+ *   A  = total weight of associated slots     ma = matched weight of associated slots
  *   base = 100 * (0.7 * mc/C + 0.3 * ma/A)     (A = 0 => base = 100 * mc/C)
  *   A condition with no matched core feature is skipped (it is never forced into the list).
  *
@@ -19,9 +21,15 @@
  *   medical      medicalPossible "yes"   => x0.75 + flag listing the condition's medical rule-outs
  *   partial-core matched core count < minCore => strength capped at "possible" + flag
  *   breadth      the score reaches "strong" but matched associated weight is under 25% of the
- *                condition's associated weight (A > 0)  => score held at 64 ("moderate") + flag.
+ *                condition's associated weight (A > 0), or fewer than strongMinAreas distinct
+ *                breadthArea slots are matched  => score held at 64 ("moderate") + flag.
  *                Key features alone are not a full picture: e.g. low mood + loss of interest with
  *                nothing else documented stays "moderate" until supporting features are recorded.
+ *   required     a requiredFeatures symptom is missing (e.g. trauma exposure for PTSD) => held at
+ *                "moderate" (score <= 64) + flag with the condition's note.
+ *   red-flag     a red flag in the same input matches one of the condition's redFlagRules => flag
+ *                (and the rule's cap, e.g. mania holds MDD at "moderate"). Withdrawal signs add a
+ *                substance flag listing the condition's substance rule-outs, even with the toggle unset.
  *
  * score = round(base * gate multipliers), clamped to 0-100 (then the breadth hold, if it applies).
  * strength: score >= 65 "strong", >= 40 "moderate", otherwise "possible" (after the partial-core cap).
@@ -60,6 +68,10 @@ export const SCORING = {
 
 export const EMPTY_MESSAGE =
   "Add symptoms (tap a chip or describe the presentation) to see possible considerations for clinician review.";
+
+/** Shown instead of EMPTY_MESSAGE when text was typed but nothing in it matched the lexicon. */
+export const NO_MATCH_MESSAGE =
+  "No recognized symptoms in the text yet. Add symptom chips or rephrase (for example, “heart racing” or “can’t stop worrying”). Text matching can miss things, including risk statements: ask directly.";
 
 export function insufficientMessage(conditionCount: number): string {
   return (
@@ -162,42 +174,133 @@ function gateFlags(cond: Condition, input: ScoringInput): { multiplier: number; 
   return { multiplier, flags };
 }
 
+/** One scoring slot: a feature, or a group of features that share a symptom area (highest weight counts). */
+interface Slot {
+  key: string;
+  kind: ConditionFeature["kind"];
+  weight: number; // highest weight in the slot
+  matched: number; // highest matched weight, 0 when nothing in the slot is present
+  breadthArea: boolean;
+}
+
+function slotsOf(features: ConditionFeature[], present: ReadonlySet<string>): Slot[] {
+  const byKey = new Map<string, Slot>();
+  for (const f of features) {
+    const key = `${f.kind}:${f.group ?? f.symptomId}`;
+    const slot = byKey.get(key) ?? { key, kind: f.kind, weight: 0, matched: 0, breadthArea: false };
+    slot.weight = Math.max(slot.weight, f.weight);
+    if (present.has(f.symptomId)) slot.matched = Math.max(slot.matched, f.weight);
+    slot.breadthArea ||= f.breadthArea === true;
+    byKey.set(key, slot);
+  }
+  return [...byKey.values()];
+}
+
+/** Weighted base score and slot counts for a condition (shared with the "Why suggested" panel). */
+export interface ScoreBreakdown {
+  coreTotal: number; // C: core slot weights
+  coreMatched: number; // mc
+  assocTotal: number; // A
+  assocMatched: number; // ma
+  coreSlots: number;
+  coreHits: number; // matched core slots
+  assocSlots: number;
+  assocHits: number;
+  areaHits: number; // matched breadthArea slots
+  base: number;
+}
+
+export function scoreBreakdown(cond: Condition, present: ReadonlySet<string>): ScoreBreakdown {
+  const slots = slotsOf(uniqueFeatures(cond.features), present);
+  const core = slots.filter((x) => x.kind === "core");
+  const assoc = slots.filter((x) => x.kind === "associated");
+  const sum = (list: Slot[], k: "weight" | "matched") => list.reduce((n, x) => n + x[k], 0);
+  const C = sum(core, "weight");
+  const A = sum(assoc, "weight");
+  const mc = sum(core, "matched");
+  const ma = sum(assoc, "matched");
+  const base = C === 0 ? 0 : A > 0 ? 100 * (SCORING.coreShare * (mc / C) + SCORING.associatedShare * (ma / A)) : 100 * (mc / C);
+  return {
+    coreTotal: C,
+    coreMatched: mc,
+    assocTotal: A,
+    assocMatched: ma,
+    coreSlots: core.length,
+    coreHits: core.filter((x) => x.matched > 0).length,
+    assocSlots: assoc.length,
+    assocHits: assoc.filter((x) => x.matched > 0).length,
+    areaHits: slots.filter((x) => x.breadthArea && x.matched > 0).length,
+    base,
+  };
+}
+
+const RANK: Record<Strength, number> = { possible: 0, moderate: 1, strong: 2 };
+
 function scoreOne(
   cond: Condition,
   present: ReadonlySet<string>,
   input: ScoringInput,
   labelOf: (id: string) => string,
+  redFlagTypes: ReadonlySet<string>,
 ): Suggestion | null {
   const features = uniqueFeatures(cond.features);
-  const core = features.filter((f) => f.kind === "core");
-  const assoc = features.filter((f) => f.kind === "associated");
-  const C = core.reduce((n, f) => n + f.weight, 0);
-  const A = assoc.reduce((n, f) => n + f.weight, 0);
-  const coreHits = core.filter((f) => present.has(f.symptomId));
-  if (C === 0 || coreHits.length === 0) return null;
-
-  const mc = coreHits.reduce((n, f) => n + f.weight, 0);
-  const assocHits = assoc.filter((f) => present.has(f.symptomId));
-  const ma = assocHits.reduce((n, f) => n + f.weight, 0);
-  const base = A > 0 ? 100 * (SCORING.coreShare * (mc / C) + SCORING.associatedShare * (ma / A)) : 100 * (mc / C);
+  const bd = scoreBreakdown(cond, present);
+  if (bd.coreTotal === 0 || bd.coreHits === 0) return null;
 
   const { multiplier, flags } = gateFlags(cond, input);
-  let score = Math.min(100, Math.max(0, Math.round(base * multiplier)));
-
+  let score = Math.min(100, Math.max(0, Math.round(bd.base * multiplier)));
   let strength = strengthFor(score);
-  if (coreHits.length < cond.minCore) {
+
+  // Holds lower the strength (and the score to just under the next band) and always say why.
+  const holdAt = (cap: Strength) => {
+    if (RANK[strength] <= RANK[cap]) return false;
+    strength = cap;
+    score = Math.min(score, cap === "moderate" ? SCORING.strongAt - 1 : SCORING.moderateAt - 1);
+    return true;
+  };
+
+  if (bd.coreHits < cond.minCore) {
     strength = "possible";
-    const verb = coreHits.length === 1 ? "is" : "are";
+    const verb = bd.coreHits === 1 ? "is" : "are";
     flags.unshift({
       type: "partial-core",
-      message: `Only ${coreHits.length} of the ${core.length} key features ${verb} present (at least ${cond.minCore} expected); gather more information.`,
+      message: `Only ${bd.coreHits} of the ${bd.coreSlots} key features ${verb} present (at least ${cond.minCore} expected); gather more information.`,
     });
-  } else if (strength === "strong" && A > 0 && ma / A < SCORING.breadthShare) {
-    score = SCORING.strongAt - 1;
-    strength = "moderate";
+  } else {
+    const thinAssoc = bd.assocTotal > 0 && bd.assocMatched / bd.assocTotal < SCORING.breadthShare;
+    const fewAreas = cond.strongMinAreas !== undefined && bd.areaHits < cond.strongMinAreas;
+    if (strength === "strong" && (thinAssoc || fewAreas)) {
+      holdAt("moderate");
+      flags.push({
+        type: "breadth",
+        message: fewAreas
+          ? `Only ${bd.areaHits} of the symptom areas this pattern usually spans ${bd.areaHits === 1 ? "is" : "are"} documented (at least ${cond.strongMinAreas} expected for a strong match); score held at ${score} so the match stays moderate until more of the picture is documented.`
+          : `Few supporting features are documented yet (${bd.assocHits} of ${bd.assocSlots} associated features); score reduced to ${score} so the match stays moderate until more of the picture is documented.`,
+      });
+    }
+  }
+
+  // Required features: without them the pattern is not complete, whatever the score.
+  for (const req of cond.requiredFeatures) {
+    if (present.has(req.symptomId)) continue;
+    const held = holdAt("moderate");
+    flags.push({ type: "required", message: `${req.note}${held ? ` Strength held at moderate (score ${score}).` : ""}` });
+  }
+
+  // Red flags documented in the same input (G9): never hidden, and they change how to read this suggestion.
+  for (const rule of cond.redFlagRules) {
+    if (!redFlagTypes.has(rule.type)) continue;
+    const held = rule.capAt ? holdAt(rule.capAt) : false;
+    flags.push({ type: "red-flag", message: `${rule.message}${held ? ` Strength held at ${strength} (score ${score}).` : ""}` });
+  }
+  if (redFlagTypes.has("withdrawal") && !flags.some((f) => f.type === "substance")) {
+    const labels = cond.ruleOuts.filter((r) => r.type === "substance").map((r) => r.label);
     flags.push({
-      type: "breadth",
-      message: `Few supporting features are documented yet (${assocHits.length} of ${assoc.length} associated features); score reduced to ${score} so the match stays moderate until more of the picture is documented.`,
+      type: "substance",
+      message: `Possible alcohol or sedative withdrawal is documented. Withdrawal can mimic or worsen this pattern and can be medically dangerous; consider an urgent medical assessment. ${listOrFallback(
+        labels,
+        "Consider substance or medication effects before attributing symptoms to this pattern.",
+      )}`,
     });
   }
 
@@ -264,9 +367,10 @@ export function scoreConditions(input: ScoringInput, conditions: Condition[], sy
   const byId = new Map<string, Condition>();
   for (const c of conditions) if (!byId.has(c.id)) byId.set(c.id, c);
 
+  const redFlagTypes: ReadonlySet<string> = new Set(redFlags.map((f) => f.type));
   const scored: Suggestion[] = [];
   for (const cond of byId.values()) {
-    const s = scoreOne(cond, present, input, labelOf);
+    const s = scoreOne(cond, present, input, labelOf, redFlagTypes);
     if (s && s.score >= SCORING.minScore) scored.push(s);
   }
   scored.sort((a, b) => b.score - a.score || compareText(a.name, b.name) || compareText(a.conditionId, b.conditionId));

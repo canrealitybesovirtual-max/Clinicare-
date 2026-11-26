@@ -33,18 +33,30 @@
  *     and never overlap.
  *  5. Negation (deliberately conservative: a missed negation shows one extra item for clinician review,
  *     a wrong negation could hide a red flag):
- *     - strong cues (STRONG_NEGATION_CUES: "denies", "negative for", "no history of", ...) negate every
- *       phrase that starts later in the SAME clause, unless an affirming verb (reports, endorses,
- *       describes, admits, complains) sits between the cue and the phrase. A cue inside a matched phrase
- *       is ignored. Cues AFTER a phrase never negate it.
- *     - bare "no" / "not" / "never" negates only when it is the non-stopword token immediately before
- *       the phrase, in the same clause, and the phrase itself does not begin with a negation
- *       (so "no interest in anything" stays a positive match, "no nightmares" is negated,
- *       "no si or hi" negates only si).
+ *     - strong cues (STRONG_NEGATION_CUES: "denies", "negative for", "no history of", ...) negate
+ *       phrases later in the SAME clause. The scope ends at an affirming verb (reports, endorses,
+ *       describes, admits, complains) and at a conjunction followed by a new predicate ("and has",
+ *       "and feels", "and is now", "and hears", "and she": PREDICATES), so "Denies SI and has been
+ *       hearing voices" keeps the voices. A red-flag phrase needs a tight link: between the cue and it only
+ *       other matched phrases, list words and at most 3 stopwords or fillers ("denies any current
+ *       thoughts of suicide"). A cue inside a matched phrase is ignored.
+ *     - bare negators ("no", "not", "never", "without", "nor" and contractions such as "doesn't",
+ *       "hasn't", "didn't") negate the phrase right after them; stopwords and a few fillers may sit in
+ *       between ("doesn't have", "not currently", "no longer has"). A phrase that itself begins with a
+ *       negation stays positive ("no interest in anything", "doesn't enjoy anything").
+ *     - post-phrase negation: "SI: denied", "HI - none", "AVH: negative", "suicidal thoughts? No".
+ *     - list spreading: a negated phrase passes the negation on to the next phrase when only list words
+ *       sit between ("no SI or HI", "no nightmares or flashbacks"); across a comma only to a one-word
+ *       abbreviation ("No SI, HI, or AVH"); never past a new predicate ("no SI and hears voices").
  *     - a gap pattern is negated when either its first part (A) or its matched part (B) is negated.
- *  6. One entry per symptomId. A symptom is positive if ANY mention is positive and negated only when
- *     every mention is negated; matches and negated never share an id. Results are in order of first
- *     mention. `phrase` is the lexicon phrase (synonym, label or clientLabel) that matched, as written.
+ *     - case-restricted abbreviations (SI, HI, AVH, SOB) match alone only in capitals or next to a
+ *       clinical word, so "SI joint", "dice que si", "hi there" and "sobbing" never match.
+ *  6. Attribution: phrases about a relative ("mother has depression", "family history of",
+ *     "her father's PTSD") or resolved past history ("depression in remission", "past history of") go
+ *     to `attributed` and are not scored. Red-flag phrases are never attributed.
+ *  7. One entry per symptomId. Positive wins over negated, negated over attributed; the three lists
+ *     never share an id. Results are in order of first mention. `phrase` is the lexicon phrase
+ *     (synonym, label or clientLabel) that matched, as written.
  *
  * searchSymptoms(query, symptoms) is a fuzzy chip search (Fuse.js) over label, clientLabel, synonyms
  * (gap patterns are left out of the chip index).
@@ -58,9 +70,16 @@ export interface SymptomMatch {
   phrase: string;
 }
 
+/** A mention about someone else (family history) or resolved past history: shown, never scored. */
+export interface AttributedMatch extends SymptomMatch {
+  reason: "family" | "historical";
+}
+
 export interface MatchResult {
   matches: SymptomMatch[];
   negated: SymptomMatch[];
+  /** Family history and resolved past history. Never includes red-flag symptoms (those stay in matches). */
+  attributed: AttributedMatch[];
 }
 
 /* ------------------------------------------------------------------ normalization */
@@ -141,14 +160,27 @@ export const STOPWORDS: ReadonlySet<string> = new Set([
 ]);
 
 const CONTRAST_WORDS = new Set(["but", "however", "although", "though", "except", "whereas"]);
-const BARE_NEGATIONS = new Set(["no", "not", "never"]);
+
+/**
+ * Bare negators: negate the phrase right after them (stopwords and NEG_SKIP fillers may sit in
+ * between). Contractions are normalized without the apostrophe ("doesn't" -> "doesnt").
+ */
+const BARE_NEGATIONS = new Set([
+  "no", "not", "never", "nor", "neither", "without",
+  "doesnt", "dont", "didnt", "hasnt", "havent", "hadnt", "isnt", "wasnt", "arent", "werent",
+]);
+/** Fillers a bare negator may skip besides stopwords: "not currently suicidal", "no longer has panic attacks". */
+const NEG_SKIP = new Set(["experience", "experiences", "experienced", "experiencing", "currently", "actively", "presently", "longer"]);
+/** A bare negator never reaches back past a new subject ("no, she has nightmares"). */
+const SUBJECTS = new Set(["i", "she", "he", "they", "we", "you", "client", "pt", "patient"]);
+
 /** A phrase starting with one of these is itself a negative statement ("no interest in anything"). */
 const NEGATION_START = new Set([
   "no", "not", "never", "none", "nothing", "nobody", "cant", "cannot", "dont", "doesnt", "didnt",
   "wont", "isnt", "arent", "wasnt", "havent", "hasnt", "hadnt", "couldnt", "unable", "without",
 ]);
 
-/** Strong negation cues (normalized, unstemmed word sequences). Scope: the rest of the clause. */
+/** Strong negation cues (normalized, unstemmed word sequences). Scope: the rest of the clause (see below). */
 export const STRONG_NEGATION_CUES: readonly string[] = [
   "denies", "denied", "denying", "deny",
   "negative for",
@@ -163,6 +195,78 @@ const CUE_TOKENS: readonly string[][] = STRONG_NEGATION_CUES.map((c) => c.split(
 
 /** An affirming verb between a strong cue and a phrase ends the cue's scope ("denies si and reports hi"). */
 const AFFIRM_STEMS = new Set(["reports", "endorses", "describes", "admits", "complains"].map(stem));
+
+/** Words that join list items ("no si or hi", "denies nightmares nor flashbacks"). */
+const SEPARATORS = new Set(["and", "or", "nor", "plus", "either", "neither"]);
+
+/** A conjunction followed (within two words) by one of these starts a new statement: the scope of a cue ends there. */
+const SCOPE_BREAK_CONJ = new Set(["and", "or", "then", "now", "plus", "also", "so", "while"]);
+/**
+ * New-predicate words (verbs, "now/currently", new subjects). "Denies SI and has been hearing voices",
+ * "denies depression and feels hopeless", "negative for mania and is now spending": the cue stops at "and".
+ */
+const PREDICATES = new Set([
+  "has", "have", "had", "is", "are", "was", "were", "been",
+  "feels", "feel", "felt", "wants", "want", "wanted", "says", "said", "states", "stated",
+  "hears", "heard", "sees", "saw", "believes", "believed", "thinks", "started", "starts", "start",
+  "began", "begins", "became", "becomes", "currently", "now", "reports", "reported", "endorses", "endorsed",
+  "describes", "described", "admits", "admitted", "complains", "complained", "notes", "noted",
+  "keeps", "kept", "continues", "continued", "gets", "got", "experiences", "experienced", "presents",
+  "presented", "appears", "seems", "acknowledges", "expresses", "expressed", "shows", "showed",
+  "displays", "exhibits", "can", "cant", "cannot", "could", "couldnt", "will", "would", "wont", "may",
+  "might", "does", "did", "doesnt", "didnt", "hasnt", "havent",
+  "i", "she", "he", "they", "we", "client", "pt", "patient",
+]);
+
+/**
+ * Red-flag phrases need a tight link to a strong cue: between the cue and the phrase only other
+ * matched phrases, list separators and at most RED_FLAG_LOOSE stopwords or these fillers may sit.
+ */
+const RED_FLAG_FILLERS = new Set([...NEG_SKIP, "any", "current", "recent", "active", "ongoing", "feeling", "feelings", "thoughts", "thought"]);
+const RED_FLAG_LOOSE = 3;
+
+/** Post-phrase negation: "SI: denied", "HI - none", "AVH: negative", "Suicidal thoughts? No." */
+const POST_NEGATIONS = new Set(["denied", "denies", "deny", "none", "negative", "neg", "no", "absent", "nil", "never", "not"]);
+const POST_NEG_TAIL = new Set(["reported", "noted", "endorsed", "present", "currently", "today", "now", "elicited", "observed"]);
+
+/**
+ * Short abbreviations that are also ordinary words or abbreviations elsewhere ("SI joint", "dice que
+ * si", "hi there", "she was sobbing"). As a one-word phrase they match only when typed in capitals,
+ * or (CONTEXT_ABBREVIATIONS) next to a clinical word ("denies si", "active si", "si/hi").
+ */
+export const CASE_RESTRICTED_ABBREVIATIONS: ReadonlySet<string> = new Set(["si", "hi", "avh", "sob"]);
+const CONTEXT_ABBREVIATIONS = new Set(["si", "hi", "avh"]);
+const ABBREVIATION_NEIGHBORS = new Set([
+  "denies", "denied", "deny", "denying", "endorses", "endorsed", "endorsing", "endorse", "reports", "reported",
+  "admits", "admitted", "active", "passive", "current", "recent", "chronic", "fleeting", "intermittent",
+  "positive", "negative", "neg", "pos", "plan", "plans", "intent", "ideation", "si", "hi", "avh", "ah", "vh",
+  "no", "any",
+]);
+const ABBREVIATION_NOT_BEFORE: Readonly<Record<string, ReadonlySet<string>>> = {
+  si: new Set(["joint", "joints", "unit", "units"]),
+  hi: new Set(["res", "fi", "tech", "there"]),
+};
+
+/**
+ * Attribution (not scored): phrases about relatives, and resolved past history, go to `attributed`.
+ * Red-flag phrases are never attributed: they always surface for the clinician.
+ */
+const RELATIVES = new Set([
+  "mother", "father", "mom", "mum", "dad", "brother", "sister", "sibling", "siblings", "parent", "parents",
+  "son", "daughter", "aunt", "uncle", "cousin", "grandmother", "grandfather", "grandma", "grandpa",
+  "grandparent", "grandparents", "husband", "wife", "spouse", "partner", "boyfriend", "girlfriend",
+  "stepmother", "stepfather", "stepmom", "stepdad", "niece", "nephew", "twin", "relative", "relatives",
+]);
+const FAMILY_VERBS = new Set(["has", "had", "have", "suffers", "suffered", "struggles", "struggled", "diagnosed", "dx", "battled", "battles"]);
+const FAMILY_CUES: readonly string[][] = [
+  "family history of", "family hx of", "family history significant for", "family history positive for",
+  "family psychiatric history of", "family history includes", "fhx of", "fhx", "fh of", "fam hx of",
+].map((c) => c.split(" "));
+const HISTORY_CUES: readonly string[][] = [
+  "past history of", "past hx of", "remote history of", "remote hx of", "prior history of", "previous history of",
+].map((c) => c.split(" "));
+const REMISSION_WORDS = new Set(["remission", "resolved", "remitted"]);
+const REMISSION_SKIP = new Set(["full", "partial", "now", "since", "currently", "sustained", "early", "complete", "completely", "fully", "long"]);
 
 /** Gap patterns: at most this many content words may sit between two parts. */
 const MAX_GAP = 5;
@@ -179,6 +283,7 @@ interface PhraseEntry {
   chars: number;
   negStart: boolean; // first part starts with a negation word
   lastNegStart: boolean; // last part starts with a negation word (gap patterns)
+  red: boolean; // the symptom carries a red flag: tighter negation, never attributed
   order: number;
 }
 
@@ -208,7 +313,7 @@ function expandPattern(phrase: string): { display: string; parts: string[] }[] {
 
 const words = (s: string) => normalizeText(s).split(" ").filter((t) => t.length > 0);
 
-function makeEntry(symptomId: string, display: string, rawParts: string[], order: number): PhraseEntry | null {
+function makeEntry(symptomId: string, display: string, rawParts: string[], order: number, red: boolean): PhraseEntry | null {
   const tokenParts = rawParts.map(words);
   const contentParts = tokenParts.map((p) => p.filter((t) => !STOPWORDS.has(t)));
   // Every part needs at least one content word.
@@ -238,6 +343,7 @@ function makeEntry(symptomId: string, display: string, rawParts: string[], order
     chars: parts.map((p) => p.join(" ")).join(" ").length,
     negStart: NEGATION_START.has(first[0] ?? ""),
     lastNegStart: NEGATION_START.has(last[0] ?? ""),
+    red,
     order,
   };
 }
@@ -259,7 +365,7 @@ function buildIndex(symptoms: readonly Symptom[]): MatcherIndex {
     for (const plain of [s.label, s.clientLabel]) phrases.push({ display: plain, parts: [plain] });
 
     for (const p of phrases) {
-      const entry = makeEntry(s.id, p.display, p.parts, order);
+      const entry = makeEntry(s.id, p.display, p.parts, order, !!s.redFlag);
       if (!entry) continue;
       const key = `${entry.kind}:${entry.parts.map((x) => x.join(" ")).join(` ${GAP} `)}`;
       if (seen.has(key)) continue;
@@ -287,7 +393,8 @@ function getIndex(symptoms: readonly Symptom[]): MatcherIndex {
 /* ------------------------------------------------------------------ matching */
 
 interface Tok {
-  raw: string;
+  raw: string; // lowercase normalized token
+  orig: string; // same token with its original letter case (case-restricted abbreviations)
   stem: string;
   stop: boolean;
   clause: number;
@@ -297,6 +404,7 @@ interface Segment {
   toks: Tok[];
   content: number[]; // indexes into toks of non-stopword tokens
   group: number; // segments joined only by commas share a group
+  delimAfter: string; // punctuation that ends this segment ("" at the end of the text)
 }
 
 /** A token addressed across the segments of one sentence group. */
@@ -307,6 +415,19 @@ interface FlatTok {
 
 const SEGMENT_SPLIT = /([.,;:!?\r\n]+)/;
 
+/** Like words(), but keeps each token's original letter case alongside the lowercase form. */
+function casedWords(s: string): { raw: string; orig: string }[] {
+  return s
+    .normalize("NFKD")
+    .replace(COMBINING_MARKS, "")
+    .replace(APOSTROPHES, "")
+    .replace(/[^\p{L}\p{N}]+/gu, " ")
+    .trim()
+    .split(" ")
+    .filter((t) => t.length > 0)
+    .map((orig) => ({ orig, raw: orig.toLowerCase() }));
+}
+
 function segmentize(text: string): Segment[] {
   const segments: Segment[] = [];
   let clause = 0;
@@ -316,18 +437,18 @@ function segmentize(text: string): Segment[] {
     const part = pieces[i] ?? "";
     const delimiterBefore = i > 0 ? (pieces[i - 1] ?? "") : "";
     if (delimiterBefore && !/^,+$/.test(delimiterBefore)) group++;
-    const ws = words(part);
+    const ws = casedWords(part);
     if (ws.length === 0) continue;
     clause++;
     const toks: Tok[] = [];
     const content: number[] = [];
-    for (const raw of ws) {
+    for (const { raw, orig } of ws) {
       if (CONTRAST_WORDS.has(raw) && toks.length > 0) clause++;
       const stop = STOPWORDS.has(raw);
       if (!stop) content.push(toks.length);
-      toks.push({ raw, stem: stem(raw), stop, clause });
+      toks.push({ raw, orig, stem: stem(raw), stop, clause });
     }
-    segments.push({ toks, content, group });
+    segments.push({ toks, content, group, delimAfter: pieces[i + 1] ?? "" });
   }
   return segments;
 }
@@ -339,7 +460,7 @@ interface Span {
   cEnd: number;
   rStart: number; // token range of the matched (last) part
   rEnd: number;
-  anchor?: { seg: number; cStart: number; rStart: number }; // first part of a gap pattern
+  anchor?: { seg: number; cStart: number; rStart: number; rEnd: number }; // first part of a gap pattern
 }
 
 interface CueHit {
@@ -348,10 +469,11 @@ interface CueHit {
   clause: number;
 }
 
-function findCues(toks: Tok[]): CueHit[] {
+/** Every occurrence of a multi-word cue inside one clause. */
+function findSequences(toks: Tok[], sequences: readonly string[][]): CueHit[] {
   const hits: CueHit[] = [];
   for (let i = 0; i < toks.length; i++) {
-    for (const cue of CUE_TOKENS) {
+    for (const cue of sequences) {
       if (i + cue.length > toks.length) continue;
       let ok = true;
       for (let k = 0; k < cue.length; k++) {
@@ -368,30 +490,6 @@ function findCues(toks: Tok[]): CueHit[] {
     }
   }
   return hits;
-}
-
-function negatedAt(seg: Segment, rStart: number, cStart: number, negStart: boolean, cues: CueHit[]): boolean {
-  const startTok = seg.toks[rStart];
-  if (!startTok) return false;
-  const clause = startTok.clause;
-  for (const cue of cues) {
-    if (cue.clause !== clause || cue.end >= rStart) continue;
-    let affirmed = false;
-    for (let k = cue.end + 1; k < rStart; k++) {
-      const t = seg.toks[k];
-      if (t && AFFIRM_STEMS.has(t.stem)) {
-        affirmed = true;
-        break;
-      }
-    }
-    if (!affirmed) return true;
-  }
-  if (!negStart && cStart > 0) {
-    const prevIdx = seg.content[cStart - 1];
-    const prev = prevIdx === undefined ? undefined : seg.toks[prevIdx];
-    if (prev && prev.clause === clause && BARE_NEGATIONS.has(prev.raw)) return true;
-  }
-  return false;
 }
 
 /** Does `stems` match the content tokens of `seg` starting at content index ci? */
@@ -455,20 +553,284 @@ function matchGapTail(entry: PhraseEntry, flat: FlatTok[], pos: number, segments
   return found;
 }
 
-/** Map free text to lexicon symptom ids, splitting positive and negated mentions. Deterministic. */
-export function matchSymptoms(text: string, symptoms: Symptom[]): MatchResult {
-  if (!text || symptoms.length === 0) return { matches: [], negated: [] };
-  const index = getIndex(symptoms);
-  const segments = segmentize(text);
+const isAllCaps = (s: string) => s !== s.toLowerCase() && s === s.toUpperCase();
 
-  // Flattened tokens per sentence group (for gap patterns).
-  const flatByGroup = new Map<number, FlatTok[]>();
-  const flatPos: number[][] = []; // [seg][ti] -> index in its group's flat list
-  segments.forEach((seg, si) => {
-    const list = flatByGroup.get(seg.group) ?? [];
-    flatPos[si] = seg.toks.map((_, ti) => list.push({ seg: si, ti }) - 1);
-    flatByGroup.set(seg.group, list);
-  });
+/** Context for the matching passes over one text. */
+class TextContext {
+  readonly segments: Segment[];
+  readonly flatByGroup = new Map<number, FlatTok[]>();
+  readonly flatPos: number[][] = []; // [seg][ti] -> index in its group's flat list
+  /** [seg][ti] -> furthest token end (same segment) of any matched span covering the token, or -1. */
+  covEnd: number[][] = [];
+
+  constructor(text: string) {
+    this.segments = segmentize(text);
+    this.segments.forEach((seg, si) => {
+      const list = this.flatByGroup.get(seg.group) ?? [];
+      this.flatPos[si] = seg.toks.map((_, ti) => list.push({ seg: si, ti }) - 1);
+      this.flatByGroup.set(seg.group, list);
+    });
+  }
+
+  tok(seg: number, ti: number): Tok | undefined {
+    return this.segments[seg]?.toks[ti];
+  }
+
+  /** Nearest token before (dir -1) or after (dir +1) in the sentence group, skipping list separators. */
+  neighbor(seg: number, ti: number, dir: -1 | 1): Tok | undefined {
+    const group = this.segments[seg]?.group ?? -1;
+    const flat = this.flatByGroup.get(group) ?? [];
+    for (let at = (this.flatPos[seg]?.[ti] ?? 0) + dir; at >= 0 && at < flat.length; at += dir) {
+      const f = flat[at];
+      const t = f ? this.tok(f.seg, f.ti) : undefined;
+      if (!t) return undefined;
+      if (!SEPARATORS.has(t.raw)) return t;
+    }
+    return undefined;
+  }
+
+  /** Case-restricted one-word abbreviations ("SI", "HI", "AVH", "SOB"): capitals or a clinical neighbor. */
+  abbreviationOk(entry: PhraseEntry, seg: number, ti: number): boolean {
+    const stems = entry.parts[0] ?? [];
+    const abbr = stems[0] ?? "";
+    if (entry.kind === "gap" || stems.length !== 1 || !CASE_RESTRICTED_ABBREVIATIONS.has(abbr)) return true;
+    const t = this.tok(seg, ti);
+    if (!t || t.raw !== abbr) return false;
+    const next = this.neighbor(seg, ti, 1);
+    if (next && ABBREVIATION_NOT_BEFORE[abbr]?.has(next.raw)) return false;
+    if (isAllCaps(t.orig)) return true;
+    if (!CONTEXT_ABBREVIATIONS.has(abbr)) return false;
+    const prev = this.neighbor(seg, ti, -1);
+    return (!!prev && ABBREVIATION_NEIGHBORS.has(prev.raw)) || (!!next && ABBREVIATION_NEIGHBORS.has(next.raw));
+  }
+
+  markCovered(spans: Span[], gapSpans: Span[]): void {
+    this.covEnd = this.segments.map((seg) => seg.toks.map(() => -1));
+    const mark = (seg: number, r0: number, r1: number) => {
+      const row = this.covEnd[seg];
+      if (!row) return;
+      for (let k = r0; k <= r1; k++) row[k] = Math.max(row[k] ?? -1, r1);
+    };
+    for (const s of spans) mark(s.seg, s.rStart, s.rEnd);
+    for (const s of gapSpans) {
+      mark(s.seg, s.rStart, s.rEnd);
+      if (s.anchor) mark(s.anchor.seg, s.anchor.rStart, s.anchor.rEnd);
+    }
+  }
+
+  covered(seg: number, ti: number): boolean {
+    return (this.covEnd[seg]?.[ti] ?? -1) >= 0;
+  }
+
+  /** "and"/"or"/"then"/"now" followed within two words by a new predicate ends a cue's scope. */
+  scopeBreakAt(seg: Segment, k: number): boolean {
+    const t = seg.toks[k];
+    if (!t || !SCOPE_BREAK_CONJ.has(t.raw)) return false;
+    for (const j of [k + 1, k + 2]) {
+      const n = seg.toks[j];
+      if (n && n.clause === t.clause && PREDICATES.has(n.raw)) return true;
+    }
+    return false;
+  }
+
+  /** A strong cue earlier in the clause negates the phrase starting at rStart (see the module doc). */
+  strongNegated(si: number, rStart: number, cues: CueHit[], red: boolean): boolean {
+    const seg = this.segments[si];
+    const clause = seg?.toks[rStart]?.clause;
+    if (!seg || clause === undefined) return false;
+    for (const cue of cues) {
+      if (cue.clause !== clause || cue.end >= rStart) continue;
+      let ok = true;
+      let loose = 0;
+      for (let k = cue.end + 1; k < rStart && ok; k++) {
+        const t = seg.toks[k];
+        if (!t || AFFIRM_STEMS.has(t.stem) || this.scopeBreakAt(seg, k)) ok = false;
+        else if (red && !this.covered(si, k) && !SEPARATORS.has(t.raw)) {
+          if (!(t.stop || RED_FLAG_FILLERS.has(t.raw)) || ++loose > RED_FLAG_LOOSE) ok = false;
+        }
+      }
+      if (ok) return true;
+    }
+    return false;
+  }
+
+  /** A bare negator right before the phrase (stopwords and NEG_SKIP fillers may sit between). */
+  bareNegated(si: number, rStart: number, negStart: boolean): boolean {
+    if (negStart) return false;
+    const seg = this.segments[si];
+    const clause = seg?.toks[rStart]?.clause;
+    if (!seg || clause === undefined) return false;
+    let skipped = 0;
+    for (let k = rStart - 1; k >= 0; k--) {
+      const t = seg.toks[k];
+      if (!t || t.clause !== clause) return false;
+      const end = this.covEnd[si]?.[k] ?? -1;
+      if (end >= rStart) continue; // part of an overlapping phrase over the same words
+      if (end >= 0) return false; // another phrase sits in between: list spreading decides
+      if (BARE_NEGATIONS.has(t.raw)) return true;
+      if (SUBJECTS.has(t.raw)) return false;
+      if ((t.stop || NEG_SKIP.has(t.raw)) && ++skipped <= 4) continue;
+      return false;
+    }
+    return false;
+  }
+
+  /** "SI: denied", "HI - none", "suicidal thoughts? No.", "si/hi denied". */
+  postNegated(si: number, rEnd: number): boolean {
+    const seg = this.segments[si];
+    if (!seg) return false;
+    const tailOnly = (s: Segment, from: number) => {
+      for (let k = from; k < s.toks.length; k++) {
+        const t = s.toks[k];
+        if (t && !t.stop && !POST_NEG_TAIL.has(t.raw)) return false;
+      }
+      return true;
+    };
+    for (let k = rEnd + 1; k < seg.toks.length; k++) {
+      const t = seg.toks[k];
+      if (!t) return false;
+      if (this.covered(si, k) || SEPARATORS.has(t.raw) || t.stop) continue;
+      return POST_NEGATIONS.has(t.raw) && tailOnly(seg, k + 1);
+    }
+    // The phrase ends its segment: "SI: denied" / "Suicidal thoughts? No".
+    if (!/^[:?]+$/.test(seg.delimAfter.trim())) return false;
+    const next = this.segments[si + 1];
+    if (!next) return false;
+    const firstContent = next.content[0];
+    const first = firstContent === undefined ? undefined : next.toks[firstContent];
+    return !!first && POST_NEGATIONS.has(first.raw) && tailOnly(next, (firstContent ?? 0) + 1);
+  }
+
+  /** Attribution cue (family history, resolved past history) that covers the phrase at rStart. */
+  attributedAt(si: number, rStart: number, cues: { hit: CueHit; reason: Attribution }[]): Attribution | null {
+    const seg = this.segments[si];
+    const clause = seg?.toks[rStart]?.clause;
+    if (!seg || clause === undefined) return null;
+    for (const { hit, reason } of cues) {
+      if (hit.clause !== clause || hit.end >= rStart) continue;
+      let ok = true;
+      for (let k = hit.end + 1; k < rStart && ok; k++) {
+        const t = seg.toks[k];
+        if (!t || AFFIRM_STEMS.has(t.stem) || this.scopeBreakAt(seg, k) || (SUBJECTS.has(t.raw) && k > hit.end + 1)) ok = false;
+      }
+      if (ok) return reason;
+    }
+    // Possessive relative right before the phrase: "mother's depression" -> "mothers depression".
+    for (let k = rStart - 1; k >= 0; k--) {
+      const t = seg.toks[k];
+      if (!t || t.clause !== clause) break;
+      if (t.stop) continue;
+      if (t.raw.endsWith("s") && RELATIVES.has(t.raw.slice(0, -1))) return "family";
+      break;
+    }
+    return null;
+  }
+
+  /** "depression in remission", "panic attacks have resolved". */
+  remissionAfter(si: number, rEnd: number): boolean {
+    const seg = this.segments[si];
+    if (!seg) return false;
+    for (let k = rEnd + 1; k < seg.toks.length; k++) {
+      const t = seg.toks[k];
+      if (!t) return false;
+      if (t.stop || REMISSION_SKIP.has(t.raw)) continue;
+      return REMISSION_WORDS.has(t.raw);
+    }
+    return false;
+  }
+
+  /** Family and history cues per segment. */
+  attributionCues(si: number): { hit: CueHit; reason: Attribution }[] {
+    const seg = this.segments[si];
+    if (!seg) return [];
+    const out: { hit: CueHit; reason: Attribution }[] = [
+      ...findSequences(seg.toks, FAMILY_CUES).map((hit) => ({ hit, reason: "family" as const })),
+      ...findSequences(seg.toks, HISTORY_CUES).map((hit) => ({ hit, reason: "historical" as const })),
+    ];
+    // "<relative> has / had / was diagnosed with ...": the cue ends at the verb.
+    seg.toks.forEach((t, i) => {
+      if (!RELATIVES.has(t.raw)) return;
+      for (const j of [i + 1, i + 2]) {
+        const n = seg.toks[j];
+        if (!n || n.clause !== t.clause) break;
+        if (FAMILY_VERBS.has(n.raw)) {
+          out.push({ hit: { start: i, end: j, clause: t.clause }, reason: "family" });
+          break;
+        }
+        if (!n.stop) break;
+      }
+    });
+    return out;
+  }
+}
+
+export type Attribution = "family" | "historical";
+
+interface Placed {
+  span: Span;
+  group: number;
+  start: number; // flat index (group) of the first token
+  end: number; // flat index of the last token
+  state: "positive" | "negated" | Attribution;
+  /** One-word abbreviation such as SI / HI / AVH (may continue a comma list). */
+  abbrev: boolean;
+}
+
+/**
+ * List spreading: a negated (or attributed) phrase passes its state on to the next phrase when only
+ * list words sit between them: "no SI or HI", "denies SI, HI, or AVH", "no nightmares or flashbacks".
+ * Allowed in between: other matched words, separators (and/or/nor), stopwords that are not new
+ * predicates, and NEG_SKIP fillers (at most 3 of those). A comma boundary passes negation on only to
+ * a one-word abbreviation ("No SI, HI, AVH"), never to a whole new clause ("denies SI, avoids buses").
+ * A new predicate after a conjunction ("and hears voices", "and is now spending") stops the chain.
+ */
+function spread(ctx: TextContext, placed: Placed[], from: "negated" | Attribution, onlyIf: (p: Placed) => boolean): void {
+  const order = [...placed].sort((a, b) => a.group - b.group || a.start - b.start || a.end - b.end);
+  let chainEnd = -1;
+  let chainGroup = -1;
+  for (const p of order) {
+    if (p.group !== chainGroup) {
+      chainGroup = p.group;
+      chainEnd = -1;
+    }
+    if (p.state === from) {
+      chainEnd = Math.max(chainEnd, p.end);
+      continue;
+    }
+    if (chainEnd < 0 || p.start <= chainEnd) continue; // no chain, or the same words as the chain
+    const flat = ctx.flatByGroup.get(p.group) ?? [];
+    let ok = p.state === "positive" && onlyIf(p);
+    let loose = 0;
+    let crossesComma = false;
+    for (let at = chainEnd; ok && at < p.start; at++) {
+      const a = flat[at];
+      const b = flat[at + 1];
+      if (a && b && a.seg !== b.seg) crossesComma = true;
+      if (at === chainEnd) continue;
+      const t = a ? ctx.tok(a.seg, a.ti) : undefined;
+      const seg = a ? ctx.segments[a.seg] : undefined;
+      if (!a || !t || !seg) ok = false;
+      else if (ctx.covered(a.seg, a.ti)) continue;
+      else if (CONTRAST_WORDS.has(t.raw) || AFFIRM_STEMS.has(t.stem) || PREDICATES.has(t.raw) || ctx.scopeBreakAt(seg, a.ti)) ok = false;
+      else if (SEPARATORS.has(t.raw)) continue;
+      else if (!((t.stop || NEG_SKIP.has(t.raw)) && ++loose <= 3)) ok = false;
+    }
+    if (ok && crossesComma && from === "negated" && !p.abbrev) ok = false;
+    if (ok) {
+      p.state = from;
+      chainEnd = Math.max(chainEnd, p.end);
+    } else {
+      chainEnd = -1;
+    }
+  }
+}
+
+/** Map free text to lexicon symptom ids, splitting positive, negated and attributed mentions. Deterministic. */
+export function matchSymptoms(text: string, symptoms: Symptom[]): MatchResult {
+  if (!text || symptoms.length === 0) return { matches: [], negated: [], attributed: [] };
+  const index = getIndex(symptoms);
+  const ctx = new TextContext(text);
+  const { segments, flatByGroup, flatPos } = ctx;
 
   // 1. Every candidate phrase occurrence. Gap patterns are collected apart (non-consuming).
   const candidates: Span[] = [];
@@ -479,12 +841,12 @@ export function matchSymptoms(text: string, symptoms: Symptom[]): MatchResult {
       const firstIdx = seg.content[ci];
       const first = firstIdx === undefined ? undefined : seg.toks[firstIdx];
       const bucket = first ? index.plainByFirst.get(first.stem) : undefined;
-      if (!bucket) continue;
+      if (!bucket || firstIdx === undefined) continue;
       for (const entry of bucket) {
         const stems = entry.parts[0] ?? [];
-        if (!plainAt(seg, ci, stems)) continue;
+        if (!plainAt(seg, ci, stems) || !ctx.abbreviationOk(entry, si, firstIdx)) continue;
         const cEnd = ci + stems.length - 1;
-        candidates.push({ entry, seg: si, cStart: ci, cEnd, rStart: seg.content[ci] ?? 0, rEnd: seg.content[cEnd] ?? 0 });
+        candidates.push({ entry, seg: si, cStart: ci, cEnd, rStart: firstIdx, rEnd: seg.content[cEnd] ?? 0 });
       }
     }
     // Word-for-word phrases and gap patterns: over all tokens.
@@ -493,7 +855,7 @@ export function matchSymptoms(text: string, symptoms: Symptom[]): MatchResult {
       if (!tok) continue;
       for (const entry of index.exactByFirst.get(tok.stem) ?? []) {
         const stems = entry.parts[0] ?? [];
-        if (!exactAt(seg, ti, stems)) continue;
+        if (!exactAt(seg, ti, stems) || !ctx.abbreviationOk(entry, si, ti)) continue;
         const range = contentRange(seg, ti, ti + stems.length - 1);
         if (range) candidates.push({ entry, seg: si, cStart: range[0], cEnd: range[1], rStart: ti, rEnd: ti + stems.length - 1 });
       }
@@ -513,7 +875,7 @@ export function matchSymptoms(text: string, symptoms: Symptom[]): MatchResult {
           cEnd: tailRange[1],
           rStart: tail.r0,
           rEnd: tail.r1,
-          anchor: { seg: si, cStart: headRange[0], rStart: ti },
+          anchor: { seg: si, cStart: headRange[0], rStart: ti, rEnd: ti + head.length - 1 },
         });
       }
     }
@@ -533,40 +895,75 @@ export function matchSymptoms(text: string, symptoms: Symptom[]): MatchResult {
     const overlaps = accepted.some((a) => a.seg === c.seg && a.cStart <= c.cEnd && c.cStart <= a.cEnd);
     if (!overlaps) accepted.push(c);
   }
+  ctx.markCovered(accepted, gapSpans);
 
-  // 3. Negation, then one entry per symptom (positive wins over negated).
+  // 3. Negation, then attribution, per mention.
   const cuesBySeg = segments.map((seg, si) => {
     const inside = accepted.filter((a) => a.seg === si);
-    return findCues(seg.toks).filter((cue) => !inside.some((a) => cue.start <= a.rEnd && a.rStart <= cue.end));
+    return findSequences(seg.toks, CUE_TOKENS).filter((cue) => !inside.some((a) => cue.start <= a.rEnd && a.rStart <= cue.end));
   });
+  const attribBySeg = segments.map((_, si) => ctx.attributionCues(si));
   const all = [...accepted, ...gapSpans].sort(
     (a, b) => a.seg - b.seg || a.cStart - b.cStart || a.entry.order - b.entry.order,
   );
-  const positive = new Map<string, SymptomMatch>();
-  const negative = new Map<string, SymptomMatch>();
-  for (const span of all) {
-    const seg = segments[span.seg];
-    if (!seg) continue;
-    const hit: SymptomMatch = { symptomId: span.entry.symptomId, phrase: span.entry.phrase };
+
+  const negatedHere = (si: number, rStart: number, negStart: boolean, red: boolean) =>
+    ctx.strongNegated(si, rStart, cuesBySeg[si] ?? [], red) || ctx.bareNegated(si, rStart, negStart);
+
+  const placed: Placed[] = all.map((span) => {
+    const red = span.entry.red;
+    const headSeg = span.anchor ? span.anchor.seg : span.seg;
+    const headStart = span.anchor ? span.anchor.rStart : span.rStart;
     let neg: boolean;
     if (span.anchor) {
-      const aSeg = segments[span.anchor.seg];
       neg =
-        (aSeg !== undefined &&
-          negatedAt(aSeg, span.anchor.rStart, span.anchor.cStart, span.entry.negStart, cuesBySeg[span.anchor.seg] ?? [])) ||
-        negatedAt(seg, span.rStart, span.cStart, span.entry.lastNegStart, cuesBySeg[span.seg] ?? []);
+        negatedHere(span.anchor.seg, span.anchor.rStart, span.entry.negStart, red) ||
+        negatedHere(span.seg, span.rStart, span.entry.lastNegStart, red);
     } else {
-      neg = negatedAt(seg, span.rStart, span.cStart, span.entry.negStart, cuesBySeg[span.seg] ?? []);
+      neg = negatedHere(span.seg, span.rStart, span.entry.negStart, red);
     }
-    if (neg) {
+    if (!neg) neg = ctx.postNegated(span.seg, span.rEnd);
+
+    let state: Placed["state"] = neg ? "negated" : "positive";
+    if (!neg && !red) {
+      const reason =
+        ctx.attributedAt(headSeg, headStart, attribBySeg[headSeg] ?? []) ??
+        (ctx.remissionAfter(span.seg, span.rEnd) ? "historical" : null);
+      if (reason) state = reason;
+    }
+    const stems = span.entry.parts[0] ?? [];
+    return {
+      span,
+      group: segments[span.seg]?.group ?? 0,
+      start: flatPos[headSeg]?.[headStart] ?? 0,
+      end: flatPos[span.seg]?.[span.rEnd] ?? 0,
+      state,
+      abbrev: span.entry.kind !== "gap" && stems.length === 1 && CASE_RESTRICTED_ABBREVIATIONS.has(stems[0] ?? ""),
+    };
+  });
+  spread(ctx, placed, "negated", (p) => !(p.span.anchor ? p.span.entry.lastNegStart : p.span.entry.negStart));
+  spread(ctx, placed, "family", (p) => !p.span.entry.red);
+  spread(ctx, placed, "historical", (p) => !p.span.entry.red);
+
+  // 4. One entry per symptom: positive wins over negated, negated over attributed.
+  placed.sort((a, b) => a.span.seg - b.span.seg || a.span.cStart - b.span.cStart || a.span.entry.order - b.span.entry.order);
+  const positive = new Map<string, SymptomMatch>();
+  const negative = new Map<string, SymptomMatch>();
+  const attributed = new Map<string, AttributedMatch>();
+  for (const p of placed) {
+    const hit: SymptomMatch = { symptomId: p.span.entry.symptomId, phrase: p.span.entry.phrase };
+    if (p.state === "positive") {
+      if (!positive.has(hit.symptomId)) positive.set(hit.symptomId, hit);
+    } else if (p.state === "negated") {
       if (!negative.has(hit.symptomId)) negative.set(hit.symptomId, hit);
-    } else if (!positive.has(hit.symptomId)) {
-      positive.set(hit.symptomId, hit);
+    } else if (!attributed.has(hit.symptomId)) {
+      attributed.set(hit.symptomId, { ...hit, reason: p.state });
     }
   }
   return {
     matches: [...positive.values()],
     negated: [...negative.values()].filter((n) => !positive.has(n.symptomId)),
+    attributed: [...attributed.values()].filter((n) => !positive.has(n.symptomId) && !negative.has(n.symptomId)),
   };
 }
 

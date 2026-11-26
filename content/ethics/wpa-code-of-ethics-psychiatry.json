@@ -1,0 +1,52 @@
+{
+  "id": "wpa-code-of-ethics-psychiatry",
+  "name": "WPA Code of Ethics for Psychiatry",
+  "shortName": "WPA Code",
+  "organization": "World Psychiatric Association",
+  "edition": 2020,
+  "editionLabel": "Adopted by the WPA General Assembly in October 2020 (supersedes the Declaration of Madrid)",
+  "editionStatus": "current",
+  "appliesTo": ["psychiatrist"],
+  "countries": ["INTL"],
+  "scope": "global",
+  "summary": "The World Psychiatric Association's code is a global ethics statement for psychiatrists. It was adopted by the WPA General Assembly in October 2020, supersedes the Declaration of Madrid, and has four parts: ethics in clinical practice, in psychiatric education, in research and in public mental health. WPA describes it as a living document to be updated as psychiatry changes. National psychiatric associations' codes and national law govern individual practice. This is a summary in the app's own words. It is information, not legal advice.",
+  "keyReminders": [
+    {
+      "topic": "Person-centred care",
+      "text": "Respect the person's dignity, autonomy and values, and involve them, and with consent their family, in treatment decisions.",
+      "tags": ["informed-consent"]
+    },
+    {
+      "topic": "Least restrictive care",
+      "text": "Use involuntary treatment only when the law allows and less restrictive options will not keep the person or others safe, and review it often.",
+      "tags": ["duty-to-warn"]
+    },
+    {
+      "topic": "Confidentiality",
+      "text": "Protect confidentiality and explain its legal limits; share information only as needed for care or as the law requires.",
+      "tags": ["confidentiality"]
+    },
+    {
+      "topic": "Culture and human rights",
+      "text": "Consider culture and social context in diagnosis and care, and oppose discrimination and stigma against people with mental illness.",
+      "tags": ["cultural-competence", "assessment"]
+    }
+  ],
+  "whenRelevant": ["informed-consent", "duty-to-warn", "confidentiality", "cultural-competence", "assessment"],
+  "regulatorNote": "Psychiatrists are licensed nationally or by state or province, and national psychiatric associations have their own codes. Local law and the local regulator take precedence.",
+  "officialUrl": "https://www.wpanet.org/wpa-documents",
+  "relatedLinks": [
+    { "title": "World Psychiatry article describing the WPA Code of Ethics (PubMed Central)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8129851" }
+  ],
+  "verification": {
+    "method": "search-index",
+    "note": "The October 2020 adoption, four-part structure and supersession of the Declaration of Madrid were confirmed through search results indexing wpanet.org and a World Psychiatry article on PubMed Central (PMC8129851). A person must load the official page before release."
+  },
+  "sources": [
+    { "title": "WPA Documents: Code of Ethics for Psychiatry", "publisher": "World Psychiatric Association", "url": "https://www.wpanet.org/wpa-documents", "year": 2020 },
+    { "title": "Article on the WPA Code of Ethics for Psychiatry", "publisher": "World Psychiatry (via PubMed Central)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8129851" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

@@ -19,7 +19,6 @@ import "server-only";
  * about the client. Results are public facility listings.
  */
 import { z } from "zod";
-import { curated } from "@/lib/outbound";
 import {
   PART2_REMINDER,
   SAMHSA_HELPLINE,
@@ -27,7 +26,8 @@ import {
   findTreatmentLink,
   type FinderLink,
 } from "@/lib/referral-links";
-import { NotConfigured, UpstreamError, setRateLimit, upstreamFetch } from "@/server/core";
+import { NotConfigured, UpstreamError, assertSudLookupAllowed, setRateLimit, upstreamFetch } from "@/server/core";
+import { PLACES_ATTRIBUTION } from "./places";
 import {
   MILES_TO_METERS,
   RadiusMiles,
@@ -42,6 +42,7 @@ import {
   zip5,
   type GeoPoint,
 } from "./referral-common";
+import { strictCurated } from "./strict-input";
 
 export { findTreatmentLink } from "@/lib/referral-links";
 
@@ -50,7 +51,9 @@ export const FINDTREATMENT_DEFAULT_HOST = "findtreatment.gov";
 export const FINDTREATMENT_SOURCE_URL = "https://findtreatment.gov/";
 export const CALL_TO_CONFIRM =
   "Call to confirm before referring: facility details are self-reported to SAMHSA and can be out of date (services, hours, insurance, waitlists and eligibility change).";
-export const FINDTREATMENT_ATTRIBUTION = `Data: SAMHSA FindTreatment.gov. ${CALL_TO_CONFIRM} Listing is not an endorsement.`;
+export const FINDTREATMENT_ATTRIBUTION = `Data: SAMHSA FindTreatment.gov. ${CALL_TO_CONFIRM} Listing is not an endorsement. City names: ${PLACES_ATTRIBUTION}.`;
+/** FINDTREATMENT_API_HOST may only name findtreatment.gov or a SAMHSA host (exact host or a subdomain). */
+export const FINDTREATMENT_ALLOWED_HOSTS = ["findtreatment.gov", "samhsa.gov"] as const;
 
 /** No published rate limit; the service sends Cache-Control max-age=600. Stay conservative: 1 request/s, burst 2. */
 export function applyFindTreatmentRateLimit() {
@@ -64,7 +67,7 @@ const S_TYPE: Record<FacilityType, "mh" | "sa" | "both"> = { "mental-health": "m
 
 export const TreatmentFacilitiesInput = z.strictObject({
   location: StrictLocation,
-  facilityType: curated(FACILITY_TYPES),
+  facilityType: strictCurated(FACILITY_TYPES),
   radiusMiles: RadiusMiles.default(25),
   page: z.number().int().min(1).max(50).default(1),
   pageSize: z.number().int().min(1).max(50).default(20),
@@ -132,8 +135,11 @@ export function findTreatmentEndpoint(): string {
   if (process.env.FINDTREATMENT_ACCESS_APPROVED?.trim().toLowerCase() !== "true") {
     throw new NotConfigured("FindTreatment.gov facility search");
   }
-  const host = process.env.FINDTREATMENT_API_HOST?.trim() || FINDTREATMENT_DEFAULT_HOST;
-  if (!/^(?:[a-z0-9-]+\.)+gov$/i.test(host)) throw new NotConfigured("FindTreatment.gov facility search");
+  const host = (process.env.FINDTREATMENT_API_HOST?.trim() || FINDTREATMENT_DEFAULT_HOST).toLowerCase();
+  const allowed =
+    /^(?:[a-z0-9-]+\.)*[a-z0-9-]+\.gov$/.test(host) &&
+    FINDTREATMENT_ALLOWED_HOSTS.some((h) => host === h || host.endsWith(`.${h}`));
+  if (!allowed) throw new NotConfigured("FindTreatment.gov facility search");
   return `https://${host}/locator/exportsAsJson/v2`;
 }
 
@@ -201,6 +207,7 @@ function normalize(row: FtRow): TreatmentFacility | null {
 /** Treatment facilities near a ZIP or city/state. Requires FINDTREATMENT_ACCESS_APPROVED=true. */
 export async function searchTreatmentFacilities(input: TreatmentFacilitiesInput): Promise<TreatmentFacilitiesResult> {
   const q = TreatmentFacilitiesInput.parse(input);
+  assertSudLookupAllowed(q.facilityType !== "mental-health"); // 42 CFR Part 2 owner switch (core.ts), before any fetch
   const endpoint = findTreatmentEndpoint();
   const point = await resolvePoint(q.location);
   const url = buildFindTreatmentUrl(endpoint, q, point);

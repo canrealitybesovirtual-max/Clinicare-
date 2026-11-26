@@ -7,6 +7,7 @@ import {
   ChevronDown,
   CircleMinus,
   FlaskConical,
+  History,
   Search,
   ShieldAlert,
   Square,
@@ -23,9 +24,11 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ChoiceGroup } from "@/components/ui/choice-group";
 import { Notice } from "@/components/ui/notice";
+import { ExternalLink } from "@/components/ui/external-link";
+import { PRIVATE_TEXT_FIELD_PROPS } from "@/components/ui/private-field";
 import { cn } from "@/lib/utils";
 import { useSymptomAnalysis, type SymptomAnalysis } from "./analysis";
-import { RedFlagBanner } from "./red-flag-banner";
+import { RedFlagBanner, RiskMissNote } from "./red-flag-banner";
 import { Under18Notice } from "./under18-notice";
 import { useScrubbedField } from "./use-scrubbed-field";
 import {
@@ -36,6 +39,9 @@ import {
   ONSET_CHOICES,
   TRI_CHOICES,
 } from "./symptom-meta";
+
+/** APA online assessment measures page, which hosts the Cultural Formulation Interview (link-out only). */
+const CFI_URL = "https://www.psychiatry.org/psychiatrists/practice/dsm/educational-resources/assessment-measures";
 
 /* ------------------------------------------------------------------ shared bits */
 
@@ -143,8 +149,7 @@ function FreeTextCard({ analysis }: { analysis: SymptomAnalysis }) {
           onChange={(e) => field.setDraft(e.target.value)}
           onBlur={field.flushNow}
           rows={6}
-          spellCheck
-          autoComplete="off"
+          {...PRIVATE_TEXT_FIELD_PROPS}
           placeholder="e.g., sudden panic out of nowhere, heart racing, now avoids crowds and buses"
           className="mt-2 block w-full resize-y rounded-lg border border-border bg-surface px-3 py-2.5 text-base leading-relaxed text-text placeholder:text-muted/80"
         />
@@ -249,6 +254,42 @@ function FreeTextCard({ analysis }: { analysis: SymptomAnalysis }) {
             </p>
           )}
         </div>
+        {analysis.attributed.length ? (
+          <div>
+            <h3 className="flex items-center gap-2 text-sm font-semibold">
+              Family or past history (not scored) <Badge tone="neutral">{analysis.attributed.length}</Badge>
+            </h3>
+            <ul className="mt-2 grid gap-1.5 sm:grid-cols-2">
+              {analysis.attributed.map((m) => {
+                const s = getSymptom(m.symptomId);
+                return (
+                  <li key={m.symptomId} className="flex items-start gap-2 rounded-lg bg-surface-2 px-3 py-2 text-sm">
+                    <History aria-hidden className="mt-0.5 size-4 shrink-0 text-muted" />
+                    <span>
+                      {s?.label ?? m.symptomId}
+                      <span className="block text-xs text-muted">
+                        {m.reason === "family" ? "about a relative" : "resolved or past"}: “{m.phrase}”
+                      </span>
+                    </span>
+                  </li>
+                );
+              })}
+            </ul>
+            <p className="mt-2 text-xs text-muted">
+              Mentions about relatives or resolved past history are not counted. Add a chip if it applies to the client now.
+            </p>
+          </div>
+        ) : null}
+        {analysis.cultural.length ? (
+          <Notice tone="info" title="Cultural concept of distress named">
+            <p>
+              The text names an idiom of distress (for example “ataque de nervios”, “nervios” or “thinking too much”). It is
+              not mapped to any condition. Ask what it means to the client, and consider the{" "}
+              <ExternalLink href={CFI_URL}>Cultural Formulation Interview</ExternalLink> (APA, external). Each condition’s
+              cultural notes are on the Diagnoses screen.
+            </p>
+          </Notice>
+        ) : null}
       </div>
 
       {!state.under18 ? <DiagnosesCta analysis={analysis} size="md" className="lg:hidden" /> : null}
@@ -291,7 +332,7 @@ function SymptomPicker({ analysis }: { analysis: SymptomAnalysis }) {
             value={search.draft}
             onChange={(e) => search.setDraft(e.target.value)}
             onBlur={search.flushNow}
-            autoComplete="off"
+            {...PRIVATE_TEXT_FIELD_PROPS}
             placeholder="e.g., can't sleep, on edge"
             className="block min-h-11 w-full rounded-lg border border-border bg-surface pl-9 pr-3 text-base text-text placeholder:text-muted/80"
           />
@@ -481,14 +522,16 @@ function ContextCard() {
 
 export function SymptomFinder() {
   const analysis = useSymptomAnalysis();
-  const { state } = useSession();
+  const { state, resetCount } = useSession();
   return (
     <>
       <RedFlagBanner flags={analysis.redFlags} />
+      <RiskMissNote />
       <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_23rem] lg:items-start">
         <div className="min-w-0 space-y-6">
-          <FreeTextCard analysis={analysis} />
-          <SymptomPicker analysis={analysis} />
+          {/* Remount on every reset so drafts, search text and notices clear with the session (G5). */}
+          <FreeTextCard key={`text-${resetCount}`} analysis={analysis} />
+          <SymptomPicker key={`picker-${resetCount}`} analysis={analysis} />
           {!state.under18 ? <DiagnosesCta analysis={analysis} className="hidden lg:flex" /> : null}
         </div>
         <div className="flex min-w-0 flex-col gap-6">

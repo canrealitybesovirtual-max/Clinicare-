@@ -55,6 +55,7 @@ const handoutMap = byId(handouts);
 const statMap = byId(stats);
 
 export const getSymptom = (id: string): Symptom | undefined => symptomMap.get(id);
+const getSymptomCategory = (id: string) => symptomMap.get(id)?.category;
 export const getCondition = (id: string): Condition | undefined => conditionMap.get(id);
 export const getMeasure = (id: string): Measure | undefined => measureMap.get(id);
 export const getHandout = (id: string): Handout | undefined => handoutMap.get(id);
@@ -89,6 +90,26 @@ export function contentProblems(): string[] {
       const raw = allMeasures.find((x) => x.id === m);
       if (!raw) problems.push(`${where}: unknown measure ${m}`);
       else if (!isMeasureLicensed(raw)) problems.push(`${where}: measure ${m} license not confirmed (G7)`);
+    }
+    const featureIds = new Set(c.features.map((f) => f.symptomId));
+    for (const r of c.requiredFeatures)
+      if (!featureIds.has(r.symptomId)) problems.push(`${where}: required feature ${r.symptomId} is not one of its features`);
+    const groupKind = new Map<string, string>();
+    for (const f of c.features) {
+      if (!f.group) continue;
+      const kind = groupKind.get(f.group);
+      if (kind && kind !== f.kind) problems.push(`${where}: group ${f.group} mixes core and associated features`);
+      groupKind.set(f.group, f.kind);
+    }
+    const areas = new Set(c.features.filter((f) => f.breadthArea).map((f) => f.group ?? f.symptomId)).size;
+    if (c.strongMinAreas !== undefined && c.strongMinAreas > areas)
+      problems.push(`${where}: strongMinAreas ${c.strongMinAreas} > breadth areas ${areas}`);
+    for (const f of c.features)
+      if (getSymptomCategory(f.symptomId) === "cultural") problems.push(`${where}: cultural concept ${f.symptomId} must not be scored`);
+    for (const m of c.measuresPending) {
+      const lic = licenses.items[m.licenseKey];
+      if (!lic) problems.push(`${where}: pending measure ${m.name} has no licenses.json entry ${m.licenseKey} (G7)`);
+      else if (lic.status === "confirmed") problems.push(`${where}: ${m.name} is confirmed in licenses.json; build it in or drop it from measuresPending`);
     }
     for (const h of c.handouts) if (!handoutMap.has(h)) problems.push(`${where}: unknown handout ${h}`);
     for (const s of c.statIds) if (!statMap.has(s)) problems.push(`${where}: unknown stat ${s}`);

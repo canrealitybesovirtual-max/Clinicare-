@@ -69,6 +69,7 @@ function router(overrides: Partial<Record<"token" | "codeinfo" | "entity", (url:
 }
 
 beforeEach(() => {
+  vi.stubEnv("ALLOW_SUD_REFERENCE_LOOKUPS", "true"); // 42 CFR Part 2 owner switch; default (off) is tested in hardening.test.ts
   __resetCoreForTests();
   __resetIcd11ForTests();
   configureIcd11RateLimit();
@@ -91,7 +92,7 @@ const calls = () => fetchMock.mock.calls.map(([url, init]) => ({ url: String(url
 const apiCalls = () => calls().filter((c) => c.url !== TOKEN_URL);
 const tokenCalls = () => calls().filter((c) => c.url === TOKEN_URL);
 const post = (body: unknown) =>
-  POST(new Request("http://localhost/api/icd11", { method: "POST", body: typeof body === "string" ? body : JSON.stringify(body) }));
+  POST(new Request("http://localhost/api/icd11", { method: "POST", headers: { "content-type": "application/json" }, body: typeof body === "string" ? body : JSON.stringify(body) }));
 
 describe("icd11: OAuth2 client credentials and outbound requests", () => {
   it("requests a token with exactly the client-credentials form fields", async () => {

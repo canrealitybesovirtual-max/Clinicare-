@@ -1,0 +1,77 @@
+{
+  "id": "apa-psychiatry-principles-medical-ethics",
+  "name": "The Principles of Medical Ethics with Annotations Especially Applicable to Psychiatry",
+  "shortName": "APA Principles (psychiatry)",
+  "organization": "American Psychiatric Association",
+  "edition": 2013,
+  "editionLabel": "2013 edition, applied through the APA Ethics Committee's published opinions (compilation dated June 2025)",
+  "editionStatus": "current",
+  "appliesTo": ["psychiatrist"],
+  "countries": ["US"],
+  "scope": "national",
+  "summary": "This document applies the American Medical Association's Principles of Medical Ethics to psychiatry. Each AMA principle is followed by American Psychiatric Association annotations on issues specific to psychiatric practice, such as confidentiality of psychiatric information, boundaries and exploitation, competence and consultation, relationships with other clinicians, and public comment about people the psychiatrist has not examined. It is binding on APA members, and the APA Ethics Committee publishes opinions that show how it is applied. It is a different document from the American Psychological Association's code. This is a summary in the app's own words. It is information, not legal advice.",
+  "keyReminders": [
+    {
+      "topic": "Confidentiality",
+      "text": "Psychiatric information is especially sensitive. Release only what is needed, with consent or legal authority, and explain the legal limits of confidentiality early.",
+      "tags": ["confidentiality", "duty-to-warn"]
+    },
+    {
+      "topic": "Boundaries",
+      "text": "Sexual contact with a current or former patient is unethical. Watch for gradual boundary crossings and get consultation early.",
+      "tags": ["dual-relationships"]
+    },
+    {
+      "topic": "Public comment (the Goldwater principle)",
+      "text": "Do not give a professional opinion about a public figure you have not examined and who has not authorized it; speak about psychiatric issues in general terms instead."
+    },
+    {
+      "topic": "Your own evaluation",
+      "text": "Base diagnosis and treatment on your own evaluation. Decision-support tools, scales and apps can inform your judgment but never replace it.",
+      "tags": ["assessment", "technology"]
+    },
+    {
+      "topic": "Collaborative and supervisory roles",
+      "text": "When you supervise or collaborate with nurse practitioners, psychologists, counselors or social workers, make roles and responsibility for medical decisions clear to everyone, including the patient.",
+      "tags": ["informed-consent"]
+    },
+    {
+      "topic": "Telepsychiatry prescribing",
+      "text": "Remote prescribing of controlled substances must follow state law and DEA rules. Temporary federal telemedicine flexibilities run through December 31, 2026; check for any later rule before then.",
+      "tags": ["telehealth", "sud"]
+    }
+  ],
+  "whenRelevant": ["confidentiality", "duty-to-warn", "dual-relationships", "assessment", "technology", "informed-consent", "telehealth", "sud"],
+  "regulatorNote": "Psychiatrists are licensed by state medical boards, and DEA registration is required to prescribe controlled substances. Board rules, state law and DEA rules control.",
+  "officialUrl": "https://www.psychiatry.org/psychiatrists/practice/ethics",
+  "relatedLinks": [
+    { "title": "Principles of Medical Ethics with Annotations (PDF)", "url": "https://www.psychiatry.org/File%20Library/Psychiatrists/Practice/Ethics/principles-medical-ethics.pdf" },
+    {
+      "title": "APA Opinions of the Ethics Committee (June 2025, PDF)",
+      "url": "https://www.psychiatry.org/getmedia/fdf4221c-2ccd-442e-b902-ddc666f5f2a9/Opinions-of-the-Ethics-Committee-June-2025.pdf"
+    },
+    { "title": "DEA: Telemedicine flexibilities extended through 2026", "url": "https://www.dea.gov/press-releases/2025/12/31/dea-extends-telemedicine-flexibilities-ensure-continued-access-care" }
+  ],
+  "verification": {
+    "method": "search-index",
+    "note": "psychiatry.org was not loaded directly. The 2013 edition being binding on members (as stated in the June 2025 Ethics Committee opinions) and the DEA extension through December 31, 2026 were confirmed through search results indexing psychiatry.org, dea.gov and the Federal Register. A person must load the official pages before release."
+  },
+  "sources": [
+    { "title": "Ethics", "publisher": "American Psychiatric Association", "url": "https://www.psychiatry.org/psychiatrists/practice/ethics" },
+    {
+      "title": "Opinions of the Ethics Committee on the Principles of Medical Ethics (June 2025)",
+      "publisher": "American Psychiatric Association",
+      "url": "https://www.psychiatry.org/getmedia/fdf4221c-2ccd-442e-b902-ddc666f5f2a9/Opinions-of-the-Ethics-Committee-June-2025.pdf",
+      "year": 2025
+    },
+    {
+      "title": "DEA Extends Telemedicine Flexibilities to Ensure Continued Access to Care",
+      "publisher": "US Drug Enforcement Administration",
+      "url": "https://www.dea.gov/press-releases/2025/12/31/dea-extends-telemedicine-flexibilities-ensure-continued-access-care",
+      "year": 2025
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

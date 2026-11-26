@@ -11,10 +11,11 @@ import "server-only";
  */
 import { z } from "zod";
 import topicsJson from "@content/topics.json";
-import { assertNoPHI, curated } from "@/lib/outbound";
+import { assertNoPHI } from "@/lib/outbound";
 import { governance, slug } from "@/lib/schemas";
-import { UpstreamError, setRateLimit, upstreamFetch } from "@/server/core";
+import { UpstreamError, assertSudLookupAllowed, setRateLimit, upstreamFetch } from "@/server/core";
 import { clip, safeHttpsUrl, xmlEscapedHtmlToPlainText } from "./plain-text";
+import { strictCurated } from "./strict-input";
 
 /* ---------------- curated topics (content/topics.json) ---------------- */
 const MEDLINEPLUS_HOSTS = ["medlineplus.gov"] as const;
@@ -73,13 +74,14 @@ export const HEALTH_TOPICS_TTL_MS = 12 * 60 * 60 * 1000;
 export const SUMMARY_MAX_CHARS = 400;
 
 export function configureHealthTopicsRateLimit() {
-  setRateLimit(HEALTH_TOPICS_UPSTREAM, 1, 5);
+  // Published: 85 requests/minute per IP. Bucket 1/s burst 5 (<= 65 in a minute); the window is a hard cap of 80.
+  setRateLimit(HEALTH_TOPICS_UPSTREAM, 1, 5, { max: 80, ms: 60_000 });
 }
 configureHealthTopicsRateLimit();
 
 export const HealthTopicsLang = z.enum(["en", "es"]);
 export const HealthTopicsInput = z.strictObject({
-  topic: curated(HEALTH_TOPIC_KEYS).transform((k) => topicByKey.get(k.toLowerCase())!.id),
+  topic: strictCurated(HEALTH_TOPIC_KEYS).transform((k) => topicByKey.get(k.toLowerCase())!.id),
   lang: HealthTopicsLang.default("en"),
   max: z.number().int().min(1).max(HEALTH_TOPICS_RETMAX).default(5),
 });
@@ -154,6 +156,7 @@ export async function searchHealthTopics(raw: HealthTopicsInput): Promise<Health
   const topic = topicByKey.get(input.topic)!;
   const term = input.lang === "es" ? topic.es : topic.en;
   assertNoPHI(term, input.lang);
+  assertSudLookupAllowed(topic.sud); // 42 CFR Part 2 owner switch (core.ts), before any fetch
   const xml = await upstreamFetch<string>(healthTopicsUrl(term, input.lang), {
     upstream: HEALTH_TOPICS_UPSTREAM,
     parse: "text",

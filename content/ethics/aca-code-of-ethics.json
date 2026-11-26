@@ -1,0 +1,82 @@
+{
+  "id": "aca-code-of-ethics",
+  "name": "ACA Code of Ethics",
+  "shortName": "ACA Code",
+  "organization": "American Counseling Association",
+  "edition": 2014,
+  "editionLabel": "2014 edition (a revised code was planned for fall 2026)",
+  "editionStatus": "revision-in-progress",
+  "editionNote": "ACA's Ethics Revision Task Force took public comment on a draft revised code through April 2026 and planned to present the final version to the ACA Governing Board at its fall 2026 meeting, with publication on the ACA website in fall 2026. On 2026-11-26 no adoption notice could be confirmed, so the 2014 code is shown as the operative edition. Re-check counseling.org and update this file as soon as ACA publishes the new code.",
+  "appliesTo": ["counselor"],
+  "countries": ["US"],
+  "scope": "national",
+  "summary": "The ACA Code of Ethics is the main ethical standard for professional counselors in the United States, and many state counseling boards adopt or reference it in their rules. It has nine sections, A through I: the counseling relationship; confidentiality and privacy; professional responsibility; relationships with other professionals; evaluation, assessment and interpretation; supervision, training and teaching; research and publication; distance counseling, technology and social media; and resolving ethical issues. Its themes are client welfare, informed consent as an ongoing process, practicing within competence, multicultural sensitivity and avoiding harm. This is a summary in the app's own words. It is information, not legal advice; read the official code and your state board rules.",
+  "keyReminders": [
+    {
+      "topic": "Informed consent",
+      "text": "Treat consent as a conversation that continues through care. Explain the nature of services, fees, record keeping, the limits of confidentiality and the client's right to refuse or stop, in language and a format the client understands.",
+      "tags": ["informed-consent"]
+    },
+    {
+      "topic": "Assessment and diagnosis (Section E)",
+      "text": "Use instruments that are validated for the purpose and the population, consider culture and context when interpreting results, and treat any app or score as input to your own clinical judgment, not a conclusion.",
+      "tags": ["assessment", "cultural-competence"]
+    },
+    {
+      "topic": "Distance counseling and technology (Section H)",
+      "text": "Before remote sessions, confirm you may practice where the client is located, explain technology risks and the plan if the connection fails or a crisis occurs, and verify the client's identity and location at the start.",
+      "tags": ["technology", "telehealth", "informed-consent"]
+    },
+    {
+      "topic": "Confidentiality and its limits",
+      "text": "Explain at the start when confidentiality may be broken, such as serious and foreseeable harm or a legal requirement. When you must disclose, share only what is needed and consult first when time allows.",
+      "tags": ["confidentiality", "duty-to-warn"]
+    },
+    {
+      "topic": "Personal values",
+      "text": "Do not impose your own values or beliefs, including religious ones. When a client wants spiritual themes included, let the client lead and document the client's consent.",
+      "tags": ["faith-based", "cultural-competence"]
+    },
+    {
+      "topic": "Boundaries",
+      "text": "Weigh the risk of harm before any non-professional contact with a client or someone close to them. If a boundary extension seems helpful, document the reasons, the client's consent and the safeguards.",
+      "tags": ["dual-relationships"]
+    }
+  ],
+  "whenRelevant": [
+    "informed-consent",
+    "assessment",
+    "technology",
+    "telehealth",
+    "confidentiality",
+    "duty-to-warn",
+    "cultural-competence",
+    "faith-based",
+    "dual-relationships"
+  ],
+  "regulatorNote": "Counselor licensure is granted by each US state board, and many boards write the ACA code into rule. Your state board's current rules and statutes control where they differ from the code.",
+  "officialUrl": "https://www.counseling.org/resources/ethics",
+  "relatedLinks": [
+    { "title": "ACA Code of Ethics revision project (ACA Manifold)", "url": "https://manifold.counseling.org/projects/aca-code-of-ethics" },
+    {
+      "title": "NBCC: Understanding the upcoming changes to the ACA Code of Ethics",
+      "url": "https://nbcc.org/resources/nccs/newsletter/understanding-the-upcoming-changes-to-the-aca-code-of-ethics"
+    }
+  ],
+  "verification": {
+    "method": "search-index",
+    "note": "counseling.org and manifold.counseling.org could not be loaded from this session (host not allowed), so the 2014 edition, the fall 2026 revision timeline and the URLs were confirmed only through search results indexing ACA's ethics page, ACA's Manifold project page and an NBCC newsletter. A person must load the official pages before release."
+  },
+  "sources": [
+    { "title": "Counseling Ethics and ACA Code of Ethics Resources", "publisher": "American Counseling Association", "url": "https://www.counseling.org/resources/ethics" },
+    { "title": "ACA Code of Ethics (revision project page)", "publisher": "American Counseling Association", "url": "https://manifold.counseling.org/projects/aca-code-of-ethics", "year": 2026 },
+    {
+      "title": "Understanding the Upcoming Changes to the ACA Code of Ethics",
+      "publisher": "National Board for Certified Counselors",
+      "url": "https://nbcc.org/resources/nccs/newsletter/understanding-the-upcoming-changes-to-the-aca-code-of-ethics"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

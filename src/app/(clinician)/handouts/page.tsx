@@ -7,6 +7,7 @@ import { ExternalLink } from "@/components/ui/external-link";
 import { Governance, PageIntro, ReviewBadge, SourcesList } from "@/components/content/content-bits";
 import { DownloadPdfButton } from "@/components/pdf/download-pdf-button";
 import { HandoutBody } from "@/components/handouts/handout-body";
+import { AdultOnly } from "@/components/measures/adult-only";
 
 export const metadata: Metadata = { title: "Handouts" };
 
@@ -66,14 +67,19 @@ export default function HandoutsPage() {
               <h2 id="blank-forms" className="flex items-center gap-2 text-lg font-semibold">
                 <FileText aria-hidden className="size-5 text-muted" /> Blank measure forms
               </h2>
-              <p className="text-sm text-muted">Official wording, empty boxes and a scoring key. No answers or scores are printed.</p>
-              <ul className="space-y-2">
-                {measures.map((m) => (
-                  <li key={m.id}>
-                    <DownloadPdfButton measure={m} label={`${m.shortName} blank PDF`} className="w-full justify-start" />
-                  </li>
-                ))}
-              </ul>
+              <AdultOnly compact>
+                <p className="text-sm text-muted">
+                  Official wording and empty boxes on page 1; the scoring key is on a separate clinician page. No answers
+                  or scores are printed.
+                </p>
+                <ul className="space-y-2">
+                  {measures.map((m) => (
+                    <li key={m.id}>
+                      <DownloadPdfButton measure={m} label={`${m.shortName} blank PDF`} className="w-full justify-start" />
+                    </li>
+                  ))}
+                </ul>
+              </AdultOnly>
             </Card>
           </section>
 

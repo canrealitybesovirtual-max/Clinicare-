@@ -13,13 +13,14 @@ import "server-only";
  *   countries/states. No contact names, emails or phone numbers are requested.
  */
 import { z } from "zod";
-import { US_STATES, UsState, assertNoPHI, curated } from "@/lib/outbound";
+import { US_STATES, UsState, assertNoPHI } from "@/lib/outbound";
+import type { TrialCondition } from "@/lib/schemas-evidence";
+import { UpstreamError, assertSudLookupAllowed, setRateLimit, upstreamFetch } from "@/server/core";
+import { clip, htmlToPlainText } from "./plain-text";
+import { evidenceQueriesFile } from "./pubmed";
+import { strictCurated } from "./strict-input";
 
 type UsStateCode = z.infer<typeof UsState>;
-import type { TrialCondition } from "@/lib/schemas-evidence";
-import { UpstreamError, setRateLimit, upstreamFetch } from "@/server/core";
-import { clip } from "./plain-text";
-import { evidenceQueriesFile } from "./pubmed";
 
 /* ---------------- curated values ---------------- */
 export const TRIAL_CONDITIONS: Readonly<Record<string, TrialCondition>> = evidenceQueriesFile.trials.conditions;
@@ -68,16 +69,17 @@ export const TRIALS_FIELDS = [
 export const TRIALS_ADULT_FILTER = "AREA[StdAge]ADULT";
 
 export function configureTrialsRateLimit() {
-  setRateLimit(TRIALS_UPSTREAM, 0.75, 3);
+  // ~50/min/IP is the commonly cited figure; bucket 0.75/s burst 3 (<= 48 in a minute), window caps at 45.
+  setRateLimit(TRIALS_UPSTREAM, 0.75, 3, { max: 45, ms: 60_000 });
 }
 configureTrialsRateLimit();
 
 /* ---------------- input / output ---------------- */
 export const TrialsInput = z
   .strictObject({
-    condition: curated(TRIAL_CONDITION_KEYS).transform((k) => conditionByKey.get(k.toLowerCase())!),
+    condition: strictCurated(TRIAL_CONDITION_KEYS).transform((k) => conditionByKey.get(k.toLowerCase())!),
     state: UsState.optional(),
-    country: curated(TRIAL_COUNTRIES).optional(),
+    country: strictCurated(TRIAL_COUNTRIES).optional(),
     max: z.number().int().min(1).max(TRIALS_PAGE_SIZE).default(TRIALS_PAGE_SIZE),
   })
   .refine((v) => !(v.state && v.country), { message: "Send a US state or a country, not both", path: ["country"] });
@@ -163,6 +165,9 @@ export function trialsSearchLink(raw: TrialsInput): string {
 }
 
 export function trialUrl(nctId: string): string {
+  if (typeof nctId !== "string" || !/^NCT\d{8}$/.test(nctId)) {
+    throw new z.ZodError([{ code: "custom", message: "NCT id", path: ["nctId"], input: undefined }]);
+  }
   return `${TRIALS_SOURCE}study/${nctId}`;
 }
 
@@ -200,15 +205,9 @@ function enumLabel(v: string | undefined): string | null {
   return s.charAt(0).toUpperCase() + s.slice(1);
 }
 
-/** Plain text: no control characters, collapsed whitespace, clipped. Rendered as text by the UI. */
+/** Plain text: markup stripped (and entity-encoded markup neutralised), no control characters, clipped. */
 function plain(s: string | undefined, max: number): string {
-  return clip(
-    (s ?? "")
-      .replace(/[\u0000-\u001f\u007f-\u009f]/g, " ")
-      .replace(/\s+/g, " ")
-      .trim(),
-    max,
-  );
+  return clip(htmlToPlainText((s ?? "").replace(/[\u0000-\u001f\u007f-\u009f]/g, " ")), max);
 }
 
 function uniqPlain(values: (string | undefined)[], cap: number, max = 120): string[] {
@@ -269,6 +268,7 @@ export function parseTrials(body: unknown, loc: TrialsLocation | null): { total:
 export async function searchTrials(raw: TrialsInput): Promise<TrialsResult> {
   const input = TrialsInput.parse(raw);
   const cond = TRIAL_CONDITIONS[input.condition]!;
+  assertSudLookupAllowed(cond.sud); // 42 CFR Part 2 owner switch (core.ts), before any fetch
   const params = trialsParams(input);
   for (const v of params.values()) assertNoPHI(v);
   const loc = resolveLocation(input);

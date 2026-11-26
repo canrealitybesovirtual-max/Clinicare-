@@ -17,11 +17,12 @@ import {
   MedicationDrug,
   dailyMedSearchUrl,
   getMedication,
+  isSudTreatment,
   medicationsFile,
   rxNavConceptUrl,
   type Medication,
 } from "@/lib/schemas-medications";
-import { UpstreamError, cacheSet, setRateLimit, upstreamFetch } from "@/server/core";
+import { UpstreamError, assertSudLookupAllowed, cacheSet, setRateLimit, upstreamFetch } from "@/server/core";
 import { clip, htmlToPlainText } from "./plain-text";
 
 export const RXNORM_UPSTREAM = "nlm-rxnav";
@@ -34,7 +35,8 @@ export const RXNORM_MAX_BRANDS = 20;
 export const RXNORM_MAX_CLASSES = 12;
 
 export function configureRxNormRateLimit() {
-  setRateLimit(RXNORM_UPSTREAM, 8, 8);
+  // Terms: no more than 20 requests/second per IP. Bucket 8/s burst 8 (<= 16 in a second), window hard cap 18.
+  setRateLimit(RXNORM_UPSTREAM, 8, 8, { max: 18, ms: 1000 });
 }
 configureRxNormRateLimit();
 
@@ -184,6 +186,7 @@ export async function lookupRxNorm(raw: RxNormInput): Promise<RxNormResult> {
   const med = getMedication(input.drug)!;
   const queryName = med.rxnormName ?? med.generic;
   assertNoPHI(queryName);
+  assertSudLookupAllowed(isSudTreatment(med)); // 42 CFR Part 2 owner switch (core.ts), before any fetch
 
   const ids = (await getParsed(rxcuiByNameUrl(queryName), (raw) => parse(RxcuiResponse, raw))).idGroup.rxnormId ?? [];
   const rxcui = ids.find((id) => /^\d{1,10}$/.test(id)) ?? null; // only digits ever go back upstream

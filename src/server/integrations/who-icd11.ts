@@ -10,9 +10,10 @@ import "server-only";
  * - Missing credentials => NotConfigured; the UI shows icd11BrowserLink(code) instead.
  */
 import { z } from "zod";
-import { Icd11Code, assertNoPHI } from "@/lib/outbound";
-import { NotConfigured, UpstreamError, setRateLimit, upstreamFetch } from "@/server/core";
+import { assertNoPHI } from "@/lib/outbound";
+import { NotConfigured, UpstreamError, assertSudLookupAllowed, cachedUpstream, setRateLimit, upstreamFetch } from "@/server/core";
 import { clip, htmlToPlainText, safeHttpsUrl } from "./plain-text";
+import { StrictIcd11Code } from "./strict-input";
 
 export const ICD11_UPSTREAM = "who-icd11";
 export const ICD11_TOKEN_UPSTREAM = "who-icd11-token";
@@ -33,7 +34,7 @@ configureIcd11RateLimit();
 
 export const Icd11Lang = z.enum(["en", "es"]);
 export type Icd11Lang = z.infer<typeof Icd11Lang>;
-export const Icd11Input = z.strictObject({ code: Icd11Code, lang: Icd11Lang.default("en") });
+export const Icd11Input = z.strictObject({ code: StrictIcd11Code, lang: Icd11Lang.default("en") });
 export type Icd11Input = z.input<typeof Icd11Input>;
 
 export interface Icd11Result {
@@ -69,6 +70,16 @@ function releaseFromEnv(): string {
   return r && /^\d{4}-\d{2}$/.test(r) ? r : ICD11_DEFAULT_RELEASE;
 }
 
+/** Plain http is allowed only for a local / private-network ICD-API container (codes never cross the internet in clear). */
+export function isPrivateHost(hostname: string): boolean {
+  const h = hostname.toLowerCase().replace(/^\[|\]$/g, "");
+  if (h === "localhost" || h.endsWith(".localhost") || h === "::1" || h.endsWith(".internal") || h.endsWith(".local")) return true;
+  const m = /^(\d{1,3})\.(\d{1,3})\.\d{1,3}\.\d{1,3}$/.exec(h);
+  if (!m) return /^f[cd][0-9a-f]{2}:/.test(h); // IPv6 unique-local
+  const [a, b] = [Number(m[1]), Number(m[2])];
+  return a === 127 || a === 10 || (a === 172 && b >= 16 && b <= 31) || (a === 192 && b === 168);
+}
+
 function readConfig(): Icd11Config {
   const release = releaseFromEnv();
   const rawBase = process.env.WHO_ICD_API_BASE?.trim();
@@ -76,7 +87,8 @@ function readConfig(): Icd11Config {
   if (rawBase) {
     try {
       const u = new URL(rawBase);
-      if ((u.protocol !== "https:" && u.protocol !== "http:") || u.username || u.password) throw new Error("bad base");
+      if (u.username || u.password || u.search || u.hash) throw new Error("bad base");
+      if (u.protocol !== "https:" && !(u.protocol === "http:" && isPrivateHost(u.hostname))) throw new Error("bad base");
       base = `${u.origin}${u.pathname.replace(/\/+$/, "")}`;
     } catch {
       throw new NotConfigured(ICD11_UPSTREAM);
@@ -104,7 +116,7 @@ export function isIcd11Configured(): boolean {
  * release. The code is validated but NOT put in the URL (the browser deep-links by entity id, which needs the API).
  */
 export function icd11BrowserLink(code: string, lang: Icd11Lang = "en"): string {
-  Icd11Code.parse(code);
+  StrictIcd11Code.parse(code);
   return `https://icd.who.int/browse/${releaseFromEnv()}/mms/${Icd11Lang.parse(lang)}`;
 }
 
@@ -161,10 +173,14 @@ async function getToken(cfg: Icd11Config): Promise<string> {
 
 async function apiGet(cfg: Icd11Config, url: string, lang: Icd11Lang): Promise<unknown> {
   const headers: Record<string, string> = { Accept: "application/json", "API-Version": "v2", "Accept-Language": lang };
+  // Cache key never includes the token; language is part of it because titles/definitions depend on it.
+  const cacheKey = `${lang}|${url}`;
+  // A cache hit needs no token: never send the client credentials for data we already hold.
+  const cached = cachedUpstream<unknown>(ICD11_UPSTREAM, cacheKey);
+  if (cached !== undefined) return cached;
   const call = async () => {
     if (!cfg.local) headers.Authorization = `Bearer ${await getToken(cfg)}`;
-    // Cache key never includes the token; language is part of it because titles/definitions depend on it.
-    return upstreamFetch<unknown>(url, { upstream: ICD11_UPSTREAM, headers, ttlMs: ICD11_TTL_MS, cacheKey: `${lang}|${url}` });
+    return upstreamFetch<unknown>(url, { upstream: ICD11_UPSTREAM, headers, ttlMs: ICD11_TTL_MS, cacheKey });
   };
   try {
     return await call();
@@ -205,6 +221,7 @@ export function icd11CodeInfoUrl(base: string, release: string, code: string): s
 export async function icd11Lookup(raw: Icd11Input): Promise<Icd11Result> {
   const input = Icd11Input.parse(raw);
   assertNoPHI(input.code, input.lang);
+  assertSudLookupAllowed(isSudIcd11(input.code)); // 42 CFR Part 2 owner switch (core.ts), before any fetch
   const cfg = readConfig();
   const fallback = `https://icd.who.int/browse/${cfg.release}/mms/${input.lang}`;
   const base: Icd11Result = {
@@ -222,7 +239,8 @@ export async function icd11Lookup(raw: Icd11Input): Promise<Icd11Result> {
   try {
     info = await apiGet(cfg, icd11CodeInfoUrl(cfg.base, cfg.release, input.code), input.lang);
   } catch (e) {
-    if (e instanceof UpstreamError && e.status === 404) return base; // no such code in this release
+    // No such code in this release. Only the ICD-API itself can say that (a 404 from the token endpoint cannot).
+    if (e instanceof UpstreamError && e.upstream === ICD11_UPSTREAM && e.status === 404) return base;
     throw e;
   }
   const ci = CodeInfo.safeParse(info);

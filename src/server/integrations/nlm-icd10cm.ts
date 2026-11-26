@@ -9,10 +9,11 @@ import "server-only";
  */
 import { z } from "zod";
 import { conditions } from "@/lib/content";
-import { Icd10CmCode, assertNoPHI, curated } from "@/lib/outbound";
-import { UpstreamError, setRateLimit, upstreamFetch } from "@/server/core";
+import { Icd10CmCode, assertNoPHI } from "@/lib/outbound";
+import { UpstreamError, assertSudLookupAllowed, setRateLimit, upstreamFetch } from "@/server/core";
 import { HEALTH_TOPICS } from "./medlineplus-topics";
 import { clip, htmlToPlainText } from "./plain-text";
+import { StrictIcd10CmCode, strictCurated } from "./strict-input";
 
 export const ICD10CM_UPSTREAM = "nlm-icd10cm";
 export const ICD10CM_ENDPOINT = "https://clinicaltables.nlm.nih.gov/api/icd10cm/v3/search";
@@ -23,7 +24,8 @@ export const ICD10CM_DEFAULT_LIST = 10;
 export const ICD10CM_TTL_MS = 7 * 24 * 60 * 60 * 1000;
 
 export function configureIcd10cmRateLimit() {
-  setRateLimit(ICD10CM_UPSTREAM, 5, 10);
+  // FAQ: at most 25 requests/second. Bucket 5/s burst 10 (<= 15 in any second); the window makes it a hard cap.
+  setRateLimit(ICD10CM_UPSTREAM, 5, 10, { max: 20, ms: 1000 });
 }
 configureIcd10cmRateLimit();
 
@@ -33,6 +35,13 @@ configureIcd10cmRateLimit();
  */
 export function isSudIcd10cm(code: string): boolean {
   return /^F1[0-9]/i.test(code) || /^Z71\.[45]/i.test(code);
+}
+
+/** A curated search term about substance use (Part 2 owner switch). Tobacco/nicotine is outside Part 2. */
+const SUD_TERM = /\b(?:alcohol|substance|opioids?|cannabis|cocaine|stimulants?|sedatives?|hypnotics?|anxiolytics?|hallucinogens?|inhalants?|drugs?|intoxication|withdrawal|addiction)\b/i;
+const SUD_TOPIC_TERMS = new Set(HEALTH_TOPICS.filter((t) => t.sud).map((t) => t.en.toLowerCase()));
+export function isSudTerm(term: string): boolean {
+  return SUD_TERM.test(term) || SUD_TOPIC_TERMS.has(term.toLowerCase());
 }
 
 /* ---------------- curated terms ---------------- */
@@ -73,11 +82,11 @@ const TERM_MAP = buildTermMap();
 /** Every value a caller may send as `term` (original casing, sorted). */
 export const ICD10CM_TERMS: readonly string[] = [...TERM_MAP.values()].map((v) => v.accepted).sort((a, b) => a.localeCompare(b));
 
-export const Icd10cmTerm = curated(ICD10CM_TERMS).transform((t) => TERM_MAP.get(t.toLowerCase())!.searchFor);
+export const Icd10cmTerm = strictCurated(ICD10CM_TERMS).transform((t) => TERM_MAP.get(t.toLowerCase())!.searchFor);
 const MaxList = z.number().int().min(1).max(ICD10CM_MAX_LIST).default(ICD10CM_DEFAULT_LIST);
 
 export const Icd10cmInput = z.union([
-  z.strictObject({ code: Icd10CmCode, max: MaxList }),
+  z.strictObject({ code: StrictIcd10CmCode, max: MaxList }),
   z.strictObject({ term: Icd10cmTerm, max: MaxList }),
 ]);
 export type Icd10cmInput = z.input<typeof Icd10cmInput>;
@@ -106,6 +115,7 @@ export async function searchIcd10cm(raw: Icd10cmInput): Promise<Icd10cmResult> {
   const kind = "code" in input ? "code" : "term";
   const value = "code" in input ? input.code : input.term;
   assertNoPHI(value);
+  assertSudLookupAllowed(kind === "code" ? isSudIcd10cm(value) : isSudTerm(value)); // Part 2 owner switch, before any fetch
 
   const json = await upstreamFetch<unknown>(icd10cmUrl(value, input.max), { upstream: ICD10CM_UPSTREAM, ttlMs: ICD10CM_TTL_MS });
   const parsed = RawResponse.safeParse(json);

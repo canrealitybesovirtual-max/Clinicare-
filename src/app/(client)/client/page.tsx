@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { HeartHandshake, MessagesSquare, Phone, Siren, Globe, Stethoscope } from "lucide-react";
 import { getHandout } from "@/lib/content";
+import { clientSafeSources } from "@/lib/client-safe";
 import { Card } from "@/components/ui/card";
 import { ExternalLink } from "@/components/ui/external-link";
 import { CrisisPanel } from "@/components/crisis/crisis-panel";
@@ -14,8 +15,6 @@ export const metadata: Metadata = { title: "Self-help" };
  * Client mode (G3): plain language (grades 6-8), crisis information first, no diagnosis names,
  * no codes, no scores, and no links into clinician screens other than the header mode switch.
  */
-
-const CLINICAL_TERMS = /disorder|anxiety|depress|panic|ptsd|diagnos/i;
 
 function TalkToSomeone({ id, title }: { id: string; title: string }) {
   return (
@@ -39,7 +38,8 @@ function TalkToSomeone({ id, title }: { id: string; title: string }) {
 
 export default function ClientPage() {
   const pmr = getHandout("pmr-homework");
-  const plainSources = pmr?.sources.filter((s) => !CLINICAL_TERMS.test(s.title)) ?? [];
+  // Same client-safe rule as the printed PDF (src/lib/client-safe.ts): no titles that name a condition.
+  const plainSources = pmr ? clientSafeSources(pmr.sources) : [];
 
   return (
     <div className="mx-auto max-w-3xl space-y-8">

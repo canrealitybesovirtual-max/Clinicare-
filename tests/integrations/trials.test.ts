@@ -53,6 +53,7 @@ const page = (studies: unknown[], totalCount = studies.length) => ({ totalCount,
 
 let fetchMock: ReturnType<typeof vi.fn<(url: string, init?: RequestInit) => Promise<Response>>>;
 beforeEach(() => {
+  vi.stubEnv("ALLOW_SUD_REFERENCE_LOOKUPS", "true"); // 42 CFR Part 2 owner switch; default (off) is tested in hardening.test.ts
   __resetCoreForTests();
   configureTrialsRateLimit();
   phi.force = false;
@@ -65,7 +66,7 @@ afterEach(() => {
 
 const urlOf = (i = 0) => new URL(String(fetchMock.mock.calls[i]![0]));
 const post = (body: unknown) =>
-  POST(new Request("http://localhost/api/trials", { method: "POST", body: typeof body === "string" ? body : JSON.stringify(body) }));
+  POST(new Request("http://localhost/api/trials", { method: "POST", headers: { "content-type": "application/json" }, body: typeof body === "string" ? body : JSON.stringify(body) }));
 const BASE_KEYS = ["countTotal", "fields", "filter.advanced", "filter.overallStatus", "format", "pageSize", "query.cond"];
 
 describe("curated trial conditions and locations", () => {
@@ -196,7 +197,7 @@ describe("ClinicalTrials.gov: free text, identifiers and bad locations are rejec
   it("route: invalid / oversized bodies are 400 and never echoed", async () => {
     for (const body of [{ condition: "patient Mary Jones MRN 4455667" }, "{bad json", JSON.stringify({ condition: "y".repeat(3000) })]) {
       const res = await post(body);
-      expect(res.status).toBe(400);
+      expect([400, 413]).toContain(res.status); // 413: body over the 2 KB cap
       const text = await res.text();
       expect(text).not.toContain("Mary");
       expect(text).not.toContain("4455667");

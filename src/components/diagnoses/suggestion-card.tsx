@@ -287,7 +287,16 @@ export function SuggestionCard({
                 × {g.multiplier} ({g.label.toLowerCase()})
               </span>
             ))}
-            <span className="block font-semibold">score = {s.score} (rounded, 0–100)</span>
+            {ex.heldAt !== undefined ? (
+              <>
+                <span className="block">= {ex.raw} (rounded, 0–100)</span>
+                <span className="block font-semibold">
+                  held at score = {ex.heldAt} ({ex.holdReasons.join("; ") || "see the flags above"})
+                </span>
+              </>
+            ) : (
+              <span className="block font-semibold">score = {s.score} (rounded, 0–100)</span>
+            )}
           </p>
           <ul className="list-disc space-y-1 pl-5 text-muted">
             <li>
@@ -300,6 +309,11 @@ export function SuggestionCard({
             <li>
               Strength is capped at “possible” when fewer than {ex.minCore} core features are present. Suggestions under 15
               are not shown, and no match is ever forced.
+            </li>
+            <li>
+              A match is held at “moderate” when supporting features are thin, when a feature this pattern requires is not
+              documented, or when a red flag in the same input points elsewhere. Related features (for example, sleeping
+              too little or too much) count once.
             </li>
             <li>The weights are app-authored and awaiting clinical review. They are not DSM-5-TR criteria.</li>
           </ul>

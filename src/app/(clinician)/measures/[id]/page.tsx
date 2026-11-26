@@ -7,6 +7,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { Governance, PageIntro, ReviewBadge, SourcesList } from "@/components/content/content-bits";
 import { MeasureForm } from "@/components/measures/measure-form";
+import { AdultOnly } from "@/components/measures/adult-only";
 
 export const dynamicParams = false;
 
@@ -50,7 +51,9 @@ export default async function MeasurePage({ params }: { params: Promise<{ id: st
         </p>
       </PageIntro>
 
-      <MeasureForm measure={measure} />
+      <AdultOnly>
+        <MeasureForm measure={measure} />
+      </AdultOnly>
 
       <section aria-labelledby="about-measure" className="mt-8">
         <Card className="space-y-4">

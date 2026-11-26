@@ -22,7 +22,7 @@ import {
   measures,
   stats,
 } from "@/lib/content";
-import { matchSymptoms, normalizeText } from "@/lib/matcher";
+import { CASE_RESTRICTED_ABBREVIATIONS, matchSymptoms, normalizeText } from "@/lib/matcher";
 import { RedFlagType } from "@/lib/schemas";
 import { scoreConditions } from "@/lib/scoring";
 import type { ScoringInput } from "@/lib/types";
@@ -166,9 +166,15 @@ describe("conditions", () => {
 describe("symptom lexicon", () => {
   const used = new Set(conditions.flatMap((c) => c.features.map((f) => f.symptomId)));
 
-  it("has no unused symptom: each one is a condition feature or a red flag", () => {
-    const unused = lexicon.symptoms.filter((s) => !used.has(s.id) && !s.redFlag).map((s) => s.id);
+  it("has no unused symptom: each one is a condition feature, a red flag or a cultural concept (never scored)", () => {
+    const unused = lexicon.symptoms.filter((s) => !used.has(s.id) && !s.redFlag && s.category !== "cultural").map((s) => s.id);
     expect(unused).toEqual([]);
+  });
+
+  it("never maps a cultural concept of distress to a condition", () => {
+    const cultural = lexicon.symptoms.filter((s) => s.category === "cultural");
+    expect(cultural.length).toBeGreaterThan(0);
+    for (const s of cultural) expect(used.has(s.id), s.id).toBe(false);
   });
 
   it("covers every red-flag type (G9)", () => {
@@ -207,7 +213,9 @@ describe("symptom lexicon", () => {
               .map((p) => p.split("|")[0]?.trim() ?? "")
               .join(" ")
           : syn;
-        const ids = matchSymptoms(text, lexicon.symptoms).matches.map((m) => m.symptomId);
+        // Case-restricted abbreviations (SI, HI, AVH, SOB) only match in capitals on their own.
+        const sample = CASE_RESTRICTED_ABBREVIATIONS.has(text) ? text.toUpperCase() : text;
+        const ids = matchSymptoms(sample, lexicon.symptoms).matches.map((m) => m.symptomId);
         if (!ids.includes(s.id)) misses.push(`${s.id}: "${text}" -> [${ids.join(", ")}]`);
       }
     }

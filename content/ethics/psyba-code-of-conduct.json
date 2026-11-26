@@ -1,0 +1,69 @@
+{
+  "id": "psyba-code-of-conduct",
+  "name": "Psychology Board of Australia Code of Conduct",
+  "shortName": "PsyBA Code of conduct",
+  "organization": "Psychology Board of Australia (with Ahpra)",
+  "edition": 2025,
+  "editionLabel": "Code of conduct for psychologists, published 25 November 2024, in effect from 1 December 2025",
+  "effectiveDate": "2025-12-01",
+  "editionStatus": "current",
+  "appliesTo": ["psychologist"],
+  "countries": ["AU"],
+  "scope": "national",
+  "summary": "Since 1 December 2025, registered psychologists in Australia are held to the Psychology Board of Australia's own Code of conduct, which replaced the Australian Psychological Society's Code of Ethics as the regulatory standard. The Board, supported by Ahpra, can use it when it considers notifications and complaints. Commentators describe it as more detailed and prescriptive than the APS code it replaced, and the APS code remains a useful practice resource. This is a summary in the app's own words. It is information, not legal advice.",
+  "keyReminders": [
+    {
+      "topic": "Know which code applies",
+      "text": "For registered psychologists in Australia, the Board's Code of conduct is the regulatory standard from 1 December 2025; APS membership standards may add to it.",
+      "tags": ["informed-consent"]
+    },
+    {
+      "topic": "Informed consent",
+      "text": "Give clients the information they need to decide about assessment and treatment, including fees, risks, alternatives and confidentiality limits.",
+      "tags": ["informed-consent", "confidentiality"]
+    },
+    {
+      "topic": "Culturally safe practice",
+      "text": "Provide culturally safe care, particularly for Aboriginal and Torres Strait Islander peoples, as defined by the people receiving care.",
+      "tags": ["cultural-competence"]
+    },
+    {
+      "topic": "Assessment",
+      "text": "Choose and interpret psychological tests with attention to their validity for the person, and explain results clearly.",
+      "tags": ["assessment"]
+    },
+    {
+      "topic": "Boundaries",
+      "text": "Maintain professional boundaries, including online, and avoid relationships that could exploit clients or impair judgment.",
+      "tags": ["dual-relationships", "technology"]
+    }
+  ],
+  "whenRelevant": ["informed-consent", "confidentiality", "cultural-competence", "assessment", "dual-relationships", "technology"],
+  "regulatorNote": "Psychologists in Australia are registered with the Psychology Board of Australia through Ahpra under the National Law. Counsellors and psychotherapists are not registered by Ahpra.",
+  "officialUrl": "https://www.psychologyboard.gov.au/Standards-and-Guidelines/Professional-practice-standards/Code-of-conduct",
+  "relatedLinks": [
+    { "title": "Ahpra: Psychologists to maintain high standards under new requirements (1 December 2025)", "url": "https://www.ahpra.gov.au/News/2025-12-01-Psychologists-Code-of-conduct.aspx" },
+    { "title": "Psychology Board of Australia: Code of conduct released (25 November 2024)", "url": "https://www.psychologyboard.gov.au/News/2024-11-25-code-of-conduct-released.aspx" }
+  ],
+  "verification": {
+    "method": "search-index",
+    "note": "Publication (25 November 2024) and effective date (1 December 2025), and the replacement of the APS Code of Ethics as the regulatory standard, were confirmed through search results indexing psychologyboard.gov.au, ahpra.gov.au and psychology.org.au. A person must load the official page before release."
+  },
+  "sources": [
+    {
+      "title": "Code of conduct",
+      "publisher": "Psychology Board of Australia",
+      "url": "https://www.psychologyboard.gov.au/Standards-and-Guidelines/Professional-practice-standards/Code-of-conduct",
+      "year": 2025
+    },
+    {
+      "title": "Psychologists to maintain high standards under new requirements",
+      "publisher": "Australian Health Practitioner Regulation Agency",
+      "url": "https://www.ahpra.gov.au/News/2025-12-01-Psychologists-Code-of-conduct.aspx",
+      "year": 2025
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

@@ -1,0 +1,67 @@
+{
+  "id": "fda-cds",
+  "title": "FDA clinical decision support: why this app is clinician-facing",
+  "jurisdiction": "US-federal",
+  "summary": "Under section 520(o)(1)(E) of the Federal Food, Drug, and Cosmetic Act, some clinical decision support (CDS) software is excluded from the definition of a medical device. FDA's Clinical Decision Support Software guidance explains four conditions, and software must satisfy all four to be non-device CDS. The current guidance was issued January 6, 2026 and re-issued January 29, 2026, replacing the 2022 version. This app is designed around the four conditions: it is built for licensed clinicians, works from typed symptoms and curated references rather than images or signals, offers suggestions instead of directions, and shows the basis for each suggestion so the clinician can check it independently. This page is information, not legal advice.",
+  "keyPoints": [
+    "First condition: the software does not take in or analyze medical images, signals from in vitro diagnostic devices, or physiological signal patterns such as ECG or EEG waveforms. Software that does is a device no matter what else it does.",
+    "Second condition: the software displays, analyzes or prints medical information, such as patient symptoms and history, or published clinical guidelines and studies.",
+    "Third condition: the software supports or offers recommendations to a health care professional about prevention, diagnosis or treatment, rather than directing their decision. The 2026 guidance says FDA intends to use enforcement discretion when software gives one recommendation, if only one option is clinically appropriate and the other conditions are satisfied.",
+    "Fourth condition: the professional can independently review the basis for each recommendation, so they do not rely mainly on the software. The 2026 guidance moved its discussion of time-critical decisions into this condition.",
+    "Patient-facing software is outside this exclusion: software that gives recommendations to patients or caregivers is treated as a device function. That is why client mode shows topics, skills and resources, and never diagnosis names, codes or scores.",
+    "FDA updated its general wellness guidance at the same time. Client self-help content should stay general (for example relaxation or sleep habits) and not claim to diagnose or treat a condition.",
+    "FDA held a town hall on the final guidance on March 11, 2026. Commentators note the guidance still does not settle every question about documentation tools and AI features."
+  ],
+  "whatToDo": [
+    "Treat every suggestion as a starting point for your own assessment, and review the matched and missing features shown with it.",
+    "Never show diagnosis suggestions, codes or scores to clients; use client mode for any shared screen or handout.",
+    "Report any output that seems to direct care rather than support it, so the owner can correct it.",
+    "Owners: re-check the guidance before adding AI, images, wearable signals, time-critical alerts or any patient-facing recommendation.",
+    "Consult a regulatory or healthcare attorney before changing the app's intended use; clinicians with practice questions should consult their licensing board."
+  ],
+  "officialLinks": [
+    { "title": "FDA: Clinical Decision Support Software (guidance page)", "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software" },
+    {
+      "title": "FDA: Town hall on the Clinical Decision Support Software final guidance (March 11, 2026)",
+      "url": "https://www.fda.gov/medical-devices/medical-devices-news-and-events/town-hall-clinical-decision-support-software-final-guidance-03112026"
+    },
+    { "title": "FDA guidance PDF cited in the app spec (confirm it opens the 2026 version)", "url": "https://www.fda.gov/media/109618/download" }
+  ],
+  "appPositioning": "Clinician mode labels every suggestion For clinician review, shows matched and missing features, uses deterministic and transparent scoring, needs a clinician click to add anything to a plan, and never states a final diagnosis. Client mode shows no diagnosis names, codes or scores. No images or physiological signals are processed, and no AI model is used in Phases 1 to 3.",
+  "whenRelevant": ["device-regulation", "assessment", "technology"],
+  "changesOften": false,
+  "statusAsOf": "2026-11-26",
+  "verification": {
+    "method": "search-index",
+    "note": "fda.gov was not loaded directly. The January 6, 2026 issue and January 29, 2026 re-issue, the March 11, 2026 town hall and the main 2026 changes (single-recommendation enforcement discretion, time-critical discussion moved to the fourth condition, patient-facing software treated as a device) were confirmed through search results indexing fda.gov and law-firm analyses (Covington, Cooley, Arnold and Porter). The PDF media ID for the 2026 guidance was not confirmed; search also returned fda.gov/media/191560 and 191561. A person must load the FDA guidance page before release."
+  },
+  "sources": [
+    {
+      "title": "Clinical Decision Support Software: Guidance for Industry and Food and Drug Administration Staff",
+      "publisher": "US Food and Drug Administration",
+      "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software",
+      "year": 2026
+    },
+    {
+      "title": "Town Hall: Clinical Decision Support Software Final Guidance",
+      "publisher": "US Food and Drug Administration",
+      "url": "https://www.fda.gov/medical-devices/medical-devices-news-and-events/town-hall-clinical-decision-support-software-final-guidance-03112026",
+      "year": 2026
+    },
+    {
+      "title": "5 Key Takeaways from FDA's Revised Clinical Decision Support (CDS) Software Guidance",
+      "publisher": "Covington and Burling",
+      "url": "https://www.cov.com/news-and-insights/insights/2026/01/5-key-takeaways-from-fdas-revised-clinical-decision-support-cds-software-guidance",
+      "year": 2026
+    },
+    {
+      "title": "Automation Bias and Clinical Practice: FDA Makes Incremental Updates to Clinical Decision Support Software Guidance",
+      "publisher": "Cooley",
+      "url": "https://www.cooley.com/news/insight/2026/2026-01-20-automation-bias-and-clinical-practice-fda-makes-incremental-updates-to-clinical-decision-support-software-guidance",
+      "year": 2026
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

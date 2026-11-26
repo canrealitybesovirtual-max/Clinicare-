@@ -1,0 +1,58 @@
+{
+  "id": "crisis-and-involuntary-holds",
+  "title": "Crisis response, emergency evaluation and involuntary holds",
+  "jurisdiction": "US-state-varies",
+  "summary": "Every US state allows short-term emergency evaluation or detention, and longer civil commitment, of a person with a mental illness who meets the state's legal standard, which usually involves danger to self or others or being unable to meet basic needs (often called grave disability), and only when less restrictive options are not enough. Who may start a hold (physicians, psychologists, licensed counselors or social workers, police or a court), how long it lasts and what rights the person has differ widely by state. The national crisis system, including 988, mobile crisis teams and crisis stabilization services, offers alternatives to emergency rooms and police. This page is information, not legal advice.",
+  "keyPoints": [
+    "Emergency holds are usually short, often measured in hours or a few days, and are for evaluation. Longer commitment needs a court process with notice, a hearing and usually a right to counsel.",
+    "Who can start an emergency evaluation is set by state law. In many states licensed counselors and social workers cannot sign a hold themselves but can call mobile crisis, petition a court or contact law enforcement.",
+    "SAMHSA's 2019 report on civil commitment notes that every state allows commitment only when no less restrictive option will work, and that most hospital stays after commitment are brief.",
+    "Most states also have assisted outpatient treatment, a court order for community treatment, and many recognize psychiatric advance directives that record a person's treatment preferences.",
+    "988 offers call, text and chat crisis support across the US, with options for Spanish speakers and veterans. SAMHSA's 2025 National Guidelines describe a crisis system built on someone to contact, someone to respond and a safe place for help.",
+    "HIPAA permits sharing information needed to prevent a serious and imminent threat and for treatment; state law decides what is required.",
+    "Safety planning and counseling on access to lethal means are core crisis steps that can often prevent the need for an involuntary hold."
+  ],
+  "whatToDo": [
+    "Before you need it, learn who can start an emergency evaluation in your state, the legal standard and the exact steps.",
+    "Keep local crisis contacts ready: 988, your county mobile crisis team, the nearest emergency department and 911 for immediate danger.",
+    "Choose the least restrictive safe option, involve the client in safety planning whenever possible, and work to reduce access to lethal means.",
+    "Document your assessment, consultation, actions and the reasons for them.",
+    "Consult your licensing board, your agency's policy or a healthcare attorney about your role and authority under your state's law."
+  ],
+  "officialLinks": [
+    { "title": "SAMHSA: National behavioral health crisis care guidance (2025 National Guidelines)", "url": "https://www.samhsa.gov/mental-health/national-behavioral-health-crisis-care" },
+    {
+      "title": "SAMHSA: Civil Commitment and the Mental Health Care Continuum: Historical Trends and Principles for Law and Practice",
+      "url": "https://www.samhsa.gov/resource/ebp/civil-commitment-mental-health-care-continuum-historical-trends-principles-law"
+    },
+    { "title": "SAMHSA: 988 key messages", "url": "https://www.samhsa.gov/mental-health/988/key-messages" },
+    { "title": "988 Suicide and Crisis Lifeline", "url": "https://988lifeline.org" },
+    { "title": "Find A Helpline (international crisis lines)", "url": "https://findahelpline.com" }
+  ],
+  "appPositioning": "The crisis button (988, local emergency numbers and findahelpline.com) is on every screen. The app never scores or decides risk; PHQ-9 item 9 above zero prompts the clinician to do a suicide risk screen and safety planning.",
+  "whenRelevant": ["crisis", "duty-to-warn", "confidentiality"],
+  "changesOften": false,
+  "statusAsOf": "2026-11-26",
+  "verification": {
+    "method": "search-index",
+    "note": "samhsa.gov pages were not loaded directly; the 2025 National Guidelines (released January 2025) and the 2019 civil commitment report were confirmed through search results indexing samhsa.gov. 988 details follow the repo's source-verification report (SAMHSA key messages). 988lifeline.org and findahelpline.com were not reachable from this session. State-specific hold rules are intentionally not stated."
+  },
+  "sources": [
+    {
+      "title": "2025 National Guidelines for a Behavioral Health Coordinated System of Crisis Care",
+      "publisher": "Substance Abuse and Mental Health Services Administration",
+      "url": "https://www.samhsa.gov/mental-health/national-behavioral-health-crisis-care",
+      "year": 2025
+    },
+    {
+      "title": "Civil Commitment and the Mental Health Care Continuum: Historical Trends and Principles for Law and Practice",
+      "publisher": "Substance Abuse and Mental Health Services Administration",
+      "url": "https://www.samhsa.gov/resource/ebp/civil-commitment-mental-health-care-continuum-historical-trends-principles-law",
+      "year": 2019
+    },
+    { "title": "988 Key Messages", "publisher": "Substance Abuse and Mental Health Services Administration", "url": "https://www.samhsa.gov/mental-health/988/key-messages" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

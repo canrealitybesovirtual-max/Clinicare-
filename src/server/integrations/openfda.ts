@@ -17,8 +17,15 @@ import "server-only";
  */
 import { z } from "zod";
 import { assertNoPHI } from "@/lib/outbound";
-import { MedicationDrug, dailyMedLabelUrl, dailyMedSearchUrl, getMedication, type Medication } from "@/lib/schemas-medications";
-import { UpstreamError, cacheGet, cacheSet, setRateLimit, upstreamFetch } from "@/server/core";
+import {
+  MedicationDrug,
+  dailyMedLabelUrl,
+  dailyMedSearchUrl,
+  getMedication,
+  isSudTreatment,
+  type Medication,
+} from "@/lib/schemas-medications";
+import { NotConfigured, UpstreamError, assertSudLookupAllowed, cacheGet, cacheSet, setRateLimit, upstreamFetch } from "@/server/core";
 import { clip, htmlToPlainText } from "./plain-text";
 
 export const OPENFDA_UPSTREAM = "openfda-label";
@@ -32,7 +39,8 @@ export const OPENFDA_DAILY_CAP = { withoutKey: 950, withKey: 119_000 } as const;
 export const LABEL_TEXT_MAX = { boxedWarning: 1500, indications: 1200, warningsAndCautions: 1500, contraindications: 800 } as const;
 
 export function configureOpenFdaRateLimit() {
-  setRateLimit(OPENFDA_UPSTREAM, 3, 6);
+  // Published: 240 requests/minute. Bucket 3/s burst 6 (<= 186 in a minute); the window is a hard cap of 230.
+  setRateLimit(OPENFDA_UPSTREAM, 3, 6, { max: 230, ms: 60_000 });
 }
 configureOpenFdaRateLimit();
 
@@ -283,6 +291,10 @@ async function fetchFirst(search: string): Promise<LabelDoc | null> {
     });
   } catch (e) {
     if (e instanceof UpstreamError && e.status === 404) return null; // openFDA answers "no matches" with HTTP 404
+    // 401/403 (e.g. API_KEY_INVALID): a configuration problem, so the UI shows the DailyMed link-out instead.
+    if (e instanceof UpstreamError && e.upstream === OPENFDA_UPSTREAM && (e.status === 401 || e.status === 403)) {
+      throw new NotConfigured("openFDA drug label lookup");
+    }
     throw e;
   }
   const r = LabelResponse.safeParse(raw);
@@ -298,6 +310,7 @@ export async function lookupDrugLabel(raw: DrugLabelInput): Promise<DrugLabelRes
   const med = getMedication(input.drug)!;
   const lab = med.label ?? {};
   assertNoPHI(med.generic, lab.name, lab.brand, lab.route, ...(lab.exclude ?? []));
+  assertSudLookupAllowed(isSudTreatment(med)); // 42 CFR Part 2 owner switch (core.ts), before any fetch
 
   const cacheKey = `${OPENFDA_UPSTREAM}:result:${med.id}`;
   const hit = cacheGet<DrugLabelResult>(cacheKey);

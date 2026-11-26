@@ -112,7 +112,8 @@ export async function downloadVia(page: Page, button: Locator): Promise<{ bytes:
 export function pdfText(bytes: Buffer): { all: string; drawn: string } {
   const raw = bytes.toString("latin1");
   const parts: string[] = [raw];
-  const re = /stream\r?\n/g;
+  // "stream" but not the tail of "endstream", so every stream (every page) is read, not every other one.
+  const re = /(?<!end)stream\r?\n/g;
   let m: RegExpExecArray | null;
   while ((m = re.exec(raw))) {
     const start = m.index + m[0].length;
@@ -123,7 +124,7 @@ export function pdfText(bytes: Buffer): { all: string; drawn: string } {
     } catch {
       /* not a Flate stream */
     }
-    re.lastIndex = end;
+    re.lastIndex = end + "endstream".length;
   }
   const joined = parts.join("\n");
   const hex = [...joined.matchAll(/<([0-9A-Fa-f]+)>\s*Tj/g)].map((x) => Buffer.from(x[1] ?? "", "hex").toString("latin1"));

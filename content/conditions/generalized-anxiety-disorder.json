@@ -12,12 +12,12 @@
   "features": [
     { "symptomId": "worry-excessive", "kind": "core", "weight": 5 },
     { "symptomId": "worry-hard-to-control", "kind": "core", "weight": 4 },
-    { "symptomId": "restlessness", "kind": "associated", "weight": 2 },
-    { "symptomId": "fatigue", "kind": "associated", "weight": 2 },
-    { "symptomId": "concentration-difficulty", "kind": "associated", "weight": 2 },
-    { "symptomId": "irritability", "kind": "associated", "weight": 2 },
-    { "symptomId": "muscle-tension", "kind": "associated", "weight": 2 },
-    { "symptomId": "insomnia", "kind": "associated", "weight": 2 },
+    { "symptomId": "restlessness", "kind": "associated", "weight": 2, "breadthArea": true },
+    { "symptomId": "fatigue", "kind": "associated", "weight": 2, "breadthArea": true },
+    { "symptomId": "concentration-difficulty", "kind": "associated", "weight": 2, "breadthArea": true },
+    { "symptomId": "irritability", "kind": "associated", "weight": 2, "breadthArea": true },
+    { "symptomId": "muscle-tension", "kind": "associated", "weight": 2, "breadthArea": true },
+    { "symptomId": "insomnia", "kind": "associated", "weight": 2, "breadthArea": true },
     { "symptomId": "nausea-abdominal-distress", "kind": "associated", "weight": 1 },
     { "symptomId": "subjective-anxiety-stress", "kind": "associated", "weight": 1 }
   ],
@@ -43,7 +43,7 @@
     { "label": "Illness anxiety disorder (ICD-10-CM title: Hypochondriasis)", "icd10cm": "F45.21", "distinguishing": "Worry focuses mainly on having or getting a serious disease, with checking or reassurance seeking." },
     { "label": "Obsessive-compulsive disorder (ICD-10-CM title: Mixed obsessional thoughts and acts)", "icd10cm": "F42.2", "distinguishing": "Intrusive, unwanted thoughts or images that feel foreign to the person, often paired with compulsions, rather than worries about real-life problems." },
     { "label": "Adjustment disorder with anxiety", "icd10cm": "F43.22", "distinguishing": "Anxiety clearly started after an identifiable stressor and is expected to ease once the stressor or its effects end." },
-    { "label": "Anxiety disorder due to another medical condition", "icd10cm": "F06.4", "distinguishing": "Anxiety is a direct physiological effect of a medical condition, and its course follows that condition." },
+    { "label": "Anxiety disorder due to another medical condition (ICD-10-CM title: Anxiety disorder due to known physiological condition)", "icd10cm": "F06.4", "distinguishing": "Anxiety is a direct physiological effect of a medical condition, and its course follows that condition." },
     { "label": "Social anxiety disorder (ICD-10-CM title: Social phobia, unspecified)", "icd10cm": "F40.10", "distinguishing": "Worry centers on being judged or embarrassed by others." },
     { "label": "Major depressive disorder", "distinguishing": "Repetitive thinking is mostly about past failures, guilt or worthlessness, alongside low mood or loss of interest. Both conditions often co-occur." }
   ],
@@ -55,8 +55,8 @@
   ],
   "measures": ["gad-7", "phq-9"],
   "measuresPending": [
-    { "name": "Penn State Worry Questionnaire (PSWQ)", "url": "https://pubmed.ncbi.nlm.nih.gov/2076086/", "note": "License pending — link out only" },
-    { "name": "APA Severity Measure for Generalized Anxiety Disorder — Adult", "url": "https://www.psychiatry.org/psychiatrists/practice/dsm/educational-resources/assessment-measures", "note": "License pending — link out only" }
+    { "name": "Penn State Worry Questionnaire (PSWQ)", "url": "https://pubmed.ncbi.nlm.nih.gov/2076086/", "note": "License pending — link out only", "licenseKey": "PSWQ" },
+    { "name": "APA Severity Measure for Generalized Anxiety Disorder — Adult", "url": "https://www.psychiatry.org/psychiatrists/practice/dsm/educational-resources/assessment-measures", "note": "License pending — link out only", "licenseKey": "APA Severity Measures" }
   ],
   "interventions": [
     { "name": "Cognitive behavioral therapy (CBT) for GAD", "evidence": "NICE CG113 (2011; 2020 surveillance kept the recommendations): individual high-intensity CBT is a recommended option at step 3 of stepped care. APA Division 12 lists CBT for GAD (check the current rating).", "note": "Targets worry processes, intolerance of uncertainty and avoidance. NICE describes weekly sessions over about 3 to 4 months." },
@@ -78,6 +78,11 @@
     "If a client draws on prayer, scripture, meditation or other spiritual practices to manage worry, explore this respectfully. Use spiritual or faith-integrated approaches only when the client asks for them and after informed consent (see the AACC Code of Ethics for faith-based counselors)."
   ],
   "sud": false,
+  "strongMinAreas": 3,
+  "redFlagRules": [
+    {"type": "mania", "message": "Manic or hypomanic signs are documented in this input. Screen for bipolar disorder (ICD-10-CM F31.x) and refer for psychiatric evaluation before treatment planning."},
+    {"type": "psychosis", "message": "Psychotic symptoms are documented in this input and are not part of this pattern. Consider a psychotic disorder, substance effects or a medical cause, and refer for an urgent psychiatric evaluation."}
+  ],
   "licensedDsm": false,
   "wileyLicensed": false,
   "sources": [

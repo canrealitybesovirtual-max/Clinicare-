@@ -1,0 +1,77 @@
+{
+  "id": "nasw-code-of-ethics",
+  "name": "NASW Code of Ethics",
+  "shortName": "NASW Code",
+  "organization": "National Association of Social Workers",
+  "edition": 2021,
+  "editionLabel": "2021 revision (self-care and cultural competence amendments; technology standards added in 2017)",
+  "editionStatus": "revision-in-progress",
+  "editionNote": "NASW's Delegate Assembly page says proposed Code of Ethics revisions were posted for member comment and scheduled for final consideration at the November 2026 Delegate Assembly. The outcome could not be confirmed on 2026-11-26. Re-check socialworkers.org for a newer edition.",
+  "appliesTo": ["social-worker"],
+  "countries": ["US"],
+  "scope": "national",
+  "summary": "The NASW Code of Ethics guides social workers in the United States and is referenced by many state social work boards. It states the profession's mission and six core values (service, social justice, dignity and worth of the person, importance of human relationships, integrity and competence), turns them into broad ethical principles, and sets detailed standards for responsibilities to clients, colleagues, practice settings, the profession and society. The 2017 revision added extensive technology standards. The 2021 amendments added professional self-care and widened cultural competence to include self-reflection and action against oppression. This is a summary in the app's own words. It is information, not legal advice.",
+  "keyReminders": [
+    {
+      "topic": "Self-determination",
+      "text": "Respect the client's right to make their own choices. Limit that right only when the client's actions would create a serious and immediate danger to themselves or others, and explain this limit when services begin.",
+      "tags": ["informed-consent", "duty-to-warn"]
+    },
+    {
+      "topic": "Cultural competence and humility",
+      "text": "Learn about clients' cultures, reflect on your own identity and bias, and act against discrimination. Notice how power and privilege shape access to services and the relationship itself.",
+      "tags": ["cultural-competence"]
+    },
+    {
+      "topic": "Technology and electronic services",
+      "text": "Get informed consent for electronic services, check that the client can use the technology safely and privately, and avoid searching for information about clients online without their consent unless there is a compelling professional reason.",
+      "tags": ["technology", "telehealth", "informed-consent"]
+    },
+    {
+      "topic": "Confidentiality",
+      "text": "When a disclosure is required or permitted, share the least information needed for the purpose, and when you can, tell the client beforehand what will be shared and what may follow.",
+      "tags": ["confidentiality"]
+    },
+    {
+      "topic": "Dual or multiple relationships",
+      "text": "Avoid dual relationships that risk exploitation or harm. When one cannot be avoided, for example in a small or rural community, set clear and culturally sensitive boundaries and document them.",
+      "tags": ["dual-relationships"]
+    },
+    {
+      "topic": "Self-care and impairment",
+      "text": "Treat your own self-care as part of competent practice. If stress, illness or substance use starts to affect your judgment, seek help and adjust your caseload."
+    }
+  ],
+  "whenRelevant": ["informed-consent", "confidentiality", "technology", "telehealth", "cultural-competence", "dual-relationships", "duty-to-warn"],
+  "regulatorNote": "State social work boards license practice and may adopt their own conduct rules, often based on ASWB model rules. Board rules and state law control where they differ from the NASW code.",
+  "officialUrl": "https://www.socialworkers.org/About/Ethics/Code-of-Ethics/Code-of-Ethics-English",
+  "relatedLinks": [
+    {
+      "title": "NASW, ASWB, CSWE and CSWA Standards for Technology in Social Work Practice (2017)",
+      "url": "https://www.socialworkers.org/Practice/NASW-Practice-Standards-Guidelines/Standards-for-Technology-in-Social-Work-Practice"
+    },
+    { "title": "NASW: Highlighted revisions to the Code of Ethics", "url": "https://socialworkers.org/About/Ethics/Code-of-Ethics/Highlighted-Revisions-to-the-Code-of-Ethics" },
+    { "title": "NASW Delegate Assembly: Code of Ethics and Bylaws", "url": "https://www.socialworkers.org/About/Delegate-Assembly/Code-of-Ethics-and-Bylaws" }
+  ],
+  "verification": {
+    "method": "search-index",
+    "note": "Edition (2021 amendments to standard 1.05, the Purpose section and the value of integrity) and URLs confirmed through search results indexing socialworkers.org pages (Code of Ethics, 2021 amendments FAQ, Delegate Assembly page). The November 2026 Delegate Assembly outcome was not found. A person must load the official pages before release."
+  },
+  "sources": [
+    { "title": "Code of Ethics", "publisher": "National Association of Social Workers", "url": "https://www.socialworkers.org/About/Ethics/Code-of-Ethics/Code-of-Ethics-English", "year": 2021 },
+    {
+      "title": "2021 Amendments to the NASW Code of Ethics: Self-Care and Cultural Competence",
+      "publisher": "National Association of Social Workers",
+      "url": "https://www.socialworkers.org/About/Ethics/Code-of-Ethics/2021-Amendments-to-the-NASW-Code-of-Ethics",
+      "year": 2021
+    },
+    {
+      "title": "Delegate Assembly: Code of Ethics and Bylaws",
+      "publisher": "National Association of Social Workers",
+      "url": "https://www.socialworkers.org/About/Delegate-Assembly/Code-of-Ethics-and-Bylaws"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}
