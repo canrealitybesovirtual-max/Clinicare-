@@ -10,7 +10,7 @@
     { "code": "6B02", "label": "Agoraphobia" }
   ],
   "dsmPointer": "See DSM-5-TR: Anxiety Disorders — Agoraphobia",
-  "summary": "Strong fear and avoidance spanning several kinds of everyday settings, such as buses and trains, wide-open or closed-in places, crowds and lines, or being away from home alone. The driving concern is being stuck, or left without help, if sudden alarming or humiliating symptoms hit. People may steer clear of these places, push through them while very distressed, or go only when someone they trust comes along, and the level of fear goes well beyond any real threat. It can occur with or without panic disorder; assess each separately. For clinician review only; this is not a diagnosis.",
+  "summary": "Agoraphobia is organized around a feared outcome rather than a feared place: the client expects to be caught out by sudden symptoms somewhere that offers no easy retreat or help. Avoidance tends to spread from one setting to the next until the client's world has shrunk, and going out often comes to depend on a trusted companion or safety aids. In session, ask what the client predicts would happen, map the outings that have dropped away, and weigh the fear against the realistic risk given the client's health and setting. It can develop with or without panic attacks; assess panic separately. For clinician review only; this is not a diagnosis.",
   "features": [
     { "symptomId": "fear-escape-help-unavailable", "kind": "core", "weight": 5 },
     { "symptomId": "avoid-public-transport", "kind": "core", "weight": 4 },
@@ -29,14 +29,14 @@
   "minCore": 2,
   "durationGate": {
     "minWeeks": 26,
-    "note": "Expect a long-standing pattern, generally half a year or more. Briefer avoidance may reflect an adjustment reaction or a medical issue. Confirm the timing requirement in DSM-5-TR."
+    "note": "Ask when outings first began to drop away. Avoidance that is recent or brief may reflect an adjustment reaction or a medical issue. Confirm the timing requirement in DSM-5-TR."
   },
   "impairmentRequired": true,
   "ruleOuts": [
-    { "label": "Medical conditions that make the concern realistic", "type": "medical", "note": "With conditions such as inflammatory bowel disease, Parkinson's disease, cardiac disease or a history of falls, some worry about being away from help is reasonable. Consider agoraphobia only if the fear or avoidance is clearly out of proportion." },
+    { "label": "Medical conditions that make the concern realistic", "type": "medical", "note": "Some caution about being far from help is sensible with conditions such as epilepsy, unstable angina, urinary urgency or a recent fall. Treat avoidance as agoraphobic only when it reaches well past what the medical risk would justify." },
     { "label": "Vestibular or balance disorders", "type": "medical", "note": "Dizziness in open spaces or crowds can reflect a vestibular problem; consider ENT or neurology referral when dizziness is prominent." },
     { "label": "Substance or medication effects", "type": "substance", "note": "Stimulants, caffeine, withdrawal states or medication side effects can drive panic-like symptoms that feed avoidance." },
-    { "label": "Avoidance explained by another mental health condition", "type": "psychiatric", "note": "Avoidance limited to social scrutiny, one specific feared situation, trauma reminders, obsessional fears, separation from attachment figures, or paranoid beliefs points to other conditions." },
+    { "label": "Avoidance explained by another mental health condition", "type": "psychiatric", "note": "Ask what the client predicts would happen while out. If the feared outcome is something other than being stranded with symptoms, see the differentials list, and also consider obsessional, separation-related or paranoid fears." },
     { "label": "Low mood or loss of interest", "type": "psychiatric", "note": "Staying home because of low energy or loss of interest, rather than fear, suggests depression." }
   ],
   "specifiers": [
@@ -45,11 +45,11 @@
     { "label": "Severity tracking (descriptive)", "note": "Track the number of avoided situation types, reliance on a companion and time spent housebound over the course of treatment." }
   ],
   "differentials": [
-    { "label": "Specific phobia, situational type (ICD-10-CM title: Other situational type phobia)", "icd10cm": "F40.248", "distinguishing": "Fear is confined to one type of situation (e.g., only flying or only elevators) and centers on that situation itself, not on being unable to escape or get help." },
-    { "label": "Social anxiety disorder (ICD-10-CM title: Social phobia, unspecified)", "icd10cm": "F40.10", "distinguishing": "Avoidance is driven by fear of being judged or humiliated by others rather than by fear of being trapped or without help." },
+    { "label": "Specific phobia, situational type (ICD-10-CM title: Other situational type phobia)", "icd10cm": "F40.248", "distinguishing": "The fear stays with one kind of trigger, such as flying or elevators, and the feared outcome comes from the situation itself (the cable snapping) rather than from the client's own symptoms." },
+    { "label": "Social anxiety disorder (ICD-10-CM title: Social phobia, unspecified)", "icd10cm": "F40.10", "distinguishing": "Ask what the client predicts: in social anxiety it is other people's negative judgment, not being stranded with symptoms." },
     { "label": "Separation anxiety disorder (ICD-10-CM title: Separation anxiety disorder of childhood)", "icd10cm": "F93.0", "distinguishing": "Staying home is driven by fear of being apart from attachment figures, not by fear of panic-like symptoms. Adult presentations exist; confirm adult code use against current coding guidance." },
-    { "label": "Posttraumatic stress disorder", "icd10cm": "F43.10", "distinguishing": "Avoidance is limited to places or cues linked to a traumatic event, with re-experiencing symptoms." },
-    { "label": "Panic disorder without agoraphobia", "icd10cm": "F41.0", "distinguishing": "Recurrent unexpected attacks and worry about them, without avoidance of two or more kinds of situations." }
+    { "label": "Posttraumatic stress disorder", "icd10cm": "F43.10", "distinguishing": "Avoided places share a link to a past trauma and the client also relives the event; the fear is of the memory returning, not of being stranded with symptoms." },
+    { "label": "Panic disorder without agoraphobia", "icd10cm": "F41.0", "distinguishing": "Attacks and dread of the next one are present, but daily life has not narrowed around places the client avoids." }
   ],
   "comorbidities": [
     { "conditionId": "panic-disorder", "label": "Panic disorder", "note": "Agoraphobic avoidance often develops after repeated panic attacks, but it can also occur without them. Assess panic disorder separately." },

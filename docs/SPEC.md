@@ -165,7 +165,7 @@ Everything the owner asked for, grouped. Nothing is dropped. Wording is kept as 
 ### 42 CFR Part 2 (substance use disorder records)
 
 - The 2024 Part 2 Final Rule has been in force since Feb 16, 2026, the compliance date. OCR now takes complaints and enforces it.
-- SUD screens carry a Part 2 reminder, and exports include the required notice: "42 CFR Part 2 prohibits unauthorized disclosure of these records."
+- SUD screens carry a Part 2 reminder, and exports include the required notice: "42 CFR Part 2 prohibits unauthorized use or disclosure of these records."
 - No SUD information is stored.
 
 ### International and state privacy
@@ -330,7 +330,7 @@ A licensed clinical reviewer signs off on every content release.
 | G3 | FDA device risk / client harm | Client mode must never show diagnosis names, codes or match scores. The app must never state a final diagnosis. | Client mode shows symptom topics ("worry," "panic attacks"), skills, handouts and crisis info. Clinician mode labels every suggestion "For clinician review," shows matched and missing features, and needs a clinician click to add anything to a plan. |
 | G4 | Unproven treatments | No homeopathy listings or claims. | Use a "Complementary & integrative" category (exercise, yoga, mindfulness, sleep hygiene) with NCCIH evidence notes. Medication referrals point to psychiatry, a PCP or a psychiatric NP. |
 | G5 | PHI / HIPAA | No fields for name, DOB, address, phone, email, record numbers or photos. No localStorage, cookies, logs or analytics on clinical text. No outbound call ever carries typed text. | Client-side PHI scrubber (18 Safe Harbor identifiers) with warning modal. Data in memory only, wiped on close or idle timeout. Automated tests plant fake identifiers and fail the build if any leave the browser. |
-| G6 | 42 CFR Part 2 | Never store or transmit SUD information. | SUD screens show a Part 2 banner. Every SUD export prints: "42 CFR Part 2 prohibits unauthorized disclosure of these records." |
+| G6 | 42 CFR Part 2 | Never store or transmit SUD information. | SUD screens show a Part 2 banner. Every SUD export prints: "42 CFR Part 2 prohibits unauthorized use or disclosure of these records." |
 | G7 | Measure licensing | Do not build in any measure unless its license is confirmed in /content/licenses.json. | Phase 1 builds in PHQ-9 and GAD-7 only. PCL-5 and AUDIT go in after terms are confirmed. PDSS, ISI, Y-BOCS, SPIN, C-SSRS and Stanley-Brown appear as outbound links marked "license pending." |
 | G8 | Third-party worksheets | Never scrape, copy or re-host TherapistAid, CCI, Get Self Help or similar content. | Link out with title, publisher and URL only. Handouts in the app are original. |
 | G9 | Suicide / crisis risk | Never auto-decide risk level or hide crisis info behind menus. | Crisis button on every screen (988, local emergency, findahelpline.com). PHQ-9 item 9 above 0 → C-SSRS and safety-planning prompt. Red-flag banners for psychosis, mania, homicidality, eating-disorder medical risk and withdrawal. |

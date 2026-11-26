@@ -15,3 +15,5 @@ services:
         value: "22"
       - key: NEXT_TELEMETRY_DISABLED
         value: "1"
+      - key: ALLOW_SUD_REFERENCE_LOOKUPS
+        value: "true" # owner approval 2026-11-26 (curated codes/terms/drug names only; see docs/RESOURCES.md)

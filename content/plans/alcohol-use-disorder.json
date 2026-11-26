@@ -5,11 +5,11 @@
       "id": "aud-drinking-and-health-risk",
       "label": "Drinking past intended limits, with risks to health and safety",
       "definitions": [
-        "Keeps drinking past a limit they set for themselves on 1 or more days in a typical week, or drinks enough on some days to have memory gaps, falls, injuries or hangovers that lead to missed work or caregiving.",
-        "Has tried to cut down or stop at least once in the past year and returned to the earlier pattern within weeks.",
-        "Reports shakiness, sweating, a racing heart, nausea, poor sleep or strong anxiety when not drinking, or drinks early in the day to steady themselves; these can be signs of physical dependence and call for medical assessment.",
+        "Describes evenings that start with 'just one or two' and end well past that on 1 or more days in a typical week, sometimes with memory gaps, falls, injuries or hangovers that cost work or caregiving time.",
+        "Reports health warnings linked to drinking from a medical provider, for example abnormal liver tests, high blood pressure or stomach problems.",
         "Drinks in situations that raise the risk of harm, such as before driving, while in sole charge of children, or together with sedatives, sleep medicines or opioids.",
-        "Reports health warnings linked to drinking from a medical provider, for example abnormal liver tests, high blood pressure or stomach problems."
+        "Has made a real attempt in the past year to cut back or stop, such as a dry month or a no-weeknights rule, and slid back to the earlier pattern within weeks.",
+        "Reports shakiness, sweating, a racing heart, nausea, poor sleep or strong anxiety when not drinking, or a morning drink to steady themselves; these can be signs of physical dependence and call for medical assessment."
       ],
       "longTermGoals": [
         "The client reaches and keeps a drinking goal they chose (stopping, or a lower-risk pattern where a medical provider agrees it is safe), and the harms drinking was causing are reduced.",
@@ -147,7 +147,7 @@
       "measureIds": ["phq-9"]
     }
   ],
-  "collaborativeNote": "42 CFR Part 2 prohibits unauthorized disclosure of these records. These are starting points for clinician review, not a finished plan. Rewrite each goal and objective with the client in their own words, respect the client's choice of goal (stopping, or cutting down where medically safe), and record their agreement before anything is added to the plan. Check withdrawal risk first: alcohol withdrawal can be dangerous, and anyone drinking heavily every day, with past withdrawal symptoms or also using sedatives needs a medical assessment before cutting down. Medication and contingency management come from prescribers and established programs; this plan supports referral only. Share substance-use information only with written consent that meets Part 2, and never type identifying details, diary entries or test results into this tool; nothing is stored or sent. Use person-first language the client is comfortable with, and fit drink-refusal practice, family involvement, mutual-help and faith options to the client's culture and wishes. Safety planning is always done together with the client, and the clinician makes every risk decision. Adult scope only. Resource only. Not a substitute for clinical judgment.",
+  "collaborativeNote": "42 CFR Part 2 prohibits unauthorized use or disclosure of these records. These are starting points for clinician review, not a finished plan. Rewrite each goal and objective with the client in their own words, respect the client's choice of goal (stopping, or cutting down where medically safe), and record their agreement before anything is added to the plan. Check withdrawal risk first: alcohol withdrawal can be dangerous, and anyone drinking heavily every day, with past withdrawal symptoms or also using sedatives needs a medical assessment before cutting down. Medication and contingency management come from prescribers and established programs; this plan supports referral only. Share substance-use information only with written consent that meets Part 2, and never type identifying details, diary entries or test results into this tool; nothing is stored or sent. Use person-first language the client is comfortable with, and fit drink-refusal practice, family involvement, mutual-help and faith options to the client's culture and wishes. Safety planning is always done together with the client, and the clinician makes every risk decision. Adult scope only. Resource only. Not a substitute for clinical judgment.",
   "sud": true,
   "sources": [
     { "title": "Alcohol-use disorders: diagnosis, assessment and management of harmful drinking (high-risk drinking) and alcohol dependence (CG115)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/cg115", "year": 2011 },

@@ -20,7 +20,7 @@ export interface FinderLink {
 }
 
 /** Exact text required on SUD exports and referral screens (SPEC section 6, guardrail G6). */
-export const PART2_NOTICE = "42 CFR Part 2 prohibits unauthorized disclosure of these records.";
+export const PART2_NOTICE = "42 CFR Part 2 prohibits unauthorized use or disclosure of these records.";
 
 /** Reminder attached to substance-use referral results. Original wording. */
 export const PART2_REMINDER =

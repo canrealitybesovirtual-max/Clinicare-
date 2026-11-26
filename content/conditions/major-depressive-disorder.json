@@ -22,7 +22,7 @@
     { "code": "6A71", "label": "Recurrent depressive disorder" }
   ],
   "dsmPointer": "See DSM-5-TR: Depressive Disorders — Major Depressive Disorder",
-  "summary": "One or more distinct periods of persistently low mood and/or loss of interest or enjoyment, together with changes in sleep, appetite, energy, movement, concentration and self-worth, and sometimes thoughts of death or suicide. Episodes differ noticeably from how the person usually is and persist for a couple of weeks or more. Always ask about past periods of unusually high mood or energy (possible bipolar disorder), and ask directly about suicidal thoughts; this app never rates risk. For clinician review only; this is not a diagnosis.",
+  "summary": "An episodic condition: for a stretch of weeks, clearly unlike the client's usual self, mood sinks or the capacity for enjoyment drains away, and the body and outlook follow, with changes in sleep, appetite, energy and how the client sees themselves. In session it often shows up as withdrawal and inertia: activity drops, what remains feels less rewarding, and mood sinks further, the loop that behavioral activation targets. Thoughts of death or suicide can be part of the picture. Always ask about past periods of unusually high mood or energy (possible bipolar disorder), and ask directly about suicidal thoughts; this app never rates risk. For clinician review only; this is not a diagnosis.",
   "features": [
     { "symptomId": "depressed-mood", "kind": "core", "weight": 5, "breadthArea": true },
     { "symptomId": "anhedonia", "kind": "core", "weight": 5, "breadthArea": true },
@@ -41,7 +41,7 @@
   "minCore": 1,
   "durationGate": {
     "minWeeks": 2,
-    "note": "Symptoms cluster together for about two weeks or longer and are present on most days. Confirm the required symptom count and timing in DSM-5-TR."
+    "note": "Ask whether the low period has been steady rather than a few bad days scattered among good ones. Confirm the required symptom count and timing in DSM-5-TR."
   },
   "impairmentRequired": true,
   "ruleOuts": [
@@ -52,27 +52,27 @@
     { "label": "Medication effects", "type": "substance", "note": "Some medicines, such as corticosteroids, interferon, isotretinoin and certain hormonal treatments, have been linked to mood changes. Review the medication list with the prescriber." },
     { "label": "Alcohol, sedative or stimulant effects", "type": "substance", "note": "Heavy use, intoxication or withdrawal (e.g., a stimulant crash) can produce depressive symptoms. This app does not store substance-use information." },
     { "label": "History of manic or hypomanic episodes", "type": "psychiatric", "note": "Ask about past periods of high energy, little need for sleep, racing ideas or risky spending. Such a history points toward bipolar disorder and changes treatment; refer for psychiatric evaluation." },
-    { "label": "Bereavement and expected grief", "type": "psychiatric", "note": "Sadness after a death is expected. Look for pervasive loss of self-worth, constant low mood unrelated to reminders of the loss, or suicidal thinking, which suggest a depressive episode." },
+    { "label": "Bereavement and expected grief", "type": "psychiatric", "note": "Sadness after a death is expected. In grief the pain is about the loss and tends to ease between reminders. When the low spreads to the client's view of self and future, or suicidal thinking appears, assess for a depressive episode as well." },
     { "label": "Psychotic disorders", "type": "psychiatric", "note": "Hallucinations or delusions that occur outside mood episodes suggest a primary psychotic or schizoaffective disorder." }
   ],
   "specifiers": [
-    { "label": "Severity: mild, moderate or severe", "note": "Severity sets the ICD-10-CM fourth character (F32.0 to F32.2 or F33.0 to F33.2). Base it on symptom number and intensity and on functional impact." },
+    { "label": "Severity: mild, moderate or severe", "note": "Severity sets the ICD-10-CM fourth character (F32.0 to F32.2 or F33.0 to F33.2). Rate it from the whole picture, including how much the client can still manage at work and home; a PHQ-9 trend can support, but not replace, that judgment." },
     { "label": "With psychotic features", "note": "Coded F32.3 or F33.3. Warrants urgent psychiatric referral." },
     { "label": "In partial or full remission", "note": "Coded F32.4 / F32.5 (single episode) or F33.41 / F33.42 (recurrent)." },
     { "label": "Single episode vs. recurrent", "note": "Use the recurrent codes (F33.x; ICD-11 6A71) when there has been an earlier, separate episode with a period of improvement in between. See DSM-5-TR for the required interval." },
-    { "label": "With anxious distress", "note": "Marked tension, restlessness or dread during the episode. Linked to higher risk and slower response; screen for anxiety disorders and assess suicidal thinking." },
+    { "label": "With anxious distress", "note": "Use when anxiety is a prominent part of the depressive episode itself, not only a separate condition (see DSM-5-TR for the feature list). Linked to higher risk and slower response; screen for anxiety disorders and assess suicidal thinking." },
     { "label": "With mixed features", "note": "Some manic or hypomanic symptoms during a depressive episode. Raises concern for bipolar spectrum illness; refer for psychiatric evaluation." },
-    { "label": "With melancholic features", "note": "Near-total loss of pleasure, mood that does not lift with good events, early waking and marked slowing or agitation." },
-    { "label": "With atypical features", "note": "Mood that brightens with good events, plus long sleep, increased appetite, a heavy, weighed-down feeling in the arms or legs, or strong sensitivity to rejection." },
-    { "label": "With peripartum onset", "note": "Onset during pregnancy or after delivery. Coordinate with obstetric or primary care and screen for risk to the parent and infant." },
-    { "label": "With seasonal pattern", "note": "Episodes that start and end at about the same time of year, often in fall or winter." }
+    { "label": "With melancholic features", "note": "A severe, 'endogenous'-looking depression: pleasure is all but absent, mood stays fixed whatever happens, and physical and daily-rhythm changes are prominent. See DSM-5-TR for the feature list." },
+    { "label": "With atypical features", "note": "Despite the name, a common pattern: mood can still lift for a while when something good happens, and the episode leans toward 'more' rather than 'less' (oversleeping, eating more, a heavy body), often in someone deeply wounded by rejection or criticism. See DSM-5-TR for the feature list." },
+    { "label": "With peripartum onset", "note": "Episode begins in pregnancy or soon after the birth (see DSM-5-TR for the time window). Coordinate with obstetric or primary care and screen for risk to the parent and infant." },
+    { "label": "With seasonal pattern", "note": "Low periods that follow the calendar, most often arriving in the darker months and clearing as daylight returns. A mood and sleep log kept across the year helps show the pattern." }
   ],
   "differentials": [
-    { "label": "Persistent depressive disorder (ICD-10-CM title: Dysthymic disorder)", "icd10cm": "F34.1", "distinguishing": "Long-lasting, often milder low mood present for years (two or more in adults). Major episodes can occur on top of it." },
-    { "label": "Bipolar II disorder", "icd10cm": "F31.81", "distinguishing": "At least one past hypomanic period alongside depressive episodes. Screen before starting antidepressants." },
+    { "label": "Persistent depressive disorder (ICD-10-CM title: Dysthymic disorder)", "icd10cm": "F34.1", "distinguishing": "Low mood has been the client's baseline for years, often described as 'just how I am'; full episodes can sit on top of it. See DSM-5-TR for the duration." },
+    { "label": "Bipolar II disorder", "icd10cm": "F31.81", "distinguishing": "A past stretch of hypomania, even a brief or pleasant one the client never saw as a problem, changes the picture. Screen before antidepressants start." },
     { "label": "Bipolar disorder, unspecified", "icd10cm": "F31.9", "distinguishing": "Any history of mania or hypomania that is not yet fully characterized. Refer for psychiatric evaluation." },
-    { "label": "Adjustment disorder with depressed mood", "icd10cm": "F43.21", "distinguishing": "Low mood clearly tied to an identifiable stressor, without the full depressive episode pattern." },
-    { "label": "Prolonged grief disorder", "icd10cm": "F43.81", "distinguishing": "Intense longing for, or preoccupation with, a person who has died, lasting well beyond what is expected in the client's culture. ICD-11 uses at least 6 months after the death; DSM-5-TR uses about 12 months for adults (confirm the duration in DSM-5-TR). It can co-occur with a depressive episode." },
+    { "label": "Adjustment disorder with depressed mood", "icd10cm": "F43.21", "distinguishing": "Low mood that grew out of a specific recent setback and stays centered on it, without the breadth of a depressive episode." },
+    { "label": "Prolonged grief disorder", "icd10cm": "F43.81", "distinguishing": "Grief that has not found a place in the client's life: the person who died still dominates attention and the loss feels unreal or unbearable, well past what the client's culture expects. ICD-11 uses at least 6 months after the death; DSM-5-TR uses about 12 months for adults (confirm the duration in DSM-5-TR). It can co-occur with a depressive episode." },
     { "label": "Depressive symptoms due to a medical condition, substance or medication", "distinguishing": "Onset and course track the illness, substance or medication. See the rule-out list." }
   ],
   "comorbidities": [

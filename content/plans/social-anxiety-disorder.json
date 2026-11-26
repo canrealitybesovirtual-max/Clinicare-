@@ -5,7 +5,7 @@
       "id": "sad-avoiding-being-seen-or-judged",
       "label": "Steering clear of, or escaping, situations where the client might be judged",
       "definitions": [
-        "Turns down, cancels or skips at least one work, study, family, faith or community event in a typical week because of fear of embarrassment, criticism or rejection.",
+        "Turns down, cancels or skips at least one work, study, family, faith or community event in a typical week because they expect to come across badly or be found lacking.",
         "Avoids specific everyday tasks that involve being noticed, such as making or answering phone calls, asking a question in a meeting or class, ordering at a counter or eating with coworkers, and can list them when asked.",
         "Leaves gatherings early, stays at the edges of groups or keeps conversations very short, by self or collateral report.",
         "Spends long stretches before an event dreading it, and long stretches afterward going back over what they said or did, often an hour or more each time."
@@ -125,7 +125,7 @@
         },
         {
           "id": "sad-alcohol-check",
-          "text": "At intake and again by week 4, ask whether alcohol or other substances are used to get through social situations. If so, agree to attend at least 2 events a month without drinking beforehand, set up as planned experiments, and consider adding goals from the alcohol-use plan. Keep notes free of identifying details; where substance-use records fall under 42 CFR Part 2, note that 42 CFR Part 2 prohibits unauthorized disclosure of these records.",
+          "text": "At intake and again by week 4, ask whether alcohol or other substances are used to get through social situations. If so, agree to attend at least 2 events a month without drinking beforehand, set up as planned experiments, and consider adding goals from the alcohol-use plan. Keep notes free of identifying details; where substance-use records fall under 42 CFR Part 2, note that 42 CFR Part 2 prohibits unauthorized use or disclosure of these records.",
           "interventionIds": ["motivational-interviewing", "behavioral-experiments"]
         },
         {

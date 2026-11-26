@@ -8,7 +8,7 @@
     { "code": "6B00", "label": "Generalised anxiety disorder" }
   ],
   "dsmPointer": "See DSM-5-TR: Anxiety Disorders — Generalized Anxiety Disorder",
-  "summary": "Long-running, broad worry about ordinary life areas such as work, health, family and money that the person struggles to rein in, together with bodily tension and arousal: restlessness, tiring easily, poor focus, irritability, tight muscles and broken sleep. The worry is larger than the actual risk and is present much of the time over many months. Some clients describe mainly physical complaints. It often co-occurs with depression and other anxiety conditions. For clinician review only; this is not a diagnosis.",
+  "summary": "Chronic worry that moves from topic to topic, runs ahead of the real risk and resists the client's efforts to set it aside. Worry often feels like a way to stay prepared or avoid being caught off guard, yet it rarely ends in a decision, and intolerance of uncertainty shows up as reassurance seeking, over-planning or putting decisions off. Over months the body carries the load as tension and poor rest. Some clients describe mainly physical complaints. It often co-occurs with depression and other anxiety conditions. For clinician review only; this is not a diagnosis.",
   "features": [
     { "symptomId": "worry-excessive", "kind": "core", "weight": 5 },
     { "symptomId": "worry-hard-to-control", "kind": "core", "weight": 4 },
@@ -24,7 +24,7 @@
   "minCore": 2,
   "durationGate": {
     "minWeeks": 26,
-    "note": "Expect worry that is present much of the time over a long period, roughly six months or more. ICD-11 asks for at least several months. Confirm the timing requirement in DSM-5-TR."
+    "note": "Ask how long worry has filled ordinary days and whether there have been worry-free stretches. ICD-11 describes a duration of at least several months. Confirm the timing requirement in DSM-5-TR."
   },
   "impairmentRequired": true,
   "ruleOuts": [
@@ -33,17 +33,17 @@
     { "label": "Medication effects", "type": "substance", "note": "Corticosteroids, stimulants, bronchodilators, thyroid hormone and some other medicines can cause anxiety or insomnia. Review the medication list with the prescriber." },
     { "label": "Caffeine, stimulants or nicotine", "type": "substance", "note": "High intake can mimic or worsen chronic tension and poor sleep." },
     { "label": "Alcohol or sedative withdrawal", "type": "substance", "note": "Daily rebound anxiety between drinks or doses can look like generalized worry. Refer for medical assessment if withdrawal is possible. This app does not store substance-use information." },
-    { "label": "Worry better explained by another mental health condition", "type": "psychiatric", "note": "Consider obsessions (OCD), health-focused worry (illness anxiety), social-evaluation fears, trauma-related fear, or depressive rumination." }
+    { "label": "Worry better explained by another mental health condition", "type": "psychiatric", "note": "When worry keeps returning to one theme, that theme usually points to the better fit (see the differentials list). GAD worry is broad and shifts between topics." }
   ],
   "specifiers": [
     { "label": "Predominantly somatic presentation (descriptive)", "note": "Some clients report muscle pain, headaches, stomach upset or fatigue rather than 'worry'. Ask about the content of their thoughts and how much time they spend thinking about problems." },
     { "label": "Late-life onset (descriptive)", "note": "New generalized anxiety after mid-life calls for a careful medical and medication review." }
   ],
   "differentials": [
-    { "label": "Illness anxiety disorder (ICD-10-CM title: Hypochondriasis)", "icd10cm": "F45.21", "distinguishing": "Worry focuses mainly on having or getting a serious disease, with checking or reassurance seeking." },
-    { "label": "Obsessive-compulsive disorder (ICD-10-CM title: Mixed obsessional thoughts and acts)", "icd10cm": "F42.2", "distinguishing": "Intrusive, unwanted thoughts or images that feel foreign to the person, often paired with compulsions, rather than worries about real-life problems." },
-    { "label": "Adjustment disorder with anxiety", "icd10cm": "F43.22", "distinguishing": "Anxiety clearly started after an identifiable stressor and is expected to ease once the stressor or its effects end." },
-    { "label": "Anxiety disorder due to another medical condition (ICD-10-CM title: Anxiety disorder due to known physiological condition)", "icd10cm": "F06.4", "distinguishing": "Anxiety is a direct physiological effect of a medical condition, and its course follows that condition." },
+    { "label": "Illness anxiety disorder (ICD-10-CM title: Hypochondriasis)", "icd10cm": "F45.21", "distinguishing": "One theme dominates: health. The client scans the body, researches symptoms and seeks medical reassurance that does not last." },
+    { "label": "Obsessive-compulsive disorder (ICD-10-CM title: Mixed obsessional thoughts and acts)", "icd10cm": "F42.2", "distinguishing": "The thoughts feel alien to the client's values and are neutralized by rituals; GAD worry is about plausible everyday problems and feels like the client's own thinking." },
+    { "label": "Adjustment disorder with anxiety", "icd10cm": "F43.22", "distinguishing": "The anxiety has a clear starting point in a recent life event and stays focused on it; expect it to settle as the client adapts or the situation resolves." },
+    { "label": "Anxiety disorder due to another medical condition (ICD-10-CM title: Anxiety disorder due to known physiological condition)", "icd10cm": "F06.4", "distinguishing": "A medical illness, such as an overactive thyroid, is producing the anxiety through its effects on the body; symptoms rise and fall with that illness." },
     { "label": "Social anxiety disorder (ICD-10-CM title: Social phobia, unspecified)", "icd10cm": "F40.10", "distinguishing": "Worry centers on being judged or embarrassed by others." },
     { "label": "Major depressive disorder", "distinguishing": "Repetitive thinking is mostly about past failures, guilt or worthlessness, alongside low mood or loss of interest. Both conditions often co-occur." }
   ],

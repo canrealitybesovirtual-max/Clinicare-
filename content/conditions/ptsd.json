@@ -10,7 +10,7 @@
     { "code": "6B40", "label": "Post traumatic stress disorder" }
   ],
   "dsmPointer": "See DSM-5-TR: Trauma- and Stressor-Related Disorders — Posttraumatic Stress Disorder",
-  "summary": "A pattern that can follow a traumatic event such as assault, combat, a serious accident, disaster or sudden violent loss. It involves re-living the event (unwanted memories, nightmares, flashbacks, strong reactions to reminders), avoiding reminders, lasting negative shifts in beliefs and mood, and a body stuck on alert (scanning for danger, startling easily, poor sleep and focus). Symptoms last beyond the first month after the event. ICD-11 builds PTSD around a smaller core of re-experiencing in the present, avoidance and an ongoing sense of threat; complex PTSD (6B41) adds problems with emotion regulation, self-worth and relationships. For clinician review only; this is not a diagnosis.",
+  "summary": "A persistent sense of current threat after a traumatic event, long after the danger has passed. The trauma memory stays poorly integrated, so reminders set it off as if the danger were present, and the client draws harsh conclusions from the event about safety, trust or their own worth. Strategies that bring short-term relief, such as avoiding reminders, pushing the memory away, staying on guard or shutting feelings down, keep the memory from being updated. In session, watch for vivid sensory reliving, a narrative that jumps or stalls, and sudden shifts in arousal. ICD-11 frames PTSD around re-experiencing in the present, avoidance and a sense of ongoing threat; complex PTSD (6B41) adds problems with emotion regulation, self-worth and relationships. For clinician review only; this is not a diagnosis.",
   "features": [
     { "symptomId": "traumatic-event-exposure", "kind": "core", "weight": 5 },
     { "symptomId": "intrusive-memories", "kind": "core", "weight": 3 },
@@ -33,7 +33,7 @@
   "minCore": 3,
   "durationGate": {
     "minWeeks": 4,
-    "note": "Symptoms continue past the first month after the event. Under a month, consider an acute stress reaction instead. A full picture can also first appear many months later. Confirm the timing requirement in DSM-5-TR."
+    "note": "Reactions in the first weeks after an event are common and often settle; consider an acute stress reaction and reassess. Onset can also come long after the event. Confirm the timing requirement in DSM-5-TR."
   },
   "impairmentRequired": true,
   "ruleOuts": [
@@ -45,14 +45,14 @@
     { "label": "Psychotic disorders", "type": "psychiatric", "note": "Flashbacks are tied to the event and the person usually knows they are memories; hallucinations or delusions unrelated to the trauma suggest a psychotic process." }
   ],
   "specifiers": [
-    { "label": "With dissociative symptoms", "note": "The client also has repeated episodes of feeling unreal or outside their own body. Rule out substance and medical causes first." },
-    { "label": "With delayed expression", "note": "For presentations where the complete picture only emerged half a year or more after the event; partial symptoms may have shown up sooner." },
+    { "label": "With dissociative symptoms", "note": "Use when depersonalization or derealization is a regular part of the picture, not only during flashbacks. Teach grounding early and pace trauma-focused work; check that substances or a medical cause are not driving the episodes." },
+    { "label": "With delayed expression", "note": "Applies when the client coped, or had only scattered symptoms, for a long time and the picture filled out much later, often after a new stressor, a loss or a reminder. Ask what changed around the time things worsened. See DSM-5-TR for the timing threshold." },
     { "label": "Acute vs. chronic status (ICD-10-CM F43.11 / F43.12)", "note": "ICD-10-CM fifth characters for status; F43.10 is the fallback when status is not documented. Confirm the duration convention your coding guidance or payer uses." },
     { "label": "Complex PTSD (ICD-11 6B41)", "note": "ICD-11 only. Adds lasting problems with emotion regulation, a negative sense of self and relationship difficulties, usually after prolonged or repeated trauma. There is no separate ICD-10-CM code." }
   ],
   "differentials": [
-    { "label": "Acute stress disorder (ICD-10-CM title: Acute stress reaction)", "icd10cm": "F43.0", "distinguishing": "Similar symptoms that begin after the event but last less than about one month." },
-    { "label": "Adjustment disorder, unspecified", "icd10cm": "F43.20", "distinguishing": "Distress after a life stressor that does not meet the trauma-exposure threshold or the full PTSD pattern." },
+    { "label": "Acute stress disorder (ICD-10-CM title: Acute stress reaction)", "icd10cm": "F43.0", "distinguishing": "The same kinds of reactions, seen only in the first weeks after the event; reassess at about a month, since many settle on their own." },
+    { "label": "Adjustment disorder, unspecified", "icd10cm": "F43.20", "distinguishing": "The stressor was hard but not traumatic in the clinical sense (for example a divorce or job loss), or the reactions lack the reliving and avoidance seen in PTSD." },
     { "label": "Prolonged grief disorder", "icd10cm": "F43.81", "distinguishing": "After a death, the focus is on longing for the person and difficulty accepting the loss, rather than fear-based re-experiencing. ICD-11 uses at least 6 months after the death; DSM-5-TR uses about 12 months for adults (confirm the duration in DSM-5-TR). Both can follow a traumatic loss." },
     { "label": "Panic disorder", "icd10cm": "F41.0", "distinguishing": "Attacks arise unexpectedly rather than mainly in response to trauma reminders." },
     { "label": "Major depressive disorder", "distinguishing": "Low mood and loss of interest without trauma-linked re-experiencing and avoidance. Often co-occurs with PTSD." },

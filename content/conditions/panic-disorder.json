@@ -8,7 +8,7 @@
     { "code": "6B01", "label": "Panic disorder" }
   ],
   "dsmPointer": "See DSM-5-TR: Anxiety Disorders — Panic Disorder",
-  "summary": "Repeated, abrupt episodes of intense fear or physical alarm that are not reliably tied to a trigger, followed by ongoing apprehension about further episodes and/or changes in behavior meant to prevent them. Episodes usually bring strong cardiopulmonary and other bodily sensations that the person reads as a medical emergency, so many first present to primary or emergency care. Medical and substance-related causes should be considered before treating the picture as a primary anxiety condition. For clinician review only; this is not a diagnosis.",
+  "summary": "Built on a feedback loop: the client notices a body change, reads it as a sign of disaster (breathlessness as suffocation, dizziness as collapse), and the fear amplifies the sensations until the episode peaks. Because some attacks arrive without warning, the client starts monitoring the body and arranging life around preventing the next one, and those protective habits keep the loop going. Many first present to primary or emergency care. Consider medical and substance-related causes before treating the picture as a primary anxiety condition. For clinician review only; this is not a diagnosis.",
   "features": [
     { "symptomId": "panic-attacks-unexpected", "kind": "core", "weight": 5, "group": "attacks" },
     { "symptomId": "panic-attacks-unspecified", "kind": "core", "weight": 4, "group": "attacks" },
@@ -32,7 +32,7 @@
   "minCore": 2,
   "durationGate": {
     "minWeeks": 4,
-    "note": "The worry about further attacks, or the behavior changes made to head them off, usually last a month or longer. Confirm the exact timing requirement in DSM-5-TR."
+    "note": "Date the first attack, then ask how long the client has been bracing for the next one or changing plans because of it. Confirm the exact timing requirement in DSM-5-TR."
   },
   "impairmentRequired": true,
   "ruleOuts": [
@@ -44,7 +44,7 @@
     { "label": "Caffeine, stimulants or decongestants", "type": "substance", "note": "High caffeine intake, energy drinks, prescribed or illicit stimulants and some cold medicines can trigger panic-like episodes." },
     { "label": "Alcohol or benzodiazepine withdrawal", "type": "substance", "note": "Rebound anxiety, tremor and sweating after cutting down can mimic panic and may be medically dangerous; refer for medical assessment." },
     { "label": "Cannabis or other substance effects", "type": "substance", "note": "Acute intoxication or withdrawal from several substances can provoke attacks. This app does not store substance-use information." },
-    { "label": "Attacks better explained by another mental health condition", "type": "psychiatric", "note": "If attacks occur only with social scrutiny, a specific feared object or situation, trauma reminders, obsessions or separation, consider those conditions first." }
+    { "label": "Attacks better explained by another mental health condition", "type": "psychiatric", "note": "Attacks that only ever arrive with one kind of trigger are cued rather than unexpected. Trace the trigger (see the differentials list), and consider obsessional and separation-related fears as well." }
   ],
   "specifiers": [
     { "label": "Nocturnal panic (descriptive)", "note": "Attacks that wake the person from sleep. Ask about them directly and consider sleep-related differentials such as sleep apnea or reflux." },
@@ -54,13 +54,13 @@
   "differentials": [
     { "label": "Social anxiety disorder (ICD-10-CM title: Social phobia, unspecified)", "icd10cm": "F40.10", "distinguishing": "Attacks occur mainly in social or performance settings, and the core fear is being judged or embarrassed rather than the attack itself." },
     { "label": "Specific phobia, situational type (ICD-10-CM title: Other situational type phobia)", "icd10cm": "F40.248", "distinguishing": "Attacks are limited to one narrow trigger (e.g., flying, driving, heights) rather than also arising unexpectedly." },
-    { "label": "Illness anxiety disorder (ICD-10-CM title: Hypochondriasis)", "icd10cm": "F45.21", "distinguishing": "Ongoing preoccupation with having a serious illness and repeated checking or reassurance seeking, without discrete fear surges as the main problem." },
-    { "label": "Anxiety disorder due to another medical condition (ICD-10-CM title: Anxiety disorder due to known physiological condition)", "icd10cm": "F06.4", "distinguishing": "Episodes are a direct physiological effect of a medical condition (e.g., thyroid, cardiac or respiratory disease); onset and course track that condition." },
+    { "label": "Illness anxiety disorder (ICD-10-CM title: Hypochondriasis)", "icd10cm": "F45.21", "distinguishing": "Health fear is constant rather than coming in spikes; the client checks, researches and seeks reassurance between visits." },
+    { "label": "Anxiety disorder due to another medical condition (ICD-10-CM title: Anxiety disorder due to known physiological condition)", "icd10cm": "F06.4", "distinguishing": "A medical illness, such as thyroid, heart or lung disease, is producing the episodes through its effects on the body; they rise and fall with that illness." },
     { "label": "Generalized anxiety disorder", "icd10cm": "F41.1", "distinguishing": "Chronic, diffuse worry and tension rather than abrupt, time-limited surges. The two often co-occur." },
     { "label": "Posttraumatic stress disorder", "icd10cm": "F43.10", "distinguishing": "Attacks set off by trauma reminders, together with re-experiencing and avoidance of reminders, point toward PTSD." }
   ],
   "comorbidities": [
-    { "conditionId": "agoraphobia", "label": "Agoraphobia", "note": "Avoidance of places where escape or help feels hard to reach often develops after repeated attacks. Assess both; they are now separate diagnoses." },
+    { "conditionId": "agoraphobia", "label": "Agoraphobia", "note": "Many clients start avoiding places after repeated attacks, fearing they will be stranded with symptoms. Assess both; they are now separate diagnoses." },
     { "conditionId": "major-depressive-disorder", "label": "Major depressive disorder", "note": "Depression commonly follows or accompanies panic disorder, and their combination is linked to more impairment. Screen for low mood and ask directly about suicidal thoughts." },
     { "conditionId": "ptsd", "label": "Posttraumatic stress disorder", "note": "Panic attacks are frequent in PTSD. Ask about trauma history when attacks cluster around reminders." },
     { "conditionId": "generalized-anxiety-disorder", "label": "Generalized anxiety disorder", "note": "Broad everyday worry can coexist with panic attacks; treatment plans can address both." },
@@ -81,8 +81,8 @@
   "handouts": [],
   "statIds": ["us-panic-disorder-past-year", "us-any-anxiety-past-year", "global-anxiety-disorders-2021"],
   "culturalNotes": [
-    "Some Caribbean and other Latino clients may describe an 'ataque de nervios': an episode of shouting, crying, trembling, heat, and sometimes dissociation or aggression, often after family conflict or loss. It overlaps with panic attacks only in part; ask what happened before the episode and what it means to the client.",
-    "Some Cambodian clients may describe 'khyal cap' (wind attacks): dizziness, palpitations and breathlessness explained as wind-like substance rising in the body, sometimes with fear of fainting or death. Explore the client's own explanation before reframing symptoms.",
+    "Some Latino clients, particularly of Caribbean background, may describe an 'ataque de nervios'. It often erupts after a family shock or conflict and tends to be more emotionally expressive than a typical panic attack, so the two overlap only in part. Ask what happened just before and what the episode means to the client and family.",
+    "Some Cambodian clients may describe 'khyal cap' (wind attacks), understood within a traditional model of wind rising in the body and threatening serious harm. Bodily alarm is read through that framework, so explore the client's own explanation and feared consequences before reframing symptoms.",
     "Many clients first describe panic in purely physical terms (heart, stomach, 'nerves'). Respect the bodily explanation, coordinate with medical care, and introduce the panic cycle as an added way of understanding, not a replacement.",
     "Use a trained professional interpreter, not family members, when assessing in a language other than English; idioms for fear and bodily alarm translate poorly.",
     "GAD-7 scores do not measure panic severity directly, and cut-offs may perform differently across languages and cultural groups. Interpret scores alongside the interview.",

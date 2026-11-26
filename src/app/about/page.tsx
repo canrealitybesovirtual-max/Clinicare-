@@ -111,7 +111,7 @@ export default function AboutPage() {
           </p>
           <p>
             Substance-use information is never stored or transmitted. Every printable sheet about substance use carries
-            this notice in the footer of each page: 42 CFR Part 2 prohibits unauthorized disclosure of these records.
+            this notice in the footer of each page: 42 CFR Part 2 prohibits unauthorized use or disclosure of these records.
           </p>
         </Card>
       </section>

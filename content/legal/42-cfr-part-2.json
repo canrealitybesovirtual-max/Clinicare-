@@ -37,7 +37,7 @@
       "text": "42 CFR part 2 prohibits unauthorized use or disclosure of these records.",
       "citation": "42 CFR 2.32(a)(2), as amended February 16, 2024 (89 FR 12472)",
       "sourceUrl": "https://www.ecfr.gov/current/title-42/chapter-I/subchapter-A/part-2/subpart-C",
-      "note": "The 2024 Federal Register preamble says this short notice was modified to add the word \"use\". The app spec (docs/SPEC.md section 6 and G6), CLAUDE.md, src/lib/referral-links.ts (PART2_NOTICE) and many content files still print the older 2018 wording, \"42 CFR Part 2 prohibits unauthorized disclosure of these records.\" The owner and a healthcare attorney should confirm the exact current text on eCFR and update the export notice everywhere at once. Section 2.32(a)(1) offers a longer alternative notice."
+      "note": "The 2024 Federal Register preamble says this short notice was modified to add the word \"use\". The app spec (docs/SPEC.md section 6 and G6), CLAUDE.md, src/lib/referral-links.ts (PART2_NOTICE) and many content files still print the older 2018 wording, \"42 CFR Part 2 prohibits unauthorized use or disclosure of these records.\" The owner and a healthcare attorney should confirm the exact current text on eCFR and update the export notice everywhere at once. Section 2.32(a)(1) offers a longer alternative notice."
     }
   ],
   "appPositioning": "The app never stores or transmits substance use information (42 CFR Part 2 and CLAUDE.md). Substance-use screens show a Part 2 banner, and substance-use exports print a Part 2 notice; the owner must align that notice with the current regulatory text shown here.",

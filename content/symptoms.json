@@ -3,7 +3,7 @@
   "symptoms": [
     {
       "id": "panic-attacks-unexpected",
-      "label": "Recurrent sudden fear surges that arise without an obvious trigger (uncued panic attacks)",
+      "label": "Panic that arrives with no trigger the client can find, sometimes even waking them from sleep (uncued panic)",
       "clientLabel": "Sudden waves of strong fear that seem to come out of nowhere",
       "category": "panic",
       "synonyms": [
@@ -56,7 +56,7 @@
     },
     {
       "id": "panic-attack-cued",
-      "label": "Panic surges set off by specific situations, objects or reminders (cued or expected attacks)",
+      "label": "Panic that reliably shows up in particular settings or around particular reminders, so the client can predict it (cued or expected panic)",
       "clientLabel": "Waves of strong fear that happen in certain places or situations",
       "category": "panic",
       "synonyms": [
@@ -157,8 +157,8 @@
     },
     {
       "id": "fear-losing-control",
-      "label": "Dread of losing control, acting strangely or 'losing one's mind' during an episode",
-      "clientLabel": "Feeling afraid you will lose control or go crazy",
+      "label": "Mid-episode fear of 'cracking up' or of doing something uncontrolled or bizarre in front of others",
+      "clientLabel": "Feeling scared you will lose it or not be able to stop yourself",
       "category": "panic",
       "synonyms": [
         "going crazy",
@@ -183,8 +183,8 @@
     },
     {
       "id": "persistent-concern-future-attacks",
-      "label": "Ongoing dread of further attacks or of what they might mean (e.g., heart disease, humiliation)",
-      "clientLabel": "Worrying a lot about having another attack",
+      "label": "Apprehension that carries over between attacks: body-checking for warning signs and fear of what the next one could do to health or standing",
+      "clientLabel": "Always on watch for the next attack",
       "category": "panic",
       "synonyms": [
         "afraid of another attack",
@@ -225,8 +225,8 @@
     },
     {
       "id": "behavior-change-avoid-attacks",
-      "label": "Changes in routine made to prevent or manage attacks (safety behaviors, avoiding exertion or caffeine, carrying rescue items)",
-      "clientLabel": "Changing what you do to keep attacks from happening",
+      "label": "Safety behaviors the client relies on to prevent or ride out attacks, such as carrying unused medication, cutting out coffee or sitting near the door",
+      "clientLabel": "Habits you rely on to feel safe from an attack, like always carrying pills or water",
       "category": "behavioral",
       "synonyms": [
         "stopped exercising so my heart wont race",
@@ -287,8 +287,8 @@
     },
     {
       "id": "palpitations",
-      "label": "Racing, pounding or irregular-feeling heartbeat (palpitations)",
-      "clientLabel": "Heart racing or pounding",
+      "label": "Uncomfortable awareness of the heartbeat as fast, forceful or skipping (palpitations)",
+      "clientLabel": "Feeling your heart beat hard or fast",
       "category": "somatic",
       "synonyms": [
         "heart pounding",
@@ -334,8 +334,8 @@
     },
     {
       "id": "trembling",
-      "label": "Shaking or trembling of the hands or body",
-      "clientLabel": "Shaking or trembling",
+      "label": "Visible tremor or an inner sense of shakiness",
+      "clientLabel": "Hands or body shaking",
       "category": "somatic",
       "synonyms": [
         "shaking",
@@ -354,7 +354,7 @@
     },
     {
       "id": "shortness-of-breath",
-      "label": "Breathlessness, air hunger or a smothering sensation",
+      "label": "Air hunger: feeling unable to get a full or satisfying breath",
       "clientLabel": "Feeling like you cannot get enough air",
       "category": "somatic",
       "synonyms": [
@@ -382,7 +382,7 @@
     },
     {
       "id": "choking-sensation",
-      "label": "Throat tightness or a sensation of choking",
+      "label": "A tight or blocked feeling in the throat (choking sensation)",
       "clientLabel": "Feeling like you are choking",
       "category": "somatic",
       "synonyms": [
@@ -423,7 +423,7 @@
     },
     {
       "id": "nausea-abdominal-distress",
-      "label": "Nausea, stomach churning or abdominal upset",
+      "label": "Nausea or a churning, unsettled stomach",
       "clientLabel": "Upset stomach or feeling sick",
       "category": "somatic",
       "synonyms": [
@@ -446,8 +446,8 @@
     },
     {
       "id": "dizziness",
-      "label": "Light-headedness, dizziness, unsteadiness or near-fainting",
-      "clientLabel": "Feeling dizzy or light-headed",
+      "label": "Woozy or off-balance spells, sometimes with a sense of being about to pass out",
+      "clientLabel": "Feeling dizzy, like you might pass out",
       "category": "somatic",
       "synonyms": [
         "dizzy",
@@ -479,7 +479,7 @@
     },
     {
       "id": "chills-heat-sensations",
-      "label": "Sudden hot flushes or chills",
+      "label": "Waves of heat or cold passing through the body",
       "clientLabel": "Feeling suddenly hot or cold",
       "category": "somatic",
       "synonyms": [
@@ -499,8 +499,8 @@
     },
     {
       "id": "numbness-tingling",
-      "label": "Tingling or numbness, often in the hands, feet or face (paresthesias)",
-      "clientLabel": "Tingling or numb hands, feet or face",
+      "label": "Pins and needles or numb patches, often around the mouth or in the fingers (paresthesias)",
+      "clientLabel": "Pins and needles in your hands, feet or face",
       "category": "somatic",
       "synonyms": [
         "tingling",
@@ -519,8 +519,8 @@
     },
     {
       "id": "derealization-depersonalization",
-      "label": "Sense of unreality, or of being detached from one's own body or thoughts",
-      "clientLabel": "Feeling unreal, like in a dream, or outside your body",
+      "label": "Surroundings seem flat, foggy or staged, or the self feels strange, like watching oneself from behind glass (derealization, depersonalization)",
+      "clientLabel": "Feeling like the world looks fake or you are not really yourself",
       "category": "cognitive",
       "synonyms": [
         "felt unreal",
@@ -548,8 +548,8 @@
     },
     {
       "id": "avoid-public-transport",
-      "label": "Dread or avoidance of public transport (e.g., buses, trains, ferries, planes)",
-      "clientLabel": "Fear of buses, trains or planes",
+      "label": "Fear centered on shared transit, where getting off is not under the client's control; trips are skipped or cut to short hops",
+      "clientLabel": "Fear of rides you can't get off when you want, like a bus or train",
       "category": "avoidance",
       "synonyms": [
         "afraid of buses",
@@ -573,7 +573,7 @@
     },
     {
       "id": "avoid-open-spaces",
-      "label": "Dread or avoidance of wide-open areas (e.g., large car parks, fields, plazas)",
+      "label": "Unease in wide, exposed areas with nowhere to retreat to, such as a sports field or a beach",
       "clientLabel": "Fear of big open places",
       "category": "avoidance",
       "synonyms": [
@@ -587,8 +587,8 @@
     },
     {
       "id": "avoid-enclosed-spaces",
-      "label": "Dread or avoidance of enclosed or hard-to-exit places (e.g., elevators, tunnels, malls, small rooms)",
-      "clientLabel": "Fear of closed-in places like elevators, stores or tunnels",
+      "label": "Unease in closed-in places where the way out is far or blocked, such as an elevator, a tunnel or a windowless back room",
+      "clientLabel": "Fear of closed-in places like elevators or tunnels",
       "category": "avoidance",
       "synonyms": [
         "enclosed spaces",
@@ -608,8 +608,8 @@
     },
     {
       "id": "avoid-crowds-lines",
-      "label": "Dread or avoidance of crowds or waiting in lines",
-      "clientLabel": "Fear of crowds or waiting in line",
+      "label": "Unease when hemmed in by people, as in a packed concert or a long checkout queue, where slipping away is hard",
+      "clientLabel": "Feeling trapped in packed places or long lines",
       "category": "avoidance",
       "synonyms": [
         "avoid crowds",
@@ -629,8 +629,8 @@
     },
     {
       "id": "avoid-leaving-home-alone",
-      "label": "Dread or avoidance of being away from home by oneself",
-      "clientLabel": "Fear of leaving the house alone",
+      "label": "Going out alone feels unsafe; the client keeps to a 'safe zone' around home that may shrink over time",
+      "clientLabel": "Fear of going out on your own",
       "category": "avoidance",
       "synonyms": [
         "cant leave the house",
@@ -661,7 +661,7 @@
     },
     {
       "id": "needs-companion",
-      "label": "Relies on a trusted companion to face feared places",
+      "label": "A trusted person works as a safety signal: outings that feel impossible alone become possible with them along",
       "clientLabel": "Needing someone with you to go places",
       "category": "avoidance",
       "synonyms": [
@@ -690,8 +690,8 @@
     },
     {
       "id": "fear-escape-help-unavailable",
-      "label": "Belief that one could be stuck, or left without help, if sudden bodily alarm or an embarrassing loss of control occurred",
-      "clientLabel": "Worry that you could not get out or get help if you felt sick or panicky",
+      "label": "Fear of being caught out by sudden symptoms somewhere with no quick retreat and no one to step in; the place matters less than the 'what if'",
+      "clientLabel": "Fear of being stuck and alone if you start to feel sick or panicky",
       "category": "cognitive",
       "synonyms": [
         "afraid i cant get out",
@@ -734,8 +734,8 @@
     },
     {
       "id": "worry-excessive",
-      "label": "Broad, out-of-proportion worry about routine life matters, present much of the time",
-      "clientLabel": "Worrying a lot about many everyday things",
+      "label": "Worry that hops from one everyday topic to the next and runs well ahead of the real risk",
+      "clientLabel": "Your mind jumps from one worry to the next",
       "category": "anxiety",
       "synonyms": [
         "worry about everything",
@@ -778,7 +778,7 @@
     },
     {
       "id": "worry-hard-to-control",
-      "label": "Worry that feels difficult to stop, shift or set aside",
+      "label": "Once a worry starts, the client cannot easily park it or turn their attention elsewhere",
       "clientLabel": "Worry that is hard to turn off",
       "category": "anxiety",
       "synonyms": [
@@ -849,8 +849,8 @@
     },
     {
       "id": "restlessness",
-      "label": "Inner restlessness; feeling wound up or tense and unable to settle",
-      "clientLabel": "Feeling restless or on edge",
+      "label": "Physical restlessness: fidgeting, getting up and down, or trouble staying seated, with a sense of being unable to settle",
+      "clientLabel": "Feeling like you can't sit still or settle down",
       "category": "anxiety",
       "synonyms": [
         "on edge",
@@ -875,7 +875,7 @@
     },
     {
       "id": "fatigue",
-      "label": "Low energy, tiring easily or persistent tiredness",
+      "label": "Low stamina: drained by ordinary tasks or out of energy partway through the day",
       "clientLabel": "Feeling tired or low on energy",
       "category": "somatic",
       "synonyms": [
@@ -912,8 +912,8 @@
     },
     {
       "id": "concentration-difficulty",
-      "label": "Trouble focusing, slowed or foggy thinking, blanking out or indecision",
-      "clientLabel": "Trouble focusing or making decisions",
+      "label": "Attention that drifts or stalls, such as losing the thread while reading or talking, with foggy thinking or trouble making routine choices",
+      "clientLabel": "Hard to keep your mind on things or make small choices",
       "category": "cognitive",
       "synonyms": [
         "cant concentrate",
@@ -944,7 +944,7 @@
     },
     {
       "id": "irritability",
-      "label": "Irritability, short temper or angry outbursts",
+      "label": "A short fuse: snapping at people or flaring up over small frustrations",
       "clientLabel": "Getting annoyed or angry easily",
       "category": "mood",
       "synonyms": [
@@ -1000,8 +1000,8 @@
     },
     {
       "id": "insomnia",
-      "label": "Trouble falling asleep, staying asleep, early waking or unrefreshing sleep",
-      "clientLabel": "Trouble falling asleep or staying asleep",
+      "label": "Insomnia of any type (sleep-onset, middle-of-the-night or early-morning), or sleep that leaves the client unrested",
+      "clientLabel": "Sleep problems, like lying awake or waking up too early",
       "category": "sleep",
       "synonyms": [
         "cant sleep",
@@ -1077,8 +1077,8 @@
     },
     {
       "id": "depressed-mood",
-      "label": "Persistently low, sad, empty or hopeless mood",
-      "clientLabel": "Feeling sad, down or empty",
+      "label": "A low or heavy mood that sets the tone for most days, sometimes described as feeling gray or flat",
+      "clientLabel": "Feeling down or heavy most of the time",
       "category": "mood",
       "synonyms": [
         "depressed",
@@ -1120,7 +1120,7 @@
     },
     {
       "id": "anhedonia",
-      "label": "Loss of interest or enjoyment in usual activities (anhedonia)",
+      "label": "Things that used to draw the client in, such as hobbies, food, sex or company, now feel flat or not worth the effort (anhedonia)",
       "clientLabel": "Not enjoying things you used to like",
       "category": "mood",
       "synonyms": [
@@ -1163,7 +1163,7 @@
     },
     {
       "id": "appetite-change",
-      "label": "Notable change in appetite or weight not explained by intentional dieting",
+      "label": "Eating noticeably more or less than usual, or an unplanned shift in weight",
       "clientLabel": "Eating much more or much less than usual",
       "category": "somatic",
       "synonyms": [
@@ -1197,7 +1197,7 @@
     },
     {
       "id": "psychomotor-change",
-      "label": "Observable slowing or agitation of movement and speech",
+      "label": "Motor slowing or agitation visible in session, such as a slow, quiet voice or constant shifting in the chair (psychomotor change)",
       "clientLabel": "Moving or talking much slower, or feeling unable to stop moving",
       "category": "behavioral",
       "synonyms": [
@@ -1222,8 +1222,8 @@
     },
     {
       "id": "worthlessness-guilt",
-      "label": "Harsh self-criticism, sense of worthlessness or outsized guilt",
-      "clientLabel": "Feeling worthless or very guilty",
+      "label": "A harsh inner critic: the client sees self as a failure or a burden and takes blame far beyond their actual part",
+      "clientLabel": "Being very hard on yourself or blaming yourself for everything",
       "category": "cognitive",
       "synonyms": [
         "worthless",
@@ -1563,7 +1563,7 @@
     },
     {
       "id": "decreased-need-for-sleep",
-      "label": "Markedly reduced need for sleep with high energy (not tired despite little sleep)",
+      "label": "Sleeping only a few hours yet feeling charged rather than tired; unlike insomnia, the client does not miss the lost sleep",
       "clientLabel": "Barely sleeping but still feeling full of energy",
       "category": "safety",
       "redFlag": "mania",
@@ -1584,7 +1584,7 @@
     },
     {
       "id": "grandiosity-elevated-mood",
-      "label": "Elevated or expansive mood with grandiosity, pressured speech or impulsive spending",
+      "label": "An out-of-character high or driven state, with inflated plans or self-image, fast speech that is hard to interrupt, or spending sprees",
       "clientLabel": "Feeling unusually high, powerful or special, with lots of big plans",
       "category": "safety",
       "redFlag": "mania",
@@ -1692,8 +1692,8 @@
     },
     {
       "id": "traumatic-event-exposure",
-      "label": "Context: history of a traumatic event (e.g., assault, combat, serious accident, disaster, sudden violent loss); clinician to clarify the type of exposure",
-      "clientLabel": "Living through or seeing something very frightening or violent",
+      "label": "Context: a traumatic event in the client's history; the clinician clarifies what happened and how the client was exposed to it",
+      "clientLabel": "A very scary or violent event in your past",
       "category": "context",
       "synonyms": [
         "traumatic event",
@@ -1755,8 +1755,8 @@
     },
     {
       "id": "intrusive-memories",
-      "label": "Unwanted, upsetting memories of the event that push into awareness",
-      "clientLabel": "Upsetting memories that pop up when you do not want them",
+      "label": "Memories or images of the event that break in uninvited, often in the middle of ordinary tasks, and are hard to push away",
+      "clientLabel": "Memories of what happened that keep popping into your head",
       "category": "trauma",
       "synonyms": [
         "intrusive memories",
@@ -1787,7 +1787,7 @@
     },
     {
       "id": "nightmares",
-      "label": "Trauma-themed nightmares or upsetting dreams",
+      "label": "Bad dreams tied to the trauma, often waking the client and leaving them reluctant to go back to sleep",
       "clientLabel": "Bad dreams about what happened",
       "category": "trauma",
       "synonyms": [
@@ -1810,8 +1810,8 @@
     },
     {
       "id": "flashbacks",
-      "label": "Flashback episodes: feeling or acting as though the event is happening again",
-      "clientLabel": "Feeling like the bad event is happening again right now",
+      "label": "Flashbacks: the trauma is relived rather than recalled, with sensory fragments that carry a 'here and now' quality",
+      "clientLabel": "Moments when you feel pulled right back into what happened",
       "category": "trauma",
       "synonyms": [
         "flashbacks",
@@ -1831,8 +1831,8 @@
     },
     {
       "id": "cue-reactivity",
-      "label": "Strong emotional or bodily reactions when reminded of the event",
-      "clientLabel": "Strong upset or body reactions when something reminds you of it",
+      "label": "Reminders such as a smell, a sound, an anniversary or a passing thought set off a rush of distress and body alarm",
+      "clientLabel": "Getting very upset, shaky or tense when something reminds you of it",
       "category": "trauma",
       "synonyms": [
         "triggered",
@@ -1855,8 +1855,8 @@
     },
     {
       "id": "avoidance-trauma-reminders",
-      "label": "Efforts to avoid trauma-linked thoughts, feelings, conversations, people or places",
-      "clientLabel": "Staying away from things that remind you of what happened",
+      "label": "Avoidance that keeps the memory unprocessed: rerouting trips, shutting down talk about the event, or staying busy so the memory cannot surface",
+      "clientLabel": "Going out of your way so you don't have to face reminders",
       "category": "avoidance",
       "synonyms": [
         "avoid thinking about it",
@@ -1890,8 +1890,8 @@
     },
     {
       "id": "negative-beliefs",
-      "label": "Lasting negative beliefs about self, others or the world, or distorted blame for the event",
-      "clientLabel": "Strong negative thoughts about yourself, other people or the world since it happened",
+      "label": "Rigid conclusions drawn from the trauma about safety, trust, control or self-worth, including misplaced blame ('stuck points' in CPT terms)",
+      "clientLabel": "Since it happened, you see yourself and life in a much darker way",
       "category": "cognitive",
       "synonyms": [
         "world is dangerous",
@@ -1914,7 +1914,7 @@
     },
     {
       "id": "emotional-numbing-detachment",
-      "label": "Emotional numbing or feeling cut off from others; difficulty feeling positive emotions",
+      "label": "Emotional numbing: feelings seem turned down, and closeness with people who matter feels out of reach",
       "clientLabel": "Feeling numb or cut off from people",
       "category": "mood",
       "synonyms": [
@@ -1985,8 +1985,8 @@
     },
     {
       "id": "trauma-memory-gaps",
-      "label": "Gaps in memory for key parts of the event (not explained by head injury, alcohol or drugs)",
-      "clientLabel": "Not being able to remember parts of what happened",
+      "label": "Patchy memory for parts of the event; check for causes such as a concussion or intoxication at the time before assuming dissociation",
+      "clientLabel": "Blank spots in your memory of what happened",
       "category": "trauma",
       "synonyms": [
         "cant remember parts of it",
@@ -2000,7 +2000,7 @@
     },
     {
       "id": "reckless-self-destructive",
-      "label": "Risk-taking or self-endangering behavior",
+      "label": "Risk-taking that puts the client in danger, such as very fast driving or picking fights",
       "clientLabel": "Doing risky or dangerous things",
       "category": "behavioral",
       "synonyms": [

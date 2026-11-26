@@ -153,3 +153,11 @@ Rule: every external call sends only a standard code, a curated keyword, a drug 
 - **Use in app:** Hosting once accounts exist
 - **Phase:** 4
 - **Privacy rule:** BAA before any account data
+
+## Owner decisions (recorded)
+- **2026-11-26 — 42 CFR Part 2 reference lookups ALLOWED.** The owner approved sending curated substance-use
+  reference values (SUD ICD-10-CM/ICD-11 codes, curated terms, AUD medication names, addiction-counselor taxonomy,
+  location) to the public reference APIs above. Nothing typed by the clinician and no client data is ever sent.
+  Enabled with the server-only env var `ALLOW_SUD_REFERENCE_LOOKUPS=true` (set in render.yaml).
+- **2026-11-26 — Part 2 notice wording updated** to the current regulatory text:
+  "42 CFR Part 2 prohibits unauthorized use or disclosure of these records." (2024 Final Rule, 42 CFR 2.32).

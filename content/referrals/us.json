@@ -125,7 +125,7 @@
       "kind": "substance-use",
       "languages": ["en", "es"],
       "hours": "24/7, 365 days a year",
-      "notes": ["42 CFR Part 2 prohibits unauthorized disclosure of these records."],
+      "notes": ["42 CFR Part 2 prohibits unauthorized use or disclosure of these records."],
       "lastVerified": "2026-11-26",
       "verification": "Number (tel:1-800-662-4357, '1-800-662-HELP') and page URL confirmed 2026-11-26 in SAMHSA's FindTreatment.gov application, fetched directly from findtreatment.gov.",
       "sources": [
@@ -189,7 +189,7 @@
       "languages": ["en", "es"],
       "notes": [
         "Facility details are self-reported and can be out of date. Call to confirm services, eligibility and availability.",
-        "42 CFR Part 2 prohibits unauthorized disclosure of these records."
+        "42 CFR Part 2 prohibits unauthorized use or disclosure of these records."
       ],
       "lastVerified": "2026-11-26",
       "verification": "Site, Developer Guide v1.12 and JSON locator fetched directly on 2026-11-26.",
@@ -205,7 +205,7 @@
       "languages": ["en"],
       "notes": [
         "Overview page: https://www.samhsa.gov/find-help/locators/opioid-treatment-program-directory",
-        "42 CFR Part 2 prohibits unauthorized disclosure of these records."
+        "42 CFR Part 2 prohibits unauthorized use or disclosure of these records."
       ],
       "lastVerified": "2026-11-26",
       "verification": "Both URLs confirmed 2026-11-26 as linked from SAMHSA's FindTreatment.gov application (fetched directly). The directory page itself was not loaded.",
@@ -221,7 +221,7 @@
       "region": "US",
       "kind": "medication",
       "languages": ["en"],
-      "notes": ["42 CFR Part 2 prohibits unauthorized disclosure of these records."],
+      "notes": ["42 CFR Part 2 prohibits unauthorized use or disclosure of these records."],
       "lastVerified": "2026-11-26",
       "verification": "URL confirmed 2026-11-26 as linked from SAMHSA's FindTreatment.gov application ('Buprenorphine Practitioners'), fetched directly. The locator page itself was not loaded.",
       "sources": [
@@ -365,7 +365,7 @@
       "region": "US",
       "kind": "peer-support",
       "languages": ["en"],
-      "notes": ["42 CFR Part 2 prohibits unauthorized disclosure of these records."],
+      "notes": ["42 CFR Part 2 prohibits unauthorized use or disclosure of these records."],
       "lastVerified": "unverified",
       "verification": "Well-known organization URL; not checked online on 2026-11-26 (site not reachable from the build sandbox).",
       "sources": [{ "title": "SMART Recovery", "publisher": "SMART Recovery", "url": "https://smartrecovery.org/" }]
@@ -378,7 +378,7 @@
       "region": "US",
       "kind": "peer-support",
       "languages": ["en", "es", "fr"],
-      "notes": ["42 CFR Part 2 prohibits unauthorized disclosure of these records."],
+      "notes": ["42 CFR Part 2 prohibits unauthorized use or disclosure of these records."],
       "lastVerified": "unverified",
       "verification": "Well-known organization URL; not checked online on 2026-11-26 (site not reachable from the build sandbox).",
       "sources": [{ "title": "Alcoholics Anonymous", "publisher": "Alcoholics Anonymous World Services", "url": "https://www.aa.org/" }]
@@ -391,7 +391,7 @@
       "region": "US",
       "kind": "peer-support",
       "languages": ["en", "es"],
-      "notes": ["42 CFR Part 2 prohibits unauthorized disclosure of these records."],
+      "notes": ["42 CFR Part 2 prohibits unauthorized use or disclosure of these records."],
       "lastVerified": "unverified",
       "verification": "Well-known organization URL; not checked online on 2026-11-26 (site not reachable from the build sandbox).",
       "sources": [{ "title": "Narcotics Anonymous World Services", "publisher": "Narcotics Anonymous World Services", "url": "https://na.org/" }]
