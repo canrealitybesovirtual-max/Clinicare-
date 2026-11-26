@@ -59,11 +59,14 @@ const POSITIVES: [PhiType, string, string][] = [
   ["NAME", "pt Jose missed his appointment", "Jose"],
   ["NAME", "Spoke with John Q. Public by phone.", "John Q. Public"],
   ["NAME", "Ms. O'Brien-Walsh reports insomnia.", "O'Brien-Walsh"],
+  ["NAME", "Intake form says MARIA GONZALEZ in capitals.", "MARIA"],
+  ["NAME", "Intake form says MARIA GONZALEZ in capitals.", "GONZALEZ"],
   // ADDRESS
   ["ADDRESS", "Lives at 1600 Pennsylvania Ave NW with family.", "1600 Pennsylvania Ave NW"],
   ["ADDRESS", "Send mail to PO Box 4521 instead.", "PO Box 4521"],
   ["ADDRESS", "She moved into Apt 12C recently.", "Apt 12C"],
   ["ADDRESS", "Address is 123 Main Street, Springfield now.", "123 Main Street, Springfield"],
+  ["ADDRESS", "Works at 55 Water St., Suite 300 downtown.", "55 Water St., Suite 300"],
   ["ADDRESS", "She lives in Dayton with her kids.", "Dayton"],
   ["ADDRESS", "He moved to Fort Collins last spring.", "Fort Collins"],
   ["ADDRESS", "Originally from Toledo, came here for work.", "Toledo"],
@@ -218,6 +221,7 @@ const NEGATIVES: [string, string][] = [
   ["faith-based care", "Prefers Christian counseling with prayer."],
   ["session counts", "Session 4 of 12 on Tuesday."],
   ["modalities", "Trauma-focused CBT (TF-CBT), EMDR, DBT, ACT, and IPT."],
+  ["all-caps acronyms", "Screened with CAPS, MINI and SCID; on an SSRI, not an SNRI or MAOI; ADHD ruled out."],
   ["crisis line", "Gave 988 and findahelpline.com as crisis resources."],
 ];
 
@@ -322,6 +326,10 @@ describe("index correctness", () => {
     expect(r.findings).toHaveLength(1);
     expect(r.findings[0]!.type).toBe("ADDRESS");
     expect(text.slice(r.findings[0]!.start, r.findings[0]!.end)).toBe("456 John Street");
+  });
+
+  it("keeps a sentence-ending period after a street abbreviation", () => {
+    expect(scrubPHI("Lives at 1234 N 45th St. Call later.").clean).toBe("Lives at [ADDRESS]. Call later.");
   });
 
   it("cued identifiers beat bare formats", () => {

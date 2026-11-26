@@ -71,7 +71,7 @@
     {
       "itemId": "9",
       "threshold": 1,
-      "message": "Item 9 was answered above \"Not at all\". Follow up directly with a suicide-risk assessment (for example, the C-SSRS) and safety planning, guided by your clinical judgment and local protocol. This app does not assess or decide risk."
+      "message": "Item 9 answered above \"Not at all\": follow up directly with a suicide-risk assessment (for example, the C-SSRS) and safety planning, guided by your clinical judgment and local protocol. This app does not assess or decide risk."
     }
   ],
   "citation": "Kroenke K, Spitzer RL, Williams JBW. The PHQ-9: validity of a brief depression severity measure. J Gen Intern Med. 2001;16(9):606-613.",

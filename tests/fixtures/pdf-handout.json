@@ -1,0 +1,52 @@
+{
+  "id": "fixture-breathing-practice",
+  "title": "Fixture Handout: Slow Breathing Practice",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 10,
+  "intro": "This is a test fixture, not clinical content. It uses “smart quotes”, an arrow → and a sign ≥ so the PDF sanitizer has something to convert, plus an emoji 🙂 that must be dropped.",
+  "sections": [
+    {
+      "heading": "Getting ready",
+      "body": "Find a quiet spot. Sit with both feet on the floor.",
+      "steps": [
+        "Set a timer for 5 minutes.",
+        "Rest one hand on your belly.",
+        "Breathe in for a count of 4, then out for a count of 6."
+      ]
+    },
+    {
+      "heading": "Long section to force a page break",
+      "steps": [
+        "Step text that repeats so the layout needs more than one page. Step text that repeats so the layout needs more than one page.",
+        "Step text that repeats so the layout needs more than one page. Step text that repeats so the layout needs more than one page.",
+        "Step text that repeats so the layout needs more than one page. Step text that repeats so the layout needs more than one page.",
+        "Step text that repeats so the layout needs more than one page. Step text that repeats so the layout needs more than one page.",
+        "Step text that repeats so the layout needs more than one page. Step text that repeats so the layout needs more than one page.",
+        "Step text that repeats so the layout needs more than one page. Step text that repeats so the layout needs more than one page.",
+        "Step text that repeats so the layout needs more than one page. Step text that repeats so the layout needs more than one page.",
+        "Step text that repeats so the layout needs more than one page. Step text that repeats so the layout needs more than one page.",
+        "Step text that repeats so the layout needs more than one page. Step text that repeats so the layout needs more than one page.",
+        "Step text that repeats so the layout needs more than one page. Step text that repeats so the layout needs more than one page.",
+        "Step text that repeats so the layout needs more than one page. Step text that repeats so the layout needs more than one page.",
+        "Step text that repeats so the layout needs more than one page. Step text that repeats so the layout needs more than one page."
+      ]
+    }
+  ],
+  "practiceLog": {
+    "columns": ["Day", "Minutes practiced", "Tension before (0-10)", "Tension after (0-10)", "Notes"],
+    "rows": 14
+  },
+  "safetyNote": "Stop if you feel dizzy or unwell, and breathe normally. Talk with your counselor about any problems.",
+  "sources": [
+    {
+      "title": "Fixture source for tests only",
+      "publisher": "Test Publisher",
+      "url": "https://example.org/fixture",
+      "year": 2026
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

@@ -420,7 +420,14 @@ function detectNames(text: string, add: Add): void {
     }
     if (DISTINCTIVE_SURNAMES.has(t.t)) add("NAME", t.s, t.e);
   }
+
+  // ALL-CAPS typing ("JOHN SMITH"). 4+ letters and listed names only, so acronyms (PTSD, SNRI, CAPS) are safe.
+  each(text, ALLCAPS_TOKEN_RE, (m) => {
+    const t = capitalize(m[0].toLowerCase());
+    if (FIRST_NAMES.has(t) || DISTINCTIVE_SURNAMES.has(t)) add("NAME", m.index, m.index + m[0].length);
+  });
 }
+const ALLCAPS_TOKEN_RE = /(?<![A-Za-z0-9'\u2019-])[A-Z]{4,}(?![A-Za-z0-9])/g;
 
 /* ------------------------------------------------------------------ */
 /* ADDRESS and ZIP                                                      */
@@ -436,9 +443,10 @@ const UNIT_VALUE = "(?:\\d[A-Za-z0-9-]{0,5}|[A-Za-z]\\d[A-Za-z0-9-]{0,4}|[A-Za-z
 const STREET_RE = new RegExp(
   "\\b\\d{1,6}[A-Za-z]?(?:-\\d{1,4})?(?:[ \\t]+(?:N[EW]|S[EW]|[NSEW]|North|South|East|West)\\.?)?" +
     "(?:[ \\t]+(?:[A-Z][A-Za-z'.-]*|\\d{1,3}(?:st|nd|rd|th))){1,4}?" +
-    `[ \\t]+(?:${STREET_SUFFIX})\\b\\.?` +
-    "(?:[ \\t]+(?:N[EW]|S[EW]|[NSEW])\\b\\.?)?" +
-    `(?:,?[ \\t]*(?:${UNIT_WORD}\\.?|#)[ \\t]*#?[ \\t]*${UNIT_VALUE})?`,
+    // A trailing "." is left in place: it may end the sentence.
+    `[ \\t]+(?:${STREET_SUFFIX})\\b` +
+    "(?:\\.?[ \\t]+(?:N[EW]|S[EW]|[NSEW])\\b)?" +
+    `(?:\\.?,?[ \\t]*(?:${UNIT_WORD}\\.?|#)[ \\t]*#?[ \\t]*${UNIT_VALUE})?`,
   "g",
 );
 const PO_BOX_RE = /\b(?:P\.?[ \t]?O\.?|Post[ \t]+Office)[ \t]*Box[ \t]+\d{1,8}\b/gi;
@@ -499,7 +507,7 @@ function detectAddresses(text: string, add: Add): void {
   each(text, STREET_RE, (m) => {
     let end = m.index + m[0].length;
     // ", Springfield" after a street line is the city.
-    const comma = at(text, /,[ \t]*/y, end);
+    const comma = at(text, /\.?,[ \t]*/y, end);
     if (comma) {
       const cityEnd = readPlace(text, end + comma[0].length, false);
       if (cityEnd > 0) end = cityEnd;
@@ -767,12 +775,12 @@ function detectIps(text: string, add: Add): void {
 /* VEHICLE, DEVICE, BIOMETRIC, OTHER_ID                                 */
 /* ------------------------------------------------------------------ */
 
-const QUALIFIER = "(?:id|identifier|number|num|no|#)";
+const QUALIFIER_WORDS = "id|identifier|number|num|no|#";
 const CUE_TAIL = "(?:[ \\t]+(?:is|was|of))?[ \\t]*[:#=]?[ \\t]*";
 
 /** Builds a cue regex whose match ends exactly where the identifier value starts. */
 function cue(core: string, qualifier: "optional" | "required" = "optional", extraQualifiers = ""): RegExp {
-  const q = extraQualifiers ? `(?:${QUALIFIER.slice(3, -1)}|${extraQualifiers})` : QUALIFIER;
+  const q = extraQualifiers ? `(?:${QUALIFIER_WORDS}|${extraQualifiers})` : `(?:${QUALIFIER_WORDS})`;
   const qual = qualifier === "required" ? `[ \\t]*${q}\\.?` : `(?:[ \\t]*${q}\\.?)?`;
   return new RegExp(`(?<![A-Za-z0-9])(?:${core})(?![A-Za-z])${qual}${CUE_TAIL}`, "gi");
 }
