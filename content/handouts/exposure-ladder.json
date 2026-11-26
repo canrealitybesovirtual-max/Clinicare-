@@ -1,0 +1,83 @@
+{
+  "id": "exposure-ladder",
+  "title": "Exposure Ladder: Facing Fears Step by Step",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 20,
+  "intro": "When something scares us, we often stay away from it. Staying away brings quick relief. But over time, the fear can grow, and life can get smaller. An exposure ladder helps you face a fear in small steps, starting with easier ones. Each step helps you learn that you can handle more than your fear tells you. You can build the ladder with your counselor or therapist. Making the ladder takes about 20 minutes.",
+  "sections": [
+    {
+      "heading": "Build your ladder",
+      "steps": [
+        "Pick one goal. Make it clear, like 'Take the bus to the store by myself.'",
+        "List 6 to 10 steps that lead up to that goal. Start with steps that feel a little hard but doable. The last step is your goal.",
+        "Rate how scary each step feels from 0 to 10. A 0 means no fear. A 10 means the most fear you can imagine.",
+        "Put the steps in order, from lowest fear to highest. Write the easiest step in the first row of the log.",
+        "Try to have some low steps (around 3 or 4), some middle steps (5 or 6), and some high steps (7 or more)."
+      ]
+    },
+    {
+      "heading": "Example ladder",
+      "body": "Goal: Shop at a busy store alone. Steps: Sit in the car in the store parking lot (3). Walk in with a friend for 5 minutes (4). Walk in alone for 5 minutes (5). Buy one item while a friend waits outside (6). Shop alone at a quiet time (7). Shop alone at a busy time (9)."
+    },
+    {
+      "heading": "How to practice a step",
+      "steps": [
+        "Start with the lowest step. Plan a day and time to do it.",
+        "Before you start, ask yourself, 'What do I fear will happen?'",
+        "Do the step. Stay long enough to learn something new. Fear often goes up at first and then comes down.",
+        "You do not have to wait for your fear to reach 0. The goal is to learn that you can handle it.",
+        "Notice things you do to feel safer, like staying near the exit, holding on to someone, or keeping your mind busy. Try to drop them, a little at a time.",
+        "Afterward, ask yourself: Did what I feared happen? What did I learn?",
+        "Repeat the step on different days until it feels easier. Then move up to the next step."
+      ]
+    },
+    {
+      "heading": "Tips",
+      "steps": [
+        "Practice often. Regular practice helps more than once in a while.",
+        "Mix it up. Try the same step in different places or at different times of day.",
+        "If a step feels too big, add a smaller step in between.",
+        "Feeling scared during practice is normal. It means you are doing the work. It is not a sign of danger.",
+        "Be proud of each step, even small ones.",
+        "Bring this sheet to your next visit."
+      ]
+    },
+    {
+      "heading": "How to use the practice log",
+      "body": "Write each step in the Step column, easiest first. In the Fear column, write how scary the step seems before you try it. Each time you practice, write the date. Then rate your fear again in the last column. Your fear may not drop much at first. That is okay."
+    }
+  ],
+  "practiceLog": {
+    "columns": ["Step", "Fear (0-10)", "Date practiced", "Fear after (0-10)"],
+    "rows": 10
+  },
+  "safetyNote": "Safety first: Only practice steps that are safe. Exposure means facing things that feel scary but are not truly dangerous. Never practice anything that could get you hurt. If you have a health problem, such as heart or lung trouble, or you are pregnant, ask your doctor which steps are okay for you. Do not use alcohol or other drugs to get through a step. If a fear is linked to something very upsetting that happened to you, plan those steps with your counselor or therapist first. This skill is not for emergencies. In the US, call or text 988 or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sources": [
+    {
+      "title": "NICE guideline CG113: managing anxiety and panic in adults",
+      "publisher": "National Institute for Health and Care Excellence (NICE)",
+      "url": "https://www.nice.org.uk/guidance/cg113",
+      "year": 2011
+    },
+    {
+      "title": "Maximizing exposure therapy: an inhibitory learning approach (Craske et al.)",
+      "publisher": "Behaviour Research and Therapy (PubMed Central)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4114726/",
+      "year": 2014
+    },
+    {
+      "title": "Psychotherapies (health topic)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/topics/psychotherapies"
+    },
+    {
+      "title": "Psychological Treatments (treatment index)",
+      "publisher": "APA Division 12, Society of Clinical Psychology",
+      "url": "https://div12.org/psychological-treatments/treatments/"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

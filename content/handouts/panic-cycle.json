@@ -1,0 +1,86 @@
+{
+  "id": "panic-cycle",
+  "title": "Understanding the Panic Cycle",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 10,
+  "intro": "A panic attack is a wave of strong fear that comes on fast. Your heart may pound. You may feel short of breath, dizzy, or shaky. You may feel sure that something terrible is about to happen. Panic attacks feel awful, but they pass. This sheet shows how a panic attack can feed itself, and how you can break the cycle. It takes about 10 minutes to read.",
+  "sections": [
+    {
+      "heading": "How the cycle works",
+      "body": "Panic often follows the same pattern. Each step feeds the next one.",
+      "steps": [
+        "Something sets it off. It might be a place, a thought, or a body feeling, like a skipped heartbeat. Sometimes it seems to come out of nowhere.",
+        "You notice a body feeling, like a racing heart, a tight chest, or feeling light-headed.",
+        "Your mind reads the feeling as a sign of danger. You might think, 'I'm having a heart attack,' 'I'm going to pass out,' or 'I'm losing control.'",
+        "That scary thought makes you more afraid.",
+        "Fear turns on your body's alarm. Your heart beats faster and you breathe faster. The body feelings get stronger.",
+        "The stronger feelings seem to prove the scary thought. So the cycle goes around again."
+      ]
+    },
+    {
+      "heading": "Your body's alarm",
+      "body": "Your body has a built-in alarm. It gets you ready to fight or run when there is danger. It speeds up your heart and breathing to send more blood and air to your muscles. In a panic attack, the alarm goes off when there is no real danger. It is like a smoke alarm that goes off when you burn toast. It is loud and scary, but there is no fire. The alarm cannot stay on high forever. Even if you do nothing, your body calms down on its own."
+    },
+    {
+      "heading": "What keeps panic going",
+      "body": "These things make sense, and they bring quick relief. But they can keep your mind from learning that the feelings are not dangerous. Over time, they can make panic stronger and your world smaller.",
+      "steps": [
+        "Staying away from places or things you link with panic.",
+        "Doing things to feel safe, like always sitting near the door or always bringing someone with you.",
+        "Checking your body over and over for signs of a new attack.",
+        "Worrying a lot about when the next attack will come."
+      ]
+    },
+    {
+      "heading": "How to break the cycle",
+      "steps": [
+        "Learn the cycle. Knowing what is happening can take away some of the fear.",
+        "Catch the scary thought. Ask, 'Is this really danger, or is it my alarm going off again? What happened the last time I felt this way?'",
+        "Let the feelings come and go. Try not to fight them. Tell yourself, 'This feels bad, but it will pass.'",
+        "Stay where you are, if it is safe. Leaving can teach your brain that you just escaped danger.",
+        "With your counselor or therapist, slowly face the places and feelings you have been avoiding."
+      ]
+    },
+    {
+      "heading": "Get checked by a doctor",
+      "body": "Some health problems can cause feelings like panic. Examples are heart, lung, or thyroid problems, some medicines, and too much caffeine. If you have not done so, see a doctor to check your body. Also see a doctor if your symptoms change or feel different from your usual panic."
+    },
+    {
+      "heading": "How to use the practice log",
+      "body": "When you have a panic attack or a strong rush of fear, write it down as soon as you can. Note what was happening, what you felt in your body, and the scary thought. Rate how strong the fear was from 0 to 10. Look for patterns. Bring the log to your next visit."
+    }
+  ],
+  "practiceLog": {
+    "columns": ["Day", "What was happening", "Body feelings", "Scary thought", "Fear (0-10)"],
+    "rows": 7
+  },
+  "safetyNote": "Safety first: Panic can feel like a heart attack. If you have chest pain, trouble breathing, or fainting that is new, different, or does not go away, call 911 or your local emergency number. It is always okay to get checked. This sheet is not for emergencies. If you have thoughts of hurting yourself or someone else, call or text 988 in the US, or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sources": [
+    {
+      "title": "A cognitive approach to panic (Clark)",
+      "publisher": "Behaviour Research and Therapy",
+      "url": "https://doi.org/10.1016/0005-7967%2886%2990011-2",
+      "year": 1986
+    },
+    {
+      "title": "When Fear Overwhelms (NIMH brochure on panic attacks)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/publications/panic-disorder-when-fear-overwhelms"
+    },
+    {
+      "title": "NICE guideline CG113: managing anxiety and panic in adults",
+      "publisher": "National Institute for Health and Care Excellence (NICE)",
+      "url": "https://www.nice.org.uk/guidance/cg113",
+      "year": 2011
+    },
+    {
+      "title": "Psychological Treatments (treatment index)",
+      "publisher": "APA Division 12, Society of Clinical Psychology",
+      "url": "https://div12.org/psychological-treatments/treatments/"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

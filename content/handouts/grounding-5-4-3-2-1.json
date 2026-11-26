@@ -1,0 +1,86 @@
+{
+  "id": "grounding-5-4-3-2-1",
+  "title": "5-4-3-2-1 Grounding",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 5,
+  "intro": "Strong feelings or upsetting memories can pull your mind away from the here and now. You might feel far away or numb. It might feel like something from the past is happening again. Grounding uses your five senses to bring your mind back to the present. It takes about 2 to 5 minutes. You can do it almost anywhere, and you keep your eyes open the whole time.",
+  "sections": [
+    {
+      "heading": "Before you start",
+      "steps": [
+        "Keep your eyes open. Look around the room.",
+        "Put both feet flat on the floor. Notice the floor under your feet.",
+        "Take one slow breath in and a longer breath out."
+      ]
+    },
+    {
+      "heading": "The 5-4-3-2-1 steps",
+      "body": "Go slowly. Name each thing out loud or in your head. Take your time with each sense.",
+      "steps": [
+        "Look. Name 5 things you can see, like a blue cup, a window, or your shoe.",
+        "Touch. Name 4 things you can feel, like your chair, your clothes, the floor, or something in your hand.",
+        "Listen. Name 3 things you can hear, like a fan, a car outside, or your own breathing.",
+        "Smell. Name 2 things you can smell. If you can't smell anything, name 2 smells you like.",
+        "Taste. Name 1 thing you can taste. You can take a sip of water, or think of a food you like."
+      ]
+    },
+    {
+      "heading": "Check in when you finish",
+      "steps": [
+        "Say where you are and what day it is.",
+        "If you are safe right now, tell yourself so. For example: 'I am in my kitchen. It is Tuesday. I am safe right now.'",
+        "Notice how you feel. If you still feel far away, go through the steps again."
+      ]
+    },
+    {
+      "heading": "Other ways to ground yourself",
+      "steps": [
+        "Hold a cool drink, or run cool water over your hands. Notice how it feels.",
+        "Press your feet into the floor, or push your palms together for a few seconds.",
+        "Count everything in the room that is blue, or name all the colors you see.",
+        "Carry a small object, like a smooth stone, to hold and notice.",
+        "If one of your senses does not work well for you, skip it. Use the senses that work best for you."
+      ]
+    },
+    {
+      "heading": "Tips for practice",
+      "steps": [
+        "Practice when you feel calm first. Then the steps will come more easily when you need them.",
+        "Keep a small card with the steps in your wallet or bag.",
+        "If your mind drifts, that is okay. Gently move on to the next sense.",
+        "Tell your counselor or therapist how it went. Together you can find what works best for you."
+      ]
+    },
+    {
+      "heading": "How to use the practice log",
+      "body": "Each time you practice, write down what was going on. Rate how upset you felt before and after, from 0 to 10. A 0 means not upset at all. A 10 means the most upset you can imagine."
+    }
+  ],
+  "practiceLog": {
+    "columns": ["Day", "What was going on", "Upset before (0-10)", "Upset after (0-10)"],
+    "rows": 7
+  },
+  "safetyNote": "Safety first: Grounding helps you come back to the present. It does not fix a situation that is unsafe. If you are in danger right now, or someone is hurting you, get to a safe place and call for help. If you often lose track of time, feel cut off from your body, or have memories that feel like they are happening again, tell your counselor or therapist. This skill is not for emergencies. In the US, call or text 988 or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sources": [
+    {
+      "title": "Coping With Traumatic Events (health topic)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/topics/coping-with-traumatic-events"
+    },
+    {
+      "title": "Staying present: incorporating mindfulness into therapy for dissociation (Zerubavel & Messman-Moore)",
+      "publisher": "Mindfulness (Springer)",
+      "url": "https://doi.org/10.1007/s12671-013-0261-3",
+      "year": 2015
+    },
+    {
+      "title": "Meditation and Mindfulness: Effectiveness and Safety",
+      "publisher": "National Center for Complementary and Integrative Health (NCCIH)",
+      "url": "https://www.nccih.nih.gov/health/meditation-and-mindfulness-effectiveness-and-safety"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

@@ -1,0 +1,76 @@
+{
+  "id": "worry-log",
+  "title": "Worry Log",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 15,
+  "intro": "Everyone worries sometimes. But worry can take up a lot of time and energy, and it can keep you up at night. This log helps you sort your worries. Some worries are about problems you can do something about. Others are about things you can't control right now. Sorting them helps you choose what to do next: make a plan, or set the worry aside for now. The log and a short worry time take about 15 to 30 minutes a day.",
+  "sections": [
+    {
+      "heading": "Step 1: Write it down",
+      "steps": [
+        "When a worry shows up, write it in the Worry column. Use a few words, like 'rent is due' or 'what if I get sick.'",
+        "Getting it on paper can help your mind let go of it for now."
+      ]
+    },
+    {
+      "heading": "Step 2: Ask, 'Can I act on it?'",
+      "body": "Ask yourself: Is this about a real problem that is happening now? Is there something I can do about it, even something small? Write Yes or No in the second column."
+    },
+    {
+      "heading": "Step 3: Choose a next step",
+      "steps": [
+        "If Yes: Write one small, clear step and when you will do it. For example, 'Call the landlord Monday at 10.' Then do it.",
+        "If the problem is big, break it into smaller steps. Write down only the first one.",
+        "If No: The worry may be about something you can't change, or a 'what if' that may never happen. Write 'Set aside' or 'Save for worry time.'",
+        "Then bring your mind back to what you are doing. Notice what you can see, hear, and feel around you."
+      ]
+    },
+    {
+      "heading": "Try a daily worry time",
+      "steps": [
+        "Pick a set time each day to worry, for up to 30 minutes. Use the same place each time. Choose a time well before bed.",
+        "When a worry pops up during the day, write it down. Tell yourself, 'I will think about this at worry time.'",
+        "At worry time, read your list. Some worries may not seem as big anymore. Cross those off.",
+        "Use the rest of the time to think through the others or plan next steps.",
+        "When time is up, stop. Do something else, like take a walk or start a task."
+      ]
+    },
+    {
+      "heading": "Tips",
+      "steps": [
+        "Putting off a worry may feel strange at first. It gets easier with practice.",
+        "Some worries are about real hard times, like money, housing, health, or safety. Your counselor can help you find support or resources.",
+        "Bring this log to your next visit."
+      ]
+    }
+  ],
+  "practiceLog": {
+    "columns": ["Worry", "Can I act on it?", "Next step"],
+    "rows": 8
+  },
+  "safetyNote": "Safety first: If a worry is about your safety right now, such as someone hurting or threatening you, do not save it for later. Get help now. If worry keeps you from sleeping, eating, or getting through the day, tell your counselor or doctor. This sheet is not for emergencies. If you have thoughts of hurting yourself or someone else, call or text 988 in the US, or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sources": [
+    {
+      "title": "NICE guideline CG113: managing anxiety and panic in adults",
+      "publisher": "National Institute for Health and Care Excellence (NICE)",
+      "url": "https://www.nice.org.uk/guidance/cg113",
+      "year": 2011
+    },
+    {
+      "title": "Stimulus control applications to the treatment of worry (Borkovec et al.)",
+      "publisher": "Behaviour Research and Therapy (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/6615390/",
+      "year": 1983
+    },
+    {
+      "title": "A preliminary investigation of stimulus control training for worry (McGowan & Behar)",
+      "publisher": "Behavior Modification (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22977265/",
+      "year": 2013
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

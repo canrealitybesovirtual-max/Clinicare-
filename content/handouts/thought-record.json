@@ -1,0 +1,86 @@
+{
+  "id": "thought-record",
+  "title": "Thought Record",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 15,
+  "intro": "The way we think about a moment can change how we feel about it. When a strong feeling hits, like sadness, worry, or anger, a thought has often just gone through your mind. This sheet helps you catch that thought, look at it closely, and find other ways to see things. The goal is not to think only happy thoughts. The goal is to see the whole picture. Each entry takes about 10 to 15 minutes.",
+  "sections": [
+    {
+      "heading": "When to fill it in",
+      "body": "Fill in a row when you notice your mood change. If you can't do it right away, do it later that day while you still remember."
+    },
+    {
+      "heading": "What goes in each column",
+      "steps": [
+        "Situation: Write what was going on. Where were you? Who was there? What happened? Stick to the facts, in a few words.",
+        "Thought: Write what went through your mind. Ask yourself, 'What was I telling myself?' or 'What did I think would happen?'",
+        "Feeling (0-10): Name the feeling, like sad, scared, angry, or ashamed. Rate how strong it was from 0 to 10.",
+        "Other ways to see it: Look at the thought the way a fair friend would. Use the questions below for help.",
+        "Feeling after (0-10): Rate the same feeling again after you look for other ways to see it."
+      ]
+    },
+    {
+      "heading": "Questions to help you see other sides",
+      "steps": [
+        "What facts back up this thought? What facts do not fit with it?",
+        "What would I say to a friend who had this thought?",
+        "Am I jumping to the worst outcome? What is most likely to happen?",
+        "Is there another way to explain what happened?",
+        "Will this matter a week from now? A year from now?",
+        "If the thought is true, what could I do to cope?"
+      ]
+    },
+    {
+      "heading": "Example",
+      "body": "Situation: A friend did not text back all day. Thought: 'She is mad at me.' Feeling: worried, 7. Other ways to see it: 'She might be busy at work. She was kind to me last week. I can ask her if things are okay.' Feeling after: worried, 4."
+    },
+    {
+      "heading": "Tips",
+      "steps": [
+        "Thoughts are not facts. They are ideas your mind comes up with. You can check them.",
+        "Your feeling may not drop much at first. Even a small change counts.",
+        "If you can't think of another way to see it, leave that box blank. Talk about it at your next visit.",
+        "Bring this sheet to your next visit."
+      ]
+    }
+  ],
+  "practiceLog": {
+    "columns": ["Situation", "Thought", "Feeling (0-10)", "Other ways to see it", "Feeling after (0-10)"],
+    "rows": 5
+  },
+  "safetyNote": "Safety first: Some thoughts need more help than a worksheet can give. If you have thoughts of hurting yourself or someone else, or thoughts that life is not worth living, do not wait for your next visit. Talk to someone now. In the US, call or text 988 or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sources": [
+    {
+      "title": "NICE guideline NG222: treatment and management in adults (includes CBT)",
+      "publisher": "National Institute for Health and Care Excellence (NICE)",
+      "url": "https://www.nice.org.uk/guidance/ng222",
+      "year": 2022
+    },
+    {
+      "title": "NICE guideline CG113: managing anxiety and panic in adults",
+      "publisher": "National Institute for Health and Care Excellence (NICE)",
+      "url": "https://www.nice.org.uk/guidance/cg113",
+      "year": 2011
+    },
+    {
+      "title": "Psychotherapies (health topic)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/topics/psychotherapies"
+    },
+    {
+      "title": "Examining the effects of thought records and behavioral experiments in instigating belief change (McManus et al.)",
+      "publisher": "Journal of Behavior Therapy and Experimental Psychiatry",
+      "url": "https://doi.org/10.1016/j.jbtep.2011.07.003",
+      "year": 2012
+    },
+    {
+      "title": "Psychological Treatments (treatment index)",
+      "publisher": "APA Division 12, Society of Clinical Psychology",
+      "url": "https://div12.org/psychological-treatments/treatments/"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

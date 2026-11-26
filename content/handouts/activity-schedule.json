@@ -1,0 +1,75 @@
+{
+  "id": "activity-schedule",
+  "title": "Activity Schedule",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 15,
+  "intro": "When your mood is low, it is common to do less. You may stop doing things you used to enjoy, and chores can pile up. Doing less can make your mood drop even more. An activity schedule helps you plan small, doable activities and notice how they affect you. You do not have to wait until you feel like it. Often, doing comes first and feeling better follows. Planning your week takes about 15 minutes.",
+  "sections": [
+    {
+      "heading": "Two kinds of activities",
+      "body": "Try to plan a mix of both kinds each week. Pleasure activities are things you enjoy, like a walk, music, a call with a friend, or time outside. Mastery activities give you a sense of 'I did it.' Examples are paying a bill, doing laundry, or cooking a meal."
+    },
+    {
+      "heading": "Plan your week",
+      "steps": [
+        "Think about what matters to you, like family, friends, health, faith, work, or fun. Choose activities that fit those things.",
+        "Start small. Pick 1 or 2 easy activities a day. A 10-minute walk counts.",
+        "Write each activity in the log next to the day you plan to do it. Pick a time, too.",
+        "Break big tasks into small parts. Instead of 'clean the house,' try 'wash the dishes.'"
+      ]
+    },
+    {
+      "heading": "After each activity",
+      "steps": [
+        "Rate Pleasure from 0 to 10. How much did you enjoy it? A 0 means not at all. A 10 means very much.",
+        "Rate Mastery from 0 to 10. How much did you feel 'I did it'? A 0 means not at all. A 10 means a lot.",
+        "Rate it right after, if you can. Later on, it is easy to forget the good parts."
+      ]
+    },
+    {
+      "heading": "Tips",
+      "steps": [
+        "Do the activity even if you don't feel like it. The wish to do things often shows up after you start.",
+        "Low numbers are okay. A 2 is still more than 0, and it tells you something useful.",
+        "If you miss a day, just start again the next day. You do not need to catch up.",
+        "Ask someone to join you, if that helps.",
+        "At the end of the week, look back. Which activities helped most? Plan more of those.",
+        "Bring this sheet to your next visit."
+      ]
+    }
+  ],
+  "practiceLog": {
+    "columns": ["Day", "Activity", "Pleasure (0-10)", "Mastery (0-10)"],
+    "rows": 14
+  },
+  "safetyNote": "Safety first: Pick activities that are safe for your body. If you have a health problem, or you have not been active in a while, ask your doctor before you start a new kind of exercise. Low mood can sometimes come with thoughts of death or of hurting yourself. If that happens, do not wait for your next visit. Talk to someone now. In the US, call or text 988 or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sources": [
+    {
+      "title": "NICE guideline NG222: treatment and management in adults (includes behavioural activation)",
+      "publisher": "National Institute for Health and Care Excellence (NICE)",
+      "url": "https://www.nice.org.uk/guidance/ng222",
+      "year": 2022
+    },
+    {
+      "title": "Behavioural activation: an updated meta-analysis of effectiveness and subgroup analysis (Ekers et al.)",
+      "publisher": "PLoS ONE (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24936656/",
+      "year": 2014
+    },
+    {
+      "title": "Cochrane review CD013305: behavioural activation therapy in adults (Uphoff et al.)",
+      "publisher": "Cochrane Database of Systematic Reviews",
+      "url": "https://doi.org/10.1002/14651858.CD013305.pub2",
+      "year": 2020
+    },
+    {
+      "title": "Psychological Treatments (treatment index)",
+      "publisher": "APA Division 12, Society of Clinical Psychology",
+      "url": "https://div12.org/psychological-treatments/treatments/"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

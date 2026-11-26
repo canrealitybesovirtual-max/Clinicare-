@@ -1,0 +1,80 @@
+{
+  "id": "breathing-practice",
+  "title": "Slow Breathing Practice",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 10,
+  "intro": "When you feel stressed, your breathing often gets fast and shallow. Slow breathing is a simple way to help your body settle down. You breathe in gently. Then you breathe out a little longer than you breathed in. You can do it sitting, standing, or lying down. No one around you has to know. One practice takes about 5 to 10 minutes.",
+  "sections": [
+    {
+      "heading": "Getting ready",
+      "steps": [
+        "Sit or lie down in a way that feels good. Let your shoulders drop.",
+        "Loosen anything tight around your waist.",
+        "Put one hand on your chest and the other hand on your belly.",
+        "Close your eyes, or rest your eyes on one spot in front of you."
+      ]
+    },
+    {
+      "heading": "Slow belly breathing",
+      "steps": [
+        "Breathe in slowly through your nose. Count to 4 in your head.",
+        "As you breathe in, let your belly push your hand out. The hand on your chest should move only a little.",
+        "Breathe out slowly through your mouth or nose. Count to 6. Let your belly fall back in.",
+        "Keep each breath soft and quiet. You do not need to fill your lungs all the way.",
+        "Keep going for about 5 minutes. If your mind wanders, that is okay. Just go back to counting."
+      ]
+    },
+    {
+      "heading": "If counting to 4 and 6 feels hard",
+      "body": "Start with a shorter count, like 2 in and 3 out, or 3 in and 4 out. The main idea is to make each breath out a bit longer than each breath in. It gets easier with practice."
+    },
+    {
+      "heading": "When to use it",
+      "steps": [
+        "Practice once or twice a day when you already feel fairly calm. A skill is easier to use when you know it well.",
+        "Try it before something that makes you nervous, like a phone call or a hard talk.",
+        "Use it when you notice your body getting tense or your breathing speeding up.",
+        "Use it at bedtime to help your body wind down."
+      ]
+    },
+    {
+      "heading": "Good to know",
+      "steps": [
+        "Anxious feelings are unpleasant, but they pass. They rise and then fall on their own. Slow breathing can help you ride the wave. You do not need it to stay safe.",
+        "If you feel dizzy or tingly, you may be breathing too deeply. Breathe normally for a minute. Then try smaller, softer breaths.",
+        "Bring this sheet to your next visit so you can talk about how it went."
+      ]
+    },
+    {
+      "heading": "How to use the practice log",
+      "body": "Each day, write how many times you practiced. For one practice that day, rate how calm you felt before and after, from 0 to 10. A 0 means not calm at all. A 10 means the calmest you can imagine."
+    }
+  ],
+  "practiceLog": {
+    "columns": ["Day", "Times practiced", "Calm before (0-10)", "Calm after (0-10)"],
+    "rows": 7
+  },
+  "safetyNote": "Safety first: Breathe gently and slowly. Do not force big or fast breaths. If you feel dizzy, light-headed, or short of breath, stop and breathe normally. If you have a lung or heart problem, or you are pregnant, ask your doctor before you start. If you have chest pain or trouble breathing that is new or does not go away, get medical help right away. This skill is not for emergencies. In the US, call or text 988 or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sources": [
+    {
+      "title": "Relaxation Techniques: What You Need To Know",
+      "publisher": "National Center for Complementary and Integrative Health (NCCIH)",
+      "url": "https://www.nccih.nih.gov/health/relaxation-techniques-what-you-need-to-know"
+    },
+    {
+      "title": "Breathing exercises for stress",
+      "publisher": "NHS (UK National Health Service)",
+      "url": "https://www.nhs.uk/mental-health/self-help/guides-tools-and-activities/breathing-exercises-for-stress/"
+    },
+    {
+      "title": "How breath-control can change your life: a systematic review on psycho-physiological correlates of slow breathing (Zaccaro et al.)",
+      "publisher": "Frontiers in Human Neuroscience (PubMed Central)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6137615/",
+      "year": 2018
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}
