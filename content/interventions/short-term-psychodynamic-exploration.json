@@ -2,7 +2,7 @@
   "id": "short-term-psychodynamic-exploration",
   "name": "Short-term psychodynamic exploration: overview and referral",
   "modality": "Psychodynamic psychotherapy",
-  "conditions": ["major-depressive-disorder", "panic-disorder"],
+  "conditions": ["major-depressive-disorder", "panic-disorder", "social-anxiety-disorder", "persistent-depressive-disorder"],
   "evidenceLevel": "Listed by APA Division 12 as having modest research support for depression (short-term psychodynamic therapy). NICE NG222 includes short-term psychodynamic psychotherapy (STPP) among options for less severe depression, noting it may be effective but appeared less cost effective on average than higher-ranked options. NICE CG159 suggests considering STPP developed specifically for social anxiety disorder for adults who decline CBT-based and drug treatments, and notes it is less effective than those options. Panic: emerging evidence. One small RCT found panic-focused psychodynamic psychotherapy outperformed applied relaxation (Milrod et al., 2007). Reviews: Shedler (2010); Driessen et al. (2015) meta-analysis update.",
   "minutes": { "min": 45, "max": 50 },
   "purpose": "A focused, time-limited exploratory therapy (often about 16 to 30 sessions) that helps clients notice and understand recurring emotional and relationship patterns: feelings they tend to avoid, wishes that pull in opposite directions, and ways earlier experiences shape what they expect from others. These patterns are explored as they show up in daily life and in the therapy relationship. Common methods include identifying a core conflictual relationship theme (Luborsky: what the person wishes for, how they expect others to respond, and how they then react), exploring avoided feelings and the ways the client moves away from them, and using the therapy relationship as a window on patterns. Shedler's review describes these shared features. Overview for planning and referral only.",
@@ -16,11 +16,11 @@
     "Use the ending of therapy to work through feelings about separation and to consolidate new patterns."
   ],
   "script": [
-    "I notice that when you talk about your manager, you smile and change the subject. What do you think happens inside you right before that?",
-    "In each of these stories, you hoped someone would notice how hard you were trying, you expected them to brush you off, and then you pulled back. Does that pattern ring true?",
-    "What would it be like to let yourself feel the anger here with me, without having to do anything about it?",
-    "I wonder if some of that same worry shows up with me, that if you tell me what you really think, I will be disappointed in you.",
-    "Our ending is coming up. People often have mixed feelings about endings. What is coming up for you?"
+    "There is a kind of talk therapy that looks at patterns in how you feel and how you relate to people, and where those patterns may have come from.",
+    "With a trained therapist, you would notice feelings you tend to push away and patterns that keep repeating, including how they show up with the therapist.",
+    "It usually means weekly sessions for several months, connecting what happens now with earlier experiences.",
+    "This therapy needs a therapist with specific training in it. If it interests you, I can help you find one.",
+    "It is one option among several. We can compare it with others, like CBT, before you decide."
   ],
   "contraindications": [
     "Formal training and supervision in a specific short-term psychodynamic model are required to deliver it as a therapy. This entry is overview-level.",

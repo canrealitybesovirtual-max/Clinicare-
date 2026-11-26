@@ -1,0 +1,156 @@
+{
+  "id": "relapse-prevention-plan",
+  "title": "Staying on Track: My Relapse Prevention Plan",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 30,
+  "intro": "Making a big change is hard work. Hard days and setbacks are common, and they are part of learning. This plan helps you get ready for them ahead of time, while you feel calm and clear. You can use it for a change like cutting back or stopping drinking or drug use. You can also use it to keep low moods or worry from coming back. Fill it in with your counselor, in your own words. It takes about 20 to 30 minutes.",
+  "sections": [
+    {
+      "heading": "Why this change matters to me",
+      "body": "Write the reasons that keep you going. Think about your health, people you love, work, faith, or goals.",
+      "steps": [
+        "A reason that matters to me: ________________________",
+        "Another reason: ________________________",
+        "How my life is better since I started: ________________________"
+      ]
+    },
+    {
+      "heading": "My high-risk times",
+      "body": "These are times that make it harder to stick with your plan. They might be places, times of day, events, or feelings. Common ones are stress, money worries, fights, parties, payday, or being alone at night. Feeling bored, lonely, angry, hungry, or tired can be risky too. Use general words, not names.",
+      "steps": [
+        "A risky place or event: ________________________",
+        "A risky time: ________________________",
+        "A risky feeling: ________________________"
+      ]
+    },
+    {
+      "heading": "My early warning signs",
+      "body": "Setbacks often start well before a slip. Watch for signs like these.",
+      "steps": [
+        "A thought, like 'Just one won't hurt' or 'What's the point?': ________________",
+        "A change in mood, like feeling on edge or numb: ________________",
+        "A change in what I do, like skipping sessions, staying home, or keeping secrets: ________________",
+        "A change in my body, like poor sleep or not eating: ________________"
+      ]
+    },
+    {
+      "heading": "What I will do instead",
+      "body": "For each risky time or warning sign, plan a way to cope.",
+      "steps": [
+        "Avoid or leave: How I can stay away from, or get out of, a risky situation: ________________",
+        "Wait it out: Give the urge time to pass, like a wave. The urge surfing log can help.",
+        "Stay busy: Something that keeps my hands and mind busy: ________________",
+        "Reach out: Someone I can contact (write who they are to me, not their name): ________________",
+        "Say no: What I will say if someone offers: ________________",
+        "Care for my body: Eat, rest, drink water, or move."
+      ]
+    },
+    {
+      "heading": "People and places that support me",
+      "body": "Support makes a big difference. It might come from family, friends, a sponsor, a support group, a faith community, or your counselor. Keep their contact details in a private place you can reach fast. On this sheet, write who they are to you, not their names.",
+      "steps": [
+        "Someone I can reach out to any time: ________________",
+        "A group or place where I feel supported: ________________",
+        "My counselor or clinic: ________________"
+      ]
+    },
+    {
+      "heading": "If I slip",
+      "body": "A slip is one step back. It does not have to turn into a full return to old patterns. It does not mean you have failed or that your progress is lost.",
+      "steps": [
+        "Stop, and get to a safe place.",
+        "Reach out to someone who supports you, and tell your counselor soon.",
+        "Be kind to yourself. Guilt and shame can lead to more use. Kindness helps you get back on track.",
+        "Look at what led up to the slip. What can you learn from it?",
+        "Go back to your plan. Update it with what you learned."
+      ]
+    },
+    {
+      "heading": "Healthy routines that keep me strong",
+      "steps": [
+        "Sleep: ________________________",
+        "Meals: ________________________",
+        "Movement: ________________________",
+        "Something fun or meaningful each week: ________________________"
+      ]
+    },
+    {
+      "heading": "Keep your plan up to date",
+      "steps": [
+        "Look at your plan once a week, and after any hard time.",
+        "Keep a copy where you can find it fast.",
+        "Change what did not help, and add what did."
+      ]
+    },
+    {
+      "heading": "Privacy note",
+      "body": "Keep this plan somewhere private. If you share it with a substance use treatment program, it may become part of your treatment records. Those records have special federal privacy protection. 42 CFR Part 2 prohibits unauthorized disclosure of these records. Ask your counselor how your records are kept and shared."
+    }
+  ],
+  "practiceLog": {
+    "columns": ["Week", "Risky times I faced", "Warning signs I noticed", "What helped", "What I will try next week"],
+    "rows": 6
+  },
+  "safetyNote": "Safety first: If you drink a lot, or take certain pills like sleeping pills or pills for nerves every day, stopping all at once can be dangerous. Talk with a doctor first. After a break from opioids or other drugs, your body can't handle as much as before. Using the amount you used to can cause an overdose. If you do use, don't use alone, and keep naloxone, a medicine that can reverse an opioid overdose, close by. If someone may have overdosed, call 911. For free, confidential help finding treatment in the US, call the SAMHSA National Helpline at 1-800-662-4357, any time, in English or Spanish. If you have thoughts of hurting yourself or someone else, call or text 988 in the US, or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sources": [
+    {
+      "title": "Relapse prevention for alcohol and drug problems: that was Zen, this is Tao (Witkiewitz and Marlatt)",
+      "publisher": "American Psychologist",
+      "url": "https://doi.org/10.1037/0003-066X.59.4.224",
+      "year": 2004
+    },
+    {
+      "title": "Relapse prevention for addictive behaviors (Hendershot, Witkiewitz, George and Marlatt)",
+      "publisher": "Substance Abuse Treatment, Prevention, and Policy",
+      "url": "https://doi.org/10.1186/1747-597X-6-17",
+      "year": 2011
+    },
+    {
+      "title": "Bowen et al.: randomized trial of mindfulness-based relapse prevention",
+      "publisher": "JAMA Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24647726/",
+      "year": 2014
+    },
+    {
+      "title": "Treatment and Recovery (Drugs, Brains, and Behavior)",
+      "publisher": "National Institute on Drug Abuse (NIDA)",
+      "url": "https://nida.nih.gov/publications/drugs-brains-behavior-science-addiction/treatment-recovery"
+    },
+    {
+      "title": "Naloxone",
+      "publisher": "National Institute on Drug Abuse (NIDA)",
+      "url": "https://nida.nih.gov/research-topics/naloxone"
+    },
+    {
+      "title": "NICE guideline NG222",
+      "publisher": "National Institute for Health and Care Excellence (NICE)",
+      "url": "https://www.nice.org.uk/guidance/ng222",
+      "year": 2022
+    },
+    {
+      "title": "Alcohol withdrawal (medical encyclopedia)",
+      "publisher": "MedlinePlus, U.S. National Library of Medicine",
+      "url": "https://medlineplus.gov/ency/article/000764.htm"
+    },
+    {
+      "title": "National Helpline",
+      "publisher": "SAMHSA",
+      "url": "https://www.samhsa.gov/find-help/helplines/national-helpline"
+    },
+    {
+      "title": "42 CFR 2.32: notice to accompany disclosure (federal confidentiality rule for substance use treatment records)",
+      "publisher": "eCFR, U.S. Government Publishing Office",
+      "url": "https://www.ecfr.gov/current/title-42/chapter-I/subchapter-A/part-2/subpart-C/section-2.32",
+      "year": 2024
+    },
+    {
+      "title": "Confidentiality of substance use treatment records (42 CFR Part 2)",
+      "publisher": "U.S. Department of Health and Human Services",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/hipaa-part-2/index.html"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

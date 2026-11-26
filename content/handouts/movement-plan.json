@@ -1,0 +1,92 @@
+{
+  "id": "movement-plan",
+  "title": "My Movement Plan",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 15,
+  "intro": "Moving your body can lift your mood, ease stress, and help you sleep. You don't need a gym or special gear. Any movement counts, even a short walk or dancing in your kitchen. The key is to start small and build from there. This sheet helps you make a plan that fits your life. It takes about 15 minutes to fill in.",
+  "sections": [
+    {
+      "heading": "How much to aim for",
+      "body": "US health guidelines suggest that adults aim for at least 150 minutes a week of moderate activity. That could be 30 minutes, 5 days a week. Short bouts, like three 10-minute walks, count too. The guidelines also suggest activities that build muscle at least 2 days a week, like lifting weights, push-ups, or heavy gardening. If that sounds like a lot, start with what you can do. Some movement is better than none."
+    },
+    {
+      "heading": "How hard is moderate?",
+      "body": "During moderate activity, you breathe harder and your heart beats faster. You can still talk, but you can't sing. Brisk walking is a good example."
+    },
+    {
+      "heading": "Make your plan",
+      "steps": [
+        "Pick one or two activities you enjoy, or used to enjoy. Ideas: walking, dancing, biking, swimming, gardening, playing with kids or a pet, chair exercises, or stretching.",
+        "Pick the days, times, and places. Write them in your calendar like an appointment.",
+        "Start small. Even 5 or 10 minutes is a good start. Add a few minutes each week.",
+        "Plan for things that get in the way, like bad weather, low energy, cost, or no safe place to walk. Have a backup, like an exercise video at home or a walk inside a mall or big store.",
+        "If you like company, ask a friend or family member to join you, or find a group.",
+        "Don't wait until you feel like it. Often the good feeling comes after you start moving, not before.",
+        "Rate your mood before and after, from 0 to 10. Notice what helps."
+      ]
+    },
+    {
+      "heading": "Mind-body movement",
+      "body": "Yoga and tai chi mix gentle movement with slow breathing and focus. Research suggests they may help some people with stress and mood. But the research is still growing. They are generally safe when you learn from a trained teacher and go at your own pace. Some poses are not right for everyone, so tell the teacher about any health problems. If a practice does not fit your beliefs, gentle stretching works well too."
+    },
+    {
+      "heading": "My plan",
+      "steps": [
+        "Activity I will do: ________________________",
+        "Days and times: ________________________",
+        "How long I will start with: ________ minutes",
+        "My backup plan: ________________________",
+        "Someone who could join me or cheer me on: ________________"
+      ]
+    }
+  ],
+  "practiceLog": {
+    "columns": ["Day", "Activity", "Minutes", "Mood before (0-10)", "Mood after (0-10)", "Notes"],
+    "rows": 14
+  },
+  "safetyNote": "Safety first: If you have a health problem, such as heart or lung trouble, diabetes, high blood pressure, or joint pain, or you are pregnant, ask your doctor which activities are right for you. Start slowly and build up. Stop and get medical help right away if you have chest pain or pressure, trouble breathing, or feel faint or dizzy. Drink water, and dress for the weather. Movement should not be a way to punish yourself or to make up for eating. If it starts to feel that way, tell your counselor. This sheet is not for emergencies. If you have thoughts of hurting yourself or someone else, call or text 988 in the US, or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sources": [
+    {
+      "title": "Physical Activity Guidelines for Americans, 2nd edition",
+      "publisher": "U.S. Department of Health and Human Services, Office of Disease Prevention and Health Promotion",
+      "url": "https://odphp.health.gov/our-work/nutrition-physical-activity/physical-activity-guidelines/current-guidelines",
+      "year": 2018
+    },
+    {
+      "title": "Physical activity (fact sheet)",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/physical-activity"
+    },
+    {
+      "title": "Benefits of Exercise (health topic)",
+      "publisher": "MedlinePlus, U.S. National Library of Medicine",
+      "url": "https://medlineplus.gov/benefitsofexercise.html"
+    },
+    {
+      "title": "Noetel et al.: exercise for low mood, systematic review and network meta-analysis of randomised trials",
+      "publisher": "BMJ",
+      "url": "https://doi.org/10.1136/bmj-2023-075847",
+      "year": 2024
+    },
+    {
+      "title": "NICE guideline NG222",
+      "publisher": "National Institute for Health and Care Excellence (NICE)",
+      "url": "https://www.nice.org.uk/guidance/ng222",
+      "year": 2022
+    },
+    {
+      "title": "Yoga: Effectiveness and Safety",
+      "publisher": "National Center for Complementary and Integrative Health (NCCIH)",
+      "url": "https://www.nccih.nih.gov/health/yoga-effectiveness-and-safety"
+    },
+    {
+      "title": "Tai Chi: What You Need To Know",
+      "publisher": "National Center for Complementary and Integrative Health (NCCIH)",
+      "url": "https://www.nccih.nih.gov/health/tai-chi-what-you-need-to-know"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

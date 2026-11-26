@@ -1,0 +1,545 @@
+{
+  "version": "1.0.0",
+  "description": "Curated, original PubMed search strategies (one per condition and per major intervention family) and ClinicalTrials.gov condition terms. These are the ONLY search values the server may send to NCBI E-utilities or ClinicalTrials.gov (G5, G17). Queries verified live against PubMed (MeSH 2026 headings) on 2026-11-26; results are links for clinician review, not ratings of evidence.",
+  "pubmed": {
+    "filter": "(systematic review[pt] OR meta-analysis[pt] OR network meta-analysis[pt] OR randomized controlled trial[pt]) AND \"last 10 years\"[dp] NOT retracted publication[pt] NOT ((child[mh] OR adolescent[mh] OR infant[mh]) NOT adult[mh])",
+    "filterLabel": "Systematic reviews, meta-analyses and randomized controlled trials from the last 10 years. Retracted papers and child-only studies are excluded (adult scope)."
+  },
+  "queries": {
+    "panic-disorder": {
+      "kind": "condition",
+      "label": "Panic disorder: treatment evidence",
+      "query": "\"Panic Disorder/therapy\"[mh] OR (\"panic disorder\"[tiab] AND (therap*[tiab] OR treatment*[tiab]))",
+      "interventionIds": [],
+      "sud": false
+    },
+    "agoraphobia": {
+      "kind": "condition",
+      "label": "Agoraphobia: treatment evidence",
+      "query": "\"Agoraphobia/therapy\"[mh] OR (agoraphobia[tiab] AND (therap*[tiab] OR treatment*[tiab]))",
+      "interventionIds": [],
+      "sud": false
+    },
+    "generalized-anxiety-disorder": {
+      "kind": "condition",
+      "label": "Generalized anxiety disorder: treatment evidence",
+      "query": "\"Generalized Anxiety Disorder/therapy\"[mh] OR (\"Anxiety Disorders/therapy\"[mh] AND \"generalized anxiety\"[tiab]) OR (\"generalized anxiety disorder\"[tiab] AND (therap*[tiab] OR treatment*[tiab]))",
+      "interventionIds": [],
+      "sud": false
+    },
+    "major-depressive-disorder": {
+      "kind": "condition",
+      "label": "Major depressive disorder: treatment evidence",
+      "query": "\"Major Depressive Disorder/therapy\"[mh] OR ((\"major depressive disorder\"[tiab] OR \"major depression\"[tiab]) AND (therap*[tiab] OR treatment*[tiab]))",
+      "interventionIds": [],
+      "sud": false
+    },
+    "ptsd": {
+      "kind": "condition",
+      "label": "Posttraumatic stress disorder: treatment evidence",
+      "query": "\"Stress Disorders, Post-Traumatic/therapy\"[mh] OR ((\"posttraumatic stress disorder\"[tiab] OR \"post-traumatic stress disorder\"[tiab] OR PTSD[tiab]) AND (therap*[tiab] OR treatment*[tiab]))",
+      "interventionIds": [],
+      "sud": false
+    },
+    "social-anxiety-disorder": {
+      "kind": "condition",
+      "label": "Social anxiety disorder: treatment evidence",
+      "query": "\"Phobia, Social/therapy\"[mh] OR ((\"social anxiety disorder\"[tiab] OR \"social phobia\"[tiab]) AND (therap*[tiab] OR treatment*[tiab]))",
+      "interventionIds": [],
+      "sud": false
+    },
+    "obsessive-compulsive-disorder": {
+      "kind": "condition",
+      "label": "Obsessive-compulsive disorder: treatment evidence",
+      "query": "\"Obsessive-Compulsive Disorder/therapy\"[mh] OR ((\"obsessive-compulsive disorder\"[tiab] OR \"obsessive compulsive disorder\"[tiab]) AND (therap*[tiab] OR treatment*[tiab]))",
+      "interventionIds": [],
+      "sud": false
+    },
+    "alcohol-use-disorder": {
+      "kind": "condition",
+      "label": "Alcohol use disorder: treatment evidence",
+      "query": "\"Alcoholism/therapy\"[mh] OR ((\"alcohol use disorder\"[tiab] OR \"alcohol dependence\"[tiab]) AND (therap*[tiab] OR treatment*[tiab]))",
+      "interventionIds": [],
+      "sud": true
+    },
+    "insomnia-disorder": {
+      "kind": "condition",
+      "label": "Insomnia disorder: treatment evidence",
+      "query": "\"Sleep Initiation and Maintenance Disorders/therapy\"[mh] OR ((\"insomnia disorder\"[tiab] OR insomnia[tiab]) AND (therap*[tiab] OR treatment*[tiab]))",
+      "interventionIds": [],
+      "sud": false
+    },
+    "cbt": {
+      "kind": "intervention",
+      "label": "Cognitive behavioral therapy (CBT)",
+      "query": "(\"Cognitive Behavioral Therapy\"[mh:noexp] OR \"cognitive behavioral therapy\"[tiab] OR \"cognitive behavioural therapy\"[tiab]) AND \"Mental Disorders\"[mh]",
+      "interventionIds": [
+        "thought-record",
+        "behavioral-experiments",
+        "catastrophic-misinterpretation-restructuring",
+        "social-anxiety-cognitive-techniques",
+        "worry-time",
+        "problem-solving",
+        "safety-behavior-reduction"
+      ],
+      "sud": false
+    },
+    "exposure-therapy": {
+      "kind": "intervention",
+      "label": "Exposure therapy (in vivo, interoceptive, imaginal)",
+      "query": "(\"Implosive Therapy\"[mh] OR \"exposure therapy\"[tiab] OR \"in vivo exposure\"[tiab] OR \"interoceptive exposure\"[tiab]) AND \"Mental Disorders\"[mh]",
+      "interventionIds": [
+        "graded-in-vivo-exposure",
+        "interoceptive-exposure"
+      ],
+      "sud": false
+    },
+    "behavioral-activation": {
+      "kind": "intervention",
+      "label": "Behavioral activation",
+      "query": "\"behavioral activation\"[tiab] OR \"behavioural activation\"[tiab]",
+      "interventionIds": [
+        "behavioral-activation"
+      ],
+      "sud": false
+    },
+    "act": {
+      "kind": "intervention",
+      "label": "Acceptance and commitment therapy (ACT)",
+      "query": "\"Acceptance and Commitment Therapy\"[mh] OR \"acceptance and commitment therapy\"[tiab]",
+      "interventionIds": [
+        "act-acceptance-willingness",
+        "act-cognitive-defusion",
+        "act-committed-action",
+        "act-present-moment-self-as-context",
+        "act-values-clarification"
+      ],
+      "sud": false
+    },
+    "dbt": {
+      "kind": "intervention",
+      "label": "Dialectical behavior therapy (DBT)",
+      "query": "\"Dialectical Behavior Therapy\"[mh] OR \"dialectical behavior therapy\"[tiab] OR \"dialectical behaviour therapy\"[tiab]",
+      "interventionIds": [
+        "dbt-distress-tolerance",
+        "dbt-emotion-regulation-opposite-action",
+        "dbt-interpersonal-effectiveness",
+        "dbt-mindfulness-skills"
+      ],
+      "sud": false
+    },
+    "mbct": {
+      "kind": "intervention",
+      "label": "Mindfulness-based cognitive therapy (MBCT)",
+      "query": "\"mindfulness-based cognitive therapy\"[tiab]",
+      "interventionIds": [
+        "mindfulness-meditation",
+        "mindful-check-in"
+      ],
+      "sud": false
+    },
+    "ipt": {
+      "kind": "intervention",
+      "label": "Interpersonal psychotherapy (IPT)",
+      "query": "\"Interpersonal Psychotherapy\"[mh] OR \"interpersonal psychotherapy\"[tiab] OR \"interpersonal therapy\"[tiab]",
+      "interventionIds": [
+        "interpersonal-psychotherapy"
+      ],
+      "sud": false
+    },
+    "motivational-interviewing": {
+      "kind": "intervention",
+      "label": "Motivational interviewing (MI)",
+      "query": "\"Motivational Interviewing\"[mh] OR \"motivational interviewing\"[tiab] OR \"motivational enhancement therapy\"[tiab]",
+      "interventionIds": [
+        "motivational-interviewing",
+        "decisional-balance"
+      ],
+      "sud": false
+    },
+    "emdr": {
+      "kind": "intervention",
+      "label": "Eye movement desensitization and reprocessing (EMDR)",
+      "query": "\"Eye Movement Desensitization Reprocessing\"[mh] OR \"eye movement desensitization\"[tiab] OR EMDR[tiab]",
+      "interventionIds": [
+        "emdr"
+      ],
+      "sud": false
+    },
+    "cognitive-processing-therapy": {
+      "kind": "intervention",
+      "label": "Cognitive processing therapy (CPT)",
+      "query": "\"cognitive processing therapy\"[tiab]",
+      "interventionIds": [
+        "cognitive-processing-therapy"
+      ],
+      "sud": false
+    },
+    "prolonged-exposure": {
+      "kind": "intervention",
+      "label": "Prolonged exposure therapy (PE)",
+      "query": "\"prolonged exposure\"[tiab] AND (\"Stress Disorders, Post-Traumatic\"[mh] OR PTSD[tiab] OR posttraumatic[tiab] OR post-traumatic[tiab])",
+      "interventionIds": [
+        "prolonged-exposure"
+      ],
+      "sud": false
+    },
+    "cbt-i": {
+      "kind": "intervention",
+      "label": "Cognitive behavioral therapy for insomnia (CBT-I)",
+      "query": "\"cognitive behavioral therapy for insomnia\"[tiab] OR \"cognitive behavioural therapy for insomnia\"[tiab] OR CBT-I[tiab] OR (\"Cognitive Behavioral Therapy\"[mh] AND \"Sleep Initiation and Maintenance Disorders\"[mh])",
+      "interventionIds": [],
+      "sud": false
+    },
+    "relaxation-training": {
+      "kind": "intervention",
+      "label": "Progressive muscle relaxation and applied relaxation",
+      "query": "\"progressive muscle relaxation\"[tiab] OR \"progressive relaxation\"[tiab] OR \"applied relaxation\"[tiab]",
+      "interventionIds": [
+        "progressive-muscle-relaxation",
+        "applied-relaxation"
+      ],
+      "sud": false
+    },
+    "erp": {
+      "kind": "intervention",
+      "label": "Exposure and response prevention (ERP)",
+      "query": "\"exposure and response prevention\"[tiab] OR \"exposure response prevention\"[tiab] OR \"exposure with response prevention\"[tiab]",
+      "interventionIds": [
+        "exposure-and-response-prevention"
+      ],
+      "sud": false
+    },
+    "written-exposure-therapy": {
+      "kind": "intervention",
+      "label": "Written exposure therapy (WET)",
+      "query": "\"written exposure therapy\"[tiab]",
+      "interventionIds": [
+        "written-exposure-therapy"
+      ],
+      "sud": false
+    },
+    "narrative-exposure-therapy": {
+      "kind": "intervention",
+      "label": "Narrative exposure therapy (NET)",
+      "query": "\"narrative exposure therapy\"[tiab]",
+      "interventionIds": [
+        "narrative-exposure-therapy"
+      ],
+      "sud": false
+    }
+  },
+  "trials": {
+    "adultOnly": true,
+    "conditions": {
+      "panic-disorder": {
+        "label": "Panic disorder",
+        "term": "Panic Disorder",
+        "sud": false
+      },
+      "agoraphobia": {
+        "label": "Agoraphobia",
+        "term": "Agoraphobia",
+        "sud": false
+      },
+      "generalized-anxiety-disorder": {
+        "label": "Generalized anxiety disorder",
+        "term": "Generalized Anxiety Disorder",
+        "sud": false
+      },
+      "major-depressive-disorder": {
+        "label": "Major depressive disorder",
+        "term": "Major Depressive Disorder",
+        "sud": false
+      },
+      "ptsd": {
+        "label": "Posttraumatic stress disorder",
+        "term": "Post-traumatic Stress Disorder",
+        "sud": false
+      },
+      "social-anxiety-disorder": {
+        "label": "Social anxiety disorder",
+        "term": "Social Anxiety Disorder",
+        "sud": false
+      },
+      "obsessive-compulsive-disorder": {
+        "label": "Obsessive-compulsive disorder",
+        "term": "Obsessive-Compulsive Disorder",
+        "sud": false
+      },
+      "alcohol-use-disorder": {
+        "label": "Alcohol use disorder",
+        "term": "Alcohol Use Disorder",
+        "sud": true
+      },
+      "insomnia-disorder": {
+        "label": "Insomnia disorder",
+        "term": "Insomnia",
+        "sud": false
+      }
+    },
+    "countries": [
+      "Afghanistan",
+      "Aland Islands",
+      "Albania",
+      "Algeria",
+      "American Samoa",
+      "Andorra",
+      "Angola",
+      "Anguilla",
+      "Antarctica",
+      "Antigua and Barbuda",
+      "Argentina",
+      "Armenia",
+      "Aruba",
+      "Australia",
+      "Austria",
+      "Azerbaijan",
+      "Bahrain",
+      "Bangladesh",
+      "Barbados",
+      "Belarus",
+      "Belgium",
+      "Belize",
+      "Benin",
+      "Bermuda",
+      "Bhutan",
+      "Bolivia",
+      "Bonaire, Saint Eustatius and Saba",
+      "Bosnia and Herzegovina",
+      "Botswana",
+      "Brazil",
+      "Brunei",
+      "Bulgaria",
+      "Burkina Faso",
+      "Burma",
+      "Burundi",
+      "Cabo Verde",
+      "Cambodia",
+      "Cameroon",
+      "Canada",
+      "Cayman Islands",
+      "Central African Republic",
+      "Chad",
+      "Chile",
+      "China",
+      "Christmas Island",
+      "Colombia",
+      "Comoros",
+      "Costa Rica",
+      "Croatia",
+      "Cuba",
+      "Curacao",
+      "Cyprus",
+      "Czechia",
+      "Côte d’Ivoire",
+      "Democratic Republic of the Congo",
+      "Denmark",
+      "Djibouti",
+      "Dominica",
+      "Dominican Republic",
+      "Ecuador",
+      "Egypt",
+      "El Salvador",
+      "Equatorial Guinea",
+      "Eritrea",
+      "Estonia",
+      "Eswatini",
+      "Ethiopia",
+      "Faroe Islands",
+      "Federal Republic of Yugoslavia",
+      "Fiji",
+      "Finland",
+      "France",
+      "French Guiana",
+      "French Polynesia",
+      "French Southern and Antarctic Lands",
+      "Gabon",
+      "Georgia",
+      "Germany",
+      "Ghana",
+      "Gibraltar",
+      "Greece",
+      "Greenland",
+      "Grenada",
+      "Guadeloupe",
+      "Guam",
+      "Guatemala",
+      "Guinea",
+      "Guinea-Bissau",
+      "Guyana",
+      "Haiti",
+      "Holy See",
+      "Honduras",
+      "Hong Kong",
+      "Hungary",
+      "Iceland",
+      "India",
+      "Indonesia",
+      "Iran",
+      "Iraq",
+      "Ireland",
+      "Israel",
+      "Italy",
+      "Jamaica",
+      "Japan",
+      "Jersey",
+      "Jordan",
+      "Kazakhstan",
+      "Kenya",
+      "Kiribati",
+      "Kosovo",
+      "Kuwait",
+      "Kyrgyzstan",
+      "Laos",
+      "Latvia",
+      "Lebanon",
+      "Lesotho",
+      "Liberia",
+      "Libya",
+      "Liechtenstein",
+      "Lithuania",
+      "Luxembourg",
+      "Macau",
+      "Madagascar",
+      "Malawi",
+      "Malaysia",
+      "Maldives",
+      "Mali",
+      "Malta",
+      "Martinique",
+      "Mauritania",
+      "Mauritius",
+      "Mayotte",
+      "Mexico",
+      "Micronesia",
+      "Moldova",
+      "Monaco",
+      "Mongolia",
+      "Montenegro",
+      "Montserrat",
+      "Morocco",
+      "Mozambique",
+      "Namibia",
+      "Nepal",
+      "Netherlands",
+      "Netherlands Antilles",
+      "New Caledonia",
+      "New Zealand",
+      "Nicaragua",
+      "Niger",
+      "Nigeria",
+      "Niue",
+      "North Korea",
+      "North Macedonia",
+      "Northern Mariana Islands",
+      "Norway",
+      "Oman",
+      "Pakistan",
+      "Palestinian Territories",
+      "Panama",
+      "Papua New Guinea",
+      "Paraguay",
+      "Peru",
+      "Philippines",
+      "Poland",
+      "Portugal",
+      "Puerto Rico",
+      "Qatar",
+      "Republic of the Congo",
+      "Reunion",
+      "Romania",
+      "Russia",
+      "Rwanda",
+      "Saint Kitts and Nevis",
+      "Saint Lucia",
+      "Saint Martin",
+      "Saint Vincent and the Grenadines",
+      "Samoa",
+      "San Marino",
+      "Saudi Arabia",
+      "Senegal",
+      "Serbia",
+      "Serbia and Montenegro",
+      "Seychelles",
+      "Sierra Leone",
+      "Singapore",
+      "Slovakia",
+      "Slovenia",
+      "Solomon Islands",
+      "Somalia",
+      "South Africa",
+      "South Korea",
+      "South Sudan",
+      "Spain",
+      "Sri Lanka",
+      "Sudan",
+      "Suriname",
+      "Sweden",
+      "Switzerland",
+      "Syria",
+      "Taiwan",
+      "Tajikistan",
+      "Tanzania",
+      "Thailand",
+      "The Bahamas",
+      "The Gambia",
+      "Timor-Leste",
+      "Togo",
+      "Trinidad and Tobago",
+      "Tunisia",
+      "Turkey (Türkiye)",
+      "Turkmenistan",
+      "Uganda",
+      "Ukraine",
+      "United Arab Emirates",
+      "United Kingdom",
+      "United States",
+      "United States Minor Outlying Islands",
+      "Uruguay",
+      "Uzbekistan",
+      "Vanuatu",
+      "Venezuela",
+      "Vietnam",
+      "Virgin Islands",
+      "Yemen",
+      "Zambia",
+      "Zimbabwe"
+    ]
+  },
+  "sources": [
+    {
+      "title": "Entrez Programming Utilities Help: E-utilities Quick Start and usage guidelines",
+      "publisher": "National Center for Biotechnology Information (NCBI)",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK25497/",
+      "year": 2026
+    },
+    {
+      "title": "PubMed User Guide: search field descriptions and tags",
+      "publisher": "National Library of Medicine",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/help/",
+      "year": 2026
+    },
+    {
+      "title": "MeSH Browser (2026 MeSH)",
+      "publisher": "National Library of Medicine",
+      "url": "https://meshb.nlm.nih.gov/",
+      "year": 2026
+    },
+    {
+      "title": "ClinicalTrials.gov REST API v2 (OpenAPI 2.0.5)",
+      "publisher": "U.S. National Library of Medicine",
+      "url": "https://clinicaltrials.gov/data-api/api",
+      "year": 2026
+    },
+    {
+      "title": "Constructing complex search queries (Essie expression syntax)",
+      "publisher": "U.S. National Library of Medicine",
+      "url": "https://clinicaltrials.gov/find-studies/constructing-complex-search-queries",
+      "year": 2026
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

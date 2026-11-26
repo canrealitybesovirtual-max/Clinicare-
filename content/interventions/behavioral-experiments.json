@@ -6,9 +6,14 @@
     "panic-disorder",
     "agoraphobia",
     "generalized-anxiety-disorder",
-    "major-depressive-disorder"
+    "major-depressive-disorder",
+    "social-anxiety-disorder",
+    "obsessive-compulsive-disorder",
+    "specific-phobia",
+    "insomnia-disorder",
+    "persistent-depressive-disorder"
   ],
-  "evidenceLevel": "A core technique within cognitive therapy packages that guidelines recommend, for example CBT based on the Clark and Wells model for social anxiety disorder (NICE CG159) and CBT for panic disorder (NICE CG113). Evidence for behavioral experiments as an isolated component is limited. A meta-analysis of 20 RCTs comparing cognitive therapy (which includes behavioral experiments) with exposure found no overall difference for panic disorder, PTSD and OCD, and an advantage for cognitive therapy in social phobia (Ougrin, 2011; some figures were corrected in a 2012 commentary). Emerging evidence as a stand-alone technique; see Bennett-Levy et al. (2004) for the clinical method.",
+  "evidenceLevel": "A core technique within cognitive therapy packages that guidelines recommend, for example CBT based on the Clark and Wells model for social anxiety disorder (NICE CG159) and CBT for panic disorder (NICE CG113). Evidence for behavioral experiments as an isolated component is limited. A meta-analysis of 20 RCTs comparing cognitive therapy (which includes behavioral experiments) with exposure found no overall difference for panic disorder, PTSD and OCD, and an advantage for cognitive therapy in social phobia (Ougrin, 2011; some figures were corrected in a 2012 commentary). Emerging evidence as a stand-alone technique; see Bennett-Levy et al. (2004) for the clinical method. In CBT for insomnia, experiments are also used to test beliefs about sleep loss and daytime functioning, alongside the behavioral components.",
   "minutes": { "min": 20, "max": 60 },
   "purpose": "A behavioral experiment is a planned activity, designed with the client, that tests a specific belief or prediction in real life (for example, 'If I say I don't know in a meeting, people will think I'm stupid' or 'If my heart races, I will faint'). Exposure is often framed as getting used to anxiety. Here the stated aim is to gather evidence about a belief and compare the old belief with a new, more helpful one. Experiments can be active tests (doing something differently), surveys of other people's views, or careful observation. The method is described in detail by Bennett-Levy, Butler, Fennell, Hackmann, Mueller and Westbrook in the Oxford Guide to Behavioural Experiments in Cognitive Therapy (2004). This entry uses original wording.",
   "steps": [

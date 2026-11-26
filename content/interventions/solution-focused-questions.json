@@ -2,7 +2,7 @@
   "id": "solution-focused-questions",
   "name": "Solution-focused questions (SFBT)",
   "modality": "Solution-focused brief therapy",
-  "conditions": ["major-depressive-disorder"],
+  "conditions": ["major-depressive-disorder", "adjustment-disorder", "alcohol-use-disorder", "persistent-depressive-disorder"],
   "evidenceLevel": "Emerging evidence. A systematic review of controlled outcome studies found the strongest support for SFBT in adults with depressive symptoms, where several studies found it comparable to established treatments, though study quality varied (Gingerich and Peterson, 2013). A 2024 umbrella review summarizes later reviews. No NICE or APA Division 12 recommendation was found for these conditions. Use it alongside guideline-recommended care.",
   "minutes": { "min": 10, "max": 50 },
   "purpose": "A brief, strengths-based approach developed by Steve de Shazer, Insoo Kim Berg and colleagues. Most of the conversation is spent on what the client wants instead of the problem, on times when the problem is absent or smaller (exceptions), and on the resources the client already has. Questions help the client describe a preferred future in concrete, observable terms and notice small steps toward it. Useful for building hope and goals early in care, for clients who prefer brief work, and as a framing tool inside other treatments.",

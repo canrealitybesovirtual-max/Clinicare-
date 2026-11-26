@@ -1,0 +1,95 @@
+{
+  "id": "urge-surfing-log",
+  "title": "Riding Out Urges: Urge Surfing Log",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 10,
+  "intro": "An urge, or craving, is a strong pull to do something. It might be to drink, use a drug, smoke, or do another habit you want to change. Urges can feel like they will keep growing until you give in. But urges are a lot like ocean waves. They build, reach a peak, and then fade, often sooner than you expect. Urge surfing means riding the wave without fighting it and without giving in. Each time you ride one out, you learn that you can. Practice whenever an urge shows up. Writing in the log takes about 2 minutes.",
+  "sections": [
+    {
+      "heading": "How to surf an urge",
+      "steps": [
+        "Notice the urge and name it: 'I'm having an urge.' You don't have to act on it.",
+        "If you can, sit or stand somewhere comfortable. Breathe in a normal, easy way.",
+        "Notice where you feel the urge in your body. It might be in your mouth, throat, chest, stomach, or hands.",
+        "Get curious about it. Is it tight, warm, buzzing, or heavy? Is it big or small? Does it move?",
+        "Rate the urge from 0 (none) to 10 (the strongest ever).",
+        "Keep breathing in an easy way while the urge rises. Don't push it away, and don't give in.",
+        "Keep noticing. Every few minutes, rate it again. See how it changes, peaks, and starts to drop.",
+        "When it eases, notice that you rode it out. Then do something helpful, like drinking water, going for a walk, or reaching out to someone who supports you."
+      ]
+    },
+    {
+      "heading": "If the urge feels too strong",
+      "steps": [
+        "Get away from what set it off, if you can. Leave the room or the place.",
+        "Reach out to someone who supports your goals.",
+        "Use another skill, like slow breathing or a short walk. Then come back to surfing if you want.",
+        "Remind yourself why this change matters to you."
+      ]
+    },
+    {
+      "heading": "If you give in",
+      "body": "A slip does not erase your progress. Be kind to yourself. Guilt and shame can make urges stronger. Write down what happened and what set it off. Talk about it with your counselor. Each urge, even one you give in to, can teach you something for next time."
+    },
+    {
+      "heading": "Privacy note",
+      "body": "Do not write your name, or the names of other people or places, on this sheet. Use general words like 'party' or 'after work' instead. Keep the sheet somewhere private. If you share it with a substance use treatment program, it may become part of your treatment records. Those records have special federal privacy protection. 42 CFR Part 2 prohibits unauthorized disclosure of these records. Ask your counselor how your records are kept and shared."
+    }
+  ],
+  "practiceLog": {
+    "columns": [
+      "Day and time",
+      "What set off the urge (no names)",
+      "Where I felt it in my body",
+      "Urge at start (0-10)",
+      "Urge at end (0-10)",
+      "What I did next"
+    ],
+    "rows": 8
+  },
+  "safetyNote": "Safety first: If you have been drinking a lot, or taking certain pills like sleeping pills or pills for nerves every day, stopping all at once can be dangerous. Talk with a doctor before you stop. Get medical help right away if you have shaking, sweating, a racing heart, confusion, or seizures, or if you see or hear things that aren't there. If someone may have overdosed, call 911. For free, confidential help finding treatment in the US, call the SAMHSA National Helpline at 1-800-662-4357, any time, in English or Spanish. If you have thoughts of hurting yourself or someone else, call or text 988 in the US, or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sources": [
+    {
+      "title": "Surfing the urge: brief mindfulness-based intervention for college student smokers (Bowen and Marlatt)",
+      "publisher": "Psychology of Addictive Behaviors",
+      "url": "https://doi.org/10.1037/a0017127",
+      "year": 2009
+    },
+    {
+      "title": "Bowen et al.: randomized trial of mindfulness-based relapse prevention",
+      "publisher": "JAMA Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24647726/",
+      "year": 2014
+    },
+    {
+      "title": "Rethinking Drinking",
+      "publisher": "NIAAA, National Institutes of Health",
+      "url": "https://www.rethinkingdrinking.niaaa.nih.gov/"
+    },
+    {
+      "title": "Alcohol withdrawal (medical encyclopedia)",
+      "publisher": "MedlinePlus, U.S. National Library of Medicine",
+      "url": "https://medlineplus.gov/ency/article/000764.htm"
+    },
+    {
+      "title": "National Helpline",
+      "publisher": "SAMHSA",
+      "url": "https://www.samhsa.gov/find-help/helplines/national-helpline"
+    },
+    {
+      "title": "42 CFR 2.32: notice to accompany disclosure (federal confidentiality rule for substance use treatment records)",
+      "publisher": "eCFR, U.S. Government Publishing Office",
+      "url": "https://www.ecfr.gov/current/title-42/chapter-I/subchapter-A/part-2/subpart-C/section-2.32",
+      "year": 2024
+    },
+    {
+      "title": "Confidentiality of substance use treatment records (42 CFR Part 2)",
+      "publisher": "U.S. Department of Health and Human Services",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/hipaa-part-2/index.html"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

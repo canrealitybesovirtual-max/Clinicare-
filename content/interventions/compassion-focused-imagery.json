@@ -5,7 +5,8 @@
   "conditions": [
     "major-depressive-disorder",
     "generalized-anxiety-disorder",
-    "ptsd"
+    "ptsd",
+    "persistent-depressive-disorder"
   ],
   "evidenceLevel": "Emerging evidence; not guideline-recommended as a stand-alone treatment for any condition in this app. CFT was developed by Paul Gilbert for people with high shame and self-criticism (Gilbert, 2009). A meta-analysis found CFT reduced self-criticism and increased the ability to self-soothe (Vidal & Alberti, 2023), and compassion-based interventions show moderate effects on depression and anxiety, mostly in small trials (Kirby et al., 2017). In a related practice, group loving-kindness meditation was noninferior to group cognitive processing therapy for veterans with PTSD, with modest gains in both arms (Kearney et al., 2021).",
   "minutes": { "min": 15, "max": 30 },
@@ -24,7 +25,7 @@
     "Our brains have a few different settings. One is for spotting danger. One is for chasing goals. And one is for feeling safe and cared for. For many people, that last one doesn't get much practice.",
     "Let's start by slowing your breath a little, to a pace that feels comfortable and soothing. Let your face soften into a small, kind expression.",
     "Now picture a place where you feel calm and safe. It can be real or made up. What can you see? What can you hear? What do you feel under your feet?",
-    "Now imagine someone or something that is completely on your side. It is wise, strong and warm. It understands what you're going through and wants good things for you. It doesn't have to be a person, and the picture doesn't need to be clear.",
+    "Now imagine a presence that is fully on your side. Give it whatever qualities help you feel cared for, perhaps calm, steady, kind or understanding. It can be a person, an animal, a place, or just a color or a light, and the picture doesn't need to be clear.",
     "Let that kind presence say something to you about what you're struggling with. What does it say? How does its voice sound?",
     "If this feels hard or strange, that's very common. We can go slowly. Even a tiny moment of warmth counts."
   ],

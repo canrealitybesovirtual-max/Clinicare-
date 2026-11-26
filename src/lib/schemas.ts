@@ -5,6 +5,10 @@
  */
 import { z } from "zod";
 
+// Content is parsed in the browser too. The CSP has no 'unsafe-eval', so turn off zod's JIT: otherwise
+// zod probes `Function("")` on first parse, which the CSP blocks and reports as a violation.
+z.config({ jitless: true });
+
 export const slug = z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/, "kebab-case id");
 export const isoDate = z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "YYYY-MM-DD");
 

@@ -1,0 +1,90 @@
+{
+  "id": "sleep-diary",
+  "title": "Sleep Diary",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 5,
+  "intro": "A sleep diary is a simple record of how you sleep. After one or two weeks, it can show patterns that are hard to see day by day. You and your counselor can use it to decide what to change. It takes about 2 to 5 minutes each morning. Your best guess is good enough. You do not need exact times.",
+  "sections": [
+    {
+      "heading": "How to fill it in",
+      "steps": [
+        "Fill in one row each morning, within about an hour of getting up.",
+        "Day: Write the day of the week, like Mon or Tue.",
+        "Into bed: Write the time you got into bed for the night.",
+        "Minutes to fall asleep: Guess how long it took to fall asleep after you turned out the light.",
+        "Wake-ups: Write how many times you woke up in the night. Then guess how many minutes you were awake in all.",
+        "Woke for the day: Write the time you woke up for the last time.",
+        "Out of bed: Write the time you got out of bed to start your day.",
+        "Sleep quality: Rate how well you slept, from 0 (very badly) to 10 (very well).",
+        "Naps, caffeine, alcohol: Jot down any naps and when they were. Add any coffee, tea, soda, energy drinks, or alcohol after lunch. Also add any sleep medicine you took."
+      ]
+    },
+    {
+      "heading": "Example",
+      "body": "Tue: Into bed at 10:30 pm. About 45 minutes to fall asleep. Woke 2 times, awake about 30 minutes in all. Woke for the day at 6:00 am. Out of bed at 6:20 am. Sleep quality 4. Notes: nap from 3:00 to 3:40 pm, coffee at 4 pm."
+    },
+    {
+      "heading": "Tips",
+      "steps": [
+        "Do not check the clock at night to fill in the diary. Checking the time can make it harder to sleep. Just guess in the morning.",
+        "Turn your clock so you can't see it from bed.",
+        "Fill in the diary on good nights and bad nights, and on weekends too.",
+        "For now, keep doing what you usually do, unless your counselor asks you to change something.",
+        "Your counselor may give you a different diary form. Use the one that works best for you both.",
+        "Bring the diary to each visit."
+      ]
+    },
+    {
+      "heading": "Looking at your diary",
+      "body": "After a week or two, look over the diary with your counselor. Here are some questions to ask.",
+      "steps": [
+        "How much time do I spend in bed? How much of that time am I asleep?",
+        "Do my bedtime and wake-up time change a lot from day to day?",
+        "Do naps, caffeine, or alcohol seem to go along with worse nights?",
+        "What was different about my best nights?"
+      ]
+    }
+  ],
+  "practiceLog": {
+    "columns": [
+      "Day",
+      "Into bed",
+      "Minutes to fall asleep",
+      "Wake-ups and minutes awake",
+      "Woke for the day",
+      "Out of bed",
+      "Sleep quality (0-10)",
+      "Naps, caffeine, alcohol"
+    ],
+    "rows": 14
+  },
+  "safetyNote": "Safety first: If you feel very sleepy during the day, do not drive or use machines until you feel alert. Tell your doctor if you snore loudly or someone sees you gasp or stop breathing in your sleep. Also tell your doctor if you fall asleep during the day without meaning to. These can be signs of a health problem that needs care. If you start to need much less sleep than usual but feel full of energy, tell your counselor or doctor soon. Do not start, stop, or change sleep medicine without your doctor. This sheet is not for emergencies. If you have thoughts of hurting yourself or someone else, call or text 988 in the US, or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sources": [
+    {
+      "title": "AASM clinical practice guideline: behavioral and psychological treatments for long-term sleep problems in adults (Edinger et al.)",
+      "publisher": "Journal of Clinical Sleep Medicine, American Academy of Sleep Medicine",
+      "url": "https://doi.org/10.5664/jcsm.8986",
+      "year": 2021
+    },
+    {
+      "title": "The consensus sleep diary: standardizing prospective sleep self-monitoring (Carney et al.)",
+      "publisher": "Sleep",
+      "url": "https://doi.org/10.5665/sleep.1642",
+      "year": 2012
+    },
+    {
+      "title": "Healthy Sleep (health topic)",
+      "publisher": "MedlinePlus, U.S. National Library of Medicine",
+      "url": "https://medlineplus.gov/healthysleep.html"
+    },
+    {
+      "title": "Drowsy Driving",
+      "publisher": "National Highway Traffic Safety Administration",
+      "url": "https://www.nhtsa.gov/risky-driving/drowsy-driving"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

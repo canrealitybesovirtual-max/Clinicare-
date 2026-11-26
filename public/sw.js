@@ -1,9 +1,12 @@
 /*
- * Offline service worker. Caches ONLY static, same-origin app files (pages are static and contain no
- * clinical text; all session data lives in page memory). Never touches non-GET requests or other origins.
+ * Offline service worker. Caches ONLY static, same-origin app files: hashed build assets, icons and the
+ * fixed list of static pages below (pages are prerendered and contain no clinical text; all session
+ * data lives in page memory). Page entries are keyed by path alone, so a query string is never stored.
+ * RSC payloads are not cached: offline, Next.js falls back to a full navigation, which is served from
+ * the cached page. Never touches non-GET requests or other origins.
  */
-const VERSION = "crc-v1";
-const SHELL = [
+const VERSION = "crc-v2";
+const PAGES = [
   "/",
   "/symptoms",
   "/diagnoses",
@@ -13,10 +16,9 @@ const SHELL = [
   "/handouts",
   "/client",
   "/about",
-  "/manifest.webmanifest",
-  "/icons/icon.svg",
-  "/icons/icon-192.png",
 ];
+const PAGE_SET = new Set(PAGES);
+const SHELL = [...PAGES, "/manifest.webmanifest", "/icons/icon.svg", "/icons/icon-192.png"];
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
@@ -42,14 +44,17 @@ self.addEventListener("fetch", (event) => {
   const url = new URL(req.url);
   if (url.origin !== self.location.origin) return;
 
-  // Immutable build assets: cache first.
+  // Immutable build assets and icons: cache first.
   if (url.pathname.startsWith("/_next/static/") || url.pathname.startsWith("/icons/")) {
     event.respondWith(
       caches.match(req).then(
         (hit) =>
           hit ||
           fetch(req).then((res) => {
-            if (res.ok) caches.open(VERSION).then((c) => c.put(req, res.clone()));
+            if (res.ok && res.type === "basic") {
+              const copy = res.clone();
+              caches.open(VERSION).then((c) => c.put(req, copy));
+            }
             return res;
           }),
       ),
@@ -57,19 +62,23 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
-  // Pages and RSC payloads: network first, fall back to the cached static copy when offline.
-  if (req.mode === "navigate" || req.headers.get("RSC") === "1") {
+  // Page loads: network first. Only the known static pages are cached, keyed by path (no query string).
+  if (req.mode === "navigate") {
+    const key = url.pathname;
     event.respondWith(
       fetch(req)
         .then((res) => {
-          if (res.ok && res.type === "basic") {
+          if (res.ok && res.type === "basic" && PAGE_SET.has(key)) {
             const copy = res.clone();
-            caches.open(VERSION).then((c) => c.put(req, copy));
+            caches.open(VERSION).then((c) => c.put(key, copy));
           }
           return res;
         })
         .catch(() =>
-          caches.match(req).then((hit) => hit || (req.mode === "navigate" ? caches.match("/") : Response.error())),
+          caches
+            .match(PAGE_SET.has(key) ? key : "/")
+            .then((hit) => hit || caches.match("/"))
+            .then((hit) => hit || Response.error()),
         ),
     );
   }

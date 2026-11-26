@@ -1,0 +1,172 @@
+{
+  "conditionId": "insomnia-disorder",
+  "problems": [
+    {
+      "id": "ins-trouble-sleeping-and-time-awake-in-bed",
+      "label": "Trouble falling or staying asleep, with long stretches awake in bed",
+      "definitions": [
+        "The sleep diary shows more than 30 minutes to fall asleep, or more than 30 minutes awake after first falling asleep, on most nights of a typical week.",
+        "Wakes much earlier than planned, cannot get back to sleep, and then stays in bed hoping to drift off again.",
+        "Spends much more time in bed than asleep (for example 9 hours in bed for about 5 to 6 hours of sleep), including sleeping in or napping to make up for lost sleep.",
+        "Uses the bed for screens, work, phone calls or worrying, and reports feeling more awake once they lie down."
+      ],
+      "longTermGoals": [
+        "The client falls asleep and gets back to sleep more easily, spends most of their time in bed asleep, and wakes feeling more rested.",
+        "The client has a plan for handling a run of poor nights without slipping back into old habits."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "ins-medical-screen",
+          "text": "By session 2, before behavioral sleep work starts, screen for signs that call for a medical or sleep medicine evaluation (loud snoring, pauses in breathing or gasping, restless legs, a body clock far out of step with daily life, acting out dreams, pain, or medicines and substances that disrupt sleep) and refer as needed, continuing CBT-I alongside where the medical provider agrees.",
+          "interventionIds": ["cbti-stimulus-control"]
+        },
+        {
+          "id": "ins-sleep-diary",
+          "text": "For 2 weeks, fill in a sleep diary each morning (time to bed, estimated minutes to fall asleep, number and length of awakenings, final wake time, time out of bed, naps, sleep quality 0-10), then keep it going and bring it to every session for the rest of treatment.",
+          "interventionIds": ["cbti-stimulus-control", "cbti-sleep-restriction"]
+        },
+        {
+          "id": "ins-how-sleep-works",
+          "text": "By session 3, the client explains in their own words how sleep drive and the body clock work, and how long periods awake in bed, naps and shifting wake times weaken them.",
+          "interventionIds": ["sleep-hygiene-education"]
+        },
+        {
+          "id": "ins-stimulus-control",
+          "text": "From week 3, follow stimulus control on at least 5 nights a week for 4 weeks: go to bed only when sleepy, get up and do something quiet in dim light after what feels like about 15 to 20 minutes awake (without watching the clock), keep the bed for sleep and intimacy only, and get up at the same time every day, within 30 minutes.",
+          "interventionIds": ["cbti-stimulus-control"]
+        },
+        {
+          "id": "ins-sleep-window",
+          "text": "Only when delivered by a clinician trained in CBT-I, or through referral to one: after screening for bipolar disorder or past mania, seizure disorders, untreated sleep apnea, falls risk, pregnancy and safety-sensitive work or driving, set a temporary sleep window from diary data by week 4 and adjust it weekly following the clinician's CBT-I protocol. Avoid it for clients with bipolar disorder or a seizure disorder unless it is coordinated with their prescriber or neurologist, and check daytime sleepiness and driving safety at every session.",
+          "interventionIds": ["cbti-sleep-restriction"]
+        },
+        {
+          "id": "ins-step-up-care",
+          "text": "If the diary shows little change after 6 to 8 weeks of CBT-I, discuss together by week 10 a referral to behavioral sleep medicine, a medical review, or a prescriber visit about whether short-term medication fits; any medication decision belongs to the prescriber and the client.",
+          "interventionIds": ["medication-referral"]
+        },
+        {
+          "id": "ins-poor-night-plan",
+          "text": "In the final 2 sessions, write a plan for a run of poor nights: restart the diary for 1 to 2 weeks, go back to stimulus control, keep the fixed wake time, avoid sleeping in or long naps, and contact the clinician if poor sleep lasts longer than 3 weeks.",
+          "interventionIds": ["relapse-prevention-planning", "cbti-stimulus-control"]
+        }
+      ],
+      "measureIds": []
+    },
+    {
+      "id": "ins-racing-mind-and-sleep-worry",
+      "label": "A racing mind, worry about sleep and feeling keyed up at bedtime",
+      "definitions": [
+        "Reports lying awake with thoughts racing about the day, tomorrow or not sleeping, for example 'if I don't sleep tonight I'll fall apart at work.'",
+        "Checks the clock several times a night and works out how much sleep is left.",
+        "Describes feeling tense, wired or 'tired but wired' at bedtime, even when worn out during the day.",
+        "Holds firm beliefs that raise the pressure to sleep, such as needing a full 8 hours to function at all, or that one bad night will cause lasting harm."
+      ],
+      "longTermGoals": [
+        "The client goes to bed with a calmer mind, holds more balanced beliefs about sleep, and worries less about the effects of a poor night."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "ins-wind-down",
+          "text": "For 4 weeks, use a 30 to 60 minute wind-down period before bed on at least 5 nights a week (dim lights, screens put away or kept to a minimum, and a calming activity such as reading, gentle stretching or progressive muscle relaxation), rating how settled the client feels (0-10) at lights out.",
+          "interventionIds": ["sleep-hygiene-education", "progressive-muscle-relaxation"]
+        },
+        {
+          "id": "ins-early-evening-worry",
+          "text": "From week 2, on at least 5 days a week, set aside 15 minutes in the early evening to write down worries and possible next steps. When worries come up in bed, the client reminds themselves that the worries have a set time, and notes any change in time spent awake worrying on the diary.",
+          "interventionIds": ["worry-time", "problem-solving"]
+        },
+        {
+          "id": "ins-sleep-beliefs",
+          "text": "By week 6, complete at least 3 thought records on unhelpful sleep beliefs, rating belief (0-100) before and after, and test at least 1 belief with a behavioral experiment (for example comparing a prediction about the day after a short night with how the day actually went).",
+          "interventionIds": ["thought-record", "behavioral-experiments"]
+        },
+        {
+          "id": "ins-clock-away",
+          "text": "By week 4, turn the clock away or put it out of reach and stop checking the time during the night on at least 5 nights a week, recorded on the diary.",
+          "interventionIds": ["safety-behavior-reduction", "cbti-stimulus-control"]
+        },
+        {
+          "id": "ins-mindful-acceptance",
+          "text": "Over weeks 3 to 10, practice a 10 to 20 minute mindfulness or acceptance exercise during the day or early evening on at least 5 days a week, framed as learning to let thoughts come and go rather than as a way to force sleep, and rate how easy it was to let thoughts pass (0-10). This is an add-on to CBT-I: NCCIH notes that mindfulness improved sleep quality more than education-based approaches but not more than CBT or exercise.",
+          "interventionIds": ["mindfulness-meditation", "act-acceptance-willingness", "act-cognitive-defusion"]
+        },
+        {
+          "id": "ins-faith-wind-down",
+          "text": "Only if the client raises faith and asks to include it, and after documented informed consent: by week 4, fit a prayer, devotional reading or other practice the client chooses into the wind-down routine or the early-evening worry time, and plan the fixed wake time around night prayer or fasting periods. The client leads; the clinician does not introduce, endorse or challenge beliefs.",
+          "interventionIds": ["religiously-integrated-cbt"]
+        }
+      ],
+      "measureIds": ["gad-7"]
+    },
+    {
+      "id": "ins-daytime-effects-and-sleep-setting",
+      "label": "Daytime tiredness, mood effects, and habits or settings that work against sleep",
+      "definitions": [
+        "Reports feeling tired, foggy or irritable during the day, and has cut back on work, exercise, social plans or caregiving because of poor sleep.",
+        "Uses caffeine late in the day, alcohol to fall asleep, or long or late naps to get through the day.",
+        "Works shifts, provides care at night, or sleeps in a setting with noise, light, crowding or safety concerns that makes a regular routine hard.",
+        "Reports low mood or anxiety that rises and falls with sleep; any thoughts of death or self-harm call for direct clinician assessment at the time they come up."
+      ],
+      "longTermGoals": [
+        "The client keeps up valued daytime activities despite some tiredness, relies less on habits that disrupt sleep, and feels better able to manage mood.",
+        "Any suicide risk is noticed early and handled through a safety plan built together with the client."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "ins-caffeine-alcohol",
+          "text": "By week 3, set a personal caffeine cut-off time and avoid using alcohol as a sleep aid on at least 6 nights a week, recorded on the sleep diary. If the client drinks heavily every day or has had withdrawal symptoms, refer for a medical assessment before they cut down, and consider the alcohol-use plan.",
+          "interventionIds": ["sleep-hygiene-education", "motivational-interviewing"]
+        },
+        {
+          "id": "ins-daytime-activity",
+          "text": "Over weeks 2 to 8, keep at least 1 planned valued or pleasant activity each day even when tired, rather than cancelling it, rating energy and mood (0-10) before and after.",
+          "interventionIds": ["behavioral-activation", "act-committed-action"]
+        },
+        {
+          "id": "ins-movement",
+          "text": "By week 6, add a physical activity the client chooses and has been medically cleared for (for example a 20-minute walk, or a gentle yoga or tai chi class) at least 3 times a week, ideally not right before bed. This is a complementary add-on: NCCIH notes that yoga and tai chi may improve sleep quality, and that CBT-I has the strongest evidence for chronic insomnia.",
+          "interventionIds": ["physical-activity", "yoga-mind-body"]
+        },
+        {
+          "id": "ins-real-life-fit",
+          "text": "By week 4, if shift work, night caregiving, a shared bed or room, or a noisy or unsafe sleep setting is present, use structured problem solving to make at least 1 practical change, and adapt the CBT-I steps (for example the fixed wake time) to the client's real schedule and household.",
+          "interventionIds": ["problem-solving", "cultural-formulation-exploration"]
+        },
+        {
+          "id": "ins-score-and-safety",
+          "text": "Complete the PHQ-9 and GAD-7 at intake and every 2 to 4 weeks, along with any insomnia scale the practice is licensed to use outside this app (the ISI is license pending here). Whenever risk is present (for example a PHQ-9 item 9 response above 0, or the client describes thoughts of death or self-harm), the clinician assesses risk directly and, in that same session, works with the client to create or review a written safety plan with professional and crisis contacts (call or text 988 in the US; elsewhere the local emergency number or findahelpline.com) and agreed steps to limit access to means of harm, and holds off on sleep restriction until safety has been addressed. Risk level and next steps are the clinician's decision; this tool never rates risk.",
+          "interventionIds": ["collaborative-safety-planning"]
+        }
+      ],
+      "measureIds": ["phq-9", "gad-7"]
+    }
+  ],
+  "collaborativeNote": "These are starting points for clinician review, not a finished plan. Rewrite each goal and objective with the client in their own words, fit the routine to their work, caregiving, faith and household, and record their agreement before anything is added to the plan. CBT for insomnia (CBT-I) is the first-line treatment in the ACP 2016 and AASM 2021 guidelines, and the AASM advises against using sleep-habit education as the only treatment for chronic insomnia. Sleep restriction is for clinicians trained in CBT-I (otherwise refer): screen first for bipolar disorder or past mania, seizure disorders, untreated sleep apnea, falls risk and safety-sensitive work, and check sleepiness and driving safety throughout. Screen for other sleep disorders and for medical, medication and substance causes before starting. If drinking comes up, follow the alcohol-use plan; for records from a Part 2 program, 42 CFR Part 2 prohibits unauthorized disclosure of these records. Mindfulness, yoga, tai chi and exercise are complementary add-ons, not replacements for CBT-I. Safety planning is always done together with the client, and the clinician makes every risk decision. Adult scope only. Do not add names or other identifying details. Resource only. Not a substitute for clinical judgment.",
+  "sources": [
+    { "title": "Behavioral and psychological treatments for chronic insomnia disorder in adults: an American Academy of Sleep Medicine clinical practice guideline (Edinger et al.)", "publisher": "Journal of Clinical Sleep Medicine (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/33164742/", "year": 2021 },
+    { "title": "Behavioral and psychological treatments for chronic insomnia disorder in adults: an AASM systematic review, meta-analysis and GRADE assessment", "publisher": "Journal of Clinical Sleep Medicine (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/33164741/", "year": 2021 },
+    { "title": "New guideline supports behavioral and psychological treatments for insomnia", "publisher": "American Academy of Sleep Medicine", "url": "https://aasm.org/new-guideline-supports-behavioral-psychological-treatments-for-insomnia/", "year": 2021 },
+    { "title": "Behavioral and Psychological Treatments for Insomnia: patient guide", "publisher": "American Academy of Sleep Medicine", "url": "https://aasm.org/wp-content/uploads/2021/08/Behavioral-and-Psychological-Treatments-for-Insomnia-Patient-Guide.pdf", "year": 2021 },
+    { "title": "Management of chronic insomnia disorder in adults: a clinical practice guideline from the American College of Physicians (Qaseem et al.)", "publisher": "Annals of Internal Medicine (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/27136449/", "year": 2016 },
+    { "title": "No pain, no gain: an exploratory within-subjects mixed-methods evaluation of the patient experience of sleep restriction therapy for insomnia (Kyle, Morgan, Spiegelhalder and Espie)", "publisher": "Sleep Medicine (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/21907616/", "year": 2011 },
+    { "title": "New clinical practice guideline recognizes insomnia and sleep apnea can occur together (2025 VA/DoD guideline)", "publisher": "Military Health System", "url": "https://health.mil/News/Dvids-Articles/2026/01/22/news556510", "year": 2026 },
+    { "title": "Treating Insomnia: providers guide", "publisher": "Military Health System", "url": "https://health.mil/Reference-Center/Publications/2025/11/26/Treating-Insomnia-Providers-Guide", "year": 2025 },
+    { "title": "Sleep Disorders and Complementary Health Approaches", "publisher": "National Center for Complementary and Integrative Health (NCCIH)", "url": "https://www.nccih.nih.gov/health/sleep-disorders-and-complementary-health-approaches" },
+    { "title": "Meditation and Mindfulness: Effectiveness and Safety", "publisher": "National Center for Complementary and Integrative Health (NCCIH)", "url": "https://www.nccih.nih.gov/health/meditation-and-mindfulness-effectiveness-and-safety" },
+    { "title": "Healthy Sleep (health topic)", "publisher": "MedlinePlus, National Library of Medicine", "url": "https://medlineplus.gov/healthysleep.html" },
+    { "title": "Integrating clients' religion and spirituality within psychotherapy: a comprehensive meta-analysis (Captari et al.)", "publisher": "Journal of Clinical Psychology (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/30221353/", "year": 2018 },
+    { "title": "AACC Code of Ethics", "publisher": "American Association of Christian Counselors", "url": "https://aacc.net/aacc-code-of-ethics/" },
+    { "title": "ACA Code of Ethics (2014) and ethics resources", "publisher": "American Counseling Association", "url": "https://www.counseling.org/resources/ethics", "year": 2014 },
+    { "title": "The HIPAA Privacy Rule and 42 CFR Part 2", "publisher": "US Department of Health and Human Services", "url": "https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/hipaa-part-2/index.html" },
+    { "title": "Comparison of the Safety Planning Intervention with follow-up vs usual care of suicidal patients treated in the emergency department (Stanley et al.)", "publisher": "JAMA Psychiatry (PubMed Central)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6142908/", "year": 2018 },
+    { "title": "988 Suicide & Crisis Lifeline", "publisher": "988 Lifeline", "url": "https://988lifeline.org" },
+    { "title": "Find A Helpline (international directory)", "publisher": "Find A Helpline", "url": "https://findahelpline.com" },
+    { "title": "A Tipping Point for Measurement-Based Care (Fortney et al.)", "publisher": "Psychiatric Services; reprinted in Focus (PubMed Central)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6996080/", "year": 2017 },
+    { "title": "Shared decision making (NG197)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng197", "year": 2021 },
+    { "title": "PHQ and GAD-7 screeners (reproduction terms)", "publisher": "Pfizer / PHQ Screeners", "url": "https://www.phqscreeners.com" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

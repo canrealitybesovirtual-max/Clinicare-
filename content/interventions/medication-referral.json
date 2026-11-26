@@ -12,9 +12,10 @@
     "social-anxiety-disorder",
     "obsessive-compulsive-disorder",
     "alcohol-use-disorder",
-    "insomnia-disorder"
+    "insomnia-disorder",
+    "prolonged-grief-disorder"
   ],
-  "evidenceLevel": "Guidelines include medication as an option, alone or with psychotherapy, for several conditions. Examples: NICE NG222 (depression; antidepressants are not routinely offered first-line for less severe depression unless the person prefers them); NICE CG113 (GAD and panic disorder); NICE CG159 (social anxiety, where antidepressants are usually less helpful than individual CBT); NICE CG31 (OCD, SSRIs for moderate or severe impairment); the 2025 APA PTSD guideline (suggests SSRIs or SNRIs); the APA 2018 alcohol pharmacotherapy guideline (naltrexone or acamprosate for moderate to severe AUD); and ACP 2016 with AASM (CBT-I first for chronic insomnia, with short-term medication considered if CBT-I is not enough). Decisions belong to the prescriber and the client.",
+  "evidenceLevel": "Guidelines include medication as an option, alone or with psychotherapy, for several conditions. Examples: NICE NG222 (depression; antidepressants are not routinely offered first-line for less severe depression unless the person prefers them); NICE CG113 (GAD and panic disorder); NICE CG159 (social anxiety, where antidepressants are usually less helpful than individual CBT); NICE CG31 (OCD, SSRIs for moderate or severe impairment); the APA PTSD guideline (updated 2025; check its current medication ratings); the APA 2018 alcohol pharmacotherapy guideline (naltrexone or acamprosate for moderate to severe AUD); and ACP 2016 with AASM (CBT-I first for chronic insomnia, with short-term medication considered if CBT-I is not enough). Prolonged grief: in one large trial, an antidepressant helped co-occurring depressive symptoms but did not improve grief outcomes (Shear et al., 2016), so refer for the depression rather than for grief itself. Decisions belong to the prescriber and the client.",
   "minutes": { "min": 10, "max": 20 },
   "purpose": "Helps the clinician recognize when a medication evaluation may help, explain options in plain language, and refer to a prescriber (psychiatrist, primary care clinician or psychiatric nurse practitioner) while therapy continues. This is clinician-facing, class-level medication education only. It gives no doses, no prescribing advice, and no advice to start, stop or change any medicine. Non-prescribing clinicians should stay within their scope of practice and coordinate with the prescriber, with the client's consent.",
   "steps": [
@@ -70,6 +71,7 @@
     { "title": "Combination treatment for chronic insomnia (guideline announcement)", "publisher": "American Academy of Sleep Medicine", "url": "https://aasm.org/combination-treatment-chronic-insomnia-guideline/", "year": 2026 },
     { "title": "FDA requiring Boxed Warning updated to improve safe use of benzodiazepine drug class", "publisher": "US Food and Drug Administration", "url": "https://www.fda.gov/drugs/drug-safety-and-availability/fda-requiring-boxed-warning-updated-improve-safe-use-benzodiazepine-drug-class", "year": 2020 },
     { "title": "Depression and Complementary Health Approaches: What the Science Says", "publisher": "National Center for Complementary and Integrative Health (NCCIH)", "url": "https://www.nccih.nih.gov/health/providers/digest/depression-and-complementary-health-approaches" },
+    { "title": "Optimizing treatment of complicated grief: a randomized clinical trial (Shear et al.)", "publisher": "JAMA Psychiatry", "url": "https://doi.org/10.1001/jamapsychiatry.2016.0892", "year": 2016 },
     { "title": "NPPES NPI Registry", "publisher": "Centers for Medicare and Medicaid Services", "url": "https://npiregistry.cms.hhs.gov/" },
     { "title": "The HIPAA Privacy Rule and 42 CFR Part 2", "publisher": "US Department of Health and Human Services", "url": "https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/hipaa-part-2/index.html" },
     { "title": "AACC Code of Ethics", "publisher": "American Association of Christian Counselors", "url": "https://aacc.net/aacc-code-of-ethics/" },

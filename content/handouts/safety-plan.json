@@ -4,87 +4,74 @@
   "audience": "client",
   "readingLevel": "6-8",
   "estimatedMinutes": 30,
-  "intro": "A safety plan is a list of steps to help you stay safe during a very hard time. This might be a time when you have thoughts of suicide. You make it ahead of time, when you are calm, with your counselor or someone you trust. Then, in a hard moment, you don't have to figure out what to do. You just follow your plan. Write it by hand, in your own words. Making it takes about 20 to 30 minutes.",
+  "intro": "A safety plan is your own short guide for getting through a crisis, like a time when you have thoughts of suicide. You make it ahead of time, when you feel calmer, with your counselor or someone you trust. Then, in a hard moment, you don't have to figure out what to do. You can just follow your plan. Write it by hand on a printed copy, in your own words. Making it takes about 20 to 30 minutes.",
   "sections": [
     {
       "heading": "How to use your plan",
       "steps": [
-        "When you notice your warning signs, start with Step 1 and keep going down the list.",
-        "If a step does not help, move on to the next one.",
-        "You can skip straight to the crisis lines or emergency help at any time. You do not have to try every step first.",
+        "When you notice your early signs, start with Part 2 and keep going down the sheet.",
+        "If one idea does not help, try the next one.",
+        "You can go straight to Part 5 at any time. You do not have to try everything else first.",
         "Keep a copy where you can find it fast, like in your wallet, your bag, or by your bed."
       ]
     },
     {
-      "heading": "What keeps me going",
-      "body": "Write one or more things that matter to you and give you a reason to keep going. It could be people, pets, faith, goals, or things you love to do.",
+      "heading": "My reasons to keep going",
+      "body": "Start with what matters to you. Reading it in a hard moment can remind you why staying safe is worth it. It could be people, pets, faith, plans, or things you love to do.",
       "steps": [
-        "Something that matters to me: ________________________",
-        "Something I look forward to: ________________________"
+        "A reason I want to keep going: ________________________",
+        "Something I am looking forward to: ________________________"
       ]
     },
     {
-      "heading": "Step 1: My warning signs",
-      "body": "These are signs that a crisis may be starting. They can be thoughts, feelings, things you do, or things that happen.",
+      "heading": "Part 1: Notice my early signs",
+      "body": "A crisis often builds slowly. Think back to the last few hard times. What came first?",
       "steps": [
-        "A thought I notice: ________________________",
-        "A feeling or body sign I notice: ________________________",
-        "Something I do, or stop doing: ________________________",
-        "A situation that can set it off: ________________________"
+        "What I might start to think: ________________________",
+        "What I might feel in my mood or my body: ________________________",
+        "What I might start doing, or stop doing: ________________________",
+        "Times or events that can make things harder: ________________________"
       ]
     },
     {
-      "heading": "Step 2: Things I can do on my own",
-      "body": "These are things that help you feel calmer or take your mind off things, without needing anyone else.",
+      "heading": "Part 2: Calm down and get through the next hour",
+      "body": "List things you can do by yourself, right where you are. The goal is to get through the moment, not to fix everything.",
       "steps": [
-        "Something that calms my body: ________________________",
-        "Something that takes my mind off things: ________________________",
-        "Something that comforts me: ________________________"
+        "Something that helps my body calm down: ________________________",
+        "Something that keeps my mind busy: ________________________",
+        "Something that brings me comfort: ________________________"
       ]
     },
     {
-      "heading": "Step 3: People and places that lift my mood",
-      "body": "Being around others can help, even if you don't talk about how you feel.",
+      "heading": "Part 3: Connect with people",
+      "body": "Being around others can help, even if you do not talk about how you feel. Some people can also help when you tell them you are struggling. Write how to reach them on your paper copy only.",
       "steps": [
-        "A person I like to spend time with: ________________________",
-        "Another person I like to spend time with: ________________________",
-        "A safe place where I can be around others: ________________________"
+        "Someone I like being around: ________________________",
+        "A place with other people where I feel okay: ________________________",
+        "Someone I can tell 'I am not okay,' and how to reach them: ________________",
+        "Another person I can tell, and how to reach them: ________________"
       ]
     },
     {
-      "heading": "Step 4: People I can ask for help",
-      "body": "These are people you trust enough to tell that you are having a hard time. Write how to reach each one.",
+      "heading": "Part 4: Make my space safer",
+      "body": "A crisis often passes. Putting time and distance between you and things you could use to hurt yourself gives the feeling time to ease. This can save a life. Plan these steps with your counselor and someone you trust.",
       "steps": [
-        "Person and how to reach them: ________________________",
-        "Another person and how to reach them: ________________________",
-        "A third person and how to reach them: ________________________"
-      ]
-    },
-    {
-      "heading": "Step 5: Professionals I can contact",
-      "steps": [
-        "My counselor or therapist and how to reach them: ________________",
-        "My doctor or clinic and how to reach them: ________________",
-        "After-hours help line from my clinic, if there is one: ________________",
-        "Nearest emergency room: ________________________"
-      ]
-    },
-    {
-      "heading": "Step 6: Making my space safer",
-      "body": "Some things in your home could be used to hurt yourself. Putting time and distance between you and those things can save your life. A crisis often passes. Making it harder to act during a crisis gives the feeling time to ease. Talk about these steps with your counselor and with someone you trust.",
-      "steps": [
-        "Guns: During a hard time, the safest choice is to store guns away from home with someone you trust. Check that the law where you live allows this. If that is not possible, keep guns locked and unloaded. Lock the bullets up in a separate place, and ask someone else to hold the keys.",
-        "Medicines: Keep only the amount you need at home. Ask someone you trust to hold the rest, or to give you a few days at a time. Drop off old or unused medicines at a take-back site, such as many pharmacies.",
-        "Alcohol and drugs: These can make it harder to stay safe. Think about keeping them out of your home for now.",
+        "Guns: While things are hard, the safest choice is for someone you trust to keep your guns away from your home. First check that the law where you live allows this. If that cannot happen, keep guns locked and unloaded. Lock the bullets in a different place, and let someone else hold the keys.",
+        "Medicines: Keep only what you need at home. Ask someone you trust to hold the rest, or to give you a few days at a time. Take old or unused medicines to a take-back site. Many pharmacies have one.",
+        "Alcohol and drugs: They can make it harder to stay safe. Think about keeping them out of your home for now.",
         "Other things I could use to hurt myself: ________________",
-        "One thing I will do to make my space safer: ________________",
+        "One step I will take to make my space safer: ________________",
         "Someone who can help me with this: ________________"
       ]
     },
     {
-      "heading": "Step 7: Crisis lines and emergency help",
-      "body": "You can reach these any time, day or night.",
+      "heading": "Part 5: Get help now",
+      "body": "You can reach out to these at any time, day or night. You do not have to wait until things feel 'bad enough.'",
       "steps": [
+        "My counselor or therapist, and how to reach them: ________________",
+        "My doctor or clinic, and how to reach them: ________________",
+        "My clinic's after-hours line, if there is one: ________________",
+        "The nearest emergency room: ________________",
         "In the US, call or text 988 to reach the 988 Suicide & Crisis Lifeline. You can also chat at 988lifeline.org.",
         "For help in Spanish, call 988 and press 2.",
         "Veterans and service members: call 988 and press 1, or text 838255.",
@@ -97,13 +84,13 @@
       "heading": "Keeping your plan up to date",
       "steps": [
         "Look over your plan with your counselor every few visits, and after any hard time.",
-        "Change anything that did not help, and add what did.",
+        "Cross out what did not help, and add what did.",
         "If you want, share a copy with someone you trust so they know how to help."
       ]
     },
     {
       "heading": "About this sheet",
-      "body": "This is an original blank plan written for this resource. It is not the Stanley-Brown Safety Plan, which is a separate form. Your counselor may use that form or another one instead. Use the plan that works best for you and your counselor."
+      "body": "This blank plan was written for this resource, in its own words and its own order. It is not the Stanley-Brown Safety Plan, which is a separate form. Your counselor may use that form or another one instead. Use the plan that works best for you and your counselor."
     }
   ],
   "practiceLog": {

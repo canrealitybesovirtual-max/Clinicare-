@@ -1,0 +1,122 @@
+{
+  "id": "drinking-diary",
+  "title": "Drinking Diary",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 10,
+  "intro": "A drinking diary helps you see how much you drink, when, and what is going on around it. There are no right or wrong answers. Just write down what really happens. Over a week or two, patterns start to show. You and your counselor can use them to plan next steps. Reading this sheet takes about 10 minutes. Filling in the diary takes a minute or two each day.",
+  "sections": [
+    {
+      "heading": "What counts as one drink",
+      "body": "Drinks come in many sizes and strengths. So health experts count 'standard drinks.' In the US, one standard drink has about 14 grams (0.6 ounces) of pure alcohol. Each of these is about one standard drink:",
+      "steps": [
+        "12 ounces of regular beer (about 5% alcohol)",
+        "5 ounces of wine (about 12% alcohol)",
+        "1.5 ounces of liquor, such as vodka, whiskey, or rum (about 40% alcohol, also called 80 proof)"
+      ]
+    },
+    {
+      "heading": "Counting tips",
+      "steps": [
+        "Many cans, glasses, and mixed drinks hold more than one standard drink. Strong beers and malt liquor often have more alcohol than regular beer.",
+        "A regular 750 mL bottle of wine holds about 5 standard drinks.",
+        "Check the label for the percent of alcohol. It is often shown as 'ABV.'",
+        "At home, try pouring your usual drink into a measuring cup once. Many people pour more than they think."
+      ]
+    },
+    {
+      "heading": "How to fill in your diary",
+      "steps": [
+        "Fill in a row each day, as soon after drinking as you can. It's easy to forget later.",
+        "Write '0' on days you don't drink. Those days count too.",
+        "Write what you drank and how much, like '2 large beers' or '3 glasses of wine.' Then add up the standard drinks.",
+        "Write the kind of place and whether you were alone or with others. For example, 'home, alone' or 'bar, with friends.' Do not write names.",
+        "Write what was going on and how you felt before you drank, like 'stressed after work' or 'bored.'"
+      ]
+    },
+    {
+      "heading": "My goal",
+      "body": "If you and your counselor set a goal, write it here. Your goal might be to cut back or to stop. It is your choice, made with your care team.",
+      "steps": [
+        "Most drinks I plan to have on any one day: ________",
+        "Days with no drinking each week: ________",
+        "Why this goal matters to me: ________________________"
+      ]
+    },
+    {
+      "heading": "Looking back each week",
+      "steps": [
+        "Which days or times did I drink the most?",
+        "What was going on, or how was I feeling, before those times?",
+        "What helped on days I drank less or not at all?"
+      ]
+    },
+    {
+      "heading": "Privacy note",
+      "body": "Do not write your name, or the names of other people or places, on this sheet. Keep it somewhere private. If you share it with a substance use treatment program, it may become part of your treatment records. Those records have special federal privacy protection. 42 CFR Part 2 prohibits unauthorized disclosure of these records. Ask your counselor how your records are kept and shared."
+    }
+  ],
+  "practiceLog": {
+    "columns": [
+      "Day",
+      "Time",
+      "What I drank and how much",
+      "Standard drinks",
+      "Kind of place; alone or with others",
+      "What was going on and how I felt"
+    ],
+    "rows": 14
+  },
+  "safetyNote": "Safety first: If you drink a lot every day, stopping all at once can be dangerous. Talk with a doctor before you cut back or stop. Get medical help right away if you have shaking, sweating, a racing heart, confusion, or seizures, or if you see or hear things that aren't there. Never drive after drinking. Mixing alcohol with some medicines, such as pills for sleep, pain, or nerves, can be very dangerous. If you are pregnant or could be, the safest choice is not to drink. For free, confidential help finding treatment in the US, call the SAMHSA National Helpline at 1-800-662-4357, any time, in English or Spanish. If you have thoughts of hurting yourself or someone else, call or text 988 in the US, or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sources": [
+    {
+      "title": "What Is A Standard Drink?",
+      "publisher": "NIAAA, National Institutes of Health",
+      "url": "https://www.niaaa.nih.gov/alcohols-effects-health/what-standard-drink"
+    },
+    {
+      "title": "Rethinking Drinking",
+      "publisher": "NIAAA, National Institutes of Health",
+      "url": "https://www.rethinkingdrinking.niaaa.nih.gov/"
+    },
+    {
+      "title": "Harmful Interactions: Mixing Alcohol With Medicines",
+      "publisher": "NIAAA, National Institutes of Health",
+      "url": "https://www.niaaa.nih.gov/publications/brochures-and-fact-sheets/harmful-interactions-mixing-alcohol-with-medicines"
+    },
+    {
+      "title": "Alcohol withdrawal (medical encyclopedia)",
+      "publisher": "MedlinePlus, U.S. National Library of Medicine",
+      "url": "https://medlineplus.gov/ency/article/000764.htm"
+    },
+    {
+      "title": "Alcohol Treatment Navigator",
+      "publisher": "NIAAA, National Institutes of Health",
+      "url": "https://alcoholtreatment.niaaa.nih.gov/"
+    },
+    {
+      "title": "Drunk Driving",
+      "publisher": "National Highway Traffic Safety Administration",
+      "url": "https://www.nhtsa.gov/risky-driving/drunk-driving"
+    },
+    {
+      "title": "National Helpline",
+      "publisher": "SAMHSA",
+      "url": "https://www.samhsa.gov/find-help/helplines/national-helpline"
+    },
+    {
+      "title": "42 CFR 2.32: notice to accompany disclosure (federal confidentiality rule for substance use treatment records)",
+      "publisher": "eCFR, U.S. Government Publishing Office",
+      "url": "https://www.ecfr.gov/current/title-42/chapter-I/subchapter-A/part-2/subpart-C/section-2.32",
+      "year": 2024
+    },
+    {
+      "title": "Confidentiality of substance use treatment records (42 CFR Part 2)",
+      "publisher": "U.S. Department of Health and Human Services",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/hipaa-part-2/index.html"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

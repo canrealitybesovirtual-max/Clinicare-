@@ -1,0 +1,83 @@
+{
+  "id": "collaborative-safety-planning",
+  "name": "Collaborative safety planning (original format)",
+  "modality": "Suicide prevention - brief collaborative safety planning",
+  "conditions": [
+    "major-depressive-disorder",
+    "persistent-depressive-disorder",
+    "ptsd",
+    "alcohol-use-disorder",
+    "prolonged-grief-disorder",
+    "adjustment-disorder",
+    "panic-disorder",
+    "agoraphobia",
+    "generalized-anxiety-disorder",
+    "social-anxiety-disorder",
+    "obsessive-compulsive-disorder",
+    "insomnia-disorder"
+  ],
+  "evidenceLevel": "A meta-analysis of 6 studies (3,536 participants) found that safety planning-type interventions reduced suicidal behavior (relative risk about 0.57; number needed to treat 16) but not suicidal thoughts (Nuij et al., 2021). In a VA emergency department cohort study, the Safety Planning Intervention plus follow-up phone calls was linked with 45% fewer suicidal behaviors over 6 months and more outpatient mental health visits (Stanley et al., 2018; observational, mostly male veterans). The 2024 VA/DoD suicide risk guideline highlights crisis response and safety planning, including means safety. NICE NG225 (self-harm, 2022) advises against using risk tools or low/medium/high risk categories to predict suicide or to decide who gets care.",
+  "minutes": { "min": 20, "max": 45 },
+  "purpose": "A safety plan is a short, written, personal list that the client and clinician build together for use during a suicidal crisis. It usually covers personal warning signs; things the client can do alone to get through the moment; people and places that offer distraction; people the client can ask for help; professional and crisis contacts; steps to make the surroundings safer (see lethal-means-counseling); and the client's reasons for living. It is a collaborative intervention, not a 'no-suicide contract', and it does not measure or decide risk. This app's format and wording are original. The widely used Stanley-Brown Safety Planning Intervention template is copyrighted and listed as license pending here; link out to it rather than reproducing it.",
+  "steps": [
+    "Complete your setting's suicide risk assessment first, and use clinical judgment and local procedures to decide on level of care. The safety plan supports that assessment; it does not replace it.",
+    "Explain the purpose: a plan made while calmer, for use when things get hard. Invite the client to lead and to use their own words.",
+    "Walk through the most recent crisis together, step by step, to find warning signs (thoughts, feelings, situations, behaviors) and what helped or could have helped.",
+    "Build each section with the client. Start with things they can do on their own, then people and places for distraction, then people who can help in a crisis, then professional supports and crisis lines (in the US, call or text 988; the local emergency number; findahelpline.com for other countries).",
+    "Talk about making the surroundings safer, especially firearms, medicines and any other means the client mentions. Use the lethal-means-counseling entry.",
+    "Add reasons for living, or things that matter most, in the client's words.",
+    "Ask how likely the client is to use each step and problem-solve barriers. If it helps, rehearse calling someone or calling or texting 988.",
+    "Decide together where the plan will be kept (a paper copy or a photo on the phone) and who else will know about it, with consent. Write it on the safety-plan handout.",
+    "Follow up: review and update the plan at later sessions and after any crisis. Consider brief follow-up contacts (calls or messages) after high-risk periods."
+  ],
+  "script": [
+    "Let's make a plan together for times when things feel really dark. We make it now, while you're calmer, so it's ready when you need it.",
+    "Think about the last time things got really bad. What were the first signs?",
+    "What can you do on your own to get through a hard moment, even for ten minutes?",
+    "Who could you be with, or where could you go, to take your mind off things?",
+    "Who could you tell that you're struggling? Is there anyone you'd want to call?",
+    "If those steps don't help, you can call or text 988 any time in the US. In an emergency, call your local emergency number. If you live somewhere else, findahelpline.com lists lines near you.",
+    "Let's talk about making things safer at home while you're going through this.",
+    "What matters most to you? What are your reasons to keep going?",
+    "How likely are you to use this plan? What might get in the way?"
+  ],
+  "contraindications": [
+    "A safety plan is not a risk assessment and does not decide risk or level of care; the clinician does. This app never decides risk.",
+    "Do not use 'no-suicide contracts' or promises in place of safety planning.",
+    "If risk appears imminent (for example, intent with access to means, or the client cannot agree to use the plan), follow emergency procedures. Do not end the session with only a safety plan. In the US, call or text 988 or call the local emergency number; elsewhere, use the local emergency number or findahelpline.com.",
+    "Check that the people listed are safe and willing to help. Do not list anyone who is a source of harm.",
+    "Alcohol and drug use raise risk in a crisis. Include steps about substances where relevant. Do not enter identifying details into this tool; nothing is stored or sent. Any note or export about substance use must carry this notice: 42 CFR Part 2 prohibits unauthorized disclosure of these records.",
+    "Licensing: the Stanley-Brown template is copyrighted. Copies of the form state that individual use is permitted and that written permission is needed for changes or electronic record use. This app uses its own original format and links out to the Stanley-Brown plan as license pending.",
+    "Duty-to-protect and mandatory reporting rules vary by jurisdiction. Follow local law, and consult your board or an attorney when unsure."
+  ],
+  "culturalAdaptations": [
+    "Ask about cultural, family and religious beliefs about suicide (for example, shame, religious prohibitions, family honor) and how they affect help-seeking and disclosure.",
+    "In family-centered cultures, involve family in the plan when the client agrees. In some families disclosure could cause harm, so let the client decide.",
+    "Include culturally meaningful coping and supports (community, elders, faith, cultural practices) and crisis services in the client's language. 988 offers Spanish-language and interpretation options; check current services.",
+    "For LGBTQ+ clients, identify affirming supports and specialized crisis services. Veterans can reach the Veterans Crisis Line through 988 (press 1).",
+    "Indigenous clients may prefer culturally grounded supports. Ask about tribal or local community resources."
+  ],
+  "faithIntegrated": {
+    "note": "If the client chooses, the plan can include prayer, sacred texts, worship, or contacting a trusted faith leader as coping steps or supports, and faith-based reasons for living in the client's own words. The clinician does not introduce religious arguments against suicide and never suggests that suicidal thoughts reflect weak faith.",
+    "consentNote": "Offer only if the client raises faith or spirituality and asks to include it. Before starting, explain what the faith-integrated option involves, that it is optional, that the same intervention is available without religious content, and that the client can change their mind at any time; document informed consent. Follow the client's own tradition and words, and never introduce, impose, endorse or challenge beliefs (AACC Code of Ethics: informed consent before spiritual interventions, client-led integration; ACA Code of Ethics 2014, A.2 informed consent and A.4.b personal values)."
+  },
+  "handoutIds": ["safety-plan", "hard-moment-plan", "coping-cards"],
+  "sources": [
+    { "title": "Safety planning-type interventions for suicide prevention: meta-analysis (Nuij et al.)", "publisher": "British Journal of Psychiatry (DOI)", "url": "https://doi.org/10.1192/bjp.2021.50", "year": 2021 },
+    { "title": "Comparison of the Safety Planning Intervention with follow-up vs usual care of suicidal patients treated in the emergency department (Stanley et al.)", "publisher": "JAMA Psychiatry (PubMed Central)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6142908/", "year": 2018 },
+    { "title": "Stanley-Brown Safety Plan (link-out; license pending in this app)", "publisher": "Suicide Prevention Resource Center", "url": "https://sprc.org/online-library/stanley-brown-safety-plan/" },
+    { "title": "Evidence Brief: Safety Planning Intervention for Suicidality", "publisher": "Psychological Health Center of Excellence, Military Health System", "url": "https://health.mil/Reference-Center/Publications/2021/04/26/PHCoE-Evidence-Brief-Safety-Planning-Intervention-for-Suicidality-508" },
+    { "title": "VA/DoD Clinical Practice Guideline: Assessment and Management of Patients at Risk for Suicide", "publisher": "US Department of Veterans Affairs and Department of Defense", "url": "https://www.healthquality.va.gov/guidelines/mh/srb/", "year": 2024 },
+    { "title": "Clinical practice guideline updated for service members and veterans at risk for suicide", "publisher": "Military Health System", "url": "https://www.health.mil/News/Dvids-Articles/2024/06/07/news473280", "year": 2024 },
+    { "title": "Self-harm: assessment, management and preventing recurrence (NG225)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng225", "year": 2022 },
+    { "title": "Suicide Prevention (health topic)", "publisher": "National Institute of Mental Health", "url": "https://www.nimh.nih.gov/health/topics/suicide-prevention" },
+    { "title": "988 Suicide & Crisis Lifeline", "publisher": "988 Lifeline", "url": "https://988lifeline.org" },
+    { "title": "Find A Helpline (international directory)", "publisher": "Find A Helpline", "url": "https://findahelpline.com" },
+    { "title": "The HIPAA Privacy Rule and 42 CFR Part 2", "publisher": "US Department of Health and Human Services", "url": "https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/hipaa-part-2/index.html" },
+    { "title": "AACC Code of Ethics", "publisher": "American Association of Christian Counselors", "url": "https://aacc.net/aacc-code-of-ethics/" },
+    { "title": "ACA Code of Ethics (2014) and ethics resources", "publisher": "American Counseling Association", "url": "https://www.counseling.org/resources/ethics", "year": 2014 }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

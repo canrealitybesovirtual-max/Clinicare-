@@ -1,0 +1,98 @@
+{
+  "id": "social-situations-practice",
+  "title": "Practicing Social Situations",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 15,
+  "intro": "Lots of people feel nervous around others. It can happen when meeting someone new, speaking up at work, or eating in front of people. When we feel watched, our attention often turns inward. We focus on a racing heart, a red face, or what to say next. We may also do things to feel safer, like not looking at people, practicing every sentence, or staying quiet. These habits make sense, but they can keep the fear going. This sheet helps you practice in a new way. It takes about 15 minutes to plan and fill in.",
+  "sections": [
+    {
+      "heading": "Before you go",
+      "steps": [
+        "Pick a situation from the list you made with your counselor. Start with one that feels hard but doable.",
+        "Write down what you fear will happen. For example, 'I'll go blank, and people will think I'm boring.' Rate how much you believe it, from 0% to 100%.",
+        "List the safety habits you usually use. Plan to drop one or more of them this time.",
+        "Plan a little, then stop. Going over it again and again ahead of time tends to make fear grow."
+      ]
+    },
+    {
+      "heading": "While you are there",
+      "steps": [
+        "Turn your attention outward. Listen to what the other person says. Notice their face, the room, and what is going on.",
+        "When your attention drifts back to how you feel or look, gently bring it back outward. This takes practice.",
+        "Let small signs of nervousness show. Others often notice them less than you think.",
+        "Join in, even a little. Ask a question, share a thought, or smile."
+      ]
+    },
+    {
+      "heading": "Afterward",
+      "steps": [
+        "Write down what really happened. Stick to what people said and did, not how you felt inside.",
+        "Compare it with what you feared. Rate your belief in the fear again.",
+        "Watch out for replaying the event in your head and picking it apart. Replaying often makes things seem worse than they were. If you notice it, gently turn to something else."
+      ]
+    },
+    {
+      "heading": "Ideas for practice",
+      "steps": [
+        "Say hello to a neighbor or coworker.",
+        "Ask a store worker where to find something.",
+        "Call a business to ask what time they close.",
+        "Give your opinion in a meeting or group.",
+        "Eat or drink something in a busy cafe.",
+        "Make a small slip on purpose, like pausing in the middle of a sentence, and see what happens.",
+        "My own idea: ________________________"
+      ]
+    },
+    {
+      "heading": "Make it fit your life",
+      "body": "Customs about eye contact, small talk, and speaking up are different across families and cultures. Choose goals that matter to you and fit your community. You don't have to become someone you are not."
+    }
+  ],
+  "practiceLog": {
+    "columns": [
+      "Situation",
+      "What I feared (belief 0-100%)",
+      "Safety habits I dropped",
+      "Where my attention went",
+      "What really happened",
+      "Fear before and after (0-10)"
+    ],
+    "rows": 8
+  },
+  "safetyNote": "Safety first: Choose situations that are safe. Practice means facing things that feel scary but are not truly dangerous. If someone treats you badly because of who you are, that is not your fault. Talk with your counselor about it. Try not to use alcohol or other drugs to get through social events. If you feel you need them to cope, tell your counselor. This skill is not for emergencies. If you have thoughts of hurting yourself or someone else, call or text 988 in the US, or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sources": [
+    {
+      "title": "NICE guideline CG159",
+      "publisher": "National Institute for Health and Care Excellence (NICE)",
+      "url": "https://www.nice.org.uk/guidance/cg159",
+      "year": 2013
+    },
+    {
+      "title": "Clark et al.: randomized trial of cognitive therapy for fear of social situations",
+      "publisher": "Journal of Consulting and Clinical Psychology (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16822113/",
+      "year": 2006
+    },
+    {
+      "title": "Warnock-Parkes et al.: using video feedback in cognitive therapy for social fears",
+      "publisher": "Cognitive and Behavioral Practice (PubMed Central)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5627505/",
+      "year": 2017
+    },
+    {
+      "title": "Mayo-Wilson et al.: talking and medicine treatments for social fears in adults, network meta-analysis",
+      "publisher": "The Lancet Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26361000/",
+      "year": 2014
+    },
+    {
+      "title": "Psychological Treatments (treatment index)",
+      "publisher": "APA Division 12, Society of Clinical Psychology",
+      "url": "https://div12.org/psychological-treatments/treatments/"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

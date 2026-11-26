@@ -1,0 +1,68 @@
+{
+  "id": "yoga-mind-body",
+  "name": "Yoga and mind-body movement (complementary and integrative)",
+  "modality": "Complementary and integrative - mind and body practice",
+  "conditions": [
+    "major-depressive-disorder",
+    "persistent-depressive-disorder",
+    "generalized-anxiety-disorder",
+    "ptsd",
+    "insomnia-disorder"
+  ],
+  "evidenceLevel": "Complementary and integrative option with preliminary to modest evidence. NCCIH describes yoga as possibly helpful as an addition to depression treatment and for anxiety linked to life stressors, and calls the evidence for diagnosed anxiety disorders, clinical depression and PTSD mildly positive but very preliminary. Meta-analyses report short-term improvement in depressive symptoms, with variable study quality (Cramer et al., 2013; updated review by Moosburner et al., 2024). For PTSD, NCCIH notes that the 2017 VA/DoD guideline found research does not support any complementary practice as a primary treatment, though reviews suggest yoga may help some symptoms. For sleep, NCCIH notes that yoga and tai chi may improve sleep quality but not necessarily insomnia, and that CBT-I has the strongest evidence. Use as an add-on to evidence-based treatment.",
+  "minutes": { "min": 10, "max": 20 },
+  "purpose": "Yoga combines physical postures, breathing and focused attention or meditation; related mind-body movement practices include tai chi and qigong. For some people they may reduce stress, support mood and improve sleep quality, and many clients find them an acceptable way into body awareness. In therapy, the clinician helps the client choose a safe, suitable class or program (for example, gentle, chair-based or trauma-sensitive yoga), sets practice goals, and links practice to therapy goals. If within their competence, the clinician may teach a few minutes of simple movement and breathing in session; otherwise refer to a qualified instructor.",
+  "steps": [
+    "Ask about interest, past experience, health conditions, injuries, pregnancy and mobility, and about any cultural or religious views on yoga.",
+    "Set realistic expectations: likely modest benefits for stress, mood and sleep quality, and not a replacement for psychotherapy or medication.",
+    "Help choose a style: gentle, restorative, chair-based or trauma-sensitive classes for beginners. Avoid very hot or very strenuous styles at first, and consider tai chi or qigong for older adults or clients who prefer slow movement.",
+    "Advise learning from a qualified instructor and telling them about any health conditions. NCCIH notes that learning alone without supervision has been linked with more injuries.",
+    "Set a specific practice goal (for example, one class plus two 10-minute home sessions a week) on the movement-plan handout, and pair it with the breathing-practice handout if useful.",
+    "Track mood, anxiety or sleep before and after practice, and review in session.",
+    "For trauma survivors, talk through choice and control in class: skipping poses, declining hands-on adjustments, keeping eyes open, and choosing a spot near the door."
+  ],
+  "script": [
+    "Yoga mixes gentle movement, breathing and paying attention. Some people find it helps with stress, mood and sleep.",
+    "It works best as an extra, alongside the work we do here.",
+    "If you're new, a gentle or chair class is a good place to start.",
+    "Tell the teacher about any injuries or health problems. You can skip any pose that doesn't feel right.",
+    "You are in charge of your body in class. You can keep your eyes open and say no to hands-on help.",
+    "Let's set a small goal, like one class this week and a few minutes at home.",
+    "Notice how you feel before and after. We'll talk about it next time."
+  ],
+  "contraindications": [
+    "Medical cautions: some poses are unsafe with certain conditions (for example, glaucoma, high blood pressure, osteoporosis, recent surgery, pregnancy or joint problems). Clients should check with their medical provider and tell the instructor. Hot yoga carries extra risks for people with heart conditions, pregnancy or heat sensitivity.",
+    "Breathing and relaxation practices can occasionally raise anxiety or bring up trauma memories, and NCCIH notes rare reports of relaxation techniques worsening symptoms in people with trauma histories. Offer eyes-open, choice-based options and grounding.",
+    "Fast or forceful breathing practices can bring on panic-like sensations or dizziness. Avoid them, or introduce them only with care, for clients with panic disorder.",
+    "Not a replacement for evidence-based treatment. NCCIH advises against using complementary approaches to replace conventional care or to delay seeing a provider.",
+    "Suicidal thoughts or severe depression: assess safety first. This tool does not judge risk. Crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com.",
+    "Eating disorders or body-image concerns: some class settings (mirrors, weight-loss framing) can do harm. Choose settings with care."
+  ],
+  "culturalAdaptations": [
+    "Yoga has roots in Indian spiritual and philosophical traditions. Some clients value these roots; others, for religious reasons, prefer a secular or adapted form or a different practice (for example, stretching, tai chi, or faith-based movement). Ask, and respect the client's choice.",
+    "Classes can feel exclusive because of cost, body size, gender or race. Help the client find welcoming, low-cost or online options.",
+    "Gender-specific classes or home practice may suit clients with modesty norms or trauma histories.",
+    "Tai chi and qigong come from Chinese traditions and may feel more familiar to some clients."
+  ],
+  "faithIntegrated": {
+    "note": "If the client wishes, they may pair movement with their own prayers, scripture reflection or devotional music instead of meditation content from other traditions, or choose a faith-based movement class. The client leads and decides whether yoga fits their beliefs.",
+    "consentNote": "Offer only if the client raises faith or spirituality and asks to include it. Before starting, explain what the faith-integrated option involves, that it is optional, that the same intervention is available without religious content, and that the client can change their mind at any time; document informed consent. Follow the client's own tradition and words, and never introduce, impose, endorse or challenge beliefs (AACC Code of Ethics: informed consent before spiritual interventions, client-led integration; ACA Code of Ethics 2014, A.2 informed consent and A.4.b personal values)."
+  },
+  "handoutIds": ["movement-plan", "breathing-practice"],
+  "sources": [
+    { "title": "Yoga: Effectiveness and Safety", "publisher": "National Center for Complementary and Integrative Health (NCCIH)", "url": "https://www.nccih.nih.gov/health/yoga-effectiveness-and-safety" },
+    { "title": "Yoga for Health: What the Science Says (clinical digest)", "publisher": "National Center for Complementary and Integrative Health (NCCIH)", "url": "https://www.nccih.nih.gov/health/providers/digest/yoga-for-health" },
+    { "title": "Mind and Body Approaches for Stress and Anxiety: What the Science Says", "publisher": "National Center for Complementary and Integrative Health (NCCIH)", "url": "https://www.nccih.nih.gov/health/providers/digest/mind-and-body-approaches-for-stress-science" },
+    { "title": "Post-Traumatic Stress Disorder and complementary health approaches", "publisher": "National Center for Complementary and Integrative Health (NCCIH)", "url": "https://www.nccih.nih.gov/health/post-traumatic-stress-disorder" },
+    { "title": "Sleep Disorders and Complementary Health Approaches", "publisher": "National Center for Complementary and Integrative Health (NCCIH)", "url": "https://www.nccih.nih.gov/health/sleep-disorders-and-complementary-health-approaches" },
+    { "title": "Depression and Complementary Health Approaches: What the Science Says", "publisher": "National Center for Complementary and Integrative Health (NCCIH)", "url": "https://www.nccih.nih.gov/health/providers/digest/depression-and-complementary-health-approaches" },
+    { "title": "Relaxation Techniques: What You Need To Know", "publisher": "National Center for Complementary and Integrative Health (NCCIH)", "url": "https://www.nccih.nih.gov/health/relaxation-techniques-what-you-need-to-know" },
+    { "title": "Yoga for depression: a systematic review and meta-analysis (Cramer, Lauche, Langhorst and Dobos)", "publisher": "Depression and Anxiety (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/23922209/", "year": 2013 },
+    { "title": "Yoga for depressive disorder: a systematic review and meta-analysis (Moosburner et al.)", "publisher": "Depression and Anxiety (PubMed Central)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11919030/", "year": 2024 },
+    { "title": "AACC Code of Ethics", "publisher": "American Association of Christian Counselors", "url": "https://aacc.net/aacc-code-of-ethics/" },
+    { "title": "ACA Code of Ethics (2014) and ethics resources", "publisher": "American Counseling Association", "url": "https://www.counseling.org/resources/ethics", "year": 2014 }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

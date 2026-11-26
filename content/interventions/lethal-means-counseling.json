@@ -1,0 +1,71 @@
+{
+  "id": "lethal-means-counseling",
+  "name": "Lethal means safety counseling (CALM-informed)",
+  "modality": "Suicide prevention - lethal means counseling",
+  "conditions": [
+    "major-depressive-disorder",
+    "persistent-depressive-disorder",
+    "ptsd",
+    "alcohol-use-disorder",
+    "prolonged-grief-disorder",
+    "adjustment-disorder",
+    "panic-disorder",
+    "agoraphobia",
+    "generalized-anxiety-disorder",
+    "social-anxiety-disorder",
+    "obsessive-compulsive-disorder",
+    "insomnia-disorder"
+  ],
+  "evidenceLevel": "Emerging evidence for the counseling itself. In a factorial RCT with 232 firearm-owning National Guard members, a brief, motivational interviewing-informed lethal means counseling session increased safe firearm storage at 3 months compared with control (55% vs 39%); suicide outcomes were not measured (Anestis et al., 2021). A Military Health System review notes that lethal means counseling improved safe storage of medicines and firearms but that its effect on suicide outcomes is unknown. The 2024 VA/DoD suicide risk guideline stresses means safety at every step of care, suggests assessing access to firearms, and found weak evidence for population-level means-reduction efforts. CALM (Counseling on Access to Lethal Means) is a free SPRC course listed in SPRC's Best Practices Registry.",
+  "minutes": { "min": 10, "max": 30 },
+  "purpose": "Many suicidal crises are brief, and the method within reach in that moment matters, because some methods, especially firearms, are more likely to be fatal. Lethal means counseling is a collaborative conversation with the client, and with consent their family or household, about temporarily putting time and distance between a person at risk and the most dangerous means, especially firearms and stockpiled medicines. It respects the client's values (including firearm ownership) and focuses on safety during a high-risk period, not on permanent removal or politics. Based on the principles taught in CALM; the wording here is original.",
+  "steps": [
+    "Ask every client who has suicidal thoughts, in a matter-of-fact way, about access to firearms (at home, in vehicles, at other people's homes) and to medicines (including saved-up supplies), plus any other means they mention.",
+    "Explain the reason in plain language: crises often pass, and putting time and distance between a person and a lethal method can save a life.",
+    "Explore options with the client, respecting their values. For firearms: temporary storage away from home with a trusted person, or at a gun shop, range or law-enforcement agency where legal; or, as a next-best step, locked storage with someone else holding the key or code and ammunition kept separately. For medicines: dispose of medicines no longer needed, keep only small amounts at home, and have someone else hold the rest.",
+    "With consent, involve a family member or support person and agree on who will do what, and by when.",
+    "Check local laws on transferring firearms and on extreme risk protection orders. Point to legal resources rather than giving legal advice.",
+    "Add the agreed steps to the safety plan (safety-plan handout), and agree how and when firearms or medicines will be returned once risk is lower.",
+    "Follow up at the next contact to confirm the steps were taken, and problem-solve any barriers.",
+    "Before using this routinely, complete training such as the free CALM course."
+  ],
+  "script": [
+    "I ask everyone who is going through a hard time about this. Are there guns in your home, or anywhere you can easily get to them?",
+    "This isn't about taking anything away for good. It's about putting some time and distance between you and the most dangerous things while you're going through a rough patch.",
+    "Most suicidal crises pass. Having a gun or a lot of pills nearby makes a bad moment much more dangerous.",
+    "Is there someone you trust who could hold on to your firearms for a while? Or could someone else keep the key?",
+    "What about medicines? Could we get rid of old ones and have someone hold the extras?",
+    "Would it be okay to bring your partner or a family member into this plan?",
+    "When things are better, we can plan how and when things come back."
+  ],
+  "contraindications": [
+    "This conversation supports, but does not replace, suicide risk assessment and clinical decisions about level of care. This tool does not judge risk. If risk appears imminent, follow emergency procedures: in the US, call or text 988 or call the local emergency number; elsewhere, use the local emergency number or findahelpline.com.",
+    "Do not ask a family member to remove firearms if doing so could provoke violence. Consider domestic violence risk, and involve legal resources or law enforcement where appropriate.",
+    "Firearm transfer and storage laws vary by state and country. Do not give legal advice; point to local legal resources.",
+    "A confrontational or political tone can damage trust. Lead with shared concern for safety and respect for the client's values.",
+    "Medicines: do not advise stopping prescribed medicines. Coordinate with the prescriber or pharmacist about smaller supplies or other safer dispensing options.",
+    "Alcohol raises risk in a crisis. Include plans to reduce access to alcohol where relevant. Do not enter identifying details into this tool; nothing is stored or sent. Any note or export about substance use must carry this notice: 42 CFR Part 2 prohibits unauthorized disclosure of these records."
+  ],
+  "culturalAdaptations": [
+    "Firearm ownership can be tied to identity, work, personal safety, hunting and rural life. Respect this, and frame storage as temporary and as protecting the client and their family.",
+    "In rural areas, distance to storage sites can be a barrier. Problem-solve with options that are actually available locally.",
+    "Veterans and service members may respond to peer-based framing ('looking out for each other'). VA and Military Health System resources support this approach.",
+    "For clients who distrust police or government, do not suggest law-enforcement storage first; offer trusted private options.",
+    "Medicines may be shared within families or kept as traditional remedies. Ask respectfully about everything in the home."
+  ],
+  "handoutIds": ["safety-plan"],
+  "sources": [
+    { "title": "CALM: Counseling on Access to Lethal Means", "publisher": "Suicide Prevention Resource Center", "url": "https://sprc.org/online-library/calm-counseling-on-access-to-lethal-means" },
+    { "title": "Lethal means counseling, distribution of cable locks, and safe firearm storage practices among the Mississippi National Guard: a factorial randomized controlled trial, 2018-2020 (Anestis et al.)", "publisher": "American Journal of Public Health (DOI)", "url": "https://doi.org/10.2105/AJPH.2020.306019", "year": 2021 },
+    { "title": "Lethal Means Safety Interventions for Suicide Prevention", "publisher": "Psychological Health Center of Excellence, Military Health System", "url": "https://health.mil/Military-Health-Topics/Centers-of-Excellence/Psychological-Health-Center-of-Excellence/Clinicians-Corner-Blog/Mental-Health-Stigma-and-Suicide-Risk/Lethal-Means-Safety-Interventions-for-Suicide-Prevention" },
+    { "title": "Managing Suicide Risk and Access to Firearms: Guidelines for Providers", "publisher": "Psychological Health Center of Excellence, Military Health System", "url": "https://health.mil/Military-Health-Topics/Centers-of-Excellence/Psychological-Health-Center-of-Excellence/Clinicians-Corner-Blog/Managing-Suicide-Risk-and-Access-to-Firearms-Guidelines-for-Providers" },
+    { "title": "VA/DoD Clinical Practice Guideline: Assessment and Management of Patients at Risk for Suicide", "publisher": "US Department of Veterans Affairs and Department of Defense", "url": "https://www.healthquality.va.gov/guidelines/mh/srb/", "year": 2024 },
+    { "title": "Online Courses (including CALM)", "publisher": "Suicide Prevention Resource Center", "url": "https://sprc.org/online-courses" },
+    { "title": "988 Suicide & Crisis Lifeline", "publisher": "988 Lifeline", "url": "https://988lifeline.org" },
+    { "title": "Find A Helpline (international directory)", "publisher": "Find A Helpline", "url": "https://findahelpline.com" },
+    { "title": "The HIPAA Privacy Rule and 42 CFR Part 2", "publisher": "US Department of Health and Human Services", "url": "https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/hipaa-part-2/index.html" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

@@ -5,6 +5,7 @@
  */
 import { readFileSync } from "node:fs";
 import path from "node:path";
+import { inflateSync } from "node:zlib";
 import { expect, type Download, type Locator, type Page } from "@playwright/test";
 
 export const ROOT = path.resolve(__dirname, "../..");
@@ -102,6 +103,33 @@ export async function downloadVia(page: Page, button: Locator): Promise<{ bytes:
   const [download] = await Promise.all([page.waitForEvent("download"), button.click()]);
   const bytes = await readDownload(download);
   return { bytes, name: download.suggestedFilename() };
+}
+
+/**
+ * Everything readable in a PDF: the raw bytes, every inflated (Flate) stream, and the text drawn by
+ * Tj operators (pdf-lib writes standard-font text as hex strings). Good enough to search for leaks.
+ */
+export function pdfText(bytes: Buffer): { all: string; drawn: string } {
+  const raw = bytes.toString("latin1");
+  const parts: string[] = [raw];
+  const re = /stream\r?\n/g;
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(raw))) {
+    const start = m.index + m[0].length;
+    const end = raw.indexOf("endstream", start);
+    if (end < 0) break;
+    try {
+      parts.push(inflateSync(bytes.subarray(start, end)).toString("latin1"));
+    } catch {
+      /* not a Flate stream */
+    }
+    re.lastIndex = end;
+  }
+  const joined = parts.join("\n");
+  const hex = [...joined.matchAll(/<([0-9A-Fa-f]+)>\s*Tj/g)].map((x) => Buffer.from(x[1] ?? "", "hex").toString("latin1"));
+  const literal = [...joined.matchAll(/\(((?:\\.|[^\\)])*)\)\s*Tj/g)].map((x) => x[1] ?? "");
+  const drawn = [...hex, ...literal].join("\n");
+  return { all: `${joined}\n${drawn}`, drawn };
 }
 
 /** All text a user (or screen reader) could perceive, including form field values. */

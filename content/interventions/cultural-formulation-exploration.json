@@ -7,7 +7,15 @@
     "agoraphobia",
     "generalized-anxiety-disorder",
     "major-depressive-disorder",
-    "ptsd"
+    "ptsd",
+    "social-anxiety-disorder",
+    "obsessive-compulsive-disorder",
+    "alcohol-use-disorder",
+    "insomnia-disorder",
+    "persistent-depressive-disorder",
+    "adjustment-disorder",
+    "prolonged-grief-disorder",
+    "specific-phobia"
   ],
   "evidenceLevel": "Assessment practice, not a treatment. In the DSM-5 international field trial, patients and clinicians rated the DSM-5 Cultural Formulation Interview (CFI) as feasible, acceptable and clinically useful, and clinicians' feasibility ratings improved after their first interview (Lewis-Fernandez et al., 2017). The CFI is copyrighted by the American Psychiatric Association and is linked out only; the questions in this entry are original and are not the CFI. See DSM-5-TR, Section III: Cultural Formulation.",
   "minutes": { "min": 15, "max": 45 },
@@ -16,23 +24,23 @@
     "Explain why you are asking: you want to understand the client's own view and what matters to them so that care fits. Make clear there are no wrong answers and they can skip any question.",
     "Invite the client to name the problem in their own words, including any family or community term for it (Kleinman's explanatory-model approach).",
     "Explore the client's own explanation: what they think is causing it, what it means for them, and what they fear might happen.",
-    "Ask about identity and context (heritage, language, religion, migration, gender, sexuality, disability, age, money and work) and which of these matter most right now. Ask about discrimination or unfair treatment.",
+    "Explore identity and life context using a framework such as Hays' ADDRESSING model (age and generation, developmental and acquired disability, religion, ethnicity, social class, sexual orientation, Indigenous heritage, national origin and gender), plus language, migration and work. Let the client say which parts matter most right now, and ask about discrimination or unfair treatment.",
     "Explore supports and stresses: family, community, faith, work, and how each one helps or adds strain.",
     "Ask about coping and earlier help: what they have tried, including traditional, religious or community healing, and what helped or did not.",
     "Ask about hopes for care and possible barriers: what kind of help they want and from whom, and obstacles such as cost, transport, stigma, language, or mistrust from past experiences.",
-    "Ask how differences between you and the client might affect the work, and invite them to tell you when something does not fit.",
+    "Name, in your own words, that you and the client may see things differently, and invite correction throughout (cultural humility).",
     "Summarize what you heard and use it to shape goals, interventions and handouts. For the official structured interview, use the APA CFI (link out)."
   ],
   "script": [
     "You are the expert on your own life. Can you walk me through what has been happening, using whatever words feel right to you?",
     "Is there a name or a saying for this kind of trouble in your family or where you grew up?",
-    "Some people link troubles like this to stress, the body, the spirit, family, or something that happened to them. What do you link it to? What do the people at home say?",
+    "What is your own sense of why this started, and why now? People explain these things in many different ways, and all of them are welcome here.",
     "When you picture this getting worse, what scares you the most?",
-    "Many things can shape a hard time: age, faith, where your family comes from, the languages you speak, money, gender, a disability. Which of these is on your mind most these days, and does it make things lighter or heavier?",
+    "Tell me a little about your world: the people you come from, the communities you are part of, and what daily life is like right now with work, money, health or faith. What in all of that is weighing on you, and what is holding you up?",
     "Have you been treated unfairly because of who you are? How has that affected you?",
-    "What has gotten you through rough patches before? That might be prayer, family, a healer, a doctor, or something you do on your own. What helped, and what did not?",
-    "If our work together goes well, what would be different a few months from now? What could get in the way of coming here, like cost, rides, time off, language or bad past experiences?",
-    "We may come from different places. If I say something that does not fit you or your family's ways, please stop me. I want to get it right."
+    "When life has been hard before, what did you lean on? Who or what made a difference, and did anything make it worse?",
+    "If this goes well, what will be different for you a few months from now? And what might make it hard to keep coming? I would rather plan for that now.",
+    "I will get some things wrong about your life and your family's ways. When I do, I really want you to tell me."
   ],
   "contraindications": [
     "Do not copy, embed or modify the APA Cultural Formulation Interview in this app; it is APA copyrighted. Link out to the official version.",

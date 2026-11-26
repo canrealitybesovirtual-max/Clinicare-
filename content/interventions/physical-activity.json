@@ -1,0 +1,68 @@
+{
+  "id": "physical-activity",
+  "name": "Physical activity and exercise (complementary and integrative)",
+  "modality": "Complementary and integrative - lifestyle (physical activity)",
+  "conditions": [
+    "major-depressive-disorder",
+    "persistent-depressive-disorder",
+    "generalized-anxiety-disorder",
+    "panic-disorder",
+    "adjustment-disorder",
+    "insomnia-disorder"
+  ],
+  "evidenceLevel": "Complementary and integrative option with growing evidence. A 2024 network meta-analysis of 218 RCTs (about 14,000 people with depression) found that several forms of exercise had at least moderate benefits, with low certainty because of bias and differences between studies; group exercise and programs with clear prescriptions did better (Noetel et al., 2024). An umbrella review of 97 systematic reviews found medium effects of physical activity on symptoms of depression, anxiety and psychological distress compared with usual care (Singh et al., 2023). NICE NG222 lists group exercise as one of the first-line options for less severe depression. NCCIH advises that complementary approaches should not replace conventional care or delay seeing a provider. US guidelines advise adults to get 150 to 300 minutes of moderate activity a week plus muscle strengthening on 2 days. For insomnia, use activity alongside CBT-I, not instead of it.",
+  "minutes": { "min": 10, "max": 20 },
+  "purpose": "Regular physical activity can lift mood, ease anxiety and stress, and support sleep and overall health. In therapy, activity is planned together as a behavior-change goal: start small, choose enjoyable and accessible activities, schedule them, track them, and build up gradually. It fits well with behavioral activation. For anxiety, activity can also be a gentle way to get used to a faster heartbeat and breathing. In this app it is listed under complementary and integrative care; it supports, and does not replace, evidence-based psychotherapy or medication when those are needed.",
+  "steps": [
+    "Ask about current activity, activities the client enjoyed in the past, and barriers (time, cost, safety, pain, childcare, body image), plus health conditions.",
+    "Screen for medical concerns: chest pain, fainting, heart or lung disease, uncontrolled blood pressure or diabetes, pregnancy, eating-disorder risk or recent injury. When any are present, advise checking with a medical provider before starting or stepping up vigorous activity.",
+    "Share the general guideline target (150 to 300 minutes a week of moderate activity plus muscle strengthening on 2 days) as a long-term direction, and stress that any amount helps and short bouts count.",
+    "Choose one or two activities the client enjoys and can reach (walking, dancing, cycling, swimming, sports, chair-based exercise, active chores). Consider group or supervised options, which tend to work better for depression.",
+    "Set a specific, small starting goal (what, when, where, how long), schedule it on the movement-plan or activity-schedule handout, and plan for barriers.",
+    "Track mood or anxiety before and after activity, to link effort with benefit.",
+    "Review at each session, increase gradually, and troubleshoot missed days without blame.",
+    "For panic or health anxiety, explain that a faster heartbeat during activity is expected and safe for most people, and build up gradually (see the interoceptive-exposure entry)."
+  ],
+  "script": [
+    "Moving your body can help your mood, worry and sleep. Even a little bit counts.",
+    "What kinds of movement have you enjoyed in the past?",
+    "Let's start small. What's one thing you could do this week, like a 10-minute walk after lunch?",
+    "When and where will you do it? What might get in the way?",
+    "Notice how you feel before and after. Many people feel a little better afterward, even if it's hard to start.",
+    "If you miss a day, that's okay. Just pick it up again the next day.",
+    "If you have health problems, check with your doctor before you do hard exercise."
+  ],
+  "contraindications": [
+    "Medical warning signs (chest pain, fainting, breathlessness out of proportion to effort, palpitations with dizziness) need medical evaluation before exercise. Coordinate with primary care for heart, lung, metabolic or joint conditions and for pregnancy.",
+    "Eating disorders or compulsive exercise: activity goals can worsen symptoms. Coordinate with specialist care and focus on enjoyable movement, not 'making up' for eating.",
+    "Activity supports, but does not replace, treatment for moderate to severe depression or anxiety. NCCIH advises against using complementary approaches to replace conventional care or to delay seeing a provider.",
+    "Severe depression with suicidal thoughts: assess safety first. This tool does not judge risk. Crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com.",
+    "Do not give exercise advice that ignores real safety concerns (unsafe neighborhoods, harassment, extreme heat)."
+  ],
+  "culturalAdaptations": [
+    "Choose activities that fit the client's culture, gender norms, faith and budget (for example, dance, community walking groups, women-only classes, home routines, or traditional practices such as tai chi).",
+    "Modesty norms can affect clothing choices or mixed-gender settings. Problem-solve options with the client.",
+    "Some clients see exercise as a luxury or not 'real' treatment for mental health. Link it to the client's own goals (energy for family, work, worship).",
+    "Consider disability and chronic pain; adapted, seated or water-based activity can be options.",
+    "Neighborhood safety, cost and access vary. Look for free community options together."
+  ],
+  "faithIntegrated": {
+    "note": "If the client chooses, activity can connect with their faith (for example, walking to a place of worship, joining a walking group from their faith community, or a walking prayer or reflection). The client leads and chooses the content.",
+    "consentNote": "Offer only if the client raises faith or spirituality and asks to include it. Before starting, explain what the faith-integrated option involves, that it is optional, that the same intervention is available without religious content, and that the client can change their mind at any time; document informed consent. Follow the client's own tradition and words, and never introduce, impose, endorse or challenge beliefs (AACC Code of Ethics: informed consent before spiritual interventions, client-led integration; ACA Code of Ethics 2014, A.2 informed consent and A.4.b personal values)."
+  },
+  "handoutIds": ["movement-plan", "activity-schedule"],
+  "sources": [
+    { "title": "Effect of exercise for depression: systematic review and network meta-analysis of randomised controlled trials (Noetel et al.)", "publisher": "BMJ (DOI)", "url": "https://doi.org/10.1136/bmj-2023-075847", "year": 2024 },
+    { "title": "Effectiveness of physical activity interventions for improving depression, anxiety and distress: an overview of systematic reviews (Singh et al.)", "publisher": "British Journal of Sports Medicine (DOI)", "url": "https://doi.org/10.1136/bjsports-2022-106195", "year": 2023 },
+    { "title": "Depression in adults: treatment and management (NG222)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng222", "year": 2022 },
+    { "title": "Top 10 Things to Know About the Second Edition of the Physical Activity Guidelines for Americans", "publisher": "Office of Disease Prevention and Health Promotion, US Department of Health and Human Services", "url": "https://odphp.health.gov/our-work/nutrition-physical-activity/physical-activity-guidelines/current-guidelines/top-10-things-know", "year": 2018 },
+    { "title": "Physical Activity Guidelines for Americans, 2nd edition: executive summary", "publisher": "US Department of Health and Human Services", "url": "https://health.gov/sites/default/files/2019-10/PAG_ExecutiveSummary.pdf", "year": 2018 },
+    { "title": "Depression and Complementary Health Approaches: What the Science Says", "publisher": "National Center for Complementary and Integrative Health (NCCIH)", "url": "https://www.nccih.nih.gov/health/providers/digest/depression-and-complementary-health-approaches" },
+    { "title": "Anxiety and Complementary Health Approaches", "publisher": "National Center for Complementary and Integrative Health (NCCIH)", "url": "https://www.nccih.nih.gov/health/anxiety-and-complementary-health-approaches" },
+    { "title": "AACC Code of Ethics", "publisher": "American Association of Christian Counselors", "url": "https://aacc.net/aacc-code-of-ethics/" },
+    { "title": "ACA Code of Ethics (2014) and ethics resources", "publisher": "American Counseling Association", "url": "https://www.counseling.org/resources/ethics", "year": 2014 }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

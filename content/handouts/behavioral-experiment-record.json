@@ -1,0 +1,95 @@
+{
+  "id": "behavioral-experiment-record",
+  "title": "Testing My Thoughts: Experiment Record",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 20,
+  "intro": "Our minds are always making guesses about what will happen. When we feel scared or low, these guesses can be harsh, like 'I'll mess up' or 'Nothing will help.' They can feel true even when we have never checked them. An experiment is a small, planned test in real life. You act like a scientist. You test a guess and see what really happens. There is no way to fail. Every result teaches you something. Planning a test takes about 15 to 20 minutes. You can plan it with your counselor.",
+  "sections": [
+    {
+      "heading": "Step 1: Pick a thought to test",
+      "steps": [
+        "Choose one clear guess about what will happen. For example, 'If I ask a question at work, people will think I'm stupid.'",
+        "Rate how much you believe it, from 0% (not at all) to 100% (totally).",
+        "Now write another way things could go. For example, 'People will answer my question and move on.' Rate how much you believe this one too."
+      ]
+    },
+    {
+      "heading": "Step 2: Plan your test",
+      "steps": [
+        "Decide what you will do, where, and when. Keep it small and clear.",
+        "Decide ahead of time how you will tell which guess was right. For example, 'I'll notice if anyone laughs or makes a face.'",
+        "List the things you usually do to feel safe, like practicing what to say over and over or not looking at people. Plan to drop them for the test. They can hide what really happens.",
+        "Think about what might get in the way, and how you will handle it."
+      ]
+    },
+    {
+      "heading": "Step 3: Do the test",
+      "steps": [
+        "Carry out your plan. Pay attention to what happens around you, not just to how you feel inside.",
+        "Feeling nervous is okay. It does not mean the test is going badly."
+      ]
+    },
+    {
+      "heading": "Step 4: Look at what happened",
+      "steps": [
+        "Write down what really happened. Stick to the facts, like what people said or did.",
+        "Did your first guess come true? All of it, part of it, or none of it?",
+        "If some of what you feared did happen, ask: Was it as bad as I expected? How did I cope?",
+        "What did you learn? Rate your first guess again, from 0% to 100%.",
+        "Plan your next test. You might try the same test in a new place, or test a doubt that is left."
+      ]
+    },
+    {
+      "heading": "Example",
+      "body": "Thought: 'If I take a walk when I feel low, I'll just feel worse.' Belief: 80%. Other view: 'A walk might help a little.' Belief: 20%. Test: Walk around the block for 10 minutes on Tuesday after lunch. Rate my mood before and after. What happened: My mood went from 3 to 5 out of 10. What I learned: Moving helped a bit, even when I didn't feel like it. Belief in my first thought now: 40%."
+    }
+  ],
+  "practiceLog": {
+    "columns": [
+      "Thought I am testing (belief 0-100%)",
+      "My test: what, where, when",
+      "What I predict will happen",
+      "What really happened",
+      "What I learned",
+      "Belief now (0-100%)"
+    ],
+    "rows": 6
+  },
+  "safetyNote": "Safety first: Pick tests that are safe. Do not plan tests that could hurt your health or safety, break the law, or cause real harm to your job or relationships. Some tests bring on strong body feelings, like a racing heart. If you have a health problem such as heart or lung trouble, or you are pregnant, check with your doctor first. If someone treats you badly because of who you are, that is not a problem with your thinking. Talk it over with your counselor. This skill is not for emergencies. If you have thoughts of hurting yourself or someone else, call or text 988 in the US, or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sources": [
+    {
+      "title": "Oxford Guide to Behavioural Experiments in Cognitive Therapy (Bennett-Levy, Butler, Fennell, Hackmann, Mueller and Westbrook, eds.)",
+      "publisher": "Oxford University Press",
+      "url": "https://academic.oup.com/book/1220",
+      "year": 2004
+    },
+    {
+      "title": "Maximizing exposure therapy: an inhibitory learning approach (Craske et al.)",
+      "publisher": "Behaviour Research and Therapy (PubMed Central)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4114726/",
+      "year": 2014
+    },
+    {
+      "title": "Ougrin: review comparing exposure and cognitive therapy for fear and worry problems",
+      "publisher": "BMC Psychiatry",
+      "url": "https://bmcpsychiatry.biomedcentral.com/articles/10.1186/1471-244X-11-200",
+      "year": 2011
+    },
+    {
+      "title": "NICE guideline CG113",
+      "publisher": "National Institute for Health and Care Excellence (NICE)",
+      "url": "https://www.nice.org.uk/guidance/cg113",
+      "year": 2011
+    },
+    {
+      "title": "NICE guideline NG222",
+      "publisher": "National Institute for Health and Care Excellence (NICE)",
+      "url": "https://www.nice.org.uk/guidance/ng222",
+      "year": 2022
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

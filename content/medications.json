@@ -1,0 +1,2950 @@
+{
+  "version": "2026.11.26",
+  "description": "Curated psychotropic and alcohol-use-disorder medication reference for clinician mode. Original wording; FDA label facts summarized, never copied. Names, RxCUIs, brand lists and boxed-warning flags were checked against live RxNorm, openFDA and MedlinePlus Connect on lastVerified.",
+  "scope": "Clinician mode only. Education to support medication-referral conversations; not prescribing, dosing, switching or tapering guidance. Medication decisions belong to a prescriber (psychiatrist, primary care clinician or psychiatric nurse practitioner).",
+  "brandExclusions": [
+    "RECONCILE",
+    "Clomicalm",
+    "Caniquell",
+    "Calmera",
+    "Mirataz"
+  ],
+  "medications": [
+    {
+      "id": "fluoxetine",
+      "generic": "fluoxetine",
+      "category": "antidepressant",
+      "class": "SSRI",
+      "commonBrands": [
+        "Prozac"
+      ],
+      "combinationBrands": [
+        "Symbyax"
+      ],
+      "usedFor": [
+        {
+          "label": "Major depressive disorder",
+          "status": "fda-approved",
+          "conditionId": "major-depressive-disorder"
+        },
+        {
+          "label": "Obsessive-compulsive disorder",
+          "status": "fda-approved"
+        },
+        {
+          "label": "Panic disorder, with or without agoraphobia",
+          "status": "fda-approved",
+          "conditionId": "panic-disorder"
+        },
+        {
+          "label": "Bulimia nervosa",
+          "status": "fda-approved"
+        },
+        {
+          "label": "With olanzapine: bipolar I depression and treatment-resistant depression",
+          "status": "fda-approved"
+        },
+        {
+          "label": "PTSD (guideline-supported, off-label in the US)",
+          "status": "off-label",
+          "conditionId": "ptsd"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: higher risk of suicidal thoughts and behaviors in children, adolescents and young adults in short-term trials; monitor for worsening mood or emerging suicidality, especially early on and after changes.",
+        "Serotonin syndrome risk when combined with other serotonergic drugs (triptans, tramadol, linezolid, St. John's wort, other antidepressants); contraindicated with MAOIs.",
+        "Very long half-life (active metabolite), so effects and interactions persist for weeks after stopping; strong CYP2D6 inhibitor.",
+        "Screen for personal or family history of bipolar disorder before starting; antidepressants can unmask mania or hypomania."
+      ],
+      "boxedWarning": true,
+      "rxcui": "4493",
+      "label": {
+        "brand": "Prozac"
+      },
+      "medlinePlus": [
+        {
+          "title": "Fluoxetine",
+          "url": "https://medlineplus.gov/druginfo/meds/a689006.html"
+        }
+      ]
+    },
+    {
+      "id": "sertraline",
+      "generic": "sertraline",
+      "category": "antidepressant",
+      "class": "SSRI",
+      "commonBrands": [
+        "Zoloft"
+      ],
+      "usedFor": [
+        {
+          "label": "Major depressive disorder",
+          "status": "fda-approved",
+          "conditionId": "major-depressive-disorder"
+        },
+        {
+          "label": "Obsessive-compulsive disorder",
+          "status": "fda-approved"
+        },
+        {
+          "label": "Panic disorder",
+          "status": "fda-approved",
+          "conditionId": "panic-disorder"
+        },
+        {
+          "label": "Posttraumatic stress disorder",
+          "status": "fda-approved",
+          "conditionId": "ptsd"
+        },
+        {
+          "label": "Social anxiety disorder",
+          "status": "fda-approved"
+        },
+        {
+          "label": "Premenstrual dysphoric disorder",
+          "status": "fda-approved"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: higher risk of suicidal thoughts and behaviors in children, adolescents and young adults in short-term trials; monitor for worsening mood or emerging suicidality, especially early on and after changes.",
+        "Serotonin syndrome risk when combined with other serotonergic drugs (triptans, tramadol, linezolid, St. John's wort, other antidepressants); contraindicated with MAOIs.",
+        "Raises bleeding risk with NSAIDs, aspirin or anticoagulants; hyponatremia can occur, especially in older adults.",
+        "Stopping abruptly can cause discontinuation symptoms (dizziness, irritability, flu-like or sensory symptoms); changes are planned with the prescriber."
+      ],
+      "boxedWarning": true,
+      "rxcui": "36437",
+      "label": {
+        "brand": "Zoloft"
+      },
+      "medlinePlus": [
+        {
+          "title": "Sertraline",
+          "url": "https://medlineplus.gov/druginfo/meds/a697048.html"
+        }
+      ]
+    },
+    {
+      "id": "paroxetine",
+      "generic": "paroxetine",
+      "category": "antidepressant",
+      "class": "SSRI",
+      "commonBrands": [
+        "Paxil",
+        "Brisdelle"
+      ],
+      "usedFor": [
+        {
+          "label": "Major depressive disorder",
+          "status": "fda-approved",
+          "conditionId": "major-depressive-disorder"
+        },
+        {
+          "label": "Obsessive-compulsive disorder",
+          "status": "fda-approved"
+        },
+        {
+          "label": "Panic disorder",
+          "status": "fda-approved",
+          "conditionId": "panic-disorder"
+        },
+        {
+          "label": "Social anxiety disorder",
+          "status": "fda-approved"
+        },
+        {
+          "label": "Generalized anxiety disorder",
+          "status": "fda-approved",
+          "conditionId": "generalized-anxiety-disorder"
+        },
+        {
+          "label": "Posttraumatic stress disorder",
+          "status": "fda-approved",
+          "conditionId": "ptsd"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: higher risk of suicidal thoughts and behaviors in children, adolescents and young adults in short-term trials; monitor for worsening mood or emerging suicidality, especially early on and after changes.",
+        "Serotonin syndrome risk when combined with other serotonergic drugs (triptans, tramadol, linezolid, St. John's wort, other antidepressants); contraindicated with MAOIs.",
+        "More anticholinergic and sedating than other SSRIs; discontinuation symptoms are common with abrupt stopping.",
+        "Strong CYP2D6 inhibitor (can reduce tamoxifen effectiveness); label cautions about first-trimester exposure."
+      ],
+      "boxedWarning": true,
+      "rxcui": "32937",
+      "label": {
+        "brand": "PAXIL"
+      },
+      "medlinePlus": [
+        {
+          "title": "Paroxetine",
+          "url": "https://medlineplus.gov/druginfo/meds/a698032.html"
+        }
+      ]
+    },
+    {
+      "id": "citalopram",
+      "generic": "citalopram",
+      "category": "antidepressant",
+      "class": "SSRI",
+      "commonBrands": [
+        "Celexa"
+      ],
+      "usedFor": [
+        {
+          "label": "Major depressive disorder",
+          "status": "fda-approved",
+          "conditionId": "major-depressive-disorder"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: higher risk of suicidal thoughts and behaviors in children, adolescents and young adults in short-term trials; monitor for worsening mood or emerging suicidality, especially early on and after changes.",
+        "Dose-related QT prolongation; label limits use with other QT-prolonging drugs and in certain cardiac or electrolyte conditions.",
+        "Serotonin syndrome risk when combined with other serotonergic drugs (triptans, tramadol, linezolid, St. John's wort, other antidepressants); contraindicated with MAOIs.",
+        "Raises bleeding risk with NSAIDs, aspirin or anticoagulants; hyponatremia can occur, especially in older adults."
+      ],
+      "boxedWarning": true,
+      "rxcui": "2556",
+      "label": {
+        "brand": "Celexa"
+      },
+      "medlinePlus": [
+        {
+          "title": "Citalopram",
+          "url": "https://medlineplus.gov/druginfo/meds/a699001.html"
+        }
+      ]
+    },
+    {
+      "id": "escitalopram",
+      "generic": "escitalopram",
+      "category": "antidepressant",
+      "class": "SSRI",
+      "commonBrands": [
+        "Lexapro"
+      ],
+      "usedFor": [
+        {
+          "label": "Major depressive disorder",
+          "status": "fda-approved",
+          "conditionId": "major-depressive-disorder"
+        },
+        {
+          "label": "Generalized anxiety disorder",
+          "status": "fda-approved",
+          "conditionId": "generalized-anxiety-disorder"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: higher risk of suicidal thoughts and behaviors in children, adolescents and young adults in short-term trials; monitor for worsening mood or emerging suicidality, especially early on and after changes.",
+        "Serotonin syndrome risk when combined with other serotonergic drugs (triptans, tramadol, linezolid, St. John's wort, other antidepressants); contraindicated with MAOIs.",
+        "Minimal CYP enzyme inhibition, so fewer drug interactions than several other SSRIs.",
+        "Stopping abruptly can cause discontinuation symptoms (dizziness, irritability, flu-like or sensory symptoms); changes are planned with the prescriber."
+      ],
+      "boxedWarning": true,
+      "rxcui": "321988",
+      "medlinePlus": [
+        {
+          "title": "Escitalopram",
+          "url": "https://medlineplus.gov/druginfo/meds/a603005.html"
+        }
+      ]
+    },
+    {
+      "id": "fluvoxamine",
+      "generic": "fluvoxamine",
+      "category": "antidepressant",
+      "class": "SSRI",
+      "commonBrands": [],
+      "usedFor": [
+        {
+          "label": "Obsessive-compulsive disorder",
+          "status": "fda-approved"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: higher risk of suicidal thoughts and behaviors in children, adolescents and young adults in short-term trials; monitor for worsening mood or emerging suicidality, especially early on and after changes.",
+        "Strong CYP1A2 inhibitor: contraindicated with tizanidine, ramelteon, pimozide, thioridazine and alosetron; raises clozapine and caffeine levels.",
+        "Serotonin syndrome risk when combined with other serotonergic drugs (triptans, tramadol, linezolid, St. John's wort, other antidepressants); contraindicated with MAOIs."
+      ],
+      "boxedWarning": true,
+      "rxcui": "42355",
+      "medlinePlus": [
+        {
+          "title": "Fluvoxamine",
+          "url": "https://medlineplus.gov/druginfo/meds/a695004.html"
+        }
+      ]
+    },
+    {
+      "id": "venlafaxine",
+      "generic": "venlafaxine",
+      "category": "antidepressant",
+      "class": "SNRI",
+      "commonBrands": [
+        "Effexor"
+      ],
+      "usedFor": [
+        {
+          "label": "Major depressive disorder",
+          "status": "fda-approved",
+          "conditionId": "major-depressive-disorder"
+        },
+        {
+          "label": "Generalized anxiety disorder",
+          "status": "fda-approved",
+          "conditionId": "generalized-anxiety-disorder"
+        },
+        {
+          "label": "Social anxiety disorder",
+          "status": "fda-approved"
+        },
+        {
+          "label": "Panic disorder",
+          "status": "fda-approved",
+          "conditionId": "panic-disorder"
+        },
+        {
+          "label": "PTSD (guideline-supported, off-label in the US)",
+          "status": "off-label",
+          "conditionId": "ptsd"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: higher risk of suicidal thoughts and behaviors in children, adolescents and young adults in short-term trials; monitor for worsening mood or emerging suicidality, especially early on and after changes.",
+        "Can raise blood pressure; monitor. Discontinuation symptoms are often marked with abrupt stopping.",
+        "Serotonin syndrome risk when combined with other serotonergic drugs (triptans, tramadol, linezolid, St. John's wort, other antidepressants); contraindicated with MAOIs."
+      ],
+      "boxedWarning": true,
+      "rxcui": "39786",
+      "label": {
+        "brand": "Effexor XR"
+      },
+      "medlinePlus": [
+        {
+          "title": "Venlafaxine",
+          "url": "https://medlineplus.gov/druginfo/meds/a694020.html"
+        }
+      ]
+    },
+    {
+      "id": "desvenlafaxine",
+      "generic": "desvenlafaxine",
+      "category": "antidepressant",
+      "class": "SNRI",
+      "commonBrands": [
+        "Pristiq",
+        "Khedezla"
+      ],
+      "usedFor": [
+        {
+          "label": "Major depressive disorder",
+          "status": "fda-approved",
+          "conditionId": "major-depressive-disorder"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: higher risk of suicidal thoughts and behaviors in children, adolescents and young adults in short-term trials; monitor for worsening mood or emerging suicidality, especially early on and after changes.",
+        "Can raise blood pressure; discontinuation symptoms with abrupt stopping.",
+        "Serotonin syndrome risk when combined with other serotonergic drugs (triptans, tramadol, linezolid, St. John's wort, other antidepressants); contraindicated with MAOIs."
+      ],
+      "boxedWarning": true,
+      "rxcui": "734064",
+      "label": {
+        "brand": "Pristiq Extended-Release"
+      },
+      "medlinePlus": [
+        {
+          "title": "Desvenlafaxine",
+          "url": "https://medlineplus.gov/druginfo/meds/a608022.html"
+        }
+      ]
+    },
+    {
+      "id": "duloxetine",
+      "generic": "duloxetine",
+      "category": "antidepressant",
+      "class": "SNRI",
+      "commonBrands": [
+        "Cymbalta",
+        "Drizalma",
+        "Irenka"
+      ],
+      "usedFor": [
+        {
+          "label": "Major depressive disorder",
+          "status": "fda-approved",
+          "conditionId": "major-depressive-disorder"
+        },
+        {
+          "label": "Generalized anxiety disorder",
+          "status": "fda-approved",
+          "conditionId": "generalized-anxiety-disorder"
+        },
+        {
+          "label": "Diabetic peripheral neuropathic pain",
+          "status": "fda-approved"
+        },
+        {
+          "label": "Fibromyalgia",
+          "status": "fda-approved"
+        },
+        {
+          "label": "Chronic musculoskeletal pain",
+          "status": "fda-approved"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: higher risk of suicidal thoughts and behaviors in children, adolescents and young adults in short-term trials; monitor for worsening mood or emerging suicidality, especially early on and after changes.",
+        "Rare liver injury; label advises against use with heavy alcohol use or chronic liver disease. Can raise blood pressure.",
+        "Serotonin syndrome risk when combined with other serotonergic drugs (triptans, tramadol, linezolid, St. John's wort, other antidepressants); contraindicated with MAOIs."
+      ],
+      "boxedWarning": true,
+      "rxcui": "72625",
+      "medlinePlus": [
+        {
+          "title": "Duloxetine",
+          "url": "https://medlineplus.gov/druginfo/meds/a604030.html"
+        }
+      ]
+    },
+    {
+      "id": "levomilnacipran",
+      "generic": "levomilnacipran",
+      "category": "antidepressant",
+      "class": "SNRI",
+      "commonBrands": [
+        "Fetzima"
+      ],
+      "usedFor": [
+        {
+          "label": "Major depressive disorder",
+          "status": "fda-approved",
+          "conditionId": "major-depressive-disorder"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: higher risk of suicidal thoughts and behaviors in children, adolescents and young adults in short-term trials; monitor for worsening mood or emerging suicidality, especially early on and after changes.",
+        "Can raise heart rate and blood pressure; urinary hesitancy or retention can occur.",
+        "Serotonin syndrome risk when combined with other serotonergic drugs (triptans, tramadol, linezolid, St. John's wort, other antidepressants); contraindicated with MAOIs."
+      ],
+      "boxedWarning": true,
+      "rxcui": "1433212",
+      "label": {
+        "brand": "Fetzima"
+      },
+      "medlinePlus": [
+        {
+          "title": "Levomilnacipran",
+          "url": "https://medlineplus.gov/druginfo/meds/a613048.html"
+        }
+      ]
+    },
+    {
+      "id": "bupropion",
+      "generic": "bupropion",
+      "category": "antidepressant",
+      "class": "Aminoketone (norepinephrine-dopamine reuptake inhibitor)",
+      "commonBrands": [
+        "Aplenzin",
+        "Forfivo",
+        "Wellbutrin"
+      ],
+      "combinationBrands": [
+        "Auvelity",
+        "Contrave"
+      ],
+      "usedFor": [
+        {
+          "label": "Major depressive disorder",
+          "status": "fda-approved",
+          "conditionId": "major-depressive-disorder"
+        },
+        {
+          "label": "Prevention of seasonal major depressive episodes",
+          "status": "fda-approved"
+        },
+        {
+          "label": "Smoking cessation aid (some products)",
+          "status": "fda-approved"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: higher risk of suicidal thoughts and behaviors in children, adolescents and young adults in short-term trials; monitor for worsening mood or emerging suicidality, especially early on and after changes.",
+        "Dose-related seizure risk; contraindicated with seizure disorders, current or prior bulimia or anorexia nervosa, and abrupt stopping of alcohol, benzodiazepines or anticonvulsants.",
+        "Little sexual side-effect or weight-gain burden; can worsen insomnia, anxiety or blood pressure. Contraindicated with MAOIs."
+      ],
+      "boxedWarning": true,
+      "rxcui": "42347",
+      "label": {
+        "brand": "WELLBUTRIN XL"
+      },
+      "medlinePlus": [
+        {
+          "title": "Bupropion",
+          "url": "https://medlineplus.gov/druginfo/meds/a695033.html"
+        }
+      ]
+    },
+    {
+      "id": "dextromethorphan-bupropion",
+      "generic": "dextromethorphan and bupropion",
+      "category": "antidepressant",
+      "class": "NMDA receptor antagonist and sigma-1 agonist with aminoketone",
+      "commonBrands": [],
+      "combinationBrands": [
+        "Auvelity"
+      ],
+      "usedFor": [
+        {
+          "label": "Major depressive disorder",
+          "status": "fda-approved",
+          "conditionId": "major-depressive-disorder"
+        },
+        {
+          "label": "Agitation associated with dementia due to Alzheimer's disease",
+          "status": "fda-approved"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: higher risk of suicidal thoughts and behaviors in children, adolescents and young adults in short-term trials; monitor for worsening mood or emerging suicidality, especially early on and after changes.",
+        "Carries bupropion's seizure precautions; serotonin syndrome risk with other serotonergic drugs; contraindicated with MAOIs.",
+        "Many CYP2D6 interactions (bupropion inhibits the enzyme that clears dextromethorphan)."
+      ],
+      "boxedWarning": true,
+      "rxcui": "2611256",
+      "rxnormName": "bupropion / dextromethorphan",
+      "label": {
+        "brand": "AUVELITY",
+        "name": "bupropion",
+        "combination": true
+      },
+      "medlinePlus": [
+        {
+          "title": "Bupropion",
+          "url": "https://medlineplus.gov/druginfo/meds/a695033.html"
+        },
+        {
+          "title": "Dextromethorphan",
+          "url": "https://medlineplus.gov/druginfo/meds/a682492.html"
+        }
+      ]
+    },
+    {
+      "id": "mirtazapine",
+      "generic": "mirtazapine",
+      "category": "antidepressant",
+      "class": "Tetracyclic antidepressant (noradrenergic and specific serotonergic)",
+      "commonBrands": [
+        "Remeron"
+      ],
+      "usedFor": [
+        {
+          "label": "Major depressive disorder",
+          "status": "fda-approved",
+          "conditionId": "major-depressive-disorder"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: higher risk of suicidal thoughts and behaviors in children, adolescents and young adults in short-term trials; monitor for worsening mood or emerging suicidality, especially early on and after changes.",
+        "Sedation and increased appetite or weight gain are common; rare agranulocytosis (report fever, sore throat or infection).",
+        "Low sexual side-effect burden; contraindicated with MAOIs."
+      ],
+      "boxedWarning": true,
+      "rxcui": "15996",
+      "label": {
+        "brand": "REMERON"
+      },
+      "medlinePlus": [
+        {
+          "title": "Mirtazapine",
+          "url": "https://medlineplus.gov/druginfo/meds/a697009.html"
+        }
+      ]
+    },
+    {
+      "id": "trazodone",
+      "generic": "trazodone",
+      "category": "antidepressant",
+      "class": "Serotonin antagonist and reuptake inhibitor (SARI)",
+      "commonBrands": [
+        "Raldesy"
+      ],
+      "formerBrands": [
+        "Desyrel"
+      ],
+      "usedFor": [
+        {
+          "label": "Major depressive disorder",
+          "status": "fda-approved",
+          "conditionId": "major-depressive-disorder"
+        },
+        {
+          "label": "Insomnia (common off-label use; the AASM guideline suggests against it)",
+          "status": "off-label"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: higher risk of suicidal thoughts and behaviors in children, adolescents and young adults in short-term trials; monitor for worsening mood or emerging suicidality, especially early on and after changes.",
+        "Sedation and orthostatic hypotension (falls in older adults); priapism is rare but an emergency.",
+        "QT prolongation risk; serotonin syndrome risk with other serotonergic drugs."
+      ],
+      "boxedWarning": true,
+      "rxcui": "10737",
+      "medlinePlus": [
+        {
+          "title": "Trazodone",
+          "url": "https://medlineplus.gov/druginfo/meds/a681038.html"
+        }
+      ]
+    },
+    {
+      "id": "vortioxetine",
+      "generic": "vortioxetine",
+      "category": "antidepressant",
+      "class": "Serotonin modulator",
+      "commonBrands": [
+        "Trintellix"
+      ],
+      "usedFor": [
+        {
+          "label": "Major depressive disorder",
+          "status": "fda-approved",
+          "conditionId": "major-depressive-disorder"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: higher risk of suicidal thoughts and behaviors in children, adolescents and young adults in short-term trials; monitor for worsening mood or emerging suicidality, especially early on and after changes.",
+        "Nausea is the most common early side effect; serotonin syndrome risk; contraindicated with MAOIs.",
+        "Raises bleeding risk with NSAIDs, aspirin or anticoagulants; hyponatremia can occur, especially in older adults."
+      ],
+      "boxedWarning": true,
+      "rxcui": "1455099",
+      "label": {
+        "brand": "Trintellix"
+      },
+      "medlinePlus": [
+        {
+          "title": "Vortioxetine",
+          "url": "https://medlineplus.gov/druginfo/meds/a614003.html"
+        }
+      ]
+    },
+    {
+      "id": "vilazodone",
+      "generic": "vilazodone",
+      "category": "antidepressant",
+      "class": "Serotonin modulator (SSRI and 5-HT1A partial agonist)",
+      "commonBrands": [
+        "Viibryd"
+      ],
+      "usedFor": [
+        {
+          "label": "Major depressive disorder",
+          "status": "fda-approved",
+          "conditionId": "major-depressive-disorder"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: higher risk of suicidal thoughts and behaviors in children, adolescents and young adults in short-term trials; monitor for worsening mood or emerging suicidality, especially early on and after changes.",
+        "Diarrhea and nausea are common early; serotonin syndrome risk; contraindicated with MAOIs.",
+        "Raises bleeding risk with NSAIDs, aspirin or anticoagulants; hyponatremia can occur, especially in older adults."
+      ],
+      "boxedWarning": true,
+      "rxcui": "1086769",
+      "label": {
+        "brand": "VIIBRYD"
+      },
+      "medlinePlus": [
+        {
+          "title": "Vilazodone",
+          "url": "https://medlineplus.gov/druginfo/meds/a611020.html"
+        }
+      ]
+    },
+    {
+      "id": "nefazodone",
+      "generic": "nefazodone",
+      "category": "antidepressant",
+      "class": "Serotonin antagonist and reuptake inhibitor (SARI)",
+      "commonBrands": [],
+      "usedFor": [
+        {
+          "label": "Depression",
+          "status": "fda-approved",
+          "conditionId": "major-depressive-disorder"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warnings: life-threatening liver failure, and suicidal thoughts and behaviors in young people; generally reserved and requires liver monitoring.",
+        "Strong CYP3A4 inhibitor with several contraindicated combinations (for example pimozide, triazolam, carbamazepine)."
+      ],
+      "boxedWarning": true,
+      "rxcui": "31565",
+      "medlinePlus": [
+        {
+          "title": "Nefazodone",
+          "url": "https://medlineplus.gov/druginfo/meds/a695005.html"
+        }
+      ]
+    },
+    {
+      "id": "gepirone",
+      "generic": "gepirone",
+      "category": "antidepressant",
+      "class": "Azapirone (5-HT1A receptor agonist)",
+      "commonBrands": [
+        "Exxua"
+      ],
+      "usedFor": [
+        {
+          "label": "Major depressive disorder",
+          "status": "fda-approved",
+          "conditionId": "major-depressive-disorder"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: higher risk of suicidal thoughts and behaviors in children, adolescents and young adults in short-term trials; monitor for worsening mood or emerging suicidality, especially early on and after changes.",
+        "QT prolongation: label requires baseline ECG and lists cardiac and hepatic contraindications; contraindicated with strong CYP3A4 inhibitors and MAOIs."
+      ],
+      "boxedWarning": true,
+      "rxcui": "2672253",
+      "label": {
+        "brand": "EXXUA"
+      },
+      "medlinePlus": [
+        {
+          "title": "Gepirone",
+          "url": "https://medlineplus.gov/druginfo/meds/a623052.html"
+        }
+      ]
+    },
+    {
+      "id": "amitriptyline",
+      "generic": "amitriptyline",
+      "category": "antidepressant",
+      "class": "Tricyclic antidepressant (TCA)",
+      "commonBrands": [
+        "Elavil"
+      ],
+      "usedFor": [
+        {
+          "label": "Depression",
+          "status": "fda-approved",
+          "conditionId": "major-depressive-disorder"
+        },
+        {
+          "label": "Neuropathic pain or migraine prevention (off-label)",
+          "status": "off-label"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: higher risk of suicidal thoughts and behaviors in children, adolescents and young adults in short-term trials; monitor for worsening mood or emerging suicidality, especially early on and after changes.",
+        "Narrow margin of safety in overdose (cardiac conduction effects, seizures); weigh this when suicide risk is present.",
+        "Anticholinergic effects (dry mouth, constipation, urinary retention, confusion) and orthostatic hypotension; caution in older adults and cardiac disease."
+      ],
+      "boxedWarning": true,
+      "rxcui": "704",
+      "medlinePlus": [
+        {
+          "title": "Amitriptyline",
+          "url": "https://medlineplus.gov/druginfo/meds/a682388.html"
+        }
+      ]
+    },
+    {
+      "id": "nortriptyline",
+      "generic": "nortriptyline",
+      "category": "antidepressant",
+      "class": "Tricyclic antidepressant (TCA)",
+      "commonBrands": [
+        "Pamelor"
+      ],
+      "usedFor": [
+        {
+          "label": "Depression",
+          "status": "fda-approved",
+          "conditionId": "major-depressive-disorder"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: higher risk of suicidal thoughts and behaviors in children, adolescents and young adults in short-term trials; monitor for worsening mood or emerging suicidality, especially early on and after changes.",
+        "Narrow margin of safety in overdose (cardiac conduction effects, seizures); weigh this when suicide risk is present.",
+        "Fewer anticholinergic and orthostatic effects than amitriptyline, but the same cardiac precautions; blood levels are sometimes used to guide therapy."
+      ],
+      "boxedWarning": true,
+      "rxcui": "7531",
+      "label": {
+        "brand": "PAMELOR"
+      },
+      "medlinePlus": [
+        {
+          "title": "Nortriptyline",
+          "url": "https://medlineplus.gov/druginfo/meds/a682620.html"
+        }
+      ]
+    },
+    {
+      "id": "imipramine",
+      "generic": "imipramine",
+      "category": "antidepressant",
+      "class": "Tricyclic antidepressant (TCA)",
+      "commonBrands": [],
+      "formerBrands": [
+        "Tofranil"
+      ],
+      "usedFor": [
+        {
+          "label": "Depression",
+          "status": "fda-approved",
+          "conditionId": "major-depressive-disorder"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: higher risk of suicidal thoughts and behaviors in children, adolescents and young adults in short-term trials; monitor for worsening mood or emerging suicidality, especially early on and after changes.",
+        "Narrow margin of safety in overdose (cardiac conduction effects, seizures); weigh this when suicide risk is present.",
+        "Anticholinergic effects (dry mouth, constipation, urinary retention, confusion) and orthostatic hypotension; caution in older adults and cardiac disease."
+      ],
+      "boxedWarning": true,
+      "rxcui": "5691",
+      "medlinePlus": [
+        {
+          "title": "Imipramine",
+          "url": "https://medlineplus.gov/druginfo/meds/a682389.html"
+        }
+      ]
+    },
+    {
+      "id": "clomipramine",
+      "generic": "clomipramine",
+      "category": "antidepressant",
+      "class": "Tricyclic antidepressant (TCA)",
+      "commonBrands": [
+        "Anafranil"
+      ],
+      "usedFor": [
+        {
+          "label": "Obsessive-compulsive disorder",
+          "status": "fda-approved"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: higher risk of suicidal thoughts and behaviors in children, adolescents and young adults in short-term trials; monitor for worsening mood or emerging suicidality, especially early on and after changes.",
+        "Seizure risk is higher than with other TCAs; strongly serotonergic, so serotonin syndrome risk and MAOI contraindication.",
+        "Narrow margin of safety in overdose (cardiac conduction effects, seizures); weigh this when suicide risk is present."
+      ],
+      "boxedWarning": true,
+      "rxcui": "2597",
+      "label": {
+        "brand": "ANAFRANIL"
+      },
+      "medlinePlus": [
+        {
+          "title": "Clomipramine",
+          "url": "https://medlineplus.gov/druginfo/meds/a697002.html"
+        }
+      ]
+    },
+    {
+      "id": "desipramine",
+      "generic": "desipramine",
+      "category": "antidepressant",
+      "class": "Tricyclic antidepressant (TCA)",
+      "commonBrands": [
+        "Norpramin"
+      ],
+      "usedFor": [
+        {
+          "label": "Depression",
+          "status": "fda-approved",
+          "conditionId": "major-depressive-disorder"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: higher risk of suicidal thoughts and behaviors in children, adolescents and young adults in short-term trials; monitor for worsening mood or emerging suicidality, especially early on and after changes.",
+        "Narrow margin of safety in overdose (cardiac conduction effects, seizures); weigh this when suicide risk is present.",
+        "Reports of sudden death, mostly in children; cardiac history and ECG considerations apply."
+      ],
+      "boxedWarning": true,
+      "rxcui": "3247",
+      "label": {
+        "brand": "Norpramin"
+      },
+      "medlinePlus": [
+        {
+          "title": "Desipramine",
+          "url": "https://medlineplus.gov/druginfo/meds/a682387.html"
+        }
+      ]
+    },
+    {
+      "id": "doxepin",
+      "generic": "doxepin",
+      "category": "antidepressant",
+      "class": "Tricyclic antidepressant (TCA); low-strength tablets are a hypnotic",
+      "commonBrands": [
+        "Silenor",
+        "Prudoxin",
+        "Zonalon"
+      ],
+      "usedFor": [
+        {
+          "label": "Major depressive disorder (antidepressant-strength capsules)",
+          "status": "fda-approved",
+          "conditionId": "major-depressive-disorder"
+        },
+        {
+          "label": "Insomnia with trouble staying asleep (low-strength tablets)",
+          "status": "fda-approved"
+        }
+      ],
+      "clinicianNotes": [
+        "Antidepressant-strength products carry the antidepressant suicidality boxed warning; the low-strength insomnia tablets do not.",
+        "Strong antihistamine effect: sedation, next-day impairment; avoid alcohol. Higher strengths carry usual TCA overdose and anticholinergic risks.",
+        "Topical doxepin products exist for itching (not psychiatric)."
+      ],
+      "boxedWarning": true,
+      "rxcui": "3638",
+      "medlinePlus": [
+        {
+          "title": "Doxepin (Depression, Anxiety)",
+          "url": "https://medlineplus.gov/druginfo/meds/a682390.html"
+        },
+        {
+          "title": "Doxepin (Insomnia)",
+          "url": "https://medlineplus.gov/druginfo/meds/a617017.html"
+        }
+      ]
+    },
+    {
+      "id": "phenelzine",
+      "generic": "phenelzine",
+      "category": "antidepressant",
+      "class": "Monoamine oxidase inhibitor (MAOI)",
+      "commonBrands": [
+        "Nardil"
+      ],
+      "usedFor": [
+        {
+          "label": "Depression not responding to other treatments",
+          "status": "fda-approved",
+          "conditionId": "major-depressive-disorder"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: higher risk of suicidal thoughts and behaviors in children, adolescents and young adults in short-term trials; monitor for worsening mood or emerging suicidality, especially early on and after changes.",
+        "Hypertensive crisis risk with tyramine-rich foods and many drugs (other antidepressants, stimulants, decongestants, some opioids); requires dietary and medication-interaction counseling by the prescriber.",
+        "Washout periods are required when switching to or from other antidepressants; coordinate with the prescriber."
+      ],
+      "boxedWarning": true,
+      "rxcui": "8123",
+      "label": {
+        "brand": "Nardil"
+      },
+      "medlinePlus": [
+        {
+          "title": "Phenelzine",
+          "url": "https://medlineplus.gov/druginfo/meds/a682089.html"
+        }
+      ]
+    },
+    {
+      "id": "tranylcypromine",
+      "generic": "tranylcypromine",
+      "category": "antidepressant",
+      "class": "Monoamine oxidase inhibitor (MAOI)",
+      "commonBrands": [
+        "Parnate"
+      ],
+      "usedFor": [
+        {
+          "label": "Major depressive disorder not responding to other antidepressants",
+          "status": "fda-approved",
+          "conditionId": "major-depressive-disorder"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: higher risk of suicidal thoughts and behaviors in children, adolescents and young adults in short-term trials; monitor for worsening mood or emerging suicidality, especially early on and after changes.",
+        "Hypertensive crisis risk with tyramine-rich foods and many drugs (other antidepressants, stimulants, decongestants, some opioids); requires dietary and medication-interaction counseling by the prescriber.",
+        "Washout periods are required when switching to or from other antidepressants; coordinate with the prescriber."
+      ],
+      "boxedWarning": true,
+      "rxcui": "10734",
+      "label": {
+        "brand": "PARNATE"
+      },
+      "medlinePlus": [
+        {
+          "title": "Tranylcypromine",
+          "url": "https://medlineplus.gov/druginfo/meds/a682088.html"
+        }
+      ]
+    },
+    {
+      "id": "isocarboxazid",
+      "generic": "isocarboxazid",
+      "category": "antidepressant",
+      "class": "Monoamine oxidase inhibitor (MAOI)",
+      "commonBrands": [
+        "Marplan"
+      ],
+      "usedFor": [
+        {
+          "label": "Depression",
+          "status": "fda-approved",
+          "conditionId": "major-depressive-disorder"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: higher risk of suicidal thoughts and behaviors in children, adolescents and young adults in short-term trials; monitor for worsening mood or emerging suicidality, especially early on and after changes.",
+        "Hypertensive crisis risk with tyramine-rich foods and many drugs (other antidepressants, stimulants, decongestants, some opioids); requires dietary and medication-interaction counseling by the prescriber."
+      ],
+      "boxedWarning": true,
+      "rxcui": "6011",
+      "label": {
+        "brand": "MARPLAN"
+      },
+      "medlinePlus": [
+        {
+          "title": "Isocarboxazid",
+          "url": "https://medlineplus.gov/druginfo/meds/a605036.html"
+        }
+      ]
+    },
+    {
+      "id": "selegiline-transdermal",
+      "generic": "selegiline",
+      "category": "antidepressant",
+      "class": "Monoamine oxidase inhibitor (MAOI), transdermal",
+      "commonBrands": [
+        "Emsam",
+        "Zelapar"
+      ],
+      "usedFor": [
+        {
+          "label": "Major depressive disorder (transdermal patch)",
+          "status": "fda-approved",
+          "conditionId": "major-depressive-disorder"
+        },
+        {
+          "label": "Parkinson's disease (oral forms; not psychiatric)",
+          "status": "fda-approved"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: higher risk of suicidal thoughts and behaviors in children, adolescents and young adults in short-term trials; monitor for worsening mood or emerging suicidality, especially early on and after changes.",
+        "Dietary tyramine restrictions apply at higher patch strengths; drug-interaction restrictions apply at all strengths (serotonergic drugs, stimulants, decongestants, some opioids).",
+        "Application-site reactions are common."
+      ],
+      "boxedWarning": true,
+      "rxcui": "9639",
+      "label": {
+        "brand": "EMSAM",
+        "route": "TRANSDERMAL"
+      },
+      "medlinePlus": [
+        {
+          "title": "Selegiline",
+          "url": "https://medlineplus.gov/druginfo/meds/a697046.html"
+        },
+        {
+          "title": "Selegiline Transdermal Patch",
+          "url": "https://medlineplus.gov/druginfo/meds/a607003.html"
+        }
+      ]
+    },
+    {
+      "id": "buspirone",
+      "generic": "buspirone",
+      "category": "anxiolytic",
+      "class": "Azapirone (5-HT1A partial agonist)",
+      "commonBrands": [
+        "Buspar",
+        "Bucapsol"
+      ],
+      "usedFor": [
+        {
+          "label": "Anxiety disorders (studied mainly in generalized anxiety)",
+          "status": "fda-approved",
+          "conditionId": "generalized-anxiety-disorder"
+        }
+      ],
+      "clinicianNotes": [
+        "Not habit-forming and not a controlled substance; onset over weeks, so it does not help acute panic.",
+        "Do not combine with MAOIs; dizziness and nausea are common. Grapefruit juice and strong CYP3A4 inhibitors raise levels."
+      ],
+      "boxedWarning": false,
+      "rxcui": "1827",
+      "medlinePlus": [
+        {
+          "title": "Buspirone",
+          "url": "https://medlineplus.gov/druginfo/meds/a688005.html"
+        }
+      ]
+    },
+    {
+      "id": "hydroxyzine",
+      "generic": "hydroxyzine",
+      "category": "anxiolytic",
+      "class": "Antihistamine (H1 antagonist)",
+      "commonBrands": [
+        "Vistaril"
+      ],
+      "usedFor": [
+        {
+          "label": "Symptomatic relief of anxiety",
+          "status": "fda-approved",
+          "conditionId": "generalized-anxiety-disorder"
+        },
+        {
+          "label": "Itching due to allergic conditions",
+          "status": "fda-approved"
+        },
+        {
+          "label": "Sedation before or after procedures",
+          "status": "fda-approved"
+        }
+      ],
+      "clinicianNotes": [
+        "Non-controlled option sometimes used instead of benzodiazepines; sedation and anticholinergic effects (caution in older adults).",
+        "QT prolongation risk, especially with other QT-prolonging drugs or cardiac risk factors; avoid alcohol and other CNS depressants."
+      ],
+      "boxedWarning": false,
+      "rxcui": "5553",
+      "medlinePlus": [
+        {
+          "title": "Hydroxyzine",
+          "url": "https://medlineplus.gov/druginfo/meds/a682866.html"
+        }
+      ]
+    },
+    {
+      "id": "alprazolam",
+      "generic": "alprazolam",
+      "category": "anxiolytic",
+      "class": "Benzodiazepine",
+      "commonBrands": [
+        "Xanax"
+      ],
+      "usedFor": [
+        {
+          "label": "Generalized anxiety disorder",
+          "status": "fda-approved",
+          "conditionId": "generalized-anxiety-disorder"
+        },
+        {
+          "label": "Panic disorder, with or without agoraphobia",
+          "status": "fda-approved",
+          "conditionId": "panic-disorder"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: profound sedation, respiratory depression and death with opioids; abuse, misuse and addiction; physical dependence with potentially life-threatening withdrawal if stopped abruptly.",
+        "Short-acting: rebound anxiety between doses and interdose withdrawal are common; tapering is done gradually with the prescriber.",
+        "Raises fall, confusion and next-day impairment risk, particularly in older adults; avoid alcohol and other CNS depressants."
+      ],
+      "boxedWarning": true,
+      "deaSchedule": "CIV",
+      "rxcui": "596",
+      "label": {
+        "brand": "Xanax"
+      },
+      "medlinePlus": [
+        {
+          "title": "Alprazolam",
+          "url": "https://medlineplus.gov/druginfo/meds/a684001.html"
+        }
+      ]
+    },
+    {
+      "id": "clonazepam",
+      "generic": "clonazepam",
+      "category": "anxiolytic",
+      "class": "Benzodiazepine",
+      "commonBrands": [
+        "Klonopin"
+      ],
+      "usedFor": [
+        {
+          "label": "Panic disorder, with or without agoraphobia",
+          "status": "fda-approved",
+          "conditionId": "panic-disorder"
+        },
+        {
+          "label": "Seizure disorders",
+          "status": "fda-approved"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: profound sedation, respiratory depression and death with opioids; abuse, misuse and addiction; physical dependence with potentially life-threatening withdrawal if stopped abruptly.",
+        "Long-acting; still requires a gradual, prescriber-guided taper. Anticonvulsants as a class carry a suicidality warning.",
+        "Raises fall, confusion and next-day impairment risk, particularly in older adults; avoid alcohol and other CNS depressants."
+      ],
+      "boxedWarning": true,
+      "deaSchedule": "CIV",
+      "rxcui": "2598",
+      "label": {
+        "brand": "Klonopin"
+      },
+      "medlinePlus": [
+        {
+          "title": "Clonazepam",
+          "url": "https://medlineplus.gov/druginfo/meds/a682279.html"
+        }
+      ]
+    },
+    {
+      "id": "lorazepam",
+      "generic": "lorazepam",
+      "category": "anxiolytic",
+      "class": "Benzodiazepine",
+      "commonBrands": [
+        "Ativan",
+        "Loreev"
+      ],
+      "usedFor": [
+        {
+          "label": "Anxiety disorders and short-term relief of anxiety symptoms",
+          "status": "fda-approved",
+          "conditionId": "generalized-anxiety-disorder"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: profound sedation, respiratory depression and death with opioids; abuse, misuse and addiction; physical dependence with potentially life-threatening withdrawal if stopped abruptly.",
+        "Raises fall, confusion and next-day impairment risk, particularly in older adults; avoid alcohol and other CNS depressants.",
+        "No active metabolites, so often preferred in liver impairment; still requires a gradual, prescriber-guided taper."
+      ],
+      "boxedWarning": true,
+      "deaSchedule": "CIV",
+      "rxcui": "6470",
+      "label": {
+        "brand": "Ativan"
+      },
+      "medlinePlus": [
+        {
+          "title": "Lorazepam",
+          "url": "https://medlineplus.gov/druginfo/meds/a682053.html"
+        }
+      ]
+    },
+    {
+      "id": "diazepam",
+      "generic": "diazepam",
+      "category": "anxiolytic",
+      "class": "Benzodiazepine",
+      "commonBrands": [
+        "Valium",
+        "Diastat",
+        "Libervant",
+        "Valtoco"
+      ],
+      "usedFor": [
+        {
+          "label": "Anxiety disorders",
+          "status": "fda-approved",
+          "conditionId": "generalized-anxiety-disorder"
+        },
+        {
+          "label": "Acute alcohol withdrawal symptoms",
+          "status": "fda-approved"
+        },
+        {
+          "label": "Adjunct for muscle spasm and seizures",
+          "status": "fda-approved"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: profound sedation, respiratory depression and death with opioids; abuse, misuse and addiction; physical dependence with potentially life-threatening withdrawal if stopped abruptly.",
+        "Very long-acting with active metabolites; accumulation in older adults and liver disease raises fall and sedation risk.",
+        "Raises fall, confusion and next-day impairment risk, particularly in older adults; avoid alcohol and other CNS depressants."
+      ],
+      "boxedWarning": true,
+      "deaSchedule": "CIV",
+      "sudRelated": true,
+      "rxcui": "3322",
+      "label": {
+        "brand": "Valium"
+      },
+      "medlinePlus": [
+        {
+          "title": "Diazepam",
+          "url": "https://medlineplus.gov/druginfo/meds/a682047.html"
+        },
+        {
+          "title": "Diazepam Buccal",
+          "url": "https://medlineplus.gov/druginfo/meds/a624027.html"
+        }
+      ]
+    },
+    {
+      "id": "chlordiazepoxide",
+      "generic": "chlordiazepoxide",
+      "category": "anxiolytic",
+      "class": "Benzodiazepine",
+      "commonBrands": [],
+      "combinationBrands": [
+        "Librax"
+      ],
+      "formerBrands": [
+        "Librium"
+      ],
+      "usedFor": [
+        {
+          "label": "Anxiety disorders",
+          "status": "fda-approved",
+          "conditionId": "generalized-anxiety-disorder"
+        },
+        {
+          "label": "Acute alcohol withdrawal symptoms",
+          "status": "fda-approved"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: profound sedation, respiratory depression and death with opioids; abuse, misuse and addiction; physical dependence with potentially life-threatening withdrawal if stopped abruptly.",
+        "Long-acting; commonly used in supervised alcohol-withdrawal management. Withdrawal management belongs in a medical setting.",
+        "Raises fall, confusion and next-day impairment risk, particularly in older adults; avoid alcohol and other CNS depressants."
+      ],
+      "boxedWarning": true,
+      "deaSchedule": "CIV",
+      "sudRelated": true,
+      "rxcui": "2356",
+      "label": {
+        "exclude": [
+          "clidinium",
+          "amitriptyline"
+        ]
+      },
+      "medlinePlus": [
+        {
+          "title": "Chlordiazepoxide",
+          "url": "https://medlineplus.gov/druginfo/meds/a682078.html"
+        }
+      ]
+    },
+    {
+      "id": "temazepam",
+      "generic": "temazepam",
+      "category": "hypnotic",
+      "class": "Benzodiazepine",
+      "commonBrands": [
+        "Restoril"
+      ],
+      "usedFor": [
+        {
+          "label": "Short-term treatment of insomnia",
+          "status": "fda-approved"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: profound sedation, respiratory depression and death with opioids; abuse, misuse and addiction; physical dependence with potentially life-threatening withdrawal if stopped abruptly.",
+        "Raises fall, confusion and next-day impairment risk, particularly in older adults; avoid alcohol and other CNS depressants.",
+        "CBT for insomnia is first-line; hypnotics are generally intended for short-term use."
+      ],
+      "boxedWarning": true,
+      "deaSchedule": "CIV",
+      "rxcui": "10355",
+      "label": {
+        "brand": "RESTORIL"
+      },
+      "medlinePlus": [
+        {
+          "title": "Temazepam",
+          "url": "https://medlineplus.gov/druginfo/meds/a684003.html"
+        }
+      ]
+    },
+    {
+      "id": "prazosin",
+      "generic": "prazosin",
+      "category": "other",
+      "class": "Alpha-1 adrenergic antagonist",
+      "commonBrands": [
+        "Minipress"
+      ],
+      "usedFor": [
+        {
+          "label": "High blood pressure (labeled; not psychiatric)",
+          "status": "fda-approved"
+        },
+        {
+          "label": "Trauma-related nightmares (off-label; mixed trial evidence)",
+          "status": "off-label",
+          "conditionId": "ptsd"
+        }
+      ],
+      "clinicianNotes": [
+        "Orthostatic hypotension and fainting, especially at first doses or after missed doses; caution with other blood-pressure-lowering drugs and PDE5 inhibitors.",
+        "Not a controlled substance; evidence for nightmares is mixed, so expectations are set with the prescriber."
+      ],
+      "boxedWarning": false,
+      "rxcui": "8629",
+      "medlinePlus": [
+        {
+          "title": "Prazosin",
+          "url": "https://medlineplus.gov/druginfo/meds/a682245.html"
+        }
+      ]
+    },
+    {
+      "id": "propranolol",
+      "generic": "propranolol",
+      "category": "other",
+      "class": "Beta-adrenergic antagonist (non-selective)",
+      "commonBrands": [
+        "Inderal",
+        "InnoPran",
+        "Hemangeol"
+      ],
+      "usedFor": [
+        {
+          "label": "Cardiovascular conditions, tremor and migraine prevention (labeled; not psychiatric)",
+          "status": "fda-approved"
+        },
+        {
+          "label": "Performance-related anxiety symptoms (off-label)",
+          "status": "off-label"
+        }
+      ],
+      "clinicianNotes": [
+        "Contraindicated in asthma or reactive airway disease, some heart blocks and severe bradycardia; can mask low-blood-sugar warning signs.",
+        "Stopping abruptly can worsen angina or cause heart events in people with heart disease; changes are planned with the prescriber.",
+        "Overdose is dangerous (cardiac and seizure effects)."
+      ],
+      "boxedWarning": false,
+      "rxcui": "8787",
+      "label": {
+        "brand": "INDERAL LA"
+      },
+      "medlinePlus": [
+        {
+          "title": "Propranolol",
+          "url": "https://medlineplus.gov/druginfo/meds/a682607.html"
+        },
+        {
+          "title": "Propranolol (Infantile Hemangioma)",
+          "url": "https://medlineplus.gov/druginfo/meds/a615024.html"
+        }
+      ]
+    },
+    {
+      "id": "lithium",
+      "generic": "lithium",
+      "category": "mood-stabilizer",
+      "class": "Mood stabilizer (lithium salt)",
+      "commonBrands": [
+        "Lithobid"
+      ],
+      "usedFor": [
+        {
+          "label": "Bipolar I disorder: acute manic or mixed episodes and maintenance",
+          "status": "fda-approved"
+        },
+        {
+          "label": "Augmentation in treatment-resistant depression (off-label)",
+          "status": "off-label",
+          "conditionId": "major-depressive-disorder"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: toxicity is closely tied to blood levels; requires regular serum lithium, kidney and thyroid monitoring arranged by the prescriber.",
+        "Levels rise with dehydration, low-salt diets, NSAIDs, ACE inhibitors, ARBs and thiazide diuretics; early toxicity signs include coarse tremor, vomiting, diarrhea, confusion and unsteadiness.",
+        "Evidence supports a reduction in suicide risk in mood disorders; overdose is dangerous."
+      ],
+      "boxedWarning": true,
+      "rxcui": "6448",
+      "label": {
+        "brand": "LITHOBID",
+        "name": "lithium carbonate"
+      },
+      "medlinePlus": [
+        {
+          "title": "Lithium",
+          "url": "https://medlineplus.gov/druginfo/meds/a681039.html"
+        }
+      ]
+    },
+    {
+      "id": "valproate",
+      "generic": "valproate",
+      "category": "mood-stabilizer",
+      "class": "Anticonvulsant mood stabilizer",
+      "commonBrands": [
+        "Depakote"
+      ],
+      "usedFor": [
+        {
+          "label": "Bipolar disorder: manic episodes",
+          "status": "fda-approved"
+        },
+        {
+          "label": "Epilepsy and migraine prevention (labeled; not psychiatric)",
+          "status": "fda-approved"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warnings: serious liver injury, pancreatitis, and major birth defects and reduced IQ after prenatal exposure; generally avoided in people who could become pregnant unless no alternative.",
+        "Monitoring of liver tests, blood counts and drug levels is arranged by the prescriber; can cause weight gain, tremor and hair thinning.",
+        "Interacts with lamotrigine (raises its levels) and other anticonvulsants."
+      ],
+      "boxedWarning": true,
+      "rxcui": "40254",
+      "label": {
+        "brand": "Depakote",
+        "name": "divalproex sodium"
+      },
+      "medlinePlus": [
+        {
+          "title": "Valproic Acid",
+          "url": "https://medlineplus.gov/druginfo/meds/a682412.html"
+        }
+      ]
+    },
+    {
+      "id": "lamotrigine",
+      "generic": "lamotrigine",
+      "category": "mood-stabilizer",
+      "class": "Anticonvulsant mood stabilizer",
+      "commonBrands": [
+        "Lamictal",
+        "Subvenite"
+      ],
+      "usedFor": [
+        {
+          "label": "Bipolar I disorder: maintenance to delay mood episodes",
+          "status": "fda-approved"
+        },
+        {
+          "label": "Epilepsy (labeled; not psychiatric)",
+          "status": "fda-approved"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: serious, potentially fatal rashes (including Stevens-Johnson syndrome); risk rises with fast titration or use with valproate. Any rash needs prompt prescriber review.",
+        "Not effective for acute mania; restarting after a gap needs prescriber guidance. Hormonal contraceptives can lower levels."
+      ],
+      "boxedWarning": true,
+      "rxcui": "28439",
+      "label": {
+        "brand": "LAMICTAL"
+      },
+      "medlinePlus": [
+        {
+          "title": "Lamotrigine",
+          "url": "https://medlineplus.gov/druginfo/meds/a695007.html"
+        }
+      ]
+    },
+    {
+      "id": "carbamazepine",
+      "generic": "carbamazepine",
+      "category": "mood-stabilizer",
+      "class": "Anticonvulsant mood stabilizer",
+      "commonBrands": [
+        "Equetro",
+        "Tegretol",
+        "Carbatrol",
+        "Epitol"
+      ],
+      "usedFor": [
+        {
+          "label": "Bipolar I disorder: acute manic or mixed episodes (extended-release capsules)",
+          "status": "fda-approved"
+        },
+        {
+          "label": "Epilepsy and trigeminal neuralgia (labeled; not psychiatric)",
+          "status": "fda-approved"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warnings: serious skin reactions (risk is higher with the HLA-B*1502 allele; the label advises testing before starting in patients with at-risk ancestry, including many Asian populations) and aplastic anemia or agranulocytosis.",
+        "Strong enzyme inducer: lowers levels of many drugs, including hormonal contraceptives and several psychotropics; hyponatremia can occur.",
+        "Birth-defect risk with prenatal exposure."
+      ],
+      "boxedWarning": true,
+      "rxcui": "2002",
+      "label": {
+        "brand": "EQUETRO"
+      },
+      "medlinePlus": [
+        {
+          "title": "Carbamazepine",
+          "url": "https://medlineplus.gov/druginfo/meds/a682237.html"
+        }
+      ]
+    },
+    {
+      "id": "aripiprazole",
+      "generic": "aripiprazole",
+      "category": "antipsychotic",
+      "class": "Second-generation antipsychotic (dopamine partial agonist)",
+      "commonBrands": [
+        "Abilify",
+        "Opipza"
+      ],
+      "usedFor": [
+        {
+          "label": "Schizophrenia",
+          "status": "fda-approved"
+        },
+        {
+          "label": "Bipolar I disorder: manic or mixed episodes and maintenance",
+          "status": "fda-approved"
+        },
+        {
+          "label": "Adjunct for major depressive disorder",
+          "status": "fda-approved",
+          "conditionId": "major-depressive-disorder"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: increased mortality in older adults with dementia-related psychosis. Also carries the antidepressant suicidality boxed warning.",
+        "Akathisia is common; reports of compulsive behaviors (gambling, binge eating, shopping). Lower metabolic burden than some agents but still monitored.",
+        "Long-acting injectable forms exist."
+      ],
+      "boxedWarning": true,
+      "rxcui": "89013",
+      "label": {
+        "brand": "ABILIFY"
+      },
+      "medlinePlus": [
+        {
+          "title": "Aripiprazole",
+          "url": "https://medlineplus.gov/druginfo/meds/a603012.html"
+        },
+        {
+          "title": "Aripiprazole Injection",
+          "url": "https://medlineplus.gov/druginfo/meds/a615048.html"
+        }
+      ]
+    },
+    {
+      "id": "brexpiprazole",
+      "generic": "brexpiprazole",
+      "category": "antipsychotic",
+      "class": "Second-generation antipsychotic (dopamine partial agonist)",
+      "commonBrands": [
+        "Rexulti"
+      ],
+      "usedFor": [
+        {
+          "label": "Adjunct for major depressive disorder",
+          "status": "fda-approved",
+          "conditionId": "major-depressive-disorder"
+        },
+        {
+          "label": "Schizophrenia",
+          "status": "fda-approved"
+        },
+        {
+          "label": "Agitation associated with dementia due to Alzheimer's disease",
+          "status": "fda-approved"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: increased mortality in older adults with dementia-related psychosis. Also carries the antidepressant suicidality boxed warning.",
+        "Akathisia, weight gain and compulsive behaviors can occur.",
+        "Monitor weight, glucose and lipids; can cause akathisia, other movement effects including tardive dyskinesia, and rarely neuroleptic malignant syndrome."
+      ],
+      "boxedWarning": true,
+      "rxcui": "1658314",
+      "label": {
+        "brand": "Rexulti"
+      },
+      "medlinePlus": [
+        {
+          "title": "Brexpiprazole",
+          "url": "https://medlineplus.gov/druginfo/meds/a615046.html"
+        }
+      ]
+    },
+    {
+      "id": "cariprazine",
+      "generic": "cariprazine",
+      "category": "antipsychotic",
+      "class": "Second-generation antipsychotic (dopamine partial agonist)",
+      "commonBrands": [
+        "Vraylar"
+      ],
+      "usedFor": [
+        {
+          "label": "Schizophrenia",
+          "status": "fda-approved"
+        },
+        {
+          "label": "Bipolar I disorder: manic or mixed episodes and depressive episodes",
+          "status": "fda-approved"
+        },
+        {
+          "label": "Adjunct for major depressive disorder",
+          "status": "fda-approved",
+          "conditionId": "major-depressive-disorder"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: increased mortality in older adults with dementia-related psychosis. Also carries the antidepressant suicidality boxed warning.",
+        "Long-lived active metabolites mean side effects can appear or persist weeks after changes; akathisia is common.",
+        "Monitor weight, glucose and lipids; can cause akathisia, other movement effects including tardive dyskinesia, and rarely neuroleptic malignant syndrome."
+      ],
+      "boxedWarning": true,
+      "rxcui": "1667655",
+      "label": {
+        "brand": "Vraylar"
+      },
+      "medlinePlus": [
+        {
+          "title": "Cariprazine",
+          "url": "https://medlineplus.gov/druginfo/meds/a615050.html"
+        }
+      ]
+    },
+    {
+      "id": "quetiapine",
+      "generic": "quetiapine",
+      "category": "antipsychotic",
+      "class": "Second-generation antipsychotic",
+      "commonBrands": [
+        "Seroquel"
+      ],
+      "usedFor": [
+        {
+          "label": "Schizophrenia",
+          "status": "fda-approved"
+        },
+        {
+          "label": "Bipolar I manic episodes and bipolar depression",
+          "status": "fda-approved"
+        },
+        {
+          "label": "Bipolar I maintenance with lithium or divalproex (extended-release)",
+          "status": "fda-approved"
+        },
+        {
+          "label": "Adjunct for major depressive disorder (extended-release)",
+          "status": "fda-approved",
+          "conditionId": "major-depressive-disorder"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: increased mortality in older adults with dementia-related psychosis. Also carries the antidepressant suicidality boxed warning.",
+        "Sedation, orthostatic hypotension, weight gain and metabolic effects are common; QT prolongation and cataract monitoring are noted in the label.",
+        "Monitor weight, glucose and lipids; can cause akathisia, other movement effects including tardive dyskinesia, and rarely neuroleptic malignant syndrome."
+      ],
+      "boxedWarning": true,
+      "rxcui": "51272",
+      "label": {
+        "brand": "SEROQUEL"
+      },
+      "medlinePlus": [
+        {
+          "title": "Quetiapine",
+          "url": "https://medlineplus.gov/druginfo/meds/a698019.html"
+        }
+      ]
+    },
+    {
+      "id": "olanzapine",
+      "generic": "olanzapine",
+      "category": "antipsychotic",
+      "class": "Second-generation antipsychotic",
+      "commonBrands": [
+        "Zyprexa"
+      ],
+      "combinationBrands": [
+        "Lybalvi",
+        "Symbyax"
+      ],
+      "usedFor": [
+        {
+          "label": "Schizophrenia",
+          "status": "fda-approved"
+        },
+        {
+          "label": "Bipolar I disorder: manic or mixed episodes and maintenance",
+          "status": "fda-approved"
+        },
+        {
+          "label": "With fluoxetine: bipolar I depression and treatment-resistant depression",
+          "status": "fda-approved"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: increased mortality in older adults with dementia-related psychosis.",
+        "High risk of weight gain, high blood sugar and lipid changes; sedation common. Smoking lowers levels.",
+        "The long-acting injection carries a separate post-injection delirium/sedation risk and restricted-distribution program."
+      ],
+      "boxedWarning": true,
+      "rxcui": "61381",
+      "label": {
+        "brand": "Zyprexa"
+      },
+      "medlinePlus": [
+        {
+          "title": "Olanzapine",
+          "url": "https://medlineplus.gov/druginfo/meds/a601213.html"
+        },
+        {
+          "title": "Olanzapine Injection",
+          "url": "https://medlineplus.gov/druginfo/meds/a614016.html"
+        }
+      ]
+    },
+    {
+      "id": "risperidone",
+      "generic": "risperidone",
+      "category": "antipsychotic",
+      "class": "Second-generation antipsychotic",
+      "commonBrands": [
+        "Perseris",
+        "Risperdal",
+        "Rykindo",
+        "Uzedy"
+      ],
+      "usedFor": [
+        {
+          "label": "Schizophrenia",
+          "status": "fda-approved"
+        },
+        {
+          "label": "Bipolar I disorder: acute manic or mixed episodes",
+          "status": "fda-approved"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: increased mortality in older adults with dementia-related psychosis.",
+        "Prolactin elevation is common (menstrual changes, breast symptoms, sexual dysfunction); movement effects more likely than with some other agents.",
+        "Monitor weight, glucose and lipids; can cause akathisia, other movement effects including tardive dyskinesia, and rarely neuroleptic malignant syndrome."
+      ],
+      "boxedWarning": true,
+      "rxcui": "35636",
+      "medlinePlus": [
+        {
+          "title": "Risperidone",
+          "url": "https://medlineplus.gov/druginfo/meds/a694015.html"
+        },
+        {
+          "title": "Risperidone Injection",
+          "url": "https://medlineplus.gov/druginfo/meds/a615012.html"
+        }
+      ]
+    },
+    {
+      "id": "paliperidone",
+      "generic": "paliperidone",
+      "category": "antipsychotic",
+      "class": "Second-generation antipsychotic",
+      "commonBrands": [
+        "Invega",
+        "Erzofri"
+      ],
+      "usedFor": [
+        {
+          "label": "Schizophrenia",
+          "status": "fda-approved"
+        },
+        {
+          "label": "Schizoaffective disorder",
+          "status": "fda-approved"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: increased mortality in older adults with dementia-related psychosis.",
+        "Active metabolite of risperidone: prolactin elevation and movement effects; mainly cleared by the kidneys.",
+        "Long-acting injectable forms exist; QT prolongation caution."
+      ],
+      "boxedWarning": true,
+      "rxcui": "679314",
+      "label": {
+        "brand": "INVEGA"
+      },
+      "medlinePlus": [
+        {
+          "title": "Paliperidone",
+          "url": "https://medlineplus.gov/druginfo/meds/a607005.html"
+        },
+        {
+          "title": "Paliperidone Injection",
+          "url": "https://medlineplus.gov/druginfo/meds/a615032.html"
+        }
+      ]
+    },
+    {
+      "id": "ziprasidone",
+      "generic": "ziprasidone",
+      "category": "antipsychotic",
+      "class": "Second-generation antipsychotic",
+      "commonBrands": [
+        "Geodon"
+      ],
+      "usedFor": [
+        {
+          "label": "Schizophrenia",
+          "status": "fda-approved"
+        },
+        {
+          "label": "Bipolar I disorder: manic or mixed episodes, and maintenance with lithium or valproate",
+          "status": "fda-approved"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: increased mortality in older adults with dementia-related psychosis.",
+        "QT prolongation: contraindicated with other QT-prolonging drugs and certain cardiac conditions. Absorption depends on taking it with food.",
+        "Rare serious drug reaction with eosinophilia and systemic symptoms (DRESS) is in the label."
+      ],
+      "boxedWarning": true,
+      "rxcui": "115698",
+      "label": {
+        "brand": "Geodon"
+      },
+      "medlinePlus": [
+        {
+          "title": "Ziprasidone",
+          "url": "https://medlineplus.gov/druginfo/meds/a699062.html"
+        },
+        {
+          "title": "Ziprasidone Injection",
+          "url": "https://medlineplus.gov/druginfo/meds/a615047.html"
+        }
+      ]
+    },
+    {
+      "id": "lurasidone",
+      "generic": "lurasidone",
+      "category": "antipsychotic",
+      "class": "Second-generation antipsychotic",
+      "commonBrands": [
+        "Latuda"
+      ],
+      "usedFor": [
+        {
+          "label": "Schizophrenia",
+          "status": "fda-approved"
+        },
+        {
+          "label": "Bipolar I depression (alone or with lithium or valproate)",
+          "status": "fda-approved"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: increased mortality in older adults with dementia-related psychosis. Also carries the antidepressant suicidality boxed warning.",
+        "Taken with food for absorption; contraindicated with strong CYP3A4 inhibitors or inducers. Akathisia is common; lower metabolic burden.",
+        "Monitor weight, glucose and lipids; can cause akathisia, other movement effects including tardive dyskinesia, and rarely neuroleptic malignant syndrome."
+      ],
+      "boxedWarning": true,
+      "rxcui": "1040028",
+      "label": {
+        "brand": "Latuda"
+      },
+      "medlinePlus": [
+        {
+          "title": "Lurasidone",
+          "url": "https://medlineplus.gov/druginfo/meds/a611016.html"
+        }
+      ]
+    },
+    {
+      "id": "lumateperone",
+      "generic": "lumateperone",
+      "category": "antipsychotic",
+      "class": "Second-generation antipsychotic",
+      "commonBrands": [
+        "Caplyta"
+      ],
+      "usedFor": [
+        {
+          "label": "Schizophrenia",
+          "status": "fda-approved"
+        },
+        {
+          "label": "Bipolar I or II depression (alone or with lithium or valproate)",
+          "status": "fda-approved"
+        },
+        {
+          "label": "Adjunct for major depressive disorder",
+          "status": "fda-approved",
+          "conditionId": "major-depressive-disorder"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: increased mortality in older adults with dementia-related psychosis. Also carries the antidepressant suicidality boxed warning.",
+        "Sedation is common; comparatively low metabolic and movement-effect burden in trials. CYP3A4 interactions."
+      ],
+      "boxedWarning": true,
+      "rxcui": "2275602",
+      "label": {
+        "brand": "CAPLYTA"
+      },
+      "medlinePlus": [
+        {
+          "title": "Lumateperone",
+          "url": "https://medlineplus.gov/druginfo/meds/a620014.html"
+        }
+      ]
+    },
+    {
+      "id": "asenapine",
+      "generic": "asenapine",
+      "category": "antipsychotic",
+      "class": "Second-generation antipsychotic",
+      "commonBrands": [
+        "Saphris",
+        "Secuado"
+      ],
+      "usedFor": [
+        {
+          "label": "Schizophrenia",
+          "status": "fda-approved"
+        },
+        {
+          "label": "Bipolar I disorder: manic or mixed episodes",
+          "status": "fda-approved"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: increased mortality in older adults with dementia-related psychosis.",
+        "Sublingual tablet (or patch); mouth numbness and serious allergic reactions are possible. Sedation and weight gain occur.",
+        "Monitor weight, glucose and lipids; can cause akathisia, other movement effects including tardive dyskinesia, and rarely neuroleptic malignant syndrome."
+      ],
+      "boxedWarning": true,
+      "rxcui": "784649",
+      "label": {
+        "brand": "SAPHRIS",
+        "route": "SUBLINGUAL"
+      },
+      "medlinePlus": [
+        {
+          "title": "Asenapine",
+          "url": "https://medlineplus.gov/druginfo/meds/a610015.html"
+        },
+        {
+          "title": "Asenapine Transdermal Patch",
+          "url": "https://medlineplus.gov/druginfo/meds/a620019.html"
+        }
+      ]
+    },
+    {
+      "id": "iloperidone",
+      "generic": "iloperidone",
+      "category": "antipsychotic",
+      "class": "Second-generation antipsychotic",
+      "commonBrands": [
+        "Fanapt"
+      ],
+      "usedFor": [
+        {
+          "label": "Schizophrenia",
+          "status": "fda-approved"
+        },
+        {
+          "label": "Bipolar I disorder: manic or mixed episodes",
+          "status": "fda-approved"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: increased mortality in older adults with dementia-related psychosis.",
+        "Orthostatic hypotension requires slow titration by the prescriber; QT prolongation caution.",
+        "Monitor weight, glucose and lipids; can cause akathisia, other movement effects including tardive dyskinesia, and rarely neuroleptic malignant syndrome."
+      ],
+      "boxedWarning": true,
+      "rxcui": "73178",
+      "label": {
+        "brand": "FANAPT"
+      },
+      "medlinePlus": [
+        {
+          "title": "Iloperidone",
+          "url": "https://medlineplus.gov/druginfo/meds/a609026.html"
+        }
+      ]
+    },
+    {
+      "id": "clozapine",
+      "generic": "clozapine",
+      "category": "antipsychotic",
+      "class": "Second-generation antipsychotic",
+      "commonBrands": [
+        "Clozaril",
+        "Versacloz"
+      ],
+      "usedFor": [
+        {
+          "label": "Treatment-resistant schizophrenia",
+          "status": "fda-approved"
+        },
+        {
+          "label": "Reducing suicidal behavior in schizophrenia or schizoaffective disorder",
+          "status": "fda-approved"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warnings: severe neutropenia (absolute neutrophil count monitoring per label); orthostatic hypotension, bradycardia and fainting; seizures; myocarditis, pericarditis and cardiomyopathy; and increased mortality in older adults with dementia-related psychosis.",
+        "Constipation can become life-threatening (bowel obstruction); hypersalivation, sedation and metabolic effects are common. Smoking changes levels.",
+        "The Clozapine REMS program ended in 2025 and the current label no longer references it; neutrophil monitoring guidance remains in the label."
+      ],
+      "boxedWarning": true,
+      "rxcui": "2626",
+      "label": {
+        "brand": "Clozaril"
+      },
+      "medlinePlus": [
+        {
+          "title": "Clozapine",
+          "url": "https://medlineplus.gov/druginfo/meds/a691001.html"
+        }
+      ]
+    },
+    {
+      "id": "xanomeline-trospium",
+      "generic": "xanomeline and trospium",
+      "category": "antipsychotic",
+      "class": "Muscarinic receptor agonist with peripheral antagonist",
+      "commonBrands": [],
+      "combinationBrands": [
+        "Cobenfy"
+      ],
+      "usedFor": [
+        {
+          "label": "Schizophrenia",
+          "status": "fda-approved"
+        }
+      ],
+      "clinicianNotes": [
+        "Not a dopamine blocker; nausea, vomiting, constipation, indigestion and tachycardia are common.",
+        "Contraindicated with urinary retention, moderate or severe liver impairment, gastric retention and untreated narrow-angle glaucoma; risk of urinary retention and angioedema."
+      ],
+      "boxedWarning": false,
+      "rxcui": "2694836",
+      "rxnormName": "trospium / xanomeline",
+      "label": {
+        "brand": "Cobenfy",
+        "name": "xanomeline",
+        "combination": true
+      },
+      "medlinePlus": [
+        {
+          "title": "Xanomeline and trospium chloride",
+          "url": "https://medlineplus.gov/druginfo/meds/a624070.html"
+        }
+      ]
+    },
+    {
+      "id": "esketamine",
+      "generic": "esketamine",
+      "category": "antidepressant",
+      "class": "NMDA receptor antagonist (nasal spray)",
+      "commonBrands": [
+        "Spravato"
+      ],
+      "usedFor": [
+        {
+          "label": "Treatment-resistant depression",
+          "status": "fda-approved",
+          "conditionId": "major-depressive-disorder"
+        },
+        {
+          "label": "Depressive symptoms in major depressive disorder with acute suicidal ideation or behavior (with an oral antidepressant)",
+          "status": "fda-approved",
+          "conditionId": "major-depressive-disorder"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warnings: sedation, dissociation, respiratory depression, abuse and misuse, and suicidal thoughts and behaviors.",
+        "Available only through a restricted program (REMS): given in a certified healthcare setting with observation afterward; patients do not drive until the next day after a restful sleep.",
+        "Can raise blood pressure; screen for aneurysmal vascular disease and recent brain bleeding (contraindications)."
+      ],
+      "boxedWarning": true,
+      "deaSchedule": "CIII",
+      "rxcui": "2119365",
+      "label": {
+        "brand": "Spravato",
+        "route": "NASAL"
+      },
+      "medlinePlus": [
+        {
+          "title": "Esketamine Nasal Spray",
+          "url": "https://medlineplus.gov/druginfo/meds/a619017.html"
+        }
+      ]
+    },
+    {
+      "id": "zuranolone",
+      "generic": "zuranolone",
+      "category": "antidepressant",
+      "class": "Neuroactive steroid (GABA-A receptor positive modulator)",
+      "commonBrands": [
+        "Zurzuvae"
+      ],
+      "usedFor": [
+        {
+          "label": "Postpartum depression",
+          "status": "fda-approved"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: impaired ability to drive or do hazardous activities; the label restricts driving for a set period after each dose, and people may not notice their own impairment.",
+        "CNS depressant effects (sleepiness, confusion) add to alcohol, opioids and other sedatives; the label also includes a suicidality warning and fetal-harm caution.",
+        "Short, fixed treatment course taken orally."
+      ],
+      "boxedWarning": true,
+      "deaSchedule": "CIV",
+      "rxcui": "2669905",
+      "label": {
+        "unharmonized": true
+      },
+      "medlinePlus": [
+        {
+          "title": "Zuranolone",
+          "url": "https://medlineplus.gov/druginfo/meds/a623048.html"
+        }
+      ]
+    },
+    {
+      "id": "brexanolone",
+      "generic": "brexanolone",
+      "category": "antidepressant",
+      "class": "Neuroactive steroid (GABA-A receptor positive modulator), intravenous",
+      "commonBrands": [
+        "Zulresso"
+      ],
+      "usedFor": [
+        {
+          "label": "Postpartum depression",
+          "status": "fda-approved"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: excessive sedation and sudden loss of consciousness; given only as a continuous intravenous infusion in a certified healthcare setting with pulse-oximetry monitoring (REMS).",
+        "The manufacturer announced it would stop US distribution (2024); confirm current availability. Oral zuranolone is the other approved option for postpartum depression."
+      ],
+      "boxedWarning": true,
+      "deaSchedule": "CIV",
+      "rxcui": "2121777",
+      "label": {
+        "unharmonized": true
+      },
+      "medlinePlus": [
+        {
+          "title": "Brexanolone Injection",
+          "url": "https://medlineplus.gov/druginfo/meds/a619037.html"
+        }
+      ]
+    },
+    {
+      "id": "naltrexone",
+      "generic": "naltrexone",
+      "category": "aud",
+      "class": "Opioid receptor antagonist",
+      "commonBrands": [
+        "ReVia",
+        "Vivitrol"
+      ],
+      "combinationBrands": [
+        "Contrave"
+      ],
+      "usedFor": [
+        {
+          "label": "Alcohol use disorder",
+          "status": "fda-approved"
+        },
+        {
+          "label": "Opioid use disorder: relapse prevention after detoxification (extended-release injection); blockade of opioid effects (oral)",
+          "status": "fda-approved"
+        }
+      ],
+      "clinicianNotes": [
+        "People must be opioid-free before starting; it precipitates opioid withdrawal and blocks opioid pain relief (relevant for planned surgery or pain care).",
+        "Reduced opioid tolerance after stopping raises overdose risk with any return to use; naloxone access is advised.",
+        "Liver injury is uncommon but monitored; the injection can cause injection-site reactions."
+      ],
+      "boxedWarning": false,
+      "sudRelated": true,
+      "rxcui": "7243",
+      "medlinePlus": [
+        {
+          "title": "Naltrexone",
+          "url": "https://medlineplus.gov/druginfo/meds/a685041.html"
+        },
+        {
+          "title": "Naltrexone Injection",
+          "url": "https://medlineplus.gov/druginfo/meds/a609007.html"
+        }
+      ]
+    },
+    {
+      "id": "acamprosate",
+      "generic": "acamprosate",
+      "category": "aud",
+      "class": "Glutamate modulator",
+      "commonBrands": [],
+      "formerBrands": [
+        "Campral"
+      ],
+      "usedFor": [
+        {
+          "label": "Maintaining alcohol abstinence in people abstinent at the start of treatment",
+          "status": "fda-approved"
+        }
+      ],
+      "clinicianNotes": [
+        "Cleared by the kidneys: contraindicated in severe kidney impairment; diarrhea is common.",
+        "Not metabolized by the liver, so it is an option with liver disease; monitor mood (suicidality reported in trials)."
+      ],
+      "boxedWarning": false,
+      "sudRelated": true,
+      "rxcui": "82819",
+      "medlinePlus": [
+        {
+          "title": "Acamprosate",
+          "url": "https://medlineplus.gov/druginfo/meds/a604028.html"
+        }
+      ]
+    },
+    {
+      "id": "disulfiram",
+      "generic": "disulfiram",
+      "category": "aud",
+      "class": "Aldehyde dehydrogenase inhibitor",
+      "commonBrands": [
+        "Antabuse"
+      ],
+      "usedFor": [
+        {
+          "label": "Supporting abstinence in selected people with alcohol use disorder who want to remain abstinent",
+          "status": "fda-approved"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: never given to someone who is intoxicated or without their full knowledge.",
+        "Any alcohol (including in mouthwash, sauces or hand products) can cause a severe reaction; works mainly with supervised adherence.",
+        "Liver toxicity and drug interactions (warfarin, phenytoin, metronidazole) are noted in the label."
+      ],
+      "boxedWarning": true,
+      "sudRelated": true,
+      "rxcui": "3554",
+      "medlinePlus": [
+        {
+          "title": "Disulfiram",
+          "url": "https://medlineplus.gov/druginfo/meds/a682602.html"
+        }
+      ]
+    },
+    {
+      "id": "topiramate",
+      "generic": "topiramate",
+      "category": "aud",
+      "class": "Anticonvulsant",
+      "commonBrands": [
+        "Qudexy",
+        "Topamax",
+        "Trokendi",
+        "Eprontia"
+      ],
+      "combinationBrands": [
+        "Qsymia"
+      ],
+      "usedFor": [
+        {
+          "label": "Alcohol use disorder (off-label; guideline-supported when first-line options are unsuitable)",
+          "status": "off-label"
+        },
+        {
+          "label": "Epilepsy and migraine prevention (labeled; not psychiatric)",
+          "status": "fda-approved"
+        }
+      ],
+      "clinicianNotes": [
+        "Off-label for alcohol use disorder in the US.",
+        "Cognitive slowing and word-finding problems, tingling, kidney stones, metabolic acidosis and rare acute angle-closure glaucoma; can reduce hormonal contraceptive effectiveness.",
+        "Birth-defect risk (oral clefts) with prenatal exposure."
+      ],
+      "boxedWarning": false,
+      "sudRelated": true,
+      "rxcui": "38404",
+      "label": {
+        "brand": "Topamax"
+      },
+      "medlinePlus": [
+        {
+          "title": "Topiramate",
+          "url": "https://medlineplus.gov/druginfo/meds/a697012.html"
+        }
+      ]
+    },
+    {
+      "id": "gabapentin",
+      "generic": "gabapentin",
+      "category": "aud",
+      "class": "Anticonvulsant (gabapentinoid)",
+      "commonBrands": [
+        "Gralise",
+        "Horizant",
+        "Neurontin",
+        "Gabarone",
+        "Relgaabi"
+      ],
+      "usedFor": [
+        {
+          "label": "Alcohol use disorder (off-label; guideline-supported when first-line options are unsuitable)",
+          "status": "off-label"
+        },
+        {
+          "label": "Postherpetic neuralgia and seizures (labeled; not psychiatric)",
+          "status": "fda-approved"
+        }
+      ],
+      "clinicianNotes": [
+        "Off-label for alcohol use disorder in the US.",
+        "Misuse potential, especially in people who use opioids; FDA warns of serious breathing problems with opioids or other CNS depressants and in lung disease or older age. Some states schedule it.",
+        "Dizziness and sedation; cleared by the kidneys."
+      ],
+      "boxedWarning": false,
+      "sudRelated": true,
+      "rxcui": "25480",
+      "label": {
+        "brand": "Neurontin"
+      },
+      "medlinePlus": [
+        {
+          "title": "Gabapentin",
+          "url": "https://medlineplus.gov/druginfo/meds/a694007.html"
+        }
+      ]
+    },
+    {
+      "id": "suvorexant",
+      "generic": "suvorexant",
+      "category": "hypnotic",
+      "class": "Dual orexin receptor antagonist",
+      "commonBrands": [
+        "Belsomra"
+      ],
+      "usedFor": [
+        {
+          "label": "Insomnia: trouble falling and/or staying asleep",
+          "status": "fda-approved"
+        }
+      ],
+      "clinicianNotes": [
+        "Contraindicated in narcolepsy; next-day impairment, sleep paralysis, hallucinations around sleep and complex sleep behaviors can occur.",
+        "CNS depressant: avoid alcohol; worsening depression or suicidal thinking has been reported. Strong CYP3A4 inhibitors raise levels."
+      ],
+      "boxedWarning": false,
+      "deaSchedule": "CIV",
+      "rxcui": "1547099",
+      "label": {
+        "brand": "BELSOMRA"
+      },
+      "medlinePlus": [
+        {
+          "title": "Suvorexant",
+          "url": "https://medlineplus.gov/druginfo/meds/a614046.html"
+        }
+      ]
+    },
+    {
+      "id": "lemborexant",
+      "generic": "lemborexant",
+      "category": "hypnotic",
+      "class": "Dual orexin receptor antagonist",
+      "commonBrands": [
+        "Dayvigo"
+      ],
+      "usedFor": [
+        {
+          "label": "Insomnia: trouble falling and/or staying asleep",
+          "status": "fda-approved"
+        }
+      ],
+      "clinicianNotes": [
+        "Contraindicated in narcolepsy; next-day impairment, sleep paralysis and complex sleep behaviors can occur.",
+        "CNS depressant: avoid alcohol; CYP3A interactions."
+      ],
+      "boxedWarning": false,
+      "deaSchedule": "CIV",
+      "rxcui": "2272403",
+      "label": {
+        "brand": "DAYVIGO"
+      },
+      "medlinePlus": [
+        {
+          "title": "Lemborexant",
+          "url": "https://medlineplus.gov/druginfo/meds/a620039.html"
+        }
+      ]
+    },
+    {
+      "id": "daridorexant",
+      "generic": "daridorexant",
+      "category": "hypnotic",
+      "class": "Dual orexin receptor antagonist",
+      "commonBrands": [
+        "Quviviq"
+      ],
+      "usedFor": [
+        {
+          "label": "Insomnia: trouble falling and/or staying asleep",
+          "status": "fda-approved"
+        }
+      ],
+      "clinicianNotes": [
+        "Contraindicated in narcolepsy; next-day impairment, sleep paralysis and complex sleep behaviors can occur.",
+        "CNS depressant: avoid alcohol; CYP3A4 interactions."
+      ],
+      "boxedWarning": false,
+      "deaSchedule": "CIV",
+      "rxcui": "2591497",
+      "label": {
+        "brand": "QUVIVIQ"
+      },
+      "medlinePlus": [
+        {
+          "title": "Daridorexant",
+          "url": "https://medlineplus.gov/druginfo/meds/a622034.html"
+        }
+      ]
+    },
+    {
+      "id": "zolpidem",
+      "generic": "zolpidem",
+      "category": "hypnotic",
+      "class": "Nonbenzodiazepine hypnotic (benzodiazepine-receptor agonist)",
+      "commonBrands": [
+        "Ambien",
+        "Edluar"
+      ],
+      "usedFor": [
+        {
+          "label": "Short-term treatment of insomnia (trouble falling asleep; some products also staying asleep)",
+          "status": "fda-approved"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: complex sleep behaviors (sleep-walking, sleep-driving and other activities while not fully awake) that have caused serious injury or death; stop if one occurs.",
+        "Next-morning impairment (including driving) is possible; women clear it more slowly. Avoid alcohol and other CNS depressants.",
+        "CBT for insomnia is first-line; dependence and rebound insomnia can occur."
+      ],
+      "boxedWarning": true,
+      "deaSchedule": "CIV",
+      "rxcui": "39993",
+      "label": {
+        "brand": "Ambien"
+      },
+      "medlinePlus": [
+        {
+          "title": "Zolpidem",
+          "url": "https://medlineplus.gov/druginfo/meds/a693025.html"
+        }
+      ]
+    },
+    {
+      "id": "eszopiclone",
+      "generic": "eszopiclone",
+      "category": "hypnotic",
+      "class": "Nonbenzodiazepine hypnotic (benzodiazepine-receptor agonist)",
+      "commonBrands": [
+        "Lunesta"
+      ],
+      "usedFor": [
+        {
+          "label": "Insomnia",
+          "status": "fda-approved"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: complex sleep behaviors (sleep-walking, sleep-driving and other activities while not fully awake) that have caused serious injury or death; stop if one occurs.",
+        "Next-day impairment and an unpleasant taste are common; avoid alcohol and other CNS depressants."
+      ],
+      "boxedWarning": true,
+      "deaSchedule": "CIV",
+      "rxcui": "461016",
+      "label": {
+        "brand": "Lunesta"
+      },
+      "medlinePlus": [
+        {
+          "title": "Eszopiclone",
+          "url": "https://medlineplus.gov/druginfo/meds/a605009.html"
+        }
+      ]
+    },
+    {
+      "id": "zaleplon",
+      "generic": "zaleplon",
+      "category": "hypnotic",
+      "class": "Nonbenzodiazepine hypnotic (benzodiazepine-receptor agonist)",
+      "commonBrands": [],
+      "formerBrands": [
+        "Sonata"
+      ],
+      "usedFor": [
+        {
+          "label": "Short-term treatment of insomnia (trouble falling asleep)",
+          "status": "fda-approved"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: complex sleep behaviors (sleep-walking, sleep-driving and other activities while not fully awake) that have caused serious injury or death; stop if one occurs.",
+        "Very short-acting; avoid alcohol and other CNS depressants."
+      ],
+      "boxedWarning": true,
+      "deaSchedule": "CIV",
+      "rxcui": "74667",
+      "medlinePlus": [
+        {
+          "title": "Zaleplon",
+          "url": "https://medlineplus.gov/druginfo/meds/a601251.html"
+        }
+      ]
+    },
+    {
+      "id": "ramelteon",
+      "generic": "ramelteon",
+      "category": "hypnotic",
+      "class": "Melatonin receptor agonist",
+      "commonBrands": [
+        "Rozerem"
+      ],
+      "usedFor": [
+        {
+          "label": "Insomnia with trouble falling asleep",
+          "status": "fda-approved"
+        }
+      ],
+      "clinicianNotes": [
+        "Not a controlled substance; no evidence of abuse or dependence in studies.",
+        "Contraindicated with fluvoxamine (strong CYP1A2 inhibitor); can affect reproductive hormones such as prolactin."
+      ],
+      "boxedWarning": false,
+      "rxcui": "596205",
+      "label": {
+        "brand": "Rozerem"
+      },
+      "medlinePlus": [
+        {
+          "title": "Ramelteon",
+          "url": "https://medlineplus.gov/druginfo/meds/a605038.html"
+        }
+      ]
+    },
+    {
+      "id": "methylphenidate",
+      "generic": "methylphenidate",
+      "category": "adhd",
+      "class": "CNS stimulant",
+      "commonBrands": [
+        "Concerta",
+        "Daytrana",
+        "Jornay",
+        "Ritalin",
+        "Aptensio",
+        "Cotempla",
+        "Metadate",
+        "Methylin"
+      ],
+      "usedFor": [
+        {
+          "label": "Attention-deficit/hyperactivity disorder",
+          "status": "fda-approved"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: high potential for abuse, misuse and addiction, which can lead to overdose and death; assess risk before and during treatment.",
+        "Can raise blood pressure and heart rate; screen for cardiac history; can worsen anxiety, insomnia or appetite loss, and rarely trigger psychosis or mania.",
+        "Contraindicated with MAOIs; misuse and diversion counseling is part of treatment."
+      ],
+      "boxedWarning": true,
+      "deaSchedule": "CII",
+      "rxcui": "6901",
+      "label": {
+        "brand": "CONCERTA"
+      },
+      "medlinePlus": [
+        {
+          "title": "Methylphenidate",
+          "url": "https://medlineplus.gov/druginfo/meds/a682188.html"
+        },
+        {
+          "title": "Methylphenidate Transdermal Patch",
+          "url": "https://medlineplus.gov/druginfo/meds/a606014.html"
+        }
+      ]
+    },
+    {
+      "id": "amphetamine",
+      "generic": "amphetamine",
+      "category": "adhd",
+      "class": "CNS stimulant",
+      "commonBrands": [
+        "Dyanavel",
+        "Evekeo",
+        "Adzenys"
+      ],
+      "combinationBrands": [
+        "Adderall",
+        "Mydayis"
+      ],
+      "usedFor": [
+        {
+          "label": "Attention-deficit/hyperactivity disorder",
+          "status": "fda-approved"
+        },
+        {
+          "label": "Narcolepsy (some products)",
+          "status": "fda-approved"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: high potential for abuse, misuse and addiction, which can lead to overdose and death; assess risk before and during treatment.",
+        "Can raise blood pressure and heart rate; screen for cardiac history; can worsen anxiety, insomnia or appetite loss, and rarely trigger psychosis or mania.",
+        "Many products are mixed amphetamine salts; contraindicated with MAOIs."
+      ],
+      "boxedWarning": true,
+      "deaSchedule": "CII",
+      "rxcui": "725",
+      "label": {
+        "brand": "Adderall XR",
+        "combination": true
+      },
+      "medlinePlus": [
+        {
+          "title": "Amphetamine",
+          "url": "https://medlineplus.gov/druginfo/meds/a616004.html"
+        }
+      ]
+    },
+    {
+      "id": "lisdexamfetamine",
+      "generic": "lisdexamfetamine",
+      "category": "adhd",
+      "class": "CNS stimulant (amphetamine prodrug)",
+      "commonBrands": [
+        "Vyvanse",
+        "Arynta"
+      ],
+      "usedFor": [
+        {
+          "label": "Attention-deficit/hyperactivity disorder",
+          "status": "fda-approved"
+        },
+        {
+          "label": "Moderate to severe binge-eating disorder in adults",
+          "status": "fda-approved"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: high potential for abuse, misuse and addiction, which can lead to overdose and death; assess risk before and during treatment.",
+        "Can raise blood pressure and heart rate; screen for cardiac history; can worsen anxiety, insomnia or appetite loss, and rarely trigger psychosis or mania.",
+        "Not approved for weight loss; contraindicated with MAOIs."
+      ],
+      "boxedWarning": true,
+      "deaSchedule": "CII",
+      "rxcui": "700810",
+      "label": {
+        "brand": "Vyvanse"
+      },
+      "medlinePlus": [
+        {
+          "title": "Lisdexamfetamine",
+          "url": "https://medlineplus.gov/druginfo/meds/a607047.html"
+        }
+      ]
+    },
+    {
+      "id": "atomoxetine",
+      "generic": "atomoxetine",
+      "category": "adhd",
+      "class": "Selective norepinephrine reuptake inhibitor (non-stimulant)",
+      "commonBrands": [
+        "Strattera",
+        "Atoncy"
+      ],
+      "usedFor": [
+        {
+          "label": "Attention-deficit/hyperactivity disorder",
+          "status": "fda-approved"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: suicidal thoughts and behaviors in pediatric patients.",
+        "Not a controlled substance; can raise heart rate and blood pressure; rare liver injury. CYP2D6 inhibitors (fluoxetine, paroxetine, bupropion) raise levels. Contraindicated with MAOIs."
+      ],
+      "boxedWarning": true,
+      "rxcui": "38400",
+      "label": {
+        "brand": "Strattera"
+      },
+      "medlinePlus": [
+        {
+          "title": "Atomoxetine",
+          "url": "https://medlineplus.gov/druginfo/meds/a603013.html"
+        }
+      ]
+    },
+    {
+      "id": "viloxazine",
+      "generic": "viloxazine",
+      "category": "adhd",
+      "class": "Selective norepinephrine reuptake inhibitor (non-stimulant)",
+      "commonBrands": [
+        "Qelbree"
+      ],
+      "usedFor": [
+        {
+          "label": "Attention-deficit/hyperactivity disorder",
+          "status": "fda-approved"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: suicidal thoughts and behaviors; monitor mood.",
+        "Not a controlled substance; strong CYP1A2 inhibitor (contraindicated with sensitive substrates such as ramelteon or tizanidine); can raise heart rate and blood pressure. Contraindicated with MAOIs."
+      ],
+      "boxedWarning": true,
+      "rxcui": "11196",
+      "label": {
+        "brand": "QELBREE"
+      },
+      "medlinePlus": [
+        {
+          "title": "Viloxazine",
+          "url": "https://medlineplus.gov/druginfo/meds/a621027.html"
+        }
+      ]
+    },
+    {
+      "id": "valbenazine",
+      "generic": "valbenazine",
+      "category": "other",
+      "class": "VMAT2 inhibitor",
+      "commonBrands": [
+        "Ingrezza"
+      ],
+      "usedFor": [
+        {
+          "label": "Tardive dyskinesia",
+          "status": "fda-approved"
+        },
+        {
+          "label": "Chorea of Huntington's disease",
+          "status": "fda-approved"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: depression and suicidality in people with Huntington's disease.",
+        "Sleepiness and QT prolongation risk; interactions with strong CYP3A4 or CYP2D6 inhibitors and with MAOIs."
+      ],
+      "boxedWarning": true,
+      "rxcui": "1918219",
+      "label": {
+        "brand": "INGREZZA"
+      },
+      "medlinePlus": [
+        {
+          "title": "Valbenazine",
+          "url": "https://medlineplus.gov/druginfo/meds/a617023.html"
+        }
+      ]
+    },
+    {
+      "id": "deutetrabenazine",
+      "generic": "deutetrabenazine",
+      "category": "other",
+      "class": "VMAT2 inhibitor",
+      "commonBrands": [
+        "Austedo"
+      ],
+      "usedFor": [
+        {
+          "label": "Tardive dyskinesia",
+          "status": "fda-approved"
+        },
+        {
+          "label": "Chorea of Huntington's disease",
+          "status": "fda-approved"
+        }
+      ],
+      "clinicianNotes": [
+        "Boxed warning: depression and suicidality in people with Huntington's disease; contraindicated when suicidal or with untreated depression in Huntington's disease.",
+        "Sleepiness and QT prolongation risk; contraindicated with MAOIs, reserpine, tetrabenazine or valbenazine, and in liver impairment."
+      ],
+      "boxedWarning": true,
+      "rxcui": "1876905",
+      "label": {
+        "brand": "AUSTEDO"
+      },
+      "medlinePlus": [
+        {
+          "title": "Deutetrabenazine",
+          "url": "https://medlineplus.gov/druginfo/meds/a617022.html"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "DailyMed: FDA-approved drug labels (structured product labeling)",
+      "publisher": "U.S. National Library of Medicine",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/",
+      "year": 2026
+    },
+    {
+      "title": "openFDA drug labeling API",
+      "publisher": "U.S. Food and Drug Administration",
+      "url": "https://open.fda.gov/apis/drug/label/",
+      "year": 2026
+    },
+    {
+      "title": "openFDA NDC directory API (DEA schedules)",
+      "publisher": "U.S. Food and Drug Administration",
+      "url": "https://open.fda.gov/apis/drug/ndc/",
+      "year": 2026
+    },
+    {
+      "title": "RxNorm and RxClass APIs (RxNav)",
+      "publisher": "U.S. National Library of Medicine",
+      "url": "https://lhncbc.nlm.nih.gov/RxNav/APIs/index.html",
+      "year": 2026
+    },
+    {
+      "title": "Mental Health Medications",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/topics/mental-health-medications",
+      "year": 2026
+    },
+    {
+      "title": "Drugs, Herbs and Supplements",
+      "publisher": "MedlinePlus, U.S. National Library of Medicine",
+      "url": "https://medlineplus.gov/druginformation.html",
+      "year": 2026
+    },
+    {
+      "title": "FDA Drug Safety Communications",
+      "publisher": "U.S. Food and Drug Administration",
+      "url": "https://www.fda.gov/drugs/drug-safety-and-availability/drug-safety-communications",
+      "year": 2026
+    },
+    {
+      "title": "Practice Guideline for the Pharmacological Treatment of Patients With Alcohol Use Disorder",
+      "publisher": "American Psychiatric Association",
+      "url": "https://psychiatryonline.org/doi/book/10.1176/appi.books.9781615371969",
+      "year": 2018
+    },
+    {
+      "title": "VA/DoD Clinical Practice Guideline for the Management of Posttraumatic Stress Disorder and Acute Stress Disorder",
+      "publisher": "U.S. Department of Veterans Affairs and Department of Defense",
+      "url": "https://www.healthquality.va.gov/guidelines/MH/ptsd/",
+      "year": 2023
+    },
+    {
+      "title": "Clinical Practice Guideline for the Pharmacologic Treatment of Chronic Insomnia in Adults",
+      "publisher": "American Academy of Sleep Medicine (J Clin Sleep Med)",
+      "url": "https://jcsm.aasm.org/doi/10.5664/jcsm.6470",
+      "year": 2017
+    },
+    {
+      "title": "Management of Chronic Insomnia Disorder in Adults: A Clinical Practice Guideline",
+      "publisher": "American College of Physicians (Ann Intern Med)",
+      "url": "https://www.acpjournals.org/doi/10.7326/M15-2175",
+      "year": 2016
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

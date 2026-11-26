@@ -2,7 +2,7 @@
   "id": "genogram-family-systems",
   "name": "Genogram and family systems exploration",
   "modality": "Family systems (Bowen / structural)",
-  "conditions": ["major-depressive-disorder"],
+  "conditions": ["major-depressive-disorder", "alcohol-use-disorder", "adjustment-disorder", "prolonged-grief-disorder", "persistent-depressive-disorder"],
   "evidenceLevel": "Genograms are an assessment and engagement tool rather than a stand-alone treatment. Their clinical use is described in the family therapy and family medicine literature (McGoldrick and Gerson; Journal of Family Practice, 1988), with little outcome research on the genogram itself. Related systemic treatments have stronger evidence: NICE CG115 recommends behavioural couples therapy for harmful drinking and mild alcohol dependence when a regular partner is willing to take part (updated in 2022 to state it is not suitable where there is domestic abuse), and a Cochrane review found couple therapy about as effective as individual psychotherapy for depression, based on low-quality evidence (Barbato et al., 2018).",
   "minutes": { "min": 30, "max": 75 },
   "purpose": "A genogram is a family diagram, built with the client across three or more generations, that maps relationships, roles, losses, illnesses, migrations and patterns such as drinking, depression, cutoffs or conflict. It is grounded in Murray Bowen's family systems theory (differentiation of self, triangles, patterns passed down through generations) and complemented by Salvador Minuchin's structural ideas (boundaries, hierarchy, alliances). It helps clients see current problems in family context, eases self-blame, highlights resilience and support, and guides decisions about involving family in care.",

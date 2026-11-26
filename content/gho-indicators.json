@@ -1,0 +1,1603 @@
+{
+  "version": "1.0.0",
+  "description": "Curated WHO Global Health Observatory indicators (codes verified live on 2026-11-26 against the GHO OData API) and the WHO area codes the server may request. Only these indicator codes and ISO3 / WHO area codes are ever sent to WHO (G5, G17). Every value shown carries its source and year (G13).",
+  "endpoint": "https://ghoapi.azureedge.net/api",
+  "endpointStatus": "WHO's GHO legacy page (checked 2026-11-26) says this OData API was to be deprecated near the end of 2025 in favour of a 'World Health Data Hub OData API' with standardized field names, but no public URL for the replacement is published yet. The current endpoint is live and serving data updated in October 2026. Re-check at every content review.",
+  "indicators": {
+    "suicide-rate-age-standardized": {
+      "code": "MH_12",
+      "label": "Suicide rate (age-standardized)",
+      "whoName": "Age-standardized suicide rates (per 100 000 population)",
+      "unit": "per 100,000 population",
+      "valueType": "numeric",
+      "decimals": 1,
+      "topic": "suicide",
+      "headline": {
+        "SEX": "SEX_BTSX"
+      },
+      "page": "https://www.who.int/data/gho/data/indicators/indicator-details/GHO/age-standardized-suicide-rates-(per-100-000-population)",
+      "note": "Modelled WHO estimate; the range in brackets is the uncertainty interval. Age-standardized rates are the right choice for comparing countries."
+    },
+    "suicide-rate-crude": {
+      "code": "SDGSUICIDE",
+      "label": "Suicide rate (crude, SDG 3.4.2)",
+      "whoName": "Crude suicide rates (per 100 000 population)",
+      "unit": "per 100,000 population",
+      "valueType": "numeric",
+      "decimals": 1,
+      "topic": "suicide",
+      "headline": {
+        "SEX": "SEX_BTSX",
+        "AGEGROUP": "AGEGROUP_YEARSALL"
+      },
+      "page": "https://www.who.int/data/gho/data/indicators/indicator-details/GHO/crude-suicide-rates-(per-100-000-population)",
+      "note": "Modelled WHO estimate; the range in brackets is the uncertainty interval."
+    },
+    "psychiatrists-rate": {
+      "code": "MH_6",
+      "label": "Psychiatrists in the mental health sector",
+      "whoName": "Psychiatrists working in mental health sector (per 100,000)",
+      "unit": "per 100,000 population",
+      "valueType": "numeric",
+      "decimals": 2,
+      "topic": "workforce",
+      "headline": {},
+      "page": "https://www.who.int/data/gho/data/indicators/indicator-details/GHO/psychiatrists-working-in-mental-health-sector-(per-100-000)",
+      "note": "Country-reported (WHO Mental Health Atlas). Many countries report in some survey years only."
+    },
+    "psychologists-rate": {
+      "code": "MH_9",
+      "label": "Psychologists in the mental health sector",
+      "whoName": "Psychologists working in mental health sector (per 100,000)",
+      "unit": "per 100,000 population",
+      "valueType": "numeric",
+      "decimals": 2,
+      "topic": "workforce",
+      "headline": {},
+      "page": "https://www.who.int/data/gho/data/indicators/indicator-details/GHO/psychologists-working-in-mental-health-sector-(per-100-000)",
+      "note": "Country-reported (WHO Mental Health Atlas)."
+    },
+    "mental-health-nurses-rate": {
+      "code": "MH_7",
+      "label": "Nurses in the mental health sector",
+      "whoName": "Nurses working in mental health sector (per 100,000)",
+      "unit": "per 100,000 population",
+      "valueType": "numeric",
+      "decimals": 2,
+      "topic": "workforce",
+      "headline": {},
+      "page": "https://www.who.int/data/gho/data/indicators/indicator-details/GHO/nurses-working-in-mental-health-sector-(per-100-000)",
+      "note": "Country-reported (WHO Mental Health Atlas)."
+    },
+    "mental-health-social-workers-rate": {
+      "code": "MH_8",
+      "label": "Social workers in the mental health sector",
+      "whoName": "Social workers working in mental health sector (per 100,000)",
+      "unit": "per 100,000 population",
+      "valueType": "numeric",
+      "decimals": 2,
+      "topic": "workforce",
+      "headline": {},
+      "page": "https://www.who.int/data/gho/data/indicators/indicator-details/GHO/social-workers-working-in-mental-health-sector-(per-100-000)",
+      "note": "Country-reported (WHO Mental Health Atlas)."
+    },
+    "mental-health-outpatient-facilities": {
+      "code": "MH_10",
+      "label": "Mental health outpatient facilities",
+      "whoName": "Mental health outpatient facilities (per 100,000)",
+      "unit": "per 100,000 population",
+      "valueType": "numeric",
+      "decimals": 2,
+      "topic": "services",
+      "headline": {},
+      "page": "https://www.who.int/data/gho/data/indicators/indicator-details/GHO/mental-health-outpatient-facilities-(per-100-000)",
+      "note": "Country-reported (WHO Mental Health Atlas)."
+    },
+    "mental-health-beds-general-hospitals": {
+      "code": "MH_13",
+      "label": "Mental health beds in general hospitals",
+      "whoName": "Beds for mental health in general hospitals (per 100,000)",
+      "unit": "per 100,000 population",
+      "valueType": "numeric",
+      "decimals": 2,
+      "topic": "services",
+      "headline": {},
+      "page": "https://www.who.int/data/gho/data/indicators/indicator-details/GHO/beds-for-mental-health-in-general-hospitals-(per-100-000)",
+      "note": "Country-reported (WHO Mental Health Atlas)."
+    },
+    "mental-health-policy": {
+      "code": "MH_25",
+      "label": "Stand-alone mental health policy or plan",
+      "whoName": "Stand-alone policy or plan for mental health",
+      "unit": "Yes / No",
+      "valueType": "text",
+      "decimals": 0,
+      "topic": "policy",
+      "headline": {},
+      "page": "https://www.who.int/data/gho/data/indicators/indicator-details/GHO/stand-alone-policy-or-plan-for-mental-health",
+      "note": "Country-reported (WHO Mental Health Atlas)."
+    },
+    "mental-health-legislation": {
+      "code": "MH_3",
+      "label": "Stand-alone mental health legislation",
+      "whoName": "Stand-alone mental health legislation",
+      "unit": "Yes / No",
+      "valueType": "text",
+      "decimals": 0,
+      "topic": "policy",
+      "headline": {},
+      "page": "https://www.who.int/data/gho/data/indicators/indicator-details/GHO/stand-alone-mental-health-legislation",
+      "note": "Country-reported (WHO Mental Health Atlas)."
+    },
+    "alcohol-per-capita": {
+      "code": "SA_0000001688",
+      "label": "Alcohol consumption per capita (15+, SDG 3.5.2)",
+      "whoName": "Alcohol, total per capita (15+) consumption (in litres of pure alcohol) (SDG Indicator 3.5.2), three-year average",
+      "unit": "litres of pure alcohol per person aged 15+ per year",
+      "valueType": "numeric",
+      "decimals": 1,
+      "topic": "alcohol",
+      "headline": {
+        "SEX": "SEX_BTSX"
+      },
+      "page": "https://www.who.int/data/gho/data/indicators/indicator-details/GHO/total-(recorded-unrecorded)-alcohol-per-capita-(15-)-consumption",
+      "note": "Population statistic (recorded plus unrecorded consumption, three-year average). Contains no information about any client."
+    },
+    "alcohol-heavy-episodic-drinkers": {
+      "code": "SA_0000001416",
+      "label": "Heavy episodic drinking among drinkers (15+)",
+      "whoName": "Alcohol, heavy episodic drinking (15+), drinkers only, past 30 days (%), age-standardized",
+      "unit": "% of current drinkers, age-standardized",
+      "valueType": "numeric",
+      "decimals": 1,
+      "topic": "alcohol",
+      "headline": {
+        "SEX": "SEX_BTSX"
+      },
+      "page": "https://www.who.int/data/gho/data/themes/topics/topic-details/GHO/levels-of-consumption",
+      "note": "Population statistic; age-standardized. Contains no information about any client."
+    }
+  },
+  "dimensionTypeLabels": {
+    "SEX": "Sex",
+    "AGEGROUP": "Age group"
+  },
+  "dimensionLabels": {
+    "SEX_BTSX": "Both sexes",
+    "SEX_FMLE": "Female",
+    "SEX_MLE": "Male",
+    "SEX_NOA": "Not applicable",
+    "AGEGROUP_YEARSALL": "All ages",
+    "AGEGROUP_YEARS15PLUS": "15+ years",
+    "AGEGROUP_YEARS70PLUS": "70+ years",
+    "AGEGROUP_YEARS80PLUS": "80+ years"
+  },
+  "areas": [
+    {
+      "code": "GLOBAL",
+      "name": "Global (all WHO regions)",
+      "type": "GLOBAL"
+    },
+    {
+      "code": "AFR",
+      "name": "WHO Africa Region",
+      "type": "REGION"
+    },
+    {
+      "code": "AMR",
+      "name": "WHO Americas Region",
+      "type": "REGION"
+    },
+    {
+      "code": "EMR",
+      "name": "WHO Eastern Mediterranean Region",
+      "type": "REGION"
+    },
+    {
+      "code": "EUR",
+      "name": "WHO Europe Region",
+      "type": "REGION"
+    },
+    {
+      "code": "SEAR",
+      "name": "WHO South-East Asia Region",
+      "type": "REGION"
+    },
+    {
+      "code": "WPR",
+      "name": "WHO Western Pacific Region",
+      "type": "REGION"
+    },
+    {
+      "code": "AFG",
+      "name": "Afghanistan",
+      "type": "COUNTRY",
+      "region": "EMR"
+    },
+    {
+      "code": "ALB",
+      "name": "Albania",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "DZA",
+      "name": "Algeria",
+      "type": "COUNTRY",
+      "region": "AFR"
+    },
+    {
+      "code": "ASM",
+      "name": "American Samoa",
+      "type": "COUNTRY",
+      "region": "WPR"
+    },
+    {
+      "code": "AND",
+      "name": "Andorra",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "AGO",
+      "name": "Angola",
+      "type": "COUNTRY",
+      "region": "AFR"
+    },
+    {
+      "code": "AIA",
+      "name": "Anguilla",
+      "type": "COUNTRY",
+      "region": "AMR"
+    },
+    {
+      "code": "ATG",
+      "name": "Antigua and Barbuda",
+      "type": "COUNTRY",
+      "region": "AMR"
+    },
+    {
+      "code": "ARG",
+      "name": "Argentina",
+      "type": "COUNTRY",
+      "region": "AMR"
+    },
+    {
+      "code": "ARM",
+      "name": "Armenia",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "ABW",
+      "name": "Aruba",
+      "type": "COUNTRY",
+      "region": "AMR"
+    },
+    {
+      "code": "AUS",
+      "name": "Australia",
+      "type": "COUNTRY",
+      "region": "WPR"
+    },
+    {
+      "code": "AUT",
+      "name": "Austria",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "AZE",
+      "name": "Azerbaijan",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "BHS",
+      "name": "Bahamas",
+      "type": "COUNTRY",
+      "region": "AMR"
+    },
+    {
+      "code": "BHR",
+      "name": "Bahrain",
+      "type": "COUNTRY",
+      "region": "EMR"
+    },
+    {
+      "code": "BGD",
+      "name": "Bangladesh",
+      "type": "COUNTRY",
+      "region": "SEAR"
+    },
+    {
+      "code": "BRB",
+      "name": "Barbados",
+      "type": "COUNTRY",
+      "region": "AMR"
+    },
+    {
+      "code": "BLR",
+      "name": "Belarus",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "BEL",
+      "name": "Belgium",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "BLZ",
+      "name": "Belize",
+      "type": "COUNTRY",
+      "region": "AMR"
+    },
+    {
+      "code": "BEN",
+      "name": "Benin",
+      "type": "COUNTRY",
+      "region": "AFR"
+    },
+    {
+      "code": "BMU",
+      "name": "Bermuda",
+      "type": "COUNTRY",
+      "region": "AMR"
+    },
+    {
+      "code": "BTN",
+      "name": "Bhutan",
+      "type": "COUNTRY",
+      "region": "SEAR"
+    },
+    {
+      "code": "BOL",
+      "name": "Bolivia (Plurinational State of)",
+      "type": "COUNTRY",
+      "region": "AMR"
+    },
+    {
+      "code": "BES",
+      "name": "Bonaire, Saint Eustatius and Saba",
+      "type": "COUNTRY",
+      "region": "AMR"
+    },
+    {
+      "code": "BIH",
+      "name": "Bosnia and Herzegovina",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "BWA",
+      "name": "Botswana",
+      "type": "COUNTRY",
+      "region": "AFR"
+    },
+    {
+      "code": "BRA",
+      "name": "Brazil",
+      "type": "COUNTRY",
+      "region": "AMR"
+    },
+    {
+      "code": "VGB",
+      "name": "British Virgin Islands",
+      "type": "COUNTRY",
+      "region": "AMR"
+    },
+    {
+      "code": "BRN",
+      "name": "Brunei Darussalam",
+      "type": "COUNTRY",
+      "region": "WPR"
+    },
+    {
+      "code": "BGR",
+      "name": "Bulgaria",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "BFA",
+      "name": "Burkina Faso",
+      "type": "COUNTRY",
+      "region": "AFR"
+    },
+    {
+      "code": "BDI",
+      "name": "Burundi",
+      "type": "COUNTRY",
+      "region": "AFR"
+    },
+    {
+      "code": "CPV",
+      "name": "Cabo Verde",
+      "type": "COUNTRY",
+      "region": "AFR"
+    },
+    {
+      "code": "KHM",
+      "name": "Cambodia",
+      "type": "COUNTRY",
+      "region": "WPR"
+    },
+    {
+      "code": "CMR",
+      "name": "Cameroon",
+      "type": "COUNTRY",
+      "region": "AFR"
+    },
+    {
+      "code": "CAN",
+      "name": "Canada",
+      "type": "COUNTRY",
+      "region": "AMR"
+    },
+    {
+      "code": "CYM",
+      "name": "Cayman Islands",
+      "type": "COUNTRY",
+      "region": "AMR"
+    },
+    {
+      "code": "CAF",
+      "name": "Central African Republic",
+      "type": "COUNTRY",
+      "region": "AFR"
+    },
+    {
+      "code": "TCD",
+      "name": "Chad",
+      "type": "COUNTRY",
+      "region": "AFR"
+    },
+    {
+      "code": "CHL",
+      "name": "Chile",
+      "type": "COUNTRY",
+      "region": "AMR"
+    },
+    {
+      "code": "CHN",
+      "name": "China",
+      "type": "COUNTRY",
+      "region": "WPR"
+    },
+    {
+      "code": "COL",
+      "name": "Colombia",
+      "type": "COUNTRY",
+      "region": "AMR"
+    },
+    {
+      "code": "COM",
+      "name": "Comoros",
+      "type": "COUNTRY",
+      "region": "AFR"
+    },
+    {
+      "code": "COG",
+      "name": "Congo",
+      "type": "COUNTRY",
+      "region": "AFR"
+    },
+    {
+      "code": "COK",
+      "name": "Cook Islands",
+      "type": "COUNTRY",
+      "region": "WPR"
+    },
+    {
+      "code": "CRI",
+      "name": "Costa Rica",
+      "type": "COUNTRY",
+      "region": "AMR"
+    },
+    {
+      "code": "CIV",
+      "name": "Cote d'Ivoire",
+      "type": "COUNTRY",
+      "region": "AFR"
+    },
+    {
+      "code": "HRV",
+      "name": "Croatia",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "CUB",
+      "name": "Cuba",
+      "type": "COUNTRY",
+      "region": "AMR"
+    },
+    {
+      "code": "CUW",
+      "name": "Curaçao",
+      "type": "COUNTRY",
+      "region": "AMR"
+    },
+    {
+      "code": "CYP",
+      "name": "Cyprus",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "CZE",
+      "name": "Czechia",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "PRK",
+      "name": "Democratic People's Republic of Korea",
+      "type": "COUNTRY",
+      "region": "SEAR"
+    },
+    {
+      "code": "COD",
+      "name": "Democratic Republic of the Congo",
+      "type": "COUNTRY",
+      "region": "AFR"
+    },
+    {
+      "code": "DNK",
+      "name": "Denmark",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "DJI",
+      "name": "Djibouti",
+      "type": "COUNTRY",
+      "region": "EMR"
+    },
+    {
+      "code": "DMA",
+      "name": "Dominica",
+      "type": "COUNTRY",
+      "region": "AMR"
+    },
+    {
+      "code": "DOM",
+      "name": "Dominican Republic",
+      "type": "COUNTRY",
+      "region": "AMR"
+    },
+    {
+      "code": "ECU",
+      "name": "Ecuador",
+      "type": "COUNTRY",
+      "region": "AMR"
+    },
+    {
+      "code": "EGY",
+      "name": "Egypt",
+      "type": "COUNTRY",
+      "region": "EMR"
+    },
+    {
+      "code": "SLV",
+      "name": "El Salvador",
+      "type": "COUNTRY",
+      "region": "AMR"
+    },
+    {
+      "code": "GNQ",
+      "name": "Equatorial Guinea",
+      "type": "COUNTRY",
+      "region": "AFR"
+    },
+    {
+      "code": "ERI",
+      "name": "Eritrea",
+      "type": "COUNTRY",
+      "region": "AFR"
+    },
+    {
+      "code": "EST",
+      "name": "Estonia",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "SWZ",
+      "name": "Eswatini",
+      "type": "COUNTRY",
+      "region": "AFR"
+    },
+    {
+      "code": "ETH",
+      "name": "Ethiopia",
+      "type": "COUNTRY",
+      "region": "AFR"
+    },
+    {
+      "code": "FLK",
+      "name": "Falkland Islands (Malvinas)",
+      "type": "COUNTRY",
+      "region": "AMR"
+    },
+    {
+      "code": "FRO",
+      "name": "Faroe Islands",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "FJI",
+      "name": "Fiji",
+      "type": "COUNTRY",
+      "region": "WPR"
+    },
+    {
+      "code": "FIN",
+      "name": "Finland",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "FRA",
+      "name": "France",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "GUF",
+      "name": "French Guiana",
+      "type": "COUNTRY",
+      "region": "AMR"
+    },
+    {
+      "code": "PYF",
+      "name": "French Polynesia",
+      "type": "COUNTRY",
+      "region": "WPR"
+    },
+    {
+      "code": "GAB",
+      "name": "Gabon",
+      "type": "COUNTRY",
+      "region": "AFR"
+    },
+    {
+      "code": "GMB",
+      "name": "Gambia",
+      "type": "COUNTRY",
+      "region": "AFR"
+    },
+    {
+      "code": "GEO",
+      "name": "Georgia",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "DEU",
+      "name": "Germany",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "GHA",
+      "name": "Ghana",
+      "type": "COUNTRY",
+      "region": "AFR"
+    },
+    {
+      "code": "GIB",
+      "name": "Gibraltar",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "GRC",
+      "name": "Greece",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "GRL",
+      "name": "Greenland",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "GRD",
+      "name": "Grenada",
+      "type": "COUNTRY",
+      "region": "AMR"
+    },
+    {
+      "code": "GLP",
+      "name": "Guadeloupe",
+      "type": "COUNTRY",
+      "region": "AMR"
+    },
+    {
+      "code": "GUM",
+      "name": "Guam",
+      "type": "COUNTRY",
+      "region": "WPR"
+    },
+    {
+      "code": "GTM",
+      "name": "Guatemala",
+      "type": "COUNTRY",
+      "region": "AMR"
+    },
+    {
+      "code": "GIN",
+      "name": "Guinea",
+      "type": "COUNTRY",
+      "region": "AFR"
+    },
+    {
+      "code": "GNB",
+      "name": "Guinea-Bissau",
+      "type": "COUNTRY",
+      "region": "AFR"
+    },
+    {
+      "code": "GUY",
+      "name": "Guyana",
+      "type": "COUNTRY",
+      "region": "AMR"
+    },
+    {
+      "code": "HTI",
+      "name": "Haiti",
+      "type": "COUNTRY",
+      "region": "AMR"
+    },
+    {
+      "code": "HND",
+      "name": "Honduras",
+      "type": "COUNTRY",
+      "region": "AMR"
+    },
+    {
+      "code": "HUN",
+      "name": "Hungary",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "ISL",
+      "name": "Iceland",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "IND",
+      "name": "India",
+      "type": "COUNTRY",
+      "region": "SEAR"
+    },
+    {
+      "code": "IDN",
+      "name": "Indonesia",
+      "type": "COUNTRY",
+      "region": "WPR"
+    },
+    {
+      "code": "IRN",
+      "name": "Iran (Islamic Republic of)",
+      "type": "COUNTRY",
+      "region": "EMR"
+    },
+    {
+      "code": "IRQ",
+      "name": "Iraq",
+      "type": "COUNTRY",
+      "region": "EMR"
+    },
+    {
+      "code": "IRL",
+      "name": "Ireland",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "IMN",
+      "name": "Isle of Man",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "ISR",
+      "name": "Israel",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "ITA",
+      "name": "Italy",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "JAM",
+      "name": "Jamaica",
+      "type": "COUNTRY",
+      "region": "AMR"
+    },
+    {
+      "code": "JPN",
+      "name": "Japan",
+      "type": "COUNTRY",
+      "region": "WPR"
+    },
+    {
+      "code": "JOR",
+      "name": "Jordan",
+      "type": "COUNTRY",
+      "region": "EMR"
+    },
+    {
+      "code": "KAZ",
+      "name": "Kazakhstan",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "KEN",
+      "name": "Kenya",
+      "type": "COUNTRY",
+      "region": "AFR"
+    },
+    {
+      "code": "KIR",
+      "name": "Kiribati",
+      "type": "COUNTRY",
+      "region": "WPR"
+    },
+    {
+      "code": "KWT",
+      "name": "Kuwait",
+      "type": "COUNTRY",
+      "region": "EMR"
+    },
+    {
+      "code": "KGZ",
+      "name": "Kyrgyzstan",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "LAO",
+      "name": "Lao People's Democratic Republic",
+      "type": "COUNTRY",
+      "region": "WPR"
+    },
+    {
+      "code": "LVA",
+      "name": "Latvia",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "LBN",
+      "name": "Lebanon",
+      "type": "COUNTRY",
+      "region": "EMR"
+    },
+    {
+      "code": "LSO",
+      "name": "Lesotho",
+      "type": "COUNTRY",
+      "region": "AFR"
+    },
+    {
+      "code": "LBR",
+      "name": "Liberia",
+      "type": "COUNTRY",
+      "region": "AFR"
+    },
+    {
+      "code": "LBY",
+      "name": "Libya",
+      "type": "COUNTRY",
+      "region": "EMR"
+    },
+    {
+      "code": "LIE",
+      "name": "Liechtenstein",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "LTU",
+      "name": "Lithuania",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "LUX",
+      "name": "Luxembourg",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "MDG",
+      "name": "Madagascar",
+      "type": "COUNTRY",
+      "region": "AFR"
+    },
+    {
+      "code": "MWI",
+      "name": "Malawi",
+      "type": "COUNTRY",
+      "region": "AFR"
+    },
+    {
+      "code": "MYS",
+      "name": "Malaysia",
+      "type": "COUNTRY",
+      "region": "WPR"
+    },
+    {
+      "code": "MDV",
+      "name": "Maldives",
+      "type": "COUNTRY",
+      "region": "SEAR"
+    },
+    {
+      "code": "MLI",
+      "name": "Mali",
+      "type": "COUNTRY",
+      "region": "AFR"
+    },
+    {
+      "code": "MLT",
+      "name": "Malta",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "MHL",
+      "name": "Marshall Islands",
+      "type": "COUNTRY",
+      "region": "WPR"
+    },
+    {
+      "code": "MTQ",
+      "name": "Martinique",
+      "type": "COUNTRY",
+      "region": "AMR"
+    },
+    {
+      "code": "MRT",
+      "name": "Mauritania",
+      "type": "COUNTRY",
+      "region": "AFR"
+    },
+    {
+      "code": "MUS",
+      "name": "Mauritius",
+      "type": "COUNTRY",
+      "region": "AFR"
+    },
+    {
+      "code": "MYT",
+      "name": "Mayotte",
+      "type": "COUNTRY",
+      "region": "AFR"
+    },
+    {
+      "code": "MEX",
+      "name": "Mexico",
+      "type": "COUNTRY",
+      "region": "AMR"
+    },
+    {
+      "code": "FSM",
+      "name": "Micronesia (Federated States of)",
+      "type": "COUNTRY",
+      "region": "WPR"
+    },
+    {
+      "code": "MCO",
+      "name": "Monaco",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "MNG",
+      "name": "Mongolia",
+      "type": "COUNTRY",
+      "region": "WPR"
+    },
+    {
+      "code": "MNE",
+      "name": "Montenegro",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "MSR",
+      "name": "Montserrat",
+      "type": "COUNTRY",
+      "region": "AMR"
+    },
+    {
+      "code": "MAR",
+      "name": "Morocco",
+      "type": "COUNTRY",
+      "region": "EMR"
+    },
+    {
+      "code": "MOZ",
+      "name": "Mozambique",
+      "type": "COUNTRY",
+      "region": "AFR"
+    },
+    {
+      "code": "MMR",
+      "name": "Myanmar",
+      "type": "COUNTRY",
+      "region": "SEAR"
+    },
+    {
+      "code": "NAM",
+      "name": "Namibia",
+      "type": "COUNTRY",
+      "region": "AFR"
+    },
+    {
+      "code": "NRU",
+      "name": "Naoero",
+      "type": "COUNTRY",
+      "region": "WPR"
+    },
+    {
+      "code": "NPL",
+      "name": "Nepal",
+      "type": "COUNTRY",
+      "region": "SEAR"
+    },
+    {
+      "code": "NLD",
+      "name": "Netherlands (Kingdom of the)",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "NCL",
+      "name": "New Caledonia",
+      "type": "COUNTRY",
+      "region": "WPR"
+    },
+    {
+      "code": "NZL",
+      "name": "New Zealand",
+      "type": "COUNTRY",
+      "region": "WPR"
+    },
+    {
+      "code": "NIC",
+      "name": "Nicaragua",
+      "type": "COUNTRY",
+      "region": "AMR"
+    },
+    {
+      "code": "NER",
+      "name": "Niger",
+      "type": "COUNTRY",
+      "region": "AFR"
+    },
+    {
+      "code": "NGA",
+      "name": "Nigeria",
+      "type": "COUNTRY",
+      "region": "AFR"
+    },
+    {
+      "code": "NIU",
+      "name": "Niue",
+      "type": "COUNTRY",
+      "region": "WPR"
+    },
+    {
+      "code": "MKD",
+      "name": "North Macedonia",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "MNP",
+      "name": "Northern Mariana Islands",
+      "type": "COUNTRY",
+      "region": "WPR"
+    },
+    {
+      "code": "NOR",
+      "name": "Norway",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "OMN",
+      "name": "Oman",
+      "type": "COUNTRY",
+      "region": "EMR"
+    },
+    {
+      "code": "PAK",
+      "name": "Pakistan",
+      "type": "COUNTRY",
+      "region": "EMR"
+    },
+    {
+      "code": "PLW",
+      "name": "Palau",
+      "type": "COUNTRY",
+      "region": "WPR"
+    },
+    {
+      "code": "PAN",
+      "name": "Panama",
+      "type": "COUNTRY",
+      "region": "AMR"
+    },
+    {
+      "code": "PNG",
+      "name": "Papua New Guinea",
+      "type": "COUNTRY",
+      "region": "WPR"
+    },
+    {
+      "code": "PRY",
+      "name": "Paraguay",
+      "type": "COUNTRY",
+      "region": "AMR"
+    },
+    {
+      "code": "PER",
+      "name": "Peru",
+      "type": "COUNTRY",
+      "region": "AMR"
+    },
+    {
+      "code": "PHL",
+      "name": "Philippines",
+      "type": "COUNTRY",
+      "region": "WPR"
+    },
+    {
+      "code": "POL",
+      "name": "Poland",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "PRT",
+      "name": "Portugal",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "PRI",
+      "name": "Puerto Rico",
+      "type": "COUNTRY",
+      "region": "AMR"
+    },
+    {
+      "code": "QAT",
+      "name": "Qatar",
+      "type": "COUNTRY",
+      "region": "EMR"
+    },
+    {
+      "code": "KOR",
+      "name": "Republic of Korea",
+      "type": "COUNTRY",
+      "region": "WPR"
+    },
+    {
+      "code": "MDA",
+      "name": "Republic of Moldova",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "REU",
+      "name": "Reunion",
+      "type": "COUNTRY",
+      "region": "AFR"
+    },
+    {
+      "code": "ROU",
+      "name": "Romania",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "RUS",
+      "name": "Russian Federation",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "RWA",
+      "name": "Rwanda",
+      "type": "COUNTRY",
+      "region": "AFR"
+    },
+    {
+      "code": "KNA",
+      "name": "Saint Kitts and Nevis",
+      "type": "COUNTRY",
+      "region": "AMR"
+    },
+    {
+      "code": "LCA",
+      "name": "Saint Lucia",
+      "type": "COUNTRY",
+      "region": "AMR"
+    },
+    {
+      "code": "SPM",
+      "name": "Saint Pierre and Miquelon",
+      "type": "COUNTRY",
+      "region": "AMR"
+    },
+    {
+      "code": "VCT",
+      "name": "Saint Vincent and the Grenadines",
+      "type": "COUNTRY",
+      "region": "AMR"
+    },
+    {
+      "code": "WSM",
+      "name": "Samoa",
+      "type": "COUNTRY",
+      "region": "WPR"
+    },
+    {
+      "code": "SMR",
+      "name": "San Marino",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "STP",
+      "name": "Sao Tome and Principe",
+      "type": "COUNTRY",
+      "region": "AFR"
+    },
+    {
+      "code": "SAU",
+      "name": "Saudi Arabia",
+      "type": "COUNTRY",
+      "region": "EMR"
+    },
+    {
+      "code": "SEN",
+      "name": "Senegal",
+      "type": "COUNTRY",
+      "region": "AFR"
+    },
+    {
+      "code": "SRB",
+      "name": "Serbia",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "SYC",
+      "name": "Seychelles",
+      "type": "COUNTRY",
+      "region": "AFR"
+    },
+    {
+      "code": "SLE",
+      "name": "Sierra Leone",
+      "type": "COUNTRY",
+      "region": "AFR"
+    },
+    {
+      "code": "SGP",
+      "name": "Singapore",
+      "type": "COUNTRY",
+      "region": "WPR"
+    },
+    {
+      "code": "SXM",
+      "name": "Sint Maarten (Dutch part)",
+      "type": "COUNTRY",
+      "region": "AMR"
+    },
+    {
+      "code": "SVK",
+      "name": "Slovakia",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "SVN",
+      "name": "Slovenia",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "SLB",
+      "name": "Solomon Islands",
+      "type": "COUNTRY",
+      "region": "WPR"
+    },
+    {
+      "code": "SOM",
+      "name": "Somalia",
+      "type": "COUNTRY",
+      "region": "EMR"
+    },
+    {
+      "code": "ZAF",
+      "name": "South Africa",
+      "type": "COUNTRY",
+      "region": "AFR"
+    },
+    {
+      "code": "SSD",
+      "name": "South Sudan",
+      "type": "COUNTRY",
+      "region": "AFR"
+    },
+    {
+      "code": "ESP",
+      "name": "Spain",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "LKA",
+      "name": "Sri Lanka",
+      "type": "COUNTRY",
+      "region": "SEAR"
+    },
+    {
+      "code": "SHN",
+      "name": "St Helena, Ascension and Tristan da Cunha",
+      "type": "COUNTRY",
+      "region": "AFR"
+    },
+    {
+      "code": "SDN",
+      "name": "Sudan",
+      "type": "COUNTRY",
+      "region": "EMR"
+    },
+    {
+      "code": "SUR",
+      "name": "Suriname",
+      "type": "COUNTRY",
+      "region": "AMR"
+    },
+    {
+      "code": "SWE",
+      "name": "Sweden",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "CHE",
+      "name": "Switzerland",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "SYR",
+      "name": "Syrian Arab Republic",
+      "type": "COUNTRY",
+      "region": "EMR"
+    },
+    {
+      "code": "TJK",
+      "name": "Tajikistan",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "THA",
+      "name": "Thailand",
+      "type": "COUNTRY",
+      "region": "SEAR"
+    },
+    {
+      "code": "TLS",
+      "name": "Timor-Leste",
+      "type": "COUNTRY",
+      "region": "SEAR"
+    },
+    {
+      "code": "TGO",
+      "name": "Togo",
+      "type": "COUNTRY",
+      "region": "AFR"
+    },
+    {
+      "code": "TKL",
+      "name": "Tokelau",
+      "type": "COUNTRY",
+      "region": "WPR"
+    },
+    {
+      "code": "TON",
+      "name": "Tonga",
+      "type": "COUNTRY",
+      "region": "WPR"
+    },
+    {
+      "code": "TTO",
+      "name": "Trinidad and Tobago",
+      "type": "COUNTRY",
+      "region": "AMR"
+    },
+    {
+      "code": "TUN",
+      "name": "Tunisia",
+      "type": "COUNTRY",
+      "region": "EMR"
+    },
+    {
+      "code": "TKM",
+      "name": "Turkmenistan",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "TCA",
+      "name": "Turks and Caicos Islands",
+      "type": "COUNTRY",
+      "region": "AMR"
+    },
+    {
+      "code": "TUV",
+      "name": "Tuvalu",
+      "type": "COUNTRY",
+      "region": "WPR"
+    },
+    {
+      "code": "TUR",
+      "name": "Türkiye",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "UGA",
+      "name": "Uganda",
+      "type": "COUNTRY",
+      "region": "AFR"
+    },
+    {
+      "code": "UKR",
+      "name": "Ukraine",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "ARE",
+      "name": "United Arab Emirates",
+      "type": "COUNTRY",
+      "region": "EMR"
+    },
+    {
+      "code": "GBR",
+      "name": "United Kingdom of Great Britain and Northern Ireland",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "TZA",
+      "name": "United Republic of Tanzania",
+      "type": "COUNTRY",
+      "region": "AFR"
+    },
+    {
+      "code": "USA",
+      "name": "United States of America",
+      "type": "COUNTRY",
+      "region": "AMR"
+    },
+    {
+      "code": "URY",
+      "name": "Uruguay",
+      "type": "COUNTRY",
+      "region": "AMR"
+    },
+    {
+      "code": "UZB",
+      "name": "Uzbekistan",
+      "type": "COUNTRY",
+      "region": "EUR"
+    },
+    {
+      "code": "VUT",
+      "name": "Vanuatu",
+      "type": "COUNTRY",
+      "region": "WPR"
+    },
+    {
+      "code": "VEN",
+      "name": "Venezuela (Bolivarian Republic of)",
+      "type": "COUNTRY",
+      "region": "AMR"
+    },
+    {
+      "code": "VNM",
+      "name": "Viet Nam",
+      "type": "COUNTRY",
+      "region": "WPR"
+    },
+    {
+      "code": "VIR",
+      "name": "Virgin Islands (USA)",
+      "type": "COUNTRY",
+      "region": "AMR"
+    },
+    {
+      "code": "WLF",
+      "name": "Wallis and Futuna Islands",
+      "type": "COUNTRY",
+      "region": "WPR"
+    },
+    {
+      "code": "YEM",
+      "name": "Yemen",
+      "type": "COUNTRY",
+      "region": "EMR"
+    },
+    {
+      "code": "ZMB",
+      "name": "Zambia",
+      "type": "COUNTRY",
+      "region": "AFR"
+    },
+    {
+      "code": "ZWE",
+      "name": "Zimbabwe",
+      "type": "COUNTRY",
+      "region": "AFR"
+    },
+    {
+      "code": "PSE",
+      "name": "occupied Palestinian territory, including east Jerusalem",
+      "type": "COUNTRY",
+      "region": "EMR"
+    }
+  ],
+  "sources": [
+    {
+      "title": "GHO OData API",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/data/gho/info/gho-odata-api",
+      "year": 2026
+    },
+    {
+      "title": "The old GHO Minerva interface and GHO Athena API are retired (deprecation notice for the current OData API)",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/data/gho/legacy",
+      "year": 2026
+    },
+    {
+      "title": "GHO theme: Mental health",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/data/gho/data/themes/mental-health",
+      "year": 2026
+    },
+    {
+      "title": "GHO indicator: Age-standardized suicide rates (per 100 000 population)",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/data/gho/data/indicators/indicator-details/GHO/age-standardized-suicide-rates-(per-100-000-population)",
+      "year": 2026
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

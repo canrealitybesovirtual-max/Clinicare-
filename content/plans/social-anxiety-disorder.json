@@ -1,0 +1,171 @@
+{
+  "conditionId": "social-anxiety-disorder",
+  "problems": [
+    {
+      "id": "sad-avoiding-being-seen-or-judged",
+      "label": "Steering clear of, or escaping, situations where the client might be judged",
+      "definitions": [
+        "Turns down, cancels or skips at least one work, study, family, faith or community event in a typical week because of fear of embarrassment, criticism or rejection.",
+        "Avoids specific everyday tasks that involve being noticed, such as making or answering phone calls, asking a question in a meeting or class, ordering at a counter or eating with coworkers, and can list them when asked.",
+        "Leaves gatherings early, stays at the edges of groups or keeps conversations very short, by self or collateral report.",
+        "Spends long stretches before an event dreading it, and long stretches afterward going back over what they said or did, often an hour or more each time."
+      ],
+      "longTermGoals": [
+        "The client takes part in the social, work and community situations that matter to them, even when some nervousness shows up, and fear of judgment no longer makes the choice for them.",
+        "The client spends much less time dreading events beforehand and picking them apart afterward."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "sad-values-and-costs",
+          "text": "By session 3, name at least 2 things the client cares about (for example friendship, a career step, or belonging to a faith or cultural community) that avoidance is getting in the way of, and note 1 concrete cost of avoidance for each.",
+          "interventionIds": ["act-values-clarification", "motivational-interviewing"]
+        },
+        {
+          "id": "sad-situation-ladder",
+          "text": "By session 4, build a list of at least 10 feared social or performance situations, ordered from mildly to very hard, rating each for expected anxiety (0-100) and how often it is avoided now (never, sometimes or always).",
+          "interventionIds": ["graded-in-vivo-exposure", "behavioral-experiments"]
+        },
+        {
+          "id": "sad-weekly-practice",
+          "text": "Over weeks 5 to 14, carry out at least 3 planned practices per week from the list. Before each one, write down the feared outcome and how likely it seems (0-100); afterward, record what actually happened. Move to a harder step once the feared outcome has not shown up, or has turned out to be bearable, on at least 2 tries.",
+          "interventionIds": ["graded-in-vivo-exposure", "behavioral-experiments"]
+        },
+        {
+          "id": "sad-willingness-ratings",
+          "text": "From week 4 to week 12, rate willingness to feel anxious (0-10) as well as anxiety (0-10) before each planned practice, aiming for willingness of 6 or more on most practices by week 10, and use 1 defusion step (for example noticing 'I'm having the thought that they find me boring') during at least half of them.",
+          "interventionIds": ["act-acceptance-willingness", "act-cognitive-defusion"]
+        },
+        {
+          "id": "sad-replay-limit",
+          "text": "From week 6, after each social event, allow one written review of no more than 10 minutes and then switch to a planned activity. Track estimated replay minutes per event, aiming for half of the baseline from weeks 1 and 2, or less, by week 12.",
+          "interventionIds": ["social-anxiety-cognitive-techniques", "act-present-moment-self-as-context"]
+        },
+        {
+          "id": "sad-score-tracking",
+          "text": "Complete the GAD-7 and the PHQ-9 at intake and every 2 to 4 weeks, along with any social anxiety scale the practice is licensed to use outside this app (the SPIN is license pending here). Review the trend together, and if scores have not improved across 2 check-ins in a row, revisit the plan, including treatment intensity, a different recommended approach or a referral for a medication evaluation.",
+          "interventionIds": ["medication-referral"]
+        },
+        {
+          "id": "sad-keep-gains",
+          "text": "In the final 2 sessions, write a short plan that lists the practices that helped most, at least 3 early signs that avoidance is creeping back (for example cancelling plans or silently rehearsing sentences again), and 1 new practice per month for the next 3 months.",
+          "interventionIds": ["relapse-prevention-planning", "act-committed-action"]
+        }
+      ],
+      "measureIds": ["gad-7", "phq-9"]
+    },
+    {
+      "id": "sad-self-focus-and-safety-behaviors",
+      "label": "Watching oneself from the inside, a harsh self-image and hidden protective habits",
+      "definitions": [
+        "Reports that attention turns inward during conversations, onto blushing, shaking, sweating, a racing heart or the sound of their own voice, and that they lose track of what the other person is saying.",
+        "Uses protective habits during social contact, such as rehearsing sentences silently, looking away, gripping a cup to hide shaking, wearing extra layers to hide sweat or letting others do all the talking.",
+        "Holds strong predictions about how others see them, such as 'everyone can tell I'm nervous' or 'they'll think I'm strange', and rates them as highly believable (70 or more out of 100).",
+        "Calls themselves harsh names after social events (for example 'idiot' or 'weird') and describes a mental picture of looking far more awkward than others report seeing."
+      ],
+      "longTermGoals": [
+        "The client keeps attention on the conversation and the people in it, drops protective habits that are not needed, and holds a more accurate and kinder view of how they come across."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "sad-personal-map",
+          "text": "By session 3, draw a personal map with the clinician of 1 recent hard social moment: the feared outcome, where attention went, the picture the client had of how they looked, and each protective habit they used.",
+          "interventionIds": ["social-anxiety-cognitive-techniques"]
+        },
+        {
+          "id": "sad-drop-safety-experiment",
+          "text": "By session 5, complete an in-session experiment with 2 short role-play conversations, one using the client's usual protective habits and inward focus and one without them. After each, rate anxiety and how anxious the client thinks they looked (0-100), then compare the two.",
+          "interventionIds": ["social-anxiety-cognitive-techniques", "behavioral-experiments", "safety-behavior-reduction"]
+        },
+        {
+          "id": "sad-video-feedback",
+          "text": "By session 7, if the client agrees, watch a recording of a role-play made in session (on a practice-approved device under the practice's privacy policy, never in this tool, and deleted when the client chooses). Before watching, the client predicts how anxious they will look (0-100); afterward, they rate what they actually saw.",
+          "interventionIds": ["social-anxiety-cognitive-techniques"]
+        },
+        {
+          "id": "sad-outward-attention",
+          "text": "Over weeks 4 to 10, practice moving attention outward (to the other person's words and face, or to the surroundings) for at least 5 minutes a day in everyday settings, rating how easy it was to stay outward-focused (0-10). Set any eye-contact goals at a level that fits the client's cultural norms.",
+          "interventionIds": ["social-anxiety-cognitive-techniques", "act-present-moment-self-as-context"]
+        },
+        {
+          "id": "sad-kinder-response",
+          "text": "By week 8, write a kinder and more realistic response to the client's 2 most common self-critical thoughts after social events, and use it after at least 3 events, rating self-criticism (0-10) before and after.",
+          "interventionIds": ["thought-record", "self-compassion-practice", "compassion-focused-imagery"]
+        },
+        {
+          "id": "sad-early-memory-rescripting",
+          "text": "If assessment shows a vivid, painful early memory of being humiliated, bullied or teased that is tied to the current self-image, decide together by week 8 whether to add imagery rescripting delivered by a clinician trained in the method (or through referral to one). If it is added, rate how believable the memory's message about the self is (0-100) before the first session and after each session.",
+          "interventionIds": ["imagery-rescripting"]
+        }
+      ],
+      "measureIds": ["gad-7"]
+    },
+    {
+      "id": "sad-narrowed-life-and-risky-coping",
+      "label": "A shrinking social world, stalled goals and coping that adds risk",
+      "definitions": [
+        "Has few people they contact outside work or the household in a typical month, and says they would like more friendships, a partner or community ties but has not been able to act on it.",
+        "Has passed up interviews, promotions, courses or leadership roles because they involve speaking up, being evaluated or meeting new people.",
+        "Drinks alcohol or uses other substances before or during social events to feel able to go, or skips events where they cannot.",
+        "Reports loneliness, low mood or hopelessness linked to isolation; any thoughts of death or self-harm call for direct clinician assessment at the time they come up."
+      ],
+      "longTermGoals": [
+        "The client builds and keeps a few rewarding relationships and moves toward the work, study or community roles they want.",
+        "Coping that adds risk, such as drinking to get through events, is noticed and replaced, and any suicide risk is handled through a safety plan built together with the client."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "sad-connection-goal",
+          "text": "By week 6, choose 1 relationship or community goal (for example joining a class, club, faith group or volunteer team) and take at least 1 small step toward it each week for 8 weeks, logging what happened and what the client learned.",
+          "interventionIds": ["act-committed-action", "behavioral-activation", "solution-focused-questions"]
+        },
+        {
+          "id": "sad-conversation-skills",
+          "text": "By week 8, practice at least 3 conversation or assertiveness skills in role-play (for example starting a chat, asking a follow-up question, making a request or saying no), then use each one in real life at least twice, set up as an experiment with the predicted and actual outcome written down.",
+          "interventionIds": ["assertiveness-training", "communication-skills-training", "dbt-interpersonal-effectiveness"]
+        },
+        {
+          "id": "sad-alcohol-check",
+          "text": "At intake and again by week 4, ask whether alcohol or other substances are used to get through social situations. If so, agree to attend at least 2 events a month without drinking beforehand, set up as planned experiments, and consider adding goals from the alcohol-use plan. Keep notes free of identifying details; where substance-use records fall under 42 CFR Part 2, note that 42 CFR Part 2 prohibits unauthorized disclosure of these records.",
+          "interventionIds": ["motivational-interviewing", "behavioral-experiments"]
+        },
+        {
+          "id": "sad-other-options",
+          "text": "If the client declines CBT for social anxiety, or has not benefited after an adequate course, discuss other options together by week 12, such as short-term psychodynamic therapy designed for social anxiety (an alternative NICE CG159 describes as less effective than CBT), a medication evaluation, or both, and record the client's choice.",
+          "interventionIds": ["short-term-psychodynamic-exploration", "medication-referral"]
+        },
+        {
+          "id": "sad-safety-plan-review",
+          "text": "Whenever risk is present (for example a PHQ-9 item 9 response above 0, or the client describes thoughts of death or self-harm), the clinician assesses risk directly and, in that same session, works with the client to create or review a written safety plan: personal warning signs, coping steps, people and places that help, professional and crisis contacts (call or text 988 in the US; elsewhere the local emergency number or findahelpline.com) and agreed steps to limit access to means of harm, including alcohol if it plays a part. Revisit the plan at every session while risk remains. Risk level and next steps are the clinician's decision; this tool never rates risk.",
+          "interventionIds": ["collaborative-safety-planning", "lethal-means-counseling"]
+        }
+      ],
+      "measureIds": ["phq-9"]
+    }
+  ],
+  "collaborativeNote": "These are starting points for clinician review, not a finished plan. Rewrite each goal and objective with the client in their own words, let the client choose the situations and the pace, and record their agreement before anything is added to the plan. Individual CBT developed for social anxiety is the first-line option in NICE CG159; the ACT, mindfulness, compassion-focused, skills-based, solution-focused and psychodynamic items are adjuncts or alternatives the client chooses with you. Social norms (eye contact, speaking up to elders or supervisors, modesty, gender roles) differ across cultures, so set practice targets that fit the client's context, and ask about culture-linked forms of social fear such as fear of offending or embarrassing others (for example taijin kyofusho). Imagery rescripting calls for specific training. Safety planning is always done together with the client, and the clinician makes every risk decision. Adult scope only. Do not add names or other identifying details. Resource only. Not a substitute for clinical judgment.",
+  "sources": [
+    { "title": "Social anxiety disorder: recognition, assessment and treatment (CG159)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/cg159", "year": 2013 },
+    { "title": "Social anxiety disorder (CG159): treatments for adults (information for the public)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/cg159/ifp/chapter/Treatments-for-adults" },
+    { "title": "Psychological and pharmacological interventions for social anxiety disorder in adults: a systematic review and network meta-analysis (Mayo-Wilson et al.)", "publisher": "The Lancet Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/26361000/", "year": 2014 },
+    { "title": "Cognitive therapy versus exposure and applied relaxation in social phobia: a randomized controlled trial (Clark et al.)", "publisher": "Journal of Consulting and Clinical Psychology (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/16822113/", "year": 2006 },
+    { "title": "Seeing is believing: using video feedback in cognitive therapy for social anxiety disorder (Warnock-Parkes et al.)", "publisher": "Cognitive and Behavioral Practice (PubMed Central)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5627505/", "year": 2017 },
+    { "title": "Randomized controlled trial of cognitive behavioral therapy and acceptance and commitment therapy for social phobia (Craske et al.)", "publisher": "Journal of Consulting and Clinical Psychology (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/24999670/", "year": 2014 },
+    { "title": "Imagery rescripting as a clinical intervention for aversive memories: a meta-analysis (Morina, Lancee and Arntz)", "publisher": "Journal of Behavior Therapy and Experimental Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/27855298/", "year": 2017 },
+    { "title": "Psychological Treatments (treatment index)", "publisher": "APA Division 12, Society of Clinical Psychology", "url": "https://div12.org/psychological-treatments/treatments/" },
+    { "title": "A meta-analysis of compassion-based interventions: current state of knowledge and future directions (Kirby, Tellegen and Steindl)", "publisher": "Behavior Therapy (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/29029675/", "year": 2017 },
+    { "title": "A meta-analysis of cultural adaptations of psychological interventions (Hall et al.)", "publisher": "Behavior Therapy (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/27993346/", "year": 2016 },
+    { "title": "Anxiety Disorders (health topic)", "publisher": "National Institute of Mental Health", "url": "https://www.nimh.nih.gov/health/topics/anxiety-disorders" },
+    { "title": "Comparison of the Safety Planning Intervention with follow-up vs usual care of suicidal patients treated in the emergency department (Stanley et al.)", "publisher": "JAMA Psychiatry (PubMed Central)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6142908/", "year": 2018 },
+    { "title": "CALM: Counseling on Access to Lethal Means", "publisher": "Suicide Prevention Resource Center", "url": "https://sprc.org/online-library/calm-counseling-on-access-to-lethal-means" },
+    { "title": "988 Suicide & Crisis Lifeline", "publisher": "988 Lifeline", "url": "https://988lifeline.org" },
+    { "title": "Find A Helpline (international directory)", "publisher": "Find A Helpline", "url": "https://findahelpline.com" },
+    { "title": "The HIPAA Privacy Rule and 42 CFR Part 2", "publisher": "US Department of Health and Human Services", "url": "https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/hipaa-part-2/index.html" },
+    { "title": "A Tipping Point for Measurement-Based Care (Fortney et al.)", "publisher": "Psychiatric Services; reprinted in Focus (PubMed Central)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6996080/", "year": 2017 },
+    { "title": "Implementing Measurement-Based Care in Behavioral Health: A Review (Lewis et al.)", "publisher": "JAMA Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/30566197/", "year": 2019 },
+    { "title": "Shared decision making (NG197)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng197", "year": 2021 },
+    { "title": "PHQ and GAD-7 screeners (reproduction terms)", "publisher": "Pfizer / PHQ Screeners", "url": "https://www.phqscreeners.com" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

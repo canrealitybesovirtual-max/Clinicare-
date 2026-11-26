@@ -1,0 +1,88 @@
+{
+  "id": "erp-practice-log",
+  "title": "Facing Fears Without Rituals: Practice Log",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 15,
+  "intro": "Many people have upsetting thoughts or doubts that keep coming back. You may feel a strong urge to do something to make the feeling go away. This could be washing, checking, counting, asking someone if things are okay, or saying certain words in your head. We call these rituals. Rituals bring quick relief. But over time, they teach your brain that the thought was a real danger, so the thought keeps coming back. In this practice, you face the trigger on purpose and choose not to do the ritual. You plan each step with your counselor. This log helps you keep track. Filling it in takes about 5 minutes after each practice.",
+  "sections": [
+    {
+      "heading": "Before you practice",
+      "steps": [
+        "Pick a step from the list you made with your counselor. Start with one that feels hard but doable.",
+        "Write the step in the log. For example, 'Touch the doorknob and don't wash for 1 hour' or 'Lock the door once and walk away.'",
+        "Ask yourself, 'What do I fear will happen if I don't do the ritual?' Write it down.",
+        "Decide what 'no ritual' means for this step. Include hidden rituals, like counting or going over things in your head. Asking others if things are okay counts too."
+      ]
+    },
+    {
+      "heading": "During practice",
+      "steps": [
+        "Do the step. Let the thought and the urge be there. You don't have to fight them or push them away.",
+        "Notice the urge rise. It may get strong. Then it often starts to fade on its own.",
+        "Stay with it long enough to learn something new. You do not have to wait until you feel calm.",
+        "Rate how upset you feel from 0 to 10, at the highest point and again at the end. A 0 means not at all. A 10 means the most you can imagine."
+      ]
+    },
+    {
+      "heading": "After practice",
+      "steps": [
+        "Write down if you skipped the ritual: yes, partly, or no. Be honest. There is no shame in a 'partly' or a 'no.'",
+        "Ask yourself: Did what I feared happen? How did I cope? What did I learn?",
+        "If you did a ritual, that's okay. If you can, face the same trigger again soon, and let the urge be there this time."
+      ]
+    },
+    {
+      "heading": "Tips",
+      "steps": [
+        "Practice every day if you can. Short, regular practice helps more than one long try once in a while.",
+        "Try the same step in different places and at different times.",
+        "Family and friends may try to help by telling you things are okay or by doing rituals for you. Talk with your counselor about other ways they can help.",
+        "Move up your list when a step feels easier. If a step feels too big, add a smaller one in between.",
+        "Be proud of each try, even when it is hard.",
+        "Bring this log to your next visit."
+      ]
+    }
+  ],
+  "practiceLog": {
+    "columns": [
+      "Day",
+      "Step I practiced",
+      "What I feared would happen",
+      "Highest upset (0-10)",
+      "Upset at end (0-10)",
+      "Skipped the ritual? (yes / partly / no)",
+      "What I learned"
+    ],
+    "rows": 10
+  },
+  "safetyNote": "Safety first: Only practice steps you have planned with your counselor. A practice step should feel scary, but it should never be truly dangerous, against the law, or harmful to you or anyone else. If washing or cleaning has hurt your skin, tell your doctor. Having an upsetting thought does not mean you want it or will act on it. But if you ever feel you might act on a thought of hurting yourself or someone else, that is not a practice step. Stop and get help right away. In the US, call or text 988, or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sources": [
+    {
+      "title": "NICE guideline CG31",
+      "publisher": "National Institute for Health and Care Excellence (NICE)",
+      "url": "https://www.nice.org.uk/guidance/cg31",
+      "year": 2005
+    },
+    {
+      "title": "Law and Boisseau: exposure and response prevention, current perspectives (review)",
+      "publisher": "Psychology Research and Behavior Management (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31920413/",
+      "year": 2019
+    },
+    {
+      "title": "Maximizing exposure therapy: an inhibitory learning approach (Craske et al.)",
+      "publisher": "Behaviour Research and Therapy (PubMed Central)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4114726/",
+      "year": 2014
+    },
+    {
+      "title": "Psychological Treatments (treatment index)",
+      "publisher": "APA Division 12, Society of Clinical Psychology",
+      "url": "https://div12.org/psychological-treatments/treatments/"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

@@ -1,0 +1,172 @@
+{
+  "conditionId": "prolonged-grief-disorder",
+  "problems": [
+    {
+      "id": "pgd-yearning-and-disbelief",
+      "label": "Intense longing for the person who died and trouble accepting the death",
+      "definitions": [
+        "Describes strong yearning for the person who died, or being taken up with thoughts and memories of them, on most days, long after the death and beyond what the client's family, culture or faith would expect.",
+        "Says the death still does not feel real, or acts as though the person might come back (for example keeping their room exactly as it was and being unable to change anything).",
+        "Reports waves of intense sorrow, anger, guilt or numbness about the loss that break into work, sleep or daily tasks several times a week.",
+        "Has trouble taking part in daily life or making plans since the death, for example leaving routines, work or social contact undone for weeks at a time."
+      ],
+      "longTermGoals": [
+        "The client comes to accept the reality of the death while keeping a sense of connection with the person that brings comfort rather than only pain.",
+        "Grief takes up less of the day, and the client can feel sadness alongside moments of enjoyment and purpose."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "pgd-initial-screening",
+          "text": "Within the first 2 sessions, the clinician screens for depression, trauma reactions (especially after a sudden or violent death), use of alcohol or sleep aids to cope, and thoughts of suicide, and agrees with the client whether grief-focused, trauma-focused or combined care should come first.",
+          "interventionIds": ["grief-focused-therapy", "cultural-formulation-exploration"]
+        },
+        {
+          "id": "pgd-share-the-story",
+          "text": "By session 3, share as much of the story of the relationship and the death as the client chooses, at their own pace, while the clinician listens and reflects back, and rate grief intensity (0-10) at the start and end of the session.",
+          "interventionIds": ["person-centered-reflective-listening", "grief-focused-therapy"]
+        },
+        {
+          "id": "pgd-daily-grief-rating",
+          "text": "For 4 weeks, rate grief intensity once a day (0-10) and note what made it heavier or lighter, then review the pattern with the clinician each week.",
+          "interventionIds": ["grief-focused-therapy", "mindful-check-in"]
+        },
+        {
+          "id": "pgd-how-grief-works",
+          "text": "By session 4, explain in their own words how grief usually softens with time, what may be keeping it stuck for them, and why moving back and forth between grieving and getting on with life is healthy.",
+          "interventionIds": ["grief-focused-therapy"]
+        },
+        {
+          "id": "pgd-make-room-for-waves",
+          "text": "Over weeks 3 to 10, practice making room for waves of grief (noticing and naming the feeling, breathing with it, letting it rise and fall) on at least 4 days a week, rating how much each wave stops them from doing what matters (0-10).",
+          "interventionIds": ["act-acceptance-willingness", "mindfulness-meditation"]
+        },
+        {
+          "id": "pgd-structured-loss-work",
+          "text": "Between weeks 6 and 14, when the client feels ready, take part in structured exercises that revisit the story of the death and support a comfortable ongoing bond with the person (for example an imagined conversation or a letter to them), delivered only by a clinician trained in grief-focused therapy or chair work, or through referral to one. Rate grief intensity (0-10) and avoidance of reminders (0-10) before the first exercise and after every 2 exercises.",
+          "interventionIds": ["grief-focused-therapy", "emotion-focused-chair-work"]
+        },
+        {
+          "id": "pgd-score-tracking",
+          "text": "Complete the PHQ-9 and GAD-7 at intake and every 2 to 4 weeks, along with any grief-specific scale the practice is licensed to use outside this app, and review the daily grief ratings. If scores have not improved across 2 check-ins in a row, revisit the plan together, including referral to a clinician trained in grief-focused therapy.",
+          "interventionIds": []
+        }
+      ],
+      "measureIds": ["phq-9", "gad-7"]
+    },
+    {
+      "id": "pgd-avoidance-and-withdrawal",
+      "label": "Avoiding reminders and pulling back from life after the loss",
+      "definitions": [
+        "Avoids places, objects, photos, people, dates or conversations linked to the person who died, and can list them when asked.",
+        "Or, at the other extreme, spends many hours a day with reminders (for example long daily grave visits or rereading old messages) in a way the client says keeps them from other parts of life.",
+        "Has dropped friendships, work, hobbies, or faith or community activities since the death.",
+        "Says they no longer know who they are or what their role is without the person."
+      ],
+      "longTermGoals": [
+        "The client can approach reminders of the person at a pace they choose, and builds a life with meaningful roles, relationships and plans."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "pgd-avoided-reminders-list",
+          "text": "Within 3 weeks, list at least 6 reminders, places or activities avoided since the death, rate each 0-100 for expected distress, and choose with the clinician which ones matter most to approach.",
+          "interventionIds": ["grief-focused-therapy", "graded-in-vivo-exposure"]
+        },
+        {
+          "id": "pgd-approach-reminders",
+          "text": "Over weeks 4 to 12, approach at least 1 listed reminder per week at the client's pace (for example looking through photos or visiting a shared place), stay until the planned end, and record distress (0-100) at the start and end. Approaching reminders of a traumatic death is done only by a clinician trained in that work.",
+          "interventionIds": ["grief-focused-therapy", "graded-in-vivo-exposure"]
+        },
+        {
+          "id": "pgd-hopes-and-steps",
+          "text": "By week 6, name at least 2 personal hopes or values for the future (for example a role, a relationship or a project) and take at least 1 small step toward one of them each week for 6 weeks.",
+          "interventionIds": ["act-values-clarification", "act-committed-action", "grief-focused-therapy"]
+        },
+        {
+          "id": "pgd-reengage",
+          "text": "By week 8, take part in at least 2 activities per week that the client has chosen (enjoyable, social, faith or community activities), rating mood (0-10) before and after each.",
+          "interventionIds": ["behavioral-activation"]
+        },
+        {
+          "id": "pgd-family-grief-map-optional",
+          "text": "If the client agrees, by week 8 map how the family or community has grieved this loss and earlier ones (genogram), including roles, rituals and who offers support, and choose 1 way to share grief with others.",
+          "interventionIds": ["genogram-family-systems", "cultural-formulation-exploration"]
+        },
+        {
+          "id": "pgd-hard-dates-plan",
+          "text": "At least 2 weeks before each anniversary, holiday or other hard date during treatment, write a short plan for the day that includes a way to honor the person, people to be with and 2 or more coping steps.",
+          "interventionIds": ["grief-focused-therapy", "problem-solving"]
+        }
+      ],
+      "measureIds": ["phq-9"]
+    },
+    {
+      "id": "pgd-guilt-and-safety",
+      "label": "Guilt, self-blame and risks to safety after the loss",
+      "definitions": [
+        "Repeats statements of blame (for example 'I should have seen it coming' or 'it was my fault') and goes over what could have been done differently.",
+        "Feels guilty about moments of enjoyment or about moving forward, and avoids pleasure as a result.",
+        "Expresses a wish to be with the person who died, or says life is not worth living without them.",
+        "May report thoughts of death, suicide or self-harm; risk can be higher after a death by suicide or another sudden or violent death; these call for direct clinician assessment at the time they come up."
+      ],
+      "longTermGoals": [
+        "The client holds a fairer, kinder view of their part in what happened and allows themselves to live fully while still honoring the person.",
+        "Any suicide risk is noticed early and handled through a safety plan built together with the client, with crisis contacts known and easy to reach."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "pgd-weigh-guilt-thoughts",
+          "text": "Over weeks 3 to 9, complete at least 1 thought record per week on a guilt or blame thought, looking at what the client knew and could do at the time, and re-rate belief in the blaming thought (0-100).",
+          "interventionIds": ["thought-record"]
+        },
+        {
+          "id": "pgd-compassionate-response",
+          "text": "Over weeks 4 to 10, practice a compassionate response to guilt or self-blame (for example imagining what a kind friend, or the person who died, might say) on at least 4 days a week, rating self-criticism (0-10) before and after.",
+          "interventionIds": ["self-compassion-practice", "compassion-focused-imagery"]
+        },
+        {
+          "id": "pgd-faith-resources-optional",
+          "text": "Only if the client asks to include faith or spirituality and gives informed consent: by week 6, explore in the client's own words their beliefs about death, comforting prayers or rituals and any spiritual struggles (for example anger at God), and choose at least 1 practice or faith-community support to use weekly. Leave this objective out if the client does not ask for it.",
+          "interventionIds": ["religiously-integrated-cbt", "grief-focused-therapy"]
+        },
+        {
+          "id": "pgd-depression-referral",
+          "text": "If depressive symptoms are significant (for example high or rising PHQ-9 totals), discuss a medication evaluation for the depression by week 6, explaining that medication may help depression but is not expected to resolve grief on its own.",
+          "interventionIds": ["medication-referral"]
+        },
+        {
+          "id": "pgd-safety-plan-review",
+          "text": "Whenever risk is present (for example a PHQ-9 item 9 response above 0, a stated wish to join the person who died, or thoughts of suicide or self-harm), the clinician assesses risk directly and, in that same session, builds or reviews a written safety plan with the client: early warning signs (including anniversaries and other hard dates), things the client can do alone, people and places that help, professional and crisis contacts (call or text 988 in the US, the local emergency number, or findahelpline.com elsewhere) and agreed steps to put time and distance between the client and means of harm. Revisit it at every session while risk remains. Risk level and next steps are the clinician's decision; this tool never rates risk.",
+          "interventionIds": ["collaborative-safety-planning", "lethal-means-counseling"]
+        }
+      ],
+      "measureIds": ["phq-9"]
+    }
+  ],
+  "collaborativeNote": "These are starting points for clinician review, not a finished plan, and they do not diagnose (see DSM-5-TR and ICD-11; the clinician decides any diagnosis). Most bereaved people do not need treatment, so do not treat grief that fits the client's culture and faith as a disorder or push a timeline for mourning. Rewrite every goal and objective with the client in their own words, let the client set the pace and how much they share about the death, and record their agreement before anything goes into the plan. Ongoing bonds with the person who died (talking to them, visiting graves, keeping altars, honoring ancestors) are normal in many cultures; work with them. Structured retelling of the death and chair work are for clinicians trained in those methods; otherwise refer. Faith-based steps are used only when the client asks for them and gives informed consent. If substance use comes up, do not record identifying details in this tool, and any note or export about it must carry this notice: 42 CFR Part 2 prohibits unauthorized disclosure of these records. Safety planning is always done with the client, and the clinician makes every risk decision; crisis contacts are 988 (call or text, US), the local emergency number and findahelpline.com. Do not add names or other identifying details. Resource only. Not a substitute for clinical judgment.",
+  "sources": [
+    { "title": "Treatment of complicated grief: a randomized controlled trial (Shear et al.)", "publisher": "JAMA", "url": "https://doi.org/10.1001/jama.293.21.2601", "year": 2005 },
+    { "title": "Optimizing treatment of complicated grief: a randomized clinical trial (Shear et al.)", "publisher": "JAMA Psychiatry", "url": "https://doi.org/10.1001/jamapsychiatry.2016.0892", "year": 2016 },
+    { "title": "Psychological interventions for grief in adults: a systematic review and meta-analysis of randomized controlled trials (Johannsen et al.)", "publisher": "Journal of Affective Disorders", "url": "https://doi.org/10.1016/j.jad.2019.04.065", "year": 2019 },
+    { "title": "Grief-focused cognitive behavioral therapies for prolonged grief symptoms: a systematic review and meta-analysis", "publisher": "PubMed (National Library of Medicine)", "url": "https://pubmed.ncbi.nlm.nih.gov/38573714/", "year": 2024 },
+    { "title": "Treatment of complicated grief: a comparison between cognitive-behavioral therapy and supportive counseling (Boelen et al.)", "publisher": "Journal of Consulting and Clinical Psychology (DOI)", "url": "https://doi.org/10.1037/0022-006X.75.2.277", "year": 2007 },
+    { "title": "Treating prolonged grief disorder: a randomized clinical trial (Bryant et al.)", "publisher": "JAMA Psychiatry (DOI)", "url": "https://doi.org/10.1001/jamapsychiatry.2014.1600", "year": 2014 },
+    { "title": "Center for Prolonged Grief: resources and training for clinicians", "publisher": "Columbia University School of Social Work", "url": "https://prolongedgrief.columbia.edu/for-clinicians/" },
+    { "title": "Clinical descriptions and diagnostic requirements for ICD-11 mental, behavioural and neurodevelopmental disorders (CDDR)", "publisher": "World Health Organization", "url": "https://www.who.int/publications/i/item/9789240077263", "year": 2024 },
+    { "title": "A meta-analysis of the efficacy of acceptance and commitment therapy for clinically relevant mental and physical health problems (A-Tjak et al.)", "publisher": "Psychotherapy and Psychosomatics (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/25547522/", "year": 2015 },
+    { "title": "A meta-analysis of compassion-based interventions: current state of knowledge and future directions (Kirby, Tellegen & Steindl)", "publisher": "Behavior Therapy (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/29029675/", "year": 2017 },
+    { "title": "Meditation and Mindfulness: Effectiveness and Safety", "publisher": "National Center for Complementary and Integrative Health (NCCIH)", "url": "https://www.nccih.nih.gov/health/meditation-and-mindfulness-effectiveness-and-safety" },
+    { "title": "Integrating clients' religion and spirituality within psychotherapy: a comprehensive meta-analysis (Captari et al.)", "publisher": "Journal of Clinical Psychology (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/30221353/", "year": 2018 },
+    { "title": "Suicide Prevention (health topic)", "publisher": "National Institute of Mental Health", "url": "https://www.nimh.nih.gov/health/topics/suicide-prevention" },
+    { "title": "Safety planning-type interventions for suicide prevention: meta-analysis (Nuij et al.)", "publisher": "British Journal of Psychiatry (DOI)", "url": "https://doi.org/10.1192/bjp.2021.50", "year": 2021 },
+    { "title": "CALM: Counseling on Access to Lethal Means", "publisher": "Suicide Prevention Resource Center", "url": "https://sprc.org/online-library/calm-counseling-on-access-to-lethal-means" },
+    { "title": "988 Suicide & Crisis Lifeline", "publisher": "988 Lifeline / SAMHSA", "url": "https://988lifeline.org" },
+    { "title": "Find A Helpline (international directory)", "publisher": "Find A Helpline", "url": "https://findahelpline.com" },
+    { "title": "The HIPAA Privacy Rule and 42 CFR Part 2", "publisher": "US Department of Health and Human Services", "url": "https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/hipaa-part-2/index.html" },
+    { "title": "PHQ and GAD-7 screeners (reproduction terms)", "publisher": "Pfizer / PHQ Screeners", "url": "https://www.phqscreeners.com" },
+    { "title": "AACC Code of Ethics", "publisher": "American Association of Christian Counselors", "url": "https://aacc.net/aacc-code-of-ethics/" },
+    { "title": "ACA Code of Ethics (2014) and ethics resources", "publisher": "American Counseling Association", "url": "https://www.counseling.org/resources/ethics", "year": 2014 }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

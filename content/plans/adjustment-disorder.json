@@ -1,0 +1,174 @@
+{
+  "conditionId": "adjustment-disorder",
+  "problems": [
+    {
+      "id": "adj-distress-and-preoccupation",
+      "label": "Distress and preoccupation since a recent life change or stressor",
+      "definitions": [
+        "Names a specific recent stressor or change (for example a job loss, breakup, move, new illness, money crisis or new caregiving duty) and dates the start of distress to it.",
+        "Spends long stretches, often an hour or more a day, going over the stressor, what it means or what might happen next, and finds it hard to turn attention to other things.",
+        "Reports frequent tearfulness, irritability, tension or worry since the change, at a level the client says is more than they would expect of themselves.",
+        "Has had trouble sleeping, focusing or making everyday decisions since the change."
+      ],
+      "longTermGoals": [
+        "The client copes with the stressor and its effects so that they can think about it when they choose, and distress stays at a level they can manage.",
+        "The client makes sense of the change in a way that fits their values, culture and faith, and feels able to face what comes next."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "adj-tell-the-story",
+          "text": "By session 2, describe the stressor and what has changed since, including what it means in the client's family, culture or community, and rate current distress (0-10) and how many hours a day the stressor takes up.",
+          "interventionIds": ["person-centered-reflective-listening", "cultural-formulation-exploration"]
+        },
+        {
+          "id": "adj-sort-what-can-change",
+          "text": "By session 4, sort the problems linked to the stressor into those the client can act on and those that call for acceptance or support, listing at least 2 of each.",
+          "interventionIds": ["problem-solving", "act-acceptance-willingness"]
+        },
+        {
+          "id": "adj-solve-one-problem",
+          "text": "Over weeks 3 to 8, work through at least 1 practical problem every 2 weeks using set steps (define it, list options, choose one, plan, try, review), and record the result.",
+          "interventionIds": ["problem-solving", "solution-focused-questions"]
+        },
+        {
+          "id": "adj-calming-skill",
+          "text": "Within 2 weeks, learn 1 calming or grounding skill (for example slow breathing, a brief mindful check-in or a distress tolerance skill) and use it at least once a day for 3 weeks, rating distress (0-10) before and after.",
+          "interventionIds": ["diaphragmatic-breathing", "mindful-check-in", "dbt-distress-tolerance"]
+        },
+        {
+          "id": "adj-contain-dwelling",
+          "text": "For 4 weeks, when the client notices they have been going over the stressor for more than 15 minutes, jot it down and shift to a planned activity, a problem-solving step or a set thinking time later that day, on at least 3 days a week.",
+          "interventionIds": ["worry-time", "problem-solving"]
+        },
+        {
+          "id": "adj-score-tracking",
+          "text": "Complete the PHQ-9 and GAD-7 at intake and every 2 to 4 weeks, reviewing totals and item responses together. If scores rise, or distress does not ease as the stressor settles, the clinician reviews the working diagnosis and the plan with the client (see DSM-5-TR and ICD-11).",
+          "interventionIds": []
+        }
+      ],
+      "measureIds": ["phq-9", "gad-7"]
+    },
+    {
+      "id": "adj-role-disruption",
+      "label": "Falling behind at work, home or with people since the change",
+      "definitions": [
+        "Has missed work, classes, appointments or caregiving duties since the stressor, or performance has slipped (for example late tasks or warnings at work).",
+        "Has pulled back from friends, family, faith or community activities that were part of life before the change.",
+        "Is adjusting to a new role or the loss of an old one (for example becoming a parent, retiring, divorcing, migrating or living with a new diagnosis) and says they do not know how to 'be' in the new situation.",
+        "Has had more arguments or tension at home or work since the stressor, by the client's report or, with consent, by others' report."
+      ],
+      "longTermGoals": [
+        "The client returns to, or rebuilds, the daily roles and relationships that matter to them, adapted to the new circumstances."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "adj-old-role-new-role",
+          "text": "By session 4, name what was lost and what was gained, or could be gained, with the role change, plus at least 2 skills or supports the new situation calls for.",
+          "interventionIds": ["interpersonal-psychotherapy", "narrative-externalizing"]
+        },
+        {
+          "id": "adj-rebuild-routine",
+          "text": "Over weeks 2 to 6, rebuild a basic daily routine (a regular wake time, regular meals and at least 1 planned activity a day) on at least 5 days a week, tracked on an activity log.",
+          "interventionIds": ["behavioral-activation"]
+        },
+        {
+          "id": "adj-valued-steps",
+          "text": "By week 6, choose at least 2 valued directions for this new chapter (for example being a steady parent or a reliable coworker) and take at least 2 small steps toward them each week for 4 weeks.",
+          "interventionIds": ["act-values-clarification", "act-committed-action"]
+        },
+        {
+          "id": "adj-ask-for-support",
+          "text": "By week 6, have at least 2 contacts a week with supportive people of the client's choosing, and by week 8 ask at least 1 of them for a specific kind of practical or emotional help.",
+          "interventionIds": ["communication-skills-training", "assertiveness-training"]
+        },
+        {
+          "id": "adj-family-map-optional",
+          "text": "If family strain is part of the picture and the client agrees, by week 8 draw a family map (genogram) showing roles, how the family has handled past changes and where support comes from, and choose 1 pattern to work on.",
+          "interventionIds": ["genogram-family-systems"]
+        },
+        {
+          "id": "adj-graded-return",
+          "text": "If the client is off work or study, by week 6 agree on a stepwise return plan with week-by-week steps, and coordinate with an employer, school or occupational health service only with the client's written consent.",
+          "interventionIds": ["problem-solving", "solution-focused-questions"]
+        }
+      ],
+      "measureIds": ["phq-9"]
+    },
+    {
+      "id": "adj-hopelessness-and-risky-coping",
+      "label": "Low mood, hopelessness or harmful coping after the stressor",
+      "definitions": [
+        "Talks about the future as ruined or says life will never be okay again, and has trouble naming anything to look forward to.",
+        "Has started coping in ways that may add harm since the stressor (for example drinking more, using other substances, overspending, gambling or not eating), by self-report.",
+        "Blames self harshly for the stressor or for how they are coping with it.",
+        "May report thoughts of death, of not wanting to be alive or of self-harm, even when the stressor might seem moderate to others; these call for direct clinician assessment at the time they come up."
+      ],
+      "longTermGoals": [
+        "The client holds a more hopeful, balanced view of the future and relies on ways of coping that do not create new harm.",
+        "Any suicide risk is noticed early and handled through a safety plan built together with the client, with crisis contacts known and easy to reach."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "adj-weigh-hopeless-thoughts",
+          "text": "Over weeks 2 to 8, complete at least 2 thought records a week on hopeless or self-blaming thoughts about the stressor, and re-rate belief in the original thought (0-100) after writing a fairer view.",
+          "interventionIds": ["thought-record"]
+        },
+        {
+          "id": "adj-coping-review",
+          "text": "By session 3, list current ways of coping and mark which help in the short run and which cause problems later; agree on at least 2 healthier swaps to try each week for 4 weeks. If drinking or other substance use has increased, the clinician screens further, explores the client's own reasons for change, and follows the safeguards for substance use information.",
+          "interventionIds": ["motivational-interviewing", "decisional-balance"]
+        },
+        {
+          "id": "adj-strengths-story",
+          "text": "By week 8, write or tell a short account of the change that includes what the client has learned about their strengths, values and supports, in the client's own words.",
+          "interventionIds": ["narrative-externalizing", "solution-focused-questions"]
+        },
+        {
+          "id": "adj-kinder-response",
+          "text": "Over weeks 4 to 8, answer self-blame about the stressor with a kinder, supportive statement at least once a day on 4 or more days a week, rating self-criticism (0-10) before and after.",
+          "interventionIds": ["self-compassion-practice"]
+        },
+        {
+          "id": "adj-faith-resources-optional",
+          "text": "Only if the client asks to include faith or spiritual practice and gives informed consent: by week 6, identify at least 1 practice or community support from the client's own tradition that helps them cope, and plan to use it at least weekly. Leave this objective out if the client does not ask for it.",
+          "interventionIds": ["religiously-integrated-cbt"]
+        },
+        {
+          "id": "adj-safety-plan-review",
+          "text": "Whenever risk is present (for example a PHQ-9 item 9 response above 0, or the client describes thoughts of death or self-harm), the clinician assesses risk directly and, in that same session, builds or reviews a written safety plan with the client: early warning signs, things the client can do alone, people and places that help, professional and crisis contacts (call or text 988 in the US, the local emergency number, or findahelpline.com elsewhere) and agreed steps to put time and distance between the client and means of harm, including alcohol where relevant. Revisit it at every session while risk remains. Risk level and next steps are the clinician's decision; this tool never rates risk.",
+          "interventionIds": ["collaborative-safety-planning", "lethal-means-counseling"]
+        }
+      ],
+      "measureIds": ["phq-9"]
+    }
+  ],
+  "collaborativeNote": "These are starting points for clinician review, not a finished plan, and they do not diagnose (see DSM-5-TR and ICD-11; the clinician decides any diagnosis and revisits it if distress lasts well beyond what the stressor and its effects would explain). Rewrite every goal and objective with the client in their own words, and record their agreement before anything goes into the plan. Keep the focus brief and practical, and respect that some stressors (discrimination, poverty, immigration stress, illness) are real and ongoing rather than problems of perception. Interpersonal psychotherapy is for clinicians trained in it; otherwise refer. Faith-based steps are used only when the client asks for them and gives informed consent. If substance use comes up, do not record identifying details in this tool, and any note or export about it must carry this notice: 42 CFR Part 2 prohibits unauthorized disclosure of these records. Safety planning is always done with the client, and the clinician makes every risk decision; crisis contacts are 988 (call or text, US), the local emergency number and findahelpline.com. Do not add names or other identifying details. Resource only. Not a substitute for clinical judgment.",
+  "sources": [
+    { "title": "Clinical descriptions and diagnostic requirements for ICD-11 mental, behavioural and neurodevelopmental disorders (CDDR)", "publisher": "World Health Organization", "url": "https://www.who.int/publications/i/item/9789240077263", "year": 2024 },
+    { "title": "A systematic review of psychological and pharmacological treatments for adjustment disorder in adults (O'Donnell et al.)", "publisher": "Journal of Traumatic Stress (DOI)", "url": "https://doi.org/10.1002/jts.22295", "year": 2018 },
+    { "title": "Problem Management Plus (PM+): individual psychological help for adults impaired by distress in communities exposed to adversity", "publisher": "World Health Organization", "url": "https://www.who.int/publications/i/item/problem-management-plus-(-pm-)-individual-psychological-help-for-adults-impaired-by-distress-in-communities-exposed-to-adversity" },
+    { "title": "Problem-solving therapy for depression: a meta-analysis (Bell & D'Zurilla)", "publisher": "Clinical Psychology Review (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/19299058/", "year": 2009 },
+    { "title": "Problem-solving therapy for adult depression: an updated meta-analysis (Cuijpers et al.)", "publisher": "European Psychiatry (DOI)", "url": "https://doi.org/10.1016/j.eurpsy.2017.11.006", "year": 2018 },
+    { "title": "Effectiveness of solution-focused brief therapy: a systematic qualitative review of controlled outcome studies (Gingerich and Peterson)", "publisher": "Research on Social Work Practice (SAGE)", "url": "https://staticssl.sagepub.com/sites/default/files/Gingerich%20and%20Peterson%20%282013%29%20Effectiveness%20of%20solution-focused%20brief%20therapy.pdf", "year": 2013 },
+    { "title": "Interpersonal psychotherapy for mental health problems: a comprehensive meta-analysis (Cuijpers et al.)", "publisher": "American Journal of Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/27032627/", "year": 2016 },
+    { "title": "Behavioural activation for depression: an update of meta-analysis of effectiveness and sub group analysis (Ekers et al.)", "publisher": "PLoS ONE (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/24936656/", "year": 2014 },
+    { "title": "A meta-analysis of the efficacy of acceptance and commitment therapy for clinically relevant mental and physical health problems (A-Tjak et al.)", "publisher": "Psychotherapy and Psychosomatics (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/25547522/", "year": 2015 },
+    { "title": "A meta-analysis of motivational interviewing: twenty-five years of empirical studies (Lundahl et al.)", "publisher": "Research on Social Work Practice (Utah State University repository)", "url": "https://digitalcommons.usu.edu/sswa_facpubs/199", "year": 2010 },
+    { "title": "Feasibility, acceptability and clinical utility of the Cultural Formulation Interview: mixed-methods results from the DSM-5 international field trial (Lewis-Fernandez et al.)", "publisher": "British Journal of Psychiatry", "url": "https://doi.org/10.1192/bjp.bp.116.193862", "year": 2017 },
+    { "title": "A meta-analysis of cultural adaptations of psychological interventions (Hall et al.)", "publisher": "Behavior Therapy (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/27993346/", "year": 2016 },
+    { "title": "Integrating clients' religion and spirituality within psychotherapy: a comprehensive meta-analysis (Captari et al.)", "publisher": "Journal of Clinical Psychology (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/30221353/", "year": 2018 },
+    { "title": "Suicide Prevention (health topic)", "publisher": "National Institute of Mental Health", "url": "https://www.nimh.nih.gov/health/topics/suicide-prevention" },
+    { "title": "Safety planning-type interventions for suicide prevention: meta-analysis (Nuij et al.)", "publisher": "British Journal of Psychiatry (DOI)", "url": "https://doi.org/10.1192/bjp.2021.50", "year": 2021 },
+    { "title": "CALM: Counseling on Access to Lethal Means", "publisher": "Suicide Prevention Resource Center", "url": "https://sprc.org/online-library/calm-counseling-on-access-to-lethal-means" },
+    { "title": "988 Suicide & Crisis Lifeline", "publisher": "988 Lifeline / SAMHSA", "url": "https://988lifeline.org" },
+    { "title": "Find A Helpline (international directory)", "publisher": "Find A Helpline", "url": "https://findahelpline.com" },
+    { "title": "The HIPAA Privacy Rule and 42 CFR Part 2", "publisher": "US Department of Health and Human Services", "url": "https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/hipaa-part-2/index.html" },
+    { "title": "PHQ and GAD-7 screeners (reproduction terms)", "publisher": "Pfizer / PHQ Screeners", "url": "https://www.phqscreeners.com" },
+    { "title": "AAMFT Code of Ethics", "publisher": "American Association for Marriage and Family Therapy", "url": "https://aamft.org/coe", "year": 2015 },
+    { "title": "AACC Code of Ethics", "publisher": "American Association of Christian Counselors", "url": "https://aacc.net/aacc-code-of-ethics/" },
+    { "title": "ACA Code of Ethics (2014) and ethics resources", "publisher": "American Counseling Association", "url": "https://www.counseling.org/resources/ethics", "year": 2014 }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

@@ -1,0 +1,185 @@
+{
+  "conditionId": "alcohol-use-disorder",
+  "problems": [
+    {
+      "id": "aud-drinking-and-health-risk",
+      "label": "Drinking past intended limits, with risks to health and safety",
+      "definitions": [
+        "Keeps drinking past a limit they set for themselves on 1 or more days in a typical week, or drinks enough on some days to have memory gaps, falls, injuries or hangovers that lead to missed work or caregiving.",
+        "Has tried to cut down or stop at least once in the past year and returned to the earlier pattern within weeks.",
+        "Reports shakiness, sweating, a racing heart, nausea, poor sleep or strong anxiety when not drinking, or drinks early in the day to steady themselves; these can be signs of physical dependence and call for medical assessment.",
+        "Drinks in situations that raise the risk of harm, such as before driving, while in sole charge of children, or together with sedatives, sleep medicines or opioids.",
+        "Reports health warnings linked to drinking from a medical provider, for example abnormal liver tests, high blood pressure or stomach problems."
+      ],
+      "longTermGoals": [
+        "The client reaches and keeps a drinking goal they chose (stopping, or a lower-risk pattern where a medical provider agrees it is safe), and the harms drinking was causing are reduced.",
+        "Any change in drinking happens safely, with medical oversight whenever withdrawal risk is present."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "aud-withdrawal-risk-check",
+          "text": "At the first session, before any plan to cut down or stop, the clinician asks about daily or near-daily heavy drinking, past withdrawal symptoms (shaking, sweating, seeing or hearing things that are not there, seizures or confusion) and use of benzodiazepines or other sedatives. If any are present, refer the client for a medical assessment of withdrawal risk (primary care or an addiction medicine provider, or emergency care for severe or worsening symptoms), and agree that the client will not stop suddenly on their own before a medical provider has advised on safe withdrawal management. This tool does not judge withdrawal severity.",
+          "interventionIds": ["medication-referral"]
+        },
+        {
+          "id": "aud-drinking-diary",
+          "text": "For the first 4 weeks, keep a private daily drinking diary on paper or the client's own device (standard drinks, time, setting, mood and urge strength 0-10) and talk it through in each session. The diary carries no names or other identifying details, and nothing from it is typed into this tool.",
+          "interventionIds": ["motivational-interviewing", "relapse-prevention-planning"]
+        },
+        {
+          "id": "aud-choose-goal",
+          "text": "By session 3, the client chooses a drinking goal in their own words (stopping, or specific daily and weekly limits if a medical provider agrees this is safe), writes it on their own copy of the plan and rates confidence in reaching it (0-10).",
+          "interventionIds": ["motivational-interviewing"]
+        },
+        {
+          "id": "aud-harm-reduction-steps",
+          "text": "By week 2, agree on at least 2 immediate safety steps the client is willing to take, such as never driving after drinking, arranging other adult care for children on days they drink, or not mixing alcohol with sedatives, sleep medicines or opioids, and check in on each step every session.",
+          "interventionIds": ["motivational-interviewing", "problem-solving"]
+        },
+        {
+          "id": "aud-medication-discussion",
+          "text": "By week 4, with the client's consent, share plain-language information about FDA-approved medicines for alcohol use disorder (naltrexone, acamprosate and disulfiram) and offer a referral to a prescriber. The client decides; if referred, confirm by week 8 whether the appointment happened and how it went.",
+          "interventionIds": ["medication-referral"]
+        },
+        {
+          "id": "aud-score-tracking",
+          "text": "Complete the PHQ-9 and GAD-7 at intake and every 2 to 4 weeks to check for low mood and anxiety, which often occur alongside drinking problems and can set off drinking. An alcohol screening tool such as the AUDIT is license pending in this app; use it by link-out only if the practice has confirmed its terms. If scores rise, or drinking has not changed across 2 check-ins in a row, revisit the plan and level of care together.",
+          "interventionIds": []
+        }
+      ],
+      "measureIds": ["phq-9", "gad-7"]
+    },
+    {
+      "id": "aud-mixed-feelings-about-change",
+      "label": "Feeling two ways about changing drinking",
+      "definitions": [
+        "Says things that point both ways within the same conversation, such as 'I know it's getting out of hand, but it's the only way I unwind.'",
+        "Can name some harms from drinking (arguments at home, money worries, health warnings or missed work) but describes them as not serious yet, or as someone else's concern.",
+        "Misses or cancels sessions after heavy drinking days, or after sessions where drinking was discussed."
+      ],
+      "longTermGoals": [
+        "The client's own reasons for change are clear to them, and they commit to a change plan they chose."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "aud-own-reasons",
+          "text": "By session 3, the client names in their own words at least 3 personal reasons for changing their drinking and at least 1 strength or past success that could help, recorded on the client's own copy of the plan.",
+          "interventionIds": ["motivational-interviewing", "decisional-balance"]
+        },
+        {
+          "id": "aud-ruler-check",
+          "text": "At each of the first 6 sessions, rate how important change feels and how confident the client feels about it (each 0-10), and talk through what it would take to move each rating up by 1 point.",
+          "interventionIds": ["motivational-interviewing"]
+        },
+        {
+          "id": "aud-exceptions",
+          "text": "By session 4, describe at least 2 recent times when drinking was lower or did not happen, what was different about those times, and plan to repeat at least 1 of those conditions each week for 4 weeks.",
+          "interventionIds": ["solution-focused-questions"]
+        },
+        {
+          "id": "aud-values-activities",
+          "text": "By week 6, link the drinking goal to at least 2 personal values (for example being present for family, health, work, faith or community) and schedule at least 2 alcohol-free activities tied to those values each week for 6 weeks.",
+          "interventionIds": ["act-values-clarification", "act-committed-action", "behavioral-activation"]
+        },
+        {
+          "id": "aud-family-involvement",
+          "text": "If the client wishes and there is no domestic abuse, invite a supportive partner or family member to at least 1 session by week 8 to plan practical support. Where a regular partner is willing, discuss behavioural couples therapy, an option NICE CG115 describes for harmful drinking and mild dependence.",
+          "interventionIds": ["genogram-family-systems", "communication-skills-training"]
+        },
+        {
+          "id": "aud-faith-support",
+          "text": "Only if the client raises faith and asks to include it, and after documented informed consent: by week 6, identify faith practices, texts or community supports the client sees as helpful for their drinking goal and plan to use at least 1 of them each week. The client leads; the clinician does not introduce, endorse or challenge beliefs.",
+          "interventionIds": ["religiously-integrated-cbt"]
+        }
+      ],
+      "measureIds": []
+    },
+    {
+      "id": "aud-cravings-and-return-to-drinking",
+      "label": "Cravings, high-risk situations and returning to heavy drinking",
+      "definitions": [
+        "Reports strong urges to drink in predictable situations, such as after work, after an argument, when alone in the evening, on payday or at celebrations.",
+        "Has gone back to heavy drinking after a period of change, often after one drink followed by thoughts like 'I've already blown it, so I might as well keep going.'",
+        "Has few alcohol-free ways to deal with stress, boredom, poor sleep, pain or low mood.",
+        "Any thoughts of suicide or self-harm, including during intoxication or withdrawal, call for direct clinician assessment at the time they come up."
+      ],
+      "longTermGoals": [
+        "The client handles cravings and high-risk situations without returning to heavy drinking, and treats any slip as information to learn from rather than proof of failure.",
+        "Any suicide risk is noticed early and handled through a safety plan built together with the client, including steps that address drinking during a crisis."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "aud-high-risk-map",
+          "text": "By week 4, use the drinking diary to list at least 5 personal high-risk situations, rate each for typical urge strength (0-10), and plan at least 1 specific coping response for each.",
+          "interventionIds": ["relapse-prevention-planning", "problem-solving"]
+        },
+        {
+          "id": "aud-urge-surfing",
+          "text": "Over weeks 3 to 10, practice urge surfing at least 4 times a week, during real cravings or as a short planned practice, noting urge strength at the start, the peak and the end on an urge log.",
+          "interventionIds": ["urge-surfing", "mindfulness-meditation"]
+        },
+        {
+          "id": "aud-drink-refusal",
+          "text": "By week 6, role-play at least 2 ways of turning down a drink that fit the client's culture and relationships, then use them in at least 2 real situations and note what happened.",
+          "interventionIds": ["assertiveness-training", "communication-skills-training"]
+        },
+        {
+          "id": "aud-hard-moment-skills",
+          "text": "By week 8, learn at least 2 alcohol-free skills for intense emotion (for example slow breathing, a brisk walk or a planned distraction) and use one of them in at least half of the logged high-urge moments.",
+          "interventionIds": ["dbt-distress-tolerance", "diaphragmatic-breathing"]
+        },
+        {
+          "id": "aud-contingency-management-referral",
+          "text": "By week 6, explain contingency management in plain language. If the client is interested and a local program with reliable testing exists, refer with written consent that meets 42 CFR Part 2. Contingency management is delivered by an established program and is never improvised by a solo clinician.",
+          "interventionIds": ["contingency-management"]
+        },
+        {
+          "id": "aud-written-relapse-plan",
+          "text": "By week 10, write a relapse prevention plan with the client: early warning signs, top high-risk situations, coping steps, support options the client chooses (for example a 12-step group, SMART Recovery or a faith-based recovery group), and a lapse plan for the first 24 hours after a drink that swaps self-blame for a next step. Names of support people stay on the client's own copy only.",
+          "interventionIds": ["relapse-prevention-planning", "self-compassion-practice"]
+        },
+        {
+          "id": "aud-safety-plan-review",
+          "text": "Whenever risk is present (for example a PHQ-9 item 9 response above 0, thoughts of suicide or self-harm, or dangerous intoxication), the clinician assesses risk directly and, in that same session, works with the client to create or review a written safety plan: personal warning signs (including drinking more), coping steps, people and places that help, professional and crisis contacts (call or text 988 in the US; elsewhere the local emergency number or findahelpline.com) and agreed steps to limit access to means of harm, such as firearms, stored medicines and alcohol in the home during a crisis. Revisit the plan at every session while risk remains. Risk level and next steps are the clinician's decision; this tool never rates risk.",
+          "interventionIds": ["collaborative-safety-planning", "lethal-means-counseling"]
+        }
+      ],
+      "measureIds": ["phq-9"]
+    }
+  ],
+  "collaborativeNote": "42 CFR Part 2 prohibits unauthorized disclosure of these records. These are starting points for clinician review, not a finished plan. Rewrite each goal and objective with the client in their own words, respect the client's choice of goal (stopping, or cutting down where medically safe), and record their agreement before anything is added to the plan. Check withdrawal risk first: alcohol withdrawal can be dangerous, and anyone drinking heavily every day, with past withdrawal symptoms or also using sedatives needs a medical assessment before cutting down. Medication and contingency management come from prescribers and established programs; this plan supports referral only. Share substance-use information only with written consent that meets Part 2, and never type identifying details, diary entries or test results into this tool; nothing is stored or sent. Use person-first language the client is comfortable with, and fit drink-refusal practice, family involvement, mutual-help and faith options to the client's culture and wishes. Safety planning is always done together with the client, and the clinician makes every risk decision. Adult scope only. Resource only. Not a substitute for clinical judgment.",
+  "sources": [
+    { "title": "Alcohol-use disorders: diagnosis, assessment and management of harmful drinking (high-risk drinking) and alcohol dependence (CG115)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/cg115", "year": 2011 },
+    { "title": "Alcohol-use disorders: diagnosis and management of physical complications (CG100)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/cg100", "year": 2010 },
+    { "title": "Healthcare Professional's Core Resource on Alcohol", "publisher": "National Institute on Alcohol Abuse and Alcoholism", "url": "https://niaaa.nih.gov/health-professionals-communities/core-resource-on-alcohol" },
+    { "title": "NIAAA Alcohol Treatment Navigator", "publisher": "National Institute on Alcohol Abuse and Alcoholism", "url": "https://alcoholtreatment.niaaa.nih.gov/" },
+    { "title": "The American Psychiatric Association practice guideline for the pharmacological treatment of patients with alcohol use disorder (Reus et al.; Focus reprint)", "publisher": "Focus (American Psychiatric Association Publishing)", "url": "https://doi.org/10.1176/appi.focus.17205", "year": 2018 },
+    { "title": "Medication for the Treatment of Alcohol Use Disorder: A Brief Guide (SMA15-4907)", "publisher": "Substance Abuse and Mental Health Services Administration", "url": "https://store.samhsa.gov/product/medication-treatment-alcohol-use-disorder-brief-guide/sma15-4907", "year": 2015 },
+    { "title": "TIP 35: Enhancing Motivation for Change in Substance Use Disorder Treatment (PEP19-02-01-003)", "publisher": "Substance Abuse and Mental Health Services Administration", "url": "https://store.samhsa.gov/product/tip-35-enhancing-motivation-change-substance-use-disorder-treatment/pep19-02-01-003", "year": 2019 },
+    { "title": "VA/DoD Clinical Practice Guideline for the Management of Substance Use Disorders: provider summary", "publisher": "US Department of Veterans Affairs and Department of Defense", "url": "https://www.healthquality.va.gov/guidelines/MH/sud/VADoDSUDCPGProviderSummary.pdf", "year": 2021 },
+    { "title": "The management of substance use disorders: synopsis of the 2021 US Department of Veterans Affairs and US Department of Defense clinical practice guideline", "publisher": "Annals of Internal Medicine (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/35313113/", "year": 2022 },
+    { "title": "Evidence Brief: Motivational Enhancement Therapy for Alcohol Use Disorder", "publisher": "Psychological Health Center of Excellence, Military Health System", "url": "https://health.mil/Reference-Center/Publications/2021/04/26/PHCoE-Evidence-Brief-Motivational-Enhancement-Therapy-for-AUD-508", "year": 2021 },
+    { "title": "Relapse prevention: an overview of Marlatt's cognitive-behavioral model (Larimer, Palmer and Marlatt)", "publisher": "Alcohol Research and Health (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/10890810/", "year": 1999 },
+    { "title": "Efficacy of relapse prevention: a meta-analytic review (Irvin, Bowers, Dunn and Wang)", "publisher": "Journal of Consulting and Clinical Psychology (DOI)", "url": "https://doi.org/10.1037/0022-006X.67.4.563", "year": 1999 },
+    { "title": "Relative efficacy of mindfulness-based relapse prevention, standard relapse prevention, and treatment as usual for substance use disorders: a randomized clinical trial (Bowen et al.)", "publisher": "JAMA Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/24647726/", "year": 2014 },
+    { "title": "Contingency management for treatment of substance use disorders: a meta-analysis (Prendergast et al.)", "publisher": "Addiction (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/17034434/", "year": 2006 },
+    { "title": "Ethyl glucuronide-based contingency management for outpatients with co-occurring alcohol use disorders and serious mental illness (McDonell et al.)", "publisher": "American Journal of Psychiatry (DOI)", "url": "https://doi.org/10.1176/appi.ajp.2016.16050627", "year": 2017 },
+    { "title": "Drink refusal training as part of a combined behavioral intervention: effectiveness and mechanisms of change (Witkiewitz, Donovan and Hartzler)", "publisher": "PubMed Central", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3349797/", "year": 2012 },
+    { "title": "An initial meta-analysis of acceptance and commitment therapy for treating substance use disorders (Lee, An, Levin and Twohig)", "publisher": "Drug and Alcohol Dependence", "url": "https://doi.org/10.1016/j.drugalcdep.2015.08.004", "year": 2015 },
+    { "title": "Integrating clients' religion and spirituality within psychotherapy: a comprehensive meta-analysis (Captari et al.)", "publisher": "Journal of Clinical Psychology (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/30221353/", "year": 2018 },
+    { "title": "FindTreatment.gov", "publisher": "Substance Abuse and Mental Health Services Administration", "url": "https://findtreatment.gov" },
+    { "title": "The HIPAA Privacy Rule and 42 CFR Part 2", "publisher": "US Department of Health and Human Services", "url": "https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/hipaa-part-2/index.html" },
+    { "title": "Comparison of the Safety Planning Intervention with follow-up vs usual care of suicidal patients treated in the emergency department (Stanley et al.)", "publisher": "JAMA Psychiatry (PubMed Central)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6142908/", "year": 2018 },
+    { "title": "CALM: Counseling on Access to Lethal Means", "publisher": "Suicide Prevention Resource Center", "url": "https://sprc.org/online-library/calm-counseling-on-access-to-lethal-means" },
+    { "title": "988 Suicide & Crisis Lifeline", "publisher": "988 Lifeline", "url": "https://988lifeline.org" },
+    { "title": "Find A Helpline (international directory)", "publisher": "Find A Helpline", "url": "https://findahelpline.com" },
+    { "title": "AACC Code of Ethics", "publisher": "American Association of Christian Counselors", "url": "https://aacc.net/aacc-code-of-ethics/" },
+    { "title": "ACA Code of Ethics (2014) and ethics resources", "publisher": "American Counseling Association", "url": "https://www.counseling.org/resources/ethics", "year": 2014 },
+    { "title": "A Tipping Point for Measurement-Based Care (Fortney et al.)", "publisher": "Psychiatric Services; reprinted in Focus (PubMed Central)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6996080/", "year": 2017 },
+    { "title": "Shared decision making (NG197)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng197", "year": 2021 },
+    { "title": "PHQ and GAD-7 screeners (reproduction terms)", "publisher": "Pfizer / PHQ Screeners", "url": "https://www.phqscreeners.com" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

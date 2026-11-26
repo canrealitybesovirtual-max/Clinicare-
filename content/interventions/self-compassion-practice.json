@@ -5,17 +5,18 @@
   "conditions": [
     "major-depressive-disorder",
     "generalized-anxiety-disorder",
-    "ptsd"
+    "ptsd",
+    "persistent-depressive-disorder"
   ],
-  "evidenceLevel": "Emerging-to-moderate evidence; not a guideline-recommended stand-alone treatment for any condition in this app, so use it as an adjunct. A meta-analysis of 21 RCTs of compassion-based interventions found moderate effects on self-compassion, depression, anxiety and distress, mostly from small samples (Kirby et al., 2017). A meta-analysis of 27 RCTs of self-compassion-based interventions found moderate effects on depression, anxiety, stress, rumination and self-criticism (Ferrari et al., 2019); a later meta-analysis in clinical populations found no significant differences when self-compassion-related therapies were compared with active control conditions (Wilson et al., 2018), so certainty is limited. In a small RCT, the Mindful Self-Compassion program improved self-compassion and well-being versus waitlist (Neff & Germer, 2013). In an open pilot of loving-kindness meditation for PTSD, symptom reductions were mediated by gains in self-compassion (Kearney et al., 2013).",
+  "evidenceLevel": "Emerging-to-moderate evidence; not a guideline-recommended stand-alone treatment for any condition in this app, so use it as an adjunct. A meta-analysis of 21 RCTs of compassion-based interventions found moderate effects on self-compassion, depression, anxiety and distress, mostly from small samples (Kirby et al., 2017). A meta-analysis of 27 RCTs of self-compassion-based interventions found moderate effects on depression, anxiety, stress, rumination and self-criticism (Ferrari et al., 2019); another meta-analysis found no significant differences when self-compassion-related therapies were compared with active control conditions (Wilson et al., 2018), so certainty is limited. In a small RCT, the Mindful Self-Compassion program improved self-compassion and well-being versus waitlist (Neff & Germer, 2013). In an open pilot of loving-kindness meditation for PTSD, symptom reductions were mediated by gains in self-compassion (Kearney et al., 2013).",
   "minutes": { "min": 10, "max": 25 },
   "purpose": "Builds the client's capacity to meet their own pain, mistakes and perceived flaws with warmth and support instead of harsh self-attack. It draws on Neff's model of self-compassion (kindness toward oneself, recognizing that struggle is part of being human, and balanced awareness of pain) and on Gilbert's compassion-focused therapy. The clinician helps the client notice the self-critical voice, understand what it is trying to protect, and practice a kinder but still honest inner voice and soothing gestures. Exercises here are original; scripted exercises from the Mindful Self-Compassion program are not reproduced. Fit across presentations: Anxiety - softens fear of failure and self-attack after anxious moments, and reduces post-event self-criticism in social anxiety, which can support exposure. Depression - directly targets the self-criticism and shame that feed low mood and rumination. Trauma - addresses shame and self-blame; go slowly, because kindness can feel unsafe at first. Substance use - weakens the shame-and-relapse cycle after a lapse ('I already blew it, so why stop'), supporting recommitment. Grief - supports self-kindness amid guilt and regret.",
   "steps": [
     "Explore the inner critic: what it says, its tone of voice, when it shows up, and what it may be trying to protect the client from (failure, rejection, being caught off guard). Acknowledge its protective intent.",
     "Ask the friend question: how would the client respond to a close friend in the same situation? Compare that with how they speak to themselves.",
-    "Explain three elements in plain words: name the pain honestly, remember that others struggle too, and offer kind and useful words.",
-    "Practice a short three-part pause in session around a mild or moderate recent difficulty, not the client's most painful memory.",
-    "If comfortable for the client, add a soothing gesture (a hand on the chest or arm, a warm drink, a comforting object) and a warm tone of voice. Always optional.",
+    "Explain the idea in plain words: noticing pain honestly, remembering that struggle is part of being human, and treating oneself with warmth rather than attack (Neff's model; Gilbert's compassion-focused therapy).",
+    "In session, around a mild or moderate recent difficulty (not the client's most painful memory), help the client write a short reply to the critic that is fair (facts, not labels), warm (a caring tone) and useful (one next step). This format is original to this app; for Neff's own scripted exercises, see her published materials.",
+    "If helpful, pair the reply with a slow, calming breath or a comforting object (a warm drink, a blanket) and a warm tone of voice. Always optional.",
     "Write two or three kind self-talk phrases in the client's own words for the kind-self-talk handout and coping cards.",
     "Address common fears: self-compassion is not self-pity, excuse-making or lowering standards. Being kind after a mistake can make it easier to take responsibility and try again.",
     "Assign practice whenever the critic shows up, and review what happened at the next session."
@@ -23,15 +24,15 @@
   "script": [
     "I notice you're really hard on yourself. If your best friend made the same mistake, what would you say to them?",
     "That voice calling you stupid might be trying to keep you from messing up again. But does it actually help, or does it mostly make you feel worse?",
-    "Let's try something. First, name what hurts, plainly: 'This is really hard right now.'",
-    "Next, remember you're not the only one: 'Lots of people would struggle with this. I'm not alone in this.'",
-    "Then offer yourself something kind and useful, the way you would to a friend: 'I made a mistake. I can learn from it, and I can take the next step.'",
-    "If it feels okay, rest a hand on your chest or your arm and notice the warmth. If it feels strange or uncomfortable, that's common at first, and you can skip it.",
+    "Let's write a reply to that critic. First, make it fair. What actually happened, without the labels?",
+    "Now make it warm. How would you say that to someone you care about? What tone would you use?",
+    "Last, make it useful. What is one small next step you could take?",
+    "If it helps, take a slow breath first, or hold something warm while you read your reply back. If it feels strange at first, that's common, and you can skip it.",
     "Being kind to yourself isn't letting yourself off the hook. People who treat themselves kindly after a slip often find it easier to get back on track."
   ],
   "contraindications": [
     "Turning kindness inward can at first stir up fear, grief or distress, especially for clients with abuse or harsh early environments. Go slowly, normalize the reaction, shorten the practice, and coordinate with trauma-focused care where relevant.",
-    "Touch gestures can be triggering. Offer them only as an option, and the clinician never touches the client.",
+    "Comfort gestures and body-focused steps can be triggering. Offer them only as an option, and the clinician never touches the client.",
     "Self-compassion does not excuse harm to others. When guilt fits real harm, pair self-compassion with accountability and repair.",
     "If self-criticism includes suicidal thoughts or self-harm urges, follow your risk protocol and safety planning, and keep 988 in the US (call or text), the local emergency number and findahelpline.com visible. The clinician, not this tool, judges risk.",
     "Substance-use care: screen for withdrawal risk (alcohol or benzodiazepine withdrawal needs medical referral), coordinate with SUD treatment, and keep notes and handouts free of identifying details. 42 CFR Part 2 prohibits unauthorized disclosure of these records."

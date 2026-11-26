@@ -1,0 +1,168 @@
+{
+  "conditionId": "obsessive-compulsive-disorder",
+  "problems": [
+    {
+      "id": "ocd-obsessions-and-rituals",
+      "label": "Unwanted intrusive thoughts and the rituals used to cancel or prevent them",
+      "definitions": [
+        "Describes upsetting thoughts, pictures or urges that push into the mind many times a day and that the client sees as at odds with who they are, such as fears of contamination, of harming someone by accident, of having done something morally wrong, or of things not being exactly right.",
+        "Responds with repeated actions or silent mental routines meant to ease distress or head off a feared outcome, such as washing or cleaning, going back to check doors or appliances, arranging items until they feel right, going over memories or repeating a set phrase.",
+        "Loses a measurable part of the day to the cycle, for example arriving late to work most days because of checking, showers that last 45 minutes or longer, or chores left unfinished.",
+        "Shows visible effects such as raw or cracked hands from washing, or steers clear of places, objects or people that set off the thoughts, and can list them when asked."
+      ],
+      "longTermGoals": [
+        "Obsessional thoughts lose their grip: the client can notice them, let them come and go, and carry on with the day without rituals, and the time OCD takes up falls to a level the client finds livable."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "ocd-cycle-map",
+          "text": "By session 3, map with the clinician at least 3 trigger-thought-ritual cycles from the past week, including mental rituals, avoidance and reassurance-seeking, and describe in the client's own words how rituals bring short-term relief but keep the cycle going.",
+          "interventionIds": ["exposure-and-response-prevention"]
+        },
+        {
+          "id": "ocd-ritual-baseline",
+          "text": "For 2 weeks, log rituals each day (trigger, ritual, estimated minutes, distress 0-10 before and after) to set a baseline for total daily ritual time.",
+          "interventionIds": ["exposure-and-response-prevention"]
+        },
+        {
+          "id": "ocd-practice-list",
+          "text": "By session 5, build together a graded list of 10 to 15 practice tasks rated for expected distress (0-100), including written or imagined tasks for feared thoughts that cannot or should not be acted out in real life.",
+          "interventionIds": ["exposure-and-response-prevention"]
+        },
+        {
+          "id": "ocd-erp-practice",
+          "text": "Over weeks 5 to 16, complete ERP practice in every session and at least 5 home practices a week, staying with each task without rituals until the planned end, and record expected versus actual distress and what was learned.",
+          "interventionIds": ["exposure-and-response-prevention", "behavioral-experiments"]
+        },
+        {
+          "id": "ocd-defusion-support",
+          "text": "From week 4, use at least 1 defusion or willingness skill during home practice (for example labeling 'I'm having the thought that my hands are dirty', or making room for the discomfort), rating willingness 0-10, as support for response prevention and not as a new way to cancel the thought.",
+          "interventionIds": ["act-cognitive-defusion", "act-acceptance-willingness"]
+        },
+        {
+          "id": "ocd-ritual-reduction",
+          "text": "By week 12, cut total daily ritual time to half of the 2-week baseline or less, measured with the same daily log.",
+          "interventionIds": ["exposure-and-response-prevention"]
+        },
+        {
+          "id": "ocd-score-tracking",
+          "text": "Complete the GAD-7 and PHQ-9 at intake and every 2 to 4 weeks, along with an OCD severity scale the practice is licensed to use outside this app (the Y-BOCS is license pending here). If scores or ritual time have not improved across 2 check-ins in a row, or daily life is badly affected, discuss stepping up care together: more intensive ERP, referral to a specialist OCD service, or a medication evaluation (NICE CG31 matches treatment intensity to the level of impairment).",
+          "interventionIds": ["medication-referral"]
+        }
+      ],
+      "measureIds": ["gad-7", "phq-9"]
+    },
+    {
+      "id": "ocd-accommodation-and-reassurance",
+      "label": "Family and partners pulled into rituals and reassurance",
+      "definitions": [
+        "Family members or a partner take part in rituals at the client's request, for example rewashing items, answering the same question many times a day or checking locks on the client's behalf.",
+        "Asks others for reassurance about the same fear several times a day, and becomes upset, tearful or angry when they decline.",
+        "Household routines such as meals, laundry, outings or having guests have changed to avoid setting off the client's distress, by self or collateral report."
+      ],
+      "longTermGoals": [
+        "The client and the people they live with respond to OCD in a warm, supportive way that does not feed rituals, with less conflict at home."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "ocd-externalize",
+          "text": "By session 4, give OCD a name or character, describe in the client's own words how it pushes them and the household around, and use this shared language when planning practices.",
+          "interventionIds": ["narrative-externalizing"]
+        },
+        {
+          "id": "ocd-accommodation-list",
+          "text": "By session 5, with the client's consent, list at least 5 ways others currently join in with or make room for rituals, with how often each happens in a typical week.",
+          "interventionIds": ["genogram-family-systems", "exposure-and-response-prevention"]
+        },
+        {
+          "id": "ocd-joint-session",
+          "text": "By week 6, if the client agrees and a family member or partner is willing, hold at least 1 joint session to explain how accommodation keeps the cycle going and to agree on a short, kind response to reassurance requests that everyone will use.",
+          "interventionIds": ["communication-skills-training", "genogram-family-systems"]
+        },
+        {
+          "id": "ocd-phase-out",
+          "text": "Over weeks 6 to 14, phase out at least 1 agreed accommodation every 2 weeks, starting with the easiest, and keep a simple weekly tally of reassurance requests and accommodations still in place.",
+          "interventionIds": ["exposure-and-response-prevention", "communication-skills-training"]
+        },
+        {
+          "id": "ocd-reassurance-delay",
+          "text": "By week 8, when the urge to seek reassurance shows up, use a planned alternative (for example waiting 15 minutes, noticing the urge without acting on it, or a defusion phrase) on at least half of occasions, tracked on a daily tally.",
+          "interventionIds": ["act-cognitive-defusion", "exposure-and-response-prevention"]
+        }
+      ],
+      "measureIds": []
+    },
+    {
+      "id": "ocd-shame-mood-and-meaning",
+      "label": "Shame about thoughts, low mood and, for some clients, faith- or morality-focused fears",
+      "definitions": [
+        "Describes intense shame or fear about what the thoughts might say about them (for example 'only a bad person would think this') and has told few or no people about them.",
+        "For some clients, fears center on religious or moral themes, with confession, prayer or rule-checking repeated well beyond what their own tradition asks, or many requests for reassurance from faith leaders.",
+        "Reports low mood, loss of interest or hopelessness about OCD ever getting better; any thoughts of death or self-harm call for direct clinician assessment at the time they come up."
+      ],
+      "longTermGoals": [
+        "The client relates to unwanted thoughts with less shame and more self-kindness, and spends more time on what they value, including their faith practice when the client wants it included.",
+        "Any suicide risk is noticed early and handled through a safety plan built together with the client, with crisis contacts known and easy to reach."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "ocd-thought-meaning",
+          "text": "By week 6, rate belief in 'having this thought means I want it or will act on it' (0-100), then re-rate every 2 weeks after thought records and experiments that test it, aiming for 30 or below by week 12. Give education about intrusive thoughts once, not as repeated reassurance.",
+          "interventionIds": ["thought-record", "behavioral-experiments"]
+        },
+        {
+          "id": "ocd-values-time",
+          "text": "By week 8, name at least 3 valued activities that OCD has crowded out, and schedule at least 2 of them each week for 6 weeks, logging whether each one happened.",
+          "interventionIds": ["act-values-clarification", "act-committed-action"]
+        },
+        {
+          "id": "ocd-self-kindness",
+          "text": "Over weeks 4 to 12, on at least 4 days a week, respond to shame after an obsession with a brief, kind and realistic self-statement (one that does not cancel or undo the thought), rating shame 0-10 before and after.",
+          "interventionIds": ["self-compassion-practice", "compassion-focused-imagery"]
+        },
+        {
+          "id": "ocd-faith-scrupulosity",
+          "text": "Only if the client raises faith and asks to include it, and after documented informed consent: by week 8, the client (with a faith leader of their choosing, if they wish) sorts their own sincere faith practices from OCD-driven rituals and plans practice tasks that respect their tradition. The clinician follows the client's own words and beliefs and never introduces, endorses or challenges them.",
+          "interventionIds": ["exposure-and-response-prevention", "cultural-formulation-exploration"]
+        },
+        {
+          "id": "ocd-relapse-plan",
+          "text": "In the final 2 to 3 sessions, write a plan that names the skills that helped most, at least 3 early signs that rituals are creeping back, a self-run practice routine for the next 3 months and when to ask for a booster session.",
+          "interventionIds": ["relapse-prevention-planning", "exposure-and-response-prevention"]
+        },
+        {
+          "id": "ocd-safety-plan-review",
+          "text": "Whenever risk is present (for example a PHQ-9 item 9 response above 0, or the client describes thoughts of death or self-harm), the clinician assesses risk directly and, in that same session, works with the client to create or review a written safety plan: personal warning signs, coping steps, people and places that help, professional and crisis contacts (call or text 988 in the US; elsewhere the local emergency number or findahelpline.com) and agreed steps to limit access to means of harm. Revisit the plan at every session while risk remains. Risk level and next steps are the clinician's decision; this tool never rates risk.",
+          "interventionIds": ["collaborative-safety-planning", "lethal-means-counseling"]
+        }
+      ],
+      "measureIds": ["phq-9"]
+    }
+  ],
+  "collaborativeNote": "These are starting points for clinician review, not a finished plan. Rewrite each goal and objective with the client in their own words, agree on the pace of practice together, and record the client's agreement before anything is added to the plan. CBT that includes exposure and response prevention (ERP) is the first-line psychological treatment in NICE CG31; the ACT, compassion-focused, narrative, family-systems and faith-integrated items support ERP and do not replace it. Watch that new skills, education or kind self-talk do not turn into reassurance or mental rituals. Involve family only with the client's consent. Faith-integrated work is client-led and needs documented informed consent (AACC and ACA codes of ethics); sort OCD rituals from the client's sincere practice with respect, ideally alongside a faith leader the client trusts. Obsessions with harm, sexual or religious content are common in OCD and are usually experienced as unwanted; assess them calmly and carefully rather than with alarm. Safety planning is always done together with the client, and the clinician makes every risk decision. Adult scope only. Do not add names or other identifying details. Resource only. Not a substitute for clinical judgment.",
+  "sources": [
+    { "title": "Obsessive-compulsive disorder and body dysmorphic disorder: treatment (CG31)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/cg31", "year": 2005 },
+    { "title": "Psychological Treatments (treatment index)", "publisher": "APA Division 12, Society of Clinical Psychology", "url": "https://div12.org/psychological-treatments/treatments/" },
+    { "title": "Exposure and Response Prevention for Obsessive Compulsive Disorder (evidence brief)", "publisher": "Psychological Health Center of Excellence, Military Health System", "url": "https://health.mil/Reference-Center/Publications/2024/03/29/Exposure-and-Response-Prevention-for-Obsessive-Compulsive-Disorder-2024-508", "year": 2024 },
+    { "title": "Exposure and response prevention in the treatment of obsessive-compulsive disorder: current perspectives (Law and Boisseau)", "publisher": "Psychology Research and Behavior Management (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/31920413/", "year": 2019 },
+    { "title": "Exposure and Response Prevention Therapy", "publisher": "International OCD Foundation", "url": "https://iocdf.org/exposure-response-prevention/" },
+    { "title": "Obsessive-Compulsive Disorder (health topic)", "publisher": "National Institute of Mental Health", "url": "https://www.nimh.nih.gov/health/topics/obsessive-compulsive-disorder-ocd" },
+    { "title": "A randomized clinical trial of acceptance and commitment therapy versus progressive relaxation training for obsessive-compulsive disorder (Twohig et al.)", "publisher": "Journal of Consulting and Clinical Psychology (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/20873905/", "year": 2010 },
+    { "title": "A meta-analysis of compassion-based interventions: current state of knowledge and future directions (Kirby, Tellegen and Steindl)", "publisher": "Behavior Therapy (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/29029675/", "year": 2017 },
+    { "title": "Integrating clients' religion and spirituality within psychotherapy: a comprehensive meta-analysis (Captari et al.)", "publisher": "Journal of Clinical Psychology (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/30221353/", "year": 2018 },
+    { "title": "Externalising Conversations (course on Michael White's narrative practice)", "publisher": "Dulwich Centre", "url": "https://dulwichcentre.com.au/courses/externalising-conversations/" },
+    { "title": "A meta-analysis of cultural adaptations of psychological interventions (Hall et al.)", "publisher": "Behavior Therapy (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/27993346/", "year": 2016 },
+    { "title": "Comparison of the Safety Planning Intervention with follow-up vs usual care of suicidal patients treated in the emergency department (Stanley et al.)", "publisher": "JAMA Psychiatry (PubMed Central)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6142908/", "year": 2018 },
+    { "title": "CALM: Counseling on Access to Lethal Means", "publisher": "Suicide Prevention Resource Center", "url": "https://sprc.org/online-library/calm-counseling-on-access-to-lethal-means" },
+    { "title": "988 Suicide & Crisis Lifeline", "publisher": "988 Lifeline", "url": "https://988lifeline.org" },
+    { "title": "Find A Helpline (international directory)", "publisher": "Find A Helpline", "url": "https://findahelpline.com" },
+    { "title": "AACC Code of Ethics", "publisher": "American Association of Christian Counselors", "url": "https://aacc.net/aacc-code-of-ethics/" },
+    { "title": "ACA Code of Ethics (2014) and ethics resources", "publisher": "American Counseling Association", "url": "https://www.counseling.org/resources/ethics", "year": 2014 },
+    { "title": "A Tipping Point for Measurement-Based Care (Fortney et al.)", "publisher": "Psychiatric Services; reprinted in Focus (PubMed Central)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6996080/", "year": 2017 },
+    { "title": "Shared decision making (NG197)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng197", "year": 2021 },
+    { "title": "PHQ and GAD-7 screeners (reproduction terms)", "publisher": "Pfizer / PHQ Screeners", "url": "https://www.phqscreeners.com" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

@@ -24,9 +24,8 @@ const securityHeaders = [
   { key: "Referrer-Policy", value: "no-referrer" },
   { key: "X-Content-Type-Options", value: "nosniff" },
   { key: "X-Frame-Options", value: "DENY" },
-  { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=(), interest-cohort=()" },
+  { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=(), browsing-topics=()" },
   { key: "Strict-Transport-Security", value: "max-age=63072000; includeSubDomains" },
-  { key: "Cache-Control", value: "no-store" },
 ];
 
 const nextConfig: NextConfig = {
@@ -35,7 +34,9 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       { source: "/:path*", headers: securityHeaders },
-      { source: "/_next/static/:path*", headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }] },
+      // Pages and other responses are never stored by the browser or proxies. Hashed build assets are
+      // left out on purpose: Next.js already serves /_next/static/* as public, immutable.
+      { source: "/:path((?!_next/static/).*)", headers: [{ key: "Cache-Control", value: "no-store" }] },
       { source: "/sw.js", headers: [{ key: "Cache-Control", value: "no-cache" }, { key: "Service-Worker-Allowed", value: "/" }] },
     ];
   },

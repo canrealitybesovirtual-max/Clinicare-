@@ -1,0 +1,107 @@
+{
+  "id": "sleep-habits",
+  "title": "Habits for Better Sleep",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 10,
+  "intro": "Most people have a bad night now and then. When sleep trouble goes on, daily habits can make it better or worse. This sheet lists habits that help many people sleep. You don't have to change everything at once. Pick one or two to start. Your counselor can help you choose. Habits alone may not fix long-term sleep trouble, but they are a good base for other help. Reading this sheet takes about 10 minutes.",
+  "sections": [
+    {
+      "heading": "Keep a steady schedule",
+      "steps": [
+        "Get up at the same time every day, even on weekends and after a bad night. This is one of the most helpful habits.",
+        "Go to bed when you feel sleepy, not just tired. Sleepy means your eyes feel heavy and you start to nod off.",
+        "Try not to make up for a bad night by sleeping in or going to bed very early. This can make the next night harder.",
+        "If you nap, keep it short, about 20 to 30 minutes, and nap before mid-afternoon. Your counselor may ask you to skip naps for a while."
+      ]
+    },
+    {
+      "heading": "Make your bed a place for sleep",
+      "steps": [
+        "Use your bed only for sleep and sex. Watch TV, scroll, eat, or work somewhere else.",
+        "If you can't fall asleep after what feels like about 20 minutes, get up. Don't check the clock. Just guess.",
+        "Go to another room or a different spot. Do something calm in dim light, like reading something light, listening to soft music, or folding laundry.",
+        "Go back to bed when you feel sleepy again. Do this as many times as you need. Do the same if you wake in the night and can't get back to sleep.",
+        "Over time, your body learns that bed is a place for sleep, not for lying awake."
+      ]
+    },
+    {
+      "heading": "Wind down before bed",
+      "steps": [
+        "Give yourself 30 to 60 minutes to slow down before bed. Dim the lights and do something relaxing.",
+        "If you can, put away screens like TV, computers, and tablets during this time. Bright light and busy content can keep your mind awake.",
+        "If worries keep you up, write them down earlier in the evening, with one next step for each. Then set the list aside until tomorrow.",
+        "Turn your clock so you can't see it from bed."
+      ]
+    },
+    {
+      "heading": "Watch what you eat and drink",
+      "steps": [
+        "Caffeine can keep you awake for hours. It is in coffee, tea, soda, energy drinks, chocolate, and some medicines. Try to stop at least 6 hours before bed.",
+        "Alcohol may make you sleepy at first. But it breaks up your sleep later in the night. Try not to drink close to bedtime.",
+        "Nicotine can keep you awake too. Avoid it close to bedtime.",
+        "Skip big or spicy meals late at night. A light snack is fine if you are hungry.",
+        "Drink less in the last hour or two before bed, so you don't wake up to use the bathroom."
+      ]
+    },
+    {
+      "heading": "Help your body clock",
+      "steps": [
+        "Get outside light in the morning, even for 10 to 15 minutes. Light helps set your body clock.",
+        "Move your body most days. Try not to do hard exercise in the last couple of hours before bed.",
+        "Keep your bedroom dark, quiet, and cool. Earplugs, an eye mask, or a fan can help."
+      ]
+    },
+    {
+      "heading": "A note about time in bed",
+      "body": "Some sleep programs ask you to change how much time you spend in bed for a while. This can work well, but it can make you very sleepy at first. Only do it with your counselor or doctor guiding you. They will check in with you each week and help you stay safe."
+    },
+    {
+      "heading": "When to see a doctor",
+      "steps": [
+        "You snore loudly, or someone sees you gasp, choke, or stop breathing in your sleep.",
+        "You feel very sleepy in the day, or you doze off without meaning to.",
+        "An urge to move your legs keeps you awake.",
+        "Sleep trouble goes on for more than a few weeks, even after you try these habits.",
+        "You want to start, stop, or change a sleep medicine. Talk with your doctor first."
+      ]
+    }
+  ],
+  "practiceLog": {
+    "columns": ["Day", "Habit I tried", "Did I do it? (yes / partly / no)", "Sleep quality (0-10)", "Notes"],
+    "rows": 7
+  },
+  "safetyNote": "Safety first: If you feel very sleepy, do not drive or use machines until you feel alert. If you get up at night, keep a soft light on so you don't trip or fall. If you start to need much less sleep than usual but feel full of energy, tell your counselor or doctor soon. Do not start, stop, or change sleep medicine without your doctor. This sheet is not for emergencies. If you have thoughts of hurting yourself or someone else, call or text 988 in the US, or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sources": [
+    {
+      "title": "AASM clinical practice guideline: behavioral and psychological treatments for long-term sleep problems in adults (Edinger et al.)",
+      "publisher": "Journal of Clinical Sleep Medicine, American Academy of Sleep Medicine",
+      "url": "https://doi.org/10.5664/jcsm.8986",
+      "year": 2021
+    },
+    {
+      "title": "Caffeine effects on sleep taken 0, 3, or 6 hours before going to bed (Drake et al.)",
+      "publisher": "Journal of Clinical Sleep Medicine",
+      "url": "https://doi.org/10.5664/jcsm.3170",
+      "year": 2013
+    },
+    {
+      "title": "NICE Clinical Knowledge Summaries: managing long-term sleep problems",
+      "publisher": "National Institute for Health and Care Excellence (NICE)",
+      "url": "https://cks.nice.org.uk/topics/insomnia/"
+    },
+    {
+      "title": "Healthy Sleep (health topic)",
+      "publisher": "MedlinePlus, U.S. National Library of Medicine",
+      "url": "https://medlineplus.gov/healthysleep.html"
+    },
+    {
+      "title": "Drowsy Driving",
+      "publisher": "National Highway Traffic Safety Administration",
+      "url": "https://www.nhtsa.gov/risky-driving/drowsy-driving"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

@@ -5,9 +5,11 @@
   "conditions": [
     "major-depressive-disorder",
     "generalized-anxiety-disorder",
-    "agoraphobia"
+    "agoraphobia",
+    "alcohol-use-disorder",
+    "social-anxiety-disorder"
   ],
-  "evidenceLevel": "Moderate evidence for ACT as a package (A-Tjak et al., 2015; Gloster et al., 2020); committed action has not been tested much as a stand-alone component (emerging evidence). In practice it overlaps with behavioral activation and graded exposure, which have stronger support: NICE NG222 (2022) lists individual and group behavioral activation among first-line options for less severe depression. The 2022 VA/DoD MDD guideline includes ACT among suggested psychotherapies for uncomplicated MDD (weak-for, per guideline summaries; confirm in the CPG). APA Division 12 rating not verified this session; check div12.org.",
+  "evidenceLevel": "Moderate evidence for ACT as a package (A-Tjak et al., 2015; Gloster et al., 2020); committed action has not been tested much as a stand-alone component (emerging evidence). In practice it overlaps with behavioral activation and graded exposure, which have stronger support: NICE NG222 (2022) lists individual and group behavioral activation among first-line options for less severe depression. The 2022 VA/DoD MDD guideline includes ACT among its psychotherapy options for uncomplicated MDD (the strength of that recommendation could not be re-verified; confirm in the CPG). APA Division 12 rating not verified this session; check div12.org.",
   "minutes": { "min": 15, "max": 30 },
   "purpose": "Turns values into concrete, repeated behavior and plans ahead for barriers, including the unwanted thoughts, feelings and urges that show up along the way. The focus is on small, specific, observable steps that build into larger patterns, and on recommitting after lapses instead of quitting. Fit across presentations: Anxiety - steps are planned approach behaviors, so this works as a values-anchored form of graded exposure; coordinate with graded-in-vivo-exposure for agoraphobia and phobias. Depression - overlaps closely with behavioral activation and helps counter withdrawal. Trauma - supports re-engaging in safe but avoided parts of life; trauma memory work still belongs in trauma-focused therapy. Substance use - plans valued alternatives to using and treats a slip as a cue to recommit, not as proof of failure. Theoretical grounding: ACT (Hayes, Strosahl & Wilson).",
   "steps": [

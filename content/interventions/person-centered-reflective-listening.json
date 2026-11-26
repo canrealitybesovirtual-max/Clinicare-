@@ -2,7 +2,7 @@
   "id": "person-centered-reflective-listening",
   "name": "Person-centered reflective listening",
   "modality": "Person-centered / humanistic",
-  "conditions": ["major-depressive-disorder"],
+  "conditions": ["major-depressive-disorder", "adjustment-disorder", "prolonged-grief-disorder"],
   "evidenceLevel": "NICE NG222 includes counselling among options for less severe depression, noting it may be effective but appeared less cost effective on average than higher-ranked options. Across therapy types, therapist empathy is a moderately strong predictor of outcome (Elliott et al., 2018 meta-analysis: mean r = .28 across 82 samples). Rogers (1957) proposed the core conditions; later research supports them as helpful, but not as sufficient on their own. For anxiety disorders, PTSD, OCD and insomnia, use it as the relationship base alongside guideline-recommended treatments.",
   "minutes": { "min": 10, "max": 50 },
   "purpose": "A way of being with clients, rooted in Carl Rogers' client-centered therapy, that offers accurate empathy, unconditional positive regard and genuineness so that clients feel understood and can explore their experience in their own way. Reflective listening, which means carefully checking your understanding of what the client means and feels, is the core skill. It is the base for the therapeutic alliance in every approach in this library (including MI), and a stand-alone counselling option for some clients with less severe depression or adjustment difficulties.",

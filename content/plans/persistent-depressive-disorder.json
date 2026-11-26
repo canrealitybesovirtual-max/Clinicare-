@@ -1,0 +1,181 @@
+{
+  "conditionId": "persistent-depressive-disorder",
+  "problems": [
+    {
+      "id": "pdd-narrowed-life-and-chronic-low-mood",
+      "label": "Years of low mood that have shrunk daily life",
+      "definitions": [
+        "Describes feeling down, flat or 'gray' on most days for years, says 'this is just how I am', and cannot recall a recent stretch of weeks that felt clearly good.",
+        "Keeps a narrow routine (for example work or caregiving, then home and screens) with few or no activities chosen for enjoyment, meaning or connection, and turns down most new opportunities.",
+        "Reports low energy and steady putting-off of tasks, so that chores, paperwork or health appointments pile up over months rather than weeks.",
+        "When reviewing a typical week in session, rates enjoyment of most activities at 3 or lower on a 0-10 scale."
+      ],
+      "longTermGoals": [
+        "The client builds a fuller, more varied week that includes regular activities linked to what they value, and mood lifts enough that they can point to recent days that felt better.",
+        "The client and clinician settle on a treatment combination that fits a long-lasting pattern of low mood (psychological therapy, with or without medication) and keep it going long enough to judge its effect."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "pdd-mood-timeline",
+          "text": "By session 3, draw a timeline of mood across the past several years with the clinician, marking at least 3 periods that felt somewhat better or worse and what was happening in life and relationships at each point.",
+          "interventionIds": ["solution-focused-questions", "interpersonal-psychotherapy"]
+        },
+        {
+          "id": "pdd-activity-baseline",
+          "text": "For the first 2 weeks, keep a daily activity log on at least 5 days, rating mood, enjoyment and sense of accomplishment (each 0-10) for the main blocks of each day.",
+          "interventionIds": ["behavioral-activation"]
+        },
+        {
+          "id": "pdd-life-directions",
+          "text": "By session 5, name at least 3 life directions that matter to the client (for example relationships, health, learning, faith or creativity) and, for each one, at least 1 small action that takes under 30 minutes.",
+          "interventionIds": ["act-values-clarification", "behavioral-activation"]
+        },
+        {
+          "id": "pdd-weekly-valued-actions",
+          "text": "Over weeks 4 to 12, complete at least 3 planned valued actions per week, including at least 1 new or long-dropped activity every 2 weeks, and rate mood (0-10) before and after each one.",
+          "interventionIds": ["behavioral-activation", "act-committed-action"]
+        },
+        {
+          "id": "pdd-movement",
+          "text": "By week 8, do a physical activity the client chooses (for example a 15-minute walk) on at least 3 days a week, after checking with a medical provider first if health conditions are present.",
+          "interventionIds": ["physical-activity"]
+        },
+        {
+          "id": "pdd-combined-care-discussion",
+          "text": "By week 6, the clinician and client discuss whether to add a medication evaluation given the long course of low mood; if the client chooses it, attend an appointment with a prescriber by week 10 while therapy continues.",
+          "interventionIds": ["medication-referral"]
+        },
+        {
+          "id": "pdd-score-tracking",
+          "text": "Complete the PHQ-9 at intake and every 2 to 4 weeks (and the GAD-7 on the same schedule if anxiety is also present), reviewing totals and item responses together. Because long-standing low mood often shifts slowly, agree at the start what amount of change by week 12 will prompt a review of the plan, its intensity or a referral.",
+          "interventionIds": []
+        }
+      ],
+      "measureIds": ["phq-9", "gad-7"]
+    },
+    {
+      "id": "pdd-fixed-harsh-self-view",
+      "label": "A deep-rooted harsh view of self and little hope for change",
+      "definitions": [
+        "Often describes self in fixed, global terms (for example 'I have always been a failure' or 'I am just not enough') and has trouble naming strengths even when offered examples.",
+        "Predicts that change will not happen or will not last, and gives this as a reason not to try new steps or between-session tasks.",
+        "Responds to small setbacks with long stretches of self-criticism or dwelling, such as an evening spent going over one mistake.",
+        "Brushes off good events or praise as luck, a fluke or 'not counting'.",
+        "May report thoughts of death, of not wanting to be alive or of self-harm; these call for direct clinician assessment at the time they come up."
+      ],
+      "longTermGoals": [
+        "The client treats themselves with more fairness and warmth, holds beliefs about self as ideas to test rather than facts, and can name personal strengths and reasons for hope.",
+        "Any suicide risk is noticed early and handled through a safety plan built together with the client, with crisis contacts known and easy to reach."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "pdd-notice-self-talk",
+          "text": "Over the next 3 weeks, write down at least 3 self-critical or hopeless thoughts per week, with the situation, the feeling and how strongly the thought is believed (0-100).",
+          "interventionIds": ["thought-record"]
+        },
+        {
+          "id": "pdd-test-predictions",
+          "text": "Over weeks 4 to 12, set up at least 1 small behavioral experiment every 2 weeks to test a pessimistic prediction (for example 'no one will answer if I reach out'), writing the prediction beforehand and the actual result afterward.",
+          "interventionIds": ["behavioral-experiments", "thought-record"]
+        },
+        {
+          "id": "pdd-step-back-from-thoughts",
+          "text": "By week 6, practice at least 1 way of stepping back from harsh thoughts (for example noticing 'I am having the thought that...') on at least 4 days a week, rating how much the thought gets in the way (0-10) before and after.",
+          "interventionIds": ["act-cognitive-defusion", "mindful-check-in"]
+        },
+        {
+          "id": "pdd-kinder-inner-voice",
+          "text": "Over weeks 4 to 10, spend at least 5 minutes on a self-compassion or compassion-focused imagery practice on at least 4 days a week, and again after any setback, logging self-criticism (0-10) before and after.",
+          "interventionIds": ["self-compassion-practice", "compassion-focused-imagery"]
+        },
+        {
+          "id": "pdd-pattern-exploration",
+          "text": "By week 10, with a clinician trained in short-term psychodynamic work (or through referral), describe at least 1 repeating pattern that links past relationships to today's self-view (for example expecting to be dismissed and then holding back) and name 1 way to respond differently in a current relationship.",
+          "interventionIds": ["short-term-psychodynamic-exploration", "narrative-externalizing"]
+        },
+        {
+          "id": "pdd-faith-resources-optional",
+          "text": "Only if the client asks to include their faith and gives informed consent: by week 8, identify at least 2 beliefs, practices or community supports from the client's own tradition that counter harsh self-judgment, and use 1 of them at least weekly. Leave this objective out if the client does not ask for it.",
+          "interventionIds": ["religiously-integrated-cbt"]
+        },
+        {
+          "id": "pdd-safety-plan-review",
+          "text": "Whenever risk is present (for example a PHQ-9 item 9 response above 0, or the client describes thoughts of death or self-harm), the clinician assesses risk directly and, in that same session, builds or reviews a written safety plan with the client: early warning signs, things the client can do alone, people and places that help, professional and crisis contacts (call or text 988 in the US, the local emergency number, or findahelpline.com elsewhere) and agreed steps to put time and distance between the client and means of harm. Revisit it at every session while risk remains. Risk level and next steps are the clinician's decision; this tool never rates risk.",
+          "interventionIds": ["collaborative-safety-planning", "lethal-means-counseling"]
+        }
+      ],
+      "measureIds": ["phq-9"]
+    },
+    {
+      "id": "pdd-withdrawn-relationship-patterns",
+      "label": "Passive, withdrawn patterns in relationships",
+      "definitions": [
+        "Rarely starts contact with friends, family or coworkers, has few people to turn to, and may go a week or more without a personal conversation outside work or household tasks.",
+        "Goes along with what others want and keeps needs or disagreements to self, then reports feeling resentful, unseen or lower in mood afterward.",
+        "Describes the same relationship difficulties recurring over years (for example conflicts that never get resolved or growing distance from a partner) and links dips in mood to them.",
+        "In session, expects the clinician or others to be disappointed or dismissive, and finds it hard to say what they want."
+      ],
+      "longTermGoals": [
+        "The client has a wider, more supportive circle of relationships and can state needs, preferences and limits in ways that fit their culture and values."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "pdd-relationship-map",
+          "text": "By session 4, map the client's important relationships (family, chosen family, friends, coworkers, faith or community members), mark which feel supportive, strained or lost, and choose 1 or 2 relationship areas to work on.",
+          "interventionIds": ["interpersonal-psychotherapy", "genogram-family-systems"]
+        },
+        {
+          "id": "pdd-start-contacts",
+          "text": "Over weeks 3 to 10, start at least 2 contacts per week with people the client chooses (a call, a back-and-forth message exchange or a visit), and rate mood (0-10) before and after.",
+          "interventionIds": ["behavioral-activation", "interpersonal-psychotherapy"]
+        },
+        {
+          "id": "pdd-ask-and-decline",
+          "text": "By week 6, role-play in session at least 2 real situations in which the client wants to ask for something or say no, then use the practiced approach in daily life at least once a week for 4 weeks and note what happened.",
+          "interventionIds": ["assertiveness-training", "dbt-interpersonal-effectiveness"]
+        },
+        {
+          "id": "pdd-conversation-review",
+          "text": "Over weeks 6 to 12, bring at least 1 recent conversation every 2 weeks to look at closely: what the client hoped for, what was said, what happened, and what to try next time.",
+          "interventionIds": ["communication-skills-training", "interpersonal-psychotherapy"]
+        },
+        {
+          "id": "pdd-staying-well-plan",
+          "text": "In the final 3 sessions, write a personal staying-well plan that names at least 3 early signs that mood is slipping, the skills and people that helped most, and when to ask for a booster session or a medication review.",
+          "interventionIds": ["relapse-prevention-planning"]
+        }
+      ],
+      "measureIds": ["phq-9"]
+    }
+  ],
+  "collaborativeNote": "These are starting points for clinician review, not a finished plan, and they do not diagnose (see DSM-5-TR and ICD-11 for diagnostic requirements; the clinician decides any diagnosis). Rewrite every goal and objective with the client in their own words, and record their agreement before anything goes into the plan. Long-standing low mood can feel like part of who the client is, so set small targets, expect slow change and name each gain. Interpersonal psychotherapy and short-term psychodynamic work are for clinicians trained in those methods; otherwise refer. Faith-based steps are used only when the client asks for them and gives informed consent. Choose activities that fit the client's culture, faith, body, budget and caregiving load. Safety planning is always done with the client, and the clinician makes every risk decision; crisis contacts are 988 (call or text, US), the local emergency number and findahelpline.com. Do not add names or other identifying details. Resource only. Not a substitute for clinical judgment.",
+  "sources": [
+    { "title": "Depression in adults: treatment and management (NG222)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng222", "year": 2022 },
+    { "title": "Diagnosis: Depression (psychological treatments listing)", "publisher": "APA Division 12, Society of Clinical Psychology", "url": "https://div12.org/diagnosis/depression/" },
+    { "title": "Behavioral Activation for Depression", "publisher": "APA Division 12, Society of Clinical Psychology", "url": "https://div12.org/treatment/behavioral-activation-for-depression/" },
+    { "title": "Short-term psychodynamic therapy for depression", "publisher": "APA Division 12, Society of Clinical Psychology", "url": "https://div12.org/treatment/short-term-psychodynamic-therapy-for-depression/" },
+    { "title": "Psychotherapy for chronic major depression and dysthymia: a meta-analysis (Cuijpers et al.)", "publisher": "Clinical Psychology Review (DOI)", "url": "https://doi.org/10.1016/j.cpr.2009.09.003", "year": 2010 },
+    { "title": "Behavioural activation for depression: an update of meta-analysis of effectiveness and sub group analysis (Ekers et al.)", "publisher": "PLoS ONE (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/24936656/", "year": 2014 },
+    { "title": "A meta-analysis of the efficacy of acceptance and commitment therapy for clinically relevant mental and physical health problems (A-Tjak et al.)", "publisher": "Psychotherapy and Psychosomatics (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/25547522/", "year": 2015 },
+    { "title": "A meta-analysis of compassion-based interventions: current state of knowledge and future directions (Kirby, Tellegen & Steindl)", "publisher": "Behavior Therapy (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/29029675/", "year": 2017 },
+    { "title": "Interpersonal psychotherapy for depression: a meta-analysis (Cuijpers et al.)", "publisher": "American Journal of Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/21362740/", "year": 2011 },
+    { "title": "The efficacy of short-term psychodynamic psychotherapy for depression: a meta-analysis update (Driessen et al.)", "publisher": "Clinical Psychology Review (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/26281018/", "year": 2015 },
+    { "title": "Religious vs. conventional cognitive behavioral therapy for major depression in persons with chronic medical illness: a pilot randomized trial (Koenig et al.)", "publisher": "Journal of Nervous and Mental Disease", "url": "https://doi.org/10.1097/NMD.0000000000000273", "year": 2015 },
+    { "title": "Effect of exercise for depression: systematic review and network meta-analysis of randomised controlled trials (Noetel et al.)", "publisher": "BMJ (DOI)", "url": "https://doi.org/10.1136/bmj-2023-075847", "year": 2024 },
+    { "title": "Depression and Complementary Health Approaches: What the Science Says", "publisher": "National Center for Complementary and Integrative Health (NCCIH)", "url": "https://www.nccih.nih.gov/health/providers/digest/depression-and-complementary-health-approaches" },
+    { "title": "Depression (health topic)", "publisher": "National Institute of Mental Health", "url": "https://www.nimh.nih.gov/health/topics/depression" },
+    { "title": "Suicide Prevention (health topic)", "publisher": "National Institute of Mental Health", "url": "https://www.nimh.nih.gov/health/topics/suicide-prevention" },
+    { "title": "Safety planning-type interventions for suicide prevention: meta-analysis (Nuij et al.)", "publisher": "British Journal of Psychiatry (DOI)", "url": "https://doi.org/10.1192/bjp.2021.50", "year": 2021 },
+    { "title": "CALM: Counseling on Access to Lethal Means", "publisher": "Suicide Prevention Resource Center", "url": "https://sprc.org/online-library/calm-counseling-on-access-to-lethal-means" },
+    { "title": "988 Suicide & Crisis Lifeline", "publisher": "988 Lifeline / SAMHSA", "url": "https://988lifeline.org" },
+    { "title": "Find A Helpline (international directory)", "publisher": "Find A Helpline", "url": "https://findahelpline.com" },
+    { "title": "A Tipping Point for Measurement-Based Care (Fortney et al.)", "publisher": "Psychiatric Services; reprinted in Focus (PubMed Central)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6996080/", "year": 2017 },
+    { "title": "Shared decision making (NG197)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng197", "year": 2021 },
+    { "title": "PHQ and GAD-7 screeners (reproduction terms)", "publisher": "Pfizer / PHQ Screeners", "url": "https://www.phqscreeners.com" },
+    { "title": "AACC Code of Ethics", "publisher": "American Association of Christian Counselors", "url": "https://aacc.net/aacc-code-of-ethics/" },
+    { "title": "ACA Code of Ethics (2014) and ethics resources", "publisher": "American Counseling Association", "url": "https://www.counseling.org/resources/ethics", "year": 2014 }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-26",
+  "reviewedBy": "PENDING"
+}

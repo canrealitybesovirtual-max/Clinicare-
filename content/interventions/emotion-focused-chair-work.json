@@ -2,8 +2,8 @@
   "id": "emotion-focused-chair-work",
   "name": "Emotion-focused chair work: overview and referral",
   "modality": "Emotion-focused therapy (EFT)",
-  "conditions": ["major-depressive-disorder", "ptsd", "generalized-anxiety-disorder"],
-  "evidenceLevel": "APA Division 12 lists emotion-focused therapy for depression (1998 status: modest research support; 2015 status: pending re-evaluation; check the current page). In an RCT of 38 adults with major depression, adding emotion-focused tasks, including chair work, to a client-centered relationship led to greater improvement in depressive symptoms than the relationship alone (Goldman, Greenberg and Angus, 2006). For childhood abuse trauma, two versions of emotion-focused therapy for trauma, with and without empty-chair confrontation, were similarly effective (Paivio et al., 2010). GAD: emerging evidence. A feasibility RCT found EFT and CBT had similar outcomes (Timulak et al., 2022). Not a NICE first-line treatment for these conditions.",
+  "conditions": ["major-depressive-disorder", "ptsd", "generalized-anxiety-disorder", "prolonged-grief-disorder"],
+  "evidenceLevel": "APA Division 12 lists emotion-focused therapy for depression (1998 status: modest research support; 2015 status: pending re-evaluation; check the current page). In an RCT of 38 adults with major depression, adding emotion-focused tasks, including chair work, to a client-centered relationship led to greater improvement in depressive symptoms than the relationship alone (Goldman, Greenberg and Angus, 2006). For childhood abuse trauma, two versions of emotion-focused therapy for trauma, with and without empty-chair confrontation, were similarly effective (Paivio et al., 2010). GAD: emerging evidence. A feasibility RCT found EFT and CBT had similar outcomes (Timulak et al., 2022). Unresolved grief: empty-chair work for unfinished business with a person who died is a common EFT task; emerging evidence. Not a NICE first-line treatment for these conditions.",
   "minutes": { "min": 15, "max": 40 },
   "purpose": "Structured, experiential tasks from emotion-focused therapy (Leslie Greenberg, Robert Elliott, Jeanne Watson, Sandra Paivio and colleagues) that help clients reach and change painful, long-standing emotional patterns. Two-chair dialogue works with an inner split, such as a harsh self-critical part and the self that feels criticized, or a worrying part that frightens the self. Empty-chair work addresses unresolved feelings toward an important person, where the client imagines the other and voices unmet needs and lingering hurt. It is delivered within a strong, empathic relationship by trained clinicians. Overview for planning and referral only.",
   "steps": [
@@ -17,8 +17,8 @@
   ],
   "script": [
     "When you talk to yourself that way, saying 'you're useless', it sounds like there are two sides in you. Would you be open to trying something that may feel a bit unusual, using two chairs to hear from each side?",
-    "Take a moment in this chair. What do you feel when you hear those words? What do you need from that critical side?",
-    "If you could picture your father here for a few minutes, what would you want him to know about how that felt?",
+    "In this kind of therapy, a trained therapist may invite you to speak from each side, sometimes moving between two chairs, and to notice what you feel and need.",
+    "With hurt that lingers toward someone important, the therapist may invite you to imagine speaking to that person. You always decide whether, and how far, to go.",
     "We can also just talk about him together, if that feels better today. You decide.",
     "Let's slow down and come back to the room. Feel your feet on the floor. What stands out for you from what just happened?"
   ],
