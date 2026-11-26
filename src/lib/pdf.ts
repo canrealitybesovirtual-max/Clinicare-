@@ -320,54 +320,56 @@ const CHECKBOX = 10;
 
 export function measurePdfLayout(measure: Measure): PdfLayout {
   const b = new LayoutBuilder(toWinAnsi(measure.name));
+  const { min, max } = measure.scoring;
 
   b.paragraph(measure.name, { size: 16, bold: true, lineHeight: 1.3 });
-  b.y -= 6;
+  b.y -= 4;
   b.nameLine();
-  b.paragraph(measure.instructions, { size: 11, bold: true });
-  b.paragraph("Mark one box for each question.", { size: 9.5, color: "muted" });
-  b.y -= 6;
+  b.paragraph(measure.instructions, { size: 10.5, bold: true });
+  b.y -= 4;
 
   // ---- items table
   const nOpt = measure.options.length;
   const optW = Math.min(64, (CONTENT_W * 0.55) / nOpt);
   const textColW = CONTENT_W - optW * nOpt;
   const numW = 20;
-  const pad = 5;
+  const pad = 4;
   const optX = (i: number) => LEFT + textColW + i * optW;
   const itemSize = 9.5;
-  const itemLh = itemSize * 1.3;
+  const itemLh = itemSize * 1.25;
   const headSize = 8;
   const headLh = headSize * 1.25;
 
-  const headLines = measure.options.map((o) => [...wrapText(o.label, headSize, optW - 6, true), `(${o.value})`]);
-  const headH = Math.max(...headLines.map((l) => l.length)) * headLh + 2 * pad;
+  const cornerLines = wrapText("Mark one box for each question.", 8.5, textColW - 2 * pad);
+  const headLines = measure.options.map((o) => wrapText(`${o.label} (${o.value})`, headSize, optW - 6, true));
+  const headH = Math.max(cornerLines.length, ...headLines.map((l) => l.length)) * headLh + 2 * pad + 2;
   const rowLines = measure.items.map((it) => wrapText(it.text, itemSize, textColW - numW - 2 * pad));
-  const rowH = rowLines.map((l) => Math.max(l.length * itemLh + 2 * pad, 24));
+  const rowH = rowLines.map((l) => Math.max(l.length * itemLh + 2 * pad, 20));
 
   const drawHeader = () => {
     const top = b.y;
     b.rect(LEFT, top - headH, CONTENT_W, headH, { fill: "headFill", stroke: "border", lineWidth: 0.75 });
+    cornerLines.forEach((l, j) => b.text(l, LEFT + pad, top - pad - 1 - headSize - j * headLh, 8.5, false, "muted"));
     headLines.forEach((lines, i) => {
       const x = optX(i);
       b.line(x, top, x, top - headH);
       lines.forEach((l, j) => {
-        const bold = j < lines.length - 1;
-        b.text(l, x + (optW - widthOf(l, headSize, bold)) / 2, top - pad - headSize - j * headLh, headSize, bold);
+        b.text(l, x + (optW - widthOf(l, headSize, true)) / 2, top - pad - 1 - headSize - j * headLh, headSize, true);
       });
     });
     b.y = top - headH;
   };
 
-  b.ensure(headH + (rowH[0] ?? 24));
+  b.ensure(headH + (rowH[0] ?? 20));
   drawHeader();
   measure.items.forEach((it, idx) => {
-    const h = rowH[idx] ?? 24;
+    const h = rowH[idx] ?? 20;
     if (b.ensure(h)) drawHeader();
     const top = b.y;
     b.rect(LEFT, top - h, CONTENT_W, h, { fill: idx % 2 === 1 ? "stripe" : undefined, stroke: "border", lineWidth: 0.75 });
-    b.text(`${it.id}.`, LEFT + pad, top - pad - itemSize, itemSize, true);
-    (rowLines[idx] ?? []).forEach((l, j) => b.text(l, LEFT + numW + pad, top - pad - itemSize - j * itemLh, itemSize));
+    const firstBaseline = top - pad - itemSize + 1;
+    b.text(`${it.id}.`, LEFT + pad, firstBaseline, itemSize, true);
+    (rowLines[idx] ?? []).forEach((l, j) => b.text(l, LEFT + numW + pad, firstBaseline - j * itemLh, itemSize));
     for (let i = 0; i < nOpt; i++) {
       const x = optX(i);
       b.line(x, top, x, top - h);
@@ -376,41 +378,40 @@ export function measurePdfLayout(measure: Measure): PdfLayout {
     b.y = top - h;
   });
 
-  // column totals ("add columns") row
-  const totalsH = 26;
-  if (b.ensure(totalsH + 30)) drawHeader();
+  // column totals ("add columns") row, then the total score box
+  const totalsH = 22;
+  const totalH = 24;
+  if (b.ensure(totalsH + totalH)) drawHeader();
   {
     const top = b.y;
+    const mid = top - totalsH / 2 - 3.3;
     b.rect(LEFT, top - totalsH, CONTENT_W, totalsH, { fill: "headFill", stroke: "border", lineWidth: 0.75 });
     const label = "Add columns:";
-    b.text(label, LEFT + textColW - pad - widthOf(label, 9.5, true), top - totalsH / 2 - 3.5, 9.5, true);
+    b.text(label, LEFT + textColW - pad - 4 - widthOf(label, 9.5, true), mid, 9.5, true);
     for (let i = 0; i < nOpt; i++) {
       const x = optX(i);
-      b.rect(x + 8, top - totalsH + 6, optW - 16, totalsH - 12, { stroke: "text", lineWidth: 0.75 });
-      if (i > 0) b.text("+", x - widthOf("+", 9, true) / 2, top - totalsH / 2 - 3.5, 9, true);
+      b.rect(x + 8, top - totalsH + 5, optW - 16, totalsH - 10, { stroke: "text", lineWidth: 0.75 });
+      if (i > 0) b.text("+", x - widthOf("+", 9, true) / 2, mid, 9, true);
     }
     b.y = top - totalsH;
   }
-  // total score box
   {
-    const h = 30;
     const top = b.y;
-    b.rect(LEFT, top - h, CONTENT_W, h, { stroke: "border", lineWidth: 0.75 });
-    const label = `Total score (${measure.scoring.min}-${measure.scoring.max}):`;
-    const boxW = 64;
-    const boxX = RIGHT - pad - 4 - boxW;
-    b.text(label, boxX - 8 - widthOf(label, 10.5, true), top - h / 2 - 4, 10.5, true);
-    b.rect(boxX, top - h + 5, boxW, h - 10, { stroke: "text", lineWidth: 1.1 });
-    b.y = top - h;
+    b.rect(LEFT, top - totalH, CONTENT_W, totalH, { stroke: "border", lineWidth: 0.75 });
+    const label = `Total score (${min}-${max}):`;
+    const boxW = optW - 16;
+    const boxX = optX(nOpt - 1) + 8;
+    b.text(label, boxX - 10 - widthOf(label, 10, true), top - totalH / 2 - 3.5, 10, true);
+    b.rect(boxX, top - totalH + 4, boxW, totalH - 8, { stroke: "text", lineWidth: 1.1 });
+    b.y = top - totalH;
   }
-  b.y -= 14;
+  b.y -= 10;
 
   // ---- functional difficulty item (not scored)
   if (measure.functionalItem) {
-    b.heading(measure.functionalItem.text, 10, 20);
-    b.y -= 2;
+    b.heading(measure.functionalItem.text, 9.5, 18);
     const size = 9.5;
-    const lh = 18;
+    const lh = 16;
     let x = LEFT;
     b.ensure(lh);
     for (const opt of measure.functionalItem.options) {
@@ -421,37 +422,48 @@ export function measurePdfLayout(measure: Measure): PdfLayout {
         b.ensure(lh);
         x = LEFT;
       }
-      b.rect(x, b.y - CHECKBOX - 1, CHECKBOX, CHECKBOX, { stroke: "text", lineWidth: 0.9 });
-      b.text(label, x + CHECKBOX + 5, b.y - CHECKBOX + 1, size);
+      b.rect(x, b.y - CHECKBOX, CHECKBOX, CHECKBOX, { stroke: "text", lineWidth: 0.9 });
+      b.text(label, x + CHECKBOX + 5, b.y - CHECKBOX + 1.5, size);
       x += w;
     }
-    b.y -= lh + 10;
+    b.y -= lh + 4;
   }
 
-  // ---- scoring key for the clinician
-  b.heading("Scoring key (for clinician use)", 11, 5 * 13);
-  b.paragraph(
-    `Add the column totals for a total score from ${measure.scoring.min} to ${measure.scoring.max}. Every item must be answered.`,
-    { size: 9 },
-  );
-  for (const band of [...measure.scoring.bands].sort((p, q) => p.min - q.min)) {
-    b.paragraph(`${band.min}-${band.max}: ${band.label}`, { size: 9, indent: 12 });
+  // ---- scoring key for the clinician: one cell per severity band
+  const bands = [...measure.scoring.bands].sort((p, q) => p.min - q.min);
+  const bandW = CONTENT_W / bands.length;
+  const bandLabelLines = bands.map((band) => wrapText(band.label, 8.5, bandW - 2 * pad));
+  const bandH = 2 * pad + 10 + Math.max(...bandLabelLines.map((l) => l.length)) * 10.5;
+  b.heading("Scoring key (for clinician use)", 10, bandH + 24);
+  {
+    const top = b.y;
+    b.rect(LEFT, top - bandH, CONTENT_W, bandH, { stroke: "border", lineWidth: 0.75 });
+    bands.forEach((band, i) => {
+      const x = LEFT + i * bandW;
+      if (i > 0) b.line(x, top, x, top - bandH);
+      b.text(`${band.min}-${band.max}`, x + pad + 1, top - pad - 8.5, 8.5, true);
+      (bandLabelLines[i] ?? []).forEach((l, j) => b.text(l, x + pad + 1, top - pad - 19 - j * 10.5, 8.5));
+    });
+    b.y = top - bandH - 4;
   }
-  if (measure.functionalItem) b.paragraph("The difficulty question is not added to the total.", { size: 9 });
-  for (const r of measure.riskItems) b.paragraph(`Item ${r.itemId}: ${r.message}`, { size: 9, bold: true });
-  b.paragraph("A total is screening information for clinician review, not a diagnosis.", { size: 9, color: "muted" });
-  b.y -= 10;
+  const notScored = measure.functionalItem ? "; the difficulty question is not added" : "";
+  b.paragraph(
+    `Add the column totals for a total score from ${min} to ${max} (every item must be answered${notScored}). ` +
+      "A total is screening information for clinician review, not a diagnosis.",
+    { size: 8.5, lineHeight: 1.3 },
+  );
+  for (const r of measure.riskItems) b.paragraph(r.message, { size: 8.5, bold: true, lineHeight: 1.3 });
+  b.y -= 6;
 
   b.crisisBox();
-  b.y -= 12;
+  b.y -= 6;
 
   // ---- copyright and citation
-  b.paragraph(measure.copyright, { size: 7.5, color: "muted" });
-  b.paragraph(`Citation: ${measure.citation}`, { size: 7.5, color: "muted" });
-  if (measure.loinc) {
-    const total = measure.loinc.total ? `, total score ${measure.loinc.total}` : "";
-    b.paragraph(`LOINC: panel ${measure.loinc.panel}${total}.`, { size: 7.5, color: "muted" });
-  }
+  b.paragraph(measure.copyright, { size: 7, color: "muted", lineHeight: 1.3 });
+  const loinc = measure.loinc
+    ? ` LOINC: panel ${measure.loinc.panel}${measure.loinc.total ? `, total score ${measure.loinc.total}` : ""}.`
+    : "";
+  b.paragraph(`Citation: ${measure.citation}${loinc}`, { size: 7, color: "muted", lineHeight: 1.3 });
 
   return b.finish();
 }

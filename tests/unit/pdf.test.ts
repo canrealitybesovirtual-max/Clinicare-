@@ -141,6 +141,10 @@ describe.each([
     await expectValidPdf(bytes, measurePdfLayout(measure), measure.name);
   });
 
+  it("fits on one page like the official form", () => {
+    expect(measurePdfLayout(measure).pages).toHaveLength(1);
+  });
+
   it("has the footer on every page and stays inside the 0.75in margins", () => {
     const layout = measurePdfLayout(measure);
     expectFooterOnEveryPage(layout);
@@ -153,16 +157,18 @@ describe.each([
     expect(text).toContain(measure.name);
     expect(text).toContain(measure.instructions);
     for (const item of measure.items) expect(text).toContain(`${item.id}. ${toWinAnsi(item.text)}`);
-    for (const o of measure.options) {
-      expect(text).toContain(`(${o.value})`);
-      for (const word of o.label.split(" ")) expect(text).toContain(word);
-    }
+    for (const o of measure.options) expect(text).toContain(`${o.label} (${o.value})`);
     expect(lines).toContain("Add columns:");
     expect(lines).toContain(`Total score (${measure.scoring.min}-${measure.scoring.max}):`);
     expect(text).toContain(measure.functionalItem?.text ?? "");
     for (const opt of measure.functionalItem?.options ?? []) expect(lines).toContain(opt);
-    for (const b of measure.scoring.bands) expect(lines).toContain(`${b.min}-${b.max}: ${b.label}`);
-    for (const r of measure.riskItems) expect(text).toContain(`Item ${r.itemId}: ${r.message}`);
+    expect(lines).toContain("Scoring key (for clinician use)");
+    for (const b of measure.scoring.bands) {
+      expect(lines).toContain(`${b.min}-${b.max}`);
+      expect(lines).toContain(b.label);
+    }
+    for (const r of measure.riskItems) expect(text).toContain(toWinAnsi(r.message));
+    expect(text).toContain("not a diagnosis");
     expect(text).toContain(measure.copyright);
     expect(text).toContain(`Citation: ${toWinAnsi(measure.citation)}`);
     expect(text).toContain(PDF_CRISIS_HEADING);

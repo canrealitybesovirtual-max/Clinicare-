@@ -6,7 +6,6 @@
 
 /** Strip characters that are unsafe in file names on common operating systems. */
 export function safeFilename(name: string): string {
-  // eslint-disable-next-line no-control-regex
   const cleaned = name.replace(/[\\/:*?"<>|\u0000-\u001f]+/g, "-").replace(/\s+/g, " ").trim();
   return cleaned.length > 0 ? cleaned.slice(0, 120) : "download";
 }
