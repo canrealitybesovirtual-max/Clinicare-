@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+/* Design tokens. Calm clinical palette; all text pairs meet WCAG 2.2 AA (>= 4.5:1). */
+:root {
+  --bg: #f6f8fa;
+  --surface: #ffffff;
+  --surface-2: #eef3f7;
+  --text: #13202e;
+  --muted: #4a5a6a;
+  --border: #d3dce5;
+  --primary: #1f3a5f;
+  --primary-fg: #ffffff;
+  --accent: #1d6b66;
+  --accent-soft: #e3f1ef;
+  --crisis: #b42318;
+  --crisis-fg: #ffffff;
+  --warn-bg: #fff6e0;
+  --warn-fg: #6b4300;
+  --warn-border: #f0c869;
+  --info-bg: #e8f0fa;
+  --info-fg: #1f3a5f;
+  --ok: #1e6b3a;
+  --focus: #2563eb;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0e141b;
+    --surface: #151e28;
+    --surface-2: #1c2734;
+    --text: #e8eef4;
+    --muted: #a9b7c5;
+    --border: #2c3a49;
+    --primary: #9cc2ef;
+    --primary-fg: #0e141b;
+    --accent: #6fd0c6;
+    --accent-soft: #15302e;
+    --crisis: #f0625a;
+    --crisis-fg: #10161d;
+    --warn-bg: #2e2410;
+    --warn-fg: #f6d58a;
+    --warn-border: #6b5418;
+    --info-bg: #17263a;
+    --info-fg: #cfe0f5;
+    --ok: #7ad69b;
+    --focus: #8ab4ff;
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-text: var(--text);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-primary-fg: var(--primary-fg);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-crisis: var(--crisis);
+  --color-crisis-fg: var(--crisis-fg);
+  --color-warn-bg: var(--warn-bg);
+  --color-warn-fg: var(--warn-fg);
+  --color-warn-border: var(--warn-border);
+  --color-info-bg: var(--info-bg);
+  --color-info-fg: var(--info-fg);
+  --color-ok: var(--ok);
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+html { -webkit-text-size-adjust: 100%; }
+body { background: var(--bg); color: var(--text); font-family: var(--font-sans); }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+@media print {
+  .no-print { display: none !important; }
+  body { background: #fff; color: #000; }
+}
