@@ -28,6 +28,15 @@ ALWAYS
 - Respect API terms: attribution, rate limits, caching. Secrets in server-side route handlers only.
 - Tests: scoring, measures, PHI-leak, accessibility (axe). Run them before saying done.
 
+OWNER AMENDMENT (2026-11-27) to "Call any AI/LLM API" and G16/G17 — approved by the owner in session:
+- Allowed: ONE optional server-side Claude assistant (src/server/ai/**) for follow-up questions and navigation help.
+- OFF by default. Runs only when ALL are set server-side: ANTHROPIC_API_KEY, AI_ASSISTANT_ENABLED=true,
+  AI_BAA_CONFIRMED=true (set only after a signed BAA with Anthropic). Clinician must opt in per session.
+- Input = PHI-scrubbed text re-checked server-side + curated ids only. Never DSM-5-TR or Wiley text. No logging/storage.
+- Output = structured, labeled "For clinician review", limited to curated ids (symptoms, measures, interventions,
+  referrals) + follow-up questions. Never a diagnosis, never a risk decision. Never in client mode.
+- Everything else in NEVER/ALWAYS still applies. Scanner exceptions for this need `guardrail-ok: G16 owner amendment`.
+
 KEY FILES
 - docs/SPEC.md (full spec)  docs/RESOURCES.md (APIs)  docs/ROADMAP.md (phases)
 - content/licenses.json (measure licenses)  scripts/guardrail-scan.sh (runs after every edit)
