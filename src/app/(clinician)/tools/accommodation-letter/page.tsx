@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { HubPrompt } from "@/components/hub/hub-prompt";
 import { AccommodationLetterTool } from "@/components/tools/accommodation-letter-tool";
 import { ToolIntro } from "@/components/tools/tool-intro";
 
@@ -14,6 +15,7 @@ export default function AccommodationLetterPage() {
         </p>
       </ToolIntro>
       <AccommodationLetterTool />
+      <HubPrompt context="letters-and-forms" className="mt-6" />
     </div>
   );
 }

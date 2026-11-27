@@ -24,8 +24,8 @@ export default function FormulationsPage() {
         </p>
       </PageIntro>
 
-      <Card className="mb-5 flex flex-wrap items-center justify-between gap-3">
-        <div className="min-w-0 flex-1">
+      <Card className="mb-5 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+        <div className="min-w-0 sm:flex-1">
           <h2 className="text-base font-semibold">Formulation worksheet</h2>
           <p className="mt-1 text-sm text-muted">
             {worksheetFormulations.map((f) => f.shortName).join(", ")}. Tap factors, add a few words, then copy or print.

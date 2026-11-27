@@ -50,11 +50,26 @@ const CLINICAL_TERMS = [
   "somatic symptom",
   "prolonged grief",
   "\\b(?:cannabis|opioid|stimulant)[- ]use\\b",
+  "acute stress",
+  "anxiolytic",
+  "sedative[-, ]+hypnotic",
+  "nicotine dependence",
+  "pathological gambling",
+  "trichotillomani",
+  "excoriation",
+  "dermatillomani",
+  "body[- ]focused repetitive",
+  "\\bBFRBs?\\b",
+  "dysphori",
+  "\\bPMDD\\b",
   // Codes: ICD-10-CM F-codes with or without a decimal (F41, F41.1), any dotted ICD-10-CM code (G47.00, Z63.4),
   // ICD-11 mental-health and sleep-wake codes (6A70, 6B00, 7A00)
   "\\bF\\d{2}(?:\\.\\d{0,3})?\\b",
   "\\b[A-Z]\\d{2}\\.\\d{1,4}\\b",
-  "\\b(?:6[A-E]|7[AB])\\d{2}\\b",
+  "\\b(?:6[A-E]|7[AB])\\d[0-9A-Z]\\b",
+  // ICD-11 codes outside chapters 6-7 used here: premenstrual dysphoric disorder (GA34.41), acute stress reaction (QE84)
+  "\\bGA34(?:\\.\\d{1,2})?\\b",
+  "\\bQE84\\b",
   // Spanish diagnosis and scoring words
   "trastorno",
   "ansiedad",
@@ -80,6 +95,17 @@ const CLINICAL_TERMS = [
   "\\bTDAH\\b",
   "acumulaci[oó]n compulsiva",
   "duelo prolongado",
+  "estr[eé]s agudo",
+  "ludopat",
+  "tricotiloman",
+  "dermatiloman",
+  "excoriaci",
+  "juego patol",
+  "\\bTDPM\\b",
+  // "Tabaquismo" is the usual Spanish clinical name for tobacco dependence, so client text says "fumar" instead.
+  "tabaquismo",
+  "disf[oó]ric",
+  "dependencia (?:de|a) la nicotina",
   "puntuaci",
   "gravedad",
 ];
@@ -132,8 +158,26 @@ export function clientSafeSources(sources: readonly Source[]): Source[] {
 }
 
 /** A handout as a client page may receive it: the same handout with client-safe sources only (G3). */
-export function clientHandout<T extends { sources: readonly Source[] }>(handout: T): T {
-  return { ...handout, sources: clientSafeSources(handout.sources) };
+export function clientHandout<T extends { sources: readonly Source[]; linkOuts?: readonly LinkOutLike[] }>(handout: T): T {
+  return {
+    ...handout,
+    sources: clientSafeSources(handout.sources),
+    ...(handout.linkOuts ? { linkOuts: clientSafeLinkOuts(handout.linkOuts) } : {}),
+  };
+}
+
+interface LinkOutLike {
+  title: string;
+  publisher: string;
+  url: string;
+  note?: string;
+}
+
+/** Curated link-outs whose title, publisher and note name no diagnosis, code or score (G3), https only. */
+export function clientSafeLinkOuts<T extends LinkOutLike>(links: readonly T[]): T[] {
+  return links.filter(
+    (l) => l.url.startsWith("https://") && isClientSafeText(l.title) && isClientSafeText(l.publisher) && (!l.note || isClientSafeText(l.note)),
+  );
 }
 
 /**

@@ -5,6 +5,8 @@ import { clientHandout } from "@/lib/client-safe";
 import { clientMetadata } from "@/components/client/client-metadata";
 import { ClientHandoutView } from "@/components/client/client-handout-view";
 import { SHARE_BACK } from "../share-back";
+import { DiscreetBrowsingTips } from "@/components/layout/quick-exit";
+import { DISCREET_HANDOUT_IDS, DISCREET_TITLE } from "@/lib/discreet";
 
 /*
  * Spanish share page /r/<handout id>/es: the same client-facing page as /r/<id>, opened in Spanish. Only handouts
@@ -21,6 +23,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   const { id } = await params;
   const h = getAnyHandout(id);
   const es = clientMetadata("es");
+  if (DISCREET_HANDOUT_IDS.includes(id)) return { ...es, title: { absolute: DISCREET_TITLE.es } };
   return { ...es, title: { absolute: `${h?.es?.title ?? h?.title ?? "Hoja de autoayuda"} · Autoayuda` } };
 }
 
@@ -28,5 +31,10 @@ export default async function SharedHandoutPageEs({ params }: { params: Promise<
   const { id } = await params;
   const handout = getAnyHandout(id);
   if (!handout?.es) notFound();
-  return <ClientHandoutView handout={clientHandout(handout)} back={SHARE_BACK} initialLang="es" />;
+  return (
+    <>
+      {DISCREET_HANDOUT_IDS.includes(id) ? <DiscreetBrowsingTips className="mb-4" /> : null}
+      <ClientHandoutView handout={clientHandout(handout)} back={SHARE_BACK} initialLang="es" />
+    </>
+  );
 }

@@ -31,7 +31,7 @@ const ROOT = path.resolve(__dirname, "../..");
 const CONTENT_DIR = path.join(ROOT, "content");
 const TODAY = "2026-11-27";
 
-/** The 29 adult conditions in the knowledge base. */
+/** The 35 adult conditions in the knowledge base. */
 const CONDITION_IDS = [
   "acute-stress-disorder",
   "adjustment-disorder",
@@ -342,6 +342,13 @@ describe("expansion conditions (codes, measures, Part 2, cultural notes, interve
     ["cannabis-use-disorder", /^F12\.(1[01]|2[013]|90)$/, ["6C41.1", "6C41.2"]],
     ["opioid-use-disorder", /^F11\.(1[01]|2[013]|90)$/, ["6C43.1", "6C43.2"]],
     ["stimulant-use-disorder", /^F1[45]\.(10|2[01])$/, ["6C45.1", "6C45.2", "6C46.1", "6C46.2"]],
+    ["acute-stress-disorder", /^F43\.0$/, ["QE84"]],
+    ["sedative-hypnotic-use-disorder", /^F13\.(1[01]|2[01]|23[09]|90)$/, ["6C44.1", "6C44.2"]],
+    ["gambling-disorder", /^F63\.0$/, ["6C50.0", "6C50.1"]],
+    ["tobacco-use-disorder", /^F17\.2(0[013]|1[013]|20|90)$/, ["6C4A.1", "6C4A.2"]],
+    ["body-focused-repetitive-behaviors", /^F(63\.3|42\.4)$/, ["6B25.0", "6B25.1"]],
+    ["premenstrual-dysphoric-disorder", /^F32\.81$/, ["GA34.41"]],
+    ["ptsd", /^F43\.1[012]$/, ["6B40", "6B41"]],
   ] as [string, RegExp, string[]][])("%s carries its ICD-10-CM family and ICD-11 codes", (id, ten, eleven) => {
     expect(codes(id).length).toBeGreaterThan(0);
     for (const c of codes(id)) expect(c, id).toMatch(ten);
@@ -360,8 +367,9 @@ describe("expansion conditions (codes, measures, Part 2, cultural notes, interve
   });
 
   it("gives every new condition except the two bodily-distress patterns a US statistic with a data year (G13)", () => {
-    // No US national estimate was found for illness anxiety or somatic symptom disorder; none is invented.
-    const noUsStat = new Set(["illness-anxiety-disorder", "somatic-symptom-disorder"]);
+    // No US national estimate was found for illness anxiety, somatic symptom disorder or acute stress reactions
+    // (rates depend on the kind of trauma); none is invented.
+    const noUsStat = new Set(["illness-anxiety-disorder", "somatic-symptom-disorder", "acute-stress-disorder"]);
     for (const c of conditions) {
       const us = c.statIds.map((id) => getStat(id)).filter((st) => st?.region === "US");
       if (noUsStat.has(c.id)) expect(c.statIds, c.id).toEqual([]);

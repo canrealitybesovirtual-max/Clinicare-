@@ -116,7 +116,9 @@ for (const scheme of ["light", "dark"] as const) {
 
       const step = page.getByRole("region", { name: /^Step \d+ of \d+/ });
       const next = () => step.getByRole("button", { name: /^Next: / }).click();
-      await next();
+      await next(); // Formulation (optional)
+      await audit(page, `plan formulation step (${scheme})`);
+      await next(); // Problems
       await step.getByRole("checkbox").first().check();
       for (let i = 0; i < 3; i++) {
         await next();

@@ -15,6 +15,7 @@ export default function ReferralLetterToolPage() {
         </p>
       </ToolIntro>
       <ReferralLetterTool sudPrompt={<HubPrompt context="sud" />} />
+      <HubPrompt context="letters-and-forms" className="mt-6" />
     </div>
   );
 }

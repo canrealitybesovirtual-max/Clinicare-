@@ -194,7 +194,13 @@
   ],
   "sud": false,
   "requiredFeatures": [],
-  "redFlagRules": [],
+  "redFlagRules": [
+    {
+      "type": "neurological-signs",
+      "capAt": "possible",
+      "message": "New neurological signs are documented. They need emergency medical evaluation before a somatic or functional pattern is considered."
+    }
+  ],
   "licensedDsm": false,
   "wileyLicensed": false,
   "sources": [

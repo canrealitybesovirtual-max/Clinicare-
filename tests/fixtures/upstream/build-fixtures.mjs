@@ -281,9 +281,19 @@ pmids.forEach((id, i) => {
   };
 });
 write("ncbi-eutils", [
+  // LactMed (db=books) first: the generic PubMed entries below would otherwise answer it.
+  { when: { path: "/esearch.fcgi", query: { db: "books" } }, json: { esearchresult: { count: "1", idlist: ["99100001"] } } },
+  {
+    when: { path: "/esummary.fcgi", query: { db: "books" } },
+    json: {
+      result: {
+        99100001: { uid: "99100001", title: "Sertraline", rtype: "chapter", book: "lactmed", bookaccessionid: "NBK501922", accessionid: "NBK9910001" },
+      },
+    },
+  },
   { when: { path: "/esearch.fcgi" }, json: { esearchresult: { count: "3", idlist: pmids } } },
   { when: { path: "/esummary.fcgi" }, json: { result: summary } },
-], "PMIDs 99000001-99000003 are placeholders.");
+], "PMIDs 99000001-99000003 and LactMed uid 99100001 are placeholders.");
 
 /* ---------------- ClinicalTrials.gov API v2 ---------------- */
 const study = (n) => ({

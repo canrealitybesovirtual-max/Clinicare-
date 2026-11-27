@@ -12,6 +12,7 @@ import { HelpTip } from "@/components/ui/help-tip";
 import { MeasureForm } from "@/components/measures/measure-form";
 import type { FhirExportInfo } from "@/components/measures/fhir-export";
 import { AdultOnly } from "@/components/measures/adult-only";
+import { ReportProblemLink } from "@/components/content/report-problem-link";
 
 export const dynamicParams = false;
 
@@ -116,6 +117,7 @@ export default async function MeasurePage({ params }: { params: Promise<{ id: st
           ) : null}
           <SourcesList sources={measure.sources} />
           <Governance license={measure.license} lastVerified={measure.lastVerified} reviewedBy={measure.reviewedBy} />
+          <ReportProblemLink type="measure" id={measure.id} />
         </Card>
       </section>
       <NextStep href="/plan" label="Step 4 · Plan with the client" />

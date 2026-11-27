@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, ClipboardList } from "lucide-react";
-import { conditions, measures } from "@/lib/content";
+import { conditions, licenses, measures } from "@/lib/content";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -15,6 +15,22 @@ import { HubPrompt } from "@/components/hub/hub-prompt";
 
 export const metadata: Metadata = { title: "Measures" };
 
+/** Opening phrases in licenses.json terms that describe the terms rather than name the instrument. */
+const NOT_A_NAME = /^(?:believed|check|copyrighted|not built|reported|who instrument)\b/i;
+
+/** Display name for a license-queue key: its `name`, else the instrument name the terms open with, else the key. */
+function queueName(key: string, l: { name?: string; terms: string }): string {
+  if (l.name) return l.name;
+  const lead = /^([^(.;:,]{2,80}?)\s*[(.;:,]/.exec(l.terms)?.[1]?.trim();
+  if (!lead || NOT_A_NAME.test(lead) || lead === key) return key;
+  return lead.includes(key) ? lead : `${lead} (${key})`;
+}
+
+/** Structured risk instruments need trained raters (G9): flagged in licenses.json, or by its "Trained clinicians only". */
+function isRiskInstrument(l: { kind?: string; terms: string }): boolean {
+  return l.kind === "risk-instrument" || /trained clinicians only/i.test(l.terms);
+}
+
 export default function MeasuresPage() {
   // Link-out measures named in the knowledge base (license pending, G7), deduplicated by URL.
   const pending = new Map<string, { name: string; url: string; note: string; conditions: string[] }>();
@@ -25,6 +41,12 @@ export default function MeasuresPage() {
       else pending.set(m.url, { ...m, conditions: [c.name] });
     }
   }
+  // Every other measure in the license queue (content/licenses.json, status pending): name and source link only.
+  const namedKeys = new Set(conditions.flatMap((c) => c.measuresPending.map((m) => m.licenseKey)));
+  const queue = Object.entries(licenses.items)
+    .filter(([key, l]) => l.status === "pending" && !namedKeys.has(key) && typeof l.source === "string" && l.source.startsWith("https://"))
+    .map(([key, l]) => ({ key, name: queueName(key, l), url: l.source as string, risk: isRiskInstrument(l) }))
+    .sort((a, b) => a.name.localeCompare(b.name));
 
   return (
     <>
@@ -125,6 +147,29 @@ export default function MeasuresPage() {
               </li>
             ))}
           </ul>
+          {queue.length ? (
+            <>
+              <h3 className="mt-6 text-base font-semibold">Other measures (license pending, link-out only)</h3>
+              <p className="mt-1 max-w-3xl text-sm text-muted">
+                Every other instrument in the app&apos;s license queue that no condition above names. Not built in; the
+                link opens the publisher or literature page.
+              </p>
+              <ul className="mt-3 grid gap-x-6 gap-y-1 text-sm sm:grid-cols-2 lg:grid-cols-3">
+                {queue.map((q) => (
+                  <li key={q.key} className={q.risk ? "py-1" : undefined}>
+                    <ExternalLink href={q.url} className="inline-flex min-h-11 items-center">
+                      {q.name}
+                    </ExternalLink>
+                    {q.risk ? (
+                      <span className="block text-xs text-muted">
+                        Structured risk instrument: trained raters only. This app does not score it or decide risk.
+                      </span>
+                    ) : null}
+                  </li>
+                ))}
+              </ul>
+            </>
+          ) : null}
         </section>
       </AdultOnly>
       <NextStep href="/plan" label="Step 4 · Plan with the client" />

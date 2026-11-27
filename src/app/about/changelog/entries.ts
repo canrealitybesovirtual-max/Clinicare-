@@ -22,6 +22,14 @@ export interface ChangelogEntry {
 export const CHANGELOG: readonly ChangelogEntry[] = [
   {
     date: "2026-11-27",
+    kind: "changed",
+    title: "Session check-in card rewritten",
+    summary:
+      "The end-of-visit items are now open prompts with no ratings, in English and Spanish, and the practice log asks what helped most. The card is not offered in client mode until its review is complete.",
+    items: ["handout/session-check-in-card"],
+  },
+  {
+    date: "2026-11-27",
     kind: "added",
     title: "Theoretical orientation profiles",
     summary:
@@ -245,6 +253,14 @@ export const CHANGELOG: readonly ChangelogEntry[] = [
       "35 more measures (among them the EPDS, GDS, Mini-Cog, MoCA, PC-PTSD-5, WHO-5, WHODAS 2.0, ORS and SRS) are recorded as license pending with the publisher's terms. Pages may link out to them; none is built in until the owner confirms terms in writing. The AGS Beers Criteria are recorded as not licensed: pages point to them and never reproduce them.",
     items: [],
     link: { href: "/about#licensing-heading", label: "License status" },
+  },
+  {
+    date: "2026-11-27",
+    kind: "added",
+    title: "Lactation lookup and Beers link-out",
+    summary:
+      "Medication pages can open the NIH LactMed record on demand. Only the drug name is sent, and LactMed shares the NCBI key and rate limit with PubMed. The older-adults profile links out to the AGS Beers Criteria (2023) and does not reproduce them.",
+    items: [],
   },
   {
     date: "2026-11-27",

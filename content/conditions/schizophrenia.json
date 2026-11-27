@@ -243,7 +243,9 @@
     "safety-plan",
     "sleep-habits",
     "understanding-unusual-experiences",
-    "voices-coping-plan"
+    "voices-coping-plan",
+    "listening-to-someone-you-love",
+    "questions-for-my-prescriber"
   ],
   "statIds": [
     "us-schizophrenia-prevalence"
@@ -270,6 +272,15 @@
     {
       "type": "homicidality",
       "message": "Thoughts of harming others are documented alongside possible psychosis. Follow your crisis protocol, consult, and review duty-to-protect rules for your jurisdiction."
+    },
+    {
+      "type": "acute-confusion",
+      "capAt": "possible",
+      "message": "Possible acute confusion is documented. Delirium and other medical causes can mimic this pattern; arrange a same-day medical assessment before relying on this suggestion."
+    },
+    {
+      "type": "catatonia",
+      "message": "Possible catatonic signs are documented. Catatonia can occur with mood, psychotic and medical conditions and needs an urgent medical and psychiatric assessment."
     }
   ],
   "licensedDsm": false,

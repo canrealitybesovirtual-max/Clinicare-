@@ -20,6 +20,10 @@ import {
 import { HubPrompt } from "@/components/hub/hub-prompt";
 import { conditionLabel, isSudCondition, pubmedTargetFor, trialsTargetFor } from "@/components/interventions/catalog";
 import { orientationLabel, orientationsOf } from "@/components/interventions/orientation";
+import { EvidenceGrades } from "@/components/content/evidence-grades";
+import { ReportProblemLink } from "@/components/content/report-problem-link";
+import { PopulationNotesPanel } from "@/components/populations/population-notes-panel";
+import { formulationsForIntervention, isEmergingTier, orientationsFor, practiceGuidesForIntervention } from "@/lib/cross-links";
 import { minutesLabel } from "@/components/interventions/format";
 import { ScriptReader } from "@/components/interventions/script-reader";
 import { EvidencePanel } from "@/components/interventions/evidence-panel";
@@ -84,7 +88,12 @@ export default async function InterventionPage({ params }: { params: Promise<{ i
   const sud = iv.conditions.some(isSudCondition);
   const pubmed = pubmedTargetFor(iv);
   const trials = trialsTargetFor(iv);
-  const approaches = orientationsOf(iv).map(orientationLabel);
+  const approachIds = orientationsOf(iv);
+  const profiles = orientationsFor(iv.orientationIds);
+  const linkedFormulations = formulationsForIntervention(iv.id);
+  const linkedGuides = practiceGuidesForIntervention(iv.id);
+  // Emerging or limited evidence for every approach it belongs to: show the emerging-treatments ethics prompt.
+  const emerging = profiles.length > 0 && profiles.every((o) => isEmergingTier(o.evidenceTier));
 
   return (
     <>
@@ -135,6 +144,7 @@ export default async function InterventionPage({ params }: { params: Promise<{ i
             </Notice>
           ) : null}
           {sud ? <HubPrompt context="sud" /> : null}
+          {emerging ? <HubPrompt context="emerging-treatment" /> : null}
 
           {/* Safety first: cautions come before the steps and the read-aloud script. */}
           <section aria-labelledby="cautions" className="scroll-mt-6">
@@ -230,14 +240,18 @@ export default async function InterventionPage({ params }: { params: Promise<{ i
 
           <Section id="evidence" title="Evidence">
             <p className="text-sm leading-relaxed">{iv.evidenceLevel}</p>
+            {iv.evidenceGrades?.length ? <EvidenceGrades grades={iv.evidenceGrades} conditionLabel={conditionLabel} /> : null}
             <div className="border-t border-border pt-4">
               <EvidencePanel pubmed={pubmed} trials={trials} />
             </div>
           </Section>
 
+          <PopulationNotesPanel interventionId={iv.id} />
+
           <Section id="sources" title="Sources and review">
             <SourcesList sources={iv.sources} />
             <Governance license={iv.license} lastVerified={iv.lastVerified} reviewedBy={iv.reviewedBy} />
+            <ReportProblemLink type="intervention" id={iv.id} />
           </Section>
 
           <NextStep href="/handouts" label="Step 6 · Handouts" />
@@ -250,7 +264,21 @@ export default async function InterventionPage({ params }: { params: Promise<{ i
               <dt className="font-semibold">Time</dt>
               <dd>{minutesLabel(iv.minutes)}</dd>
               <dt className="font-semibold">Approach</dt>
-              <dd>{approaches.join("; ")}</dd>
+              <dd>
+                <ul className="space-y-0.5">
+                  {approachIds.map((oid) => (
+                    <li key={oid}>
+                      {profiles.some((o) => o.id === oid) ? (
+                        <Link href={`/orientations/${oid}`} className="inline-flex min-h-11 items-center font-semibold text-accent underline underline-offset-2">
+                          {orientationLabel(oid)}
+                        </Link>
+                      ) : (
+                        orientationLabel(oid)
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </dd>
               <dt className="font-semibold">Training</dt>
               <dd>{iv.trainingRequired ? "Specialist training required" : "No specialist training listed"}</dd>
             </dl>
@@ -276,6 +304,40 @@ export default async function InterventionPage({ params }: { params: Promise<{ i
             </ul>
             <p className="text-xs text-muted">Possible uses for clinician review; not a diagnosis.</p>
           </Card>
+
+          {linkedFormulations.length || linkedGuides.length ? (
+            <Card className="space-y-3">
+              <h2 className="text-lg font-semibold">Where it fits</h2>
+              {linkedFormulations.length ? (
+                <div>
+                  <h3 className="text-sm font-semibold">Formulation frameworks</h3>
+                  <ul className="text-sm">
+                    {linkedFormulations.map((f) => (
+                      <li key={f.id}>
+                        <Link href={`/formulations/${f.id}`} className="inline-flex min-h-11 items-center font-semibold text-accent underline underline-offset-2">
+                          {f.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
+              {linkedGuides.length ? (
+                <div>
+                  <h3 className="text-sm font-semibold">Practice guides</h3>
+                  <ul className="text-sm">
+                    {linkedGuides.map((g) => (
+                      <li key={g.id}>
+                        <Link href={`/practice/${g.id}`} className="inline-flex min-h-11 items-center font-semibold text-accent underline underline-offset-2">
+                          {g.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ) : null}
+            </Card>
+          ) : null}
 
           <Card className="hidden space-y-3 lg:block">
             <h2 className="text-lg font-semibold">Client handouts</h2>

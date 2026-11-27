@@ -40,6 +40,7 @@ import { medicationEffectProblems, medicationEffectsFile } from "../src/lib/sche
 import { populationProblems, populations } from "../src/lib/populations";
 import { legalTopicLinkProblems } from "../src/lib/schemas-hub";
 import { z } from "zod";
+import { EvidenceGradeSchema, MAX_EVIDENCE_GRADES } from "../src/lib/schemas-governance";
 import { slug, type Condition, type Handout } from "../src/lib/schemas";
 import type { Intervention } from "../src/lib/schemas-phase2";
 import { interventionsRaw } from "../src/lib/generated/interventions";
@@ -161,16 +162,7 @@ export const contentWiring = () => wiringReport({ handouts, conditions, interven
  * strength term, with a link to the guideline. Checked on the raw files because InterventionSchema does not carry
  * the field yet; grades older than five years are listed by the content audit's review queue.
  */
-export const EvidenceGradeSchema = z.strictObject({
-  body: z.enum(["NICE", "VA/DoD", "APA", "APA Div 12", "WHO", "Cochrane", "USPSTF", "AASM", "SAMHSA", "other"]),
-  guideline: z.string().min(5),
-  year: z.number().int().min(1990),
-  conditionId: slug.optional(),
-  population: z.string().min(5).optional(),
-  direction: z.enum(["for", "against", "insufficient"]),
-  strength: z.string().min(2),
-  url: z.url().refine((u) => u.startsWith("https://"), "https URLs only"),
-});
+export { EvidenceGradeSchema };
 
 /** Each raw intervention's evidenceGrades parse, are not dated in the future and name one of its own conditions. */
 export function evidenceGradeProblems(raw: readonly unknown[], thisYear = new Date().getFullYear()): string[] {
@@ -179,7 +171,7 @@ export function evidenceGradeProblems(raw: readonly unknown[], thisYear = new Da
     const { id, conditions: listed = [], evidenceGrades } = item as { id?: string; conditions?: string[]; evidenceGrades?: unknown };
     if (evidenceGrades === undefined) continue;
     const where = `interventions/${String(id)} evidenceGrades`;
-    const parsed = z.array(EvidenceGradeSchema).max(6).safeParse(evidenceGrades);
+    const parsed = z.array(EvidenceGradeSchema).max(MAX_EVIDENCE_GRADES).safeParse(evidenceGrades);
     if (!parsed.success) {
       p.push(`${where}: ${parsed.error.issues.slice(0, 3).map((i) => `${i.path.join(".")}: ${i.message}`).join("; ")}`);
       continue;

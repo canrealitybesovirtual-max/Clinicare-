@@ -17,13 +17,12 @@
     },
     {
       "heading": "At the end of my visit",
-      "body": "Circle yes, partly, or no. Add a few words if you like.",
+      "body": "Write a few words, or talk it over with your counselor. You can skip any line.",
       "steps": [
-        "I felt heard, understood, and respected: yes / partly / no",
-        "We worked on what matters most to me: yes / partly / no",
-        "The way we worked today was a good fit for me: yes / partly / no",
-        "Overall, today's visit was right for me: yes / partly / no",
-        "One thing that would make next time better: ________________"
+        "What helped most today: ________________",
+        "Something that was hard to say, or that did not work for me today: ________________",
+        "One thing I will try or think about before next time: ________________",
+        "What I want more of, or less of, next time: ________________"
       ]
     },
     {
@@ -32,14 +31,14 @@
     },
     {
       "heading": "About this card",
-      "body": "This card was written for this resource. It is not a test, and nothing on it is added up or graded. Your counselor may also use a short rating form. If so, they will explain how it works."
+      "body": "This card was written for this resource. It is not a test or a rating form, and nothing on it is added up or graded. Your counselor may also ask you to fill in a short rating form. If so, they will explain how it works."
     }
   ],
   "practiceLog": {
     "columns": [
       "Visit",
       "Main thing I wanted to talk about",
-      "Felt heard? (yes / partly / no)",
+      "What helped most",
       "One thing for next time"
     ],
     "rows": 6
@@ -61,13 +60,12 @@
       },
       {
         "heading": "Al final de mi cita",
-        "body": "Marque sí, en parte o no. Agregue unas palabras si quiere.",
+        "body": "Escriba unas palabras, o háblelo con su consejero. Puede saltarse cualquier línea.",
         "steps": [
-          "Me sentí escuchado, comprendido y respetado: sí / en parte / no",
-          "Trabajamos en lo que más me importa: sí / en parte / no",
-          "La forma en que trabajamos hoy me quedó bien: sí / en parte / no",
-          "En general, la cita de hoy fue buena para mí: sí / en parte / no",
-          "Una cosa que haría mejor la próxima vez: ________________"
+          "Lo que más me ayudó hoy: ________________",
+          "Algo que me costó decir, o que hoy no me funcionó: ________________",
+          "Una cosa que voy a probar o pensar antes de la próxima cita: ________________",
+          "Lo que me gustaría tener más, o menos, la próxima vez: ________________"
         ]
       },
       {
@@ -76,14 +74,14 @@
       },
       {
         "heading": "Sobre esta tarjeta",
-        "body": "Esta tarjeta se escribió para este recurso. No es una prueba, y nada de lo que escriba se suma ni se califica. Su consejero también puede usar un formulario corto para calificar las citas. Si es así, le va a explicar cómo funciona."
+        "body": "Esta tarjeta se escribió para este recurso. No es una prueba ni un formulario para calificar, y nada de lo que escriba se suma ni se califica. Su consejero también puede pedirle que llene un formulario corto para calificar las citas. Si es así, le va a explicar cómo funciona."
       }
     ],
     "practiceLog": {
       "columns": [
         "Cita",
         "Lo principal que quería hablar",
-        "¿Me sentí escuchado? (sí / en parte / no)",
+        "Lo que más me ayudó",
         "Una cosa para la próxima vez"
       ]
     },

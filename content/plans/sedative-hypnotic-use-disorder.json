@@ -1,0 +1,110 @@
+{
+  "conditionId": "sedative-hypnotic-use-disorder",
+  "problems": [
+    {
+      "id": "shu-control",
+      "label": "Sedative or sleeping-medicine use that is hard to control",
+      "definitions": [
+        {
+          "text": "Takes sedatives or sleeping medicine more often or in larger amounts than prescribed, or gets extra supplies.",
+          "sud": true
+        },
+        {
+          "text": "Has rebound anxiety, poor sleep or shakiness between doses or when trying to cut down.",
+          "sud": true
+        },
+        {
+          "text": "Use has led to falls, memory gaps, drowsy driving or mixing with alcohol or opioids.",
+          "sud": true
+        }
+      ],
+      "longTermGoals": [
+        {
+          "text": "The client safely reaches the medicine goal agreed with their prescriber (a slower schedule, a lower dose or stopping) and manages anxiety and sleep with skills.",
+          "sud": true
+        }
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "shu-goal",
+          "text": "By session 3, agree on a personal goal for the medicine with the prescriber and list 3 reasons for change in own words.",
+          "interventionIds": [
+            "motivational-interviewing",
+            "medication-referral"
+          ],
+          "sud": true
+        },
+        {
+          "id": "shu-taper",
+          "text": "Follow the prescriber's taper schedule, recording each dose change and any rebound symptoms weekly, and never stop suddenly.",
+          "interventionIds": [
+            "medication-referral"
+          ],
+          "sud": true
+        },
+        {
+          "id": "shu-sleep",
+          "text": "Practice stimulus control every night for 4 weeks and keep a sleep diary to review together.",
+          "interventionIds": [
+            "cbti-stimulus-control",
+            "brief-behavioral-treatment-insomnia"
+          ],
+          "sud": true
+        },
+        {
+          "id": "shu-anxiety",
+          "text": "Practice applied relaxation daily and use it during at least 3 moments of rebound anxiety a week.",
+          "interventionIds": [
+            "applied-relaxation"
+          ],
+          "sud": true
+        },
+        {
+          "id": "shu-sensations",
+          "text": "If panic was the reason for the medicine, complete graded body-sensation practice and rate fear before and after each exercise.",
+          "interventionIds": [
+            "interoceptive-exposure"
+          ],
+          "sud": true
+        },
+        {
+          "id": "shu-relapse",
+          "text": "Write a relapse plan listing high-risk times and situations and people to call, including a commitment never to mix sedatives with alcohol or opioids.",
+          "interventionIds": [
+            "relapse-prevention-planning"
+          ],
+          "sud": true
+        }
+      ],
+      "measureIds": [
+        "gad-7",
+        "phq-9"
+      ]
+    }
+  ],
+  "collaborativeNote": "Write goals and objectives with the client in their own words; timelines are examples to adapt. Any change to the medicine is planned with the prescriber: never suggest stopping suddenly, since withdrawal can cause seizures. Every item in this plan records substance use: the export carries the 42 CFR Part 2 notice. 42 CFR Part 2 prohibits unauthorized use or disclosure of these records. Safety planning is done together with the client, and the clinician makes every risk decision. Adult scope only. Do not add names or other identifying details.",
+  "sud": true,
+  "sources": [
+    {
+      "title": "Treatment of benzodiazepine dependence (Soyka)",
+      "publisher": "New England Journal of Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28328330/",
+      "year": 2017
+    },
+    {
+      "title": "Psychosocial interventions for benzodiazepine harmful use, abuse or dependence (Darker et al.)",
+      "publisher": "Cochrane Database of Systematic Reviews (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26106751/",
+      "year": 2015
+    },
+    {
+      "title": "42 CFR 2.32: notice to accompany disclosure (federal confidentiality rule for substance use treatment records)",
+      "publisher": "eCFR, U.S. Government Publishing Office",
+      "url": "https://www.ecfr.gov/current/title-42/chapter-I/subchapter-A/part-2/subpart-C/section-2.32",
+      "year": 2024
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

@@ -121,13 +121,20 @@ function PrecautionsInner({ interventions }: { interventions: readonly Intervent
                     {shown.map((e) => (
                       <Disclosure
                         key={e.interventionId}
-                        title={e.name}
-                        meta={[
-                          e.notes.length ? `${e.notes.length} sourced ${e.notes.length === 1 ? "note" : "notes"}` : null,
-                          e.cautionLines.length ? `${e.cautionLines.length} from its cautions` : null,
-                        ]
-                          .filter(Boolean)
-                          .join(" · ")}
+                        title={
+                          // Counts sit under the name, not beside it: a side-by-side meta squeezes the name at 390px.
+                          <>
+                            <span className="block">{e.name}</span>
+                            <span className="block text-xs font-normal text-muted">
+                              {[
+                                e.notes.length ? `${e.notes.length} sourced ${e.notes.length === 1 ? "note" : "notes"}` : null,
+                                e.cautionLines.length ? `${e.cautionLines.length} from its cautions` : null,
+                              ]
+                                .filter(Boolean)
+                                .join(" · ")}
+                            </span>
+                          </>
+                        }
                       >
                         {e.notes.map((n) => (
                           <div key={n.id} className="space-y-1.5 rounded-xl border border-accent/30 bg-accent-soft p-3">

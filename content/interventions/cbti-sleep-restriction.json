@@ -2,7 +2,7 @@
   "id": "cbti-sleep-restriction",
   "name": "CBT-I: Sleep restriction therapy (limiting time in bed)",
   "modality": "CBT for insomnia (CBT-I) - behavioral component",
-  "conditions": ["insomnia-disorder", "major-depressive-disorder"],
+  "conditions": ["insomnia-disorder", "major-depressive-disorder", "ptsd"],
   "evidenceLevel": "The AASM 2021 guideline gives sleep restriction therapy a conditional recommendation as a single-component treatment and strongly recommends multicomponent CBT-I, which usually includes it (Edinger et al., 2021). The guideline notes harms, including temporary daytime sleepiness and reduced concentration, and possible contraindications in high-risk occupations and in people prone to mania or seizures. The American College of Physicians (2016) recommends CBT-I as the initial treatment for chronic insomnia disorder. In a mixed-methods study, side effects such as fatigue, sleepiness, low energy and headache were very common during sleep restriction (Kyle et al., 2011).",
   "minutes": { "min": 15, "max": 45 },
   "purpose": "Sleep restriction, developed by Arthur Spielman and colleagues, temporarily limits time in bed to about the client's current average sleep time (based on a sleep diary), with a minimum floor and a fixed rise time. This builds sleep drive, makes sleep deeper and more continuous, and cuts down time awake in bed. Time in bed is then adjusted step by step, based on diary data. Because it causes short-term sleepiness and needs careful adjustment, it should be delivered by clinicians trained in CBT-I. This entry describes principles only. Follow your CBT-I protocol for sleep windows, floors and adjustment rules.",

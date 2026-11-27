@@ -118,9 +118,29 @@ const RED_FLAG_CONTRIBUTIONS: Record<RedFlagType, Contribution> = {
     why: "Possible alcohol or sedative withdrawal is documented: arrange an urgent medical assessment.",
     part2: true,
   },
+  "acute-confusion": { referrals: ["urgent-medical", "primary-care"], why: "Possible acute confusion is documented: arrange a same-day medical assessment for delirium." },
+  catatonia: { referrals: ["urgent-medical", "psychiatrist"], why: "Possible catatonic signs are documented: arrange an urgent medical and psychiatric assessment." },
+  "toxicity-or-overdose": {
+    referrals: ["crisis", "urgent-medical"],
+    why: "Possible overdose, intoxication or medication toxicity is documented: call emergency services or arrange same-day medical care.",
+    // Intoxication and overdose are substance-use information (the banner cites 42 CFR Part 2 too).
+    part2: true,
+  },
+  "neurological-signs": { referrals: ["urgent-medical"], why: "Possible new neurological signs are documented: arrange emergency medical care." },
 };
 
-const RED_FLAG_ORDER: readonly RedFlagType[] = ["suicidality", "homicidality", "psychosis", "mania", "eating-disorder-medical", "withdrawal"];
+const RED_FLAG_ORDER: readonly RedFlagType[] = [
+  "suicidality",
+  "homicidality",
+  "psychosis",
+  "mania",
+  "eating-disorder-medical",
+  "withdrawal",
+  "acute-confusion",
+  "catatonia",
+  "toxicity-or-overdose",
+  "neurological-signs",
+];
 const SUD_REFERRALS: ReadonlySet<FollowUpReferralKind> = new Set(["addiction-counselor", "substance-use"]);
 
 /** Pure: compute hints from a scoring result, triggers and a catalog. */

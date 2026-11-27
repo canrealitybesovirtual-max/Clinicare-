@@ -67,6 +67,10 @@ const RED_FLAG_ORDER: RedFlagType[] = [
   "mania",
   "eating-disorder-medical",
   "withdrawal",
+  "acute-confusion",
+  "catatonia",
+  "toxicity-or-overdose",
+  "neurological-signs",
 ];
 
 const NO_ANSWERS: readonly AnsweredRecord[] = [];

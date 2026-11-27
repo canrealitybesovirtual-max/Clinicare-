@@ -14,6 +14,7 @@ import {
 } from "@/lib/schemas-referrals";
 
 const TODAY = "2026-11-26"; // compile date of these files
+const LATEST_CHECK = "2026-11-27"; // round 4 entries were verified one day later
 const usDir = ReferralDirectorySchema.parse(us);
 const intlDir = ReferralDirectorySchema.parse(intl);
 const all: ReferralEntry[] = [...usDir.entries, ...intlDir.entries];
@@ -41,8 +42,8 @@ describe("referral directories: schema and governance", () => {
     for (const e of all) {
       expect(e.sources.length, e.id).toBeGreaterThan(0);
       expect(e.url.startsWith("https://"), e.id).toBe(true);
-      expect(e.lastVerified === "unverified" || e.lastVerified <= TODAY, e.id).toBe(true);
-      if (isVerified(e)) expect(e.verification, e.id).toMatch(/2026-11-26/);
+      expect(e.lastVerified === "unverified" || e.lastVerified <= LATEST_CHECK, e.id).toBe(true);
+      if (isVerified(e)) expect(e.verification, e.id).toMatch(/2026-11-2[67]/);
     }
   });
 

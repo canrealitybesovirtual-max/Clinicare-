@@ -20,6 +20,7 @@ const ROUTES = [
   "pubmed",
   "trials",
   "gho",
+  "lactmed", // NCBI LactMed record links (E-utilities, curated drug names only)
   "assistant", // optional Claude assistant (CLAUDE.md owner amendment 2026-11-27); off unless configured server-side
 ] as const;
 

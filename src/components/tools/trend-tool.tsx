@@ -1,5 +1,6 @@
 "use client";
 import * as React from "react";
+import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { Plus, Trash2 } from "lucide-react";
 import type { Measure } from "@/lib/schemas";
@@ -8,6 +9,7 @@ import {
   TREND_GOVERNANCE,
   TREND_RULES,
   analyzeTrend,
+  notOnTrack,
   pointError,
   removePoint,
   upsertPoint,
@@ -22,6 +24,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ChoiceGroup } from "@/components/ui/choice-group";
 import { ExternalLink } from "@/components/ui/external-link";
+import { Notice } from "@/components/ui/notice";
 import { RemissionShape, ResponseShape, TrendChart } from "./trend-chart";
 
 type TrendMeasureId = keyof typeof TREND_RULES;
@@ -317,6 +320,25 @@ function TrendInner({ measures }: { measures: (Measure & { id: TrendMeasureId })
           <p className="text-sm text-muted">Add the first total above. The first session you add is the baseline.</p>
         )}
       </Card>
+
+      {notOnTrack(trend) ? (
+        <Notice tone="info" title="Not on track: worth a review">
+          <ClinicianReviewBadge />
+          <p>
+            Totals have not come down from the baseline, or have risen. Consider reviewing the alliance, the formulation,
+            the fit and intensity of the work, consulting or stepping up care, and re-checking safety. This is a prompt
+            for your review, not a decision.
+          </p>
+          <p className="flex flex-wrap gap-x-4">
+            <Link href="/practice/outcome-monitoring" className="inline-flex min-h-11 items-center font-semibold text-accent underline underline-offset-2">
+              Outcome monitoring guide
+            </Link>
+            <Link href="/practice/unwanted-effects-of-therapy" className="inline-flex min-h-11 items-center font-semibold text-accent underline underline-offset-2">
+              Unwanted effects of therapy
+            </Link>
+          </p>
+        </Notice>
+      ) : null}
 
       <Card className="space-y-4">
         <h2 className="text-lg font-semibold">How the markers are defined</h2>

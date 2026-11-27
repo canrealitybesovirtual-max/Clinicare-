@@ -1,7 +1,43 @@
 {
-  "_about": "Fictional e2e fixture data in the upstream's response shape (E2E_UPSTREAM_FIXTURES=1, tests only). PMIDs 99000001-99000003 are placeholders.",
+  "_about": "Fictional e2e fixture data in the upstream's response shape (E2E_UPSTREAM_FIXTURES=1, tests only). PMIDs 99000001-99000003 and LactMed uid 99100001 are placeholders.",
   "upstream": "ncbi-eutils",
   "responses": [
+    {
+      "when": {
+        "path": "/esearch.fcgi",
+        "query": {
+          "db": "books"
+        }
+      },
+      "json": {
+        "esearchresult": {
+          "count": "1",
+          "idlist": [
+            "99100001"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/esummary.fcgi",
+        "query": {
+          "db": "books"
+        }
+      },
+      "json": {
+        "result": {
+          "99100001": {
+            "uid": "99100001",
+            "title": "Sertraline",
+            "rtype": "chapter",
+            "book": "lactmed",
+            "bookaccessionid": "NBK501922",
+            "accessionid": "NBK9910001"
+          }
+        }
+      }
+    },
     {
       "when": {
         "path": "/esearch.fcgi"

@@ -238,7 +238,8 @@
   ],
   "handouts": [
     "medicine-taper-support",
-    "sleep-habits"
+    "sleep-habits",
+    "questions-for-my-prescriber"
   ],
   "statIds": [
     "us-sedative-misuse-past-year"
@@ -265,6 +266,10 @@
     {
       "type": "psychosis",
       "message": "Psychotic symptoms are documented. Sedative withdrawal delirium and intoxication need urgent medical and psychiatric evaluation."
+    },
+    {
+      "type": "toxicity-or-overdose",
+      "message": "Possible overdose, intoxication or medication toxicity is documented. Call emergency services if the person is hard to wake or breathing poorly, give naloxone if opioids may be involved, and arrange same-day medical care."
     }
   ],
   "licensedDsm": false,

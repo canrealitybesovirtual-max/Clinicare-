@@ -30,6 +30,7 @@ import {
 import { fill, useT, type Text } from "@/lib/i18n/core";
 import { HEADER, NAV } from "@/lib/i18n/shell";
 import { CrisisButton } from "@/components/crisis/crisis-button";
+import { QuickExitButton, isDiscreetPath } from "@/components/layout/quick-exit";
 import { Button, buttonVariants } from "@/components/ui/button";
 import {
   Dialog,
@@ -373,6 +374,7 @@ export function SiteHeader() {
           <LanguageToggle />
           <TextSizeToggle />
           {client ? isSharePath(pathname) ? null : <ClinicianViewButton /> : <MobileNav pathname={pathname} />}
+          {isDiscreetPath(pathname) ? <QuickExitButton /> : null}
           <CrisisButton plain={client} />
         </div>
       </div>

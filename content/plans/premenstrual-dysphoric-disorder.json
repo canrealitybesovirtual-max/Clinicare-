@@ -1,0 +1,78 @@
+{
+  "conditionId": "premenstrual-dysphoric-disorder",
+  "problems": [
+    {
+      "id": "pmdd-cyclical",
+      "label": "Mood symptoms that follow the menstrual cycle",
+      "definitions": [
+        "Irritability, low mood, tension or mood swings rise before the period and ease soon after it starts.",
+        "Arguments, missed work or pulling away from others cluster in the same days of each cycle.",
+        "Daily ratings over at least two cycles show symptom-free days after the period."
+      ],
+      "longTermGoals": [
+        "The client feels more in control during the premenstrual days, and the cycle affects work and relationships less."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "pmdd-plan",
+          "text": "Using the daily ratings, plan lighter scheduling, a way to pause conflicts and extra support for the 3 hardest days before the next cycle.",
+          "interventionIds": [
+            "problem-solving"
+          ]
+        },
+        {
+          "id": "pmdd-thoughts",
+          "text": "During the premenstrual days, write down at least 2 harsh or hopeless thoughts a week and a kinder, balanced response.",
+          "interventionIds": [
+            "thought-record",
+            "self-compassion-practice"
+          ]
+        },
+        {
+          "id": "pmdd-movement",
+          "text": "Do at least 20 minutes of movement the client enjoys on most days of the cycle.",
+          "interventionIds": [
+            "physical-activity"
+          ]
+        },
+        {
+          "id": "pmdd-relax",
+          "text": "Practice progressive muscle relaxation daily in the premenstrual week and rate tension before and after.",
+          "interventionIds": [
+            "progressive-muscle-relaxation"
+          ]
+        },
+        {
+          "id": "pmdd-medicine",
+          "text": "If symptoms are marked, see a prescriber about SSRI or hormonal options and bring the daily ratings.",
+          "interventionIds": [
+            "medication-referral"
+          ]
+        }
+      ],
+      "measureIds": [
+        "phq-9",
+        "gad-7"
+      ]
+    }
+  ],
+  "collaborativeNote": "Write goals with the client in their own words. Keep daily ratings for at least two cycles before relying on the cycle link, and ask about suicidal thoughts, which can rise in the premenstrual days. New mood problems with irregular cycles or hot flashes in midlife call for a medical review for perimenopause. Safety planning is done together with the client, and the clinician makes every risk decision. Adult scope only. Do not add names or other identifying details.",
+  "sud": false,
+  "sources": [
+    {
+      "title": "Management of premenstrual disorders: ACOG Clinical Practice Guideline No. 7",
+      "publisher": "Obstetrics & Gynecology (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37973069/",
+      "year": 2023
+    },
+    {
+      "title": "Daily Record of Severity of Problems (DRSP): reliability and validity (Endicott et al.)",
+      "publisher": "Archives of Women's Mental Health (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16172836/",
+      "year": 2006
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

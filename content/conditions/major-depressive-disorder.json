@@ -111,7 +111,9 @@
   "strongMinAreas": 5,
   "redFlagRules": [
     {"type": "mania", "capAt": "moderate", "message": "Manic or hypomanic signs are documented in this input: consider bipolar disorder (ICD-10-CM F31.x) rather than unipolar depression, and refer for psychiatric evaluation before starting treatment."},
-    {"type": "psychosis", "message": "Psychotic symptoms are documented in this input: consider a depressive episode with psychotic features (ICD-10-CM F32.3 / F33.3) or a primary psychotic disorder, and refer for an urgent psychiatric evaluation."}
+    {"type": "psychosis", "message": "Psychotic symptoms are documented in this input: consider a depressive episode with psychotic features (ICD-10-CM F32.3 / F33.3) or a primary psychotic disorder, and refer for an urgent psychiatric evaluation."},
+    {"type": "acute-confusion", "capAt": "possible", "message": "Possible acute confusion is documented. Delirium and other medical causes can mimic this pattern; arrange a same-day medical assessment before relying on this suggestion."},
+    {"type": "catatonia", "message": "Possible catatonic signs are documented. Catatonia can occur with mood, psychotic and medical conditions and needs an urgent medical and psychiatric assessment."}
   ],
   "licensedDsm": false,
   "wileyLicensed": false,

@@ -450,6 +450,196 @@
     {
       "when": {
         "query": {
+          "terms": "F13"
+        }
+      },
+      "json": [
+        7,
+        [
+          "F13.10",
+          "F13.11",
+          "F13.20",
+          "F13.21",
+          "F13.230",
+          "F13.239",
+          "F13.90"
+        ],
+        null,
+        [
+          [
+            "F13.10",
+            "Sedative, hypnotic or anxiolytic abuse, uncomplicated"
+          ],
+          [
+            "F13.11",
+            "Sedative, hypnotic or anxiolytic abuse, in remission"
+          ],
+          [
+            "F13.20",
+            "Sedative, hypnotic or anxiolytic dependence, uncomplicated"
+          ],
+          [
+            "F13.21",
+            "Sedative, hypnotic or anxiolytic dependence, in remission"
+          ],
+          [
+            "F13.230",
+            "Sedative, hypnotic or anxiolytic dependence with withdrawal, uncomplicated"
+          ],
+          [
+            "F13.239",
+            "Sedative, hypnotic or anxiolytic dependence with withdrawal, unspecified"
+          ],
+          [
+            "F13.90",
+            "Sedative, hypnotic, or anxiolytic use, unspecified, uncomplicated"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F13.10"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F13.10"
+        ],
+        null,
+        [
+          [
+            "F13.10",
+            "Sedative, hypnotic or anxiolytic abuse, uncomplicated"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F13.11"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F13.11"
+        ],
+        null,
+        [
+          [
+            "F13.11",
+            "Sedative, hypnotic or anxiolytic abuse, in remission"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F13.20"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F13.20"
+        ],
+        null,
+        [
+          [
+            "F13.20",
+            "Sedative, hypnotic or anxiolytic dependence, uncomplicated"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F13.21"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F13.21"
+        ],
+        null,
+        [
+          [
+            "F13.21",
+            "Sedative, hypnotic or anxiolytic dependence, in remission"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F13.230"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F13.230"
+        ],
+        null,
+        [
+          [
+            "F13.230",
+            "Sedative, hypnotic or anxiolytic dependence with withdrawal, uncomplicated"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F13.239"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F13.239"
+        ],
+        null,
+        [
+          [
+            "F13.239",
+            "Sedative, hypnotic or anxiolytic dependence with withdrawal, unspecified"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F13.90"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F13.90"
+        ],
+        null,
+        [
+          [
+            "F13.90",
+            "Sedative, hypnotic, or anxiolytic use, unspecified, uncomplicated"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
           "terms": "F14"
         }
       },
@@ -623,6 +813,221 @@
           [
             "F15.21",
             "Other stimulant dependence, in remission"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F17"
+        }
+      },
+      "json": [
+        8,
+        [
+          "F17.200",
+          "F17.201",
+          "F17.203",
+          "F17.210",
+          "F17.211",
+          "F17.213",
+          "F17.220",
+          "F17.290"
+        ],
+        null,
+        [
+          [
+            "F17.200",
+            "Nicotine dependence, unspecified, uncomplicated"
+          ],
+          [
+            "F17.201",
+            "Nicotine dependence, unspecified, in remission"
+          ],
+          [
+            "F17.203",
+            "Nicotine dependence unspecified, with withdrawal"
+          ],
+          [
+            "F17.210",
+            "Nicotine dependence, cigarettes, uncomplicated"
+          ],
+          [
+            "F17.211",
+            "Nicotine dependence, cigarettes, in remission"
+          ],
+          [
+            "F17.213",
+            "Nicotine dependence, cigarettes, with withdrawal"
+          ],
+          [
+            "F17.220",
+            "Nicotine dependence, chewing tobacco, uncomplicated"
+          ],
+          [
+            "F17.290",
+            "Nicotine dependence, other tobacco product, uncomplicated"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F17.200"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F17.200"
+        ],
+        null,
+        [
+          [
+            "F17.200",
+            "Nicotine dependence, unspecified, uncomplicated"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F17.201"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F17.201"
+        ],
+        null,
+        [
+          [
+            "F17.201",
+            "Nicotine dependence, unspecified, in remission"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F17.203"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F17.203"
+        ],
+        null,
+        [
+          [
+            "F17.203",
+            "Nicotine dependence unspecified, with withdrawal"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F17.210"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F17.210"
+        ],
+        null,
+        [
+          [
+            "F17.210",
+            "Nicotine dependence, cigarettes, uncomplicated"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F17.211"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F17.211"
+        ],
+        null,
+        [
+          [
+            "F17.211",
+            "Nicotine dependence, cigarettes, in remission"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F17.213"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F17.213"
+        ],
+        null,
+        [
+          [
+            "F17.213",
+            "Nicotine dependence, cigarettes, with withdrawal"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F17.220"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F17.220"
+        ],
+        null,
+        [
+          [
+            "F17.220",
+            "Nicotine dependence, chewing tobacco, uncomplicated"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F17.290"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F17.290"
+        ],
+        null,
+        [
+          [
+            "F17.290",
+            "Nicotine dependence, other tobacco product, uncomplicated"
           ]
         ]
       ]
@@ -1164,7 +1569,7 @@
         }
       },
       "json": [
-        7,
+        8,
         [
           "F32.0",
           "F32.1",
@@ -1172,6 +1577,7 @@
           "F32.3",
           "F32.4",
           "F32.5",
+          "F32.81",
           "F32.9"
         ],
         null,
@@ -1199,6 +1605,10 @@
           [
             "F32.5",
             "Major depressive disorder, single episode, in full remission"
+          ],
+          [
+            "F32.81",
+            "Premenstrual dysphoric disorder"
           ],
           [
             "F32.9",
@@ -1323,6 +1733,26 @@
           [
             "F32.5",
             "Major depressive disorder, single episode, in full remission"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F32.81"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F32.81"
+        ],
+        null,
+        [
+          [
+            "F32.81",
+            "Premenstrual dysphoric disorder"
           ]
         ]
       ]
@@ -2164,10 +2594,11 @@
         }
       },
       "json": [
-        4,
+        5,
         [
           "F42.2",
           "F42.3",
+          "F42.4",
           "F42.8",
           "F42.9"
         ],
@@ -2180,6 +2611,10 @@
           [
             "F42.3",
             "Hoarding disorder"
+          ],
+          [
+            "F42.4",
+            "Excoriation (skin-picking) disorder"
           ],
           [
             "F42.8",
@@ -2235,6 +2670,26 @@
     {
       "when": {
         "query": {
+          "terms": "F42.4"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F42.4"
+        ],
+        null,
+        [
+          [
+            "F42.4",
+            "Excoriation (skin-picking) disorder"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
           "terms": "F42.8"
         }
       },
@@ -2279,8 +2734,9 @@
         }
       },
       "json": [
-        10,
+        11,
         [
+          "F43.0",
           "F43.10",
           "F43.11",
           "F43.12",
@@ -2294,6 +2750,10 @@
         ],
         null,
         [
+          [
+            "F43.0",
+            "Acute stress reaction"
+          ],
           [
             "F43.10",
             "Post-traumatic stress disorder, unspecified"
@@ -2333,6 +2793,26 @@
           [
             "F43.81",
             "Prolonged grief disorder"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F43.0"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F43.0"
+        ],
+        null,
+        [
+          [
+            "F43.0",
+            "Acute stress reaction"
           ]
         ]
       ]
@@ -3343,6 +3823,71 @@
           [
             "F60.3",
             "Borderline personality disorder"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F63"
+        }
+      },
+      "json": [
+        2,
+        [
+          "F63.0",
+          "F63.3"
+        ],
+        null,
+        [
+          [
+            "F63.0",
+            "Pathological gambling"
+          ],
+          [
+            "F63.3",
+            "Trichotillomania"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F63.0"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F63.0"
+        ],
+        null,
+        [
+          [
+            "F63.0",
+            "Pathological gambling"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F63.3"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F63.3"
+        ],
+        null,
+        [
+          [
+            "F63.3",
+            "Trichotillomania"
           ]
         ]
       ]

@@ -4,6 +4,7 @@
  */
 import { z } from "zod";
 import { governance, slug } from "./schemas";
+import { EvidenceGradeSchema, MAX_EVIDENCE_GRADES } from "./schemas-governance";
 
 export const InterventionSchema = z.object({
   id: slug,
@@ -26,6 +27,8 @@ export const InterventionSchema = z.object({
   trainingRequired: z.string().optional(), // e.g. "EMDR: trained clinicians only"
   handoutIds: z.array(slug), // matching client handouts (content/handouts)
   orientationIds: z.array(slug).optional(), // theoretical orientation profiles (content/orientations)
+  // Structured ratings from named guideline bodies (direction, strength, year, link); validated against conditions.
+  evidenceGrades: z.array(EvidenceGradeSchema).max(MAX_EVIDENCE_GRADES).optional(),
   // Suggested for a condition only when one of these symptoms is documented (applied tension: blood-injection-injury).
   suggestWith: z.array(slug).min(1).optional(),
   ...governance,

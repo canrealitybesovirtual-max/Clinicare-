@@ -23,6 +23,7 @@ import { useScrubbedField } from "@/components/symptoms/use-scrubbed-field";
 import { PRIVATE_TEXT_FIELD_PROPS } from "@/components/ui/private-field";
 import { ClinicianReviewBadge } from "@/components/content/content-meta";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ChoiceGroup } from "@/components/ui/choice-group";
 import { ExternalLink } from "@/components/ui/external-link";
@@ -64,6 +65,9 @@ function StepHeading({ n, children }: { n: number; children: React.ReactNode }) 
   );
 }
 
+/** Options shown before "Show all" on a long list. */
+const PREVIEW_COUNT = 12;
+
 function OptionGridInner({ conditions, facts }: { conditions: GridCondition[]; facts: Record<string, OptionFacts> }) {
   const { register, flushAll } = useFlushRegistry();
   const [view, setView] = React.useState<View>("clinician");
@@ -86,6 +90,13 @@ function OptionGridInner({ conditions, facts }: { conditions: GridCondition[]; f
   );
   const options: OptionFacts[] = [...selected.flatMap((id) => facts[id] ?? []), ...(includeWait ? [WAIT_AND_REVIEW] : [])];
   const atMax = selected.length >= MAX_OPTIONS;
+  // A long list (some areas have 70+ options) shows the first PREVIEW_COUNT, plus anything already chosen, until the
+  // clinician asks for all of them or types a filter; otherwise step 3 ends up thousands of pixels down on a phone.
+  const [showAll, setShowAll] = React.useState(false);
+  let unpicked = 0;
+  const visible =
+    showAll || words.length ? listed : listed.filter((o) => selected.includes(o.id) || unpicked++ < PREVIEW_COUNT);
+  const hiddenCount = listed.length - visible.length;
   const docInput = () => ({ options, plain: plainRef.current, priorities, sud: condition?.sud ?? false });
   const sud = optionGridRecordsSubstanceUse({ options, plain, priorities, sud: condition?.sud ?? false });
 
@@ -94,6 +105,7 @@ function OptionGridInner({ conditions, facts }: { conditions: GridCondition[]; f
     setSelected([]);
     setIncludeWait(false);
     setPlain({});
+    setShowAll(false);
     filterField.replace("");
   }
 
@@ -166,13 +178,25 @@ function OptionGridInner({ conditions, facts }: { conditions: GridCondition[]; f
                     className="block min-h-11 w-full rounded-xl border border-input-border bg-surface px-3 text-base text-text placeholder:text-muted"
                   />
                   <p role="status" className="text-sm text-muted">
-                    {listed.length} of {available.length} options shown.
+                    {visible.length} of {available.length} options shown.
                   </p>
                 </div>
               ) : null}
+              {options.length ? (
+                <p className="flex flex-wrap items-center gap-x-2 rounded-xl bg-accent-soft px-3 text-sm">
+                  <span className="font-semibold">
+                    Selected {selected.length} of {MAX_OPTIONS}
+                    {includeWait ? ", plus wait and review" : ""}
+                  </span>
+                  <span aria-hidden>·</span>
+                  <a href="#compare-heading" className="inline-flex min-h-11 items-center font-semibold text-accent underline underline-offset-2">
+                    Go to compare
+                  </a>
+                </p>
+              ) : null}
               <fieldset className="space-y-2">
                 <legend className="sr-only">Options from the library</legend>
-                {listed.map((o) => (
+                {visible.map((o) => (
                   <CheckRow
                     key={o.id}
                     checked={selected.includes(o.id)}
@@ -186,6 +210,11 @@ function OptionGridInner({ conditions, facts }: { conditions: GridCondition[]; f
                   </CheckRow>
                 ))}
               </fieldset>
+              {hiddenCount > 0 ? (
+                <Button type="button" variant="outline" onClick={() => setShowAll(true)}>
+                  Show all {listed.length} options
+                </Button>
+              ) : null}
               {atMax ? <p className="text-sm text-muted">Up to {MAX_OPTIONS} at a time. Untick one to choose another.</p> : null}
               <CheckRow checked={includeWait} onChange={setIncludeWait}>
                 <span className="font-semibold">Also show: wait and review</span>

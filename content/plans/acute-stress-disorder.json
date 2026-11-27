@@ -1,0 +1,94 @@
+{
+  "conditionId": "acute-stress-disorder",
+  "problems": [
+    {
+      "id": "asd-early-reactions",
+      "label": "Distressing reactions in the first weeks after a traumatic event",
+      "definitions": [
+        "Since the event, unwanted memories, dreams or flashbacks of it keep coming back by day or night.",
+        "Avoids places, people or reminders linked to the event, and sleep, focus or sense of safety have been disrupted.",
+        "Feels numb, unreal or cut off at times since the event."
+      ],
+      "longTermGoals": [
+        "The client feels safe enough to rest and return to usual routines, and reactions to the event ease over the coming weeks.",
+        "If reactions last beyond about a month, the client has a clear plan for trauma-focused care."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "asd-safety-needs",
+          "text": "In the first session, review current safety, practical needs and who can offer support, and agree on one step for each unmet need.",
+          "interventionIds": [
+            "psychological-first-aid-and-recovery-skills",
+            "problem-solving"
+          ]
+        },
+        {
+          "id": "asd-understand",
+          "text": "By session 2, name at least 3 reactions the client has noticed since the event and describe them as common responses to a frightening experience.",
+          "interventionIds": [
+            "trauma-psychoeducation-and-grounding"
+          ]
+        },
+        {
+          "id": "asd-grounding",
+          "text": "Practice a grounding skill daily for 2 weeks and rate distress (0-10) before and after in at least 3 hard moments.",
+          "interventionIds": [
+            "grounding-5-4-3-2-1",
+            "trauma-psychoeducation-and-grounding"
+          ]
+        },
+        {
+          "id": "asd-coping",
+          "text": "Use one planned coping skill (for example slow breathing or a coping statement) in at least 3 stressful situations a week and note what helped.",
+          "interventionIds": [
+            "stress-inoculation-training"
+          ]
+        },
+        {
+          "id": "asd-checkin",
+          "text": "Agree on a check-in date within the month and the signs that mean getting in touch sooner, such as sleep getting worse, drinking more or thoughts of suicide.",
+          "interventionIds": [
+            "psychological-first-aid-and-recovery-skills"
+          ]
+        },
+        {
+          "id": "asd-tf-cbt",
+          "text": "If reactions are marked or not easing within the month, start a brief trauma-focused CBT course with a trained clinician (for example cognitive therapy for PTSD or prolonged exposure) and attend the agreed sessions.",
+          "interventionIds": [
+            "cognitive-therapy-for-ptsd",
+            "prolonged-exposure"
+          ]
+        }
+      ],
+      "measureIds": [
+        "phq-9",
+        "gad-7"
+      ]
+    }
+  ],
+  "collaborativeNote": "Write goals with the client in their own words and keep the pace in their hands. Many reactions in the first month ease with safety and support, so start with practical help and active monitoring; offer brief trauma-focused CBT when reactions are marked or persisting, and do not use single-session psychological debriefing (NICE NG116). Reassess for PTSD at about one month. Safety planning is done together with the client, and the clinician makes every risk decision. Adult scope only. Do not add names or other identifying details.",
+  "sud": false,
+  "sources": [
+    {
+      "title": "Post-traumatic stress disorder (NG116): recommendations",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng116/chapter/recommendations",
+      "year": 2018
+    },
+    {
+      "title": "Psychological first aid: guide for field workers",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/publications/i/item/9789241548205",
+      "year": 2011
+    },
+    {
+      "title": "Treatment of acute stress disorder: a randomized controlled trial (Bryant et al.)",
+      "publisher": "Archives of General Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18519824/",
+      "year": 2008
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

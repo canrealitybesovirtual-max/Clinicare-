@@ -26,6 +26,7 @@ import type { Handout, Measure } from "./schemas";
 import type { Lang } from "./i18n/core";
 import { clientSourceCredits } from "./client-safe";
 import { PART2_NOTICE } from "./referral-links";
+import { DISCREET_HANDOUT_IDS } from "./discreet";
 import { HANDOUT_TEXT, localizeHandout, withN } from "@/components/handouts/localize";
 
 export const PDF_APP_NAME = "Clinician Resource Companion";
@@ -587,7 +588,8 @@ export function handoutPdfLayout(handout: Handout, lang: Lang = "en"): PdfLayout
 
   b.paragraph(h.title, { size: 18, bold: true, lineHeight: 1.25 });
   b.y -= 6;
-  b.nameLine();
+  // A safety help card carries no name line: a printed card with a name on it is a risk if someone finds it.
+  if (!DISCREET_HANDOUT_IDS.includes(handout.id)) b.nameLine();
   b.paragraph(withN(tx(HANDOUT_TEXT.minutes), handout.estimatedMinutes), { size: 9.5, color: "muted" });
   b.y -= 4;
   b.paragraph(h.intro, { size: body, lineHeight: 1.45 });

@@ -7,6 +7,8 @@ import { FAMILY_LABELS, worksheetHref } from "@/lib/schemas-formulations";
 import { formulations, getFormulation } from "@/lib/formulations";
 import { getAnyCondition, getAnyHandout, getIntervention, legalTopics } from "@/lib/library";
 import { getOrientation } from "@/lib/orientations";
+import { populationName, practiceTitle } from "@/lib/cross-links";
+import { ReportProblemLink } from "@/components/content/report-problem-link";
 import { ClinicianReviewBadge, Governance, NextStep, PageIntro, SourcesList } from "@/components/content/content-meta";
 import { HubPrompt } from "@/components/hub/hub-prompt";
 import {
@@ -64,8 +66,8 @@ export default async function FormulationPage({ params }: { params: Promise<{ id
   const conditions = f.conditionIds.flatMap((c) => conditionName(c) ?? []);
   const related = {
     orientations: f.orientationIds.map((o) => ({ href: `/orientations/${o}`, label: getOrientation(o)?.name ?? slugLabel(o) })),
-    practice: f.practiceIds.map((p) => ({ href: `/practice/${p}`, label: slugLabel(p) })),
-    populations: f.populationIds.map((p) => ({ href: `/populations/${p}`, label: slugLabel(p) })),
+    practice: f.practiceIds.map((p) => ({ href: `/practice/${p}`, label: practiceTitle(p) })),
+    populations: f.populationIds.map((p) => ({ href: `/populations/${p}`, label: populationName(p) })),
     legal: f.legalIds.map((l) => ({ href: `/ethics#${l}`, label: legalTitles.get(l) ?? slugLabel(l) })),
   };
 
@@ -89,8 +91,8 @@ export default async function FormulationPage({ params }: { params: Promise<{ id
 
       <div className="space-y-6">
         {f.worksheet ? (
-          <Card className="flex flex-wrap items-center justify-between gap-3">
-            <p className="min-w-0 flex-1 text-sm">
+          <Card className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <p className="min-w-0 text-sm sm:flex-1">
               Fill this in with the client on the memory-only worksheet: tap the factors that fit, add a few words, then
               copy or print a copy that is safe to share.
             </p>
@@ -227,7 +229,7 @@ export default async function FormulationPage({ params }: { params: Promise<{ id
               <ul className="space-y-2 text-sm">
                 {f.linkOuts.map((l) => (
                   <li key={l.url}>
-                    <ExternalLink href={l.url}>{l.title}</ExternalLink>
+                    <ExternalLink href={l.url} className="inline-flex min-h-11 items-center">{l.title}</ExternalLink>
                     <span className="text-muted">
                       {" "}
                       · {l.publisher}
@@ -244,7 +246,7 @@ export default async function FormulationPage({ params }: { params: Promise<{ id
                 <ul className="space-y-2 text-sm">
                   {f.measuresPending.map((m) => (
                     <li key={m.licenseKey}>
-                      <ExternalLink href={m.url}>{m.name}</ExternalLink>
+                      <ExternalLink href={m.url} className="inline-flex min-h-11 items-center">{m.name}</ExternalLink>
                       {m.note ? <span className="text-muted"> · {m.note}</span> : null}
                     </li>
                   ))}
@@ -257,6 +259,7 @@ export default async function FormulationPage({ params }: { params: Promise<{ id
         <SectionCard id="sources" title="Sources and review">
           <SourcesList sources={f.sources} />
           <Governance license={f.license} lastVerified={f.lastVerified} reviewedBy={f.reviewedBy} />
+          <ReportProblemLink type="formulation" id={f.id} />
         </SectionCard>
 
         <NextStep href="/plan" label="Plan builder" />

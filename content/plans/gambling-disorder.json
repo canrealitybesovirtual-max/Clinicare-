@@ -1,0 +1,93 @@
+{
+  "conditionId": "gambling-disorder",
+  "problems": [
+    {
+      "id": "gd-control",
+      "label": "Gambling that is hard to control and is causing harm",
+      "definitions": [
+        "Bets more often, for longer or with more money than planned, and has tried to cut down without success.",
+        "Goes back to gamble to try to win back losses.",
+        "Hides gambling from others, or has debts, borrowing or lost savings because of it."
+      ],
+      "longTermGoals": [
+        "The client reaches their own gambling goal (usually stopping), regains control of money and rebuilds trust with people close to them."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "gd-goal",
+          "text": "By session 3, set a personal gambling goal and list 3 reasons for change in own words.",
+          "interventionIds": [
+            "motivational-interviewing",
+            "decisional-balance"
+          ]
+        },
+        {
+          "id": "gd-safety",
+          "text": "In the first two sessions, talk directly about thoughts of suicide and, if present, complete a written safety plan with crisis numbers.",
+          "interventionIds": [
+            "collaborative-safety-planning"
+          ]
+        },
+        {
+          "id": "gd-barriers",
+          "text": "Within 2 weeks, set up at least 2 practical barriers (for example a bank gambling block, app or site self-exclusion, or a trusted person holding cards for a time) and review whether they hold.",
+          "interventionIds": [
+            "problem-solving"
+          ]
+        },
+        {
+          "id": "gd-thoughts",
+          "text": "Each week, write down at least 2 urges to gamble with the thoughts behind them (for example 'I'm due a win') and a balanced response.",
+          "interventionIds": [
+            "thought-record"
+          ]
+        },
+        {
+          "id": "gd-urges",
+          "text": "Use urge surfing or another coping skill for urges at least 3 times a week and note the outcome.",
+          "interventionIds": [
+            "urge-surfing"
+          ]
+        },
+        {
+          "id": "gd-relapse",
+          "text": "Write a relapse plan covering paydays, big sports events and other high-risk times, and who to call after a slip.",
+          "interventionIds": [
+            "relapse-prevention-planning"
+          ]
+        },
+        {
+          "id": "gd-peer",
+          "text": "If the client wishes, attend a peer support group (for example Gamblers Anonymous) at least twice in the first month.",
+          "interventionIds": [
+            "twelve-step-and-mutual-help-facilitation"
+          ]
+        },
+        {
+          "id": "gd-family",
+          "text": "If a partner or family member is affected and both agree, offer them support in their own right (for example CRAFT with a trained clinician).",
+          "interventionIds": [
+            "craft-for-family-members"
+          ]
+        }
+      ],
+      "measureIds": [
+        "phq-9",
+        "gad-7"
+      ]
+    }
+  ],
+  "collaborativeNote": "Write goals with the client in their own words; stopping is the usual aim, and other goals such as easing debts or repairing relationships matter too (NICE NG248). Ask directly about suicide, especially after big losses. Gambling is not a substance, so the 42 CFR Part 2 notice does not apply, but record only what the care needs. Safety planning is done together with the client, and the clinician makes every risk decision. Adult scope only. Do not add names or other identifying details.",
+  "sud": false,
+  "sources": [
+    {
+      "title": "Gambling-related harms: identification, assessment and management (NG248): recommendations",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng248/chapter/recommendations",
+      "year": 2025
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

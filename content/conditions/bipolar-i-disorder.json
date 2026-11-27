@@ -263,7 +263,9 @@
     "staying-well-plan",
     "sleep-diary",
     "safety-plan",
-    "mood-highs-and-lows-plan"
+    "mood-highs-and-lows-plan",
+    "listening-to-someone-you-love",
+    "questions-for-my-prescriber"
   ],
   "statIds": [
     "us-bipolar-past-year"
@@ -287,6 +289,19 @@
     {
       "type": "psychosis",
       "message": "Psychotic symptoms are documented alongside the mood picture. Psychosis during a high or low is a medical priority: arrange an urgent psychiatric evaluation and check safety at home."
+    },
+    {
+      "type": "acute-confusion",
+      "capAt": "possible",
+      "message": "Possible acute confusion is documented. Delirium and other medical causes can mimic this pattern; arrange a same-day medical assessment before relying on this suggestion."
+    },
+    {
+      "type": "catatonia",
+      "message": "Possible catatonic signs are documented. Catatonia can occur with mood, psychotic and medical conditions and needs an urgent medical and psychiatric assessment."
+    },
+    {
+      "type": "toxicity-or-overdose",
+      "message": "Possible overdose, intoxication or medication toxicity is documented. Call emergency services if the person is hard to wake or breathing poorly, give naloxone if opioids may be involved, and arrange same-day medical care."
     }
   ],
   "licensedDsm": false,

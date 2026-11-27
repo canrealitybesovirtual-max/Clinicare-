@@ -27,6 +27,13 @@ describe("isClientSafeText", () => {
     }
   });
 
+  it("catches Spanish short forms of the round-4 diagnosis names", () => {
+    for (const t of ["dermatilomanía", "trastorno por excoriación", "juego patológico", "el TDPM", "tabaquismo"]) {
+      expect(isClientSafeText(t), t).toBe(false);
+    }
+    for (const t of ["dejar de fumar", "un juego de mesa", "jugar con la familia"]) expect(isClientSafeText(t), t).toBe(true);
+  });
+
   it("lets ordinary client wording through", () => {
     for (const t of ["Call or text 988", "Open 24/7", "Vitamin B12 and your health", "COVID-19 and stress", "Breathing basics", "Step 3 of 5"]) {
       expect(isClientSafeText(t), t).toBe(true);
@@ -58,7 +65,7 @@ describe("isClientSafeText (Spanish and extra English diagnosis words)", () => {
 
   it("catches every condition name in the knowledge base, and its short form without 'disorder'", () => {
     // Everyday words left as they are on purpose: "alcohol use" is itself a client topic.
-    const everyday = new Set(["Adjustment", "Alcohol use"]);
+    const everyday = new Set(["Adjustment", "Alcohol use", "Gambling"]);
     for (const c of allConditions) {
       expect(isClientSafeText(c.name), c.name).toBe(false);
       const short = c.name.replace(/\s*disorder\b/i, "").trim();
@@ -90,8 +97,8 @@ describe("isClientSafeText (Spanish and extra English diagnosis words)", () => {
 
 describe("client handout PDFs credit sources without naming a condition", () => {
   // Condition names from content/conditions/*.json, their short forms without "disorder", and the Spanish names
-  // a Spanish source title would use. "Alcohol use" and "Adjustment" are everyday words on purpose.
-  const everyday = new Set(["adjustment", "alcohol use"]);
+  // a Spanish source title would use. "Alcohol use", "Adjustment" and "Gambling" are everyday words on purpose.
+  const everyday = new Set(["adjustment", "alcohol use", "gambling"]);
   const names = [
     ...new Set(
       allConditions.flatMap((c) => {

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Ban, EyeOff, FileLock2, LockKeyhole, ScanSearch, ServerOff, ShieldCheck, SpellCheck2, TimerReset } from "lucide-react";
 import { conditions, crisisLines, lexicon, licenses, measures, stats } from "@/lib/content";
 import { handouts } from "@/lib/library";
@@ -186,6 +187,14 @@ export default function AboutPage() {
         <p className="mt-2 max-w-3xl text-sm text-muted">
           {pending} of {reviewItems.length} content items are awaiting sign-off by a licensed clinician. Until then each one
           shows a “Not yet clinically reviewed” badge.
+        </p>
+        <p className="mt-2 flex flex-wrap gap-x-5 text-sm">
+          <Link href="/about/changelog" className="inline-flex min-h-11 items-center font-semibold text-accent underline underline-offset-2">
+            What changed in the content
+          </Link>
+          <Link href="/about/report" className="inline-flex min-h-11 items-center font-semibold text-accent underline underline-offset-2">
+            Report a content problem
+          </Link>
         </p>
         <div className="relative mt-4 overflow-x-auto rounded-xl border border-border bg-surface" tabIndex={0} role="region" aria-label="Review status table">
           <table className="w-full min-w-[36rem] text-left text-sm">

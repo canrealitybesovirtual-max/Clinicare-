@@ -12,6 +12,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { ExternalLink } from "@/components/ui/external-link";
 import { Notice } from "@/components/ui/notice";
+import { ReportProblemLink } from "@/components/content/report-problem-link";
 
 export const dynamicParams = false;
 
@@ -176,7 +177,7 @@ export default async function PopulationPage({ params }: { params: Promise<{ id:
               <ul className="mt-2 space-y-1.5 text-sm">
                 {p.measuresPending.map((m) => (
                   <li key={m.licenseKey}>
-                    <ExternalLink href={m.url}>{m.name}</ExternalLink>
+                    <ExternalLink href={m.url} className="inline-flex min-h-11 items-center">{m.name}</ExternalLink>
                   </li>
                 ))}
               </ul>
@@ -255,7 +256,7 @@ export default async function PopulationPage({ params }: { params: Promise<{ id:
                 <ul className="mt-2 space-y-2 text-sm">
                   {p.linkOuts.map((l) => (
                     <li key={l.url}>
-                      <ExternalLink href={l.url}>{l.title}</ExternalLink>
+                      <ExternalLink href={l.url} className="inline-flex min-h-11 items-center">{l.title}</ExternalLink>
                       <span className="text-muted"> · {l.publisher}</span>
                       {l.note ? <span className="block text-muted">{l.note}</span> : null}
                     </li>
@@ -279,6 +280,7 @@ export default async function PopulationPage({ params }: { params: Promise<{ id:
         <Section id="sources" title="Sources and review">
           <SourcesList sources={p.sources} />
           <Governance license={p.license} lastVerified={p.lastVerified} reviewedBy={p.reviewedBy} />
+          <ReportProblemLink type="population" id={p.id} />
         </Section>
       </div>
 

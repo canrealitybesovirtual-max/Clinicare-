@@ -3,7 +3,7 @@
  * Quick exit and discreet browsing for safety topics (relationship and sexual violence). A person at risk may be
  * reading on a phone or computer that someone else checks, so these pages get:
  * - QuickExitButton: clears the in-memory session and replaces this page with a neutral site, so Back does not
- *   return here. Mounting it also gives the tab a neutral title.
+ *   return here. The service worker never caches these pages (public/sw.js DISCREET). Mounting it also gives the tab a neutral title.
  * - DiscreetBrowsingTips: what history, shared links, QR codes and printouts can reveal.
  * Crisis help stays on screen (the crisis button is part of every page). Nothing prints by itself.
  * Based on safety-net guidance on technology safety (NNEDV Safety Net Project, techsafety.org).
@@ -15,25 +15,9 @@ import { useSession } from "@/state/session";
 import { Disclosure } from "@/components/ui/disclosure";
 import { cn } from "@/lib/utils";
 
-/** Neutral page that replaces this one. A general search page reveals nothing about what was being read. */
-export const QUICK_EXIT_URL = "https://www.google.com/";
+import { DISCREET_PATHS, DISCREET_TITLE, QUICK_EXIT_URL, isDiscreetPath } from "@/lib/discreet";
 
-/** Tab title for discreet pages, also meant for their generateMetadata. */
-export const DISCREET_TITLE: Required<Text> = { en: "Health information", es: "Información de salud" };
-
-/** Pages that get the quick exit: the relationship-safety client topic and its help card, in each language. */
-export const DISCREET_PATHS: readonly string[] = [
-  "/client/topics/relationship-safety",
-  "/client/skills/relationship-safety-help-card",
-  "/r/relationship-safety-help-card",
-  "/r/relationship-safety-help-card/es",
-];
-
-export function isDiscreetPath(pathname: string | null | undefined): boolean {
-  if (!pathname) return false;
-  const path = pathname.length > 1 ? pathname.replace(/\/+$/, "") : pathname;
-  return DISCREET_PATHS.includes(path);
-}
+export { DISCREET_PATHS, DISCREET_TITLE, QUICK_EXIT_URL, isDiscreetPath };
 
 const COPY = {
   button: { en: "Quick exit", es: "Salida rápida" },
@@ -73,6 +57,22 @@ const COPY = {
   ],
 } satisfies Record<string, Text | readonly Text[]>;
 
+/**
+ * Best effort, never awaited: deletes any discreet page an older service worker version put in Cache Storage. The
+ * current worker (public/sw.js) never caches these pages, and its activate step drops older caches.
+ */
+function clearDiscreetCache() {
+  try {
+    if (typeof caches === "undefined") return;
+    void caches
+      .keys()
+      .then((keys) => Promise.all(keys.map((k) => caches.open(k).then((c) => Promise.all(DISCREET_PATHS.map((p) => c.delete(p)))))))
+      .catch(() => undefined);
+  } catch {
+    // No Cache Storage in this browser or context.
+  }
+}
+
 /** Gives the tab a neutral title while a discreet page is open (a server title in the page metadata is better still). */
 function useDiscreetTitle(title: string) {
   React.useEffect(() => {
@@ -95,6 +95,7 @@ export function QuickExitButton({ className }: { className?: string }) {
         onClick={(e) => {
           e.preventDefault();
           reset();
+          clearDiscreetCache();
           window.location.replace(QUICK_EXIT_URL);
         }}
         className={cn(

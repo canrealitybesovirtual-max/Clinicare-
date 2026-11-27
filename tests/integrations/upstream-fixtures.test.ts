@@ -35,6 +35,7 @@ import { POST as drugLabel } from "@/server/routes/drug-label";
 import { POST as pubmed } from "@/server/routes/pubmed";
 import { POST as trials } from "@/server/routes/trials";
 import { POST as gho } from "@/server/routes/gho";
+import { POST as lactmed } from "@/server/routes/lactmed";
 
 type Handler = (req: Request) => Promise<Response>;
 const call = async (handler: Handler, body: unknown) => {
@@ -216,6 +217,13 @@ describe("every route answers from fixtures through the real adapters (no networ
     const g = await call(gho, { indicator: "suicide-rate-age-standardized", country: "GLOBAL" });
     expect(g.json.ok).toBe(true);
     expect(g.json.data).toMatchObject({ found: true, latestYear: 2021 });
+  });
+
+  it("LactMed: a curated drug gets the books fixture, not the PubMed one", async () => {
+    const r = await call(lactmed, { drug: "sertraline" });
+    expect(r.json.ok).toBe(true);
+    expect(r.json.data).toMatchObject({ found: true });
+    expect((r.json.data!.records as { url: string }[])[0]!.url).toBe("https://www.ncbi.nlm.nih.gov/books/NBK9910001/");
   });
 
   it("error entries: a 429 fixture maps to rate-limited, unknown ICD-11 codes to not found", async () => {

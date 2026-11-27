@@ -138,15 +138,15 @@ describe("/plan", () => {
     render(inSession(h(PlanPage)));
     expect(screen.getByText("How the builder works")).toBeTruthy();
     expect(screen.queryByLabelText("Go to step")).toBeNull();
-    const step = screen.getByRole("region", { name: /^Step 1 of 8/ });
+    const step = screen.getByRole("region", { name: /^Step 1 of 9/ });
     fireEvent.change(screen.getByLabelText("Plan library"), { target: { value: "generalized-anxiety-disorder" } });
     await screen.findByText(/Plan library: /);
-    fireEvent.click(within(step).getByRole("button", { name: /^Next: Problems/ }));
-    expect(screen.getByRole("region", { name: /^Step 2 of 8/ })).toBeTruthy();
+    fireEvent.click(within(step).getByRole("button", { name: /^Next: Formulation/ }));
+    expect(screen.getByRole("region", { name: /^Step 2 of 9/ })).toBeTruthy();
     // The current step is marked in both step lists (wide row and the phone disclosure).
     const current = screen.getAllByRole("button", { current: "step" });
     expect(current.length).toBe(2);
-    for (const b of current) expect(b.textContent).toMatch(/Problems/);
+    for (const b of current) expect(b.textContent).toMatch(/Formulation/);
   });
 });
 

@@ -267,6 +267,10 @@
     {
       "type": "psychosis",
       "message": "Psychotic symptoms are documented in this input. Hallucinations with heavy drinking or withdrawal can signal delirium or alcohol-induced psychosis, which need urgent medical evaluation."
+    },
+    {
+      "type": "toxicity-or-overdose",
+      "message": "Possible overdose, intoxication or medication toxicity is documented. Call emergency services if the person is hard to wake or breathing poorly, give naloxone if opioids may be involved, and arrange same-day medical care."
     }
   ],
   "licensedDsm": false,

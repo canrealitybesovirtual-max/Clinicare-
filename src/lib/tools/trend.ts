@@ -176,3 +176,17 @@ export function analyzeTrend(
     firstRemission: rows.find((r) => r.remission)?.session ?? null,
   };
 }
+
+/** Fewest totals before "no improvement since baseline" is shown as a review prompt. */
+export const NOT_ON_TRACK_MIN_POINTS = 4;
+
+/**
+ * Neutral "not on track" review prompt (outcome monitoring, for clinician review). True when at least
+ * NOT_ON_TRACK_MIN_POINTS totals exist and the latest is not lower than the baseline, or when any total rose by at
+ * least the meaningful-change threshold. It prompts a review; it never decides anything about care or risk.
+ */
+export function notOnTrack(t: TrendSummary): boolean {
+  if (!t.baseline || !t.latest) return false;
+  if (t.rows.some((r) => r.worsened)) return true;
+  return t.rows.length >= NOT_ON_TRACK_MIN_POINTS && t.latest.total >= t.baseline.total;
+}

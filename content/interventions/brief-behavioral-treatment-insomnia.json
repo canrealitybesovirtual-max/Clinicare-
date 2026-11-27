@@ -2,7 +2,7 @@
   "id": "brief-behavioral-treatment-insomnia",
   "name": "Brief behavioral treatment for insomnia (BBTI)",
   "modality": "Brief behavioral therapy for insomnia (sleep restriction and stimulus control)",
-  "conditions": ["insomnia-disorder", "sedative-hypnotic-use-disorder"],
+  "conditions": ["insomnia-disorder", "sedative-hypnotic-use-disorder", "ptsd"],
   "evidenceLevel": "The VA/DoD 2025 chronic insomnia guideline recommends CBT for insomnia and suggests brief behavioral therapy for insomnia as a treatment option. The AASM 2021 guideline suggests (conditional) multicomponent brief therapies for chronic insomnia in adults, alongside a strong recommendation for full CBT for insomnia. In a randomized trial with 79 older adults, two sessions plus two phone calls delivered by a nurse led to a response in 67% versus 25% with printed education, with benefits maintained at 6 months (Buysse et al., 2011).",
   "minutes": { "min": 20, "max": 45 },
   "purpose": "BBTI is a short, behavior-focused version of CBT for insomnia designed for primary care, older adults and settings where longer therapy is hard to provide. Over about four weeks (often two visits and two brief phone calls), it teaches how sleep drive and the body clock work and applies a few simple rules: spend less time in bed, keep a fixed wake-up time every day, go to bed only when sleepy, and get up if unable to sleep. Time in bed is set from a sleep diary and adjusted each week. It can be delivered by trained nurses, counselors and other clinicians, and can support people who want to reduce reliance on sleeping pills with their prescriber.",

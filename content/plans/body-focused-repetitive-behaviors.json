@@ -1,0 +1,97 @@
+{
+  "conditionId": "body-focused-repetitive-behaviors",
+  "problems": [
+    {
+      "id": "bfrb-behavior",
+      "label": "Hair pulling or skin picking that is hard to stop",
+      "definitions": [
+        "Pulls hair or picks skin most days, leaving thinning, bald patches, sores or scars.",
+        "Has tried to stop or cut down many times without lasting success.",
+        "Hides the effects and avoids situations such as haircuts, swimming or closeness because of them."
+      ],
+      "longTermGoals": [
+        "The client pulls or picks less often, catches episodes earlier and feels less shame about their hair or skin."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "bfrb-goal",
+          "text": "By session 2, set a personal reduction goal and list reasons for change in own words.",
+          "interventionIds": [
+            "motivational-interviewing"
+          ]
+        },
+        {
+          "id": "bfrb-awareness",
+          "text": "For 2 weeks, record each episode with the time, place, activity, feelings and urge strength, and identify the 3 most common high-risk situations.",
+          "interventionIds": [
+            "habit-reversal-training"
+          ]
+        },
+        {
+          "id": "bfrb-competing",
+          "text": "Practice a competing response (for example clenching the hands for one minute) whenever an urge or early warning sign appears, and log uses daily.",
+          "interventionIds": [
+            "habit-reversal-training"
+          ]
+        },
+        {
+          "id": "bfrb-urges",
+          "text": "Use urge surfing or a willingness exercise for at least 3 urges a day and rate the urge before and after.",
+          "interventionIds": [
+            "urge-surfing",
+            "act-acceptance-willingness"
+          ]
+        },
+        {
+          "id": "bfrb-defusion",
+          "text": "Practice unhooking from at least one urge-related thought (for example 'I have to even it out') each day for 2 weeks.",
+          "interventionIds": [
+            "act-cognitive-defusion"
+          ]
+        },
+        {
+          "id": "bfrb-shame",
+          "text": "After a slip, use a self-compassion exercise instead of self-criticism at least 3 times a week.",
+          "interventionIds": [
+            "self-compassion-practice"
+          ]
+        }
+      ],
+      "measureIds": [
+        "phq-9",
+        "gad-7"
+      ]
+    }
+  ],
+  "collaborativeNote": "Write goals with the client in their own words and aim for less pulling or picking rather than perfection; slips are expected. Ask directly whether any picking or pulling is meant to cause harm, and refer for medical care for infected wounds or swallowed hair. Safety planning is done together with the client, and the clinician makes every risk decision. Adult scope only. Do not add names or other identifying details.",
+  "sud": false,
+  "sources": [
+    {
+      "title": "The efficacy of habit reversal therapy for tics, habit disorders, and stuttering: a meta-analytic review (Bate et al.)",
+      "publisher": "Clinical Psychology Review (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21549664/",
+      "year": 2011
+    },
+    {
+      "title": "Treating trichotillomania: a meta-analysis of treatment effects and moderators for behavior therapy and serotonin reuptake inhibitors (McGuire et al.)",
+      "publisher": "Journal of Psychiatric Research (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25108618/",
+      "year": 2014
+    },
+    {
+      "title": "A systematic review and meta-analysis of psychiatric treatments for excoriation (skin-picking) disorder (Selles et al.)",
+      "publisher": "General Hospital Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27143352/",
+      "year": 2016
+    },
+    {
+      "title": "Systematic review of pharmacological and behavioral treatments for skin picking disorder (Schumer et al.)",
+      "publisher": "Journal of Clinical Psychopharmacology (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26872117/",
+      "year": 2016
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

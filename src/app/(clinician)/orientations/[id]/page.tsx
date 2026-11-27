@@ -11,6 +11,10 @@ import { Notice } from "@/components/ui/notice";
 import { ClinicianReviewBadge, Governance, NextStep, PageIntro, ReviewBadge, SourcesList } from "@/components/content/content-meta";
 import { EvidenceTierBadge, TrainingBadge } from "@/components/orientations/orientation-badges";
 import { TechniqueList } from "@/components/orientations/technique-list";
+import { HubPrompt } from "@/components/hub/hub-prompt";
+import { ReportProblemLink } from "@/components/content/report-problem-link";
+import { PopulationNotesPanel } from "@/components/populations/population-notes-panel";
+import { isEmergingTier, populationName, practiceTitle } from "@/lib/cross-links";
 
 export const dynamicParams = false;
 
@@ -26,14 +30,6 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 const linkClass =
   "inline-flex min-h-11 items-center font-semibold text-accent underline decoration-accent/40 underline-offset-2 hover:decoration-accent";
 
-/**
- * Readable name for a curated id whose page belongs to another section (practice guides, populations) and whose
- * loader this page does not import.
- */
-function idLabel(id: string): string {
-  const text = id.replace(/-/g, " ");
-  return text.charAt(0).toUpperCase() + text.slice(1);
-}
 
 function Section({ id, title, children }: { id: string; title: string; children: React.ReactNode }) {
   return (
@@ -96,6 +92,7 @@ export default async function OrientationPage({ params }: { params: Promise<{ id
       </PageIntro>
 
       <div className="space-y-6">
+        {isEmergingTier(o.evidenceTier) ? <HubPrompt context="emerging-treatment" /> : null}
         <Card className="space-y-3">
           <h2 className="text-lg font-semibold">At a glance</h2>
           <dl className="grid gap-x-4 gap-y-2 text-sm sm:grid-cols-[auto_1fr]">
@@ -305,7 +302,7 @@ export default async function OrientationPage({ params }: { params: Promise<{ id
                       {r.practiceIds.map((p) => (
                         <li key={p}>
                           <Link href={`/practice/${p}`} className={linkClass}>
-                            {idLabel(p)}
+                            {practiceTitle(p)}
                           </Link>
                         </li>
                       ))}
@@ -372,7 +369,7 @@ export default async function OrientationPage({ params }: { params: Promise<{ id
                       {ids.map((p) => (
                         <li key={p}>
                           <Link href={`/${route}/${p}`} className={linkClass}>
-                            {idLabel(p)}
+                            {route === "practice" ? practiceTitle(p) : populationName(p)}
                           </Link>
                         </li>
                       ))}
@@ -399,9 +396,12 @@ export default async function OrientationPage({ params }: { params: Promise<{ id
           </Section>
         ) : null}
 
+        <PopulationNotesPanel orientationId={o.id} />
+
         <Section id="sources" title="Sources and review">
           <SourcesList sources={o.sources} />
           <Governance license={o.license} lastVerified={o.lastVerified} reviewedBy={o.reviewedBy} />
+          <ReportProblemLink type="orientation" id={o.id} />
         </Section>
       </div>
 

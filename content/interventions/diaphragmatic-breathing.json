@@ -45,7 +45,7 @@
     "note": "If the client wishes, they may match a short phrase from their own tradition to the breath (for example, one word on the in-breath and one on the out-breath), or use the practice as a quiet moment of prayer or reflection. The client chooses the words and whether to use them.",
     "consentNote": "Offer only if the client raises faith or spirituality as a resource, and only after informed consent. Explain that the faith element is optional, that the standard version works without it, and that the client can change or stop it at any time. Use the client's own beliefs and words; never introduce or impose religious content. Record the consent discussion in your own clinical record, not in this app. See the AACC Code of Ethics on consent for spiritual interventions and the ACA Code of Ethics on informed consent and not imposing counselor values."
   },
-  "handoutIds": ["breathing-practice"],
+  "handoutIds": ["breathing-practice", "breathing-and-grounding-easy-read"],
   "orientationIds": ["behavior-therapy"],
   "sources": [
     {

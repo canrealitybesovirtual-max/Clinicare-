@@ -135,6 +135,15 @@
     "privacyRule": "Curated search terms only"
   },
   {
+    "name": "LactMed (NCBI Bookshelf via E-utilities)",
+    "category": "Medications",
+    "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/ (db=books)",
+    "access": "Free; NCBI E-utilities usage rules (shares the PubMed rate limit)",
+    "use": "LactMed record link for a curated medication (clinician mode)",
+    "phase": "3",
+    "privacyRule": "Curated drug names only"
+  },
+  {
     "name": "ClinicalTrials.gov API v2",
     "category": "Evidence",
     "endpoint": "https://clinicaltrials.gov/api/v2/studies",

@@ -7,6 +7,9 @@ import { PRACTICE_CATEGORY_LABELS } from "@/lib/schemas-practice";
 import { ClinicianReviewBadge, Governance, NextStep, PageIntro, ReviewBadge, SourcesList } from "@/components/content/content-meta";
 import { CrisisPanel } from "@/components/crisis/crisis-panel";
 import { TOOLS } from "@/components/tools/catalog";
+import { HubPrompt } from "@/components/hub/hub-prompt";
+import { ReportProblemLink } from "@/components/content/report-problem-link";
+import { populationName } from "@/lib/cross-links";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { ExternalLink } from "@/components/ui/external-link";
@@ -25,12 +28,6 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 
 const linkClass =
   "inline-flex min-h-11 items-center gap-2 font-semibold text-accent underline decoration-accent/40 underline-offset-2 hover:decoration-accent";
-
-/** Readable name for a population id, whose page and loader belong to another section. */
-function idLabel(id: string): string {
-  const text = id.replace(/-/g, " ");
-  return text.charAt(0).toUpperCase() + text.slice(1);
-}
 
 function Section({ id, title, children }: { id: string; title: string; children: React.ReactNode }) {
   return (
@@ -97,7 +94,7 @@ export default async function PracticeGuidePage({ params }: { params: Promise<{ 
     { title: "Other practice guides", icon: Route, links: links.guides.map((p) => ({ href: `/practice/${p.id}`, label: p.title })) },
     { title: "Orientations that use this guide", icon: Compass, links: links.orientations.map((o) => ({ href: `/orientations/${o.id}`, label: o.name })) },
     { title: "Legal and ethics topics", icon: Scale, links: links.legal.map((t) => ({ href: `/ethics#${t.id}`, label: t.title })) },
-    { title: "Population adaptations", icon: Users, links: g.relatedPopulationIds.map((p) => ({ href: `/populations/${p}`, label: idLabel(p) })) },
+    { title: "Population adaptations", icon: Users, links: g.relatedPopulationIds.map((p) => ({ href: `/populations/${p}`, label: populationName(p) })) },
   ].filter((r) => r.links.length > 0);
 
   return (
@@ -160,6 +157,8 @@ export default async function PracticeGuidePage({ params }: { params: Promise<{ 
         <Section id="when" title="When to use it">
           <Bullets items={g.whenToUse} />
         </Section>
+
+        {g.id === "group-formats" ? <HubPrompt context="groups" /> : null}
 
         {g.crisisPanel ? (
           <section aria-labelledby="crisis" className="scroll-mt-6">
@@ -242,7 +241,7 @@ export default async function PracticeGuidePage({ params }: { params: Promise<{ 
                 <ul className="mt-2 space-y-1.5 text-sm">
                   {g.measuresPending.map((m) => (
                     <li key={m.url}>
-                      <ExternalLink href={m.url}>{m.name}</ExternalLink>
+                      <ExternalLink href={m.url} className="inline-flex min-h-11 items-center">{m.name}</ExternalLink>
                     </li>
                   ))}
                 </ul>
@@ -254,7 +253,7 @@ export default async function PracticeGuidePage({ params }: { params: Promise<{ 
                 <ul className="mt-2 space-y-2 text-sm">
                   {g.linkOuts.map((l) => (
                     <li key={l.url}>
-                      <ExternalLink href={l.url}>{l.title}</ExternalLink>
+                      <ExternalLink href={l.url} className="inline-flex min-h-11 items-center">{l.title}</ExternalLink>
                       <span className="text-muted"> · {l.publisher}</span>
                       {l.note ? <span className="block text-muted">{l.note}</span> : null}
                     </li>
@@ -278,6 +277,7 @@ export default async function PracticeGuidePage({ params }: { params: Promise<{ 
         <Section id="sources" title="Sources and review">
           <SourcesList sources={g.sources} />
           <Governance license={g.license} lastVerified={g.lastVerified} reviewedBy={g.reviewedBy} />
+          <ReportProblemLink type="practice" id={g.id} />
         </Section>
       </div>
 

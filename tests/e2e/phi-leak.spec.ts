@@ -317,6 +317,7 @@ const API_ROUTES = new Set([
   "pubmed",
   "trials",
   "gho",
+  "lactmed",
 ]);
 const ID = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const ZIP = /^\d{5}$/;
@@ -353,6 +354,7 @@ const BODY_RULES: Record<string, Record<string, Rule>> = {
   pubmed: { queryId: isId, max: isInt },
   trials: { condition: isId, state: (v) => typeof v === "string" && STATE.test(v), max: isInt },
   gho: { indicator: isId, country: (v) => typeof v === "string" && /^[A-Z]{3,6}$/.test(v) },
+  lactmed: { drug: isId },
 };
 
 /** Problems with one captured /api request: route, method, query string, headers and every body field. */
@@ -405,11 +407,11 @@ test.describe("PHI never leaves the page: plan builder and referral search", () 
     // 1. Plan builder: a custom objective typed key by key, full of planted identifiers.
     const objective =
       `${PLANTED.name} (DOB ${PLANTED.dob}, SSN ${PLANTED.ssn}, MRN ${PLANTED.mrn}) will walk to ${PLANTED.address} ` +
-      `three times a week and text ${PLANTED.phone} or email ${PLANTED.email} afterwards.`;
+      `four evenings a week and text ${PLANTED.phone} or email ${PLANTED.email} afterwards.`;
     await gotoReady(page, "/plan");
     await buildPlan(page, "Generalized anxiety disorder", { customObjective: objective });
     const step = page.getByRole("region", { name: /^Step \d+ of \d+/ });
-    await expect(step).toContainText("three times a week");
+    await expect(step).toContainText("four evenings a week");
     expect(identifierLeaks(await visibleTextAndValues(page))).toEqual([]);
     expect(identifierLeaks(await page.content())).toEqual([]);
 
@@ -417,12 +419,12 @@ test.describe("PHI never leaves the page: plan builder and referral search", () 
     const pdf = await downloadVia(page, step.getByRole("button", { name: "Download PDF" }));
     expect(pdf.bytes.subarray(0, 4).toString("latin1")).toBe("%PDF");
     const pdfAll = pdfText(pdf.bytes);
-    expect(pdfAll.drawn).toContain("three times a week");
+    expect(pdfAll.drawn).toContain("four evenings a week");
     expect(leaks(pdfAll.all)).toEqual([]);
     const docx = await downloadVia(page, step.getByRole("button", { name: "Download Word (.docx)" }));
     expect(docx.bytes.subarray(0, 2).toString("latin1")).toBe("PK");
     const docxText = docxAll(docx.bytes);
-    expect(docxText).toContain("three times a week");
+    expect(docxText).toContain("four evenings a week");
     expect(leaks(docxText)).toEqual([]);
     expect(identifierLeaks(pdf.name + docx.name)).toEqual([]);
 
@@ -480,7 +482,7 @@ test.describe("PHI never leaves the page: plan builder and referral search", () 
     for (const r of net.captured) {
       const wire = [r.url, decodeURIComponentSafe(r.url), JSON.stringify(r.headers), r.postData].join("\n");
       expect(leaks(wire), `${r.method} ${r.url}`).toEqual([]);
-      expect(wire, `${r.method} ${r.url}`).not.toContain("three times a week");
+      expect(wire, `${r.method} ${r.url}`).not.toContain("four evenings a week");
       const u = new URL(r.url);
       // The only query parameter any request may carry is Next.js's own RSC cache-buster (never typed text).
       if (u.protocol === "http:" || u.protocol === "https:")
@@ -492,18 +494,18 @@ test.describe("PHI never leaves the page: plan builder and referral search", () 
     const storage = await dumpStorage(page);
     expect(storage.local).toEqual({});
     expect(leaks(JSON.stringify(storage.session))).toEqual([]);
-    expect(JSON.stringify(storage.session)).not.toContain("three times a week");
+    expect(JSON.stringify(storage.session)).not.toContain("four evenings a week");
     expect(storage.cookie).toBe("");
     expect(storage.idb).toEqual([]);
     expect(leaks(storage.historyState + storage.windowName + storage.href)).toEqual([]);
-    expect(storage.historyState).not.toContain("three times a week");
+    expect(storage.historyState).not.toContain("four evenings a week");
     for (const entry of storage.cacheEntries) {
       expect(leaks(entry.url), `cached ${entry.url}`).toEqual([]);
       const builtFile = staticFileFor(new URL(entry.url).pathname);
       if (builtFile) expect(entry.sha256, `cached ${entry.url} differs from ${builtFile}`).toBe(sha256File(builtFile));
       else {
         expect(leaks(entry.body), `cached ${entry.url}`).toEqual([]);
-        expect(entry.body).not.toContain("three times a week");
+        expect(entry.body).not.toContain("four evenings a week");
       }
     }
     const state = await page.context().storageState({ indexedDB: true });
@@ -592,3 +594,39 @@ function decodeURIComponentSafe(s: string): string {
     return s;
   }
 }
+
+/* ------------------------------------------------------------------ round 4 pages with text fields */
+
+test.describe("PHI never leaves the page: formulation worksheet, goal writer and practice search", () => {
+  for (const route of ["/formulations/builder", "/tools/goals", "/practice"]) {
+    test(`${route}: identifiers typed into its fields are never sent or stored`, async ({ page }) => {
+      const net = capture(page);
+      await gotoReady(page, route);
+      const fields = page.locator("textarea:visible, input[type=text]:visible, input[type=search]:visible, input:not([type]):visible");
+      const n = Math.min(await fields.count(), 3);
+      expect(n, "the page has at least one text field").toBeGreaterThan(0);
+      for (let i = 0; i < n; i++) {
+        const f = fields.nth(i);
+        await f.fill(`Spoke with ${PLANTED.name} on ${PLANTED.phone} about the week.`);
+        await f.blur();
+      }
+
+      await net.settle();
+      for (const r of net.captured) {
+        const wire = [r.url, decodeURIComponentSafe(r.url), JSON.stringify(r.headers), r.postData].join("\n");
+        expect(leaks(wire), `${r.method} ${r.url}`).toEqual([]);
+        expect(wire, `${r.method} ${r.url}`).not.toContain("about the week");
+      }
+      expect(net.captured.filter((r) => r.postData.length > 0).map((r) => `${r.method} ${r.url}`)).toEqual([]);
+
+      const storage = await dumpStorage(page);
+      expect(storage.local).toEqual({});
+      expect(storage.cookie).toBe("");
+      expect(leaks(JSON.stringify(storage.session) + storage.historyState + storage.windowName + storage.href)).toEqual([]);
+      for (const entry of storage.cacheEntries) {
+        if (staticFileFor(new URL(entry.url).pathname)) continue;
+        expect(leaks(entry.body), `cached ${entry.url}`).toEqual([]);
+      }
+    });
+  }
+});

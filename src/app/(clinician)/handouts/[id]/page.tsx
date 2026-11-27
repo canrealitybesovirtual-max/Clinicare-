@@ -21,6 +21,8 @@ import {
 } from "@/components/handouts/handout-lang-scope";
 import { relatedInterventions } from "@/components/handouts/catalog";
 import { HubPrompt } from "@/components/hub/hub-prompt";
+import { LinkOuts } from "@/components/content/link-outs";
+import { ReportProblemLink } from "@/components/content/report-problem-link";
 
 export const dynamicParams = false;
 
@@ -108,9 +110,11 @@ export default async function HandoutPage({ params }: { params: Promise<{ id: st
               </div>
               <HandoutPreview />
               <div className="space-y-3 border-t border-border pt-4">
+                <LinkOuts links={h.linkOuts} title="Outside resources for the client (link out only)" headingLevel="h3" />
                 <h3 className="text-sm font-semibold">Sources</h3>
                 <SourcesList sources={h.sources} />
                 <Governance license={h.license} lastVerified={h.lastVerified} reviewedBy={h.reviewedBy} />
+                <ReportProblemLink type="handout" id={h.id} />
               </div>
             </Card>
           </article>

@@ -16,7 +16,7 @@ import { REFERRAL_KINDS, type ReferralKind } from "@/lib/schemas-referrals";
 import type { Condition, Symptom } from "@/lib/schemas";
 
 /** Ids that name substance use even when a content file forgets its `sud` flag. */
-const SUD_ID = /(?:^|-)(?:alcohol|substance|opioid|cannabis|stimulant|sedative|hallucinogen|inhalant|intoxication|drug)(?:-|$)/;
+const SUD_ID = /(?:^|-)(?:alcohol|substance|opioid|cannabis|stimulant|sedative|tobacco|nicotine|hallucinogen|inhalant|intoxication|drug)(?:-|$)/;
 
 export const REFERRAL_KIND_LABELS: Record<ReferralKind, { en: string; es: string }> = {
   crisis: { en: "24/7 crisis lines", es: "Líneas de crisis 24/7" },
@@ -29,6 +29,12 @@ export const REFERRAL_KIND_LABELS: Record<ReferralKind, { en: string; es: string
   medication: { en: "Medication evaluation and pharmacy help", es: "Evaluación de medicamentos y ayuda con farmacia" },
   lgbtq: { en: "LGBTQ+ affirming services", es: "Servicios afirmativos LGBTQ+" },
   "deaf-hoh": { en: "Deaf and hard-of-hearing access", es: "Acceso para personas sordas o con pérdida auditiva" },
+  "violence-and-abuse": { en: "Violence and abuse support", es: "Apoyo ante la violencia y el abuso" },
+  perinatal: { en: "Pregnancy and postpartum support", es: "Apoyo durante el embarazo y el posparto" },
+  "older-adults-and-caregivers": { en: "Older adults and caregivers", es: "Personas mayores y cuidadores" },
+  disability: { en: "Disability and workplace accommodations", es: "Discapacidad y adaptaciones en el trabajo" },
+  "basic-needs": { en: "Housing and basic needs", es: "Vivienda y necesidades básicas" },
+  indigenous: { en: "Indigenous health services", es: "Servicios de salud indígena" },
 };
 
 export interface CatalogFeature {

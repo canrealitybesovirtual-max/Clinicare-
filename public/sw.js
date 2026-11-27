@@ -5,9 +5,11 @@
  * stored (keyed by its path): a server-rendered page embeds the URL it was asked for, query included, so a page
  * fetched with a query is passed through and never cached. RSC payloads are not cached: offline, Next.js falls back to a full navigation, which
  * is served from the cached page. Never touches non-GET requests, other origins, /api/**, /models/** or /ort/**
- * (the on-device model checks its own files).
+ * (the on-device model checks its own files). Never stores the discreet safety pages (DISCREET below), so a person
+ * checking the device cannot find them in this site's offline data.
  */
-const VERSION = "crc-v4";
+// Bumped when what may be cached changes: activate deletes every older cache (crc-v6 purges discreet pages).
+const VERSION = "crc-v6";
 
 /** Every route without a dynamic segment (src/app). A route that does not exist yet is skipped at install. */
 const PAGES = [
@@ -51,9 +53,22 @@ const DYNAMIC_PAGES = [
   /^\/r\/[a-z0-9-]+\/es$/,
   /^\/formulations\/[a-z0-9-]+$/,
   /^\/orientations\/[a-z0-9-]+$/,
+  /^\/practice\/[a-z0-9-]+$/,
+  /^\/populations\/[a-z0-9-]+$/,
 ];
 
-const NEVER = [/^\/api\//, /^\/models\//, /^\/ort\//];
+/**
+ * Discreet pages (src/lib/discreet.ts DISCREET_PATHS; tests/unit/sw-discreet.test.ts keeps the two in step): passed
+ * straight to the network, never cached, never served from the cache.
+ */
+const DISCREET = [
+  /^\/client\/topics\/relationship-safety\/?$/,
+  /^\/client\/skills\/relationship-safety-help-card\/?$/,
+  /^\/r\/relationship-safety-help-card\/?$/,
+  /^\/r\/relationship-safety-help-card\/es\/?$/,
+];
+
+const NEVER = [/^\/api\//, /^\/models\//, /^\/ort\//, ...DISCREET];
 const SHELL = [...PAGES, "/manifest.webmanifest", "/icons/icon.svg", "/icons/icon-192.png"];
 
 const isPage = (path) => PAGE_SET.has(path) || DYNAMIC_PAGES.some((re) => re.test(path));

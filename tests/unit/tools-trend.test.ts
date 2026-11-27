@@ -4,7 +4,7 @@
  */
 import { describe, expect, it } from "vitest";
 import { getMeasure } from "@/lib/content";
-import { MAX_SESSION, TREND_RULES, analyzeTrend, pointError, removePoint, upsertPoint } from "@/lib/tools/trend";
+import { MAX_SESSION, TREND_RULES, analyzeTrend, notOnTrack, pointError, removePoint, upsertPoint } from "@/lib/tools/trend";
 
 const phq9 = getMeasure("phq-9")!;
 const gad7 = getMeasure("gad-7")!;
@@ -107,5 +107,25 @@ describe("points", () => {
     list = upsertPoint(list, { session: 2, total: 8 });
     expect(list).toEqual(pts([1, 14], [2, 8]));
     expect(removePoint(list, 1)).toEqual(pts([2, 8]));
+  });
+});
+
+describe("not-on-track review prompt (for clinician review, never a decision)", () => {
+  const rules = TREND_RULES["phq-9"];
+  const run = (...pairs: [number, number][]) => notOnTrack(analyzeTrend(pts(...pairs), rules, phq9.scoring.bands));
+
+  it("is off with no totals, one total or while totals are coming down", () => {
+    expect(notOnTrack(analyzeTrend([], rules, phq9.scoring.bands))).toBe(false);
+    expect(run([1, 15])).toBe(false);
+    expect(run([1, 18], [3, 14], [5, 11], [8, 9])).toBe(false);
+  });
+
+  it("shows after 4 totals when the latest is not lower than the baseline", () => {
+    expect(run([1, 15], [2, 14], [3, 15])).toBe(false); // only 3 totals
+    expect(run([1, 15], [2, 14], [3, 16], [4, 15])).toBe(true);
+  });
+
+  it("shows as soon as a total rises by the meaningful-change threshold", () => {
+    expect(run([1, 10], [2, 10 + rules.meaningfulChange])).toBe(true);
   });
 });

@@ -35,6 +35,10 @@ export const RedFlagType = z.enum([
   "mania",
   "eating-disorder-medical",
   "withdrawal",
+  "acute-confusion", // possible delirium: same-day medical assessment
+  "catatonia",
+  "toxicity-or-overdose", // intoxication, overdose or medication toxicity
+  "neurological-signs", // new focal neurological signs or a first seizure
 ]);
 export type RedFlagType = z.infer<typeof RedFlagType>;
 
@@ -150,6 +154,19 @@ export const ConditionSchema = z.object({
 });
 export type Condition = z.infer<typeof ConditionSchema>;
 
+/**
+ * A curated outside resource shown with a content item (link out only, never re-hosted). Same shape as the
+ * governance LinkOutSchema planned for src/lib/schemas-governance.ts; switch to that import once it exists.
+ */
+export const LinkOutSchema = z.object({
+  title: z.string().min(3),
+  publisher: z.string().min(2),
+  url: z.url().startsWith("https://"),
+  note: z.string().optional(),
+  lastVerified: isoDate,
+});
+export type LinkOut = z.infer<typeof LinkOutSchema>;
+
 export const MeasureSchema = z.object({
   id: slug,
   name: z.string(),
@@ -170,6 +187,8 @@ export const MeasureSchema = z.object({
   citation: z.string(),
   copyright: z.string(),
   loinc: z.object({ panel: z.string(), total: z.string().optional() }).optional(),
+  // Original clinician-facing notes on reading the score (for clinician review; never a risk decision).
+  interpretationNotes: z.array(z.object({ heading: z.string().min(3), body: z.string().min(20) })).optional(),
   ...governance,
 });
 export type Measure = z.infer<typeof MeasureSchema>;
@@ -203,6 +222,7 @@ export const HandoutSchema = z.object({
   // Suggested for a condition only when one of these symptoms is documented (applied tension: blood-injection-injury).
   suggestWith: z.array(slug).min(1).optional(),
   es: HandoutTranslationSchema.optional(), // Spanish version (client mode / client PDF)
+  linkOuts: z.array(LinkOutSchema).max(6).optional(), // curated outside resources, link out only
   ...governance,
 });
 export type Handout = z.infer<typeof HandoutSchema>;
@@ -224,7 +244,18 @@ export const StatsFileSchema = z.object({ stats: z.array(StatSchema).min(1) });
 export const LicensesSchema = z.object({
   items: z.record(
     z.string(),
-    z.object({ status: z.string(), terms: z.string(), source: z.string().nullable(), lastVerified: z.string().nullable() }).passthrough(),
+    z
+      .object({
+        status: z.string(),
+        terms: z.string(),
+        source: z.string().nullable(),
+        lastVerified: z.string().nullable(),
+        /** Display name when the key is an abbreviation (e.g. "K6-K10"). */
+        name: z.string().min(2).optional(),
+        /** A structured risk instrument: trained raters only; the app never scores it or decides risk (G9). */
+        kind: z.enum(["risk-instrument"]).optional(),
+      })
+      .passthrough(),
   ),
 });
 

@@ -1,5 +1,20 @@
-import { ChartLine, Columns3, GraduationCap, LifeBuoy, Network, NotebookPen, Send, Target, Timer, type LucideIcon } from "lucide-react";
-import { ArrowRightLeft, Briefcase, FileLock2, GitCompareArrows, ShieldAlert } from "lucide-react";
+import {
+  ArrowRightLeft,
+  Briefcase,
+  ChartLine,
+  Columns3,
+  FileLock2,
+  GitCompareArrows,
+  GraduationCap,
+  LifeBuoy,
+  Network,
+  NotebookPen,
+  Send,
+  ShieldAlert,
+  Target,
+  Timer,
+  type LucideIcon,
+} from "lucide-react";
 
 export interface ToolEntry {
   href: string;

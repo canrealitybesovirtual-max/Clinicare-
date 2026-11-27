@@ -24,6 +24,7 @@ import { FollowUpPanel } from "@/components/ai/follow-up-panel";
 import { codeSummary } from "@/components/ai/labels";
 import { PART2_NOTICE } from "@/lib/referral-links";
 import { SuggestionCard } from "./suggestion-card";
+import { ReasoningCheck } from "./differential-compare";
 import { STRENGTH_LABEL } from "./explain";
 
 function KnowledgeBase() {
@@ -174,6 +175,12 @@ export function DiagnosesView({ catalog, assistant }: { catalog: ResourceCatalog
                   </li>
                 ))}
               </ol>
+              <Link
+                href="/diagnoses/compare"
+                className="mt-2 inline-flex min-h-11 items-center gap-1 px-2 text-sm font-semibold text-accent underline underline-offset-2"
+              >
+                Compare side by side <ChevronRight aria-hidden className="size-4" />
+              </Link>
             </nav>
           ) : null}
           <ol className="space-y-6" aria-label="Possible considerations, ranked">
@@ -191,6 +198,7 @@ export function DiagnosesView({ catalog, assistant }: { catalog: ResourceCatalog
         </>
       )}
 
+      {result.status === "ok" && result.suggestions.length ? <ReasoningCheck className="mt-6" /> : null}
       <RiskMissNote className="mt-6" />
       <p className="mt-2 max-w-3xl text-sm text-muted">
         Suggestions come from a transparent, rule-based score over app-authored feature lists. They are prompts for your

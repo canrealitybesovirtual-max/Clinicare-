@@ -9,7 +9,7 @@ import Link from "next/link";
 import { ArrowLeft, Clock, Info } from "lucide-react";
 import type { Handout } from "@/lib/schemas";
 import { pick, type Lang, type Text } from "@/lib/i18n/core";
-import { clientSafeSources } from "@/lib/client-safe";
+import { clientSafeLinkOuts, clientSafeSources } from "@/lib/client-safe";
 import { Card } from "@/components/ui/card";
 import { ExternalLink } from "@/components/ui/external-link";
 import { DownloadPdfButton } from "@/components/pdf/download-pdf-button";
@@ -27,6 +27,7 @@ const TEXT = {
     es: "Léala aquí, o imprímala y escriba en ella. Esta página funciona con lectores de pantalla; la hoja impresa es para papel.",
   },
   print: { en: "Download to print", es: "Descargar para imprimir" },
+  moreHelp: { en: "More help from trusted websites", es: "Más ayuda en sitios web de confianza" },
   basedOn: { en: "Based on information from", es: "Basado en información de" },
   notReviewed: {
     en: "This sheet was written for this app. A licensed professional has not reviewed it yet, so ask your counselor about it.",
@@ -50,6 +51,7 @@ export function ClientHandoutView({
   // Labels follow the handout's language, so a page never mixes two languages in its own text.
   const t = (text: Text) => pick(text, h.lang);
   const sources = clientSafeSources(handout.sources);
+  const linkOuts = clientSafeLinkOuts(handout.linkOuts ?? []);
   const langs = handoutLangs(handout);
 
   return (
@@ -105,6 +107,22 @@ export function ClientHandoutView({
           {h.translatedBy?.includes("PENDING") ? <p>{HANDOUT_TEXT.machineTranslated.es}</p> : null}
         </div>
       </Card>
+
+      {linkOuts.length ? (
+        <Card className="space-y-2">
+          <h2 className="text-lg font-semibold">{t(TEXT.moreHelp)}</h2>
+          <ul className="space-y-1.5 text-sm">
+            {linkOuts.map((l) => (
+              <li key={l.url} lang="en">
+                <ExternalLink href={l.url} className="inline-flex min-h-11 items-center">
+                  {l.title}
+                </ExternalLink>
+                <span className="text-muted"> · {l.publisher}</span>
+              </li>
+            ))}
+          </ul>
+        </Card>
+      ) : null}
 
       <TalkToSomeone id="handout-talk" />
 

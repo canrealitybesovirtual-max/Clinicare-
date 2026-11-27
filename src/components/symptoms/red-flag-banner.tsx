@@ -40,6 +40,24 @@ const GUIDANCE: Record<RedFlagType, { title: string; body: React.ReactNode; cris
     title: "Possible alcohol or sedative withdrawal noted",
     body: "Consider an urgent medical referral: withdrawal can be medically dangerous. This app does not store or transmit client substance-use information (42 CFR Part 2).",
   },
+  "acute-confusion": {
+    title: "Possible delirium or acute confusion noted",
+    body: "Sudden confusion, or attention and alertness that come and go, can signal a medical emergency such as an infection, intoxication, withdrawal or a medicine effect. Arrange a same-day medical assessment before reading it as a mental health pattern.",
+  },
+  catatonia: {
+    title: "Possible catatonic signs noted",
+    body: "Not moving, speaking or eating, holding fixed postures or staring without responding can become dangerous quickly and can have medical, mood or psychotic causes. Arrange an urgent medical and psychiatric assessment.",
+  },
+  "toxicity-or-overdose": {
+    title: "Possible overdose, intoxication or medication toxicity noted",
+    crisis: true,
+    body: "If the person is hard to wake, breathing slowly or noisily, or has taken an unknown amount, call emergency services now, and give naloxone if opioids may be involved. Possible medication toxicity (for example lithium or serotonin toxicity) needs same-day medical care. Sudden slurred speech can also be a stroke sign: call emergency services. This app does not store or transmit client substance-use information (42 CFR Part 2).",
+  },
+  "neurological-signs": {
+    title: "Possible new neurological signs noted",
+    crisis: true,
+    body: "Sudden weakness or numbness on one side, a drooping face, sudden trouble speaking, a sudden severe headache or a first seizure need emergency medical care. Do not attribute them to anxiety or a functional cause before they are checked.",
+  },
 };
 
 /**

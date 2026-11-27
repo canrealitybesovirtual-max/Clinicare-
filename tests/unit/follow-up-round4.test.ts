@@ -10,6 +10,8 @@ import { followUpBank, bankProblems, getQuestionDef } from "@/lib/follow-up/bank
 import { applyAnswer, applyAnswers } from "@/lib/follow-up/engine";
 import { triggerDictionary } from "@/lib/follow-up/dictionary";
 import { scoreConditions } from "@/lib/scoring";
+import { resourceHints } from "@/lib/follow-up/catalog";
+import { PART2_NOTICE } from "@/lib/referral-links";
 import type { ScoringInput } from "@/lib/types";
 
 const NEW_CONDITIONS = [
@@ -154,5 +156,22 @@ describe("answers record only what the clinician chose", () => {
     const b = applyAnswers(input(TRAUMA), answered);
     expect(a).toEqual(b);
     expect(a.addedSymptomIds).toEqual(["recent-trauma-past-month", "sedative-impaired-control", "sedative-despite-harm"]);
+  });
+});
+
+describe("red-flag resource hints and 42 CFR Part 2 (G6)", () => {
+  const hintsFor = (type: string) => {
+    const sym = lexicon.symptoms.find((s) => s.redFlag === type);
+    expect(sym, type).toBeTruthy();
+    return resourceHints(score(input([sym!.id])), []);
+  };
+
+  it("a toxicity or overdose red flag carries the Part 2 notice, like withdrawal", () => {
+    expect(hintsFor("toxicity-or-overdose").part2Notice).toBe(PART2_NOTICE);
+    expect(hintsFor("withdrawal").part2Notice).toBe(PART2_NOTICE);
+  });
+
+  it("a new neurological sign alone does not", () => {
+    expect(hintsFor("neurological-signs").part2Notice).toBeUndefined();
   });
 });

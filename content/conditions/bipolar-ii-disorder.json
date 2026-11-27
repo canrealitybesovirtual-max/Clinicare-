@@ -211,7 +211,9 @@
     "staying-well-plan",
     "activity-schedule",
     "safety-plan",
-    "mood-highs-and-lows-plan"
+    "mood-highs-and-lows-plan",
+    "listening-to-someone-you-love",
+    "questions-for-my-prescriber"
   ],
   "statIds": [
     "us-bipolar-past-year"

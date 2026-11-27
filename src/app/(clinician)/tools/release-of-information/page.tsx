@@ -15,6 +15,7 @@ export default function ReleaseOfInformationPage() {
         </p>
       </ToolIntro>
       <ReleaseOfInformationTool sudPrompt={<HubPrompt context="sud" />} />
+      <HubPrompt context="letters-and-forms" className="mt-6" />
     </div>
   );
 }

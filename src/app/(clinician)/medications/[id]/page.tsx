@@ -19,7 +19,16 @@ import { Governance, PageIntro, ReviewBadge, SourcesList } from "@/components/co
 import { HubPrompt } from "@/components/hub/hub-prompt";
 import { HelpTip } from "@/components/ui/help-tip";
 import { DrugLabelPanel, RxNormPanel } from "@/components/medications/live-panels";
+import { LactMedPanel } from "@/components/medications/lactmed-panel";
+import { ReportProblemLink } from "@/components/content/report-problem-link";
+
 import { NOT_FOR_PRESCRIBING, deaLabel, displayGeneric, isSudMedication } from "@/components/medications/medication-labels";
+
+/**
+ * AGS Beers Criteria (2023), link-out only: the tables are never reproduced. The pointer shows on EVERY medication
+ * page, because the app keeps no reviewed per-medicine list and a missing card must not read as "no concern".
+ */
+const BEERS_URL = "https://pubmed.ncbi.nlm.nih.gov/37139824/";
 
 export const dynamicParams = false;
 
@@ -205,6 +214,18 @@ export default async function MedicationPage({ params }: { params: Promise<{ id:
             rxNavUrl={rxNavConceptUrl(med.rxcui)}
             dailyMedSearchUrl={dailyMed}
           />
+          <LactMedPanel drug={med.id} name={name} />
+          <Card className="space-y-2">
+            <h2 className="text-lg font-semibold">Older adults</h2>
+            <p className="text-sm">
+              The AGS Beers Criteria list medicines to review with care in adults 65 and older. Check with the prescriber
+              whether this medicine or its class appears in the current criteria, including its interaction and
+              kidney-function tables. This app does not check the criteria for you.
+            </p>
+            <ExternalLink href={BEERS_URL} className="inline-flex min-h-11 items-center">
+              AGS Beers Criteria (2023), older adults
+            </ExternalLink>
+          </Card>
         </div>
       </div>
 
@@ -215,6 +236,7 @@ export default async function MedicationPage({ params }: { params: Promise<{ id:
           </h2>
           <SourcesList sources={medicationsFile.sources} />
           <Governance license={medicationsFile.license} lastVerified={medicationsFile.lastVerified} reviewedBy={medicationsFile.reviewedBy} />
+          <ReportProblemLink type="medication" id={med.id} />
         </Card>
       </section>
     </>

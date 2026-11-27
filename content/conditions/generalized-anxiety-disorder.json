@@ -83,7 +83,8 @@
   "strongMinAreas": 3,
   "redFlagRules": [
     {"type": "mania", "message": "Manic or hypomanic signs are documented in this input. Screen for bipolar disorder (ICD-10-CM F31.x) and refer for psychiatric evaluation before treatment planning."},
-    {"type": "psychosis", "message": "Psychotic symptoms are documented in this input and are not part of this pattern. Consider a psychotic disorder, substance effects or a medical cause, and refer for an urgent psychiatric evaluation."}
+    {"type": "psychosis", "message": "Psychotic symptoms are documented in this input and are not part of this pattern. Consider a psychotic disorder, substance effects or a medical cause, and refer for an urgent psychiatric evaluation."},
+    {"type": "acute-confusion", "capAt": "possible", "message": "Possible acute confusion is documented. Delirium and other medical causes can mimic this pattern; arrange a same-day medical assessment before relying on this suggestion."}
   ],
   "licensedDsm": false,
   "wileyLicensed": false,

@@ -208,7 +208,10 @@
           "id": "sudden-fluctuating",
           "label": "Sudden or fluctuating confusion over hours or days",
           "effects": {
-            "setMedicalPossible": "yes"
+            "setMedicalPossible": "yes",
+            "addSymptomIds": [
+              "acute-confusion-fluctuating-attention"
+            ]
           },
           "surfaces": [
             "urgent-medical"

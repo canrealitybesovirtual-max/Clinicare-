@@ -580,7 +580,7 @@ describe("catalog", () => {
     expect(cat.text).toContain("graded-in-vivo-exposure | ");
     expect(cat.text).toMatch(/setDuration: lt2w/);
     expect(cat.text).not.toMatch(/Criterion [A-H]\b|DSM-5-TR [Cc]riteria/);
-    expect(cat.text).not.toMatch(/alcohol-benzo-withdrawal|contingency-management|urge-surfing|^substance-use \|/m);
+    expect(cat.text).not.toMatch(/alcohol-benzo-withdrawal|contingency-management|^substance-use \|/m);
     expect(cat.sudSymptomIds.has("alcohol-benzo-withdrawal")).toBe(true);
     expect(cat.referralKinds.has("substance-use" as never)).toBe(false);
     const ids = [...cat.symptomIds];

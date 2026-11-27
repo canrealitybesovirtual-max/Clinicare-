@@ -73,7 +73,8 @@
   "linkOuts": [
     { "title": "Elder Abuse", "publisher": "National Institute on Aging", "url": "https://www.nia.nih.gov/health/elder-abuse", "note": "Signs of abuse and neglect and where to report.", "lastVerified": "2026-11-27" },
     { "title": "Dementia: assessment, management and support for people living with dementia and their carers (NG97)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng97", "lastVerified": "2026-11-27" },
-    { "title": "Mental health of older adults", "publisher": "World Health Organization", "url": "https://www.who.int/news-room/fact-sheets/detail/mental-health-of-older-adults", "lastVerified": "2026-11-27" }
+    { "title": "Mental health of older adults", "publisher": "World Health Organization", "url": "https://www.who.int/news-room/fact-sheets/detail/mental-health-of-older-adults", "lastVerified": "2026-11-27" },
+    { "title": "AGS Beers Criteria (2023 update), older adults", "publisher": "American Geriatrics Society, Journal of the American Geriatrics Society (PubMed record)", "url": "https://pubmed.ncbi.nlm.nih.gov/37139824/", "note": "Medicines that need extra care in later life, to review with the prescriber. Link out only; the criteria tables are not reproduced here.", "lastVerified": "2026-11-27" }
   ],
   "sud": true,
   "sources": [

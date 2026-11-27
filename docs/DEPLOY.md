@@ -65,9 +65,12 @@ HRSA_API_KEY=
 # SAMHSA FindTreatment.gov
 FINDTREATMENT_ACCESS_APPROVED=   # "true" only after SAMHSA approves this deployment
 FINDTREATMENT_API_HOST=          # optional, only findtreatment.gov or a samhsa.gov host
-# NCBI E-utilities (PubMed), optional
+# NCBI E-utilities (PubMed and LactMed), optional
 NCBI_API_KEY=
 NCBI_EMAIL=                 # operator contact only, never a clinician or client address
+# Content problem reports (/about/report), optional; server-only. https URL wins over the email address.
+CONTENT_REPORT_URL=         # https form that receives ?item=<type/id>&reason=<code>
+CONTENT_REPORT_EMAIL=       # mailbox for mailto: reports
 # openFDA, optional
 OPENFDA_API_KEY=
 # WHO GHO mirror, optional (https on ghoapi.azureedge.net or *.who.int only)
@@ -83,8 +86,10 @@ WHO_GHO_API_BASE=
 | `HRSA_API_KEY` | `/api/health-centers` | Yes | `Token` field of the POST body to data.hrsa.gov. Never in a URL or cache key | 503; UI shows Find a Health Center |
 | `FINDTREATMENT_ACCESS_APPROVED` | `/api/treatment-facilities` | Yes (`true`) | Not sent | 503; UI shows findtreatment.gov + SAMHSA helpline |
 | `FINDTREATMENT_API_HOST` | `/api/treatment-facilities` | No | Host name | Anything but findtreatment.gov / samhsa.gov (or a subdomain) is not configured |
-| `NCBI_API_KEY` | `/api/pubmed` | No | `api_key` query parameter (NCBI accepts no header). Kept out of cache keys | Keyless: 3 requests/second |
-| `NCBI_EMAIL` | `/api/pubmed` | No | `email` query parameter | Not sent |
+| `NCBI_API_KEY` | `/api/pubmed`, `/api/lactmed` | No | `api_key` query parameter (NCBI accepts no header). Kept out of cache keys. Both routes share one rate limiter | Keyless: 3 requests/second |
+| `NCBI_EMAIL` | `/api/pubmed`, `/api/lactmed` | No | `email` query parameter | Not sent |
+| `CONTENT_REPORT_URL` | `/about/report` | No | Link target only (`?item=type/id&reason=code`); https, no credentials | Falls back to `CONTENT_REPORT_EMAIL` |
+| `CONTENT_REPORT_EMAIL` | `/about/report` | No | `mailto:` link only | The page says reports are not configured |
 | `OPENFDA_API_KEY` | `/api/drug-label` | No | `X-Api-Key` header only | Keyless: 950/day. A key openFDA rejects turns the lookup off (DailyMed link-out) |
 | `WHO_GHO_API_BASE` | `/api/gho` | No | Base URL | Default `https://ghoapi.azureedge.net/api` |
 

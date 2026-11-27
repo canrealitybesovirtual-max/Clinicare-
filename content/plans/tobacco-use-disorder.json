@@ -1,0 +1,101 @@
+{
+  "conditionId": "tobacco-use-disorder",
+  "problems": [
+    {
+      "id": "tud-dependence",
+      "label": "Tobacco or nicotine use that is hard to stop",
+      "definitions": [
+        {
+          "text": "Uses cigarettes, vapes or other nicotine products daily, often soon after waking.",
+          "sud": true
+        },
+        {
+          "text": "Has strong cravings or feels irritable or restless without nicotine.",
+          "sud": true
+        },
+        {
+          "text": "Has tried to quit or cut down without lasting success.",
+          "sud": true
+        }
+      ],
+      "longTermGoals": [
+        {
+          "text": "The client stops using tobacco and nicotine, or reaches their own cut-down goal, with support and medicine as needed.",
+          "sud": true
+        }
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "tud-goal",
+          "text": "By session 2, choose a quit or cut-down goal and a date, and list 3 personal reasons for change.",
+          "interventionIds": [
+            "motivational-interviewing",
+            "decisional-balance"
+          ],
+          "sud": true
+        },
+        {
+          "id": "tud-medicine",
+          "text": "Before the quit date, see a prescriber about cessation medicine and tell them the planned date.",
+          "interventionIds": [
+            "medication-referral"
+          ],
+          "sud": true
+        },
+        {
+          "id": "tud-triggers",
+          "text": "For 1 week before the quit date, log each use and the situation, and plan a replacement for the 3 most common triggers.",
+          "interventionIds": [
+            "relapse-prevention-planning"
+          ],
+          "sud": true
+        },
+        {
+          "id": "tud-urges",
+          "text": "Use urge surfing for cravings at least 3 times a day in the first 2 weeks after the quit date and note how long each urge lasts.",
+          "interventionIds": [
+            "urge-surfing"
+          ],
+          "sud": true
+        },
+        {
+          "id": "tud-incentives",
+          "text": "If available, join a cessation program that offers incentives for confirmed quit days.",
+          "interventionIds": [
+            "contingency-management"
+          ],
+          "sud": true
+        }
+      ],
+      "measureIds": [
+        "phq-9",
+        "gad-7"
+      ]
+    }
+  ],
+  "collaborativeNote": "Write goals with the client in their own words and let them choose between quitting and cutting down first. Combine behavioral support with a prescriber's advice on cessation medicine (USPSTF, 2021), and ask the client to tell the prescriber about the quit date. The Part 2 definition leaves out tobacco, but this plan treats it the same conservative way: every item records substance use and the export carries the notice. 42 CFR Part 2 prohibits unauthorized use or disclosure of these records. Safety planning is done together with the client, and the clinician makes every risk decision. Adult scope only. Do not add names or other identifying details.",
+  "sud": true,
+  "sources": [
+    {
+      "title": "Interventions for tobacco smoking cessation in adults, including pregnant persons: USPSTF recommendation statement",
+      "publisher": "JAMA (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33464343/",
+      "year": 2021
+    },
+    {
+      "title": "42 CFR 2.11 Definitions (substance use disorder; excludes tobacco and caffeine)",
+      "publisher": "eCFR, U.S. Government Publishing Office",
+      "url": "https://www.ecfr.gov/current/title-42/chapter-I/subchapter-A/part-2/subpart-A/section-2.11",
+      "year": 2024
+    },
+    {
+      "title": "42 CFR 2.32: notice to accompany disclosure (federal confidentiality rule for substance use treatment records)",
+      "publisher": "eCFR, U.S. Government Publishing Office",
+      "url": "https://www.ecfr.gov/current/title-42/chapter-I/subchapter-A/part-2/subpart-C/section-2.32",
+      "year": 2024
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

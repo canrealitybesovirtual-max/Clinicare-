@@ -18,5 +18,14 @@ check "G15 forbidden marketing claim" 'HIPAA[ -](certified|approved|certificatio
 check "G4 homeopathy" '[Hh]omeopath'
 check "G1 possible DSM criteria structure (use original wording)" 'Criterion [A-H]\b|DSM-5-TR [Cc]riteria [A-H]\b'
 check "G3/G14 analytics or trackers" 'google-analytics|gtag\(|googletagmanager|mixpanel|segment\.com|hotjar|posthog'
+# Recommendation content only (the ethics hub's caution topic content/legal/conversion-practices.json names it on purpose).
+check_dirs() { # $1 = label, $2 = case-insensitive extended regex, $3... = directories
+  label=$1; re=$2; shift 2; dirs=""; for d in "$@"; do [ -d "$d" ] && dirs="$dirs $d"; done
+  [ -z "$dirs" ] && return 0
+  hits=$(grep -rnIiE "$re" $dirs 2>/dev/null | grep -v "guardrail-ok")
+  if [ -n "$hits" ]; then echo "GUARDRAIL $label:" >&2; echo "$hits" | head -20 >&2; fail=1; fi
+}
+check_dirs "G-conv conversion practice offered as care" 'conversion therap|reparative therap|change (their|your|the client.s) (sexual orientation|gender identity)' \
+  content/interventions content/plans content/handouts content/orientations content/formulations content/practice
 [ $fail -eq 1 ] && { echo "Fix the lines above or add 'guardrail-ok: <reason>' after owner approval. See CLAUDE.md." >&2; exit 2; }
 exit 0

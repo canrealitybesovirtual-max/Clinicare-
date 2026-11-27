@@ -99,6 +99,11 @@ export const CLIENT_ROUTES = [
   `/r/${SAMPLE.handout}`,
   `/r/${SAMPLE.handout}/es`,
   `/r/${SAMPLE.sudHandout}`,
+  // Round 4: a new handout (and its Spanish share page) and the discreet safety pages (quick exit).
+  "/r/what-keeps-it-going",
+  "/r/what-keeps-it-going/es",
+  "/client/topics/relationship-safety",
+  "/r/relationship-safety-help-card",
 ] as const;
 
 /** Clinician routes (the PHI banner and clinician navigation show on these). */
@@ -115,10 +120,12 @@ export const CLINICIAN_ROUTES = [
   `/interventions/${SAMPLE.intervention}`,
   `/interventions/${SAMPLE.sudIntervention}`,
   `/interventions/${SAMPLE.newIntervention}`,
+  "/interventions/cbct-for-ptsd",
   "/handouts",
   `/handouts/${SAMPLE.handout}`,
   `/handouts/${SAMPLE.sudHandout}`,
   `/handouts/${SAMPLE.newHandout}`,
+  "/handouts/high-risk-situations-plan",
   "/referrals",
   "/medications",
   `/medications/${SAMPLE.medication}`,
@@ -398,6 +405,7 @@ export async function buildPlan(page: Page, conditionLabel: string, opts: { cust
   const step = page.getByRole("region", { name: /^Step \d+ of \d+/ });
   const next = () => step.getByRole("button", { name: /^Next: / }).click();
 
+  await next(); // Formulation (optional, skipped)
   await next(); // Problems
   await step.getByRole("checkbox").first().check();
   for (let i = 0; i < 3; i++) {

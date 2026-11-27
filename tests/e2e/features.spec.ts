@@ -192,6 +192,20 @@ test.describe("client pages (G3)", () => {
     }
   });
 
+  test("the relationship-safety pages have a neutral tab title, a quick exit and discreet-browsing tips", async ({ page }) => {
+    for (const route of ["/client/topics/relationship-safety", "/r/relationship-safety-help-card"]) {
+      await gotoReady(page, route);
+      await expect(page).toHaveTitle("Health information");
+      const exit = page.getByRole("link", { name: "Quick exit" });
+      await expect(exit).toBeVisible();
+      await expect(exit).toHaveAttribute("href", "https://www.google.com/");
+      await expect(page.getByText("Is someone else able to check this phone or computer?")).toBeVisible();
+      await expect(page.getByText("988").first()).toBeVisible(); // crisis help stays on screen (G9)
+    }
+    await gotoReady(page, `/client/topics/${SAMPLE.topic}`);
+    await expect(page.getByRole("link", { name: "Quick exit" })).toHaveCount(0);
+  });
+
   test("a topic page in Spanish keeps the attribution and stays client-safe", async ({ page }) => {
     await gotoReady(page, `/client/topics/${SAMPLE.conditionTopic}`);
     await expect(page.getByText("Information from MedlinePlus.gov")).toBeVisible();

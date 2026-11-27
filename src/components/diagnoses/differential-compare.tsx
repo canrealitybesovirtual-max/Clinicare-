@@ -210,22 +210,48 @@ export function DifferentialCompare() {
       ) : (
         <>
           <Row
-            title="Codes and reference"
+            title="How they differ"
+            hint="Each pattern's own distinguishing notes about the others compared here."
             columns={columns}
-            render={(c) => (
-              <dl className="space-y-1.5 text-sm">
-                <dt className="font-semibold">ICD-10-CM</dt>
-                <dd className="text-muted">{c.icd10cm.map((x) => x.code).join(", ")}</dd>
-                <dt className="font-semibold">ICD-11</dt>
-                <dd className="text-muted">{c.icd11.map((x) => x.code).join(", ")}</dd>
-                <dt className="font-semibold">DSM-5-TR</dt>
-                <dd className="flex items-start gap-1.5 text-muted">
-                  <BookOpen aria-hidden className="mt-0.5 size-4 shrink-0" />
-                  {c.dsmPointer}
-                </dd>
-              </dl>
-            )}
+            render={(c) =>
+              c.versus.length ? (
+                <ul className="space-y-2 text-sm">
+                  {c.versus.map((v) => (
+                    <li key={v.otherId}>
+                      <span className="font-semibold">Versus {v.otherName}:</span> {v.text}
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="text-sm text-muted">No note about the others compared here.</p>
+              )
+            }
           />
+          <section aria-labelledby="compare-questions" className="space-y-2">
+            <h2 id="compare-questions" className="flex items-center gap-2 text-base font-semibold">
+              <CircleHelp aria-hidden className="size-5 text-accent" />
+              Questions that help tell them apart
+            </h2>
+            {questions.length ? (
+              <ol className="space-y-3">
+                {questions.map((q) => (
+                  <li key={q.id} className="rounded-xl border border-border bg-surface p-3 text-sm sm:p-4">
+                    <p className="font-semibold">{q.text}</p>
+                    <p className="mt-1 text-muted">{q.why}</p>
+                  </li>
+                ))}
+              </ol>
+            ) : (
+              <p className="text-sm text-muted">No curated question is tagged for these patterns. Use the features only one pattern lists, below.</p>
+            )}
+            <p className="text-sm text-muted">
+              Answer them in the follow-up panel on{" "}
+              <Link href="/diagnoses" className="font-semibold text-accent underline underline-offset-2">
+                Possible diagnoses
+              </Link>
+              , where answers update the suggestions on this device.
+            </p>
+          </section>
           <Row
             title="Key features"
             hint="A tick means documented this session; a dashed circle means not yet documented."
@@ -252,24 +278,6 @@ export function DifferentialCompare() {
               </div>
             </section>
           ) : null}
-          <Row
-            title="How they differ"
-            hint="Each pattern's own distinguishing notes about the others compared here."
-            columns={columns}
-            render={(c) =>
-              c.versus.length ? (
-                <ul className="space-y-2 text-sm">
-                  {c.versus.map((v) => (
-                    <li key={v.otherId}>
-                      <span className="font-semibold">Versus {v.otherName}:</span> {v.text}
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                <p className="text-sm text-muted">No note about the others compared here.</p>
-              )
-            }
-          />
           <Row title="Duration" columns={columns} render={(c) => <p className="text-sm">{c.durationNote}</p>} />
           <Row
             title="Rule out first"
@@ -284,31 +292,23 @@ export function DifferentialCompare() {
               </ul>
             )}
           />
-          <section aria-labelledby="compare-questions" className="space-y-2">
-            <h2 id="compare-questions" className="flex items-center gap-2 text-base font-semibold">
-              <CircleHelp aria-hidden className="size-5 text-accent" />
-              Questions that help tell them apart
-            </h2>
-            {questions.length ? (
-              <ol className="space-y-3">
-                {questions.map((q) => (
-                  <li key={q.id} className="rounded-xl border border-border bg-surface p-3 text-sm sm:p-4">
-                    <p className="font-semibold">{q.text}</p>
-                    <p className="mt-1 text-muted">{q.why}</p>
-                  </li>
-                ))}
-              </ol>
-            ) : (
-              <p className="text-sm text-muted">No curated question is tagged for these patterns. Use the distinctive features above.</p>
+          <Row
+            title="Codes and reference"
+            columns={columns}
+            render={(c) => (
+              <dl className="space-y-1.5 text-sm">
+                <dt className="font-semibold">ICD-10-CM</dt>
+                <dd className="text-muted">{c.icd10cm.map((x) => x.code).join(", ")}</dd>
+                <dt className="font-semibold">ICD-11</dt>
+                <dd className="text-muted">{c.icd11.map((x) => x.code).join(", ")}</dd>
+                <dt className="font-semibold">DSM-5-TR</dt>
+                <dd className="flex items-start gap-1.5 text-muted">
+                  <BookOpen aria-hidden className="mt-0.5 size-4 shrink-0" />
+                  {c.dsmPointer}
+                </dd>
+              </dl>
             )}
-            <p className="text-sm text-muted">
-              Answer them in the follow-up panel on{" "}
-              <Link href="/diagnoses" className="font-semibold text-accent underline underline-offset-2">
-                Possible diagnoses
-              </Link>
-              , where answers update the suggestions on this device.
-            </p>
-          </section>
+          />
         </>
       )}
 

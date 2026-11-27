@@ -15,7 +15,7 @@ export function HubPrompt({ context, className }: { context: HubContext; classNa
       <p>{prompt.message}</p>
       {ids.length > 0 ? (
         <p className="mt-1">
-          <Link href={`/ethics#${prompt.anchor ?? ids[0]}`} className="font-semibold text-accent underline underline-offset-2">
+          <Link href={`/ethics#${prompt.anchor ?? ids[0]}`} className="inline-flex min-h-11 items-center font-semibold text-accent underline underline-offset-2">
             Ethics &amp; Legal Hub
           </Link>
           <span className="text-muted"> · {ids.length} related {ids.length === 1 ? "item" : "items"}</span>
