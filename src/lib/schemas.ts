@@ -72,6 +72,8 @@ export const SymptomLexiconSchema = z.object({
 export type SymptomLexicon = z.infer<typeof SymptomLexiconSchema>;
 
 export const CodeSchema = z.object({ code: z.string().min(3), label: z.string().min(3) });
+/** An ICD-10-CM code of a condition; featureIds names the documented features it fits (phobia type -> its codes). */
+export const ConditionCodeSchema = CodeSchema.extend({ featureIds: z.array(slug).min(1).optional() });
 
 export const ConditionFeatureSchema = z.object({
   symptomId: slug,
@@ -88,7 +90,7 @@ export type ConditionFeature = z.infer<typeof ConditionFeatureSchema>;
 export const ConditionSchema = z.object({
   id: slug,
   name: z.string().min(3),
-  icd10cm: z.array(CodeSchema).min(1),
+  icd10cm: z.array(ConditionCodeSchema).min(1),
   icd11: z.array(CodeSchema).min(1),
   dsmPointer: z.string().includes("See DSM-5-TR"),
   summary: z.string().min(40), // original clinical summary, never DSM text
@@ -120,7 +122,15 @@ export const ConditionSchema = z.object({
   // Link-out, "license pending". licenseKey traces the status in content/licenses.json (G7).
   measuresPending: z.array(z.object({ name: z.string(), url: z.url(), note: z.string(), licenseKey: z.string().min(2) })),
   interventions: z
-    .array(z.object({ name: z.string(), evidence: z.string(), note: z.string() }))
+    .array(
+      z.object({
+        name: z.string(),
+        evidence: z.string(),
+        note: z.string(),
+        // Shown only when one of these symptoms is documented (applied tension: blood-injection-injury fears).
+        requiresAny: z.array(slug).min(1).optional(),
+      }),
+    )
     .min(1),
   handouts: z.array(slug),
   statIds: z.array(slug),
@@ -190,6 +200,8 @@ export const HandoutSchema = z.object({
   practiceLog: z.object({ columns: z.array(z.string()).min(2), rows: z.number().int().min(1) }).optional(),
   safetyNote: z.string(),
   sud: z.boolean().default(false), // substance-use content: PDF footer carries the 42 CFR Part 2 notice on every page (G6)
+  // Suggested for a condition only when one of these symptoms is documented (applied tension: blood-injection-injury).
+  suggestWith: z.array(slug).min(1).optional(),
   es: HandoutTranslationSchema.optional(), // Spanish version (client mode / client PDF)
   ...governance,
 });

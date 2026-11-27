@@ -1,0 +1,71 @@
+{
+  "conditionId": "cyclothymic-disorder",
+  "problems": [
+    {
+      "id": "cyc-mood-instability",
+      "label": "Years of mood ups and downs that make life feel unpredictable",
+      "definitions": [
+        "Describes mood that has shifted between mild highs and lows for years, with few settled weeks.",
+        "Others describe the client as unpredictable, and plans or relationships suffer from the shifts.",
+        "Sleep and activity levels change with the mood swings."
+      ],
+      "longTermGoals": [
+        "Mood becomes more predictable and less disruptive, with a routine and early-warning plan that the client uses."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "cyc-tracker",
+          "text": "For 6 weeks, complete a daily mood, sleep and routine tracker and review patterns in session every 2 weeks.",
+          "interventionIds": [
+            "interpersonal-social-rhythm-therapy",
+            "bipolar-psychoeducation"
+          ]
+        },
+        {
+          "id": "cyc-sleep",
+          "text": "Keep a regular wake time within 1 hour on at least 5 days a week for 4 weeks.",
+          "interventionIds": [
+            "sleep-hygiene-education"
+          ]
+        },
+        {
+          "id": "cyc-pause",
+          "text": "Use a brief mindful pause before big decisions during a high or a low at least 3 times a week, noting the outcome.",
+          "interventionIds": [
+            "mindful-check-in"
+          ]
+        },
+        {
+          "id": "cyc-medication",
+          "text": "If swings disrupt work or relationships after 8 weeks of these steps, attend a medication evaluation.",
+          "interventionIds": [
+            "medication-referral"
+          ]
+        }
+      ],
+      "measureIds": [
+        "phq-9",
+        "gad-7"
+      ]
+    }
+  ],
+  "collaborativeNote": "Write goals and objectives with the client in their own words. Timelines and targets are examples to adapt; the client decides what matters, and the clinician checks safety and fit.",
+  "sud": false,
+  "sources": [
+    {
+      "title": "Bipolar disorder: assessment and management (CG185)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg185",
+      "year": 2014
+    },
+    {
+      "title": "Two-year outcomes for interpersonal and social rhythm therapy in individuals with bipolar I disorder (Frank et al.)",
+      "publisher": "Archives of General Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16143731/",
+      "year": 2005
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

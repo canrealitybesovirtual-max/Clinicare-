@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ArrowRight, ShieldCheck, Wind } from "lucide-react";
-import { PageIntro } from "@/components/content/content-bits";
+import { PageIntro } from "@/components/content/content-meta";
 import { TOOLS } from "@/components/tools/catalog";
 
 export const metadata: Metadata = { title: "Session tools" };

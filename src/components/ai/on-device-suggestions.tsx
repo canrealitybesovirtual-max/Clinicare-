@@ -13,7 +13,7 @@ import { SEMANTIC_DOWNLOAD_BYTES, SEMANTIC_SUGGESTIONS_LABEL } from "@/lib/seman
 import { useSemanticModel, useSemanticSuggestions } from "@/lib/semantic/use-semantic";
 import { useSession } from "@/state/session";
 import { Button } from "@/components/ui/button";
-import { ClinicianReviewBadge } from "@/components/content/content-bits";
+import { ClinicianReviewBadge } from "@/components/content/content-meta";
 import type { SymptomAnalysis } from "@/components/symptoms/analysis";
 import { AddSymptomChip } from "./follow-up-panel";
 import { useIsClientMode } from "./use-client-mode";

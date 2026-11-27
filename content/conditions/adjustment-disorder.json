@@ -228,7 +228,11 @@
       "note": "Ask directly about suicidal thoughts. The clinician decides on risk level and next steps; crisis resources (988, local emergency number, findahelpline.com) stay visible on every screen."
     }
   ],
-  "handouts": [],
+  "handouts": [
+    "problem-solving-steps",
+    "coping-cards",
+    "activity-schedule"
+  ],
   "statIds": [],
   "culturalNotes": [
     "What counts as a major stressor, and what reaction is expected, varies across cultures and families. Ask how people in the client's community would usually respond before judging the reaction as out of proportion.",

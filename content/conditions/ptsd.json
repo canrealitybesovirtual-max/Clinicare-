@@ -78,7 +78,7 @@
     { "name": "Grounding skills (e.g., 5-4-3-2-1 senses)", "evidence": "Stabilization skill used within trauma-focused care; not a stand-alone PTSD treatment.", "note": "Helps clients reorient during flashbacks or dissociation. Teach early and practice in session." },
     { "name": "Referral for medication evaluation", "evidence": "NICE NG116 suggests considering venlafaxine or an SSRI such as sertraline for adults, based on preference. The VA/DoD 2023 guideline recommends against benzodiazepines for PTSD.", "note": "Refer to psychiatry, a primary care provider or a psychiatric nurse practitioner. Prescribing decisions rest with the prescriber." }
   ],
-  "handouts": [],
+  "handouts": ["grounding-5-4-3-2-1", "breathing-practice", "safety-plan"],
   "statIds": ["us-ptsd-past-year", "global-mental-health-conditions"],
   "culturalNotes": [
     "Refugees, asylum seekers and people from war-affected areas may have repeated or ongoing trauma and current threats such as immigration risk or unsafe housing. Address current safety and basic needs alongside trauma-focused work.",
@@ -112,6 +112,6 @@
     { "title": "AACC Code of Ethics", "publisher": "American Association of Christian Counselors", "url": "https://aacc.net/aacc-code-of-ethics/" }
   ],
   "license": "original",
-  "lastVerified": "2026-11-26",
+  "lastVerified": "2026-11-27",
   "reviewedBy": "PENDING"
 }

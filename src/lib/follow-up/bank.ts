@@ -14,6 +14,9 @@ import traumaJson from "@content/follow-ups/trauma.json";
 import sleepJson from "@content/follow-ups/sleep.json";
 import alcoholJson from "@content/follow-ups/alcohol.json";
 import griefJson from "@content/follow-ups/grief.json";
+import eatingJson from "@content/follow-ups/eating.json";
+import attentionJson from "@content/follow-ups/attention.json";
+import psychosisJson from "@content/follow-ups/psychosis.json";
 import gatesJson from "@content/follow-ups/gates.json";
 import ruleOutsJson from "@content/follow-ups/rule-outs.json";
 import type { Symptom } from "@/lib/schemas";
@@ -46,6 +49,9 @@ export const followUpFiles: readonly FollowUpBankFile[] = [
   parseBank(sleepJson, "sleep"),
   parseBank(alcoholJson, "alcohol"),
   parseBank(griefJson, "grief"),
+  parseBank(eatingJson, "eating"),
+  parseBank(attentionJson, "attention"),
+  parseBank(psychosisJson, "psychosis"),
   parseBank(gatesJson, "gates"),
   parseBank(ruleOutsJson, "rule-outs"),
 ];

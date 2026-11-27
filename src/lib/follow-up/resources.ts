@@ -30,10 +30,11 @@ import type { TriggerHit } from "./triggers";
 /** Serializable slice of the content library (ids and names only), safe to pass to a client component. */
 export interface ResourceCatalog {
   conditions: { id: string; name: string; measures: string[]; handouts: string[]; sud: boolean }[];
-  interventions: { id: string; name: string; conditions: string[]; handoutIds: string[] }[];
+  /** suggestWith: offered for a condition only when one of these symptoms is documented (content suggestWith). */
+  interventions: { id: string; name: string; conditions: string[]; handoutIds: string[]; suggestWith?: string[] }[];
   /** conditionId -> intervention ids in plan-library order. */
   planInterventions: Record<string, string[]>;
-  handouts: { id: string; title: string; sud: boolean }[];
+  handouts: { id: string; title: string; sud: boolean; suggestWith?: string[] }[];
   /** Built-in measures whose license is confirmed in content/licenses.json (G7). */
   measureIds: string[];
 }
@@ -204,13 +205,17 @@ export function computeResourceHints(
     // for other problems (for example, drinking to cope in a social-anxiety plan) only fill remaining slots.
     const planned = catalog.planInterventions[s.conditionId] ?? [];
     const listed = new Set(catalog.interventions.filter((i) => i.conditions.includes(s.conditionId)).map((i) => i.id));
+    // Items written for one kind of presentation (applied tension: blood-injection-injury fears) wait until one of
+    // their symptoms is documented for this suggestion, so a fear of dogs is never offered applied tension.
+    const documented = new Set(s.matched.map((f) => f.symptomId));
+    const suits = (suggestWith?: readonly string[]) => !suggestWith || suggestWith.some((id) => documented.has(id));
     const chosen = [...new Set([...planned.filter((id) => listed.has(id)), ...[...listed].sort(), ...planned])]
-      .filter((id) => interventionIds.has(id))
+      .filter((id) => interventionIds.has(id) && suits(interventionById.get(id)?.suggestWith))
       .slice(0, 3);
     for (const id of chosen) push("intervention", id, why);
     // Substance-use handouts only for a substance-use consideration (they would otherwise raise Part 2 for, say, a
     // needle fear whose relapse-prevention intervention also serves substance use).
-    const fits = (h: string) => cond?.sud === true || handoutById.get(h)?.sud !== true;
+    const fits = (h: string) => (cond?.sud === true || handoutById.get(h)?.sud !== true) && suits(handoutById.get(h)?.suggestWith);
     for (const h of cond?.handouts ?? []) if (fits(h)) push("handout", h, why);
     for (const id of chosen) for (const h of interventionById.get(id)?.handoutIds ?? []) if (fits(h)) push("handout", h, why);
     for (const r of (cond?.sud ? ["addiction-counselor", "substance-use"] : ["psychologist", "professional-counselor"]) as FollowUpReferralKind[])

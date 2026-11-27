@@ -14,7 +14,14 @@
     "generalized-anxiety-disorder",
     "social-anxiety-disorder",
     "obsessive-compulsive-disorder",
-    "insomnia-disorder"
+    "insomnia-disorder",
+    "bipolar-i-disorder",
+    "bipolar-ii-disorder",
+    "borderline-personality-disorder",
+    "anorexia-nervosa",
+    "schizophrenia",
+    "body-dysmorphic-disorder",
+    "opioid-use-disorder"
   ],
   "evidenceLevel": "A meta-analysis of 6 studies (3,536 participants) found that safety planning-type interventions reduced suicidal behavior (relative risk about 0.57; number needed to treat 16) but not suicidal thoughts (Nuij et al., 2021). In a VA emergency department cohort study, the Safety Planning Intervention plus follow-up phone calls was linked with 45% fewer suicidal behaviors over 6 months and more outpatient mental health visits (Stanley et al., 2018; observational, mostly male veterans). The 2024 VA/DoD suicide risk guideline highlights crisis response and safety planning, including means safety. NICE NG225 (self-harm, 2022) advises against using risk tools or low/medium/high risk categories to predict suicide or to decide who gets care.",
   "minutes": { "min": 20, "max": 45 },

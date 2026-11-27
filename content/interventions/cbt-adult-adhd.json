@@ -1,0 +1,64 @@
+{
+  "id": "cbt-adult-adhd",
+  "name": "CBT for adult ADHD (organization, planning and procrastination)",
+  "modality": "CBT - adult ADHD skills",
+  "conditions": [
+    "adult-adhd"
+  ],
+  "evidenceLevel": "Added to medication, CBT reduced ADHD symptoms more than relaxation with education in a randomized trial (Safren et al., 2010). Group meta-cognitive therapy improved time management and organization (Solanto et al., 2010). NICE NG87 recommends non-drug treatment for adults, including CBT.",
+  "minutes": {
+    "min": 45,
+    "max": 60
+  },
+  "purpose": "Builds practical systems for planning, organization and time, and works on the thoughts and avoidance that feed procrastination. The aim is to make tasks visible, small and started, and to use the environment to support attention.",
+  "steps": [
+    "Set up one calendar and one task list the client will actually check, and practice using them in session.",
+    "Break large tasks into small, concrete first steps; schedule them.",
+    "Practice distractibility delay: write down distracting thoughts to deal with later, and use short timed work blocks.",
+    "Organize the environment: one place for keys, wallet and papers; reduce clutter in work areas.",
+    "Address procrastination thoughts (I'll do it when I feel like it) and test them with small experiments.",
+    "Review the week, problem-solve what did not work, and keep what did."
+  ],
+  "script": [
+    "Let's make the task so small you can start it today.",
+    "Where will you write that down so you'll see it?",
+    "Set a timer for 15 minutes and stop when it rings.",
+    "What thought shows up right before you put it off?"
+  ],
+  "contraindications": [
+    "Untreated depression, substance use or sleep problems can block progress; address them in parallel.",
+    "Do not start during an active crisis, current suicidal risk, acute intoxication or withdrawal; stabilize first and share crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com."
+  ],
+  "culturalAdaptations": [
+    "Time norms differ across cultures and families; set goals that fit the client's work and home settings.",
+    "Some clients have been labeled lazy for years; acknowledge the effort they already make.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "handoutIds": [
+    "focus-and-follow-through",
+    "problem-solving-steps"
+  ],
+  "sources": [
+    {
+      "title": "Cognitive behavioral therapy vs relaxation with educational support for medication-treated adults with ADHD and persistent symptoms (Safren et al.)",
+      "publisher": "JAMA (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20736471/",
+      "year": 2010
+    },
+    {
+      "title": "Efficacy of meta-cognitive therapy for adult ADHD (Solanto et al.)",
+      "publisher": "American Journal of Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20231319/",
+      "year": 2010
+    },
+    {
+      "title": "Attention deficit hyperactivity disorder: diagnosis and management (NG87)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng87",
+      "year": 2018
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

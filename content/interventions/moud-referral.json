@@ -1,0 +1,63 @@
+{
+  "id": "moud-referral",
+  "name": "Medications for opioid use disorder (MOUD): referral and support",
+  "modality": "Care coordination - medication treatment for opioid use disorder",
+  "conditions": [
+    "opioid-use-disorder"
+  ],
+  "evidenceLevel": "Buprenorphine and methadone maintenance keep people in treatment and reduce opioid use compared with placebo or no medication (Mattick et al., 2014 Cochrane review); being on opioid agonist treatment is linked to much lower all-cause and overdose mortality (Sordo et al., 2017).",
+  "minutes": {
+    "min": 15,
+    "max": 45
+  },
+  "purpose": "Connects clients with opioid use disorder to buprenorphine, methadone or extended-release naltrexone as soon as possible, and supports them to stay on it. Counseling helps, but medication should never wait for it.",
+  "steps": [
+    "Explain the options (buprenorphine, methadone through an opioid treatment program, extended-release naltrexone) in plain language.",
+    "Address myths, such as the idea that medication is replacing one drug with another.",
+    "Find local prescribers and programs, including telehealth options where allowed, and help with the first appointment.",
+    "Coordinate care with consent, respecting 42 CFR Part 2 rules for records.",
+    "Support retention: discuss side effects, stigma and practical barriers at every session.",
+    "Make sure the client has naloxone."
+  ],
+  "script": [
+    "Medication is one of the most effective ways to stay alive and get your life back.",
+    "Taking it as prescribed is treatment, not using.",
+    "What would make it easier to get to that first appointment?",
+    "How is the medication working for you?"
+  ],
+  "contraindications": [
+    "Prescribing decisions rest with the prescriber; do not advise dose changes.",
+    "Stopping medication raises overdose risk because tolerance drops; plan carefully with the prescriber."
+  ],
+  "culturalAdaptations": [
+    "Stigma about medication in some recovery communities and families can be strong; share evidence and respect the client's choice.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "handoutIds": [
+    "overdose-safety",
+    "relapse-prevention-plan"
+  ],
+  "sources": [
+    {
+      "title": "Buprenorphine maintenance versus placebo or methadone maintenance for opioid dependence (Mattick et al.)",
+      "publisher": "Cochrane Database of Systematic Reviews (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24500948/",
+      "year": 2014
+    },
+    {
+      "title": "Mortality risk during and after opioid substitution treatment: systematic review and meta-analysis of cohort studies (Sordo et al.)",
+      "publisher": "BMJ (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28446428/",
+      "year": 2017
+    },
+    {
+      "title": "Drug misuse in over 16s: psychosocial interventions (CG51)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg51",
+      "year": 2007
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

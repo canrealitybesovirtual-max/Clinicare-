@@ -6,9 +6,9 @@ import { normalizeText, stem } from "@/lib/matcher";
 import { scrubPHI } from "@/lib/phi-scrubber";
 import { TRIGGER_CATEGORIES } from "@/lib/schemas-follow-up";
 import { allHandouts, interventions } from "@/lib/library";
-import { measures } from "@/lib/content";
+import { conditions, lexicon, measures } from "@/lib/content";
 import { triggerDictionary } from "@/lib/follow-up/dictionary";
-import { extractTriggers, summarizeTriggers, triggerCategoriesOf } from "@/lib/follow-up/triggers";
+import { answerConfirmedSubtypes, extractTriggers, summarizeTriggers, triggerCategoriesOf } from "@/lib/follow-up/triggers";
 
 const one = (text: string) => {
   const hits = extractTriggers(text);
@@ -187,6 +187,30 @@ describe("trigger dictionary (content/trigger-objects.json)", () => {
     }
   });
 
+  it("maps objects only to phobia-type symptoms of a pattern their category points to", () => {
+    const lex = new Map(lexicon.symptoms.map((s) => [s.id, s] as const));
+    for (const o of triggerDictionary.objects) {
+      if (!o.symptomId) continue;
+      const s = lex.get(o.symptomId);
+      expect(s, `${o.id} -> ${o.symptomId}`).toBeDefined();
+      expect(s?.redFlag, o.id).toBeUndefined();
+      const hinted = triggerDictionary.categories[o.category].conditionHints;
+      const owners = conditions.filter((c) => hinted.includes(c.id) && c.features.some((f) => f.symptomId === o.symptomId));
+      expect(owners.length, `${o.id} -> ${o.symptomId} belongs to no hinted pattern`).toBeGreaterThan(0);
+    }
+    const of = (id: string) => triggerDictionary.objects.find((o) => o.id === id)?.symptomId;
+    for (const o of triggerDictionary.objects.filter((x) => x.category === "animal")) expect(o.symptomId, o.id).toBe("fear-animals");
+    expect([of("flying"), of("bridge"), of("elevator"), of("needle"), of("storm")]).toEqual([
+      "fear-flying",
+      "fear-heights",
+      "fear-enclosed-spaces",
+      "fear-blood-injection",
+      "fear-natural-environment",
+    ]);
+    // Situations with no phobia-type symptom of their own stay unmapped (driving, crowds, leaving home).
+    expect([of("driving"), of("crowds"), of("leaving-home")]).toEqual([undefined, undefined, undefined]);
+  });
+
   it("carries governance: original license, sources, lastVerified and reviewedBy", () => {
     expect(triggerDictionary.license).toBe("original");
     expect(triggerDictionary.reviewedBy).toBe("PENDING");
@@ -204,5 +228,21 @@ describe("trigger dictionary (content/trigger-objects.json)", () => {
   it("is deterministic", () => {
     const text = "panic from dogs, avoids bridges and tunnels, scared of needles since the crash";
     expect(extractTriggers(text)).toEqual(extractTriggers(text));
+  });
+});
+
+describe("answerConfirmedSubtypes", () => {
+  it("adds the object's phobia type once an answer ties the fear to it", () => {
+    const hits = extractTriggers("panics around pit bulls");
+    expect(answerConfirmedSubtypes(hits, ["circumscribed-fear"], { present: [], absent: [] })).toEqual(["fear-animals"]);
+    expect(answerConfirmedSubtypes(hits, ["phobic-avoidance"], { present: [], absent: [] })).toEqual(["fear-animals"]);
+  });
+
+  it("adds nothing without such an answer, when already present, or when noted as absent", () => {
+    const hits = extractTriggers("panics around pit bulls");
+    expect(answerConfirmedSubtypes(hits, [], { present: [], absent: [] })).toEqual([]);
+    expect(answerConfirmedSubtypes(hits, ["palpitations"], { present: [], absent: [] })).toEqual([]);
+    expect(answerConfirmedSubtypes(hits, ["circumscribed-fear"], { present: ["fear-animals"], absent: [] })).toEqual([]);
+    expect(answerConfirmedSubtypes(hits, ["circumscribed-fear"], { present: [], absent: ["fear-animals"] })).toEqual([]);
   });
 });

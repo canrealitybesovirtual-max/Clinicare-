@@ -1,22 +1,27 @@
+/**
+ * Light, shared content components: review badges, sources, governance, page intro, the next-step link and the
+ * stat card. No content-library imports, so client components can use them without pulling the library into the
+ * browser bundle.
+ */
 import * as React from "react";
 import Link from "next/link";
 import { ArrowRight, BookOpen, ClipboardCheck } from "lucide-react";
 import type { Source, Stat } from "@/lib/schemas";
-import { isStatStale } from "@/lib/content";
+import { isStatStale } from "@/lib/stat-age";
 import { Badge } from "@/components/ui/badge";
 import { ExternalLink } from "@/components/ui/external-link";
 import { cn } from "@/lib/utils";
 
 /**
  * G10: visible badge while a licensed clinician has not signed off on the item. `inList` keeps it visible but
- * neutral in list views (owner decision), so real warnings such as "Trained clinicians only" stand out there;
- * detail pages keep the warning tone.
+ * neutral and icon-free in list views (owner decision), so real warnings such as "Trained clinicians only" stand
+ * out there; detail pages keep the warning tone.
  */
 export function ReviewBadge({ reviewedBy, inList = false, className }: { reviewedBy: string; inList?: boolean; className?: string }) {
   if (reviewedBy === "PENDING") {
     return (
       <Badge tone={inList ? "neutral" : "warn"} className={className}>
-        <ClipboardCheck aria-hidden className="size-3.5" />
+        {inList ? null : <ClipboardCheck aria-hidden className="size-3.5" />}
         Not yet clinically reviewed
       </Badge>
     );
@@ -34,33 +39,6 @@ export function ClinicianReviewBadge({ className }: { className?: string }) {
     <Badge tone="info" className={cn("uppercase tracking-wide", className)}>
       For clinician review
     </Badge>
-  );
-}
-
-/** Psychoeducation stat card (G13): value, original sentence, publisher + data year + link, stale flag. */
-export function StatCard({ stat, compact = false, headingLevel = "h3" }: { stat: Stat; compact?: boolean; headingLevel?: "h2" | "h3" | "h4" }) {
-  const stale = isStatStale(stat);
-  const H = headingLevel;
-  return (
-    <article className={cn("flex h-full flex-col rounded-xl border border-border bg-surface p-4 shadow-sm", compact && "p-3.5 shadow-none")}>
-      <div className="flex flex-wrap items-center gap-1.5">
-        <Badge tone="neutral">{stat.region === "US" ? "United States" : "Worldwide"}</Badge>
-        {stale ? (
-          <Badge tone="warn">Older data (over 5 years)</Badge>
-        ) : null}
-      </div>
-      <H className={cn("mt-3 font-bold tracking-tight text-primary dark:text-text", compact ? "text-2xl" : "text-3xl")}>
-        {stat.value}
-      </H>
-      <p className="mt-2 flex-1 text-sm leading-relaxed text-text">{stat.text}</p>
-      <p className="mt-3 border-t border-border pt-3 text-xs leading-relaxed text-muted">
-        <span className="font-semibold text-text">Source:</span> {stat.publisher}.{" "}
-        <span className="font-semibold text-text">Data year:</span> {stat.dataYear}.{" "}
-        <ExternalLink href={stat.url} className="text-xs">
-          View source
-        </ExternalLink>
-      </p>
-    </article>
   );
 }
 
@@ -149,5 +127,32 @@ export function NextStep({ href, label, className }: { href: string; label: stri
         <ArrowRight aria-hidden className="size-4" />
       </Link>
     </p>
+  );
+}
+
+/** Psychoeducation stat card (G13): value, original sentence, publisher + data year + link, stale flag. */
+export function StatCard({ stat, compact = false, headingLevel = "h3" }: { stat: Stat; compact?: boolean; headingLevel?: "h2" | "h3" | "h4" }) {
+  const stale = isStatStale(stat);
+  const H = headingLevel;
+  return (
+    <article className={cn("flex h-full flex-col rounded-xl border border-border bg-surface p-4 shadow-sm", compact && "p-3.5 shadow-none")}>
+      <div className="flex flex-wrap items-center gap-1.5">
+        <Badge tone="neutral">{stat.region === "US" ? "United States" : "Worldwide"}</Badge>
+        {stale ? (
+          <Badge tone="warn">Older data (over 5 years)</Badge>
+        ) : null}
+      </div>
+      <H className={cn("mt-3 font-bold tracking-tight text-primary dark:text-text", compact ? "text-2xl" : "text-3xl")}>
+        {stat.value}
+      </H>
+      <p className="mt-2 flex-1 text-sm leading-relaxed text-text">{stat.text}</p>
+      <p className="mt-3 border-t border-border pt-3 text-xs leading-relaxed text-muted">
+        <span className="font-semibold text-text">Source:</span> {stat.publisher}.{" "}
+        <span className="font-semibold text-text">Data year:</span> {stat.dataYear}.{" "}
+        <ExternalLink href={stat.url} className="text-xs">
+          View source
+        </ExternalLink>
+      </p>
+    </article>
   );
 }

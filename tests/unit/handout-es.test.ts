@@ -10,7 +10,7 @@ import { describe, expect, it } from "vitest";
 import { HandoutSchema, type Handout } from "@/lib/schemas";
 import { PDF_PART2_NOTICE_ES, toWinAnsi } from "@/lib/pdf";
 import { PART2_NOTICE } from "@/lib/referral-links";
-import { isPlainSafe } from "@/components/client/plain-text";
+import { isClientSafeText } from "@/lib/client-safe";
 import { handoutLangs, localizeHandout } from "@/components/handouts/localize";
 
 const DIR = path.resolve(__dirname, "../../content/handouts");
@@ -85,7 +85,7 @@ describe.each(handouts.map((h) => [h.id, h] as const))("Spanish version: %s", (_
     const en = blocks(h, h.practiceLog);
     const sp = blocks(es, es.practiceLog);
     en.forEach((block, i) => {
-      if (isPlainSafe(block)) expect(isPlainSafe(sp[i] ?? ""), sp[i]).toBe(true);
+      if (isClientSafeText(block)) expect(isClientSafeText(sp[i] ?? ""), sp[i]).toBe(true);
     });
   });
 });

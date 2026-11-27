@@ -6,8 +6,9 @@
  * Cities that are also first names (Austin, Charlotte, Madison, Jackson) are the one exception: when the WHOLE
  * field is exactly a city name in the bundled USPS gazetteer (content/referrals/us-places.json) for the chosen
  * state, it is allowed through, and the canonical gazetteer spelling is what gets sent, never the typed text.
- * The gazetteer is loaded on demand, only when the scrubber flags a city. The server checks the city against the
- * same file again (src/server/integrations/places.ts).
+ * The gazetteer's names (src/lib/generated/us-place-names.json, generated from that file without its centre
+ * points) load on demand, only when the scrubber flags a city. The server checks the city against the full file
+ * again (src/server/integrations/places.ts).
  */
 import { City, Location, UsState, UsZip } from "@/lib/outbound";
 import { scrubPHI } from "@/lib/phi-scrubber";
@@ -33,14 +34,18 @@ export interface PlaceIndex {
 
 const placeKey = (name: string): string => name.trim().replace(/\s+/g, " ").toLowerCase();
 
-/** Builds the index from the gazetteer's `states` field ("Name:lat,lng;Name:lat,lng" per state). Names only. */
+/**
+ * Builds the index from a gazetteer `states` field: "Name;Name" per state (the generated names-only copy) or
+ * "Name:lat,lng;Name:lat,lng" (content/referrals/us-places.json). Names only either way.
+ */
 export function buildPlaceIndex(states: Readonly<Record<string, string>>): PlaceIndex {
   const byState = new Map<string, Map<string, string>>();
   const all = new Map<string, string>();
   for (const [state, data] of Object.entries(states)) {
     const names = new Map<string, string>();
     for (const rec of data.split(";")) {
-      const name = rec.slice(0, rec.lastIndexOf(":"));
+      const cut = rec.lastIndexOf(":");
+      const name = cut < 0 ? rec : rec.slice(0, cut);
       if (!City.safeParse(name).success) continue;
       names.set(placeKey(name), name);
       all.set(placeKey(name), name);
@@ -54,7 +59,7 @@ let placeIndex: Promise<PlaceIndex> | null = null;
 
 /** Loads the gazetteer once, as its own chunk; a failed load (offline) is retried on the next call. */
 export function loadPlaceIndex(): Promise<PlaceIndex> {
-  placeIndex ??= import("@content/referrals/us-places.json").then(
+  placeIndex ??= import("@/lib/generated/us-place-names.json").then(
     (m) => buildPlaceIndex((m.default as { states: Record<string, string> }).states),
     (e: unknown) => {
       placeIndex = null;

@@ -1,0 +1,104 @@
+{
+  "conditionId": "anorexia-nervosa",
+  "problems": [
+    {
+      "id": "an-restriction",
+      "label": "Food restriction and low weight that put health at risk",
+      "definitions": [
+        "Eats much less than the body needs, skips meals or follows strict food rules.",
+        "Weight is well below a healthy range, or has dropped quickly, per the medical team.",
+        "Shows strong distress at the idea of gaining weight, and checks body shape or weight often."
+      ],
+      "longTermGoals": [
+        "The client restores health, eats regularly and flexibly, and rebuilds a life that is not ruled by food and weight."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "an-medical",
+          "text": "Within 1 week, attend a medical assessment, and agree with the care team which warning signs (fainting, chest pain, very low weight) mean same-day care.",
+          "interventionIds": [
+            "eating-disorder-medical-monitoring"
+          ]
+        },
+        {
+          "id": "an-regular-eating",
+          "text": "By week 4, eat 3 meals and 2 or 3 snacks a day at planned times on at least 5 days a week, recorded in a log.",
+          "interventionIds": [
+            "cbt-e-eating-disorders"
+          ]
+        },
+        {
+          "id": "an-weighing",
+          "text": "Each session, complete collaborative weighing and discuss the trend without changing the plan based on a single reading.",
+          "interventionIds": [
+            "cbt-e-eating-disorders"
+          ]
+        },
+        {
+          "id": "an-motivation",
+          "text": "By session 4, write the costs and benefits of the eating problem in own words, and 2 reasons for change.",
+          "interventionIds": [
+            "motivational-interviewing"
+          ]
+        },
+        {
+          "id": "an-self-kindness",
+          "text": "Practice a kind response to body criticism at least once a day for 4 weeks.",
+          "interventionIds": [
+            "self-compassion-practice"
+          ]
+        },
+        {
+          "id": "an-safety",
+          "text": "By session 2, complete a written safety plan and review it monthly.",
+          "interventionIds": [
+            "collaborative-safety-planning"
+          ]
+        },
+        {
+          "id": "an-level-of-care",
+          "text": "If weight, vital signs or eating do not improve over 4 weeks, discuss a higher level of care with the team.",
+          "interventionIds": [
+            "eating-disorder-medical-monitoring",
+            "short-term-psychodynamic-exploration"
+          ]
+        }
+      ],
+      "measureIds": [
+        "phq-9",
+        "gad-7"
+      ]
+    }
+  ],
+  "collaborativeNote": "Write goals and objectives with the client in their own words. Timelines and targets are examples to adapt; the client decides what matters, and the clinician checks safety and fit.",
+  "sud": false,
+  "sources": [
+    {
+      "title": "Eating disorders: recognition and treatment (NG69)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng69",
+      "year": 2017
+    },
+    {
+      "title": "Transdiagnostic cognitive-behavioral therapy for patients with eating disorders: a two-site trial with 60-week follow-up (Fairburn et al.)",
+      "publisher": "American Journal of Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19074978/",
+      "year": 2009
+    },
+    {
+      "title": "Focal psychodynamic therapy, cognitive behaviour therapy, and optimised treatment as usual in outpatients with anorexia nervosa (ANTOP study; Zipfel et al.)",
+      "publisher": "The Lancet (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24131861/",
+      "year": 2014
+    },
+    {
+      "title": "Mortality rates in patients with anorexia nervosa and other eating disorders: a meta-analysis of 36 studies (Arcelus et al.)",
+      "publisher": "Archives of General Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21727255/",
+      "year": 2011
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

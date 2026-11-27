@@ -67,7 +67,7 @@
     { "name": "Mindfulness-based approaches (complementary)", "evidence": "NCCIH notes evidence that mindfulness and meditation may help anxiety, including a 2023 randomized trial in which MBSR was noninferior to escitalopram.", "note": "Offer as an adjunct or alternative based on client preference. Adapt for trauma history (e.g., eyes-open options)." },
     { "name": "Referral for medication evaluation", "evidence": "NICE CG113 names an SSRI (sertraline) as the first-line medication for GAD at step 3.", "note": "Refer to psychiatry, a primary care provider or a psychiatric nurse practitioner. Prescribing decisions rest with the prescriber." }
   ],
-  "handouts": ["pmr-homework"],
+  "handouts": ["worry-log", "pmr-homework", "breathing-practice"],
   "statIds": ["us-gad-past-year", "us-any-anxiety-past-year", "global-anxiety-disorders-2021"],
   "culturalNotes": [
     "In many settings, chronic worry is described through idioms like 'thinking too much', 'nerves' or 'nervios'. These overlap only in part with GAD, depression or PTSD; ask what the phrase means for the client rather than treating it as a symptom label.",
@@ -101,6 +101,6 @@
     { "title": "AACC Code of Ethics", "publisher": "American Association of Christian Counselors", "url": "https://aacc.net/aacc-code-of-ethics/" }
   ],
   "license": "original",
-  "lastVerified": "2026-11-26",
+  "lastVerified": "2026-11-27",
   "reviewedBy": "PENDING"
 }

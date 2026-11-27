@@ -1,0 +1,105 @@
+{
+  "conditionId": "stimulant-use-disorder",
+  "problems": [
+    {
+      "id": "stud-binges",
+      "label": "Stimulant binges, crashes and harm",
+      "definitions": [
+        {
+          "text": "Uses cocaine, methamphetamine or misused stimulant pills in binges, more than planned.",
+          "sud": true
+        },
+        {
+          "text": "Has strong cravings and crashes with exhaustion and low mood after use.",
+          "sud": true
+        },
+        {
+          "text": "Use has caused health, money, work or legal problems, or periods of paranoia.",
+          "sud": true
+        }
+      ],
+      "longTermGoals": [
+        {
+          "text": "The client reaches their own goal for stimulant use, stays safer from overdose and health harm, and rebuilds daily routines.",
+          "sud": true
+        }
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "stud-cm",
+          "text": "Within 2 weeks, enroll in a program that offers contingency management, if available.",
+          "interventionIds": [
+            "contingency-management"
+          ],
+          "sud": true
+        },
+        {
+          "id": "stud-naloxone",
+          "text": "By the next session, have naloxone available, because the drug supply may contain fentanyl.",
+          "interventionIds": [
+            "naloxone-overdose-education"
+          ],
+          "sud": true
+        },
+        {
+          "id": "stud-goal",
+          "text": "By session 3, set a personal use goal and list 3 reasons for change.",
+          "interventionIds": [
+            "motivational-interviewing"
+          ],
+          "sud": true
+        },
+        {
+          "id": "stud-urges",
+          "text": "Use a coping skill for at least 3 cravings a week and record the outcome.",
+          "interventionIds": [
+            "urge-surfing"
+          ],
+          "sud": true
+        },
+        {
+          "id": "stud-plan",
+          "text": "By session 8, complete a relapse prevention plan with high-risk situations, coping steps and support contacts.",
+          "interventionIds": [
+            "relapse-prevention-planning"
+          ],
+          "sud": true
+        }
+      ],
+      "measureIds": [
+        "phq-9",
+        "gad-7"
+      ]
+    }
+  ],
+  "collaborativeNote": "Write goals and objectives with the client in their own words. Timelines and targets are examples to adapt; the client decides what matters, and the clinician checks safety and fit. Every item in this plan records substance use: the export carries the 42 CFR Part 2 notice.",
+  "sud": true,
+  "sources": [
+    {
+      "title": "Drug misuse in over 16s: psychosocial interventions (CG51)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg51",
+      "year": 2007
+    },
+    {
+      "title": "42 CFR 2.32: notice to accompany disclosure (federal confidentiality rule for substance use treatment records)",
+      "publisher": "eCFR, U.S. Government Publishing Office",
+      "url": "https://www.ecfr.gov/current/title-42/chapter-I/subchapter-A/part-2/subpart-C/section-2.32",
+      "year": 2024
+    },
+    {
+      "title": "Confidentiality of substance use treatment records (42 CFR Part 2)",
+      "publisher": "U.S. Department of Health and Human Services",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/hipaa-part-2/index.html"
+    },
+    {
+      "title": "Comparative efficacy and acceptability of psychosocial interventions for individuals with cocaine and amphetamine addiction: a network meta-analysis (De Crescenzo et al.)",
+      "publisher": "PLOS Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30586362/",
+      "year": 2018
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

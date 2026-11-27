@@ -1,5 +1,5 @@
 {
- "_about": "US Postal Service city names by state or territory, each with an approximate centre point (the mean of that city's ZIP Code centre points, rounded to 0.01 degree, about 1 km). Server-side only. Used as an ALLOWLIST so a referral search 'city' can only be a real place name (never typed clinical text), and to turn a city into a coarse point locally, so the city is never sent anywhere for geocoding. NPPES receives only the canonical name from this file.",
+ "_about": "US Postal Service city names by state or territory, each with an approximate centre point (the mean of that city's ZIP Code centre points, rounded to 0.01 degree, about 1 km). The centre points stay server-side; the browser loads only the generated names-only copy (src/lib/generated/us-place-names.json) for its exact-city check. Used as an ALLOWLIST so a referral search 'city' can only be a real place name (never typed clinical text), and to turn a city into a coarse point locally, so the city is never sent anywhere for geocoding. NPPES receives only the canonical name from this file.",
  "format": "states: object keyed by USPS state/territory code. Each value holds records separated by ';'. Each record is Name:latitude,longitude.",
  "sources": [
   {

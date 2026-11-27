@@ -1,0 +1,147 @@
+{
+  "id": "attention",
+  "title": "Attention and activity",
+  "domain": "attention",
+  "about": "Attention questions: whether attention or activity problems go back to childhood, and how they show up across settings. Problems that start in adulthood often follow mood, anxiety, sleep, substance or medical causes, which the rule-out questions cover.",
+  "questions": [
+    {
+      "id": "attention-since-childhood",
+      "kind": "discriminate",
+      "domain": "attention",
+      "text": "Were attention or activity problems already there in childhood, before the current difficulties?",
+      "why": "A lifelong pattern that began in childhood fits ADHD. Attention problems that begin in adulthood, or only with low mood, worry, poor sleep or substance use, usually follow those causes instead. School reports or a relative's account can help.",
+      "options": [
+        {
+          "id": "childhood",
+          "label": "Yes, school reports or family recall them from childhood",
+          "effects": {
+            "addSymptomIds": [
+              "childhood-onset-attention"
+            ]
+          }
+        },
+        {
+          "id": "adult-onset",
+          "label": "No, they began in adulthood or with the current stress, low mood or sleep problems",
+          "effects": {
+            "negateSymptomIds": [
+              "childhood-onset-attention"
+            ]
+          },
+          "note": "Look first at mood, anxiety, sleep, substance and medical causes of the attention problems."
+        },
+        {
+          "id": "unsure",
+          "label": "Not sure yet",
+          "note": "School reports or a relative's account can help.",
+          "keepOpen": true
+        }
+      ],
+      "showWhen": {
+        "symptomIds": [
+          "inattention-disorganization",
+          "hyperactivity-impulsivity",
+          "time-management-procrastination",
+          "concentration-difficulty"
+        ],
+        "conditionIds": [
+          "adult-adhd"
+        ]
+      },
+      "targets": [
+        "childhood-onset-attention"
+      ],
+      "discriminates": [
+        "adult-adhd",
+        "generalized-anxiety-disorder",
+        "major-depressive-disorder",
+        "bipolar-ii-disorder"
+      ],
+      "priority": 10
+    },
+    {
+      "id": "attention-across-settings",
+      "kind": "core",
+      "domain": "attention",
+      "select": "many",
+      "text": "How do the attention or activity problems show up at work, at home and with other people?",
+      "why": "Disorganization and lost track of tasks, and acting or speaking before thinking, are the two sides of ADHD. Seeing them in more than one setting separates a lasting pattern from a reaction to one demanding place.",
+      "options": [
+        {
+          "id": "inattention",
+          "label": "Loses track, forgets and is disorganized in more than one setting",
+          "effects": {
+            "addSymptomIds": [
+              "inattention-disorganization"
+            ]
+          }
+        },
+        {
+          "id": "impulsive",
+          "label": "Restless, acts or speaks before thinking, interrupts",
+          "effects": {
+            "addSymptomIds": [
+              "hyperactivity-impulsivity"
+            ]
+          }
+        },
+        {
+          "id": "neither",
+          "label": "Neither of these",
+          "effects": {
+            "negateSymptomIds": [
+              "inattention-disorganization",
+              "hyperactivity-impulsivity"
+            ]
+          },
+          "exclusive": true
+        },
+        {
+          "id": "not-yet",
+          "label": "Not asked yet",
+          "keepOpen": true,
+          "exclusive": true
+        }
+      ],
+      "showWhen": {
+        "symptomIds": [
+          "childhood-onset-attention",
+          "concentration-difficulty",
+          "time-management-procrastination"
+        ],
+        "conditionIds": [
+          "adult-adhd"
+        ]
+      },
+      "targets": [
+        "inattention-disorganization",
+        "hyperactivity-impulsivity"
+      ],
+      "discriminates": [
+        "adult-adhd"
+      ],
+      "priority": 20
+    }
+  ],
+  "sources": [
+    {
+      "title": "Attention-Deficit/Hyperactivity Disorder (health topic)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/topics/attention-deficit-hyperactivity-disorder-adhd"
+    },
+    {
+      "title": "Attention-Deficit/Hyperactivity Disorder (statistics)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/statistics/attention-deficit-hyperactivity-disorder-adhd"
+    },
+    {
+      "title": "Attention deficit hyperactivity disorder: diagnosis and management (NG87)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng87",
+      "year": 2018
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

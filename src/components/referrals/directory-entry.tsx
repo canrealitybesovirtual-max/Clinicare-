@@ -2,7 +2,7 @@
  * One curated directory or helpline entry (link out only, G8). Shows how to reach the service (tel:/sms: links,
  * chat, website), who it serves, and whether a person has re-verified it against the official site.
  */
-import { BadgeCheck, Clock, Globe, Languages, LifeBuoy, TriangleAlert, Video } from "lucide-react";
+import { BadgeCheck, Clock, LifeBuoy, TriangleAlert, Video } from "lucide-react";
 import { isVerified, type ReferralEntry } from "@/lib/schemas-referrals";
 import { Badge } from "@/components/ui/badge";
 import { Disclosure } from "@/components/ui/disclosure";
@@ -36,10 +36,7 @@ export function DirectoryEntryCard({ entry, headingLevel = "h4" }: { entry: Refe
           {entry.kind === "crisis" ? <LifeBuoy aria-hidden className="size-3.5" /> : null}
           {KIND_LABELS[entry.kind]}
         </Badge>
-        <Badge tone="info">
-          <Globe aria-hidden className="size-3.5" />
-          {regionLabel(entry.region)}
-        </Badge>
+        <Badge tone="info">{regionLabel(entry.region)}</Badge>
         <VerificationBadge entry={entry} />
         {entry.commercial ? <Badge tone="warn">Commercial directory</Badge> : null}
       </div>
@@ -65,10 +62,7 @@ export function DirectoryEntryCard({ entry, headingLevel = "h4" }: { entry: Refe
           </li>
         ) : null}
         {entry.languages?.length ? (
-          <li className="flex items-start gap-1.5">
-            <Languages aria-hidden className="mt-0.5 size-4 shrink-0" />
-            {languageList(entry.languages)}
-          </li>
+          <li>Languages: {languageList(entry.languages)}</li>
         ) : null}
         {entry.audience ? <li>For: {entry.audience}</li> : null}
         {entry.cost ? <li>Cost: {entry.cost}</li> : null}

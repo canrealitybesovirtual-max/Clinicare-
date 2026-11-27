@@ -6,7 +6,7 @@
  * The header's "Get help now" button stays on every screen as well.
  */
 import { Siren } from "lucide-react";
-import { useT } from "@/lib/i18n/core";
+import { pick, useT, type Lang, type Text } from "@/lib/i18n/core";
 import { Card } from "@/components/ui/card";
 import { CrisisInline, CrisisPanel } from "@/components/crisis/crisis-panel";
 import { cn } from "@/lib/utils";
@@ -18,15 +18,17 @@ const STRIP = {
   es: "Si está en peligro o piensa en hacerse daño, busque ayuda ahora.",
 };
 
-export function CrisisStrip({ className }: { className?: string }) {
-  const t = useT();
+/** `lang` overrides the shell language (the Spanish share link renders Spanish from the server). */
+export function CrisisStrip({ className, lang }: { className?: string; lang?: Lang }) {
+  const shell = useT();
+  const t = (text: Text) => (lang ? pick(text, lang) : shell(text));
   return (
-    <div className={cn("rounded-2xl border border-crisis/30 border-l-[6px] border-l-crisis bg-surface p-4", className)}>
+    <div className={cn("rounded-2xl border border-crisis/30 border-l-[6px] border-l-crisis bg-surface p-3 sm:p-4", className)}>
       <p className="flex items-start gap-2 font-semibold">
         <Siren aria-hidden className="mt-0.5 size-5 shrink-0 text-crisis" />
         {t(STRIP)}
       </p>
-      <CrisisInline className="mt-1" />
+      <CrisisInline className="mt-1" lang={lang} />
     </div>
   );
 }

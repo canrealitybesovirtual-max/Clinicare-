@@ -1,0 +1,110 @@
+{
+  "id": "checking-and-reassurance-log",
+  "title": "Checking Less: Urge and Delay Log",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 10,
+  "intro": "Checking your body, your looks or your symptoms, or asking others if things are okay, can bring quick relief. But the relief does not last, and the urge often comes back stronger. Learning to delay checking can help the worry fade over time. This log helps you notice the urge and practice waiting. Each entry takes about 2 minutes.",
+  "sections": [
+    {
+      "heading": "How to practice",
+      "steps": [
+        "Notice the urge to check, search online, look in the mirror or ask for reassurance.",
+        "Rate how strong the urge is from 0 (none) to 10 (the strongest).",
+        "Delay. Start with 10 minutes, then try longer as it gets easier.",
+        "While you wait, do something that takes your attention, like a walk or a task.",
+        "Rate the urge again after the delay. Notice if it went down on its own.",
+        "Write down what you learned."
+      ]
+    },
+    {
+      "heading": "Helpful reminders",
+      "steps": [
+        "The urge is uncomfortable, but it is not dangerous. It usually rises, peaks and fades.",
+        "Each time you wait, you teach your brain that you can cope without checking.",
+        "If you do check, that is okay. Write it down and try again next time."
+      ]
+    },
+    {
+      "heading": "When to see a doctor",
+      "body": "New, different or worsening symptoms should be checked by a doctor. Work with your counselor and your doctor on a plan for regular check-ups, so you do not have to decide alone each time."
+    }
+  ],
+  "practiceLog": {
+    "columns": [
+      "Day and time",
+      "Urge to",
+      "Urge (0-10)",
+      "How long I waited",
+      "Urge after (0-10)",
+      "What I learned"
+    ],
+    "rows": 8
+  },
+  "safetyNote": "Safety first: If you have thoughts of hurting yourself, get help right away. In the US, call or text 988 or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sud": false,
+  "es": {
+    "title": "Revisar menos: registro de las ganas y la espera",
+    "intro": "Revisar su cuerpo, su aspecto o sus síntomas, o preguntar a otros si todo está bien, puede dar alivio rápido. Pero el alivio no dura, y las ganas muchas veces vuelven más fuertes. Aprender a esperar antes de revisar puede ayudar a que la preocupación baje con el tiempo. Este registro le ayuda a notar las ganas y a practicar la espera. Cada anotación toma unos 2 minutos.",
+    "sections": [
+      {
+        "heading": "Cómo practicar",
+        "steps": [
+          "Note las ganas de revisar, buscar en internet, mirarse en el espejo o pedir que le digan que todo está bien.",
+          "Califique qué tan fuertes son las ganas del 0 (nada) al 10 (lo más fuerte).",
+          "Espere. Empiece con 10 minutos y luego pruebe más tiempo cuando sea más fácil.",
+          "Mientras espera, haga algo que le ocupe la mente, como caminar o hacer una tarea.",
+          "Vuelva a calificar las ganas después de esperar. Note si bajaron solas.",
+          "Escriba lo que aprendió."
+        ]
+      },
+      {
+        "heading": "Cosas que conviene recordar",
+        "steps": [
+          "Las ganas son molestas, pero no son peligrosas. Por lo general suben, llegan a un punto alto y bajan.",
+          "Cada vez que espera, le enseña a su cerebro que puede salir adelante sin revisar.",
+          "Si revisa, está bien. Anótelo y vuelva a intentarlo la próxima vez."
+        ]
+      },
+      {
+        "heading": "Cuándo ir al médico",
+        "body": "Los síntomas nuevos, distintos o que empeoran deben ser revisados por un médico. Haga un plan con su consejero y su médico para tener citas regulares, así no tiene que decidir solo cada vez."
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Día y hora",
+        "Ganas de",
+        "Ganas (0-10)",
+        "Cuánto esperé",
+        "Ganas después (0-10)",
+        "Lo que aprendí"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: Si tiene pensamientos de hacerse daño, busque ayuda de inmediato. En EE. UU., llame o envíe un mensaje de texto al 988, o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "sources": [
+    {
+      "title": "Clinical and cost-effectiveness of cognitive behaviour therapy for health anxiety in medical patients (Tyrer et al.)",
+      "publisher": "The Lancet (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24139977/",
+      "year": 2014
+    },
+    {
+      "title": "Efficacy and posttreatment effects of therapist-delivered cognitive behavioral therapy vs supportive psychotherapy for adults with body dysmorphic disorder (Wilhelm et al.)",
+      "publisher": "JAMA Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30785624/",
+      "year": 2019
+    },
+    {
+      "title": "Obsessive-compulsive disorder and body dysmorphic disorder: treatment (CG31)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg31",
+      "year": 2005
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

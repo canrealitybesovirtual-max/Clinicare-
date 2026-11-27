@@ -149,6 +149,29 @@ function DiagnosesCta({ analysis, className, size = "lg" }: { analysis: SymptomA
   );
 }
 
+/** "3 found in your text · 4 included for scoring", one line, without the full list. */
+function countsLine(analysis: SymptomAnalysis): string {
+  const found = analysis.match.matches.length;
+  const included = analysis.ids.length;
+  return `${found} found in your text · ${included} included for scoring`;
+}
+
+/**
+ * Phones and tablets: the running result right under the text box, so the first screen shows whether anything
+ * matched and leads straight to the suggestions (wide screens have the sticky "Included for scoring" column).
+ * Not a live region: step 2 announces the same counts.
+ */
+function QuickSummary({ analysis }: { analysis: SymptomAnalysis }) {
+  const { state } = useSession();
+  if (!state.symptomText.trim() && analysis.ids.length === 0) return null;
+  return (
+    <div className="flex flex-col gap-2 rounded-lg bg-surface-2 p-3 sm:flex-row sm:items-center sm:justify-between lg:hidden">
+      <p className="text-sm font-semibold">{countsLine(analysis)}</p>
+      {state.under18 ? null : <DiagnosesCta analysis={analysis} size="md" className="sm:w-auto" />}
+    </div>
+  );
+}
+
 /* ------------------------------------------------------------------ step 1: describe */
 
 function DescribeStep({ analysis }: { analysis: SymptomAnalysis }) {
@@ -184,6 +207,8 @@ function DescribeStep({ analysis }: { analysis: SymptomAnalysis }) {
           Anything that looks like an identifier is removed as you type, but please leave identifiers out.
         </p>
       </div>
+
+      <QuickSummary analysis={analysis} />
 
       <div role="alert">
         {field.removed ? (
@@ -250,7 +275,6 @@ function DescribeStep({ analysis }: { analysis: SymptomAnalysis }) {
 /* ------------------------------------------------------------------ step 2: what was found */
 
 function FoundStep({ analysis }: { analysis: SymptomAnalysis }) {
-  const { state } = useSession();
   const detected = analysis.match.matches;
   const setAside = new Set(analysis.setAsideByAnswers);
   return (
@@ -287,6 +311,12 @@ function FoundStep({ analysis }: { analysis: SymptomAnalysis }) {
               );
             })}
           </ul>
+        ) : analysis.ids.length ? (
+          <p className="mt-2 text-sm text-muted">
+            Nothing found in the text.{" "}
+            {analysis.ids.length} {analysis.ids.length === 1 ? "feature" : "features"} added from your answers or taps
+            {" "}(listed under Included for scoring).
+          </p>
         ) : (
           <p className="mt-2 text-sm text-muted">
             Nothing detected yet. Everyday phrasings are recognized, such as “can’t leave the house” or “heart racing”.
@@ -354,8 +384,6 @@ function FoundStep({ analysis }: { analysis: SymptomAnalysis }) {
       ) : null}
 
       <OnDeviceSuggestions analysis={analysis} />
-
-      {!state.under18 ? <DiagnosesCta analysis={analysis} size="md" className="lg:hidden" /> : null}
     </Step>
   );
 }

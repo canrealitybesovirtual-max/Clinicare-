@@ -8,7 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { Disclosure } from "@/components/ui/disclosure";
 import { Notice } from "@/components/ui/notice";
-import { HelpTip } from "@/components/symptoms/help-tip";
+import { HelpTip } from "@/components/ui/help-tip";
 import {
   ClinicianReviewBadge,
   Governance,
@@ -16,7 +16,7 @@ import {
   PageIntro,
   ReviewBadge,
   SourcesList,
-} from "@/components/content/content-bits";
+} from "@/components/content/content-meta";
 import { HubPrompt } from "@/components/hub/hub-prompt";
 import { conditionLabel, isSudCondition, pubmedTargetFor, trialsTargetFor } from "@/components/interventions/catalog";
 import { orientationLabel, orientationsOf } from "@/components/interventions/orientation";

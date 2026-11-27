@@ -1,0 +1,292 @@
+{
+  "id": "adult-adhd",
+  "name": "Attention-deficit/hyperactivity disorder (adult presentation)",
+  "icd10cm": [
+    {
+      "code": "F90.0",
+      "label": "Attention-deficit hyperactivity disorder, predominantly inattentive type"
+    },
+    {
+      "code": "F90.1",
+      "label": "Attention-deficit hyperactivity disorder, predominantly hyperactive type"
+    },
+    {
+      "code": "F90.2",
+      "label": "Attention-deficit hyperactivity disorder, combined type"
+    },
+    {
+      "code": "F90.8",
+      "label": "Attention-deficit hyperactivity disorder, other type"
+    },
+    {
+      "code": "F90.9",
+      "label": "Attention-deficit hyperactivity disorder, unspecified type"
+    }
+  ],
+  "icd11": [
+    {
+      "code": "6A05",
+      "label": "Attention deficit hyperactivity disorder"
+    }
+  ],
+  "dsmPointer": "See DSM-5-TR: Neurodevelopmental Disorders — Attention-Deficit/Hyperactivity Disorder",
+  "summary": "A lifelong neurodevelopmental pattern of inattention, disorganization and, for some, restlessness and impulsivity, present since childhood and showing up across work, home and relationships. In adults, overt hyperactivity often fades into inner restlessness, while missed deadlines, lost items, chronic lateness, unfinished tasks and quick, unplanned decisions remain. Many adults arrive with depression, anxiety or substance use, and the attention problems are missed. Look for childhood evidence (school reports, family accounts) and for the same pattern in more than one setting. CBT and coaching for organization skills help alongside medication from a prescriber. For clinician review only; this is not a diagnosis.",
+  "features": [
+    {
+      "symptomId": "inattention-disorganization",
+      "kind": "core",
+      "weight": 5
+    },
+    {
+      "symptomId": "hyperactivity-impulsivity",
+      "kind": "core",
+      "weight": 4
+    },
+    {
+      "symptomId": "childhood-onset-attention",
+      "kind": "associated",
+      "weight": 3,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "concentration-difficulty",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "time-management-procrastination",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "restlessness",
+      "kind": "associated",
+      "weight": 1
+    },
+    {
+      "symptomId": "irritability",
+      "kind": "associated",
+      "weight": 1
+    },
+    {
+      "symptomId": "subjective-anxiety-stress",
+      "kind": "associated",
+      "weight": 1
+    }
+  ],
+  "minCore": 1,
+  "durationGate": {
+    "minWeeks": 26,
+    "note": "Ask whether the pattern has been present for most of the client's life, with examples from childhood and from more than one setting. See DSM-5-TR for age-of-onset and duration guidance."
+  },
+  "impairmentRequired": true,
+  "ruleOuts": [
+    {
+      "label": "Sleep deprivation and sleep disorders",
+      "type": "medical",
+      "note": "Sleep apnea, insomnia and shift work can cause poor focus and irritability; ask about snoring and sleep schedule."
+    },
+    {
+      "label": "Thyroid disease, hearing or vision problems and other medical causes",
+      "type": "medical",
+      "note": "Check that a recent physical has ruled out medical causes of poor attention."
+    },
+    {
+      "label": "Substance use and medication effects",
+      "type": "substance",
+      "note": "Cannabis, alcohol, sedatives and some medicines impair attention; stimulant misuse is also a reason to coordinate carefully with the prescriber. This app does not store substance-use information."
+    },
+    {
+      "label": "Mood, anxiety and trauma-related conditions",
+      "type": "psychiatric",
+      "note": "Depression, anxiety and PTSD all impair concentration; ADHD is lifelong and present before them."
+    }
+  ],
+  "specifiers": [
+    {
+      "label": "Presentation: predominantly inattentive, predominantly hyperactive-impulsive or combined (descriptive)",
+      "note": "Sets the ICD-10-CM code (F90.0 to F90.2). See DSM-5-TR for presentation and severity specifiers."
+    }
+  ],
+  "differentials": [
+    {
+      "label": "Major depressive disorder",
+      "distinguishing": "Poor focus began with the low mood and lifts with it.",
+      "icd10cm": "F33.9"
+    },
+    {
+      "label": "Generalized anxiety disorder",
+      "distinguishing": "Attention is pulled away by worry rather than drifting.",
+      "icd10cm": "F41.1"
+    },
+    {
+      "label": "Bipolar disorder",
+      "distinguishing": "Distractibility comes in episodes with a drop in need for sleep.",
+      "icd10cm": "F31.9"
+    },
+    {
+      "label": "Specific learning disorder",
+      "distinguishing": "Difficulties are limited to reading, writing or math.",
+      "icd10cm": "F81.9"
+    },
+    {
+      "label": "Mild neurocognitive disorder",
+      "distinguishing": "Attention and memory decline began in later adulthood.",
+      "icd10cm": "F06.70"
+    }
+  ],
+  "comorbidities": [
+    {
+      "label": "Depression",
+      "note": "Long-standing frustration and setbacks can feed low mood; screen with the PHQ-9.",
+      "conditionId": "major-depressive-disorder"
+    },
+    {
+      "label": "Anxiety disorders",
+      "note": "Common alongside ADHD; screen with the GAD-7.",
+      "conditionId": "generalized-anxiety-disorder"
+    },
+    {
+      "label": "Substance use",
+      "note": "Higher rates of alcohol and other substance use; screen sensitively.",
+      "conditionId": "alcohol-use-disorder"
+    },
+    {
+      "label": "Sleep problems",
+      "note": "Delayed sleep timing and insomnia are common and worsen daytime attention.",
+      "conditionId": "insomnia-disorder"
+    }
+  ],
+  "measures": [
+    "phq-9",
+    "gad-7"
+  ],
+  "measuresPending": [
+    {
+      "name": "Adult ADHD Self-Report Scale for DSM-5 (ASRS-5)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28384801/",
+      "note": "License pending — link out only",
+      "licenseKey": "ASRS"
+    }
+  ],
+  "interventions": [
+    {
+      "name": "CBT for adult ADHD",
+      "evidence": "Added to medication, CBT reduced symptoms more than relaxation with education in a randomized trial (Safren et al., 2010).",
+      "note": "Planner use, task breakdown, distraction delay and thought work on procrastination."
+    },
+    {
+      "name": "Meta-cognitive therapy (group)",
+      "evidence": "Solanto et al. (2010) found group meta-cognitive therapy improved time management and organization.",
+      "note": "Group skills for time, planning and organization."
+    },
+    {
+      "name": "Referral for medication evaluation",
+      "evidence": "NICE NG87 sets out medication options for adults, started and monitored by a specialist.",
+      "note": "Refer to psychiatry or a prescriber familiar with adult ADHD; share any substance-use concerns with consent."
+    },
+    {
+      "name": "Psychoeducation and environment changes",
+      "evidence": "Recommended in NICE NG87 for adults.",
+      "note": "Reminders, visible calendars, body doubling and workplace accommodations."
+    },
+    {
+      "name": "Mindfulness practice (adjunct)",
+      "evidence": "Small trials suggest benefit for attention and emotional control; evidence is still limited.",
+      "note": "Short daily practice, built into existing routines."
+    }
+  ],
+  "handouts": [
+    "focus-and-follow-through",
+    "problem-solving-steps",
+    "mindful-check-in"
+  ],
+  "statIds": [
+    "us-adult-adhd-2023"
+  ],
+  "culturalNotes": [
+    "Expectations about attention, punctuality and activity differ across cultures, schools and workplaces. Compare the client with peers in their own setting.",
+    "Women, older adults and people of color are more often missed or misdiagnosed. Ask about childhood signs even when the client presents with anxiety or depression.",
+    "Some families see restlessness or distractibility as a moral or discipline problem. Explain the pattern without blame and invite family input with consent.",
+    "Use a trained professional interpreter, not family members, and check that key terms translate with the meaning you intend.",
+    "School records and report cards may be missing for clients educated in another country or with interrupted schooling; rely on family accounts and the client's own history."
+  ],
+  "sud": false,
+  "requiredFeatures": [
+    {
+      "symptomId": "childhood-onset-attention",
+      "note": "No childhood onset is documented yet. This pattern begins in childhood; ask for school or family history before relying on the suggestion."
+    }
+  ],
+  "strongMinAreas": 2,
+  "redFlagRules": [
+    {
+      "type": "mania",
+      "message": "Signs of a possible high are documented. Distractibility and restlessness during a high point to a mood episode rather than ADHD; assess for bipolar disorder before ADHD treatment.",
+      "capAt": "moderate"
+    }
+  ],
+  "licensedDsm": false,
+  "wileyLicensed": false,
+  "sources": [
+    {
+      "title": "Attention-Deficit/Hyperactivity Disorder (health topic)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/topics/attention-deficit-hyperactivity-disorder-adhd"
+    },
+    {
+      "title": "Attention-Deficit/Hyperactivity Disorder (statistics)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/statistics/attention-deficit-hyperactivity-disorder-adhd"
+    },
+    {
+      "title": "Attention deficit hyperactivity disorder: diagnosis and management (NG87)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng87",
+      "year": 2018
+    },
+    {
+      "title": "Attention Deficit Hyperactivity Disorder (health topic)",
+      "publisher": "MedlinePlus, U.S. National Library of Medicine",
+      "url": "https://medlineplus.gov/attentiondeficithyperactivitydisorder.html"
+    },
+    {
+      "title": "ADHD diagnosis, treatment, and telehealth use in adults: NCHS Rapid Surveys System, United States, October-November 2023 (Staley et al.)",
+      "publisher": "MMWR Morbidity and Mortality Weekly Report (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39388378/",
+      "year": 2024
+    },
+    {
+      "title": "Cognitive behavioral therapy vs relaxation with educational support for medication-treated adults with ADHD and persistent symptoms (Safren et al.)",
+      "publisher": "JAMA (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20736471/",
+      "year": 2010
+    },
+    {
+      "title": "Efficacy of meta-cognitive therapy for adult ADHD (Solanto et al.)",
+      "publisher": "American Journal of Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20231319/",
+      "year": 2010
+    },
+    {
+      "title": "ICD-11 for Mortality and Morbidity Statistics (browser)",
+      "publisher": "World Health Organization",
+      "url": "https://icd.who.int/browse/latest-release/mms/en"
+    },
+    {
+      "title": "ICD-10-CM (official code set)",
+      "publisher": "CDC National Center for Health Statistics",
+      "url": "https://www.cdc.gov/nchs/icd/icd-10-cm/index.html"
+    },
+    {
+      "title": "ICD-10-CM codes checked with the NLM Clinical Table Search Service",
+      "publisher": "National Library of Medicine",
+      "url": "https://clinicaltables.nlm.nih.gov/apidoc/icd10cm/v3/doc.html"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

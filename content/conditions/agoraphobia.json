@@ -66,7 +66,7 @@
     { "name": "CBT for panic with agoraphobia", "evidence": "NICE CG113 recommends CBT for panic disorder, including when agoraphobia is present.", "note": "Combines psychoeducation, interoceptive exposure, cognitive restructuring and in-vivo exposure. Home-based or telehealth sessions can help clients who cannot yet reach the clinic." },
     { "name": "Referral for medication evaluation", "evidence": "NICE CG113 names an SSRI as the first-line medication for panic disorder and advises against benzodiazepines for this condition.", "note": "Refer to psychiatry, a primary care provider or a psychiatric nurse practitioner. Prescribing decisions rest with the prescriber." }
   ],
-  "handouts": [],
+  "handouts": ["exposure-ladder", "panic-cycle", "breathing-practice"],
   "statIds": ["us-agoraphobia-past-year", "us-any-anxiety-past-year", "global-anxiety-disorders-2021"],
   "culturalNotes": [
     "Before labeling avoidance as excessive, check whether staying close to home is expected or protective in the client's setting, for example due to gender norms, immigration status, discrimination, neighborhood violence or disability access.",
@@ -93,6 +93,6 @@
     { "title": "AACC Code of Ethics", "publisher": "American Association of Christian Counselors", "url": "https://aacc.net/aacc-code-of-ethics/" }
   ],
   "license": "original",
-  "lastVerified": "2026-11-26",
+  "lastVerified": "2026-11-27",
   "reviewedBy": "PENDING"
 }

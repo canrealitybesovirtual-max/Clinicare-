@@ -1,0 +1,78 @@
+{
+  "conditionId": "somatic-symptom-disorder",
+  "problems": [
+    {
+      "id": "ssd-symptom-burden",
+      "label": "Physical symptoms that take over daily life",
+      "definitions": [
+        "Has physical symptoms such as pain or fatigue on most days that cause real distress.",
+        "Spends much of the day attending to, researching or worrying about the symptoms.",
+        "Has cut back on work, social life or activities because of the symptoms."
+      ],
+      "longTermGoals": [
+        "The client lives a fuller life alongside the symptoms, with steady activity, less worry and consistent medical care."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "ssd-care-plan",
+          "text": "Within 4 weeks, agree on a consistent plan with one medical clinician, including scheduled check-ups.",
+          "interventionIds": [
+            "cbt-health-anxiety"
+          ]
+        },
+        {
+          "id": "ssd-pacing",
+          "text": "Plan daily activity at a steady level and increase it by small steps each week, logged for 6 weeks.",
+          "interventionIds": [
+            "physical-activity",
+            "problem-solving"
+          ]
+        },
+        {
+          "id": "ssd-values",
+          "text": "By session 6, name 3 valued activities and do at least one of them each week, whatever the symptom level.",
+          "interventionIds": [
+            "act-acceptance-willingness"
+          ]
+        },
+        {
+          "id": "ssd-attention",
+          "text": "Practice a 5-minute attention shift or mindfulness exercise daily and rate symptom distress before and after.",
+          "interventionIds": [
+            "mindfulness-meditation"
+          ]
+        },
+        {
+          "id": "ssd-tracking",
+          "text": "Complete the PHQ-9 and GAD-7 at intake and every 4 weeks; if low mood or worry is high, discuss a medication evaluation.",
+          "interventionIds": [
+            "medication-referral"
+          ]
+        }
+      ],
+      "measureIds": [
+        "phq-9",
+        "gad-7"
+      ]
+    }
+  ],
+  "collaborativeNote": "Write goals and objectives with the client in their own words. Timelines and targets are examples to adapt; the client decides what matters, and the clinician checks safety and fit.",
+  "sud": false,
+  "sources": [
+    {
+      "title": "Chronic pain (primary and secondary) in over 16s: assessment of all chronic pain and management of chronic primary pain (NG193)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng193",
+      "year": 2021
+    },
+    {
+      "title": "Non-pharmacological interventions for somatoform disorders and medically unexplained physical symptoms in adults (van Dessel et al.)",
+      "publisher": "Cochrane Database of Systematic Reviews (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25362239/",
+      "year": 2014
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

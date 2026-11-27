@@ -7,7 +7,8 @@ import { LOINC_NOTICE, LOINC_PANELS, describeFhirExport } from "@/lib/fhir";
 import type { Measure } from "@/lib/schemas";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
-import { Governance, NextStep, PageIntro, ReviewBadge, SourcesList } from "@/components/content/content-bits";
+import { Governance, NextStep, PageIntro, ReviewBadge, SourcesList } from "@/components/content/content-meta";
+import { HelpTip } from "@/components/ui/help-tip";
 import { MeasureForm } from "@/components/measures/measure-form";
 import type { FhirExportInfo } from "@/components/measures/fhir-export";
 import { AdultOnly } from "@/components/measures/adult-only";
@@ -45,6 +46,7 @@ export default async function MeasurePage({ params }: { params: Promise<{ id: st
   const measure = getMeasure(id);
   if (!measure) notFound();
   const license = licenses.items[measure.licenseKey];
+  const cssrsUrl = licenses.items["C-SSRS"]?.source ?? "https://cssrs.columbia.edu";
 
   return (
     <>
@@ -70,9 +72,20 @@ export default async function MeasurePage({ params }: { params: Promise<{ id: st
           item is answered.
         </p>
       </PageIntro>
+      <HelpTip title="How to use this form" className="mb-5">
+        <p>
+          Tap one answer for each item, reading the items aloud or letting the client choose. The total updates as you go,
+          and the severity band shows once every item is answered. A score is screening information for your review, not
+          a diagnosis.
+        </p>
+        <p>
+          If a risk item is answered above zero, a follow-up prompt appears next to it; the app never decides risk.
+          Nothing is saved: record the score in your EHR, and use the trend tool to see change across sessions.
+        </p>
+      </HelpTip>
 
       <AdultOnly>
-        <MeasureForm measure={measure} fhir={fhirInfo(measure)} />
+        <MeasureForm measure={measure} fhir={fhirInfo(measure)} cssrsUrl={cssrsUrl} />
       </AdultOnly>
 
       <section aria-labelledby="about-measure" className="mt-8">

@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { connection } from "next/server";
-import { ClinicianReviewBadge, PageIntro } from "@/components/content/content-bits";
+import { ClinicianReviewBadge, PageIntro } from "@/components/content/content-meta";
 import { DiagnosesView } from "@/components/diagnoses/diagnoses-view";
 import { Icd10cmLookup } from "@/components/diagnoses/icd10cm-lookup";
-import { HelpTip } from "@/components/symptoms/help-tip";
+import { HelpTip } from "@/components/ui/help-tip";
 import { HubPrompt } from "@/components/hub/hub-prompt";
 import { defaultResourceCatalog } from "@/lib/follow-up/catalog";
 // Server component: the curated term list is built on the server and only the strings are passed down.

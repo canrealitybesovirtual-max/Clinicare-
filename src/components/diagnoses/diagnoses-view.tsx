@@ -5,6 +5,7 @@
  * (for example a fear outside the lexicon, "panic from dogs"), the follow-up panel comes first so the screen still
  * gives the clinician somewhere useful to go.
  */
+import * as React from "react";
 import Link from "next/link";
 import { ArrowLeft, ChevronRight, ListChecks, SearchX } from "lucide-react";
 import { conditions, getCondition } from "@/lib/content";
@@ -67,6 +68,7 @@ export function DiagnosesView({ catalog, assistant }: { catalog: ResourceCatalog
   const { state } = useSession();
   const analysis = useSymptomAnalysis();
   const { result } = analysis;
+  const handoutInfo = React.useMemo(() => new Map(catalog.handouts.map((h) => [h.id, h] as const)), [catalog]);
   // G6: any substance-use consideration on screen => Part 2 banner + Ethics & Legal Hub prompt, once, at the top.
   const anySud =
     !state.under18 && result.status === "ok" && result.suggestions.some((s) => getCondition(s.conditionId)?.sud === true);
@@ -115,12 +117,13 @@ export function DiagnosesView({ catalog, assistant }: { catalog: ResourceCatalog
         </Link>
       </Card>
 
+      {/* Short status for screen readers; the card below gives the full explanation, so it is not repeated here. */}
       <div aria-live="polite" className="sr-only">
         {state.under18
           ? "Adult content only. Suggestions are not shown."
           : result.status === "ok"
             ? `${result.suggestions.length} possible consideration${result.suggestions.length === 1 ? "" : "s"} for clinician review.`
-            : (result.message ?? "")}
+            : "No possible considerations yet."}
       </div>
 
       {state.under18 ? (
@@ -179,7 +182,7 @@ export function DiagnosesView({ catalog, assistant }: { catalog: ResourceCatalog
               if (!cond) return null;
               return (
                 <li key={s.conditionId}>
-                  <SuggestionCard s={s} cond={cond} input={context} rank={i + 1} />
+                  <SuggestionCard s={s} cond={cond} input={context} rank={i + 1} handoutInfo={handoutInfo} />
                 </li>
               );
             })}

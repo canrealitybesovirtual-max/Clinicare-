@@ -5,7 +5,8 @@ import { getIntervention } from "@/lib/library";
 import { SUD_KINDS, DIRECTORY_REGIONS, KIND_LABELS, regionLabel } from "@/components/referrals/referral-format";
 import { Card } from "@/components/ui/card";
 import { Notice } from "@/components/ui/notice";
-import { PageIntro, ReviewBadge, SourcesList } from "@/components/content/content-bits";
+import { PageIntro, ReviewBadge, SourcesList } from "@/components/content/content-meta";
+import { HelpTip } from "@/components/ui/help-tip";
 import { CrisisInline } from "@/components/crisis/crisis-panel";
 import { HubPrompt } from "@/components/hub/hub-prompt";
 import { FacetCount, FacetEmpty, FacetGate, FacetReset, FacetSelect } from "@/components/ethics/facet-filter";
@@ -44,10 +45,9 @@ export default function ReferralsPage() {
 
   return (
     <>
-      <PageIntro title="Referrals" eyebrow="Step 7 · Find care beyond counseling">
+      <PageIntro title="Referrals" eyebrow="Step 7 · Find care beyond counseling" compact>
         <p>
           Psychiatry and medication evaluation, substance use treatment, low-cost care, peer support and crisis lines.
-          Locations are typed on this device and sent only as a ZIP code or a city and state.
         </p>
       </PageIntro>
 
@@ -66,6 +66,19 @@ export default function ReferralsPage() {
           your crisis protocol and clinical judgment.
         </p>
       </section>
+
+      <HelpTip title="How to find care here" className="mb-5">
+        <p>
+          Choose what to find (a type of provider, a sliding-fee health center or a treatment facility), then enter a ZIP
+          code or a city and state, and press Search. Results are public listings: call to confirm before you refer, and
+          talk with the client about what they want.
+        </p>
+        <p>
+          Only the search type and the ZIP or city and state are sent, never anything about the client. Outside the US,
+          or if live search is unavailable, use the directories and helplines further down; each links to its official
+          site.
+        </p>
+      </HelpTip>
 
       <nav aria-label="On this page" className="mb-8">
         <ul className="flex flex-wrap gap-2">
@@ -96,9 +109,8 @@ export default function ReferralsPage() {
                 Find care near a location
               </h2>
               <p className="mt-1 text-sm text-muted">
-                Licensed providers from the CMS NPI Registry, sliding-fee health centers from HRSA, and mental health and
-                substance use treatment facilities from SAMHSA. United States only; for other countries use the
-                directories below.
+                Providers (CMS NPI Registry), sliding-fee health centers (HRSA) and treatment facilities (SAMHSA). US
+                only; elsewhere, use the directories below.
               </p>
             </div>
             <ReferralSearch sudPrompt={sudPrompt} />

@@ -1,35 +1,35 @@
 /**
  * Single entry point for the curated content that client components use: the symptom lexicon, every condition,
- * built-in measures, every client handout, stats, crisis lines and the license registry. Everything is validated
- * with zod at load time, so malformed content fails the build and the tests (G10).
+ * built-in measures, stats, crisis lines and the license registry. Everything is validated with zod at load time,
+ * so malformed content fails the build and the tests (G10).
  * G7: only measures whose license is "confirmed" in content/licenses.json are exposed as built-in.
- * It imports only the generated folder modules it needs (conditions, measures, handouts), so a client bundle that
- * reaches this file never carries interventions, plans, ethics or legal content (those load via library.ts).
+ * It imports only the generated folder modules it needs (conditions, measures), so a client bundle that reaches
+ * this file never carries handout bodies, interventions, plans, ethics or legal content (those load via
+ * library.ts; client components get the slices they need, such as handout titles, as props).
  */
 import symptomsJson from "@content/symptoms.json";
 import statsJson from "@content/stats/stats.json";
 import crisisJson from "@content/crisis-lines.json";
 import licensesJson from "@content/licenses.json";
 import { conditionsRaw } from "./generated/conditions";
-import { handoutsRaw } from "./generated/handouts";
 import { measuresRaw } from "./generated/measures";
 import {
   ConditionSchema,
   CrisisLinesSchema,
-  HandoutSchema,
   LicensesSchema,
   MeasureSchema,
   StatsFileSchema,
   SymptomLexiconSchema,
   type Condition,
-  type Handout,
   type Measure,
   type Stat,
   type Symptom,
 } from "./schemas";
 
+type SafeParser<T> = { safeParse: (x: unknown) => { success: true; data: T } | { success: false; error: Error } };
+
 /** Parses every raw item with its schema; a malformed file throws with its kind and id so the build fails (G10). */
-export function parseAll<T>(raw: readonly unknown[], schema: { safeParse: (x: unknown) => { success: true; data: T } | { success: false; error: Error } }, kind: string): T[] {
+export function parseAll<T>(raw: readonly unknown[], schema: SafeParser<T>, kind: string): T[] {
   return raw.map((r, i) => {
     const parsed = schema.safeParse(r);
     if (parsed.success) return parsed.data;
@@ -44,8 +44,6 @@ export const lexicon = SymptomLexiconSchema.parse(symptomsJson);
 export const conditions: Condition[] = parseAll(conditionsRaw, ConditionSchema, "condition");
 export const licenses = LicensesSchema.parse(licensesJson);
 const allMeasures: Measure[] = parseAll(measuresRaw, MeasureSchema, "measure");
-/** Every client handout in content/handouts, in file-name order. */
-export const handouts: Handout[] = parseAll(handoutsRaw, HandoutSchema, "handout");
 export const stats: Stat[] = StatsFileSchema.parse(statsJson).stats;
 export const crisisLines = CrisisLinesSchema.parse(crisisJson);
 
@@ -60,22 +58,15 @@ const byId = <T extends { id: string }>(list: T[]) => new Map(list.map((x) => [x
 const symptomMap = byId(lexicon.symptoms);
 const conditionMap = byId(conditions);
 const measureMap = byId(measures);
-const handoutMap = byId(handouts);
 const statMap = byId(stats);
 
 export const getSymptom = (id: string): Symptom | undefined => symptomMap.get(id);
 const getSymptomCategory = (id: string) => symptomMap.get(id)?.category;
 export const getCondition = (id: string): Condition | undefined => conditionMap.get(id);
 export const getMeasure = (id: string): Measure | undefined => measureMap.get(id);
-export const getHandout = (id: string): Handout | undefined => handoutMap.get(id);
 export const getStat = (id: string): Stat | undefined => statMap.get(id);
 
-/** G13: flag statistics whose data are older than 5 years. */
-export function isStatStale(stat: Pick<Stat, "dataYear">, now: Date = new Date()): boolean {
-  const years = stat.dataYear.match(/\d{4}/g)?.map(Number) ?? [];
-  if (years.length === 0) return true;
-  return now.getFullYear() - Math.max(...years) > 5;
-}
+export { isStatStale } from "./stat-age";
 
 /** Cross-reference checks used by scripts/validate-content.ts and the unit tests. Returns error strings. */
 export function contentProblems(): string[] {
@@ -120,7 +111,6 @@ export function contentProblems(): string[] {
       if (!lic) problems.push(`${where}: pending measure ${m.name} has no licenses.json entry ${m.licenseKey} (G7)`);
       else if (lic.status === "confirmed") problems.push(`${where}: ${m.name} is confirmed in licenses.json; build it in or drop it from measuresPending`);
     }
-    for (const h of c.handouts) if (!handoutMap.has(h)) problems.push(`${where}: unknown handout ${h}`);
     for (const s of c.statIds) if (!statMap.has(s)) problems.push(`${where}: unknown stat ${s}`);
     for (const co of c.comorbidities)
       if (co.conditionId && !conditionMap.has(co.conditionId)) problems.push(`${where}: unknown comorbidity ${co.conditionId}`);
@@ -137,7 +127,7 @@ export function contentProblems(): string[] {
     if (expect !== m.scoring.max + 1) problems.push(`measures/${m.id}: bands do not end at max ${m.scoring.max}`);
   }
   const today = new Date().toISOString().slice(0, 10);
-  const all = [lexicon, ...conditions, ...allMeasures, ...handouts, ...stats] as { lastVerified: string; reviewedBy: string }[];
+  const all = [lexicon, ...conditions, ...allMeasures, ...stats] as { lastVerified: string; reviewedBy: string }[];
   for (const item of all) if (item.lastVerified > today) problems.push(`lastVerified in the future: ${item.lastVerified}`);
   return problems;
 }

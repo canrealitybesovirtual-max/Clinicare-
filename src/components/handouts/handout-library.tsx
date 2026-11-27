@@ -6,10 +6,11 @@
  */
 import * as React from "react";
 import Link from "next/link";
-import { ChevronRight, ClipboardCheck, Clock, Languages, Search, X } from "lucide-react";
+import { ChevronRight, Clock, Languages, Search, X } from "lucide-react";
 import { useSession } from "@/state/session";
 import { useScrubbedField } from "@/components/symptoms/use-scrubbed-field";
 import { PRIVATE_TEXT_FIELD_PROPS } from "@/components/ui/private-field";
+import { ReviewBadge } from "@/components/content/content-meta";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -79,7 +80,7 @@ function LibraryInner({ cards, practiceTypes, interventions }: Props) {
                 aria-describedby={ids.hint}
                 value={search.draft}
                 onChange={(e) => search.setDraft(e.target.value)}
-                onBlur={search.flushNow}
+                onBlur={search.onBlur}
                 {...PRIVATE_TEXT_FIELD_PROPS}
                 placeholder="e.g., sleep, worry, breathing, urges"
                 className="block min-h-11 w-full rounded-lg border border-input-border bg-surface pl-9 pr-3 text-base text-text placeholder:text-muted"
@@ -197,11 +198,7 @@ function LibraryInner({ cards, practiceTypes, interventions }: Props) {
                   ) : null}
                   {c.sud ? <Badge tone="warn">Part 2 notice on PDF</Badge> : null}
                   {/* G10 badge stays visible; neutral in the list so real warnings stand out (owner decision). */}
-                  {c.reviewPending ? (
-                    <Badge tone="neutral">
-                      <ClipboardCheck aria-hidden className="size-3.5" /> Not yet clinically reviewed
-                    </Badge>
-                  ) : null}
+                  {c.reviewPending ? <ReviewBadge reviewedBy="PENDING" inList /> : null}
                 </div>
                 <p className="mt-2 text-xs text-muted">
                   Open to print, download or share a link{c.hasSpanish ? ", in English or Spanish" : ""}.

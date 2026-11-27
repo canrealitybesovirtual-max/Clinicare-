@@ -1,10 +1,10 @@
 {
-  "version": "1.0.0",
-  "about": "Curated dictionary of feared objects and situations used by src/lib/follow-up/triggers.ts. Objects are matched only after a fear, panic or avoidance cue (\"afraid of X\", \"panic around X\", \"avoids X\"). Terms are normalized and lightly stemmed like the symptom matcher, so regular plurals match; irregular forms are listed. Ids and categories are curated codes; the matched words stay on the device.",
+  "version": "1.1.0",
+  "about": "Curated dictionary of feared objects and situations used by src/lib/follow-up/triggers.ts. Objects are matched only after a fear, panic or avoidance cue (\"afraid of X\", \"panic around X\", \"avoids X\"). Terms are normalized and lightly stemmed like the symptom matcher, so regular plurals match; irregular forms are listed. `symptomId` names the phobia-type symptom of the lexicon an object belongs to (dogs: fear of animals), offered as a tap-to-add feature. Ids and categories are curated codes; the matched words stay on the device.",
   "categories": {
     "animal": {
       "label": "Animals or insects",
-      "clinicianNote": "Fear centered on an animal or insect. Clarify whether fear comes on nearly every time the animal is near or expected, whether it is avoided or endured with intense distress, and whether it is out of proportion to the real danger in the client's setting. A bite or attack also calls for trauma questions.",
+      "clinicianNote": "Fear centered on an animal or insect. Ask what happens when the animal is around, what the client does to keep away from it and what that costs day to day, and how real the risk is where they live. A bite or attack also calls for trauma questions.",
       "conditionHints": [
         "specific-phobia",
         "ptsd"
@@ -48,15 +48,17 @@
     },
     "blood-injection-injury": {
       "label": "Needles, blood, injury or medical care",
-      "clinicianNote": "Fear of needles, blood, injury or medical and dental care. Ask about fainting: this fear often brings a drop in heart rate and blood pressure after the first surge, which changes exposure planning (applied tension is often used; it is not yet in the intervention library) and is worth telling medical staff. Check whether needed care is being delayed.",
+      "clinicianNote": "Fear of needles, blood, injury or medical and dental care. Ask about fainting: this fear often brings a drop in heart rate and blood pressure after the first surge, which changes exposure planning (applied tension) and is worth telling medical staff. Check whether needed care is being delayed.",
       "conditionHints": [
         "specific-phobia"
       ],
       "interventionIds": [
+        "applied-tension",
         "graded-in-vivo-exposure",
         "behavioral-experiments"
       ],
       "handoutIds": [
+        "applied-tension-practice",
         "exposure-ladder",
         "behavioral-experiment-record"
       ],
@@ -179,20 +181,24 @@
     },
     "health": {
       "label": "Dying, heart attack or serious illness",
-      "clinicianNote": "Fear of dying, a heart attack or a serious illness. Clarify whether it comes mainly during panic surges or is a lasting preoccupation with having or getting an illness (health anxiety, outside the current knowledge base), and make sure a medical review has been offered.",
+      "clinicianNote": "Fear of dying, a heart attack or a serious illness. Clarify whether it comes mainly during panic surges, is a steady fear of being or becoming seriously ill that reassurance settles only briefly (health anxiety), or centers on body symptoms that are clearly there, and make sure a medical review has been offered.",
       "conditionHints": [
         "panic-disorder",
+        "illness-anxiety-disorder",
+        "somatic-symptom-disorder",
         "generalized-anxiety-disorder"
       ],
       "interventionIds": [
         "catastrophic-misinterpretation-restructuring",
         "behavioral-experiments",
-        "thought-record"
+        "thought-record",
+        "cbt-health-anxiety"
       ],
       "handoutIds": [
         "panic-cycle",
         "thought-record",
-        "behavioral-experiment-record"
+        "behavioral-experiment-record",
+        "checking-and-reassurance-log"
       ],
       "measureIds": [],
       "referralKinds": [
@@ -206,6 +212,7 @@
       "id": "dog",
       "category": "animal",
       "label": "dogs",
+      "symptomId": "fear-animals",
       "terms": [
         "dog",
         "dogs",
@@ -225,6 +232,7 @@
       "id": "cat",
       "category": "animal",
       "label": "cats",
+      "symptomId": "fear-animals",
       "terms": [
         "cat",
         "cats",
@@ -237,6 +245,7 @@
       "id": "spider",
       "category": "animal",
       "label": "spiders",
+      "symptomId": "fear-animals",
       "terms": [
         "spider",
         "spiders",
@@ -251,6 +260,7 @@
       "id": "cobweb",
       "category": "animal",
       "label": "cobwebs",
+      "symptomId": "fear-animals",
       "terms": [
         "cobweb",
         "cobwebs",
@@ -264,6 +274,7 @@
       "id": "snake",
       "category": "animal",
       "label": "snakes",
+      "symptomId": "fear-animals",
       "terms": [
         "snake",
         "snakes",
@@ -283,6 +294,7 @@
       "id": "bird",
       "category": "animal",
       "label": "birds",
+      "symptomId": "fear-animals",
       "terms": [
         "bird",
         "birds"
@@ -292,6 +304,7 @@
       "id": "pigeon",
       "category": "animal",
       "label": "pigeons",
+      "symptomId": "fear-animals",
       "terms": [
         "pigeon",
         "pigeons"
@@ -301,6 +314,7 @@
       "id": "seagull",
       "category": "animal",
       "label": "seagulls",
+      "symptomId": "fear-animals",
       "terms": [
         "seagull",
         "seagulls",
@@ -312,6 +326,7 @@
       "id": "crow",
       "category": "animal",
       "label": "crows",
+      "symptomId": "fear-animals",
       "terms": [
         "crow",
         "crows",
@@ -323,6 +338,7 @@
       "id": "owl",
       "category": "animal",
       "label": "owls",
+      "symptomId": "fear-animals",
       "terms": [
         "owl",
         "owls"
@@ -332,6 +348,7 @@
       "id": "bird-of-prey",
       "category": "animal",
       "label": "birds of prey",
+      "symptomId": "fear-animals",
       "terms": [
         "birds of prey",
         "eagle",
@@ -346,6 +363,7 @@
       "id": "parrot",
       "category": "animal",
       "label": "parrots",
+      "symptomId": "fear-animals",
       "terms": [
         "parrot",
         "parrots",
@@ -357,6 +375,7 @@
       "id": "swan",
       "category": "animal",
       "label": "swans",
+      "symptomId": "fear-animals",
       "terms": [
         "swan",
         "swans"
@@ -366,6 +385,7 @@
       "id": "chicken",
       "category": "animal",
       "label": "chickens",
+      "symptomId": "fear-animals",
       "terms": [
         "chicken",
         "chickens",
@@ -379,6 +399,7 @@
       "id": "duck",
       "category": "animal",
       "label": "ducks",
+      "symptomId": "fear-animals",
       "terms": [
         "duck",
         "ducks"
@@ -388,6 +409,7 @@
       "id": "goose",
       "category": "animal",
       "label": "geese",
+      "symptomId": "fear-animals",
       "terms": [
         "goose",
         "geese"
@@ -397,6 +419,7 @@
       "id": "feather",
       "category": "animal",
       "label": "feathers",
+      "symptomId": "fear-animals",
       "terms": [
         "feather",
         "feathers"
@@ -406,6 +429,7 @@
       "id": "insect",
       "category": "animal",
       "label": "insects",
+      "symptomId": "fear-animals",
       "terms": [
         "insect",
         "insects",
@@ -419,6 +443,7 @@
       "id": "bee",
       "category": "animal",
       "label": "bees",
+      "symptomId": "fear-animals",
       "terms": [
         "bee",
         "bees",
@@ -432,6 +457,7 @@
       "id": "wasp",
       "category": "animal",
       "label": "wasps",
+      "symptomId": "fear-animals",
       "terms": [
         "wasp",
         "wasps",
@@ -447,6 +473,7 @@
       "id": "ant",
       "category": "animal",
       "label": "ants",
+      "symptomId": "fear-animals",
       "terms": [
         "ant",
         "ants",
@@ -457,6 +484,7 @@
       "id": "cockroach",
       "category": "animal",
       "label": "cockroaches",
+      "symptomId": "fear-animals",
       "terms": [
         "cockroach",
         "cockroaches",
@@ -468,6 +496,7 @@
       "id": "housefly",
       "category": "animal",
       "label": "flies",
+      "symptomId": "fear-animals",
       "terms": [
         "flies",
         "housefly",
@@ -480,6 +509,7 @@
       "id": "gnat",
       "category": "animal",
       "label": "gnats",
+      "symptomId": "fear-animals",
       "terms": [
         "gnat",
         "gnats",
@@ -491,6 +521,7 @@
       "id": "mosquito",
       "category": "animal",
       "label": "mosquitoes",
+      "symptomId": "fear-animals",
       "terms": [
         "mosquito",
         "mosquitoes",
@@ -501,6 +532,7 @@
       "id": "moth",
       "category": "animal",
       "label": "moths",
+      "symptomId": "fear-animals",
       "terms": [
         "moth",
         "moths"
@@ -510,6 +542,7 @@
       "id": "butterfly",
       "category": "animal",
       "label": "butterflies",
+      "symptomId": "fear-animals",
       "terms": [
         "butterfly",
         "butterflies"
@@ -519,6 +552,7 @@
       "id": "dragonfly",
       "category": "animal",
       "label": "dragonflies",
+      "symptomId": "fear-animals",
       "terms": [
         "dragonfly",
         "dragonflies"
@@ -528,6 +562,7 @@
       "id": "beetle",
       "category": "animal",
       "label": "beetles",
+      "symptomId": "fear-animals",
       "terms": [
         "beetle",
         "beetles",
@@ -541,6 +576,7 @@
       "id": "grasshopper",
       "category": "animal",
       "label": "grasshoppers",
+      "symptomId": "fear-animals",
       "terms": [
         "grasshopper",
         "grasshoppers",
@@ -553,6 +589,7 @@
       "id": "termite",
       "category": "animal",
       "label": "termites",
+      "symptomId": "fear-animals",
       "terms": [
         "termite",
         "termites",
@@ -563,6 +600,7 @@
       "id": "worm",
       "category": "animal",
       "label": "worms",
+      "symptomId": "fear-animals",
       "terms": [
         "worm",
         "worms",
@@ -574,6 +612,7 @@
       "id": "caterpillar",
       "category": "animal",
       "label": "caterpillars",
+      "symptomId": "fear-animals",
       "terms": [
         "caterpillar",
         "caterpillars"
@@ -583,6 +622,7 @@
       "id": "maggot",
       "category": "animal",
       "label": "maggots",
+      "symptomId": "fear-animals",
       "terms": [
         "maggot",
         "maggots",
@@ -593,6 +633,7 @@
       "id": "tick",
       "category": "animal",
       "label": "ticks",
+      "symptomId": "fear-animals",
       "terms": [
         "ticks",
         "mite",
@@ -604,6 +645,7 @@
       "id": "flea",
       "category": "animal",
       "label": "fleas",
+      "symptomId": "fear-animals",
       "terms": [
         "flea",
         "fleas"
@@ -613,6 +655,7 @@
       "id": "lice",
       "category": "animal",
       "label": "lice",
+      "symptomId": "fear-animals",
       "terms": [
         "lice",
         "head lice",
@@ -623,6 +666,7 @@
       "id": "bedbug",
       "category": "animal",
       "label": "bed bugs",
+      "symptomId": "fear-animals",
       "terms": [
         "bed bug",
         "bed bugs",
@@ -634,6 +678,7 @@
       "id": "scorpion",
       "category": "animal",
       "label": "scorpions",
+      "symptomId": "fear-animals",
       "terms": [
         "scorpion",
         "scorpions"
@@ -643,6 +688,7 @@
       "id": "centipede",
       "category": "animal",
       "label": "centipedes",
+      "symptomId": "fear-animals",
       "terms": [
         "centipede",
         "centipedes",
@@ -654,6 +700,7 @@
       "id": "slug",
       "category": "animal",
       "label": "slugs",
+      "symptomId": "fear-animals",
       "terms": [
         "slug",
         "slugs",
@@ -665,6 +712,7 @@
       "id": "leech",
       "category": "animal",
       "label": "leeches",
+      "symptomId": "fear-animals",
       "terms": [
         "leech",
         "leeches"
@@ -674,6 +722,7 @@
       "id": "rat",
       "category": "animal",
       "label": "rats",
+      "symptomId": "fear-animals",
       "terms": [
         "rat",
         "rats"
@@ -683,6 +732,7 @@
       "id": "mouse",
       "category": "animal",
       "label": "mice",
+      "symptomId": "fear-animals",
       "terms": [
         "mouse",
         "mice"
@@ -692,6 +742,7 @@
       "id": "rodent",
       "category": "animal",
       "label": "rodents",
+      "symptomId": "fear-animals",
       "terms": [
         "rodent",
         "rodents",
@@ -708,6 +759,7 @@
       "id": "squirrel",
       "category": "animal",
       "label": "squirrels",
+      "symptomId": "fear-animals",
       "terms": [
         "squirrel",
         "squirrels"
@@ -717,6 +769,7 @@
       "id": "rabbit",
       "category": "animal",
       "label": "rabbits",
+      "symptomId": "fear-animals",
       "terms": [
         "rabbit",
         "rabbits",
@@ -730,6 +783,7 @@
       "id": "bat",
       "category": "animal",
       "label": "bats",
+      "symptomId": "fear-animals",
       "terms": [
         "bat",
         "bats"
@@ -739,6 +793,7 @@
       "id": "horse",
       "category": "animal",
       "label": "horses",
+      "symptomId": "fear-animals",
       "terms": [
         "horse",
         "horses",
@@ -754,6 +809,7 @@
       "id": "cow",
       "category": "animal",
       "label": "cows",
+      "symptomId": "fear-animals",
       "terms": [
         "cow",
         "cows",
@@ -766,6 +822,7 @@
       "id": "pig",
       "category": "animal",
       "label": "pigs",
+      "symptomId": "fear-animals",
       "terms": [
         "pig",
         "pigs",
@@ -777,6 +834,7 @@
       "id": "goat",
       "category": "animal",
       "label": "goats",
+      "symptomId": "fear-animals",
       "terms": [
         "goat",
         "goats",
@@ -789,6 +847,7 @@
       "id": "frog",
       "category": "animal",
       "label": "frogs",
+      "symptomId": "fear-animals",
       "terms": [
         "frog",
         "frogs",
@@ -800,6 +859,7 @@
       "id": "lizard",
       "category": "animal",
       "label": "lizards",
+      "symptomId": "fear-animals",
       "terms": [
         "lizard",
         "lizards",
@@ -813,6 +873,7 @@
       "id": "turtle",
       "category": "animal",
       "label": "turtles",
+      "symptomId": "fear-animals",
       "terms": [
         "turtle",
         "turtles",
@@ -824,6 +885,7 @@
       "id": "reptile",
       "category": "animal",
       "label": "reptiles",
+      "symptomId": "fear-animals",
       "terms": [
         "reptile",
         "reptiles",
@@ -835,6 +897,7 @@
       "id": "crocodile",
       "category": "animal",
       "label": "crocodiles",
+      "symptomId": "fear-animals",
       "terms": [
         "crocodile",
         "crocodiles",
@@ -846,6 +909,7 @@
       "id": "shark",
       "category": "animal",
       "label": "sharks",
+      "symptomId": "fear-animals",
       "terms": [
         "shark",
         "sharks"
@@ -855,6 +919,7 @@
       "id": "fish",
       "category": "animal",
       "label": "fish",
+      "symptomId": "fear-animals",
       "terms": [
         "fish",
         "fishes"
@@ -864,6 +929,7 @@
       "id": "eel",
       "category": "animal",
       "label": "eels",
+      "symptomId": "fear-animals",
       "terms": [
         "eel",
         "eels",
@@ -875,6 +941,7 @@
       "id": "jellyfish",
       "category": "animal",
       "label": "jellyfish",
+      "symptomId": "fear-animals",
       "terms": [
         "jellyfish",
         "jelly fish"
@@ -884,6 +951,7 @@
       "id": "crab",
       "category": "animal",
       "label": "crabs",
+      "symptomId": "fear-animals",
       "terms": [
         "crab",
         "crabs",
@@ -895,6 +963,7 @@
       "id": "octopus",
       "category": "animal",
       "label": "octopuses",
+      "symptomId": "fear-animals",
       "terms": [
         "octopus",
         "octopuses",
@@ -905,6 +974,7 @@
       "id": "whale",
       "category": "animal",
       "label": "whales",
+      "symptomId": "fear-animals",
       "terms": [
         "whale",
         "whales"
@@ -914,6 +984,7 @@
       "id": "monkey",
       "category": "animal",
       "label": "monkeys",
+      "symptomId": "fear-animals",
       "terms": [
         "monkey",
         "monkeys",
@@ -927,6 +998,7 @@
       "id": "bear",
       "category": "animal",
       "label": "bears",
+      "symptomId": "fear-animals",
       "terms": [
         "bear",
         "bears"
@@ -936,6 +1008,7 @@
       "id": "wolf",
       "category": "animal",
       "label": "wolves",
+      "symptomId": "fear-animals",
       "terms": [
         "wolf",
         "wolves",
@@ -947,6 +1020,7 @@
       "id": "fox",
       "category": "animal",
       "label": "foxes",
+      "symptomId": "fear-animals",
       "terms": [
         "fox",
         "foxes"
@@ -956,6 +1030,7 @@
       "id": "big-cat",
       "category": "animal",
       "label": "lions or tigers",
+      "symptomId": "fear-animals",
       "terms": [
         "lion",
         "lions",
@@ -969,6 +1044,7 @@
       "id": "elephant",
       "category": "animal",
       "label": "elephants",
+      "symptomId": "fear-animals",
       "terms": [
         "elephant",
         "elephants"
@@ -978,6 +1054,7 @@
       "id": "deer",
       "category": "animal",
       "label": "deer",
+      "symptomId": "fear-animals",
       "terms": [
         "deer",
         "moose"
@@ -987,6 +1064,7 @@
       "id": "raccoon",
       "category": "animal",
       "label": "raccoons",
+      "symptomId": "fear-animals",
       "terms": [
         "raccoon",
         "raccoons",
@@ -1002,6 +1080,7 @@
       "id": "ferret",
       "category": "animal",
       "label": "ferrets",
+      "symptomId": "fear-animals",
       "terms": [
         "ferret",
         "ferrets"
@@ -1011,6 +1090,7 @@
       "id": "animals-general",
       "category": "animal",
       "label": "animals",
+      "symptomId": "fear-animals",
       "terms": [
         "animal",
         "animals",
@@ -1025,6 +1105,7 @@
       "id": "farm-animals",
       "category": "animal",
       "label": "farm animals",
+      "symptomId": "fear-animals",
       "terms": [
         "farm animals",
         "livestock"
@@ -1034,6 +1115,7 @@
       "id": "pet",
       "category": "animal",
       "label": "pets",
+      "symptomId": "fear-animals",
       "terms": [
         "pet",
         "pets"
@@ -1043,6 +1125,7 @@
       "id": "heights",
       "category": "natural-environment",
       "label": "heights",
+      "symptomId": "fear-heights",
       "terms": [
         "heights",
         "high places",
@@ -1057,6 +1140,7 @@
       "id": "ledge",
       "category": "natural-environment",
       "label": "ledges or cliffs",
+      "symptomId": "fear-heights",
       "terms": [
         "ledge",
         "ledges",
@@ -1069,6 +1153,7 @@
       "id": "balcony",
       "category": "natural-environment",
       "label": "balconies",
+      "symptomId": "fear-heights",
       "terms": [
         "balcony",
         "balconies"
@@ -1078,6 +1163,7 @@
       "id": "ladder",
       "category": "natural-environment",
       "label": "ladders",
+      "symptomId": "fear-heights",
       "terms": [
         "ladder",
         "ladders",
@@ -1088,6 +1174,7 @@
       "id": "rooftop",
       "category": "natural-environment",
       "label": "rooftops",
+      "symptomId": "fear-heights",
       "terms": [
         "rooftop",
         "rooftops",
@@ -1098,6 +1185,7 @@
       "id": "lookout",
       "category": "natural-environment",
       "label": "lookouts",
+      "symptomId": "fear-heights",
       "terms": [
         "lookout",
         "lookouts",
@@ -1123,6 +1211,7 @@
       "id": "mountain",
       "category": "natural-environment",
       "label": "mountains",
+      "symptomId": "fear-heights",
       "terms": [
         "mountain",
         "mountains",
@@ -1133,6 +1222,7 @@
       "id": "storm",
       "category": "natural-environment",
       "label": "storms",
+      "symptomId": "fear-natural-environment",
       "terms": [
         "storm",
         "storms",
@@ -1146,6 +1236,7 @@
       "id": "thunder",
       "category": "natural-environment",
       "label": "thunder",
+      "symptomId": "fear-natural-environment",
       "terms": [
         "thunder",
         "thunderstorm",
@@ -1157,6 +1248,7 @@
       "id": "lightning",
       "category": "natural-environment",
       "label": "lightning",
+      "symptomId": "fear-natural-environment",
       "terms": [
         "lightning",
         "lightning storms"
@@ -1166,6 +1258,7 @@
       "id": "wind",
       "category": "natural-environment",
       "label": "high winds",
+      "symptomId": "fear-natural-environment",
       "terms": [
         "high winds",
         "strong winds",
@@ -1177,6 +1270,7 @@
       "id": "tornado",
       "category": "natural-environment",
       "label": "tornadoes",
+      "symptomId": "fear-natural-environment",
       "terms": [
         "tornado",
         "tornadoes",
@@ -1188,6 +1282,7 @@
       "id": "hurricane",
       "category": "natural-environment",
       "label": "hurricanes",
+      "symptomId": "fear-natural-environment",
       "terms": [
         "hurricane",
         "hurricanes",
@@ -1199,6 +1294,7 @@
       "id": "earthquake",
       "category": "natural-environment",
       "label": "earthquakes",
+      "symptomId": "fear-natural-environment",
       "terms": [
         "earthquake",
         "earthquakes"
@@ -1208,6 +1304,7 @@
       "id": "tsunami",
       "category": "natural-environment",
       "label": "tsunamis",
+      "symptomId": "fear-natural-environment",
       "terms": [
         "tsunami",
         "tsunamis",
@@ -1218,6 +1315,7 @@
       "id": "volcano",
       "category": "natural-environment",
       "label": "volcanoes",
+      "symptomId": "fear-natural-environment",
       "terms": [
         "volcano",
         "volcanoes"
@@ -1227,6 +1325,7 @@
       "id": "flood",
       "category": "natural-environment",
       "label": "floods",
+      "symptomId": "fear-natural-environment",
       "terms": [
         "flood",
         "floods",
@@ -1237,6 +1336,7 @@
       "id": "water",
       "category": "natural-environment",
       "label": "water",
+      "symptomId": "fear-natural-environment",
       "terms": [
         "water",
         "deep water",
@@ -1249,6 +1349,7 @@
       "id": "swimming",
       "category": "natural-environment",
       "label": "swimming",
+      "symptomId": "fear-natural-environment",
       "terms": [
         "swimming",
         "swimming pools",
@@ -1261,6 +1362,7 @@
       "id": "ocean",
       "category": "natural-environment",
       "label": "the ocean",
+      "symptomId": "fear-natural-environment",
       "terms": [
         "ocean",
         "the ocean",
@@ -1274,6 +1376,7 @@
       "id": "lake",
       "category": "natural-environment",
       "label": "lakes or rivers",
+      "symptomId": "fear-natural-environment",
       "terms": [
         "lake",
         "lakes",
@@ -1285,6 +1388,7 @@
       "id": "drowning",
       "category": "natural-environment",
       "label": "drowning",
+      "symptomId": "fear-natural-environment",
       "terms": [
         "drowning",
         "being underwater",
@@ -1295,6 +1399,7 @@
       "id": "dark",
       "category": "natural-environment",
       "label": "the dark",
+      "symptomId": "fear-natural-environment",
       "terms": [
         "the dark",
         "darkness",
@@ -1311,6 +1416,7 @@
       "id": "fog",
       "category": "natural-environment",
       "label": "fog",
+      "symptomId": "fear-natural-environment",
       "terms": [
         "fog",
         "foggy weather"
@@ -1335,6 +1441,7 @@
       "id": "snow",
       "category": "natural-environment",
       "label": "snow or ice",
+      "symptomId": "fear-natural-environment",
       "terms": [
         "snow",
         "blizzards",
@@ -1356,6 +1463,7 @@
       "id": "woods",
       "category": "natural-environment",
       "label": "the woods",
+      "symptomId": "fear-natural-environment",
       "terms": [
         "the woods",
         "woods",
@@ -1367,6 +1475,7 @@
       "id": "cave",
       "category": "natural-environment",
       "label": "caves",
+      "symptomId": "fear-enclosed-spaces",
       "terms": [
         "cave",
         "caves",
@@ -1377,6 +1486,7 @@
       "id": "needle",
       "category": "blood-injection-injury",
       "label": "needles",
+      "symptomId": "fear-blood-injection",
       "terms": [
         "needle",
         "needles",
@@ -1387,6 +1497,7 @@
       "id": "injection",
       "category": "blood-injection-injury",
       "label": "injections",
+      "symptomId": "fear-blood-injection",
       "terms": [
         "injection",
         "injections",
@@ -1403,6 +1514,7 @@
       "id": "vaccine",
       "category": "blood-injection-injury",
       "label": "vaccines",
+      "symptomId": "fear-blood-injection",
       "terms": [
         "vaccine",
         "vaccines",
@@ -1416,6 +1528,7 @@
       "id": "blood",
       "category": "blood-injection-injury",
       "label": "blood",
+      "symptomId": "fear-blood-injection",
       "terms": [
         "blood",
         "seeing blood",
@@ -1427,6 +1540,7 @@
       "id": "blood-draw",
       "category": "blood-injection-injury",
       "label": "blood draws",
+      "symptomId": "fear-blood-injection",
       "terms": [
         "blood draw",
         "blood draws",
@@ -1444,6 +1558,7 @@
       "id": "iv",
       "category": "blood-injection-injury",
       "label": "IV lines",
+      "symptomId": "fear-blood-injection",
       "terms": [
         "iv",
         "ivs",
@@ -1459,6 +1574,7 @@
       "id": "injury",
       "category": "blood-injection-injury",
       "label": "injuries",
+      "symptomId": "fear-blood-injection",
       "terms": [
         "injury",
         "injuries",
@@ -1475,6 +1591,7 @@
       "id": "surgery",
       "category": "blood-injection-injury",
       "label": "surgery",
+      "symptomId": "fear-blood-injection",
       "terms": [
         "surgery",
         "surgeries",
@@ -1490,6 +1607,7 @@
       "id": "hospital",
       "category": "blood-injection-injury",
       "label": "hospitals",
+      "symptomId": "fear-blood-injection",
       "terms": [
         "hospital",
         "hospitals",
@@ -1502,6 +1620,7 @@
       "id": "doctor",
       "category": "blood-injection-injury",
       "label": "doctors",
+      "symptomId": "fear-blood-injection",
       "terms": [
         "doctor",
         "doctors",
@@ -1519,6 +1638,7 @@
       "id": "dentist",
       "category": "blood-injection-injury",
       "label": "dentists",
+      "symptomId": "fear-blood-injection",
       "terms": [
         "dentist",
         "dentists",
@@ -1538,6 +1658,7 @@
       "id": "medical-procedure",
       "category": "blood-injection-injury",
       "label": "medical procedures",
+      "symptomId": "fear-blood-injection",
       "terms": [
         "medical procedures",
         "procedures",
@@ -1554,6 +1675,7 @@
       "id": "gynecological-exam",
       "category": "blood-injection-injury",
       "label": "pelvic exams",
+      "symptomId": "fear-blood-injection",
       "terms": [
         "pelvic exam",
         "pelvic exams",
@@ -1566,6 +1688,7 @@
       "id": "stitches",
       "category": "blood-injection-injury",
       "label": "stitches",
+      "symptomId": "fear-blood-injection",
       "terms": [
         "stitches",
         "sutures"
@@ -1585,6 +1708,7 @@
       "id": "piercing",
       "category": "blood-injection-injury",
       "label": "piercings or tattoos",
+      "symptomId": "fear-blood-injection",
       "terms": [
         "piercings",
         "ear piercing",
@@ -1605,6 +1729,7 @@
       "id": "eye-procedure",
       "category": "blood-injection-injury",
       "label": "eye exams or eye drops",
+      "symptomId": "fear-blood-injection",
       "terms": [
         "eye drops",
         "eye exams",
@@ -1626,6 +1751,7 @@
       "id": "flying",
       "category": "situational",
       "label": "flying",
+      "symptomId": "fear-flying",
       "terms": [
         "flying",
         "fly",
@@ -1649,6 +1775,7 @@
       "id": "elevator",
       "category": "situational",
       "label": "elevators",
+      "symptomId": "fear-enclosed-spaces",
       "terms": [
         "elevator",
         "elevators",
@@ -1670,6 +1797,7 @@
       "id": "bridge",
       "category": "situational",
       "label": "bridges",
+      "symptomId": "fear-heights",
       "terms": [
         "bridge",
         "bridges",
@@ -1682,6 +1810,7 @@
       "id": "tunnel",
       "category": "situational",
       "label": "tunnels",
+      "symptomId": "fear-enclosed-spaces",
       "terms": [
         "tunnel",
         "tunnels",
@@ -1742,6 +1871,7 @@
       "id": "enclosed",
       "category": "situational",
       "label": "enclosed spaces",
+      "symptomId": "fear-enclosed-spaces",
       "terms": [
         "enclosed spaces",
         "enclosed places",
@@ -1766,6 +1896,7 @@
       "id": "basement",
       "category": "situational",
       "label": "basements or attics",
+      "symptomId": "fear-enclosed-spaces",
       "terms": [
         "basement",
         "basements",
@@ -1788,6 +1919,7 @@
       "id": "scanner",
       "category": "situational",
       "label": "MRI scanners",
+      "symptomId": "fear-enclosed-spaces",
       "terms": [
         "mri",
         "mris",

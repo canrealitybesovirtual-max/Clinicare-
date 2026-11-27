@@ -232,8 +232,14 @@
       "note": "Incentives for verified goals, offered through programs that can measure them."
     }
   ],
-  "handouts": [],
-  "statIds": [],
+  "handouts": [
+    "drinking-diary",
+    "urge-surfing-log",
+    "relapse-prevention-plan"
+  ],
+  "statIds": [
+    "us-alcohol-use-disorder-2025"
+  ],
   "culturalNotes": [
     "Drinking norms vary widely. In some families and communities daily drinking or heavy weekend drinking is ordinary; in others any alcohol use is forbidden and brings shame. Ask about the client's own norms and goals before judging a pattern, and anchor the assessment in harms and control rather than in amounts alone.",
     "Standard drink sizes differ by country (for example 14 g of alcohol in the US, 8 g per unit in the UK and 10 g in many other countries). Convert carefully when using drinking guidelines or the AUDIT.",

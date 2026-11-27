@@ -17,7 +17,9 @@
  *
  * Layout is pure and synchronous (measurePdfLayout / handoutPdfLayout), using the standard-font metrics
  * from pdf-lib, so tests can assert content without decompressing PDF streams. The create* functions
- * only render that layout.
+ * only render that layout. The plan and tools exports (src/lib/plan-export.ts, src/lib/tools/doc-export.ts)
+ * lay out their own blocks but share this module's geometry, text metrics, footer (stampPdfFooters) and
+ * renderer (renderPdf).
  */
 import { PDFDocument, StandardFontEmbedder, StandardFonts, rgb } from "pdf-lib";
 import type { Handout, Measure } from "./schemas";
@@ -93,6 +95,9 @@ const TOP = PAGE_HEIGHT - PAGE_MARGIN;
 const BOTTOM = PAGE_MARGIN + FOOTER_H;
 const LEFT = PAGE_MARGIN;
 const RIGHT = PAGE_WIDTH - PAGE_MARGIN;
+
+/** Content box shared by every PDF this app makes (points; `bottom` is above the footer band). */
+export const PDF_CONTENT = { top: TOP, bottom: BOTTOM, left: LEFT, right: RIGHT, width: CONTENT_W } as const;
 
 /* ---------------------------------------------------------------- layout model */
 
@@ -200,10 +205,12 @@ export function toWinAnsi(input: string): string {
   return out;
 }
 
-function widthOf(text: string, size: number, bold = false): number {
+/** Width in points of WinAnsi text in Helvetica (bold: Helvetica-Bold). */
+export function pdfTextWidth(text: string, size: number, bold = false): number {
   const m = metrics();
   return (bold ? m.bold : m.regular).widthOfTextAtSize(text, size);
 }
+const widthOf = pdfTextWidth;
 
 /** Word-wrap already-sanitized or raw text to maxWidth. "\n" starts a new line. Long words are split. */
 export function wrapText(text: string, size: number, maxWidth: number, bold = false): string[] {
@@ -250,12 +257,40 @@ interface TextStyle {
 const NOTICE_SIZE = 7.5;
 const NOTICE_LH = 9.5;
 
+/** A footer notice (e.g. 42 CFR Part 2, G6) wrapped for every page, and the content bottom that leaves room for it. */
+export function pdfFooterNotice(text?: string): { lines: string[]; bottom: number } {
+  const lines = text ? wrapText(text, NOTICE_SIZE, CONTENT_W, true) : [];
+  return { lines, bottom: BOTTOM + (lines.length ? lines.length * NOTICE_LH + 6 : 0) };
+}
+
+/**
+ * Footer on every page (G14): the notice (when given) above a separator, then the disclaimer, "Page x of y" and
+ * the app name.
+ */
+export function stampPdfFooters(
+  pages: PdfPageLayout[],
+  opts: { disclaimer: string; pageLabel: (page: number, pages: number) => string; notice: { lines: string[]; bottom: number } },
+): void {
+  const n = pages.length;
+  const sep = BOTTOM - 8;
+  pages.forEach((page, i) => {
+    opts.notice.lines.forEach((l, j) => {
+      page.ops.push({ kind: "text", text: l, x: LEFT, y: opts.notice.bottom - 4 - NOTICE_SIZE - j * NOTICE_LH, size: NOTICE_SIZE, bold: true, color: "text" });
+    });
+    page.ops.push({ kind: "line", x1: LEFT, y1: sep, x2: RIGHT, y2: sep, color: "border", lineWidth: 0.5 });
+    page.ops.push({ kind: "text", text: toWinAnsi(opts.disclaimer), x: LEFT, y: sep - 11, size: 8.5, bold: true, color: "text" });
+    const label = toWinAnsi(opts.pageLabel(i + 1, n));
+    page.ops.push({ kind: "text", text: label, x: RIGHT - widthOf(label, 8.5), y: sep - 11, size: 8.5, bold: false, color: "text" });
+    page.ops.push({ kind: "text", text: PDF_APP_NAME, x: LEFT, y: sep - 21, size: 7.5, bold: false, color: "muted" });
+  });
+}
+
 class LayoutBuilder {
   readonly pages: PdfPageLayout[] = [];
   y = TOP;
   /** Lowest y content may reach; raised when a footer notice needs room. */
   readonly bottom: number;
-  private readonly noticeLines: string[];
+  private readonly notice: { lines: string[]; bottom: number };
   readonly copy: PdfShellCopy;
 
   constructor(
@@ -263,8 +298,8 @@ class LayoutBuilder {
     opts: { footerNotice?: string; copy?: PdfShellCopy } = {},
   ) {
     this.copy = opts.copy ?? PDF_COPY.en;
-    this.noticeLines = opts.footerNotice ? wrapText(opts.footerNotice, NOTICE_SIZE, CONTENT_W, true) : [];
-    this.bottom = BOTTOM + (this.noticeLines.length ? this.noticeLines.length * NOTICE_LH + 6 : 0);
+    this.notice = pdfFooterNotice(opts.footerNotice);
+    this.bottom = this.notice.bottom;
     this.newPage();
   }
 
@@ -368,27 +403,7 @@ class LayoutBuilder {
 
   /** Add the footer (disclaimer, app name, "Page x of y") to every page. */
   finish(): PdfLayout {
-    const n = this.pages.length;
-    this.pages.forEach((page, i) => {
-      // Footer notice (e.g. 42 CFR Part 2 on substance-use exports, G6): above the separator, every page.
-      this.noticeLines.forEach((l, j) => {
-        page.ops.push({ kind: "text", text: l, x: LEFT, y: this.bottom - 4 - NOTICE_SIZE - j * NOTICE_LH, size: NOTICE_SIZE, bold: true, color: "text" });
-      });
-      const sep = BOTTOM - 8;
-      page.ops.push({ kind: "line", x1: LEFT, y1: sep, x2: RIGHT, y2: sep, color: "border", lineWidth: 0.5 });
-      page.ops.push({ kind: "text", text: toWinAnsi(this.copy.disclaimer), x: LEFT, y: sep - 11, size: 8.5, bold: true, color: "text" });
-      const pageLabel = toWinAnsi(this.copy.page(i + 1, n));
-      page.ops.push({
-        kind: "text",
-        text: pageLabel,
-        x: RIGHT - widthOf(pageLabel, 8.5),
-        y: sep - 11,
-        size: 8.5,
-        bold: false,
-        color: "text",
-      });
-      page.ops.push({ kind: "text", text: PDF_APP_NAME, x: LEFT, y: sep - 21, size: 7.5, bold: false, color: "muted" });
-    });
+    stampPdfFooters(this.pages, { disclaimer: this.copy.disclaimer, pageLabel: this.copy.page, notice: this.notice });
     return { title: this.title, language: this.copy.language, pages: this.pages };
   }
 }
@@ -656,7 +671,8 @@ export function handoutPdfLines(handout: Handout, lang: Lang = "en"): string[] {
 
 /* ---------------------------------------------------------------- rendering */
 
-async function renderLayout(layout: PdfLayout): Promise<Uint8Array> {
+/** Draws a layout with pdf-lib, on this device. No creation or modification dates, no author. */
+export async function renderPdf(layout: PdfLayout): Promise<Uint8Array> {
   // updateMetadata: false => no automatic creation/modification dates; author is never set.
   const doc = await PDFDocument.create({ updateMetadata: false });
   doc.setTitle(layout.title, { showInWindowTitleBar: true });
@@ -698,10 +714,10 @@ async function renderLayout(layout: PdfLayout): Promise<Uint8Array> {
 
 /** Blank, printable measure form (no answers, no scores). */
 export function createBlankMeasurePdf(measure: Measure): Promise<Uint8Array> {
-  return renderLayout(measurePdfLayout(measure));
+  return renderPdf(measurePdfLayout(measure));
 }
 
 /** Printable client handout, in English or (when the handout has a translation) Spanish. */
 export function createHandoutPdf(handout: Handout, lang: Lang = "en"): Promise<Uint8Array> {
-  return renderLayout(handoutPdfLayout(handout, lang));
+  return renderPdf(handoutPdfLayout(handout, lang));
 }

@@ -5,15 +5,15 @@
  *    back to the clinician (question text is templated with dictionary labels, never with typed words);
  *  - the per-session opt-in for the optional Claude assistant and its server-sealed answer history.
  *
- * Module memory only: never storage, URL, cookie or log. Everything is tied to the session: after Clear session or
- * the idle wipe (`resetCount` changes), and for a brand-new session (state still the untouched initialSession), it
- * reads as empty at once; the stale values are dropped (and the on-device model is switched off) the next time a
- * screen that uses this store renders.
+ * Module memory only: never storage, URL, cookie or log. Everything is tied to the session: Clear session and the
+ * idle wipe empty it and switch the on-device model off at once, on whatever page is open (onSessionReset). A
+ * brand-new session (state still the untouched initialSession, for example a second SessionProvider) also reads as
+ * empty, and its stale values are dropped the next time a screen that uses this store renders.
  */
 import * as React from "react";
 import type { AnsweredRecord } from "@/lib/follow-up";
 import { disableSemanticModel } from "@/lib/semantic/client";
-import { initialSession, useSession } from "@/state/session";
+import { initialSession, onSessionReset, useSession } from "@/state/session";
 
 /** A follow-up answer as the panel shows it back. Curated strings only. */
 export interface FollowUpAnswer extends AnsweredRecord {
@@ -69,6 +69,14 @@ function emptyFor(epoch: number): AiSessionState {
 }
 store = emptyFor(0);
 
+/** Drop the answers, opt-in and assistant history, and stop the on-device worker (it keeps recent clause vectors). */
+function clearFor(epoch: number): void {
+  store = emptyFor(epoch);
+  disableSemanticModel();
+  for (const l of listeners) l();
+}
+onSessionReset(clearFor);
+
 type AiSessionPatch = Partial<Omit<AiSessionState, "epoch">>;
 
 export function useAiSession(): [AiSessionState, (patch: AiSessionPatch | ((prev: AiSessionState) => AiSessionPatch)) => void] {
@@ -80,10 +88,7 @@ export function useAiSession(): [AiSessionState, (patch: AiSessionPatch | ((prev
   const current = stale(snap) ? emptyFor(resetCount) : snap;
 
   React.useEffect(() => {
-    if (!stale(store)) return;
-    store = emptyFor(resetCount);
-    disableSemanticModel(); // the worker keeps recent clause vectors; a new session starts with it off
-    for (const l of listeners) l();
+    if (stale(store)) clearFor(resetCount);
   });
 
   const update = React.useCallback(

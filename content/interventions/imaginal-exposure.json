@@ -1,0 +1,68 @@
+{
+  "id": "imaginal-exposure",
+  "name": "Imaginal exposure (scripts and worry exposure)",
+  "modality": "Exposure - imaginal",
+  "conditions": [
+    "generalized-anxiety-disorder",
+    "obsessive-compulsive-disorder",
+    "ptsd",
+    "specific-phobia",
+    "illness-anxiety-disorder"
+  ],
+  "evidenceLevel": "Worry exposure was as effective as applied relaxation for GAD in a randomized trial (Hoyer et al., 2009). Imaginal exposure is a core part of ERP for OCD (NICE CG31) and of trauma-focused exposure therapies.",
+  "minutes": {
+    "min": 30,
+    "max": 50
+  },
+  "purpose": "Has the client vividly imagine a feared outcome or memory, in a planned and repeated way, until the image becomes less frightening and the client learns they can tolerate it. Useful when the feared situation cannot be arranged in real life (a catastrophe in a worry, an obsessional fear, a feared illness).",
+  "steps": [
+    "Explain the rationale: avoiding the image keeps the fear going; facing it on purpose weakens it.",
+    "With the client, write a short first-person, present-tense script of the feared scenario, including thoughts, feelings and sensations.",
+    "Rate anxiety (0-10) before, during and after.",
+    "Have the client read or listen to the script, or imagine it with eyes closed, for a planned time without reassurance or neutralizing.",
+    "Debrief: what did the client expect, and what happened?",
+    "Assign daily practice with the script and log ratings; update the script as fear decreases."
+  ],
+  "script": [
+    "We are going to face this fear on purpose, in your imagination.",
+    "Write it as if it is happening now: I am...",
+    "Stay with the image. Don't push it away, and don't try to fix it.",
+    "What did you learn about your ability to handle this thought?"
+  ],
+  "contraindications": [
+    "Trauma memories need a trauma-focused protocol and training; do not improvise trauma imaginal exposure.",
+    "Avoid scripts that include acting on harm when the client has active suicidal or violent intent; assess risk first.",
+    "Do not start during an active crisis, current suicidal risk, acute intoxication or withdrawal; stabilize first and share crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com."
+  ],
+  "culturalAdaptations": [
+    "Feared images may carry religious or cultural meanings (for example, blasphemous thoughts); discuss them respectfully and adapt the script with the client.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "handoutIds": [
+    "exposure-ladder",
+    "worry-log"
+  ],
+  "sources": [
+    {
+      "title": "Worry exposure versus applied relaxation in the treatment of generalized anxiety disorder (Hoyer et al.)",
+      "publisher": "Psychotherapy and Psychosomatics (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19218829/",
+      "year": 2009
+    },
+    {
+      "title": "Obsessive-compulsive disorder and body dysmorphic disorder: treatment (CG31)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg31",
+      "year": 2005
+    },
+    {
+      "title": "Generalised anxiety disorder and panic disorder in adults: management (CG113)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg113",
+      "year": 2011
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

@@ -1,0 +1,63 @@
+{
+  "id": "good-faith-estimate",
+  "title": "Good faith estimates for uninsured and self-pay clients (No Surprises Act)",
+  "jurisdiction": "US-federal",
+  "summary": "Under the federal No Surprises Act, health care providers, including licensed mental health clinicians, must give uninsured clients and clients who choose not to use insurance a written good faith estimate of expected charges before scheduled services or on request. If the final bill is at least 400 dollars more than the estimate, the client can use a federal patient-provider dispute resolution process. Many states add their own price-transparency rules. This page is information, not legal advice.",
+  "keyPoints": [
+    "Tell uninsured and self-pay clients that they can get a good faith estimate, for example with a notice in the office, on the website and when they ask about cost.",
+    "Give the estimate in writing when a service is scheduled at least three business days ahead, or when a client asks for one. CMS guidance sets the deadlines, which depend on how far ahead the service is scheduled.",
+    "The estimate lists the expected items and services with their expected charges and diagnosis or service codes where used. For ongoing therapy, CMS guidance allows one estimate to cover a series of recurring sessions for a limited period.",
+    "If the bill exceeds the estimate by 400 dollars or more, the client can start patient-provider dispute resolution with CMS.",
+    "The estimate is a billing document: share only what is needed and keep it with the client's record under your usual privacy safeguards."
+  ],
+  "whatToDo": [
+    "Add good faith estimate language to your intake and fee policy, and train staff who schedule appointments.",
+    "Use CMS's model notice and estimate templates, and update the estimate when the plan changes.",
+    "Keep a copy of each estimate with the client's records for the retention period your state and payers require.",
+    "Check your state's price-transparency or surprise-billing laws as well as the federal rule.",
+    "Consult a healthcare attorney or your licensing board's guidance if you are unsure how the rules apply to your practice."
+  ],
+  "officialLinks": [
+    {
+      "title": "CMS: No Surprises Act overview",
+      "url": "https://www.cms.gov/nosurprises"
+    },
+    {
+      "title": "CMS: Payment resolution with patients (uninsured and self-pay)",
+      "url": "https://www.cms.gov/initiatives/no-surprise-billing/overview/policies-resources/providers-payment-resolution-patients"
+    },
+    {
+      "title": "CMS: Key responsibilities for providers (PDF)",
+      "url": "https://www.cms.gov/files/document/nsa-key-responsibilities-providers.pdf"
+    },
+    {
+      "title": "CMS: Good faith estimate decision tree (PDF)",
+      "url": "https://www.cms.gov/files/document/nsa-gfe-decision-tree.pdf"
+    }
+  ],
+  "whenRelevant": [
+    "informed-consent",
+    "records"
+  ],
+  "changesOften": true,
+  "statusAsOf": "2026-11-27",
+  "verification": {
+    "method": "search-index",
+    "note": "cms.gov was not reachable from the build sandbox. The duty to inform uninsured and self-pay individuals, the three-business-day scheduling trigger and the 400-dollar dispute threshold were confirmed through search results indexing CMS guidance. Exact delivery deadlines and the rules for recurring services were not re-read; a person must check the current CMS guidance and FAQs before release."
+  },
+  "sources": [
+    {
+      "title": "No Surprises Act: providers' key responsibilities",
+      "publisher": "Centers for Medicare & Medicaid Services",
+      "url": "https://www.cms.gov/files/document/nsa-key-responsibilities-providers.pdf"
+    },
+    {
+      "title": "Payment resolution with patients",
+      "publisher": "Centers for Medicare & Medicaid Services",
+      "url": "https://www.cms.gov/initiatives/no-surprise-billing/overview/policies-resources/providers-payment-resolution-patients"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

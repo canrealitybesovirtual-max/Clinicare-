@@ -119,7 +119,7 @@
         {
           "id": "phobia-bii-tension-skill",
           "text": "If the client tends to faint, by session 4 learn and practice a muscle-tensing skill that briefly raises blood pressure (applied tension), several times a day for 1 week, then use it during exposure steps. Relaxation-only skills are generally not used during blood or needle exposure for clients who faint.",
-          "interventionIds": ["graded-in-vivo-exposure"]
+          "interventionIds": ["applied-tension", "graded-in-vivo-exposure"]
         },
         {
           "id": "phobia-bii-ladder-practice",

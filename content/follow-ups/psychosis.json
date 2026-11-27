@@ -1,0 +1,162 @@
+{
+  "id": "psychosis",
+  "title": "Unusual experiences and beliefs",
+  "domain": "psychosis",
+  "about": "Questions that follow a documented psychosis red flag: when the experiences show up (with highs, with deep lows or on their own) and what else has changed in thinking, drive and daily functioning. Each calls for a prompt psychiatric evaluation; the safety questions come first.",
+  "questions": [
+    {
+      "id": "psychosis-when",
+      "kind": "discriminate",
+      "domain": "psychosis",
+      "text": "When do the unusual experiences or beliefs show up?",
+      "why": "Experiences that come only with a high stretch or a deep low point toward a mood pattern; experiences that also run on their own point toward a psychotic pattern. Substances and medical causes are covered by the rule-out questions. Any of these calls for a prompt psychiatric evaluation.",
+      "options": [
+        {
+          "id": "with-highs",
+          "label": "Only during a high or driven stretch",
+          "effects": {
+            "addSymptomIds": [
+              "grandiosity-elevated-mood"
+            ]
+          },
+          "surfaces": [
+            "psychiatric-referral"
+          ]
+        },
+        {
+          "id": "with-lows",
+          "label": "Only during deep low mood",
+          "effects": {
+            "addSymptomIds": [
+              "depressed-mood"
+            ]
+          },
+          "surfaces": [
+            "psychiatric-referral"
+          ]
+        },
+        {
+          "id": "on-their-own",
+          "label": "Also on their own, outside any mood change",
+          "effects": {},
+          "surfaces": [
+            "psychiatric-referral"
+          ],
+          "note": "Ask about thinking, speech, drive and daily functioning (the next question)."
+        },
+        {
+          "id": "unsure",
+          "label": "Not sure yet",
+          "keepOpen": true
+        }
+      ],
+      "showWhen": {
+        "redFlags": [
+          "psychosis"
+        ],
+        "conditionIds": [
+          "schizophrenia"
+        ]
+      },
+      "discriminates": [
+        "schizophrenia",
+        "bipolar-i-disorder",
+        "major-depressive-disorder"
+      ],
+      "priority": 10
+    },
+    {
+      "id": "psychosis-other-changes",
+      "kind": "core",
+      "domain": "psychosis",
+      "select": "many",
+      "text": "What else has changed in thinking, drive or daily life?",
+      "why": "Hard-to-follow thinking, little drive or expression, and a clear drop in work, study or self-care are part of a psychotic pattern beyond the voices or beliefs themselves, and they shape the support the client needs.",
+      "options": [
+        {
+          "id": "disorganized",
+          "label": "Speech or thinking that is hard to follow",
+          "effects": {
+            "addSymptomIds": [
+              "disorganized-thinking"
+            ]
+          }
+        },
+        {
+          "id": "drive",
+          "label": "Little drive or speech, flat expression, pulling back from usual roles",
+          "effects": {
+            "addSymptomIds": [
+              "negative-symptoms"
+            ]
+          }
+        },
+        {
+          "id": "decline",
+          "label": "A clear drop in work, study or self-care",
+          "effects": {
+            "addSymptomIds": [
+              "functional-decline"
+            ]
+          }
+        },
+        {
+          "id": "none",
+          "label": "None of these",
+          "effects": {
+            "negateSymptomIds": [
+              "disorganized-thinking",
+              "negative-symptoms",
+              "functional-decline"
+            ]
+          },
+          "exclusive": true
+        },
+        {
+          "id": "not-yet",
+          "label": "Not asked yet",
+          "keepOpen": true,
+          "exclusive": true
+        }
+      ],
+      "showWhen": {
+        "symptomIds": [
+          "hallucinations",
+          "paranoia-delusions"
+        ],
+        "conditionIds": [
+          "schizophrenia"
+        ]
+      },
+      "targets": [
+        "disorganized-thinking",
+        "negative-symptoms",
+        "functional-decline"
+      ],
+      "discriminates": [
+        "schizophrenia"
+      ],
+      "priority": 15
+    }
+  ],
+  "sources": [
+    {
+      "title": "Schizophrenia (health topic)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/topics/schizophrenia"
+    },
+    {
+      "title": "Schizophrenia (statistics)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/statistics/schizophrenia"
+    },
+    {
+      "title": "Schizophrenia (fact sheet)",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/schizophrenia"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

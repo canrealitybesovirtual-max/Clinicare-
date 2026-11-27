@@ -1,0 +1,87 @@
+{
+  "conditionId": "illness-anxiety-disorder",
+  "problems": [
+    {
+      "id": "ia-health-fear",
+      "label": "Fear of serious illness and the checking that keeps it going",
+      "definitions": [
+        "Spends a lot of time each day worried about having a serious illness, even after normal results.",
+        "Checks the body, searches symptoms online or asks for reassurance several times a day, or avoids doctors out of fear.",
+        "Health worry interferes with work, sleep or relationships."
+      ],
+      "longTermGoals": [
+        "Health worry takes up much less time, checking and reassurance are rare, and the client uses medical care in a steady, planned way."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "ia-cycle",
+          "text": "By session 3, map 3 recent episodes of the worry cycle (sensation, thought, checking, short relief) in own words.",
+          "interventionIds": [
+            "cbt-health-anxiety",
+            "thought-record"
+          ]
+        },
+        {
+          "id": "ia-checking-baseline",
+          "text": "For 2 weeks, log each urge to check, search or seek reassurance, and whether it was acted on.",
+          "interventionIds": [
+            "cbt-health-anxiety",
+            "safety-behavior-reduction"
+          ]
+        },
+        {
+          "id": "ia-delay",
+          "text": "By week 6, delay checking for at least 30 minutes on 80% of urges, and halve total checking compared with the baseline.",
+          "interventionIds": [
+            "safety-behavior-reduction"
+          ]
+        },
+        {
+          "id": "ia-exposure",
+          "text": "Complete at least 3 planned exposure practices a week (reading health stories, writing a feared-illness script) without checking.",
+          "interventionIds": [
+            "imaginal-exposure"
+          ]
+        },
+        {
+          "id": "ia-mindful",
+          "text": "Practice noticing sensations without checking for 5 minutes a day, at least 4 days a week.",
+          "interventionIds": [
+            "mindfulness-meditation",
+            "act-acceptance-willingness"
+          ]
+        },
+        {
+          "id": "ia-tracking",
+          "text": "Complete the GAD-7 and PHQ-9 at intake and every 2 to 4 weeks.",
+          "interventionIds": [
+            "cbt-health-anxiety"
+          ]
+        }
+      ],
+      "measureIds": [
+        "phq-9",
+        "gad-7"
+      ]
+    }
+  ],
+  "collaborativeNote": "Write goals and objectives with the client in their own words. Timelines and targets are examples to adapt; the client decides what matters, and the clinician checks safety and fit.",
+  "sud": false,
+  "sources": [
+    {
+      "title": "Clinical and cost-effectiveness of cognitive behaviour therapy for health anxiety in medical patients (Tyrer et al.)",
+      "publisher": "The Lancet (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24139977/",
+      "year": 2014
+    },
+    {
+      "title": "Cognitive behavior therapy for health anxiety: systematic review and meta-analysis of clinical efficacy and health economic outcomes (Axelsson and Hedman-Lagerlöf)",
+      "publisher": "Expert Review of Pharmacoeconomics & Outcomes Research (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31859542/",
+      "year": 2019
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

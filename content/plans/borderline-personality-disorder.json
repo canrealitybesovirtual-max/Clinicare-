@@ -1,0 +1,143 @@
+{
+  "conditionId": "borderline-personality-disorder",
+  "problems": [
+    {
+      "id": "bpd-emotion-and-crisis",
+      "label": "Intense emotions, crises and self-harm urges",
+      "definitions": [
+        "Describes emotions that rise fast and take hours or days to settle, often after conflict or feeling rejected.",
+        "Has harmed self or had urges to do so in the past months, often to stop unbearable feelings.",
+        "Makes sudden decisions during strong emotion that the client later regrets."
+      ],
+      "longTermGoals": [
+        "The client can ride out intense emotions and urges with skills, with fewer crises, less self-harm and more stable relationships."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "bpd-safety-plan",
+          "text": "By session 2, complete a written safety plan with warning signs, coping steps, people and services to contact, and steps to make the home safer, and review it at least monthly.",
+          "interventionIds": [
+            "collaborative-safety-planning",
+            "lethal-means-counseling"
+          ]
+        },
+        {
+          "id": "bpd-chain",
+          "text": "Each week, review one hard moment step by step (trigger, feelings, urges, actions, results) and identify one point where a skill could be used.",
+          "interventionIds": [
+            "dbt-emotion-regulation-opposite-action"
+          ]
+        },
+        {
+          "id": "bpd-distress-skills",
+          "text": "By session 4, list 3 distress tolerance skills and use one during at least 3 urges a week, rating urge strength before and after.",
+          "interventionIds": [
+            "dbt-distress-tolerance"
+          ]
+        },
+        {
+          "id": "bpd-mindfulness",
+          "text": "Practice a 5-minute mindfulness skill at least 5 days a week for 4 weeks.",
+          "interventionIds": [
+            "dbt-mindfulness-skills"
+          ]
+        },
+        {
+          "id": "bpd-interpersonal",
+          "text": "Use a structured way of asking for what one needs in at least 2 conversations a week and note the outcome.",
+          "interventionIds": [
+            "dbt-interpersonal-effectiveness"
+          ]
+        },
+        {
+          "id": "bpd-specialist",
+          "text": "Within 4 weeks, attend an assessment for a structured therapy program (DBT, MBT or schema therapy), if available.",
+          "interventionIds": [
+            "mentalization-based-treatment",
+            "schema-therapy"
+          ]
+        },
+        {
+          "id": "bpd-tracking",
+          "text": "Complete the PHQ-9 and GAD-7 at intake and every 2 to 4 weeks; review medication questions for co-occurring conditions with a prescriber.",
+          "interventionIds": [
+            "medication-referral"
+          ]
+        }
+      ],
+      "measureIds": [
+        "phq-9",
+        "gad-7"
+      ]
+    },
+    {
+      "id": "bpd-self-and-relationships",
+      "label": "Unstable sense of self and stormy relationships",
+      "definitions": [
+        "Describes relationships that swing between closeness and anger, with frequent breakups and reunions.",
+        "Reports feeling empty or unsure of who they are, with goals and values that shift often."
+      ],
+      "longTermGoals": [
+        "Relationships feel steadier and the client has a clearer sense of their values and identity."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "bpd-values",
+          "text": "By session 8, write down 3 personal values and one action a week that fits each.",
+          "interventionIds": [
+            "schema-therapy"
+          ]
+        },
+        {
+          "id": "bpd-self-kindness",
+          "text": "Replace self-attack with a kind self-statement at least once a day for 4 weeks, logged.",
+          "interventionIds": [
+            "self-compassion-practice"
+          ]
+        },
+        {
+          "id": "bpd-curiosity",
+          "text": "In session, practice describing what another person may have felt or meant in 2 recent conflicts, with at least 2 possible views each.",
+          "interventionIds": [
+            "mentalization-based-treatment"
+          ]
+        }
+      ],
+      "measureIds": [
+        "phq-9",
+        "gad-7"
+      ]
+    }
+  ],
+  "collaborativeNote": "Write goals and objectives with the client in their own words. Timelines and targets are examples to adapt; the client decides what matters, and the clinician checks safety and fit.",
+  "sud": false,
+  "sources": [
+    {
+      "title": "Borderline personality disorder: recognition and management (CG78)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg78",
+      "year": 2009
+    },
+    {
+      "title": "Two-year randomized controlled trial and follow-up of dialectical behavior therapy vs therapy by experts (Linehan et al.)",
+      "publisher": "Archives of General Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16818865/",
+      "year": 2006
+    },
+    {
+      "title": "Randomized controlled trial of outpatient mentalization-based treatment versus structured clinical management (Bateman and Fonagy)",
+      "publisher": "American Journal of Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19833787/",
+      "year": 2009
+    },
+    {
+      "title": "Outpatient psychotherapy for borderline personality disorder: schema-focused therapy vs transference-focused psychotherapy (Giesen-Bloo et al.)",
+      "publisher": "Archives of General Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16754838/",
+      "year": 2006
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

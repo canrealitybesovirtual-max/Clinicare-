@@ -1,5 +1,5 @@
 {
-  "version": "1.3.0",
+  "version": "1.4.0",
   "symptoms": [
     {
       "id": "panic-attacks-unexpected",
@@ -118,7 +118,8 @@
         "panic before",
         "panic whenever",
         "panic every time",
-        "panic triggered by"
+        "panic triggered by",
+        "panic from|panics from|panic around|panic near|panic over|panics over|panic about|panics about|panics because of|panic attacks around|panic attacks near|panic attacks from|panics when she sees ... spiders|spider|dogs|dog|snakes|snake|bees|wasps|insects|bugs|mice|rats|birds|cats|heights|high places|ladders|balconies|storms|thunderstorms|thunder|lightning|deep water|swimming|the ocean|needles|needle|shots|injections|blood|blood draws|the dentist|dentists|vomiting|throwing up|choking|clowns|the dark|flying|planes|airplanes|elevators|tunnels|bridges|escalators"
       ]
     },
     {
@@ -1588,7 +1589,14 @@
         "tv is talking to me",
         "tv talks to me",
         "radio is talking to me",
-        "tv is sending me messages"
+        "tv is sending me messages",
+        "spying on me",
+        "spies on me",
+        "tapping my phone",
+        "tapped my phone",
+        "bugged my phone",
+        "bugging my house",
+        "neighbors|neighbor|people|someone|government|police|fbi|cia ... spying|spies|spy"
       ]
     },
     {
@@ -1609,7 +1617,8 @@
         "decreased need for sleep",
         "reduced need for sleep",
         "little need for sleep",
-        "havent slept|not sleeping|barely sleeping|barely slept|no sleep|up all night|awake all night|only sleeping|only sleeps|only slept|sleeping only|sleeps only|slept only ... but full of energy|full of energy|but not tired|not tired|tons of energy|so much energy|lots of energy|feels great|feel great|feels amazing|wired|still energetic|but energized|energized|feels rested|feel rested"
+        "havent slept|not sleeping|barely sleeping|barely slept|no sleep|up all night|awake all night|only sleeping|only sleeps|only slept|sleeping only|sleeps only|slept only ... but full of energy|full of energy|but not tired|not tired|tons of energy|so much energy|lots of energy|feels great|feel great|feels amazing|wired|still energetic|but energized|energized|feels rested|feel rested",
+        "needed only|only needed|needs only|only needs|barely slept|hardly slept ... hours of sleep and felt rested|hours of sleep and felt great|and felt great|and felt amazing|but felt great|but felt amazing|but felt rested|and felt rested|felt energized|and feels rested|feels rested|feel rested|feels great|feel great|feels amazing"
       ]
     },
     {
@@ -1856,7 +1865,8 @@
         "flash backs",
         "relives it",
         "feels like it is happening again",
-        "like it was happening all over again"
+        "like it was happening all over again",
+        "reliving|relives|relived|keeps reliving ... the crash|the accident|the attack|the assault|the fire|the shooting|what happened|that night|the war"
       ]
     },
     {
@@ -2015,7 +2025,7 @@
     },
     {
       "id": "trauma-memory-gaps",
-      "label": "Patchy memory for parts of the event; check for causes such as a concussion or intoxication at the time before assuming dissociation",
+      "label": "Patchy memory for parts of the event; check for medical causes such as a head injury at the time before assuming dissociation",
       "clientLabel": "Blank spots in your memory of what happened",
       "category": "trauma",
       "synonyms": [
@@ -2606,7 +2616,7 @@
     },
     {
       "id": "sleep-compensatory-behaviors",
-      "label": "Ways of coping with poor sleep that tend to keep it going: long naps, sleeping in, long hours in bed, alcohol as a nightcap, or nightly sleep aids",
+      "label": "Ways of coping with poor sleep that tend to keep it going: long naps, sleeping in, long hours in bed, or relying on something every night to get to sleep",
       "clientLabel": "Naps, sleeping in, or pills or drinks to try to sleep",
       "category": "behavioral",
       "synonyms": [
@@ -2632,7 +2642,7 @@
     },
     {
       "id": "longstanding-low-mood",
-      "label": "Low mood that has been the client's baseline for years (two or more in adults), with only short better stretches, so it can feel like 'just who I am'",
+      "label": "Low mood that has been the client's baseline for years, with only short better stretches, so it can feel like 'just who I am'",
       "clientLabel": "Feeling down most days for years",
       "category": "mood",
       "synonyms": [
@@ -2642,7 +2652,7 @@
         "never really happy",
         "never felt happy",
         "cant remember the last time i felt happy",
-        "depressed|down|sad|low mood|feeling low|felt low|unhappy|blue|depression|in a funk|gloomy ... for years|for as long as i can remember|most of my life|since high school|since my teens|since childhood|since i was a kid|since i was a teenager|for over two years|for over 2 years|for more than two years|for 2 years|for two years|for 3 years|for three years|for decades|my whole life|all my life",
+        "depressed|feeling down|felt down|been down|down most days|sad|low mood|feeling low|felt low|unhappy|blue|depression|in a funk|gloomy ... for years|for as long as i can remember|most of my life|since high school|since my teens|since childhood|since i was a kid|since i was a teenager|for over two years|for over 2 years|for more than two years|for 2 years|for two years|for 3 years|for three years|for decades|my whole life|all my life",
         "chronic|chronically|longstanding|long standing|lifelong|low grade|low level ... depression|depressed|low mood|sadness"
       ]
     },
@@ -3002,7 +3012,7 @@
         "freaks out at the sight of a spider",
         "screams when she sees a spider",
         "panics around dogs",
-        "afraid of|scared of|terrified of|fear of|fears|frightened of|phobia of|petrified of|panics around|panics at|panics on|panics near|freaks out around|freaks out at|freaks out on|freezes at|freezes on|screams at ... spiders|spider|dogs|dog|snakes|snake|bees|wasps|insects|bugs|mice|rats|birds|cats|heights|high places|ladders|balconies|storms|thunderstorms|thunder|lightning|deep water|swimming|the ocean|needles|needle|shots|injections|blood|blood draws|the dentist|dentists|vomiting|throwing up|choking|clowns|the dark|flying|planes|airplanes|elevators|tunnels|bridges|driving|escalators"
+        "panic from|panics from|panic around|panic near|panic over|panics over|panic about|panics about|panics because of|panic attacks around|panic attacks near|panic attacks from|panics when she sees|freaks out when she sees|afraid of|scared of|terrified of|fear of|fears|frightened of|phobia of|petrified of|panics around|panics at|panics on|panics near|freaks out around|freaks out at|freaks out on|freezes at|freezes on|screams at ... spiders|spider|dogs|dog|snakes|snake|bees|wasps|insects|bugs|mice|rats|birds|cats|heights|high places|ladders|balconies|storms|thunderstorms|thunder|lightning|deep water|swimming|the ocean|needles|needle|shots|injections|blood|blood draws|the dentist|dentists|vomiting|throwing up|choking|clowns|the dark|flying|planes|airplanes|elevators|tunnels|bridges|driving|escalators"
       ]
     },
     {
@@ -3068,6 +3078,843 @@
         "taijin kyofusho",
         "taijin kyofu",
         "taijin kyofu sho"
+      ]
+    },
+    {
+      "id": "fear-animals",
+      "label": "Phobic fear centered on animals or insects (for example dogs, spiders, snakes, bees, mice or birds)",
+      "clientLabel": "Strong fear of animals or bugs",
+      "category": "anxiety",
+      "synonyms": [
+        "scared of spiders",
+        "scared of dogs",
+        "scared of snakes",
+        "afraid of bees",
+        "afraid of mice",
+        "afraid of birds",
+        "cynophobia",
+        "ophidiophobia",
+        "entomophobia",
+        "fear of animals",
+        "panic from|panics from|panic around|panic near|panic over|panics over|panic about|panics about|panics because of|panic attacks around|panic attacks near|panic attacks from|panics when she sees|freaks out when she sees|afraid of|scared of|terrified of|fear of|fears|frightened of|petrified of|phobia of|panics around|panics at|panics near|freaks out around|freaks out at|freezes at|screams at ... spiders|spider|dogs|dog|snakes|snake|bees|bee|wasps|insects|bugs|mice|mouse|rats|rat|birds|cats|horses|animals|cockroaches|roaches"
+      ]
+    },
+    {
+      "id": "fear-heights",
+      "label": "Phobic fear of heights or of high places and structures (balconies, ladders, bridges, high floors)",
+      "clientLabel": "Strong fear of heights or bridges",
+      "category": "anxiety",
+      "synonyms": [
+        "scared of bridges",
+        "fear of bridges",
+        "gephyrophobia",
+        "afraid of balconies",
+        "afraid of ladders",
+        "cant look down from high places",
+        "freezes on ladders",
+        "afraid of|scared of|terrified of|fear of|fears|frightened of|petrified of|phobia of|panics around|panics at|panics near|freaks out around|freaks out at|freezes on|freezes at ... heights|high places|ladders|balconies|bridges|high floors|cliffs|rooftops|overpasses|glass elevators|tall buildings"
+      ]
+    },
+    {
+      "id": "fear-flying",
+      "label": "Phobic fear of flying: dread of crashes, turbulence or being unable to get off the plane",
+      "clientLabel": "Strong fear of flying",
+      "category": "anxiety",
+      "synonyms": [
+        "scared of flying",
+        "terrified of flying",
+        "aviophobia",
+        "flight anxiety",
+        "cant get on a plane",
+        "afraid of|scared of|terrified of|fear of|fears|frightened of|petrified of|phobia of|panics around|panics at|panics near|freaks out around|freaks out at ... flying|planes|airplanes|airplane|plane|turbulence|airports"
+      ]
+    },
+    {
+      "id": "fear-blood-injection",
+      "label": "Phobic fear of blood, needles, injections, injury or medical and dental procedures (blood-injection-injury type)",
+      "clientLabel": "Strong fear of blood, needles or shots",
+      "category": "anxiety",
+      "synonyms": [
+        "scared of needles",
+        "scared of blood",
+        "afraid of shots",
+        "fear of injections",
+        "trypanophobia",
+        "hemophobia",
+        "afraid of getting blood drawn",
+        "scared of the dentist",
+        "afraid of|scared of|terrified of|fear of|fears|frightened of|petrified of|phobia of|panics around|panics at|panics near|freaks out around|freaks out at ... needles|needle|shots|injections|blood|blood draws|blood tests|getting blood drawn|vaccines|vaccinations|ivs|injuries|wounds|surgery|the dentist|dental work"
+      ]
+    },
+    {
+      "id": "fear-enclosed-spaces",
+      "label": "Phobic fear of being shut in tight or closed spaces (elevators, tunnels, MRI scanners, small rooms), centered on being trapped or smothered",
+      "clientLabel": "Strong fear of small, closed-in places",
+      "category": "anxiety",
+      "synonyms": [
+        "afraid of tight spaces",
+        "scared of small spaces",
+        "cant do an mri",
+        "panics in the mri",
+        "scared of getting stuck in an elevator",
+        "afraid of|scared of|terrified of|fear of|fears|frightened of|petrified of|phobia of|panics around|panics at|panics near|freaks out around|freaks out at|panic in|panics in ... tight spaces|small spaces|confined spaces|mri|mri machines|mri scans|closets|caves|crawl spaces|getting stuck in elevators|being stuck in an elevator"
+      ]
+    },
+    {
+      "id": "fear-natural-environment",
+      "label": "Phobic fear of parts of the natural environment, such as storms, thunder and lightning, deep water or the dark",
+      "clientLabel": "Strong fear of storms, deep water or the dark",
+      "category": "anxiety",
+      "synonyms": [
+        "afraid of thunder",
+        "scared of storms",
+        "afraid of lightning",
+        "afraid of the water",
+        "scared of deep water",
+        "afraid of the dark",
+        "fear of the dark",
+        "astraphobia",
+        "afraid of|scared of|terrified of|fear of|fears|frightened of|petrified of|phobia of|panics around|panics at|panics near|freaks out around|freaks out at ... storms|thunderstorms|thunder|lightning|tornadoes|hurricanes|deep water|the ocean|lakes|the dark|darkness"
+      ]
+    },
+    {
+      "id": "limited-symptom-attacks",
+      "label": "Limited-symptom attacks: brief surges of fear with only one or two body symptoms, short of a full panic attack",
+      "clientLabel": "Short bursts of fear with only one or two body signs",
+      "category": "panic",
+      "synonyms": [
+        "limited symptom attacks",
+        "limited symptom panic",
+        "mini|small|little|minor|partial ... panic attack|panic attacks|anxiety attacks"
+      ]
+    },
+    {
+      "id": "mood-swings",
+      "label": "Marked mood swings the client describes as highs and lows (ask how long each state lasts and what it looks like to others)",
+      "clientLabel": "Big ups and downs in mood",
+      "category": "mood",
+      "synonyms": [
+        "mood swings",
+        "moodswings",
+        "emotional rollercoaster",
+        "extreme mood changes",
+        "rapid mood changes",
+        "mood shifts",
+        "highs and lows",
+        "emotional ups and downs",
+        "my moods go up and down",
+        "moods change fast"
+      ]
+    },
+    {
+      "id": "racing-thoughts",
+      "label": "Racing or crowded thoughts: ideas come faster than the client can follow or say them, often jumping from topic to topic",
+      "clientLabel": "Thoughts that race faster than you can keep up",
+      "category": "cognitive",
+      "synonyms": [
+        "racing thoughts",
+        "thoughts racing",
+        "flight of ideas",
+        "thoughts going a mile a minute",
+        "jumping from idea to idea",
+        "too many ideas at once",
+        "thoughts are racing",
+        "thoughts race"
+      ]
+    },
+    {
+      "id": "increased-goal-activity",
+      "label": "A burst of drive and busyness that is unusual for the client: many projects at once, nonstop activity or unusual productivity",
+      "clientLabel": "Bursts of nonstop energy and many new projects",
+      "category": "behavioral",
+      "synonyms": [
+        "starting lots of projects",
+        "so many projects at once",
+        "started five new projects",
+        "working on ten things at once",
+        "cleaning the house all night",
+        "more productive than ever",
+        "boundless energy",
+        "nonstop energy",
+        "signed up for everything"
+      ]
+    },
+    {
+      "id": "mania-severe-impact",
+      "label": "A high that ended in hospital care, police involvement, a break with reality or a serious crisis at work or at home (points toward a full manic episode)",
+      "clientLabel": "A high period that led to the hospital or other serious trouble",
+      "category": "behavioral",
+      "synonyms": [
+        "hospitalized|admitted|psych hold|involuntary hold|arrested|lost my job|fired ... manic|mania|manic episode|during a high",
+        "manic|mania|manic episode ... hospitalized|hospital|psych ward|arrested|jail|police",
+        "hospitalized|admitted|arrested|psych hold ... during that high|during the high|while manic|while she was manic|while he was manic"
+      ]
+    },
+    {
+      "id": "longstanding-mood-cycling",
+      "label": "Mood that has cycled between milder highs and lows for years, with few settled stretches in between",
+      "clientLabel": "Moods that have gone up and down for years",
+      "category": "mood",
+      "synonyms": [
+        "moods have gone up and down for years",
+        "up and down for years",
+        "cycles of highs and lows for years",
+        "always been moody",
+        "never stable for long",
+        "moody for as long as i can remember"
+      ]
+    },
+    {
+      "id": "inattention-disorganization",
+      "label": "Attention slips and disorganization that show up at work, at home and in relationships: lost items, missed details, unfinished tasks and missed deadlines",
+      "clientLabel": "Trouble staying organized and finishing tasks",
+      "category": "cognitive",
+      "synonyms": [
+        "always losing things",
+        "constantly losing things",
+        "loses my keys",
+        "disorganized",
+        "cant stay organized",
+        "cant finish anything",
+        "starts things and never finishes",
+        "miss deadlines",
+        "misses deadlines",
+        "careless mistakes",
+        "zone out in meetings",
+        "cant follow through",
+        "adhd",
+        "attention deficit",
+        "inattentive"
+      ]
+    },
+    {
+      "id": "hyperactivity-impulsivity",
+      "label": "Acting before thinking and a restless, busy style: cutting into conversations, speaking before others finish, hasty decisions, trouble waiting",
+      "clientLabel": "Acting fast without thinking, or always on the go",
+      "category": "behavioral",
+      "synonyms": [
+        "interrupts people",
+        "blurts things out",
+        "cant wait my turn",
+        "acts without thinking",
+        "impulsive",
+        "impulsivity",
+        "talks over people",
+        "hyperactive"
+      ]
+    },
+    {
+      "id": "childhood-onset-attention",
+      "label": "Context: attention or activity problems that began in childhood (school reports, a childhood evaluation, a lifelong pattern)",
+      "clientLabel": "Focus or activity problems since childhood",
+      "category": "context",
+      "synonyms": [
+        "since childhood|since i was a kid|as a child|as a kid|in grade school|since grade school ... distracted|cant focus|cant pay attention|hyper|fidgety|daydreaming|disorganized|in trouble for talking",
+        "distracted|cant focus|cant pay attention|hyper|fidgety|daydreaming|disorganized ... since childhood|since i was a kid|as a child|as a kid|in grade school|since grade school",
+        "teachers said i couldnt sit still",
+        "report cards said i didnt pay attention",
+        "adhd|attention deficit ... as a child|as a kid|in childhood|in grade school"
+      ]
+    },
+    {
+      "id": "time-management-procrastination",
+      "label": "Chronic lateness, a poor sense of time and last-minute rushes; tasks are put off until a deadline forces action",
+      "clientLabel": "Always running late or putting things off",
+      "category": "behavioral",
+      "synonyms": [
+        "always late",
+        "chronically late",
+        "time blindness",
+        "procrastinate",
+        "procrastinating",
+        "procrastination",
+        "put things off until the last minute",
+        "lose track of time",
+        "underestimate how long things take"
+      ]
+    },
+    {
+      "id": "fear-of-abandonment",
+      "label": "Intense fear of being left or rejected, with urgent attempts to keep people close (repeated texting, pleading, sudden threats)",
+      "clientLabel": "Strong fear that people will leave you",
+      "category": "mood",
+      "synonyms": [
+        "fear of abandonment",
+        "abandonment issues",
+        "terrified of being abandoned",
+        "afraid people will leave me",
+        "everyone leaves me",
+        "terrified my partner will leave",
+        "panic when my partner doesnt text back",
+        "scared of being left"
+      ]
+    },
+    {
+      "id": "unstable-relationships",
+      "label": "Close relationships run hot and cold: a person can seem perfect one week and worthless the next, with frequent ruptures and reunions",
+      "clientLabel": "Close relationships that swing from love to anger",
+      "category": "behavioral",
+      "synonyms": [
+        "unstable relationships",
+        "love hate relationships",
+        "on and off relationships",
+        "rocky relationships",
+        "intense relationships",
+        "goes from loving to hating people",
+        "puts people on a pedestal then hates them",
+        "splitting"
+      ]
+    },
+    {
+      "id": "identity-disturbance",
+      "label": "The client's sense of who they are keeps shifting: goals, values, friends or style change sharply, sometimes to match whoever they are with",
+      "clientLabel": "Not sure who you are, or changing a lot to fit in",
+      "category": "cognitive",
+      "synonyms": [
+        "no sense of self",
+        "unstable self image",
+        "identity keeps changing",
+        "like a chameleon",
+        "i change who i am around people",
+        "dont have a stable identity",
+        "identity disturbance"
+      ]
+    },
+    {
+      "id": "chronic-emptiness",
+      "label": "A lasting hollow or void feeling inside, different from sadness",
+      "clientLabel": "Feeling empty inside much of the time",
+      "category": "mood",
+      "synonyms": [
+        "empty inside",
+        "chronic emptiness",
+        "chronically empty",
+        "hollow inside",
+        "a void inside",
+        "emptiness inside"
+      ]
+    },
+    {
+      "id": "intense-anger",
+      "label": "Anger that flares far beyond the trigger and is hard to rein in, such as rages, broken objects or physical fights, often followed by shame",
+      "clientLabel": "Very strong anger that is hard to control",
+      "category": "mood",
+      "synonyms": [
+        "rage",
+        "rages",
+        "fits of rage",
+        "explosive anger",
+        "anger outbursts",
+        "cant control my anger",
+        "uncontrollable anger",
+        "anger problems",
+        "temper tantrums"
+      ]
+    },
+    {
+      "id": "fear-weight-gain",
+      "label": "Dread of weight gain or of looking bigger, which drives steps to keep weight down even when weight is already low",
+      "clientLabel": "Strong fear of gaining weight",
+      "category": "cognitive",
+      "synonyms": [
+        "terrified of gaining weight",
+        "afraid of getting fat",
+        "fear of weight gain",
+        "scared of gaining weight",
+        "afraid of gaining weight",
+        "cant gain a pound",
+        "fear of getting fat"
+      ]
+    },
+    {
+      "id": "low-body-weight",
+      "label": "Weight well below a healthy range for this person, or a steep drop (check with the medical record or the client's physician)",
+      "clientLabel": "Body weight that is very low",
+      "category": "somatic",
+      "synonyms": [
+        "underweight",
+        "very underweight",
+        "dangerously thin",
+        "skin and bones",
+        "emaciated",
+        "bmi of 15",
+        "bmi of 16",
+        "bmi of 17",
+        "low bmi",
+        "bmi under 18"
+      ]
+    },
+    {
+      "id": "shape-weight-overvaluation",
+      "label": "How the client judges themselves depends heavily on weight or shape, often with frequent weighing, body checking or comparing",
+      "clientLabel": "Feeling your worth depends on your weight or shape",
+      "category": "cognitive",
+      "synonyms": [
+        "my worth depends on my weight",
+        "obsessed with my weight",
+        "weighs herself several times a day",
+        "weigh myself every day",
+        "body checking",
+        "pinching my stomach",
+        "feel fat",
+        "feels fat",
+        "hate my body",
+        "obsessed with being thin"
+      ]
+    },
+    {
+      "id": "binge-eating-episodes",
+      "label": "Binge episodes: eating far past the client's usual amount in one sitting, with a feeling of being unable to stop or to choose what or how much",
+      "clientLabel": "Eating a lot in a short time and feeling unable to stop",
+      "category": "behavioral",
+      "synonyms": [
+        "binge eating",
+        "binge eat",
+        "binges on food",
+        "eating binges",
+        "food binges",
+        "cant stop eating once i start",
+        "out of control eating",
+        "lose control when eating",
+        "eat until im sick",
+        "eats a whole box of",
+        "binge|binges|bingeing|binging ... purge|purges|purging|throw up|throwing up|vomit"
+      ]
+    },
+    {
+      "id": "compensatory-exercise-fasting",
+      "label": "Compensating for eating through fasting, very hard exercise or skipped meals (record purging under the medical warning sign)",
+      "clientLabel": "Fasting or exercising hard to make up for eating",
+      "category": "behavioral",
+      "synonyms": [
+        "exercise to burn off food",
+        "work out for hours after eating",
+        "fasting after a binge",
+        "skip meals after a binge",
+        "compulsive exercise",
+        "exercises excessively",
+        "burn off every calorie",
+        "exercise to make up for eating"
+      ]
+    },
+    {
+      "id": "binge-shame-secrecy",
+      "label": "Hiding eating from others and feeling strong shame afterward; eating may go on past fullness or start without hunger",
+      "clientLabel": "Eating in secret and feeling ashamed after",
+      "category": "behavioral",
+      "synonyms": [
+        "eat in secret",
+        "eats in secret",
+        "hide food",
+        "hides food",
+        "sneak food",
+        "eat until uncomfortably full",
+        "eat when im not hungry",
+        "disgusted with myself after eating",
+        "ashamed after eating",
+        "hide the wrappers"
+      ]
+    },
+    {
+      "id": "disorganized-thinking",
+      "label": "Disorganized speech or thinking: hard to follow, loose links between ideas, or answers that drift far off the question",
+      "clientLabel": "Thoughts or speech that are hard for others to follow",
+      "category": "cognitive",
+      "synonyms": [
+        "word salad",
+        "disorganized speech",
+        "disorganized thinking",
+        "loose associations",
+        "thought blocking",
+        "derailment",
+        "incoherent speech",
+        "hard to follow what he says",
+        "hard to follow what she says",
+        "talks in circles",
+        "tangential speech"
+      ]
+    },
+    {
+      "id": "negative-symptoms",
+      "label": "Negative symptoms: little drive or speech, flat expression and pulling back from usual roles, beyond what low mood explains",
+      "clientLabel": "Very little drive, speech or feeling showing",
+      "category": "behavioral",
+      "synonyms": [
+        "flat affect",
+        "blunted affect",
+        "poverty of speech",
+        "avolition",
+        "alogia",
+        "negative symptoms",
+        "no facial expression",
+        "barely speaks anymore",
+        "stares blankly"
+      ]
+    },
+    {
+      "id": "functional-decline",
+      "label": "A marked drop in everyday functioning: stopped working or studying, self-care slipping, withdrawn from usual roles",
+      "clientLabel": "Daily life and self-care falling apart",
+      "category": "behavioral",
+      "synonyms": [
+        "neglecting hygiene",
+        "poor self care",
+        "stopped taking care of himself",
+        "stopped taking care of herself",
+        "dropped out of school",
+        "stopped going to work",
+        "decline in functioning",
+        "functional decline",
+        "cant take care of myself"
+      ]
+    },
+    {
+      "id": "health-anxiety-preoccupation",
+      "label": "Persistent fear that one has, or will soon develop, a serious disease, which normal results and reassurance do not settle for long",
+      "clientLabel": "Worry that you have a serious illness, even after normal tests",
+      "category": "anxiety",
+      "synonyms": [
+        "health anxiety",
+        "hypochondria",
+        "hypochondriac",
+        "hypochondriasis",
+        "worried i have cancer",
+        "afraid i have cancer",
+        "convinced i have a serious illness",
+        "afraid i have a brain tumor",
+        "sure something is seriously wrong with me",
+        "worried about my health all the time",
+        "tests are normal but still worried"
+      ]
+    },
+    {
+      "id": "body-checking-reassurance",
+      "label": "Health-related safety habits: scanning or prodding the body, searching symptoms online, seeking repeated tests or visits, or staying away from doctors out of dread",
+      "clientLabel": "Checking your body or looking up symptoms over and over",
+      "category": "behavioral",
+      "synonyms": [
+        "googling symptoms",
+        "googles symptoms",
+        "dr google",
+        "checks my body for lumps",
+        "checks her body for lumps",
+        "doctor shopping",
+        "goes back to the doctor again and again",
+        "asks for more tests",
+        "checks my blood pressure constantly",
+        "takes my temperature all the time"
+      ]
+    },
+    {
+      "id": "distressing-bodily-symptoms",
+      "label": "Physical symptoms such as pain, tiredness or stomach trouble that persist, cause real distress and crowd out daily life; a medical cause may or may not be found",
+      "clientLabel": "Body symptoms like pain that take over daily life",
+      "category": "somatic",
+      "synonyms": [
+        "pain all over",
+        "chronic pain",
+        "constant pain",
+        "unexplained symptoms",
+        "symptoms doctors cant explain",
+        "medically unexplained symptoms",
+        "my body always hurts",
+        "so many physical symptoms",
+        "physical symptoms with no cause"
+      ]
+    },
+    {
+      "id": "symptom-preoccupation",
+      "label": "The symptoms become the center of life: constant attention to them, worry about what they mean and much of the day organized around them",
+      "clientLabel": "Your symptoms taking up most of your thoughts and time",
+      "category": "cognitive",
+      "synonyms": [
+        "my life revolves around my symptoms",
+        "cant stop thinking about my pain",
+        "all i think about is my symptoms",
+        "consumed by my symptoms",
+        "symptoms rule my life",
+        "constantly focused on my body"
+      ]
+    },
+    {
+      "id": "difficulty-discarding",
+      "label": "Letting go of belongings is very hard: the client keeps items of little use or value and gets very upset at the idea of parting with them",
+      "clientLabel": "Very hard to throw things away or let them go",
+      "category": "behavioral",
+      "synonyms": [
+        "cant throw anything away",
+        "cant get rid of things",
+        "saves everything",
+        "keeps everything",
+        "hoarding",
+        "hoarder",
+        "cant part with things",
+        "keep things just in case",
+        "upset when people throw my stuff away"
+      ]
+    },
+    {
+      "id": "cluttered-living-spaces",
+      "label": "Clutter piles up in the main rooms until cooking, sleeping or sitting there becomes hard or impossible",
+      "clientLabel": "Rooms so full of things they cannot be used",
+      "category": "behavioral",
+      "synonyms": [
+        "house is full of stuff",
+        "clutter everywhere",
+        "rooms filled to the ceiling",
+        "piles of stuff everywhere",
+        "cant use the kitchen because of the clutter",
+        "paths through the house",
+        "cluttered house",
+        "cant sit on the couch because of stuff"
+      ]
+    },
+    {
+      "id": "excessive-acquiring",
+      "label": "Excessive buying, collecting free items or picking up discarded things, beyond the space or need",
+      "clientLabel": "Buying or collecting far more than you need",
+      "category": "behavioral",
+      "synonyms": [
+        "buy things i dont need",
+        "cant stop buying things",
+        "collect free things",
+        "picks things up from the curb",
+        "compulsive buying",
+        "compulsive shopping",
+        "bags of things i never open"
+      ]
+    },
+    {
+      "id": "clutter-safety-hazard",
+      "label": "Context: clutter creates safety risks (blocked exits, fire or fall hazards, pests, unsanitary rooms); consider fire-safety, housing or adult protective services involvement",
+      "clientLabel": "Clutter that makes your home unsafe",
+      "category": "context",
+      "synonyms": [
+        "fire hazard",
+        "blocked exits",
+        "cant get out the door because of stuff",
+        "code enforcement",
+        "unsanitary conditions",
+        "eviction because of clutter",
+        "landlord complained about the clutter"
+      ]
+    },
+    {
+      "id": "appearance-preoccupation",
+      "label": "Long stretches of time spent worrying about a part of the face or body the client sees as flawed or ugly, though others notice little or nothing",
+      "clientLabel": "Worry about flaws in your looks that others barely see",
+      "category": "cognitive",
+      "synonyms": [
+        "hate my nose",
+        "obsessed with my skin",
+        "convinced i am ugly",
+        "think i look ugly",
+        "my face is deformed",
+        "cant stop thinking about my looks",
+        "flaw in my appearance",
+        "perceived flaw",
+        "hate how i look"
+      ]
+    },
+    {
+      "id": "appearance-checking",
+      "label": "Rituals around looks: checking or avoiding mirrors, long grooming, covering or hiding the area, comparing with others, or picking at skin to fix it",
+      "clientLabel": "Checking, fixing or hiding your looks over and over",
+      "category": "behavioral",
+      "synonyms": [
+        "mirror checking",
+        "checking the mirror",
+        "hours in front of the mirror",
+        "avoid mirrors",
+        "avoids mirrors",
+        "comparing my looks",
+        "takes selfies to check",
+        "cover my face with makeup",
+        "hide my face"
+      ]
+    },
+    {
+      "id": "cosmetic-treatment-seeking",
+      "label": "Repeated cosmetic, dermatology or surgical treatments for perceived flaws, usually with little lasting relief",
+      "clientLabel": "Many cosmetic treatments to fix how you look",
+      "category": "behavioral",
+      "synonyms": [
+        "cosmetic surgery",
+        "plastic surgery",
+        "another nose job",
+        "multiple cosmetic procedures",
+        "keeps getting cosmetic procedures",
+        "seeing dermatologists over and over"
+      ]
+    },
+    {
+      "id": "cannabis-use-pattern",
+      "label": "Context: regular or heavy cannabis use (record frequency, potency and route with a structured screen; use alone is not a disorder)",
+      "clientLabel": "Using cannabis often",
+      "category": "behavioral",
+      "synonyms": [
+        "smokes weed",
+        "smoke weed",
+        "smoking weed",
+        "weed every day",
+        "marijuana every day",
+        "smokes pot",
+        "wake and bake",
+        "dabs every day",
+        "vapes thc",
+        "uses cannabis daily",
+        "daily cannabis use",
+        "daily marijuana use",
+        "edibles every night",
+        "high every day",
+        "stoned every day"
+      ]
+    },
+    {
+      "id": "cannabis-impaired-control",
+      "label": "Impaired control over cannabis: uses more or longer than planned, cannot cut down, or keeps going back after deciding to stop",
+      "clientLabel": "Hard to cut back on cannabis",
+      "category": "behavioral",
+      "synonyms": [
+        "cant stop|cant quit|cant cut down|cant cut back|tried to quit|trying to quit|failed to quit|keeps relapsing on|more than i planned ... weed|marijuana|cannabis|pot|dabs|edibles|thc",
+        "weed|marijuana|cannabis|dabs|edibles|thc ... more than i planned|more than i meant to|cant stop|cant cut back|out of control"
+      ]
+    },
+    {
+      "id": "cannabis-craving-withdrawal",
+      "label": "Craving cannabis, or irritability, poor sleep, low appetite and restlessness when stopping",
+      "clientLabel": "Strong urges for cannabis, or feeling bad without it",
+      "category": "behavioral",
+      "synonyms": [
+        "craving|cravings|crave|urges for ... weed|marijuana|cannabis|pot|thc",
+        "irritable|cant sleep|no appetite|restless|anxious|vivid dreams ... without weed|when i stop smoking weed|when i stop using cannabis|without marijuana|without thc"
+      ]
+    },
+    {
+      "id": "cannabis-despite-harm",
+      "label": "Cannabis use continues despite harm: work, study, relationships, mental health (worse anxiety or paranoia) or risky situations such as driving high",
+      "clientLabel": "Using cannabis even when it causes problems",
+      "category": "behavioral",
+      "synonyms": [
+        "driving high",
+        "drives high",
+        "weed|marijuana|cannabis|thc ... despite|even though|messing up|hurting my|causing problems|affecting my work|affecting school|cost me my job"
+      ]
+    },
+    {
+      "id": "opioid-use-pattern",
+      "label": "Context: opioid use outside a prescription, or prescribed opioids taken in larger amounts (heroin, fentanyl, pain pills); record route and frequency",
+      "clientLabel": "Using opioids like pain pills, heroin or fentanyl",
+      "category": "behavioral",
+      "synonyms": [
+        "uses heroin",
+        "using heroin",
+        "heroin use",
+        "uses fentanyl",
+        "using fentanyl",
+        "fentanyl use",
+        "smokes fentanyl",
+        "shooting up",
+        "injects heroin",
+        "takes oxys",
+        "pressed pills",
+        "buys pain pills on the street",
+        "opioid use",
+        "opiate use",
+        "using opiates",
+        "takes more pain pills than prescribed"
+      ]
+    },
+    {
+      "id": "opioid-impaired-control",
+      "label": "Impaired control over opioids: uses more than planned or prescribed, cannot cut down, or returns to use after trying to stop",
+      "clientLabel": "Hard to cut back on opioids",
+      "category": "behavioral",
+      "synonyms": [
+        "cant stop|cant quit|cant cut down|tried to quit|trying to quit|keep relapsing|more than prescribed|more than i planned ... heroin|fentanyl|opioids|opiates|oxys|percs|painkillers|pain pills|dope",
+        "heroin|fentanyl|opioids|opiates|oxys|painkillers|pain pills ... more than prescribed|more than i planned|cant stop|out of control"
+      ]
+    },
+    {
+      "id": "opioid-withdrawal",
+      "label": "Opioid withdrawal: aching, sweating, yawning, runny nose, goosebumps, diarrhea and strong cravings when use stops (dope sick)",
+      "clientLabel": "Feeling sick and achy when stopping opioids",
+      "category": "behavioral",
+      "synonyms": [
+        "dope sick",
+        "dopesick",
+        "opioid withdrawal",
+        "opiate withdrawal",
+        "withdrawal from heroin",
+        "withdrawing from fentanyl",
+        "sick|aching|achy|sweats|diarrhea|throwing up ... without heroin|without fentanyl|without my pain pills|without opioids|coming off heroin|coming off fentanyl"
+      ]
+    },
+    {
+      "id": "opioid-overdose-risk",
+      "label": "Context: overdose risk (a past overdose, using alone, fentanyl exposure, mixing with alcohol or sedatives, or tolerance lost after jail, detox or treatment)",
+      "clientLabel": "Risk of an overdose",
+      "category": "context",
+      "synonyms": [
+        "narcan",
+        "needed narcan",
+        "revived with narcan",
+        "naloxone",
+        "uses alone",
+        "using alone",
+        "overdosed|overdose|od ... heroin|fentanyl|opioids|opiates|dope"
+      ]
+    },
+    {
+      "id": "stimulant-use-pattern",
+      "label": "Context: cocaine, methamphetamine or misused prescription stimulant use (record route and frequency)",
+      "clientLabel": "Using drugs like meth, cocaine or someone else's stimulant pills",
+      "category": "behavioral",
+      "synonyms": [
+        "uses meth",
+        "using meth",
+        "smokes meth",
+        "crystal meth",
+        "uses cocaine",
+        "using cocaine",
+        "snorts coke",
+        "does coke",
+        "crack cocaine",
+        "smokes crack",
+        "adderall without a prescription",
+        "takes extra adderall",
+        "buys adderall",
+        "tweaking"
+      ]
+    },
+    {
+      "id": "stimulant-impaired-control",
+      "label": "Impaired control over stimulants: binges, uses more than planned, cannot cut down, or returns to use after trying to stop",
+      "clientLabel": "Hard to cut back on stimulant drugs",
+      "category": "behavioral",
+      "synonyms": [
+        "cant stop|cant quit|binges on|binge on|tried to quit|keep relapsing|more than i planned|up for days on ... meth|cocaine|coke|crack|adderall|stimulants",
+        "meth|cocaine|coke|crack ... more than i planned|cant stop|out of control|binge|binges"
+      ]
+    },
+    {
+      "id": "stimulant-craving-crash",
+      "label": "Craving stimulants, or a crash when use stops: exhaustion, long sleep, low mood and strong urges",
+      "clientLabel": "Strong urges for stimulants, or crashing after use",
+      "category": "behavioral",
+      "synonyms": [
+        "craving|cravings|crave ... meth|cocaine|coke|crack|adderall",
+        "crash|crashing|comedown|come down ... after meth|after coke|after cocaine|after crack|from meth|from coke"
+      ]
+    },
+    {
+      "id": "stimulant-despite-harm",
+      "label": "Stimulant use continues despite harm: heart or other medical problems, paranoia, lost work, debt or legal trouble",
+      "clientLabel": "Using stimulant drugs even when it causes problems",
+      "category": "behavioral",
+      "synonyms": [
+        "meth|cocaine|coke|crack ... despite|even though|messing up|hurting my|causing problems|cost me my job|lost my job",
+        "chest pain|paranoid|heart racing ... after meth|after coke|after cocaine|after crack|on meth|on coke"
       ]
     }
   ],
@@ -3162,6 +4009,76 @@
       "publisher": "Journal of Nervous and Mental Disease (PubMed)",
       "url": "https://pubmed.ncbi.nlm.nih.gov/1985144/",
       "year": 1991
+    },
+    {
+      "title": "Bipolar Disorder (health topic)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/topics/bipolar-disorder"
+    },
+    {
+      "title": "Attention-Deficit/Hyperactivity Disorder (health topic)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/topics/attention-deficit-hyperactivity-disorder-adhd"
+    },
+    {
+      "title": "Borderline Personality Disorder (health topic)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/topics/borderline-personality-disorder"
+    },
+    {
+      "title": "Eating Disorders (health topic)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/topics/eating-disorders"
+    },
+    {
+      "title": "Schizophrenia (health topic)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/topics/schizophrenia"
+    },
+    {
+      "title": "Eating disorders: recognition and treatment (NG69)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng69",
+      "year": 2017
+    },
+    {
+      "title": "Psychosis and schizophrenia in adults: prevention and management (CG178)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg178",
+      "year": 2014
+    },
+    {
+      "title": "Opioid Misuse and Addiction (health topic)",
+      "publisher": "MedlinePlus, U.S. National Library of Medicine",
+      "url": "https://medlineplus.gov/opioidmisuseandaddiction.html"
+    },
+    {
+      "title": "Marijuana (health topic)",
+      "publisher": "MedlinePlus, U.S. National Library of Medicine",
+      "url": "https://medlineplus.gov/marijuana.html"
+    },
+    {
+      "title": "Methamphetamine (health topic)",
+      "publisher": "MedlinePlus, U.S. National Library of Medicine",
+      "url": "https://medlineplus.gov/methamphetamine.html"
+    },
+    {
+      "title": "Waitlist-controlled trial of cognitive behavior therapy for hoarding disorder (Steketee et al.)",
+      "publisher": "Depression and Anxiety (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20336804/",
+      "year": 2010
+    },
+    {
+      "title": "Cognitive-behavioral therapy for body dysmorphic disorder: a systematic review and meta-analysis of randomized controlled trials (Harrison et al.)",
+      "publisher": "Clinical Psychology Review (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27393916/",
+      "year": 2016
+    },
+    {
+      "title": "Clinical and cost-effectiveness of cognitive behaviour therapy for health anxiety in medical patients (Tyrer et al.)",
+      "publisher": "The Lancet (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24139977/",
+      "year": 2014
     }
   ],
   "license": "original",

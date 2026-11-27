@@ -1,8 +1,8 @@
 "use client";
 import * as React from "react";
-import { Eraser, Repeat, ShieldAlert } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight, Eraser, Repeat, ShieldAlert } from "lucide-react";
 import type { Measure } from "@/lib/schemas";
-import { licenses } from "@/lib/content";
 import { emptyAnswers, scoreMeasure } from "@/lib/measures";
 import { useSession } from "@/state/session";
 import { Button } from "@/components/ui/button";
@@ -13,8 +13,6 @@ import { DownloadPdfButton } from "@/components/pdf/download-pdf-button";
 import { Disclosure } from "@/components/ui/disclosure";
 import { cn } from "@/lib/utils";
 import { FhirExport, type FhirExportInfo } from "./fhir-export";
-
-const CSSRS_URL = licenses.items["C-SSRS"]?.source ?? "https://cssrs.columbia.edu";
 
 function OptionRow({
   name,
@@ -59,7 +57,7 @@ function OptionRow({
   );
 }
 
-function RiskPanel({ itemId, message }: { itemId: string; message: string }) {
+function RiskPanel({ itemId, message, cssrsUrl }: { itemId: string; message: string; cssrsUrl: string }) {
   return (
     <div className="mt-3 rounded-xl border border-crisis/40 border-l-[6px] border-l-crisis bg-surface p-4">
       <p className="flex items-center gap-2 font-bold text-crisis">
@@ -69,7 +67,7 @@ function RiskPanel({ itemId, message }: { itemId: string; message: string }) {
       <ul className="mt-2 list-disc space-y-1 pl-5 text-sm">
         <li>
           Ask directly about suicidal thoughts, intent, plans and means, for example with the{" "}
-          <ExternalLink href={CSSRS_URL}>C-SSRS</ExternalLink> (external, license pending).
+          <ExternalLink href={cssrsUrl}>C-SSRS</ExternalLink> (external, license pending).
         </li>
         <li>Collaborate on a safety plan and follow your local protocol and supervision requirements.</li>
         <li>If there is immediate danger, contact emergency services.</li>
@@ -93,8 +91,12 @@ export function MeasurementBasedCareNote({ className }: { className?: string }) 
   );
 }
 
-/** Interactive measure (GAD-7 / PHQ-9). Answers live in memory-only session state; scores are never saved. */
-export function MeasureForm({ measure, fhir }: { measure: Measure; fhir?: FhirExportInfo }) {
+/**
+ * Interactive measure (GAD-7 / PHQ-9). Answers live in memory-only session state; scores are never saved.
+ * `cssrsUrl` is the C-SSRS link-out from content/licenses.json, passed by the server page so this client
+ * component does not load the content library.
+ */
+export function MeasureForm({ measure, fhir, cssrsUrl }: { measure: Measure; fhir?: FhirExportInfo; cssrsUrl: string }) {
   const { state, answer, setFunctional, clearMeasure } = useSession();
   const answers = state.measureAnswers[measure.id] ?? emptyAnswers(measure);
   const functional = state.measureFunctional[measure.id] ?? null;
@@ -126,6 +128,14 @@ export function MeasureForm({ measure, fhir }: { measure: Measure; fhir?: FhirEx
         <div className="rounded-lg bg-accent-soft p-3 text-sm">
           <p className="font-semibold">Severity band: {score.band.label}</p>
           <p className="mt-1 leading-relaxed">{score.band.clinicianNote}</p>
+          {/* Client-side link: the trend tool reads this total from the same memory-only session. */}
+          <Link
+            href={`/tools/trend?measure=${measure.id}`}
+            className="mt-2 inline-flex min-h-11 items-center gap-1.5 font-semibold text-accent underline decoration-accent/40 underline-offset-2 hover:decoration-accent"
+          >
+            Track the {measure.shortName} over sessions
+            <ArrowRight aria-hidden className="size-4" />
+          </Link>
         </div>
       ) : (
         <p className="rounded-lg bg-surface-2 p-3 text-sm text-muted">
@@ -212,7 +222,7 @@ export function MeasureForm({ measure, fhir }: { measure: Measure; fhir?: FhirEx
                     onChange={(v) => answer(measure.id, i, v, n)}
                   />
                 </fieldset>
-                <div role="alert">{flagged.has(item.id) ? <RiskPanel itemId={item.id} message={flagged.get(item.id) ?? ""} /> : null}</div>
+                <div role="alert">{flagged.has(item.id) ? <RiskPanel itemId={item.id} message={flagged.get(item.id) ?? ""} cssrsUrl={cssrsUrl} /> : null}</div>
               </li>
             ))}
           </ol>

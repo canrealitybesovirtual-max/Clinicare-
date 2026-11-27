@@ -2,7 +2,7 @@
   "id": "problem-solving",
   "name": "Structured problem-solving",
   "modality": "Problem-solving therapy (CBT-based)",
-  "conditions": ["major-depressive-disorder", "generalized-anxiety-disorder", "alcohol-use-disorder", "insomnia-disorder", "persistent-depressive-disorder", "adjustment-disorder", "prolonged-grief-disorder", "specific-phobia"],
+  "conditions": ["major-depressive-disorder", "generalized-anxiety-disorder", "alcohol-use-disorder", "insomnia-disorder", "persistent-depressive-disorder", "adjustment-disorder", "prolonged-grief-disorder", "specific-phobia", "adult-adhd", "somatic-symptom-disorder", "hoarding-disorder"],
   "evidenceLevel": "Supported for depression. NICE NG222 lists individual problem solving among treatment options for more severe depression. Meta-analyses (Bell & D'Zurilla, 2009; Cuijpers et al., 2018) found problem-solving therapy effective for depression, with effects comparable to other psychological treatments. The VA/DoD 2022 guideline includes problem-solving therapy among psychotherapy options for uncomplicated MDD. WHO's Problem Management Plus uses problem-solving as a core element for adults facing adversity. For worry it is commonly part of CBT packages (see NICE CG113); stand-alone evidence for GAD is more limited.",
   "minutes": { "min": 20, "max": 45 },
   "purpose": "Teaches a step-by-step way to tackle practical problems that feed low mood or worry: define the problem clearly, set a realistic goal, brainstorm options, weigh them, choose and plan one, try it, and review the result. It builds a sense of control and helps the client separate problems they can change from ones that call for coping, support or acceptance.",

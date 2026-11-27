@@ -80,11 +80,14 @@ function answerRounds(text: string, script: Record<string, string>, rounds = 4):
 describe('"panic from dogs" gives clearly useful feedback', () => {
   const first = run("panic from dogs");
 
-  it("recognizes the trigger (an animal) even though no lexicon symptom matches", () => {
-    expect(first.scoringResult.status).toBe("empty");
+  it("recognizes the trigger (an animal) and, in the text itself, the fear tied to it", () => {
+    // Review round 3: the lexicon now reads "panic from <object>" as a fear tied to that object.
     expect(first.summary).toEqual([
       { category: "animal", label: "Animals or insects", objectIds: ["dog"], objectLabels: ["dogs"], phrases: ["dogs"] },
     ]);
+    expect(first.scoringInput.symptomIds).toEqual(expect.arrayContaining(["circumscribed-fear", "fear-animals", "panic-attack-cued"]));
+    expect(first.scoringResult.status).toBe("ok");
+    expect(first.scoringResult.suggestions.map((s) => s.conditionId)).toEqual(["specific-phobia"]);
   });
 
   it("points to specific phobia as a pattern to consider, with codes, the DSM-5-TR pointer and features", () => {
@@ -93,29 +96,29 @@ describe('"panic from dogs" gives clearly useful feedback', () => {
     expect(p.icd10cm.map((c) => c.code)).toContain("F40.218");
     expect(p.icd11.map((c) => c.code)).toEqual(["6B03"]);
     expect(p.dsmPointer).toMatch(/^See DSM-5-TR/);
-    expect(p.matched).toEqual([]);
-    expect(p.missing.filter((f) => f.kind === "core").map((f) => f.symptomId)).toEqual(["circumscribed-fear", "phobic-avoidance"]);
+    expect(p.matched.map((f) => f.symptomId)).toEqual(expect.arrayContaining(["circumscribed-fear", "fear-animals", "panic-attack-cued"]));
+    expect(p.missing.filter((f) => f.kind === "core").map((f) => f.symptomId)).toEqual(["phobic-avoidance"]);
     expect(p.objectLabels).toEqual(["dogs"]);
-    expect(p.scored).toBeUndefined();
+    const sp = first.scoringResult.suggestions[0]!;
+    expect(p.scored).toEqual({ score: sp.score, strength: sp.strength });
   });
 
-  it("offers the circumscribed-fear and phobic-avoidance features (and cued panic) as tap-to-add", () => {
-    expect(first.patterns[0]?.addable).toEqual(["circumscribed-fear", "phobic-avoidance", "panic-attack-cued"]);
-    // Tapping them scores specific phobia, with matched and missing features, for clinician review.
-    const tapped = run("panic from dogs", [], ["circumscribed-fear", "phobic-avoidance", "panic-attack-cued"]);
+  it("offers the missing core feature (avoidance) as tap-to-add, and tapping it re-scores", () => {
+    expect(first.patterns[0]?.addable).toEqual(["phobic-avoidance"]);
+    const tapped = run("panic from dogs", [], ["phobic-avoidance"]);
     const sp = tapped.scoringResult.suggestions.find((s) => s.conditionId === "specific-phobia");
     expect(sp).toBeDefined();
     expect(sp?.matched.map((f) => f.symptomId)).toEqual(expect.arrayContaining(["circumscribed-fear", "phobic-avoidance"]));
     expect(sp?.missing.length).toBeGreaterThan(0);
     expect(sp?.dsmPointer).toMatch(/See DSM-5-TR/);
+    expect(sp!.score).toBeGreaterThan(first.scoringResult.suggestions[0]!.score);
     expect(tapped.patterns[0]?.scored).toEqual({ score: sp?.score, strength: sp?.strength });
   });
 
-  it("asks first about panic around dogs or in anticipation, avoidance, how it began, and duration", () => {
-    expect(ids(first.questions)).toEqual(["fear-cued-or-unexpected", "fear-every-time", "fear-avoids-trigger", "fear-onset", "gate-duration"]);
+  it("asks about panic around dogs or out of the blue, avoidance and how it began", () => {
+    expect(ids(first.questions)).toEqual(expect.arrayContaining(["fear-cued-or-unexpected", "fear-avoids-trigger", "fear-onset"]));
     const text = first.questions.map((q) => q.text);
     expect(text).toContain("Do the attacks happen only around dogs, or also out of the blue?");
-    expect(text).toContain("Does the fear come on whenever the client faces dogs, and even while just expecting to?");
     expect(text).toContain("How did the fear of dogs begin?");
     expectReviewOnly(first);
   });
@@ -244,6 +247,19 @@ describe("other everyday phrasings", () => {
     expectReviewOnly(r);
   });
 
+  it('"panics on bridges": the bridge is offered as a fear of heights, not as a fear of animals', () => {
+    const r = run("panics on bridges");
+    expect(r.summary[0]).toMatchObject({ category: "situational", objectIds: ["bridge"] });
+    expect(r.patterns[0]?.conditionId).toBe("specific-phobia");
+    expect(r.patterns[0]?.addable).toContain("fear-heights");
+    expect(r.patterns[0]?.addable).not.toContain("fear-animals");
+    // Once tapped, the other phobia types are not listed as missing: one documented type fills the slot.
+    const tapped = run("panics on bridges", [], ["fear-heights", "circumscribed-fear"]);
+    const sp = tapped.scoringResult.suggestions.find((s) => s.conditionId === "specific-phobia");
+    expect(sp?.missing.map((f) => f.symptomId)).not.toContain("fear-animals");
+    expectReviewOnly(r);
+  });
+
   it("tap-to-add never offers a red-flag symptom or one noted as absent", () => {
     const redFlagIds = new Set(lexicon.symptoms.filter((s) => s.redFlag).map((s) => s.id));
     for (const text of ["panic from dogs", "can't fly", "afraid to leave the house", "nervous around people at work"]) {
@@ -258,5 +274,89 @@ describe("other everyday phrasings", () => {
     const b = run("afraid to leave the house");
     expect(JSON.stringify(a.questions)).toBe(JSON.stringify(b.questions));
     expect(a.scoringResult).toEqual(scoreConditions(a.scoringInput, conditions, lexicon.symptoms));
+  });
+});
+
+describe("the newer conditions reach their own follow-up questions", () => {
+  const questionIds = (text: string, chips: string[] = [], answered: AnsweredRecord[] = []) => ids(run(text, answered, chips, 8).questions);
+
+  it("eating: the pattern questions, with body warning signs in the safety tier once restriction is documented", () => {
+    const q = questionIds("", ["binge-eating-episodes", "compensatory-exercise-fasting", "shape-weight-overvaluation"]);
+    expect(q).toEqual(expect.arrayContaining(["eating-pattern", "eating-after-episode"]));
+    // Safety questions lead (asking directly about suicide, then the body warning signs), before any other kind.
+    const restricting = run("", [], ["low-body-weight", "fear-weight-gain"], 8).questions;
+    const firstOther = restricting.findIndex((x) => x.kind !== "safety");
+    expect(ids(restricting.slice(0, firstOther))).toEqual(expect.arrayContaining(["eating-medical-signs"]));
+  });
+
+  it("attention: asks whether it goes back to childhood", () => {
+    expect(questionIds("", ["inattention-disorganization", "time-management-procrastination"])).toContain("attention-since-childhood");
+  });
+
+  it("psychosis: safety first, then when the experiences show up", () => {
+    const q = questionIds("", ["hallucinations", "paranoia-delusions"]);
+    expect(q[0]).toMatch(/^safety-/);
+    expect(q).toEqual(expect.arrayContaining(["psychosis-when", "psychosis-other-changes"]));
+  });
+
+  it("bipolar: what changes during highs and how far they went", () => {
+    const q = questionIds("", ["grandiosity-elevated-mood", "decreased-need-for-sleep"]);
+    expect(q).toEqual(expect.arrayContaining(["mood-high-features", "mood-high-impact"]));
+  });
+
+  it("health worry, appearance and belongings reach their questions", () => {
+    expect(questionIds("", ["health-anxiety-preoccupation"])).toEqual(expect.arrayContaining(["health-symptoms-or-fear", "health-checking"]));
+    expect(questionIds("", ["appearance-preoccupation"])).toContain("appearance-habits");
+    expect(questionIds("", ["difficulty-discarding"])).toContain("keeping-things-home");
+  });
+
+  it("opioids: overdose safety is in the safety tier and carries the Part 2 notice", () => {
+    const r = run("", [], ["opioid-use-pattern", "opioid-impaired-control"], 8);
+    const firstOther = r.questions.findIndex((x) => x.kind !== "safety");
+    const overdose = r.questions.findIndex((x) => x.id === "opioid-overdose-safety");
+    expect(overdose).toBeGreaterThanOrEqual(0);
+    expect(overdose).toBeLessThan(firstOther);
+    expect(r.questions[overdose]?.part2Notice).toMatch(/42 CFR Part 2/);
+    expect(ids(r.questions)).toContain("opioid-control");
+  });
+});
+
+describe("everyday fear and paranoia phrasings reach the right symptoms (review round 3)", () => {
+  const matched = (text: string) => matchSymptoms(text, lexicon.symptoms).matches.map((m) => m.symptomId);
+
+  it.each([
+    ["panic from dogs", ["fear-animals", "circumscribed-fear", "panic-attack-cued"]],
+    ["panic attacks around dogs", ["fear-animals", "circumscribed-fear", "panic-attack-cued"]],
+    ["freaks out when she sees a dog", ["fear-animals", "circumscribed-fear"]],
+    ["panics when he sees a spider", ["fear-animals", "panic-attack-cued"]],
+    ["neighbors are spying on him", ["paranoia-delusions"]],
+    ["thinks the FBI is tapping his phone", ["paranoia-delusions"]],
+  ])("%s", (text, expected) => {
+    expect(matched(text)).toEqual(expect.arrayContaining(expected));
+  });
+
+  it("the Symptom Finder's own placeholder example finds the fear, not just the racing heart", () => {
+    expect(matched("panic from dogs; heart racing; now avoids the park")).toEqual(expect.arrayContaining(["fear-animals", "palpitations"]));
+  });
+
+  it("ordinary wording near those phrases stays unmatched", () => {
+    expect(matched("panic from stress at work")).not.toContain("fear-animals");
+    expect(matched("she loves spy movies with people")).not.toContain("paranoia-delusions");
+    expect(matched("my boss is watching me closely at work")).not.toContain("paranoia-delusions");
+  });
+});
+
+describe("blood-injection-injury resources wait for a blood, needle or injury fear", () => {
+  it("a fear of dogs is never offered applied tension", () => {
+    const r = run("afraid of dogs, avoids the park");
+    expect(r.scoringResult.suggestions.map((s) => s.conditionId)).toContain("specific-phobia");
+    expect(r.hints.interventionIds).not.toContain("applied-tension");
+    expect(r.hints.handoutIds).not.toContain("applied-tension-practice");
+  });
+
+  it("a needle fear with fainting is", () => {
+    const r = run("terrified of needles, fainted at a blood draw, avoids the doctor");
+    expect(r.hints.interventionIds).toContain("applied-tension");
+    expect(r.hints.handoutIds).toContain("applied-tension-practice");
   });
 });

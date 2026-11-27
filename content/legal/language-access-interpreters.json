@@ -1,0 +1,76 @@
+{
+  "id": "language-access-interpreters",
+  "title": "Language access and interpreters",
+  "jurisdiction": "US-federal",
+  "summary": "Clients with limited English proficiency and Deaf or hard of hearing clients have a right to communicate effectively about their care. In the US, Title VI of the Civil Rights Act and Section 1557 of the Affordable Care Act require health programs that receive federal financial assistance, such as Medicaid or Medicare payments, to provide meaningful language access, and the Americans with Disabilities Act requires effective communication for people with disabilities, including sign language interpreters. Parts of the 2024 Section 1557 rule have been affected by court decisions, so check the current status. This page is information, not legal advice.",
+  "keyPoints": [
+    "The 2024 Section 1557 rule (45 CFR 92.201) requires covered entities to offer a qualified interpreter when interpretation is needed, free of charge, and bars requiring clients to bring their own interpreter.",
+    "Relying on an adult family member or friend, or on a minor child, is limited to narrow emergency situations involving an imminent threat to safety, until a qualified interpreter is available, or, for an adult companion, when the client asks for it and it is appropriate.",
+    "Machine translation of critical documents must be reviewed by a qualified human translator when the information affects a person's rights, benefits or meaningful access.",
+    "For Deaf clients, the ADA requires effective communication; this often means a qualified sign language interpreter, in person or by video, not lip-reading or written notes for a therapy session.",
+    "Interpreted therapy works best when the interpreter is briefed on confidentiality and the session's purpose, and when the clinician speaks directly to the client.",
+    "Professional codes ask clinicians to practice within their competence and to respect language and culture; using a trained interpreter is part of that duty."
+  ],
+  "whatToDo": [
+    "Ask every client which language they prefer for care and whether they need an interpreter or other aids, and record it.",
+    "Arrange a qualified professional or video interpreter in advance; avoid family members, and never use children, except in an emergency.",
+    "Brief the interpreter before the session on confidentiality, the purpose of the session and any terms that are hard to translate.",
+    "Use translated handouts reviewed by a qualified human translator, and check understanding by asking the client to explain key points in their own words.",
+    "Consult your licensing board, your organization's compliance office or a healthcare attorney about which rules apply to your practice and payer mix."
+  ],
+  "officialLinks": [
+    {
+      "title": "HHS Office for Civil Rights: Section 1557 of the Affordable Care Act",
+      "url": "https://www.hhs.gov/civil-rights/for-individuals/section-1557/index.html"
+    },
+    {
+      "title": "HHS Office for Civil Rights: Dear Colleague letter on language access under Section 1557 (PDF)",
+      "url": "https://www.hhs.gov/sites/default/files/ocr-dcl-section-1557-language-access.pdf"
+    },
+    {
+      "title": "eCFR: 45 CFR 92.201, meaningful access for individuals with limited English proficiency",
+      "url": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-A/part-92/subpart-C/section-92.201"
+    },
+    {
+      "title": "ADA.gov: Effective communication",
+      "url": "https://www.ada.gov/resources/effective-communication/"
+    },
+    {
+      "title": "LEP.gov: Limited English proficiency resources",
+      "url": "https://www.lep.gov/"
+    }
+  ],
+  "appPositioning": "Client handouts are written in English and Spanish, and the Spanish versions are marked for review by a fluent human translator before release. The app does not interpret sessions.",
+  "whenRelevant": [
+    "cultural-competence",
+    "informed-consent",
+    "telehealth"
+  ],
+  "changesOften": true,
+  "statusAsOf": "2026-11-27",
+  "verification": {
+    "method": "search-index",
+    "note": "hhs.gov, ecfr.gov, ada.gov and lep.gov were not reachable from the build sandbox. The qualified-interpreter, family-member, minor-child and machine-translation points were confirmed through search results indexing the eCFR text of 45 CFR 92.201 and the HHS OCR Dear Colleague letter, which notes that the 2024 rule is applied subject to court decisions. A person must read 45 CFR 92.201 and the current OCR guidance before release."
+  },
+  "sources": [
+    {
+      "title": "Nondiscrimination in Health Programs and Activities (final rule)",
+      "publisher": "Federal Register (HHS)",
+      "url": "https://www.govinfo.gov/content/pkg/FR-2024-05-06/pdf/2024-08711.pdf",
+      "year": 2024
+    },
+    {
+      "title": "Dear Colleague letter: language access provisions of Section 1557",
+      "publisher": "HHS Office for Civil Rights",
+      "url": "https://www.hhs.gov/sites/default/files/ocr-dcl-section-1557-language-access.pdf"
+    },
+    {
+      "title": "Effective communication",
+      "publisher": "U.S. Department of Justice, Civil Rights Division (ADA.gov)",
+      "url": "https://www.ada.gov/resources/effective-communication/"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

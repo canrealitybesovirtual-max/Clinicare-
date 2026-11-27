@@ -21,7 +21,8 @@ import CalmPage from "@/app/(client)/client/calm/page";
 import { TOOLS } from "@/components/tools/catalog";
 import { SCRUB_DEBOUNCE_MS } from "@/components/symptoms/use-scrubbed-field";
 
-vi.mock("next/navigation", () => ({ usePathname: () => "/tools" }));
+let query = "";
+vi.mock("next/navigation", () => ({ usePathname: () => "/tools", useSearchParams: () => new URLSearchParams(query) }));
 
 let reduceMotion = false;
 beforeEach(() => {
@@ -38,6 +39,7 @@ beforeEach(() => {
 });
 afterEach(() => {
   cleanup();
+  query = "";
   vi.useRealTimers();
   vi.unstubAllGlobals();
 });
@@ -101,7 +103,7 @@ describe("scrubbing typed text", () => {
   it("safety plan: a typed name and phone number never stay in the field", () => {
     vi.useFakeTimers();
     renderPage(<SafetyPlanToolPage />);
-    const field = screen.getByLabelText(/Early signs/) as HTMLTextAreaElement;
+    const field = screen.getByLabelText(/Notice my early signs/) as HTMLTextAreaElement;
     fireEvent.change(field, { target: { value: "Call Maria Lopez at 555-301-2299" } });
     act(() => vi.advanceTimersByTime(SCRUB_DEBOUNCE_MS + 10));
     expect(field.value).not.toMatch(/301-2299/);
@@ -167,6 +169,15 @@ describe("trend", () => {
     expect(within(table).getByText("Response · Down 5+ points")).toBeTruthy();
     add("5", "40");
     expect(screen.getByRole("alert").textContent).toMatch(/Total must be a whole number from 0 to 27/);
+  });
+  it("preselects a charted measure from ?measure= and ignores anything else", () => {
+    query = "measure=phq-9";
+    renderPage(<TrendToolPage />);
+    expect((screen.getByRole("radio", { name: "PHQ-9" }) as HTMLInputElement).checked).toBe(true);
+    cleanup();
+    query = "measure=not-a-measure";
+    renderPage(<TrendToolPage />);
+    expect((screen.getByRole("radio", { name: "GAD-7" }) as HTMLInputElement).checked).toBe(true);
   });
 });
 

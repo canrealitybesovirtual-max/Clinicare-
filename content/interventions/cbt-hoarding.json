@@ -1,0 +1,58 @@
+{
+  "id": "cbt-hoarding",
+  "name": "CBT for hoarding disorder",
+  "modality": "CBT - hoarding",
+  "conditions": [
+    "hoarding-disorder"
+  ],
+  "evidenceLevel": "CBT reduced hoarding severity in a waitlist-controlled trial (Steketee et al., 2010); a meta-analysis (Tolin et al., 2021) supports CBT, with larger effects when it includes home visits and more sessions.",
+  "minutes": {
+    "min": 50,
+    "max": 90
+  },
+  "purpose": "Builds skills and motivation to acquire less, sort and let go of belongings, and organize the home, while working on the beliefs that make discarding hard. Home sessions and practice are central; the client makes every decision about their things.",
+  "steps": [
+    "Assess safety in the home first (exits, fire risk, falls, sanitation) and agree on urgent steps.",
+    "Use motivational interviewing to connect change to the client's own values and goals for the home.",
+    "Set up a sorting system (keep, recycle, donate, discard) and practice with easy items in one small area.",
+    "Practice tolerating discomfort while discarding, and test predictions (I will regret this forever).",
+    "Work on acquiring: plan non-acquiring trips and alternatives to buying or collecting.",
+    "Teach organizing and decision-making skills, and schedule regular home practice."
+  ],
+  "script": [
+    "What would you love to be able to do in this room again?",
+    "Let's start with something small, from this one box.",
+    "How uncomfortable is it, from 0 to 10? Let's see what happens to it over the next few minutes.",
+    "You decide what stays; I'm here to help you think it through."
+  ],
+  "contraindications": [
+    "Forced clean-outs without the client's involvement tend to worsen distress and relapse; avoid them unless safety requires.",
+    "Cognitive decline or self-neglect needs medical and protective services assessment.",
+    "Explain any mandatory reporting duties (for example, adult protective services or child welfare) at the start."
+  ],
+  "culturalAdaptations": [
+    "Saving can reflect past poverty, war, displacement or cultural values about waste; explore these meanings respectfully.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "handoutIds": [
+    "sorting-and-letting-go",
+    "problem-solving-steps"
+  ],
+  "sources": [
+    {
+      "title": "Waitlist-controlled trial of cognitive behavior therapy for hoarding disorder (Steketee et al.)",
+      "publisher": "Depression and Anxiety (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20336804/",
+      "year": 2010
+    },
+    {
+      "title": "Cognitive behavioral therapy for hoarding disorder: a meta-analysis (Tolin et al.)",
+      "publisher": "Focus (American Psychiatric Publishing) (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35747301/",
+      "year": 2021
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

@@ -1,0 +1,104 @@
+{
+  "conditionId": "schizophrenia",
+  "problems": [
+    {
+      "id": "sz-psychosis",
+      "label": "Distressing unusual experiences and a drop in daily functioning",
+      "definitions": [
+        "Hears voices or holds beliefs that cause fear or distress and that others do not share.",
+        "Has had trouble keeping up with work, study or self-care over recent months.",
+        "Has pulled away from family and friends."
+      ],
+      "longTermGoals": [
+        "The client feels safer and less distressed by the experiences, stays connected to care, and returns to valued roles such as work, study and relationships."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "sz-specialty",
+          "text": "Within 1 week, complete a referral to an early psychosis or coordinated specialty care program, or to psychiatry, and attend the first appointment.",
+          "interventionIds": [
+            "coordinated-specialty-care-referral"
+          ]
+        },
+        {
+          "id": "sz-medication",
+          "text": "Attend medication appointments and bring questions about benefits and side effects to each visit.",
+          "interventionIds": [
+            "medication-referral"
+          ]
+        },
+        {
+          "id": "sz-cbtp",
+          "text": "By week 8, start CBT for psychosis, and develop at least 2 coping strategies for distressing voices or thoughts.",
+          "interventionIds": [
+            "cbt-for-psychosis"
+          ]
+        },
+        {
+          "id": "sz-family",
+          "text": "With consent, involve family in at least 4 family sessions over 3 months, focused on information, communication and an early-warning plan.",
+          "interventionIds": [
+            "family-psychoeducation-psychosis"
+          ]
+        },
+        {
+          "id": "sz-routine",
+          "text": "Keep a regular sleep schedule and take a 20-minute walk or other activity at least 3 days a week for 4 weeks.",
+          "interventionIds": [
+            "sleep-hygiene-education",
+            "physical-activity"
+          ]
+        },
+        {
+          "id": "sz-safety-plan",
+          "text": "By session 2, complete a written safety plan with warning signs, coping steps, people and services to contact, and steps to make the home safer, and review it at least monthly.",
+          "interventionIds": [
+            "collaborative-safety-planning",
+            "lethal-means-counseling"
+          ]
+        },
+        {
+          "id": "sz-tracking",
+          "text": "Complete the PHQ-9 at intake and every 4 weeks, and review mood and safety at each session.",
+          "interventionIds": [
+            "coordinated-specialty-care-referral"
+          ]
+        }
+      ],
+      "measureIds": [
+        "phq-9"
+      ]
+    }
+  ],
+  "collaborativeNote": "Write goals and objectives with the client in their own words. Timelines and targets are examples to adapt; the client decides what matters, and the clinician checks safety and fit.",
+  "sud": false,
+  "sources": [
+    {
+      "title": "Psychosis and schizophrenia in adults: prevention and management (CG178)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg178",
+      "year": 2014
+    },
+    {
+      "title": "Comprehensive versus usual community care for first-episode psychosis: 2-year outcomes from the NIMH RAISE Early Treatment Program (Kane et al.)",
+      "publisher": "American Journal of Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26481174/",
+      "year": 2016
+    },
+    {
+      "title": "Cognitive behavior therapy for schizophrenia: effect sizes, clinical models, and methodological rigor (Wykes et al.)",
+      "publisher": "Schizophrenia Bulletin (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17962231/",
+      "year": 2008
+    },
+    {
+      "title": "Family intervention for schizophrenia (Pharoah et al.)",
+      "publisher": "Cochrane Database of Systematic Reviews (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21154340/",
+      "year": 2010
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

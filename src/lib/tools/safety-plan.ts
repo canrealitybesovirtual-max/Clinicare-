@@ -1,12 +1,15 @@
 /**
  * Collaborative safety-planning worksheet (tools/safety-plan). Pure: no React, no I/O.
  *
- * - Original wording, written for this app in its own order. It is not the Stanley-Brown Safety Plan (that form is
- *   copyrighted and needs the authors' written permission for electronic use; licenses.json lists it as pending),
- *   so the app only links to the official site (G7, G8).
+ * - Original wording, built on the app's own safety-plan handout (content/handouts/safety-plan.json): reasons to
+ *   keep going first, then early signs, calming down alone, connecting with people (company and help in one part),
+ *   making the space safer, and getting help now. It is not the Stanley-Brown Safety Plan (that form is copyrighted
+ *   and needs the authors' written permission for electronic use; licenses.json lists it as pending), so the app
+ *   only links to the official site (G7, G8).
  * - It never scores, grades or decides risk (G9). Crisis lines are printed on every plan and can never be removed.
- * - Names and phone numbers are never typed (G5): those parts print blank lines to fill in by hand. What is typed
- *   (signs, coping ideas, kinds of places, safety steps, reasons) passes the PHI scrubber while typing and again here.
+ * - Names and phone numbers are never typed (G5): those parts print blank lines to fill in by hand on the client's
+ *   own paper copy. What is typed (signs, calming ideas, kinds of places, safety steps, reasons) passes the PHI
+ *   scrubber while typing and again here.
  * - Substance-use wording (for example "keep alcohol out of the house") adds the 42 CFR Part 2 notice (G6).
  */
 import { scrubPHI } from "@/lib/phi-scrubber";
@@ -14,14 +17,7 @@ import { mentionsSubstanceUse } from "@/lib/substance-terms";
 import type { Source } from "@/lib/schemas";
 import type { DocBlock, DocSpec } from "./doc-model";
 
-export type SafetyPlanSectionId =
-  | "warning-signs"
-  | "coping-alone"
-  | "distraction"
-  | "reach-out"
-  | "professional-help"
-  | "safer-space"
-  | "reasons";
+export type SafetyPlanSectionId = "reasons" | "early-signs" | "calm-down" | "connect" | "safer-space" | "get-help";
 
 export interface SafetyPlanSection {
   id: SafetyPlanSectionId;
@@ -40,61 +36,54 @@ export interface SafetyPlanSection {
 
 export const SAFETY_PLAN_SECTIONS: readonly SafetyPlanSection[] = [
   {
-    id: "warning-signs",
-    heading: "1. Early signs that a hard time is building",
-    prompt: "Thoughts, feelings, body signals or situations that tend to come first.",
-    typed: true,
-    blankLines: 3,
-  },
-  {
-    id: "coping-alone",
-    heading: "2. Things I can do by myself to get through it",
-    prompt: "Small, doable things that help the next few minutes or hours pass more safely.",
-    typed: true,
-    blankLines: 3,
-  },
-  {
-    id: "distraction",
-    heading: "3. People and places that help me take a break from it",
-    prompt: "Kinds of places where I can be around others (no addresses). Write people's names by hand.",
+    id: "reasons",
+    heading: "My reasons to keep going",
+    prompt: "What matters to me: people, pets, faith, plans or things I love to do.",
     typed: true,
     blankLines: 2,
-    handwritten: { label: "Person (write by hand)", rows: 2 },
   },
   {
-    id: "reach-out",
-    heading: "4. People I can reach out to for help",
-    prompt: "People I trust to tell that I am not okay. Write their names and numbers by hand.",
-    typed: false,
-    blankLines: 0,
-    handwritten: { label: "Name and phone (write by hand)", rows: 3 },
+    id: "early-signs",
+    heading: "Part 1: Notice my early signs",
+    prompt: "What came first the last few hard times: thoughts, feelings in my mood or body, things I start or stop doing.",
+    typed: true,
+    blankLines: 3,
   },
   {
-    id: "professional-help",
-    heading: "5. Professional help and crisis lines",
-    prompt: "Help I can reach at any time, day or night. I do not have to wait until it feels bad enough.",
+    id: "calm-down",
+    heading: "Part 2: Calm down and get through the next hour",
+    prompt: "Things I can do by myself, right where I am, to calm my body, keep my mind busy or bring comfort.",
+    typed: true,
+    blankLines: 3,
+  },
+  {
+    id: "connect",
+    heading: "Part 3: Connect with people",
+    prompt:
+      "Kinds of places with other people where I feel okay (no addresses). People to be around, and people I can tell that I am not okay, go on the paper copy by hand.",
+    typed: true,
+    blankLines: 2,
+    handwritten: { label: "Person and how to reach them (write by hand)", rows: 3 },
+  },
+  {
+    id: "safer-space",
+    heading: "Part 4: Make my space safer",
+    prompt: "Steps that put time and distance between me and things I could use to hurt myself, and who will help.",
+    typed: true,
+    blankLines: 3,
+  },
+  {
+    id: "get-help",
+    heading: "Part 5: Get help now",
+    prompt: "Help I can reach at any time, day or night. I do not have to wait until things feel bad enough.",
     typed: false,
     blankLines: 0,
-    handwritten: { label: "My clinician or clinic, and phone (write by hand)", rows: 2 },
+    handwritten: { label: "My counselor, doctor or clinic, and how to reach them (write by hand)", rows: 2 },
     fixed: [
       "In the US, call or text 988 (988 Suicide & Crisis Lifeline), or chat at 988lifeline.org.",
       "In danger right now: call 911 or your local emergency number, or go to the nearest emergency room.",
       "Outside the US: find a crisis line at findahelpline.com.",
     ],
-  },
-  {
-    id: "safer-space",
-    heading: "6. Making my space safer",
-    prompt: "Steps that put time and distance between me and anything I could use to hurt myself, and who will help.",
-    typed: true,
-    blankLines: 3,
-  },
-  {
-    id: "reasons",
-    heading: "7. What keeps me going",
-    prompt: "People, pets, plans, beliefs or things I care about.",
-    typed: true,
-    blankLines: 2,
   },
 ];
 
@@ -120,7 +109,7 @@ const SAFETY_PLAN_TITLE = "My safety plan";
 export const SAFETY_PLAN_ORIGIN_NOTE =
   "This plan was written for this resource in its own words. It is not the Stanley-Brown Safety Plan, which is a separate form your counselor may use instead.";
 const SAFETY_PLAN_USE_NOTE =
-  "Start with part 1 and move down the page. If one step does not help, try the next. You can go straight to part 5 at any time.";
+  "When you notice your early signs, start with Part 2 and keep going down the page. If one idea does not help, try the next. You can go straight to Part 5 at any time.";
 
 /** Official Stanley-Brown resources (link out only, G8). */
 export const STANLEY_BROWN_URL = "https://suicidesafetyplan.com/";

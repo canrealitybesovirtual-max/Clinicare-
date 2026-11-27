@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
-import { BookOpenCheck, Filter, Gavel, Signpost } from "lucide-react";
+import { BookOpenCheck, CalendarClock, Filter, Gavel, ListTree, Signpost } from "lucide-react";
 import { ethicsCodes, legalTopics } from "@/lib/library";
 import { HUB_PROMPTS, PROFESSIONS, PROFESSION_LABELS, ethicsCodesFor, legalTopicsFor } from "@/lib/schemas-hub";
 import { Card } from "@/components/ui/card";
+import { Disclosure } from "@/components/ui/disclosure";
 import { Notice } from "@/components/ui/notice";
-import { PageIntro } from "@/components/content/content-bits";
+import { PageIntro } from "@/components/content/content-meta";
+import { HelpTip } from "@/components/ui/help-tip";
 import { HubPrompt } from "@/components/hub/hub-prompt";
 import {
   FacetCount,
@@ -52,13 +54,24 @@ export default function EthicsPage() {
 
   return (
     <>
-      <PageIntro title="Ethics & Legal Hub" eyebrow="Codes and laws by profession and country">
+      <PageIntro title="Ethics & Legal Hub" eyebrow="Codes and laws by profession and country" compact>
         <p>
-          Original summaries of the professional codes and laws that shape everyday practice, each with a link to the
-          official text. This is information, not legal advice: read the official source, and consult your licensing
-          board or a healthcare attorney about your own situation.
+          Original summaries of professional codes and laws, each linked to the official text. Information, not legal
+          advice.
         </p>
       </PageIntro>
+      <HelpTip title="How to use the hub" className="mb-5">
+        <p>
+          Choose your profession and country to see the codes and legal topics that apply. Each card gives a short summary
+          in the app&apos;s own words and a link to the official text; open &ldquo;Key reminders&rdquo; or &ldquo;Key
+          points&rdquo; for more.
+        </p>
+        <p>
+          Other screens link here when a situation comes up, such as faith-based care, substance use records or
+          telehealth across state lines. This is information, not legal advice: read the official source, and ask your
+          licensing board or a healthcare attorney about your own situation.
+        </p>
+      </HelpTip>
 
       <FacetFilterProvider index={index} items={items}>
         <FacetSessionCountry facet="country" allowed={countries} />
@@ -81,22 +94,26 @@ export default function EthicsPage() {
           </Card>
         </section>
 
-        <nav aria-labelledby="jump-heading" className="mb-8">
-          <h2 id="jump-heading" className="text-base font-semibold">
-            Jump to a code or topic (A–Z)
-          </h2>
-          <ul className="mt-2 flex flex-wrap gap-1.5">
-            {jumpList.map((j) => (
-              <li key={j.id}>
-                <a
-                  href={`#${j.id}`}
-                  className="inline-flex min-h-11 items-center rounded-full border border-border bg-surface px-3 text-sm font-medium text-text hover:border-accent hover:bg-surface-2"
-                >
-                  {j.label}
-                </a>
-              </li>
-            ))}
-          </ul>
+        <nav aria-label="Codes and topics, A to Z" className="mb-8">
+          <Disclosure
+            title={`Jump to a code or topic (A–Z, ${jumpList.length})`}
+            icon={ListTree}
+            bordered={false}
+            className="rounded-xl border border-border bg-surface px-4"
+          >
+            <ul className="flex flex-wrap gap-1.5">
+              {jumpList.map((j) => (
+                <li key={j.id}>
+                  <a
+                    href={`#${j.id}`}
+                    className="inline-flex min-h-11 items-center rounded-full border border-border bg-surface px-3 text-sm font-medium text-text hover:border-accent hover:bg-surface-2"
+                  >
+                    {j.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </Disclosure>
         </nav>
 
         <section aria-labelledby="when-heading" className="mb-8">
@@ -145,6 +162,11 @@ export default function EthicsPage() {
             </h2>
             <FacetCount group="ethics" singular="code" plural="codes" />
           </div>
+          <p className="mb-4 flex max-w-3xl items-start gap-2 text-sm text-muted">
+            <CalendarClock aria-hidden className="mt-0.5 size-4 shrink-0" />
+            Each card is a summary in the app&apos;s own words, not legal advice. Codes are revised from time to time:
+            check for newer editions every year.
+          </p>
           <FacetEmpty group="ethics">
             <Notice tone="neutral" title="No code in this list matches both filters">
               <p>

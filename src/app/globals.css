@@ -106,6 +106,10 @@ html { -webkit-text-size-adjust: 100%; }
  * spacing and targets together, for telehealth screen sharing and low vision. Respects the browser's own setting.
  */
 html[data-text-size="large"] { font-size: 125%; }
+/* Three-option choice groups get two columns on phones with large text, so no label touches its box edge. */
+@media (max-width: 39.98rem) {
+  html[data-text-size="large"] .choice-grid-3 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
 /*
  * WCAG 2.4.11 Focus Not Obscured: below lg the crisis button floats at the bottom of the viewport, and measure
  * forms keep a sticky score bar at the top. Scroll padding keeps focused controls and anchor targets clear of both.

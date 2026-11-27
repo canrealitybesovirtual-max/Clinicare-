@@ -164,9 +164,49 @@ describe("coverage of the required topics", () => {
     ["caffeine and substances", "ruleout-substances", /[Cc]affeine/],
     ["thyroid and cardiac", "ruleout-medical-anxiety", /thyroid.*heart rhythm/],
     ["asking directly about suicide", "safety-ask-directly", /suicide or self-harm/],
+    ["bipolar: what changes during highs", "mood-high-features", /racing|plans/],
+    ["bipolar I vs II: how far the high went", "mood-high-impact", /hospital care/],
+    ["cyclothymic vs bipolar vs borderline course", "mood-swings-course", /for years/],
+    ["borderline pattern: relationships", "relationships-fear-of-being-left", /fear of being left/],
+    ["health anxiety vs somatic symptoms", "health-symptoms-or-fear", /body symptoms/],
+    ["health checking and avoidance", "health-checking", /reassurance/],
+    ["appearance habits", "appearance-habits", /mirrors/],
+    ["hoarding: home safety", "keeping-things-home", /exits/],
+    ["cannabis control", "cannabis-control", /cut down/],
+    ["opioid control and withdrawal", "opioid-control", /when stopping/],
+    ["opioid overdose safety", "opioid-overdose-safety", /fentanyl/],
+    ["stimulant control and crash", "stimulant-control", /crash/],
+    ["eating pattern", "eating-pattern", /losing control/],
+    ["eating body warning signs", "eating-medical-signs", /fainting/],
+    ["binge vs bulimic pattern", "eating-after-episode", /undo/],
+    ["weight and shape", "eating-weight-shape", /self-worth/],
+    ["ADHD childhood onset", "attention-since-childhood", /childhood/],
+    ["ADHD across settings", "attention-across-settings", /more than one setting/],
+    ["psychosis: when it shows up", "psychosis-when", /on their own/],
+    ["psychosis: other changes", "psychosis-other-changes", /hard to follow/],
   ])("%s (%s)", (_label, id, re) => {
     expect(byId.has(id), id).toBe(true);
     expect(text(id)).toMatch(re);
+  });
+
+  it("reaches every condition in the knowledge base from at least one question or trigger category", () => {
+    const reached = new Set<string>();
+    for (const q of followUpBank) for (const id of [...q.discriminates, ...(q.showWhen.conditionIds ?? [])]) reached.add(id);
+    const dict = TriggerObjectsFileSchema.parse(json("trigger-objects.json"));
+    for (const info of Object.values(dict.categories)) for (const id of info.conditionHints) reached.add(id);
+    expect(conditions.map((c) => c.id).filter((id) => !reached.has(id))).toEqual([]);
+  });
+
+  it("targets a core feature of every condition with a core question, or tells it apart with a discriminating one", () => {
+    const uncovered = conditions
+      .filter((c) => {
+        const core = new Set(c.features.filter((f) => f.kind === "core").map((f) => f.symptomId));
+        return !followUpBank.some(
+          (q) => q.discriminates.includes(c.id) || (q.kind === "core" && q.targets.some((t) => core.has(t))),
+        );
+      })
+      .map((c) => c.id);
+    expect(uncovered).toEqual([]);
   });
 
   it("marks every alcohol and substance question for the Part 2 notice", () => {

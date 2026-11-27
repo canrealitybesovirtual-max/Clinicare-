@@ -212,7 +212,11 @@
       "note": "Refer to psychiatry, a primary care provider or a psychiatric nurse practitioner. Prescribing decisions rest with the prescriber."
     }
   ],
-  "handouts": [],
+  "handouts": [
+    "activity-schedule",
+    "thought-record",
+    "kind-self-talk"
+  ],
   "statIds": [
     "global-depression-2021"
   ],

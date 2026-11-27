@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import { PDFDocument } from "pdf-lib";
-import { strFromU8, unzipSync } from "fflate"; // docx's own zip dependency
+import { strFromU8, unzipSync } from "fflate";
 import { getPlanLibrary } from "@/lib/library";
 import { measures } from "@/lib/content";
 import {
@@ -286,6 +286,9 @@ describe("planDocx", () => {
       expect(text).not.toMatch(IDENTIFIER_LABELS);
       expect(text.match(/Name:/g)).toHaveLength(1);
       expect(core).not.toMatch(/Un-named/);
+      // No created or modified date (G5): a filled-in name line plus a timestamp would be a dated record.
+      expect(core).toContain("<dc:title>");
+      expect(core).not.toMatch(/dcterms:(created|modified)|\d{4}-\d{2}-\d{2}T/);
     }
   });
 });

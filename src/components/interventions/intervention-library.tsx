@@ -2,9 +2,9 @@
 import * as React from "react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { BookOpenText, ChevronRight, ClipboardCheck, Clock, FileText, GraduationCap, HandHeart, Search, SlidersHorizontal, X } from "lucide-react";
+import { ChevronRight, ClipboardCheck, GraduationCap, Search, SlidersHorizontal, X } from "lucide-react";
 import { useSession } from "@/state/session";
-import { ReviewBadge } from "@/components/content/content-bits";
+import { ReviewBadge } from "@/components/content/content-meta";
 import { useScrubbedField } from "@/components/symptoms/use-scrubbed-field";
 import { PRIVATE_TEXT_FIELD_PROPS } from "@/components/ui/private-field";
 import { Badge } from "@/components/ui/badge";
@@ -165,7 +165,7 @@ function LibraryInner({
                 aria-describedby={ids.hint}
                 value={search.draft}
                 onChange={(e) => search.setDraft(e.target.value)}
-                onBlur={search.flushNow}
+                onBlur={search.onBlur}
                 {...PRIVATE_TEXT_FIELD_PROPS}
                 placeholder="e.g., breathing, worry, sleep, values"
                 className="block min-h-11 w-full rounded-lg border border-input-border bg-surface pl-9 pr-3 text-base text-text placeholder:text-muted"
@@ -338,20 +338,15 @@ function InterventionCard({ item }: { item: InterventionCardData }) {
       </h3>
       <p className="mt-1 text-sm text-muted">{item.modality}</p>
       <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-text">{item.purpose}</p>
-      <dl className="mt-auto space-y-1 pt-3 text-sm">
-        <div className="flex items-start gap-1.5">
-          <dt className="flex items-center">
-            <Clock aria-hidden className="mt-0.5 size-4 text-muted" />
-            <span className="sr-only">Time</span>
-          </dt>
-          <dd>{minutesLabel(item.minutes)}</dd>
+      {/* Text labels, not icons: 61 cards render on one page, so the list stays light and calm. */}
+      <dl className="mt-auto space-y-0.5 pt-3 text-sm">
+        <div>
+          <dt className="inline text-muted">Time: </dt>
+          <dd className="inline">{minutesLabel(item.minutes)}</dd>
         </div>
-        <div className="flex items-start gap-1.5">
-          <dt className="flex items-center">
-            <BookOpenText aria-hidden className="mt-0.5 size-4 text-muted" />
-            <span className="sr-only">Used for</span>
-          </dt>
-          <dd className="min-w-0">
+        <div>
+          <dt className="inline text-muted">Used for: </dt>
+          <dd className="inline">
             {shown.map((c) => c.label).join(", ")}
             {extra > 0 ? <span className="text-muted"> and {extra} more</span> : null}
           </dd>
@@ -363,16 +358,8 @@ function InterventionCard({ item }: { item: InterventionCardData }) {
             <GraduationCap aria-hidden className="size-3.5" /> Trained clinicians only
           </Badge>
         ) : null}
-        {item.handoutCount > 0 ? (
-          <Badge tone="accent">
-            <FileText aria-hidden className="size-3.5" /> Client handout
-          </Badge>
-        ) : null}
-        {item.faith ? (
-          <Badge tone="neutral">
-            <HandHeart aria-hidden className="size-3.5" /> Faith-integrated option
-          </Badge>
-        ) : null}
+        {item.handoutCount > 0 ? <Badge tone="accent">Client handout</Badge> : null}
+        {item.faith ? <Badge tone="neutral">Faith-integrated option</Badge> : null}
         <ReviewBadge reviewedBy={item.reviewedBy} inList />
       </div>
     </article>

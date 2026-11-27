@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { interventions } from "@/lib/library";
-import { NextStep, PageIntro } from "@/components/content/content-bits";
-import { HelpTip } from "@/components/symptoms/help-tip";
+import { NextStep, PageIntro } from "@/components/content/content-meta";
+import { HelpTip } from "@/components/ui/help-tip";
 import { conditionLabel } from "@/components/interventions/catalog";
 import { ORIENTATIONS, OTHER_ORIENTATION, orientationsOf } from "@/components/interventions/orientation";
 import { InterventionLibrary, type FilterOption, type InterventionCardData } from "@/components/interventions/intervention-library";

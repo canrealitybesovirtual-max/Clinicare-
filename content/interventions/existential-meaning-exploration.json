@@ -1,0 +1,62 @@
+{
+  "id": "existential-meaning-exploration",
+  "name": "Existential therapy: meaning, choice and mortality",
+  "modality": "Existential / humanistic",
+  "conditions": [
+    "adjustment-disorder",
+    "prolonged-grief-disorder",
+    "major-depressive-disorder",
+    "persistent-depressive-disorder"
+  ],
+  "evidenceLevel": "A meta-analysis (Vos, Craig and Cooper, 2015) found existential therapies improved meaning in life and had smaller effects on symptoms, with meaning-centered approaches showing the clearest benefit. Use alongside evidence-based symptom-focused treatment.",
+  "minutes": {
+    "min": 45,
+    "max": 60
+  },
+  "purpose": "Helps the client face the givens of life, such as loss, death, freedom, responsibility and isolation, and find or rebuild meaning and purpose. Useful after losses, major life changes, illness or when depression centers on a sense of meaninglessness.",
+  "steps": [
+    "Invite the client's own questions about meaning, purpose, death, freedom or isolation; follow their lead.",
+    "Explore what still matters to them and what the current crisis has changed.",
+    "Name the choices that remain open, even within real limits.",
+    "Identify sources of meaning: relationships, creativity, faith, service or how one faces suffering.",
+    "Plan small actions that express those meanings, and review them."
+  ],
+  "script": [
+    "What gives your life meaning now, even a little?",
+    "This loss has changed a lot. What has it not taken from you?",
+    "Within these limits, what choices are still yours?",
+    "Who do you want to be as you face this?"
+  ],
+  "contraindications": [
+    "Discussions of death and meaninglessness can deepen despair in a client with suicidal thoughts; ask about suicidal thinking directly and safety-plan first.",
+    "Do not start during an active crisis, current suicidal risk, acute intoxication or withdrawal; stabilize first and share crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com."
+  ],
+  "culturalAdaptations": [
+    "Meaning is often rooted in faith, family and community; explore these sources in the client's own terms.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "faithIntegrated": {
+    "note": "For clients whose meaning is rooted in faith, explore spiritual sources of purpose and hope at their request.",
+    "consentNote": "Before adding any spiritual element, explain what you propose, confirm the client wants it, document informed consent and let the client lead (see the AACC Code of Ethics for faith-based counselors)."
+  },
+  "handoutIds": [
+    "values-compass",
+    "grief-and-loss"
+  ],
+  "sources": [
+    {
+      "title": "Existential therapies: a meta-analysis of their effects on psychological outcomes (Vos, Craig and Cooper)",
+      "publisher": "Journal of Consulting and Clinical Psychology (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25045907/",
+      "year": 2015
+    },
+    {
+      "title": "AACC Code of Ethics",
+      "publisher": "American Association of Christian Counselors",
+      "url": "https://aacc.net/aacc-code-of-ethics/"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

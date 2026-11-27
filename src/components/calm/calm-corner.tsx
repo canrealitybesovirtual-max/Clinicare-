@@ -7,6 +7,7 @@ import { CrisisPanel } from "@/components/crisis/crisis-panel";
 import { Card } from "@/components/ui/card";
 import { ChoiceGroup } from "@/components/ui/choice-group";
 import { ExternalLink } from "@/components/ui/external-link";
+import { HANDOUT_TEXT } from "@/components/handouts/localize";
 import { BREATHE, CALM, GROUND, RELAX } from "./calm-text";
 import { BreathingPacer } from "./breathing-pacer";
 import { Grounding } from "./grounding";
@@ -70,12 +71,12 @@ export function CalmCorner({ sources }: { sources: Source[] }) {
         <ul className="space-y-1.5">
           {sources.map((s) => (
             <li key={s.url} lang="en">
-              <ExternalLink href={s.url}>{s.title}</ExternalLink> · {s.publisher}
-              {s.year ? `, ${s.year}` : ""}
+              <ExternalLink href={s.url}>{s.title}</ExternalLink>
+              {s.title === s.publisher ? null : ` · ${s.publisher}${s.year ? `, ${s.year}` : ""}`}
             </li>
           ))}
         </ul>
-        {lang === "es" ? <p>{t(CALM.translationNote)}</p> : null}
+        {lang === "es" ? <p>{HANDOUT_TEXT.machineTranslated.es}</p> : null}
       </section>
     </div>
   );

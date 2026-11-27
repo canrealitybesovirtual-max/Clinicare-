@@ -171,6 +171,17 @@ canonical city. Before adding any instrumentation, strip query strings from thos
   "42 CFR Part 2 prohibits unauthorized use or disclosure of these records." (`src/lib/referral-links.ts`).
 
 ### Still open
+- **Identifier lines on exports (owner to confirm).** Every export prints one blank client or name line. The
+  referral letter no longer prints a blank "Date of birth" line; add it back only if the owner decides receiving
+  services need it for matching. The safety plan prints blank rows for the client's own contacts and clinician
+  ("Person and how to reach them", "My counselor, doctor or clinic, and how to reach them"). Nothing is typed
+  into them in the app: they are for handwriting on the client's own paper copy.
+- **Safety-plan structure (owner or counsel to confirm).** /tools/safety-plan follows the app's own handout
+  (content/handouts/safety-plan.json): reasons first, company and help merged into one part, the safer-space part
+  before "Get help now". The Stanley-Brown form itself stays "pending" in content/licenses.json and is link-out only.
+- **Crisis lines need a person's check before release.** `npm run validate:content -- --release` fails until a
+  person checks each number and URL in content/crisis-lines.json on the official site and records lastVerified,
+  and re-checks the Spanish 988 wording (`src/lib/i18n/shell.ts`).
 - **Terms not re-read live.** The terms pages of NLM (Clinical Tables FAQ, RxNav ToS, MedlinePlus), NCBI, openFDA,
   WHO and SAMHSA were blocked from the build sandbox. The figures above come from those publishers' published terms
   as cited in each adapter. Re-check them (`/verify-sources`) before launch, and confirm WHO's terms of reuse for

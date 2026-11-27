@@ -1,0 +1,99 @@
+{
+  "conditionId": "bipolar-i-disorder",
+  "problems": [
+    {
+      "id": "bp1-mood-episodes",
+      "label": "Highs and lows that disrupt life and safety",
+      "definitions": [
+        "Has had at least one period of days with much less sleep, racing ideas, big plans or spending, and actions that caused serious problems at home, work or with money.",
+        "Has periods of low mood, low energy and withdrawal that take up weeks.",
+        "Sleep and daily routine shift sharply before or during episodes."
+      ],
+      "longTermGoals": [
+        "Fewer and shorter mood episodes, caught early, with a steady routine and a plan the client and family trust."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "bp1-medication-link",
+          "text": "Within 2 weeks, attend a psychiatric evaluation and bring a written list of questions about medication benefits and side effects.",
+          "interventionIds": [
+            "medication-referral"
+          ]
+        },
+        {
+          "id": "bp1-psychoeducation",
+          "text": "By session 4, describe in own words at least 3 personal early warning signs of a high and 3 of a low.",
+          "interventionIds": [
+            "bipolar-psychoeducation"
+          ]
+        },
+        {
+          "id": "bp1-rhythms",
+          "text": "For 4 weeks, log daily wake time, bedtime, first contact and main meal with a mood rating, and keep wake time within 1 hour of the target on at least 5 days a week.",
+          "interventionIds": [
+            "interpersonal-social-rhythm-therapy",
+            "sleep-hygiene-education"
+          ]
+        },
+        {
+          "id": "bp1-staying-well",
+          "text": "By session 6, complete a staying-well plan with early signs, first steps and contacts, and share it with one trusted person if the client chooses.",
+          "interventionIds": [
+            "relapse-prevention-planning",
+            "family-psychoeducation-psychosis"
+          ]
+        },
+        {
+          "id": "bp1-safety-plan",
+          "text": "By session 2, complete a written safety plan with warning signs, coping steps, people and services to contact, and steps to make the home safer, and review it at least monthly.",
+          "interventionIds": [
+            "collaborative-safety-planning",
+            "lethal-means-counseling"
+          ]
+        },
+        {
+          "id": "bp1-tracking",
+          "text": "Complete the PHQ-9 at intake and every 2 to 4 weeks; if a high or a low lasts more than a few days, contact the prescriber within 48 hours.",
+          "interventionIds": [
+            "medication-referral"
+          ]
+        }
+      ],
+      "measureIds": [
+        "phq-9",
+        "gad-7"
+      ]
+    }
+  ],
+  "collaborativeNote": "Write goals and objectives with the client in their own words. Timelines and targets are examples to adapt; the client decides what matters, and the clinician checks safety and fit.",
+  "sud": false,
+  "sources": [
+    {
+      "title": "Bipolar disorder: assessment and management (CG185)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg185",
+      "year": 2014
+    },
+    {
+      "title": "Two-year outcomes for interpersonal and social rhythm therapy in individuals with bipolar I disorder (Frank et al.)",
+      "publisher": "Archives of General Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16143731/",
+      "year": 2005
+    },
+    {
+      "title": "A randomized trial on the efficacy of group psychoeducation in the prophylaxis of recurrences in bipolar patients whose disease is in remission (Colom et al.)",
+      "publisher": "Archives of General Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12695318/",
+      "year": 2003
+    },
+    {
+      "title": "Intensive psychosocial intervention enhances functioning in patients with bipolar depression (Miklowitz et al.)",
+      "publisher": "American Journal of Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17728418/",
+      "year": 2007
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

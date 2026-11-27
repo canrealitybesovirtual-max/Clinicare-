@@ -1,0 +1,61 @@
+{
+  "id": "naloxone-overdose-education",
+  "name": "Naloxone and overdose prevention education",
+  "modality": "Harm reduction - overdose prevention",
+  "conditions": [
+    "opioid-use-disorder",
+    "stimulant-use-disorder"
+  ],
+  "evidenceLevel": "Take-home naloxone programs reduce opioid overdose deaths (McDonald and Strang, 2016 systematic review); WHO recommends naloxone access for people likely to witness an overdose. Naloxone nasal spray is available without a prescription in the US.",
+  "minutes": {
+    "min": 10,
+    "max": 20
+  },
+  "purpose": "Makes sure clients who use opioids, or who use drugs that may contain fentanyl, and the people around them, can recognize an overdose and respond with naloxone and a call for help. It also covers practical ways to lower overdose risk.",
+  "steps": [
+    "Ask whether the client or anyone they live with uses opioids or other drugs, without judgment.",
+    "Explain overdose signs: slow or no breathing, blue lips, pinpoint pupils, cannot wake.",
+    "Show how to use naloxone nasal spray, and stress calling 911 and staying with the person.",
+    "Discuss risk factors: using alone, mixing with alcohol or sedatives, lower tolerance after a break, unknown supply.",
+    "Help the client get naloxone (pharmacy without prescription, community programs) and keep it where others can find it.",
+    "Offer referral for medication treatment and other services."
+  ],
+  "script": [
+    "Can we talk about keeping you safe, whatever you decide about using?",
+    "If someone won't wake up and is barely breathing, call 911 and give naloxone.",
+    "Where will you keep it, so others can find it?",
+    "Using with someone else around, or a never-use-alone line, can save your life."
+  ],
+  "contraindications": [
+    "Naloxone wears off sooner than many opioids; the person needs emergency care and monitoring even after waking.",
+    "Good Samaritan laws vary by state; share what applies locally."
+  ],
+  "culturalAdaptations": [
+    "Stigma and fear of police can stop people calling for help; explain Good Samaritan protections where they exist.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "handoutIds": [
+    "overdose-safety"
+  ],
+  "sources": [
+    {
+      "title": "Are take-home naloxone programmes effective? Systematic review utilizing application of the Bradford Hill criteria (McDonald and Strang)",
+      "publisher": "Addiction (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27028542/",
+      "year": 2016
+    },
+    {
+      "title": "Opioid overdose (fact sheet)",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/opioid-overdose"
+    },
+    {
+      "title": "Naloxone nasal spray (drug information)",
+      "publisher": "MedlinePlus, U.S. National Library of Medicine",
+      "url": "https://medlineplus.gov/druginfo/meds/a616003.html"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

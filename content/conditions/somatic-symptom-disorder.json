@@ -1,0 +1,235 @@
+{
+  "id": "somatic-symptom-disorder",
+  "name": "Somatic symptom disorder (bodily distress)",
+  "icd10cm": [
+    {
+      "code": "F45.1",
+      "label": "Undifferentiated somatoform disorder"
+    }
+  ],
+  "icd11": [
+    {
+      "code": "6C20",
+      "label": "Bodily distress disorder"
+    }
+  ],
+  "dsmPointer": "See DSM-5-TR: Somatic Symptom and Related Disorders — Somatic Symptom Disorder (ICD-10-CM F45.1 is the code used); ICD-11 uses bodily distress disorder.",
+  "summary": "Physical symptoms such as pain, fatigue, stomach or heart sensations that are genuinely distressing and become the center of the client's life: much attention, worry and time go to them, and daily roles shrink around them. A medical cause may or may not be found; the pattern is defined by the distress and the response to the symptoms, not by the absence of a medical explanation, and medical and psychological care go together. Helpful approaches focus on living better with symptoms: CBT, graded activity, pacing, and a consistent relationship with one medical clinician. For clinician review only; this is not a diagnosis.",
+  "features": [
+    {
+      "symptomId": "distressing-bodily-symptoms",
+      "kind": "core",
+      "weight": 5
+    },
+    {
+      "symptomId": "symptom-preoccupation",
+      "kind": "core",
+      "weight": 4
+    },
+    {
+      "symptomId": "health-anxiety-preoccupation",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "body-checking-reassurance",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "fatigue",
+      "kind": "associated",
+      "weight": 1,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "muscle-tension",
+      "kind": "associated",
+      "weight": 1
+    },
+    {
+      "symptomId": "nausea-abdominal-distress",
+      "kind": "associated",
+      "weight": 1
+    },
+    {
+      "symptomId": "dizziness",
+      "kind": "associated",
+      "weight": 1
+    },
+    {
+      "symptomId": "depressed-mood",
+      "kind": "associated",
+      "weight": 1
+    },
+    {
+      "symptomId": "insomnia",
+      "kind": "associated",
+      "weight": 1
+    }
+  ],
+  "minCore": 1,
+  "durationGate": {
+    "minWeeks": 26,
+    "note": "Ask how long the symptoms and the worry about them have dominated daily life. See DSM-5-TR for duration guidance."
+  },
+  "impairmentRequired": true,
+  "ruleOuts": [
+    {
+      "label": "Medical conditions that need assessment",
+      "type": "medical",
+      "note": "Autoimmune, endocrine, neurological and other illnesses can present with diffuse symptoms; new, changing or objective signs need medical review."
+    },
+    {
+      "label": "Medication side effects and withdrawal",
+      "type": "substance",
+      "note": "Review medicines and recent changes with the prescriber. This app does not store substance-use information."
+    },
+    {
+      "label": "Depression and anxiety disorders",
+      "type": "psychiatric",
+      "note": "Both commonly present through the body; treat them when present."
+    }
+  ],
+  "specifiers": [
+    {
+      "label": "With predominant pain (descriptive)",
+      "note": "Pain-focused care may follow NICE NG193 for chronic primary pain. See DSM-5-TR for specifiers."
+    }
+  ],
+  "differentials": [
+    {
+      "label": "Illness anxiety disorder",
+      "distinguishing": "Fear of illness with few or mild symptoms.",
+      "icd10cm": "F45.21"
+    },
+    {
+      "label": "Functional neurological symptom disorder",
+      "distinguishing": "Neurological symptoms (weakness, movement, seizures) inconsistent with known disease.",
+      "icd10cm": "F44.4"
+    },
+    {
+      "label": "Major depressive disorder",
+      "distinguishing": "Bodily complaints occur within a depressive episode.",
+      "icd10cm": "F33.9"
+    },
+    {
+      "label": "Panic disorder",
+      "distinguishing": "Symptoms come in sudden attacks.",
+      "icd10cm": "F41.0"
+    }
+  ],
+  "comorbidities": [
+    {
+      "label": "Depression",
+      "note": "Common; screen with the PHQ-9.",
+      "conditionId": "major-depressive-disorder"
+    },
+    {
+      "label": "Anxiety",
+      "note": "Common; screen with the GAD-7.",
+      "conditionId": "generalized-anxiety-disorder"
+    },
+    {
+      "label": "Health anxiety",
+      "note": "Fear of illness often accompanies the symptoms.",
+      "conditionId": "illness-anxiety-disorder"
+    }
+  ],
+  "measures": [
+    "phq-9",
+    "gad-7"
+  ],
+  "measuresPending": [
+    {
+      "name": "Patient Health Questionnaire-15 (PHQ-15)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11914441/",
+      "note": "License pending — link out only",
+      "licenseKey": "PHQ-15"
+    }
+  ],
+  "interventions": [
+    {
+      "name": "CBT for persistent physical symptoms",
+      "evidence": "A Cochrane review (van Dessel et al., 2014) found CBT reduced symptom severity modestly compared with usual care.",
+      "note": "Link thoughts, attention and activity to symptom experience; set goals for valued activity."
+    },
+    {
+      "name": "Graded activity and pacing",
+      "evidence": "Recommended for chronic primary pain in NICE NG193 as part of exercise and psychological approaches.",
+      "note": "Plan steady, gradual activity increases rather than boom-and-bust cycles."
+    },
+    {
+      "name": "Consistent coordinated medical care",
+      "evidence": "Regular scheduled visits with one clinician limit unplanned tests and visits.",
+      "note": "Coordinate with the primary care clinician, with consent."
+    },
+    {
+      "name": "Acceptance and commitment approaches",
+      "evidence": "NICE NG193 lists ACT among psychological therapies for chronic primary pain.",
+      "note": "Make room for symptoms while moving toward values."
+    },
+    {
+      "name": "Medication referral",
+      "evidence": "Prescribing decisions rest with the prescriber.",
+      "note": "Refer when co-occurring depression or anxiety is present."
+    }
+  ],
+  "handouts": [
+    "checking-and-reassurance-log",
+    "activity-schedule",
+    "movement-plan"
+  ],
+  "statIds": [],
+  "culturalNotes": [
+    "How people describe distress through the body differs across cultures; some communities speak of heat, nerves, heaviness or a weak heart rather than of worry. Ask what the symptoms mean to the client and their family.",
+    "Past experiences of being dismissed or misdiagnosed by health services, which are more common for women, people of color and people with disabilities, can understandably drive checking and repeated visits. Acknowledge this before working on reassurance-seeking.",
+    "Do not assume that symptoms without a found cause are psychological. Keep the medical team involved and review new or changing symptoms.",
+    "Use a trained professional interpreter, not family members, and check that key terms translate with the meaning you intend.",
+    "If the client wants faith or spiritual practice included, follow their lead and get informed consent first (see the AACC Code of Ethics for faith-based counselors); never impose beliefs."
+  ],
+  "sud": false,
+  "requiredFeatures": [],
+  "redFlagRules": [],
+  "licensedDsm": false,
+  "wileyLicensed": false,
+  "sources": [
+    {
+      "title": "Non-pharmacological interventions for somatoform disorders and medically unexplained physical symptoms in adults (van Dessel et al.)",
+      "publisher": "Cochrane Database of Systematic Reviews (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25362239/",
+      "year": 2014
+    },
+    {
+      "title": "Chronic pain (primary and secondary) in over 16s: assessment of all chronic pain and management of chronic primary pain (NG193)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng193",
+      "year": 2021
+    },
+    {
+      "title": "Bodily distress disorder (ICD-11 entry 6C20)",
+      "publisher": "World Health Organization",
+      "url": "https://icd.who.int/browse/latest-release/mms/en"
+    },
+    {
+      "title": "ICD-10-CM (official code set)",
+      "publisher": "CDC National Center for Health Statistics",
+      "url": "https://www.cdc.gov/nchs/icd/icd-10-cm/index.html"
+    },
+    {
+      "title": "ICD-10-CM codes checked with the NLM Clinical Table Search Service",
+      "publisher": "National Library of Medicine",
+      "url": "https://clinicaltables.nlm.nih.gov/apidoc/icd10cm/v3/doc.html"
+    },
+    {
+      "title": "AACC Code of Ethics",
+      "publisher": "American Association of Christian Counselors",
+      "url": "https://aacc.net/aacc-code-of-ethics/"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

@@ -1,0 +1,67 @@
+{
+  "id": "interpersonal-social-rhythm-therapy",
+  "name": "Interpersonal and social rhythm therapy (IPSRT)",
+  "modality": "Interpersonal therapy - social rhythm (bipolar spectrum)",
+  "conditions": [
+    "bipolar-i-disorder",
+    "bipolar-ii-disorder",
+    "cyclothymic-disorder"
+  ],
+  "evidenceLevel": "In a randomized trial, people with bipolar I who received IPSRT during acute treatment stayed well longer during maintenance (Frank et al., 2005). In STEP-BD, intensive psychotherapy, including IPSRT, sped recovery from bipolar depression (Miklowitz et al., 2007). Used alongside medication.",
+  "minutes": {
+    "min": 45,
+    "max": 60
+  },
+  "purpose": "Steadies the daily rhythms that keep mood stable: the time the client wakes, first contacts another person, eats, works and goes to bed. Disrupted routines and sleep can trigger mood episodes, so the client tracks rhythms, finds what knocks them off course and plans ahead, while working on an interpersonal problem area such as a role change or a conflict.",
+  "steps": [
+    "Explain the link between sleep, daily routine and mood episodes.",
+    "Have the client track five anchor times each day (wake, first contact, start of work or main activity, dinner, bed) and daily mood.",
+    "Review the tracker together and pick one or two anchors to make more regular.",
+    "Identify events that disrupt rhythms (travel, night shifts, parties, new relationships) and plan ahead for them.",
+    "Choose an interpersonal focus (grief for the healthy self, a role change, a dispute or isolation) and work on it.",
+    "Build an early warning plan with the client and, with consent, family."
+  ],
+  "script": [
+    "Your body clock and your mood are closely linked.",
+    "Let's look at what time you got up each day this week.",
+    "What threw your schedule off on Thursday?",
+    "If you start sleeping less and feeling wired, what will be your first step?"
+  ],
+  "contraindications": [
+    "Not a substitute for medication in bipolar I; coordinate with the prescriber.",
+    "A rapid switch into a high, psychosis or suicidal thinking needs urgent psychiatric care.",
+    "Do not start during an active crisis, current suicidal risk, acute intoxication or withdrawal; stabilize first and share crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com."
+  ],
+  "culturalAdaptations": [
+    "Shift work, caregiving, religious fasting and celebrations shape rhythms; set realistic anchors that fit the client's life.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "trainingRequired": "IPSRT: training is recommended for the full protocol; social rhythm tracking can be used by trained clinicians as an adjunct.",
+  "handoutIds": [
+    "mood-routine-tracker",
+    "sleep-diary"
+  ],
+  "sources": [
+    {
+      "title": "Two-year outcomes for interpersonal and social rhythm therapy in individuals with bipolar I disorder (Frank et al.)",
+      "publisher": "Archives of General Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16143731/",
+      "year": 2005
+    },
+    {
+      "title": "Intensive psychosocial intervention enhances functioning in patients with bipolar depression (Miklowitz et al.)",
+      "publisher": "American Journal of Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17728418/",
+      "year": 2007
+    },
+    {
+      "title": "Bipolar disorder: assessment and management (CG185)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg185",
+      "year": 2014
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

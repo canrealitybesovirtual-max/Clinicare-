@@ -94,20 +94,19 @@ or negated texts). Report: `npx tsx scripts/build-lexicon-embeddings.ts --calibr
 
 | Threshold | Precision | Recall | Top-1 | Negatives clean |
 | ---: | ---: | ---: | ---: | ---: |
-| 0.450 | 0.649 | 0.903 | 0.887 | 0.7 |
-| 0.500 | 0.698 | 0.887 | 0.887 | 0.8 |
-| 0.550 | 0.750 | 0.855 | 0.887 | 0.8 |
-| 0.575 | 0.803 | 0.855 | 0.887 | 1.0 |
-| **0.600 (default)** | **0.812** | **0.855** | **0.868** | **1.0** |
-| 0.650 | 0.833 | 0.774 | 0.811 | 1.0 |
+| 0.450 | 0.610 | 0.903 | 0.906 | 0.7 |
+| 0.500 | 0.663 | 0.903 | 0.906 | 0.8 |
+| 0.550 | 0.738 | 0.887 | 0.906 | 0.8 |
+| 0.575 | 0.787 | 0.887 | 0.906 | 1.0 |
+| **0.600 (default)** | **0.808** | **0.887** | **0.906** | **1.0** |
+| 0.650 | 0.841 | 0.806 | 0.849 | 1.0 |
 
-Precision = relevant suggestions / all suggestions; recall = expected symptoms found / expected symptoms (lexicon 1.3.0,
-104 symptoms, 2632 phrases, margin 0.08, limit 5). The default was 0.50 on lexicon 1.2.0 (67 symptoms: precision
+Precision = relevant suggestions / all suggestions; recall = expected symptoms found / expected symptoms (lexicon 1.4.0
+with the review-round-3 fear and paranoia phrasings, 157 symptoms, 3302 phrases, margin 0.08, limit 5). The default was 0.50 on lexicon 1.2.0 (67 symptoms: precision
 0.833, recall 0.887). With the larger lexicon, 0.50 let neutral texts through ("likes walking her dogs in the park"
-suggested avoidance; "keeps reliving the crash" surfaced a drinking-relapse symptom), so the default moved to 0.60,
-where every negative text stays clean. Cost: "keeps reliving the crash" (best 0.58) now gets no suggestion; adding a
-"reliving" synonym to intrusive-memories / flashbacks in the lexicon fixes it. Re-run the report whenever the
-lexicon changes.
+suggested avoidance), so the default moved to 0.60, where every negative text stays clean. Lexicon 1.4.0 added
+"reliving" wording to the intrusive-memory symptoms, so "keeps reliving the crash" is found again at 0.60. Re-run the
+report whenever the lexicon changes.
 
 Known limits (also why it is only a suggestion list):
 - Colloquialisms the lexicon lacks ("freaks out near dogs", "the smell of smoke sets her off") can stay below the
@@ -115,8 +114,9 @@ Known limits (also why it is only a suggestion list):
 - Embeddings blur close opposites: "drives way too fast since the accident" scores higher for avoidance ("won't drive
   since the accident") than for reckless driving, and "thinking about killing himself" also surfaces homicidal ideation
   (0.72, just below suicidal ideation at 0.75). The clinician decides.
-- No specific animal-fear symptom exists in lexicon 1.2.0, so "panic from dogs" maps to cued panic. Ids matching
-  `/phobi|animal|specific-(fear|object)/` added later are accepted by the tests automatically.
+- Lexicon 1.4.0 has phobia-subtype symptoms (`fear-animals`, `fear-heights`, `fear-flying`, `fear-blood-injection`,
+  `fear-enclosed-spaces`, `fear-natural-environment`); they form one associated slot of specific phobia, so a matched
+  subtype counts once and is not offered as a tap-to-add feature.
 
 ## How to disable
 
@@ -130,8 +130,10 @@ Known limits (also why it is only a suggestion list):
 
 ## Updating the model or lexicon
 
-- Lexicon changed: `npx tsx scripts/build-lexicon-embeddings.ts` (runs in `prebuild`; `--check` fails when stale;
-  `tests/integrations/semantic.test.ts` fails too). Output is byte-for-byte deterministic.
+- Lexicon changed: `npm run model:embed` (`npx tsx scripts/build-lexicon-embeddings.ts`), then commit
+  `public/models/lexicon-embeddings.json`. It is not part of `prebuild` (the model files may be absent on a build
+  host); `npm run model:check`, `tests/unit/semantic-build.test.ts` and `tests/integrations/semantic.test.ts` fail
+  while it is stale. Output is byte-for-byte deterministic.
 - New model revision: change `MODEL_REVISION` and the `MODEL_FILES` hashes in `src/lib/semantic/model.ts` (the build
   script and the worker both read them), run all three scripts, re-run `--calibrate` and the tests, update this page.
 - New onnxruntime-web build (an `@huggingface/transformers` upgrade): `npx tsx scripts/copy-ort.ts --check` fails with
@@ -158,7 +160,8 @@ const { suggestions, pending } = useSemanticSuggestions(scrubbedText, {
 
 - CSP `script-src` adds `'wasm-unsafe-eval'` (WebAssembly compile). `worker-src 'self' blob:` and `connect-src 'self'`
   stay as they are. No `'unsafe-eval'`, no CDN.
-- `prebuild`: `tsx scripts/gen-content-index.ts && tsx scripts/fetch-model.ts && tsx scripts/copy-ort.ts && tsx scripts/build-lexicon-embeddings.ts`.
+- `prebuild`: `tsx scripts/gen-content-index.ts && tsx scripts/copy-ort.ts` (`predev` runs copy-ort). The model files
+  (`npm run model:fetch`) and the embeddings (`npm run model:embed`) are committed, not rebuilt on the build host.
 - `.gitignore`: `public/ort/`.
 - Cache headers: `/models/all-MiniLM-L6-v2/*` and `/ort/*` can be `public, max-age=31536000, immutable` (pinned
   revision / pinned package); `/models/lexicon-embeddings.json` should be `no-cache` (revalidate). The current

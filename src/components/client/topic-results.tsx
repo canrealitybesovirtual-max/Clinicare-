@@ -17,7 +17,7 @@ import { ExternalLink } from "@/components/ui/external-link";
 import { Notice } from "@/components/ui/notice";
 import { useLookup, type LookupState } from "@/components/diagnoses/live-lookup";
 import { Attribution } from "@/components/diagnoses/lookup-status";
-import { firstPlainSafe, isPlainSafe } from "./plain-text";
+import { firstClientSafe, isClientSafeText } from "@/lib/client-safe";
 import type { ClientTopic } from "./topics";
 
 const TEXT = {
@@ -92,8 +92,8 @@ export function TopicResults({ topic, lang }: { topic: ClientTopic; lang: Lang }
           <div className="space-y-4">
             <ul className="space-y-3">
               {state.data.items.map((item, i) => {
-                const title = firstPlainSafe([item.title, ...item.altTitles]) ?? n(t(TEXT.more), i + 1);
-                const summary = item.summary && isPlainSafe(item.summary) ? item.summary : null;
+                const title = firstClientSafe([item.title, ...item.altTitles]) ?? n(t(TEXT.more), i + 1);
+                const summary = item.summary && isClientSafeText(item.summary) ? item.summary : null;
                 return (
                   <li key={item.url} className="rounded-xl border border-border bg-surface p-4">
                     <ExternalLink href={item.url} className="inline-flex min-h-11 items-center text-base">

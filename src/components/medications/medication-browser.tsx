@@ -55,7 +55,7 @@ function MedicationBrowserInner({ items, categories }: Props) {
               type="search"
               value={search.draft}
               onChange={(e) => search.setDraft(e.target.value)}
-              onBlur={search.flushNow}
+              onBlur={search.onBlur}
               {...PRIVATE_TEXT_FIELD_PROPS}
               placeholder="e.g., sertraline, Zoloft, SSRI"
               aria-describedby={`${ids}-hint`}

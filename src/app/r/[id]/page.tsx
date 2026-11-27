@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { allHandouts, getAnyHandout } from "@/lib/library";
+import { clientHandout } from "@/lib/client-safe";
 import { ClientHandoutView } from "@/components/client/client-handout-view";
 import { SHARE_BACK } from "./share-back";
 
@@ -24,5 +25,5 @@ export default async function SharedHandoutPage({ params }: { params: Promise<{ 
   const { id } = await params;
   const handout = getAnyHandout(id);
   if (!handout) notFound();
-  return <ClientHandoutView handout={handout} back={SHARE_BACK} />;
+  return <ClientHandoutView handout={clientHandout(handout)} back={SHARE_BACK} />;
 }

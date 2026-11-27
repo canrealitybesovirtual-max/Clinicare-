@@ -395,6 +395,60 @@
       "lastVerified": "unverified",
       "verification": "Well-known organization URL; not checked online on 2026-11-26 (site not reachable from the build sandbox).",
       "sources": [{ "title": "Narcotics Anonymous World Services", "publisher": "Narcotics Anonymous World Services", "url": "https://na.org/" }]
+    },
+    {
+      "id": "anad-helpline",
+      "name": "ANAD Eating Disorders Helpline",
+      "description": "Free helpline from the National Association of Anorexia Nervosa and Associated Disorders offering emotional support and referrals for people affected by eating problems and their families. Not a crisis line.",
+      "url": "https://anad.org/",
+      "phone": "1-888-375-7767",
+      "region": "US",
+      "kind": "helpline",
+      "languages": ["en"],
+      "hours": "Weekdays; check the ANAD site for current hours and holiday closures",
+      "notes": ["Not a crisis line. In a crisis, call or text 988, or call 911 for medical warning signs such as fainting or chest pain."],
+      "lastVerified": "unverified",
+      "verification": "Number and weekday hours cross-checked by web search (findahelpline.com and a state 211 directory list the ANAD helpline); anad.org was not reachable from the build sandbox. A person must confirm on anad.org before release.",
+      "sources": [{ "title": "ANAD Eating Disorders Helpline", "publisher": "ANAD", "url": "https://anad.org/" }]
+    },
+    {
+      "id": "iocdf-find-help",
+      "name": "International OCD Foundation resource directory",
+      "description": "Directory of clinicians, clinics and support groups with experience in obsessive-compulsive and related problems, including body-image, hoarding, hair-pulling and skin-picking concerns.",
+      "url": "https://iocdf.org/find-help/",
+      "region": "US",
+      "kind": "directory",
+      "languages": ["en"],
+      "notes": ["Listings are self-reported; check each clinician's license and training."],
+      "lastVerified": "unverified",
+      "verification": "Well-known organization URL; not checked online on 2026-11-27 (iocdf.org was not reachable from the build sandbox).",
+      "sources": [{ "title": "Find Help", "publisher": "International OCD Foundation", "url": "https://iocdf.org/find-help/" }]
+    },
+    {
+      "id": "dbsa-support-groups",
+      "name": "DBSA peer support groups",
+      "description": "Free peer-led support groups, in person and online, from the Depression and Bipolar Support Alliance for people living with mood conditions and for their families and friends.",
+      "url": "https://www.dbsalliance.org/",
+      "region": "US",
+      "kind": "peer-support",
+      "languages": ["en"],
+      "notes": ["Support groups are not treatment or crisis care. In a crisis, call or text 988."],
+      "lastVerified": "unverified",
+      "verification": "Well-known organization URL; not checked online on 2026-11-27 (dbsalliance.org was not reachable from the build sandbox).",
+      "sources": [{ "title": "Depression and Bipolar Support Alliance", "publisher": "DBSA", "url": "https://www.dbsalliance.org/" }]
+    },
+    {
+      "id": "chadd-resources",
+      "name": "CHADD (ADHD information and professional directory)",
+      "description": "Nonprofit resource for people with ADHD and their families, including adults: plain-language information, support groups and a directory of professionals who work with ADHD.",
+      "url": "https://chadd.org/",
+      "region": "US",
+      "kind": "directory",
+      "languages": ["en"],
+      "notes": ["Directory listings are not an endorsement; check each professional's license."],
+      "lastVerified": "unverified",
+      "verification": "Well-known organization URL; not checked online on 2026-11-27 (chadd.org was not reachable from the build sandbox).",
+      "sources": [{ "title": "CHADD", "publisher": "Children and Adults with Attention-Deficit/Hyperactivity Disorder", "url": "https://chadd.org/" }]
     }
   ]
 }

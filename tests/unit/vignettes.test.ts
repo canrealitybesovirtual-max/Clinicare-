@@ -30,7 +30,23 @@ type ConditionId =
   | "persistent-depressive-disorder"
   | "adjustment-disorder"
   | "prolonged-grief-disorder"
-  | "specific-phobia";
+  | "specific-phobia"
+  | "bipolar-i-disorder"
+  | "bipolar-ii-disorder"
+  | "cyclothymic-disorder"
+  | "adult-adhd"
+  | "borderline-personality-disorder"
+  | "anorexia-nervosa"
+  | "bulimia-nervosa"
+  | "binge-eating-disorder"
+  | "schizophrenia"
+  | "illness-anxiety-disorder"
+  | "somatic-symptom-disorder"
+  | "hoarding-disorder"
+  | "body-dysmorphic-disorder"
+  | "cannabis-use-disorder"
+  | "opioid-use-disorder"
+  | "stimulant-use-disorder";
 
 interface Expectation {
   status: ScoringResult["status"];
@@ -399,7 +415,10 @@ const VIGNETTES: Vignette[] = [
     text:
       "Pt states she sometimes wishes she wouldn't wake up. Hearing voices at night. Hasn't slept in 3 days but full of energy. Gets the shakes when stopping drinking.",
     expect: {
-      status: "insufficient",
+      // Each red flag touches a pattern (psychosis, bipolar), but one sign each is a thin picture: possible only.
+      status: "ok",
+      maxStrength: "possible",
+      excludes: ["alcohol-use-disorder"],
       redFlags: ["mania", "psychosis", "suicidality", "withdrawal"],
       matched: ["passive-death-wish", "hallucinations", "decreased-need-for-sleep", "alcohol-benzo-withdrawal"],
     },
@@ -415,14 +434,29 @@ const VIGNETTES: Vignette[] = [
     expect: { status: "insufficient", redFlags: ["homicidality"], negated: ["suicidal-ideation-active"] },
   },
   {
-    name: "eating-disorder medical warning signs",
+    name: "eating-disorder medical warning signs: red flag, eating patterns held at possible",
     text: "Restricting to 500 calories a day, lost 20 lb in two months, fainted at work twice.",
-    expect: { status: "insufficient", redFlags: ["eating-disorder-medical"], matched: ["severe-food-restriction", "purging-or-fainting"] },
+    expect: {
+      status: "ok",
+      top: ["anorexia-nervosa"],
+      maxStrength: "possible",
+      flags: { "anorexia-nervosa": ["partial-core", "red-flag"] },
+      redFlags: ["eating-disorder-medical"],
+      matched: ["severe-food-restriction", "purging-or-fainting"],
+    },
   },
   {
-    name: "mania signs on their own: red flag, no forced match",
+    name: "mania signs on their own: red flag, bipolar patterns held at moderate on a thin picture",
     text: "Talking a mile a minute, spending sprees, only sleeps 2 hours a night and feels rested.",
-    expect: { status: "insufficient", redFlags: ["mania"], matched: ["grandiosity-elevated-mood", "decreased-need-for-sleep"] },
+    expect: {
+      status: "ok",
+      top: ["bipolar-i-disorder"],
+      includes: ["bipolar-ii-disorder"],
+      maxStrength: "moderate",
+      flags: { "bipolar-i-disorder": ["breadth"], "bipolar-ii-disorder": ["required"] },
+      redFlags: ["mania"],
+      matched: ["grandiosity-elevated-mood", "decreased-need-for-sleep"],
+    },
   },
   {
     name: "alcohol withdrawal signs: withdrawal red flag",
@@ -745,7 +779,14 @@ const VIGNETTES: Vignette[] = [
   {
     name: "hard case, mania not insomnia: little sleep with high energy, red flag, no insomnia suggestion",
     text: "Hasn't slept in 3 days but full of energy, racing thoughts, spending sprees, can't sleep.",
-    expect: { status: "insufficient", redFlags: ["mania"], matched: ["decreased-need-for-sleep", "grandiosity-elevated-mood"] },
+    expect: {
+      status: "ok",
+      top: ["bipolar-i-disorder"],
+      excludes: ["insomnia-disorder"],
+      maxStrength: "moderate",
+      redFlags: ["mania"],
+      matched: ["decreased-need-for-sleep", "grandiosity-elevated-mood"],
+    },
   },
   {
     name: "insomnia with a nightly drink to fall asleep: insomnia disorder, alcohol use disorder not suggested",
@@ -979,6 +1020,414 @@ const VIGNETTES: Vignette[] = [
       status: "ok",
       top: ["major-depressive-disorder"],
       strength: { "major-depressive-disorder": "strong" },
+    },
+  },
+
+  /* ------------------------------------------------------------- bipolar spectrum */
+  {
+    name: "bipolar I: a high with little sleep, big spending and a hospital stay, now depressed",
+    text:
+      "For a week last spring she barely slept but felt great, talked a mile a minute, started five new projects and maxed out her credit cards; she was hospitalized during that high. Now feels down most days, no interest in anything.",
+    toggles: { duration: "gte6m" },
+    expect: {
+      status: "ok",
+      top: ["bipolar-i-disorder"],
+      includes: ["bipolar-ii-disorder"],
+      strength: { "bipolar-i-disorder": "strong", "major-depressive-disorder": "moderate" },
+      matched: ["mania-severe-impact", "decreased-need-for-sleep", "grandiosity-elevated-mood"],
+      flags: { "major-depressive-disorder": ["red-flag"] },
+      redFlags: ["mania"],
+    },
+  },
+  {
+    name: "bipolar I: current high with voices, psychosis flag on the mood pattern",
+    text:
+      "Feels on top of the world, needs only 2 hours of sleep and feels rested, racing thoughts, started five new projects, irritable when interrupted. Hearing voices telling him he is the chosen one.",
+    expect: {
+      status: "ok",
+      top: ["bipolar-i-disorder"],
+      strength: { "bipolar-i-disorder": "strong", schizophrenia: "possible" },
+      flags: { "bipolar-i-disorder": ["red-flag"], "bipolar-ii-disorder": ["required"] },
+      redFlags: ["mania", "psychosis"],
+    },
+  },
+  {
+    name: "bipolar I history only: past manic hospital stay, held at possible without current detail",
+    text: "Was hospitalized while manic two years ago after not sleeping for days and spending all her savings. Now steady on treatment.",
+    expect: {
+      status: "ok",
+      top: ["bipolar-i-disorder"],
+      maxStrength: "moderate",
+      flags: { "bipolar-i-disorder": ["partial-core"] },
+      redFlags: ["mania"],
+    },
+  },
+  {
+    name: "bipolar II: recurrent depression with a hypomanic week that friends noticed",
+    text:
+      "Two years of depression on and off. Last summer had a week where he felt on top of the world, needed only 3 hours of sleep and felt rested, racing thoughts, started lots of projects. Friends noticed. No hospital. Now depressed again, no energy, feels worthless.",
+    toggles: { duration: "gte6m" },
+    expect: {
+      status: "ok",
+      top: ["bipolar-ii-disorder", "bipolar-i-disorder"],
+      strength: { "bipolar-ii-disorder": "strong", "major-depressive-disorder": "moderate" },
+      noFlags: { "bipolar-ii-disorder": ["required"] },
+      redFlags: ["mania"],
+    },
+  },
+  {
+    name: "hard case, depression with hypomanic spells: depression held at moderate with a bipolar flag, bipolar II shown",
+    text:
+      "Recurrent depression since college, feeling down and no interest in hobbies now. Has had a few spells of a week or so feeling hypomanic, more productive than ever, talking fast. Never hospitalized.",
+    toggles: { duration: "gte6m" },
+    expect: {
+      status: "ok",
+      top: ["major-depressive-disorder", "bipolar-ii-disorder"],
+      strength: { "bipolar-ii-disorder": "moderate", "major-depressive-disorder": "moderate" },
+      flags: { "major-depressive-disorder": ["red-flag"] },
+      redFlags: ["mania"],
+    },
+  },
+  {
+    name: "bipolar II: current low with an earlier hypomanic week",
+    text: "Depressed for a month, no energy, feels worthless, sleeping too much. Two years ago had a hypomanic week where she barely slept but felt amazing.",
+    toggles: { duration: "1to6m" },
+    expect: {
+      status: "ok",
+      includes: ["bipolar-ii-disorder", "bipolar-i-disorder"],
+      strength: { "major-depressive-disorder": "moderate" },
+      maxStrength: "moderate",
+      redFlags: ["mania"],
+    },
+  },
+  {
+    name: "cyclothymia: years of milder highs and lows, never a long depression",
+    text: "Always been moody, moods have gone up and down for years with irritable high weeks and tired low weeks.",
+    toggles: { duration: "gte6m" },
+    expect: {
+      status: "ok",
+      top: ["cyclothymic-disorder"],
+      strength: { "cyclothymic-disorder": "moderate" },
+      flags: { "cyclothymic-disorder": ["breadth"] },
+      notMatched: ["longstanding-low-mood"],
+    },
+  },
+  {
+    name: "cyclothymia: emotional rollercoaster for years with racing thoughts when up",
+    text: "Emotional rollercoaster for years: highs and lows, never stable for long, mood shifts every week or two. Racing thoughts when up, tired when down.",
+    toggles: { duration: "gte6m" },
+    expect: { status: "ok", top: ["cyclothymic-disorder"], strength: { "cyclothymic-disorder": "moderate" } },
+  },
+  {
+    name: "cyclothymia vs borderline pattern: mood swings alone stay thin for both",
+    text: "Mood swings, highs and lows, never stable for long.",
+    expect: {
+      status: "ok",
+      top: ["cyclothymic-disorder"],
+      includes: ["borderline-personality-disorder"],
+      strength: { "borderline-personality-disorder": "possible" },
+      maxStrength: "moderate",
+    },
+  },
+
+  /* ------------------------------------------------------------- adult ADHD */
+  {
+    name: "adult ADHD: lifelong disorganization and impulsivity, childhood evidence",
+    text:
+      "Always losing things, misses deadlines at work, disorganized, procrastinates until the last minute. Teachers said he couldn't sit still and he was easily distracted as a kid. Interrupts people in meetings.",
+    toggles: { duration: "gte6m" },
+    expect: { status: "ok", top: ["adult-adhd"], strength: { "adult-adhd": "strong" }, matched: ["childhood-onset-attention"] },
+  },
+  {
+    name: "adult ADHD without childhood history: held at moderate with a required-feature flag",
+    text: "Easily distracted at work, careless mistakes, loses my keys, can't follow through on tasks.",
+    expect: { status: "ok", top: ["adult-adhd"], strength: { "adult-adhd": "moderate" }, flags: { "adult-adhd": ["required"] } },
+  },
+  {
+    name: "adult ADHD: hyperactive-impulsive style since grade school",
+    text: "Impulsive, interrupts people, can't wait my turn, always late and loses track of time. Since grade school he was hyper and fidgety.",
+    toggles: { duration: "gte6m" },
+    expect: { status: "ok", top: ["adult-adhd"], strength: { "adult-adhd": "moderate" }, noFlags: { "adult-adhd": ["required"] } },
+  },
+  {
+    name: "hard case, ADHD vs a high: mania signs cap the attention pattern",
+    text: "Can't stay organized, starts things and never finishes, since childhood. This week racing thoughts, talking a mile a minute and only sleeps 2 hours a night and feels rested.",
+    expect: {
+      status: "ok",
+      includes: ["adult-adhd", "bipolar-i-disorder"],
+      strength: { "adult-adhd": ["moderate", "possible"] },
+      flags: { "adult-adhd": ["red-flag"] },
+      redFlags: ["mania"],
+    },
+  },
+
+  /* ------------------------------------------------------------- borderline pattern */
+  {
+    name: "borderline pattern: abandonment fear, stormy relationships, emptiness, rage and self-harm",
+    text:
+      "Terrified her partner will leave, panics when he doesn't text back. Unstable relationships, goes from loving to hating people. Empty inside, fits of rage, cuts herself when overwhelmed.",
+    toggles: { duration: "gte6m" },
+    expect: {
+      status: "ok",
+      top: ["borderline-personality-disorder"],
+      strength: { "borderline-personality-disorder": "strong" },
+      flags: { "borderline-personality-disorder": ["red-flag"] },
+      redFlags: ["suicidality"],
+    },
+  },
+  {
+    name: "borderline pattern: mood shifts within hours after arguments, identity disturbance",
+    text: "Mood swings within hours after arguments, fear of abandonment, rocky relationships, no sense of self, explosive anger.",
+    toggles: { duration: "gte6m" },
+    expect: { status: "ok", top: ["borderline-personality-disorder"], strength: { "borderline-personality-disorder": "strong" } },
+  },
+  {
+    name: "borderline pattern with recent self-harm: suicidality red flag shown, never a risk rating",
+    text: "Fear of abandonment, love hate relationships, identity keeps changing, chronic emptiness. Self-harm by cutting last week.",
+    toggles: { duration: "gte6m" },
+    expect: { status: "ok", top: ["borderline-personality-disorder"], matched: ["self-harm"], redFlags: ["suicidality"] },
+  },
+
+  /* ------------------------------------------------------------- eating disorders */
+  {
+    name: "anorexia: restriction, fear of weight gain, low BMI, medical red flag",
+    text: "Restricting to 500 calories a day, terrified of gaining weight, underweight with a bmi of 16, exercises excessively, feels fat.",
+    toggles: { duration: "1to6m" },
+    expect: {
+      status: "ok",
+      top: ["anorexia-nervosa"],
+      strength: { "anorexia-nervosa": "strong" },
+      flags: { "anorexia-nervosa": ["red-flag"] },
+      redFlags: ["eating-disorder-medical"],
+    },
+  },
+  {
+    name: "anorexia with fainting: medical warning signs, urgent medical assessment message",
+    text: "Afraid of gaining weight, restricting calories, lost a lot of weight, dangerously thin, fainted at the gym.",
+    toggles: { duration: "1to6m" },
+    expect: { status: "ok", top: ["anorexia-nervosa"], flags: { "anorexia-nervosa": ["red-flag"] }, redFlags: ["eating-disorder-medical"] },
+  },
+  {
+    name: "bulimia: binge-purge cycle with shape concern",
+    text: "Binge eating several times a week, then makes herself throw up; obsessed with her weight and hates her body.",
+    toggles: { duration: "1to6m" },
+    expect: {
+      status: "ok",
+      top: ["bulimia-nervosa", "binge-eating-disorder"],
+      strength: { "bulimia-nervosa": "moderate" },
+      redFlags: ["eating-disorder-medical"],
+    },
+  },
+  {
+    name: "bulimia without purging: fasting and exercise after binges",
+    text: "Fasting after a binge, binges on food twice a week, compulsive exercise, my worth depends on my weight.",
+    toggles: { duration: "1to6m" },
+    expect: { status: "ok", top: ["bulimia-nervosa"], strength: { "bulimia-nervosa": "moderate" } },
+  },
+  {
+    name: "binge-eating disorder: secret binges with shame, no compensation",
+    text: "Binge eating at night, eats until uncomfortably full, eats in secret and feels disgusted with herself after eating.",
+    toggles: { duration: "1to6m" },
+    expect: {
+      status: "ok",
+      top: ["binge-eating-disorder"],
+      includes: ["bulimia-nervosa"],
+      strength: { "binge-eating-disorder": "moderate", "bulimia-nervosa": "possible" },
+    },
+  },
+  {
+    name: "hard case, binge eating not bulimia: purging denied",
+    text: "Binges on food three times a week, out of control eating, hides food, ashamed after eating. No purging.",
+    toggles: { duration: "1to6m" },
+    expect: {
+      status: "ok",
+      top: ["binge-eating-disorder"],
+      strength: { "bulimia-nervosa": "possible" },
+      negated: ["purging-or-fainting"],
+    },
+  },
+
+  /* ------------------------------------------------------------- psychosis */
+  {
+    name: "schizophrenia pattern: voices, paranoia, disorganized speech and months of decline",
+    text:
+      "Hearing voices that comment on him, believes the neighbors are plotting against him, disorganized speech, stopped going to work and neglecting hygiene for 8 months.",
+    toggles: { duration: "gte6m" },
+    expect: {
+      status: "ok",
+      top: ["schizophrenia"],
+      strength: { schizophrenia: "strong" },
+      flags: { schizophrenia: ["red-flag"] },
+      redFlags: ["psychosis"],
+    },
+  },
+  {
+    name: "first-episode psychosis with daily cannabis: psychosis pattern, cannabis context only",
+    text: "Hearing voices for a few weeks, paranoid that cameras are watching him, word salad, smokes weed every day.",
+    toggles: { duration: "2to4w" },
+    expect: {
+      status: "ok",
+      top: ["schizophrenia"],
+      strength: { schizophrenia: ["moderate", "possible"] },
+      flags: { schizophrenia: ["duration", "red-flag"] },
+      excludes: ["cannabis-use-disorder"],
+      matched: ["cannabis-use-pattern"],
+      redFlags: ["psychosis"],
+    },
+  },
+  {
+    name: "schizophrenia pattern: delusion with negative symptoms and dropping out of school",
+    text: "Paranoid, believes he is being poisoned, flat affect, barely speaks anymore, dropped out of school six months ago.",
+    toggles: { duration: "gte6m" },
+    expect: { status: "ok", top: ["schizophrenia"], matched: ["negative-symptoms", "functional-decline"], redFlags: ["psychosis"] },
+  },
+
+  /* ------------------------------------------------------------- illness anxiety and bodily distress */
+  {
+    name: "illness anxiety: fear of serious illness despite normal tests, checking and searching",
+    text: "Health anxiety: convinced she has a serious illness even though tests are normal, googling symptoms every day, asks for more tests.",
+    toggles: { duration: "gte6m" },
+    expect: { status: "ok", top: ["illness-anxiety-disorder"], strength: { "illness-anxiety-disorder": "moderate" } },
+  },
+  {
+    name: "illness anxiety: reassurance and doctor shopping",
+    text: "Hypochondriac, sure something is seriously wrong with me, doctor shopping, constant reassurance from family.",
+    toggles: { duration: "gte6m" },
+    expect: { status: "ok", top: ["illness-anxiety-disorder"], strength: { "illness-anxiety-disorder": "moderate" }, flags: { "illness-anxiety-disorder": ["breadth"] } },
+  },
+  {
+    name: "hard case, health anxiety not GAD: health is the main focus",
+    text: "Worried about my health all the time, afraid I have cancer, checks my body for lumps, dr google, worries about everything else too.",
+    toggles: { duration: "gte6m" },
+    expect: { status: "ok", top: ["illness-anxiety-disorder", "generalized-anxiety-disorder"], strength: { "generalized-anxiety-disorder": "possible" } },
+  },
+  {
+    name: "somatic symptom pattern: pain and fatigue that take over daily life",
+    text: "Chronic pain all over and fatigue, symptoms doctors can't explain, my life revolves around my symptoms, stopped working.",
+    toggles: { duration: "gte6m" },
+    expect: { status: "ok", top: ["somatic-symptom-disorder"], strength: { "somatic-symptom-disorder": "moderate" } },
+  },
+  {
+    name: "somatic symptom pattern with health worry and low mood",
+    text: "Constant pain and stomach problems, unexplained symptoms for two years, consumed by my symptoms, health anxiety, feeling down.",
+    toggles: { duration: "gte6m" },
+    expect: { status: "ok", top: ["somatic-symptom-disorder"], includes: ["illness-anxiety-disorder"] },
+  },
+  {
+    name: "somatic symptom pattern: symptoms with no cause found, preoccupation",
+    text: "So many physical symptoms, constant pain, consumed by my symptoms.",
+    expect: { status: "ok", top: ["somatic-symptom-disorder"], maxStrength: "moderate" },
+  },
+
+  /* ------------------------------------------------------------- hoarding */
+  {
+    name: "hoarding: cannot discard, rooms unusable, acquiring, fire hazard",
+    text: "Can't throw anything away, house is full of stuff, rooms filled to the ceiling, buys things he doesn't need; fire hazard per the landlord.",
+    toggles: { duration: "gte6m" },
+    expect: { status: "ok", top: ["hoarding-disorder"], strength: { "hoarding-disorder": "strong" }, matched: ["clutter-safety-hazard"] },
+  },
+  {
+    name: "hoarding: saving and clutter only, held at moderate",
+    text: "Saves everything, can't part with things, clutter everywhere, cant use the kitchen because of the clutter.",
+    toggles: { duration: "gte6m" },
+    expect: { status: "ok", top: ["hoarding-disorder"], strength: { "hoarding-disorder": "moderate" } },
+  },
+  {
+    name: "hoarding with low mood and blocked exits",
+    text: "Hoarder, piles of stuff everywhere, compulsive buying, blocked exits, depressed and isolating.",
+    toggles: { duration: "gte6m" },
+    expect: { status: "ok", top: ["hoarding-disorder"], includes: ["major-depressive-disorder"] },
+  },
+
+  /* ------------------------------------------------------------- body dysmorphic */
+  {
+    name: "body dysmorphic pattern: nose preoccupation, mirror rituals, surgery",
+    text: "Hates her nose, convinced she is ugly, hours in front of the mirror, had plastic surgery twice.",
+    toggles: { duration: "gte6m" },
+    expect: { status: "ok", top: ["body-dysmorphic-disorder"], strength: { "body-dysmorphic-disorder": "moderate" } },
+  },
+  {
+    name: "body dysmorphic pattern with a passive death wish: suicidality flag",
+    text: "Obsessed with my skin, mirror checking for hours, cover my face with makeup, avoids parties, wishes she wouldn't wake up.",
+    toggles: { duration: "gte6m" },
+    expect: {
+      status: "ok",
+      top: ["body-dysmorphic-disorder"],
+      flags: { "body-dysmorphic-disorder": ["red-flag"] },
+      redFlags: ["suicidality"],
+    },
+  },
+  {
+    name: "body dysmorphic pattern: comparing and repeated dermatology visits",
+    text: "Thinks I look ugly, flaw in my appearance, comparing my looks, seeing dermatologists over and over.",
+    toggles: { duration: "gte6m" },
+    expect: { status: "ok", top: ["body-dysmorphic-disorder"] },
+  },
+
+  /* ------------------------------------------------------------- cannabis, opioids, stimulants (Part 2) */
+  {
+    name: "cannabis use disorder: daily use, failed cut-down, withdrawal, harm",
+    text: "Smokes weed every day, can't cut down on weed, irritable and can't sleep without weed, keeps using even though it is messing up his job.",
+    toggles: { duration: "gte6m" },
+    expect: { status: "ok", top: ["cannabis-use-disorder"], strength: { "cannabis-use-disorder": "strong" }, part2: true },
+  },
+  {
+    name: "cannabis use disorder: cravings, failed quit attempts, driving high",
+    text: "Uses cannabis daily, cravings for weed, tried to quit weed many times, drives high.",
+    toggles: { duration: "gte6m" },
+    expect: { status: "ok", top: ["cannabis-use-disorder"], strength: { "cannabis-use-disorder": "moderate" }, part2: true },
+  },
+  {
+    name: "cannabis use alone is context, not a disorder",
+    text: "Smokes weed on weekends with friends. Otherwise doing fine.",
+    expect: { status: "insufficient", matched: ["cannabis-use-pattern"] },
+  },
+  {
+    name: "cannabis use disorder with daily use and lost control only",
+    text: "Weed every day, more than I planned, can't stop smoking weed even though my partner is upset.",
+    toggles: { duration: "gte6m" },
+    expect: { status: "ok", top: ["cannabis-use-disorder"], part2: true },
+  },
+  {
+    name: "opioid use disorder: fentanyl, withdrawal, overdose and naloxone",
+    text: "Uses fentanyl daily, dope sick in the mornings, can't stop using heroin, overdosed on fentanyl last month and needed narcan.",
+    toggles: { duration: "gte6m" },
+    expect: { status: "ok", top: ["opioid-use-disorder"], strength: { "opioid-use-disorder": "strong" }, matched: ["opioid-overdose-risk"], part2: true },
+  },
+  {
+    name: "opioid use disorder: prescription pain pills beyond the prescription",
+    text: "Takes more pain pills than prescribed, can't cut down on pain pills, opioid withdrawal when he runs out.",
+    toggles: { duration: "gte6m" },
+    expect: { status: "ok", top: ["opioid-use-disorder"], strength: { "opioid-use-disorder": "moderate" }, flags: { "opioid-use-disorder": ["breadth"] }, part2: true },
+  },
+  {
+    name: "opioid use disorder: withdrawal and using alone",
+    text: "Dopesick, uses heroin alone, revived with narcan twice.",
+    toggles: { duration: "gte6m" },
+    expect: { status: "ok", top: ["opioid-use-disorder"], strength: { "opioid-use-disorder": "moderate" }, part2: true },
+  },
+  {
+    name: "stimulant use disorder: methamphetamine binges, crashes and job loss",
+    text: "Smokes meth on weekends, binges on meth for days, crashes after meth, cravings for meth, lost his job because of it.",
+    toggles: { duration: "gte6m" },
+    expect: { status: "ok", top: ["stimulant-use-disorder"], strength: { "stimulant-use-disorder": "moderate" }, part2: true },
+  },
+  {
+    name: "stimulant use disorder: cocaine binges with chest pain",
+    text: "Uses cocaine on weekends, can't stop once he starts on coke, chest pain after coke, crashing after cocaine.",
+    toggles: { duration: "gte6m" },
+    expect: { status: "ok", top: ["stimulant-use-disorder"], matched: ["chest-pain"], part2: true },
+  },
+  {
+    name: "stimulant use disorder: misused prescription stimulants and paranoia, psychosis flag",
+    text: "Takes extra adderall, buys adderall, cravings for adderall, up for days on adderall, paranoid after meth.",
+    toggles: { duration: "gte6m" },
+    expect: {
+      status: "ok",
+      top: ["stimulant-use-disorder"],
+      flags: { "stimulant-use-disorder": ["red-flag"] },
+      redFlags: ["psychosis"],
+      part2: true,
     },
   },
 ];

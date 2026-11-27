@@ -101,6 +101,9 @@ export const FOLLOW_UP_DOMAINS = [
   "sleep",
   "alcohol",
   "grief",
+  "eating",
+  "attention",
+  "psychosis",
   "gates",
   "rule-outs",
 ] as const;
@@ -260,6 +263,8 @@ export const TriggerObjectSchema = z.strictObject({
   id: slug,
   category: TriggerCategory,
   label: z.string().min(2).max(60), // display label, plural where natural ("dogs")
+  /** The lexicon's phobia-type symptom this object belongs to (dogs: fear-animals); offered as a tap-to-add feature. */
+  symptomId: slug.optional(),
   terms: z.array(z.string().min(2).max(60)).min(1), // lowercase phrases incl. irregular plurals and variants
 });
 export type TriggerObject = z.infer<typeof TriggerObjectSchema>;

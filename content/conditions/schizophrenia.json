@@ -1,0 +1,345 @@
+{
+  "id": "schizophrenia",
+  "name": "Schizophrenia (and related psychotic disorders)",
+  "icd10cm": [
+    {
+      "code": "F20.0",
+      "label": "Paranoid schizophrenia"
+    },
+    {
+      "code": "F20.1",
+      "label": "Disorganized schizophrenia"
+    },
+    {
+      "code": "F20.2",
+      "label": "Catatonic schizophrenia"
+    },
+    {
+      "code": "F20.3",
+      "label": "Undifferentiated schizophrenia"
+    },
+    {
+      "code": "F20.5",
+      "label": "Residual schizophrenia"
+    },
+    {
+      "code": "F20.81",
+      "label": "Schizophreniform disorder"
+    },
+    {
+      "code": "F20.89",
+      "label": "Other schizophrenia"
+    },
+    {
+      "code": "F20.9",
+      "label": "Schizophrenia, unspecified"
+    }
+  ],
+  "icd11": [
+    {
+      "code": "6A20",
+      "label": "Schizophrenia"
+    }
+  ],
+  "dsmPointer": "See DSM-5-TR: Schizophrenia Spectrum and Other Psychotic Disorders — Schizophrenia",
+  "summary": "A psychotic disorder in which a person loses touch with shared reality for a sustained period: voices or other hallucinations, fixed unusual beliefs, disorganized thinking or behavior, and often a loss of drive, speech and expression that undermines work, study and self-care. Onset is usually in late adolescence or early adulthood and is often preceded by months of withdrawal and slipping function. A first episode of psychosis is a medical priority: refer urgently to psychiatry or a coordinated specialty care (early psychosis) program, where medication, family work, CBT for psychosis and supported work or school improve outcomes. Shorter psychotic episodes, mood episodes with psychosis and substance- or medically-caused psychosis are key alternatives. For clinician review only; this is not a diagnosis.",
+  "features": [
+    {
+      "symptomId": "hallucinations",
+      "kind": "core",
+      "weight": 5
+    },
+    {
+      "symptomId": "paranoia-delusions",
+      "kind": "core",
+      "weight": 5
+    },
+    {
+      "symptomId": "disorganized-thinking",
+      "kind": "core",
+      "weight": 4
+    },
+    {
+      "symptomId": "negative-symptoms",
+      "kind": "core",
+      "weight": 3
+    },
+    {
+      "symptomId": "functional-decline",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "social-withdrawal",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "insomnia",
+      "kind": "associated",
+      "weight": 1
+    },
+    {
+      "symptomId": "concentration-difficulty",
+      "kind": "associated",
+      "weight": 1
+    },
+    {
+      "symptomId": "irritability",
+      "kind": "associated",
+      "weight": 1
+    },
+    {
+      "symptomId": "subjective-anxiety-stress",
+      "kind": "associated",
+      "weight": 1
+    }
+  ],
+  "minCore": 2,
+  "durationGate": {
+    "minWeeks": 26,
+    "note": "Ask when the first changes appeared, including earlier withdrawal or slipping function. Shorter episodes point toward other psychotic disorders; check the duration bands in DSM-5-TR (ICD-11 uses a shorter duration)."
+  },
+  "impairmentRequired": true,
+  "ruleOuts": [
+    {
+      "label": "Substance-induced psychosis",
+      "type": "substance",
+      "note": "Cannabis (especially high-potency), stimulants, hallucinogens and alcohol or sedative withdrawal can cause psychosis. Ask about timing and use. This app does not store substance-use information."
+    },
+    {
+      "label": "Delirium, seizures and other medical causes",
+      "type": "medical",
+      "note": "Infection, metabolic problems, brain tumors, autoimmune encephalitis, temporal lobe epilepsy and thyroid disease can cause psychosis; sudden onset, confusion or fluctuating attention need urgent medical assessment."
+    },
+    {
+      "label": "Medication effects",
+      "type": "substance",
+      "note": "Steroids, some Parkinson's medications and other drugs can cause psychotic symptoms; review the medication list with the prescriber."
+    },
+    {
+      "label": "Mood episodes with psychosis",
+      "type": "psychiatric",
+      "note": "Psychosis that occurs only during a manic or depressive episode points toward bipolar disorder or depression with psychotic features."
+    }
+  ],
+  "specifiers": [
+    {
+      "label": "First episode, multiple episodes, continuous (descriptive)",
+      "note": "Course descriptions guide treatment planning. See DSM-5-TR for course and severity specifiers; ICD-11 adds symptom qualifiers."
+    },
+    {
+      "label": "With catatonia (descriptive)",
+      "note": "Catatonia is a medical emergency; refer urgently."
+    }
+  ],
+  "differentials": [
+    {
+      "label": "Brief psychotic disorder",
+      "distinguishing": "Psychosis lasting less than a month with a full return to usual function.",
+      "icd10cm": "F23"
+    },
+    {
+      "label": "Schizophreniform disorder",
+      "distinguishing": "The same picture for a shorter total duration.",
+      "icd10cm": "F20.81"
+    },
+    {
+      "label": "Schizoaffective disorder",
+      "distinguishing": "Mood episodes are present for much of the illness, with psychosis also outside them.",
+      "icd10cm": "F25.0"
+    },
+    {
+      "label": "Delusional disorder",
+      "distinguishing": "Fixed beliefs without prominent hallucinations or disorganization, and functioning is better kept.",
+      "icd10cm": "F22"
+    },
+    {
+      "label": "Bipolar I disorder with psychotic features",
+      "distinguishing": "Psychosis only during manic or depressive episodes.",
+      "icd10cm": "F31.2"
+    },
+    {
+      "label": "Psychotic disorder due to another medical condition",
+      "distinguishing": "A medical cause explains the psychosis.",
+      "icd10cm": "F06.2"
+    }
+  ],
+  "comorbidities": [
+    {
+      "label": "Depression",
+      "note": "Depression and suicide risk are common, especially after a first episode; screen and ask directly.",
+      "conditionId": "major-depressive-disorder"
+    },
+    {
+      "label": "Cannabis use",
+      "note": "Heavy cannabis use is linked to higher rates of psychosis and to relapse; screen sensitively.",
+      "conditionId": "cannabis-use-disorder"
+    },
+    {
+      "label": "Alcohol use",
+      "note": "Common; screen for it.",
+      "conditionId": "alcohol-use-disorder"
+    },
+    {
+      "label": "OCD",
+      "note": "Obsessive-compulsive symptoms are common; distinguish obsessions (seen as unwanted) from delusions.",
+      "conditionId": "obsessive-compulsive-disorder"
+    }
+  ],
+  "measures": [
+    "phq-9"
+  ],
+  "measuresPending": [
+    {
+      "name": "Prodromal Questionnaire-Brief (PQ-B)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Prodromal+Questionnaire+Brief+Version+Loewy+2011",
+      "note": "License pending — link out only",
+      "licenseKey": "PQ-B"
+    },
+    {
+      "name": "Columbia Suicide Severity Rating Scale (C-SSRS)",
+      "url": "https://cssrs.columbia.edu",
+      "note": "License pending — link out only",
+      "licenseKey": "C-SSRS"
+    }
+  ],
+  "interventions": [
+    {
+      "name": "Urgent referral: psychiatry or coordinated specialty care",
+      "evidence": "Coordinated specialty care improved outcomes in the NIMH RAISE program (Kane et al., 2016); NICE CG178 recommends early intervention services.",
+      "note": "Refer urgently for a first episode; same-day or emergency care when there is risk to self or others."
+    },
+    {
+      "name": "Medication from a prescriber",
+      "evidence": "NICE CG178 recommends antipsychotic medication offered with informed choice and monitoring.",
+      "note": "Support informed choice and side-effect discussions; prescribing decisions rest with the prescriber."
+    },
+    {
+      "name": "CBT for psychosis (CBTp)",
+      "evidence": "Wykes et al. (2008) found CBTp helps positive symptoms; NICE CG178 recommends it.",
+      "note": "Refer to clinicians trained in CBTp."
+    },
+    {
+      "name": "Family intervention and psychoeducation",
+      "evidence": "Pharoah et al. (2010, Cochrane) found family intervention reduced relapse and hospital admission.",
+      "note": "Involve family, with consent, in education and problem-solving."
+    },
+    {
+      "name": "Supported employment and education",
+      "evidence": "Part of coordinated specialty care in RAISE (Kane et al., 2016).",
+      "note": "Connect the client with supported employment (IPS) or education services."
+    }
+  ],
+  "handouts": [
+    "staying-well-plan",
+    "safety-plan",
+    "sleep-habits"
+  ],
+  "statIds": [
+    "us-schizophrenia-prevalence"
+  ],
+  "culturalNotes": [
+    "Beliefs about spirits, God, curses or ancestors may be shared within the client's community and are not delusions. Ask family or community members, with consent, whether the belief is usual in their setting.",
+    "Black and Latino clients in the US are more often diagnosed with schizophrenia when a mood disorder may better fit. Take a careful mood history and check your own assumptions.",
+    "Hearing a deceased loved one's voice can be part of normal grief in many cultures. Distinguish it from persistent, distressing hallucinations.",
+    "Stigma, past coercive treatment and police involvement can make families wary of services. Explain options, rights and what will happen at each step.",
+    "Use a trained professional interpreter, not family members, and check that key terms translate with the meaning you intend.",
+    "If the client wants faith or spiritual practice included, follow their lead and get informed consent first (see the AACC Code of Ethics for faith-based counselors); never impose beliefs."
+  ],
+  "sud": false,
+  "requiredFeatures": [],
+  "redFlagRules": [
+    {
+      "type": "psychosis",
+      "message": "Psychotic symptoms are documented. Arrange an urgent psychiatric evaluation or a coordinated specialty care referral; if there is risk to the client or others, follow your crisis protocol and call 988 or emergency services."
+    },
+    {
+      "type": "suicidality",
+      "message": "Suicidal thoughts or self-harm are documented in this input. Ask directly about intent, plan and access to means, follow your crisis protocol and build a safety plan with the client; this app never rates risk."
+    },
+    {
+      "type": "homicidality",
+      "message": "Thoughts of harming others are documented alongside possible psychosis. Follow your crisis protocol, consult, and review duty-to-protect rules for your jurisdiction."
+    }
+  ],
+  "licensedDsm": false,
+  "wileyLicensed": false,
+  "sources": [
+    {
+      "title": "Schizophrenia (health topic)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/topics/schizophrenia"
+    },
+    {
+      "title": "Schizophrenia (statistics)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/statistics/schizophrenia"
+    },
+    {
+      "title": "Schizophrenia (fact sheet)",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/schizophrenia"
+    },
+    {
+      "title": "Psychosis and schizophrenia in adults: prevention and management (CG178)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg178",
+      "year": 2014
+    },
+    {
+      "title": "Schizophrenia (health topic)",
+      "publisher": "MedlinePlus, U.S. National Library of Medicine",
+      "url": "https://medlineplus.gov/schizophrenia.html"
+    },
+    {
+      "title": "Comprehensive versus usual community care for first-episode psychosis: 2-year outcomes from the NIMH RAISE Early Treatment Program (Kane et al.)",
+      "publisher": "American Journal of Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26481174/",
+      "year": 2016
+    },
+    {
+      "title": "Cognitive behavior therapy for schizophrenia: effect sizes, clinical models, and methodological rigor (Wykes et al.)",
+      "publisher": "Schizophrenia Bulletin (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17962231/",
+      "year": 2008
+    },
+    {
+      "title": "Family intervention for schizophrenia (Pharoah et al.)",
+      "publisher": "Cochrane Database of Systematic Reviews (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21154340/",
+      "year": 2010
+    },
+    {
+      "title": "The contribution of cannabis use to variation in the incidence of psychotic disorder across Europe (EU-GEI; Di Forti et al.)",
+      "publisher": "The Lancet Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30902669/",
+      "year": 2019
+    },
+    {
+      "title": "ICD-11 for Mortality and Morbidity Statistics (browser)",
+      "publisher": "World Health Organization",
+      "url": "https://icd.who.int/browse/latest-release/mms/en"
+    },
+    {
+      "title": "ICD-10-CM (official code set)",
+      "publisher": "CDC National Center for Health Statistics",
+      "url": "https://www.cdc.gov/nchs/icd/icd-10-cm/index.html"
+    },
+    {
+      "title": "ICD-10-CM codes checked with the NLM Clinical Table Search Service",
+      "publisher": "National Library of Medicine",
+      "url": "https://clinicaltables.nlm.nih.gov/apidoc/icd10cm/v3/doc.html"
+    },
+    {
+      "title": "AACC Code of Ethics",
+      "publisher": "American Association of Christian Counselors",
+      "url": "https://aacc.net/aacc-code-of-ethics/"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

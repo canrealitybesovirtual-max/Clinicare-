@@ -197,7 +197,11 @@
       "note": "Refer when depression, anxiety or sleep problems call for it. Prescribing decisions rest with the prescriber."
     }
   ],
-  "handouts": [],
+  "handouts": [
+    "grief-and-loss",
+    "values-compass",
+    "activity-schedule"
+  ],
   "statIds": [],
   "culturalNotes": [
     "Mourning customs, timelines and expressions of grief differ widely, from set mourning periods and anniversary rites to ongoing ceremonies for ancestors. ICD-11 asks clinicians to compare grief with the norms of the client's culture and religion. Ask what grieving well looks like in the client's community.",

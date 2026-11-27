@@ -1,0 +1,60 @@
+{
+  "id": "bipolar-psychoeducation",
+  "name": "Psychoeducation for bipolar-spectrum conditions (adjunct)",
+  "modality": "Psychoeducation (individual, family or group)",
+  "conditions": [
+    "bipolar-i-disorder",
+    "bipolar-ii-disorder",
+    "cyclothymic-disorder"
+  ],
+  "evidenceLevel": "Group psychoeducation reduced recurrences in people with bipolar disorder in remission (Colom et al., 2003); NICE CG185 recommends structured psychological interventions, including psychoeducation, alongside medication.",
+  "minutes": {
+    "min": 45,
+    "max": 90
+  },
+  "purpose": "Gives the client and, with consent, family a clear understanding of mood episodes, triggers, early warning signs, the role of sleep and routine, medication questions to bring to the prescriber and when to seek urgent help. Used alongside medication, it helps the client spot episodes early and act.",
+  "steps": [
+    "Ask what the client already knows and believes about their mood changes.",
+    "Explain mood episodes, highs and lows, in plain language, using the client's own examples.",
+    "Identify the client's personal early warning signs for highs and lows.",
+    "Discuss triggers (sleep loss, stress, substances, some antidepressants started alone) and how to reduce them.",
+    "Prepare questions for the prescriber about medication benefits and side effects.",
+    "Write a staying-well plan with steps for early signs and an urgent help plan."
+  ],
+  "script": [
+    "Many people have mood changes like these, and they can be managed.",
+    "What was the very first thing you or others noticed before your last high?",
+    "Sleep is one of your best warning lights.",
+    "Let's write down what you will do if those signs come back."
+  ],
+  "contraindications": [
+    "Do not advise changing or stopping medication; refer medication questions to the prescriber.",
+    "During a current high or psychosis, keep information brief and focus on safety and urgent care.",
+    "Do not start during an active crisis, current suicidal risk, acute intoxication or withdrawal; stabilize first and share crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com."
+  ],
+  "culturalAdaptations": [
+    "Beliefs about the cause of mood changes (spiritual, family, medical) shape how information is received; ask first and connect information to the client's framework.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "handoutIds": [
+    "staying-well-plan",
+    "mood-routine-tracker"
+  ],
+  "sources": [
+    {
+      "title": "A randomized trial on the efficacy of group psychoeducation in the prophylaxis of recurrences in bipolar patients whose disease is in remission (Colom et al.)",
+      "publisher": "Archives of General Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12695318/",
+      "year": 2003
+    },
+    {
+      "title": "Bipolar disorder: assessment and management (CG185)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg185",
+      "year": 2014
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

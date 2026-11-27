@@ -1,0 +1,100 @@
+{
+  "conditionId": "body-dysmorphic-disorder",
+  "problems": [
+    {
+      "id": "bdd-preoccupation",
+      "label": "Appearance worries and rituals that take over the day",
+      "definitions": [
+        "Spends hours a day worrying about a feature the client sees as flawed, though others notice little.",
+        "Checks mirrors, grooms, compares or covers the area many times a day, or avoids mirrors entirely.",
+        "Avoids social events, work or being seen because of appearance concerns."
+      ],
+      "longTermGoals": [
+        "Appearance worry and rituals take up much less time, and the client returns to avoided activities."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "bdd-safety-plan",
+          "text": "By session 2, complete a written safety plan with warning signs, coping steps, people and services to contact, and steps to make the home safer, and review it at least monthly.",
+          "interventionIds": [
+            "collaborative-safety-planning"
+          ]
+        },
+        {
+          "id": "bdd-ritual-baseline",
+          "text": "For 2 weeks, log rituals (checking, grooming, comparing, covering) with estimated minutes per day.",
+          "interventionIds": [
+            "cbt-bdd"
+          ]
+        },
+        {
+          "id": "bdd-exposure",
+          "text": "By week 6, complete at least 3 exposure practices a week from a graded list, without camouflage or rituals.",
+          "interventionIds": [
+            "cbt-bdd",
+            "graded-in-vivo-exposure",
+            "safety-behavior-reduction"
+          ]
+        },
+        {
+          "id": "bdd-mirror",
+          "text": "Practice neutral, whole-body mirror description for 5 minutes, at least 4 times a week.",
+          "interventionIds": [
+            "cbt-bdd"
+          ]
+        },
+        {
+          "id": "bdd-picking",
+          "text": "If picking or plucking is present, use a competing response for at least half of urges for 4 weeks.",
+          "interventionIds": [
+            "habit-reversal-training"
+          ]
+        },
+        {
+          "id": "bdd-self-kindness",
+          "text": "Practice a compassionate response to appearance criticism daily for 4 weeks.",
+          "interventionIds": [
+            "self-compassion-practice",
+            "compassion-focused-imagery"
+          ]
+        },
+        {
+          "id": "bdd-medication",
+          "text": "Within 4 weeks, attend a medication evaluation if the client wishes, and complete the PHQ-9 every 2 to 4 weeks.",
+          "interventionIds": [
+            "medication-referral"
+          ]
+        }
+      ],
+      "measureIds": [
+        "phq-9",
+        "gad-7"
+      ]
+    }
+  ],
+  "collaborativeNote": "Write goals and objectives with the client in their own words. Timelines and targets are examples to adapt; the client decides what matters, and the clinician checks safety and fit.",
+  "sud": false,
+  "sources": [
+    {
+      "title": "Obsessive-compulsive disorder and body dysmorphic disorder: treatment (CG31)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg31",
+      "year": 2005
+    },
+    {
+      "title": "Efficacy and posttreatment effects of therapist-delivered cognitive behavioral therapy vs supportive psychotherapy for adults with body dysmorphic disorder (Wilhelm et al.)",
+      "publisher": "JAMA Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30785624/",
+      "year": 2019
+    },
+    {
+      "title": "Cognitive-behavioral therapy for body dysmorphic disorder: a systematic review and meta-analysis of randomized controlled trials (Harrison et al.)",
+      "publisher": "Clinical Psychology Review (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27393916/",
+      "year": 2016
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

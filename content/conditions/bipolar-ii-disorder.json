@@ -1,0 +1,310 @@
+{
+  "id": "bipolar-ii-disorder",
+  "name": "Bipolar II disorder",
+  "icd10cm": [
+    {
+      "code": "F31.81",
+      "label": "Bipolar II disorder"
+    }
+  ],
+  "icd11": [
+    {
+      "code": "6A61",
+      "label": "Bipolar type II disorder"
+    }
+  ],
+  "dsmPointer": "See DSM-5-TR: Bipolar and Related Disorders — Bipolar II Disorder",
+  "summary": "Recurrent depressive episodes plus at least one milder high: a run of days in which the client is noticeably more energetic, talkative, confident or irritable than usual, sleeps less without missing it and takes on more, yet keeps functioning and never needs hospital care or loses touch with reality. Depression is the main burden and is often what brings the client in; the highs may be recalled only as productive spells. Ask about them directly and, with consent, ask family. The pattern matters because treatment differs from unipolar depression. For clinician review only; this is not a diagnosis.",
+  "features": [
+    {
+      "symptomId": "grandiosity-elevated-mood",
+      "kind": "core",
+      "weight": 5
+    },
+    {
+      "symptomId": "decreased-need-for-sleep",
+      "kind": "core",
+      "weight": 3
+    },
+    {
+      "symptomId": "depressed-mood",
+      "kind": "associated",
+      "weight": 2,
+      "group": "low-mood",
+      "breadthArea": true
+    },
+    {
+      "symptomId": "anhedonia",
+      "kind": "associated",
+      "weight": 2,
+      "group": "low-mood",
+      "breadthArea": true
+    },
+    {
+      "symptomId": "racing-thoughts",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "increased-goal-activity",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "mood-swings",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "irritability",
+      "kind": "associated",
+      "weight": 1
+    },
+    {
+      "symptomId": "fatigue",
+      "kind": "associated",
+      "weight": 1
+    },
+    {
+      "symptomId": "worthlessness-guilt",
+      "kind": "associated",
+      "weight": 1
+    },
+    {
+      "symptomId": "concentration-difficulty",
+      "kind": "associated",
+      "weight": 1
+    }
+  ],
+  "minCore": 1,
+  "durationGate": {
+    "minWeeks": 2,
+    "note": "Ask how long the lows and the highs each lasted, and whether others noticed the change. Check the duration thresholds in DSM-5-TR."
+  },
+  "impairmentRequired": true,
+  "ruleOuts": [
+    {
+      "label": "Stimulants, steroids and other substances or medicines",
+      "type": "substance",
+      "note": "Cocaine, amphetamines, high-dose corticosteroids and some antidepressant starts can bring on manic-like states. Review the medication list with the prescriber. This app does not store substance-use information."
+    },
+    {
+      "label": "Thyroid, neurological and other medical causes",
+      "type": "medical",
+      "note": "Hyperthyroidism, brain injury, seizures, multiple sclerosis, dementia and some infections can cause elation, irritability or disinhibition, especially with a first episode after age 40. Arrange a medical work-up."
+    },
+    {
+      "label": "Primary psychotic disorder",
+      "type": "psychiatric",
+      "note": "Hallucinations or delusions that persist when mood is level point toward a schizophrenia-spectrum or schizoaffective picture."
+    },
+    {
+      "label": "Unipolar depression without a history of highs",
+      "type": "psychiatric",
+      "note": "Ask the client and, with consent, someone who knows them well about past periods of unusual energy, little sleep or risky spending; highs are often missed or remembered as good spells."
+    }
+  ],
+  "specifiers": [
+    {
+      "label": "Current or most recent episode: hypomanic or depressed (descriptive)",
+      "note": "ICD-10-CM uses one code (F31.81). See DSM-5-TR for episode specifiers."
+    },
+    {
+      "label": "Rapid cycling pattern (descriptive)",
+      "note": "Frequent switches within a year call for a specialist review of the treatment plan."
+    }
+  ],
+  "differentials": [
+    {
+      "label": "Bipolar I disorder",
+      "distinguishing": "At least one high severe enough for hospital care, psychosis or serious harm.",
+      "icd10cm": "F31.9"
+    },
+    {
+      "label": "Major depressive disorder",
+      "distinguishing": "No history of highs; ask again as the picture develops.",
+      "icd10cm": "F33.9"
+    },
+    {
+      "label": "Cyclothymic disorder",
+      "distinguishing": "Years of milder ups and downs that never reach a full depressive episode.",
+      "icd10cm": "F34.0"
+    },
+    {
+      "label": "Borderline personality pattern",
+      "distinguishing": "Shifts last hours, follow interpersonal triggers, and do not come with days of reduced need for sleep.",
+      "icd10cm": "F60.3"
+    }
+  ],
+  "comorbidities": [
+    {
+      "label": "Depressive episodes",
+      "note": "The depressive phase drives most of the impairment and suicide risk; ask about highs before an antidepressant is started alone.",
+      "conditionId": "major-depressive-disorder"
+    },
+    {
+      "label": "Anxiety disorders",
+      "note": "Common and linked to a harder course; screen with the GAD-7.",
+      "conditionId": "generalized-anxiety-disorder"
+    },
+    {
+      "label": "Alcohol use disorder",
+      "note": "Common; alcohol can worsen both highs and lows.",
+      "conditionId": "alcohol-use-disorder"
+    },
+    {
+      "label": "Borderline personality pattern",
+      "note": "The two can co-occur; map mood episodes and relationship-driven shifts separately.",
+      "conditionId": "borderline-personality-disorder"
+    }
+  ],
+  "measures": [
+    "phq-9",
+    "gad-7"
+  ],
+  "measuresPending": [
+    {
+      "name": "Mood Disorder Questionnaire (MDQ)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Mood+Disorder+Questionnaire+Hirschfeld+2000",
+      "note": "License pending — link out only",
+      "licenseKey": "MDQ"
+    },
+    {
+      "name": "Columbia Suicide Severity Rating Scale (C-SSRS)",
+      "url": "https://cssrs.columbia.edu",
+      "note": "License pending — link out only",
+      "licenseKey": "C-SSRS"
+    }
+  ],
+  "interventions": [
+    {
+      "name": "Referral for medication evaluation (first line)",
+      "evidence": "NICE CG185 covers medication for bipolar depression and long-term mood stability, prescribed by a specialist.",
+      "note": "Refer to psychiatry or a psychiatric nurse practitioner."
+    },
+    {
+      "name": "Psychoeducation (adjunct)",
+      "evidence": "Group psychoeducation reduced recurrences (Colom et al., 2003).",
+      "note": "Early warning signs, sleep, routine and medication questions."
+    },
+    {
+      "name": "Interpersonal and social rhythm therapy (adjunct)",
+      "evidence": "Frank et al. (2005); STEP-BD found intensive psychotherapy helped recovery from bipolar depression (Miklowitz et al., 2007).",
+      "note": "Regular daily rhythms and interpersonal work."
+    },
+    {
+      "name": "CBT for bipolar depression (adjunct)",
+      "evidence": "CBT was one of the intensive therapies in STEP-BD (Miklowitz et al., 2007).",
+      "note": "Activity planning and thought work, watching for signs of a switch."
+    },
+    {
+      "name": "Safety planning",
+      "evidence": "Suicide risk is highest in depressive and mixed states.",
+      "note": "Safety plan and lethal means counseling; this app never rates risk."
+    }
+  ],
+  "handouts": [
+    "mood-routine-tracker",
+    "staying-well-plan",
+    "activity-schedule",
+    "safety-plan"
+  ],
+  "statIds": [
+    "us-bipolar-past-year"
+  ],
+  "culturalNotes": [
+    "Expressions of energy, religiosity and confidence differ across cultures. Judge a change against the client's own usual self and community norms, not the clinician's.",
+    "Black and Latino clients with mood symptoms are more often misdiagnosed with psychotic disorders in US studies. Take a careful mood history before concluding that psychosis is primary.",
+    "Shame about psychiatric illness and medication can delay care. Explain that mood episodes are common, treatable and not a character flaw, and ask what the family believes about the cause.",
+    "Night shifts, travel across time zones, fasting periods and late-night celebrations can disrupt sleep and routine. Plan around them with the client rather than asking them to give them up.",
+    "Use a trained professional interpreter, not family members, and check that key terms translate with the meaning you intend.",
+    "If the client wants faith or spiritual practice included, follow their lead and get informed consent first (see the AACC Code of Ethics for faith-based counselors); never impose beliefs."
+  ],
+  "sud": false,
+  "requiredFeatures": [
+    {
+      "symptomId": "depressed-mood",
+      "note": "No low mood is documented yet. This pattern includes depressive episodes as well as milder highs; ask about periods of low mood or lost interest."
+    }
+  ],
+  "strongMinAreas": 2,
+  "redFlagRules": [
+    {
+      "type": "suicidality",
+      "message": "Suicidal thoughts or self-harm are documented in this input. Ask directly about intent, plan and access to means, follow your crisis protocol and build a safety plan with the client; this app never rates risk."
+    },
+    {
+      "type": "psychosis",
+      "message": "Psychotic symptoms are documented alongside the mood picture. Psychosis during a high or low is a medical priority: arrange an urgent psychiatric evaluation and check safety at home."
+    }
+  ],
+  "licensedDsm": false,
+  "wileyLicensed": false,
+  "sources": [
+    {
+      "title": "Bipolar Disorder (health topic)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/topics/bipolar-disorder"
+    },
+    {
+      "title": "Bipolar Disorder (statistics)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/statistics/bipolar-disorder"
+    },
+    {
+      "title": "Bipolar disorder: assessment and management (CG185)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg185",
+      "year": 2014
+    },
+    {
+      "title": "Bipolar Disorder (health topic)",
+      "publisher": "MedlinePlus, U.S. National Library of Medicine",
+      "url": "https://medlineplus.gov/bipolardisorder.html"
+    },
+    {
+      "title": "A randomized trial on the efficacy of group psychoeducation in the prophylaxis of recurrences in bipolar patients whose disease is in remission (Colom et al.)",
+      "publisher": "Archives of General Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12695318/",
+      "year": 2003
+    },
+    {
+      "title": "Two-year outcomes for interpersonal and social rhythm therapy in individuals with bipolar I disorder (Frank et al.)",
+      "publisher": "Archives of General Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16143731/",
+      "year": 2005
+    },
+    {
+      "title": "Intensive psychosocial intervention enhances functioning in patients with bipolar depression (Miklowitz et al.)",
+      "publisher": "American Journal of Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17728418/",
+      "year": 2007
+    },
+    {
+      "title": "ICD-11 for Mortality and Morbidity Statistics (browser)",
+      "publisher": "World Health Organization",
+      "url": "https://icd.who.int/browse/latest-release/mms/en"
+    },
+    {
+      "title": "ICD-10-CM (official code set)",
+      "publisher": "CDC National Center for Health Statistics",
+      "url": "https://www.cdc.gov/nchs/icd/icd-10-cm/index.html"
+    },
+    {
+      "title": "ICD-10-CM codes checked with the NLM Clinical Table Search Service",
+      "publisher": "National Library of Medicine",
+      "url": "https://clinicaltables.nlm.nih.gov/apidoc/icd10cm/v3/doc.html"
+    },
+    {
+      "title": "AACC Code of Ethics",
+      "publisher": "American Association of Christian Counselors",
+      "url": "https://aacc.net/aacc-code-of-ethics/"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

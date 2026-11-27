@@ -75,7 +75,7 @@ export const NO_MATCH_MESSAGE =
 
 export function insufficientMessage(conditionCount: number): string {
   return (
-    `Not enough information to suggest any of the ${conditionCount} conditions in the Phase 1 knowledge base. ` +
+    `Not enough information to suggest any of the ${conditionCount} conditions in this knowledge base. ` +
     "The presentation may fall outside this set; do not force a match. Gather more information and use clinical judgment."
   );
 }
@@ -103,9 +103,14 @@ function orderFeatures(list: ConditionFeature[]): ConditionFeature[] {
     .map((x) => x.f);
 }
 
+/** Scoring slot of a feature: features sharing a `group` fill one slot (see slotsOf). */
+const slotKey = (f: ConditionFeature): string => `${f.kind}:${f.group ?? f.symptomId}`;
+
 /**
  * A condition's features split into documented and not yet documented, core first, then by weight (each symptom
- * once). The same lists a suggestion carries; also used to preview a pattern that is not scored yet.
+ * once). A feature whose slot is already filled by another member of its group is in neither list: it would add
+ * nothing to the score (a documented dog fear does not leave the other phobia subtypes "missing"). The same lists a
+ * suggestion carries; also used to preview a pattern that is not scored yet.
  */
 export function featureMatch(
   cond: Pick<Condition, "features">,
@@ -114,9 +119,11 @@ export function featureMatch(
 ): { matched: FeatureRef[]; missing: FeatureRef[] } {
   const toRef = (f: ConditionFeature): FeatureRef => ({ symptomId: f.symptomId, label: labelOf(f.symptomId), kind: f.kind, weight: f.weight });
   const ordered = orderFeatures(uniqueFeatures(cond.features));
+  const matched = ordered.filter((f) => present.has(f.symptomId));
+  const filled = new Set(matched.map(slotKey));
   return {
-    matched: ordered.filter((f) => present.has(f.symptomId)).map(toRef),
-    missing: ordered.filter((f) => !present.has(f.symptomId)).map(toRef),
+    matched: matched.map(toRef),
+    missing: ordered.filter((f) => !present.has(f.symptomId) && !filled.has(slotKey(f))).map(toRef),
   };
 }
 
@@ -203,7 +210,7 @@ interface Slot {
 function slotsOf(features: ConditionFeature[], present: ReadonlySet<string>): Slot[] {
   const byKey = new Map<string, Slot>();
   for (const f of features) {
-    const key = `${f.kind}:${f.group ?? f.symptomId}`;
+    const key = slotKey(f);
     const slot = byKey.get(key) ?? { key, kind: f.kind, weight: 0, matched: 0, breadthArea: false };
     slot.weight = Math.max(slot.weight, f.weight);
     if (present.has(f.symptomId)) slot.matched = Math.max(slot.matched, f.weight);

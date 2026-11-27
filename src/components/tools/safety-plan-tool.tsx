@@ -17,7 +17,7 @@ import { DOC_PART2_NOTICE } from "@/lib/tools/doc-model";
 import { useSession } from "@/state/session";
 import { AdultOnly } from "@/components/measures/adult-only";
 import { CrisisInline } from "@/components/crisis/crisis-panel";
-import { ClinicianReviewBadge, Governance, SourcesList } from "@/components/content/content-bits";
+import { ClinicianReviewBadge, Governance, SourcesList } from "@/components/content/content-meta";
 import { Card } from "@/components/ui/card";
 import { ExternalLink } from "@/components/ui/external-link";
 import { Notice } from "@/components/ui/notice";

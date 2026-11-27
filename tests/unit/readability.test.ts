@@ -4,7 +4,8 @@
  * Syllables use the common vowel-group heuristic, numbers are counted as they are read aloud.
  */
 import { describe, expect, it } from "vitest";
-import { getHandout, lexicon } from "@/lib/content";
+import { lexicon } from "@/lib/content";
+import { getAnyHandout as getHandout } from "@/lib/library";
 
 const ONES = [
   "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",

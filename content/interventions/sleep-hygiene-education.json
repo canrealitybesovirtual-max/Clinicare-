@@ -2,7 +2,7 @@
   "id": "sleep-hygiene-education",
   "name": "Sleep habits education (sleep hygiene) - adjunct only",
   "modality": "Psychoeducation - sleep habits (complementary and integrative; adjunct)",
-  "conditions": ["insomnia-disorder", "major-depressive-disorder", "generalized-anxiety-disorder", "ptsd"],
+  "conditions": ["insomnia-disorder", "major-depressive-disorder", "generalized-anxiety-disorder", "ptsd", "bipolar-i-disorder", "cyclothymic-disorder", "schizophrenia"],
   "evidenceLevel": "Adjunct only. The AASM 2021 guideline suggests that clinicians not use sleep hygiene as a single-component therapy for chronic insomnia (conditional recommendation against). Multicomponent CBT-I, which may include sleep education, is strongly recommended (Edinger et al., 2021). The AASM patient guide notes that most people with chronic insomnia need more than basic sleep-hygiene advice, and NCCIH notes that the strongest evidence for chronic insomnia supports CBT-I.",
   "minutes": { "min": 10, "max": 20 },
   "purpose": "Brief education about daily habits and the sleep setting that can support sleep: a regular rise time, daylight and activity during the day, less caffeine later in the day, avoiding alcohol and nicotine near bedtime, avoiding heavy meals late at night, a wind-down routine, a dark, quiet, comfortable room, and keeping screens and work out of bed. It is useful as general health information and as one part of CBT-I, but it is not an effective stand-alone treatment for chronic insomnia. When insomnia persists, offer CBT-I or refer for it.",

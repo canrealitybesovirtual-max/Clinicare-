@@ -1,0 +1,110 @@
+{
+  "id": "sorting-and-letting-go",
+  "title": "Sorting and Letting Go: Practice Sheet",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 15,
+  "intro": "When things pile up, a home can become hard to use and even unsafe. Deciding what to keep can feel very hard. Small, planned practice can help. You make every decision about your things. This sheet helps you practice sorting one small area at a time. Each practice takes about 15 minutes.",
+  "sections": [
+    {
+      "heading": "Before you start",
+      "steps": [
+        "Pick one small area, like one shelf, one bag or one corner of a table.",
+        "Set up 4 boxes or bags: keep, recycle, donate, throw away.",
+        "Set a timer for 15 minutes.",
+        "Rate how uneasy you feel from 0 (calm) to 10 (very upset)."
+      ]
+    },
+    {
+      "heading": "While you sort",
+      "steps": [
+        "Pick up one item at a time and decide where it goes.",
+        "Ask yourself: Have I used this in the past year? Do I have space for it? Would I buy it again today?",
+        "Notice the uneasy feeling. Let it be there. It usually gets smaller if you keep going.",
+        "Move the donate and recycle bags out of the house the same day if you can."
+      ]
+    },
+    {
+      "heading": "Safety first at home",
+      "body": "Start with places that keep you safe: clear paths, doors and exits, the stove and the bed. If there is a fire risk or you cannot get out easily, tell your counselor right away."
+    },
+    {
+      "heading": "After you sort",
+      "body": "Rate how you feel again. Write what you learned. Notice what went better than you expected."
+    }
+  ],
+  "practiceLog": {
+    "columns": [
+      "Date",
+      "Area",
+      "Uneasy at start (0-10)",
+      "Items I let go",
+      "Uneasy at end (0-10)",
+      "What I learned"
+    ],
+    "rows": 8
+  },
+  "safetyNote": "Safety first: If clutter blocks your exits or creates a fire risk, ask for help to clear a safe path now. If you have thoughts of hurting yourself, get help right away. In the US, call or text 988 or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sud": false,
+  "es": {
+    "title": "Ordenar y dejar ir: hoja de práctica",
+    "intro": "Cuando las cosas se acumulan, una casa puede volverse difícil de usar y hasta peligrosa. Decidir qué guardar puede ser muy difícil. Practicar en pasos pequeños y planeados puede ayudar. Usted toma cada decisión sobre sus cosas. Esta hoja le ayuda a practicar cómo ordenar un área pequeña a la vez. Cada práctica toma unos 15 minutos.",
+    "sections": [
+      {
+        "heading": "Antes de empezar",
+        "steps": [
+          "Elija un área pequeña, como un estante, una bolsa o una esquina de una mesa.",
+          "Prepare 4 cajas o bolsas: guardar, reciclar, regalar y botar.",
+          "Ponga un reloj de 15 minutos.",
+          "Califique qué tan inquieto se siente del 0 (en calma) al 10 (muy molesto)."
+        ]
+      },
+      {
+        "heading": "Mientras ordena",
+        "steps": [
+          "Tome una cosa a la vez y decida a dónde va.",
+          "Pregúntese: ¿La he usado en el último año? ¿Tengo espacio para ella? ¿La compraría otra vez hoy?",
+          "Note la inquietud. Déjela estar. Por lo general baja si sigue adelante.",
+          "Si puede, saque de la casa ese mismo día las bolsas para regalar y reciclar."
+        ]
+      },
+      {
+        "heading": "La seguridad en casa va primero",
+        "body": "Empiece por los lugares que lo mantienen seguro: los pasillos, las puertas y salidas, la estufa y la cama. Si hay riesgo de incendio o no puede salir con facilidad, dígaselo a su consejero de inmediato."
+      },
+      {
+        "heading": "Después de ordenar",
+        "body": "Vuelva a calificar cómo se siente. Escriba lo que aprendió. Note lo que salió mejor de lo que esperaba."
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Fecha",
+        "Área",
+        "Inquietud al inicio (0-10)",
+        "Cosas que dejé ir",
+        "Inquietud al final (0-10)",
+        "Lo que aprendí"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: Si las cosas tapan sus salidas o hay riesgo de incendio, pida ayuda ahora para abrir un camino seguro. Si tiene pensamientos de hacerse daño, busque ayuda de inmediato. En EE. UU., llame o envíe un mensaje de texto al 988, o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "sources": [
+    {
+      "title": "Waitlist-controlled trial of cognitive behavior therapy for hoarding disorder (Steketee et al.)",
+      "publisher": "Depression and Anxiety (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20336804/",
+      "year": 2010
+    },
+    {
+      "title": "Cognitive behavioral therapy for hoarding disorder: a meta-analysis (Tolin et al.)",
+      "publisher": "Focus (American Psychiatric Publishing) (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35747301/",
+      "year": 2021
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

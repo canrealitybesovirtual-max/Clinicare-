@@ -3,7 +3,7 @@ import { allConditions, allHandouts, ethicsCodes, interventions, legalTopics } f
 import { MEDICATIONS } from "@/lib/schemas-medications";
 import { Badge } from "@/components/ui/badge";
 import { Disclosure } from "@/components/ui/disclosure";
-import { ReviewBadge, StatCard } from "@/components/content/content-bits";
+import { ReviewBadge, StatCard } from "@/components/content/content-meta";
 import { ContinueCard } from "@/components/home/continue-card";
 import { HomeHero } from "@/components/home/home-hero";
 import { StartHere } from "@/components/home/start-here";

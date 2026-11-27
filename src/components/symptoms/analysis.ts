@@ -11,7 +11,7 @@
  */
 import * as React from "react";
 import { conditions, getSymptom, lexicon } from "@/lib/content";
-import { applyAnswers, extractTriggers, type AnsweredRecord, type FoldedAnswers, type TriggerHit } from "@/lib/follow-up";
+import { answerConfirmedSubtypes, applyAnswers, extractTriggers, type AnsweredRecord, type FoldedAnswers, type TriggerHit } from "@/lib/follow-up";
 import { matchSymptoms, type MatchResult } from "@/lib/matcher";
 import { NO_MATCH_MESSAGE, scoreConditions } from "@/lib/scoring";
 import type { RedFlagType, Symptom } from "@/lib/schemas";
@@ -92,7 +92,16 @@ export function analyze(state: SessionState, answered: readonly AnsweredRecord[]
     answered,
     { protectedSymptomIds: state.selectedSymptomIds, gates: "ignore" },
   );
-  const ids = folded.scoringInput.symptomIds;
+  const triggers = extractTriggers(state.symptomText);
+  // A follow-up answer that ties the fear to the described object also documents the object's phobia type.
+  const subtypes = answerConfirmedSubtypes(triggers, folded.addedSymptomIds, {
+    present: folded.scoringInput.symptomIds,
+    absent: [...absent.map((a) => a.symptomId), ...folded.negatedSymptomIds],
+  });
+  const scoringInput = subtypes.length
+    ? { ...folded.scoringInput, symptomIds: [...folded.scoringInput.symptomIds, ...subtypes] }
+    : folded.scoringInput;
+  const ids = scoringInput.symptomIds;
 
   const groups = new Map<RedFlagType, Symptom[]>();
   for (const id of ids) {
@@ -100,13 +109,13 @@ export function analyze(state: SessionState, answered: readonly AnsweredRecord[]
     if (s?.redFlag) groups.set(s.redFlag, [...(groups.get(s.redFlag) ?? []), s]);
   }
   const redFlags = RED_FLAG_ORDER.filter((t) => groups.has(t)).map((type) => ({ type, symptoms: groups.get(type) ?? [] }));
-  const result = scoreConditions(folded.scoringInput, conditions, lexicon.symptoms);
+  const result = scoreConditions(scoringInput, conditions, lexicon.symptoms);
   // Text typed but nothing recognized: say so, rather than asking for symptoms that were already described.
   const shown = result.status === "empty" && state.symptomText.trim() ? { ...result, message: NO_MATCH_MESSAGE } : result;
   return {
     match,
     ids,
-    fromAnswers: new Set(folded.addedSymptomIds),
+    fromAnswers: new Set([...folded.addedSymptomIds, ...subtypes]),
     setAsideByAnswers: folded.negatedSymptomIds.filter((id) => detectedIds.has(id)),
     cultural,
     attributed,
@@ -114,8 +123,8 @@ export function analyze(state: SessionState, answered: readonly AnsweredRecord[]
     absent,
     redFlags,
     sud: ids.some((id) => SUD_SYMPTOM_IDS.has(id)),
-    triggers: extractTriggers(state.symptomText),
-    folded,
+    triggers,
+    folded: subtypes.length ? { ...folded, scoringInput, addedSymptomIds: [...folded.addedSymptomIds, ...subtypes] } : folded,
     result: shown,
   };
 }

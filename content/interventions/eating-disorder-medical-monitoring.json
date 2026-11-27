@@ -1,0 +1,56 @@
+{
+  "id": "eating-disorder-medical-monitoring",
+  "name": "Medical assessment and monitoring for eating disorders (care coordination)",
+  "modality": "Care coordination - medical monitoring",
+  "conditions": [
+    "anorexia-nervosa",
+    "bulimia-nervosa",
+    "binge-eating-disorder"
+  ],
+  "evidenceLevel": "NICE NG69 sets out physical health monitoring for people with eating disorders, and a meta-analysis found raised mortality across eating disorders (Arcelus et al., 2011).",
+  "minutes": {
+    "min": 15,
+    "max": 30
+  },
+  "purpose": "Makes sure every client with an eating disorder has a physician involved for vital signs, labs and heart checks as indicated, and a clear plan for when to seek urgent care. Therapy is safer and more effective when medical risk is monitored.",
+  "steps": [
+    "Ask about fainting, chest pain, palpitations, rapid weight loss, purging frequency and fluid intake.",
+    "Refer to the client's physician for physical assessment and monitoring, with consent to share information.",
+    "Agree on red flags that mean same-day medical care or the emergency department.",
+    "Coordinate with a dietitian experienced in eating disorders.",
+    "Review medical findings regularly and adjust the level of care."
+  ],
+  "script": [
+    "Your body's safety comes first, so I want a doctor on our team.",
+    "Have you fainted, felt your heart race or skip, or felt very weak?",
+    "If that happens, here is what to do.",
+    "Can I share what we are working on with your doctor?"
+  ],
+  "contraindications": [
+    "Fainting, chest pain, confusion or very low weight need same-day medical assessment."
+  ],
+  "culturalAdaptations": [
+    "Some clients fear judgment about weight in medical settings; prepare them and advocate for respectful care.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "handoutIds": [
+    "regular-eating-plan"
+  ],
+  "sources": [
+    {
+      "title": "Eating disorders: recognition and treatment (NG69)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng69",
+      "year": 2017
+    },
+    {
+      "title": "Mortality rates in patients with anorexia nervosa and other eating disorders: a meta-analysis of 36 studies (Arcelus et al.)",
+      "publisher": "Archives of General Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21727255/",
+      "year": 2011
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

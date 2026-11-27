@@ -7,13 +7,13 @@
  * - `fill` blocks print a blank handwritten line, `write` blocks print ruled lines; nothing personal is filled in (G5).
  * - PDFs carry no creation or modification dates and no author.
  */
-import { PDFDocument, StandardFontEmbedder, StandardFonts, rgb } from "pdf-lib";
 import {
-  PAGE_HEIGHT,
-  PAGE_MARGIN,
-  PAGE_WIDTH,
   PDF_APP_NAME,
+  PDF_CONTENT,
   layoutPageLines,
+  pdfFooterNotice,
+  renderPdf,
+  stampPdfFooters,
   toWinAnsi,
   wrapText,
   type PdfColor,
@@ -30,47 +30,25 @@ import {
   fillLineText,
   type DocSpec,
 } from "./doc-model";
+import { withoutDocxDates } from "@/lib/docx-dates";
 
 export const DOCX_MIME = "application/vnd.openxmlformats-officedocument.wordprocessingml.document";
 
 /* ------------------------------------------------------------------ PDF layout (pure) */
 
-const CONTENT_W = PAGE_WIDTH - 2 * PAGE_MARGIN;
-const TOP = PAGE_HEIGHT - PAGE_MARGIN;
-const LEFT = PAGE_MARGIN;
-const RIGHT = PAGE_WIDTH - PAGE_MARGIN;
-const BASE_BOTTOM = PAGE_MARGIN + 30; // footer band
-const NOTICE_SIZE = 7.5;
-const NOTICE_LH = 9.5;
+const { top: TOP, left: LEFT, right: RIGHT, width: CONTENT_W } = PDF_CONTENT;
 const BODY = 10.5;
 const RULE_GAP = 24; // height of one handwriting line
-
-type FontName = Parameters<typeof StandardFontEmbedder.for>[0];
-let regularMetrics: StandardFontEmbedder | null = null;
-function textWidth(text: string, size: number): number {
-  regularMetrics ??= StandardFontEmbedder.for(StandardFonts.Helvetica as unknown as FontName);
-  return regularMetrics.widthOfTextAtSize(text, size);
-}
-
-const COLORS: Record<PdfColor, [number, number, number]> = {
-  text: [0.07, 0.09, 0.15],
-  muted: [0.33, 0.36, 0.43],
-  border: [0.58, 0.61, 0.67],
-  headFill: [0.92, 0.93, 0.95],
-  stripe: [0.975, 0.978, 0.985],
-  crisis: [0.68, 0.1, 0.1],
-  crisisFill: [0.995, 0.95, 0.95],
-};
 
 class Layout {
   readonly pages: PdfPageLayout[] = [];
   y = TOP;
   readonly bottom: number;
-  private readonly noticeLines: string[];
+  private readonly notice: { lines: string[]; bottom: number };
 
   constructor(footerNotice?: string) {
-    this.noticeLines = footerNotice ? wrapText(footerNotice, NOTICE_SIZE, CONTENT_W, true) : [];
-    this.bottom = BASE_BOTTOM + (this.noticeLines.length ? this.noticeLines.length * NOTICE_LH + 6 : 0);
+    this.notice = pdfFooterNotice(footerNotice);
+    this.bottom = this.notice.bottom;
     this.newPage();
   }
 
@@ -141,18 +119,7 @@ class Layout {
   }
 
   finish(title: string): PdfLayout {
-    const n = this.pages.length;
-    this.pages.forEach((page, i) => {
-      this.noticeLines.forEach((l, j) => {
-        page.ops.push({ kind: "text", text: l, x: LEFT, y: this.bottom - 4 - NOTICE_SIZE - j * NOTICE_LH, size: NOTICE_SIZE, bold: true, color: "text" });
-      });
-      const sep = BASE_BOTTOM - 8;
-      page.ops.push({ kind: "line", x1: LEFT, y1: sep, x2: RIGHT, y2: sep, color: "border", lineWidth: 0.5 });
-      page.ops.push({ kind: "text", text: DOC_FOOTER, x: LEFT, y: sep - 11, size: 8.5, bold: true, color: "text" });
-      const label = `Page ${i + 1} of ${n}`;
-      page.ops.push({ kind: "text", text: label, x: RIGHT - textWidth(label, 8.5), y: sep - 11, size: 8.5, bold: false, color: "text" });
-      page.ops.push({ kind: "text", text: PDF_APP_NAME, x: LEFT, y: sep - 21, size: 7.5, bold: false, color: "muted" });
-    });
+    stampPdfFooters(this.pages, { disclaimer: DOC_FOOTER, pageLabel: (i, n) => `Page ${i} of ${n}`, notice: this.notice });
     return { title: toWinAnsi(title), pages: this.pages };
   }
 }
@@ -208,38 +175,8 @@ export function docPdfPageLines(spec: DocSpec): string[][] {
 }
 
 /** The document as a PDF, created on this device. */
-export async function docPdf(spec: DocSpec): Promise<Uint8Array> {
-  const layout = docPdfLayout(spec);
-  // updateMetadata: false => no automatic creation/modification dates; author is never set.
-  const doc = await PDFDocument.create({ updateMetadata: false });
-  doc.setTitle(layout.title, { showInWindowTitleBar: true });
-  doc.setProducer(PDF_APP_NAME);
-  doc.setCreator(PDF_APP_NAME);
-  doc.setLanguage("en-US");
-  const regular = await doc.embedFont(StandardFonts.Helvetica);
-  const bold = await doc.embedFont(StandardFonts.HelveticaBold);
-  const color = (c: PdfColor) => rgb(...COLORS[c]);
-  for (const p of layout.pages) {
-    const page = doc.addPage([PAGE_WIDTH, PAGE_HEIGHT]);
-    for (const op of p.ops) {
-      if (op.kind === "text") {
-        if (op.text) page.drawText(op.text, { x: op.x, y: op.y, size: op.size, font: op.bold ? bold : regular, color: color(op.color) });
-      } else if (op.kind === "rect") {
-        page.drawRectangle({
-          x: op.x,
-          y: op.y,
-          width: op.w,
-          height: op.h,
-          color: op.fill ? color(op.fill) : undefined,
-          borderColor: op.stroke ? color(op.stroke) : undefined,
-          borderWidth: op.stroke ? (op.lineWidth ?? 0.75) : 0,
-        });
-      } else {
-        page.drawLine({ start: { x: op.x1, y: op.y1 }, end: { x: op.x2, y: op.y2 }, thickness: op.lineWidth, color: color(op.color) });
-      }
-    }
-  }
-  return doc.save();
+export function docPdf(spec: DocSpec): Promise<Uint8Array> {
+  return renderPdf(docPdfLayout(spec));
 }
 
 /* ------------------------------------------------------------------ Word */
@@ -324,5 +261,5 @@ export async function docDocx(spec: DocSpec): Promise<Uint8Array> {
       },
     ],
   });
-  return new Uint8Array(await Packer.toArrayBuffer(doc));
+  return withoutDocxDates(new Uint8Array(await Packer.toArrayBuffer(doc)));
 }

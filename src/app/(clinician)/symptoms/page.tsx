@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { connection } from "next/server";
-import { PageIntro } from "@/components/content/content-bits";
+import { PageIntro } from "@/components/content/content-meta";
 import { SymptomFinder } from "@/components/symptoms/symptom-finder";
-import { HelpTip } from "@/components/symptoms/help-tip";
+import { HelpTip } from "@/components/ui/help-tip";
 import { defaultResourceCatalog } from "@/lib/follow-up/catalog";
 // Server only: whether the optional assistant is switched on (never the key).
 import { assistantStatus } from "@/server/ai/config";

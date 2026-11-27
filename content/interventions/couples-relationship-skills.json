@@ -1,0 +1,78 @@
+{
+  "id": "couples-relationship-skills",
+  "name": "Couple relationship skills (research-informed, including Gottman-informed ideas)",
+  "modality": "Couples therapy - behavioral and research-informed",
+  "conditions": [
+    "major-depressive-disorder",
+    "alcohol-use-disorder",
+    "adjustment-disorder",
+    "ptsd"
+  ],
+  "evidenceLevel": "Couple therapy improves relationship satisfaction and individual well-being on average (Roddy et al., 2020 meta-analysis; Doss et al., 2022 review). Behavioral couples therapy for alcohol and drug problems improved substance and relationship outcomes in a meta-analysis (Powers et al., 2008). Methods here are described in original wording; branded protocols need their own training.",
+  "minutes": {
+    "min": 50,
+    "max": 90
+  },
+  "purpose": "Builds the everyday skills that protect a relationship under stress: noticing and expressing appreciation, starting hard conversations gently, listening without defending, taking breaks when flooded and repairing after conflict. Useful when relationship distress feeds depression, drinking, trauma symptoms or adjustment problems.",
+  "steps": [
+    "Assess both partners separately for safety, including intimate partner violence and coercive control, before any joint work.",
+    "Map the couple's strengths and recurring conflict pattern from both points of view.",
+    "Teach gentle openings: describe the situation and your feeling, then ask for what you need, without blame.",
+    "Practice speaker-listener turns: one partner speaks, the other summarizes before replying.",
+    "Agree on a break plan for when either partner feels flooded (time out, self-soothe, return at a set time).",
+    "Practice repair after conflict and build daily rituals of appreciation and connection.",
+    "Assign home practice and review it at the next session."
+  ],
+  "script": [
+    "Let's slow this down. Can you say what you felt, and what you need, without the 'you always'?",
+    "Before you answer, tell your partner what you heard.",
+    "It sounds like you are both flooded. Let's take a break and come back in twenty minutes.",
+    "What is one thing your partner did this week that you appreciated?"
+  ],
+  "contraindications": [
+    "Do not offer joint sessions when there is intimate partner violence, coercive control or fear of a partner; see each partner individually and safety-plan.",
+    "Untreated substance intoxication or a partner in acute crisis needs stabilization first.",
+    "Do not start during an active crisis, current suicidal risk, acute intoxication or withdrawal; stabilize first and share crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com."
+  ],
+  "culturalAdaptations": [
+    "Expectations about gender roles, extended family involvement and how conflict is expressed differ across cultures; ask each partner what a good relationship looks like to them.",
+    "Same-sex, gender-diverse and polyamorous relationships face added stressors such as discrimination; adapt examples and avoid heteronormative assumptions.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "faithIntegrated": {
+    "note": "Couples who share a faith may want to draw on its teachings about commitment and forgiveness; include this only when both partners ask for it.",
+    "consentNote": "Before adding any spiritual element, explain what you propose, confirm the client wants it, document informed consent and let the client lead (see the AACC Code of Ethics for faith-based counselors)."
+  },
+  "handoutIds": [
+    "assertive-communication",
+    "problem-solving-steps"
+  ],
+  "sources": [
+    {
+      "title": "Meta-analysis of couple therapy: effects across outcomes, designs, timeframes, and other moderators (Roddy et al.)",
+      "publisher": "Journal of Consulting and Clinical Psychology (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32551734/",
+      "year": 2020
+    },
+    {
+      "title": "A review of the research during 2010-2019 on evidence-based treatments for couple relationship distress (Doss et al.)",
+      "publisher": "Journal of Marital and Family Therapy (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34866194/",
+      "year": 2022
+    },
+    {
+      "title": "Behavioral couples therapy (BCT) for alcohol and drug use disorders: a meta-analysis (Powers, Vedel and Emmelkamp)",
+      "publisher": "Clinical Psychology Review (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18374464/",
+      "year": 2008
+    },
+    {
+      "title": "AACC Code of Ethics",
+      "publisher": "American Association of Christian Counselors",
+      "url": "https://aacc.net/aacc-code-of-ethics/"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

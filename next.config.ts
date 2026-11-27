@@ -38,6 +38,8 @@ const immutable = [{ key: "Cache-Control", value: "public, max-age=31536000, imm
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
+  // The project's agent rules live in CLAUDE.md; stop `next dev` from writing its own AGENTS.md block.
+  agentRules: false,
   env: {
     // Build-time switch for the test-only upstream fixtures (src/server/core.ts): "1" only when this build itself
     // ran with E2E_UPSTREAM_FIXTURES=1 (the Playwright suite). Any other build has fixture mode compiled out, so a

@@ -1,0 +1,305 @@
+{
+  "id": "cannabis-use-disorder",
+  "name": "Cannabis use disorder",
+  "icd10cm": [
+    {
+      "code": "F12.10",
+      "label": "Cannabis abuse, uncomplicated"
+    },
+    {
+      "code": "F12.11",
+      "label": "Cannabis abuse, in remission"
+    },
+    {
+      "code": "F12.20",
+      "label": "Cannabis dependence, uncomplicated"
+    },
+    {
+      "code": "F12.21",
+      "label": "Cannabis dependence, in remission"
+    },
+    {
+      "code": "F12.23",
+      "label": "Cannabis dependence with withdrawal"
+    },
+    {
+      "code": "F12.90",
+      "label": "Cannabis use, unspecified, uncomplicated"
+    }
+  ],
+  "icd11": [
+    {
+      "code": "6C41.1",
+      "label": "Harmful pattern of use of cannabis"
+    },
+    {
+      "code": "6C41.2",
+      "label": "Cannabis dependence"
+    }
+  ],
+  "dsmPointer": "See DSM-5-TR: Substance-Related and Addictive Disorders — Cannabis Use Disorder",
+  "summary": "A pattern, described in ICD-11 terms, in which cannabis use slips out of the client's control and takes priority over work, study, relationships, mood and safety, sometimes with craving and an uncomfortable withdrawal (irritability, poor sleep, low appetite, restlessness) on stopping. Daily use of high-potency products has grown, and heavy use is linked to anxiety, worse mood and, in some people, psychosis. Motivational, cognitive-behavioral and incentive-based approaches help; set goals with the client, including reduction where abstinence is not their aim. Substance-use information is protected: nothing here is stored or sent, and every export carries the Part 2 notice. 42 CFR Part 2 prohibits unauthorized use or disclosure of these records. For clinician review only; this is not a diagnosis.",
+  "features": [
+    {
+      "symptomId": "cannabis-impaired-control",
+      "kind": "core",
+      "weight": 5
+    },
+    {
+      "symptomId": "cannabis-craving-withdrawal",
+      "kind": "core",
+      "weight": 4
+    },
+    {
+      "symptomId": "cannabis-despite-harm",
+      "kind": "core",
+      "weight": 4
+    },
+    {
+      "symptomId": "cannabis-use-pattern",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "irritability",
+      "kind": "associated",
+      "weight": 1,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "insomnia",
+      "kind": "associated",
+      "weight": 1,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "subjective-anxiety-stress",
+      "kind": "associated",
+      "weight": 1
+    },
+    {
+      "symptomId": "anhedonia",
+      "kind": "associated",
+      "weight": 1
+    }
+  ],
+  "minCore": 2,
+  "durationGate": {
+    "minWeeks": 4,
+    "note": "Ask about the pattern of use over the past year, including attempts to stop. DSM-5-TR and ICD-11 both look at the pattern over months; check the timing they describe."
+  },
+  "impairmentRequired": true,
+  "ruleOuts": [
+    {
+      "label": "Other substance use",
+      "type": "substance",
+      "note": "Ask about alcohol, nicotine and other drugs; combined use changes the plan. This app does not store or send substance-use information."
+    },
+    {
+      "label": "Cannabinoid hyperemesis and other medical effects",
+      "type": "medical",
+      "note": "Repeated vomiting with heavy use, lung symptoms from smoking and heart effects need medical review."
+    },
+    {
+      "label": "Anxiety, mood or psychotic disorders",
+      "type": "psychiatric",
+      "note": "Ask whether symptoms came before heavy use or continue during sober periods."
+    }
+  ],
+  "specifiers": [
+    {
+      "label": "ICD-10-CM coding notes",
+      "note": "F12.1x codes a harmful (abuse) pattern and F12.2x a dependence pattern, each with remission and withdrawal codes. DSM-5-TR uses its own severity and course specifiers with these codes: See DSM-5-TR."
+    },
+    {
+      "label": "ICD-11 coding notes",
+      "note": "6C41.1 is a harmful pattern of use of cannabis and 6C41.2 is cannabis dependence. Check the WHO ICD-11 browser for current qualifiers."
+    }
+  ],
+  "differentials": [
+    {
+      "label": "Cannabis-induced anxiety or psychotic disorder",
+      "distinguishing": "Symptoms arise during heavy use and ease with abstinence.",
+      "icd10cm": "F12.959"
+    },
+    {
+      "label": "Generalized anxiety disorder",
+      "distinguishing": "Worry came first and continues during sober periods.",
+      "icd10cm": "F41.1"
+    },
+    {
+      "label": "Major depressive disorder",
+      "distinguishing": "Low mood continues during sober periods.",
+      "icd10cm": "F33.9"
+    }
+  ],
+  "comorbidities": [
+    {
+      "label": "Anxiety",
+      "note": "Cannabis is often used to manage anxiety; withdrawal can worsen it at first.",
+      "conditionId": "generalized-anxiety-disorder"
+    },
+    {
+      "label": "Psychosis",
+      "note": "Heavy, high-potency use is linked to higher risk of psychosis and relapse.",
+      "conditionId": "schizophrenia"
+    },
+    {
+      "label": "Depression",
+      "note": "Common; screen with the PHQ-9.",
+      "conditionId": "major-depressive-disorder"
+    },
+    {
+      "label": "Adult ADHD",
+      "note": "Higher rates of cannabis use; assess attention history.",
+      "conditionId": "adult-adhd"
+    }
+  ],
+  "measures": [
+    "phq-9",
+    "gad-7"
+  ],
+  "measuresPending": [
+    {
+      "name": "Cannabis Use Disorders Identification Test-Revised (CUDIT-R)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20347232/",
+      "note": "License pending — link out only",
+      "licenseKey": "CUDIT-R"
+    },
+    {
+      "name": "Drug Abuse Screening Test (DAST-10)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/7183189/",
+      "note": "License pending — link out only",
+      "licenseKey": "DAST-10"
+    }
+  ],
+  "interventions": [
+    {
+      "name": "Motivational enhancement and CBT",
+      "evidence": "A Cochrane review (Gates et al., 2016) found that CBT, motivational enhancement and their combination reduced use.",
+      "note": "Explore the client's goals, build coping and refusal skills."
+    },
+    {
+      "name": "Contingency management (program-based)",
+      "evidence": "Gates et al. (2016) found added incentives improved outcomes in some trials.",
+      "note": "Refer to programs that offer it."
+    },
+    {
+      "name": "Relapse prevention planning",
+      "evidence": "Part of CBT for substance use (NICE CG51 covers psychosocial approaches for drug misuse).",
+      "note": "Plan for high-risk situations and slips."
+    },
+    {
+      "name": "Sleep and withdrawal support",
+      "evidence": "Poor sleep is a common reason for returning to use.",
+      "note": "Plan sleep habits and coping for the first weeks."
+    }
+  ],
+  "handouts": [
+    "urge-surfing-log",
+    "relapse-prevention-plan"
+  ],
+  "statIds": [
+    "us-cannabis-use-disorder-2025"
+  ],
+  "culturalNotes": [
+    "Norms about cannabis, prescription pills and other drugs vary widely, and legal status differs by state and country. Anchor the assessment in control and harm, not in legal status or amounts alone.",
+    "Stigma, fear of losing custody, housing, work or immigration status, and past experiences with police can make clients cautious. Explain confidentiality, its limits and 42 CFR Part 2 protections plainly.",
+    "Use person-first, non-judgmental language (a person who uses drugs, not an addict) and offer harm-reduction options alongside abstinence goals.",
+    "Culturally grounded and community-led programs, including Indigenous healing approaches and peer recovery services, are often more acceptable; ask what support looks like for the client.",
+    "Faith can be a strong support in recovery. Offer faith-based groups or faith-integrated approaches only when the client asks and after informed consent (see the AACC Code of Ethics for faith-based counselors).",
+    "Use a trained professional interpreter, not family members, and check that key terms translate with the meaning you intend."
+  ],
+  "sud": true,
+  "requiredFeatures": [],
+  "strongMinAreas": 2,
+  "redFlagRules": [
+    {
+      "type": "suicidality",
+      "message": "Suicide-related content is documented in this input. Substance use raises suicide risk, especially during intoxication, withdrawal or after a loss; ask directly, include substances and other means in safety planning, and follow your risk protocol."
+    },
+    {
+      "type": "psychosis",
+      "message": "Psychotic symptoms are documented. Substance-induced psychosis and withdrawal delirium need urgent medical and psychiatric evaluation."
+    }
+  ],
+  "licensedDsm": false,
+  "wileyLicensed": false,
+  "sources": [
+    {
+      "title": "Marijuana (health topic)",
+      "publisher": "MedlinePlus, U.S. National Library of Medicine",
+      "url": "https://medlineplus.gov/marijuana.html"
+    },
+    {
+      "title": "Psychosocial interventions for cannabis use disorder (Gates et al.)",
+      "publisher": "Cochrane Database of Systematic Reviews (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27149547/",
+      "year": 2016
+    },
+    {
+      "title": "The contribution of cannabis use to variation in the incidence of psychotic disorder across Europe (EU-GEI; Di Forti et al.)",
+      "publisher": "The Lancet Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30902669/",
+      "year": 2019
+    },
+    {
+      "title": "Drug misuse in over 16s: psychosocial interventions (CG51)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg51",
+      "year": 2007
+    },
+    {
+      "title": "SAMHSA releases annual National Survey on Drug Use and Health (2025 data)",
+      "publisher": "SAMHSA",
+      "url": "https://www.samhsa.gov/newsroom/press-announcements/20260727/samhsa-releases-annual-national-survey-on-drug-use-and-health",
+      "year": 2026
+    },
+    {
+      "title": "Highlights for the 2025 National Survey on Drug Use and Health",
+      "publisher": "SAMHSA",
+      "url": "https://www.samhsa.gov/data/sites/default/files/NSDUH-2025-Annual-Release/2025-nsduh-nnr-highlights.pdf",
+      "year": 2026
+    },
+    {
+      "title": "National Helpline",
+      "publisher": "SAMHSA",
+      "url": "https://www.samhsa.gov/find-help/helplines/national-helpline"
+    },
+    {
+      "title": "42 CFR 2.32: notice to accompany disclosure (federal confidentiality rule for substance use treatment records)",
+      "publisher": "eCFR, U.S. Government Publishing Office",
+      "url": "https://www.ecfr.gov/current/title-42/chapter-I/subchapter-A/part-2/subpart-C/section-2.32",
+      "year": 2024
+    },
+    {
+      "title": "Confidentiality of substance use treatment records (42 CFR Part 2)",
+      "publisher": "U.S. Department of Health and Human Services",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/hipaa-part-2/index.html"
+    },
+    {
+      "title": "ICD-11 for Mortality and Morbidity Statistics (browser)",
+      "publisher": "World Health Organization",
+      "url": "https://icd.who.int/browse/latest-release/mms/en"
+    },
+    {
+      "title": "ICD-10-CM (official code set)",
+      "publisher": "CDC National Center for Health Statistics",
+      "url": "https://www.cdc.gov/nchs/icd/icd-10-cm/index.html"
+    },
+    {
+      "title": "ICD-10-CM codes checked with the NLM Clinical Table Search Service",
+      "publisher": "National Library of Medicine",
+      "url": "https://clinicaltables.nlm.nih.gov/apidoc/icd10cm/v3/doc.html"
+    },
+    {
+      "title": "AACC Code of Ethics",
+      "publisher": "American Association of Christian Counselors",
+      "url": "https://aacc.net/aacc-code-of-ethics/"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

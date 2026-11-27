@@ -1,0 +1,292 @@
+{
+  "id": "borderline-personality-disorder",
+  "name": "Borderline personality disorder (borderline pattern)",
+  "icd10cm": [
+    {
+      "code": "F60.3",
+      "label": "Borderline personality disorder"
+    }
+  ],
+  "icd11": [
+    {
+      "code": "6D10",
+      "label": "Personality disorder"
+    },
+    {
+      "code": "6D11.5",
+      "label": "Borderline pattern"
+    }
+  ],
+  "dsmPointer": "See DSM-5-TR: Personality Disorders — Borderline Personality Disorder; ICD-11 rates personality disorder severity with an optional borderline pattern specifier.",
+  "summary": "A long-standing pattern of intense, fast-changing emotions, fear of being left, stormy relationships, an unsteady sense of self and impulsive or self-damaging acts, often including self-harm and suicidal crises. Emotions rise quickly in response to interpersonal events and take a long time to settle. The pattern usually begins in adolescence or early adulthood and is often linked to early adversity, though not always. It is treatable: structured therapies such as DBT, MBT and schema therapy reduce self-harm and improve functioning, and many people improve substantially over the years. Avoid labeling during an acute crisis or after a single meeting, and use the term with care because of stigma. For clinician review only; this is not a diagnosis.",
+  "features": [
+    {
+      "symptomId": "fear-of-abandonment",
+      "kind": "core",
+      "weight": 4
+    },
+    {
+      "symptomId": "unstable-relationships",
+      "kind": "core",
+      "weight": 4
+    },
+    {
+      "symptomId": "mood-swings",
+      "kind": "core",
+      "weight": 4
+    },
+    {
+      "symptomId": "self-harm",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "identity-disturbance",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "chronic-emptiness",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "intense-anger",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "reckless-self-destructive",
+      "kind": "associated",
+      "weight": 1
+    },
+    {
+      "symptomId": "derealization-depersonalization",
+      "kind": "associated",
+      "weight": 1
+    }
+  ],
+  "minCore": 2,
+  "durationGate": {
+    "minWeeks": 52,
+    "note": "A personality pattern is long-standing and shows up across settings. Look for it over years, not only during a crisis, and check DSM-5-TR or ICD-11 for guidance on assessment."
+  },
+  "impairmentRequired": true,
+  "ruleOuts": [
+    {
+      "label": "Substance intoxication and withdrawal",
+      "type": "substance",
+      "note": "Alcohol and drugs can cause impulsivity and mood shifts; assess patterns when sober. This app does not store substance-use information."
+    },
+    {
+      "label": "Neurological causes of personality change",
+      "type": "medical",
+      "note": "Head injury, seizures or other brain conditions can change emotional control; ask about onset after an injury or illness."
+    },
+    {
+      "label": "Bipolar spectrum disorder",
+      "type": "psychiatric",
+      "note": "Look for days-long highs with reduced need for sleep rather than shifts lasting hours."
+    },
+    {
+      "label": "Complex trauma responses",
+      "type": "psychiatric",
+      "note": "Trauma-related emotional dysregulation and relationship difficulties overlap; ICD-11 complex PTSD (6B41) is a differential."
+    }
+  ],
+  "specifiers": [
+    {
+      "label": "ICD-11 severity: mild, moderate or severe (descriptive)",
+      "note": "ICD-11 rates overall personality disorder severity (6D10.0 to 6D10.2) with the borderline pattern specifier 6D11.5. See DSM-5-TR for its categorical approach."
+    }
+  ],
+  "differentials": [
+    {
+      "label": "Bipolar II disorder",
+      "distinguishing": "Discrete days-long highs with less need for sleep, not hour-to-hour shifts.",
+      "icd10cm": "F31.81"
+    },
+    {
+      "label": "Posttraumatic stress disorder",
+      "distinguishing": "Intrusions and avoidance tied to a trauma; complex trauma can add emotional and relationship difficulties.",
+      "icd10cm": "F43.10"
+    },
+    {
+      "label": "Major depressive disorder",
+      "distinguishing": "A clear episode of low mood that differs from the client's usual pattern.",
+      "icd10cm": "F33.9"
+    },
+    {
+      "label": "Adult ADHD",
+      "distinguishing": "Impulsivity without the fear of abandonment and identity disturbance.",
+      "icd10cm": "F90.9"
+    }
+  ],
+  "comorbidities": [
+    {
+      "label": "Depression",
+      "note": "Very common; treat both and track suicide risk closely.",
+      "conditionId": "major-depressive-disorder"
+    },
+    {
+      "label": "Trauma",
+      "note": "Many clients have trauma histories; stabilization skills usually come before trauma processing.",
+      "conditionId": "ptsd"
+    },
+    {
+      "label": "Substance use",
+      "note": "Common and linked to higher risk; screen sensitively.",
+      "conditionId": "alcohol-use-disorder"
+    },
+    {
+      "label": "Eating disorders",
+      "note": "Binge-purge patterns can co-occur; ask about eating.",
+      "conditionId": "bulimia-nervosa"
+    }
+  ],
+  "measures": [
+    "phq-9",
+    "gad-7"
+  ],
+  "measuresPending": [
+    {
+      "name": "McLean Screening Instrument for Borderline Personality Disorder (MSI-BPD)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/?term=McLean+Screening+Instrument+for+Borderline+Personality+Disorder+Zanarini+2003",
+      "note": "License pending — link out only",
+      "licenseKey": "MSI-BPD"
+    },
+    {
+      "name": "Columbia Suicide Severity Rating Scale (C-SSRS)",
+      "url": "https://cssrs.columbia.edu",
+      "note": "License pending — link out only",
+      "licenseKey": "C-SSRS"
+    }
+  ],
+  "interventions": [
+    {
+      "name": "Dialectical behavior therapy (DBT)",
+      "evidence": "Linehan et al. (2006) found DBT halved suicide attempts compared with therapy by experts; NICE CG78 supports DBT for women with recurrent self-harm.",
+      "note": "Comprehensive DBT includes individual therapy, skills group, coaching and a consultation team; individual skills can be taught as an adjunct."
+    },
+    {
+      "name": "Mentalization-based treatment (MBT)",
+      "evidence": "Outpatient MBT reduced self-harm and hospital admissions more than structured clinical management (Bateman and Fonagy, 2009).",
+      "note": "Refer to trained MBT clinicians."
+    },
+    {
+      "name": "Schema therapy",
+      "evidence": "Schema-focused therapy outperformed transference-focused psychotherapy on recovery in Giesen-Bloo et al. (2006); a 2023 meta-analysis (Zhang et al.) supports it across personality disorders.",
+      "note": "Refer to trained schema therapists."
+    },
+    {
+      "name": "Collaborative safety planning",
+      "evidence": "Recommended for anyone with self-harm or suicidal crises.",
+      "note": "Build a crisis plan with the client; this app never rates risk."
+    },
+    {
+      "name": "Medication referral for co-occurring conditions",
+      "evidence": "NICE CG78 does not recommend medication for the pattern itself; it can treat co-occurring conditions.",
+      "note": "Refer to a prescriber for depression, anxiety or other conditions."
+    }
+  ],
+  "handouts": [
+    "hard-moment-plan",
+    "opposite-action-practice",
+    "safety-plan",
+    "kind-self-talk"
+  ],
+  "statIds": [
+    "us-bpd-past-year"
+  ],
+  "culturalNotes": [
+    "Emotional expression, closeness and independence are judged differently across cultures and generations. Interpret intensity and relationship patterns against the client's own context.",
+    "The label carries stigma, and women are more often given it than men with a similar picture. Describe the pattern and its treatability, and invite the client's view.",
+    "Many clients have experienced abuse, neglect, racism or discrimination. Name these experiences as context, not as character flaws.",
+    "Use a trained professional interpreter, not family members, and check that key terms translate with the meaning you intend.",
+    "If the client wants faith or spiritual practice included, follow their lead and get informed consent first (see the AACC Code of Ethics for faith-based counselors); never impose beliefs."
+  ],
+  "sud": false,
+  "requiredFeatures": [],
+  "strongMinAreas": 2,
+  "redFlagRules": [
+    {
+      "type": "suicidality",
+      "message": "Suicidal thoughts or self-harm are documented in this input. Ask directly about intent, plan and access to means, follow your crisis protocol and build a safety plan with the client; this app never rates risk."
+    },
+    {
+      "type": "psychosis",
+      "message": "Psychotic symptoms are documented. Brief stress-related paranoia can occur in this pattern, but persistent hallucinations or delusions need an urgent psychiatric evaluation."
+    }
+  ],
+  "licensedDsm": false,
+  "wileyLicensed": false,
+  "sources": [
+    {
+      "title": "Borderline Personality Disorder (health topic)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/topics/borderline-personality-disorder"
+    },
+    {
+      "title": "Personality Disorders (statistics)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/statistics/personality-disorders"
+    },
+    {
+      "title": "Borderline personality disorder: recognition and management (CG78)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg78",
+      "year": 2009
+    },
+    {
+      "title": "Two-year randomized controlled trial and follow-up of dialectical behavior therapy vs therapy by experts (Linehan et al.)",
+      "publisher": "Archives of General Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16818865/",
+      "year": 2006
+    },
+    {
+      "title": "Randomized controlled trial of outpatient mentalization-based treatment versus structured clinical management (Bateman and Fonagy)",
+      "publisher": "American Journal of Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19833787/",
+      "year": 2009
+    },
+    {
+      "title": "Outpatient psychotherapy for borderline personality disorder: schema-focused therapy vs transference-focused psychotherapy (Giesen-Bloo et al.)",
+      "publisher": "Archives of General Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16754838/",
+      "year": 2006
+    },
+    {
+      "title": "The efficacy of schema therapy for personality disorders: a systematic review and meta-analysis (Zhang et al.)",
+      "publisher": "Nordic Journal of Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37402124/",
+      "year": 2023
+    },
+    {
+      "title": "ICD-11 for Mortality and Morbidity Statistics (browser)",
+      "publisher": "World Health Organization",
+      "url": "https://icd.who.int/browse/latest-release/mms/en"
+    },
+    {
+      "title": "ICD-10-CM (official code set)",
+      "publisher": "CDC National Center for Health Statistics",
+      "url": "https://www.cdc.gov/nchs/icd/icd-10-cm/index.html"
+    },
+    {
+      "title": "ICD-10-CM codes checked with the NLM Clinical Table Search Service",
+      "publisher": "National Library of Medicine",
+      "url": "https://clinicaltables.nlm.nih.gov/apidoc/icd10cm/v3/doc.html"
+    },
+    {
+      "title": "AACC Code of Ethics",
+      "publisher": "American Association of Christian Counselors",
+      "url": "https://aacc.net/aacc-code-of-ethics/"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

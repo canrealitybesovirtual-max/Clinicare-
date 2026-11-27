@@ -18,6 +18,7 @@ import {
   buildPlan,
   choose,
   downloadVia,
+  enterSymptomText,
   goNav,
   gotoReady,
   pdfText,
@@ -321,8 +322,11 @@ const ID = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const ZIP = /^\d{5}$/;
 const STATE = /^[A-Z]{2}$/;
 const ICD = /^[A-Z0-9]{2,4}(?:\.[0-9A-Z]{1,4})?$/;
-/** The only city this test types on purpose (a canonical gazetteer name). */
-const CANONICAL_CITIES = new Set(["Springfield"]);
+/**
+ * The only cities this test types on purpose: canonical gazetteer names. Austin is also a first name, so the scrubber
+ * flags it; it is let through only because the whole field is exactly a city in the chosen state.
+ */
+const CANONICAL_CITIES = new Set(["Springfield", "Austin"]);
 
 type Rule = (v: unknown) => boolean;
 const isInt: Rule = (v) => Number.isInteger(v);
@@ -449,6 +453,14 @@ test.describe("PHI never leaves the page: plan builder and referral search", () 
     await city.pressSequentially("Springfield");
     await form.getByRole("button", { name: "Search" }).click();
     await expect(page.getByRole("status").filter({ hasText: /^Showing \d+ results?\.$/ })).toBeVisible();
+    // A city that is also a first name, typed alone, is checked against the gazetteer and sent as the city only.
+    await form.getByLabel("State or territory").selectOption("TX");
+    await city.fill("");
+    await city.pressSequentially("Austin");
+    const austin = page.waitForRequest((r) => new URL(r.url()).pathname.startsWith("/api/") && (r.postData() ?? "").includes("Austin"));
+    await form.getByRole("button", { name: "Search" }).click();
+    await austin;
+    await expect(city).not.toHaveAttribute("aria-invalid", "true");
     // And a ZIP search for comparison.
     await choose(form, "Search location", "By ZIP code");
     await form.getByRole("textbox", { name: "ZIP code" }).fill("62701");
@@ -462,7 +474,9 @@ test.describe("PHI never leaves the page: plan builder and referral search", () 
     expect(api.length).toBeGreaterThanOrEqual(2);
     expect(api.flatMap(apiRequestProblems)).toEqual([]);
     const bodies = api.map((r) => JSON.parse(r.postData) as { location?: unknown });
-    expect(bodies.map((b) => b.location)).toEqual(expect.arrayContaining([{ city: "Springfield", state: "IL" }, { zip: "62701" }]));
+    expect(bodies.map((b) => b.location)).toEqual(
+      expect.arrayContaining([{ city: "Springfield", state: "IL" }, { city: "Austin", state: "TX" }, { zip: "62701" }]),
+    );
     for (const r of net.captured) {
       const wire = [r.url, decodeURIComponentSafe(r.url), JSON.stringify(r.headers), r.postData].join("\n");
       expect(leaks(wire), `${r.method} ${r.url}`).toEqual([]);
@@ -498,6 +512,65 @@ test.describe("PHI never leaves the page: plan builder and referral search", () 
 
     const csp = await page.evaluate(() => (window as unknown as { __cspViolations: string[] }).__cspViolations);
     expect(csp).toEqual([]);
+  });
+});
+
+/* ------------------------------------------------------------------ session note helper */
+
+test.describe("PHI never leaves the page: session note helper", () => {
+  test("a name and phone typed into the note are scrubbed before export, and never sent or stored", async ({ page }) => {
+    const net = capture(page);
+    await gotoReady(page, "/symptoms");
+    await enterSymptomText(page, CLINICAL);
+    await choose(page, "Duration", "1 to 6 months");
+    await goNav(page, "Tools");
+    await page.getByRole("link", { name: /^Session note helper/ }).click();
+    await expect(page).toHaveURL(/\/tools\/note$/);
+
+    // Prefilled from the memory-only session, then typed into and exported straight away: the export runs the
+    // scrubber on every field first, so the last keystrokes are never exported raw.
+    const subjective = page.getByLabel("Subjective", { exact: true });
+    await expect(subjective).not.toHaveValue("");
+    const prefill = await subjective.inputValue();
+    await subjective.fill(`${prefill} Spoke with ${PLANTED.name} on ${PLANTED.phone} about the week.`);
+    const pdf = await downloadVia(page, page.getByRole("button", { name: "Download PDF", exact: true }));
+    await expect(subjective).toHaveValue(/\[NAME\]/);
+    expect(identifierLeaks(await subjective.inputValue())).toEqual([]);
+
+    expect(pdf.bytes.subarray(0, 5).toString("latin1")).toBe("%PDF-");
+    const pdfAll = pdfText(pdf.bytes);
+    expect(pdfAll.drawn).toContain("about the week");
+    expect(pdfAll.drawn).toContain("[PHONE]");
+    expect(pdfAll.drawn).toContain("Client:");
+    expect(pdfAll.drawn).toContain("Resource only. Not a substitute for clinical judgment.");
+    expect(leaks(pdfAll.all)).toEqual([]);
+    const docx = await downloadVia(page, page.getByRole("button", { name: "Download Word" }));
+    expect(docx.bytes.subarray(0, 2).toString("latin1")).toBe("PK");
+    const docxText = docxAll(docx.bytes);
+    expect(docxText).toContain("about the week");
+    expect(leaks(docxText)).toEqual([]);
+    expect(identifierLeaks(pdf.name + docx.name)).toEqual([]);
+    expect(identifierLeaks(await visibleTextAndValues(page))).toEqual([]);
+
+    // Network: nothing typed anywhere, and the note helper posts nothing.
+    await net.settle();
+    for (const r of net.captured) {
+      const wire = [r.url, decodeURIComponentSafe(r.url), JSON.stringify(r.headers), r.postData].join("\n");
+      expect(leaks(wire), `${r.method} ${r.url}`).toEqual([]);
+      expect(wire, `${r.method} ${r.url}`).not.toContain("about the week");
+    }
+    expect(net.captured.filter((r) => r.postData.length > 0).map((r) => `${r.method} ${r.url}`)).toEqual([]);
+
+    // Storage: nothing typed is persisted.
+    const storage = await dumpStorage(page);
+    expect(storage.local).toEqual({});
+    expect(storage.cookie).toBe("");
+    expect(leaks(JSON.stringify(storage.session) + storage.historyState + storage.windowName + storage.href)).toEqual([]);
+    for (const entry of storage.cacheEntries) {
+      if (staticFileFor(new URL(entry.url).pathname)) continue;
+      expect(leaks(entry.body), `cached ${entry.url}`).toEqual([]);
+      expect(entry.body).not.toContain("about the week");
+    }
   });
 });
 

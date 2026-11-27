@@ -332,7 +332,7 @@ export const HUB_PROMPTS: Record<HubContext, HubPrompt> = {
     message:
       "Threats of violence, abuse or imminent self-harm: duties differ by state and country. Follow your crisis protocol, consult, document, and call 988 or emergency services when needed.",
     ethicsIds: ["aca-code-of-ethics", "nasw-code-of-ethics"],
-    legalIds: ["duty-to-warn-protect", "mandatory-reporting", "crisis-and-involuntary-holds"],
+    legalIds: ["duty-to-warn-protect", "mandatory-reporting", "crisis-and-involuntary-holds", "crisis-988-or-911"],
   },
   technology: {
     message:

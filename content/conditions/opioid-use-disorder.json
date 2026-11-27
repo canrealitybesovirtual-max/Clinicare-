@@ -1,0 +1,314 @@
+{
+  "id": "opioid-use-disorder",
+  "name": "Opioid use disorder",
+  "icd10cm": [
+    {
+      "code": "F11.10",
+      "label": "Opioid abuse, uncomplicated"
+    },
+    {
+      "code": "F11.11",
+      "label": "Opioid abuse, in remission"
+    },
+    {
+      "code": "F11.20",
+      "label": "Opioid dependence, uncomplicated"
+    },
+    {
+      "code": "F11.21",
+      "label": "Opioid dependence, in remission"
+    },
+    {
+      "code": "F11.23",
+      "label": "Opioid dependence with withdrawal"
+    },
+    {
+      "code": "F11.90",
+      "label": "Opioid use, unspecified, uncomplicated"
+    }
+  ],
+  "icd11": [
+    {
+      "code": "6C43.1",
+      "label": "Harmful pattern of use of opioids"
+    },
+    {
+      "code": "6C43.2",
+      "label": "Opioid dependence"
+    }
+  ],
+  "dsmPointer": "See DSM-5-TR: Substance-Related and Addictive Disorders — Opioid Use Disorder",
+  "summary": "A pattern, described in ICD-11 terms, in which use of heroin, fentanyl or prescription opioids slips out of the client's control and takes priority over health, work and relationships, usually with physical adaptation: needing more for the same effect, and painful withdrawal (aching, sweating, diarrhea, intense craving) on stopping. Overdose is the central danger, raised by fentanyl in the drug supply, using alone, mixing with alcohol or sedatives, and lost tolerance after jail, detox or treatment. Medications for opioid use disorder (buprenorphine, methadone, extended-release naltrexone) save lives and are first line; offer naloxone and overdose education to every client and their family. Substance-use information is protected: nothing here is stored or sent, and every export carries the Part 2 notice. 42 CFR Part 2 prohibits unauthorized use or disclosure of these records. For clinician review only; this is not a diagnosis.",
+  "features": [
+    {
+      "symptomId": "opioid-impaired-control",
+      "kind": "core",
+      "weight": 5
+    },
+    {
+      "symptomId": "opioid-withdrawal",
+      "kind": "core",
+      "weight": 4
+    },
+    {
+      "symptomId": "opioid-use-pattern",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "opioid-overdose-risk",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "anhedonia",
+      "kind": "associated",
+      "weight": 1
+    },
+    {
+      "symptomId": "insomnia",
+      "kind": "associated",
+      "weight": 1
+    }
+  ],
+  "minCore": 1,
+  "durationGate": {
+    "minWeeks": 4,
+    "note": "Ask about the pattern of use over the past year, including attempts to stop and any overdoses. DSM-5-TR and ICD-11 both look at the pattern over months; check the timing they describe."
+  },
+  "impairmentRequired": true,
+  "ruleOuts": [
+    {
+      "label": "Benzodiazepine, alcohol and other sedative use",
+      "type": "substance",
+      "note": "Combined use sharply raises overdose risk. Ask about all substances; this app does not store or send substance-use information."
+    },
+    {
+      "label": "Chronic pain and prescribed opioid treatment",
+      "type": "medical",
+      "note": "Physical dependence on prescribed opioids is not the same as a use disorder. Coordinate with the prescriber about pain care."
+    },
+    {
+      "label": "Infections and other medical harm",
+      "type": "medical",
+      "note": "Injection use brings risks of HIV, hepatitis C, skin infections and endocarditis; connect the client with medical care and testing."
+    },
+    {
+      "label": "Mood and anxiety disorders",
+      "type": "psychiatric",
+      "note": "Ask whether symptoms began before use or continue in recovery."
+    }
+  ],
+  "specifiers": [
+    {
+      "label": "ICD-10-CM coding notes",
+      "note": "F11.1x codes a harmful (abuse) pattern and F11.2x a dependence pattern, each with remission and withdrawal codes. DSM-5-TR uses its own severity and course specifiers with these codes: See DSM-5-TR."
+    },
+    {
+      "label": "On maintenance medication (descriptive)",
+      "note": "Taking buprenorphine or methadone as prescribed is treatment, not ongoing misuse. See DSM-5-TR for course specifiers."
+    }
+  ],
+  "differentials": [
+    {
+      "label": "Physical dependence on prescribed opioids for pain",
+      "distinguishing": "Tolerance and withdrawal occur with prescribed use, without loss of control or harm-driven use."
+    },
+    {
+      "label": "Sedative, hypnotic or anxiolytic use disorder",
+      "distinguishing": "The main substance is a benzodiazepine or other sedative.",
+      "icd10cm": "F13.20"
+    },
+    {
+      "label": "Major depressive disorder",
+      "distinguishing": "Low mood that continues during sustained recovery.",
+      "icd10cm": "F33.9"
+    }
+  ],
+  "comorbidities": [
+    {
+      "label": "Trauma",
+      "note": "Trauma histories are common; integrated care helps.",
+      "conditionId": "ptsd"
+    },
+    {
+      "label": "Depression",
+      "note": "Common; screen with the PHQ-9 and ask about suicide.",
+      "conditionId": "major-depressive-disorder"
+    },
+    {
+      "label": "Alcohol use",
+      "note": "Combined use raises overdose risk.",
+      "conditionId": "alcohol-use-disorder"
+    }
+  ],
+  "measures": [
+    "phq-9",
+    "gad-7"
+  ],
+  "measuresPending": [
+    {
+      "name": "Drug Abuse Screening Test (DAST-10)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/7183189/",
+      "note": "License pending — link out only",
+      "licenseKey": "DAST-10"
+    },
+    {
+      "name": "Clinical Opiate Withdrawal Scale (COWS), clinician-rated",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12924748/",
+      "note": "License pending — link out only",
+      "licenseKey": "COWS"
+    }
+  ],
+  "interventions": [
+    {
+      "name": "Medications for opioid use disorder (first line)",
+      "evidence": "Buprenorphine and methadone maintenance keep people in treatment and reduce opioid use (Mattick et al., 2014); being on them is linked to much lower mortality (Sordo et al., 2017).",
+      "note": "Refer promptly to a prescriber or opioid treatment program; do not wait for counseling to start medication."
+    },
+    {
+      "name": "Naloxone and overdose education",
+      "evidence": "Take-home naloxone programs reduce overdose deaths (McDonald and Strang, 2016).",
+      "note": "Make sure the client and family have naloxone and know how to use it; discuss never using alone."
+    },
+    {
+      "name": "Contingency management and CBT (alongside medication)",
+      "evidence": "Psychosocial approaches add benefit alongside medication; NICE CG51 covers contingency management for drug misuse.",
+      "note": "Refer to programs that combine them."
+    },
+    {
+      "name": "Harm reduction services",
+      "evidence": "WHO recommends naloxone access and harm reduction as part of overdose prevention.",
+      "note": "Connect the client with syringe services, testing and peer support."
+    }
+  ],
+  "handouts": [
+    "overdose-safety",
+    "urge-surfing-log",
+    "relapse-prevention-plan"
+  ],
+  "statIds": [
+    "us-opioid-use-disorder-2025"
+  ],
+  "culturalNotes": [
+    "Norms about cannabis, prescription pills and other drugs vary widely, and legal status differs by state and country. Anchor the assessment in control and harm, not in legal status or amounts alone.",
+    "Stigma, fear of losing custody, housing, work or immigration status, and past experiences with police can make clients cautious. Explain confidentiality, its limits and 42 CFR Part 2 protections plainly.",
+    "Use person-first, non-judgmental language (a person who uses drugs, not an addict) and offer harm-reduction options alongside abstinence goals.",
+    "Culturally grounded and community-led programs, including Indigenous healing approaches and peer recovery services, are often more acceptable; ask what support looks like for the client.",
+    "Faith can be a strong support in recovery. Offer faith-based groups or faith-integrated approaches only when the client asks and after informed consent (see the AACC Code of Ethics for faith-based counselors).",
+    "Use a trained professional interpreter, not family members, and check that key terms translate with the meaning you intend."
+  ],
+  "sud": true,
+  "requiredFeatures": [],
+  "strongMinAreas": 2,
+  "redFlagRules": [
+    {
+      "type": "suicidality",
+      "message": "Suicide-related content is documented in this input. Substance use raises suicide risk, especially during intoxication, withdrawal or after a loss; ask directly, include substances and other means in safety planning, and follow your risk protocol."
+    },
+    {
+      "type": "psychosis",
+      "message": "Psychotic symptoms are documented. Substance-induced psychosis and withdrawal delirium need urgent medical and psychiatric evaluation."
+    },
+    {
+      "type": "withdrawal",
+      "message": "Withdrawal signs are documented. Alcohol or sedative withdrawal alongside opioid use can be medically dangerous; arrange an urgent medical assessment."
+    }
+  ],
+  "licensedDsm": false,
+  "wileyLicensed": false,
+  "sources": [
+    {
+      "title": "Opioid Misuse and Addiction (health topic)",
+      "publisher": "MedlinePlus, U.S. National Library of Medicine",
+      "url": "https://medlineplus.gov/opioidmisuseandaddiction.html"
+    },
+    {
+      "title": "Naloxone nasal spray (drug information)",
+      "publisher": "MedlinePlus, U.S. National Library of Medicine",
+      "url": "https://medlineplus.gov/druginfo/meds/a616003.html"
+    },
+    {
+      "title": "Opioid overdose (fact sheet)",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/opioid-overdose"
+    },
+    {
+      "title": "Buprenorphine maintenance versus placebo or methadone maintenance for opioid dependence (Mattick et al.)",
+      "publisher": "Cochrane Database of Systematic Reviews (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24500948/",
+      "year": 2014
+    },
+    {
+      "title": "Mortality risk during and after opioid substitution treatment: systematic review and meta-analysis of cohort studies (Sordo et al.)",
+      "publisher": "BMJ (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28446428/",
+      "year": 2017
+    },
+    {
+      "title": "Are take-home naloxone programmes effective? Systematic review utilizing application of the Bradford Hill criteria (McDonald and Strang)",
+      "publisher": "Addiction (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27028542/",
+      "year": 2016
+    },
+    {
+      "title": "Drug misuse in over 16s: psychosocial interventions (CG51)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg51",
+      "year": 2007
+    },
+    {
+      "title": "SAMHSA releases annual National Survey on Drug Use and Health (2025 data)",
+      "publisher": "SAMHSA",
+      "url": "https://www.samhsa.gov/newsroom/press-announcements/20260727/samhsa-releases-annual-national-survey-on-drug-use-and-health",
+      "year": 2026
+    },
+    {
+      "title": "Highlights for the 2025 National Survey on Drug Use and Health",
+      "publisher": "SAMHSA",
+      "url": "https://www.samhsa.gov/data/sites/default/files/NSDUH-2025-Annual-Release/2025-nsduh-nnr-highlights.pdf",
+      "year": 2026
+    },
+    {
+      "title": "National Helpline",
+      "publisher": "SAMHSA",
+      "url": "https://www.samhsa.gov/find-help/helplines/national-helpline"
+    },
+    {
+      "title": "42 CFR 2.32: notice to accompany disclosure (federal confidentiality rule for substance use treatment records)",
+      "publisher": "eCFR, U.S. Government Publishing Office",
+      "url": "https://www.ecfr.gov/current/title-42/chapter-I/subchapter-A/part-2/subpart-C/section-2.32",
+      "year": 2024
+    },
+    {
+      "title": "Confidentiality of substance use treatment records (42 CFR Part 2)",
+      "publisher": "U.S. Department of Health and Human Services",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/hipaa-part-2/index.html"
+    },
+    {
+      "title": "ICD-11 for Mortality and Morbidity Statistics (browser)",
+      "publisher": "World Health Organization",
+      "url": "https://icd.who.int/browse/latest-release/mms/en"
+    },
+    {
+      "title": "ICD-10-CM (official code set)",
+      "publisher": "CDC National Center for Health Statistics",
+      "url": "https://www.cdc.gov/nchs/icd/icd-10-cm/index.html"
+    },
+    {
+      "title": "ICD-10-CM codes checked with the NLM Clinical Table Search Service",
+      "publisher": "National Library of Medicine",
+      "url": "https://clinicaltables.nlm.nih.gov/apidoc/icd10cm/v3/doc.html"
+    },
+    {
+      "title": "AACC Code of Ethics",
+      "publisher": "American Association of Christian Counselors",
+      "url": "https://aacc.net/aacc-code-of-ethics/"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

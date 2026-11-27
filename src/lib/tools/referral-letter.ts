@@ -92,8 +92,9 @@ export function referralLetterDoc(input: ReferralLetterInput): DocSpec {
   const blocks: DocBlock[] = [
     { kind: "title", text: REFERRAL_TITLE },
     { kind: "fill", label: "To (service or clinician)" },
+    // One blank client line only, as on every other export (G5); no date-of-birth line unless the owner decides
+    // otherwise (docs/DEPLOY.md, "Still open").
     { kind: "fill", label: "Client name" },
-    { kind: "fill", label: "Date of birth" },
     { kind: "paragraph", text: "Dear colleague," },
     {
       kind: "paragraph",

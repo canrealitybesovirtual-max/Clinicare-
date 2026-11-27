@@ -5,7 +5,8 @@
   "conditions": [
     "major-depressive-disorder",
     "generalized-anxiety-disorder",
-    "ptsd"
+    "ptsd",
+    "borderline-personality-disorder"
   ],
   "evidenceLevel": "Emerging evidence for the core mindfulness module on its own. It is the foundation of the skills modules in comprehensive DBT, which has strong evidence for BPD and recurrent self-harm (Cochrane, Storebo et al., 2020); stand-alone DBT skills training has preliminary support (Valentine et al., 2015). NCCIH notes that evidence for mindfulness approaches in anxiety and depression is mixed and often preliminary. DBT is not among the PTSD psychotherapies recommended or suggested in the 2023 VA/DoD guideline (see the 2023 synopsis).",
   "minutes": { "min": 15, "max": 30 },

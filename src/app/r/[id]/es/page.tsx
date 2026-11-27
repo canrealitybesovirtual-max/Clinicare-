@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { allHandouts, getAnyHandout } from "@/lib/library";
+import { clientHandout } from "@/lib/client-safe";
+import { clientMetadata } from "@/components/client/client-metadata";
 import { ClientHandoutView } from "@/components/client/client-handout-view";
 import { SHARE_BACK } from "../share-back";
 
@@ -18,12 +20,13 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
   const { id } = await params;
   const h = getAnyHandout(id);
-  return { title: h?.es?.title ?? h?.title ?? "Hoja de autoayuda" };
+  const es = clientMetadata("es");
+  return { ...es, title: { absolute: `${h?.es?.title ?? h?.title ?? "Hoja de autoayuda"} · Autoayuda` } };
 }
 
 export default async function SharedHandoutPageEs({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const handout = getAnyHandout(id);
   if (!handout?.es) notFound();
-  return <ClientHandoutView handout={handout} back={SHARE_BACK} initialLang="es" />;
+  return <ClientHandoutView handout={clientHandout(handout)} back={SHARE_BACK} initialLang="es" />;
 }

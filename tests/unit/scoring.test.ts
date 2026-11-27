@@ -264,6 +264,25 @@ describe("scoreConditions: matched and missing features", () => {
     expect(s.missing[0]?.label).toBe("Ongoing apprehension about having further fear surges");
   });
 
+  it("leaves out unmatched members of a group whose slot is already filled", () => {
+    const grouped = cloneCondition("fx-surge", "fx-grouped", "Grouped (fixture)", {
+      features: [
+        { symptomId: "panic-attacks", kind: "core", weight: 5 },
+        { symptomId: "fear-of-attacks", kind: "core", weight: 4 },
+        { symptomId: "palpitations", kind: "associated", weight: 1, group: "body" },
+        { symptomId: "restlessness", kind: "associated", weight: 1, group: "body" },
+        { symptomId: "insomnia", kind: "associated", weight: 1 },
+      ],
+    });
+    const s = byId(score(input(["panic-attacks", "palpitations"]), [grouped]).suggestions, "fx-grouped");
+    expect(s.matched.map((m) => m.symptomId)).toEqual(["panic-attacks", "palpitations"]);
+    // restlessness shares the filled "body" slot, so it would add nothing: not listed as missing.
+    expect(s.missing.map((m) => m.symptomId)).toEqual(["fear-of-attacks", "insomnia"]);
+    // With the slot empty, every member is still listed.
+    const empty = byId(score(input(["panic-attacks", "fear-of-attacks"]), [grouped]).suggestions, "fx-grouped");
+    expect(empty.missing.map((m) => m.symptomId)).toEqual(["palpitations", "restlessness", "insomnia"]);
+  });
+
   it("falls back to the id as label when the lexicon lacks the symptom", () => {
     const s = scoreConditions(input(SURGE_IDS), fxConditions, []).suggestions[0];
     expect(s?.matched[0]?.label).toBe("panic-attacks");

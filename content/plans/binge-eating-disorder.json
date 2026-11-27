@@ -1,0 +1,84 @@
+{
+  "conditionId": "binge-eating-disorder",
+  "problems": [
+    {
+      "id": "bed-binges",
+      "label": "Binge eating with loss of control and shame",
+      "definitions": [
+        "Has episodes of eating a large amount with a sense of losing control, often alone and in secret.",
+        "Feels strong shame or disgust after binges, and diets strictly in between.",
+        "Avoids social events with food because of embarrassment."
+      ],
+      "longTermGoals": [
+        "Binges become rare, eating is regular and flexible, and shame no longer drives eating or hiding."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "bed-medical",
+          "text": "Within 2 weeks, attend a medical check-up and share the eating pattern with the physician, with the client's consent.",
+          "interventionIds": [
+            "eating-disorder-medical-monitoring"
+          ]
+        },
+        {
+          "id": "bed-self-help",
+          "text": "Within 4 weeks, start eating-disorder-focused guided self-help or group CBT and keep a daily food and mood log.",
+          "interventionIds": [
+            "cbt-e-eating-disorders"
+          ]
+        },
+        {
+          "id": "bed-regular-eating",
+          "text": "By week 4, eat 3 meals and 2 or 3 snacks at planned times on at least 5 days a week, with no long gaps.",
+          "interventionIds": [
+            "cbt-e-eating-disorders"
+          ]
+        },
+        {
+          "id": "bed-urge-awareness",
+          "text": "Practice a 3-minute mindful pause when an urge to binge comes, at least 3 times a week, and record what happened.",
+          "interventionIds": [
+            "mindfulness-meditation"
+          ]
+        },
+        {
+          "id": "bed-self-kindness",
+          "text": "Replace self-criticism after eating with a kind self-statement daily for 4 weeks.",
+          "interventionIds": [
+            "self-compassion-practice"
+          ]
+        },
+        {
+          "id": "bed-medication",
+          "text": "If binges have not decreased by week 8, discuss a medication evaluation as an adjunct.",
+          "interventionIds": [
+            "medication-referral"
+          ]
+        }
+      ],
+      "measureIds": [
+        "phq-9",
+        "gad-7"
+      ]
+    }
+  ],
+  "collaborativeNote": "Write goals and objectives with the client in their own words. Timelines and targets are examples to adapt; the client decides what matters, and the clinician checks safety and fit.",
+  "sud": false,
+  "sources": [
+    {
+      "title": "Eating disorders: recognition and treatment (NG69)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng69",
+      "year": 2017
+    },
+    {
+      "title": "Transdiagnostic cognitive-behavioral therapy for patients with eating disorders: a two-site trial with 60-week follow-up (Fairburn et al.)",
+      "publisher": "American Journal of Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19074978/",
+      "year": 2009
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

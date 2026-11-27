@@ -16,7 +16,7 @@ import {
 import { STRENGTH_LABEL } from "@/components/diagnoses/explain";
 import { DURATION_CHOICES, TRI_CHOICES } from "@/components/symptoms/symptom-meta";
 import { CrisisInline } from "@/components/crisis/crisis-panel";
-import { ClinicianReviewBadge, Governance, SourcesList } from "@/components/content/content-bits";
+import { ClinicianReviewBadge, Governance, SourcesList } from "@/components/content/content-meta";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";

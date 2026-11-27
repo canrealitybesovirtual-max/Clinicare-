@@ -6,7 +6,7 @@ import { Notice } from "@/components/ui/notice";
 import { PART2_NOTICE } from "@/lib/referral-links";
 import { usePlan } from "./plan-context";
 import { planCounts, toPlanExport } from "./plan-model";
-import { NextStep } from "@/components/content/content-bits";
+import { NextStep } from "@/components/content/content-meta";
 
 type ExportState = { kind: "pdf" | "docx"; status: "busy" | "done" | "error" } | null;
 

@@ -4,43 +4,43 @@
   "icd10cm": [
     {
       "code": "F40.210",
-      "label": "Arachnophobia"
+      "label": "Arachnophobia", "featureIds": ["fear-animals"]
     },
     {
       "code": "F40.218",
-      "label": "Other animal type phobia"
+      "label": "Other animal type phobia", "featureIds": ["fear-animals"]
     },
     {
       "code": "F40.220",
-      "label": "Fear of thunderstorms"
+      "label": "Fear of thunderstorms", "featureIds": ["fear-natural-environment"]
     },
     {
       "code": "F40.228",
-      "label": "Other natural environment type phobia"
+      "label": "Other natural environment type phobia", "featureIds": ["fear-natural-environment"]
     },
     {
       "code": "F40.230",
-      "label": "Fear of blood"
+      "label": "Fear of blood", "featureIds": ["fear-blood-injection"]
     },
     {
       "code": "F40.231",
-      "label": "Fear of injections and transfusions"
+      "label": "Fear of injections and transfusions", "featureIds": ["fear-blood-injection"]
     },
     {
       "code": "F40.232",
-      "label": "Fear of other medical care"
+      "label": "Fear of other medical care", "featureIds": ["fear-blood-injection"]
     },
     {
       "code": "F40.233",
-      "label": "Fear of injury"
+      "label": "Fear of injury", "featureIds": ["fear-blood-injection"]
     },
     {
       "code": "F40.240",
-      "label": "Claustrophobia"
+      "label": "Claustrophobia", "featureIds": ["fear-enclosed-spaces"]
     },
     {
       "code": "F40.241",
-      "label": "Acrophobia"
+      "label": "Acrophobia", "featureIds": ["fear-heights"]
     },
     {
       "code": "F40.242",
@@ -48,7 +48,7 @@
     },
     {
       "code": "F40.243",
-      "label": "Fear of flying"
+      "label": "Fear of flying", "featureIds": ["fear-flying"]
     },
     {
       "code": "F40.248",
@@ -77,6 +77,42 @@
       "symptomId": "phobic-avoidance",
       "kind": "core",
       "weight": 4
+    },
+    {
+      "symptomId": "fear-animals",
+      "kind": "associated",
+      "weight": 1,
+      "group": "phobia-type"
+    },
+    {
+      "symptomId": "fear-heights",
+      "kind": "associated",
+      "weight": 1,
+      "group": "phobia-type"
+    },
+    {
+      "symptomId": "fear-flying",
+      "kind": "associated",
+      "weight": 1,
+      "group": "phobia-type"
+    },
+    {
+      "symptomId": "fear-blood-injection",
+      "kind": "associated",
+      "weight": 1,
+      "group": "phobia-type"
+    },
+    {
+      "symptomId": "fear-enclosed-spaces",
+      "kind": "associated",
+      "weight": 1,
+      "group": "phobia-type"
+    },
+    {
+      "symptomId": "fear-natural-environment",
+      "kind": "associated",
+      "weight": 1,
+      "group": "phobia-type"
     },
     {
       "symptomId": "anticipatory-anxiety",
@@ -209,9 +245,7 @@
       "note": "Avoidance that narrows work, travel or health care can feed low mood; screen with the PHQ-9."
     }
   ],
-  "measures": [
-    "gad-7"
-  ],
+  "measures": [],
   "measuresPending": [
     {
       "name": "APA Severity Measure for Specific Phobia — Adult",
@@ -234,7 +268,8 @@
     {
       "name": "Applied tension for blood-injection-injury fears",
       "evidence": "Öst and Sterner (1987) described applied tension to counter fainting in blood phobia.",
-      "note": "Teach brief tensing of large muscles to raise blood pressure, then pair it with exposure to blood, needles or injury images. Check medical history first."
+      "note": "Teach brief tensing of large muscles to raise blood pressure, then pair it with exposure to blood, needles or injury images. Check medical history first.",
+      "requiresAny": ["fear-blood-injection", "blood-injury-fainting"]
     },
     {
       "name": "Virtual reality or imaginal exposure",
@@ -252,13 +287,17 @@
       "note": "Short-term medication around a necessary procedure is a prescriber decision. Prescribing decisions rest with the prescriber."
     }
   ],
-  "handouts": [],
+  "handouts": [
+    "exposure-ladder",
+    "applied-tension-practice"
+  ],
   "statIds": [
+    "us-specific-phobia-past-year",
     "us-any-anxiety-past-year",
     "global-anxiety-disorders-2021"
   ],
   "culturalNotes": [
-    "Judge whether fear is out of proportion within the client's real setting. Fear of dogs, snakes or storms can be realistic where stray dogs, venomous snakes or severe weather are common.",
+    "Fear of dogs, snakes or storms can be realistic where stray dogs, venomous snakes or severe weather are common, so weigh the client's real surroundings before treating a fear as excessive.",
     "Feared objects and their meanings are shaped by culture and belief, such as fear of particular animals, the dark or spirits. Ask what the feared thing means to the client before planning exposure.",
     "Avoidance of medical care can reflect historical abuse and mistrust of health systems rather than a phobia. Explore both, and do not label vaccine hesitancy rooted in mistrust as a phobia.",
     "Plan exposure steps that respect the client's religious and cultural practices, for example around animals considered unclean or gender norms during therapist-assisted exposure.",

@@ -42,7 +42,7 @@ export function ChoiceGroup<V extends string>({
           {hint}
         </p>
       ) : null}
-      <div className={cn("grid gap-2", options.length === 3 ? "grid-cols-3" : "grid-cols-2")}>
+      <div className={cn("grid gap-2", options.length === 3 ? "choice-grid-3 grid-cols-3" : "grid-cols-2")}>
         {options.map((o) => (
           <label
             key={o.value}
@@ -62,7 +62,9 @@ export function ChoiceGroup<V extends string>({
               onChange={() => onChange(o.value)}
             />
             <Check aria-hidden className="hidden size-4 shrink-0 text-primary group-has-[:checked]:inline-block" />
-            <span lang={o.lang}>{o.label}</span>
+            <span lang={o.lang} className="min-w-0 break-words">
+              {o.label}
+            </span>
           </label>
         ))}
       </div>

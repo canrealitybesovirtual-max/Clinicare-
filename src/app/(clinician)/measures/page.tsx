@@ -6,7 +6,8 @@ import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ExternalLink } from "@/components/ui/external-link";
-import { NextStep, PageIntro, ReviewBadge } from "@/components/content/content-bits";
+import { NextStep, PageIntro, ReviewBadge } from "@/components/content/content-meta";
+import { HelpTip } from "@/components/ui/help-tip";
 import { DownloadPdfButton } from "@/components/pdf/download-pdf-button";
 import { AdultOnly } from "@/components/measures/adult-only";
 import { MeasurementBasedCareNote } from "@/components/measures/measure-form";
@@ -28,11 +29,18 @@ export default function MeasuresPage() {
   return (
     <>
       <PageIntro title="Measures" eyebrow="Step 3 · Clinician mode" compact>
-        <p>
-          Built-in measures are limited to those with a confirmed license. Answers stay in this tab and scores are never
-          saved — record results in your EHR. Completed forms can be exported as FHIR JSON with no identifiers.
-        </p>
+        <p>Short, license-confirmed screening measures. Answers stay in this tab and scores are never saved.</p>
       </PageIntro>
+      <HelpTip title="How to use measures" className="mb-5">
+        <p>
+          Press Run to give a measure in session, or download a blank PDF for paper. The total and severity band appear as
+          the client answers; a completed form can be exported as FHIR JSON with no identifiers for your record system.
+        </p>
+        <p>
+          Only measures whose license is confirmed are built in. Others are listed below as links to the publisher.
+          Repeat the same measure over time and use the trend tool to see change; record each score in your EHR.
+        </p>
+      </HelpTip>
       <div className="mb-6 max-w-3xl space-y-3">
         <MeasurementBasedCareNote />
         <HubPrompt context="assessment" />
@@ -66,7 +74,7 @@ export default function MeasuresPage() {
                       // Informational only: crisis red is kept for crisis buttons and active red flags.
                       <Badge tone="info">Includes a risk item ({m.riskItems.map((r) => r.itemId).join(", ")})</Badge>
                     ) : null}
-                    <ReviewBadge reviewedBy={m.reviewedBy} />
+                    <ReviewBadge reviewedBy={m.reviewedBy} inList />
                   </div>
                   <p className="text-sm text-muted">
                     Bands: {m.scoring.bands.map((b) => `${b.label} ${b.min}–${b.max}`).join(" · ")}

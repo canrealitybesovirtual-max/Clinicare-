@@ -25,6 +25,8 @@ export const InterventionSchema = z.object({
     .optional(),
   trainingRequired: z.string().optional(), // e.g. "EMDR: trained clinicians only"
   handoutIds: z.array(slug), // matching client handouts (content/handouts)
+  // Suggested for a condition only when one of these symptoms is documented (applied tension: blood-injection-injury).
+  suggestWith: z.array(slug).min(1).optional(),
   ...governance,
 });
 export type Intervention = z.infer<typeof InterventionSchema>;

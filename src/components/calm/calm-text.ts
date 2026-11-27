@@ -30,11 +30,6 @@ export const CALM = {
     en: "These exercises were written for this app, based on information from:",
     es: "Estos ejercicios se escribieron para esta aplicación, con base en información de:",
   },
-  /** Shown only in Spanish. */
-  translationNote: {
-    en: "Translated with the help of a tool; waiting for review by a person.",
-    es: "Traducción hecha con ayuda de una herramienta; pendiente de revisión por una persona.",
-  },
 } satisfies Record<string, Text>;
 
 export const BREATHE = {
@@ -63,7 +58,7 @@ export const BREATHE = {
   },
   safety: {
     en: "Breathe gently. If you feel dizzy or tingly, stop and breathe normally for a minute.",
-    es: "Respire con suavidad. Si se siente mareado o con hormigueo, pare y respire normal por un minuto.",
+    es: "Respire con suavidad. Si siente mareo u hormigueo, pare y respire con normalidad un minuto.",
   },
 } satisfies Record<string, Text>;
 

@@ -1,0 +1,92 @@
+{
+  "id": "regular-eating-plan",
+  "title": "Regular Eating: My Meal and Snack Plan",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 10,
+  "intro": "Long gaps without food can lead to strong hunger, overeating and feeling out of control. Eating at regular times helps your body and mind settle. Most people do well with 3 meals and 2 or 3 snacks a day, with no more than about 3 to 4 hours between them. Work out your plan with your care team. Filling in the plan takes about 10 minutes.",
+  "sections": [
+    {
+      "heading": "How to start",
+      "steps": [
+        "Pick set times for meals and snacks, and write them in the log.",
+        "Eat at those times, even if you don't feel hungry.",
+        "Try not to skip a meal or snack to make up for eating earlier.",
+        "Plan what you will eat ahead of time, if that helps.",
+        "After eating, do something calming instead of checking your body or weighing yourself again."
+      ]
+    },
+    {
+      "heading": "If you eat more than you planned",
+      "body": "Don't skip the next meal or snack. Get back to your plan at the next set time. One hard moment does not undo your progress."
+    },
+    {
+      "heading": "Using the log",
+      "body": "Write the time, what you ate and how you felt before and after. You do not need to count anything. Bring the log to your next visit so you can look at it together."
+    }
+  ],
+  "practiceLog": {
+    "columns": [
+      "Time",
+      "Meal or snack",
+      "What I ate",
+      "How I felt before",
+      "How I felt after"
+    ],
+    "rows": 8
+  },
+  "safetyNote": "Safety first: Some eating problems can be dangerous for your heart and body. Get medical help right away if you faint, feel your heart racing or skipping, have chest pain, or feel very weak or confused. If you have thoughts of hurting yourself, get help now. In the US, call or text 988 or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sud": false,
+  "es": {
+    "title": "Comer con regularidad: mi plan de comidas y meriendas",
+    "intro": "Pasar mucho tiempo sin comer puede dar mucha hambre, hacer que coma de más y que sienta que pierde el control. Comer a horas fijas ayuda a que su cuerpo y su mente se calmen. A la mayoría de las personas les va bien con 3 comidas y 2 o 3 meriendas al día, sin más de unas 3 a 4 horas entre ellas. Haga su plan con su equipo de cuidado. Llenar el plan toma unos 10 minutos.",
+    "sections": [
+      {
+        "heading": "Cómo empezar",
+        "steps": [
+          "Elija horas fijas para las comidas y las meriendas, y escríbalas en el registro.",
+          "Coma a esas horas, aunque no tenga hambre.",
+          "Trate de no saltarse una comida o merienda para compensar lo que comió antes.",
+          "Si le ayuda, planee con tiempo lo que va a comer.",
+          "Después de comer, haga algo que le dé calma en vez de revisar su cuerpo o volver a pesarse."
+        ]
+      },
+      {
+        "heading": "Si come más de lo que planeó",
+        "body": "No se salte la próxima comida o merienda. Vuelva a su plan a la siguiente hora fija. Un momento difícil no borra su avance."
+      },
+      {
+        "heading": "Cómo usar el registro",
+        "body": "Escriba la hora, lo que comió y cómo se sintió antes y después. No necesita contar nada. Lleve el registro a su próxima cita para verlo juntos."
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Hora",
+        "Comida o merienda",
+        "Lo que comí",
+        "Cómo me sentí antes",
+        "Cómo me sentí después"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: Algunos problemas con la comida pueden ser peligrosos para el corazón y el cuerpo. Busque ayuda médica de inmediato si se desmaya, siente el corazón acelerado o que salta, tiene dolor de pecho, o se siente muy débil o confundido. Si tiene pensamientos de hacerse daño, busque ayuda ahora. En EE. UU., llame o envíe un mensaje de texto al 988, o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "sources": [
+    {
+      "title": "Transdiagnostic cognitive-behavioral therapy for patients with eating disorders: a two-site trial with 60-week follow-up (Fairburn et al.)",
+      "publisher": "American Journal of Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19074978/",
+      "year": 2009
+    },
+    {
+      "title": "Eating disorders: recognition and treatment (NG69)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng69",
+      "year": 2017
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

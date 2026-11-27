@@ -12,6 +12,7 @@
   "features": [
     { "symptomId": "panic-attacks-unexpected", "kind": "core", "weight": 5, "group": "attacks" },
     { "symptomId": "panic-attacks-unspecified", "kind": "core", "weight": 4, "group": "attacks" },
+    { "symptomId": "limited-symptom-attacks", "kind": "core", "weight": 3, "group": "attacks" },
     { "symptomId": "persistent-concern-future-attacks", "kind": "core", "weight": 4 },
     { "symptomId": "behavior-change-avoid-attacks", "kind": "core", "weight": 3 },
     { "symptomId": "palpitations", "kind": "associated", "weight": 2 },
@@ -78,7 +79,7 @@
     { "name": "Applied relaxation", "evidence": "APA Division 12 has listed applied relaxation for panic with modest research support (verify the current rating).", "note": "Second-line or adjunctive option. Some clients feel more anxious when they first relax; prepare them for this." },
     { "name": "Referral for medication evaluation", "evidence": "NICE CG113 names an SSRI as the first-line medication for panic disorder and advises against benzodiazepines for this condition.", "note": "Refer to psychiatry, a primary care provider or a psychiatric nurse practitioner. Prescribing decisions rest with the prescriber." }
   ],
-  "handouts": [],
+  "handouts": ["panic-cycle", "breathing-practice", "thought-record"],
   "statIds": ["us-panic-disorder-past-year", "us-any-anxiety-past-year", "global-anxiety-disorders-2021"],
   "culturalNotes": [
     "Some Latino clients, particularly of Caribbean background, may describe an 'ataque de nervios'. It often erupts after a family shock or conflict and tends to be more emotionally expressive than a typical panic attack, so the two overlap only in part. Ask what happened just before and what the episode means to the client and family.",
@@ -111,6 +112,6 @@
     { "title": "AACC Code of Ethics", "publisher": "American Association of Christian Counselors", "url": "https://aacc.net/aacc-code-of-ethics/" }
   ],
   "license": "original",
-  "lastVerified": "2026-11-26",
+  "lastVerified": "2026-11-27",
   "reviewedBy": "PENDING"
 }

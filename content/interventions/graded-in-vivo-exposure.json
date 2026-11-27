@@ -2,7 +2,7 @@
   "id": "graded-in-vivo-exposure",
   "name": "Graded in-vivo exposure (exposure ladder)",
   "modality": "Exposure - in vivo",
-  "conditions": ["agoraphobia", "panic-disorder", "social-anxiety-disorder", "prolonged-grief-disorder", "specific-phobia"],
+  "conditions": ["agoraphobia", "panic-disorder", "social-anxiety-disorder", "prolonged-grief-disorder", "specific-phobia", "body-dysmorphic-disorder"],
   "evidenceLevel": "Core component of CBT for panic disorder with or without agoraphobia, which NICE CG113 recommends; APA Division 12 lists CBT for panic with strong research support (check the current rating). Craske et al. (2014) describe inhibitory-learning strategies (testing expectations, varying practice, removing safety signals) to strengthen exposure. A 2018 component network meta-analysis (Pompoli et al.) found in-vivo exposure improved treatment acceptability, with small effects on efficacy, within panic CBT packages.",
   "minutes": { "min": 30, "max": 90 },
   "purpose": "Helps the client approach avoided places and situations step by step (for example, a ride two stops farther than usual, a supermarket at a busier hour, or a walk past the usual turn-back point) so they learn that feared outcomes are unlikely or manageable and that anxiety can be tolerated. The ladder breaks a large goal into practical steps chosen by the client and practiced often, without safety behaviors.",

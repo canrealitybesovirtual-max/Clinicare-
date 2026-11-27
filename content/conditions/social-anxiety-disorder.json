@@ -226,8 +226,13 @@
       "note": "Can help with self-criticism and willingness to approach feared situations; offer alongside exposure rather than instead of it."
     }
   ],
-  "handouts": [],
+  "handouts": [
+    "social-situations-practice",
+    "behavioral-experiment-record",
+    "exposure-ladder"
+  ],
   "statIds": [
+    "us-social-anxiety-past-year",
     "us-any-anxiety-past-year",
     "global-anxiety-disorders-2021"
   ],

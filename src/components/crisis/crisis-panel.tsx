@@ -2,7 +2,7 @@
 import * as React from "react";
 import { Globe, Languages, MessageSquareText, Phone, Siren } from "lucide-react";
 import { useSession } from "@/state/session";
-import { fill, useLang, useT } from "@/lib/i18n/core";
+import { fill, pick, useLang, useT, type Lang, type Text } from "@/lib/i18n/core";
 import { CRISIS } from "@/lib/i18n/shell";
 import { buttonVariants } from "@/components/ui/button";
 import { ExternalLink } from "@/components/ui/external-link";
@@ -149,10 +149,12 @@ export function CrisisPanel({
 }
 
 /** One-line crisis numbers for banners (red flags, PHQ-9 item 9). */
-export function CrisisInline({ className }: { className?: string }) {
+/** `lang` overrides the shell language, so a page that opens in Spanish (/r/<id>/es) is Spanish from first paint. */
+export function CrisisInline({ className, lang: langOverride }: { className?: string; lang?: Lang }) {
   const { state } = useSession();
-  const { lang } = useLang();
-  const t = useT();
+  const shell = useLang().lang;
+  const lang = langOverride ?? shell;
+  const t = (text: Text | string) => pick(text, lang);
   const country = findCountry(state.country);
   const line = country ? crisisNumber(country) : null;
   const emergency = country ? emergencyNumbers(country) : [];

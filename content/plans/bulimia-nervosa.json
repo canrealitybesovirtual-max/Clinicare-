@@ -1,0 +1,90 @@
+{
+  "conditionId": "bulimia-nervosa",
+  "problems": [
+    {
+      "id": "bn-binge-compensation",
+      "label": "Binge-compensation cycle",
+      "definitions": [
+        "Has episodes of eating a large amount with a sense of losing control, several times a month or more.",
+        "Tries to undo eating by vomiting, laxatives, fasting or hard exercise.",
+        "Feels that self-worth depends on shape and weight, and hides eating from others."
+      ],
+      "longTermGoals": [
+        "Binges and compensation stop or become rare, eating is regular, and self-worth rests on more than shape and weight."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "bn-medical",
+          "text": "Within 1 week, attend a medical assessment, and agree with the care team which warning signs (fainting, chest pain, very low weight) mean same-day care.",
+          "interventionIds": [
+            "eating-disorder-medical-monitoring"
+          ]
+        },
+        {
+          "id": "bn-self-help",
+          "text": "Within 4 weeks, start eating-disorder-focused guided self-help or CBT and complete weekly self-monitoring.",
+          "interventionIds": [
+            "cbt-e-eating-disorders"
+          ]
+        },
+        {
+          "id": "bn-regular-eating",
+          "text": "By week 4, eat 3 meals and 2 or 3 snacks a day at planned times on at least 5 days a week.",
+          "interventionIds": [
+            "cbt-e-eating-disorders"
+          ]
+        },
+        {
+          "id": "bn-urges",
+          "text": "Use a distress tolerance skill during at least 3 binge or purge urges a week and record the outcome.",
+          "interventionIds": [
+            "dbt-distress-tolerance"
+          ]
+        },
+        {
+          "id": "bn-shame",
+          "text": "Practice a kind self-statement after any binge, instead of compensating, for 4 weeks.",
+          "interventionIds": [
+            "self-compassion-practice"
+          ]
+        },
+        {
+          "id": "bn-medication",
+          "text": "If binge frequency has not dropped by week 8, discuss a medication evaluation as an adjunct.",
+          "interventionIds": [
+            "medication-referral"
+          ]
+        }
+      ],
+      "measureIds": [
+        "phq-9",
+        "gad-7"
+      ]
+    }
+  ],
+  "collaborativeNote": "Write goals and objectives with the client in their own words. Timelines and targets are examples to adapt; the client decides what matters, and the clinician checks safety and fit.",
+  "sud": false,
+  "sources": [
+    {
+      "title": "Eating disorders: recognition and treatment (NG69)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng69",
+      "year": 2017
+    },
+    {
+      "title": "Transdiagnostic cognitive-behavioral therapy for patients with eating disorders: a two-site trial with 60-week follow-up (Fairburn et al.)",
+      "publisher": "American Journal of Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19074978/",
+      "year": 2009
+    },
+    {
+      "title": "Mortality rates in patients with anorexia nervosa and other eating disorders: a meta-analysis of 36 studies (Arcelus et al.)",
+      "publisher": "Archives of General Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21727255/",
+      "year": 2011
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

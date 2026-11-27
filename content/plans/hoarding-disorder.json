@@ -1,0 +1,92 @@
+{
+  "conditionId": "hoarding-disorder",
+  "problems": [
+    {
+      "id": "hd-clutter",
+      "label": "Difficulty letting go and clutter that makes the home hard or unsafe to use",
+      "definitions": [
+        "Keeps items of little use or value and becomes very upset when asked to part with them.",
+        "Has rooms that cannot be used for cooking, sleeping or sitting because of possessions.",
+        "Continues to bring in new items, through buying or collecting, despite a lack of space."
+      ],
+      "longTermGoals": [
+        "The home is safe and the main rooms can be used again, and the client can decide about belongings with much less distress."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "hd-safety",
+          "text": "Within 2 weeks, clear paths to all exits and the stove area, and keep them clear.",
+          "interventionIds": [
+            "cbt-hoarding",
+            "problem-solving"
+          ]
+        },
+        {
+          "id": "hd-motivation",
+          "text": "By session 3, describe in own words how the client would like to use each main room.",
+          "interventionIds": [
+            "motivational-interviewing",
+            "decisional-balance"
+          ]
+        },
+        {
+          "id": "hd-sorting",
+          "text": "Complete at least 3 sorting practices of 15 minutes a week, rating distress at start and end.",
+          "interventionIds": [
+            "cbt-hoarding"
+          ]
+        },
+        {
+          "id": "hd-acquiring",
+          "text": "For 4 weeks, log urges to buy or collect and resist at least half of them.",
+          "interventionIds": [
+            "cbt-hoarding"
+          ]
+        },
+        {
+          "id": "hd-room",
+          "text": "By week 12, make one main room usable for its purpose, as agreed with the client.",
+          "interventionIds": [
+            "cbt-hoarding"
+          ]
+        },
+        {
+          "id": "hd-tracking",
+          "text": "Complete the PHQ-9 and GAD-7 at intake and every 4 weeks; if low mood is high, discuss a medication evaluation.",
+          "interventionIds": [
+            "medication-referral"
+          ]
+        }
+      ],
+      "measureIds": [
+        "phq-9",
+        "gad-7"
+      ]
+    }
+  ],
+  "collaborativeNote": "Write goals and objectives with the client in their own words. Timelines and targets are examples to adapt; the client decides what matters, and the clinician checks safety and fit.",
+  "sud": false,
+  "sources": [
+    {
+      "title": "Waitlist-controlled trial of cognitive behavior therapy for hoarding disorder (Steketee et al.)",
+      "publisher": "Depression and Anxiety (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20336804/",
+      "year": 2010
+    },
+    {
+      "title": "Cognitive behavioral therapy for hoarding disorder: a meta-analysis (Tolin et al.)",
+      "publisher": "Focus (American Psychiatric Publishing) (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35747301/",
+      "year": 2021
+    },
+    {
+      "title": "Obsessive-compulsive disorder and body dysmorphic disorder: treatment (CG31)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg31",
+      "year": 2005
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

@@ -1,0 +1,304 @@
+{
+  "id": "stimulant-use-disorder",
+  "name": "Stimulant use disorder (cocaine, methamphetamine, other stimulants)",
+  "icd10cm": [
+    {
+      "code": "F14.10",
+      "label": "Cocaine abuse, uncomplicated"
+    },
+    {
+      "code": "F14.20",
+      "label": "Cocaine dependence, uncomplicated"
+    },
+    {
+      "code": "F14.21",
+      "label": "Cocaine dependence, in remission"
+    },
+    {
+      "code": "F15.10",
+      "label": "Other stimulant abuse, uncomplicated"
+    },
+    {
+      "code": "F15.20",
+      "label": "Other stimulant dependence, uncomplicated"
+    },
+    {
+      "code": "F15.21",
+      "label": "Other stimulant dependence, in remission"
+    }
+  ],
+  "icd11": [
+    {
+      "code": "6C45.1",
+      "label": "Harmful pattern of use of cocaine"
+    },
+    {
+      "code": "6C45.2",
+      "label": "Cocaine dependence"
+    },
+    {
+      "code": "6C46.1",
+      "label": "Harmful pattern of use of stimulants including amphetamines, methamphetamine or methcathinone"
+    },
+    {
+      "code": "6C46.2",
+      "label": "Stimulant dependence including amphetamines, methamphetamine or methcathinone"
+    }
+  ],
+  "dsmPointer": "See DSM-5-TR: Substance-Related and Addictive Disorders — Stimulant Use Disorder",
+  "summary": "A pattern, described in ICD-11 terms, in which use of cocaine, methamphetamine or misused prescription stimulants slips out of the client's control, often in binges, and takes priority over health, money, work and relationships, with intense craving and a crash of exhaustion and low mood after use. Stimulants can cause chest pain, heart rhythm problems, stroke, paranoia and psychosis, and the drug supply may contain fentanyl. Contingency management has the strongest evidence; there is no approved medication, so medical care for complications and harm reduction matter. Substance-use information is protected: nothing here is stored or sent, and every export carries the Part 2 notice. 42 CFR Part 2 prohibits unauthorized use or disclosure of these records. For clinician review only; this is not a diagnosis.",
+  "features": [
+    {
+      "symptomId": "stimulant-impaired-control",
+      "kind": "core",
+      "weight": 5
+    },
+    {
+      "symptomId": "stimulant-craving-crash",
+      "kind": "core",
+      "weight": 4
+    },
+    {
+      "symptomId": "stimulant-despite-harm",
+      "kind": "core",
+      "weight": 4
+    },
+    {
+      "symptomId": "stimulant-use-pattern",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "insomnia",
+      "kind": "associated",
+      "weight": 1,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "depressed-mood",
+      "kind": "associated",
+      "weight": 1,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "paranoia-delusions",
+      "kind": "associated",
+      "weight": 1
+    },
+    {
+      "symptomId": "irritability",
+      "kind": "associated",
+      "weight": 1
+    }
+  ],
+  "minCore": 2,
+  "durationGate": {
+    "minWeeks": 4,
+    "note": "Ask about the pattern of use over the past year, including binges and attempts to stop. DSM-5-TR and ICD-11 both look at the pattern over months; check the timing they describe."
+  },
+  "impairmentRequired": true,
+  "ruleOuts": [
+    {
+      "label": "Opioid exposure through the drug supply",
+      "type": "substance",
+      "note": "Fentanyl contamination raises overdose risk; offer naloxone. This app does not store or send substance-use information."
+    },
+    {
+      "label": "Heart, stroke and other medical complications",
+      "type": "medical",
+      "note": "Chest pain, palpitations, severe headache or weakness need emergency care."
+    },
+    {
+      "label": "Primary psychotic, bipolar or ADHD conditions",
+      "type": "psychiatric",
+      "note": "Ask whether paranoia, highs or attention problems occur during sober periods."
+    }
+  ],
+  "specifiers": [
+    {
+      "label": "ICD-10-CM coding notes",
+      "note": "F14.x codes cocaine and F15.x codes other stimulants (amphetamine-type); .1x is a harmful (abuse) pattern and .2x a dependence pattern. DSM-5-TR uses its own severity and course specifiers: See DSM-5-TR."
+    }
+  ],
+  "differentials": [
+    {
+      "label": "Stimulant-induced psychotic disorder",
+      "distinguishing": "Paranoia or hallucinations during heavy use that clear with abstinence.",
+      "icd10cm": "F15.959"
+    },
+    {
+      "label": "Bipolar I disorder",
+      "distinguishing": "Highs occur without stimulant use.",
+      "icd10cm": "F31.9"
+    },
+    {
+      "label": "Adult ADHD with prescribed stimulant treatment",
+      "distinguishing": "Prescribed use as directed without loss of control or harm.",
+      "icd10cm": "F90.9"
+    }
+  ],
+  "comorbidities": [
+    {
+      "label": "Depression",
+      "note": "Crash-related low mood is common; screen with the PHQ-9 and ask about suicide.",
+      "conditionId": "major-depressive-disorder"
+    },
+    {
+      "label": "Psychosis",
+      "note": "Stimulants can trigger psychosis; assess during sober periods.",
+      "conditionId": "schizophrenia"
+    },
+    {
+      "label": "Adult ADHD",
+      "note": "Untreated ADHD is a risk factor; coordinate any stimulant prescribing carefully.",
+      "conditionId": "adult-adhd"
+    }
+  ],
+  "measures": [
+    "phq-9",
+    "gad-7"
+  ],
+  "measuresPending": [
+    {
+      "name": "Drug Abuse Screening Test (DAST-10)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/7183189/",
+      "note": "License pending — link out only",
+      "licenseKey": "DAST-10"
+    }
+  ],
+  "interventions": [
+    {
+      "name": "Contingency management (first line)",
+      "evidence": "A network meta-analysis (De Crescenzo et al., 2018) found contingency management, alone or with community reinforcement, the most effective psychosocial treatment for cocaine and amphetamine addiction.",
+      "note": "Refer to programs that offer it."
+    },
+    {
+      "name": "CBT and community reinforcement",
+      "evidence": "Supported in the same network meta-analysis (De Crescenzo et al., 2018).",
+      "note": "Coping skills, activity planning and support networks."
+    },
+    {
+      "name": "Naloxone and harm reduction",
+      "evidence": "The drug supply may contain fentanyl; take-home naloxone reduces deaths (McDonald and Strang, 2016).",
+      "note": "Offer naloxone, fentanyl test strips where legal, and never-use-alone planning."
+    },
+    {
+      "name": "Medical care for complications",
+      "evidence": "Stimulants carry cardiovascular and psychiatric risks.",
+      "note": "Coordinate with a physician."
+    }
+  ],
+  "handouts": [
+    "urge-surfing-log",
+    "relapse-prevention-plan",
+    "overdose-safety"
+  ],
+  "statIds": [
+    "us-stimulant-use-disorder-2025"
+  ],
+  "culturalNotes": [
+    "Norms about cannabis, prescription pills and other drugs vary widely, and legal status differs by state and country. Anchor the assessment in control and harm, not in legal status or amounts alone.",
+    "Stigma, fear of losing custody, housing, work or immigration status, and past experiences with police can make clients cautious. Explain confidentiality, its limits and 42 CFR Part 2 protections plainly.",
+    "Use person-first, non-judgmental language (a person who uses drugs, not an addict) and offer harm-reduction options alongside abstinence goals.",
+    "Culturally grounded and community-led programs, including Indigenous healing approaches and peer recovery services, are often more acceptable; ask what support looks like for the client.",
+    "Faith can be a strong support in recovery. Offer faith-based groups or faith-integrated approaches only when the client asks and after informed consent (see the AACC Code of Ethics for faith-based counselors).",
+    "Use a trained professional interpreter, not family members, and check that key terms translate with the meaning you intend."
+  ],
+  "sud": true,
+  "requiredFeatures": [],
+  "strongMinAreas": 2,
+  "redFlagRules": [
+    {
+      "type": "suicidality",
+      "message": "Suicide-related content is documented in this input. Substance use raises suicide risk, especially during intoxication, withdrawal or after a loss; ask directly, include substances and other means in safety planning, and follow your risk protocol."
+    },
+    {
+      "type": "psychosis",
+      "message": "Psychotic symptoms are documented. Stimulant-induced psychosis needs urgent medical and psychiatric evaluation; check for risk to self or others."
+    }
+  ],
+  "licensedDsm": false,
+  "wileyLicensed": false,
+  "sources": [
+    {
+      "title": "Methamphetamine (health topic)",
+      "publisher": "MedlinePlus, U.S. National Library of Medicine",
+      "url": "https://medlineplus.gov/methamphetamine.html"
+    },
+    {
+      "title": "Cocaine (health topic)",
+      "publisher": "MedlinePlus, U.S. National Library of Medicine",
+      "url": "https://medlineplus.gov/cocaine.html"
+    },
+    {
+      "title": "Comparative efficacy and acceptability of psychosocial interventions for individuals with cocaine and amphetamine addiction: a network meta-analysis (De Crescenzo et al.)",
+      "publisher": "PLOS Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30586362/",
+      "year": 2018
+    },
+    {
+      "title": "Are take-home naloxone programmes effective? Systematic review utilizing application of the Bradford Hill criteria (McDonald and Strang)",
+      "publisher": "Addiction (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27028542/",
+      "year": 2016
+    },
+    {
+      "title": "Drug misuse in over 16s: psychosocial interventions (CG51)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg51",
+      "year": 2007
+    },
+    {
+      "title": "SAMHSA releases annual National Survey on Drug Use and Health (2025 data)",
+      "publisher": "SAMHSA",
+      "url": "https://www.samhsa.gov/newsroom/press-announcements/20260727/samhsa-releases-annual-national-survey-on-drug-use-and-health",
+      "year": 2026
+    },
+    {
+      "title": "Highlights for the 2025 National Survey on Drug Use and Health",
+      "publisher": "SAMHSA",
+      "url": "https://www.samhsa.gov/data/sites/default/files/NSDUH-2025-Annual-Release/2025-nsduh-nnr-highlights.pdf",
+      "year": 2026
+    },
+    {
+      "title": "National Helpline",
+      "publisher": "SAMHSA",
+      "url": "https://www.samhsa.gov/find-help/helplines/national-helpline"
+    },
+    {
+      "title": "42 CFR 2.32: notice to accompany disclosure (federal confidentiality rule for substance use treatment records)",
+      "publisher": "eCFR, U.S. Government Publishing Office",
+      "url": "https://www.ecfr.gov/current/title-42/chapter-I/subchapter-A/part-2/subpart-C/section-2.32",
+      "year": 2024
+    },
+    {
+      "title": "Confidentiality of substance use treatment records (42 CFR Part 2)",
+      "publisher": "U.S. Department of Health and Human Services",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/hipaa-part-2/index.html"
+    },
+    {
+      "title": "ICD-11 for Mortality and Morbidity Statistics (browser)",
+      "publisher": "World Health Organization",
+      "url": "https://icd.who.int/browse/latest-release/mms/en"
+    },
+    {
+      "title": "ICD-10-CM (official code set)",
+      "publisher": "CDC National Center for Health Statistics",
+      "url": "https://www.cdc.gov/nchs/icd/icd-10-cm/index.html"
+    },
+    {
+      "title": "ICD-10-CM codes checked with the NLM Clinical Table Search Service",
+      "publisher": "National Library of Medicine",
+      "url": "https://clinicaltables.nlm.nih.gov/apidoc/icd10cm/v3/doc.html"
+    },
+    {
+      "title": "AACC Code of Ethics",
+      "publisher": "American Association of Christian Counselors",
+      "url": "https://aacc.net/aacc-code-of-ethics/"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

@@ -2,7 +2,7 @@
   "id": "urge-surfing",
   "name": "Urge surfing (riding out cravings mindfully)",
   "modality": "Mindfulness-based relapse prevention (MBRP) skill",
-  "conditions": ["alcohol-use-disorder"],
+  "conditions": ["alcohol-use-disorder", "cannabis-use-disorder", "opioid-use-disorder", "stimulant-use-disorder"],
   "evidenceLevel": "Emerging evidence for the skill on its own. Urge surfing is a core practice in mindfulness-based relapse prevention (MBRP). In an RCT with 286 adults in aftercare, MBRP reduced drug use and heavy drinking more than standard relapse prevention and treatment as usual at 12 months, though not at every time point (Bowen et al., 2014). In a laboratory study with 123 student smokers, brief urge-surfing instructions did not reduce urge ratings overall compared with no instructions, although the instructed group reported smoking fewer cigarettes over the following week (Bowen and Marlatt, 2009). Use it as one skill within a broader treatment plan.",
   "minutes": { "min": 10, "max": 20 },
   "purpose": "Urge surfing, a technique developed by G. Alan Marlatt, teaches the client to notice a craving as a passing wave of body sensations, thoughts and impulses that rises, peaks and falls, rather than something that must be obeyed or fought. The client pauses, brings curious attention to where the urge shows up in the body, breathes with it, and watches its strength change without acting on it. Over time this can loosen the automatic link between craving and drinking. It is taught within MBRP (Sarah Bowen, Neha Chawla, Katie Witkiewitz and Marlatt) and similar approaches. This entry uses original wording.",

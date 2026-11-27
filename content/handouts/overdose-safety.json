@@ -1,0 +1,123 @@
+{
+  "id": "overdose-safety",
+  "title": "Staying Safer: Overdose Prevention",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 10,
+  "intro": "Anyone who uses opioids, or drugs that might contain fentanyl, can overdose. An overdose can happen even the first time, or after a break. Knowing the signs and having naloxone nearby can save a life. Naloxone is a medicine that can reverse an opioid overdose. In the US, you can buy the nasal spray at most pharmacies without a prescription. Reading this sheet takes about 10 minutes.",
+  "sections": [
+    {
+      "heading": "Signs of an overdose",
+      "steps": [
+        "The person will not wake up or respond to your voice or a firm rub on the chest.",
+        "Breathing is very slow, noisy or has stopped.",
+        "Lips or fingertips look blue or gray.",
+        "Pupils, the black center of the eyes, are very small."
+      ]
+    },
+    {
+      "heading": "What to do",
+      "steps": [
+        "Call 911 right away.",
+        "Give naloxone: spray it into one nostril.",
+        "Give rescue breaths if you know how, or follow the 911 operator's directions.",
+        "If there is no response after 2 to 3 minutes, give another dose.",
+        "Stay with the person. Naloxone can wear off before the drug does."
+      ]
+    },
+    {
+      "heading": "Ways to lower the risk",
+      "steps": [
+        "Try not to use alone. If you do, ask someone to check on you.",
+        "Do not mix opioids with alcohol, sleeping pills or pills for nerves.",
+        "Use less after any break, such as time in jail, a hospital or treatment.",
+        "Keep naloxone where you and others can find it, and show them how to use it.",
+        "Ask your counselor about medicines that treat opioid use and lower overdose risk."
+      ]
+    },
+    {
+      "heading": "Privacy note",
+      "body": "Do not write your name, or the names of other people or places, on this sheet. Keep it somewhere private. If you share it with a substance use treatment program, it may become part of your treatment records. Those records have special federal privacy protection. 42 CFR Part 2 prohibits unauthorized use or disclosure of these records. Ask your counselor how your records are kept and shared."
+    }
+  ],
+  "safetyNote": "Safety first: If someone may have overdosed, call 911 right away. For free, confidential help finding treatment in the US, call the SAMHSA National Helpline at 1-800-662-4357, any time, in English or Spanish. If you have thoughts of hurting yourself or someone else, get help now. In the US, call or text 988 or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sud": true,
+  "es": {
+    "title": "Estar más seguro: cómo prevenir una sobredosis",
+    "intro": "Cualquier persona que usa opioides, o drogas que podrían tener fentanilo, puede tener una sobredosis. Puede pasar incluso la primera vez, o después de un tiempo sin usar. Conocer las señales y tener naloxona cerca puede salvar una vida. La naloxona es una medicina que puede revertir una sobredosis de opioides. En EE. UU., puede comprar el aerosol nasal en la mayoría de las farmacias sin receta. Leer esta hoja toma unos 10 minutos.",
+    "sections": [
+      {
+        "heading": "Señales de una sobredosis",
+        "steps": [
+          "La persona no despierta ni responde a su voz o a un roce firme en el pecho.",
+          "Respira muy lento, hace ruido al respirar o dejó de respirar.",
+          "Los labios o las puntas de los dedos se ven azules o grises.",
+          "Las pupilas, el centro negro de los ojos, se ven muy pequeñas."
+        ]
+      },
+      {
+        "heading": "Qué hacer",
+        "steps": [
+          "Llame al 911 de inmediato.",
+          "Dé la naloxona: rocíela en un lado de la nariz.",
+          "Dé respiración de rescate si sabe cómo, o siga lo que le diga la persona del 911.",
+          "Si no responde después de 2 a 3 minutos, dé otra dosis.",
+          "Quédese con la persona. El efecto de la naloxona puede pasar antes que el de la droga."
+        ]
+      },
+      {
+        "heading": "Formas de bajar el riesgo",
+        "steps": [
+          "Trate de no usar solo. Si lo hace, pídale a alguien que lo vaya a ver.",
+          "No mezcle opioides con alcohol, pastillas para dormir o pastillas para los nervios.",
+          "Use menos después de cualquier tiempo sin usar, como un tiempo en la cárcel, en el hospital o en tratamiento.",
+          "Guarde la naloxona donde usted y otros la puedan encontrar, y enséñeles a usarla.",
+          "Pregúntele a su consejero por las medicinas que tratan el uso de opioides y bajan el riesgo de sobredosis."
+        ]
+      },
+      {
+        "heading": "Nota de privacidad",
+        "body": "No escriba su nombre, ni los nombres de otras personas o lugares, en esta hoja. Guárdela en un lugar privado. Si la comparte con un programa de tratamiento por consumo de sustancias, puede llegar a ser parte de sus registros de tratamiento. Esos registros tienen una protección federal especial de la privacidad. La ley federal 42 CFR Part 2 prohíbe el uso o la divulgación no autorizados de estos registros. Pregúntele a su consejero cómo se guardan y se comparten sus registros."
+      }
+    ],
+    "safetyNote": "La seguridad es lo primero: Si alguien pudo haber tenido una sobredosis, llame al 911 de inmediato. Para recibir ayuda gratuita y confidencial para encontrar tratamiento en EE. UU., llame a la Línea Nacional de Ayuda de SAMHSA (SAMHSA National Helpline) al 1-800-662-4357, a cualquier hora, en inglés o en español. Si tiene pensamientos de hacerse daño o de hacerle daño a otra persona, busque ayuda ahora. En EE. UU., llame o envíe un mensaje de texto al 988, o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "sources": [
+    {
+      "title": "Are take-home naloxone programmes effective? Systematic review utilizing application of the Bradford Hill criteria (McDonald and Strang)",
+      "publisher": "Addiction (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27028542/",
+      "year": 2016
+    },
+    {
+      "title": "Opioid overdose (fact sheet)",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/opioid-overdose"
+    },
+    {
+      "title": "Naloxone nasal spray (drug information)",
+      "publisher": "MedlinePlus, U.S. National Library of Medicine",
+      "url": "https://medlineplus.gov/druginfo/meds/a616003.html"
+    },
+    {
+      "title": "National Helpline",
+      "publisher": "SAMHSA",
+      "url": "https://www.samhsa.gov/find-help/helplines/national-helpline"
+    },
+    {
+      "title": "42 CFR 2.32: notice to accompany disclosure (federal confidentiality rule for substance use treatment records)",
+      "publisher": "eCFR, U.S. Government Publishing Office",
+      "url": "https://www.ecfr.gov/current/title-42/chapter-I/subchapter-A/part-2/subpart-C/section-2.32",
+      "year": 2024
+    },
+    {
+      "title": "Confidentiality of substance use treatment records (42 CFR Part 2)",
+      "publisher": "U.S. Department of Health and Human Services",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/hipaa-part-2/index.html"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

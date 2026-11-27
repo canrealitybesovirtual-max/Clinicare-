@@ -6,7 +6,8 @@
     "major-depressive-disorder",
     "agoraphobia",
     "generalized-anxiety-disorder",
-    "ptsd"
+    "ptsd",
+    "borderline-personality-disorder"
   ],
   "evidenceLevel": "Emerging evidence for opposite action as a stand-alone skill: a small single-case pilot reduced event-specific shame in women with BPD (Rizvi & Linehan, 2005, building on Rizvi's 2004 dissertation), and a laboratory alternating-treatment study tested acting opposite to emotion urges in BPD (Sauer-Zavala et al., 2019). The emotion regulation module is part of comprehensive DBT, which has strong evidence for BPD and recurrent self-harm (Cochrane, Storebo et al., 2020), and stand-alone DBT skills training has preliminary support (Valentine et al., 2015). Opposite action to unjustified fear works like exposure, and opposite action to sadness works like behavioral activation; those parent approaches have stronger support (for example, NICE NG222 lists behavioral activation for depression).",
   "minutes": { "min": 20, "max": 40 },

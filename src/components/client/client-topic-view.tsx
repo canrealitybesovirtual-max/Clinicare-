@@ -47,10 +47,6 @@ const TEXT = {
     es: "Nada de lo que hace en esta página se guarda. Si le preocupa la bebida o el uso de drogas, la Línea Nacional de Ayuda de SAMHSA es gratuita, privada y está abierta todo el día, todos los días, en inglés y en español.",
   },
   call: { en: "Call {n}", es: "Llamar al {n}" },
-  withdrawal: {
-    en: "If you drink a lot every day, stopping all at once can be dangerous. Talk with a doctor or nurse first.",
-    es: "Si bebe mucho todos los días, dejar de beber de golpe puede ser peligroso. Hable primero con un médico o enfermero.",
-  },
 } satisfies Record<string, Text>;
 
 export function ClientTopicView({ topic, skills }: { topic: ClientTopic; skills: readonly SkillLink[] }) {
@@ -68,31 +64,13 @@ export function ClientTopicView({ topic, skills }: { topic: ClientTopic; skills:
         <div>
           <p className="text-sm font-semibold uppercase tracking-wide text-accent">{t(TEXT.eyebrow)}</p>
           <h1 className="mt-1 text-2xl font-bold tracking-tight sm:text-3xl">{t(topic.label)}</h1>
-          <p className="mt-3 text-lg leading-relaxed text-muted">{t(TEXT.lead)}</p>
+          {/* Hidden on phones, so the first skill is on the first screen. */}
+          <p className="mt-3 hidden text-lg leading-relaxed text-muted sm:block">{t(TEXT.lead)}</p>
         </div>
         <LangSwitch name={`topic-lang-${topic.id}`} value={lang} onChange={setLang} />
       </div>
 
       {topic.crisis ? <HelpNowCard id="topic-crisis" /> : <CrisisStrip />}
-
-      {topic.sud ? (
-        <div className="flex gap-3 rounded-2xl border border-border bg-surface-2 p-4 leading-relaxed sm:p-5">
-          <LockKeyhole aria-hidden className="mt-1 size-5 shrink-0 text-accent" />
-          <div className="space-y-2">
-            <p className="font-semibold">{t(TEXT.privacy)}</p>
-            <p>{t(TEXT.privacyBody)}</p>
-            <a href={samhsaTel} className={buttonVariants({ variant: "primary" })}>
-              <Phone aria-hidden />
-              {t(TEXT.call).replace("{n}", SAMHSA_HELPLINE.number)}
-              <span className="sr-only" lang="en">
-                {" "}
-                ({SAMHSA_HELPLINE.label})
-              </span>
-            </a>
-            <p>{t(TEXT.withdrawal)}</p>
-          </div>
-        </div>
-      ) : null}
 
       {skills.length ? (
         <section aria-labelledby="topic-skills" className="space-y-3">
@@ -100,7 +78,7 @@ export function ClientTopicView({ topic, skills }: { topic: ClientTopic; skills:
             <h2 id="topic-skills" className="text-xl font-bold">
               {t(TEXT.skills)}
             </h2>
-            <p className="mt-1 text-muted">{t(TEXT.skillsLead)}</p>
+            <p className="mt-1 hidden text-muted sm:block">{t(TEXT.skillsLead)}</p>
           </div>
           <ul className="grid gap-3 sm:grid-cols-2">
             {skills.map((s) => (
@@ -121,6 +99,27 @@ export function ClientTopicView({ topic, skills }: { topic: ClientTopic; skills:
             ))}
           </ul>
         </section>
+      ) : null}
+
+      {/* Substance-use topics: privacy, the free helpline and the topic's own safety line, after the skills so the
+          first skill is on the first phone screen. */}
+      {topic.sud ? (
+        <div className="flex gap-3 rounded-2xl border border-border bg-surface-2 p-4 leading-relaxed sm:p-5">
+          <LockKeyhole aria-hidden className="mt-1 size-5 shrink-0 text-accent" />
+          <div className="space-y-2">
+            <p className="font-semibold">{t(TEXT.privacy)}</p>
+            <p>{t(TEXT.privacyBody)}</p>
+            <a href={samhsaTel} className={buttonVariants({ variant: "primary" })}>
+              <Phone aria-hidden />
+              {t(TEXT.call).replace("{n}", SAMHSA_HELPLINE.number)}
+              <span className="sr-only" lang="en">
+                {" "}
+                ({SAMHSA_HELPLINE.label})
+              </span>
+            </a>
+            {topic.safetyNote ? <p>{t(topic.safetyNote)}</p> : null}
+          </div>
+        </div>
       ) : null}
 
       <section aria-labelledby="topic-read">

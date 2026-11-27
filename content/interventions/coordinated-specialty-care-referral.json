@@ -1,0 +1,60 @@
+{
+  "id": "coordinated-specialty-care-referral",
+  "name": "Coordinated specialty care for first-episode psychosis (referral)",
+  "modality": "Care coordination - early psychosis program",
+  "conditions": [
+    "schizophrenia"
+  ],
+  "evidenceLevel": "In the NIMH RAISE Early Treatment Program, coordinated specialty care improved quality of life and symptoms over two years compared with usual community care, especially when started early (Kane et al., 2016). NICE CG178 recommends early intervention in psychosis services.",
+  "minutes": {
+    "min": 20,
+    "max": 45
+  },
+  "purpose": "Connects a person with a first episode of psychosis to a team that offers medication management, individual therapy (often CBTp), family education, case management and supported work or school, as early as possible. Shorter time without treatment is linked to better outcomes.",
+  "steps": [
+    "Recognize a possible first episode: new hallucinations, unusual beliefs, disorganized speech or a sharp drop in functioning.",
+    "Assess immediate safety; arrange emergency care if there is risk to the client or others.",
+    "Find the nearest coordinated specialty care or early psychosis program and its referral route.",
+    "With consent, involve family in the referral and the first appointment.",
+    "Follow up to make sure the client was seen, and stay in contact during the transition."
+  ],
+  "script": [
+    "What you are going through is something specialist teams help with every day.",
+    "There is a program designed for people going through this for the first time.",
+    "Would it help if your family came to the first appointment?",
+    "I will check in after your appointment to see how it went."
+  ],
+  "contraindications": [
+    "Imminent risk to self or others needs emergency services first.",
+    "Rule out medical causes (delirium, intoxication, withdrawal, neurological illness) with urgent medical assessment."
+  ],
+  "culturalAdaptations": [
+    "Explain what the program does and the client's rights; past coercive treatment or police contact can make families wary.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "handoutIds": [
+    "staying-well-plan"
+  ],
+  "sources": [
+    {
+      "title": "Comprehensive versus usual community care for first-episode psychosis: 2-year outcomes from the NIMH RAISE Early Treatment Program (Kane et al.)",
+      "publisher": "American Journal of Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26481174/",
+      "year": 2016
+    },
+    {
+      "title": "Psychosis and schizophrenia in adults: prevention and management (CG178)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg178",
+      "year": 2014
+    },
+    {
+      "title": "Schizophrenia (health topic)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/topics/schizophrenia"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

@@ -19,7 +19,7 @@ import {
 import { useSession } from "@/state/session";
 import { SUD_SYMPTOM_IDS, useSymptomAnalysis } from "@/components/symptoms/analysis";
 import { AdultOnly } from "@/components/measures/adult-only";
-import { ClinicianReviewBadge } from "@/components/content/content-bits";
+import { ClinicianReviewBadge } from "@/components/content/content-meta";
 import { Card } from "@/components/ui/card";
 import { ChoiceGroup } from "@/components/ui/choice-group";
 import { Notice } from "@/components/ui/notice";

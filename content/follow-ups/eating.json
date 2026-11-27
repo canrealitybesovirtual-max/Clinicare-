@@ -1,0 +1,303 @@
+{
+  "id": "eating",
+  "title": "Eating and weight",
+  "domain": "eating",
+  "about": "Eating questions: the eating pattern (restriction, binge episodes, compensating), what follows an episode, how weight and shape weigh on self-worth, and body warning signs, which call for a medical review. Answers only record what the clinician chose.",
+  "questions": [
+    {
+      "id": "eating-medical-signs",
+      "kind": "safety",
+      "domain": "eating",
+      "select": "many",
+      "text": "Has the client had any body warning signs: fainting, a racing or irregular heartbeat, chest pain, confusion, or very little eating for days?",
+      "why": "Restriction, purging and very hard exercise can affect the heart and body salts before weight looks low. These signs call for a same-day medical review. The app records only what you choose and never estimates risk.",
+      "options": [
+        {
+          "id": "faint-heart",
+          "label": "Fainting, a racing or irregular heartbeat, chest pain or confusion",
+          "effects": {
+            "addSymptomIds": [
+              "purging-or-fainting"
+            ]
+          },
+          "surfaces": [
+            "urgent-medical"
+          ],
+          "note": "Arrange a same-day medical review (heart rhythm and blood tests)."
+        },
+        {
+          "id": "not-eating",
+          "label": "Very little eating for days, or weight falling fast",
+          "effects": {
+            "addSymptomIds": [
+              "severe-food-restriction"
+            ]
+          },
+          "surfaces": [
+            "medical-referral"
+          ],
+          "note": "Arrange a medical review soon, including weight, vital signs and blood tests."
+        },
+        {
+          "id": "none",
+          "label": "None of these",
+          "effects": {},
+          "exclusive": true
+        },
+        {
+          "id": "not-yet",
+          "label": "Not asked yet",
+          "keepOpen": true,
+          "exclusive": true
+        }
+      ],
+      "showWhen": {
+        "redFlags": [
+          "eating-disorder-medical"
+        ],
+        "symptomIds": [
+          "low-body-weight",
+          "compensatory-exercise-fasting"
+        ],
+        "conditionIds": [
+          "anorexia-nervosa",
+          "bulimia-nervosa"
+        ]
+      },
+      "priority": 10
+    },
+    {
+      "id": "eating-pattern",
+      "kind": "discriminate",
+      "domain": "eating",
+      "select": "many",
+      "text": "Which of these are part of the eating pattern?",
+      "why": "Eating far less than the body needs, eating episodes with a sense of losing control, and making up for eating separate the main eating patterns. Ask plainly and without judgment; shame keeps much of this hidden.",
+      "options": [
+        {
+          "id": "restricting",
+          "label": "Eating much less than the body needs, with weight well below a healthy range or falling fast",
+          "effects": {
+            "addSymptomIds": [
+              "low-body-weight"
+            ]
+          }
+        },
+        {
+          "id": "binges",
+          "label": "Episodes of eating far more than usual, with a sense of losing control",
+          "effects": {
+            "addSymptomIds": [
+              "binge-eating-episodes"
+            ]
+          }
+        },
+        {
+          "id": "compensating",
+          "label": "Fasting, very hard exercise or skipped meals to make up for eating",
+          "effects": {
+            "addSymptomIds": [
+              "compensatory-exercise-fasting"
+            ]
+          }
+        },
+        {
+          "id": "purging",
+          "label": "Making themselves sick, or using laxatives or water pills",
+          "effects": {
+            "addSymptomIds": [
+              "purging-or-fainting"
+            ]
+          },
+          "surfaces": [
+            "medical-referral"
+          ],
+          "note": "Purging can upset body salts and heart rhythm: arrange a medical review."
+        },
+        {
+          "id": "none",
+          "label": "None of these",
+          "effects": {
+            "negateSymptomIds": [
+              "low-body-weight",
+              "binge-eating-episodes",
+              "compensatory-exercise-fasting"
+            ]
+          },
+          "exclusive": true
+        },
+        {
+          "id": "not-yet",
+          "label": "Not asked yet",
+          "keepOpen": true,
+          "exclusive": true
+        }
+      ],
+      "showWhen": {
+        "symptomIds": [
+          "binge-eating-episodes",
+          "fear-weight-gain",
+          "shape-weight-overvaluation",
+          "compensatory-exercise-fasting",
+          "binge-shame-secrecy",
+          "low-body-weight"
+        ],
+        "conditionIds": [
+          "anorexia-nervosa",
+          "bulimia-nervosa",
+          "binge-eating-disorder"
+        ]
+      },
+      "discriminates": [
+        "anorexia-nervosa",
+        "bulimia-nervosa",
+        "binge-eating-disorder"
+      ],
+      "priority": 10
+    },
+    {
+      "id": "eating-after-episode",
+      "kind": "discriminate",
+      "domain": "eating",
+      "text": "After an eating episode, what usually follows?",
+      "why": "Steps to undo the eating (fasting, hard exercise, purging) point toward a bulimic pattern; shame and eating in secret without such steps point toward binge eating.",
+      "options": [
+        {
+          "id": "shame",
+          "label": "Shame and eating in secret, without steps to undo it",
+          "effects": {
+            "addSymptomIds": [
+              "binge-shame-secrecy"
+            ],
+            "negateSymptomIds": [
+              "compensatory-exercise-fasting"
+            ]
+          }
+        },
+        {
+          "id": "compensates",
+          "label": "Fasting, very hard exercise or skipped meals to make up for it",
+          "effects": {
+            "addSymptomIds": [
+              "compensatory-exercise-fasting"
+            ]
+          }
+        },
+        {
+          "id": "purges",
+          "label": "Making themselves sick, or using laxatives or water pills",
+          "effects": {
+            "addSymptomIds": [
+              "purging-or-fainting"
+            ]
+          },
+          "surfaces": [
+            "medical-referral"
+          ],
+          "note": "Purging can upset body salts and heart rhythm: arrange a medical review."
+        },
+        {
+          "id": "unsure",
+          "label": "Not sure yet",
+          "keepOpen": true
+        }
+      ],
+      "showWhen": {
+        "symptomIds": [
+          "binge-eating-episodes"
+        ],
+        "conditionIds": [
+          "bulimia-nervosa",
+          "binge-eating-disorder"
+        ]
+      },
+      "discriminates": [
+        "bulimia-nervosa",
+        "binge-eating-disorder"
+      ],
+      "priority": 15
+    },
+    {
+      "id": "eating-weight-shape",
+      "kind": "core",
+      "domain": "eating",
+      "select": "many",
+      "text": "How do weight and shape weigh on the client?",
+      "why": "A strong dread of gaining weight, and self-worth that rises and falls with weight or shape, keep restriction and compensating going. They are a main target of eating-focused therapy.",
+      "options": [
+        {
+          "id": "dread",
+          "label": "Strong dread of gaining weight or looking bigger",
+          "effects": {
+            "addSymptomIds": [
+              "fear-weight-gain"
+            ]
+          }
+        },
+        {
+          "id": "self-worth",
+          "label": "Self-worth rises and falls with weight or shape",
+          "effects": {
+            "addSymptomIds": [
+              "shape-weight-overvaluation"
+            ]
+          }
+        },
+        {
+          "id": "neither",
+          "label": "Neither of these",
+          "effects": {
+            "negateSymptomIds": [
+              "fear-weight-gain",
+              "shape-weight-overvaluation"
+            ]
+          },
+          "exclusive": true
+        },
+        {
+          "id": "not-yet",
+          "label": "Not asked yet",
+          "keepOpen": true,
+          "exclusive": true
+        }
+      ],
+      "showWhen": {
+        "symptomIds": [
+          "low-body-weight",
+          "severe-food-restriction",
+          "compensatory-exercise-fasting",
+          "binge-eating-episodes"
+        ],
+        "conditionIds": [
+          "anorexia-nervosa",
+          "bulimia-nervosa"
+        ]
+      },
+      "targets": [
+        "fear-weight-gain",
+        "shape-weight-overvaluation"
+      ],
+      "discriminates": [
+        "anorexia-nervosa",
+        "bulimia-nervosa",
+        "binge-eating-disorder"
+      ],
+      "priority": 20
+    }
+  ],
+  "sources": [
+    {
+      "title": "Eating Disorders (health topic)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/topics/eating-disorders"
+    },
+    {
+      "title": "Eating Disorders (statistics)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/statistics/eating-disorders"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

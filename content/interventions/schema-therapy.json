@@ -1,0 +1,66 @@
+{
+  "id": "schema-therapy",
+  "name": "Schema therapy: overview and referral",
+  "modality": "Schema therapy (integrative)",
+  "conditions": [
+    "borderline-personality-disorder",
+    "persistent-depressive-disorder"
+  ],
+  "evidenceLevel": "Schema-focused therapy led to more recovery from borderline personality disorder than transference-focused psychotherapy in a randomized trial (Giesen-Bloo et al., 2006). A 2023 meta-analysis (Zhang et al.) supports schema therapy across personality disorders. Evidence for chronic depression is more limited.",
+  "minutes": {
+    "min": 50,
+    "max": 60
+  },
+  "purpose": "An integrative therapy that links long-standing patterns (schemas, such as expecting abandonment or feeling defective) to unmet needs in early life and to the modes the client shifts between under stress. It combines cognitive, experiential (imagery and chair work) and behavioral methods within a warm, active therapy relationship. Full schema therapy is a long-term protocol for trained clinicians; generalist clinicians can use the formulation to understand patterns and refer.",
+  "steps": [
+    "Map recurring life patterns with the client and name the schemas that fit, in the client's own words.",
+    "Link the schemas to unmet needs and to the coping styles they trigger (giving in, avoiding, overcompensating).",
+    "Identify the modes the client moves between, such as a vulnerable part, a critical part and a healthy adult part.",
+    "Use imagery or chair work to meet unmet needs and to weaken the critical part (trained clinicians only).",
+    "Practice new behaviors in relationships between sessions and review what happened.",
+    "Refer to a trained schema therapist for the full protocol."
+  ],
+  "script": [
+    "It sounds like part of you learned early on that people leave.",
+    "When that part takes over, what do you usually do to cope?",
+    "What did that younger you need back then that they did not get?",
+    "Let's practice what the healthy adult part of you might say right now."
+  ],
+  "contraindications": [
+    "Imagery and chair work can bring up strong emotion and trauma memories; use them only with training, stabilization and a clear plan.",
+    "Not for clients in acute crisis or with current psychosis.",
+    "Do not start during an active crisis, current suicidal risk, acute intoxication or withdrawal; stabilize first and share crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com."
+  ],
+  "culturalAdaptations": [
+    "Ideas about core needs and family loyalty differ across cultures; frame needs in the client's terms and avoid blaming caregivers.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "trainingRequired": "Schema therapy: trained clinicians only for imagery and chair work and for the full protocol; refer otherwise.",
+  "handoutIds": [
+    "kind-self-talk",
+    "hard-moment-plan"
+  ],
+  "sources": [
+    {
+      "title": "Outpatient psychotherapy for borderline personality disorder: schema-focused therapy vs transference-focused psychotherapy (Giesen-Bloo et al.)",
+      "publisher": "Archives of General Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16754838/",
+      "year": 2006
+    },
+    {
+      "title": "The efficacy of schema therapy for personality disorders: a systematic review and meta-analysis (Zhang et al.)",
+      "publisher": "Nordic Journal of Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37402124/",
+      "year": 2023
+    },
+    {
+      "title": "Borderline personality disorder: recognition and management (CG78)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg78",
+      "year": 2009
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

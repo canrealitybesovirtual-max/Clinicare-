@@ -24,8 +24,8 @@ jobs:
       - run: npx tsc --noEmit
       - name: Unit tests (scoring, measures, PHI scrubber, content, vignettes)
         run: npx vitest run
-      - name: Integration tests (server adapters, outbound allowlists, API PHI-leak)
-        run: npx vitest run -c vitest.integrations.config.ts
+      - name: Integration tests (server adapters, outbound allowlists, API PHI-leak, follow-up content)
+        run: npm run test:integrations
       - run: npm run build
       - run: npx playwright install --with-deps chromium
       - name: E2E (PHI-leak, axe accessibility, flow)

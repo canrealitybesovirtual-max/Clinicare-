@@ -73,12 +73,15 @@ describe('"Help me ask more" on the Symptom Finder', () => {
 
   it("answers re-score locally: symptoms come from the answer and duration lands in the Context step", async () => {
     renderFinder();
-    const panel = await describeNote("panic from dogs");
-    fireEvent.click(within(panel).getByRole("button", { name: "Only around dogs" }));
+    // A fear the text names only loosely, so the features come from the answers.
+    const panel = await describeNote("anxious about dogs");
+    fireEvent.click(within(panel).getByRole("button", { name: "Yes: avoids dogs" }));
     fireEvent.click(within(panel).getByRole("button", { name: "6 months or longer" }));
 
     const included = screen.getByRole("region", { name: /Included for scoring/ });
+    // Avoidance from the answer, plus the phobia type of the described object (dogs) that the answer confirms.
     await waitFor(() => expect(within(included).getAllByText("From your answers").length).toBe(2));
+    expect(within(included).getByText(/^Phobic fear centered on animals/)).toBeTruthy();
     const duration = screen.getByRole("group", { name: "Duration" });
     expect((within(duration).getByRole("radio", { name: "6 months or longer" }) as HTMLInputElement).checked).toBe(true);
     expect(screen.getAllByRole("link", { name: /^See possible diagnoses \(1\)/ }).length).toBeGreaterThan(0);
@@ -91,7 +94,7 @@ describe('"Help me ask more" on the Symptom Finder', () => {
 
   it("tap-to-add chips add the feature as a selected symptom", async () => {
     renderFinder();
-    const panel = await describeNote("panic from dogs");
+    const panel = await describeNote("anxious about dogs");
     fireEvent.click(within(panel).getByRole("button", { name: /Add symptom: Fear tied to one kind of thing or situation/ }));
     const included = screen.getByRole("region", { name: /Included for scoring/ });
     await waitFor(() => expect(within(included).getByRole("button", { name: /^Remove Fear tied to one kind/ })).toBeTruthy());

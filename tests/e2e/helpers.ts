@@ -25,19 +25,47 @@ export const SAMPLE = {
   conditionTopic: "anxiety",
   sudTopic: "alcohol",
   skill: "grounding-5-4-3-2-1",
+  /** Round 3 content: a newer handout (with Spanish), intervention and client topics, including a substance-use one. */
+  newHandout: "mood-routine-tracker",
+  newIntervention: "applied-tension",
+  newTopic: "unusual-experiences",
+  newSudTopic: "opioids",
 } as const;
 
-/** The pages the service worker precaches (public/sw.js PAGES). */
+/** The clinician tools (src/app/(clinician)/tools). */
+export const TOOL_ROUTES = [
+  "/tools",
+  "/tools/note",
+  "/tools/trend",
+  "/tools/safety-plan",
+  "/tools/session",
+  "/tools/referral-letter",
+  "/tools/practice",
+] as const;
+
+/**
+ * The pages the service worker precaches (public/sw.js PAGES), plus two measure pages it caches on visit (the
+ * offline step opens /measures/gad-7, so it is visited online first).
+ */
 export const SW_ROUTES = [
   "/",
   "/symptoms",
   "/diagnoses",
   "/measures",
+  "/plan",
+  "/interventions",
+  "/handouts",
+  "/referrals",
+  "/medications",
+  "/ethics",
+  "/tools",
+  "/about",
+  "/client",
+  "/client/help",
+  "/client/skills",
+  "/client/calm",
   "/measures/gad-7",
   "/measures/phq-9",
-  "/handouts",
-  "/client",
-  "/about",
 ] as const;
 
 /** Client-facing routes: client mode and the public share page. No diagnosis names, codes or scores (G3). */
@@ -49,7 +77,12 @@ export const CLIENT_ROUTES = [
   `/client/topics/${SAMPLE.topic}`,
   `/client/topics/${SAMPLE.conditionTopic}`,
   `/client/topics/${SAMPLE.sudTopic}`,
+  `/client/topics/${SAMPLE.newTopic}`,
+  `/client/topics/${SAMPLE.newSudTopic}`,
+  "/client/calm",
   `/r/${SAMPLE.handout}`,
+  `/r/${SAMPLE.handout}/es`,
+  `/r/${SAMPLE.sudHandout}`,
 ] as const;
 
 /** Clinician routes (the PHI banner and clinician navigation show on these). */
@@ -64,14 +97,17 @@ export const CLINICIAN_ROUTES = [
   "/interventions",
   `/interventions/${SAMPLE.intervention}`,
   `/interventions/${SAMPLE.sudIntervention}`,
+  `/interventions/${SAMPLE.newIntervention}`,
   "/handouts",
   `/handouts/${SAMPLE.handout}`,
   `/handouts/${SAMPLE.sudHandout}`,
+  `/handouts/${SAMPLE.newHandout}`,
   "/referrals",
   "/medications",
   `/medications/${SAMPLE.medication}`,
   `/medications/${SAMPLE.sudMedication}`,
   "/ethics",
+  ...TOOL_ROUTES,
   "/about",
 ] as const;
 
@@ -82,11 +118,22 @@ export function isClientRoute(route: string): boolean {
   return route === "/client" || route.startsWith("/client/") || route.startsWith("/r/");
 }
 
+/** The Spanish share link (/r/<id>/es) opens the handout in Spanish and moves the whole shell to Spanish. */
+export function isSpanishRoute(route: string): boolean {
+  return /^\/r\/[a-z0-9-]+\/es$/.test(route);
+}
+
 export const DISCLAIMER =
   "Resource only. Not a substitute for clinical judgment. Not a medical device. For licensed clinicians.";
+/** The client-worded footer on /client/** and /r/** (owner decision): still the positioning sentence, then plain words. */
+export const CLIENT_DISCLAIMER =
+  "Resource only. Not a substitute for clinical judgment. This page shares general information. It is not medical advice and does not replace care from a licensed professional.";
+export const CLIENT_DISCLAIMER_ES =
+  "Solo es un recurso. No sustituye el juicio clínico. Esta página ofrece información general. No es consejo médico y no reemplaza la atención de un profesional con licencia.";
 
 export const CLINICIAN_PHI_BANNER = "Do not enter names or identifying details.";
 export const CLIENT_PHI_BANNER = "Please do not type your name or other personal details.";
+export const CLIENT_PHI_BANNER_ES = "Por favor, no escriba su nombre ni otros datos personales.";
 
 /** Exact 42 CFR Part 2 notice (owner decision 2026-11-26, docs/RESOURCES.md). */
 export const PART2_NOTICE = "42 CFR Part 2 prohibits unauthorized use or disclosure of these records.";
@@ -112,6 +159,39 @@ export function loadConditions(): ConditionInfo[] {
     .map((f) => JSON.parse(readFileSync(path.join(dir, f), "utf8")) as ConditionInfo);
 }
 
+/** Client handouts in content/handouts: id, whether a Spanish version exists, and the handout's own client text. */
+export function loadHandouts(): { id: string; es: boolean; ownText: string }[] {
+  const dir = path.join(ROOT, "content/handouts");
+  return readdirSync(dir)
+    .filter((f) => f.endsWith(".json"))
+    .sort()
+    .map((f) => {
+      const h = JSON.parse(readFileSync(path.join(dir, f), "utf8")) as Record<string, unknown> & { id: string };
+      const own = ["title", "intro", "sections", "practiceLog", "safetyNote", "es"].map((k) => JSON.stringify(h[k] ?? ""));
+      return { id: h.id, es: Boolean(h.es), ownText: own.join(" ").toLowerCase() };
+    });
+}
+
+/**
+ * Lower-case condition names to look for in client pages: each name without its parenthetical, its short form
+ * without "disorder", and the parenthetical itself ("ptsd", "health anxiety"). "Adjustment" and "alcohol use" are
+ * everyday words and are left out as short forms.
+ */
+export function conditionNameTerms(): string[] {
+  const everyday = new Set(["adjustment", "alcohol use"]);
+  const terms = new Set<string>();
+  for (const c of loadConditions()) {
+    const lower = c.name.toLowerCase();
+    const base = lower.replace(/\s*\(.*\)\s*/, "").trim();
+    const short = base.replace(/[-\s]*disorder\b/, "").trim();
+    terms.add(base);
+    if (short && !everyday.has(short)) terms.add(short);
+    const paren = /\(([^)]+)\)/.exec(lower)?.[1];
+    if (paren && !/\b(and|other|presentation|pattern)\b/.test(paren)) terms.add(paren);
+  }
+  return [...terms];
+}
+
 /**
  * Client-facing text limits (G3): no ICD codes, no condition names, no scoring or diagnosis words. Checks the
  * visible text and the HTML (attributes and hidden text included).
@@ -131,7 +211,7 @@ export async function expectClientSafe(page: Page, label: string): Promise<void>
 }
 
 export function crisisButton(page: Page): Locator {
-  return page.getByRole("button", { name: /^(Crisis help|Get help now)$/ });
+  return page.getByRole("button", { name: /^(Crisis help|Get help now|Ayuda en crisis|Ayuda ahora)$/ });
 }
 
 export type NavLabel =
@@ -144,6 +224,7 @@ export type NavLabel =
   | "Referrals"
   | "Medications"
   | "Ethics & Legal"
+  | "Tools"
   | "Client mode"
   | "About";
 

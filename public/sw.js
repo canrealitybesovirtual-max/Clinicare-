@@ -1,12 +1,13 @@
 /*
  * Offline service worker. Caches ONLY static, same-origin app files: hashed build assets, icons, the static pages
  * below (precached at install) and the curated-id pages a user has opened (cached on visit). Pages are prerendered
- * and contain no clinical text; all session data lives in page memory. Page entries are keyed by path alone, so a
- * query string is never stored. RSC payloads are not cached: offline, Next.js falls back to a full navigation, which
+ * and contain no clinical text; all session data lives in page memory. Only a navigation WITHOUT a query string is
+ * stored (keyed by its path): a server-rendered page embeds the URL it was asked for, query included, so a page
+ * fetched with a query is passed through and never cached. RSC payloads are not cached: offline, Next.js falls back to a full navigation, which
  * is served from the cached page. Never touches non-GET requests, other origins, /api/**, /models/** or /ort/**
  * (the on-device model checks its own files).
  */
-const VERSION = "crc-v3";
+const VERSION = "crc-v4";
 
 /** Every route without a dynamic segment (src/app). A route that does not exist yet is skipped at install. */
 const PAGES = [
@@ -38,6 +39,7 @@ const DYNAMIC_PAGES = [
   /^\/client\/topics\/[a-z0-9-]+$/,
   /^\/client\/skills\/[a-z0-9-]+$/,
   /^\/r\/[a-z0-9-]+$/,
+  /^\/r\/[a-z0-9-]+\/es$/,
 ];
 
 const NEVER = [/^\/api\//, /^\/models\//, /^\/ort\//];
@@ -92,15 +94,16 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
-  // Page loads: network first, cached by path (no query string). Offline, an uncached page falls back to the home
-  // page of its mode, so a client page never lands on the clinician home.
+  // Page loads: network first, cached by path, and only when the URL has no query string (see the file note).
+  // Offline, an uncached page falls back to the home page of its mode, so a client page never lands on the
+  // clinician home.
   if (req.mode === "navigate") {
     const key = url.pathname;
     const fallback = isClientPage(key) ? "/client" : "/";
     event.respondWith(
       fetch(req)
         .then((res) => {
-          if (isPage(key)) store(key, res);
+          if (isPage(key) && !url.search) store(key, res);
           return res;
         })
         .catch(() =>

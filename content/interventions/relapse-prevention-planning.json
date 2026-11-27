@@ -11,7 +11,12 @@
     "obsessive-compulsive-disorder",
     "social-anxiety-disorder",
     "insomnia-disorder",
-    "specific-phobia"
+    "specific-phobia",
+    "bipolar-i-disorder",
+    "bipolar-ii-disorder",
+    "cannabis-use-disorder",
+    "opioid-use-disorder",
+    "stimulant-use-disorder"
   ],
   "evidenceLevel": "Substance use: a meta-analysis of 26 studies (9,504 participants) found relapse prevention generally effective, particularly for alcohol problems (Irvin et al., 1999). In an RCT with 286 adults in aftercare, standard relapse prevention delayed time to first drug use at 6 months compared with treatment as usual, and mindfulness-based relapse prevention reduced drug use and heavy drinking more than both at 12 months (Bowen et al., 2014). NICE CG115 recommends psychological interventions, including CBT-based therapies, focused on alcohol-related thoughts, behavior, problems and social networks. Depression: NICE NG222 recommends offering relapse prevention, such as group CBT or MBCT, to adults at higher risk of relapse. For anxiety disorders, OCD and insomnia, relapse-prevention planning is a standard end-of-treatment part of CBT protocols, including CBT-I, and evidence for the planning step on its own is limited.",
   "minutes": { "min": 20, "max": 50 },

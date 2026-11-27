@@ -1,0 +1,56 @@
+{
+  "id": "gestalt-awareness-experiments",
+  "name": "Gestalt therapy: present-moment awareness and experiments",
+  "modality": "Gestalt / humanistic-experiential",
+  "conditions": [
+    "adjustment-disorder",
+    "prolonged-grief-disorder",
+    "major-depressive-disorder"
+  ],
+  "evidenceLevel": "Gestalt therapy has a long clinical tradition but limited controlled trial evidence (see the StatPearls overview). Related humanistic-experiential methods, such as emotion-focused chair work, have stronger research support. Use it as an adjunct within a broader plan.",
+  "minutes": {
+    "min": 30,
+    "max": 60
+  },
+  "purpose": "A humanistic-experiential approach that helps the client notice what they feel, sense and do in the present moment, and try small experiments (for example, speaking directly to an absent person or giving voice to two sides of a conflict) to finish unfinished business and take ownership of choices. The therapist works with what happens in the room rather than only talking about the past.",
+  "steps": [
+    "Invite present-moment awareness: what does the client notice in their body, breath and voice as they talk?",
+    "Reflect patterns you see happening right now, such as a held breath or a change of subject, and ask about them with curiosity.",
+    "Propose a small, optional experiment, such as speaking in the first person, exaggerating a gesture or addressing an empty chair.",
+    "Debrief: what did the client notice, feel and learn?",
+    "Link insights to choices the client wants to make outside the session."
+  ],
+  "script": [
+    "What are you aware of right now, as you say that?",
+    "I notice your hands closed into fists. What is happening for you?",
+    "Would you be willing to try something? You can stop any time.",
+    "Say it to them directly, as if they were here."
+  ],
+  "contraindications": [
+    "Experiments can bring up intense emotion; ask permission, keep the client in control and leave time to settle.",
+    "Not for clients in acute crisis, with psychosis or severe dissociation.",
+    "Do not start during an active crisis, current suicidal risk, acute intoxication or withdrawal; stabilize first and share crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com."
+  ],
+  "culturalAdaptations": [
+    "Direct expression of emotion and speaking to an absent elder may feel disrespectful in some cultures; offer alternatives such as writing or imagery.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "handoutIds": [],
+  "sources": [
+    {
+      "title": "Gestalt Therapy (StatPearls)",
+      "publisher": "NCBI Bookshelf, National Library of Medicine",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK613291/",
+      "year": 2025
+    },
+    {
+      "title": "Existential therapies: a meta-analysis of their effects on psychological outcomes (Vos, Craig and Cooper)",
+      "publisher": "Journal of Consulting and Clinical Psychology (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25045907/",
+      "year": 2015
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

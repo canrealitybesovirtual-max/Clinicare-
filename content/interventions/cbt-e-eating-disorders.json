@@ -1,0 +1,62 @@
+{
+  "id": "cbt-e-eating-disorders",
+  "name": "Enhanced CBT for eating disorders (CBT-E): overview and core steps",
+  "modality": "CBT - eating disorders (transdiagnostic)",
+  "conditions": [
+    "anorexia-nervosa",
+    "bulimia-nervosa",
+    "binge-eating-disorder"
+  ],
+  "evidenceLevel": "Fairburn et al. (2009) found transdiagnostic CBT-E effective across eating disorders in adults; NICE NG69 recommends eating-disorder-focused CBT for adults with bulimia and binge-eating disorder and lists it among options for anorexia.",
+  "minutes": {
+    "min": 50,
+    "max": 60
+  },
+  "purpose": "A structured therapy that targets what keeps the eating problem going: irregular eating and dieting, binge-compensation cycles, shape and weight checking, and the overvaluation of shape and weight. Early steps include regular eating (three meals and two or three snacks), weekly weighing in session and self-monitoring.",
+  "steps": [
+    "Coordinate medical monitoring first, and agree when medical review or a higher level of care is needed.",
+    "Build a shared map of what keeps the problem going.",
+    "Start real-time self-monitoring of eating, binges, compensation and thoughts.",
+    "Introduce regular eating: planned meals and snacks at regular times, with no long gaps.",
+    "Do weekly collaborative weighing and help the client interpret the numbers without overreacting.",
+    "Address shape checking and avoidance, and the overvaluation of shape and weight.",
+    "Plan for setbacks and maintenance."
+  ],
+  "script": [
+    "Let's look at what keeps this going, step by step.",
+    "Eating regularly is one of the most powerful tools against binges.",
+    "Let's look at your weight together, and remember one number is not the trend.",
+    "What else matters to you besides your shape?"
+  ],
+  "contraindications": [
+    "Low weight, rapid weight loss, fainting, chest pain or electrolyte problems need urgent medical care and may need a higher level of care.",
+    "Refeeding after severe restriction needs medical supervision.",
+    "Do not start during an active crisis, current suicidal risk, acute intoxication or withdrawal; stabilize first and share crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com."
+  ],
+  "culturalAdaptations": [
+    "Plan meals around cultural foods, family meals and religious fasting rather than a generic meal plan.",
+    "Ask about food insecurity and connect the client with food resources if needed.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "trainingRequired": "CBT-E: training and supervision recommended; refer to an eating disorder specialist when weight is low or medical risk is present.",
+  "handoutIds": [
+    "regular-eating-plan"
+  ],
+  "sources": [
+    {
+      "title": "Transdiagnostic cognitive-behavioral therapy for patients with eating disorders: a two-site trial with 60-week follow-up (Fairburn et al.)",
+      "publisher": "American Journal of Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19074978/",
+      "year": 2009
+    },
+    {
+      "title": "Eating disorders: recognition and treatment (NG69)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng69",
+      "year": 2017
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

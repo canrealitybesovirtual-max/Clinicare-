@@ -1,0 +1,91 @@
+{
+  "conditionId": "adult-adhd",
+  "problems": [
+    {
+      "id": "adhd-organization",
+      "label": "Disorganization, lateness and unfinished tasks at work and home",
+      "definitions": [
+        "Misses deadlines or appointments at least weekly and loses important items several times a month.",
+        "Starts tasks but leaves many unfinished, and puts off tasks until the last minute.",
+        "Reports conflict with a partner, employer or family about forgotten tasks or lateness."
+      ],
+      "longTermGoals": [
+        "The client uses a simple, reliable system for time and tasks, finishes what matters most and feels more in control of daily life."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "adhd-system",
+          "text": "By session 2, set up one calendar and one task list, and check them every morning on at least 5 days a week for 4 weeks.",
+          "interventionIds": [
+            "cbt-adult-adhd"
+          ]
+        },
+        {
+          "id": "adhd-task-steps",
+          "text": "Each week, break the 3 most important tasks into first steps and complete at least 2 of them on time.",
+          "interventionIds": [
+            "cbt-adult-adhd",
+            "problem-solving"
+          ]
+        },
+        {
+          "id": "adhd-timed-blocks",
+          "text": "Use timed work blocks of 15 to 25 minutes at least 4 times a week and log how much was completed.",
+          "interventionIds": [
+            "cbt-adult-adhd"
+          ]
+        },
+        {
+          "id": "adhd-medication",
+          "text": "Within 4 weeks, attend an evaluation with a prescriber experienced in adult ADHD, if the client wishes to consider medication.",
+          "interventionIds": [
+            "medication-referral"
+          ]
+        },
+        {
+          "id": "adhd-attention-practice",
+          "text": "Practice a 5-minute attention exercise at least 4 days a week for 4 weeks and rate focus before and after.",
+          "interventionIds": [
+            "mindfulness-meditation"
+          ]
+        },
+        {
+          "id": "adhd-tracking",
+          "text": "Complete the PHQ-9 and GAD-7 at intake and every 4 weeks to track low mood and worry alongside attention goals.",
+          "interventionIds": [
+            "cbt-adult-adhd"
+          ]
+        }
+      ],
+      "measureIds": [
+        "phq-9",
+        "gad-7"
+      ]
+    }
+  ],
+  "collaborativeNote": "Write goals and objectives with the client in their own words. Timelines and targets are examples to adapt; the client decides what matters, and the clinician checks safety and fit.",
+  "sud": false,
+  "sources": [
+    {
+      "title": "Attention deficit hyperactivity disorder: diagnosis and management (NG87)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng87",
+      "year": 2018
+    },
+    {
+      "title": "Cognitive behavioral therapy vs relaxation with educational support for medication-treated adults with ADHD and persistent symptoms (Safren et al.)",
+      "publisher": "JAMA (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20736471/",
+      "year": 2010
+    },
+    {
+      "title": "Efficacy of meta-cognitive therapy for adult ADHD (Solanto et al.)",
+      "publisher": "American Journal of Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20231319/",
+      "year": 2010
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

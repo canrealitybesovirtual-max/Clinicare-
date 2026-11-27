@@ -32,7 +32,7 @@ export function Under18Notice({ className }: { className?: string }) {
         {YOUTH_REFERRALS.map((r) => (
           <li key={r.url}>
             <ExternalLink href={r.url}>{r.title}</ExternalLink>
-            <span className="text-warn-fg/80"> · {r.publisher}</span>
+            <span className="text-warn-fg"> · {r.publisher}</span>
           </li>
         ))}
       </ul>

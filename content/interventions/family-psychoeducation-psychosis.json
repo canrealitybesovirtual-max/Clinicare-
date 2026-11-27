@@ -1,0 +1,57 @@
+{
+  "id": "family-psychoeducation-psychosis",
+  "name": "Family intervention and psychoeducation for psychosis",
+  "modality": "Family intervention (psychoeducational)",
+  "conditions": [
+    "schizophrenia",
+    "bipolar-i-disorder"
+  ],
+  "evidenceLevel": "A Cochrane review (Pharoah et al., 2010) found family intervention reduced relapse and hospital admission in schizophrenia; NICE CG178 recommends family intervention for people with psychosis who live with or are in close contact with family.",
+  "minutes": {
+    "min": 60,
+    "max": 90
+  },
+  "purpose": "Works with the client and family together over several months to share information about psychosis, lower stress at home, improve communication and problem-solving, and plan for early signs of relapse. It supports carers too.",
+  "steps": [
+    "Get the client's consent about what will be shared and who will take part.",
+    "Share information about psychosis, treatment and recovery in plain language, and invite questions.",
+    "Help the family spot early warning signs of relapse and agree on a plan.",
+    "Teach calm, clear communication and step-by-step problem-solving.",
+    "Address carer stress and connect the family with carer support."
+  ],
+  "script": [
+    "Psychosis is common and treatable, and families play a big part in recovery.",
+    "What changes have you noticed before past setbacks?",
+    "Let's try saying that in a calm, specific way.",
+    "Who can you call if those signs start again?"
+  ],
+  "contraindications": [
+    "Do not proceed without the client's consent; respect confidentiality.",
+    "Where there is family violence or the family is a source of harm, adapt or do not use joint sessions.",
+    "Do not start during an active crisis, current suicidal risk, acute intoxication or withdrawal; stabilize first and share crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com."
+  ],
+  "culturalAdaptations": [
+    "Families differ in how they explain psychosis (spiritual, medical, social); start from their explanation and build shared understanding.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "handoutIds": [
+    "staying-well-plan"
+  ],
+  "sources": [
+    {
+      "title": "Family intervention for schizophrenia (Pharoah et al.)",
+      "publisher": "Cochrane Database of Systematic Reviews (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21154340/",
+      "year": 2010
+    },
+    {
+      "title": "Psychosis and schizophrenia in adults: prevention and management (CG178)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg178",
+      "year": 2014
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

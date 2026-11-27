@@ -10,7 +10,7 @@ import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { Card } from "@/components/ui/card";
 import { Notice } from "@/components/ui/notice";
-import { Governance, PageIntro, ReviewBadge, SourcesList } from "@/components/content/content-bits";
+import { Governance, PageIntro, ReviewBadge, SourcesList } from "@/components/content/content-meta";
 import {
   HandoutLangControl,
   HandoutLangScope,

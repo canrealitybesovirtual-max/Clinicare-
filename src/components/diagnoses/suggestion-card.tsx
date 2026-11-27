@@ -18,7 +18,7 @@ import {
 } from "lucide-react";
 import type { Condition } from "@/lib/schemas";
 import type { ScoringInput, Suggestion } from "@/lib/types";
-import { getHandout, getMeasure, getStat } from "@/lib/content";
+import { getMeasure, getStat } from "@/lib/content";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { ExternalLink } from "@/components/ui/external-link";
@@ -29,7 +29,7 @@ import {
   ReviewBadge,
   SourcesList,
   StatCard,
-} from "@/components/content/content-bits";
+} from "@/components/content/content-meta";
 import { Disclosure } from "@/components/ui/disclosure";
 import { cn } from "@/lib/utils";
 import { PART2_NOTICE } from "@/lib/referral-links";
@@ -37,6 +37,53 @@ import { explainScore, STRENGTH_LABEL } from "./explain";
 import { LazyPanel } from "./lookup-status";
 import { Icd11Panel } from "./icd11-panel";
 import { MedlinePlusPanel } from "./medlineplus-panel";
+
+/** Longer code lists than this are folded, so the feature-match box stays near the top on a phone. */
+const MAX_OPEN_CODES = 4;
+
+function CodeLine({ c }: { c: { code: string; label: string } }) {
+  return (
+    <span className="block">
+      <span className="font-mono font-semibold">{c.code}</span> <span className="text-muted">{c.label}</span>
+    </span>
+  );
+}
+
+/**
+ * ICD-10-CM codes. A short list shows in full. A long one (specific phobia has 14, one per type) shows the codes
+ * that fit the documented type first (fear of animals: F40.210, F40.218) and folds the full list.
+ */
+function IcdCodes({
+  codes,
+  documented,
+}: {
+  codes: readonly { code: string; label: string; featureIds?: readonly string[] }[];
+  documented: ReadonlySet<string>;
+}) {
+  if (codes.length <= MAX_OPEN_CODES) return codes.map((c) => <CodeLine key={c.code} c={c} />);
+  const fitting = codes.filter((c) => c.featureIds?.some((id) => documented.has(id)));
+  return (
+    <>
+      {fitting.length ? (
+        <>
+          <span className="block text-xs font-semibold text-muted">Fits the documented type</span>
+          {fitting.map((c) => (
+            <CodeLine key={c.code} c={c} />
+          ))}
+        </>
+      ) : null}
+      <details className="group/codes">
+        <summary className="inline-flex min-h-11 cursor-pointer list-none items-center gap-1 font-semibold text-accent [&::-webkit-details-marker]:hidden">
+          <ChevronDown aria-hidden className="size-4 transition-transform group-open/codes:rotate-180" />
+          All {codes.length} codes
+        </summary>
+        {codes.map((c) => (
+          <CodeLine key={c.code} c={c} />
+        ))}
+      </details>
+    </>
+  );
+}
 
 /**
  * How much of the pattern's feature list is documented (owner decision 2026-11-27): feature counts and a
@@ -100,9 +147,12 @@ export function SuggestionCard({
   cond,
   input,
   rank,
+  handoutInfo,
 }: {
   s: Suggestion;
   cond: Condition;
+  /** Handout id -> title and suggestWith, from the server-built resource catalog (handout bodies never reach this bundle). */
+  handoutInfo: ReadonlyMap<string, { title: string; suggestWith?: readonly string[] }>;
   input: Omit<ScoringInput, "symptomIds">;
   rank: number;
 }) {
@@ -115,7 +165,14 @@ export function SuggestionCard({
   const coreTotal = matchedCore.length + missingCore.length;
   const assocTotal = matchedAssoc.length + missingAssoc.length;
   const builtIn = cond.measures.map((id) => getMeasure(id)).filter((m) => m !== undefined);
-  const handouts = cond.handouts.map((id) => getHandout(id)).filter((h) => h !== undefined);
+  // Items written for one kind of presentation (applied tension) show only once one of its symptoms is documented.
+  const documented = new Set(s.matched.map((f) => f.symptomId));
+  const suits = (ids?: readonly string[]) => !ids || ids.some((id) => documented.has(id));
+  const handouts = cond.handouts.flatMap((id) => {
+    const h = handoutInfo.get(id);
+    return h && suits(h.suggestWith) ? [{ id, title: h.title }] : [];
+  });
+  const interventions = cond.interventions.filter((iv) => suits(iv.requiresAny));
   const stats = cond.statIds.map((id) => getStat(id)).filter((x) => x !== undefined);
   const ruleOutGroups = (["medical", "substance", "psychiatric"] as const)
     .map((t) => ({ t, items: cond.ruleOuts.filter((r) => r.type === t) }))
@@ -125,7 +182,7 @@ export function SuggestionCard({
     <article aria-labelledby={headingId} className="rounded-2xl border border-border bg-surface p-4 shadow-sm sm:p-6">
       <div className="flex flex-wrap items-center gap-2">
         <ClinicianReviewBadge />
-        <ReviewBadge reviewedBy={cond.reviewedBy} />
+        <ReviewBadge reviewedBy={cond.reviewedBy} inList />
         <span className="ml-auto text-xs font-semibold text-muted">Consideration {rank}</span>
       </div>
 
@@ -138,11 +195,7 @@ export function SuggestionCard({
         <dl className="grid gap-x-3 gap-y-1.5 text-sm sm:grid-cols-[6.5rem_1fr]">
           <dt className="font-semibold">ICD-10-CM</dt>
           <dd>
-            {s.icd10cm.map((c) => (
-              <span key={c.code} className="block">
-                <span className="font-mono font-semibold">{c.code}</span> <span className="text-muted">{c.label}</span>
-              </span>
-            ))}
+            <IcdCodes codes={cond.icd10cm} documented={documented} />
           </dd>
           <dt className="font-semibold">ICD-11</dt>
           <dd>
@@ -436,9 +489,9 @@ export function SuggestionCard({
           </ul>
         </Disclosure>
 
-        <Disclosure title="Interventions" meta={`${cond.interventions.length} options`}>
+        <Disclosure title="Interventions" meta={`${interventions.length} options`}>
           <ul className="space-y-3">
-            {cond.interventions.map((iv) => (
+            {interventions.map((iv) => (
               <li key={iv.name}>
                 <p className="font-semibold">{iv.name}</p>
                 <p className="text-muted">

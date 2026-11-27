@@ -54,6 +54,8 @@ test.describe("service worker", () => {
       expect(u.search, e.url).toBe("");
       const isStatic =
         ROUTES.includes(u.pathname as (typeof ROUTES)[number]) ||
+        // Curated-id pages are cached on visit (public/sw.js DYNAMIC_PAGES).
+        /^\/(measures|interventions|handouts|medications|r)\/[a-z0-9-]+$|^\/r\/[a-z0-9-]+\/es$|^\/client\/(topics|skills)\/[a-z0-9-]+$/.test(u.pathname) ||
         u.pathname.startsWith("/_next/static/") ||
         u.pathname.startsWith("/icons/") ||
         u.pathname === "/manifest.webmanifest";

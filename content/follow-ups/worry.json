@@ -2,14 +2,14 @@
   "id": "worry",
   "title": "Worry: generalized worry, obsessions and health anxiety",
   "domain": "worry",
-  "about": "Questions that tell apart worry spread across everyday life, unwanted intrusive thoughts that the client tries to cancel out, and a lasting preoccupation with illness.",
+  "about": "Worry and obsessive-compulsive questions: what the worry is about (everyday matters, intrusive thoughts, illness or appearance), how it is handled (rituals, checking, reassurance), body symptoms versus fear of illness, and how belongings affect the home.",
   "questions": [
     {
       "id": "worry-scope",
       "kind": "discriminate",
       "domain": "worry",
-      "text": "Is the worry spread across many everyday matters (work, money, family, health), or is it one kind of unwanted thought or image the client tries to push away or cancel out?",
-      "why": "Worry that hops between ordinary topics fits generalized anxiety. An unwanted, intrusive thought followed by an urge to neutralize it (washing, checking, praying a set way, seeking reassurance) points toward OCD. A narrow, lasting focus on having a serious illness points toward health anxiety.",
+      "text": "What is the worry mostly about: many everyday matters (work, money, family, health), one kind of unwanted thought or image the client tries to push away, having a serious illness, or how part of the face or body looks?",
+      "why": "Worry that hops between ordinary topics fits generalized anxiety. An unwanted, intrusive thought followed by an urge to neutralize it (washing, checking, praying a set way, seeking reassurance) points toward OCD. A narrow, lasting focus on having a serious illness points toward health anxiety, and a focus on a perceived flaw in appearance toward body dysmorphic concerns.",
       "options": [
         {
           "id": "many-topics",
@@ -34,9 +34,22 @@
           "id": "illness",
           "label": "Mostly about having or getting a serious illness",
           "effects": {
+            "addSymptomIds": [
+              "health-anxiety-preoccupation"
+            ],
             "addTriggerCategory": "health"
           },
-          "note": "Health anxiety is outside the current knowledge base. Record it, offer a medical review, and do not force a match."
+          "note": "Ask about body checking, symptom searching and reassurance seeking, and make sure a medical review has been offered."
+        },
+        {
+          "id": "appearance",
+          "label": "Mostly about how part of the face or body looks",
+          "effects": {
+            "addSymptomIds": [
+              "appearance-preoccupation"
+            ]
+          },
+          "note": "Ask about mirror checking, covering the area and cosmetic treatment, and how much of the day it takes."
         },
         {
           "id": "unsure",
@@ -60,7 +73,9 @@
       },
       "discriminates": [
         "generalized-anxiety-disorder",
-        "obsessive-compulsive-disorder"
+        "obsessive-compulsive-disorder",
+        "illness-anxiety-disorder",
+        "body-dysmorphic-disorder"
       ],
       "priority": 10
     },
@@ -231,8 +246,8 @@
       "id": "health-fear-focus",
       "kind": "discriminate",
       "domain": "worry",
-      "text": "Is the fear of <trigger> mainly during panic surges, or a lasting preoccupation with having or getting a serious illness (body checking, searching symptoms, seeking reassurance)?",
-      "why": "Fear of dying or of a heart attack that flares during attacks fits panic. A steady preoccupation with illness, with reassurance helping only briefly, points toward health anxiety, which is outside the current knowledge base.",
+      "text": "Is the fear of <trigger> mainly during panic surges, or a steady fear of being or becoming seriously ill that shows up as body checking, searching symptoms online or asking for reassurance?",
+      "why": "Fear of dying or of a heart attack that flares during attacks fits panic. A steady preoccupation with illness, with reassurance helping only briefly, points toward health anxiety.",
       "options": [
         {
           "id": "during-panic",
@@ -247,8 +262,12 @@
         {
           "id": "lasting-preoccupation",
           "label": "A lasting preoccupation with illness",
-          "effects": {},
-          "note": "Health anxiety is outside the current knowledge base. Record it, offer a medical review, and do not force a match."
+          "effects": {
+            "addSymptomIds": [
+              "health-anxiety-preoccupation"
+            ]
+          },
+          "note": "Ask about checking, searching and reassurance, and make sure a medical review has been offered."
         },
         {
           "id": "both",
@@ -256,7 +275,8 @@
           "effects": {
             "addSymptomIds": [
               "panic-attacks-unspecified",
-              "fear-of-dying"
+              "fear-of-dying",
+              "health-anxiety-preoccupation"
             ]
           }
         },
@@ -273,9 +293,290 @@
       },
       "discriminates": [
         "panic-disorder",
-        "generalized-anxiety-disorder"
+        "generalized-anxiety-disorder",
+        "illness-anxiety-disorder"
       ],
       "priority": 5
+    },
+    {
+      "id": "health-symptoms-or-fear",
+      "kind": "discriminate",
+      "domain": "worry",
+      "text": "Is the main problem body symptoms that are clearly there and take over daily life, or fear of having an illness while body symptoms are few or mild?",
+      "why": "Persistent body symptoms that crowd out daily life point toward a somatic symptom pattern; the distress is real whether or not a medical cause is found. A fear of illness that normal results do not settle, with few symptoms, points toward health anxiety.",
+      "options": [
+        {
+          "id": "symptoms",
+          "label": "Body symptoms that are clearly there and take over daily life",
+          "effects": {
+            "addSymptomIds": [
+              "distressing-bodily-symptoms",
+              "symptom-preoccupation"
+            ]
+          },
+          "surfaces": [
+            "medical-referral"
+          ],
+          "note": "Make sure a medical review has been done or is planned, and keep working with it rather than around it."
+        },
+        {
+          "id": "fear",
+          "label": "Fear of having or getting an illness, with few or mild symptoms",
+          "effects": {
+            "addSymptomIds": [
+              "health-anxiety-preoccupation"
+            ]
+          }
+        },
+        {
+          "id": "both",
+          "label": "Both",
+          "effects": {
+            "addSymptomIds": [
+              "distressing-bodily-symptoms",
+              "symptom-preoccupation",
+              "health-anxiety-preoccupation"
+            ]
+          },
+          "surfaces": [
+            "medical-referral"
+          ]
+        },
+        {
+          "id": "unsure",
+          "label": "Not sure yet",
+          "keepOpen": true
+        }
+      ],
+      "showWhen": {
+        "symptomIds": [
+          "health-anxiety-preoccupation",
+          "distressing-bodily-symptoms",
+          "symptom-preoccupation",
+          "body-checking-reassurance"
+        ],
+        "conditionIds": [
+          "illness-anxiety-disorder",
+          "somatic-symptom-disorder"
+        ]
+      },
+      "discriminates": [
+        "illness-anxiety-disorder",
+        "somatic-symptom-disorder",
+        "panic-disorder",
+        "generalized-anxiety-disorder"
+      ],
+      "priority": 10
+    },
+    {
+      "id": "health-checking",
+      "kind": "core",
+      "domain": "worry",
+      "select": "many",
+      "text": "What does the client do about the health worry?",
+      "why": "Checking the body, searching symptoms and asking for tests ease the worry for a moment and keep it going; staying away from doctors out of dread is the same habit turned around. Knowing which one is in play shapes the plan.",
+      "options": [
+        {
+          "id": "checks",
+          "label": "Checks the body, searches symptoms online or asks for tests or reassurance often",
+          "effects": {
+            "addSymptomIds": [
+              "body-checking-reassurance"
+            ]
+          }
+        },
+        {
+          "id": "avoids",
+          "label": "Stays away from doctors, test results or anything about illness",
+          "effects": {
+            "addSymptomIds": [
+              "body-checking-reassurance"
+            ]
+          }
+        },
+        {
+          "id": "neither",
+          "label": "Neither of these",
+          "effects": {
+            "negateSymptomIds": [
+              "body-checking-reassurance"
+            ]
+          },
+          "exclusive": true
+        },
+        {
+          "id": "not-yet",
+          "label": "Not asked yet",
+          "keepOpen": true,
+          "exclusive": true
+        }
+      ],
+      "showWhen": {
+        "symptomIds": [
+          "health-anxiety-preoccupation",
+          "distressing-bodily-symptoms"
+        ],
+        "conditionIds": [
+          "illness-anxiety-disorder",
+          "somatic-symptom-disorder"
+        ]
+      },
+      "targets": [
+        "body-checking-reassurance"
+      ],
+      "discriminates": [
+        "illness-anxiety-disorder",
+        "somatic-symptom-disorder"
+      ],
+      "priority": 20
+    },
+    {
+      "id": "appearance-habits",
+      "kind": "core",
+      "domain": "worry",
+      "select": "many",
+      "text": "What does the client do about the part of their looks that worries them?",
+      "why": "Mirror checking or avoiding, long grooming, covering the area, comparing, asking others and repeated cosmetic treatment are the habits that keep appearance worry going. They also separate it from social anxiety, where the fear is about being judged in general.",
+      "options": [
+        {
+          "id": "checking",
+          "label": "Checks or avoids mirrors, grooms for long stretches or covers the area",
+          "effects": {
+            "addSymptomIds": [
+              "appearance-checking"
+            ]
+          }
+        },
+        {
+          "id": "treatment",
+          "label": "Keeps seeking cosmetic, skin or surgical treatment for it",
+          "effects": {
+            "addSymptomIds": [
+              "cosmetic-treatment-seeking"
+            ]
+          }
+        },
+        {
+          "id": "asking",
+          "label": "Asks others again and again whether it looks all right",
+          "effects": {
+            "addSymptomIds": [
+              "reassurance-seeking"
+            ]
+          }
+        },
+        {
+          "id": "none",
+          "label": "None of these",
+          "effects": {
+            "negateSymptomIds": [
+              "appearance-checking",
+              "cosmetic-treatment-seeking",
+              "reassurance-seeking"
+            ]
+          },
+          "exclusive": true
+        },
+        {
+          "id": "not-yet",
+          "label": "Not asked yet",
+          "keepOpen": true,
+          "exclusive": true
+        }
+      ],
+      "showWhen": {
+        "symptomIds": [
+          "appearance-preoccupation",
+          "appearance-checking"
+        ],
+        "conditionIds": [
+          "body-dysmorphic-disorder"
+        ]
+      },
+      "targets": [
+        "appearance-checking"
+      ],
+      "discriminates": [
+        "body-dysmorphic-disorder",
+        "social-anxiety-disorder",
+        "obsessive-compulsive-disorder"
+      ],
+      "priority": 20
+    },
+    {
+      "id": "keeping-things-home",
+      "kind": "core",
+      "domain": "worry",
+      "select": "many",
+      "text": "How do belongings affect the home?",
+      "why": "When parting with things is very hard, what matters next is whether the main rooms can still be used and whether the clutter creates hazards. Safety at home (exits, fire, falls, pests) comes before any sorting plan.",
+      "options": [
+        {
+          "id": "rooms",
+          "label": "The main rooms can no longer be used as meant (cooking, sleeping, sitting)",
+          "effects": {
+            "addSymptomIds": [
+              "cluttered-living-spaces"
+            ]
+          }
+        },
+        {
+          "id": "hazards",
+          "label": "Blocked exits, fire or fall hazards, pests or unsanitary rooms",
+          "effects": {
+            "addSymptomIds": [
+              "clutter-safety-hazard"
+            ]
+          },
+          "note": "Plan for home safety first; with the client's consent, fire-safety or housing services can help."
+        },
+        {
+          "id": "acquiring",
+          "label": "Keeps buying or collecting free things beyond the space or need",
+          "effects": {
+            "addSymptomIds": [
+              "excessive-acquiring"
+            ]
+          }
+        },
+        {
+          "id": "none",
+          "label": "None of these",
+          "effects": {
+            "negateSymptomIds": [
+              "cluttered-living-spaces",
+              "clutter-safety-hazard",
+              "excessive-acquiring"
+            ]
+          },
+          "exclusive": true
+        },
+        {
+          "id": "not-yet",
+          "label": "Not asked yet",
+          "keepOpen": true,
+          "exclusive": true
+        }
+      ],
+      "showWhen": {
+        "symptomIds": [
+          "difficulty-discarding",
+          "excessive-acquiring",
+          "cluttered-living-spaces"
+        ],
+        "conditionIds": [
+          "hoarding-disorder"
+        ]
+      },
+      "targets": [
+        "cluttered-living-spaces",
+        "clutter-safety-hazard"
+      ],
+      "discriminates": [
+        "hoarding-disorder",
+        "obsessive-compulsive-disorder"
+      ],
+      "priority": 20
     }
   ],
   "sources": [
@@ -295,6 +596,24 @@
       "title": "Anxiety Disorders (health topic)",
       "publisher": "National Institute of Mental Health",
       "url": "https://www.nimh.nih.gov/health/topics/anxiety-disorders"
+    },
+    {
+      "title": "Clinical and cost-effectiveness of cognitive behaviour therapy for health anxiety in medical patients (Tyrer et al.)",
+      "publisher": "The Lancet (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24139977/",
+      "year": 2014
+    },
+    {
+      "title": "Non-pharmacological interventions for somatoform disorders and medically unexplained physical symptoms in adults (van Dessel et al.)",
+      "publisher": "Cochrane Database of Systematic Reviews (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25362239/",
+      "year": 2014
+    },
+    {
+      "title": "Waitlist-controlled trial of cognitive behavior therapy for hoarding disorder (Steketee et al.)",
+      "publisher": "Depression and Anxiety (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20336804/",
+      "year": 2010
     }
   ],
   "license": "original",

@@ -564,6 +564,31 @@ export function objectLabel(objectId: string, dict: TriggerObjectsFile = trigger
   return m.get(objectId) ?? objectId;
 }
 
+/** Answers that tie the described fear to its object: the fear is circumscribed, or the object is avoided. */
+const OBJECT_FEAR_IDS: ReadonlySet<string> = new Set(["circumscribed-fear", "phobic-avoidance"]);
+
+/**
+ * Phobia-type symptoms of the described objects (dogs: fear of animals) once a follow-up answer has tied the
+ * fear to them ("Only around dogs", "Yes: avoids dogs"). The text named the object and the clinician's own answer
+ * confirmed it, so the subtype is documented too; ids that are absent or already present are left out. Pure.
+ */
+export function answerConfirmedSubtypes(
+  hits: readonly TriggerHit[],
+  addedByAnswers: readonly string[],
+  opts: { present: readonly string[]; absent: readonly string[]; dictionary?: TriggerObjectsFile },
+): string[] {
+  if (!addedByAnswers.some((id) => OBJECT_FEAR_IDS.has(id))) return [];
+  const dict = opts.dictionary ?? triggerDictionary;
+  const skip = new Set([...opts.present, ...opts.absent]);
+  const out: string[] = [];
+  for (const h of hits) {
+    if (h.negated) continue;
+    const id = dict.objects.find((o) => o.id === h.objectId)?.symptomId;
+    if (id && !skip.has(id) && !out.includes(id)) out.push(id);
+  }
+  return out;
+}
+
 /** One row per category for display (non-negated hits only), in TRIGGER_CATEGORIES order. */
 export function summarizeTriggers(hits: readonly TriggerHit[], dict: TriggerObjectsFile = triggerDictionary): TriggerSummary[] {
   const rows = new Map<TriggerCategory, TriggerSummary>();

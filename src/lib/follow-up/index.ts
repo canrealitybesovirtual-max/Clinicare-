@@ -4,6 +4,7 @@
  * directly where the bundle cost is acceptable (server components, tests).
  */
 export {
+  answerConfirmedSubtypes,
   extractTriggers,
   objectLabel,
   summarizeTriggers,

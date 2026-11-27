@@ -11,7 +11,12 @@
     "obsessive-compulsive-disorder",
     "alcohol-use-disorder",
     "adjustment-disorder",
-    "prolonged-grief-disorder"
+    "prolonged-grief-disorder",
+    "borderline-personality-disorder",
+    "anorexia-nervosa",
+    "bulimia-nervosa",
+    "binge-eating-disorder",
+    "body-dysmorphic-disorder"
   ],
   "evidenceLevel": "Emerging-to-moderate evidence; not a guideline-recommended stand-alone treatment for any condition in this app, so use it as an adjunct. A meta-analysis of 21 RCTs of compassion-based interventions found moderate effects on self-compassion, depression, anxiety and distress, mostly from small samples (Kirby et al., 2017). A meta-analysis of 27 RCTs of self-compassion-based interventions found moderate effects on depression, anxiety, stress, rumination and self-criticism (Ferrari et al., 2019); another meta-analysis found no significant differences when self-compassion-related therapies were compared with active control conditions (Wilson et al., 2018), so certainty is limited. In a small RCT, the Mindful Self-Compassion program improved self-compassion and well-being versus waitlist (Neff & Germer, 2013). In an open pilot of loving-kindness meditation for PTSD, symptom reductions were mediated by gains in self-compassion (Kearney et al., 2013).",
   "minutes": { "min": 10, "max": 25 },

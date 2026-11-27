@@ -1,0 +1,64 @@
+{
+  "id": "cbt-bdd",
+  "name": "CBT for body dysmorphic disorder (exposure, ritual prevention and perceptual retraining)",
+  "modality": "CBT - body dysmorphic disorder",
+  "conditions": [
+    "body-dysmorphic-disorder"
+  ],
+  "evidenceLevel": "Therapist-delivered CBT outperformed supportive psychotherapy for BDD in a randomized trial (Wilhelm et al., 2019); a meta-analysis (Harrison et al., 2016) found large effects. NICE CG31 recommends CBT including ERP.",
+  "minutes": {
+    "min": 50,
+    "max": 60
+  },
+  "purpose": "Targets the preoccupation with perceived flaws and the rituals and avoidance that maintain it. Methods include exposure to avoided situations without camouflage, ritual prevention, perceptual retraining (looking at the whole face and body in a neutral, descriptive way) and work on appearance-related beliefs.",
+  "steps": [
+    "Ask about suicidal thoughts directly and build a safety plan if needed.",
+    "Map rituals (checking, grooming, comparing, camouflaging, reassurance) and avoided situations.",
+    "Build an exposure ladder of avoided situations and practice without camouflage or rituals.",
+    "Practice perceptual retraining at a mirror: describe the whole body neutrally, without judging words, for a set time.",
+    "Reduce rituals step by step and track urges.",
+    "Work on beliefs about appearance and self-worth; plan for relapse."
+  ],
+  "script": [
+    "Let's describe your face as a painter would, without words like ugly or perfect.",
+    "What would you be doing if you weren't checking?",
+    "Let's go out for ten minutes without the makeup and see what happens.",
+    "Your worth is about much more than this one feature."
+  ],
+  "contraindications": [
+    "High suicide risk in BDD: assess and safety-plan.",
+    "Cosmetic procedures rarely relieve BDD; discuss before the client seeks more.",
+    "Do not start during an active crisis, current suicidal risk, acute intoxication or withdrawal; stabilize first and share crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com."
+  ],
+  "culturalAdaptations": [
+    "Beauty ideals differ across cultures; explore pressures related to skin tone, hair texture or body build without reinforcing them.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "handoutIds": [
+    "checking-and-reassurance-log",
+    "exposure-ladder"
+  ],
+  "sources": [
+    {
+      "title": "Efficacy and posttreatment effects of therapist-delivered cognitive behavioral therapy vs supportive psychotherapy for adults with body dysmorphic disorder (Wilhelm et al.)",
+      "publisher": "JAMA Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30785624/",
+      "year": 2019
+    },
+    {
+      "title": "Cognitive-behavioral therapy for body dysmorphic disorder: a systematic review and meta-analysis of randomized controlled trials (Harrison et al.)",
+      "publisher": "Clinical Psychology Review (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27393916/",
+      "year": 2016
+    },
+    {
+      "title": "Obsessive-compulsive disorder and body dysmorphic disorder: treatment (CG31)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg31",
+      "year": 2005
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

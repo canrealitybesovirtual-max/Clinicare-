@@ -1,0 +1,250 @@
+{
+  "id": "body-dysmorphic-disorder",
+  "name": "Body dysmorphic disorder",
+  "icd10cm": [
+    {
+      "code": "F45.22",
+      "label": "Body dysmorphic disorder"
+    }
+  ],
+  "icd11": [
+    {
+      "code": "6B21",
+      "label": "Body dysmorphic disorder"
+    }
+  ],
+  "dsmPointer": "See DSM-5-TR: Obsessive-Compulsive and Related Disorders — Body Dysmorphic Disorder",
+  "summary": "Distressing, time-consuming preoccupation with parts of the face or body that the client sees as defective or ugly while others notice little or nothing, together with rituals such as mirror checking, grooming, covering, comparing or skin picking. Many clients avoid social life, work or being seen, and insight ranges from good to absent. Suicidal thoughts are common, so ask about them directly. Cosmetic procedures rarely bring lasting relief. CBT tailored to this pattern (exposure, ritual prevention, perceptual retraining) and medication from a prescriber are the main treatments. For clinician review only; this is not a diagnosis.",
+  "features": [
+    {
+      "symptomId": "appearance-preoccupation",
+      "kind": "core",
+      "weight": 5
+    },
+    {
+      "symptomId": "appearance-checking",
+      "kind": "core",
+      "weight": 4
+    },
+    {
+      "symptomId": "reassurance-seeking",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "cosmetic-treatment-seeking",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "social-situation-avoidance",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "depressed-mood",
+      "kind": "associated",
+      "weight": 1
+    },
+    {
+      "symptomId": "worthlessness-guilt",
+      "kind": "associated",
+      "weight": 1
+    },
+    {
+      "symptomId": "subjective-anxiety-stress",
+      "kind": "associated",
+      "weight": 1
+    }
+  ],
+  "minCore": 1,
+  "durationGate": {
+    "minWeeks": 0,
+    "note": "Ask how much of the day the appearance worries and rituals take, and how long they have gone on."
+  },
+  "impairmentRequired": true,
+  "ruleOuts": [
+    {
+      "label": "A visible medical or skin condition",
+      "type": "medical",
+      "note": "Check whether a dermatologic or other condition explains the concern and whether the distress is far out of step with it."
+    },
+    {
+      "label": "Substance use",
+      "type": "substance",
+      "note": "Some clients misuse substances to cope with appearance distress or to change their body (for example, anabolic steroids). This app does not store substance-use information."
+    },
+    {
+      "label": "Eating disorders",
+      "type": "psychiatric",
+      "note": "Concerns limited to weight or body fat point toward an eating disorder."
+    }
+  ],
+  "specifiers": [
+    {
+      "label": "Level of insight; muscle-focused form (descriptive)",
+      "note": "Both shape the plan. See DSM-5-TR for specifiers."
+    }
+  ],
+  "differentials": [
+    {
+      "label": "Social anxiety disorder",
+      "distinguishing": "Fear of being judged in general, not a focus on a specific perceived flaw.",
+      "icd10cm": "F40.10"
+    },
+    {
+      "label": "Anorexia nervosa",
+      "distinguishing": "Concern is with weight and shape, alongside restriction.",
+      "icd10cm": "F50.00"
+    },
+    {
+      "label": "Obsessive-compulsive disorder",
+      "distinguishing": "Obsessions and rituals beyond appearance.",
+      "icd10cm": "F42.2"
+    },
+    {
+      "label": "Excoriation (skin-picking) disorder",
+      "distinguishing": "Picking is not aimed at fixing a perceived flaw.",
+      "icd10cm": "F42.4"
+    }
+  ],
+  "comorbidities": [
+    {
+      "label": "Depression",
+      "note": "Very common, with raised suicide risk; screen with the PHQ-9.",
+      "conditionId": "major-depressive-disorder"
+    },
+    {
+      "label": "Social anxiety",
+      "note": "Common; avoidance of being seen overlaps.",
+      "conditionId": "social-anxiety-disorder"
+    },
+    {
+      "label": "OCD",
+      "note": "Frequently co-occurs.",
+      "conditionId": "obsessive-compulsive-disorder"
+    }
+  ],
+  "measures": [
+    "phq-9",
+    "gad-7"
+  ],
+  "measuresPending": [
+    {
+      "name": "Body Dysmorphic Disorder Questionnaire (BDDQ)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Body+Dysmorphic+Disorder+Questionnaire+Phillips",
+      "note": "License pending — link out only",
+      "licenseKey": "BDDQ"
+    },
+    {
+      "name": "Columbia Suicide Severity Rating Scale (C-SSRS)",
+      "url": "https://cssrs.columbia.edu",
+      "note": "License pending — link out only",
+      "licenseKey": "C-SSRS"
+    }
+  ],
+  "interventions": [
+    {
+      "name": "CBT for body dysmorphic disorder",
+      "evidence": "Wilhelm et al. (2019) found therapist-delivered CBT outperformed supportive therapy; Harrison et al. (2016) found large effects across trials. NICE CG31 recommends CBT with ERP.",
+      "note": "Exposure to avoided situations, ritual prevention, perceptual retraining and thought work."
+    },
+    {
+      "name": "Referral for medication evaluation",
+      "evidence": "NICE CG31 includes SSRIs for BDD, prescribed and monitored by a prescriber.",
+      "note": "Refer to psychiatry; prescribing decisions rest with the prescriber."
+    },
+    {
+      "name": "Habit reversal for picking or plucking",
+      "evidence": "Habit reversal is a standard part of CBT protocols when skin picking or hair plucking is present.",
+      "note": "Awareness training and competing responses."
+    },
+    {
+      "name": "Safety planning",
+      "evidence": "Suicidal thoughts are common in BDD.",
+      "note": "Ask directly and build a safety plan; this app never rates risk."
+    }
+  ],
+  "handouts": [
+    "checking-and-reassurance-log",
+    "kind-self-talk",
+    "exposure-ladder"
+  ],
+  "statIds": [
+    "us-bdd-point-prevalence"
+  ],
+  "culturalNotes": [
+    "Beauty ideals differ across cultures, communities and social media spaces. Judge concern against the client's own setting, and notice pressure from ideals about skin tone, hair texture or body build.",
+    "Muscle-focused concerns are often missed in men; ask about exercise, diet and supplement or steroid use without judgment.",
+    "Cosmetic and dermatology settings may be the first point of contact; with consent, coordinate with those providers.",
+    "Use a trained professional interpreter, not family members, and check that key terms translate with the meaning you intend.",
+    "If the client wants faith or spiritual practice included, follow their lead and get informed consent first (see the AACC Code of Ethics for faith-based counselors); never impose beliefs."
+  ],
+  "sud": false,
+  "requiredFeatures": [],
+  "redFlagRules": [
+    {
+      "type": "suicidality",
+      "message": "Suicidal thoughts or self-harm are documented in this input. Ask directly about intent, plan and access to means, follow your crisis protocol and build a safety plan with the client; this app never rates risk."
+    }
+  ],
+  "licensedDsm": false,
+  "wileyLicensed": false,
+  "sources": [
+    {
+      "title": "Obsessive-compulsive disorder and body dysmorphic disorder: treatment (CG31)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg31",
+      "year": 2005
+    },
+    {
+      "title": "Efficacy and posttreatment effects of therapist-delivered cognitive behavioral therapy vs supportive psychotherapy for adults with body dysmorphic disorder (Wilhelm et al.)",
+      "publisher": "JAMA Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30785624/",
+      "year": 2019
+    },
+    {
+      "title": "Cognitive-behavioral therapy for body dysmorphic disorder: a systematic review and meta-analysis of randomized controlled trials (Harrison et al.)",
+      "publisher": "Clinical Psychology Review (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27393916/",
+      "year": 2016
+    },
+    {
+      "title": "The prevalence of body dysmorphic disorder in the United States adult population (Koran et al.)",
+      "publisher": "CNS Spectrums (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18408651/",
+      "year": 2008
+    },
+    {
+      "title": "Obsessive-Compulsive Disorder (health topic)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/topics/obsessive-compulsive-disorder-ocd"
+    },
+    {
+      "title": "ICD-11 for Mortality and Morbidity Statistics (browser)",
+      "publisher": "World Health Organization",
+      "url": "https://icd.who.int/browse/latest-release/mms/en"
+    },
+    {
+      "title": "ICD-10-CM (official code set)",
+      "publisher": "CDC National Center for Health Statistics",
+      "url": "https://www.cdc.gov/nchs/icd/icd-10-cm/index.html"
+    },
+    {
+      "title": "ICD-10-CM codes checked with the NLM Clinical Table Search Service",
+      "publisher": "National Library of Medicine",
+      "url": "https://clinicaltables.nlm.nih.gov/apidoc/icd10cm/v3/doc.html"
+    },
+    {
+      "title": "AACC Code of Ethics",
+      "publisher": "American Association of Christian Counselors",
+      "url": "https://aacc.net/aacc-code-of-ethics/"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

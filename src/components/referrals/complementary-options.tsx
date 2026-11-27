@@ -8,7 +8,7 @@ import type { Intervention } from "@/lib/schemas-phase2";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { ExternalLink } from "@/components/ui/external-link";
-import { ReviewBadge } from "@/components/content/content-bits";
+import { ReviewBadge } from "@/components/content/content-meta";
 
 /** Library ids shown in this section, in display order. */
 export const COMPLEMENTARY_IDS = ["physical-activity", "yoga-mind-body", "mindfulness-meditation", "sleep-hygiene-education"] as const;
@@ -53,7 +53,7 @@ export function ComplementaryOptions({ items }: { items: { id: (typeof COMPLEMEN
                   <Leaf aria-hidden className="size-3.5" />
                   Complementary &amp; integrative
                 </Badge>
-                <ReviewBadge reviewedBy={i.reviewedBy} />
+                <ReviewBadge reviewedBy={i.reviewedBy} inList />
               </div>
               <h3 className="text-base font-semibold leading-snug">{COMPLEMENTARY_LABELS[id]}</h3>
               <p className="text-sm leading-relaxed">

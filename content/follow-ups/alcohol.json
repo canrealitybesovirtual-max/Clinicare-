@@ -1,8 +1,8 @@
 {
   "id": "alcohol",
-  "title": "Alcohol: pattern, withdrawal and timing",
+  "title": "Alcohol and other substances: pattern, control, withdrawal and safety",
   "domain": "alcohol",
-  "about": "Substance-use questions (42 CFR Part 2): answers stay in this session's memory only and are never sent or stored. They cover the drinking pattern, withdrawal (a medical safety issue) and whether mood, anxiety or sleep problems predate or outlast heavy drinking.",
+  "about": "Substance-use questions (42 CFR Part 2): answers stay in this session's memory only and are never sent or stored. They cover the drinking pattern, control over cannabis, opioids and stimulants, withdrawal and overdose safety (medical safety issues), and whether mood, anxiety or sleep problems predate or outlast heavy use.",
   "questions": [
     {
       "id": "alcohol-pattern",
@@ -160,6 +160,327 @@
         "insomnia-disorder"
       ],
       "priority": 20
+    },
+    {
+      "id": "cannabis-control",
+      "kind": "core",
+      "domain": "alcohol",
+      "sud": true,
+      "select": "many",
+      "text": "Ask how cannabis use has gone lately: control, cravings or withdrawal, and problems it causes.",
+      "why": "Regular cannabis use matters for anxiety, mood, sleep and motivation. Control, cravings or withdrawal, and use that continues despite harm show whether use has become a problem in its own right. Ask without judgment.",
+      "options": [
+        {
+          "id": "control",
+          "label": "Uses more or for longer than planned, or cannot cut down",
+          "effects": {
+            "addSymptomIds": [
+              "cannabis-impaired-control"
+            ]
+          },
+          "surfaces": [
+            "part2-notice"
+          ]
+        },
+        {
+          "id": "craving",
+          "label": "Craves it, or gets irritable, sleeps poorly or loses appetite when stopping",
+          "effects": {
+            "addSymptomIds": [
+              "cannabis-craving-withdrawal"
+            ]
+          },
+          "surfaces": [
+            "part2-notice"
+          ]
+        },
+        {
+          "id": "harm",
+          "label": "Keeps using despite problems at work, study, home or with mood",
+          "effects": {
+            "addSymptomIds": [
+              "cannabis-despite-harm"
+            ]
+          },
+          "surfaces": [
+            "part2-notice"
+          ]
+        },
+        {
+          "id": "none",
+          "label": "None of these",
+          "effects": {
+            "negateSymptomIds": [
+              "cannabis-impaired-control",
+              "cannabis-craving-withdrawal",
+              "cannabis-despite-harm"
+            ]
+          },
+          "exclusive": true
+        },
+        {
+          "id": "not-yet",
+          "label": "Not asked yet",
+          "keepOpen": true,
+          "exclusive": true
+        }
+      ],
+      "showWhen": {
+        "symptomIds": [
+          "cannabis-use-pattern"
+        ],
+        "conditionIds": [
+          "cannabis-use-disorder"
+        ]
+      },
+      "targets": [
+        "cannabis-impaired-control",
+        "cannabis-craving-withdrawal",
+        "cannabis-despite-harm"
+      ],
+      "discriminates": [
+        "cannabis-use-disorder",
+        "major-depressive-disorder",
+        "generalized-anxiety-disorder",
+        "insomnia-disorder"
+      ],
+      "priority": 15
+    },
+    {
+      "id": "opioid-control",
+      "kind": "core",
+      "domain": "alcohol",
+      "sud": true,
+      "select": "many",
+      "text": "Ask how opioid use has gone lately: control, cravings or withdrawal, and problems it causes.",
+      "why": "Loss of control and withdrawal show whether opioid use has become a problem in its own right, and they open the conversation about medication treatment, which saves lives. Ask without judgment, including about prescribed opioids.",
+      "options": [
+        {
+          "id": "control",
+          "label": "Uses more than planned or prescribed, or cannot cut down",
+          "effects": {
+            "addSymptomIds": [
+              "opioid-impaired-control"
+            ]
+          },
+          "surfaces": [
+            "part2-notice"
+          ]
+        },
+        {
+          "id": "withdrawal",
+          "label": "Aches, sweating, yawning, runny nose or stomach upset and strong cravings when stopping",
+          "effects": {
+            "addSymptomIds": [
+              "opioid-withdrawal"
+            ]
+          },
+          "surfaces": [
+            "part2-notice"
+          ],
+          "note": "Opioid withdrawal is rarely dangerous on its own but drives return to use; discuss medication for opioid use disorder."
+        },
+        {
+          "id": "none",
+          "label": "None of these",
+          "effects": {
+            "negateSymptomIds": [
+              "opioid-impaired-control",
+              "opioid-withdrawal"
+            ]
+          },
+          "exclusive": true
+        },
+        {
+          "id": "not-yet",
+          "label": "Not asked yet",
+          "keepOpen": true,
+          "exclusive": true
+        }
+      ],
+      "showWhen": {
+        "symptomIds": [
+          "opioid-use-pattern"
+        ],
+        "conditionIds": [
+          "opioid-use-disorder"
+        ]
+      },
+      "targets": [
+        "opioid-impaired-control",
+        "opioid-withdrawal"
+      ],
+      "discriminates": [
+        "opioid-use-disorder",
+        "major-depressive-disorder",
+        "generalized-anxiety-disorder",
+        "insomnia-disorder"
+      ],
+      "priority": 15
+    },
+    {
+      "id": "stimulant-control",
+      "kind": "core",
+      "domain": "alcohol",
+      "sud": true,
+      "select": "many",
+      "text": "Ask how stimulant use has gone lately: control, cravings or withdrawal, and problems it causes.",
+      "why": "Stimulant crashes can look like depression, and heavy use can bring paranoia or panic. Control, the crash and use despite harm show whether use has become a problem in its own right.",
+      "options": [
+        {
+          "id": "control",
+          "label": "Binges, uses more than planned, or cannot cut down",
+          "effects": {
+            "addSymptomIds": [
+              "stimulant-impaired-control"
+            ]
+          },
+          "surfaces": [
+            "part2-notice"
+          ]
+        },
+        {
+          "id": "crash",
+          "label": "Craves it, or crashes when stopping (exhaustion, long sleep, low mood)",
+          "effects": {
+            "addSymptomIds": [
+              "stimulant-craving-crash"
+            ]
+          },
+          "surfaces": [
+            "part2-notice"
+          ]
+        },
+        {
+          "id": "harm",
+          "label": "Keeps using despite heart, mental health, work or relationship problems",
+          "effects": {
+            "addSymptomIds": [
+              "stimulant-despite-harm"
+            ]
+          },
+          "surfaces": [
+            "part2-notice"
+          ]
+        },
+        {
+          "id": "none",
+          "label": "None of these",
+          "effects": {
+            "negateSymptomIds": [
+              "stimulant-impaired-control",
+              "stimulant-craving-crash",
+              "stimulant-despite-harm"
+            ]
+          },
+          "exclusive": true
+        },
+        {
+          "id": "not-yet",
+          "label": "Not asked yet",
+          "keepOpen": true,
+          "exclusive": true
+        }
+      ],
+      "showWhen": {
+        "symptomIds": [
+          "stimulant-use-pattern"
+        ],
+        "conditionIds": [
+          "stimulant-use-disorder"
+        ]
+      },
+      "targets": [
+        "stimulant-impaired-control",
+        "stimulant-craving-crash",
+        "stimulant-despite-harm"
+      ],
+      "discriminates": [
+        "stimulant-use-disorder",
+        "major-depressive-disorder",
+        "generalized-anxiety-disorder",
+        "insomnia-disorder"
+      ],
+      "priority": 15
+    },
+    {
+      "id": "opioid-overdose-safety",
+      "kind": "safety",
+      "domain": "alcohol",
+      "sud": true,
+      "select": "many",
+      "text": "Ask about overdose safety: a past overdose, using alone, a supply that may contain fentanyl, mixing with alcohol or sedatives, or a recent break from use.",
+      "why": "These raise the chance of a fatal overdose, and a recent break (jail, detox, treatment) lowers tolerance. The app records only what you choose and never estimates risk; talking through naloxone and not using alone is the step that matters.",
+      "options": [
+        {
+          "id": "past-overdose",
+          "label": "A past overdose",
+          "effects": {
+            "addSymptomIds": [
+              "opioid-overdose-risk"
+            ]
+          },
+          "surfaces": [
+            "crisis-resources",
+            "part2-notice"
+          ],
+          "note": "Talk through naloxone, not using alone and what to do in an emergency; the overdose safety handout can help."
+        },
+        {
+          "id": "alone-or-mixing",
+          "label": "Uses alone, mixes with alcohol or sedatives, or the supply may contain fentanyl",
+          "effects": {
+            "addSymptomIds": [
+              "opioid-overdose-risk"
+            ]
+          },
+          "surfaces": [
+            "crisis-resources",
+            "part2-notice"
+          ],
+          "note": "Talk through naloxone, not using alone and what to do in an emergency; the overdose safety handout can help."
+        },
+        {
+          "id": "tolerance",
+          "label": "A recent break from use (jail, detox or treatment)",
+          "effects": {
+            "addSymptomIds": [
+              "opioid-overdose-risk"
+            ]
+          },
+          "surfaces": [
+            "crisis-resources",
+            "part2-notice"
+          ],
+          "note": "Tolerance drops quickly after a break: the usual amount can now be fatal."
+        },
+        {
+          "id": "none",
+          "label": "None of these",
+          "effects": {},
+          "exclusive": true
+        },
+        {
+          "id": "not-yet",
+          "label": "Not asked yet",
+          "keepOpen": true,
+          "exclusive": true
+        }
+      ],
+      "showWhen": {
+        "symptomIds": [
+          "opioid-use-pattern",
+          "opioid-impaired-control",
+          "opioid-withdrawal"
+        ],
+        "conditionIds": [
+          "opioid-use-disorder"
+        ]
+      },
+      "targets": [
+        "opioid-overdose-risk"
+      ],
+      "priority": 5
     }
   ],
   "sources": [
@@ -178,6 +499,21 @@
       "title": "Confidentiality of substance use treatment records (42 CFR Part 2)",
       "publisher": "U.S. Department of Health and Human Services",
       "url": "https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/hipaa-part-2/index.html"
+    },
+    {
+      "title": "Marijuana (health topic)",
+      "publisher": "MedlinePlus, U.S. National Library of Medicine",
+      "url": "https://medlineplus.gov/marijuana.html"
+    },
+    {
+      "title": "Opioid Misuse and Addiction (health topic)",
+      "publisher": "MedlinePlus, U.S. National Library of Medicine",
+      "url": "https://medlineplus.gov/opioidmisuseandaddiction.html"
+    },
+    {
+      "title": "Methamphetamine (health topic)",
+      "publisher": "MedlinePlus, U.S. National Library of Medicine",
+      "url": "https://medlineplus.gov/methamphetamine.html"
     }
   ],
   "license": "original",

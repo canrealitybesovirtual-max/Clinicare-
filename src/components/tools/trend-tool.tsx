@@ -1,5 +1,6 @@
 "use client";
 import * as React from "react";
+import { useSearchParams } from "next/navigation";
 import { Plus, Trash2 } from "lucide-react";
 import type { Measure } from "@/lib/schemas";
 import { scoreMeasure } from "@/lib/measures";
@@ -16,7 +17,7 @@ import {
 } from "@/lib/tools/trend";
 import { useSession } from "@/state/session";
 import { AdultOnly } from "@/components/measures/adult-only";
-import { ClinicianReviewBadge, Governance, SourcesList } from "@/components/content/content-bits";
+import { ClinicianReviewBadge, Governance, SourcesList } from "@/components/content/content-meta";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ChoiceGroup } from "@/components/ui/choice-group";
@@ -55,6 +56,19 @@ function markers(row: TrendSummary["rows"][number], rules: MeasureTrendRules): s
   return out.join(" · ");
 }
 
+function changeText(row: TrendSummary["rows"][number]): string {
+  if (row.change === null) return "—";
+  return `${signed(row.change)}${row.percentChange !== null ? ` (${signed(row.percentChange)}%)` : ""}`;
+}
+
+function RemoveButton({ session, onRemove }: { session: number; onRemove: (session: number) => void }) {
+  return (
+    <Button type="button" variant="ghost" size="sm" aria-label={`Remove session #${session}`} onClick={() => onRemove(session)}>
+      <Trash2 aria-hidden />
+    </Button>
+  );
+}
+
 /** Measure trend. Totals live only in this screen's memory; Clear session and the idle wipe remount it. */
 export function TrendTool({ measures }: { measures: Measure[] }) {
   const { resetCount } = useSession();
@@ -65,9 +79,23 @@ export function TrendTool({ measures }: { measures: Measure[] }) {
   );
 }
 
+/**
+ * Reads ?measure=<id> (the link under a completed measure on the Measures screen). Only a measure this tool
+ * charts is acted on; anything else is ignored.
+ */
+function MeasureParam({ ids, onValue }: { ids: readonly TrendMeasureId[]; onValue: (id: TrendMeasureId) => void }) {
+  const raw = useSearchParams().get("measure");
+  React.useEffect(() => {
+    const id = ids.find((x) => x === raw);
+    if (id) onValue(id);
+  }, [raw, ids, onValue]);
+  return null;
+}
+
 function TrendInner({ measures }: { measures: (Measure & { id: TrendMeasureId })[] }) {
   const { state } = useSession();
   const [measureId, setMeasureId] = React.useState<TrendMeasureId>(measures[0]?.id ?? "phq-9");
+  const measureIds = React.useMemo(() => measures.map((x) => x.id), [measures]);
   const [points, setPoints] = React.useState<Record<string, TrendPoint[]>>({});
   const [session, setSession] = React.useState("");
   const [total, setTotal] = React.useState("");
@@ -105,11 +133,20 @@ function TrendInner({ measures }: { measures: (Measure & { id: TrendMeasureId })
     sessionRef.current?.focus();
   }
 
+  function remove(sessionNo: number) {
+    setPoints((all) => ({ ...all, [m.id]: removePoint(all[m.id] ?? [], sessionNo) }));
+    setAnnounce(`Removed session #${sessionNo}.`);
+    sessionRef.current?.focus();
+  }
+
   const responseLine = trend.markersApply && rules.responseShare !== undefined && trend.baseline ? trend.baseline.total * rules.responseShare : null;
   const remissionLine = trend.markersApply && rules.remissionBelow !== undefined ? rules.remissionBelow : null;
 
   return (
     <div className="space-y-6">
+      <React.Suspense fallback={null}>
+        <MeasureParam ids={measureIds} onValue={setMeasureId} />
+      </React.Suspense>
       <Card className="space-y-5">
         <div className="flex flex-wrap items-center gap-2">
           <ClinicianReviewBadge />
@@ -126,7 +163,7 @@ function TrendInner({ measures }: { measures: (Measure & { id: TrendMeasureId })
           }}
         />
         <form onSubmit={add} noValidate className="space-y-3" aria-describedby={error ? "trend-error" : undefined}>
-          <div className="grid grid-cols-2 gap-3 sm:grid-cols-[10rem_10rem_auto] sm:items-end">
+          <div className="grid grid-cols-2 items-end gap-3 sm:grid-cols-[10rem_10rem_auto]">
             <div className="space-y-1.5">
               <label htmlFor="trend-session" className="block text-sm font-semibold">
                 Session #
@@ -219,8 +256,32 @@ function TrendInner({ measures }: { measures: (Measure & { id: TrendMeasureId })
             {!trend.markersApply && rules.responseShare !== undefined ? (
               <p className="text-sm text-muted">Response and remission are not marked: the baseline total is below {rules.elevatedFrom}.</p>
             ) : null}
-            <div className="overflow-x-auto" tabIndex={0} role="region" aria-labelledby="trend-heading">
-              <table className="w-full min-w-[34rem] border-collapse text-left text-sm">
+            {/* Phones: one card per session, so every value and Remove fit without scrolling sideways. */}
+            <ul className="space-y-2 sm:hidden" aria-labelledby="trend-heading">
+              {trend.rows.map((r, i) => (
+                <li key={r.session} className="flex items-start justify-between gap-3 rounded-xl border border-border p-3 text-sm">
+                  <dl className="grid min-w-0 grid-cols-[auto_1fr] gap-x-3 gap-y-1">
+                    <dt className="text-muted">Session #</dt>
+                    <dd className="font-semibold">
+                      {r.session}
+                      {i === 0 ? <span className="ml-1 font-normal text-muted">(baseline)</span> : null}
+                    </dd>
+                    <dt className="text-muted">Total</dt>
+                    <dd>
+                      {r.total}
+                      {r.band ? <span className="text-muted"> · {r.band}</span> : null}
+                    </dd>
+                    <dt className="text-muted">Change</dt>
+                    <dd>{changeText(r)}</dd>
+                    <dt className="text-muted">Markers</dt>
+                    <dd>{markers(r, rules) || "—"}</dd>
+                  </dl>
+                  <RemoveButton session={r.session} onRemove={remove} />
+                </li>
+              ))}
+            </ul>
+            <div className="relative hidden overflow-x-auto sm:block" tabIndex={0} role="region" aria-labelledby="trend-heading">
+              <table className="w-full border-collapse text-left text-sm">
                 <caption className="sr-only">{m.shortName} totals by session number, with severity band, change from baseline and markers</caption>
                 <thead>
                   <tr className="border-b border-border text-muted">
@@ -241,24 +302,10 @@ function TrendInner({ measures }: { measures: (Measure & { id: TrendMeasureId })
                       </th>
                       <td className="py-1.5 pr-3">{r.total}</td>
                       <td className="py-1.5 pr-3">{r.band ?? "—"}</td>
-                      <td className="py-1.5 pr-3">
-                        {r.change === null ? "—" : `${signed(r.change)}${r.percentChange !== null ? ` (${signed(r.percentChange)}%)` : ""}`}
-                      </td>
+                      <td className="py-1.5 pr-3">{changeText(r)}</td>
                       <td className="py-1.5 pr-3">{markers(r, rules) || "—"}</td>
                       <td className="py-1.5">
-                        <Button
-                          type="button"
-                          variant="ghost"
-                          size="sm"
-                          aria-label={`Remove session #${r.session}`}
-                          onClick={() => {
-                            setPoints((all) => ({ ...all, [m.id]: removePoint(all[m.id] ?? [], r.session) }));
-                            setAnnounce(`Removed session #${r.session}.`);
-                            sessionRef.current?.focus();
-                          }}
-                        >
-                          <Trash2 aria-hidden />
-                        </Button>
+                        <RemoveButton session={r.session} onRemove={remove} />
                       </td>
                     </tr>
                   ))}

@@ -1,0 +1,76 @@
+{
+  "id": "crisis-988-or-911",
+  "title": "Crisis contacts: when to use 988 and when to call 911",
+  "jurisdiction": "US-state-varies",
+  "summary": "988 and 911 do different jobs. The 988 Suicide & Crisis Lifeline is a free, confidential call, text and chat line for anyone in emotional distress, a suicidal crisis or a substance-use crisis, and the person does not have to be suicidal to reach out. 911 is for emergencies that need police, fire or medical response now, such as an overdose, a medical emergency, a weapon, or violence that is happening. Local crisis systems, including mobile crisis teams and crisis stabilization units, differ by state and county, so learn what exists where your clients live. This page is information, not legal advice.",
+  "keyPoints": [
+    "988 can be reached by call, text or chat, 24 hours a day. Veterans, service members and their families can press 1 for the Veterans Crisis Line or text 838255; Spanish speakers can press 2 or text AYUDA to 988; Deaf and hard of hearing people can use 988 by videophone, or by TTY through a relay service or 711 then 988.",
+    "The 988 Lifeline says its counselors contact emergency services only when the risk of harm to self or others is imminent or already under way and a less invasive safety plan cannot be worked out with the person.",
+    "SAMHSA reports that most people who contact 988 are helped during the call, text or chat without involving 911, and it publishes a guide for health care providers on advising people about 988 versus 911.",
+    "Call 911 first for medical emergencies, including a suspected overdose, a suicide attempt in progress, injuries, or when a weapon or violence is involved. Give naloxone for a suspected opioid overdose if it is available.",
+    "Police contact can be frightening or harmful for some clients, and the impact has fallen hardest on communities that have been historically harmed. Where available, mobile crisis teams and crisis stabilization services are less intrusive options.",
+    "Your own duties, such as duty-to-protect rules and emergency hold procedures, are set by state law and your licensing board; 988 does not replace them."
+  ],
+  "whatToDo": [
+    "Add 988, local emergency numbers, the local mobile crisis number (if any) and findahelpline.com to every client's safety plan.",
+    "Explain in plain words when to use 988 and when to call 911, and practice it with clients who have had suicidal crises.",
+    "Find out whether your county has a mobile crisis team or crisis stabilization unit, and how to reach it.",
+    "For telehealth, record the client's location at each session and the local emergency number for that location.",
+    "Consult your licensing board, your crisis protocol and, where needed, a healthcare attorney about the reporting and hold rules in each state where you practice."
+  ],
+  "officialLinks": [
+    {
+      "title": "988 Suicide & Crisis Lifeline: Get help",
+      "url": "https://988lifeline.org/get-help/"
+    },
+    {
+      "title": "988 Lifeline: Deaf, hard of hearing and hearing loss",
+      "url": "https://988lifeline.org/help-yourself/for-deaf-hard-of-hearing/"
+    },
+    {
+      "title": "988 Lifeline: why and when an intervention may involve police (PDF)",
+      "url": "https://988lifeline.org/wp-content/uploads/2024/09/988-Suicide-Crisis-Lifeline_intervention_-police.pdf"
+    },
+    {
+      "title": "SAMHSA: National behavioral health crisis care",
+      "url": "https://www.samhsa.gov/mental-health/national-behavioral-health-crisis-care"
+    },
+    {
+      "title": "Find a Helpline (international crisis lines)",
+      "url": "https://findahelpline.com"
+    }
+  ],
+  "appPositioning": "The crisis button on every screen shows 988, local emergency numbers and findahelpline.com. The app never rates risk or decides which line to call; it shows the options and the clinician decides with the client.",
+  "whenRelevant": [
+    "crisis",
+    "duty-to-warn",
+    "telehealth"
+  ],
+  "changesOften": true,
+  "statusAsOf": "2026-11-27",
+  "verification": {
+    "method": "search-index",
+    "note": "988lifeline.org pages (Get help, What to expect, Deaf and hard of hearing, and the September 2024 police-intervention document) were loaded and read on 2026-11-27. SAMHSA's statement that most contacts are resolved without 911 and its provider guide on 988 versus 911 (PEP24-06-009) were confirmed only through search results; samhsa.gov was not reachable. Specialized press options change; a person must re-check the 988 site before release."
+  },
+  "sources": [
+    {
+      "title": "988 Suicide & Crisis Lifeline: Get help",
+      "publisher": "988 Lifeline (Vibrant Emotional Health, SAMHSA)",
+      "url": "https://988lifeline.org/get-help/"
+    },
+    {
+      "title": "988 Lifeline intervention and police involvement (updated September 2024)",
+      "publisher": "988 Lifeline",
+      "url": "https://988lifeline.org/wp-content/uploads/2024/09/988-Suicide-Crisis-Lifeline_intervention_-police.pdf",
+      "year": 2024
+    },
+    {
+      "title": "National behavioral health crisis care",
+      "publisher": "SAMHSA",
+      "url": "https://www.samhsa.gov/mental-health/national-behavioral-health-crisis-care"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

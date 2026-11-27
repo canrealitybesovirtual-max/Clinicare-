@@ -4,7 +4,7 @@
  */
 import { describe, expect, it } from "vitest";
 import { PDFDocument } from "pdf-lib";
-import { strFromU8, unzipSync } from "fflate"; // docx's own zip dependency
+import { strFromU8, unzipSync } from "fflate";
 import { conditions, getSymptom, measures } from "@/lib/content";
 import { getPlanLibrary, interventions } from "@/lib/library";
 import { PDF_CRISIS_HEADING, PDF_CRISIS_LINE, PDF_DISCLAIMER, PDF_PART2_NOTICE } from "@/lib/pdf";
@@ -112,12 +112,14 @@ describe("prefill", () => {
     expect(text).not.toMatch(/\bF\d{2}\.\d/);
   });
 
-  it("says so plainly when nothing is documented", () => {
+  it("leaves empty slots for the clinician instead of writing statements the record could not back", () => {
     const empty: NoteContext = { concerns: [], cultural: [], redFlags: [], measures: [], interventions: [], objectives: [] };
     const text = prefillNote("soap", empty).map((s) => s.text).join("\n");
-    expect(text).toContain("Presenting concerns: none documented in this session yet.");
-    expect(text).toContain("Measures: none completed in this session.");
+    // A paper measure may have been given, so the draft never says "none completed".
+    expect(text).toContain("Presenting concerns: (clinician to complete)");
+    expect(text).toContain("Measures: (clinician to complete)");
     expect(text).toContain("Safety: (clinician to complete)");
+    expect(text).not.toMatch(/\bnone (documented|completed)\b/i);
   });
 });
 
@@ -189,5 +191,9 @@ describe("export", () => {
     expect(footers).toContain(PDF_DISCLAIMER);
     expect(footers).toContain(DOC_PART2_NOTICE);
     expect(body.match(/Client: _+/g)?.length).toBe(1);
+    // No created or modified date in the file properties (G5).
+    const core = strFromU8(files["docProps/core.xml"]!);
+    expect(core).toContain("Session note draft (BIRP)");
+    expect(core).not.toMatch(/dcterms:(created|modified)|\d{4}-\d{2}-\d{2}T/);
   });
 });

@@ -1,24 +1,29 @@
 /**
  * CI gate (G1, G3, G6, G7, G10, G13). Exit 1 on any problem.
  *  1. The core content parses and cross-references cleanly (src/lib/content.ts contentProblems()): lexicon,
- *     every condition, built-in measures, every handout and stats.
+ *     every condition, built-in measures and stats.
  *  2. The whole library parses and cross-references cleanly (src/lib/library.ts libraryProblems() plus the
- *     cross-content checks below): interventions, plans, ethics codes and legal topics, and the links between
- *     them and the conditions and handouts.
+ *     cross-content checks below): handouts, interventions, plans, ethics codes and legal topics, and the links
+ *     between them and the conditions.
  *  3. EVERY file under content/ matches a registered schema with governance (scripts/content-audit.ts).
  * `--release` also fails while any crisis line is unverified (a person must check each official site).
  */
 import path from "node:path";
 import { CASE_RESTRICTED_ABBREVIATIONS, matchSymptoms } from "../src/lib/matcher";
-import { conditions, contentProblems, handouts, lexicon, measures, stats } from "../src/lib/content";
+import { conditions, contentProblems, lexicon, measures, stats } from "../src/lib/content";
 import {
   ethicsCodes,
+  handouts,
   interventions,
   interventionsFor,
   legalTopics,
   libraryProblems,
   planLibraries,
 } from "../src/lib/library";
+import topicsJson from "../content/topics.json";
+import triggerObjectsJson from "../content/trigger-objects.json";
+import { followUpFiles } from "../src/lib/follow-up/bank";
+import { HealthTopicsFileSchema } from "../src/lib/schemas-topics";
 import { auditContent } from "./content-audit";
 
 /** Exact 42 CFR Part 2 notice (owner decision 2026-11-26, docs/RESOURCES.md). */
@@ -41,6 +46,27 @@ const BANNED_CONTENT: readonly [RegExp, string][] = [
   [/homeopath/i, "G4: homeopathy"],
   [/HIPAA[ -](certified|approved|certification)/i, "G15: HIPAA certification claim"],
 ];
+
+/**
+ * Close paraphrases of DSM-5-TR criterion wording (G1). Each entry fails when ALL of its patterns occur in one
+ * string of a content item (one note, question or summary), so a single everyday phrase such as "out of
+ * proportion" stays allowed while the criteria sequence it belongs to does not.
+ */
+const CLOSE_PARAPHRASE: readonly [readonly RegExp[], string][] = [
+  [[/endured with intense/i], "G1: 'endured with intense ...' (phobia criteria wording)"],
+  [[/\b(nearly|almost) (every time|always)\b/i, /out of proportion/i], "G1: 'nearly every time ... out of proportion' (phobia criteria sequence)"],
+  [[/preoccupation with (having|getting|acquiring)/i], "G1: 'preoccupation with having or getting an illness' (illness-anxiety criteria wording)"],
+  [[/\bexpansive,? (or|and) irritable\b/i], "G1: 'elevated, expansive or irritable mood' (manic-episode criteria wording)"],
+  [[/abnormally and persistently/i], "G1: 'abnormally and persistently' (manic-episode criteria wording)"],
+];
+
+/** Every string inside a content item, so CLOSE_PARAPHRASE checks one field at a time. */
+function stringsOf(value: unknown): string[] {
+  if (typeof value === "string") return [value];
+  if (Array.isArray(value)) return value.flatMap(stringsOf);
+  if (value && typeof value === "object") return Object.values(value).flatMap(stringsOf);
+  return [];
+}
 
 /** Text that surfaces as a suggestion flag or note must not read as a verdict (G3). */
 const VERDICT_WORDS = /\b(diagnosed|diagnosis is|meets|confirmed|definitely|certainly)\b/i;
@@ -72,6 +98,21 @@ export function crossContentProblems(): string[] {
   for (const i of interventions)
     for (const c of i.conditions) if (!conditionIds.has(c)) p.push(`interventions/${i.id}: unknown condition ${c}`);
 
+  // Symptom ids that gate suggestions (suggestWith, requiresAny) or map codes to a phobia type (featureIds) exist,
+  // and a code's featureIds are features of its own condition.
+  const symptomIds = new Set(lexicon.symptoms.map((s) => s.id));
+  const unknownSymptoms = (where: string, ids: readonly string[] | undefined) => {
+    for (const id of ids ?? []) if (!symptomIds.has(id)) p.push(`${where}: unknown symptom ${id}`);
+  };
+  for (const i of interventions) unknownSymptoms(`interventions/${i.id} suggestWith`, i.suggestWith);
+  for (const h of handouts) unknownSymptoms(`handouts/${h.id} suggestWith`, h.suggestWith);
+  for (const c of conditions) {
+    for (const iv of c.interventions) unknownSymptoms(`conditions/${c.id} interventions "${iv.name}" requiresAny`, iv.requiresAny);
+    const features = new Set(c.features.map((f) => f.symptomId));
+    for (const code of c.icd10cm)
+      for (const id of code.featureIds ?? []) if (!features.has(id)) p.push(`conditions/${c.id} ${code.code}: featureIds ${id} is not a feature of this condition`);
+  }
+
   // Plans: one per condition, linked interventions exist (libraryProblems) and are tagged for that condition.
   const interventionById = new Map(interventions.map((i) => [i.id, i] as const));
   const planByCondition = new Map(planLibraries.map((pl) => [pl.conditionId, pl] as const));
@@ -96,6 +137,7 @@ export function crossContentProblems(): string[] {
   for (const c of conditions) {
     const where = `conditions/${c.id}`;
     if (!planByCondition.has(c.id)) p.push(`${where}: no plan library in content/plans`);
+    if (c.handouts.length === 0) p.push(`${where}: no client handout linked (every condition needs at least one)`);
     const linked = interventionsFor(c.id).length;
     if (linked < MIN_INTERVENTIONS_PER_CONDITION)
       p.push(`${where}: only ${linked} library interventions list this condition (at least ${MIN_INTERVENTIONS_PER_CONDITION} expected)`);
@@ -130,6 +172,12 @@ export function crossContentProblems(): string[] {
       if (sudHandouts.has(h) && !i.conditions.some((c) => sudConditions.has(c)))
         p.push(`interventions/${i.id}: links SUD handout ${h} but lists no substance-use condition (G6)`);
 
+  // Client topics (content/topics.json): every "skill to try" is a real handout (which handouts suit which topic,
+  // including the tobacco exception for the urge log, is checked in tests/unit/topics.test.ts).
+  const handoutIds = new Set(handouts.map((h) => h.id));
+  for (const t of HealthTopicsFileSchema.parse(topicsJson).topics)
+    for (const id of t.handoutIds) if (!handoutIds.has(id)) p.push(`topics.json/${t.id}: unknown handout ${id}`);
+
   // Lexicon: every symptom is scored by some condition, is a red flag, or is a cultural concept (never scored).
   const used = new Set(conditions.flatMap((c) => c.features.map((f) => f.symptomId)));
   for (const s of lexicon.symptoms) {
@@ -160,10 +208,15 @@ export function crossContentProblems(): string[] {
     ...interventions.map((i): [string, unknown] => [`interventions/${i.id}`, i]),
     ...planLibraries.map((pl): [string, unknown] => [`plans/${pl.conditionId}`, pl]),
     ...handouts.map((h): [string, unknown] => [`handouts/${h.id}`, h]),
+    ...followUpFiles.map((f): [string, unknown] => [`follow-ups/${f.domain}`, f]),
+    ["trigger-objects.json", triggerObjectsJson],
   ];
   for (const [where, item] of items) {
     const body = JSON.stringify(item);
     for (const [re, label] of BANNED_CONTENT) if (re.test(body)) p.push(`${where}: banned wording (${label})`);
+    for (const text of stringsOf(item))
+      for (const [res, label] of CLOSE_PARAPHRASE)
+        if (res.every((re) => re.test(text))) p.push(`${where}: banned wording (${label}) in "${text.slice(0, 80)}"`);
   }
   return p;
 }

@@ -1,0 +1,72 @@
+{
+  "id": "subpoenas-and-court-orders",
+  "title": "Subpoenas, court orders and requests for therapy records",
+  "jurisdiction": "US-state-varies",
+  "summary": "Receiving a subpoena for a client's records does not by itself mean you must hand them over. Under HIPAA, a court order allows disclosure of what the order expressly covers, while a subpoena without a court order needs written assurance that the client was notified or that a qualified protective order was sought. Substance use disorder records protected by 42 CFR Part 2 need a special court order and cannot be released on a subpoena alone. State privilege and confidentiality laws often add protections, and federal courts recognize a psychotherapist-patient privilege. This page is information, not legal advice.",
+  "keyPoints": [
+    "Under HIPAA (45 CFR 164.512(e)), a disclosure in response to a subpoena that is not signed by a judge requires satisfactory assurance: reasonable efforts to notify the client, or to secure a qualified protective order that limits use to the case and requires return or destruction of the records.",
+    "Only the minimum necessary information may be disclosed, and psychotherapy notes have extra protection under HIPAA.",
+    "For records covered by 42 CFR Part 2, a subpoena alone is not enough: disclosure without consent needs a court order that meets Part 2's requirements, and only the information the order covers may be released.",
+    "In Jaffee v. Redmond (1996), the US Supreme Court recognized a psychotherapist-patient privilege in federal courts, including licensed clinical social workers. State courts apply state privilege law, which varies.",
+    "The privilege usually belongs to the client. The clinician may assert it on the client's behalf until the client waives it or a court orders disclosure."
+  ],
+  "whatToDo": [
+    "Do not ignore a subpoena, and do not send records before checking what it is and who signed it.",
+    "Contact the client, explain the request and their options, and ask whether they or their attorney will respond or object.",
+    "Check whether the records include substance use treatment information covered by 42 CFR Part 2, and apply its stricter rules.",
+    "Disclose only what a valid court order or the client's written authorization covers, and document every step.",
+    "Consult a healthcare attorney, your professional liability insurer's risk management line or your licensing board before responding."
+  ],
+  "officialLinks": [
+    {
+      "title": "HHS: Court orders and subpoenas (HIPAA)",
+      "url": "https://www.hhs.gov/hipaa/for-individuals/court-orders-subpoenas/index.html"
+    },
+    {
+      "title": "HHS FAQ: What satisfactory assurances must a covered entity receive before it responds to a subpoena?",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/faq/what-satisfactory-assurances-must-a-covered-entity-receive-before-it-responds-to-a-subpoena/index.html"
+    },
+    {
+      "title": "eCFR: 42 CFR Part 2, Subpart E (court orders authorizing disclosure and use)",
+      "url": "https://www.ecfr.gov/current/title-42/chapter-I/subchapter-A/part-2/subpart-E"
+    },
+    {
+      "title": "Jaffee v. Redmond, 518 U.S. 1 (1996) (Legal Information Institute)",
+      "url": "https://www.law.cornell.edu/supremecourt/text/518/1"
+    }
+  ],
+  "appPositioning": "The app stores no client records, so it holds nothing that could be subpoenaed; exports that a clinician saves become part of the clinician's own records.",
+  "whenRelevant": [
+    "records",
+    "confidentiality",
+    "privacy",
+    "sud"
+  ],
+  "changesOften": false,
+  "statusAsOf": "2026-11-27",
+  "verification": {
+    "method": "search-index",
+    "note": "hhs.gov, ecfr.gov and law.cornell.edu were not reachable from the build sandbox. The HIPAA satisfactory-assurance and qualified-protective-order rules were confirmed through search results indexing HHS FAQs; the Part 2 court-order requirement was confirmed through secondary summaries of 42 CFR 2.61 and Subpart E. Jaffee v. Redmond is cited from the published decision. A person must read the regulations and the current HHS guidance before release."
+  },
+  "sources": [
+    {
+      "title": "What satisfactory assurances must a covered entity receive before it responds to a subpoena?",
+      "publisher": "U.S. Department of Health and Human Services",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/faq/what-satisfactory-assurances-must-a-covered-entity-receive-before-it-responds-to-a-subpoena/index.html"
+    },
+    {
+      "title": "42 CFR Part 2, Subpart E: court orders authorizing disclosure and use",
+      "publisher": "eCFR, U.S. Government Publishing Office",
+      "url": "https://www.ecfr.gov/current/title-42/chapter-I/subchapter-A/part-2/subpart-E"
+    },
+    {
+      "title": "Jaffee v. Redmond, 518 U.S. 1 (1996)",
+      "publisher": "Legal Information Institute, Cornell Law School",
+      "url": "https://www.law.cornell.edu/supremecourt/text/518/1",
+      "year": 1996
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

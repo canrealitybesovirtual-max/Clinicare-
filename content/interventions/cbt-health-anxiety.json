@@ -1,0 +1,65 @@
+{
+  "id": "cbt-health-anxiety",
+  "name": "CBT for health anxiety and persistent physical symptoms",
+  "modality": "CBT - health anxiety",
+  "conditions": [
+    "illness-anxiety-disorder",
+    "somatic-symptom-disorder"
+  ],
+  "evidenceLevel": "CBT for health anxiety reduced anxiety in medical clinic patients in a large trial (Tyrer et al., 2014); a meta-analysis (Axelsson and Hedman-Lagerlöf, 2019) reported large effects. For persistent physical symptoms, a Cochrane review (van Dessel et al., 2014) found CBT reduced symptom severity modestly.",
+  "minutes": {
+    "min": 45,
+    "max": 60
+  },
+  "purpose": "Helps the client notice how attention, catastrophic interpretations of body sensations and safety habits (checking, searching, reassurance, avoidance) keep health fear and symptom distress going, and test new ways of responding.",
+  "steps": [
+    "Agree with the medical team on a consistent plan for symptoms and tests.",
+    "Map the cycle: sensation, catastrophic thought, anxiety, checking or reassurance, brief relief, more attention.",
+    "Run attention experiments (focus on a body part for 2 minutes, then on the room) to show how attention amplifies sensations.",
+    "Reduce checking, searching and reassurance step by step, logging urges and outcomes.",
+    "Test catastrophic predictions and build balanced explanations for sensations.",
+    "For persistent symptoms, plan valued activity and pacing rather than waiting for symptoms to stop."
+  ],
+  "script": [
+    "What did you think the sensation meant?",
+    "What happens to the worry an hour after you check?",
+    "Let's try not checking for one day and see what happens.",
+    "What would you be doing if the symptoms took up less room?"
+  ],
+  "contraindications": [
+    "New, changing or objective symptoms need medical review; do not discourage appropriate care.",
+    "Do not start during an active crisis, current suicidal risk, acute intoxication or withdrawal; stabilize first and share crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com."
+  ],
+  "culturalAdaptations": [
+    "Explanations of symptoms (heat, nerves, weak heart, spiritual causes) differ across cultures; explore them and connect the model to the client's view.",
+    "Past experiences of being dismissed by health care can make reassurance-seeking understandable; acknowledge this.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "handoutIds": [
+    "checking-and-reassurance-log",
+    "mindful-check-in"
+  ],
+  "sources": [
+    {
+      "title": "Clinical and cost-effectiveness of cognitive behaviour therapy for health anxiety in medical patients (Tyrer et al.)",
+      "publisher": "The Lancet (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24139977/",
+      "year": 2014
+    },
+    {
+      "title": "Cognitive behavior therapy for health anxiety: systematic review and meta-analysis of clinical efficacy and health economic outcomes (Axelsson and Hedman-Lagerlöf)",
+      "publisher": "Expert Review of Pharmacoeconomics & Outcomes Research (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31859542/",
+      "year": 2019
+    },
+    {
+      "title": "Non-pharmacological interventions for somatoform disorders and medically unexplained physical symptoms in adults (van Dessel et al.)",
+      "publisher": "Cochrane Database of Systematic Reviews (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25362239/",
+      "year": 2014
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

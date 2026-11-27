@@ -120,6 +120,1046 @@
     {
       "when": {
         "query": {
+          "terms": "F11"
+        }
+      },
+      "json": [
+        6,
+        [
+          "F11.10",
+          "F11.11",
+          "F11.20",
+          "F11.21",
+          "F11.23",
+          "F11.90"
+        ],
+        null,
+        [
+          [
+            "F11.10",
+            "Opioid abuse, uncomplicated"
+          ],
+          [
+            "F11.11",
+            "Opioid abuse, in remission"
+          ],
+          [
+            "F11.20",
+            "Opioid dependence, uncomplicated"
+          ],
+          [
+            "F11.21",
+            "Opioid dependence, in remission"
+          ],
+          [
+            "F11.23",
+            "Opioid dependence with withdrawal"
+          ],
+          [
+            "F11.90",
+            "Opioid use, unspecified, uncomplicated"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F11.10"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F11.10"
+        ],
+        null,
+        [
+          [
+            "F11.10",
+            "Opioid abuse, uncomplicated"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F11.11"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F11.11"
+        ],
+        null,
+        [
+          [
+            "F11.11",
+            "Opioid abuse, in remission"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F11.20"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F11.20"
+        ],
+        null,
+        [
+          [
+            "F11.20",
+            "Opioid dependence, uncomplicated"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F11.21"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F11.21"
+        ],
+        null,
+        [
+          [
+            "F11.21",
+            "Opioid dependence, in remission"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F11.23"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F11.23"
+        ],
+        null,
+        [
+          [
+            "F11.23",
+            "Opioid dependence with withdrawal"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F11.90"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F11.90"
+        ],
+        null,
+        [
+          [
+            "F11.90",
+            "Opioid use, unspecified, uncomplicated"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F12"
+        }
+      },
+      "json": [
+        6,
+        [
+          "F12.10",
+          "F12.11",
+          "F12.20",
+          "F12.21",
+          "F12.23",
+          "F12.90"
+        ],
+        null,
+        [
+          [
+            "F12.10",
+            "Cannabis abuse, uncomplicated"
+          ],
+          [
+            "F12.11",
+            "Cannabis abuse, in remission"
+          ],
+          [
+            "F12.20",
+            "Cannabis dependence, uncomplicated"
+          ],
+          [
+            "F12.21",
+            "Cannabis dependence, in remission"
+          ],
+          [
+            "F12.23",
+            "Cannabis dependence with withdrawal"
+          ],
+          [
+            "F12.90",
+            "Cannabis use, unspecified, uncomplicated"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F12.10"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F12.10"
+        ],
+        null,
+        [
+          [
+            "F12.10",
+            "Cannabis abuse, uncomplicated"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F12.11"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F12.11"
+        ],
+        null,
+        [
+          [
+            "F12.11",
+            "Cannabis abuse, in remission"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F12.20"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F12.20"
+        ],
+        null,
+        [
+          [
+            "F12.20",
+            "Cannabis dependence, uncomplicated"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F12.21"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F12.21"
+        ],
+        null,
+        [
+          [
+            "F12.21",
+            "Cannabis dependence, in remission"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F12.23"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F12.23"
+        ],
+        null,
+        [
+          [
+            "F12.23",
+            "Cannabis dependence with withdrawal"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F12.90"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F12.90"
+        ],
+        null,
+        [
+          [
+            "F12.90",
+            "Cannabis use, unspecified, uncomplicated"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F14"
+        }
+      },
+      "json": [
+        3,
+        [
+          "F14.10",
+          "F14.20",
+          "F14.21"
+        ],
+        null,
+        [
+          [
+            "F14.10",
+            "Cocaine abuse, uncomplicated"
+          ],
+          [
+            "F14.20",
+            "Cocaine dependence, uncomplicated"
+          ],
+          [
+            "F14.21",
+            "Cocaine dependence, in remission"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F14.10"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F14.10"
+        ],
+        null,
+        [
+          [
+            "F14.10",
+            "Cocaine abuse, uncomplicated"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F14.20"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F14.20"
+        ],
+        null,
+        [
+          [
+            "F14.20",
+            "Cocaine dependence, uncomplicated"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F14.21"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F14.21"
+        ],
+        null,
+        [
+          [
+            "F14.21",
+            "Cocaine dependence, in remission"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F15"
+        }
+      },
+      "json": [
+        3,
+        [
+          "F15.10",
+          "F15.20",
+          "F15.21"
+        ],
+        null,
+        [
+          [
+            "F15.10",
+            "Other stimulant abuse, uncomplicated"
+          ],
+          [
+            "F15.20",
+            "Other stimulant dependence, uncomplicated"
+          ],
+          [
+            "F15.21",
+            "Other stimulant dependence, in remission"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F15.10"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F15.10"
+        ],
+        null,
+        [
+          [
+            "F15.10",
+            "Other stimulant abuse, uncomplicated"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F15.20"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F15.20"
+        ],
+        null,
+        [
+          [
+            "F15.20",
+            "Other stimulant dependence, uncomplicated"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F15.21"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F15.21"
+        ],
+        null,
+        [
+          [
+            "F15.21",
+            "Other stimulant dependence, in remission"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F20"
+        }
+      },
+      "json": [
+        8,
+        [
+          "F20.0",
+          "F20.1",
+          "F20.2",
+          "F20.3",
+          "F20.5",
+          "F20.81",
+          "F20.89",
+          "F20.9"
+        ],
+        null,
+        [
+          [
+            "F20.0",
+            "Paranoid schizophrenia"
+          ],
+          [
+            "F20.1",
+            "Disorganized schizophrenia"
+          ],
+          [
+            "F20.2",
+            "Catatonic schizophrenia"
+          ],
+          [
+            "F20.3",
+            "Undifferentiated schizophrenia"
+          ],
+          [
+            "F20.5",
+            "Residual schizophrenia"
+          ],
+          [
+            "F20.81",
+            "Schizophreniform disorder"
+          ],
+          [
+            "F20.89",
+            "Other schizophrenia"
+          ],
+          [
+            "F20.9",
+            "Schizophrenia, unspecified"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F20.0"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F20.0"
+        ],
+        null,
+        [
+          [
+            "F20.0",
+            "Paranoid schizophrenia"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F20.1"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F20.1"
+        ],
+        null,
+        [
+          [
+            "F20.1",
+            "Disorganized schizophrenia"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F20.2"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F20.2"
+        ],
+        null,
+        [
+          [
+            "F20.2",
+            "Catatonic schizophrenia"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F20.3"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F20.3"
+        ],
+        null,
+        [
+          [
+            "F20.3",
+            "Undifferentiated schizophrenia"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F20.5"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F20.5"
+        ],
+        null,
+        [
+          [
+            "F20.5",
+            "Residual schizophrenia"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F20.81"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F20.81"
+        ],
+        null,
+        [
+          [
+            "F20.81",
+            "Schizophreniform disorder"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F20.89"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F20.89"
+        ],
+        null,
+        [
+          [
+            "F20.89",
+            "Other schizophrenia"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F20.9"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F20.9"
+        ],
+        null,
+        [
+          [
+            "F20.9",
+            "Schizophrenia, unspecified"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F31"
+        }
+      },
+      "json": [
+        12,
+        [
+          "F31.10",
+          "F31.11",
+          "F31.12",
+          "F31.13",
+          "F31.2",
+          "F31.30",
+          "F31.4",
+          "F31.5",
+          "F31.60",
+          "F31.70",
+          "F31.81",
+          "F31.9"
+        ],
+        null,
+        [
+          [
+            "F31.10",
+            "Bipolar disorder, current episode manic without psychotic features, unspecified"
+          ],
+          [
+            "F31.11",
+            "Bipolar disorder, current episode manic without psychotic features, mild"
+          ],
+          [
+            "F31.12",
+            "Bipolar disorder, current episode manic without psychotic features, moderate"
+          ],
+          [
+            "F31.13",
+            "Bipolar disorder, current episode manic without psychotic features, severe"
+          ],
+          [
+            "F31.2",
+            "Bipolar disorder, current episode manic severe with psychotic features"
+          ],
+          [
+            "F31.30",
+            "Bipolar disorder, current episode depressed, mild or moderate severity, unspecified"
+          ],
+          [
+            "F31.4",
+            "Bipolar disorder, current episode depressed, severe, without psychotic features"
+          ],
+          [
+            "F31.5",
+            "Bipolar disorder, current episode depressed, severe, with psychotic features"
+          ],
+          [
+            "F31.60",
+            "Bipolar disorder, current episode mixed, unspecified"
+          ],
+          [
+            "F31.70",
+            "Bipolar disorder, currently in remission, most recent episode unspecified"
+          ],
+          [
+            "F31.81",
+            "Bipolar II disorder"
+          ],
+          [
+            "F31.9",
+            "Bipolar disorder, unspecified"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F31.10"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F31.10"
+        ],
+        null,
+        [
+          [
+            "F31.10",
+            "Bipolar disorder, current episode manic without psychotic features, unspecified"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F31.11"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F31.11"
+        ],
+        null,
+        [
+          [
+            "F31.11",
+            "Bipolar disorder, current episode manic without psychotic features, mild"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F31.12"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F31.12"
+        ],
+        null,
+        [
+          [
+            "F31.12",
+            "Bipolar disorder, current episode manic without psychotic features, moderate"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F31.13"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F31.13"
+        ],
+        null,
+        [
+          [
+            "F31.13",
+            "Bipolar disorder, current episode manic without psychotic features, severe"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F31.2"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F31.2"
+        ],
+        null,
+        [
+          [
+            "F31.2",
+            "Bipolar disorder, current episode manic severe with psychotic features"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F31.30"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F31.30"
+        ],
+        null,
+        [
+          [
+            "F31.30",
+            "Bipolar disorder, current episode depressed, mild or moderate severity, unspecified"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F31.4"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F31.4"
+        ],
+        null,
+        [
+          [
+            "F31.4",
+            "Bipolar disorder, current episode depressed, severe, without psychotic features"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F31.5"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F31.5"
+        ],
+        null,
+        [
+          [
+            "F31.5",
+            "Bipolar disorder, current episode depressed, severe, with psychotic features"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F31.60"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F31.60"
+        ],
+        null,
+        [
+          [
+            "F31.60",
+            "Bipolar disorder, current episode mixed, unspecified"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F31.70"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F31.70"
+        ],
+        null,
+        [
+          [
+            "F31.70",
+            "Bipolar disorder, currently in remission, most recent episode unspecified"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F31.81"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F31.81"
+        ],
+        null,
+        [
+          [
+            "F31.81",
+            "Bipolar II disorder"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F31.9"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F31.9"
+        ],
+        null,
+        [
+          [
+            "F31.9",
+            "Bipolar disorder, unspecified"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
           "terms": "F32"
         }
       },
@@ -504,15 +1544,40 @@
         }
       },
       "json": [
-        1,
+        2,
         [
+          "F34.0",
           "F34.1"
         ],
         null,
         [
           [
+            "F34.0",
+            "Cyclothymic disorder"
+          ],
+          [
             "F34.1",
             "Dysthymic disorder"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F34.0"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F34.0"
+        ],
+        null,
+        [
+          [
+            "F34.0",
+            "Cyclothymic disorder"
           ]
         ]
       ]
@@ -1099,9 +2164,10 @@
         }
       },
       "json": [
-        3,
+        4,
         [
           "F42.2",
+          "F42.3",
           "F42.8",
           "F42.9"
         ],
@@ -1110,6 +2176,10 @@
           [
             "F42.2",
             "Mixed obsessional thoughts and acts"
+          ],
+          [
+            "F42.3",
+            "Hoarding disorder"
           ],
           [
             "F42.8",
@@ -1138,6 +2208,26 @@
           [
             "F42.2",
             "Mixed obsessional thoughts and acts"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F42.3"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F42.3"
+        ],
+        null,
+        [
+          [
+            "F42.3",
+            "Hoarding disorder"
           ]
         ]
       ]
@@ -1450,6 +2540,736 @@
     {
       "when": {
         "query": {
+          "terms": "F45"
+        }
+      },
+      "json": [
+        3,
+        [
+          "F45.1",
+          "F45.21",
+          "F45.22"
+        ],
+        null,
+        [
+          [
+            "F45.1",
+            "Undifferentiated somatoform disorder"
+          ],
+          [
+            "F45.21",
+            "Hypochondriasis"
+          ],
+          [
+            "F45.22",
+            "Body dysmorphic disorder"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F45.1"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F45.1"
+        ],
+        null,
+        [
+          [
+            "F45.1",
+            "Undifferentiated somatoform disorder"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F45.21"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F45.21"
+        ],
+        null,
+        [
+          [
+            "F45.21",
+            "Hypochondriasis"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F45.22"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F45.22"
+        ],
+        null,
+        [
+          [
+            "F45.22",
+            "Body dysmorphic disorder"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F50"
+        }
+      },
+      "json": [
+        25,
+        [
+          "F50.00",
+          "F50.010",
+          "F50.011",
+          "F50.012",
+          "F50.013",
+          "F50.014",
+          "F50.019",
+          "F50.020",
+          "F50.021",
+          "F50.022",
+          "F50.023",
+          "F50.024",
+          "F50.029",
+          "F50.20",
+          "F50.21",
+          "F50.22",
+          "F50.23",
+          "F50.24",
+          "F50.25",
+          "F50.810",
+          "F50.811",
+          "F50.812",
+          "F50.813",
+          "F50.814",
+          "F50.819"
+        ],
+        null,
+        [
+          [
+            "F50.00",
+            "Anorexia nervosa, unspecified"
+          ],
+          [
+            "F50.010",
+            "Anorexia nervosa, restricting type, mild"
+          ],
+          [
+            "F50.011",
+            "Anorexia nervosa, restricting type, moderate"
+          ],
+          [
+            "F50.012",
+            "Anorexia nervosa, restricting type, severe"
+          ],
+          [
+            "F50.013",
+            "Anorexia nervosa, restricting type, extreme"
+          ],
+          [
+            "F50.014",
+            "Anorexia nervosa, restricting type, in remission"
+          ],
+          [
+            "F50.019",
+            "Anorexia nervosa, restricting type, unspecified"
+          ],
+          [
+            "F50.020",
+            "Anorexia nervosa, binge eating/purging type, mild"
+          ],
+          [
+            "F50.021",
+            "Anorexia nervosa, binge eating/purging type, moderate"
+          ],
+          [
+            "F50.022",
+            "Anorexia nervosa, binge eating/purging type, severe"
+          ],
+          [
+            "F50.023",
+            "Anorexia nervosa, binge eating/purging type, extreme"
+          ],
+          [
+            "F50.024",
+            "Anorexia nervosa, binge eating/purging type, in remission"
+          ],
+          [
+            "F50.029",
+            "Anorexia nervosa, binge eating/purging type, unspecified"
+          ],
+          [
+            "F50.20",
+            "Bulimia nervosa, unspecified"
+          ],
+          [
+            "F50.21",
+            "Bulimia nervosa, mild"
+          ],
+          [
+            "F50.22",
+            "Bulimia nervosa, moderate"
+          ],
+          [
+            "F50.23",
+            "Bulimia nervosa, severe"
+          ],
+          [
+            "F50.24",
+            "Bulimia nervosa, extreme"
+          ],
+          [
+            "F50.25",
+            "Bulimia nervosa, in remission"
+          ],
+          [
+            "F50.810",
+            "Binge eating disorder, mild"
+          ],
+          [
+            "F50.811",
+            "Binge eating disorder, moderate"
+          ],
+          [
+            "F50.812",
+            "Binge eating disorder, severe"
+          ],
+          [
+            "F50.813",
+            "Binge eating disorder, extreme"
+          ],
+          [
+            "F50.814",
+            "Binge eating disorder, in remission"
+          ],
+          [
+            "F50.819",
+            "Binge eating disorder, unspecified"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F50.00"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F50.00"
+        ],
+        null,
+        [
+          [
+            "F50.00",
+            "Anorexia nervosa, unspecified"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F50.010"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F50.010"
+        ],
+        null,
+        [
+          [
+            "F50.010",
+            "Anorexia nervosa, restricting type, mild"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F50.011"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F50.011"
+        ],
+        null,
+        [
+          [
+            "F50.011",
+            "Anorexia nervosa, restricting type, moderate"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F50.012"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F50.012"
+        ],
+        null,
+        [
+          [
+            "F50.012",
+            "Anorexia nervosa, restricting type, severe"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F50.013"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F50.013"
+        ],
+        null,
+        [
+          [
+            "F50.013",
+            "Anorexia nervosa, restricting type, extreme"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F50.014"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F50.014"
+        ],
+        null,
+        [
+          [
+            "F50.014",
+            "Anorexia nervosa, restricting type, in remission"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F50.019"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F50.019"
+        ],
+        null,
+        [
+          [
+            "F50.019",
+            "Anorexia nervosa, restricting type, unspecified"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F50.020"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F50.020"
+        ],
+        null,
+        [
+          [
+            "F50.020",
+            "Anorexia nervosa, binge eating/purging type, mild"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F50.021"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F50.021"
+        ],
+        null,
+        [
+          [
+            "F50.021",
+            "Anorexia nervosa, binge eating/purging type, moderate"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F50.022"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F50.022"
+        ],
+        null,
+        [
+          [
+            "F50.022",
+            "Anorexia nervosa, binge eating/purging type, severe"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F50.023"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F50.023"
+        ],
+        null,
+        [
+          [
+            "F50.023",
+            "Anorexia nervosa, binge eating/purging type, extreme"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F50.024"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F50.024"
+        ],
+        null,
+        [
+          [
+            "F50.024",
+            "Anorexia nervosa, binge eating/purging type, in remission"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F50.029"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F50.029"
+        ],
+        null,
+        [
+          [
+            "F50.029",
+            "Anorexia nervosa, binge eating/purging type, unspecified"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F50.20"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F50.20"
+        ],
+        null,
+        [
+          [
+            "F50.20",
+            "Bulimia nervosa, unspecified"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F50.21"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F50.21"
+        ],
+        null,
+        [
+          [
+            "F50.21",
+            "Bulimia nervosa, mild"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F50.22"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F50.22"
+        ],
+        null,
+        [
+          [
+            "F50.22",
+            "Bulimia nervosa, moderate"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F50.23"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F50.23"
+        ],
+        null,
+        [
+          [
+            "F50.23",
+            "Bulimia nervosa, severe"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F50.24"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F50.24"
+        ],
+        null,
+        [
+          [
+            "F50.24",
+            "Bulimia nervosa, extreme"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F50.25"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F50.25"
+        ],
+        null,
+        [
+          [
+            "F50.25",
+            "Bulimia nervosa, in remission"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F50.810"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F50.810"
+        ],
+        null,
+        [
+          [
+            "F50.810",
+            "Binge eating disorder, mild"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F50.811"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F50.811"
+        ],
+        null,
+        [
+          [
+            "F50.811",
+            "Binge eating disorder, moderate"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F50.812"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F50.812"
+        ],
+        null,
+        [
+          [
+            "F50.812",
+            "Binge eating disorder, severe"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F50.813"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F50.813"
+        ],
+        null,
+        [
+          [
+            "F50.813",
+            "Binge eating disorder, extreme"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F50.814"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F50.814"
+        ],
+        null,
+        [
+          [
+            "F50.814",
+            "Binge eating disorder, in remission"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F50.819"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F50.819"
+        ],
+        null,
+        [
+          [
+            "F50.819",
+            "Binge eating disorder, unspecified"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
           "terms": "F51"
         }
       },
@@ -1483,6 +3303,186 @@
           [
             "F51.01",
             "Primary insomnia"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F60"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F60.3"
+        ],
+        null,
+        [
+          [
+            "F60.3",
+            "Borderline personality disorder"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F60.3"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F60.3"
+        ],
+        null,
+        [
+          [
+            "F60.3",
+            "Borderline personality disorder"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F90"
+        }
+      },
+      "json": [
+        5,
+        [
+          "F90.0",
+          "F90.1",
+          "F90.2",
+          "F90.8",
+          "F90.9"
+        ],
+        null,
+        [
+          [
+            "F90.0",
+            "Attention-deficit hyperactivity disorder, predominantly inattentive type"
+          ],
+          [
+            "F90.1",
+            "Attention-deficit hyperactivity disorder, predominantly hyperactive type"
+          ],
+          [
+            "F90.2",
+            "Attention-deficit hyperactivity disorder, combined type"
+          ],
+          [
+            "F90.8",
+            "Attention-deficit hyperactivity disorder, other type"
+          ],
+          [
+            "F90.9",
+            "Attention-deficit hyperactivity disorder, unspecified type"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F90.0"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F90.0"
+        ],
+        null,
+        [
+          [
+            "F90.0",
+            "Attention-deficit hyperactivity disorder, predominantly inattentive type"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F90.1"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F90.1"
+        ],
+        null,
+        [
+          [
+            "F90.1",
+            "Attention-deficit hyperactivity disorder, predominantly hyperactive type"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F90.2"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F90.2"
+        ],
+        null,
+        [
+          [
+            "F90.2",
+            "Attention-deficit hyperactivity disorder, combined type"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F90.8"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F90.8"
+        ],
+        null,
+        [
+          [
+            "F90.8",
+            "Attention-deficit hyperactivity disorder, other type"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F90.9"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F90.9"
+        ],
+        null,
+        [
+          [
+            "F90.9",
+            "Attention-deficit hyperactivity disorder, unspecified type"
           ]
         ]
       ]

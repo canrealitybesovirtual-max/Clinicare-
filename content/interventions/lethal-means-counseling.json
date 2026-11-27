@@ -14,7 +14,12 @@
     "generalized-anxiety-disorder",
     "social-anxiety-disorder",
     "obsessive-compulsive-disorder",
-    "insomnia-disorder"
+    "insomnia-disorder",
+    "bipolar-i-disorder",
+    "bipolar-ii-disorder",
+    "borderline-personality-disorder",
+    "schizophrenia",
+    "opioid-use-disorder"
   ],
   "evidenceLevel": "Emerging evidence for the counseling itself. In a factorial RCT with 232 firearm-owning National Guard members, a brief, motivational interviewing-informed lethal means counseling session increased safe firearm storage at 3 months compared with control (55% vs 39%); suicide outcomes were not measured (Anestis et al., 2021). A Military Health System review notes that lethal means counseling improved safe storage of medicines and firearms but that its effect on suicide outcomes is unknown. The 2024 VA/DoD suicide risk guideline stresses means safety at every step of care, suggests assessing access to firearms, and found weak evidence for population-level means-reduction efforts. CALM (Counseling on Access to Lethal Means) is a free SPRC course listed in SPRC's Best Practices Registry.",
   "minutes": { "min": 10, "max": 30 },

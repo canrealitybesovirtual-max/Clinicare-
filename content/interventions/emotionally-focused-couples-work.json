@@ -1,0 +1,61 @@
+{
+  "id": "emotionally-focused-couples-work",
+  "name": "Emotionally focused couple therapy (EFT-informed): overview and referral",
+  "modality": "Couples therapy - emotion-focused / attachment-based",
+  "conditions": [
+    "major-depressive-disorder",
+    "ptsd",
+    "adjustment-disorder",
+    "prolonged-grief-disorder"
+  ],
+  "evidenceLevel": "A review (Wiebe and Johnson, 2016) summarized randomized trials showing that emotionally focused couple therapy reduces relationship distress, with gains that mostly hold at follow-up. Full EFT needs specific training; generalist clinicians can use its attachment framing.",
+  "minutes": {
+    "min": 50,
+    "max": 90
+  },
+  "purpose": "An attachment-based approach that sees conflict as a cycle in which each partner's protective moves (pursuing or withdrawing) trigger the other's fears. The therapist helps the couple see the cycle as the shared problem, reach the softer feelings under anger or distance, and turn toward each other in new ways.",
+  "steps": [
+    "Assess each partner separately for safety, including intimate partner violence, before joint work.",
+    "Track the couple's negative cycle in concrete terms: who pursues, who withdraws, and what triggers each move.",
+    "Reflect the attachment fears and longings under the surface emotions.",
+    "Help each partner express softer feelings and needs directly to the other, in session.",
+    "Support the other partner to respond with care, and name new positive cycles when they happen.",
+    "Refer to a trained EFT therapist for the full model."
+  ],
+  "script": [
+    "It sounds like the more you reach for him, the more he pulls away, and the more he pulls away, the harder you reach.",
+    "Underneath the anger, I wonder if there is fear that you don't matter to him.",
+    "Can you turn and tell her that, right now?",
+    "The cycle is the enemy here, not each other."
+  ],
+  "contraindications": [
+    "Do not offer joint sessions when there is intimate partner violence, coercive control or fear of a partner.",
+    "Ongoing affairs or untreated addiction may need to be addressed first.",
+    "Do not start during an active crisis, current suicidal risk, acute intoxication or withdrawal; stabilize first and share crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com."
+  ],
+  "culturalAdaptations": [
+    "How emotion and closeness are expressed differs across cultures; let the couple define what closeness looks like.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "trainingRequired": "EFT: formal training needed for the full model; refer to a trained couple therapist.",
+  "handoutIds": [
+    "assertive-communication"
+  ],
+  "sources": [
+    {
+      "title": "A review of the research in emotionally focused therapy for couples (Wiebe and Johnson)",
+      "publisher": "Family Process (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27273169/",
+      "year": 2016
+    },
+    {
+      "title": "Meta-analysis of couple therapy: effects across outcomes, designs, timeframes, and other moderators (Roddy et al.)",
+      "publisher": "Journal of Consulting and Clinical Psychology (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32551734/",
+      "year": 2020
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

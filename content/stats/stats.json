@@ -217,6 +217,341 @@
       "license": "WHO; paraphrased with citation",
       "lastVerified": "2026-11-26",
       "reviewedBy": "PENDING"
+    },
+    {
+      "id": "us-bipolar-past-year",
+      "text": "About 2.8% of US adults had bipolar disorder in the past year, with similar rates in men and women; about 4.4% have it at some point in life. These figures come from NCS-R interviews done in 2001–2003, so the data are more than 20 years old.",
+      "value": "2.8%",
+      "region": "US",
+      "dataYear": "2001-2003",
+      "publisher": "National Institute of Mental Health (NIMH), using National Comorbidity Survey Replication (NCS-R) data",
+      "url": "https://www.nimh.nih.gov/health/statistics/bipolar-disorder",
+      "sources": [
+        {
+          "title": "Bipolar Disorder (statistics)",
+          "publisher": "National Institute of Mental Health",
+          "url": "https://www.nimh.nih.gov/health/statistics/bipolar-disorder"
+        }
+      ],
+      "license": "Public domain (US government); paraphrased",
+      "lastVerified": "2026-11-27",
+      "reviewedBy": "PENDING"
+    },
+    {
+      "id": "us-adult-adhd-2023",
+      "text": "In 2023, about 6.0% of US adults (roughly 15.5 million people) reported a current ADHD diagnosis, and about half of them were first diagnosed as adults. This figure is based on self-report in a national survey.",
+      "value": "6.0%",
+      "region": "US",
+      "dataYear": "2023",
+      "publisher": "Centers for Disease Control and Prevention (CDC), National Center for Health Statistics Rapid Surveys System (MMWR)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39388378/",
+      "sources": [
+        {
+          "title": "ADHD diagnosis, treatment, and telehealth use in adults: NCHS Rapid Surveys System, United States, October-November 2023 (Staley et al.)",
+          "publisher": "MMWR Morbidity and Mortality Weekly Report (PubMed)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/39388378/",
+          "year": 2024
+        }
+      ],
+      "license": "Public domain (US government); paraphrased",
+      "lastVerified": "2026-11-27",
+      "reviewedBy": "PENDING"
+    },
+    {
+      "id": "us-bpd-past-year",
+      "text": "About 1.4% of US adults had borderline personality disorder in the past year, and about 9.1% had any personality disorder. These figures come from NCS-R interviews done in 2001–2003, so the data are more than 20 years old.",
+      "value": "1.4%",
+      "region": "US",
+      "dataYear": "2001-2003",
+      "publisher": "National Institute of Mental Health (NIMH), using National Comorbidity Survey Replication (NCS-R) data",
+      "url": "https://www.nimh.nih.gov/health/statistics/personality-disorders",
+      "sources": [
+        {
+          "title": "Personality Disorders (statistics)",
+          "publisher": "National Institute of Mental Health",
+          "url": "https://www.nimh.nih.gov/health/statistics/personality-disorders"
+        }
+      ],
+      "license": "Public domain (US government); paraphrased",
+      "lastVerified": "2026-11-27",
+      "reviewedBy": "PENDING"
+    },
+    {
+      "id": "us-anorexia-lifetime",
+      "text": "About 0.6% of US adults have had anorexia nervosa at some point in life, three times more often women (0.9%) than men (0.3%). The survey did not produce a past-year figure. These figures come from NCS-R interviews done in 2001–2003, so the data are more than 20 years old.",
+      "value": "0.6%",
+      "region": "US",
+      "dataYear": "2001-2003",
+      "publisher": "National Institute of Mental Health (NIMH), using National Comorbidity Survey Replication (NCS-R) data",
+      "url": "https://www.nimh.nih.gov/health/statistics/eating-disorders",
+      "sources": [
+        {
+          "title": "Eating Disorders (statistics)",
+          "publisher": "National Institute of Mental Health",
+          "url": "https://www.nimh.nih.gov/health/statistics/eating-disorders"
+        }
+      ],
+      "license": "Public domain (US government); paraphrased",
+      "lastVerified": "2026-11-27",
+      "reviewedBy": "PENDING"
+    },
+    {
+      "id": "us-bulimia-past-year",
+      "text": "About 0.3% of US adults had bulimia nervosa in the past year, and about 1.0% have had it at some point in life. These figures come from NCS-R interviews done in 2001–2003, so the data are more than 20 years old.",
+      "value": "0.3%",
+      "region": "US",
+      "dataYear": "2001-2003",
+      "publisher": "National Institute of Mental Health (NIMH), using National Comorbidity Survey Replication (NCS-R) data",
+      "url": "https://www.nimh.nih.gov/health/statistics/eating-disorders",
+      "sources": [
+        {
+          "title": "Eating Disorders (statistics)",
+          "publisher": "National Institute of Mental Health",
+          "url": "https://www.nimh.nih.gov/health/statistics/eating-disorders"
+        }
+      ],
+      "license": "Public domain (US government); paraphrased",
+      "lastVerified": "2026-11-27",
+      "reviewedBy": "PENDING"
+    },
+    {
+      "id": "us-binge-eating-past-year",
+      "text": "About 1.2% of US adults had binge-eating disorder in the past year, and about 2.8% have had it at some point in life, making it the most common of these eating disorders. These figures come from NCS-R interviews done in 2001–2003, so the data are more than 20 years old.",
+      "value": "1.2%",
+      "region": "US",
+      "dataYear": "2001-2003",
+      "publisher": "National Institute of Mental Health (NIMH), using National Comorbidity Survey Replication (NCS-R) data",
+      "url": "https://www.nimh.nih.gov/health/statistics/eating-disorders",
+      "sources": [
+        {
+          "title": "Eating Disorders (statistics)",
+          "publisher": "National Institute of Mental Health",
+          "url": "https://www.nimh.nih.gov/health/statistics/eating-disorders"
+        }
+      ],
+      "license": "Public domain (US government); paraphrased",
+      "lastVerified": "2026-11-27",
+      "reviewedBy": "PENDING"
+    },
+    {
+      "id": "us-schizophrenia-prevalence",
+      "text": "Estimates of how many people in the US have schizophrenia or a related psychotic disorder range from about 0.25% to 0.64%. NIMH summarizes several US studies (interviews, claims data and records) published between 2005 and 2013, so the figure is a range, not one survey result.",
+      "value": "0.25%–0.64%",
+      "region": "US",
+      "dataYear": "studies published 2005-2013",
+      "publisher": "National Institute of Mental Health (NIMH)",
+      "url": "https://www.nimh.nih.gov/health/statistics/schizophrenia",
+      "sources": [
+        {
+          "title": "Schizophrenia (statistics)",
+          "publisher": "National Institute of Mental Health",
+          "url": "https://www.nimh.nih.gov/health/statistics/schizophrenia"
+        }
+      ],
+      "license": "Public domain (US government); paraphrased",
+      "lastVerified": "2026-11-27",
+      "reviewedBy": "PENDING"
+    },
+    {
+      "id": "us-ocd-past-year",
+      "text": "About 1.2% of US adults had OCD in the past year, more often women (1.8%) than men (0.5%); about 2.3% have it at some point in life. These figures come from NCS-R interviews done in 2001–2003, so the data are more than 20 years old.",
+      "value": "1.2%",
+      "region": "US",
+      "dataYear": "2001-2003",
+      "publisher": "National Institute of Mental Health (NIMH), using National Comorbidity Survey Replication (NCS-R) data",
+      "url": "https://www.nimh.nih.gov/health/statistics/obsessive-compulsive-disorder-ocd",
+      "sources": [
+        {
+          "title": "Obsessive-Compulsive Disorder (statistics)",
+          "publisher": "National Institute of Mental Health",
+          "url": "https://www.nimh.nih.gov/health/statistics/obsessive-compulsive-disorder-ocd"
+        }
+      ],
+      "license": "Public domain (US government); paraphrased",
+      "lastVerified": "2026-11-27",
+      "reviewedBy": "PENDING"
+    },
+    {
+      "id": "us-social-anxiety-past-year",
+      "text": "About 7.1% of US adults had social anxiety disorder in the past year, and about 12.1% have it at some point in life. These figures come from NCS-R interviews done in 2001–2003, so the data are more than 20 years old.",
+      "value": "7.1%",
+      "region": "US",
+      "dataYear": "2001-2003",
+      "publisher": "National Institute of Mental Health (NIMH), using National Comorbidity Survey Replication (NCS-R) data",
+      "url": "https://www.nimh.nih.gov/health/statistics/social-anxiety-disorder",
+      "sources": [
+        {
+          "title": "Social Anxiety Disorder (statistics)",
+          "publisher": "National Institute of Mental Health",
+          "url": "https://www.nimh.nih.gov/health/statistics/social-anxiety-disorder"
+        }
+      ],
+      "license": "Public domain (US government); paraphrased",
+      "lastVerified": "2026-11-27",
+      "reviewedBy": "PENDING"
+    },
+    {
+      "id": "us-specific-phobia-past-year",
+      "text": "About 9.1% of US adults had a specific phobia in the past year, more often women (12.2%) than men (5.8%); about 12.5% have one at some point in life. These figures come from NCS-R interviews done in 2001–2003, so the data are more than 20 years old.",
+      "value": "9.1%",
+      "region": "US",
+      "dataYear": "2001-2003",
+      "publisher": "National Institute of Mental Health (NIMH), using National Comorbidity Survey Replication (NCS-R) data",
+      "url": "https://www.nimh.nih.gov/health/statistics/specific-phobia",
+      "sources": [
+        {
+          "title": "Specific Phobia (statistics)",
+          "publisher": "National Institute of Mental Health",
+          "url": "https://www.nimh.nih.gov/health/statistics/specific-phobia"
+        }
+      ],
+      "license": "Public domain (US government); paraphrased",
+      "lastVerified": "2026-11-27",
+      "reviewedBy": "PENDING"
+    },
+    {
+      "id": "us-bdd-point-prevalence",
+      "text": "In a 2004 national telephone survey of US adults, about 2.4% screened positive for body dysmorphic disorder (2.5% of women, 2.2% of men). The interviews were done by trained lay interviewers, so the authors call for confirmation with clinical interviews.",
+      "value": "2.4%",
+      "region": "US",
+      "dataYear": "2004",
+      "publisher": "Koran et al., CNS Spectrums (national household telephone survey)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18408651/",
+      "sources": [
+        {
+          "title": "The prevalence of body dysmorphic disorder in the United States adult population (Koran et al.)",
+          "publisher": "CNS Spectrums (PubMed)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/18408651/",
+          "year": 2008
+        }
+      ],
+      "license": "Paraphrased from the published abstract",
+      "lastVerified": "2026-11-27",
+      "reviewedBy": "PENDING"
+    },
+    {
+      "id": "us-hoarding-baltimore",
+      "text": "In a community study in Baltimore, Maryland, about 5.3% of adults (weighted; nearly 4% unweighted) showed hoarding behavior, more often men and older adults. It is one local sample, not a national survey, and the data were collected before the 2008 publication.",
+      "value": "5.3%",
+      "region": "US",
+      "dataYear": "before 2008",
+      "publisher": "Samuels et al., Behaviour Research and Therapy (Hopkins Epidemiology of Personality Disorder Study)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18495084/",
+      "sources": [
+        {
+          "title": "Prevalence and correlates of hoarding behavior in a community-based sample (Samuels et al.)",
+          "publisher": "Behaviour Research and Therapy (PubMed)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/18495084/",
+          "year": 2008
+        }
+      ],
+      "license": "Paraphrased from the published abstract",
+      "lastVerified": "2026-11-27",
+      "reviewedBy": "PENDING"
+    },
+    {
+      "id": "us-cannabis-use-disorder-2025",
+      "text": "In 2025, about 19.3 million people aged 12 or older in the US had a marijuana (cannabis) use disorder in the past year, the most common drug use disorder. The figure covers ages 12 and up, not adults only.",
+      "value": "19.3 million",
+      "region": "US",
+      "dataYear": "2025",
+      "publisher": "Substance Abuse and Mental Health Services Administration (SAMHSA), National Survey on Drug Use and Health (NSDUH)",
+      "url": "https://www.samhsa.gov/data/sites/default/files/NSDUH-2025-Annual-Release/2025-nsduh-nnr-highlights.pdf",
+      "sources": [
+        {
+          "title": "SAMHSA releases annual National Survey on Drug Use and Health (2025 data)",
+          "publisher": "SAMHSA",
+          "url": "https://www.samhsa.gov/newsroom/press-announcements/20260727/samhsa-releases-annual-national-survey-on-drug-use-and-health",
+          "year": 2026
+        },
+        {
+          "title": "Highlights for the 2025 National Survey on Drug Use and Health",
+          "publisher": "SAMHSA",
+          "url": "https://www.samhsa.gov/data/sites/default/files/NSDUH-2025-Annual-Release/2025-nsduh-nnr-highlights.pdf",
+          "year": 2026
+        }
+      ],
+      "license": "Public domain (US government); paraphrased",
+      "lastVerified": "2026-11-27",
+      "reviewedBy": "PENDING"
+    },
+    {
+      "id": "us-opioid-use-disorder-2025",
+      "text": "In 2025, about 4.0 million people aged 12 or older in the US had an opioid use disorder in the past year, and only 15.7% of them (about 623,000 people) received medication for it. The figure covers ages 12 and up.",
+      "value": "4.0 million",
+      "region": "US",
+      "dataYear": "2025",
+      "publisher": "Substance Abuse and Mental Health Services Administration (SAMHSA), National Survey on Drug Use and Health (NSDUH)",
+      "url": "https://www.samhsa.gov/data/sites/default/files/NSDUH-2025-Annual-Release/2025-nsduh-nnr-highlights.pdf",
+      "sources": [
+        {
+          "title": "SAMHSA releases annual National Survey on Drug Use and Health (2025 data)",
+          "publisher": "SAMHSA",
+          "url": "https://www.samhsa.gov/newsroom/press-announcements/20260727/samhsa-releases-annual-national-survey-on-drug-use-and-health",
+          "year": 2026
+        },
+        {
+          "title": "Highlights for the 2025 National Survey on Drug Use and Health",
+          "publisher": "SAMHSA",
+          "url": "https://www.samhsa.gov/data/sites/default/files/NSDUH-2025-Annual-Release/2025-nsduh-nnr-highlights.pdf",
+          "year": 2026
+        }
+      ],
+      "license": "Public domain (US government); paraphrased",
+      "lastVerified": "2026-11-27",
+      "reviewedBy": "PENDING"
+    },
+    {
+      "id": "us-stimulant-use-disorder-2025",
+      "text": "In 2025, about 4.5 million people aged 12 or older in the US had a stimulant use disorder (cocaine, methamphetamine or misused prescription stimulants) in the past year. The figure covers ages 12 and up.",
+      "value": "4.5 million",
+      "region": "US",
+      "dataYear": "2025",
+      "publisher": "Substance Abuse and Mental Health Services Administration (SAMHSA), National Survey on Drug Use and Health (NSDUH)",
+      "url": "https://www.samhsa.gov/data/sites/default/files/NSDUH-2025-Annual-Release/2025-nsduh-nnr-highlights.pdf",
+      "sources": [
+        {
+          "title": "SAMHSA releases annual National Survey on Drug Use and Health (2025 data)",
+          "publisher": "SAMHSA",
+          "url": "https://www.samhsa.gov/newsroom/press-announcements/20260727/samhsa-releases-annual-national-survey-on-drug-use-and-health",
+          "year": 2026
+        },
+        {
+          "title": "Highlights for the 2025 National Survey on Drug Use and Health",
+          "publisher": "SAMHSA",
+          "url": "https://www.samhsa.gov/data/sites/default/files/NSDUH-2025-Annual-Release/2025-nsduh-nnr-highlights.pdf",
+          "year": 2026
+        }
+      ],
+      "license": "Public domain (US government); paraphrased",
+      "lastVerified": "2026-11-27",
+      "reviewedBy": "PENDING"
+    },
+    {
+      "id": "us-alcohol-use-disorder-2025",
+      "text": "In 2025, about 25.7 million people aged 12 or older in the US had an alcohol use disorder in the past year. The figure covers ages 12 and up.",
+      "value": "25.7 million",
+      "region": "US",
+      "dataYear": "2025",
+      "publisher": "Substance Abuse and Mental Health Services Administration (SAMHSA), National Survey on Drug Use and Health (NSDUH)",
+      "url": "https://www.samhsa.gov/data/sites/default/files/NSDUH-2025-Annual-Release/2025-nsduh-nnr-highlights.pdf",
+      "sources": [
+        {
+          "title": "SAMHSA releases annual National Survey on Drug Use and Health (2025 data)",
+          "publisher": "SAMHSA",
+          "url": "https://www.samhsa.gov/newsroom/press-announcements/20260727/samhsa-releases-annual-national-survey-on-drug-use-and-health",
+          "year": 2026
+        },
+        {
+          "title": "Highlights for the 2025 National Survey on Drug Use and Health",
+          "publisher": "SAMHSA",
+          "url": "https://www.samhsa.gov/data/sites/default/files/NSDUH-2025-Annual-Release/2025-nsduh-nnr-highlights.pdf",
+          "year": 2026
+        }
+      ],
+      "license": "Public domain (US government); paraphrased",
+      "lastVerified": "2026-11-27",
+      "reviewedBy": "PENDING"
     }
   ]
 }

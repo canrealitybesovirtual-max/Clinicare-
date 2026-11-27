@@ -62,27 +62,34 @@ export function ClientHandoutView({
         <div>
           <p className="text-sm font-semibold uppercase tracking-wide text-accent">{t(TEXT.eyebrow)}</p>
           <h1 className="mt-1 text-2xl font-bold leading-tight tracking-tight sm:text-3xl">{h.title}</h1>
-          <p className="mt-2 flex items-center gap-1.5 text-muted">
-            <Clock aria-hidden className="size-4" /> {withN(t(HANDOUT_TEXT.minutes), handout.estimatedMinutes)}
-          </p>
+          {/* Time and the print button share one row, so the sheet itself starts on the first phone screen. */}
+          <div className="mt-2 flex flex-wrap items-center justify-between gap-x-4 gap-y-2">
+            <p className="flex items-center gap-1.5 text-muted">
+              <Clock aria-hidden className="size-4" /> {withN(t(HANDOUT_TEXT.minutes), handout.estimatedMinutes)}
+            </p>
+            <DownloadPdfButton handout={handout} lang={h.lang} label={t(TEXT.print)} variant="primary" />
+          </div>
         </div>
-        {langs.length > 1 ? <LangSwitch name={`client-handout-lang-${handout.id}`} value={h.lang} onChange={setLang} /> : null}
+        {/* From tablet width up; on phones the header's language button switches the page and the sheet together. */}
+        {langs.length > 1 ? (
+          <div className="hidden sm:block">
+            <LangSwitch name={`client-handout-lang-${handout.id}`} value={h.lang} onChange={setLang} />
+          </div>
+        ) : null}
       </div>
 
-      <CrisisStrip />
+      {/* Short crisis line here; the full crisis panel is further down and "Get help now" stays on screen (G9). */}
+      <CrisisStrip lang={h.lang} />
 
       <Card className="space-y-5 sm:p-7">
-        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-sm text-muted">{t(TEXT.readOrPrint)}</p>
-          <DownloadPdfButton handout={handout} lang={h.lang} label={t(TEXT.print)} variant="primary" size="lg" />
-        </div>
         <HandoutBody handout={handout} lang={h.lang} headingLevel="h2" />
         <div className="space-y-2 border-t border-border pt-4 text-sm text-muted">
+          <p>{t(TEXT.readOrPrint)}</p>
           {sources.length ? (
             <p>
               {t(TEXT.basedOn)}{" "}
               {sources.map((s, i) => (
-                <span key={s.url} lang="en">
+                <span key={`${s.title}|${s.url}`} lang="en">
                   {i > 0 ? ", " : ""}
                   <ExternalLink href={s.url}>{s.publisher}</ExternalLink>
                 </span>

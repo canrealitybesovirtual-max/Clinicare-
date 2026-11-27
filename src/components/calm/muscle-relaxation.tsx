@@ -26,8 +26,8 @@ export function MuscleRelaxation() {
   const instruction = group ? `${t(group.name)}. ${t(s.phase === "tighten" ? RELAX.tighten : RELAX.letGo)}.` : "";
 
   return (
+    // Controls first, explanation after, so Pause and Stop sit on the first phone screen (as in the breathing exercise).
     <div className="space-y-5">
-      <p className="text-base leading-relaxed text-muted">{t(RELAX.why)}</p>
       <div className="space-y-3 rounded-3xl bg-accent-soft px-5 py-6 text-center">
         {!ticker.started ? (
           <Button type="button" size="lg" variant="accent" onClick={ticker.start} className="min-w-40">
@@ -68,6 +68,7 @@ export function MuscleRelaxation() {
           </>
         )}
       </div>
+      <p className="text-base leading-relaxed text-muted">{t(RELAX.why)}</p>
       <p className="text-sm text-muted">{t(RELAX.safety)}</p>
     </div>
   );

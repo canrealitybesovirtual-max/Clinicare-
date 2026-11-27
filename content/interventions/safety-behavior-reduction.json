@@ -2,7 +2,7 @@
   "id": "safety-behavior-reduction",
   "name": "Safety-behavior reduction (fading 'just in case' behaviors)",
   "modality": "Exposure - safety-behavior fading",
-  "conditions": ["panic-disorder", "agoraphobia", "generalized-anxiety-disorder", "ptsd", "social-anxiety-disorder", "insomnia-disorder", "specific-phobia"],
+  "conditions": ["panic-disorder", "agoraphobia", "generalized-anxiety-disorder", "ptsd", "social-anxiety-disorder", "insomnia-disorder", "specific-phobia", "illness-anxiety-disorder", "body-dysmorphic-disorder"],
   "evidenceLevel": "Supported as part of exposure-based CBT. In an experimental study of panic with agoraphobia (Salkovskis et al., 1999), dropping safety-seeking behaviors during brief exposure was linked to greater improvement. Craske et al. (2014) recommend removing safety signals to strengthen inhibitory learning. A 2016 review (Blakey & Abramowitz) notes that evidence is mixed on whether every safety behavior must be removed at once, which supports a planned, gradual approach. Delivered within CBT for panic and GAD (see NICE CG113).",
   "minutes": { "min": 20, "max": 40 },
   "purpose": "Helps the client identify the subtle things they do to feel safe or to prevent a feared outcome (carrying water or medication 'just in case,' sitting near exits, checking the pulse, seeking reassurance, over-preparing, avoiding caffeine or exercise) and then fade them in a planned way during exposure and daily life. Safety behaviors bring short-term relief but stop the client from learning that the feared outcome would not have happened, or could have been handled.",

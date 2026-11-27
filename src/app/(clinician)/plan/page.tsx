@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { interventions, planLibraries } from "@/lib/library";
 import { measures } from "@/lib/content";
-import { PageIntro } from "@/components/content/content-bits";
-import { HelpTip } from "@/components/symptoms/help-tip";
+import { PageIntro } from "@/components/content/content-meta";
+import { HelpTip } from "@/components/ui/help-tip";
 import { HubPrompt } from "@/components/hub/hub-prompt";
 import { conditionCodes, conditionLabel, isSudCondition } from "@/components/interventions/catalog";
 import { PlanBuilder } from "@/components/plan/plan-builder";

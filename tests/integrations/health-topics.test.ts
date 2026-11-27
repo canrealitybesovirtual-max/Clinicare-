@@ -72,7 +72,7 @@ describe("content/topics.json", () => {
     const file = HealthTopicsFileSchema.parse(topicsJson);
     expect(file.topics.length).toBeGreaterThanOrEqual(30);
     expect(file.license).toBe("original");
-    expect(file.lastVerified).toBe("2026-11-26");
+    expect(file.lastVerified).toBe("2026-11-27");
     expect(file.reviewedBy).toBe("PENDING");
     expect(file.sources.length).toBeGreaterThan(0);
   });

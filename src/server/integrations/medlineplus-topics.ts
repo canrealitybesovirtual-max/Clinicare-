@@ -12,48 +12,15 @@ import "server-only";
 import { z } from "zod";
 import topicsJson from "@content/topics.json";
 import { assertNoPHI } from "@/lib/outbound";
-import { governance, slug } from "@/lib/schemas";
+import { HealthTopicsFileSchema, type HealthTopic } from "@/lib/schemas-topics";
 import { UpstreamError, assertSudLookupAllowed, setRateLimit, upstreamFetch } from "@/server/core";
 import { clip, safeHttpsUrl, xmlEscapedHtmlToPlainText } from "./plain-text";
 import { strictCurated } from "./strict-input";
 
 /* ---------------- curated topics (content/topics.json) ---------------- */
+// One contract for the file, shared with the CI content validator (src/lib/schemas-topics.ts).
+export { HealthTopicSchema, HealthTopicsFileSchema, type HealthTopic } from "@/lib/schemas-topics";
 const MEDLINEPLUS_HOSTS = ["medlineplus.gov"] as const;
-const keyword = z
-  .string()
-  .min(2)
-  .max(60)
-  .regex(/^[\p{L}][\p{L} '-]*$/u, "plain keyword");
-const pageUrl = z.url().refine((u) => safeHttpsUrl(u, MEDLINEPLUS_HOSTS) !== null, "MedlinePlus https URL");
-
-export const HealthTopicSchema = z.object({
-  id: slug,
-  en: keyword,
-  es: keyword,
-  clientLabel: z.string().min(3).max(80),
-  clientLabelEs: z.string().min(3).max(80),
-  sud: z.boolean().default(false),
-  crisis: z.boolean().default(false),
-  pages: z.object({ en: pageUrl, es: pageUrl }),
-});
-export type HealthTopic = z.infer<typeof HealthTopicSchema>;
-
-export const HealthTopicsFileSchema = z
-  .object({
-    version: z.string(),
-    description: z.string().optional(),
-    topics: z.array(HealthTopicSchema).min(20),
-    ...governance,
-  })
-  .superRefine((file, ctx) => {
-    const seen = new Set<string>();
-    for (const t of file.topics) {
-      for (const k of [`id:${t.id}`, `en:${t.en.toLowerCase()}`, `es:${t.es.toLowerCase()}`]) {
-        if (seen.has(k)) ctx.addIssue({ code: "custom", message: `duplicate topic ${k}` });
-        seen.add(k);
-      }
-    }
-  });
 
 export const healthTopicsFile = HealthTopicsFileSchema.parse(topicsJson);
 export const HEALTH_TOPICS: readonly HealthTopic[] = healthTopicsFile.topics;

@@ -1,0 +1,109 @@
+{
+  "id": "staying-well-plan",
+  "title": "My Staying-Well Plan",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 20,
+  "intro": "Big changes in mood, sleep or thinking often build slowly. Many people notice small signs first. This plan helps you spot your early signs and know what to do. Fill it in with your counselor when you are feeling well. Share it, if you choose, with someone you trust. Making the plan takes about 20 minutes.",
+  "sections": [
+    {
+      "heading": "My early warning signs",
+      "body": "Think about times things got harder. What did you, or people close to you, notice first? Write down 3 to 5 signs. Examples are sleeping less, not wanting to see anyone, feeling suspicious, hearing or seeing things others don't, racing ideas, or losing interest in food or friends."
+    },
+    {
+      "heading": "What I will do when I notice early signs",
+      "steps": [
+        "Get back to my routine: regular sleep, meals and daylight.",
+        "Cut out alcohol and drugs, which can make things worse.",
+        "Call my counselor, prescriber or care team within a day or two.",
+        "Tell a person I trust and ask them to check in with me.",
+        "Lower my stress where I can, and put off big decisions."
+      ]
+    },
+    {
+      "heading": "Things that help me stay well",
+      "body": "Write down what helps you, such as taking medicine as prescribed, seeing friends, being active, prayer or quiet time, or time outside."
+    },
+    {
+      "heading": "People I can contact",
+      "body": "Write the first name or role and phone number of your counselor, your prescriber, a trusted person and your crisis line. Keep this sheet where you can find it."
+    },
+    {
+      "heading": "When to get help right away",
+      "steps": [
+        "You have thoughts of hurting yourself or someone else.",
+        "You have not slept for several nights and feel wired or unlike yourself.",
+        "You hear, see or believe things that scare you or that others don't share, and you feel unsafe."
+      ]
+    }
+  ],
+  "safetyNote": "Safety first: This plan does not replace urgent help. If you or someone else may be in danger, get help now. In the US, call or text 988 or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sud": false,
+  "es": {
+    "title": "Mi plan para mantenerme bien",
+    "intro": "Los cambios grandes en el ánimo, el sueño o la forma de pensar muchas veces llegan poco a poco. Muchas personas notan primero señales pequeñas. Este plan le ayuda a ver sus primeras señales y a saber qué hacer. Llénelo con su consejero cuando se sienta bien. Si quiere, compártalo con alguien de confianza. Hacer el plan toma unos 20 minutos.",
+    "sections": [
+      {
+        "heading": "Mis primeras señales de alerta",
+        "body": "Piense en las veces en que las cosas se pusieron más difíciles. ¿Qué notó usted primero, o qué notaron las personas cercanas? Escriba de 3 a 5 señales. Por ejemplo, dormir menos, no querer ver a nadie, sentir desconfianza, oír o ver cosas que otros no ven, tener ideas muy rápidas o perder el interés en la comida o los amigos."
+      },
+      {
+        "heading": "Lo que haré cuando note las primeras señales",
+        "steps": [
+          "Volver a mi rutina: dormir, comer y recibir luz del día a horas fijas.",
+          "Dejar el alcohol y las drogas, que pueden empeorar las cosas.",
+          "Llamar a mi consejero, a quien me receta o a mi equipo de cuidado en uno o dos días.",
+          "Contarle a una persona de confianza y pedirle que me llame para ver cómo estoy.",
+          "Bajar mi estrés donde pueda y dejar para después las decisiones grandes."
+        ]
+      },
+      {
+        "heading": "Lo que me ayuda a estar bien",
+        "body": "Escriba lo que le ayuda, como tomar sus medicinas como se las recetaron, ver a sus amigos, moverse, rezar o tener un rato de calma, o salir al aire libre."
+      },
+      {
+        "heading": "Personas a quienes puedo llamar",
+        "body": "Escriba el primer nombre o el papel y el teléfono de su consejero, de quien le receta, de una persona de confianza y de su línea de crisis. Guarde esta hoja donde la pueda encontrar."
+      },
+      {
+        "heading": "Cuándo buscar ayuda de inmediato",
+        "steps": [
+          "Tiene pensamientos de hacerse daño o de hacerle daño a otra persona.",
+          "No ha dormido por varias noches y se siente acelerado o no se siente como usted.",
+          "Oye, ve o cree cosas que le dan miedo o que otros no ven, y no se siente seguro."
+        ]
+      }
+    ],
+    "safetyNote": "La seguridad es lo primero: Este plan no reemplaza la ayuda urgente. Si usted u otra persona puede estar en peligro, busque ayuda ahora. En EE. UU., llame o envíe un mensaje de texto al 988, o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "sources": [
+    {
+      "title": "Bipolar disorder: assessment and management (CG185)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg185",
+      "year": 2014
+    },
+    {
+      "title": "Psychosis and schizophrenia in adults: prevention and management (CG178)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg178",
+      "year": 2014
+    },
+    {
+      "title": "A randomized trial on the efficacy of group psychoeducation in the prophylaxis of recurrences in bipolar patients whose disease is in remission (Colom et al.)",
+      "publisher": "Archives of General Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12695318/",
+      "year": 2003
+    },
+    {
+      "title": "Family intervention for schizophrenia (Pharoah et al.)",
+      "publisher": "Cochrane Database of Systematic Reviews (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21154340/",
+      "year": 2010
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

@@ -132,7 +132,8 @@
         "conditionIds": [
           "panic-disorder",
           "generalized-anxiety-disorder",
-          "agoraphobia"
+          "agoraphobia",
+          "illness-anxiety-disorder"
         ],
         "triggerCategories": [
           "health"
@@ -189,7 +190,9 @@
         ],
         "conditionIds": [
           "major-depressive-disorder",
-          "persistent-depressive-disorder"
+          "persistent-depressive-disorder",
+          "bipolar-ii-disorder",
+          "cyclothymic-disorder"
         ]
       },
       "priority": 30

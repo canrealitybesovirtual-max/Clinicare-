@@ -1,8 +1,7 @@
 /**
  * Contract for content/topics.json (curated MedlinePlus psychoeducation keywords), isomorphic so the
  * CI content validator (scripts/validate-content.ts) can check the file without importing server-only
- * code. Mirrors HealthTopicsFileSchema in src/server/integrations/medlineplus-topics.ts: keep the two
- * in sync (the server module may later re-export this one).
+ * code. The server adapter (src/server/integrations/medlineplus-topics.ts) re-exports these schemas.
  *
  * handoutIds: the app-authored client handouts shown as "skills to try" on the client topic page. The schema checks
  * their shape and that a topic lists each one once; that every id exists in content/handouts is checked against the
@@ -47,6 +46,8 @@ export const HealthTopicSchema = z.object({
     .default([])
     .refine((ids) => new Set(ids).size === ids.length, "a handout is listed twice"),
   pages: z.object({ en: pageUrl, es: pageUrl }),
+  // One plain safety line for a substance-use topic (alcohol withdrawal, opioid overdose risk...), in both languages.
+  safetyNote: z.object({ en: z.string().min(20), es: z.string().min(20) }).optional(),
 });
 export type HealthTopic = z.infer<typeof HealthTopicSchema>;
 
@@ -60,6 +61,7 @@ export const HealthTopicsFileSchema = z
   .superRefine((file, ctx) => {
     const seen = new Set<string>();
     for (const t of file.topics) {
+      if (t.sud && !t.safetyNote) ctx.addIssue({ code: "custom", message: `substance-use topic ${t.id} needs a safetyNote` });
       for (const k of [`id:${t.id}`, `en:${t.en.toLowerCase()}`, `es:${t.es.toLowerCase()}`]) {
         if (seen.has(k)) ctx.addIssue({ code: "custom", message: `duplicate topic ${k}` });
         seen.add(k);

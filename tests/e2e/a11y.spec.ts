@@ -250,6 +250,55 @@ for (const scheme of ["light", "dark"] as const) {
       });
     }
 
+    test('guided follow-up for "panic from dogs" with an answer given', async ({ page }) => {
+      await gotoReady(page, "/symptoms");
+      await enterSymptomText(page, "panic from dogs");
+      const panel = page.getByRole("region", { name: /Help me ask more/ });
+      await expect(panel.getByRole("heading", { name: "Specific phobia" })).toBeVisible();
+      await audit(page, `follow-up panel (${scheme})`);
+      await panel.getByRole("button", { name: "Only around dogs" }).click();
+      await expect(panel.getByRole("button", { name: /^Change answer to:/ }).first()).toBeVisible();
+      await audit(page, `follow-up panel answered (${scheme})`);
+    });
+
+    test("ethics hub with card bodies loaded", async ({ page }) => {
+      await gotoReady(page, "/ethics");
+      await openAllDetails(page);
+      // The long card parts load as their own chunk once a disclosure opens.
+      await expect(page.getByText("Loading…")).toHaveCount(0);
+      await expect(page.locator("main details[open]").first()).toBeVisible();
+      await audit(page, `ethics bodies open (${scheme})`);
+    });
+
+    test("measure trend with totals and the chart", async ({ page }) => {
+      await gotoReady(page, "/tools/trend?measure=phq-9");
+      for (const [session, total] of [["1", "18"], ["4", "8"]] as const) {
+        await page.getByLabel("Session #", { exact: true }).fill(session);
+        await page.getByRole("textbox", { name: /^PHQ-9 total/ }).fill(total);
+        await page.getByRole("button", { name: /Add to trend/ }).click();
+      }
+      // A table from tablet width up, one card per session on phones; either way Remove is on screen.
+      await expect(page.getByRole("button", { name: "Remove session #4" })).toBeVisible();
+      // Nothing scrolls sideways, and the floating crisis button stays inside the screen (G9).
+      const width = await page.evaluate(() => ({ scroll: document.documentElement.scrollWidth, client: document.documentElement.clientWidth }));
+      expect(width.scroll).toBeLessThanOrEqual(width.client);
+      const box = await crisisButton(page).boundingBox();
+      const viewport = page.viewportSize()!;
+      expect(box).not.toBeNull();
+      expect(box!.x).toBeGreaterThanOrEqual(0);
+      expect(box!.x + box!.width).toBeLessThanOrEqual(viewport.width);
+      expect(box!.y + box!.height).toBeLessThanOrEqual(viewport.height);
+      await audit(page, `trend with totals (${scheme})`);
+    });
+
+    test("client mode in Spanish", async ({ page }) => {
+      await gotoReady(page, "/client");
+      await page.getByRole("banner").getByRole("button", { name: "Español" }).click();
+      await expect(page.locator("html")).toHaveAttribute("lang", "es");
+      await openAllDetails(page);
+      await audit(page, `client home in Spanish (${scheme})`);
+    });
+
     test("navigation menus open (More menu or drawer)", async ({ page }) => {
       await gotoReady(page, "/symptoms");
       const drawer = page.getByRole("banner").getByRole("button", { name: /^Menu\b/ });

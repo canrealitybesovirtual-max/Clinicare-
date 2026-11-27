@@ -17,6 +17,8 @@ export interface ClientTopic {
   /** App-authored client handouts to offer as skills (content/topics.json handoutIds). */
   handoutIds: readonly string[];
   pages: { en: string; es: string };
+  /** Substance-use topics: the topic's own safety line (content/topics.json safetyNote). */
+  safetyNote?: Text;
 }
 
 const file = HealthTopicsFileSchema.parse(topicsJson);
@@ -28,6 +30,7 @@ export const CLIENT_TOPICS: readonly ClientTopic[] = file.topics.map((t) => ({
   crisis: t.crisis,
   handoutIds: t.handoutIds,
   pages: t.pages,
+  ...(t.safetyNote ? { safetyNote: t.safetyNote } : {}),
 }));
 
 export const getClientTopic = (id: string): ClientTopic | undefined => CLIENT_TOPICS.find((t) => t.id === id);
@@ -51,6 +54,8 @@ const GROUPS: readonly { id: string; label: Text; ids: readonly string[] }[] = [
       "unwanted-thoughts",
       "after-trauma",
       "mood-and-energy-shifts",
+      "intense-emotions",
+      "unusual-experiences",
       "focus-and-attention",
     ],
   },
@@ -64,7 +69,7 @@ const GROUPS: readonly { id: string; label: Text; ids: readonly string[] }[] = [
     label: { en: "Life changes and relationships", es: "Cambios en la vida y relaciones" },
     ids: ["mood-after-baby", "seasonal-mood", "caregiving", "disasters", "later-life", "military-life"],
   },
-  { id: "habits", label: { en: "Alcohol, drugs and habits", es: "Alcohol, drogas y hábitos" }, ids: ["alcohol", "quitting-smoking"] },
+  { id: "habits", label: { en: "Alcohol, drugs and habits", es: "Alcohol, drogas y hábitos" }, ids: ["alcohol", "cannabis", "opioids", "stimulants", "quitting-smoking"] },
   {
     id: "health",
     label: { en: "Health conditions", es: "Problemas de salud" },

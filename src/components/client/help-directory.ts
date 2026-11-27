@@ -9,7 +9,7 @@ import intlJson from "@content/referrals/international.json";
 import type { Text } from "@/lib/i18n/core";
 import { COUNTRY_NAMES } from "@/lib/i18n/shell";
 import { ReferralDirectorySchema, isVerified, type ReferralEntry } from "@/lib/schemas-referrals";
-import { isPlainSafe } from "./plain-text";
+import { isClientSafeText } from "@/lib/client-safe";
 
 export interface HelpEntry {
   id: string;
@@ -47,7 +47,7 @@ function isHelpLine(e: ReferralEntry): boolean {
   return e.kind === "substance-use" && /helpline/i.test(e.name) && Boolean(e.phone);
 }
 
-const plainOrNull = (s: string | undefined) => (s && isPlainSafe(s) ? s : null);
+const plainOrNull = (s: string | undefined) => (s && isClientSafeText(s) ? s : null);
 
 function toEntry(e: ReferralEntry): HelpEntry {
   return {
@@ -71,7 +71,7 @@ export function helpRegions(): HelpRegion[] {
   const entries = [ReferralDirectorySchema.parse(usJson), ReferralDirectorySchema.parse(intlJson)]
     .flatMap((d) => d.entries)
     .filter(isHelpLine)
-    .filter((e) => isPlainSafe(e.name));
+    .filter((e) => isClientSafeText(e.name));
   const byRegion = new Map<string, ReferralEntry[]>();
   for (const e of entries) {
     const region = e.region.split("-")[0] ?? e.region;

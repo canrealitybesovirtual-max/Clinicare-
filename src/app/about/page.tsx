@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { Ban, EyeOff, FileLock2, LockKeyhole, ScanSearch, ServerOff, ShieldCheck, SpellCheck2, TimerReset } from "lucide-react";
-import { conditions, crisisLines, handouts, lexicon, licenses, measures, stats } from "@/lib/content";
+import { conditions, crisisLines, lexicon, licenses, measures, stats } from "@/lib/content";
+import { handouts } from "@/lib/library";
 import type { Source } from "@/lib/schemas";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { ExternalLink } from "@/components/ui/external-link";
-import { PageIntro, ReviewBadge } from "@/components/content/content-bits";
+import { PageIntro, ReviewBadge } from "@/components/content/content-meta";
 import { POSITIONING } from "@/components/content/positioning";
 import { countryName } from "@/components/crisis/crisis-data";
 import { assistantStatus } from "@/server/ai/config";

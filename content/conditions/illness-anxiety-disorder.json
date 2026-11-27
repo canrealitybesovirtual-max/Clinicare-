@@ -1,0 +1,215 @@
+{
+  "id": "illness-anxiety-disorder",
+  "name": "Illness anxiety disorder (health anxiety)",
+  "icd10cm": [
+    {
+      "code": "F45.21",
+      "label": "Hypochondriasis"
+    }
+  ],
+  "icd11": [
+    {
+      "code": "6B23",
+      "label": "Hypochondriasis"
+    }
+  ],
+  "dsmPointer": "See DSM-5-TR: Somatic Symptom and Related Disorders — Illness Anxiety Disorder; ICD-11 places hypochondriasis with the obsessive-compulsive and related disorders.",
+  "summary": "A persistent fear of having, or developing, a serious illness that normal test results and medical reassurance settle only briefly. Bodily symptoms are absent or mild; the distress comes from what the client believes they might mean. The fear drives safety habits that keep it going: body checking, searching symptoms online, seeking reassurance and repeat tests, or the opposite, avoiding doctors altogether. CBT for health anxiety, including internet-delivered CBT, has good evidence; coordinate with the primary care clinician so that care is consistent. For clinician review only; this is not a diagnosis.",
+  "features": [
+    {
+      "symptomId": "health-anxiety-preoccupation",
+      "kind": "core",
+      "weight": 5
+    },
+    {
+      "symptomId": "body-checking-reassurance",
+      "kind": "core",
+      "weight": 4
+    },
+    {
+      "symptomId": "reassurance-seeking",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "worry-excessive",
+      "kind": "associated",
+      "weight": 1,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "subjective-anxiety-stress",
+      "kind": "associated",
+      "weight": 1
+    },
+    {
+      "symptomId": "persistent-concern-future-attacks",
+      "kind": "associated",
+      "weight": 1
+    },
+    {
+      "symptomId": "insomnia",
+      "kind": "associated",
+      "weight": 1
+    }
+  ],
+  "minCore": 1,
+  "durationGate": {
+    "minWeeks": 26,
+    "note": "Ask how long the health fears have lasted and whether the feared illness has changed over time. See DSM-5-TR for duration guidance."
+  },
+  "impairmentRequired": true,
+  "ruleOuts": [
+    {
+      "label": "An undiagnosed medical condition",
+      "type": "medical",
+      "note": "Keep the medical team involved and review new, changing or objective symptoms; health anxiety and medical illness can coexist."
+    },
+    {
+      "label": "Stimulants and caffeine",
+      "type": "substance",
+      "note": "Can heighten body sensations that are then misread as illness. This app does not store substance-use information."
+    },
+    {
+      "label": "Delusional disorder, somatic type",
+      "type": "psychiatric",
+      "note": "A fixed belief held with full conviction despite clear evidence suggests a delusion; refer for psychiatric evaluation."
+    }
+  ],
+  "specifiers": [
+    {
+      "label": "Care-seeking or care-avoidant pattern (descriptive)",
+      "note": "Shapes the plan: reduce repeat checks and visits, or approach avoided care step by step. See DSM-5-TR for specifiers."
+    }
+  ],
+  "differentials": [
+    {
+      "label": "Somatic symptom disorder",
+      "distinguishing": "Distressing bodily symptoms are prominent, not only the fear of illness.",
+      "icd10cm": "F45.1"
+    },
+    {
+      "label": "Generalized anxiety disorder",
+      "distinguishing": "Health is one of many worry topics rather than the main focus.",
+      "icd10cm": "F41.1"
+    },
+    {
+      "label": "Obsessive-compulsive disorder",
+      "distinguishing": "Intrusive fears of contamination or harm with rituals beyond health checking.",
+      "icd10cm": "F42.2"
+    },
+    {
+      "label": "Panic disorder",
+      "distinguishing": "Fear of dying during sudden attacks rather than a lasting fear of disease.",
+      "icd10cm": "F41.0"
+    }
+  ],
+  "comorbidities": [
+    {
+      "label": "Generalized anxiety",
+      "note": "Often co-occurs; screen with the GAD-7.",
+      "conditionId": "generalized-anxiety-disorder"
+    },
+    {
+      "label": "Depression",
+      "note": "Common; screen with the PHQ-9.",
+      "conditionId": "major-depressive-disorder"
+    },
+    {
+      "label": "Panic",
+      "note": "Panic attacks can feed fears of serious illness; assess them separately.",
+      "conditionId": "panic-disorder"
+    }
+  ],
+  "measures": [
+    "gad-7",
+    "phq-9"
+  ],
+  "measuresPending": [
+    {
+      "name": "Short Health Anxiety Inventory (SHAI)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12171378/",
+      "note": "License pending — link out only",
+      "licenseKey": "SHAI"
+    }
+  ],
+  "interventions": [
+    {
+      "name": "CBT for health anxiety",
+      "evidence": "Tyrer et al. (2014) found CBT for health anxiety in medical clinics reduced anxiety; Axelsson and Hedman-Lagerlöf (2019) report large effects across trials.",
+      "note": "Work on catastrophic interpretations of sensations, reduce checking and reassurance, and test predictions."
+    },
+    {
+      "name": "Exposure and response prevention for health fears",
+      "evidence": "A core part of CBT for health anxiety.",
+      "note": "Graded exposure to health cues (reading, hospital settings) with fewer checks and searches."
+    },
+    {
+      "name": "Coordinated care with primary care",
+      "evidence": "Consistent, scheduled medical visits reduce unplanned visits and tests.",
+      "note": "Agree a plan with the primary care clinician, with consent."
+    },
+    {
+      "name": "Mindfulness-based approaches (adjunct)",
+      "evidence": "Growing evidence as an adjunct for health anxiety.",
+      "note": "Notice sensations without checking."
+    }
+  ],
+  "handouts": [
+    "checking-and-reassurance-log",
+    "worry-log",
+    "mindful-check-in"
+  ],
+  "statIds": [],
+  "culturalNotes": [
+    "How people describe distress through the body differs across cultures; some communities speak of heat, nerves, heaviness or a weak heart rather than of worry. Ask what the symptoms mean to the client and their family.",
+    "Past experiences of being dismissed or misdiagnosed by health services, which are more common for women, people of color and people with disabilities, can understandably drive checking and repeated visits. Acknowledge this before working on reassurance-seeking.",
+    "Do not assume that symptoms without a found cause are psychological. Keep the medical team involved and review new or changing symptoms.",
+    "Use a trained professional interpreter, not family members, and check that key terms translate with the meaning you intend.",
+    "If the client wants faith or spiritual practice included, follow their lead and get informed consent first (see the AACC Code of Ethics for faith-based counselors); never impose beliefs."
+  ],
+  "sud": false,
+  "requiredFeatures": [],
+  "strongMinAreas": 2,
+  "redFlagRules": [],
+  "licensedDsm": false,
+  "wileyLicensed": false,
+  "sources": [
+    {
+      "title": "Clinical and cost-effectiveness of cognitive behaviour therapy for health anxiety in medical patients (Tyrer et al.)",
+      "publisher": "The Lancet (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24139977/",
+      "year": 2014
+    },
+    {
+      "title": "Cognitive behavior therapy for health anxiety: systematic review and meta-analysis of clinical efficacy and health economic outcomes (Axelsson and Hedman-Lagerlöf)",
+      "publisher": "Expert Review of Pharmacoeconomics & Outcomes Research (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31859542/",
+      "year": 2019
+    },
+    {
+      "title": "Hypochondriasis (ICD-11 entry 6B23)",
+      "publisher": "World Health Organization",
+      "url": "https://icd.who.int/browse/latest-release/mms/en"
+    },
+    {
+      "title": "ICD-10-CM (official code set)",
+      "publisher": "CDC National Center for Health Statistics",
+      "url": "https://www.cdc.gov/nchs/icd/icd-10-cm/index.html"
+    },
+    {
+      "title": "ICD-10-CM codes checked with the NLM Clinical Table Search Service",
+      "publisher": "National Library of Medicine",
+      "url": "https://clinicaltables.nlm.nih.gov/apidoc/icd10cm/v3/doc.html"
+    },
+    {
+      "title": "AACC Code of Ethics",
+      "publisher": "American Association of Christian Counselors",
+      "url": "https://aacc.net/aacc-code-of-ethics/"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

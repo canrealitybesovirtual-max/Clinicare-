@@ -2,7 +2,7 @@
   "id": "mood",
   "title": "Low mood: key features, course and mood elevation",
   "domain": "mood",
-  "about": "Questions on the two key features of a depressive episode, its course (recent episode or years of low mood), and a past elevated episode, which changes the picture and the plan.",
+  "about": "Low mood, loss of interest, the course of a depressed mood, and the bipolar and borderline questions that change the picture: past high stretches, how far they went, how ups and downs run over time, and how close relationships go.",
   "questions": [
     {
       "id": "mood-interest",
@@ -246,7 +246,7 @@
       "kind": "discriminate",
       "domain": "mood",
       "text": "Has the client ever had a stretch of several days feeling unusually up, wired or extremely irritable, with far more energy, thoughts racing, and little need for sleep?",
-      "why": "A past elevated episode changes the picture (bipolar spectrum) and the treatment plan, including medication choices. Bipolar disorders are outside the current knowledge base, so a 'yes' calls for a psychiatric evaluation rather than a match here.",
+      "why": "A past elevated episode changes the picture (bipolar spectrum) and the treatment plan, including medication choices. It also separates lifelong restlessness (ADHD) and fast, relationship-driven mood shifts from distinct high stretches. A 'yes' brings the bipolar patterns into view and calls for a psychiatric evaluation.",
       "options": [
         {
           "id": "yes",
@@ -284,11 +284,16 @@
         "symptomIds": [
           "depressed-mood",
           "anhedonia",
-          "decreased-need-for-sleep"
+          "decreased-need-for-sleep",
+          "mood-swings",
+          "racing-thoughts",
+          "increased-goal-activity"
         ],
         "conditionIds": [
           "major-depressive-disorder",
-          "persistent-depressive-disorder"
+          "persistent-depressive-disorder",
+          "adult-adhd",
+          "borderline-personality-disorder"
         ]
       },
       "targets": [
@@ -296,9 +301,254 @@
       ],
       "discriminates": [
         "major-depressive-disorder",
-        "persistent-depressive-disorder"
+        "persistent-depressive-disorder",
+        "bipolar-ii-disorder",
+        "adult-adhd",
+        "borderline-personality-disorder"
       ],
       "priority": 15
+    },
+    {
+      "id": "mood-high-features",
+      "kind": "core",
+      "domain": "mood",
+      "select": "many",
+      "text": "During the high or driven stretches, what else changes?",
+      "why": "Racing thoughts and a burst of plans and activity, alongside little need for sleep, show how far a high stretch goes beyond a good mood. Ask what friends or family noticed, too; people often see these stretches more clearly than the client does.",
+      "options": [
+        {
+          "id": "racing",
+          "label": "Thoughts race or jump ahead faster than they can be said",
+          "effects": {
+            "addSymptomIds": [
+              "racing-thoughts"
+            ]
+          }
+        },
+        {
+          "id": "activity",
+          "label": "Takes on far more plans, projects or activity than usual",
+          "effects": {
+            "addSymptomIds": [
+              "increased-goal-activity"
+            ]
+          }
+        },
+        {
+          "id": "neither",
+          "label": "Neither of these",
+          "effects": {
+            "negateSymptomIds": [
+              "racing-thoughts",
+              "increased-goal-activity"
+            ]
+          },
+          "exclusive": true
+        },
+        {
+          "id": "not-yet",
+          "label": "Not asked yet",
+          "keepOpen": true,
+          "exclusive": true
+        }
+      ],
+      "showWhen": {
+        "symptomIds": [
+          "grandiosity-elevated-mood",
+          "decreased-need-for-sleep",
+          "mood-swings"
+        ],
+        "conditionIds": [
+          "bipolar-i-disorder",
+          "bipolar-ii-disorder",
+          "cyclothymic-disorder"
+        ]
+      },
+      "targets": [
+        "racing-thoughts",
+        "increased-goal-activity"
+      ],
+      "discriminates": [
+        "bipolar-i-disorder",
+        "bipolar-ii-disorder",
+        "cyclothymic-disorder"
+      ],
+      "priority": 20
+    },
+    {
+      "id": "mood-high-impact",
+      "kind": "discriminate",
+      "domain": "mood",
+      "text": "How far did the most intense high stretch go?",
+      "why": "A high that led to hospital care, police contact, a break with reality or a serious crisis points toward a full manic episode; a clear change that others noticed while daily life kept going points toward milder highs. Either way, medication planning needs a psychiatric view.",
+      "options": [
+        {
+          "id": "severe",
+          "label": "It led to hospital care, police or legal trouble, a break with reality, or a serious crisis",
+          "effects": {
+            "addSymptomIds": [
+              "mania-severe-impact"
+            ]
+          },
+          "surfaces": [
+            "psychiatric-referral"
+          ],
+          "note": "Arrange a prompt psychiatric evaluation and ask about safety during highs (spending, driving, sexual risk)."
+        },
+        {
+          "id": "noticed",
+          "label": "Others noticed a clear change, but work and home kept going",
+          "effects": {
+            "negateSymptomIds": [
+              "mania-severe-impact"
+            ]
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "Not sure yet",
+          "keepOpen": true
+        }
+      ],
+      "showWhen": {
+        "symptomIds": [
+          "grandiosity-elevated-mood"
+        ],
+        "conditionIds": [
+          "bipolar-i-disorder",
+          "bipolar-ii-disorder"
+        ]
+      },
+      "targets": [
+        "mania-severe-impact"
+      ],
+      "discriminates": [
+        "bipolar-i-disorder",
+        "bipolar-ii-disorder",
+        "cyclothymic-disorder"
+      ],
+      "priority": 15
+    },
+    {
+      "id": "mood-swings-course",
+      "kind": "discriminate",
+      "domain": "mood",
+      "text": "How do the ups and downs run over time?",
+      "why": "Milder highs and lows that have come and gone for years fit a cyclothymic pattern. Distinct stretches of days or weeks point toward a bipolar pattern. Shifts within hours, often set off by something in a close relationship, point toward the questions about relationships and fear of being left.",
+      "options": [
+        {
+          "id": "years",
+          "label": "Milder highs and lows that have come and gone for years",
+          "effects": {
+            "addSymptomIds": [
+              "longstanding-mood-cycling"
+            ]
+          }
+        },
+        {
+          "id": "episodes",
+          "label": "Distinct stretches of days or weeks that are clearly high or clearly low",
+          "effects": {},
+          "note": "Ask about the most recent high: how long it lasted, sleep, and what others noticed."
+        },
+        {
+          "id": "hours",
+          "label": "Shifts within hours, often after a conflict or a feared rejection",
+          "effects": {},
+          "note": "Ask about close relationships, fear of being left and how anger shows up."
+        },
+        {
+          "id": "unsure",
+          "label": "Not sure yet",
+          "keepOpen": true
+        }
+      ],
+      "showWhen": {
+        "symptomIds": [
+          "mood-swings"
+        ],
+        "conditionIds": [
+          "cyclothymic-disorder",
+          "bipolar-ii-disorder",
+          "borderline-personality-disorder"
+        ]
+      },
+      "targets": [
+        "longstanding-mood-cycling"
+      ],
+      "discriminates": [
+        "cyclothymic-disorder",
+        "bipolar-ii-disorder",
+        "borderline-personality-disorder"
+      ],
+      "priority": 18
+    },
+    {
+      "id": "relationships-fear-of-being-left",
+      "kind": "core",
+      "domain": "mood",
+      "select": "many",
+      "text": "How do close relationships tend to go?",
+      "why": "Relationships that swing between closeness and sharp disappointment, and a strong fear of being left, are central to a borderline pattern. Ask gently and with examples; the client may describe the other person rather than the pattern.",
+      "options": [
+        {
+          "id": "swings",
+          "label": "They swing between closeness and sharp disappointment, with frequent breakups and reunions",
+          "effects": {
+            "addSymptomIds": [
+              "unstable-relationships"
+            ]
+          }
+        },
+        {
+          "id": "fear-left",
+          "label": "Strong fear of being left, with urgent efforts to keep people close",
+          "effects": {
+            "addSymptomIds": [
+              "fear-of-abandonment"
+            ]
+          }
+        },
+        {
+          "id": "neither",
+          "label": "Neither of these",
+          "effects": {
+            "negateSymptomIds": [
+              "unstable-relationships",
+              "fear-of-abandonment"
+            ]
+          },
+          "exclusive": true
+        },
+        {
+          "id": "not-yet",
+          "label": "Not asked yet",
+          "keepOpen": true,
+          "exclusive": true
+        }
+      ],
+      "showWhen": {
+        "symptomIds": [
+          "unstable-relationships",
+          "fear-of-abandonment",
+          "chronic-emptiness",
+          "identity-disturbance",
+          "intense-anger"
+        ],
+        "conditionIds": [
+          "borderline-personality-disorder"
+        ]
+      },
+      "targets": [
+        "unstable-relationships",
+        "fear-of-abandonment"
+      ],
+      "discriminates": [
+        "borderline-personality-disorder",
+        "bipolar-ii-disorder",
+        "cyclothymic-disorder"
+      ],
+      "priority": 20
     }
   ],
   "sources": [
@@ -318,6 +568,26 @@
       "title": "Depression (health topic)",
       "publisher": "National Institute of Mental Health",
       "url": "https://www.nimh.nih.gov/health/topics/depression"
+    },
+    {
+      "title": "Bipolar Disorder (health topic)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/topics/bipolar-disorder"
+    },
+    {
+      "title": "Bipolar Disorder (statistics)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/statistics/bipolar-disorder"
+    },
+    {
+      "title": "Borderline Personality Disorder (health topic)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/topics/borderline-personality-disorder"
+    },
+    {
+      "title": "Personality Disorders (statistics)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/statistics/personality-disorders"
     }
   ],
   "license": "original",

@@ -95,7 +95,7 @@
     { "name": "Suicide risk screening and safety planning", "evidence": "Clinical standard of care. If PHQ-9 item 9 is above 0 or the client reports suicidal thoughts, follow up with a structured screen (e.g., C-SSRS, link-out only) and safety-planning resources.", "note": "The clinician decides on risk level and next steps. Crisis resources (988, local emergency number, findahelpline.com) stay visible on every screen." },
     { "name": "Referral for medication evaluation", "evidence": "NICE NG222 advises against routinely offering antidepressants first-line for less severe depression unless the person prefers them; for more severe depression a combination of individual CBT and an antidepressant may be offered.", "note": "Refer to psychiatry, a primary care provider or a psychiatric nurse practitioner, especially with psychotic features, mixed features, a bipolar history or high risk." }
   ],
-  "handouts": [],
+  "handouts": ["activity-schedule", "thought-record", "safety-plan"],
   "statIds": ["us-mde-past-year-2025", "us-mde-past-year-2021", "global-depression-2021", "global-mental-health-conditions"],
   "culturalNotes": [
     "Many clients, especially from cultures where emotional distress carries stigma, present depression through the body: fatigue, pain, headaches, poor sleep or a 'heavy heart'. Ask about mood and interest directly, in the client's own words.",
@@ -127,6 +127,6 @@
     { "title": "AACC Code of Ethics", "publisher": "American Association of Christian Counselors", "url": "https://aacc.net/aacc-code-of-ethics/" }
   ],
   "license": "original",
-  "lastVerified": "2026-11-26",
+  "lastVerified": "2026-11-27",
   "reviewedBy": "PENDING"
 }

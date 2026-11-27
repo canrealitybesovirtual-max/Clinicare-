@@ -1,0 +1,281 @@
+{
+  "id": "bulimia-nervosa",
+  "name": "Bulimia nervosa",
+  "icd10cm": [
+    {
+      "code": "F50.20",
+      "label": "Bulimia nervosa, unspecified"
+    },
+    {
+      "code": "F50.21",
+      "label": "Bulimia nervosa, mild"
+    },
+    {
+      "code": "F50.22",
+      "label": "Bulimia nervosa, moderate"
+    },
+    {
+      "code": "F50.23",
+      "label": "Bulimia nervosa, severe"
+    },
+    {
+      "code": "F50.24",
+      "label": "Bulimia nervosa, extreme"
+    },
+    {
+      "code": "F50.25",
+      "label": "Bulimia nervosa, in remission"
+    }
+  ],
+  "icd11": [
+    {
+      "code": "6B81",
+      "label": "Bulimia nervosa"
+    }
+  ],
+  "dsmPointer": "See DSM-5-TR: Feeding and Eating Disorders — Bulimia Nervosa",
+  "summary": "A cycle of binge episodes followed by attempts to undo them, such as vomiting, laxatives, fasting or hard exercise, in a person whose self-judgment is tied closely to shape and weight. Weight is often in or above the healthy range, so the problem can go unnoticed for years, and shame keeps many clients from mentioning it. Purging can cause dangerous electrolyte changes, dental damage and heart rhythm problems. Eating-disorder-focused CBT (including guided self-help as a first step) is the best-supported treatment; medical review is part of care. For clinician review only; this is not a diagnosis.",
+  "features": [
+    {
+      "symptomId": "binge-eating-episodes",
+      "kind": "core",
+      "weight": 5
+    },
+    {
+      "symptomId": "purging-or-fainting",
+      "kind": "core",
+      "weight": 4,
+      "group": "compensation"
+    },
+    {
+      "symptomId": "compensatory-exercise-fasting",
+      "kind": "core",
+      "weight": 4,
+      "group": "compensation"
+    },
+    {
+      "symptomId": "shape-weight-overvaluation",
+      "kind": "core",
+      "weight": 3
+    },
+    {
+      "symptomId": "binge-shame-secrecy",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "fear-weight-gain",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "worthlessness-guilt",
+      "kind": "associated",
+      "weight": 1
+    },
+    {
+      "symptomId": "depressed-mood",
+      "kind": "associated",
+      "weight": 1
+    },
+    {
+      "symptomId": "subjective-anxiety-stress",
+      "kind": "associated",
+      "weight": 1
+    }
+  ],
+  "minCore": 2,
+  "durationGate": {
+    "minWeeks": 12,
+    "note": "Ask how often binges and compensation happen and for how long. See DSM-5-TR for frequency and duration guidance; purging is a medical concern at any frequency."
+  },
+  "impairmentRequired": true,
+  "ruleOuts": [
+    {
+      "label": "Thyroid, gastrointestinal and endocrine illness",
+      "type": "medical",
+      "note": "Hyperthyroidism, diabetes, celiac disease, inflammatory bowel disease and other illnesses can cause weight change or eating changes; coordinate a medical work-up."
+    },
+    {
+      "label": "Medication and substance effects",
+      "type": "substance",
+      "note": "Stimulants, some antidepressants, antipsychotics and other medicines change appetite and weight. This app does not store substance-use information."
+    },
+    {
+      "label": "Depression and other mental health conditions",
+      "type": "psychiatric",
+      "note": "Appetite loss in depression, food avoidance from fear of choking (ARFID) or contamination fears (OCD) can look similar; ask what drives the eating change."
+    }
+  ],
+  "specifiers": [
+    {
+      "label": "Severity by frequency of compensatory behavior (descriptive)",
+      "note": "Sets the last ICD-10-CM character (F50.21 to F50.24); F50.25 for remission. See DSM-5-TR for severity specifiers."
+    }
+  ],
+  "differentials": [
+    {
+      "label": "Binge-eating disorder",
+      "distinguishing": "Binges without regular compensation.",
+      "icd10cm": "F50.819"
+    },
+    {
+      "label": "Anorexia nervosa, binge-purge type",
+      "distinguishing": "Binge-purge pattern at a significantly low weight.",
+      "icd10cm": "F50.029"
+    },
+    {
+      "label": "Borderline personality pattern",
+      "distinguishing": "Binges are one of several impulsive behaviors alongside relationship and identity instability.",
+      "icd10cm": "F60.3"
+    }
+  ],
+  "comorbidities": [
+    {
+      "label": "Depression",
+      "note": "Common; screen with the PHQ-9 and ask about suicide.",
+      "conditionId": "major-depressive-disorder"
+    },
+    {
+      "label": "Substance use",
+      "note": "Higher rates of alcohol and drug use; screen sensitively.",
+      "conditionId": "alcohol-use-disorder"
+    },
+    {
+      "label": "Borderline personality pattern",
+      "note": "Can co-occur; DBT skills may help with urges.",
+      "conditionId": "borderline-personality-disorder"
+    }
+  ],
+  "measures": [
+    "phq-9",
+    "gad-7"
+  ],
+  "measuresPending": [
+    {
+      "name": "SCOFF questionnaire (eating disorder screen)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/?term=SCOFF+questionnaire+Morgan+Reid+Lacey+1999",
+      "note": "License pending — link out only",
+      "licenseKey": "SCOFF"
+    },
+    {
+      "name": "Eating Disorder Examination Questionnaire (EDE-Q)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Eating+Disorder+Examination+Questionnaire+Fairburn+Beglin",
+      "note": "License pending — link out only",
+      "licenseKey": "EDE-Q"
+    }
+  ],
+  "interventions": [
+    {
+      "name": "Eating-disorder-focused guided self-help",
+      "evidence": "NICE NG69 recommends it as a first step for adults with bulimia.",
+      "note": "Structured CBT-based self-help with short supportive sessions."
+    },
+    {
+      "name": "Enhanced CBT for eating disorders (CBT-E)",
+      "evidence": "Fairburn et al. (2009) found transdiagnostic CBT-E helped bulimia and related presentations.",
+      "note": "Regular eating, breaking the binge-compensation cycle and shape concern work."
+    },
+    {
+      "name": "Medical review",
+      "evidence": "NICE NG69 sets out physical checks for people who purge.",
+      "note": "Electrolytes and heart checks through the physician; dental review."
+    },
+    {
+      "name": "Medication referral",
+      "evidence": "A prescriber may consider medication as an adjunct.",
+      "note": "Prescribing decisions rest with the prescriber."
+    }
+  ],
+  "handouts": [
+    "regular-eating-plan",
+    "kind-self-talk",
+    "coping-cards"
+  ],
+  "statIds": [
+    "us-bulimia-past-year"
+  ],
+  "culturalNotes": [
+    "Eating disorders occur across all genders, body sizes, ages, ethnic groups and income levels. Do not rule one out because the client is male, older, a person of color or in a larger body.",
+    "Food, fasting, body ideals and family meals carry cultural and religious meaning. Ask about religious fasting, cultural foods and family roles before planning meals, and adapt the plan rather than asking the client to drop practices that matter to them.",
+    "Weight stigma in health care is common. Use weight-neutral, respectful language and ask before weighing; consider blind weights where clinically appropriate.",
+    "Food insecurity can drive restriction followed by overeating. Ask about access to food and connect the client with food resources where needed.",
+    "Use a trained professional interpreter, not family members, and check that key terms translate with the meaning you intend.",
+    "If the client wants faith or spiritual practice included, follow their lead and get informed consent first (see the AACC Code of Ethics for faith-based counselors); never impose beliefs."
+  ],
+  "sud": false,
+  "requiredFeatures": [],
+  "strongMinAreas": 2,
+  "redFlagRules": [
+    {
+      "type": "eating-disorder-medical",
+      "message": "Medical warning signs related to eating are documented. Eating disorders carry real medical risk: arrange a same-day or urgent medical assessment (vital signs, electrolytes, ECG as indicated) and agree on a medical monitoring plan."
+    },
+    {
+      "type": "suicidality",
+      "message": "Suicidal thoughts or self-harm are documented in this input. Ask directly about intent, plan and access to means, follow your crisis protocol and build a safety plan with the client; this app never rates risk."
+    }
+  ],
+  "licensedDsm": false,
+  "wileyLicensed": false,
+  "sources": [
+    {
+      "title": "Eating Disorders (health topic)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/topics/eating-disorders"
+    },
+    {
+      "title": "Eating Disorders (statistics)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/statistics/eating-disorders"
+    },
+    {
+      "title": "Eating disorders: recognition and treatment (NG69)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng69",
+      "year": 2017
+    },
+    {
+      "title": "Eating Disorders (health topic)",
+      "publisher": "MedlinePlus, U.S. National Library of Medicine",
+      "url": "https://medlineplus.gov/eatingdisorders.html"
+    },
+    {
+      "title": "Transdiagnostic cognitive-behavioral therapy for patients with eating disorders: a two-site trial with 60-week follow-up (Fairburn et al.)",
+      "publisher": "American Journal of Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19074978/",
+      "year": 2009
+    },
+    {
+      "title": "Mortality rates in patients with anorexia nervosa and other eating disorders: a meta-analysis of 36 studies (Arcelus et al.)",
+      "publisher": "Archives of General Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21727255/",
+      "year": 2011
+    },
+    {
+      "title": "ICD-11 for Mortality and Morbidity Statistics (browser)",
+      "publisher": "World Health Organization",
+      "url": "https://icd.who.int/browse/latest-release/mms/en"
+    },
+    {
+      "title": "ICD-10-CM (official code set)",
+      "publisher": "CDC National Center for Health Statistics",
+      "url": "https://www.cdc.gov/nchs/icd/icd-10-cm/index.html"
+    },
+    {
+      "title": "ICD-10-CM codes checked with the NLM Clinical Table Search Service",
+      "publisher": "National Library of Medicine",
+      "url": "https://clinicaltables.nlm.nih.gov/apidoc/icd10cm/v3/doc.html"
+    },
+    {
+      "title": "AACC Code of Ethics",
+      "publisher": "American Association of Christian Counselors",
+      "url": "https://aacc.net/aacc-code-of-ethics/"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

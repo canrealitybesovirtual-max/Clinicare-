@@ -4,7 +4,8 @@
  * Wiped on reload/close (it only lives in React memory) and after IDLE_MS without interaction.
  * Free text stored here has ALREADY passed the PHI scrubber.
  * Components that keep their own text state (search boxes, field drafts) remount on `resetCount`, so
- * Clear session and the idle wipe clear them as well.
+ * Clear session and the idle wipe clear them as well. Module-level memory outside React (src/components/ai/
+ * ai-session.ts) registers with onSessionReset() and is cleared at the same moment, on whatever page is open.
  */
 import * as React from "react";
 import type { DurationBand, Onset, TriState } from "@/lib/types";
@@ -114,12 +115,33 @@ interface SessionCtx {
 
 const Ctx = React.createContext<SessionCtx | null>(null);
 
+const resetListeners = new Set<(resetCount: number) => void>();
+
+/**
+ * Runs `fn` with the new resetCount right after every Clear session and idle wipe, whichever screen is open.
+ * For memory kept outside React state; returns the unsubscribe function.
+ */
+export function onSessionReset(fn: (resetCount: number) => void): () => void {
+  resetListeners.add(fn);
+  return () => {
+    resetListeners.delete(fn);
+  };
+}
+
 export function SessionProvider({ children, idleMs = IDLE_MS }: { children: React.ReactNode; idleMs?: number }) {
   const [state, dispatch] = React.useReducer(reducer, initialSession);
   const [idleCleared, setIdleCleared] = React.useState(false);
   const [idleWarning, setIdleWarning] = React.useState(false);
   const [resetCount, setResetCount] = React.useState(0);
+  const resetCountRef = React.useRef(0);
   const armRef = React.useRef<() => void>(() => {});
+  /** Clear session and the idle wipe: empty the session, bump resetCount, tell outside-React memory. */
+  const resetAll = React.useCallback(() => {
+    dispatch({ type: "reset", keepCountry: true });
+    const next = ++resetCountRef.current;
+    setResetCount(next);
+    for (const fn of resetListeners) fn(next);
+  }, []);
 
   React.useEffect(() => {
     let warnTimer: ReturnType<typeof setTimeout> | undefined;
@@ -130,8 +152,7 @@ export function SessionProvider({ children, idleMs = IDLE_MS }: { children: Reac
     const wipe = () => {
       clearTimeout(warnTimer);
       clearTimeout(wipeTimer);
-      dispatch({ type: "reset", keepCountry: true });
-      setResetCount((n) => n + 1);
+      resetAll();
       setIdleWarning(false);
       setIdleCleared(true);
     };
@@ -162,7 +183,7 @@ export function SessionProvider({ children, idleMs = IDLE_MS }: { children: Reac
       events.forEach((e) => window.removeEventListener(e, arm));
       document.removeEventListener("visibilitychange", onVisibility);
     };
-  }, [idleMs]);
+  }, [idleMs, resetAll]);
 
   const value = React.useMemo<SessionCtx>(
     () => ({
@@ -173,17 +194,14 @@ export function SessionProvider({ children, idleMs = IDLE_MS }: { children: Reac
       setFunctional: (measureId, value) => dispatch({ type: "functional", measureId, value }),
       clearMeasure: (measureId) => dispatch({ type: "clearMeasure", measureId }),
       updatePlan: (update) => dispatch({ type: "plan", update }),
-      reset: () => {
-        dispatch({ type: "reset", keepCountry: true });
-        setResetCount((n) => n + 1);
-      },
+      reset: resetAll,
       idleCleared,
       dismissIdleNotice: () => setIdleCleared(false),
       idleWarning,
       extend: () => armRef.current(),
       resetCount,
     }),
-    [state, idleCleared, idleWarning, resetCount],
+    [state, idleCleared, idleWarning, resetCount, resetAll],
   );
 
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;

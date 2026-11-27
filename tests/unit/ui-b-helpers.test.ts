@@ -12,7 +12,7 @@ import { ALL, matchesFacets } from "@/components/ethics/facet-index";
 import { buildHubIndex, countryLabel, hubCountries, jurisdictionLabel } from "@/components/ethics/hub-labels";
 import { DIRECTORIES, directoryGroups, directoryIndex } from "@/components/referrals/directory-data";
 import { checkLocation, IDENTIFIER_MESSAGE } from "@/components/referrals/location-check";
-import { KIND_ORDER, smsHref, smsNumber, telHref } from "@/components/referrals/referral-format";
+import { KIND_ORDER, smsHref, smsNumber, smsParts, telHref } from "@/components/referrals/referral-format";
 import { COMPLEMENTARY_IDS, evidenceLead } from "@/components/referrals/complementary-options";
 import { PROVIDER_TYPE_OPTIONS, STATE_OPTIONS } from "@/components/referrals/search-options";
 import { errorCopy, isSudQuery, requestBody } from "@/components/referrals/referral-search";
@@ -39,6 +39,15 @@ describe("tel: and sms: links", () => {
     expect(smsNumber("Text 1-800-985-5990")).toBe("18009855990");
     expect(smsNumber("Text us anytime")).toBeNull();
     expect(smsHref("Text SHOUT to 85258")).toBe("sms:85258");
+  });
+  it("splits a curated text instruction into keyword and number, as written, for a button in the page's language", () => {
+    expect(smsParts("Text AYUDA to 988")).toEqual({ keyword: "AYUDA", number: "988" });
+    expect(smsParts("Text HOME to 741741")).toEqual({ keyword: "HOME", number: "741741" });
+    expect(smsParts("Text START to 678-678")).toEqual({ keyword: "START", number: "678-678" });
+    expect(smsParts("Text 988")).toEqual({ keyword: null, number: "988" });
+    expect(smsParts("Text 0477 13 11 14")).toEqual({ keyword: null, number: "0477 13 11 14" });
+    expect(smsParts("Text us anytime")).toBeNull();
+    expect(smsParts(null)).toBeNull();
   });
   it("gives every directory entry with a phone or text route a working link", () => {
     for (const dir of DIRECTORIES) {

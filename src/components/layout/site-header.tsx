@@ -40,9 +40,6 @@ import { LanguageToggle, TextSizeToggle } from "./display-controls";
 import { CLIENT_HOME, isActive, isClientPath, isSharePath } from "./paths";
 import { PrivacyBar } from "./privacy-bar";
 
-/** Re-exported for callers that already import it from here (the helpers live in ./paths). */
-export { isClientPath } from "./paths";
-
 /**
  * Where an item sits on wide screens: always in the bar ("lg"), in the bar from xl and in "More" below it ("xl"),
  * or always in "More" ("more"). Small screens show every item in the menu drawer.
@@ -364,7 +361,7 @@ export function SiteHeader() {
         ) : (
           <DesktopNav pathname={pathname} />
         )}
-        <div className="ml-auto flex items-center gap-1.5 sm:gap-2">
+        <div className="ml-auto flex min-w-0 flex-wrap items-center justify-end gap-1.5 sm:gap-2">
           <LanguageToggle />
           <TextSizeToggle />
           {client ? isSharePath(pathname) ? null : <ClinicianViewButton /> : <MobileNav pathname={pathname} />}

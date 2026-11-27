@@ -1,0 +1,74 @@
+{
+  "id": "mindfulness-based-cognitive-therapy",
+  "name": "Mindfulness-based cognitive therapy (MBCT): overview and referral",
+  "modality": "Mindfulness-based (MBCT, group protocol)",
+  "conditions": [
+    "major-depressive-disorder",
+    "persistent-depressive-disorder"
+  ],
+  "evidenceLevel": "An individual patient data meta-analysis (Kuyken et al., 2016) found MBCT lowered the risk of depressive relapse compared with usual care, with larger benefit for people with more residual symptoms. NICE NG222 lists group mindfulness-based approaches for preventing relapse of depression.",
+  "minutes": {
+    "min": 20,
+    "max": 150
+  },
+  "purpose": "An eight-week group program that combines mindfulness practice with cognitive therapy ideas, mainly for people who have recovered from repeated depressive episodes and want to lower relapse risk. Clients learn to notice early signs of a downward spiral and to step out of rumination rather than argue with thoughts. In individual sessions, clinicians can introduce brief practices and refer to a group led by a trained teacher.",
+  "steps": [
+    "Check readiness: MBCT is usually offered between episodes, not at the height of a severe episode.",
+    "Explain the aim: noticing thoughts and body states early, with curiosity, so they are less likely to pull the client into a spiral.",
+    "Introduce a short practice in session, such as a three-step breathing pause, and debrief what the client noticed.",
+    "Agree on brief daily home practice and a way to track it.",
+    "Map the client's personal early warning signs of relapse and an action plan for each.",
+    "Refer to an MBCT group led by a trained teacher; coordinate goals with the group teacher with consent."
+  ],
+  "script": [
+    "This is a way of training attention, not a way to empty the mind.",
+    "When a thought pulls you in, just notice: there is a thought. Then bring your attention back to your breath.",
+    "What did you notice in your body just now?",
+    "Many people find it helpful to practice for a few minutes every day, even on good days."
+  ],
+  "contraindications": [
+    "Long silent practice can bring up trauma memories or dissociation; offer shorter practices, eyes-open options and grounding, and refer to trauma-informed teachers.",
+    "Not a first-line treatment during a severe depressive episode or psychosis.",
+    "Do not start during an active crisis, current suicidal risk, acute intoxication or withdrawal; stabilize first and share crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com."
+  ],
+  "culturalAdaptations": [
+    "Present the practice in language that fits the client's worldview; some clients prefer the word attention training to meditation.",
+    "Clients with contemplative or religious traditions may link practice to prayer or meditation they already know; let them lead.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "faithIntegrated": {
+    "note": "Some clients link mindful attention to contemplative prayer or meditation within their own tradition; build on that only at their request.",
+    "consentNote": "Before adding any spiritual element, explain what you propose, confirm the client wants it, document informed consent and let the client lead (see the AACC Code of Ethics for faith-based counselors)."
+  },
+  "handoutIds": [
+    "mindful-check-in",
+    "values-compass"
+  ],
+  "sources": [
+    {
+      "title": "Efficacy of mindfulness-based cognitive therapy in prevention of depressive relapse: an individual patient data meta-analysis (Kuyken et al.)",
+      "publisher": "JAMA Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27119968/",
+      "year": 2016
+    },
+    {
+      "title": "Depression in adults: treatment and management (NG222)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng222",
+      "year": 2022
+    },
+    {
+      "title": "Psychological Treatments (treatment index)",
+      "publisher": "APA Division 12, Society of Clinical Psychology",
+      "url": "https://div12.org/psychological-treatments/treatments/"
+    },
+    {
+      "title": "AACC Code of Ethics",
+      "publisher": "American Association of Christian Counselors",
+      "url": "https://aacc.net/aacc-code-of-ethics/"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

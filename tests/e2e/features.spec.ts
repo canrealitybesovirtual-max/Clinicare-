@@ -20,11 +20,13 @@ import {
   answerItem,
   buildPlan,
   choose,
+  conditionNameTerms,
   downloadVia,
   enterSymptomText,
   expectClientSafe,
   goNav,
   gotoReady,
+  loadHandouts,
   pdfText,
 } from "./helpers";
 
@@ -172,6 +174,23 @@ test.describe("client pages (G3)", () => {
       await expect(page.getByRole("navigation", { name: "Main" })).toHaveCount(0);
     });
   }
+
+  test("the full HTML of every client handout page, scripts included, names no condition", async ({ request }) => {
+    // Server pages hand the client view only client-safe sources (src/lib/client-safe.ts clientHandout), so
+    // diagnosis-named source titles never reach the client's device, not even in the page payload.
+    // Everyday words a sheet uses itself ("panic" in the panic-cycle sheet) are its own reviewed client text.
+    const all = [...conditionNameTerms(), "bipolar", "schizophren", "adhd", "psychotic"];
+    for (const h of loadHandouts()) {
+      const terms = all.filter((t) => !h.ownText.includes(t));
+      const routes = [`/r/${h.id}`, `/client/skills/${h.id}`, ...(h.es ? [`/r/${h.id}/es`] : [])];
+      for (const route of routes) {
+        const res = await request.get(route);
+        expect(res.status(), route).toBe(200);
+        const html = (await res.text()).toLowerCase();
+        for (const t of terms) expect(html.includes(t), `${route}: ${t}`).toBe(false);
+      }
+    }
+  });
 
   test("a topic page in Spanish keeps the attribution and stays client-safe", async ({ page }) => {
     await gotoReady(page, `/client/topics/${SAMPLE.conditionTopic}`);

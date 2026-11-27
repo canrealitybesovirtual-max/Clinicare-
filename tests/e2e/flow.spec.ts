@@ -5,7 +5,10 @@
  */
 import { expect, test } from "@playwright/test";
 import {
+  CLIENT_DISCLAIMER,
+  CLIENT_DISCLAIMER_ES,
   CLIENT_PHI_BANNER,
+  CLIENT_PHI_BANNER_ES,
   CLIENT_ROUTES,
   CLINICIAN_PHI_BANNER,
   CLINICIAN_ROUTES,
@@ -21,6 +24,7 @@ import {
   goNav,
   gotoReady,
   isClientRoute,
+  isSpanishRoute,
   loadConditions,
   pdfText,
 } from "./helpers";
@@ -90,8 +94,9 @@ test.describe("every route", () => {
       });
       await gotoReady(page, route);
 
+      const es = isSpanishRoute(route);
       const footer = page.getByRole("contentinfo");
-      await expect(footer).toContainText(DISCLAIMER);
+      await expect(footer).toContainText(es ? CLIENT_DISCLAIMER_ES : isClientRoute(route) ? CLIENT_DISCLAIMER : DISCLAIMER);
 
       const trigger = crisisButton(page);
       await expect(trigger).toBeVisible();
@@ -99,9 +104,9 @@ test.describe("every route", () => {
       await trigger.click();
       const dialog = page.getByRole("dialog");
       await expect(dialog).toBeVisible();
-      await expect(dialog).toHaveAccessibleName(isClientRoute(route) ? "Get help now" : "Crisis support");
-      await expect(dialog.getByRole("link", { name: "Call 988" })).toBeVisible();
-      await expect(dialog.getByRole("link", { name: /Call 911/ })).toBeVisible();
+      await expect(dialog).toHaveAccessibleName(es ? "Ayuda ahora" : isClientRoute(route) ? "Get help now" : "Crisis support");
+      await expect(dialog.getByRole("link", { name: es ? "Llamar al 988" : "Call 988" })).toBeVisible();
+      await expect(dialog.getByRole("link", { name: es ? /Llamar al 911/ : /Call 911/ })).toBeVisible();
       await expect(dialog.getByRole("link", { name: /findahelpline\.com/ })).toBeVisible();
       await page.keyboard.press("Escape");
       await expect(dialog).toBeHidden();
@@ -130,10 +135,11 @@ test.describe("every route", () => {
   for (const route of CLIENT_ROUTES) {
     test(`client banner and client chrome on ${route}`, async ({ page }) => {
       await gotoReady(page, route);
-      await expect(page.getByRole("banner").getByText(CLIENT_PHI_BANNER)).toBeVisible();
+      const es = isSpanishRoute(route);
+      await expect(page.getByRole("banner").getByText(es ? CLIENT_PHI_BANNER_ES : CLIENT_PHI_BANNER)).toBeVisible();
       await expect(page.getByRole("banner").getByText(CLINICIAN_PHI_BANNER)).toHaveCount(0);
       await expect(page.getByRole("navigation", { name: "Main" })).toHaveCount(0);
-      await expect(crisisButton(page)).toHaveText(/Get help now/);
+      await expect(crisisButton(page)).toHaveText(es ? /Ayuda ahora/ : /Get help now/);
       // G3: no one-tap way back into the clinician screens; the share page has no mode control at all.
       await expect(page.getByRole("navigation", { name: "Mode" })).toHaveCount(0);
       await expect(page.getByRole("banner").getByRole("link", { name: "Clinician", exact: true })).toHaveCount(0);

@@ -1,0 +1,54 @@
+{
+  "id": "mentalization-based-treatment",
+  "name": "Mentalization-based treatment (MBT): overview and referral",
+  "modality": "Psychodynamic - mentalization-based",
+  "conditions": [
+    "borderline-personality-disorder"
+  ],
+  "evidenceLevel": "Outpatient MBT led to greater reductions in self-harm, suicide attempts and hospital admission than structured clinical management in a randomized trial (Bateman and Fonagy, 2009).",
+  "minutes": {
+    "min": 50,
+    "max": 90
+  },
+  "purpose": "Strengthens the client's ability to understand their own and others' minds (feelings, wishes, intentions), especially under emotional stress when this capacity tends to collapse. Delivered as individual and group therapy by trained clinicians; generalist clinicians can use a curious, not-knowing stance in everyday sessions.",
+  "steps": [
+    "Take a curious, not-knowing stance about the client's and others' mental states.",
+    "When emotions run high, slow down and explore what happened moment by moment.",
+    "Ask about what the client thinks others were feeling or intending, and consider alternatives.",
+    "Notice and gently pause when the client jumps to certainty about others' minds.",
+    "Refer to a trained MBT program for the full treatment."
+  ],
+  "script": [
+    "Help me understand what was going on for you in that moment.",
+    "What do you imagine she was feeling when she said that?",
+    "Could there be another way of seeing it?",
+    "Let's rewind and go through it slowly."
+  ],
+  "contraindications": [
+    "Not for acute crisis without a safety plan; MBT works within a structured program.",
+    "Do not start during an active crisis, current suicidal risk, acute intoxication or withdrawal; stabilize first and share crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com."
+  ],
+  "culturalAdaptations": [
+    "Cultural norms shape how people talk about inner states; use the client's own words for feelings and intentions.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "trainingRequired": "MBT: trained clinicians only for the full treatment; refer otherwise.",
+  "handoutIds": [],
+  "sources": [
+    {
+      "title": "Randomized controlled trial of outpatient mentalization-based treatment versus structured clinical management (Bateman and Fonagy)",
+      "publisher": "American Journal of Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19833787/",
+      "year": 2009
+    },
+    {
+      "title": "Borderline personality disorder: recognition and management (CG78)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg78",
+      "year": 2009
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

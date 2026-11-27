@@ -39,7 +39,7 @@ import { useSession, type SessionState } from "@/state/session";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Notice } from "@/components/ui/notice";
-import { ClinicianReviewBadge } from "@/components/content/content-bits";
+import { ClinicianReviewBadge } from "@/components/content/content-meta";
 import { CrisisInline } from "@/components/crisis/crisis-panel";
 import type { SymptomAnalysis } from "@/components/symptoms/analysis";
 import { STRENGTH_LABEL } from "@/components/diagnoses/explain";
@@ -82,6 +82,9 @@ export function AddSymptomChip({ id, onAdd, hint }: { id: string; onAdd: (id: st
 function PatternCard({ p, onAdd }: { p: TriggerPattern; onAdd: (id: string) => void }) {
   const fear = p.objectLabels.join(" or ");
   const otherKey = p.missing.filter((f) => f.kind === "core" && !p.addable.includes(f.symptomId));
+  // Supporting features that are neither offered as chips nor named here are listed on the scored card.
+  const shown = p.addable.length + otherKey.length;
+  const more = p.missing.length - shown;
   return (
     <li className="rounded-xl border border-border bg-surface p-4">
       <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
@@ -122,7 +125,7 @@ function PatternCard({ p, onAdd }: { p: TriggerPattern; onAdd: (id: string) => v
         )}
       </div>
       <div className="mt-3">
-        <p className="text-sm font-semibold">Not yet documented ({p.missing.length})</p>
+        <p className="text-sm font-semibold">Not yet documented ({shown})</p>
         {p.addable.length ? (
           <>
             <p className="mt-0.5 text-sm text-muted">Tap to add the ones the client describes:</p>
@@ -137,6 +140,17 @@ function PatternCard({ p, onAdd }: { p: TriggerPattern; onAdd: (id: string) => v
           <p className="mt-2 text-sm text-muted">
             {p.addable.length ? "Other key features: " : "Key features: "}
             {otherKey.map((f) => shortSymptomLabel(f.symptomId)).join("; ")}.
+          </p>
+        ) : null}
+        {more > 0 ? (
+          <p className="mt-2 text-sm text-muted">
+            {p.scored ? (
+              <Link href={`/diagnoses#cond-${p.conditionId}`} className="font-semibold text-accent underline underline-offset-2">
+                +{more} more supporting {more === 1 ? "feature" : "features"} on Possible diagnoses
+              </Link>
+            ) : (
+              `+${more} more supporting ${more === 1 ? "feature" : "features"} once this pattern scores.`
+            )}
           </p>
         ) : null}
       </div>
@@ -232,7 +246,7 @@ function QuestionCard({
       )}
       {q.part2Notice ? (
         <p className="mt-3 rounded-lg bg-warn-bg p-3 text-sm text-text">
-          <span className="font-semibold text-warn-fg">42 CFR Part 2: </span>
+          <span className="font-semibold text-warn-fg">Substance use: </span>
           {q.part2Notice}
         </p>
       ) : null}
@@ -311,7 +325,7 @@ function Pointers({ hints, catalog }: { hints: ReturnType<typeof computeResource
       </div>
       {hints.part2Notice ? (
         <p className="rounded-lg bg-warn-bg p-3 text-sm">
-          <span className="font-semibold text-warn-fg">42 CFR Part 2: </span>
+          <span className="font-semibold text-warn-fg">Substance use: </span>
           {hints.part2Notice}
         </p>
       ) : null}

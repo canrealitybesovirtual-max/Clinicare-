@@ -58,10 +58,7 @@ function Entry({ e }: { e: HelpEntry }) {
           {t(TEXT.forWho)} <span lang="en">{e.audience}</span>
         </p>
       ) : null}
-      {/* Button labels come from the shared referral component (English for now). */}
-      <div lang="en">
-        <HelplineActions name={e.name} phone={e.phone} text={e.text} chat={e.chat} crisis={e.crisis} className="mt-3" />
-      </div>
+      <HelplineActions name={e.name} phone={e.phone} text={e.text} chat={e.chat} crisis={e.crisis} className="mt-3" />
       <p className="mt-2 text-sm">
         <ExternalLink href={e.url} className="inline-flex min-h-11 items-center">
           {t(TEXT.website)}

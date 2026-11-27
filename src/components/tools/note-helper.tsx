@@ -19,7 +19,7 @@ import { useSession } from "@/state/session";
 import { useSymptomAnalysis } from "@/components/symptoms/analysis";
 import { planRecordsSubstanceUse } from "@/components/plan/plan-model";
 import { AdultOnly } from "@/components/measures/adult-only";
-import { ClinicianReviewBadge } from "@/components/content/content-bits";
+import { ClinicianReviewBadge } from "@/components/content/content-meta";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ChoiceGroup } from "@/components/ui/choice-group";
@@ -119,16 +119,17 @@ function NoteHelperInner({ interventionNames, sudPlanIds, sudPrompt }: NoteHelpe
         <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
           <ClinicianReviewBadge />
           <p className="text-sm text-muted">
-            Prefilled from this session: {counts}.{" "}
             {nothingYet ? (
               <>
-                Nothing is documented yet. Write the note here, or{" "}
+                Nothing from this session to prefill yet. Write the note here, or{" "}
                 <Link href="/symptoms" className="font-semibold text-accent underline underline-offset-2">
                   add symptoms first
                 </Link>
                 .
               </>
-            ) : null}
+            ) : (
+              `Prefilled from this session: ${counts}.`
+            )}
           </p>
         </div>
         <div className="grid grid-cols-[1fr_6.5rem] gap-4 sm:grid-cols-[1fr_12rem]">

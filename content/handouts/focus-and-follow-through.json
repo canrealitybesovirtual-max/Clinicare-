@@ -1,0 +1,97 @@
+{
+  "id": "focus-and-follow-through",
+  "title": "Getting Things Done: Simple Planning Habits",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 10,
+  "intro": "Some people find it hard to stay organized, keep track of time or finish what they start. This is not laziness. Simple systems can make a big difference. This sheet gives you a few habits to try, one at a time. Pick one or two to practice this week. Reading it takes about 10 minutes.",
+  "sections": [
+    {
+      "heading": "Set up your system",
+      "steps": [
+        "Use one calendar for everything, on paper or on your phone. Check it every morning.",
+        "Keep one task list. Write tasks down the moment you think of them.",
+        "Pick one spot for keys, wallet and phone. Put them there every time you come home.",
+        "Set reminders for things that must happen at a certain time."
+      ]
+    },
+    {
+      "heading": "Make tasks easier to start",
+      "steps": [
+        "Break a big task into small steps. Write the very first step.",
+        "Make the first step so small it takes 5 minutes or less.",
+        "Set a timer for 15 minutes and work until it rings. Then take a short break.",
+        "If a distracting thought pops up, jot it on a notepad and come back to it later.",
+        "Work next to someone else, in person or online, if that helps you stay on task."
+      ]
+    },
+    {
+      "heading": "Plan your week",
+      "body": "Once a week, look at your calendar and task list together. Pick the 3 most important tasks. Put each one on a day and time. Plan some fun too."
+    },
+    {
+      "heading": "When it does not go to plan",
+      "body": "Everyone misses things. Notice what got in the way, and change one small thing for next week. Be kind to yourself. Change comes from practice, not perfection."
+    }
+  ],
+  "safetyNote": "Safety first: If you feel very low, hopeless or overwhelmed, or you have thoughts of hurting yourself, talk with someone right away. In the US, call or text 988 or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sud": false,
+  "es": {
+    "title": "Hacer las cosas: hábitos sencillos para planear",
+    "intro": "A algunas personas les cuesta organizarse, llevar la cuenta del tiempo o terminar lo que empiezan. Esto no es pereza. Unos sistemas sencillos pueden ayudar mucho. Esta hoja le da algunos hábitos para probar, uno a la vez. Elija uno o dos para practicar esta semana. Leerla toma unos 10 minutos.",
+    "sections": [
+      {
+        "heading": "Arme su sistema",
+        "steps": [
+          "Use un solo calendario para todo, en papel o en el teléfono. Mírelo cada mañana.",
+          "Tenga una sola lista de tareas. Anote cada tarea en cuanto la piense.",
+          "Elija un lugar para las llaves, la cartera y el teléfono. Póngalos ahí cada vez que llegue a casa.",
+          "Ponga recordatorios para lo que tiene que pasar a cierta hora."
+        ]
+      },
+      {
+        "heading": "Haga que sea más fácil empezar",
+        "steps": [
+          "Divida una tarea grande en pasos pequeños. Escriba el primer paso.",
+          "Haga que el primer paso sea tan pequeño que tome 5 minutos o menos.",
+          "Ponga un reloj de 15 minutos y trabaje hasta que suene. Luego tome un descanso corto.",
+          "Si le llega una idea que lo distrae, anótela en un papel y vuelva a ella después.",
+          "Trabaje al lado de otra persona, en persona o en línea, si eso le ayuda a seguir."
+        ]
+      },
+      {
+        "heading": "Planee su semana",
+        "body": "Una vez por semana, mire juntos su calendario y su lista de tareas. Elija las 3 tareas más importantes. Ponga cada una en un día y una hora. Planee también algo divertido."
+      },
+      {
+        "heading": "Cuando las cosas no salen como pensaba",
+        "body": "A todos se nos olvidan cosas. Note qué se lo impidió y cambie una cosa pequeña para la próxima semana. Trátese con amabilidad. El cambio viene de practicar, no de ser perfecto."
+      }
+    ],
+    "safetyNote": "La seguridad es lo primero: Si se siente muy bajo, sin esperanza o abrumado, o tiene pensamientos de hacerse daño, hable con alguien de inmediato. En EE. UU., llame o envíe un mensaje de texto al 988, o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "sources": [
+    {
+      "title": "Cognitive behavioral therapy vs relaxation with educational support for medication-treated adults with ADHD and persistent symptoms (Safren et al.)",
+      "publisher": "JAMA (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20736471/",
+      "year": 2010
+    },
+    {
+      "title": "Efficacy of meta-cognitive therapy for adult ADHD (Solanto et al.)",
+      "publisher": "American Journal of Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20231319/",
+      "year": 2010
+    },
+    {
+      "title": "Attention deficit hyperactivity disorder: diagnosis and management (NG87)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng87",
+      "year": 2018
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

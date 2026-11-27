@@ -21,9 +21,15 @@ export function buildResourceCatalog(): ResourceCatalog {
   }
   return {
     conditions: allConditions.map((c) => ({ id: c.id, name: c.name, measures: [...c.measures], handouts: [...c.handouts], sud: c.sud })),
-    interventions: interventions.map((i) => ({ id: i.id, name: i.name, conditions: [...i.conditions], handoutIds: [...i.handoutIds] })),
+    interventions: interventions.map((i) => ({
+      id: i.id,
+      name: i.name,
+      conditions: [...i.conditions],
+      handoutIds: [...i.handoutIds],
+      ...(i.suggestWith ? { suggestWith: [...i.suggestWith] } : {}),
+    })),
     planInterventions,
-    handouts: allHandouts.map((h) => ({ id: h.id, title: h.title, sud: h.sud })),
+    handouts: allHandouts.map((h) => ({ id: h.id, title: h.title, sud: h.sud, ...(h.suggestWith ? { suggestWith: [...h.suggestWith] } : {}) })),
     measureIds: measures.map((m) => m.id), // content.ts exposes license-confirmed measures only (G7)
   };
 }

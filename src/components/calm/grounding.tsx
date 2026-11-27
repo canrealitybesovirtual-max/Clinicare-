@@ -23,8 +23,9 @@ export function Grounding() {
   };
 
   return (
+    // The exercise card comes first, so its Next button sits on the first phone screen above the floating
+    // "Get help now" button; the explanation follows it (as in the breathing exercise).
     <div className="space-y-5">
-      <p className="text-base leading-relaxed text-muted">{t(GROUND.why)}</p>
       <div className="rounded-3xl bg-accent-soft px-5 py-6">
         {done || !current ? (
           <div className="space-y-3 text-center">
@@ -62,6 +63,7 @@ export function Grounding() {
           </div>
         )}
       </div>
+      <p className="text-base leading-relaxed text-muted">{t(GROUND.why)}</p>
       <p className="text-sm text-muted">{t(GROUND.skip)}</p>
     </div>
   );

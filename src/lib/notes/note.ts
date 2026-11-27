@@ -141,7 +141,7 @@ function slotText(slot: Slot, ctx: NoteContext): string {
       const parts = [
         ctx.concerns.length
           ? `Presenting concerns documented this session:\n${bullets(ctx.concerns)}`
-          : "Presenting concerns: none documented in this session yet.",
+          : `Presenting concerns: ${TO_COMPLETE}`,
       ];
       if (ctx.cultural.length) parts.push(`Cultural concepts of distress named (explore with the client):\n${bullets(ctx.cultural)}`);
       return parts.join("\n");
@@ -149,7 +149,7 @@ function slotText(slot: Slot, ctx: NoteContext): string {
     case "measures":
       return ctx.measures.length
         ? `Measures:\n${bullets(ctx.measures.map(measureLine))}`
-        : "Measures: none completed in this session.";
+        : `Measures: ${TO_COMPLETE}`;
     case "observations":
       return `Observations in session: ${TO_COMPLETE}`;
     case "impressions":

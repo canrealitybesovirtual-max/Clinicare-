@@ -15,8 +15,9 @@ import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { ExternalLink } from "@/components/ui/external-link";
 import { Notice } from "@/components/ui/notice";
-import { Governance, PageIntro, ReviewBadge, SourcesList } from "@/components/content/content-bits";
+import { Governance, PageIntro, ReviewBadge, SourcesList } from "@/components/content/content-meta";
 import { HubPrompt } from "@/components/hub/hub-prompt";
+import { HelpTip } from "@/components/ui/help-tip";
 import { DrugLabelPanel, RxNormPanel } from "@/components/medications/live-panels";
 import { NOT_FOR_PRESCRIBING, deaLabel, displayGeneric, isSudMedication } from "@/components/medications/medication-labels";
 
@@ -66,6 +67,14 @@ export default async function MedicationPage({ params }: { params: Promise<{ id:
       >
         <p>Education for a medication-referral conversation. Medication decisions belong to the prescriber.</p>
       </PageIntro>
+      <HelpTip title="How to use this page" className="mb-5">
+        <p>
+          The left side is a short summary in the app&apos;s own words: class, brands, what it is used for and notable
+          cautions. The right side loads the current FDA label (boxed warning first) and RxNorm names when the page opens;
+          only this medication&apos;s curated name is sent.
+        </p>
+        <p>Use it to talk about a referral. Doses, switching and stopping are questions for the prescriber.</p>
+      </HelpTip>
 
       <div className="mb-6 max-w-3xl space-y-3">
         <Notice tone="warn" title={NOT_FOR_PRESCRIBING}>

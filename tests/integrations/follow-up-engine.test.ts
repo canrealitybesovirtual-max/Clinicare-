@@ -54,15 +54,25 @@ const ids = (qs: FollowUpQuestion[]) => qs.map((q) => q.id);
 /* ------------------------------------------------------------------ "panic from dogs" */
 
 describe('"panic from dogs" end to end', () => {
-  it("extracts an animal trigger from text the lexicon alone cannot use", () => {
+  // "panic with dogs" is a phrasing the lexicon does not read, so the trigger dictionary alone carries it; since
+  // review round 3 the lexicon reads "panic from dogs" itself (fear of animals, cued panic), tested below.
+  it("reads the fear in the text itself", () => {
     const s = session("panic from dogs");
+    expect(s.scoringResult.status).toBe("ok");
+    expect(s.scoringInput.symptomIds).toEqual(expect.arrayContaining(["panic-attack-cued", "circumscribed-fear", "fear-animals"]));
+    expect(s.scoringResult.suggestions.map((x) => x.conditionId)).toEqual(["specific-phobia"]);
+    expect(ids(s.questions)).toEqual(expect.arrayContaining(["fear-cued-or-unexpected", "fear-avoids-trigger", "gate-duration"]));
+  });
+
+  it("extracts an animal trigger from text the lexicon alone cannot use", () => {
+    const s = session("panic with dogs");
     expect(s.scoringResult.status).toBe("empty"); // the original complaint: no feedback at all
     expect(s.triggers).toHaveLength(1);
     expect(s.triggers[0]).toMatchObject({ category: "animal", objectId: "dog", phrase: "dogs", cue: "panic" });
   });
 
   it("asks first whether the attacks happen only around dogs, about avoidance, and about duration", () => {
-    const qs = session("panic from dogs").questions;
+    const qs = session("panic with dogs").questions;
     expect(qs.length).toBeGreaterThanOrEqual(3);
     expect(qs.length).toBeLessThanOrEqual(5);
     expect(qs[0]?.id).toBe("fear-cued-or-unexpected");
@@ -86,12 +96,12 @@ describe('"panic from dogs" end to end', () => {
     };
     // Answer whatever the engine offers that is in the script, round by round (as a clinician would).
     for (let round = 0; round < 4; round++) {
-      const offered = session("panic from dogs", answers).questions;
+      const offered = session("panic with dogs", answers).questions;
       for (const q of offered) if (script[q.id] && !answers.some((a) => a.questionId === q.id)) answers.push({ questionId: q.id, answerIds: [script[q.id] as string] });
     }
     expect(answers.map((a) => a.questionId).sort()).toEqual(Object.keys(script).sort());
 
-    const s = session("panic from dogs", answers);
+    const s = session("panic with dogs", answers);
     expect(s.scoringInput).toEqual({
       symptomIds: ["panic-attack-cued", "circumscribed-fear", "phobic-avoidance"],
       duration: "gte6m",
@@ -119,7 +129,7 @@ describe('"panic from dogs" end to end', () => {
     }
 
     // The other answer keeps panic disorder in view: the question really discriminates.
-    const alt = session("panic from dogs", [{ questionId: "fear-cued-or-unexpected", answerIds: ["also-unexpected"] }]);
+    const alt = session("panic with dogs", [{ questionId: "fear-cued-or-unexpected", answerIds: ["also-unexpected"] }]);
     expect(alt.scoringResult.suggestions.map((x) => x.conditionId)).toContain("panic-disorder");
   });
 

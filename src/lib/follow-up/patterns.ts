@@ -3,7 +3,8 @@
  * scores. For each trigger category in play, the curated dictionary (content/trigger-objects.json
  * `conditionHints`) names the conditions to keep in mind; the ones in the knowledge base are returned with their
  * ICD-10-CM / ICD-11 codes, the "See DSM-5-TR" pointer, the features already documented and the ones not yet
- * documented, and up to four of those as tap-to-add symptom ids.
+ * documented, and up to four of those as tap-to-add symptom ids: core features first, then the phobia-type symptom
+ * the dictionary gives the described object (dogs: fear of animals), then panic features when it was described as panic.
  *
  * Every pattern is labeled "For clinician review": something to consider and check, never a diagnosis. A pattern
  * with a required feature that is not documented (for example, PTSD without a documented event) waits until it is.
@@ -97,12 +98,15 @@ export function triggerPatterns(
   const scored = new Map(result.suggestions.map((s) => [s.conditionId, s] as const));
   const objectTerms = (ids: readonly string[]) =>
     dict.objects.filter((o) => ids.includes(o.id)).flatMap((o) => [o.label, ...o.terms].map((t) => normalizeText(t)).filter(Boolean));
+  const objectSymptoms = (ids: readonly string[]) =>
+    new Set(dict.objects.flatMap((o) => (ids.includes(o.id) && o.symptomId ? [o.symptomId] : [])));
 
   const out: TriggerPattern[] = [];
   const offered = new Set<string>();
   for (const [category, objectIds] of objectsByCategory) {
     const info = dict.categories[category];
     const terms = objectTerms(objectIds);
+    const ownSymptoms = objectSymptoms(objectIds);
     // 1 when the symptom's own wording names the described object ("cant leave the house" for leaving the house).
     const relevance = (f: FeatureRef) => {
       const s = lex.get(f.symptomId);
@@ -124,12 +128,13 @@ export function triggerPatterns(
       const candidates = missing.filter((f) => {
         const s = lex.get(f.symptomId);
         if (!s || s.redFlag || absent.has(f.symptomId) || offered.has(f.symptomId)) return false;
-        // Core features, plus panic features of the pattern when the fear was described as panic.
-        return f.kind === "core" || (panicCue && s.category === "panic");
+        // Core features, the described object's own phobia-type symptom, and panic features when it was described as panic.
+        return f.kind === "core" || ownSymptoms.has(f.symptomId) || (panicCue && s.category === "panic");
       });
+      const order = (f: FeatureRef) => (f.kind === "core" ? 0 : ownSymptoms.has(f.symptomId) ? 1 : 2);
       const addable = candidates
         .map((f, i) => ({ f, i, r: relevance(f) }))
-        .sort((a, b) => (a.f.kind === b.f.kind ? 0 : a.f.kind === "core" ? -1 : 1) || b.r - a.r || b.f.weight - a.f.weight || a.i - b.i)
+        .sort((a, b) => order(a.f) - order(b.f) || b.r - a.r || b.f.weight - a.f.weight || a.i - b.i)
         .slice(0, MAX_ADDABLE)
         .map((x) => x.f.symptomId);
       for (const id of addable) offered.add(id);

@@ -1,0 +1,83 @@
+{
+  "id": "applied-tension-practice",
+  "suggestWith": ["fear-blood-injection", "blood-injury-fainting"],
+  "title": "Staying Upright: Applied Tension Practice",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 10,
+  "intro": "Some people feel faint or pass out when they see blood or get a shot. This is a body reflex, not a sign of weakness. Your blood pressure drops for a moment. Applied tension is a simple skill that raises your blood pressure again by tensing your muscles. With practice, you can use it during blood tests, shots or medical visits. Each practice takes about 10 minutes.",
+  "sections": [
+    {
+      "heading": "How to practice",
+      "steps": [
+        "Sit in a comfortable chair.",
+        "Tense the muscles in your arms, legs and stomach all at once. Hold for about 10 to 15 seconds, until you feel warmth in your face.",
+        "Let go, but not all the way. Rest for about 20 to 30 seconds.",
+        "Repeat 5 times.",
+        "Practice 5 times a day for one week."
+      ]
+    },
+    {
+      "heading": "Using it when you need it",
+      "steps": [
+        "Learn your early signs, like feeling lightheaded, sweaty or sick to your stomach.",
+        "As soon as you notice them, start tensing.",
+        "Keep tensing on and off during the blood test or shot, but keep the arm used for the needle relaxed.",
+        "Tell the nurse or doctor that you may faint, and ask to lie down if you need to."
+      ]
+    },
+    {
+      "heading": "Facing the fear step by step",
+      "body": "With your counselor, you can practice looking at pictures, then videos, then real medical tools, while you use applied tension. Go one step at a time."
+    }
+  ],
+  "safetyNote": "Safety first: Check with your doctor before you practice if you have heart problems, high blood pressure or are pregnant. If you feel chest pain or a severe headache, stop and get medical help. If you have thoughts of hurting yourself, get help right away. In the US, call or text 988 or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sud": false,
+  "es": {
+    "title": "Mantenerse firme: práctica de tensión aplicada",
+    "intro": "Algunas personas se sienten a punto de desmayarse o se desmayan cuando ven sangre o les ponen una inyección. Es un reflejo del cuerpo, no una señal de debilidad. Su presión baja por un momento. La tensión aplicada es una habilidad sencilla que vuelve a subir la presión al tensar los músculos. Con práctica, puede usarla en análisis de sangre, inyecciones o citas médicas. Cada práctica toma unos 10 minutos.",
+    "sections": [
+      {
+        "heading": "Cómo practicar",
+        "steps": [
+          "Siéntese en una silla cómoda.",
+          "Tense los músculos de los brazos, las piernas y el estómago al mismo tiempo. Sostenga unos 10 a 15 segundos, hasta sentir calor en la cara.",
+          "Suelte, pero no del todo. Descanse unos 20 a 30 segundos.",
+          "Repita 5 veces.",
+          "Practique 5 veces al día durante una semana."
+        ]
+      },
+      {
+        "heading": "Cómo usarla cuando la necesite",
+        "steps": [
+          "Aprenda sus primeras señales, como sentirse mareado, sudoroso o con el estómago revuelto.",
+          "En cuanto las note, empiece a tensar.",
+          "Siga tensando y soltando durante el análisis de sangre o la inyección, pero deje relajado el brazo de la aguja.",
+          "Avísele a la enfermera o al médico que se puede desmayar, y pida acostarse si lo necesita."
+        ]
+      },
+      {
+        "heading": "Enfrentar el miedo paso a paso",
+        "body": "Con su consejero, puede practicar mirar fotos, luego videos y luego instrumentos médicos de verdad, mientras usa la tensión aplicada. Vaya un paso a la vez."
+      }
+    ],
+    "safetyNote": "La seguridad es lo primero: Hable con su médico antes de practicar si tiene problemas del corazón, presión alta o está embarazada. Si siente dolor de pecho o un dolor de cabeza fuerte, pare y busque ayuda médica. Si tiene pensamientos de hacerse daño, busque ayuda de inmediato. En EE. UU., llame o envíe un mensaje de texto al 988, o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "sources": [
+    {
+      "title": "Applied tension: a specific behavioral method for treatment of blood phobia (Öst and Sterner)",
+      "publisher": "Behaviour Research and Therapy (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/3593159/",
+      "year": 1987
+    },
+    {
+      "title": "Psychotherapies (health topic)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/topics/psychotherapies"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

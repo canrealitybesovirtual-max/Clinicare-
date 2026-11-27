@@ -1,0 +1,106 @@
+{
+  "conditionId": "cannabis-use-disorder",
+  "problems": [
+    {
+      "id": "cud-control",
+      "label": "Cannabis use that is hard to control and causes problems",
+      "definitions": [
+        {
+          "text": "Uses cannabis more often or in larger amounts than planned, and has tried to cut down without success.",
+          "sud": true
+        },
+        {
+          "text": "Has strong urges to use and feels irritable, restless or sleeps poorly when stopping.",
+          "sud": true
+        },
+        {
+          "text": "Use has caused problems at work, school, home or with mood, or has happened in risky situations such as driving.",
+          "sud": true
+        }
+      ],
+      "longTermGoals": [
+        {
+          "text": "The client reaches their own goal for cannabis use (stopping or cutting down) and feels more in control of their mood, sleep and daily life.",
+          "sud": true
+        }
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "cud-goal",
+          "text": "By session 3, set a personal goal for cannabis use and list 3 reasons for change in own words.",
+          "interventionIds": [
+            "motivational-interviewing",
+            "decisional-balance"
+          ],
+          "sud": true
+        },
+        {
+          "id": "cud-tracking",
+          "text": "For 4 weeks, log use, amount and situation each day, and identify the 3 most common triggers.",
+          "interventionIds": [
+            "relapse-prevention-planning"
+          ],
+          "sud": true
+        },
+        {
+          "id": "cud-urges",
+          "text": "Use urge surfing or another coping skill for at least 3 urges a week and record the outcome.",
+          "interventionIds": [
+            "urge-surfing"
+          ],
+          "sud": true
+        },
+        {
+          "id": "cud-incentives",
+          "text": "If available, join a program that offers incentives for meeting use goals.",
+          "interventionIds": [
+            "contingency-management"
+          ],
+          "sud": true
+        },
+        {
+          "id": "cud-plan",
+          "text": "By session 8, complete a relapse prevention plan with high-risk situations and coping steps.",
+          "interventionIds": [
+            "relapse-prevention-planning"
+          ],
+          "sud": true
+        }
+      ],
+      "measureIds": [
+        "phq-9",
+        "gad-7"
+      ]
+    }
+  ],
+  "collaborativeNote": "Write goals and objectives with the client in their own words. Timelines and targets are examples to adapt; the client decides what matters, and the clinician checks safety and fit. Every item in this plan records substance use: the export carries the 42 CFR Part 2 notice.",
+  "sud": true,
+  "sources": [
+    {
+      "title": "Drug misuse in over 16s: psychosocial interventions (CG51)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg51",
+      "year": 2007
+    },
+    {
+      "title": "42 CFR 2.32: notice to accompany disclosure (federal confidentiality rule for substance use treatment records)",
+      "publisher": "eCFR, U.S. Government Publishing Office",
+      "url": "https://www.ecfr.gov/current/title-42/chapter-I/subchapter-A/part-2/subpart-C/section-2.32",
+      "year": 2024
+    },
+    {
+      "title": "Confidentiality of substance use treatment records (42 CFR Part 2)",
+      "publisher": "U.S. Department of Health and Human Services",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/hipaa-part-2/index.html"
+    },
+    {
+      "title": "Psychosocial interventions for cannabis use disorder (Gates et al.)",
+      "publisher": "Cochrane Database of Systematic Reviews (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27149547/",
+      "year": 2016
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

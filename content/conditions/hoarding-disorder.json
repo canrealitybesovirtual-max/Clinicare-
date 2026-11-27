@@ -1,0 +1,238 @@
+{
+  "id": "hoarding-disorder",
+  "name": "Hoarding disorder",
+  "icd10cm": [
+    {
+      "code": "F42.3",
+      "label": "Hoarding disorder"
+    }
+  ],
+  "icd11": [
+    {
+      "code": "6B24",
+      "label": "Hoarding disorder"
+    }
+  ],
+  "dsmPointer": "See DSM-5-TR: Obsessive-Compulsive and Related Disorders — Hoarding Disorder",
+  "summary": "Long-standing difficulty letting go of belongings, with strong urges to save and real distress at the thought of discarding, so that possessions pile up until rooms are hard or impossible to use. Many clients also acquire too much, by buying, collecting free items or picking up discarded things. Insight is often limited, and families may be the ones who seek help. Clutter can bring fire and fall risks, pests, eviction and conflict with family or landlords, so assess safety first. CBT for hoarding (sorting and discarding practice, reduced acquiring, decision-making skills), often with home visits, has the best evidence; forced clean-outs tend to backfire. For clinician review only; this is not a diagnosis.",
+  "features": [
+    {
+      "symptomId": "difficulty-discarding",
+      "kind": "core",
+      "weight": 5
+    },
+    {
+      "symptomId": "cluttered-living-spaces",
+      "kind": "core",
+      "weight": 4
+    },
+    {
+      "symptomId": "excessive-acquiring",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "clutter-safety-hazard",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "concentration-difficulty",
+      "kind": "associated",
+      "weight": 1,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "social-withdrawal",
+      "kind": "associated",
+      "weight": 1
+    },
+    {
+      "symptomId": "subjective-anxiety-stress",
+      "kind": "associated",
+      "weight": 1
+    },
+    {
+      "symptomId": "depressed-mood",
+      "kind": "associated",
+      "weight": 1
+    }
+  ],
+  "minCore": 1,
+  "durationGate": {
+    "minWeeks": 26,
+    "note": "Ask when saving began (often in adolescence) and how the clutter has built over the years. See DSM-5-TR for guidance."
+  },
+  "impairmentRequired": true,
+  "ruleOuts": [
+    {
+      "label": "Neurocognitive disorders and brain injury",
+      "type": "medical",
+      "note": "New hoarding in later life, or after a stroke or head injury, needs a cognitive and medical assessment."
+    },
+    {
+      "label": "Alcohol and other substance use",
+      "type": "substance",
+      "note": "Community studies link hoarding with alcohol dependence, and heavy use can erode organization and self-care. Ask sensitively; this app does not store substance-use information."
+    },
+    {
+      "label": "Self-neglect and unsafe living conditions",
+      "type": "medical",
+      "note": "Check for risks to health and safety; involve adult protective services or housing services where required by law."
+    },
+    {
+      "label": "OCD, psychosis or depression",
+      "type": "psychiatric",
+      "note": "Saving driven by contamination fears, delusional beliefs or the low energy of depression points to another condition."
+    }
+  ],
+  "specifiers": [
+    {
+      "label": "With excessive acquisition; level of insight (descriptive)",
+      "note": "Both shape the plan. See DSM-5-TR for specifiers."
+    }
+  ],
+  "differentials": [
+    {
+      "label": "Obsessive-compulsive disorder",
+      "distinguishing": "Saving is driven by intrusive fears (for example, of harm if something is thrown away) and other rituals.",
+      "icd10cm": "F42.2"
+    },
+    {
+      "label": "Major neurocognitive disorder",
+      "distinguishing": "Accumulation began with cognitive decline.",
+      "icd10cm": "F03.90"
+    },
+    {
+      "label": "Major depressive disorder",
+      "distinguishing": "Clutter from low energy without attachment to the items.",
+      "icd10cm": "F33.9"
+    }
+  ],
+  "comorbidities": [
+    {
+      "label": "Depression",
+      "note": "Very common; screen with the PHQ-9.",
+      "conditionId": "major-depressive-disorder"
+    },
+    {
+      "label": "Adult ADHD",
+      "note": "Inattention is common in hoarding; ask about attention history.",
+      "conditionId": "adult-adhd"
+    },
+    {
+      "label": "Anxiety",
+      "note": "Common; screen with the GAD-7.",
+      "conditionId": "generalized-anxiety-disorder"
+    }
+  ],
+  "measures": [
+    "phq-9",
+    "gad-7"
+  ],
+  "measuresPending": [
+    {
+      "name": "Hoarding Rating Scale-Interview (HRS-I)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20452042/",
+      "note": "License pending — link out only",
+      "licenseKey": "HRS"
+    }
+  ],
+  "interventions": [
+    {
+      "name": "CBT for hoarding disorder",
+      "evidence": "Steketee et al. (2010) found CBT reduced hoarding severity; a meta-analysis (Tolin et al., 2021) supports it.",
+      "note": "Sorting and discarding practice, acquiring reduction, decision skills and motivational work."
+    },
+    {
+      "name": "Home-based sessions and coaching",
+      "evidence": "In-home practice is part of the main CBT protocol (Steketee et al., 2010).",
+      "note": "Work in the home with the client's permission; avoid forced clean-outs."
+    },
+    {
+      "name": "Motivational interviewing",
+      "evidence": "Used to address ambivalence and limited insight in hoarding CBT.",
+      "note": "Explore values and the client's own reasons for change."
+    },
+    {
+      "name": "Safety and harm reduction planning",
+      "evidence": "Recommended when clutter creates fire, fall or health risks.",
+      "note": "Clear exits and cooking areas first; coordinate with fire safety or housing services where needed."
+    }
+  ],
+  "handouts": [
+    "sorting-and-letting-go",
+    "problem-solving-steps",
+    "values-compass"
+  ],
+  "statIds": [
+    "us-hoarding-baltimore"
+  ],
+  "culturalNotes": [
+    "Ideas about keeping, sharing and wasting differ across cultures and generations, and saving can reflect past poverty, war or displacement. Explore these meanings before setting goals.",
+    "Family conflict is common; involve family only with consent, and help them avoid forced clean-outs.",
+    "Housing, landlord and code enforcement involvement can threaten tenancy. Explain your reporting duties at the start and work with the client toward safety.",
+    "Use a trained professional interpreter, not family members, and check that key terms translate with the meaning you intend."
+  ],
+  "sud": false,
+  "requiredFeatures": [],
+  "redFlagRules": [
+    {
+      "type": "suicidality",
+      "message": "Suicidal thoughts or self-harm are documented in this input. Ask directly about intent, plan and access to means, follow your crisis protocol and build a safety plan with the client; this app never rates risk."
+    }
+  ],
+  "licensedDsm": false,
+  "wileyLicensed": false,
+  "sources": [
+    {
+      "title": "Waitlist-controlled trial of cognitive behavior therapy for hoarding disorder (Steketee et al.)",
+      "publisher": "Depression and Anxiety (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20336804/",
+      "year": 2010
+    },
+    {
+      "title": "Cognitive behavioral therapy for hoarding disorder: a meta-analysis (Tolin et al.)",
+      "publisher": "Focus (American Psychiatric Publishing) (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35747301/",
+      "year": 2021
+    },
+    {
+      "title": "Prevalence and correlates of hoarding behavior in a community-based sample (Samuels et al.)",
+      "publisher": "Behaviour Research and Therapy (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18495084/",
+      "year": 2008
+    },
+    {
+      "title": "Obsessive-compulsive disorder and body dysmorphic disorder: treatment (CG31)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg31",
+      "year": 2005
+    },
+    {
+      "title": "Obsessive-Compulsive Disorder (health topic)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/topics/obsessive-compulsive-disorder-ocd"
+    },
+    {
+      "title": "ICD-11 for Mortality and Morbidity Statistics (browser)",
+      "publisher": "World Health Organization",
+      "url": "https://icd.who.int/browse/latest-release/mms/en"
+    },
+    {
+      "title": "ICD-10-CM (official code set)",
+      "publisher": "CDC National Center for Health Statistics",
+      "url": "https://www.cdc.gov/nchs/icd/icd-10-cm/index.html"
+    },
+    {
+      "title": "ICD-10-CM codes checked with the NLM Clinical Table Search Service",
+      "publisher": "National Library of Medicine",
+      "url": "https://clinicaltables.nlm.nih.gov/apidoc/icd10cm/v3/doc.html"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

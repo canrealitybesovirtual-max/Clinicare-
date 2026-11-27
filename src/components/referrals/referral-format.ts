@@ -25,6 +25,17 @@ export function smsNumber(instruction: string | null | undefined): string | null
   return /^\+?\d{3,15}$/.test(digits) ? digits : null;
 }
 
+/**
+ * Keyword and number of a curated text instruction, as written: "Text HOME to 741741" -> { keyword: "HOME",
+ * number: "741741" }; "Text 988" -> { keyword: null, number: "988" }. Null when the instruction has no number.
+ */
+export function smsParts(instruction: string | null | undefined): { keyword: string | null; number: string } | null {
+  if (!instruction || !smsNumber(instruction)) return null;
+  const to = /^\s*text\s+(.+?)\s+to\s+([+\d][\d\s()-]*)\s*$/i.exec(instruction);
+  if (to) return { keyword: to[1]!.trim(), number: to[2]!.trim() };
+  return { keyword: null, number: instruction.replace(/^\s*text\s+/i, "").trim() };
+}
+
 export function smsHref(instruction: string | null | undefined): string | null {
   const n = smsNumber(instruction);
   return n ? `sms:${n}` : null;

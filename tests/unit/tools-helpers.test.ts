@@ -22,10 +22,10 @@ describe("referral letter", () => {
     sessionSud: false,
   };
 
-  it("prints blank lines for the client's name and date of birth, once each, and states no diagnosis", () => {
+  it("prints one blank line for the client's name, no date-of-birth line, and states no diagnosis", () => {
     const text = docPlainText(referralLetterDoc(base));
     expect(text.match(/^Client name: _+$/gm)?.length).toBe(1);
-    expect(text.match(/^Date of birth: _+$/gm)?.length).toBe(1);
+    expect(text).not.toMatch(/date of birth|\bDOB\b/i);
     expect(text).toContain("Psychiatric medication evaluation");
     expect(text).toContain("The client asked for this service.");
     expect(text).toContain("Screening totals are not diagnoses.");

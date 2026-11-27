@@ -1,0 +1,58 @@
+{
+  "id": "cbt-for-psychosis",
+  "name": "CBT for psychosis (CBTp): overview and referral",
+  "modality": "CBT - psychosis",
+  "conditions": [
+    "schizophrenia"
+  ],
+  "evidenceLevel": "A meta-analysis (Wykes et al., 2008) found CBT for psychosis had small-to-moderate effects on positive symptoms; NICE CG178 recommends offering CBTp to everyone with psychosis, alongside medication.",
+  "minutes": {
+    "min": 50,
+    "max": 60
+  },
+  "purpose": "A collaborative therapy that helps the client make sense of distressing experiences such as voices or suspicious thoughts, reduce the distress and impact they cause, and pursue their own goals. It works with the client's understanding rather than arguing with beliefs.",
+  "steps": [
+    "Engage the client around their own goals and concerns.",
+    "Build a shared, normalizing understanding of how stress, sleep and life events relate to the experiences.",
+    "Explore the evidence for distressing beliefs gently, and test predictions together.",
+    "Develop coping strategies for voices (attention shifts, responding differently, reducing safety behaviors).",
+    "Plan for early signs of relapse.",
+    "Refer to a trained CBTp clinician for the full approach."
+  ],
+  "script": [
+    "What would you like to be different in your life?",
+    "Many people hear voices, especially under stress or lack of sleep.",
+    "What do you make of the voices? What do they seem to want?",
+    "Shall we test that idea together this week?"
+  ],
+  "contraindications": [
+    "Do not argue with or ridicule beliefs; keep the relationship collaborative.",
+    "Acute psychosis with risk needs urgent psychiatric care first.",
+    "Do not start during an active crisis, current suicidal risk, acute intoxication or withdrawal; stabilize first and share crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com."
+  ],
+  "culturalAdaptations": [
+    "Explanations involving spirits, curses or religion may be shared in the client's community; do not label them as delusions without understanding the cultural context.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "trainingRequired": "CBTp: training and supervision needed; refer to a trained clinician.",
+  "handoutIds": [
+    "staying-well-plan"
+  ],
+  "sources": [
+    {
+      "title": "Cognitive behavior therapy for schizophrenia: effect sizes, clinical models, and methodological rigor (Wykes et al.)",
+      "publisher": "Schizophrenia Bulletin (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17962231/",
+      "year": 2008
+    },
+    {
+      "title": "Psychosis and schizophrenia in adults: prevention and management (CG178)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg178",
+      "year": 2014
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

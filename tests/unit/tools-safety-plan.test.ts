@@ -5,6 +5,7 @@
 import { describe, expect, it } from "vitest";
 import { PDFDocument } from "pdf-lib";
 import { PDF_DISCLAIMER } from "@/lib/pdf";
+import handoutJson from "@content/handouts/safety-plan.json";
 import { DOC_PART2_NOTICE, docPlainText } from "@/lib/tools/doc-model";
 import { docPdf, docPdfLayout, docPdfPageLines } from "@/lib/tools/doc-export";
 import {
@@ -16,11 +17,11 @@ import {
 } from "@/lib/tools/safety-plan";
 
 const typed: SafetyPlanEntries = {
-  "warning-signs": "Not sleeping\nPulling away from people",
-  "coping-alone": "- Walk around the block\n• Cold water on my face",
-  distraction: "A coffee shop\nThe library",
-  "safer-space": "Ask my sister to hold my medicines",
   reasons: "My dog\nSeeing my nephew grow up",
+  "early-signs": "Not sleeping\nPulling away from people",
+  "calm-down": "- Walk around the block\n• Cold water on my face",
+  connect: "A coffee shop\nThe library",
+  "safer-space": "Ask my sister to hold my medicines",
 };
 
 const textOf = (entries: SafetyPlanEntries) => docPlainText(safetyPlanDoc(entries));
@@ -35,8 +36,8 @@ describe("typed parts", () => {
 
   it("scrubs names, phone numbers, emails and addresses typed into any part", () => {
     const text = textOf({
-      "warning-signs": "Call John Smith at 555-201-3344",
-      distraction: "Go to 1420 Maple Avenue",
+      "early-signs": "Call John Smith at 555-201-3344",
+      connect: "Go to 1420 Maple Avenue",
       reasons: "Write to jane.doe@example.com",
     });
     expect(text).not.toMatch(/John Smith|201-3344|1420 Maple|jane\.doe@example\.com/);
@@ -44,9 +45,10 @@ describe("typed parts", () => {
     expect(text).toContain("[EMAIL]");
   });
 
-  it("offers no typed field for people or professionals", () => {
+  it("offers no typed field for professional help, and people's names go on paper only", () => {
     const untyped = SAFETY_PLAN_SECTIONS.filter((s) => !s.typed).map((s) => s.id);
-    expect(untyped).toEqual(["reach-out", "professional-help"]);
+    expect(untyped).toEqual(["get-help"]);
+    expect(SAFETY_PLAN_SECTIONS.find((s) => s.id === "connect")?.handwritten?.label).toMatch(/write by hand/);
   });
 });
 
@@ -55,9 +57,8 @@ describe("blank lines and crisis lines", () => {
     for (const entries of [{}, typed]) {
       const text = textOf(entries);
       expect(text.match(/^Name: _+$/gm)?.length).toBe(1);
-      expect(text.match(/^Name and phone \(write by hand\): _+$/gm)?.length).toBe(3);
-      expect(text.match(/^My clinician or clinic, and phone \(write by hand\): _+$/gm)?.length).toBe(2);
-      expect(text.match(/^Person \(write by hand\): _+$/gm)?.length).toBe(2);
+      expect(text.match(/^Person and how to reach them \(write by hand\): _+$/gm)?.length).toBe(3);
+      expect(text.match(/^My counselor, doctor or clinic, and how to reach them \(write by hand\): _+$/gm)?.length).toBe(2);
     }
   });
 
@@ -83,7 +84,11 @@ describe("blank lines and crisis lines", () => {
 });
 
 describe("wording and governance", () => {
-  it("does not reuse the Stanley-Brown step titles", () => {
+  it("follows the app's own handout order and does not reuse the Stanley-Brown step titles", () => {
+    // Reasons first, company and help merged, the safer-space part before getting help (content/handouts/safety-plan.json).
+    expect(SAFETY_PLAN_SECTIONS.map((s) => s.id)).toEqual(["reasons", "early-signs", "calm-down", "connect", "safer-space", "get-help"]);
+    const handout = handoutJson.sections.map((s) => s.heading);
+    for (const s of SAFETY_PLAN_SECTIONS) expect(handout, s.heading).toContain(s.heading);
     const headings = SAFETY_PLAN_SECTIONS.map((s) => `${s.heading} ${s.prompt}`).join("\n");
     expect(headings).not.toMatch(
       /warning signs|internal coping|social settings that provide distraction|people whom i can ask for help|professionals or agencies|making the environment safe/i,

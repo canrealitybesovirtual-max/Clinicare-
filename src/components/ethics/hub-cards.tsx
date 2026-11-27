@@ -1,15 +1,18 @@
 /**
  * Server-rendered cards for the Ethics & Legal Hub. Original summaries only, each with the official link,
  * edition and verification status, and a "check the official source" badge when a person must re-check it.
+ * The long parts (reminders, key points, sources) render only when their disclosure is opened (LazyHubBody), so
+ * the page stays light while every card, summary and #id anchor is in the server HTML. Exact regulatory wording
+ * (requiredText) is always shown.
  */
-import { CalendarClock, ExternalLink as ExternalIcon, Info, Landmark, ListChecks, ScrollText, TriangleAlert } from "lucide-react";
+import { CalendarClock, Landmark, TriangleAlert } from "lucide-react";
 import { PROFESSION_LABELS, needsHumanCheck, type EthicsCode, type LegalTopic } from "@/lib/schemas-hub";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { Disclosure } from "@/components/ui/disclosure";
 import { ExternalLink } from "@/components/ui/external-link";
-import { Governance, ReviewBadge } from "@/components/content/content-bits";
-import { CompactSources, LinkList } from "./compact-sources";
+import { ReviewBadge } from "@/components/content/content-meta";
+import { LazyHubBody } from "./lazy-hub-body";
 import { EDITION_STATUS_LABELS, VERIFICATION_LABELS, jurisdictionLabel, scopeLabel } from "./hub-labels";
 
 function CheckOfficialBadge() {
@@ -32,12 +35,11 @@ function VerificationNote({
   lastVerified: string;
   check: boolean;
 }) {
-  // Neutral unless a person still has to re-check the item against the official source.
+  // Neutral; the card's "Check the official source" badge already flags a re-check, so the summary only says so.
   return (
     <Disclosure
       title="How this was checked"
       meta={check ? "re-check due" : VERIFICATION_LABELS[method]}
-      icon={check ? TriangleAlert : Info}
       bordered={false}
       className="rounded-lg border border-border bg-surface-2 px-3"
       bodyClassName="space-y-2 pb-3"
@@ -62,7 +64,7 @@ export function EthicsCodeCard({ code }: { code: EthicsCode }) {
           <Badge tone="neutral">{scopeLabel(code)}</Badge>
           <Badge tone={code.editionStatus === "current" ? "accent" : "warn"}>{EDITION_STATUS_LABELS[code.editionStatus]}</Badge>
           {check ? <CheckOfficialBadge /> : null}
-          <ReviewBadge reviewedBy={code.reviewedBy} />
+          <ReviewBadge reviewedBy={code.reviewedBy} inList />
         </div>
         <div>
           <h3 id={titleId} className="text-lg font-bold leading-snug">
@@ -98,37 +100,14 @@ export function EthicsCodeCard({ code }: { code: EthicsCode }) {
           <Disclosure
             title="Key reminders and your regulator"
             meta={`${code.keyReminders.length} reminders`}
-            icon={ListChecks}
             bodyClassName="space-y-3 pb-2"
           >
-            <ul className="space-y-2">
-              {code.keyReminders.map((r) => (
-                <li key={r.topic} className="rounded-lg bg-surface-2 p-3 text-sm leading-relaxed">
-                  <span className="font-semibold">{r.topic}. </span>
-                  {r.text}
-                </li>
-              ))}
-            </ul>
-            <p className="flex items-start gap-2 text-sm leading-relaxed">
-              <Landmark aria-hidden className="mt-0.5 size-4 shrink-0 text-muted" />
-              <span>
-                <span className="font-semibold">Your regulator: </span>
-                {code.regulatorNote}
-              </span>
-            </p>
-            {code.relatedLinks?.length ? <LinkList links={code.relatedLinks} /> : null}
+            <LazyHubBody part="ethics-reminders" id={code.id} />
           </Disclosure>
           <Disclosure title="Sources and review" meta={`${code.sources.length} sources`}>
-            <CompactSources sources={code.sources} />
-            <Governance license={code.license} lastVerified={code.lastVerified} reviewedBy={code.reviewedBy} />
+            <LazyHubBody part="ethics-sources" id={code.id} />
           </Disclosure>
         </div>
-
-        <p className="flex items-start gap-2 text-xs text-muted">
-          <CalendarClock aria-hidden className="mt-0.5 size-3.5 shrink-0" />
-          Codes are revised from time to time: check for newer editions every year. This is a summary in the app&apos;s
-          own words; it is information, not legal advice.
-        </p>
 
         <VerificationNote method={code.verification.method} note={code.verification.note} lastVerified={code.lastVerified} check={check} />
       </Card>
@@ -154,27 +133,12 @@ export function LegalTopicCard({ topic }: { topic: LegalTopic }) {
             </Badge>
           ) : null}
           {check ? <CheckOfficialBadge /> : null}
-          <ReviewBadge reviewedBy={topic.reviewedBy} />
+          <ReviewBadge reviewedBy={topic.reviewedBy} inList />
         </div>
         <h3 id={titleId} className="text-lg font-bold leading-snug">
           {topic.title}
         </h3>
         <p className="text-sm leading-relaxed">{topic.summary}</p>
-
-        <Disclosure
-          title="Key points, what to do and official sources"
-          meta={`${topic.keyPoints.length} points`}
-          icon={ScrollText}
-          bodyClassName="space-y-4 pb-2"
-        >
-        <div>
-          <h4 className="text-sm font-semibold">Key points</h4>
-          <ul className="mt-2 list-disc space-y-1.5 pl-5 text-sm leading-relaxed marker:text-muted">
-            {topic.keyPoints.map((k) => (
-              <li key={k}>{k}</li>
-            ))}
-          </ul>
-        </div>
 
         {topic.requiredText?.length ? (
           <div className="space-y-3">
@@ -194,32 +158,12 @@ export function LegalTopicCard({ topic }: { topic: LegalTopic }) {
           </div>
         ) : null}
 
-        <div>
-          <h4 className="flex items-center gap-2 text-sm font-semibold">
-            <ScrollText aria-hidden className="size-4 text-accent" />
-            What to do
-          </h4>
-          <ol className="mt-2 list-decimal space-y-1.5 pl-5 text-sm leading-relaxed marker:font-semibold marker:text-muted">
-            {topic.whatToDo.map((s) => (
-              <li key={s}>{s}</li>
-            ))}
-          </ol>
-        </div>
-
-        {topic.appPositioning ? (
-          <p className="rounded-lg bg-accent-soft p-3 text-sm leading-relaxed">
-            <span className="font-semibold">How this app handles it: </span>
-            {topic.appPositioning}
-          </p>
-        ) : null}
-
-        <div>
-          <h4 className="flex items-center gap-2 text-sm font-semibold">
-            <ExternalIcon aria-hidden className="size-4 text-accent" />
-            Official sources
-          </h4>
-          <LinkList links={topic.officialLinks} className="mt-1" />
-        </div>
+        <Disclosure
+          title="Key points, what to do and official sources"
+          meta={`${topic.keyPoints.length} points`}
+          bodyClassName="space-y-4 pb-2"
+        >
+          <LazyHubBody part="legal-details" id={topic.id} />
         </Disclosure>
 
         <p className="text-xs font-semibold text-muted">
@@ -230,8 +174,7 @@ export function LegalTopicCard({ topic }: { topic: LegalTopic }) {
         <VerificationNote method={topic.verification.method} note={topic.verification.note} lastVerified={topic.lastVerified} check={check} />
 
         <Disclosure title="Sources and review" meta={`${topic.sources.length} sources`} bordered={false}>
-          <CompactSources sources={topic.sources} />
-          <Governance license={topic.license} lastVerified={topic.lastVerified} reviewedBy={topic.reviewedBy} />
+          <LazyHubBody part="legal-sources" id={topic.id} />
         </Disclosure>
       </Card>
     </article>

@@ -1,0 +1,128 @@
+{
+  "conditionId": "opioid-use-disorder",
+  "problems": [
+    {
+      "id": "oud-use-and-overdose",
+      "label": "Opioid use with withdrawal and overdose risk",
+      "definitions": [
+        {
+          "text": "Uses opioids more than planned or prescribed, and has tried to stop without success.",
+          "sud": true
+        },
+        {
+          "text": "Feels sick, achy and has strong cravings when not using.",
+          "sud": true
+        },
+        {
+          "text": "Is at risk of overdose, for example from using alone, fentanyl exposure, mixing with sedatives or a recent break in use.",
+          "sud": true
+        }
+      ],
+      "longTermGoals": [
+        {
+          "text": "The client is alive and safer, on effective treatment if they choose it, and rebuilding health, relationships and daily life.",
+          "sud": true
+        }
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "oud-naloxone",
+          "text": "By the next session, have naloxone at home and show how to use it to one other person.",
+          "interventionIds": [
+            "naloxone-overdose-education"
+          ],
+          "sud": true
+        },
+        {
+          "id": "oud-moud",
+          "text": "Within 1 week, attend an appointment with a prescriber or opioid treatment program to discuss medication.",
+          "interventionIds": [
+            "moud-referral"
+          ],
+          "sud": true
+        },
+        {
+          "id": "oud-retention",
+          "text": "Stay on medication treatment, if chosen, and attend at least 80% of scheduled appointments for 3 months.",
+          "interventionIds": [
+            "moud-referral",
+            "contingency-management"
+          ],
+          "sud": true
+        },
+        {
+          "id": "oud-goals",
+          "text": "By session 3, describe personal reasons for change and one goal for the next month.",
+          "interventionIds": [
+            "motivational-interviewing"
+          ],
+          "sud": true
+        },
+        {
+          "id": "oud-urges",
+          "text": "Use a coping skill for at least 3 cravings a week and record the outcome.",
+          "interventionIds": [
+            "urge-surfing",
+            "relapse-prevention-planning"
+          ],
+          "sud": true
+        },
+        {
+          "id": "oud-safety",
+          "text": "By session 2, complete a safety plan that includes overdose risk and suicidal thoughts.",
+          "interventionIds": [
+            "collaborative-safety-planning",
+            "lethal-means-counseling"
+          ],
+          "sud": true
+        }
+      ],
+      "measureIds": [
+        "phq-9",
+        "gad-7"
+      ]
+    }
+  ],
+  "collaborativeNote": "Write goals and objectives with the client in their own words. Timelines and targets are examples to adapt; the client decides what matters, and the clinician checks safety and fit. Every item in this plan records substance use: the export carries the 42 CFR Part 2 notice.",
+  "sud": true,
+  "sources": [
+    {
+      "title": "Drug misuse in over 16s: psychosocial interventions (CG51)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg51",
+      "year": 2007
+    },
+    {
+      "title": "42 CFR 2.32: notice to accompany disclosure (federal confidentiality rule for substance use treatment records)",
+      "publisher": "eCFR, U.S. Government Publishing Office",
+      "url": "https://www.ecfr.gov/current/title-42/chapter-I/subchapter-A/part-2/subpart-C/section-2.32",
+      "year": 2024
+    },
+    {
+      "title": "Confidentiality of substance use treatment records (42 CFR Part 2)",
+      "publisher": "U.S. Department of Health and Human Services",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/hipaa-part-2/index.html"
+    },
+    {
+      "title": "Buprenorphine maintenance versus placebo or methadone maintenance for opioid dependence (Mattick et al.)",
+      "publisher": "Cochrane Database of Systematic Reviews (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24500948/",
+      "year": 2014
+    },
+    {
+      "title": "Mortality risk during and after opioid substitution treatment: systematic review and meta-analysis of cohort studies (Sordo et al.)",
+      "publisher": "BMJ (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28446428/",
+      "year": 2017
+    },
+    {
+      "title": "Are take-home naloxone programmes effective? Systematic review utilizing application of the Bradford Hill criteria (McDonald and Strang)",
+      "publisher": "Addiction (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27028542/",
+      "year": 2016
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

@@ -21,7 +21,7 @@ import type { AssistAnswer, AssistQuestion, AssistResult } from "@/server/ai/sch
 import { useSession } from "@/state/session";
 import { Button } from "@/components/ui/button";
 import { Notice } from "@/components/ui/notice";
-import { ClinicianReviewBadge } from "@/components/content/content-bits";
+import { ClinicianReviewBadge } from "@/components/content/content-meta";
 import { CrisisInline } from "@/components/crisis/crisis-panel";
 import { SUD_SYMPTOM_IDS, type SymptomAnalysis } from "@/components/symptoms/analysis";
 import { cn } from "@/lib/utils";

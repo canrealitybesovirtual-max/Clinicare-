@@ -10,11 +10,9 @@ import {
   contentProblems,
   crisisLines,
   getCondition,
-  getHandout,
   getMeasure,
   getStat,
   getSymptom,
-  handouts,
   isMeasureLicensed,
   isStatStale,
   lexicon,
@@ -22,7 +20,7 @@ import {
   measures,
   stats,
 } from "@/lib/content";
-import { allConditions, getPlanLibrary, interventions, interventionsFor, planLibraries } from "@/lib/library";
+import { allConditions, getAnyHandout as getHandout, getPlanLibrary, handouts, interventions, interventionsFor, planLibraries } from "@/lib/library";
 import { CASE_RESTRICTED_ABBREVIATIONS, matchSymptoms, normalizeText } from "@/lib/matcher";
 import { RedFlagType } from "@/lib/schemas";
 import { scoreConditions } from "@/lib/scoring";
@@ -33,22 +31,40 @@ const ROOT = path.resolve(__dirname, "../..");
 const CONTENT_DIR = path.join(ROOT, "content");
 const TODAY = "2026-11-27";
 
-/** The 13 adult conditions in the knowledge base (5 from Phase 1 plus the 8 added in the expansion). */
+/** The 29 adult conditions in the knowledge base. */
 const CONDITION_IDS = [
   "adjustment-disorder",
+  "adult-adhd",
   "agoraphobia",
   "alcohol-use-disorder",
+  "anorexia-nervosa",
+  "binge-eating-disorder",
+  "bipolar-i-disorder",
+  "bipolar-ii-disorder",
+  "body-dysmorphic-disorder",
+  "borderline-personality-disorder",
+  "bulimia-nervosa",
+  "cannabis-use-disorder",
+  "cyclothymic-disorder",
   "generalized-anxiety-disorder",
+  "hoarding-disorder",
+  "illness-anxiety-disorder",
   "insomnia-disorder",
   "major-depressive-disorder",
   "obsessive-compulsive-disorder",
+  "opioid-use-disorder",
   "panic-disorder",
   "persistent-depressive-disorder",
   "prolonged-grief-disorder",
   "ptsd",
+  "schizophrenia",
   "social-anxiety-disorder",
+  "somatic-symptom-disorder",
   "specific-phobia",
+  "stimulant-use-disorder",
 ];
+/** Substance-use conditions: Part 2 banner, Part 2 export notice and sud plans (G6). */
+const SUD_IDS = ["alcohol-use-disorder", "cannabis-use-disorder", "opioid-use-disorder", "stimulant-use-disorder"];
 const ISO = /^\d{4}-\d{2}-\d{2}$/;
 
 const neutral = (symptomIds: string[]): ScoringInput => ({
@@ -243,11 +259,13 @@ describe("expansion conditions (codes, measures, Part 2, cultural notes, interve
       }
   });
 
-  it("marks alcohol use disorder (only) as substance-use content with the exact Part 2 notice (G6)", () => {
-    expect(conditions.filter((c) => c.sud).map((c) => c.id)).toEqual(["alcohol-use-disorder"]);
+  it("marks exactly the substance-use conditions as Part 2 content with the exact notice (G6)", () => {
+    expect(conditions.filter((c) => c.sud).map((c) => c.id)).toEqual(SUD_IDS);
     expect(PART2_NOTICE).toBe("42 CFR Part 2 prohibits unauthorized use or disclosure of these records.");
-    expect(cond("alcohol-use-disorder").summary).toContain(PART2_NOTICE);
-    expect(getPlanLibrary("alcohol-use-disorder")?.sud).toBe(true);
+    for (const id of SUD_IDS) {
+      expect(cond(id).summary, id).toContain(PART2_NOTICE);
+      expect(getPlanLibrary(id)?.sud, id).toBe(true);
+    }
     for (const c of conditions) expect(getPlanLibrary(c.id)?.sud ?? false, c.id).toBe(c.sud);
     expect(cond("alcohol-use-disorder").redFlagRules.map((r) => r.type)).toContain("withdrawal");
   });
@@ -291,6 +309,119 @@ describe("expansion conditions (codes, measures, Part 2, cultural notes, interve
     ["adjustment-disorder", "problem-solving"],
   ])("the interventions library links %s to %s", (conditionId, interventionId) => {
     expect(interventionsFor(conditionId).map((i) => i.id)).toContain(interventionId);
+  });
+
+  // ICD-10-CM codes and titles were checked against the NLM Clinical Table Search Service on 2026-11-27 (codes only).
+  it.each([
+    ["bipolar-i-disorder", /^F31\.(1[0-3]|2|30|4|5|60|70|9)$/, ["6A60"]],
+    ["bipolar-ii-disorder", /^F31\.81$/, ["6A61"]],
+    ["cyclothymic-disorder", /^F34\.0$/, ["6A62"]],
+    ["adult-adhd", /^F90\.[01289]$/, ["6A05"]],
+    ["borderline-personality-disorder", /^F60\.3$/, ["6D10", "6D11.5"]],
+    ["anorexia-nervosa", /^F50\.0(0|1[0-49]|2[0-49])$/, ["6B80"]],
+    ["bulimia-nervosa", /^F50\.2[0-5]$/, ["6B81"]],
+    ["binge-eating-disorder", /^F50\.81[0-49]$/, ["6B82"]],
+    ["schizophrenia", /^F20\.(0|1|2|3|5|81|89|9)$/, ["6A20"]],
+    ["illness-anxiety-disorder", /^F45\.21$/, ["6B23"]],
+    ["somatic-symptom-disorder", /^F45\.1$/, ["6C20"]],
+    ["hoarding-disorder", /^F42\.3$/, ["6B24"]],
+    ["body-dysmorphic-disorder", /^F45\.22$/, ["6B21"]],
+    ["cannabis-use-disorder", /^F12\.(1[01]|2[013]|90)$/, ["6C41.1", "6C41.2"]],
+    ["opioid-use-disorder", /^F11\.(1[01]|2[013]|90)$/, ["6C43.1", "6C43.2"]],
+    ["stimulant-use-disorder", /^F1[45]\.(10|2[01])$/, ["6C45.1", "6C45.2", "6C46.1", "6C46.2"]],
+  ] as [string, RegExp, string[]][])("%s carries its ICD-10-CM family and ICD-11 codes", (id, ten, eleven) => {
+    expect(codes(id).length).toBeGreaterThan(0);
+    for (const c of codes(id)) expect(c, id).toMatch(ten);
+    expect(icd11(id)).toEqual(eleven);
+  });
+
+  it("gives every condition at least one client handout that exists, and Part 2 handouts only to substance-use conditions", () => {
+    for (const c of conditions) {
+      expect(c.handouts.length, c.id).toBeGreaterThan(0);
+      for (const h of c.handouts) {
+        const handout = getHandout(h);
+        expect(handout, `${c.id} -> ${h}`).toBeDefined();
+        if (handout?.sud) expect(c.sud, `${c.id} -> SUD handout ${h}`).toBe(true);
+      }
+    }
+  });
+
+  it("gives every new condition except the two bodily-distress patterns a US statistic with a data year (G13)", () => {
+    // No US national estimate was found for illness anxiety or somatic symptom disorder; none is invented.
+    const noUsStat = new Set(["illness-anxiety-disorder", "somatic-symptom-disorder"]);
+    for (const c of conditions) {
+      const us = c.statIds.map((id) => getStat(id)).filter((st) => st?.region === "US");
+      if (noUsStat.has(c.id)) expect(c.statIds, c.id).toEqual([]);
+      else if (["insomnia-disorder", "adjustment-disorder", "prolonged-grief-disorder", "persistent-depressive-disorder"].includes(c.id)) continue;
+      else {
+        expect(us.length, c.id).toBeGreaterThan(0);
+        for (const st of us) expect(st?.dataYear, `${c.id} -> ${st?.id}`).toMatch(/\d{4}/);
+      }
+    }
+  });
+
+  it.each([
+    ["bipolar-i-disorder", "interpersonal-social-rhythm-therapy"],
+    ["bipolar-i-disorder", "bipolar-psychoeducation"],
+    ["schizophrenia", "coordinated-specialty-care-referral"],
+    ["schizophrenia", "cbt-for-psychosis"],
+    ["schizophrenia", "family-psychoeducation-psychosis"],
+    ["borderline-personality-disorder", "dbt-distress-tolerance"],
+    ["borderline-personality-disorder", "mentalization-based-treatment"],
+    ["borderline-personality-disorder", "schema-therapy"],
+    ["anorexia-nervosa", "eating-disorder-medical-monitoring"],
+    ["bulimia-nervosa", "cbt-e-eating-disorders"],
+    ["adult-adhd", "cbt-adult-adhd"],
+    ["illness-anxiety-disorder", "cbt-health-anxiety"],
+    ["hoarding-disorder", "cbt-hoarding"],
+    ["body-dysmorphic-disorder", "cbt-bdd"],
+    ["body-dysmorphic-disorder", "habit-reversal-training"],
+    ["specific-phobia", "applied-tension"],
+    ["generalized-anxiety-disorder", "imaginal-exposure"],
+    ["major-depressive-disorder", "mindfulness-based-cognitive-therapy"],
+    ["major-depressive-disorder", "couples-relationship-skills"],
+    ["adjustment-disorder", "existential-meaning-exploration"],
+    ["opioid-use-disorder", "moud-referral"],
+    ["opioid-use-disorder", "naloxone-overdose-education"],
+    ["stimulant-use-disorder", "contingency-management"],
+    ["cannabis-use-disorder", "motivational-interviewing"],
+  ])("the interventions library links %s to %s", (conditionId, interventionId) => {
+    expect(interventionsFor(conditionId).map((i) => i.id)).toContain(interventionId);
+  });
+
+  it("covers the major orientations and protocols (each with at least one condition)", () => {
+    const ids = new Set(interventions.map((i) => i.id));
+    for (const id of [
+      "cognitive-processing-therapy", "prolonged-exposure", "emdr", "written-exposure-therapy", "exposure-and-response-prevention",
+      "cbti-stimulus-control", "mindfulness-based-cognitive-therapy", "schema-therapy", "emotion-focused-chair-work",
+      "short-term-psychodynamic-exploration", "person-centered-reflective-listening", "gestalt-awareness-experiments",
+      "existential-meaning-exploration", "motivational-interviewing", "relapse-prevention-planning", "contingency-management",
+      "interpersonal-psychotherapy", "genogram-family-systems", "couples-relationship-skills", "emotionally-focused-couples-work",
+      "compassion-focused-imagery", "sleep-hygiene-education", "grief-focused-therapy", "interpersonal-social-rhythm-therapy",
+      "bipolar-psychoeducation", "family-psychoeducation-psychosis", "dbt-distress-tolerance", "dbt-emotion-regulation-opposite-action",
+      "dbt-interpersonal-effectiveness", "dbt-mindfulness-skills", "behavioral-experiments", "interoceptive-exposure",
+      "imaginal-exposure", "applied-tension", "thought-record", "habit-reversal-training",
+    ])
+      expect(ids.has(id), id).toBe(true);
+  });
+
+  it("keeps trained-only protocols marked as such", () => {
+    for (const id of ["emdr", "schema-therapy", "mentalization-based-treatment", "cbt-for-psychosis", "emotionally-focused-couples-work"])
+      expect(interventions.find((i) => i.id === id)?.trainingRequired, id).toMatch(/trained|training/i);
+  });
+
+  it("recognizes the phobia subtypes alongside the general fear, as one associated slot (no double counting of the fear)", () => {
+    const phobia = cond("specific-phobia");
+    const subtypes = ["fear-animals", "fear-heights", "fear-flying", "fear-blood-injection", "fear-enclosed-spaces", "fear-natural-environment"];
+    for (const id of subtypes) {
+      const f = phobia.features.find((x) => x.symptomId === id);
+      expect(f, id).toMatchObject({ kind: "associated", weight: 1, group: "phobia-type" });
+    }
+    const ids = (t: string) => matchSymptoms(t, lexicon.symptoms).matches.map((m) => m.symptomId);
+    expect(ids("She is scared of spiders.")).toEqual(expect.arrayContaining(["fear-animals"]));
+    expect(ids("Terrified of flying since a bumpy flight.")).toEqual(expect.arrayContaining(["fear-flying", "circumscribed-fear"]));
+    expect(ids("Afraid of needles and gets lightheaded at blood draws.")).toEqual(expect.arrayContaining(["fear-blood-injection", "circumscribed-fear"]));
+    expect(ids("Scared of storms and thunder.")).toEqual(expect.arrayContaining(["fear-natural-environment"]));
   });
 
   it(`gives every condition at least ${MIN_INTERVENTIONS_PER_CONDITION} library interventions and a plan library`, () => {

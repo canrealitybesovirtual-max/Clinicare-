@@ -29,9 +29,10 @@ export function RemissionShape({ cx, cy, r = 10 }: { cx: number; cy: number; r?:
 }
 
 /**
- * Totals by session number over the measure's severity bands, drawn at the container's real pixel width so text
- * stays readable on a phone. The table next to it carries the same data for screen readers and keyboard users;
- * the SVG has a title and a text summary. No animation.
+ * Totals by session number over the measure's severity bands (shaded; the y-axis ticks mark each band's lower
+ * edge), drawn at the container's real pixel width so text stays readable on a phone. Band names are not drawn in
+ * the plot, where points and markers would cover them: the table next to it names the band for every session and
+ * carries the same data for screen readers and keyboard users. The SVG has a title and a text summary. No animation.
  */
 export function TrendChart({
   rows,
@@ -76,12 +77,7 @@ export function TrendChart({
             const top = y(Math.min(range.max, sorted[i + 1]?.min ?? range.max));
             const bottom = y(b.min);
             return (
-              <g key={b.label}>
-                <rect x={PAD.left} y={top} width={w} height={bottom - top} fill={i % 2 ? "var(--surface-2)" : "var(--surface)"} />
-                <text x={PAD.left + w - 6} y={top + 13} textAnchor="end" fontSize={12} fill="var(--muted)">
-                  {b.label}
-                </text>
-              </g>
+              <rect key={b.label} x={PAD.left} y={top} width={w} height={bottom - top} fill={i % 2 ? "var(--surface-2)" : "var(--surface)"} />
             );
           })}
           <rect x={PAD.left} y={PAD.top} width={w} height={h} fill="none" stroke="var(--border)" />

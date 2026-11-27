@@ -1,11 +1,139 @@
 /**
  * Curated substance-use term detector (G6, 42 CFR Part 2). Runs on this device only, on wording that is already
- * PHI-scrubbed (plan library items and the clinician's own plan wording). It never sends, stores or logs text: it only
- * decides whether an export must carry the Part 2 notice and the Ethics & Legal Hub prompt must show.
- * Errs toward showing the notice (a false positive adds a protective notice; a miss could leave records unmarked).
+ * PHI-scrubbed (plan library items, the clinician's own plan wording, note, letter and safety-plan text). It never
+ * sends, stores or logs text: it only decides whether an export must carry the Part 2 notice and the Ethics & Legal
+ * Hub prompt must show. Errs toward showing the notice (a false positive adds a protective notice; a miss could
+ * leave records unmarked), but leaves out everyday words that would flag ordinary notes ("joint pain", "acid
+ * reflux", "fear of needles", "processing speed"). Tobacco, nicotine and caffeine are not matched.
  */
-const SUBSTANCE_RE =
-  /\b(?:alcohol\w*|drink(?:s|ing)?|drank|drunk(?:enness)?|binge\w*|substances?|drugs?|cannabis|marijuana|weed|opioids?|opiates?|heroin|fentanyl|cocaine|crack|methamphetamine|meth|amphetamines?|stimulant misuse|benzodiazepines?|benzos?|sedatives?|hypnotics? misuse|intoxicat\w*|withdrawal|overdos\w*|hangovers?|sober\w*|relapse|naloxone|naltrexone|buprenorphine|methadone|acamprosate|disulfiram|AUD|SUD)\b/i;
+const TERMS = [
+  // Alcohol
+  "alcohol\\w*",
+  "drink(?:s|ing|er|ers)?",
+  "drank",
+  "drunk(?:enness)?",
+  "binge\\w*",
+  "beers?",
+  "wine",
+  "liquor",
+  "vodka",
+  "whiske?y",
+  "tequila",
+  "rum",
+  "gin",
+  "nightcaps?",
+  "tipsy",
+  "buzzed",
+  "blackouts?",
+  "hangovers?",
+  // General
+  "substances?",
+  "drugs?",
+  "intoxicat\\w*",
+  "withdrawal",
+  "overdos\\w*",
+  "sober\\w*",
+  "relapse",
+  "misus(?:e|es|ed|ing)",
+  "AUD",
+  "SUD",
+  // Cannabis
+  "cannabis",
+  "marijuana",
+  "weed",
+  "pot",
+  "THC",
+  "dabs?",
+  "dabbing",
+  "edibles?",
+  "stoned",
+  "synthetic cannabinoids?",
+  // Opioids, including common brand and street names
+  "opioids?",
+  "opiates?",
+  "heroin",
+  "fentanyl",
+  "oxy",
+  "oxycodone",
+  "oxycontin",
+  "percocets?",
+  "percs?",
+  "hydrocodone",
+  "vicodin",
+  "norco",
+  "tramadol",
+  "codeine",
+  "morphine",
+  "dilaudid",
+  "hydromorphone",
+  "kratom",
+  "pain ?pills?",
+  // Stimulants
+  "cocaine",
+  "coke",
+  "crack",
+  "methamphetamine",
+  "meth",
+  "amphetamines?",
+  "stimulant misuse",
+  "uppers",
+  // Sedatives, including benzodiazepine brand names
+  "benzodiazepines?",
+  "benzos?",
+  "sedatives?",
+  "hypnotics? misuse",
+  "downers",
+  "xanax",
+  "alprazolam",
+  "klonopin",
+  "clonazepam",
+  "valium",
+  "diazepam",
+  "ativan",
+  "lorazepam",
+  "GHB",
+  // Hallucinogens, dissociatives and inhalants
+  "ketamine",
+  "MDMA",
+  "ecstasy",
+  "molly",
+  "LSD",
+  "acid trips?",
+  "(?:took|takes|taking|dropped|dropping|on) acid",
+  "psilocybin",
+  "(?:magic )?mushrooms",
+  "shrooms",
+  "PCP",
+  "DMT",
+  "inhalants?",
+  "huff(?:s|ed|ing)",
+  "whippets",
+  "poppers",
+  // Use phrases
+  "(?:get|gets|getting|got|stay|stays|staying) high",
+  "shoot(?:s|ing)? up",
+  "shot up",
+  "snort(?:s|ed|ing)?",
+  "(?:shar(?:e|es|ed|ing)|dirty|used) needles?",
+  "not prescribed",
+  "(?:someone|somebody) else'?s (?:pills|prescription|medication|meds)",
+  "pills?",
+  // Treatment and overdose-reversal medicines
+  "naloxone",
+  "narcan",
+  "naltrexone",
+  "vivitrol",
+  "buprenorphine",
+  "suboxone",
+  "subutex",
+  "sublocade",
+  "methadone",
+  "acamprosate",
+  "disulfiram",
+  "antabuse",
+];
+
+const SUBSTANCE_RE = new RegExp(`\\b(?:${TERMS.join("|")})\\b`, "i");
 
 /** True when the wording mentions alcohol or other substance use. */
 export function mentionsSubstanceUse(text: string): boolean {

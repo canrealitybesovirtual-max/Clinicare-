@@ -1,7 +1,7 @@
 import type * as React from "react";
 import Link from "next/link";
 import { ArrowLeft } from "lucide-react";
-import { PageIntro } from "@/components/content/content-bits";
+import { PageIntro } from "@/components/content/content-meta";
 
 /** Page heading for a tool: a 44px "All tools" link, then the title. The description hides on phones. */
 export function ToolIntro({ title, children }: { title: string; children: React.ReactNode }) {

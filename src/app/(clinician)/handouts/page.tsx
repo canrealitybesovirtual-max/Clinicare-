@@ -5,7 +5,7 @@ import { measures } from "@/lib/content";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { ExternalLink } from "@/components/ui/external-link";
-import { NextStep, PageIntro } from "@/components/content/content-bits";
+import { NextStep, PageIntro } from "@/components/content/content-meta";
 import { DownloadPdfButton } from "@/components/pdf/download-pdf-button";
 import { AdultOnly } from "@/components/measures/adult-only";
 import { HandoutLibrary } from "@/components/handouts/handout-library";

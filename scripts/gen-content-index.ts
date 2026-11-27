@@ -4,6 +4,9 @@
  * access. One module per folder keeps client bundles small: a client component that reaches content.ts pulls
  * in only the folders content.ts imports (conditions, handouts, measures), never interventions, plans, ethics
  * or legal, which bundlers do not drop from a shared module even when unused.
+ * It also writes us-place-names.json: the city names of content/referrals/us-places.json without their centre
+ * points, which is all the browser's exact-city check needs (src/components/referrals/location-check.ts), at less
+ * than half the download. The full file stays server-side (src/server/integrations/places.ts).
  * Run after adding or removing content files (npm run gen:content). CI fails if a committed module is stale
  * (tests/unit/content-index.test.ts).
  */
@@ -31,14 +34,34 @@ export function renderModule(dir: ContentDir): string {
   return [HEADER, "/* eslint-disable */", ...imports, "", `export const ${dir}Raw: unknown[] = [${list}];`, ""].join("\n");
 }
 
+export const PLACE_NAMES_FILE = "us-place-names.json";
+
+/** Source of src/lib/generated/us-place-names.json: per state, the gazetteer's city names joined by ";". */
+export function renderPlaceNames(): string {
+  const src = JSON.parse(readFileSync(path.join(root, "content/referrals/us-places.json"), "utf8")) as { states: Record<string, string> };
+  const states = Object.fromEntries(
+    Object.entries(src.states).map(([state, data]) => [
+      state,
+      data
+        .split(";")
+        .map((rec) => rec.slice(0, rec.lastIndexOf(":")))
+        .join(";"),
+    ]),
+  );
+  return `${JSON.stringify({ _about: `${HEADER.slice(3)} Names only, from content/referrals/us-places.json.`, states }, null, 1)}\n`;
+}
+
 if (require.main === module) {
   const written: string[] = [];
-  for (const dir of CONTENT_DIRS) {
-    const out = path.join(GENERATED_DIR, `${dir}.ts`);
-    const next = renderModule(dir);
+  const outputs: [string, string][] = [
+    ...CONTENT_DIRS.map((dir): [string, string] => [`${dir}.ts`, renderModule(dir)]),
+    [PLACE_NAMES_FILE, renderPlaceNames()],
+  ];
+  for (const [name, next] of outputs) {
+    const out = path.join(GENERATED_DIR, name);
     if (!existsSync(out) || readFileSync(out, "utf8") !== next) {
       writeFileSync(out, next);
-      written.push(dir);
+      written.push(name);
     }
   }
   console.log(`content index: ${written.length ? `written ${written.join(", ")}` : "unchanged"}`);

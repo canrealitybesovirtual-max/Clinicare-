@@ -1,0 +1,53 @@
+{
+  "id": "applied-tension",
+  "suggestWith": ["fear-blood-injection", "blood-injury-fainting"],
+  "name": "Applied tension for fainting with blood, needles or injury",
+  "modality": "Exposure - applied tension (blood-injection-injury)",
+  "conditions": [
+    "specific-phobia"
+  ],
+  "evidenceLevel": "Öst and Sterner (1987) developed applied tension to counter the drop in blood pressure that causes fainting in blood phobia; it is used before and during exposure to blood, needles and injury.",
+  "minutes": {
+    "min": 30,
+    "max": 50
+  },
+  "purpose": "Teaches the client to tense large muscles in the arms, legs and torso to raise blood pressure and prevent fainting, then to use the skill during graded exposure to blood, needles or injury. It addresses the fainting response that sets blood-injection-injury fears apart from other phobias.",
+  "steps": [
+    "Check medical history first (heart conditions, high blood pressure, pregnancy) and get medical clearance if needed.",
+    "Explain the fainting reflex and how tensing muscles counters it.",
+    "Teach the skill: tense arms, legs and torso for about 10 to 15 seconds until the face feels warm, then release for 20 to 30 seconds without relaxing completely; repeat 5 times.",
+    "Practice several times in session and assign practice 5 times a day for a week.",
+    "Teach the client to notice the first signs of a drop (lightheadedness, sweating, nausea) and to tense at that point.",
+    "Combine with graded exposure: pictures, then videos, then real blood draws or injections, using tension throughout."
+  ],
+  "script": [
+    "Fainting with blood or needles is a body reflex, not weakness.",
+    "Squeeze your arms, legs and stomach muscles now, hold it... and let go, but not all the way.",
+    "If you start to feel lightheaded, that is your cue to tense.",
+    "Let's look at the first picture together and use your tension."
+  ],
+  "contraindications": [
+    "Get medical advice first for heart disease, high blood pressure, recent surgery or pregnancy.",
+    "Do not use muscle tension for people at risk of high blood pressure crises.",
+    "Have the client seated or lying down during early exposure in case of fainting."
+  ],
+  "culturalAdaptations": [
+    "Some clients avoid medical care because of past mistreatment; explore mistrust as well as fear, and do not label avoidance rooted in mistrust as a phobia.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "handoutIds": [
+    "applied-tension-practice",
+    "exposure-ladder"
+  ],
+  "sources": [
+    {
+      "title": "Applied tension: a specific behavioral method for treatment of blood phobia (Öst and Sterner)",
+      "publisher": "Behaviour Research and Therapy (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/3593159/",
+      "year": 1987
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}
