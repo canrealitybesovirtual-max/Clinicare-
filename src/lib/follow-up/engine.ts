@@ -60,7 +60,7 @@ import { scoreConditions } from "@/lib/scoring";
 import type { ScoringInput, ScoringResult, Suggestion } from "@/lib/types";
 import { followUpBank, getQuestionDef } from "./bank";
 import { triggerDictionary } from "./dictionary";
-import { extractTriggers, triggerCategoriesOf, type TriggerHit } from "./triggers";
+import { extractTriggers, objectLabel, triggerCategoriesOf, type TriggerHit } from "./triggers";
 
 export const REVIEW_LABEL = "For clinician review" as const;
 export const DEFAULT_LIMIT = 5;
@@ -128,8 +128,11 @@ export interface FollowUpQuestion {
   options: RenderedOption[];
   tier: 0 | 1 | 2 | 3;
   rankScore: number;
-  /** The trigger templated into the text, if any. `phrase` stays on the device. */
-  trigger?: { category: TriggerCategory; objectId: string; phrase: string };
+  /**
+   * The trigger the question is about, if any. The text is templated with the curated `label` ("dogs",
+   * "leaving the house"), never with the typed words; `phrase` (as typed) stays on the device.
+   */
+  trigger?: { category: TriggerCategory; objectId: string; label: string; phrase: string };
   /** Conditions in the knowledge base this question bears on (clinician mode only). */
   discriminates: { conditionId: string; name: string }[];
   sud: boolean;
@@ -170,7 +173,16 @@ export interface ApplyOptions {
   symptoms?: readonly Symptom[];
   /** Ids a negation must never remove (for example the chips the clinician selected). */
   protectedSymptomIds?: readonly string[];
+  /**
+   * "ignore": leave duration, impairment, substance and medical as the base input has them. For screens that
+   * write those answers into their own context fields when the clinician picks them (answerGateEffects()),
+   * so a later edit of the field is never overridden by an older answer. Default "apply".
+   */
+  gates?: "apply" | "ignore";
 }
+
+/** The context fields an answer sets (duration, impairment, substance, medical), in ScoringInput terms. */
+export type GateEffects = Partial<Pick<ScoringInput, "duration" | "impairment" | "substancePossible" | "medicalPossible">>;
 
 /* ------------------------------------------------------------------ applying answers */
 
@@ -198,6 +210,7 @@ function applyEffects(
   effects: AnswerEffects,
   lex: ReadonlyMap<string, Symptom>,
   protect: ReadonlySet<string>,
+  gates: "apply" | "ignore" = "apply",
 ): EffectResult {
   let ids = uniq(input.symptomIds);
   const added: string[] = [];
@@ -211,17 +224,17 @@ function applyEffects(
     if (!ids.includes(id)) ids.push(id);
     added.push(id);
   }
-  return {
-    input: {
-      symptomIds: ids,
-      duration: effects.setDuration ?? input.duration,
-      impairment: effects.setImpairment ?? input.impairment,
-      substancePossible: effects.setSubstancePossible ?? input.substancePossible,
-      medicalPossible: effects.setMedicalPossible ?? input.medicalPossible,
-    },
-    added,
-    negated,
-  };
+  const g = gates === "apply" ? gateEffectsOf(effects) : {};
+  return { input: { ...input, ...g, symptomIds: ids }, added, negated };
+}
+
+function gateEffectsOf(e: AnswerEffects): GateEffects {
+  const out: GateEffects = {};
+  if (e.setDuration) out.duration = e.setDuration;
+  if (e.setImpairment) out.impairment = e.setImpairment;
+  if (e.setSubstancePossible) out.substancePossible = e.setSubstancePossible;
+  if (e.setMedicalPossible) out.medicalPossible = e.setMedicalPossible;
+  return out;
 }
 
 function chosenOptions(def: FollowUpQuestionDef, answer: string | readonly string[]): AnswerOption[] {
@@ -268,7 +281,7 @@ export function applyAnswer(
   const surfaces = new Set<Surface>();
   const notes: string[] = [];
   for (const o of chosen) {
-    const r = applyEffects(input, o.effects, lex, protect);
+    const r = applyEffects(input, o.effects, lex, protect, opts.gates);
     input = r.input;
     for (const x of r.negated) {
       if (!negated.includes(x)) negated.push(x);
@@ -295,6 +308,20 @@ export function applyAnswer(
     record: { questionId: def.id, answerIds: chosen.map((o) => o.id) },
     keepOpen: chosen.every((o) => o.keepOpen),
   };
+}
+
+/**
+ * The context fields the chosen answer sets, for screens that keep duration, impairment, substance and medical in
+ * their own fields (use with applyAnswers(..., { gates: "ignore" })). Empty for unknown ids. Pure.
+ */
+export function answerGateEffects(
+  questionId: string,
+  answerIds: readonly string[],
+  bank: readonly FollowUpQuestionDef[] = followUpBank,
+): GateEffects {
+  const def = getQuestionDef(questionId, bank);
+  if (!def) return {};
+  return Object.assign({}, ...def.options.filter((o) => answerIds.includes(o.id)).map((o) => gateEffectsOf(o.effects)));
 }
 
 /** Last record per question, in the order of those last records. */
@@ -362,6 +389,8 @@ interface Signals {
   topIds: readonly string[];
   answers: ReadonlyMap<string, ReadonlySet<string>>;
   closed: ReadonlySet<string>;
+  /** An answer tied the described fear to a frightening event (added the trauma-reminder category). */
+  traumaFromAnswer: boolean;
   anySignal: boolean;
   lex: ReadonlyMap<string, Symptom>;
   conditions: readonly Condition[];
@@ -422,6 +451,7 @@ function buildSignals(ctx: FollowUpContext, opts: EngineOptions): Signals {
     topIds: top.map((s) => s.conditionId),
     answers,
     closed,
+    traumaFromAnswer: (ctx.triggerCategories ?? []).includes("trauma-reminder"),
     anySignal: present.size > 0 || trigCats.size > 0,
     lex,
     conditions,
@@ -470,19 +500,32 @@ function gateKnown(gate: GateField, input: ScoringInput): boolean {
   }
 }
 
-/** The trigger hit a question is about: one of the categories or cues it was written for, else none. */
-function triggerFor(def: FollowUpQuestionDef, sig: Signals): { hit: TriggerHit; phrase: string; category: TriggerCategory } | null {
+/**
+ * The trigger hit a question is about: one of the categories or cues it was written for, else none. Questions
+ * written for trauma reminders also apply to a fear an answer tied to an event ("after a bite or attack").
+ * `label` is built from the curated object labels ("dogs or cats"), never from the typed words.
+ */
+function triggerFor(
+  def: FollowUpQuestionDef,
+  sig: Signals,
+): { hit: TriggerHit; label: string; phrase: string; category: TriggerCategory } | null {
   const cats = def.showWhen.triggerCategories ?? [];
   const cues = def.showWhen.triggerCues ?? [];
   if (cats.length === 0 && cues.length === 0) return null;
+  const viaAnswer = sig.traumaFromAnswer && cats.includes("trauma-reminder");
   const relevant = sig.hits.filter(
-    (h) => cats.includes(h.category) || (h.baseCategory !== undefined && cats.includes(h.baseCategory)) || cues.includes(h.cue),
+    (h) =>
+      viaAnswer ||
+      cats.includes(h.category) ||
+      (h.baseCategory !== undefined && cats.includes(h.baseCategory)) ||
+      cues.includes(h.cue),
   );
   const first = relevant[0];
   if (!first) return null;
+  const labels = uniq(relevant.map((h) => objectLabel(h.objectId))).slice(0, 2);
   const phrases = uniq(relevant.map((h) => h.phrase.toLowerCase())).slice(0, 2);
   const category = first.baseCategory && cats.includes(first.baseCategory) ? first.baseCategory : first.category;
-  return { hit: first, phrase: phrases.join(" or "), category };
+  return { hit: first, label: labels.join(" or "), phrase: phrases.join(" or "), category };
 }
 
 /** Category-label fallback for <trigger> when an answer added the category but no phrase was typed. */
@@ -620,7 +663,7 @@ function rank(def: FollowUpQuestionDef, sig: Signals): Candidate | null {
   const trigOn = triggerMatch(def, sig);
   const reasons: WhyReason[] = [];
   const triggerText = () => {
-    const where = trig ? `"${trig.phrase}" (${triggerDictionary.categories[trig.category].label.toLowerCase()})` : categoryFallback(def, sig);
+    const where = trig ? `"${trig.label}" (${triggerDictionary.categories[trig.category].label.toLowerCase()})` : categoryFallback(def, sig);
     return `A feared object or situation was described: ${where}.`;
   };
 
@@ -714,7 +757,7 @@ function compare(a: Candidate, b: Candidate): number {
 function render(c: Candidate, sig: Signals): FollowUpQuestion {
   const { def, trig } = c;
   const hasTrigger = trig !== null;
-  const fill = (s: string) => s.split(TRIGGER_TOKEN).join(trig ? trig.phrase : categoryFallback(def, sig));
+  const fill = (s: string) => s.split(TRIGGER_TOKEN).join(trig ? trig.label : categoryFallback(def, sig));
   const text = fill(hasTrigger ? def.text : (def.textNoTrigger ?? def.text));
   const options: RenderedOption[] = visibleOptions(def, hasTrigger).map((o) => ({
     id: o.id,
@@ -740,7 +783,7 @@ function render(c: Candidate, sig: Signals): FollowUpQuestion {
     sud: def.sud,
     label: REVIEW_LABEL,
   };
-  if (trig) q.trigger = { category: trig.category, objectId: trig.hit.objectId, phrase: trig.phrase };
+  if (trig) q.trigger = { category: trig.category, objectId: trig.hit.objectId, label: trig.label, phrase: trig.phrase };
   if (def.sud) q.part2Notice = PART2_NOTICE;
   return q;
 }
@@ -795,6 +838,8 @@ export function nextQuestions(ctx: FollowUpContext, opts: EngineOptions = {}): F
 export interface FollowUpSessionInput {
   /** Chips + text matches, before any follow-up answer (what analysis.ts scores today). */
   baseInput: ScoringInput;
+  /** See ApplyOptions.gates. Default "apply". */
+  gates?: "apply" | "ignore";
   /** Scrubbed text (extractTriggers is run on it), or pre-extracted triggers. */
   scrubbedText?: string;
   triggers?: readonly TriggerHit[];
@@ -823,6 +868,7 @@ export function followUpSession(input: FollowUpSessionInput, opts: EngineOptions
     bank: opts.bank,
     symptoms,
     protectedSymptomIds: input.protectedSymptomIds,
+    gates: input.gates,
   });
   const scoringResult = scoreConditions(folded.scoringInput, conditions as Condition[], symptoms as Symptom[]);
   const triggers = input.triggers ? [...input.triggers] : extractTriggers(input.scrubbedText ?? "");

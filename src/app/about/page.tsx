@@ -15,9 +15,9 @@ export const metadata: Metadata = { title: "About, privacy and licensing" };
 const PRIVACY = [
   { icon: Ban, title: "No identifier fields", body: "There is nowhere to enter a name, date of birth, address, phone, email, record number or photo. PDFs carry only a blank name line for handwriting." },
   { icon: ScanSearch, title: "PHI scrubber first", body: "Typed text passes a scrubber for the 18 HIPAA Safe Harbor identifier types before any matching. Anything that looks like an identifier is replaced with a placeholder, and you see which types were removed." },
-  { icon: TimerReset, title: "Memory only", body: "Session data lives in this tab’s memory. It is never written to browser storage, cookies, the URL or logs, and it is cleared when the tab closes, after 15 minutes idle, or with Clear session." },
+  { icon: TimerReset, title: "Memory only", body: "Session data lives in this tab’s memory. It is never written to browser storage, cookies, the URL or logs, and it is cleared when the tab closes, after 15 minutes idle (with a one-minute warning), or with Clear session. The language and large-text choices are kept in memory the same way." },
   { icon: EyeOff, title: "No analytics or trackers", body: "No analytics, advertising or tracking scripts, and fonts and images are served from this app." },
-  { icon: ServerOff, title: "No third-party connections", body: "Your browser talks only to this site (CSP connect-src 'self'). Optional lookups run through this site's server and send only codes, curated terms, drug names or a ZIP code or city. Outside links are plain page visits that carry nothing you typed." },
+  { icon: ServerOff, title: "Your browser talks only to this site", body: "Your browser talks only to this site (CSP connect-src 'self'). Optional lookups run through this site's server and send only codes, curated terms, drug names or a ZIP code or city. Outside links are plain page visits that carry nothing you typed." },
   { icon: FileLock2, title: "PDFs on the device", body: "Handouts and blank forms are generated in the browser. Nothing is uploaded, and no answers or scores are written into a PDF." },
   { icon: SpellCheck2, title: "Turn off cloud spellcheckers", body: "Text boxes here ask the browser not to spellcheck and opt out of Grammarly-style assistants, but browser “enhanced” spellcheck (for example in Chrome or Microsoft Edge) and writing-assistant extensions can still send what you type to their vendors. Turn them off for this site before typing anything." },
 ] as const;
@@ -84,7 +84,8 @@ export default function AboutPage() {
   const sources = [...sourceMap.values()].sort((a, b) => a.publisher.localeCompare(b.publisher) || a.title.localeCompare(b.title));
 
   return (
-    <div className="space-y-10">
+    // English-only page: marked so a Spanish shell does not mis-tag it (WCAG 3.1.2).
+    <div className="space-y-12" lang="en">
       <PageIntro title="About, privacy and licensing" eyebrow="Clinician Resource Companion · Phase 1">
         <p className="text-lg text-text">{POSITIONING}</p>
         <p>
@@ -100,7 +101,7 @@ export default function AboutPage() {
         </h2>
         <ul className="mt-4 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {PRIVACY.map((p) => (
-            <li key={p.title} className="rounded-2xl border border-border bg-surface p-5">
+            <li key={p.title} className="rounded-2xl border border-border bg-surface p-5 sm:p-6">
               <p.icon aria-hidden className="size-5 text-accent" />
               <h3 className="mt-2 font-semibold">{p.title}</h3>
               <p className="mt-1 text-sm leading-relaxed text-muted">{p.body}</p>

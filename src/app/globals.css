@@ -1,56 +1,60 @@
 @import "tailwindcss";
 
-/* Design tokens. Calm clinical palette; all text pairs meet WCAG 2.2 AA (>= 4.5:1). */
+/*
+ * Design tokens. Calm palette: soft warm neutrals, a slate-blue primary and a gentle teal accent; crisis red is
+ * reserved for crisis help. Every text pair meets WCAG 2.2 AA (>= 4.5:1) in both themes; input outlines and the
+ * focus ring are >= 3:1 against the surfaces they sit on (WCAG 1.4.11).
+ */
 :root {
-  --bg: #f6f8fa;
-  --surface: #ffffff;
-  --surface-2: #eef3f7;
-  --text: #13202e;
-  --muted: #4a5a6a;
-  --border: #d3dce5;
-  /* Outline of text inputs, selects and textareas: >= 3:1 against surface and bg (WCAG 1.4.11). */
-  --input-border: #6b7a89;
-  --primary: #1f3a5f;
+  --bg: #f7f5f0;
+  --surface: #fffdf9;
+  --surface-2: #f0ece4;
+  --text: #1f2328;
+  --muted: #555c66;
+  --border: #e2ddd3;
+  /* Outline of text inputs, selects and textareas. */
+  --input-border: #7b7468;
+  --primary: #2a4a6b;
   --primary-fg: #ffffff;
-  /* Solid fills (primary buttons, primary badges): stay calmer than the crisis colour in dark mode. */
-  --primary-solid: #1f3a5f;
+  /* Solid fills (primary buttons, primary badges): calmer than the crisis colour in both themes. */
+  --primary-solid: #2d5279;
   --primary-solid-fg: #ffffff;
-  --accent: #1d6b66;
-  --accent-soft: #e3f1ef;
+  --accent: #2c6e66;
+  --accent-soft: #e5f0eb;
   --crisis: #b42318;
   --crisis-fg: #ffffff;
-  --warn-bg: #fff6e0;
-  --warn-fg: #6b4300;
-  --warn-border: #f0c869;
-  --info-bg: #e8f0fa;
-  --info-fg: #1f3a5f;
-  --ok: #1e6b3a;
-  --focus: #2563eb;
+  --warn-bg: #fbf2de;
+  --warn-fg: #6d4a07;
+  --warn-border: #e5c67c;
+  --info-bg: #ebf1f6;
+  --info-fg: #24405f;
+  --ok: #276a43;
+  --focus: #1f5fcc;
 }
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg: #0e141b;
-    --surface: #151e28;
-    --surface-2: #1c2734;
-    --text: #e8eef4;
-    --muted: #a9b7c5;
-    --border: #2c3a49;
-    --input-border: #6e8297;
-    --primary: #9cc2ef;
-    --primary-fg: #0e141b;
-    --primary-solid: #3b6ea5;
+    --bg: #161719;
+    --surface: #1e1f22;
+    --surface-2: #272a2e;
+    --text: #ece9e3;
+    --muted: #b2aca2;
+    --border: #36393e;
+    --input-border: #7f8691;
+    --primary: #a8c3e2;
+    --primary-fg: #161719;
+    --primary-solid: #3b6492;
     --primary-solid-fg: #ffffff;
-    --accent: #6fd0c6;
-    --accent-soft: #15302e;
-    --crisis: #f0625a;
-    --crisis-fg: #10161d;
-    --warn-bg: #2e2410;
-    --warn-fg: #f6d58a;
-    --warn-border: #6b5418;
-    --info-bg: #17263a;
-    --info-fg: #cfe0f5;
-    --ok: #7ad69b;
-    --focus: #8ab4ff;
+    --accent: #84c9bd;
+    --accent-soft: #1c2f2c;
+    --crisis: #f07167;
+    --crisis-fg: #161719;
+    --warn-bg: #2c2516;
+    --warn-fg: #eccf8b;
+    --warn-border: #6b5724;
+    --info-bg: #1c2733;
+    --info-fg: #d3e1f0;
+    --ok: #8fd3a5;
+    --focus: #8db5ff;
   }
 }
 
@@ -79,7 +83,29 @@
   --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
+/*
+ * Type scale, one step larger than the Tailwind defaults (13 / 15 / 17 / 19px), with roomier line heights.
+ * Spacing stays on the 4px grid so 44px targets (min-h-11) stay exact. `max-w-reading` caps paragraphs at a
+ * comfortable line length.
+ */
+@theme {
+  --text-xs: 0.8125rem;
+  --text-xs--line-height: 1.5;
+  --text-sm: 0.9375rem;
+  --text-sm--line-height: 1.6;
+  --text-base: 1.0625rem;
+  --text-base--line-height: 1.65;
+  --text-lg: 1.1875rem;
+  --text-lg--line-height: 1.6;
+  --container-reading: 68ch;
+}
+
 html { -webkit-text-size-adjust: 100%; }
+/*
+ * Large text (header toggle, memory only): every size and space is in rem, so scaling the root scales type,
+ * spacing and targets together, for telehealth screen sharing and low vision. Respects the browser's own setting.
+ */
+html[data-text-size="large"] { font-size: 125%; }
 /*
  * WCAG 2.4.11 Focus Not Obscured: below lg the crisis button floats at the bottom of the viewport, and measure
  * forms keep a sticky score bar at the top. Scroll padding keeps focused controls and anchor targets clear of both.
@@ -88,10 +114,22 @@ html { -webkit-text-size-adjust: 100%; }
   html { scroll-padding-bottom: 5.5rem; }
   html:has([data-sticky-score]) { scroll-padding-top: 4.5rem; }
 }
-body { background: var(--bg); color: var(--text); font-family: var(--font-sans); }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: var(--text-base--line-height);
+}
+h1, h2, h3 { text-wrap: balance; }
+p, li { text-wrap: pretty; }
 :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
-@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+::selection { background: color-mix(in srgb, var(--accent) 25%, transparent); }
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
 @media print {
   .no-print { display: none !important; }
+  html[data-text-size="large"] { font-size: 100%; }
   body { background: #fff; color: #000; }
 }

@@ -4,7 +4,7 @@
  * stored (G5). Default "en". Components read text with `useT()` and a { en, es } pair, so a missing
  * Spanish string falls back to English instead of breaking the screen.
  */
-import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
+import { Fragment, createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
 
 export type Lang = "en" | "es";
 export const LANGS: readonly Lang[] = ["en", "es"] as const;
@@ -36,4 +36,15 @@ export function pick(text: Text | string, lang: Lang): string {
 export function useT(): (text: Text | string) => string {
   const { lang } = useLang();
   return useCallback((text: Text | string) => pick(text, lang), [lang]);
+}
+
+/**
+ * Fill `{slot}` placeholders in a picked string with text or elements, so word order can differ between
+ * languages: `fill(t({ en: "Call {n}", es: "Llamar al {n}" }), { n: "988" })`. Unknown slots stay as written.
+ */
+export function fill(template: string, slots: Record<string, ReactNode>): ReactNode[] {
+  return template.split(/(\{\w+\})/).map((part, i) => {
+    const name = /^\{(\w+)\}$/.exec(part)?.[1];
+    return name !== undefined && name in slots ? <Fragment key={i}>{slots[name]}</Fragment> : part;
+  });
 }

@@ -20,8 +20,9 @@
  *                  freak(s|ed|ing) out (+ optional "around" / "at"); panicky + preposition
  *       avoidance  avoid(s|ed|ing), avoidance (of), stays / keeps away from, steers clear of, can't go near,
  *                  unable to go near, won't go near, can't be near / around, can't stand / handle / face /
- *                  tolerate, refuses to; "won't" and "stopped" only when no preposition follows
- *                  ("stopped driving", never "stopped at the store")
+ *                  tolerate, refuses to; "won't", "can't", "cannot" and "stopped" only when no preposition
+ *                  follows and the object comes within a few words ("can't fly", "stopped driving", never
+ *                  "stopped at the store")
  *     Inside the window (same sentence and clause) up to 5 words may come before the first object
  *     ("afraid of the neighbor's big dog", "panics when she sees a dog"), and lists continue with at most
  *     3 words between objects ("afraid of dogs, cats and snakes"). The window stops at the next cue and,
@@ -251,6 +252,10 @@ const CUES: readonly CueDef[] = [
   cue("refuses to", "avoidance", "none", 3),
   cue("refuse to", "avoidance", "none", 3),
   exactCue("wont", "avoidance", "forbidden", 3),
+  // "can't fly", "cannot drive", "unable to ride the subway": the object must follow within two words.
+  exactCue("cant", "avoidance", "forbidden", 2),
+  exactCue("cannot", "avoidance", "forbidden", 2),
+  cue("unable to", "avoidance", "none", 2),
   exactCue("stopped", "avoidance", "forbidden", 2),
 ];
 
@@ -542,7 +547,21 @@ export interface TriggerSummary {
   category: TriggerCategory;
   label: string; // category label from the dictionary
   objectIds: string[];
+  /** Curated display labels of those objects ("dogs", "leaving the house"), same order as objectIds. */
+  objectLabels: string[];
   phrases: string[]; // distinct phrases as typed, first mention first
+}
+
+const labelCache = new WeakMap<TriggerObjectsFile, Map<string, string>>();
+
+/** Curated display label of a dictionary object ("dog" -> "dogs"); the id itself when unknown. */
+export function objectLabel(objectId: string, dict: TriggerObjectsFile = triggerDictionary): string {
+  let m = labelCache.get(dict);
+  if (!m) {
+    m = new Map(dict.objects.map((o) => [o.id, o.label] as const));
+    labelCache.set(dict, m);
+  }
+  return m.get(objectId) ?? objectId;
 }
 
 /** One row per category for display (non-negated hits only), in TRIGGER_CATEGORIES order. */
@@ -550,8 +569,17 @@ export function summarizeTriggers(hits: readonly TriggerHit[], dict: TriggerObje
   const rows = new Map<TriggerCategory, TriggerSummary>();
   for (const h of hits) {
     if (h.negated) continue;
-    const row = rows.get(h.category) ?? { category: h.category, label: dict.categories[h.category].label, objectIds: [], phrases: [] };
-    if (!row.objectIds.includes(h.objectId)) row.objectIds.push(h.objectId);
+    const row = rows.get(h.category) ?? {
+      category: h.category,
+      label: dict.categories[h.category].label,
+      objectIds: [],
+      objectLabels: [],
+      phrases: [],
+    };
+    if (!row.objectIds.includes(h.objectId)) {
+      row.objectIds.push(h.objectId);
+      row.objectLabels.push(objectLabel(h.objectId, dict));
+    }
     const p = h.phrase.toLowerCase();
     if (!row.phrases.includes(p)) row.phrases.push(p);
     rows.set(h.category, row);

@@ -3,7 +3,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { CircleAlert, Info, ShieldAlert, TriangleAlert, type LucideIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-const noticeVariants = cva("flex gap-3 rounded-xl border p-4 text-sm leading-relaxed", {
+const noticeVariants = cva("flex gap-3 rounded-2xl border p-4 text-sm leading-relaxed sm:p-5", {
   variants: {
     tone: {
       info: "border-info-fg/20 bg-info-bg text-info-fg",

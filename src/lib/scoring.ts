@@ -103,6 +103,23 @@ function orderFeatures(list: ConditionFeature[]): ConditionFeature[] {
     .map((x) => x.f);
 }
 
+/**
+ * A condition's features split into documented and not yet documented, core first, then by weight (each symptom
+ * once). The same lists a suggestion carries; also used to preview a pattern that is not scored yet.
+ */
+export function featureMatch(
+  cond: Pick<Condition, "features">,
+  present: ReadonlySet<string>,
+  labelOf: (id: string) => string,
+): { matched: FeatureRef[]; missing: FeatureRef[] } {
+  const toRef = (f: ConditionFeature): FeatureRef => ({ symptomId: f.symptomId, label: labelOf(f.symptomId), kind: f.kind, weight: f.weight });
+  const ordered = orderFeatures(uniqueFeatures(cond.features));
+  return {
+    matched: ordered.filter((f) => present.has(f.symptomId)).map(toRef),
+    missing: ordered.filter((f) => !present.has(f.symptomId)).map(toRef),
+  };
+}
+
 function compareText(a: string, b: string): number {
   const x = a.toLowerCase();
   const y = b.toLowerCase();
@@ -243,7 +260,6 @@ function scoreOne(
   labelOf: (id: string) => string,
   redFlagTypes: ReadonlySet<string>,
 ): Suggestion | null {
-  const features = uniqueFeatures(cond.features);
   const bd = scoreBreakdown(cond, present);
   if (bd.coreTotal === 0 || bd.coreHits === 0) return null;
 
@@ -274,7 +290,7 @@ function scoreOne(
       flags.push({
         type: "breadth",
         message: fewAreas
-          ? `Only ${bd.areaHits} of the symptom areas this pattern usually spans ${bd.areaHits === 1 ? "is" : "are"} documented (at least ${cond.strongMinAreas} expected for a strong match); score held at ${score} so the match stays moderate until more of the picture is documented.`
+          ? `Only ${bd.areaHits} of the symptom areas this pattern usually spans ${bd.areaHits === 1 ? "is" : "are"} documented (at least ${cond.strongMinAreas} expected for a strong feature match); score held at ${score} so the match stays moderate until more of the picture is documented.`
           : `Few supporting features are documented yet (${bd.assocHits} of ${bd.assocSlots} associated features); score reduced to ${score} so the match stays moderate until more of the picture is documented.`,
       });
     }
@@ -304,13 +320,7 @@ function scoreOne(
     });
   }
 
-  const toRef = (f: ConditionFeature): FeatureRef => ({
-    symptomId: f.symptomId,
-    label: labelOf(f.symptomId),
-    kind: f.kind,
-    weight: f.weight,
-  });
-  const ordered = orderFeatures(features);
+  const { matched, missing } = featureMatch(cond, present, labelOf);
 
   return {
     conditionId: cond.id,
@@ -320,8 +330,8 @@ function scoreOne(
     dsmPointer: cond.dsmPointer,
     score,
     strength,
-    matched: ordered.filter((f) => present.has(f.symptomId)).map(toRef),
-    missing: ordered.filter((f) => !present.has(f.symptomId)).map(toRef),
+    matched,
+    missing,
     flags,
     comorbidityNotes: [],
   };

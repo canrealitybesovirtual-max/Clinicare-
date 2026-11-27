@@ -73,7 +73,7 @@ describe('"panic from dogs" end to end', () => {
     expect(ids(qs)).toContain("gate-duration");
     expect(qs[0]?.whyAsked).toMatch(/"dogs"/);
     expect(qs[0]?.whyAsked).toMatch(/Nothing in the knowledge base matches yet/);
-    expect(qs[0]?.trigger).toEqual({ category: "animal", objectId: "dog", phrase: "dogs" });
+    expect(qs[0]?.trigger).toEqual({ category: "animal", objectId: "dog", label: "dogs", phrase: "dogs" });
   });
 
   it("answering only-around-dogs + avoids + 6 months + interferes reshapes the input and moves the picture", () => {

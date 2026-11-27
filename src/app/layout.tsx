@@ -1,7 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
+import { LangProvider } from "@/lib/i18n/core";
 import { SessionProvider } from "@/state/session";
 import { ServiceWorkerRegister } from "@/components/sw-register";
+import { TextSizeProvider } from "@/components/layout/display-controls";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
 
@@ -22,24 +24,36 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#1f3a5f",
+  // Matches the header surface in each theme (globals.css --surface).
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#fffdf9" },
+    { media: "(prefers-color-scheme: dark)", color: "#1e1f22" },
+  ],
   colorScheme: "light dark",
   width: "device-width",
   initialScale: 1,
 };
 
+/**
+ * Root shell. Language (EN/ES), large text and the clinical session are all memory-only providers (G5); the
+ * header, footer and crisis button wrap every page in every mode.
+ */
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className="scheme-light-dark">
       <body className="flex min-h-dvh flex-col antialiased">
-        <SessionProvider>
-          <SiteHeader />
-          <main id="main" tabIndex={-1} className="mx-auto w-full max-w-6xl flex-1 px-4 pt-6 outline-none sm:pt-8">
-            {children}
-          </main>
-          <SiteFooter />
-          <ServiceWorkerRegister />
-        </SessionProvider>
+        <LangProvider>
+          <TextSizeProvider>
+            <SessionProvider>
+              <SiteHeader />
+              <main id="main" tabIndex={-1} className="mx-auto w-full max-w-6xl flex-1 px-4 pt-5 outline-none sm:px-6 sm:pt-10">
+                {children}
+              </main>
+              <SiteFooter />
+              <ServiceWorkerRegister />
+            </SessionProvider>
+          </TextSizeProvider>
+        </LangProvider>
       </body>
     </html>
   );

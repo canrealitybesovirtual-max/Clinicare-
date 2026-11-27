@@ -8,9 +8,9 @@
  *      urgent medical, psychiatric, medical referral). Static links only; never a risk level.
  *   2. Trigger categories, in order of first mention (content/trigger-objects.json category hints), e.g.
  *      animal -> graded in vivo exposure, exposure ladder handout, psychologist / professional counselor.
- *   3. The top 3 suggestions, in rank order: license-confirmed measures (G7), the condition's plan-library
- *      interventions (first 3, in plan order; else interventions listing the condition, by name), and their
- *      handouts.
+ *   3. The top 3 suggestions, in rank order: license-confirmed measures (G7), up to 3 interventions written for
+ *      the condition (plan-library order first, then by id; other plan-library items only fill empty slots), and
+ *      their handouts.
  * Measures are only ever ids from catalog.measureIds (license confirmed). `part2` is true whenever any
  * substance-use content is involved (G6): show PART2_NOTICE with the hints.
  */
@@ -200,15 +200,19 @@ export function computeResourceHints(
     const why = `Commonly used for ${s.name}, one of the possible considerations.`;
     if (cond?.sud) part2 = true;
     for (const m of cond?.measures ?? []) push("measure", m, why);
+    // Interventions written for this condition come first (in plan-library order, then by id); plan items written
+    // for other problems (for example, drinking to cope in a social-anxiety plan) only fill remaining slots.
     const planned = catalog.planInterventions[s.conditionId] ?? [];
-    const listed = catalog.interventions
-      .filter((i) => i.conditions.includes(s.conditionId))
-      .map((i) => i.id)
-      .sort();
-    const chosen = [...new Set([...planned, ...listed])].filter((id) => interventionIds.has(id)).slice(0, 3);
+    const listed = new Set(catalog.interventions.filter((i) => i.conditions.includes(s.conditionId)).map((i) => i.id));
+    const chosen = [...new Set([...planned.filter((id) => listed.has(id)), ...[...listed].sort(), ...planned])]
+      .filter((id) => interventionIds.has(id))
+      .slice(0, 3);
     for (const id of chosen) push("intervention", id, why);
-    for (const h of cond?.handouts ?? []) push("handout", h, why);
-    for (const id of chosen) for (const h of interventionById.get(id)?.handoutIds ?? []) push("handout", h, why);
+    // Substance-use handouts only for a substance-use consideration (they would otherwise raise Part 2 for, say, a
+    // needle fear whose relapse-prevention intervention also serves substance use).
+    const fits = (h: string) => cond?.sud === true || handoutById.get(h)?.sud !== true;
+    for (const h of cond?.handouts ?? []) if (fits(h)) push("handout", h, why);
+    for (const id of chosen) for (const h of interventionById.get(id)?.handoutIds ?? []) if (fits(h)) push("handout", h, why);
     for (const r of (cond?.sud ? ["addiction-counselor", "substance-use"] : ["psychologist", "professional-counselor"]) as FollowUpReferralKind[])
       push("referral", r, why);
   }

@@ -1,24 +1,56 @@
 /*
- * Offline service worker. Caches ONLY static, same-origin app files: hashed build assets, icons and the
- * fixed list of static pages below (pages are prerendered and contain no clinical text; all session
- * data lives in page memory). Page entries are keyed by path alone, so a query string is never stored.
- * RSC payloads are not cached: offline, Next.js falls back to a full navigation, which is served from
- * the cached page. Never touches non-GET requests or other origins.
+ * Offline service worker. Caches ONLY static, same-origin app files: hashed build assets, icons, the static pages
+ * below (precached at install) and the curated-id pages a user has opened (cached on visit). Pages are prerendered
+ * and contain no clinical text; all session data lives in page memory. Page entries are keyed by path alone, so a
+ * query string is never stored. RSC payloads are not cached: offline, Next.js falls back to a full navigation, which
+ * is served from the cached page. Never touches non-GET requests, other origins, /api/**, /models/** or /ort/**
+ * (the on-device model checks its own files).
  */
-const VERSION = "crc-v2";
+const VERSION = "crc-v3";
+
+/** Every route without a dynamic segment (src/app). A route that does not exist yet is skipped at install. */
 const PAGES = [
   "/",
   "/symptoms",
   "/diagnoses",
   "/measures",
-  "/measures/gad-7",
-  "/measures/phq-9",
+  "/plan",
+  "/interventions",
   "/handouts",
-  "/client",
+  "/referrals",
+  "/medications",
+  "/ethics",
+  "/tools",
   "/about",
+  "/client",
+  "/client/help",
+  "/client/skills",
+  "/client/calm",
 ];
 const PAGE_SET = new Set(PAGES);
+
+/** Dynamic [id] routes: network first, cached on visit. Ids are curated content slugs, never typed text. */
+const DYNAMIC_PAGES = [
+  /^\/measures\/[a-z0-9-]+$/,
+  /^\/interventions\/[a-z0-9-]+$/,
+  /^\/handouts\/[a-z0-9-]+$/,
+  /^\/medications\/[a-z0-9-]+$/,
+  /^\/client\/topics\/[a-z0-9-]+$/,
+  /^\/client\/skills\/[a-z0-9-]+$/,
+  /^\/r\/[a-z0-9-]+$/,
+];
+
+const NEVER = [/^\/api\//, /^\/models\//, /^\/ort\//];
 const SHELL = [...PAGES, "/manifest.webmanifest", "/icons/icon.svg", "/icons/icon-192.png"];
+
+const isPage = (path) => PAGE_SET.has(path) || DYNAMIC_PAGES.some((re) => re.test(path));
+const isClientPage = (path) => path === "/client" || path.startsWith("/client/") || path.startsWith("/r/");
+
+function store(key, res) {
+  if (!res.ok || res.type !== "basic") return;
+  const copy = res.clone();
+  caches.open(VERSION).then((c) => c.put(key, copy));
+}
 
 self.addEventListener("install", (event) => {
   event.waitUntil(
@@ -43,6 +75,7 @@ self.addEventListener("fetch", (event) => {
   if (req.method !== "GET") return;
   const url = new URL(req.url);
   if (url.origin !== self.location.origin) return;
+  if (NEVER.some((re) => re.test(url.pathname))) return;
 
   // Immutable build assets and icons: cache first.
   if (url.pathname.startsWith("/_next/static/") || url.pathname.startsWith("/icons/")) {
@@ -51,10 +84,7 @@ self.addEventListener("fetch", (event) => {
         (hit) =>
           hit ||
           fetch(req).then((res) => {
-            if (res.ok && res.type === "basic") {
-              const copy = res.clone();
-              caches.open(VERSION).then((c) => c.put(req, copy));
-            }
+            store(req, res);
             return res;
           }),
       ),
@@ -62,21 +92,21 @@ self.addEventListener("fetch", (event) => {
     return;
   }
 
-  // Page loads: network first. Only the known static pages are cached, keyed by path (no query string).
+  // Page loads: network first, cached by path (no query string). Offline, an uncached page falls back to the home
+  // page of its mode, so a client page never lands on the clinician home.
   if (req.mode === "navigate") {
     const key = url.pathname;
+    const fallback = isClientPage(key) ? "/client" : "/";
     event.respondWith(
       fetch(req)
         .then((res) => {
-          if (res.ok && res.type === "basic" && PAGE_SET.has(key)) {
-            const copy = res.clone();
-            caches.open(VERSION).then((c) => c.put(key, copy));
-          }
+          if (isPage(key)) store(key, res);
           return res;
         })
         .catch(() =>
           caches
-            .match(PAGE_SET.has(key) ? key : "/")
+            .match(isPage(key) ? key : fallback)
+            .then((hit) => hit || caches.match(fallback))
             .then((hit) => hit || caches.match("/"))
             .then((hit) => hit || Response.error()),
         ),

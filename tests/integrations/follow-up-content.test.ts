@@ -144,7 +144,8 @@ describe("coverage of the required topics", () => {
   it.each([
     ["panic vs cued fear", "fear-cued-or-unexpected", /out of the blue/],
     ["avoidance of the trigger", "fear-avoids-trigger", /steer clear of <trigger>/],
-    ["fear bigger than the real danger", "fear-out-of-proportion", /much bigger than the danger/],
+    ["fear bigger than the real danger", "fear-out-of-proportion", /much bigger than the real danger/],
+    ["how the fear began (event, panic, long-standing)", "fear-onset", /begin/],
     ["agoraphobia vs situational phobia", "fear-escape-several-places", /trapped or cut off from help/],
     ["social anxiety", "fear-social-scrutiny", /watched, judged or embarrassed/],
     ["GAD vs OCD vs illness anxiety", "worry-scope", /serious illness/],

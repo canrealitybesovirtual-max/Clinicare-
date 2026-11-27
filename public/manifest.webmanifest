@@ -1,13 +1,16 @@
 {
+  "id": "/",
   "name": "Clinician Resource Companion",
   "short_name": "Clinician RC",
   "description": "Reference and resource tool for licensed mental-health clinicians. Resource only. Not a substitute for clinical judgment.",
+  "lang": "en",
+  "dir": "ltr",
   "start_url": "/",
   "scope": "/",
   "display": "standalone",
   "orientation": "any",
-  "background_color": "#f6f8fa",
-  "theme_color": "#1f3a5f",
+  "background_color": "#f7f5f0",
+  "theme_color": "#fffdf9",
   "categories": ["medical", "health", "education"],
   "icons": [
     { "src": "/icons/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },

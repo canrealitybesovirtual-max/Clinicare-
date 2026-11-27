@@ -5,6 +5,7 @@
  */
 export {
   extractTriggers,
+  objectLabel,
   summarizeTriggers,
   triggerCategoriesOf,
   type ExtractTriggersOptions,
@@ -14,6 +15,7 @@ export {
 export {
   DEFAULT_LIMIT,
   REVIEW_LABEL,
+  answerGateEffects,
   applyAnswer,
   applyAnswers,
   followUpSession,
@@ -27,6 +29,7 @@ export {
   type FollowUpSession,
   type FollowUpSessionInput,
   type FoldedAnswers,
+  type GateEffects,
   type RenderedOption,
   type WhyKind,
   type WhyReason,
@@ -34,6 +37,7 @@ export {
 export { bankProblems, followUpBank, followUpFiles, getQuestionDef, referencedSymptomIds } from "./bank";
 export { triggerDictionary } from "./dictionary";
 export { SURFACE_INFO, type SurfaceInfo } from "./surfaces";
+export { triggerPatterns, type TriggerPattern, type TriggerPatternOptions } from "./patterns";
 export {
   computeResourceHints,
   type ResourceCatalog,

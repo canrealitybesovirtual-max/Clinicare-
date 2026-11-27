@@ -2455,7 +2455,10 @@
         "social interactions",
         "social activities",
         "mixing with people",
-        "mingling"
+        "mingling",
+        "people",
+        "other people",
+        "groups of people"
       ]
     },
     {
@@ -2486,7 +2489,7 @@
     {
       "id": "workplace-social",
       "category": "social",
-      "label": "coworkers or networking",
+      "label": "people at work",
       "terms": [
         "coworkers",
         "co workers",
@@ -2494,7 +2497,11 @@
         "work events",
         "networking",
         "networking events",
-        "classmates"
+        "classmates",
+        "people at work",
+        "people at the office",
+        "people at school",
+        "work colleagues"
       ]
     },
     {

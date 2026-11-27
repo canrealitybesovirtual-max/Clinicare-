@@ -36,18 +36,18 @@ export function ChoiceGroup<V extends string>({
   const hintId = React.useId();
   return (
     <fieldset className={cn("min-w-0", className)} aria-describedby={hint ? hintId : undefined}>
-      <legend className="mb-1.5 text-sm font-semibold text-text">{legend}</legend>
+      <legend className="mb-2 text-sm font-semibold text-text">{legend}</legend>
       {hint ? (
         <p id={hintId} className="-mt-0.5 mb-2 text-xs text-muted">
           {hint}
         </p>
       ) : null}
-      <div className={cn("grid gap-1.5", options.length === 3 ? "grid-cols-3" : "grid-cols-2")}>
+      <div className={cn("grid gap-2", options.length === 3 ? "grid-cols-3" : "grid-cols-2")}>
         {options.map((o) => (
           <label
             key={o.value}
             className={cn(
-              "group relative flex min-h-11 cursor-pointer select-none items-center justify-center gap-1.5 rounded-lg border border-border bg-surface px-2 py-1.5 text-center text-sm leading-tight text-text transition-colors hover:bg-surface-2",
+              "group relative flex min-h-11 cursor-pointer select-none items-center justify-center gap-1.5 rounded-xl border border-border bg-surface px-2 py-1.5 text-center text-sm leading-tight text-text transition-colors hover:bg-surface-2",
               "has-[:checked]:border-primary has-[:checked]:bg-primary/10 has-[:checked]:font-semibold has-[:checked]:text-text has-[:checked]:ring-2 has-[:checked]:ring-primary dark:has-[:checked]:bg-primary/20",
               "forced-colors:has-[:checked]:outline forced-colors:has-[:checked]:outline-2 forced-colors:has-[:checked]:outline-[Highlight]",
               "has-[:focus-visible]:outline-3 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-[var(--focus)]",

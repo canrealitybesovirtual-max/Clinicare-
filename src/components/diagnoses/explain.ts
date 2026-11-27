@@ -69,8 +69,12 @@ export function explainScore(cond: Condition, s: Suggestion, input: Omit<Scoring
   };
 }
 
+/**
+ * How well the documented features fit the pattern's feature list (owner decision 2026-11-27): worded as a
+ * feature match, never as a likelihood. The 0-100 score itself is shown only under "Why suggested".
+ */
 export const STRENGTH_LABEL: Record<Suggestion["strength"], string> = {
-  strong: "Strong match",
-  moderate: "Moderate match",
-  possible: "Possible match",
+  strong: "Strong feature match",
+  moderate: "Moderate feature match",
+  possible: "Partial feature match",
 };

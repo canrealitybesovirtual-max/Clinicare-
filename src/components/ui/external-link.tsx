@@ -1,10 +1,12 @@
 import * as React from "react";
 import { ExternalLink as ExternalIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { NewTabHint } from "./new-tab-hint";
 
 /**
  * Outbound link (plain navigation only; nothing typed is ever added to the URL).
  * Always rel="noopener noreferrer" so the destination gets no referrer and no window handle.
+ * Server-safe; only the screen-reader "opens in a new tab" note follows the shell language.
  */
 export function ExternalLink({
   href,
@@ -26,10 +28,7 @@ export function ExternalLink({
     >
       {children}
       {showIcon ? <ExternalIcon aria-hidden className="ml-1 inline-block size-3.5 align-[-0.125em]" /> : null}
-      <span className="sr-only" lang="en">
-        {" "}
-        (opens in a new tab)
-      </span>
+      <NewTabHint />
     </a>
   );
 }

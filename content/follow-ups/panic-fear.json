@@ -100,7 +100,7 @@
       "id": "fear-avoids-trigger",
       "kind": "discriminate",
       "domain": "panic-fear",
-      "text": "Does the client steer clear of <trigger>, or of places where <trigger> might be, or face them only while very frightened?",
+      "text": "Does the client steer clear of <trigger> (changing routes, plans or care to do so), or face it only while very frightened?",
       "why": "Steering clear of the feared thing, or facing it only in great distress, is part of what separates a phobic pattern from an ordinary dislike. It also shows where an exposure ladder could start.",
       "options": [
         {
@@ -149,18 +149,21 @@
         "specific-phobia",
         "agoraphobia"
       ],
-      "priority": 20
+      "priority": 20,
+      "targets": [
+        "phobic-avoidance"
+      ]
     },
     {
       "id": "fear-every-time",
       "kind": "discriminate",
       "domain": "panic-fear",
-      "text": "Is the fear predictable: does it come on whenever the client meets <trigger>, or even just expects to?",
+      "text": "Does the fear come on whenever the client faces <trigger>, and even while just expecting to?",
       "why": "A phobic fear is dependable: it shows up whenever the client meets or expects the feared thing, not only now and then. Fear that builds in advance also tells you how far the pattern reaches into daily plans.",
       "options": [
         {
           "id": "every-time",
-          "label": "Yes, whenever it happens, and while expecting it",
+          "label": "Yes, each time, and in advance too",
           "effects": {
             "addSymptomIds": [
               "anticipatory-anxiety",
@@ -170,7 +173,7 @@
         },
         {
           "id": "on-contact",
-          "label": "Yes, on contact, but not much in advance",
+          "label": "Yes, when facing it, but not much in advance",
           "effects": {
             "addSymptomIds": [
               "circumscribed-fear"
@@ -200,13 +203,72 @@
       "discriminates": [
         "specific-phobia"
       ],
-      "priority": 25
+      "priority": 25,
+      "targets": [
+        "circumscribed-fear",
+        "anticipatory-anxiety"
+      ]
+    },
+    {
+      "id": "fear-onset",
+      "kind": "discriminate",
+      "domain": "panic-fear",
+      "text": "How did the fear of <trigger> begin?",
+      "why": "A fear that started with a bite, attack, accident or other frightening event calls for trauma questions (reliving, avoiding reminders). A fear present for as long as the client remembers, or one that grew after a panic attack in that setting, points to different next steps.",
+      "options": [
+        {
+          "id": "after-event",
+          "label": "After a bite, attack, accident or other frightening event",
+          "effects": {
+            "addSymptomIds": [
+              "traumatic-event-exposure"
+            ],
+            "addTriggerCategory": "trauma-reminder"
+          },
+          "note": "Ask gently about reliving the event and avoiding reminders next; a fear learned from one event can be a phobia, a trauma reaction, or both."
+        },
+        {
+          "id": "after-panic",
+          "label": "After a panic attack or a sudden scare in that setting",
+          "effects": {
+            "addSymptomIds": [
+              "panic-attack-cued"
+            ]
+          },
+          "note": "Fear that grew from a panic attack can spread to other places; the panic and escape questions help tell these patterns apart."
+        },
+        {
+          "id": "long-standing",
+          "label": "Gradually, or for as long as the client remembers",
+          "effects": {}
+        },
+        {
+          "id": "unsure",
+          "label": "Not sure yet",
+          "effects": {},
+          "keepOpen": true
+        }
+      ],
+      "showWhen": {
+        "triggerCategories": [
+          "animal",
+          "natural-environment",
+          "situational"
+        ]
+      },
+      "targets": [],
+      "discriminates": [
+        "specific-phobia",
+        "ptsd",
+        "agoraphobia"
+      ],
+      "priority": 15
     },
     {
       "id": "fear-out-of-proportion",
       "kind": "discriminate",
       "domain": "panic-fear",
-      "text": "Is the fear much bigger than the danger <trigger> actually poses where the client lives and works, given local conditions and the client's cultural norms?",
+      "text": "Is the fear much bigger than the real danger from <trigger> in the client's own setting, allowing for local conditions and cultural norms?",
       "why": "A fear that matches a real, current danger (for example, aggressive stray dogs in the neighborhood, or a recent disaster) is not a phobia. Cultural and local context shape what counts as proportionate, so judge it from the client's world, not only your own.",
       "options": [
         {
@@ -249,7 +311,40 @@
         "specific-phobia",
         "social-anxiety-disorder"
       ],
-      "priority": 30
+      "priority": 30,
+      "alsoRequires": {
+        "symptomIds": [
+          "circumscribed-fear",
+          "phobic-avoidance",
+          "fear-social-scrutiny",
+          "social-situation-avoidance",
+          "panic-attack-cued"
+        ],
+        "answered": [
+          {
+            "questionId": "fear-every-time",
+            "answerIds": [
+              "every-time",
+              "on-contact"
+            ]
+          },
+          {
+            "questionId": "fear-cued-or-unexpected",
+            "answerIds": [
+              "only-trigger",
+              "also-unexpected",
+              "no-attacks"
+            ]
+          },
+          {
+            "questionId": "fear-avoids-trigger",
+            "answerIds": [
+              "avoids",
+              "endures"
+            ]
+          }
+        ]
+      }
     },
     {
       "id": "fear-escape-several-places",
@@ -261,7 +356,7 @@
       "options": [
         {
           "id": "the-thing-itself",
-          "label": "About <trigger> itself (for example, a crash or being shut in)",
+          "label": "About <trigger> itself (what could happen there, such as a crash or being shut in)",
           "labelNoTrigger": "About the things or places themselves",
           "effects": {
             "negateSymptomIds": [
