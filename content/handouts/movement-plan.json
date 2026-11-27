@@ -46,6 +46,58 @@
     "rows": 14
   },
   "safetyNote": "Safety first: If you have a health problem, such as heart or lung trouble, diabetes, high blood pressure, or joint pain, or you are pregnant, ask your doctor which activities are right for you. Start slowly and build up. Stop and get medical help right away if you have chest pain or pressure, trouble breathing, or feel faint or dizzy. Drink water, and dress for the weather. Movement should not be a way to punish yourself or to make up for eating. If it starts to feel that way, tell your counselor. This sheet is not for emergencies. If you have thoughts of hurting yourself or someone else, call or text 988 in the US, or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "es": {
+    "title": "Mi plan para moverme",
+    "intro": "Mover el cuerpo puede mejorar su ánimo, bajar el estrés y ayudarle a dormir. No necesita un gimnasio ni equipo especial. Cualquier movimiento cuenta, hasta una caminata corta o bailar en su cocina. La clave es empezar con poco e ir aumentando. Esta hoja le ayuda a hacer un plan que vaya con su vida. Llenarla toma unos 15 minutos.",
+    "sections": [
+      {
+        "heading": "Cuánto tratar de hacer",
+        "body": "Las guías de salud de EE. UU. sugieren que los adultos traten de hacer al menos 150 minutos a la semana de actividad moderada. Eso podría ser 30 minutos, 5 días a la semana. Los ratos cortos, como tres caminatas de 10 minutos, también cuentan. Las guías también sugieren actividades que fortalezcan los músculos al menos 2 días a la semana, como levantar pesas, hacer flexiones de brazos o trabajos pesados de jardinería. Si eso le parece mucho, empiece con lo que pueda hacer. Moverse algo es mejor que nada."
+      },
+      {
+        "heading": "¿Qué tan fuerte es una actividad moderada?",
+        "body": "Durante una actividad moderada, respira con más fuerza y su corazón late más rápido. Todavía puede hablar, pero no puede cantar. Caminar a paso rápido es un buen ejemplo."
+      },
+      {
+        "heading": "Haga su plan",
+        "steps": [
+          "Elija una o dos actividades que disfrute, o que antes disfrutaba. Ideas: caminar, bailar, andar en bicicleta, nadar, trabajar en el jardín, jugar con niños o con una mascota, ejercicios en silla o estiramientos.",
+          "Elija los días, las horas y los lugares. Escríbalos en su calendario como una cita.",
+          "Empiece con poco. Hasta 5 o 10 minutos es un buen comienzo. Agregue unos minutos cada semana.",
+          "Planee para las cosas que pueden estorbar, como el mal tiempo, poca energía, el costo o no tener un lugar seguro para caminar. Tenga un plan de respaldo, como un video de ejercicio en casa o caminar dentro de un centro comercial o una tienda grande.",
+          "Si le gusta la compañía, invite a un amigo o a un familiar, o busque un grupo.",
+          "No espere a tener ganas. Muchas veces la sensación buena llega después de empezar a moverse, no antes.",
+          "Califique su ánimo antes y después, del 0 al 10. Note lo que le ayuda."
+        ]
+      },
+      {
+        "heading": "Movimiento de mente y cuerpo",
+        "body": "El yoga y el tai chi combinan movimiento suave con respiración lenta y concentración. Los estudios sugieren que pueden ayudar a algunas personas con el estrés y el ánimo. Pero todavía se está investigando. En general son seguros cuando aprende con un maestro capacitado y va a su propio ritmo. Algunas posturas no son adecuadas para todos, así que cuéntele al maestro sobre cualquier problema de salud. Si una práctica no va con sus creencias, los estiramientos suaves también funcionan bien."
+      },
+      {
+        "heading": "Mi plan",
+        "steps": [
+          "Actividad que voy a hacer: ________________________",
+          "Días y horas: ________________________",
+          "Con cuánto tiempo voy a empezar: ________ minutos",
+          "Mi plan de respaldo: ________________________",
+          "Alguien que podría acompañarme o animarme: ________________"
+        ]
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Día",
+        "Actividad",
+        "Minutos",
+        "Ánimo antes (0-10)",
+        "Ánimo después (0-10)",
+        "Notas"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: Si tiene un problema de salud, como problemas del corazón o de los pulmones, diabetes, presión alta o dolor en las articulaciones, o si está embarazada, pregúntele a su médico qué actividades son adecuadas para usted. Empiece despacio y vaya aumentando. Pare y busque ayuda médica de inmediato si tiene dolor o presión en el pecho, dificultad para respirar, o si siente que se va a desmayar o tiene mareo. Tome agua y vístase de acuerdo con el clima. El movimiento no debe ser una forma de castigarse ni de compensar lo que comió. Si empieza a sentirse así, dígaselo a su consejero. Esta hoja no es para emergencias. Si tiene pensamientos de hacerse daño o de hacerle daño a otra persona, llame o envíe un mensaje de texto al 988 en EE. UU., o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
   "sources": [
     {
       "title": "Physical Activity Guidelines for Americans, 2nd edition",

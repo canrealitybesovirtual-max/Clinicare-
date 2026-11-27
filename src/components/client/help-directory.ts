@@ -6,6 +6,8 @@
  */
 import usJson from "@content/referrals/us.json";
 import intlJson from "@content/referrals/international.json";
+import type { Text } from "@/lib/i18n/core";
+import { COUNTRY_NAMES } from "@/lib/i18n/shell";
 import { ReferralDirectorySchema, isVerified, type ReferralEntry } from "@/lib/schemas-referrals";
 import { isPlainSafe } from "./plain-text";
 
@@ -29,19 +31,12 @@ export interface HelpEntry {
 
 export interface HelpRegion {
   region: string;
-  label: string;
+  /** Country name in English and Spanish (shell COUNTRY_NAMES). */
+  label: Text;
   entries: HelpEntry[];
 }
 
-const REGION_LABELS: Record<string, string> = {
-  US: "United States",
-  CA: "Canada",
-  GB: "United Kingdom",
-  IE: "Ireland",
-  AU: "Australia",
-  NZ: "New Zealand",
-};
-const REGION_ORDER = ["US", "CA", "GB", "IE", "AU", "NZ"];
+const REGION_ORDER = ["US", "CA", "GB", "IE", "AU", "NZ"] as const satisfies readonly (keyof typeof COUNTRY_NAMES)[];
 
 /** Kinds a client can call, text or chat with directly. */
 const KINDS = new Set<ReferralEntry["kind"]>(["crisis", "helpline", "veterans", "deaf-hoh", "lgbtq"]);
@@ -84,7 +79,7 @@ export function helpRegions(): HelpRegion[] {
   }
   return REGION_ORDER.filter((r) => byRegion.has(r)).map((r) => ({
     region: r,
-    label: REGION_LABELS[r] ?? r,
+    label: COUNTRY_NAMES[r],
     entries: (byRegion.get(r) ?? [])
       .sort((a, b) => Number(b.kind === "crisis") - Number(a.kind === "crisis"))
       .map(toEntry),

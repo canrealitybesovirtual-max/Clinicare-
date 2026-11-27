@@ -60,6 +60,70 @@
     "rows": 6
   },
   "safetyNote": "Safety first: Speaking up is not always safe. If you think someone may hurt you, threaten you, or punish you for speaking up, put your safety first and talk with your counselor about a plan. In the US, you can call the National Domestic Violence Hotline at 1-800-799-7233 or text START to 88788. If you are in danger right now, call 911. If you have thoughts of hurting yourself or someone else, call or text 988 in the US. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "es": {
+    "title": "Hablar con claridad: comunicación asertiva",
+    "intro": "Ser asertivo significa decir lo que piensa, siente y necesita de una forma clara y respetuosa. Usted se respeta a sí mismo y también respeta a la otra persona. Es una habilidad, así que se vuelve más fácil con la práctica. Esta hoja le da pasos sencillos para planear qué decir, practicarlo y probarlo en la vida real. Planear una conversación toma unos 15 minutos.",
+    "sections": [
+      {
+        "heading": "Tres formas de hablar",
+        "steps": [
+          "Pasiva: Se queda callado o cede, aunque algo le importe. Es posible que los demás no sepan lo que usted necesita.",
+          "Agresiva: Presiona, culpa o grita. Puede que consiga lo que quiere, pero los demás pueden sentirse heridos o alejarse.",
+          "Asertiva: Habla con calma y claridad, y también escucha. Así tiene la mejor oportunidad de que le escuchen."
+        ]
+      },
+      {
+        "heading": "Planee qué decir",
+        "body": "Piense en una situación real. Luego planee un mensaje corto. Mucha gente usa esta fórmula sencilla: 'Cuando pasa ___, me siento ___. Me gustaría ___.'",
+        "steps": [
+          "Cuando: Diga lo que pasó, con hechos y sin culpar. Por ejemplo: 'Cuando llegaste una hora tarde a cenar dos veces esta semana...'",
+          "Me siento: Diga cómo le afecta. Por ejemplo: '...sentí preocupación y desilusión.'",
+          "Me gustaría: Pida un cambio claro y pequeño. Por ejemplo: 'Me gustaría que me mandaras un mensaje si vas a llegar más de 15 minutos tarde.'",
+          "Si le ayuda, agregue lo que ganan los dos. Por ejemplo: 'Así no me preocupo y todavía podemos disfrutar la noche.'"
+        ]
+      },
+      {
+        "heading": "Cómo decirlo",
+        "steps": [
+          "Escuche lo que dice la otra persona. Puede decir 'Te escucho' y aun así mantener lo que pide.",
+          "Acepte llegar a un punto medio, si todavía cubre sus necesidades.",
+          "Si la otra persona discute o cambia de tema, repita con calma su idea principal.",
+          "Mantenga la voz tranquila y el cuerpo relajado. Mire a la persona si eso le parece bien y va con su cultura."
+        ]
+      },
+      {
+        "heading": "Decir que no",
+        "steps": [
+          "Puede decir que no sin dar una larga excusa. Por ejemplo: 'No, este fin de semana no puedo.'",
+          "Si quiere, ofrezca otra opción, como: 'Puedo ayudar la próxima semana.'",
+          "Tómese tiempo si lo necesita: 'Déjame pensarlo y te aviso.'"
+        ]
+      },
+      {
+        "heading": "Practique primero",
+        "steps": [
+          "Escriba su mensaje.",
+          "Dígalo en voz alta frente a un espejo, o practique con alguien de confianza o con su consejero.",
+          "Empiece con una situación más fácil antes de probar una más difícil.",
+          "Después, fíjese en lo que salió bien. Hablar con claridad no siempre le da lo que quiere, pero le ayuda a sentir más control sobre lo que hace."
+        ]
+      },
+      {
+        "heading": "Respetar formas diferentes",
+        "body": "En algunas familias y culturas, ser muy directo puede parecer de mala educación. Aun así, puede hablar con claridad y, a la vez, con amabilidad y respeto. Usted elige las palabras, el momento y el lugar que van con su vida."
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Situación",
+        "Lo que dije",
+        "Cómo salió",
+        "Lo que podría probar la próxima vez"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: Hablar con claridad no siempre es seguro. Si cree que alguien podría hacerle daño, amenazarle o castigarle por hablar, ponga su seguridad primero y hable con su consejero sobre un plan. En EE. UU., puede llamar a la Línea Nacional de Violencia Doméstica (National Domestic Violence Hotline) al 1-800-799-7233 o enviar un mensaje de texto con la palabra START al 88788. Si está en peligro ahora mismo, llame al 911. Si tiene pensamientos de hacerse daño o de hacerle daño a otra persona, llame o envíe un mensaje de texto al 988 en EE. UU. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
   "sources": [
     {
       "title": "Assertiveness training: a forgotten evidence-based treatment (Speed, Goldstein & Goldfried)",

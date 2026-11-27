@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { interventions } from "@/lib/library";
 import { NextStep, PageIntro } from "@/components/content/content-bits";
-import { Notice } from "@/components/ui/notice";
+import { HelpTip } from "@/components/symptoms/help-tip";
 import { conditionLabel } from "@/components/interventions/catalog";
 import { ORIENTATIONS, OTHER_ORIENTATION, orientationsOf } from "@/components/interventions/orientation";
 import { InterventionLibrary, type FilterOption, type InterventionCardData } from "@/components/interventions/intervention-library";
@@ -21,7 +21,7 @@ export default function InterventionsPage() {
     training: Boolean(i.trainingRequired),
     handoutCount: i.handoutIds.length,
     faith: Boolean(i.faithIntegrated),
-    pendingReview: i.reviewedBy === "PENDING",
+    reviewedBy: i.reviewedBy,
   }));
 
   const count = (pred: (i: InterventionCardData) => boolean) => items.filter(pred).length;
@@ -35,23 +35,27 @@ export default function InterventionsPage() {
 
   return (
     <>
-      <PageIntro title="Interventions" eyebrow="Step 5 · In-session tools">
+      <PageIntro title="Interventions" eyebrow="Step 5 · In-session tools" compact>
         <p>
-          {items.length} evidence-informed interventions across theoretical orientations, each with clinician steps, an
-          original script, time needed, cautions, cultural adaptations and named sources. For clinician review: choose,
-          adapt and deliver within your training and scope.
+          {items.length} evidence-informed interventions, each with steps, an original script, cautions and sources. For
+          clinician review: choose and adapt within your training and scope.
         </p>
       </PageIntro>
-      <Notice tone="info" className="mb-6">
+      <HelpTip title="How to use this library" className="mb-5">
+        <p>
+          Search by a word such as &ldquo;sleep&rdquo; or &ldquo;worry&rdquo;, or filter by approach or condition. Open a
+          card for its cautions, clinician steps, a script you can read aloud or adapt, cultural adaptations, client
+          handouts and the evidence behind it.
+        </p>
         <p>
           Items marked <strong>Trained clinicians only</strong> are overviews for referral or for clinicians with formal
-          training in that protocol. To add interventions to a treatment plan, use the{" "}
+          training in that protocol. To put interventions into a treatment plan, use the{" "}
           <Link href="/plan" className="font-semibold text-accent underline underline-offset-2">
             Plan builder
           </Link>
-          .
+          . The search stays on this device and is never saved.
         </p>
-      </Notice>
+      </HelpTip>
       <InterventionLibrary items={items} orientations={orientations} conditions={conditions} />
       <NextStep href="/handouts" label="Step 6 · Handouts" />
     </>

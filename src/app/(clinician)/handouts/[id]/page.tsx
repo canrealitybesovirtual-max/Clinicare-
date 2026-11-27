@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, Clock, GraduationCap, HeartHandshake, Send } from "lucide-react";
+import { ArrowLeft, Clock, GraduationCap, HeartHandshake, Languages, Send } from "lucide-react";
 import { allHandouts, getAnyHandout } from "@/lib/library";
-import { sharePath } from "@/lib/share";
+import { hasSpanishShare, sharePath } from "@/lib/share";
 import { PART2_NOTICE } from "@/lib/referral-links";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
@@ -11,9 +11,14 @@ import { cn } from "@/lib/utils";
 import { Card } from "@/components/ui/card";
 import { Notice } from "@/components/ui/notice";
 import { Governance, PageIntro, ReviewBadge, SourcesList } from "@/components/content/content-bits";
-import { DownloadPdfButton } from "@/components/pdf/download-pdf-button";
-import { HandoutBody } from "@/components/handouts/handout-body";
-import { ShareHandout } from "@/components/handouts/share-handout";
+import {
+  HandoutLangControl,
+  HandoutLangScope,
+  HandoutPdfButton,
+  HandoutPreview,
+  HandoutShare,
+  HandoutTranslationNote,
+} from "@/components/handouts/handout-lang-scope";
 import { relatedInterventions } from "@/components/handouts/catalog";
 import { HubPrompt } from "@/components/hub/hub-prompt";
 
@@ -33,6 +38,7 @@ export default async function HandoutPage({ params }: { params: Promise<{ id: st
   const h = getAnyHandout(id);
   if (!h) notFound();
   const related = relatedInterventions(h.id);
+  const sharePaths = { en: sharePath(h.id), ...(hasSpanishShare(h.id) ? { es: sharePath(h.id, "es") } : {}) };
 
   return (
     <>
@@ -50,6 +56,11 @@ export default async function HandoutPage({ params }: { params: Promise<{ id: st
             <Badge tone="neutral">
               <Clock aria-hidden className="size-3.5" /> About {h.estimatedMinutes} minutes
             </Badge>
+            {h.es ? (
+              <Badge tone="neutral">
+                <Languages aria-hidden className="size-3.5" /> Spanish version
+              </Badge>
+            ) : null}
             <ReviewBadge reviewedBy={h.reviewedBy} />
             {h.sud ? <Badge tone="warn">42 CFR Part 2 notice on the PDF</Badge> : null}
           </>
@@ -63,78 +74,85 @@ export default async function HandoutPage({ params }: { params: Promise<{ id: st
           <HubPrompt context="sud" />
           <Notice tone="warn" title="Substance-use handout">
             <p>
-              The PDF prints this notice in the footer of every page: {PART2_NOTICE} Nothing about the client is added to
-              the PDF or the share link.
+              The PDF prints this notice in the footer of every page: {PART2_NOTICE} The Spanish PDF prints it in Spanish
+              above this exact sentence. Nothing about the client is added to the PDF or the share link.
             </p>
           </Notice>
         </div>
       ) : null}
 
-      <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_22rem] lg:items-start">
-        <article aria-labelledby="handout-body-heading" className="min-w-0">
-          <Card className="space-y-5 sm:p-7">
-            <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-              <h2 id="handout-body-heading" className="text-lg font-semibold">
-                What the client will read
-              </h2>
-              <div className="flex flex-wrap gap-2">
-                <DownloadPdfButton handout={h} label="Download PDF" variant="primary" />
-                {/* On phones the share card comes after the whole handout: jump straight to it. */}
-                <a href="#share-heading" className={cn(buttonVariants({ variant: "outline" }), "lg:hidden")}>
-                  <Send aria-hidden />
-                  Share link or QR
-                </a>
-              </div>
-            </div>
-            <p className="text-xs text-muted">
-              The PDF is for printing. This page is the accessible version for screen readers.
-            </p>
-            <HandoutBody handout={h} headingLevel="h3" />
-            <div className="space-y-3 border-t border-border pt-4">
-              <h3 className="text-sm font-semibold">Sources</h3>
-              <SourcesList sources={h.sources} />
-              <Governance license={h.license} lastVerified={h.lastVerified} reviewedBy={h.reviewedBy} />
-            </div>
-          </Card>
-        </article>
-
-        <div className="flex min-w-0 flex-col gap-6 lg:sticky lg:top-4">
-          <section aria-labelledby="share-heading" className="scroll-mt-4">
-            <Card className="space-y-3">
-              <h2 id="share-heading" className="flex scroll-mt-4 items-center gap-2 text-lg font-semibold">
-                <Send aria-hidden className="size-5 text-accent" /> Share with the client
-              </h2>
-              <ShareHandout path={sharePath(h.id)} title={h.title} />
-              <p className="text-xs text-muted">
-                The link opens a plain-language page with this handout, a printable PDF and crisis numbers. Send it only
-                through a channel your practice approves.
-              </p>
-            </Card>
-          </section>
-
-          {related.length ? (
-            <section aria-labelledby="related-heading">
-              <Card className="space-y-3">
-                <h2 id="related-heading" className="flex items-center gap-2 text-lg font-semibold">
-                  <HeartHandshake aria-hidden className="size-5 text-muted" /> Used with
+      <HandoutLangScope handout={h} sharePaths={sharePaths}>
+        <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_22rem] lg:items-start">
+          <article aria-labelledby="handout-body-heading" className="min-w-0">
+            <Card className="space-y-5 sm:p-7">
+              <div className="space-y-4">
+                <h2 id="handout-body-heading" className="text-lg font-semibold">
+                  What the client will read
                 </h2>
-                <ul className="space-y-1 text-sm">
-                  {related.map((i) => (
-                    <li key={i.id}>
-                      <Link
-                        href={`/interventions/${i.id}`}
-                        className="inline-flex min-h-11 items-center font-semibold text-accent underline decoration-accent/40 underline-offset-2 hover:decoration-accent"
-                      >
-                        {i.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
+                <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+                  <HandoutLangControl />
+                  <div className="flex flex-wrap gap-2">
+                    <HandoutPdfButton />
+                    {/* On phones the share card comes after the whole handout: jump straight to it. */}
+                    <a href="#share-heading" className={cn(buttonVariants({ variant: "outline" }), "lg:hidden")}>
+                      <Send aria-hidden />
+                      Share link or QR
+                    </a>
+                  </div>
+                </div>
+                <p className="text-xs text-muted">
+                  The PDF is for printing. This page is the accessible version for screen readers. The language you
+                  choose applies to the preview, the PDF and the share link.
+                </p>
+                <HandoutTranslationNote />
+              </div>
+              <HandoutPreview />
+              <div className="space-y-3 border-t border-border pt-4">
+                <h3 className="text-sm font-semibold">Sources</h3>
+                <SourcesList sources={h.sources} />
+                <Governance license={h.license} lastVerified={h.lastVerified} reviewedBy={h.reviewedBy} />
+              </div>
+            </Card>
+          </article>
+
+          <div className="flex min-w-0 flex-col gap-6 lg:sticky lg:top-4">
+            <section aria-labelledby="share-heading" className="scroll-mt-4">
+              <Card className="space-y-3">
+                <h2 id="share-heading" className="flex scroll-mt-4 items-center gap-2 text-lg font-semibold">
+                  <Send aria-hidden className="size-5 text-accent" /> Share with the client
+                </h2>
+                <HandoutShare />
+                <p className="text-xs text-muted">
+                  The link opens a plain-language page with this handout, a printable PDF and crisis numbers. Send it only
+                  through a channel your practice approves.
+                </p>
               </Card>
             </section>
-          ) : null}
+
+            {related.length ? (
+              <section aria-labelledby="related-heading">
+                <Card className="space-y-3">
+                  <h2 id="related-heading" className="flex items-center gap-2 text-lg font-semibold">
+                    <HeartHandshake aria-hidden className="size-5 text-muted" /> Used with
+                  </h2>
+                  <ul className="space-y-1 text-sm">
+                    {related.map((i) => (
+                      <li key={i.id}>
+                        <Link
+                          href={`/interventions/${i.id}`}
+                          className="inline-flex min-h-11 items-center font-semibold text-accent underline decoration-accent/40 underline-offset-2 hover:decoration-accent"
+                        >
+                          {i.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </Card>
+              </section>
+            ) : null}
+          </div>
         </div>
-      </div>
+      </HandoutLangScope>
     </>
   );
 }

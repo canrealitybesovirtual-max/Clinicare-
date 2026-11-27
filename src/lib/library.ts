@@ -1,32 +1,27 @@
 /**
- * Full content library (Phase 2/3): interventions, plan library, all handouts, ethics codes, legal topics.
- * Loaded from the generated static index and validated with zod (G10). Import this from SERVER components
- * and pass only the slices a client component needs as props, to keep client bundles small.
+ * Full content library (Phase 2/3): interventions, the plan library, ethics codes and legal topics, plus the
+ * conditions and handouts already loaded by content.ts (re-used, not parsed twice). Validated with zod (G10).
+ * Import this from SERVER components and pass only the slices a client component needs as props: the folders
+ * it loads are large and are never needed in the browser as a whole.
  */
-import { conditionsRaw, interventionsRaw, plansRaw, handoutsRaw, ethicsRaw, legalRaw } from "./generated/content-index";
-import { ConditionSchema, HandoutSchema, type Condition, type Handout } from "./schemas";
-import { InterventionSchema, PlanLibrarySchema, type Intervention, type PlanLibrary } from "./schemas-phase2";
+import { conditions, handouts, measures, parseAll } from "./content";
+import { ethicsRaw } from "./generated/ethics";
+import { interventionsRaw } from "./generated/interventions";
+import { legalRaw } from "./generated/legal";
+import { plansRaw } from "./generated/plans";
+import type { Condition, Handout } from "./schemas";
 import { EthicsCodeSchema, LegalTopicSchema, type EthicsCode, type LegalTopic } from "./schemas-hub";
+import { InterventionSchema, PlanLibrarySchema, type Intervention, type PlanLibrary } from "./schemas-phase2";
 
-function parseAll<T>(raw: unknown[], schema: { parse: (x: unknown) => T }, kind: string): T[] {
-  return raw.map((r, i) => {
-    try {
-      return schema.parse(r);
-    } catch (e) {
-      const id = (r as { id?: string; conditionId?: string })?.id ?? (r as { conditionId?: string })?.conditionId ?? i;
-      throw new Error(`Invalid ${kind} content (${String(id)}): ${(e as Error).message.slice(0, 400)}`);
-    }
-  });
-}
+const byKey = <T,>(list: readonly T[], key: (t: T) => string) => new Map(list.map((x) => [key(x), x] as const));
 
-const byKey = <T,>(list: T[], key: (t: T) => string) => new Map(list.map((x) => [key(x), x] as const));
-
-export const allConditions: Condition[] = parseAll(conditionsRaw, ConditionSchema, "condition");
+export const allConditions: Condition[] = conditions;
 export const interventions: Intervention[] = parseAll(interventionsRaw, InterventionSchema, "intervention").sort((a, b) =>
   a.name.localeCompare(b.name),
 );
 export const planLibraries: PlanLibrary[] = parseAll(plansRaw, PlanLibrarySchema, "plan");
-export const allHandouts: Handout[] = parseAll(handoutsRaw, HandoutSchema, "handout").sort((a, b) => a.title.localeCompare(b.title));
+/** Every handout, sorted by title for library listings (content.ts keeps file-name order). */
+export const allHandouts: Handout[] = [...handouts].sort((a, b) => a.title.localeCompare(b.title));
 export const ethicsCodes: EthicsCode[] = parseAll(ethicsRaw, EthicsCodeSchema, "ethics code");
 export const legalTopics: LegalTopic[] = parseAll(legalRaw, LegalTopicSchema, "legal topic");
 
@@ -34,6 +29,7 @@ const interventionMap = byKey(interventions, (i) => i.id);
 const planMap = byKey(planLibraries, (p) => p.conditionId);
 const handoutMap = byKey(allHandouts, (h) => h.id);
 const conditionMap = byKey(allConditions, (c) => c.id);
+const builtInMeasureIds = new Set(measures.map((m) => m.id));
 
 export const getIntervention = (id: string) => interventionMap.get(id);
 export const getPlanLibrary = (conditionId: string) => planMap.get(conditionId);
@@ -51,7 +47,8 @@ export function libraryProblems(): string[] {
     for (const prob of pl.problems) {
       for (const o of prob.shortTermObjectives)
         for (const iid of o.interventionIds) if (!interventionMap.has(iid)) p.push(`plans/${pl.conditionId}: unknown intervention ${iid}`);
-      for (const m of prob.measureIds) if (m !== "gad-7" && m !== "phq-9") p.push(`plans/${pl.conditionId}: measure ${m} not license-confirmed (G7)`);
+      for (const m of prob.measureIds)
+        if (!builtInMeasureIds.has(m)) p.push(`plans/${pl.conditionId}: measure ${m} is not a license-confirmed built-in measure (G7)`);
     }
   return p;
 }

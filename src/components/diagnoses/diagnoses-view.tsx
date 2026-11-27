@@ -1,7 +1,14 @@
 "use client";
+/**
+ * Possible diagnoses (spec screen 2): the ranked considerations for the session's documented features, each with
+ * codes, the "See DSM-5-TR" pointer and matched / missing features, for clinician review. When nothing scores yet
+ * (for example a fear outside the lexicon, "panic from dogs"), the follow-up panel comes first so the screen still
+ * gives the clinician somewhere useful to go.
+ */
 import Link from "next/link";
 import { ArrowLeft, ChevronRight, ListChecks, SearchX } from "lucide-react";
 import { conditions, getCondition } from "@/lib/content";
+import type { ResourceCatalog } from "@/lib/follow-up";
 import { useSession } from "@/state/session";
 import { buttonVariants } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -11,20 +18,18 @@ import { RedFlagBanner, RiskMissNote } from "@/components/symptoms/red-flag-bann
 import { Under18Notice } from "@/components/symptoms/under18-notice";
 import { durationLabel, triLabel } from "@/components/symptoms/symptom-meta";
 import { HubPrompt } from "@/components/hub/hub-prompt";
+import { AssistantPanel, type AssistantStatus } from "@/components/ai/assistant-panel";
+import { FollowUpPanel } from "@/components/ai/follow-up-panel";
+import { codeSummary } from "@/components/ai/labels";
 import { PART2_NOTICE } from "@/lib/referral-links";
 import { SuggestionCard } from "./suggestion-card";
 import { STRENGTH_LABEL } from "./explain";
 
-function codeSummary(codes: { code: string }[], max = 3): string {
-  const shown = codes.slice(0, max).map((x) => x.code).join(", ");
-  return codes.length > max ? `${shown} +${codes.length - max} more` : shown;
-}
-
 function KnowledgeBase() {
   return (
-    <section aria-labelledby="kb-heading" className="mt-6">
+    <section aria-labelledby="kb-heading" className="mt-8">
       <h2 id="kb-heading" className="text-base font-semibold">
-        Phase 1 knowledge base ({conditions.length} adult conditions)
+        What the app can suggest ({conditions.length} adult conditions)
       </h2>
       <ul className="mt-3 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
         {conditions.map((c) => (
@@ -50,14 +55,15 @@ function KnowledgeBase() {
         ))}
       </ul>
       <p className="mt-3 text-sm text-muted">
-        Presentations outside this set (for example social anxiety, OCD, bipolar or psychotic disorders) will not be
-        suggested. Absence from this list says nothing about the client.
+        Presentations outside this set (for example bipolar, psychotic or eating disorders) are never suggested. Absence
+        from this list says nothing about the client. For fears of particular things or situations, the follow-up questions
+        still help you document what matters.
       </p>
     </section>
   );
 }
 
-export function DiagnosesView() {
+export function DiagnosesView({ catalog, assistant }: { catalog: ResourceCatalog; assistant: AssistantStatus }) {
   const { state } = useSession();
   const analysis = useSymptomAnalysis();
   const { result } = analysis;
@@ -70,11 +76,15 @@ export function DiagnosesView() {
     substancePossible: state.substancePossible,
     medicalPossible: state.medicalPossible,
   };
+  const followUp = (
+    <FollowUpPanel analysis={analysis} catalog={catalog} className="mt-6">
+      <AssistantPanel status={assistant} analysis={analysis} />
+    </FollowUpPanel>
+  );
 
   return (
     <>
       <RedFlagBanner flags={analysis.redFlags} />
-      <RiskMissNote />
 
       {anySud ? (
         <div className="mb-6 space-y-3">
@@ -88,17 +98,18 @@ export function DiagnosesView() {
         </div>
       ) : null}
 
-      <Card className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+      <Card className="mb-6 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between sm:gap-3">
         <div className="text-sm">
           <p className="font-semibold">
             Based on {analysis.ids.length} symptom{analysis.ids.length === 1 ? "" : "s"}
+            {analysis.fromAnswers.size ? ` (${analysis.fromAnswers.size} from your answers)` : ""}
           </p>
           <p className="mt-0.5 text-muted">
-            Duration {durationLabel(state.duration)} · impairment {triLabel(state.impairment)} · substance could explain:{" "}
-            {triLabel(state.substancePossible)} · medical could explain: {triLabel(state.medicalPossible)}
+            Duration {durationLabel(state.duration)} · impairment {triLabel(state.impairment)} · substance{" "}
+            {triLabel(state.substancePossible)} · medical {triLabel(state.medicalPossible)}
           </p>
         </div>
-        <Link href="/symptoms" className={buttonVariants({ variant: "outline", size: "sm" })}>
+        <Link href="/symptoms" className={buttonVariants({ variant: "outline", size: "sm", className: "self-start sm:self-auto" })}>
           <ArrowLeft aria-hidden />
           Edit symptoms and context
         </Link>
@@ -126,6 +137,7 @@ export function DiagnosesView() {
               Go to Symptom Finder
             </Link>
           </Notice>
+          {followUp}
           <KnowledgeBase />
         </>
       ) : result.status === "insufficient" ? (
@@ -136,45 +148,48 @@ export function DiagnosesView() {
               Add symptoms or context
             </Link>
           </Notice>
+          {followUp}
           <KnowledgeBase />
         </>
       ) : (
         <>
-        {result.suggestions.length >= 2 ? (
-          <nav aria-label="Considerations" className="mb-6 rounded-xl border border-border bg-surface p-3 sm:p-4">
-            <p className="text-sm font-semibold">Jump to a consideration</p>
-            <ol className="mt-2 grid gap-1 sm:grid-cols-2">
-              {result.suggestions.map((s, i) => (
+          {result.suggestions.length >= 2 ? (
+            <nav aria-label="Considerations" className="mb-6 rounded-xl border border-border bg-surface p-3 sm:p-4">
+              <p className="text-sm font-semibold">Jump to a consideration</p>
+              <ol className="mt-2 grid gap-1 sm:grid-cols-2">
+                {result.suggestions.map((s, i) => (
+                  <li key={s.conditionId}>
+                    <a
+                      href={`#cond-${s.conditionId}`}
+                      className="flex min-h-11 flex-wrap items-center gap-x-2 rounded-lg px-2 text-sm hover:bg-surface-2"
+                    >
+                      <span className="font-semibold text-accent underline underline-offset-2">
+                        {i + 1}. {s.name}
+                      </span>
+                      <span className="text-muted">· {STRENGTH_LABEL[s.strength]}</span>
+                    </a>
+                  </li>
+                ))}
+              </ol>
+            </nav>
+          ) : null}
+          <ol className="space-y-6" aria-label="Possible considerations, ranked">
+            {result.suggestions.map((s, i) => {
+              const cond = getCondition(s.conditionId);
+              if (!cond) return null;
+              return (
                 <li key={s.conditionId}>
-                  <a
-                    href={`#cond-${s.conditionId}`}
-                    className="flex min-h-11 items-center gap-2 rounded-lg px-2 text-sm hover:bg-surface-2"
-                  >
-                    <span className="font-semibold text-accent underline underline-offset-2">
-                      {i + 1}. {s.name}
-                    </span>
-                    <span className="text-muted">· {STRENGTH_LABEL[s.strength]}</span>
-                  </a>
+                  <SuggestionCard s={s} cond={cond} input={context} rank={i + 1} />
                 </li>
-              ))}
-            </ol>
-          </nav>
-        ) : null}
-        <ol className="space-y-6" aria-label="Possible considerations, ranked">
-          {result.suggestions.map((s, i) => {
-            const cond = getCondition(s.conditionId);
-            if (!cond) return null;
-            return (
-              <li key={s.conditionId}>
-                <SuggestionCard s={s} cond={cond} input={context} rank={i + 1} />
-              </li>
-            );
-          })}
-        </ol>
+              );
+            })}
+          </ol>
+          {followUp}
         </>
       )}
 
-      <p className="mt-8 max-w-3xl text-sm text-muted">
+      <RiskMissNote className="mt-6" />
+      <p className="mt-2 max-w-3xl text-sm text-muted">
         Suggestions come from a transparent, rule-based score over app-authored feature lists. They are prompts for your
         own assessment, never a diagnosis. Confirm against the DSM-5-TR or ICD criteria, a full clinical interview and
         medical input where relevant.

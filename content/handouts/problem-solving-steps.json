@@ -75,6 +75,85 @@
     "rows": 6
   },
   "safetyNote": "Safety first: Some problems need help right away, such as not having a safe place to stay, someone hurting you, or a medical problem. Do not wait to solve those on your own. Reach out for help now. If you feel hopeless, or have thoughts of hurting yourself or someone else, call or text 988 in the US, or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "es": {
+    "title": "Pasos para resolver problemas",
+    "intro": "Cuando los problemas se acumulan, puede ser difícil saber por dónde empezar. Puede sentir que no avanza, o darle vueltas a un problema en su cabeza sin hacer nada al respecto. Estos pasos le ayudan a dividir un problema en partes y probar un plan. Usted trabaja en un problema a la vez. Hacer un plan toma unos 20 minutos.",
+    "sections": [
+      {
+        "heading": "Paso 1: Haga una lista y elija",
+        "steps": [
+          "Escriba los problemas que tiene en mente.",
+          "Ordénelos. ¿Con cuáles puede hacer algo, aunque sea un poco? ¿Cuáles no puede controlar en este momento?",
+          "Elija un problema en el que pueda trabajar. Empiece con uno que no sea el más difícil."
+        ]
+      },
+      {
+        "heading": "Paso 2: Describa el problema",
+        "steps": [
+          "Escriba el problema en una o dos oraciones. Dé detalles. Diga qué, cuándo, dónde y quién.",
+          "Por ejemplo, en lugar de 'el dinero es un desastre', escriba 'La mayoría de los meses me quedo sin dinero antes del día de pago.'"
+        ]
+      },
+      {
+        "heading": "Paso 3: Ponga una meta",
+        "steps": [
+          "¿Qué sería un poco mejor? Que la meta sea pequeña y realista.",
+          "Por ejemplo: 'Que me queden $20 al final del mes.'"
+        ]
+      },
+      {
+        "heading": "Paso 4: Haga una lista de ideas",
+        "steps": [
+          "Escriba todas las formas que se le ocurran para llegar a la meta. Todavía no las juzgue.",
+          "Las ideas tontas o muy raras están bien. Pueden llevar a ideas buenas.",
+          "Pregúntese: ¿Qué he probado antes? ¿Qué me sugeriría un amigo? ¿Quién me podría ayudar?"
+        ]
+      },
+      {
+        "heading": "Paso 5: Compare sus ideas",
+        "steps": [
+          "Para cada idea, haga una lista de lo bueno y lo malo. Use el registro al final de esta hoja.",
+          "Pregúntese: ¿De verdad puedo hacer esto? ¿Cuánto me va a costar en tiempo, dinero y energía? ¿Cómo va a afectar a otras personas?",
+          "Elija la mejor idea, o combine dos ideas."
+        ]
+      },
+      {
+        "heading": "Paso 6: Haga un plan",
+        "steps": [
+          "Divida la idea en pasos pequeños.",
+          "Escriba qué va a hacer, cuándo y dónde. Haga una lista de lo que necesite.",
+          "Piense en lo que podría estorbar y en cómo podría manejarlo."
+        ]
+      },
+      {
+        "heading": "Paso 7: Pruébelo y revise",
+        "steps": [
+          "Haga el primer paso.",
+          "Después, pregúntese: ¿Qué salió bien? ¿Qué no salió bien? ¿Me acerqué a mi meta?",
+          "Si no funcionó, es útil saberlo. Regrese a su lista y pruebe otra idea.",
+          "Reconozca su esfuerzo por intentarlo, sin importar cómo salió."
+        ]
+      },
+      {
+        "heading": "Consejos",
+        "steps": [
+          "Algunos problemas son demasiado grandes para resolverlos sin ayuda, como la vivienda, las cuentas o el costo de la atención médica. Pregúntele a su consejero sobre ayuda en su comunidad. En EE. UU., también puede llamar al 211 o visitar 211.org para encontrar servicios locales.",
+          "Si el problema tiene que ver con otra persona, planee con tiempo lo que quiere decir.",
+          "Traiga su plan a su próxima cita."
+        ]
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Idea",
+        "Lo bueno",
+        "Lo malo",
+        "¿Lo pruebo? (sí o no)"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: Algunos problemas necesitan ayuda de inmediato, como no tener un lugar seguro donde quedarse, que alguien le esté haciendo daño o un problema médico. No espere a resolverlos sin ayuda. Pida ayuda ahora. Si se siente sin esperanza, o tiene pensamientos de hacerse daño o de hacerle daño a otra persona, llame o envíe un mensaje de texto al 988 en EE. UU., o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
   "sources": [
     {
       "title": "Problem-solving therapy: a meta-analysis (Bell & D'Zurilla)",

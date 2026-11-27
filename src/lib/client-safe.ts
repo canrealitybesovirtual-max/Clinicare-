@@ -7,11 +7,12 @@
 import type { Source } from "./schemas";
 
 /**
- * Words and codes that must not appear in client-facing text: diagnosis vocabulary, ICD-10-CM
- * F-codes (F41.1), ICD-11 mental-health codes (6A70, 6B00), DSM/ICD references and scoring terms.
+ * Words and codes that must not appear in client-facing text: diagnosis vocabulary, ICD-10-CM F-codes with or
+ * without a decimal (F41, F41.1), any dotted ICD-10-CM code (G47.00, Z63.4), ICD-11 mental-health and sleep-wake
+ * codes (6A70, 6B00, 7A00), DSM/ICD references and scoring terms.
  */
 export const CLINICAL_TERMS_RE =
-  /disorder|anxiety|depress|panic|ptsd|post-?traumatic|phobia|agoraphob|diagnos|\bdsm\b|\bicd\b|\bF\d{2}(?:\.\d{0,3})?\b|\b6[A-E]\d{2}\b|\bscore|severity/i;
+  /disorder|anxiety|depress|panic|ptsd|post-?traumatic|phobia|agoraphob|diagnos|\bdsm\b|\bicd\b|\bF\d{2}(?:\.\d{0,3})?\b|\b[A-Z]\d{2}\.\d{1,4}\b|\b(?:6[A-E]|7[AB])\d{2}\b|\bscore|severity/i;
 
 export function isClientSafeText(text: string): boolean {
   return !CLINICAL_TERMS_RE.test(text);

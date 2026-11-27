@@ -26,9 +26,6 @@ export const REFERRAL_LABELS: Readonly<Record<FollowUpReferralKind, string>> = {
   "peer-support": "Peer support groups",
 };
 
-/** Substance-use referral kinds (G6: show the Part 2 notice with them). */
-export const SUD_REFERRAL_KINDS: ReadonlySet<string> = new Set(["addiction-counselor", "substance-use"]);
-
 /**
  * The lexicon label up to its first clause ("Fear tied to one kind of thing or situation (an animal, ...)" ->
  * "Fear tied to one kind of thing or situation"), for chips. Full labels stay on the Diagnoses cards.

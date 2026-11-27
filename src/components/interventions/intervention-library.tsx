@@ -1,13 +1,16 @@
 "use client";
 import * as React from "react";
 import Link from "next/link";
-import { BookOpenText, ChevronRight, Clock, FileText, GraduationCap, HandHeart, Search, X } from "lucide-react";
+import { useSearchParams } from "next/navigation";
+import { BookOpenText, ChevronRight, ClipboardCheck, Clock, FileText, GraduationCap, HandHeart, Search, SlidersHorizontal, X } from "lucide-react";
 import { useSession } from "@/state/session";
+import { ReviewBadge } from "@/components/content/content-bits";
 import { useScrubbedField } from "@/components/symptoms/use-scrubbed-field";
 import { PRIVATE_TEXT_FIELD_PROPS } from "@/components/ui/private-field";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { cn } from "@/lib/utils";
 import { minutesLabel } from "./format";
 
 export interface InterventionCardData {
@@ -21,7 +24,7 @@ export interface InterventionCardData {
   training: boolean;
   handoutCount: number;
   faith: boolean;
-  pendingReview: boolean;
+  reviewedBy: string;
 }
 
 export interface FilterOption {
@@ -65,6 +68,18 @@ function applyFilters(items: readonly InterventionCardData[], f: Filters, query:
 const selectClass =
   "mt-1.5 block min-h-11 w-full rounded-lg border border-input-border bg-surface px-3 text-base text-text sm:text-sm";
 
+/**
+ * Reads ?condition=<id> (links from Possible diagnoses and the plan builder). Only an id from the curated condition
+ * filter list is acted on; anything else is ignored.
+ */
+function ConditionParam({ onValue }: { onValue: (id: string) => void }) {
+  const raw = useSearchParams().get("condition");
+  React.useEffect(() => {
+    if (raw) onValue(raw);
+  }, [raw, onValue]);
+  return null;
+}
+
 /** Interventions library: client-side filters and search. Search text is scrubbed and never leaves this component. */
 export function InterventionLibrary(props: {
   items: InterventionCardData[];
@@ -87,14 +102,48 @@ function LibraryInner({
 }) {
   const [query, setQuery] = React.useState("");
   const [filters, setFilters] = React.useState<Filters>(NO_FILTERS);
+  // Phones: the filter selects fold behind a button so the results start higher. Always shown from sm.
+  const [showFilters, setShowFilters] = React.useState(false);
   const search = useScrubbedField<HTMLInputElement>(query, setQuery);
   const results = React.useMemo(() => applyFilters(items, filters, query), [items, filters, query]);
-  const active = query !== "" || JSON.stringify(filters) !== JSON.stringify(NO_FILTERS);
+  const filterCount =
+    Number(Boolean(filters.orientation)) +
+    Number(Boolean(filters.condition)) +
+    Number(filters.training !== "any") +
+    Number(filters.handout) +
+    Number(filters.faith);
+  const active = query !== "" || filterCount > 0;
+  const pending = items.filter((i) => i.reviewedBy === "PENDING").length;
   const set = (patch: Partial<Filters>) => setFilters((f) => ({ ...f, ...patch }));
-  const ids = { search: React.useId(), hint: React.useId(), orientation: React.useId(), condition: React.useId(), training: React.useId() };
+  const conditionIds = React.useMemo(() => new Set(conditions.map((c) => c.id)), [conditions]);
+  const conditionFilter = conditions.find((c) => c.id === filters.condition);
+  const resultsRef = React.useRef<HTMLHeadingElement>(null);
+  const onConditionParam = React.useCallback(
+    (id: string) => {
+      if (conditionIds.has(id)) setFilters((f) => ({ ...f, condition: id }));
+    },
+    [conditionIds],
+  );
+  const clearAll = () => {
+    setFilters(NO_FILTERS);
+    search.replace("");
+    // The clear buttons disappear once nothing is filtered: keep focus in the search box.
+    search.ref.current?.focus();
+  };
+  const ids = {
+    search: React.useId(),
+    hint: React.useId(),
+    orientation: React.useId(),
+    condition: React.useId(),
+    training: React.useId(),
+    filters: React.useId(),
+  };
 
   return (
     <div className="space-y-6">
+      <React.Suspense fallback={null}>
+        <ConditionParam onValue={onConditionParam} />
+      </React.Suspense>
       <section aria-labelledby="filters-heading">
         <Card className="space-y-4">
           <h2 id="filters-heading" className="text-lg font-semibold">
@@ -131,89 +180,121 @@ function LibraryInner({
             </div>
           </div>
 
-          <div className="grid gap-4 sm:grid-cols-3">
-            <div>
-              <label htmlFor={ids.orientation} className="text-sm font-semibold">
-                Approach or orientation
-              </label>
-              <select id={ids.orientation} className={selectClass} value={filters.orientation} onChange={(e) => set({ orientation: e.target.value })}>
-                <option value="">All approaches</option>
-                {orientations.map((o) => (
-                  <option key={o.id} value={o.id}>
-                    {o.label} ({o.count})
-                  </option>
-                ))}
-              </select>
-            </div>
-            <div>
-              <label htmlFor={ids.condition} className="text-sm font-semibold">
-                Condition
-              </label>
-              <select id={ids.condition} className={selectClass} value={filters.condition} onChange={(e) => set({ condition: e.target.value })}>
-                <option value="">All conditions</option>
-                {conditions.map((c) => (
-                  <option key={c.id} value={c.id}>
-                    {c.label} ({c.count})
-                  </option>
-                ))}
-              </select>
-            </div>
-            <div>
-              <label htmlFor={ids.training} className="text-sm font-semibold">
-                Training
-              </label>
-              <select
-                id={ids.training}
-                className={selectClass}
-                value={filters.training}
-                onChange={(e) => set({ training: e.target.value as Training })}
-              >
-                <option value="any">Any</option>
-                <option value="trained">Trained clinicians only</option>
-                <option value="not-trained">No specialist training listed</option>
-              </select>
-            </div>
-          </div>
+          <Button
+            type="button"
+            variant="outline"
+            className="w-full sm:hidden"
+            aria-expanded={showFilters}
+            aria-controls={ids.filters}
+            onClick={() => setShowFilters((v) => !v)}
+          >
+            <SlidersHorizontal aria-hidden />
+            {showFilters ? "Hide filters" : "Filters"}
+            {filterCount > 0 ? <span className="font-normal text-muted">({filterCount} on)</span> : null}
+          </Button>
 
-          <fieldset className="flex flex-wrap items-center gap-x-6 gap-y-1">
-            <legend className="sr-only">Show only interventions with</legend>
-            <label className="flex min-h-11 cursor-pointer items-center gap-2.5 text-sm">
-              <input type="checkbox" className="size-5 accent-[var(--accent)]" checked={filters.handout} onChange={(e) => set({ handout: e.target.checked })} />
-              Has a client handout
-            </label>
-            <label className="flex min-h-11 cursor-pointer items-center gap-2.5 text-sm">
-              <input type="checkbox" className="size-5 accent-[var(--accent)]" checked={filters.faith} onChange={(e) => set({ faith: e.target.checked })} />
-              Has a faith-integrated variant
-            </label>
-            {active ? (
-              <Button
-                type="button"
-                variant="ghost"
-                size="sm"
-                onClick={() => {
-                  setFilters(NO_FILTERS);
-                  search.replace("");
-                  // The button disappears once nothing is filtered: keep focus in the search box.
-                  search.ref.current?.focus();
-                }}
-              >
-                <X aria-hidden />
-                Clear search and filters
-              </Button>
-            ) : null}
-          </fieldset>
+          <div id={ids.filters} className={cn("space-y-4 sm:block", showFilters ? "block" : "hidden")}>
+            <div className="grid gap-4 sm:grid-cols-3">
+              <div>
+                <label htmlFor={ids.orientation} className="text-sm font-semibold">
+                  Approach or orientation
+                </label>
+                <select id={ids.orientation} className={selectClass} value={filters.orientation} onChange={(e) => set({ orientation: e.target.value })}>
+                  <option value="">All approaches</option>
+                  {orientations.map((o) => (
+                    <option key={o.id} value={o.id}>
+                      {o.label} ({o.count})
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div>
+                <label htmlFor={ids.condition} className="text-sm font-semibold">
+                  Condition
+                </label>
+                <select id={ids.condition} className={selectClass} value={filters.condition} onChange={(e) => set({ condition: e.target.value })}>
+                  <option value="">All conditions</option>
+                  {conditions.map((c) => (
+                    <option key={c.id} value={c.id}>
+                      {c.label} ({c.count})
+                    </option>
+                  ))}
+                </select>
+              </div>
+              <div>
+                <label htmlFor={ids.training} className="text-sm font-semibold">
+                  Training
+                </label>
+                <select
+                  id={ids.training}
+                  className={selectClass}
+                  value={filters.training}
+                  onChange={(e) => set({ training: e.target.value as Training })}
+                >
+                  <option value="any">Any</option>
+                  <option value="trained">Trained clinicians only</option>
+                  <option value="not-trained">No specialist training listed</option>
+                </select>
+              </div>
+            </div>
+
+            <fieldset className="flex flex-wrap items-center gap-x-6 gap-y-1">
+              <legend className="sr-only">Show only interventions with</legend>
+              <label className="flex min-h-11 cursor-pointer items-center gap-2.5 text-sm">
+                <input type="checkbox" className="size-5 accent-[var(--accent)]" checked={filters.handout} onChange={(e) => set({ handout: e.target.checked })} />
+                Has a client handout
+              </label>
+              <label className="flex min-h-11 cursor-pointer items-center gap-2.5 text-sm">
+                <input type="checkbox" className="size-5 accent-[var(--accent)]" checked={filters.faith} onChange={(e) => set({ faith: e.target.checked })} />
+                Has a faith-integrated variant
+              </label>
+              {active ? (
+                <Button type="button" variant="ghost" size="sm" onClick={clearAll}>
+                  <X aria-hidden />
+                  Clear search and filters
+                </Button>
+              ) : null}
+            </fieldset>
+          </div>
         </Card>
       </section>
 
       <section aria-labelledby="results-heading" className="space-y-3">
         <div className="flex flex-wrap items-baseline justify-between gap-2">
-          <h2 id="results-heading" className="text-lg font-semibold">
+          <h2 id="results-heading" ref={resultsRef} tabIndex={-1} className="text-lg font-semibold outline-none">
             Results
           </h2>
           <p role="status" aria-live="polite" className="text-sm text-muted">
             Showing {results.length} of {items.length}
           </p>
         </div>
+        {conditionFilter ? (
+          <p className="flex flex-wrap items-center gap-x-2 text-sm">
+            <span>
+              For <strong>{conditionFilter.label}</strong>
+            </span>
+            <Button
+              type="button"
+              variant="ghost"
+              size="sm"
+              onClick={() => {
+                set({ condition: "" });
+                resultsRef.current?.focus();
+              }}
+            >
+              <X aria-hidden />
+              Show all conditions
+            </Button>
+          </p>
+        ) : null}
+        {pending > 0 ? (
+          <p className="flex items-start gap-1.5 text-sm text-muted">
+            <ClipboardCheck aria-hidden className="mt-0.5 size-4 shrink-0" />
+            {pending === items.length
+              ? `All ${items.length} interventions are awaiting licensed clinical review.`
+              : `${pending} of ${items.length} interventions are awaiting licensed clinical review.`}
+          </p>
+        ) : null}
         {results.length ? (
           <ul className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
             {results.map((i) => (
@@ -223,8 +304,13 @@ function LibraryInner({
             ))}
           </ul>
         ) : (
-          <Card className="text-sm text-muted">
-            No interventions match. Try fewer words or clear a filter.
+          <Card className="space-y-3 text-sm">
+            <p className="font-semibold">No interventions match yet.</p>
+            <p className="text-muted">Try fewer or different words (for example &ldquo;sleep&rdquo; or &ldquo;worry&rdquo;), or clear the filters.</p>
+            <Button type="button" variant="outline" size="sm" onClick={clearAll}>
+              <X aria-hidden />
+              Clear search and filters
+            </Button>
           </Card>
         )}
       </section>
@@ -287,7 +373,7 @@ function InterventionCard({ item }: { item: InterventionCardData }) {
             <HandHeart aria-hidden className="size-3.5" /> Faith-integrated option
           </Badge>
         ) : null}
-        {item.pendingReview ? <Badge tone="warn">Not yet clinically reviewed</Badge> : <Badge tone="accent">Clinically reviewed</Badge>}
+        <ReviewBadge reviewedBy={item.reviewedBy} inList />
       </div>
     </article>
   );

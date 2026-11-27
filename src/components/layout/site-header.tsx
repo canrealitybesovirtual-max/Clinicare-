@@ -151,7 +151,8 @@ function ClientNav({ pathname, className }: { pathname: string | null; className
           return (
             <li key={n.href}>
               <Link href={n.href} aria-current={active ? "page" : undefined} className={cn(barLink, "px-2.5", active && barActive)}>
-                <n.icon aria-hidden className="size-4 shrink-0" />
+                {/* Text only on phones, so the four links fit one row at 390px. */}
+                <n.icon aria-hidden className="hidden size-4 shrink-0 sm:block" />
                 {t(n.label)}
               </Link>
             </li>

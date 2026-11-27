@@ -16,7 +16,11 @@
     "guardrails": "bash scripts/guardrail-scan.sh",
     "check": "npm run guardrails && npm run validate:content && npm run typecheck && npm test",
     "gen:content": "tsx scripts/gen-content-index.ts",
-    "prebuild": "tsx scripts/gen-content-index.ts"
+    "prebuild": "tsx scripts/gen-content-index.ts && tsx scripts/copy-ort.ts",
+    "predev": "tsx scripts/copy-ort.ts",
+    "model:fetch": "tsx scripts/fetch-model.ts",
+    "model:embed": "tsx scripts/build-lexicon-embeddings.ts",
+    "model:check": "tsx scripts/fetch-model.ts --check && tsx scripts/copy-ort.ts --check && tsx scripts/build-lexicon-embeddings.ts --check"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.14.0",

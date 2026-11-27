@@ -57,6 +57,62 @@
     "rows": 10
   },
   "safetyNote": "Safety first: Only practice steps you have planned with your counselor. A practice step should feel scary, but it should never be truly dangerous, against the law, or harmful to you or anyone else. If washing or cleaning has hurt your skin, tell your doctor. Having an upsetting thought does not mean you want it or will act on it. But if you ever feel you might act on a thought of hurting yourself or someone else, that is not a practice step. Stop and get help right away. In the US, call or text 988, or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "es": {
+    "title": "Enfrentar miedos sin rituales: registro de práctica",
+    "intro": "Muchas personas tienen pensamientos o dudas que les molestan y que vuelven una y otra vez. Puede sentir muchas ganas de hacer algo para que esa sensación desaparezca. Podría ser lavarse, revisar, contar, preguntarle a alguien si todo está bien o decir ciertas palabras en su mente. A esto lo llamamos rituales. Los rituales dan alivio rápido. Pero con el tiempo le enseñan a su cerebro que el pensamiento era un peligro real, y por eso el pensamiento sigue volviendo. En esta práctica, usted enfrenta a propósito el detonante, es decir, lo que hace aparecer el pensamiento, y elige no hacer el ritual. Planea cada paso con su consejero. Este registro le ayuda a llevar la cuenta. Llenarlo toma unos 5 minutos después de cada práctica.",
+    "sections": [
+      {
+        "heading": "Antes de practicar",
+        "steps": [
+          "Elija un paso de la lista que hizo con su consejero. Empiece con uno que se sienta difícil pero posible.",
+          "Escriba el paso en el registro. Por ejemplo: 'Tocar la manija de la puerta y no lavarme durante 1 hora' o 'Cerrar la puerta con llave una vez e irme.'",
+          "Pregúntese: '¿Qué temo que pase si no hago el ritual?' Escríbalo.",
+          "Decida qué significa 'sin ritual' para este paso. Incluya los rituales escondidos, como contar o repasar cosas en su mente. Preguntarles a otros si todo está bien también cuenta."
+        ]
+      },
+      {
+        "heading": "Durante la práctica",
+        "steps": [
+          "Haga el paso. Deje que el pensamiento y las ganas estén ahí. No tiene que pelear con ellos ni alejarlos.",
+          "Note cómo suben las ganas. Pueden ponerse fuertes. Luego, muchas veces, empiezan a bajar solas.",
+          "Quédese el tiempo suficiente para aprender algo nuevo. No tiene que esperar hasta sentir calma.",
+          "Califique cuánto malestar siente, del 0 al 10, en el punto más alto y otra vez al final. Un 0 significa nada. Un 10 significa lo más que pueda imaginar."
+        ]
+      },
+      {
+        "heading": "Después de practicar",
+        "steps": [
+          "Escriba si se saltó el ritual: sí, en parte o no. Diga la verdad. No hay vergüenza en un 'en parte' o un 'no'.",
+          "Pregúntese: ¿Pasó lo que temía? ¿Cómo lo manejé? ¿Qué aprendí?",
+          "Si hizo un ritual, está bien. Si puede, enfrente pronto el mismo detonante otra vez, y esta vez deje que las ganas estén ahí."
+        ]
+      },
+      {
+        "heading": "Consejos",
+        "steps": [
+          "Practique todos los días si puede. Practicar poco y seguido ayuda más que un intento largo de vez en cuando.",
+          "Pruebe el mismo paso en lugares distintos y a horas distintas.",
+          "Su familia y sus amigos pueden tratar de ayudar diciéndole que todo está bien o haciendo los rituales por usted. Hable con su consejero sobre otras formas en que pueden ayudar.",
+          "Suba en su lista cuando un paso se sienta más fácil. Si un paso parece demasiado grande, agregue uno más pequeño en medio.",
+          "Reconozca el valor de cada intento, aunque sea difícil.",
+          "Traiga este registro a su próxima cita."
+        ]
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Día",
+        "Paso que practiqué",
+        "Lo que temía que pasara",
+        "Malestar más alto (0-10)",
+        "Malestar al final (0-10)",
+        "¿Me salté el ritual? (sí / en parte / no)",
+        "Lo que aprendí"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: Practique solo los pasos que haya planeado con su consejero. Un paso de práctica debe dar miedo, pero nunca debe ser peligroso de verdad, ir contra la ley ni hacerle daño a usted ni a nadie más. Si lavarse o limpiar le ha lastimado la piel, dígaselo a su médico. Tener un pensamiento que le molesta no significa que lo quiera ni que lo vaya a hacer. Pero si alguna vez siente que podría actuar según un pensamiento de hacerse daño o de hacerle daño a otra persona, eso no es un paso de práctica. Pare y busque ayuda de inmediato. En EE. UU., llame o envíe un mensaje de texto al 988, o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
   "sources": [
     {
       "title": "NICE guideline CG31",

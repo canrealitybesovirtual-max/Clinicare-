@@ -1,10 +1,10 @@
 /**
  * CI gate (G1, G3, G6, G7, G10, G13). Exit 1 on any problem.
- *  1. Phase 1 content parses and cross-references cleanly (src/lib/content.ts contentProblems()): lexicon,
- *     every condition, built-in measures, Phase 1 handouts and stats.
+ *  1. The core content parses and cross-references cleanly (src/lib/content.ts contentProblems()): lexicon,
+ *     every condition, built-in measures, every handout and stats.
  *  2. The whole library parses and cross-references cleanly (src/lib/library.ts libraryProblems() plus the
- *     cross-content checks below): interventions, plans, every handout, ethics codes and legal topics, and
- *     the links between them and the conditions.
+ *     cross-content checks below): interventions, plans, ethics codes and legal topics, and the links between
+ *     them and the conditions and handouts.
  *  3. EVERY file under content/ matches a registered schema with governance (scripts/content-audit.ts).
  * `--release` also fails while any crisis line is unverified (a person must check each official site).
  */
@@ -12,8 +12,6 @@ import path from "node:path";
 import { CASE_RESTRICTED_ABBREVIATIONS, matchSymptoms } from "../src/lib/matcher";
 import { conditions, contentProblems, handouts, lexicon, measures, stats } from "../src/lib/content";
 import {
-  allConditions,
-  allHandouts,
   ethicsCodes,
   interventions,
   interventionsFor,
@@ -48,17 +46,12 @@ const BANNED_CONTENT: readonly [RegExp, string][] = [
 const VERDICT_WORDS = /\b(diagnosed|diagnosis is|meets|confirmed|definitely|certainly)\b/i;
 
 /**
- * Checks that span the Phase 1 loader (content.ts) and the full library (library.ts). Pure; returns error strings.
+ * Checks that span the core loader (content.ts) and the full library (library.ts). Pure; returns error strings.
  * Covers every condition, intervention, plan and handout, so CI covers all content (G10).
  */
 export function crossContentProblems(): string[] {
   const p: string[] = [...libraryProblems()];
   const conditionIds = new Set(conditions.map((c) => c.id));
-  const libraryIds = new Set(allConditions.map((c) => c.id));
-
-  // The two loaders must see the same condition set (both read the generated index).
-  for (const id of libraryIds) if (!conditionIds.has(id)) p.push(`conditions/${id}: in library.ts but not in content.ts`);
-  for (const id of conditionIds) if (!libraryIds.has(id)) p.push(`conditions/${id}: in content.ts but not in library.ts`);
 
   const dupes = <T>(list: T[], key: (t: T) => string, where: string) => {
     const seen = new Set<string>();
@@ -71,7 +64,7 @@ export function crossContentProblems(): string[] {
   dupes(conditions, (c) => c.id, "conditions");
   dupes(interventions, (i) => i.id, "interventions");
   dupes(planLibraries, (pl) => pl.conditionId, "plans");
-  dupes(allHandouts, (h) => h.id, "handouts");
+  dupes(handouts, (h) => h.id, "handouts");
   dupes(ethicsCodes, (e) => e.id, "ethics");
   dupes(legalTopics, (t) => t.id, "legal");
 
@@ -100,14 +93,12 @@ export function crossContentProblems(): string[] {
     if (pl.sud !== cond.sud) p.push(`${where}: sud ${pl.sud} but conditions/${cond.id} sud ${cond.sud} (G6)`);
   }
 
-  const allHandoutIds = new Set(allHandouts.map((h) => h.id));
   for (const c of conditions) {
     const where = `conditions/${c.id}`;
     if (!planByCondition.has(c.id)) p.push(`${where}: no plan library in content/plans`);
     const linked = interventionsFor(c.id).length;
     if (linked < MIN_INTERVENTIONS_PER_CONDITION)
       p.push(`${where}: only ${linked} library interventions list this condition (at least ${MIN_INTERVENTIONS_PER_CONDITION} expected)`);
-    for (const h of c.handouts) if (!allHandoutIds.has(h)) p.push(`${where}: unknown handout ${h}`);
     for (const code of c.icd10cm) if (!ICD10CM_CODE.test(code.code)) p.push(`${where}: malformed ICD-10-CM code ${code.code}`);
     for (const code of c.icd11) if (!ICD11_CODE.test(code.code)) p.push(`${where}: malformed ICD-11 code ${code.code}`);
     // G6: substance-use content carries the exact Part 2 notice.
@@ -130,7 +121,7 @@ export function crossContentProblems(): string[] {
   }
 
   // G6: SUD handouts are only linked from SUD conditions or interventions that list a SUD condition.
-  const sudHandouts = new Set(allHandouts.filter((h) => h.sud).map((h) => h.id));
+  const sudHandouts = new Set(handouts.filter((h) => h.sud).map((h) => h.id));
   const sudConditions = new Set(conditions.filter((c) => c.sud).map((c) => c.id));
   for (const c of conditions)
     for (const h of c.handouts) if (sudHandouts.has(h) && !c.sud) p.push(`conditions/${c.id}: links SUD handout ${h} but is not marked sud (G6)`);
@@ -168,7 +159,7 @@ export function crossContentProblems(): string[] {
     ...conditions.map((c): [string, unknown] => [`conditions/${c.id}`, c]),
     ...interventions.map((i): [string, unknown] => [`interventions/${i.id}`, i]),
     ...planLibraries.map((pl): [string, unknown] => [`plans/${pl.conditionId}`, pl]),
-    ...allHandouts.map((h): [string, unknown] => [`handouts/${h.id}`, h]),
+    ...handouts.map((h): [string, unknown] => [`handouts/${h.id}`, h]),
   ];
   for (const [where, item] of items) {
     const body = JSON.stringify(item);
@@ -191,8 +182,8 @@ function main(): void {
   console.log(
     `Content OK: ${audit.files.length} files (${byKind("clinical")} clinical, ${byKind("data")} data, ${byKind("registry")} registries). ` +
       `Knowledge base: ${lexicon.symptoms.length} symptoms, ${conditions.length} conditions, ${measures.length} built-in measures, ` +
-      `${handouts.length} Phase 1 handouts, ${stats.length} stats. Library: ${interventions.length} interventions, ` +
-      `${planLibraries.length} plans, ${allHandouts.length} handouts, ${ethicsCodes.length} ethics codes, ${legalTopics.length} legal topics.`,
+      `${handouts.length} handouts, ${stats.length} stats. Library: ${interventions.length} interventions, ` +
+      `${planLibraries.length} plans, ${ethicsCodes.length} ethics codes, ${legalTopics.length} legal topics.`,
   );
 }
 

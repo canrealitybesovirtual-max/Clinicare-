@@ -98,6 +98,108 @@
     "rows": 5
   },
   "safetyNote": "Safety first: This plan does not replace getting help. If you might act on thoughts of suicide, or of hurting yourself or someone else, do not wait. In the US, call or text 988, call 911, or go to the nearest emergency room. In other countries, call your local emergency number or visit findahelpline.com. It is always okay to reach out, even if you are not sure things are 'bad enough.' Resource only. This sheet does not replace care from a licensed professional.",
+  "es": {
+    "title": "Mi plan de seguridad",
+    "intro": "Un plan de seguridad es su propia guía corta para pasar una crisis, como un momento en que tiene pensamientos de suicidio. Lo hace con tiempo, cuando se siente con más calma, con su consejero o con alguien de confianza. Así, en un momento difícil, no tiene que pensar qué hacer. Solo tiene que seguir su plan. Escríbalo a mano en una copia impresa, con sus propias palabras. Hacerlo toma unos 20 a 30 minutos.",
+    "sections": [
+      {
+        "heading": "Cómo usar su plan",
+        "steps": [
+          "Cuando note sus primeras señales, empiece por la Parte 2 y siga bajando por la hoja.",
+          "Si una idea no le ayuda, pruebe la siguiente.",
+          "Puede ir directo a la Parte 5 en cualquier momento. No tiene que probar todo lo demás primero.",
+          "Guarde una copia donde pueda encontrarla rápido, como en su billetera, su bolsa o junto a su cama."
+        ]
+      },
+      {
+        "heading": "Mis razones para seguir adelante",
+        "body": "Empiece por lo que le importa. Leerlo en un momento difícil le puede recordar por qué vale la pena mantenerse a salvo. Pueden ser personas, mascotas, la fe, planes o cosas que le encanta hacer.",
+        "steps": [
+          "Una razón por la que quiero seguir adelante: ________________________",
+          "Algo que espero con ganas: ________________________"
+        ]
+      },
+      {
+        "heading": "Parte 1: Notar mis primeras señales",
+        "body": "Una crisis muchas veces se forma poco a poco. Piense en las últimas veces que fueron difíciles. ¿Qué llegó primero?",
+        "steps": [
+          "Lo que podría empezar a pensar: ________________________",
+          "Lo que podría sentir en mi ánimo o en mi cuerpo: ________________________",
+          "Lo que podría empezar a hacer, o dejar de hacer: ________________________",
+          "Momentos o eventos que pueden hacer las cosas más difíciles: ________________________"
+        ]
+      },
+      {
+        "heading": "Parte 2: Calmarme y pasar la próxima hora",
+        "body": "Haga una lista de cosas que puede hacer sin ayuda, ahí donde está. La meta es pasar el momento, no arreglarlo todo.",
+        "steps": [
+          "Algo que ayuda a que mi cuerpo se calme: ________________________",
+          "Algo que mantiene ocupada mi mente: ________________________",
+          "Algo que me da consuelo: ________________________"
+        ]
+      },
+      {
+        "heading": "Parte 3: Conectar con otras personas",
+        "body": "Estar con otras personas puede ayudar, aunque no hable de cómo se siente. Algunas personas también pueden ayudarle cuando les dice que está pasando por un mal momento. Escriba cómo comunicarse con ellas solo en su copia de papel.",
+        "steps": [
+          "Alguien con quien me gusta estar: ________________________",
+          "Un lugar con otras personas donde me siento bien: ________________________",
+          "Alguien a quien le puedo decir 'No estoy bien', y cómo comunicarme: ________________",
+          "Otra persona a quien se lo puedo decir, y cómo comunicarme: ________________"
+        ]
+      },
+      {
+        "heading": "Parte 4: Hacer más seguro mi espacio",
+        "body": "Una crisis muchas veces pasa. Poner tiempo y distancia entre usted y las cosas que podría usar para hacerse daño le da tiempo al sentimiento para bajar. Esto puede salvar una vida. Planee estos pasos con su consejero y con alguien de confianza.",
+        "steps": [
+          "Armas de fuego: Mientras las cosas estén difíciles, lo más seguro es que una persona de confianza guarde sus armas fuera de su casa. Primero revise que la ley del lugar donde vive lo permita. Si eso no es posible, mantenga las armas bajo llave y descargadas. Guarde las balas bajo llave en otro lugar, y deje que otra persona tenga las llaves.",
+          "Medicamentos: Tenga en casa solo lo que necesita. Pídale a alguien de confianza que guarde el resto, o que le dé solo unos días a la vez. Lleve los medicamentos viejos o que no usa a un sitio de devolución. Muchas farmacias tienen uno.",
+          "Alcohol y drogas: Pueden hacer más difícil mantenerse a salvo. Piense en no tenerlos en su casa por ahora.",
+          "Otras cosas que podría usar para hacerme daño: ________________",
+          "Un paso que voy a dar para hacer más seguro mi espacio: ________________",
+          "Alguien que me puede ayudar con esto: ________________"
+        ]
+      },
+      {
+        "heading": "Parte 5: Pedir ayuda ahora",
+        "body": "Puede comunicarse con estos en cualquier momento, de día o de noche. No tiene que esperar a que las cosas se sientan 'lo bastante mal'.",
+        "steps": [
+          "Mi consejero o terapeuta, y cómo comunicarme: ________________",
+          "Mi médico o clínica, y cómo comunicarme: ________________",
+          "La línea de mi clínica fuera del horario de atención, si hay una: ________________",
+          "La sala de emergencias más cercana: ________________",
+          "En EE. UU., llame o envíe un mensaje de texto al 988 para comunicarse con la Línea 988 de Prevención del Suicidio y Crisis. También puede chatear en 988lifeline.org.",
+          "Para recibir ayuda en español, llame al 988 y marque 2.",
+          "Si es veterano o miembro de las fuerzas armadas: llame al 988 y marque 1, o envíe un mensaje de texto al 838255.",
+          "Si es una persona sorda o con dificultad para oír: puede comunicarse con el 988 en lenguaje de señas americano (ASL) por video en 988lifeline.org. O marque 711 y luego 988 para usar un servicio de retransmisión.",
+          "Si está en peligro ahora mismo, llame al 911 o vaya a la sala de emergencias más cercana.",
+          "Fuera de EE. UU., llame al número de emergencias local, o busque una línea de crisis en findahelpline.com."
+        ]
+      },
+      {
+        "heading": "Mantener su plan al día",
+        "steps": [
+          "Revise su plan con su consejero cada pocas citas, y después de cualquier momento difícil.",
+          "Tache lo que no le ayudó y agregue lo que sí le ayudó.",
+          "Si quiere, comparta una copia con alguien de confianza para que sepa cómo ayudarle."
+        ]
+      },
+      {
+        "heading": "Sobre esta hoja",
+        "body": "Este plan en blanco se escribió para este recurso, con sus propias palabras y su propio orden. No es el Plan de Seguridad Stanley-Brown (Stanley-Brown Safety Plan), que es un formulario aparte. Su consejero puede usar ese formulario u otro en su lugar. Use el plan que mejor les funcione a usted y a su consejero."
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Día",
+        "Lo que usé de mi plan",
+        "¿Me ayudó? (0-10)",
+        "Lo que quiero cambiar"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: Este plan no reemplaza buscar ayuda. Si podría actuar según pensamientos de suicidio, o de hacerse daño o de hacerle daño a otra persona, no espere. En EE. UU., llame o envíe un mensaje de texto al 988, llame al 911 o vaya a la sala de emergencias más cercana. En otros países, llame al número de emergencias local o visite findahelpline.com. Siempre está bien pedir ayuda, aunque tenga dudas de que las cosas estén 'lo bastante mal'. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
   "sources": [
     {
       "title": "Safety planning intervention: a brief intervention to mitigate suicide risk (Stanley & Brown)",

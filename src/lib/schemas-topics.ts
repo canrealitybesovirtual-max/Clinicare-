@@ -3,6 +3,10 @@
  * CI content validator (scripts/validate-content.ts) can check the file without importing server-only
  * code. Mirrors HealthTopicsFileSchema in src/server/integrations/medlineplus-topics.ts: keep the two
  * in sync (the server module may later re-export this one).
+ *
+ * handoutIds: the app-authored client handouts shown as "skills to try" on the client topic page. The schema checks
+ * their shape and that a topic lists each one once; that every id exists in content/handouts is checked against the
+ * content library in tests/unit/topics.test.ts (this module cannot load the library).
  */
 import { z } from "zod";
 import { governance, slug } from "./schemas";
@@ -37,6 +41,11 @@ export const HealthTopicSchema = z.object({
   clientLabelEs: z.string().min(3).max(80),
   sud: z.boolean().default(false),
   crisis: z.boolean().default(false),
+  handoutIds: z
+    .array(slug)
+    .max(6)
+    .default([])
+    .refine((ids) => new Set(ids).size === ids.length, "a handout is listed twice"),
   pages: z.object({ en: pageUrl, es: pageUrl }),
 });
 export type HealthTopic = z.infer<typeof HealthTopicSchema>;

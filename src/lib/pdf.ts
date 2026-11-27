@@ -4,7 +4,9 @@
  * - Blank measure forms (GAD-7, PHQ-9): the official wording from content/measures, empty checkboxes,
  *   column totals, a total-score box and a scoring key for the clinician. No answers or scores are ever
  *   written into a PDF here.
- * - Client handouts: original wording from content/handouts.
+ * - Client handouts: original wording from content/handouts, in English or in its Spanish translation
+ *   (HandoutSchema.es). A Spanish handout PDF also has its footer, crisis box, name line and Part 2 notice in
+ *   Spanish; the Part 2 notice keeps the exact English sentence under the Spanish one.
  * - The only personal field is a blank handwritten "Name" line. No other identifier fields (G5).
  * - Every page carries the disclaimer footer (G14), the app name and "Page x of y".
  * - Every PDF that reaches a client carries the crisis box (988 / local emergency / findahelpline.com) (G9).
@@ -19,8 +21,10 @@
  */
 import { PDFDocument, StandardFontEmbedder, StandardFonts, rgb } from "pdf-lib";
 import type { Handout, Measure } from "./schemas";
+import type { Lang } from "./i18n/core";
 import { clientSourceCredits } from "./client-safe";
 import { PART2_NOTICE } from "./referral-links";
+import { HANDOUT_TEXT, localizeHandout, withN } from "@/components/handouts/localize";
 
 export const PDF_APP_NAME = "Clinician Resource Companion";
 export const PDF_DISCLAIMER = "Resource only. Not a substitute for clinical judgment.";
@@ -31,6 +35,52 @@ export const PDF_CLINICIAN_PAGE_NOTE =
   "Clinician page: keep this page. Give the client only the form on page 1.";
 /** G6: printed in the footer of every page of a substance-use (sud) export. Exact SPEC wording. */
 export const PDF_PART2_NOTICE = PART2_NOTICE;
+
+/** Wording every page and every client PDF carries (footer, crisis box, name line), per language. */
+export interface PdfShellCopy {
+  disclaimer: string;
+  crisisHeading: string;
+  crisisLine: string;
+  nameLine: string;
+  page: (page: number, pages: number) => string;
+  /** PDF /Lang entry (BCP 47). */
+  language: string;
+}
+
+export const PDF_COPY: Record<Lang, PdfShellCopy> = {
+  en: {
+    disclaimer: PDF_DISCLAIMER,
+    crisisHeading: PDF_CRISIS_HEADING,
+    crisisLine: PDF_CRISIS_LINE,
+    nameLine: PDF_NAME_LINE,
+    page: (i, n) => `Page ${i} of ${n}`,
+    language: "en-US",
+  },
+  es: {
+    disclaimer: "Solo es un recurso. No sustituye el juicio clínico.",
+    crisisHeading: "¿Necesita ayuda ahora?",
+    crisisLine:
+      "EE. UU.: llame o envíe un mensaje de texto al 988 y pida atención en español · Emergencias: 911 o el número local · Otros países: findahelpline.com",
+    nameLine: "Nombre: ________________________________________",
+    page: (i, n) => `Página ${i} de ${n}`,
+    language: "es",
+  },
+};
+
+/** Spanish wording of the Part 2 notice; Spanish PDFs print it above the exact English sentence. */
+export const PDF_PART2_NOTICE_ES = "La ley federal 42 CFR Part 2 prohíbe el uso o la divulgación no autorizados de estos registros.";
+
+/** Lines around the handout body that are not part of the handout content. */
+const HANDOUT_PDF_TEXT: Record<Lang, { basedOn: string; questions: string }> = {
+  en: {
+    basedOn: "Based on information from:",
+    questions: "Talk with your counselor or therapist about any questions on this sheet.",
+  },
+  es: {
+    basedOn: "Basado en información de:",
+    questions: "Hable con su consejero o terapeuta si tiene preguntas sobre esta hoja.",
+  },
+};
 
 /* ---------------------------------------------------------------- page geometry (points) */
 
@@ -59,6 +109,8 @@ export interface PdfPageLayout {
 
 export interface PdfLayout {
   title: string;
+  /** PDF /Lang entry; English (en-US) when absent. */
+  language?: string;
   pages: PdfPageLayout[];
 }
 
@@ -204,11 +256,13 @@ class LayoutBuilder {
   /** Lowest y content may reach; raised when a footer notice needs room. */
   readonly bottom: number;
   private readonly noticeLines: string[];
+  readonly copy: PdfShellCopy;
 
   constructor(
     readonly title: string,
-    opts: { footerNotice?: string } = {},
+    opts: { footerNotice?: string; copy?: PdfShellCopy } = {},
   ) {
+    this.copy = opts.copy ?? PDF_COPY.en;
     this.noticeLines = opts.footerNotice ? wrapText(opts.footerNotice, NOTICE_SIZE, CONTENT_W, true) : [];
     this.bottom = BOTTOM + (this.noticeLines.length ? this.noticeLines.length * NOTICE_LH + 6 : 0);
     this.newPage();
@@ -291,19 +345,19 @@ class LayoutBuilder {
 
   nameLine(): void {
     this.ensure(28);
-    this.text(PDF_NAME_LINE, LEFT, this.y - 11, 11);
+    this.text(this.copy.nameLine, LEFT, this.y - 11, 11);
     this.y -= 26;
   }
 
   crisisBox(): void {
     const pad = 9;
     const size = 10;
-    const lines = wrapText(PDF_CRISIS_LINE, size, CONTENT_W - 2 * pad, true);
+    const lines = wrapText(this.copy.crisisLine, size, CONTENT_W - 2 * pad, true);
     const h = pad + 13 + lines.length * size * 1.4 + pad - 2;
     this.ensure(h + 4);
     const top = this.y;
     this.rect(LEFT, top - h, CONTENT_W, h, { stroke: "crisis", fill: "crisisFill", lineWidth: 1.25 });
-    this.text(PDF_CRISIS_HEADING, LEFT + pad, top - pad - 10, 11, true, "crisis");
+    this.text(this.copy.crisisHeading, LEFT + pad, top - pad - 10, 11, true, "crisis");
     let y = top - pad - 13 - size - 3;
     for (const l of lines) {
       this.text(l, LEFT + pad, y, size, true);
@@ -322,8 +376,8 @@ class LayoutBuilder {
       });
       const sep = BOTTOM - 8;
       page.ops.push({ kind: "line", x1: LEFT, y1: sep, x2: RIGHT, y2: sep, color: "border", lineWidth: 0.5 });
-      page.ops.push({ kind: "text", text: PDF_DISCLAIMER, x: LEFT, y: sep - 11, size: 8.5, bold: true, color: "text" });
-      const pageLabel = `Page ${i + 1} of ${n}`;
+      page.ops.push({ kind: "text", text: toWinAnsi(this.copy.disclaimer), x: LEFT, y: sep - 11, size: 8.5, bold: true, color: "text" });
+      const pageLabel = toWinAnsi(this.copy.page(i + 1, n));
       page.ops.push({
         kind: "text",
         text: pageLabel,
@@ -335,7 +389,7 @@ class LayoutBuilder {
       });
       page.ops.push({ kind: "text", text: PDF_APP_NAME, x: LEFT, y: sep - 21, size: 7.5, bold: false, color: "muted" });
     });
-    return { title: this.title, pages: this.pages };
+    return { title: this.title, language: this.copy.language, pages: this.pages };
   }
 }
 
@@ -499,19 +553,32 @@ export function measurePdfLayout(measure: Measure): PdfLayout {
 
 /* ---------------------------------------------------------------- client handout */
 
-export function handoutPdfLayout(handout: Handout): PdfLayout {
-  const b = new LayoutBuilder(toWinAnsi(handout.title), handout.sud ? { footerNotice: PDF_PART2_NOTICE } : {});
+/** Footer notice for a substance-use handout: the exact English sentence, under its Spanish wording on Spanish PDFs. */
+function part2Notice(lang: Lang): string {
+  return lang === "es" ? `${PDF_PART2_NOTICE_ES}\n${PDF_PART2_NOTICE}` : PDF_PART2_NOTICE;
+}
+
+/**
+ * Printable client handout in English or Spanish. Spanish uses the handout's own translation and falls back to
+ * English when it has none (the layout then is the English one, footer included).
+ */
+export function handoutPdfLayout(handout: Handout, lang: Lang = "en"): PdfLayout {
+  const h = localizeHandout(handout, lang);
+  const copy = PDF_COPY[h.lang];
+  const extra = HANDOUT_PDF_TEXT[h.lang];
+  const tx = (t: { en: string; es?: string }) => (h.lang === "es" && t.es) || t.en;
+  const b = new LayoutBuilder(toWinAnsi(h.title), { copy, ...(handout.sud ? { footerNotice: part2Notice(h.lang) } : {}) });
   const body = 11;
 
-  b.paragraph(handout.title, { size: 18, bold: true, lineHeight: 1.25 });
+  b.paragraph(h.title, { size: 18, bold: true, lineHeight: 1.25 });
   b.y -= 6;
   b.nameLine();
-  b.paragraph(`About ${handout.estimatedMinutes} minutes`, { size: 9.5, color: "muted" });
+  b.paragraph(withN(tx(HANDOUT_TEXT.minutes), handout.estimatedMinutes), { size: 9.5, color: "muted" });
   b.y -= 4;
-  b.paragraph(handout.intro, { size: body, lineHeight: 1.45 });
+  b.paragraph(h.intro, { size: body, lineHeight: 1.45 });
   b.y -= 8;
 
-  for (const section of handout.sections) {
+  for (const section of h.sections) {
     b.heading(section.heading, 13, 2 * body * 1.45);
     if (section.body) b.paragraph(section.body, { size: body, lineHeight: 1.45 });
     if (section.steps && section.steps.length > 0) {
@@ -522,8 +589,8 @@ export function handoutPdfLayout(handout: Handout): PdfLayout {
   }
 
   // ---- practice log
-  if (handout.practiceLog) {
-    const cols = handout.practiceLog.columns;
+  if (h.practiceLog) {
+    const cols = h.practiceLog.columns;
     const colW = CONTENT_W / cols.length;
     const pad = 5;
     const headSize = 9;
@@ -542,9 +609,9 @@ export function handoutPdfLayout(handout: Handout): PdfLayout {
       b.y = top - headH;
     };
 
-    b.heading("Practice log", 13, headH + rowH);
+    b.heading(tx(HANDOUT_TEXT.practiceLog), 13, headH + rowH);
     drawHeader();
-    for (let r = 0; r < handout.practiceLog.rows; r++) {
+    for (let r = 0; r < h.practiceLog.rows; r++) {
       if (b.ensure(rowH)) drawHeader();
       const top = b.y;
       b.rect(LEFT, top - rowH, CONTENT_W, rowH, { stroke: "border", lineWidth: 0.75 });
@@ -555,8 +622,8 @@ export function handoutPdfLayout(handout: Handout): PdfLayout {
   }
 
   // ---- safety note + crisis box
-  b.heading("Safety note", 12, 2 * body * 1.45);
-  b.paragraph(handout.safetyNote, { size: body, lineHeight: 1.45 });
+  b.heading(tx(HANDOUT_TEXT.safetyNote), 12, 2 * body * 1.45);
+  b.paragraph(h.safetyNote, { size: body, lineHeight: 1.45 });
   b.y -= 10;
   b.crisisBox();
   b.y -= 12;
@@ -564,8 +631,10 @@ export function handoutPdfLayout(handout: Handout): PdfLayout {
   // ---- sources: client-safe credits only (G3). Titles that name a condition are reduced to the
   // publisher, the same rule the client screen applies, so a printed sheet never names a diagnosis.
   const credits = clientSourceCredits(handout.sources);
-  if (credits.length > 0) b.paragraph(`Based on information from: ${credits.join("; ")}.`, { size: 7.5, color: "muted" });
-  b.paragraph("Talk with your counselor or therapist about any questions on this sheet.", { size: 7.5, color: "muted" });
+  if (credits.length > 0) b.paragraph(`${extra.basedOn} ${credits.join("; ")}.`, { size: 7.5, color: "muted" });
+  b.paragraph(extra.questions, { size: 7.5, color: "muted" });
+  // Say plainly that a translation has not been checked by a person yet (G10-style honesty for translations).
+  if (h.lang === "es" && h.translatedBy?.includes("PENDING")) b.paragraph(HANDOUT_TEXT.machineTranslated.es, { size: 7.5, color: "muted" });
 
   return b.finish();
 }
@@ -581,8 +650,8 @@ export function measurePdfLines(measure: Measure): string[] {
   return layoutPageLines(measurePdfLayout(measure)).flat();
 }
 
-export function handoutPdfLines(handout: Handout): string[] {
-  return layoutPageLines(handoutPdfLayout(handout)).flat();
+export function handoutPdfLines(handout: Handout, lang: Lang = "en"): string[] {
+  return layoutPageLines(handoutPdfLayout(handout, lang)).flat();
 }
 
 /* ---------------------------------------------------------------- rendering */
@@ -593,7 +662,7 @@ async function renderLayout(layout: PdfLayout): Promise<Uint8Array> {
   doc.setTitle(layout.title, { showInWindowTitleBar: true });
   doc.setProducer(PDF_APP_NAME);
   doc.setCreator(PDF_APP_NAME);
-  doc.setLanguage("en-US");
+  doc.setLanguage(layout.language ?? "en-US");
 
   const regular = await doc.embedFont(StandardFonts.Helvetica);
   const bold = await doc.embedFont(StandardFonts.HelveticaBold);
@@ -632,7 +701,7 @@ export function createBlankMeasurePdf(measure: Measure): Promise<Uint8Array> {
   return renderLayout(measurePdfLayout(measure));
 }
 
-/** Printable client handout. */
-export function createHandoutPdf(handout: Handout): Promise<Uint8Array> {
-  return renderLayout(handoutPdfLayout(handout));
+/** Printable client handout, in English or (when the handout has a translation) Spanish. */
+export function createHandoutPdf(handout: Handout, lang: Lang = "en"): Promise<Uint8Array> {
+  return renderLayout(handoutPdfLayout(handout, lang));
 }

@@ -1,4 +1,5 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
+import { inflateSync } from "node:zlib";
 import { PDFDocument, StandardFontEmbedder, StandardFonts } from "pdf-lib";
 import gad7Json from "@content/measures/gad-7.json";
 import phq9Json from "@content/measures/phq-9.json";
@@ -13,6 +14,8 @@ import {
   PDF_PART2_NOTICE,
   PDF_CRISIS_LINE,
   PDF_DISCLAIMER,
+  PDF_COPY,
+  PDF_PART2_NOTICE_ES,
   createBlankMeasurePdf,
   createHandoutPdf,
   handoutPdfLayout,
@@ -31,6 +34,7 @@ import drinkingJson from "@content/handouts/drinking-diary.json";
 import urgeJson from "@content/handouts/urge-surfing-log.json";
 import { conditions } from "@/lib/content";
 import { CLINICAL_TERMS_RE, clientSourceCredits } from "@/lib/client-safe";
+import { HANDOUT_TEXT } from "@/components/handouts/localize";
 
 const gad7: Measure = MeasureSchema.parse(gad7Json);
 const phq9: Measure = MeasureSchema.parse(phq9Json);
@@ -376,5 +380,142 @@ describe("downloadBytes", () => {
   it("sanitizes file names", () => {
     expect(safeFilename("a/b\\c:d*e?.pdf")).toBe("a-b-c-d-e-.pdf");
     expect(safeFilename("   ")).toBe("download");
+  });
+});
+
+/* ---------------------------------------------------------------- Spanish handout PDFs */
+
+/**
+ * Every string drawn in the saved PDF, space-joined in drawing order (wrapped lines join back up): content streams
+ * inflated, hex strings decoded as WinAnsi (the same bytes as Latin-1 for these letters).
+ */
+function drawnText(bytes: Uint8Array): string {
+  const raw = Buffer.from(bytes).toString("latin1");
+  const out: string[] = [];
+  const re = /stream\r?\n/g;
+  for (let m = re.exec(raw); m; m = re.exec(raw)) {
+    const start = m.index + m[0].length;
+    const end = raw.indexOf("endstream", start);
+    let content: string;
+    try {
+      content = inflateSync(Buffer.from(raw.slice(start, end), "latin1")).toString("latin1");
+    } catch {
+      continue; // not a content stream (fonts, metadata)
+    }
+    for (const hex of content.match(/<([0-9A-Fa-f]+)>\s*Tj/g) ?? []) {
+      out.push(Buffer.from(hex.replace(/[^0-9A-Fa-f]/g, ""), "hex").toString("latin1"));
+    }
+  }
+  return out.join(" ");
+}
+
+const SPANISH_LETTERS = "¿Cómo está? ¡Ánimo! El niño y el pingüino: á é í ó ú ñ ü Á É Í Ó Ú Ñ Ü ¿ ¡";
+
+const spanishFixture: Handout = HandoutSchema.parse({
+  ...handoutJson,
+  es: {
+    title: "Hoja de prueba: respiración lenta",
+    intro: `Esto es un archivo de prueba, no contenido clínico. ${SPANISH_LETTERS}`,
+    sections: handoutJson.sections.map((sec, i) => ({
+      heading: `Sección ${i + 1}: preparación`,
+      ...(sec.body ? { body: "Busque un lugar tranquilo. Siéntese con los pies en el piso." } : {}),
+      ...(sec.steps ? { steps: sec.steps.map((_, j) => `Paso de prueba número ${j + 1}, con acentos: añadir, pingüino, ¿listo?`) } : {}),
+    })),
+    practiceLog: { columns: (handoutJson.practiceLog?.columns ?? []).map((c, i) => `Columna ${i + 1} (${c.length})`) },
+    safetyNote: "La seguridad es lo primero: llame o envíe un mensaje de texto al 988, o llame al 911. Visite findahelpline.com.",
+    translatedBy: "machine-assisted, PENDING human review",
+  },
+});
+
+describe("handout PDF in Spanish", () => {
+  it("WinAnsi keeps every Spanish letter and mark (á é í ó ú ñ ü ¿ ¡, capitals too)", () => {
+    expect(toWinAnsi(SPANISH_LETTERS)).toBe(SPANISH_LETTERS);
+    for (const ch of "áéíóúñüÁÉÍÓÚÑÜ¿¡") {
+      const cp = ch.codePointAt(0) ?? 0;
+      expect(fonts.regular.encoding.canEncodeUnicodeCodePoint(cp), ch).toBe(true);
+      expect(fonts.bold.encoding.canEncodeUnicodeCodePoint(cp), ch).toBe(true);
+    }
+  });
+
+  it("draws the accented letters into the saved PDF as real glyphs, not dropped or replaced", async () => {
+    const bytes = await createHandoutPdf(spanishFixture, "es");
+    const drawn = drawnText(bytes);
+    expect(drawn).toContain(SPANISH_LETTERS.slice(0, 40));
+    expect(drawn).toContain("á é í ó ú ñ ü Á É Í Ó Ú Ñ Ü ¿ ¡");
+    expect(drawn).toContain("Página 1 de");
+    expect(drawn).toContain("¿Necesita ayuda ahora?");
+    // The English handout still prints English.
+    expect(drawnText(await createHandoutPdf(spanishFixture, "en"))).toContain("Page 1 of");
+  });
+
+  it("renders a valid PDF with the Spanish title and the Spanish document language", async () => {
+    const bytes = await createHandoutPdf(spanishFixture, "es");
+    const layout = handoutPdfLayout(spanishFixture, "es");
+    expect(layout.language).toBe("es");
+    const doc = await PDFDocument.load(bytes, { updateMetadata: false });
+    expect(doc.getTitle()).toBe("Hoja de prueba: respiración lenta");
+    expect(doc.getPageCount()).toBe(layout.pages.length);
+    expect(doc.getAuthor()).toBeUndefined();
+  });
+
+  it("puts the Spanish footer on every page and stays inside the margins", () => {
+    const layout = handoutPdfLayout(spanishFixture, "es");
+    const pages = layoutPageLines(layout);
+    expect(pages.length).toBeGreaterThanOrEqual(2);
+    pages.forEach((lines, i) => {
+      expect(lines).toContain(PDF_COPY.es.disclaimer);
+      expect(lines).toContain(`Página ${i + 1} de ${pages.length}`);
+      expect(lines).toContain(PDF_APP_NAME);
+      expect(lines).not.toContain(PDF_DISCLAIMER);
+    });
+    expectInsideMargins(layout);
+  });
+
+  it("prints the crisis box, the safety note heading, the name line and the log in Spanish", () => {
+    const lines = handoutPdfLines(spanishFixture, "es");
+    const text = joined(lines);
+    expect(lines).toContain(PDF_COPY.es.crisisHeading);
+    expect(text).toContain(PDF_COPY.es.crisisLine);
+    expect(text).toContain("988");
+    expect(text).toContain("findahelpline.com");
+    expect(lines).toContain(HANDOUT_TEXT.safetyNote.es);
+    expect(lines).toContain(HANDOUT_TEXT.practiceLog.es);
+    expect(lines.filter((l) => /^Nombre:/.test(l))).toEqual([PDF_COPY.es.nameLine]);
+    expect(lines.some((l) => /^Name:/.test(l))).toBe(false);
+    expect(text).toContain("Unos 10 minutos");
+    expect(text).toContain("Columna 1");
+    expect(text).toContain(HANDOUT_TEXT.machineTranslated.es);
+    expect(text).not.toContain("Practice log");
+    expect(text).not.toContain(PDF_CRISIS_LINE);
+  });
+
+  it("falls back to the English layout when a handout has no translation", () => {
+    const lines = handoutPdfLines(handout, "es");
+    expect(lines).toEqual(handoutPdfLines(handout, "en"));
+    expect(handoutPdfLayout(handout, "es").language).toBe("en-US");
+  });
+
+  it.each([
+    ["drinking diary", drinkingJson],
+    ["urge surfing log", urgeJson],
+  ] as const)("the Spanish %s carries the Part 2 notice in Spanish and the exact English sentence on every page", (_n, json) => {
+    const h = HandoutSchema.parse(json);
+    expect(h.es).toBeDefined();
+    const layout = handoutPdfLayout(h, "es");
+    layoutPageLines(layout).forEach((lines, i) => {
+      const text = joined(lines);
+      expect(text, `page ${i + 1}`).toContain(PDF_PART2_NOTICE_ES);
+      expect(text, `page ${i + 1}`).toContain(PDF_PART2_NOTICE);
+    });
+    expectInsideMargins(layout);
+  });
+
+  it("the Spanish PMR sheet names no condition, code or diagnosis word (G3)", () => {
+    const pmr = HandoutSchema.parse(pmrJson);
+    const text = joined(handoutPdfLines(pmr, "es"));
+    expect(text).toContain("Práctica de relajación muscular en casa");
+    expect(text).not.toMatch(/trastorno|diagn[oó]stic|ansiedad|depresi|p[aá]nico|fobia|puntuaci|gravedad/i);
+    expect(text).not.toMatch(/F\d\d\.|\b6[AB]\d\d\b/);
+    expect(text).toContain("Basado en información de:");
   });
 });

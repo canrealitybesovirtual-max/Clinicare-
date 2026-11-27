@@ -61,6 +61,66 @@
     "rows": 8
   },
   "safetyNote": "Safety first: Choose situations that are safe. Practice means facing things that feel scary but are not truly dangerous. If someone treats you badly because of who you are, that is not your fault. Talk with your counselor about it. Try not to use alcohol or other drugs to get through social events. If you feel you need them to cope, tell your counselor. This skill is not for emergencies. If you have thoughts of hurting yourself or someone else, call or text 988 in the US, or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "es": {
+    "title": "Practicar situaciones sociales",
+    "intro": "Mucha gente siente nervios cuando está con otras personas. Puede pasar al conocer a alguien nuevo, al hablar en el trabajo o al comer delante de otros. Cuando sentimos que nos miran, muchas veces ponemos la atención hacia adentro. Nos fijamos en el corazón acelerado, la cara roja o lo que vamos a decir. También podemos hacer cosas para sentirnos más a salvo, como no mirar a la gente, ensayar cada frase o quedarnos callados. Estos hábitos tienen sentido, pero pueden mantener el miedo. Esta hoja le ayuda a practicar de una forma nueva. Planearla y llenarla toma unos 15 minutos.",
+    "sections": [
+      {
+        "heading": "Antes de ir",
+        "steps": [
+          "Elija una situación de la lista que hizo con su consejero. Empiece con una que se sienta difícil pero posible.",
+          "Escriba lo que teme que pase. Por ejemplo: 'Me voy a quedar en blanco y la gente va a pensar que soy aburrido.' Califique cuánto lo cree, del 0% al 100%.",
+          "Haga una lista de los hábitos de seguridad que suele usar. Planee dejar uno o más de ellos esta vez.",
+          "Planee un poco y luego pare. Repasarlo una y otra vez antes suele hacer que el miedo crezca."
+        ]
+      },
+      {
+        "heading": "Mientras está ahí",
+        "steps": [
+          "Ponga su atención hacia afuera. Escuche lo que dice la otra persona. Note su cara, el lugar y lo que está pasando.",
+          "Cuando su atención vuelva a cómo se siente o cómo se ve, tráigala con suavidad de nuevo hacia afuera. Esto toma práctica.",
+          "Deje que se noten pequeñas señales de nervios. Muchas veces los demás las notan menos de lo que usted cree.",
+          "Participe, aunque sea un poco. Haga una pregunta, comparta una idea o sonría."
+        ]
+      },
+      {
+        "heading": "Después",
+        "steps": [
+          "Escriba lo que pasó de verdad. Quédese con lo que la gente dijo e hizo, no con cómo se sintió por dentro.",
+          "Compárelo con lo que temía. Vuelva a calificar cuánto cree en ese miedo.",
+          "Tenga cuidado de no repetir el momento en su cabeza buscándole fallas. Repasarlo muchas veces hace que las cosas parezcan peores de lo que fueron. Si lo nota, pase con suavidad a otra cosa."
+        ]
+      },
+      {
+        "heading": "Ideas para practicar",
+        "steps": [
+          "Salude a un vecino o a un compañero de trabajo.",
+          "Pregúntele a un empleado de una tienda dónde encontrar algo.",
+          "Llame a un negocio para preguntar a qué hora cierran.",
+          "Dé su opinión en una reunión o un grupo.",
+          "Coma o tome algo en un café lleno de gente.",
+          "Cometa un pequeño error a propósito, como hacer una pausa a la mitad de una frase, y vea qué pasa.",
+          "Mi propia idea: ________________________"
+        ]
+      },
+      {
+        "heading": "Que vaya con su vida",
+        "body": "Las costumbres sobre mirar a los ojos, la conversación casual y hablar delante de otros cambian entre familias y culturas. Elija metas que le importen y que vayan con su comunidad. No tiene que convertirse en alguien que no es."
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Situación",
+        "Lo que temía (lo creo 0-100%)",
+        "Hábitos de seguridad que dejé",
+        "Adónde se fue mi atención",
+        "Lo que pasó de verdad",
+        "Miedo antes y después (0-10)"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: Elija situaciones que sean seguras. Practicar significa enfrentar cosas que dan miedo pero que no son peligrosas de verdad. Si alguien le trata mal por ser quien es, no es su culpa. Hable de esto con su consejero. Trate de no usar alcohol ni otras drogas para pasar los eventos sociales. Si siente que los necesita para sobrellevarlos, dígaselo a su consejero. Esta habilidad no es para emergencias. Si tiene pensamientos de hacerse daño o de hacerle daño a otra persona, llame o envíe un mensaje de texto al 988 en EE. UU., o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
   "sources": [
     {
       "title": "NICE guideline CG159",

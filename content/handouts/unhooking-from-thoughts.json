@@ -53,6 +53,64 @@
     "rows": 7
   },
   "safetyNote": "Safety first: This skill is for everyday sticky thoughts. Thoughts about ending your life or hurting someone are not something to handle on your own with this sheet. If you have thoughts like that, reach out right away. In the US, call or text 988 or call 911. In other countries, call your local emergency number or visit findahelpline.com. If some thoughts feel very upsetting, or keep you stuck doing the same things over and over, tell your counselor or therapist. Resource only. This sheet does not replace care from a licensed professional.",
+  "es": {
+    "title": "Soltarse de los pensamientos pegajosos",
+    "intro": "Nuestra mente nos habla todo el día. Adivina, juzga y cuenta historias. Algunos pensamientos ayudan. Otros son duros o dan miedo, como 'Voy a arruinar esto' o 'No le caigo bien a nadie'. Cuando un pensamiento le engancha, puede sentirse como un hecho o una orden. Entonces le puede empujar a evitar cosas o a rendirse. Soltarse no significa discutir con el pensamiento ni hacer que desaparezca. Significa ver un pensamiento como lo que es, un pensamiento, para que pueda elegir qué hacer después. Cada práctica toma unos 5 a 10 minutos.",
+    "sections": [
+      {
+        "heading": "Paso 1: Atrape el pensamiento",
+        "steps": [
+          "Note cuándo aparece un pensamiento que le hace sentir mal o que no le deja avanzar.",
+          "Escríbalo con sus propias palabras, tal como se lo dice su mente.",
+          "Califique qué tanto le atrapa en este momento, del 0 al 10. Un 0 significa nada. Un 10 significa que se siente totalmente cierto."
+        ]
+      },
+      {
+        "heading": "Paso 2: Agregue unas palabras al principio",
+        "body": "Diga otra vez el pensamiento, pero ponga unas palabras antes. Por ejemplo, 'Voy a arruinar esto' se convierte en 'Mi mente me está diciendo que voy a arruinar esto'. O pruebe: 'Noto que estoy teniendo el pensamiento de que...' Dígalo despacio. Note si algo cambia, aunque sea un poco."
+      },
+      {
+        "heading": "Paso 3: Pruebe una nueva forma de verlo",
+        "body": "Elija una de estas. Algunas funcionan mejor para algunas personas. Sáltese las que le parezcan tontas o poco amables con usted.",
+        "steps": [
+          "Escriba el pensamiento en una tarjeta. Póngala cerca de su cara. Luego aléjela con el brazo estirado. Note cuánto más puede ver a su alrededor.",
+          "Imagine las palabras en un letrero al lado del camino, o en una nube que pasa. Deje que pase a su propio ritmo.",
+          "Diga el pensamiento muy despacio, una palabra a la vez.",
+          "Contéstele a su mente como le contestaría a un amigo preocupado: 'Te escucho. Gracias por tratar de ayudar.' Luego vuelva a lo que estaba haciendo.",
+          "Póngale a la historia un nombre corto, como 'la historia del desastre'. Cuando aparezca, solo diga: 'Ahí está otra vez esa historia.'"
+        ]
+      },
+      {
+        "heading": "Paso 4: Elija su siguiente paso",
+        "steps": [
+          "Pregúntese: Si este pensamiento viniera conmigo, ¿qué haría ahora mismo que sea importante para mí?",
+          "Dé un paso pequeño, aunque el pensamiento siga ahí.",
+          "Vuelva a calificar qué tanto le atrapa el pensamiento, del 0 al 10."
+        ]
+      },
+      {
+        "heading": "Es bueno saber",
+        "steps": [
+          "El pensamiento puede volver. Eso es normal. Cada vez que se suelta, lo hace un poco más rápido.",
+          "No tiene que gustarle un pensamiento ni creerlo. Solo lo nota.",
+          "Algunas preocupaciones son sobre problemas reales, como el dinero o la seguridad. Para esas, haga un plan o pida ayuda.",
+          "Practique primero con pensamientos pequeños, antes de probar con los más difíciles.",
+          "Traiga su registro a su próxima cita."
+        ]
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Día",
+        "El pensamiento",
+        "Qué tanto me atrapa antes (0-10)",
+        "Lo que hice después",
+        "Qué tanto me atrapa después (0-10)"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: Esta habilidad es para los pensamientos pegajosos de todos los días. Los pensamientos de quitarse la vida o de hacerle daño a alguien no son algo para manejar sin ayuda con esta hoja. Si tiene pensamientos así, pida ayuda de inmediato. En EE. UU., llame o envíe un mensaje de texto al 988, o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Si algunos pensamientos le molestan mucho, o le hacen repetir las mismas cosas una y otra vez, dígaselo a su consejero o terapeuta. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
   "sources": [
     {
       "title": "Acceptance and commitment therapy: model, processes and outcomes (Hayes, Luoma, Bond, Masuda & Lillis)",

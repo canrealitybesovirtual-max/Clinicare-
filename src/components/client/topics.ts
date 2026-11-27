@@ -1,19 +1,21 @@
 /**
- * Client-mode topics (G3) from content/topics.json. Only the plain clientLabel / clientLabelEs, the flags and the
- * canonical MedlinePlus page links reach client components; the clinician-facing search keywords (en / es, which can
- * name a diagnosis) never do. The topic id is the only value sent to /api/health-topics (G5, G17).
- *
- * TOPIC_SKILLS maps each topic to related app-authored handouts (curated ids; original handouts written for clients).
+ * Client-mode topics (G3) from content/topics.json. Only the plain clientLabel / clientLabelEs, the flags, the related
+ * handout ids and the canonical MedlinePlus page links reach client components; the clinician-facing search keywords
+ * (en / es, which can name a diagnosis) never do. Import this module from SERVER components only and pass ClientTopic
+ * objects down, so topics.json itself stays out of client bundles. The topic id is the only value sent to
+ * /api/health-topics (G5, G17).
  */
 import topicsJson from "@content/topics.json";
+import type { Text } from "@/lib/i18n/core";
 import { HealthTopicsFileSchema } from "@/lib/schemas-topics";
 
 export interface ClientTopic {
   id: string;
-  label: string;
-  labelEs: string;
+  label: Text;
   sud: boolean;
   crisis: boolean;
+  /** App-authored client handouts to offer as skills (content/topics.json handoutIds). */
+  handoutIds: readonly string[];
   pages: { en: string; es: string };
 }
 
@@ -21,10 +23,10 @@ const file = HealthTopicsFileSchema.parse(topicsJson);
 
 export const CLIENT_TOPICS: readonly ClientTopic[] = file.topics.map((t) => ({
   id: t.id,
-  label: t.clientLabel,
-  labelEs: t.clientLabelEs,
+  label: { en: t.clientLabel, es: t.clientLabelEs },
   sud: t.sud,
   crisis: t.crisis,
+  handoutIds: t.handoutIds,
   pages: t.pages,
 }));
 
@@ -34,10 +36,10 @@ export const getClientTopic = (id: string): ClientTopic | undefined => CLIENT_TO
  * Plain-language groups for the client topic list (curated ids). Crisis topics are pulled out and shown first;
  * any topic not listed here falls into "More topics", so a new topic is never hidden.
  */
-const GROUPS: readonly { id: string; label: string; ids: readonly string[] }[] = [
+const GROUPS: readonly { id: string; label: Text; ids: readonly string[] }[] = [
   {
     id: "feelings",
-    label: "Feelings",
+    label: { en: "Feelings", es: "Sentimientos" },
     ids: [
       "anxiety",
       "panic-attacks",
@@ -54,21 +56,25 @@ const GROUPS: readonly { id: string; label: string; ids: readonly string[] }[] =
   },
   {
     id: "sleep-body",
-    label: "Sleep and body",
+    label: { en: "Sleep and body", es: "El sueño y el cuerpo" },
     ids: ["trouble-sleeping", "healthy-sleep", "relaxation", "exercise", "eating-concerns", "feeling-better"],
   },
   {
     id: "life",
-    label: "Life changes and relationships",
+    label: { en: "Life changes and relationships", es: "Cambios en la vida y relaciones" },
     ids: ["mood-after-baby", "seasonal-mood", "caregiving", "disasters", "later-life", "military-life"],
   },
-  { id: "habits", label: "Alcohol, drugs and habits", ids: ["alcohol", "quitting-smoking"] },
-  { id: "health", label: "Health conditions", ids: ["chronic-illness", "mental-health", "mental-health-conditions"] },
+  { id: "habits", label: { en: "Alcohol, drugs and habits", es: "Alcohol, drogas y hábitos" }, ids: ["alcohol", "quitting-smoking"] },
+  {
+    id: "health",
+    label: { en: "Health conditions", es: "Problemas de salud" },
+    ids: ["chronic-illness", "mental-health", "mental-health-conditions"],
+  },
 ];
 
 export interface ClientTopicGroup {
   id: string;
-  label: string;
+  label: Text;
   topics: ClientTopic[];
 }
 
@@ -86,41 +92,6 @@ export function groupClientTopics(topics: readonly ClientTopic[] = CLIENT_TOPICS
     if (list.length) groups.push({ id: g.id, label: g.label, topics: list });
   }
   const other = rest.filter((t) => !placed.has(t.id));
-  if (other.length) groups.push({ id: "more", label: "More topics", topics: other });
+  if (other.length) groups.push({ id: "more", label: { en: "More topics", es: "Más temas" }, topics: other });
   return { crisis, groups };
 }
-
-/** Related self-help skills (handout ids) per topic. Curated; every id must exist in content/handouts. */
-export const TOPIC_SKILLS: Readonly<Record<string, readonly string[]>> = {
-  anxiety: ["worry-log", "breathing-practice", "pmr-homework", "grounding-5-4-3-2-1"],
-  "panic-attacks": ["panic-cycle", "breathing-practice", "behavioral-experiment-record", "exposure-ladder"],
-  "low-mood": ["activity-schedule", "kind-self-talk", "thought-record", "values-compass"],
-  "after-trauma": ["grounding-5-4-3-2-1", "breathing-practice", "hard-moment-plan"],
-  "healthy-sleep": ["sleep-habits", "sleep-diary"],
-  "trouble-sleeping": ["sleep-diary", "sleep-habits", "pmr-homework"],
-  stress: ["breathing-practice", "pmr-homework", "problem-solving-steps", "mindful-check-in"],
-  grief: ["grief-and-loss", "kind-self-talk"],
-  alcohol: ["drinking-diary", "urge-surfing-log", "relapse-prevention-plan"],
-  "strong-fears": ["exposure-ladder", "behavioral-experiment-record", "breathing-practice"],
-  "unwanted-thoughts": ["unhooking-from-thoughts", "erp-practice-log"],
-  "social-nervousness": ["social-situations-practice", "assertive-communication", "behavioral-experiment-record"],
-  "self-harm-prevention": ["safety-plan", "hard-moment-plan", "coping-cards"],
-  "suicide-prevention": ["safety-plan", "hard-moment-plan", "coping-cards"],
-  "mental-health": ["mindful-check-in", "values-compass", "activity-schedule"],
-  "feeling-better": ["activity-schedule", "movement-plan", "kind-self-talk"],
-  relaxation: ["pmr-homework", "breathing-practice", "grounding-5-4-3-2-1"],
-  exercise: ["movement-plan", "activity-schedule"],
-  "mood-and-energy-shifts": ["sleep-diary", "mindful-check-in"],
-  "eating-concerns": ["kind-self-talk", "mindful-check-in"],
-  "mood-after-baby": ["activity-schedule", "kind-self-talk", "sleep-habits"],
-  "seasonal-mood": ["activity-schedule", "movement-plan"],
-  caregiving: ["problem-solving-steps", "kind-self-talk", "breathing-practice"],
-  "relationship-safety": ["grounding-5-4-3-2-1", "breathing-practice"],
-  "chronic-illness": ["problem-solving-steps", "pmr-homework", "values-compass"],
-  disasters: ["grounding-5-4-3-2-1", "breathing-practice", "problem-solving-steps"],
-  "later-life": ["activity-schedule", "movement-plan"],
-  "military-life": ["grounding-5-4-3-2-1", "hard-moment-plan", "sleep-diary"],
-  "focus-and-attention": ["problem-solving-steps", "activity-schedule"],
-  "mental-health-conditions": ["mindful-check-in", "coping-cards"],
-  "quitting-smoking": ["urge-surfing-log"],
-};

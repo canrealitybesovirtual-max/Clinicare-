@@ -152,17 +152,11 @@ export function AssistantPanel({ status, analysis }: { status: AssistantStatus; 
 
   return (
     <section aria-labelledby="assistant-heading" className="rounded-xl border border-border bg-surface p-4">
-      <div className="flex flex-wrap items-start gap-3">
-        <Bot aria-hidden className="mt-0.5 size-5 shrink-0 text-muted" />
-        <div className="min-w-0 flex-1">
-          <h3 id="assistant-heading" className="text-base font-semibold">
-            Ask the AI assistant (Claude)
-          </h3>
-          <p className="mt-0.5 text-sm text-muted">
-            Optional, for this session only. Sends the identifier-scrubbed note and app codes through this app&apos;s
-            server to {status.model ?? "Claude"}; nothing is stored. Substance-use details are never sent.
-          </p>
-        </div>
+      <div className="flex items-center gap-3">
+        <Bot aria-hidden className="size-5 shrink-0 text-muted" />
+        <h3 id="assistant-heading" className="min-w-0 flex-1 text-base font-semibold leading-snug">
+          Ask the AI assistant (Claude)
+        </h3>
         <button
           type="button"
           role="switch"
@@ -175,13 +169,16 @@ export function AssistantPanel({ status, analysis }: { status: AssistantStatus; 
           }}
           className="group relative inline-flex h-11 w-[4.5rem] shrink-0 items-center rounded-full border border-border bg-surface-2 p-1 aria-checked:border-primary aria-checked:bg-primary/15"
         >
-          <span className="sr-only">{optIn ? "On" : "Off"}</span>
           <span
             aria-hidden
             className="size-8 rounded-full bg-muted transition-transform motion-reduce:transition-none group-aria-checked:translate-x-7 group-aria-checked:bg-primary-solid"
           />
         </button>
       </div>
+      <p className="mt-2 text-sm text-muted">
+        Optional, for this session only. Sends the identifier-scrubbed note and app codes through this app&apos;s
+        server to {status.model ?? "Claude"}; nothing is stored. Substance-use details are never sent.
+      </p>
 
       {optIn ? (
         <div className="mt-4 space-y-4">

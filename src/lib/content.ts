@@ -1,16 +1,18 @@
 /**
- * Single entry point for all curated content. Everything is validated with zod at load time,
- * so malformed content fails the build and the tests (G10).
+ * Single entry point for the curated content that client components use: the symptom lexicon, every condition,
+ * built-in measures, every client handout, stats, crisis lines and the license registry. Everything is validated
+ * with zod at load time, so malformed content fails the build and the tests (G10).
  * G7: only measures whose license is "confirmed" in content/licenses.json are exposed as built-in.
+ * It imports only the generated folder modules it needs (conditions, measures, handouts), so a client bundle that
+ * reaches this file never carries interventions, plans, ethics or legal content (those load via library.ts).
  */
 import symptomsJson from "@content/symptoms.json";
-import { conditionsRaw } from "./generated/content-index";
-import gad7Json from "@content/measures/gad-7.json";
-import phq9Json from "@content/measures/phq-9.json";
-import pmrJson from "@content/handouts/pmr-homework.json";
 import statsJson from "@content/stats/stats.json";
 import crisisJson from "@content/crisis-lines.json";
 import licensesJson from "@content/licenses.json";
+import { conditionsRaw } from "./generated/conditions";
+import { handoutsRaw } from "./generated/handouts";
+import { measuresRaw } from "./generated/measures";
 import {
   ConditionSchema,
   CrisisLinesSchema,
@@ -26,21 +28,24 @@ import {
   type Symptom,
 } from "./schemas";
 
-export const lexicon = SymptomLexiconSchema.parse(symptomsJson);
+/** Parses every raw item with its schema; a malformed file throws with its kind and id so the build fails (G10). */
+export function parseAll<T>(raw: readonly unknown[], schema: { safeParse: (x: unknown) => { success: true; data: T } | { success: false; error: Error } }, kind: string): T[] {
+  return raw.map((r, i) => {
+    const parsed = schema.safeParse(r);
+    if (parsed.success) return parsed.data;
+    const item = (r ?? {}) as { id?: unknown; conditionId?: unknown };
+    const id = typeof item.id === "string" ? item.id : typeof item.conditionId === "string" ? item.conditionId : `#${i}`;
+    throw new Error(`Invalid ${kind} content (${id}): ${parsed.error.message.slice(0, 400)}`);
+  });
+}
 
-/**
- * Every content/conditions/*.json file, in file-name order, from the generated static index (npm run gen:content).
- * A malformed file throws here with its id, so the build and the tests fail (G10).
- */
-export const conditions: Condition[] = conditionsRaw.map((raw, i) => {
-  const parsed = ConditionSchema.safeParse(raw);
-  if (parsed.success) return parsed.data;
-  const id = (raw as { id?: unknown } | null)?.id;
-  throw new Error(`Invalid condition content (${typeof id === "string" ? id : `#${i}`}): ${parsed.error.message.slice(0, 400)}`);
-});
+export const lexicon = SymptomLexiconSchema.parse(symptomsJson);
+/** Every content/conditions/*.json file, in file-name order (generated module, npm run gen:content). */
+export const conditions: Condition[] = parseAll(conditionsRaw, ConditionSchema, "condition");
 export const licenses = LicensesSchema.parse(licensesJson);
-const allMeasures: Measure[] = [gad7Json, phq9Json].map((m) => MeasureSchema.parse(m));
-export const handouts: Handout[] = [pmrJson].map((h) => HandoutSchema.parse(h));
+const allMeasures: Measure[] = parseAll(measuresRaw, MeasureSchema, "measure");
+/** Every client handout in content/handouts, in file-name order. */
+export const handouts: Handout[] = parseAll(handoutsRaw, HandoutSchema, "handout");
 export const stats: Stat[] = StatsFileSchema.parse(statsJson).stats;
 export const crisisLines = CrisisLinesSchema.parse(crisisJson);
 

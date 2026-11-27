@@ -32,9 +32,9 @@ export default function HandoutsPage() {
     <>
       <PageIntro title="Handouts" eyebrow="Step 6 · Resources for the client">
         <p>
-          Original, plain-language handouts to print, download or send as a link. PDFs are created on this device and
-          nothing is uploaded; the only personal field is a blank name line to fill in by hand. Share links carry the
-          handout id only.
+          Original, plain-language handouts to print, download or send as a link, in English and in Spanish (ES). PDFs
+          are created on this device and nothing is uploaded; the only personal field is a blank name line to fill in by
+          hand. Share links carry the handout id only.
         </p>
       </PageIntro>
 
@@ -56,8 +56,9 @@ export default function HandoutsPage() {
                     <p className="flex items-center gap-1 text-xs text-muted">
                       <Clock aria-hidden className="size-3.5" /> About {h.estimatedMinutes} minutes
                     </p>
-                    <div className="mt-auto pt-1">
+                    <div className="mt-auto flex flex-col gap-1 pt-1">
                       <DownloadPdfButton handout={h} label="Download PDF" variant="primary" className="w-full" />
+                      {h.es ? <DownloadPdfButton handout={h} lang="es" label="Spanish PDF" className="w-full" /> : null}
                     </div>
                   </Card>
                 </li>

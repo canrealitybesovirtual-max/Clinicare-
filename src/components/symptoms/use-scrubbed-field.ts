@@ -44,13 +44,29 @@ function trackPointer(): void {
   window.addEventListener("pointercancel", release, { capture: true, passive: true });
 }
 
+/** Upper bound on the wait, so a press that never reports its release (pointer let go outside the window) cannot hold raw text. */
+const MAX_PRESS_WAIT_MS = 1500;
+
 function whenNotPressing(fn: () => void): () => void {
-  if (pressing) {
-    afterPress.add(fn);
-    return () => afterPress.delete(fn);
+  if (!pressing) {
+    const t = setTimeout(fn, 0);
+    return () => clearTimeout(t);
   }
-  const t = setTimeout(fn, 0);
-  return () => clearTimeout(t);
+  let done = false;
+  const run = () => {
+    if (done) return;
+    done = true;
+    afterPress.delete(run);
+    clearTimeout(timer);
+    fn();
+  };
+  const timer = setTimeout(run, MAX_PRESS_WAIT_MS);
+  afterPress.add(run);
+  return () => {
+    done = true;
+    afterPress.delete(run);
+    clearTimeout(timer);
+  };
 }
 
 /* ------------------------------------------------------------------ hook */

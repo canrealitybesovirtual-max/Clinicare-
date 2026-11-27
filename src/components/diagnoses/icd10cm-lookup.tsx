@@ -112,7 +112,7 @@ function LookupInner({ terms }: { terms: readonly string[] }) {
                 maxLength={8}
                 value={field.draft}
                 onChange={(e) => field.setDraft(e.target.value)}
-                onBlur={field.flushNow}
+                onBlur={field.onBlur}
                 aria-describedby={problem ? `${ids.hint} ${ids.err}` : ids.hint}
                 aria-invalid={problem ? true : undefined}
                 {...PRIVATE_TEXT_FIELD_PROPS}

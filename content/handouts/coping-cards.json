@@ -57,6 +57,67 @@
     "rows": 7
   },
   "safetyNote": "Safety first: Coping cards can help in hard moments, but they are not enough on their own if you are thinking about suicide or might hurt yourself or someone else. Get help now. In the US, call or text 988 or call 911. In other countries, call your local emergency number or visit findahelpline.com. Think about putting these numbers on one of your cards. Resource only. This sheet does not replace care from a licensed professional.",
+  "es": {
+    "title": "Tarjetas de apoyo",
+    "intro": "Una tarjeta de apoyo es una tarjeta pequeña que usted mismo escribe y lleva consigo. Le recuerda lo que le ayuda cuando las cosas se ponen difíciles. Cuando algo le altera, puede ser difícil recordar lo que aprendió en consejería. Una tarjeta pone esas ideas en su mano. Hacer unas cuantas tarjetas toma unos 15 minutos.",
+    "sections": [
+      {
+        "heading": "Lo que necesita",
+        "steps": [
+          "Unas cuantas fichas o pedazos pequeños de papel.",
+          "Un bolígrafo.",
+          "Un lugar para guardarlas, como su billetera, su bolsa o su bolsillo."
+        ]
+      },
+      {
+        "heading": "Tipos de tarjetas que puede hacer",
+        "body": "Elija uno o dos tipos para empezar. Escriba con sus propias palabras.",
+        "steps": [
+          "Tarjeta de pensamiento: En el frente, escriba un pensamiento que muchas veces le desanima. Atrás, escriba una respuesta más equilibrada o que le ayude.",
+          "Tarjeta de habilidad: Escriba los pasos de una habilidad que le ayuda, como la respiración lenta o anclarse al presente.",
+          "Tarjeta de razones: Escriba por qué está haciendo este trabajo difícil, como las personas o las metas que le importan.",
+          "Tarjeta de palabras amables: Escriba lo que le diría a un buen amigo que se sintiera como usted.",
+          "Tarjeta de ayuda: Escriba las personas a las que puede acudir y las líneas de crisis, como el 988."
+        ]
+      },
+      {
+        "heading": "Ejemplos",
+        "steps": [
+          "Frente: 'Siempre lo echo todo a perder.' Atrás: 'Cometí un error. También he hecho muchas cosas bien. Puedo arreglar esto.'",
+          "Frente: 'No puedo con este sentimiento.' Atrás: 'Este sentimiento es fuerte, pero va a pasar. Puedo respirar despacio y esperar 10 minutos.'",
+          "Tarjeta de razones: 'Hago esto para poder estar presente para mis hijos y disfrutar el tiempo con ellos.'"
+        ]
+      },
+      {
+        "heading": "Consejos para escribir buenas tarjetas",
+        "steps": [
+          "Que sea corta. Debería poder leerla en menos de un minuto.",
+          "Use palabras que suenen como usted.",
+          "Que las palabras sean creíbles. Si una frase le parece falsa, cámbiela hasta que le parezca lo bastante cierta.",
+          "Escriba sus tarjetas cuando esté en calma, o con su consejero."
+        ]
+      },
+      {
+        "heading": "Cómo usar sus tarjetas",
+        "steps": [
+          "Lea sus tarjetas todos los días, aunque se sienta bien. Así las palabras se le quedan.",
+          "Saque una tarjeta cuando note las primeras señales de un momento difícil.",
+          "Cambie o agregue tarjetas a medida que aprende lo que le ayuda.",
+          "Traiga sus tarjetas a su próxima cita."
+        ]
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Día",
+        "Tarjeta que usé",
+        "Qué estaba pasando",
+        "¿Me ayudó? (0-10)"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: Las tarjetas de apoyo pueden ayudar en momentos difíciles, pero no son suficientes por sí solas si está pensando en el suicidio o si podría hacerse daño o hacerle daño a otra persona. Busque ayuda ahora. En EE. UU., llame o envíe un mensaje de texto al 988, o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Piense en anotar estos números en una de sus tarjetas. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
   "sources": [
     {
       "title": "Cognitive Behavior Therapy: Basics and Beyond, Third Edition (J. S. Beck)",

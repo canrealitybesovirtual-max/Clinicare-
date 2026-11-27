@@ -1,83 +1,107 @@
+"use client";
 /**
- * One handout for a client (G3): plain language, crisis help on the same page, a printable PDF, and source credits
- * that pass the client-safe filter (no diagnosis names, codes or scores). Used by the public share page /r/[id] and
- * by client mode /client/skills/[id]. Server component; only the PDF button and crisis panel run in the browser.
+ * One handout for a client (G3), in English or Spanish: plain language, a visible "English / Español" switch,
+ * crisis help on the same page, a printable PDF in the same language, and source credits that pass the client-safe
+ * filter (no diagnosis names, codes or scores). Used by the public share pages /r/[id] and /r/[id]/es and by client
+ * mode /client/skills/[id]. The language is memory-only (G5).
  */
 import Link from "next/link";
-import { ArrowLeft, Clock, HeartHandshake, Siren } from "lucide-react";
+import { ArrowLeft, Clock, Info } from "lucide-react";
 import type { Handout } from "@/lib/schemas";
+import { pick, type Lang, type Text } from "@/lib/i18n/core";
 import { clientSafeSources } from "@/lib/client-safe";
 import { Card } from "@/components/ui/card";
 import { ExternalLink } from "@/components/ui/external-link";
-import { CrisisInline, CrisisPanel } from "@/components/crisis/crisis-panel";
 import { DownloadPdfButton } from "@/components/pdf/download-pdf-button";
 import { HandoutBody } from "@/components/handouts/handout-body";
+import { LangSwitch } from "@/components/handouts/lang-switch";
+import { HANDOUT_TEXT, handoutLangs, localizeHandout, withN } from "@/components/handouts/localize";
+import { CrisisStrip, HelpNowCard } from "./crisis-blocks";
 import { TalkToSomeone } from "./talk-to-someone";
+import { useContentLang } from "./use-content-lang";
+
+const TEXT = {
+  eyebrow: { en: "Skill to practice", es: "Ejercicio para practicar" },
+  readOrPrint: {
+    en: "Read it here, or print it and write on it. This page works with screen readers; the printout is for paper.",
+    es: "Léala aquí, o imprímala y escriba en ella. Esta página funciona con lectores de pantalla; la hoja impresa es para papel.",
+  },
+  print: { en: "Download to print", es: "Descargar para imprimir" },
+  basedOn: { en: "Based on information from", es: "Basado en información de" },
+  notReviewed: {
+    en: "This sheet was written for this app. A licensed professional has not reviewed it yet, so ask your counselor about it.",
+    es: "Esta hoja se escribió para esta aplicación. Todavía no la ha revisado un profesional con licencia, así que pregúntele a su consejero sobre ella.",
+  },
+} satisfies Record<string, Text>;
 
 export function ClientHandoutView({
   handout,
   back,
+  initialLang,
 }: {
   handout: Handout;
   /** Where "back" goes: client mode skills list, or the self-help home for shared links. */
-  back: { href: string; label: string };
+  back: { href: string; label: Text };
+  /** Open in this language (the Spanish share link). Otherwise the shell language is used. */
+  initialLang?: Lang;
 }) {
+  const { lang, setLang } = useContentLang(initialLang);
+  const h = localizeHandout(handout, lang);
+  // Labels follow the handout's language, so a page never mixes two languages in its own text.
+  const t = (text: Text) => pick(text, h.lang);
   const sources = clientSafeSources(handout.sources);
+  const langs = handoutLangs(handout);
+
   return (
-    <div className="mx-auto max-w-3xl space-y-6">
+    <div lang={h.lang} className="mx-auto max-w-3xl space-y-6">
       <Link href={back.href} className="inline-flex min-h-11 items-center gap-1.5 text-sm font-semibold text-accent">
-        <ArrowLeft aria-hidden className="size-4" /> {back.label}
+        <ArrowLeft aria-hidden className="size-4" /> {t(back.label)}
       </Link>
 
-      <div>
-        <p className="text-sm font-semibold uppercase tracking-wide text-accent">Skill to practice</p>
-        <h1 className="mt-1 text-2xl font-bold leading-tight tracking-tight sm:text-3xl">{handout.title}</h1>
-        <p className="mt-2 flex items-center gap-1.5 text-muted">
-          <Clock aria-hidden className="size-4" /> About {handout.estimatedMinutes} minutes
-        </p>
+      <div className="space-y-4">
+        <div>
+          <p className="text-sm font-semibold uppercase tracking-wide text-accent">{t(TEXT.eyebrow)}</p>
+          <h1 className="mt-1 text-2xl font-bold leading-tight tracking-tight sm:text-3xl">{h.title}</h1>
+          <p className="mt-2 flex items-center gap-1.5 text-muted">
+            <Clock aria-hidden className="size-4" /> {withN(t(HANDOUT_TEXT.minutes), handout.estimatedMinutes)}
+          </p>
+        </div>
+        {langs.length > 1 ? <LangSwitch name={`client-handout-lang-${handout.id}`} value={h.lang} onChange={setLang} /> : null}
       </div>
 
-      <div className="rounded-xl border border-crisis/30 border-l-[6px] border-l-crisis bg-surface p-4">
-        <p className="flex items-start gap-2 font-semibold">
-          <Siren aria-hidden className="mt-0.5 size-5 shrink-0 text-crisis" />
-          If you are in danger or thinking about hurting yourself, get help now.
-        </p>
-        <CrisisInline className="mt-1" />
-      </div>
+      <CrisisStrip />
 
       <Card className="space-y-5 sm:p-7">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-sm text-muted">
-            Read it here, or print it and write on it. This page also works with screen readers; the printout is for paper.
-          </p>
-          <DownloadPdfButton handout={handout} label="Download to print" variant="primary" />
+          <p className="text-sm text-muted">{t(TEXT.readOrPrint)}</p>
+          <DownloadPdfButton handout={handout} lang={h.lang} label={t(TEXT.print)} variant="primary" size="lg" />
         </div>
-        <HandoutBody handout={handout} headingLevel="h2" />
-        {sources.length ? (
-          <p className="border-t border-border pt-4 text-sm text-muted">
-            Based on information from{" "}
-            {sources.map((s, i) => (
-              <span key={s.url}>
-                {i > 0 ? ", " : ""}
-                <ExternalLink href={s.url}>{s.publisher}</ExternalLink>
-              </span>
-            ))}
-            .
-          </p>
-        ) : null}
+        <HandoutBody handout={handout} lang={h.lang} headingLevel="h2" />
+        <div className="space-y-2 border-t border-border pt-4 text-sm text-muted">
+          {sources.length ? (
+            <p>
+              {t(TEXT.basedOn)}{" "}
+              {sources.map((s, i) => (
+                <span key={s.url} lang="en">
+                  {i > 0 ? ", " : ""}
+                  <ExternalLink href={s.url}>{s.publisher}</ExternalLink>
+                </span>
+              ))}
+              .
+            </p>
+          ) : null}
+          {handout.reviewedBy === "PENDING" ? (
+            <p className="flex items-start gap-1.5">
+              <Info aria-hidden className="mt-0.5 size-4 shrink-0" /> {t(TEXT.notReviewed)}
+            </p>
+          ) : null}
+          {h.translatedBy?.includes("PENDING") ? <p>{HANDOUT_TEXT.machineTranslated.es}</p> : null}
+        </div>
       </Card>
 
-      <TalkToSomeone id="handout-talk" title="Talk with a licensed professional" />
+      <TalkToSomeone id="handout-talk" />
 
-      <section aria-labelledby="handout-help">
-        <Card className="border-crisis/30 sm:p-6">
-          <h2 id="handout-help" className="mb-4 flex items-center gap-2 text-xl font-bold">
-            <HeartHandshake aria-hidden className="size-6 text-accent" />
-            Need help right now?
-          </h2>
-          <CrisisPanel plain headingLevel="h3" />
-        </Card>
-      </section>
+      <HelpNowCard id="handout-help" />
     </div>
   );
 }

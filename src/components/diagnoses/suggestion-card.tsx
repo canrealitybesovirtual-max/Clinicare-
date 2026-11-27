@@ -38,30 +38,28 @@ import { LazyPanel } from "./lookup-status";
 import { Icd11Panel } from "./icd11-panel";
 import { MedlinePlusPanel } from "./medlineplus-panel";
 
-/** Evidence first (feature counts), then the rule-based strength band and score. */
-function StrengthMeter({ s }: { s: Suggestion }) {
+/**
+ * How much of the pattern's feature list is documented (owner decision 2026-11-27): feature counts and a
+ * feature-match label only. The 0-100 score is not shown here, so it is never read as a likelihood; it is under
+ * "Why suggested" with the arithmetic.
+ */
+function FeatureMatch({ s }: { s: Suggestion }) {
   const coreMatched = s.matched.filter((f) => f.kind === "core").length;
   const coreTotal = coreMatched + s.missing.filter((f) => f.kind === "core").length;
   const assocMatched = s.matched.length - coreMatched;
   const assocTotal = assocMatched + s.missing.filter((f) => f.kind === "associated").length;
   return (
     <div className="rounded-lg bg-surface-2 p-3">
-      <p className="text-sm font-semibold">
-        Core features {coreMatched} of {coreTotal}
-        {assocTotal > 0 ? ` · associated ${assocMatched} of ${assocTotal}` : ""}
+      <p className="text-base font-semibold">{STRENGTH_LABEL[s.strength]}</p>
+      <p className="mt-1 text-sm">
+        Key features documented: <span className="font-semibold">{coreMatched} of {coreTotal}</span>
       </p>
-      <p className="mt-1 flex flex-wrap items-baseline justify-between gap-x-3 text-sm">
-        <span className="font-semibold">{STRENGTH_LABEL[s.strength]}</span>
-        <span className="text-muted">
-          Score <span className="font-semibold text-text">{s.score}</span> of 100
-        </span>
-      </p>
-      <div aria-hidden className="relative mt-2 h-2.5 overflow-hidden rounded-full bg-border/70">
-        <div className="h-full rounded-full bg-accent" style={{ width: `${s.score}%` }} />
-        <span className="absolute inset-y-0 left-[40%] w-0.5 bg-surface" />
-        <span className="absolute inset-y-0 left-[65%] w-0.5 bg-surface" />
-      </div>
-      <p className="mt-1.5 text-xs text-muted">Possible below 40 · moderate 40–64 · strong 65 and above</p>
+      {assocTotal > 0 ? (
+        <p className="text-sm">
+          Supporting features: <span className="font-semibold">{assocMatched} of {assocTotal}</span>
+        </p>
+      ) : null}
+      <p className="mt-1.5 text-xs text-muted">How well the documented features fit this pattern&apos;s list; not a likelihood.</p>
     </div>
   );
 }
@@ -160,7 +158,7 @@ export function SuggestionCard({
             <span>{s.dsmPointer}</span>
           </dd>
         </dl>
-        <StrengthMeter s={s} />
+        <FeatureMatch s={s} />
       </div>
 
       <p className="mt-4 text-sm leading-relaxed">{cond.summary}</p>
@@ -308,7 +306,12 @@ export function SuggestionCard({
       </div>
 
       <div className="mt-5">
-        <Disclosure title="Why suggested" meta="how the score was computed">
+        <Disclosure title="Why suggested" meta={`score ${s.score} of 100`}>
+          <p>
+            <strong>Score {s.score} of 100.</strong> {STRENGTH_LABEL.strong} at 65 and above, {STRENGTH_LABEL.moderate.toLowerCase()}{" "}
+            40–64, {STRENGTH_LABEL.possible.toLowerCase()} below 40. The score ranks patterns by documented features; it is not a
+            probability.
+          </p>
           <p>
             Core features matched: <strong>{ex.coreHits}</strong> of {ex.coreCount} (weight {ex.coreMatched} of{" "}
             {ex.coreTotal}); at least {ex.minCore} expected. Associated features: weight {ex.assocMatched} of{" "}
@@ -353,12 +356,12 @@ export function SuggestionCard({
               Distress or impairment {cond.impairmentRequired ? "is usually required for this pattern." : "is not used as a gate here."}
             </li>
             <li>
-              Strength is capped at “possible” when fewer than {ex.minCore} core features are present. Suggestions under 15
-              are not shown, and no match is ever forced.
+              The label is capped at “{STRENGTH_LABEL.possible.toLowerCase()}” when fewer than {ex.minCore} core features are
+              present. Suggestions under 15 are not shown, and no match is ever forced.
             </li>
             <li>
-              A match is held at “moderate” when supporting features are thin, when a feature this pattern requires is not
-              documented, or when a red flag in the same input points elsewhere. Related features (for example, sleeping
+              A match is held at “{STRENGTH_LABEL.moderate.toLowerCase()}” when supporting features are thin, when a feature this
+              pattern requires is not documented, or when a red flag in the same input points elsewhere. Related features (for example, sleeping
               too little or too much) count once.
             </li>
             <li>The weights are app-authored and awaiting clinical review. They are not DSM-5-TR criteria.</li>

@@ -59,6 +59,69 @@
     "rows": 6
   },
   "safetyNote": "Safety first: Being kind to yourself can sometimes stir up sad or painful feelings, especially if people were harsh with you in the past. Go slowly, and talk about it with your counselor or therapist. If your inner voice tells you to hurt yourself, or that you would be better off dead, do not wait. Get help now. In the US, call or text 988 or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "es": {
+    "title": "Hablarse con amabilidad",
+    "intro": "Muchas personas tienen una voz interior dura. Puede insultarle o decirle que siempre lo echa todo a perder. Esta voz muchas veces trata de protegerle, pero puede hacer que se sienta peor. También puede hacer que le cueste más volver a intentarlo. Hablarse con amabilidad significa hablarse como lo haría un buen entrenador o un buen amigo. Es una forma de hablar honesta, cálida y útil. No se trata de fingir que todo está bien. Cada práctica toma unos 5 a 10 minutos.",
+    "sections": [
+      {
+        "heading": "Note a su crítico interior",
+        "steps": [
+          "Preste atención a lo que se dice a sí mismo cuando algo sale mal.",
+          "Escriba las palabras exactas. Note también el tono. ¿Es fuerte, frío o cruel?",
+          "Pregúntese: ¿De qué trata de protegerme esta voz? Tal vez de fallar, de sufrir o de decepcionar a alguien."
+        ]
+      },
+      {
+        "heading": "La prueba del buen amigo",
+        "body": "Imagine a un buen amigo en la misma situación. ¿Qué le diría? ¿Cómo se lo diría? Ahora note en qué se diferencia de lo que se dice a sí mismo."
+      },
+      {
+        "heading": "Escriba una respuesta justa, cálida y útil",
+        "body": "Cuando aparezca el crítico, escríbale una respuesta corta. Trate de que su respuesta haga tres cosas.",
+        "steps": [
+          "Justa: Quédese con lo que pasó de verdad. Cambie una etiqueta como 'No sirvo para nada' por un hecho como 'Se me pasó una fecha de entrega.'",
+          "Cálida: Use el tono que usaría con alguien que le importa. Puede ser firme y a la vez amable.",
+          "Útil: Termine con un pequeño paso siguiente, como 'Mañana voy a pedir más tiempo.'"
+        ]
+      },
+      {
+        "heading": "Primero calme su cuerpo si lo necesita",
+        "steps": [
+          "Si el crítico habla fuerte, primero haga más lenta su respiración. Suelte el aire durante un poco más de tiempo del que tarda en tomarlo.",
+          "A algunas personas les gusta sostener algo tibio, como una taza, o envolverse en una cobija suave.",
+          "Recuerde que todos cometemos errores y tenemos días difíciles. No es la única persona a la que le pasa.",
+          "Si algo de esto se siente raro al principio, es común. Sáltese lo que no le funcione."
+        ]
+      },
+      {
+        "heading": "Escriba sus propias palabras amables",
+        "body": "Escriba dos o tres frases con sus propias palabras que le parezcan ciertas y amables. Guárdelas en una tarjeta o en su billetera. Aquí tiene algunas ideas para empezar.",
+        "steps": [
+          "'Esto es difícil, y estoy haciendo lo mejor que puedo.'",
+          "'No necesito hacer todo perfecto para merecer cuidado.'",
+          "'Un paso a la vez es suficiente.'"
+        ]
+      },
+      {
+        "heading": "Lo que no es hablarse con amabilidad",
+        "steps": [
+          "No es dejar pasar todo. Puede ser amable y aun así hacerse responsable.",
+          "No es mentirse. Las palabras amables pueden ser honestas.",
+          "No es egoísmo. Cuidarse puede darle más fuerza para cuidar a los demás."
+        ]
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Qué pasó",
+        "Lo que dijo mi crítico",
+        "Lo que me dije en su lugar",
+        "Cómo me sentí después (0-10)"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: Ser amable consigo mismo a veces puede despertar sentimientos tristes o dolorosos, sobre todo si otras personas fueron duras con usted en el pasado. Vaya despacio y hable de esto con su consejero o terapeuta. Si su voz interior le dice que se haga daño, o que sería mejor no estar vivo, no espere. Busque ayuda ahora. En EE. UU., llame o envíe un mensaje de texto al 988, o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
   "sources": [
     {
       "title": "Introducing compassion-focused therapy (Gilbert)",

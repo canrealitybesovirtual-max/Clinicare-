@@ -7,11 +7,15 @@ import { Badge } from "@/components/ui/badge";
 import { ExternalLink } from "@/components/ui/external-link";
 import { cn } from "@/lib/utils";
 
-/** G10: visible badge while a licensed clinician has not signed off on the item. */
-export function ReviewBadge({ reviewedBy, className }: { reviewedBy: string; className?: string }) {
+/**
+ * G10: visible badge while a licensed clinician has not signed off on the item. `inList` keeps it visible but
+ * neutral in list views (owner decision), so real warnings such as "Trained clinicians only" stand out there;
+ * detail pages keep the warning tone.
+ */
+export function ReviewBadge({ reviewedBy, inList = false, className }: { reviewedBy: string; inList?: boolean; className?: string }) {
   if (reviewedBy === "PENDING") {
     return (
-      <Badge tone="warn" className={className}>
+      <Badge tone={inList ? "neutral" : "warn"} className={className}>
         <ClipboardCheck aria-hidden className="size-3.5" />
         Not yet clinically reviewed
       </Badge>

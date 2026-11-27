@@ -12,10 +12,10 @@ export function LookupLoading({ what, className }: { what: string; className?: s
   return (
     <div className={cn("space-y-2", className)}>
       <p className="flex items-center gap-2 text-sm text-muted">
-        <LoaderCircle aria-hidden className="size-4 animate-spin" />
+        <LoaderCircle aria-hidden className="size-4 animate-spin motion-reduce:animate-none" />
         Loading {what}…
       </p>
-      <div aria-hidden className="h-12 animate-pulse rounded-lg bg-surface-2" />
+      <div aria-hidden className="h-12 animate-pulse rounded-lg bg-surface-2 motion-reduce:animate-none" />
     </div>
   );
 }
@@ -145,7 +145,7 @@ export function LazyPanel({
         {Icon ? <Icon aria-hidden className="size-4 shrink-0 text-muted" /> : null}
         <span className="flex-1">{title}</span>
         {meta ? <span className="text-xs font-normal text-muted">{meta}</span> : null}
-        <ChevronDown aria-hidden className={cn("size-4 shrink-0 text-muted transition-transform", open && "rotate-180")} />
+        <ChevronDown aria-hidden className={cn("size-4 shrink-0 text-muted transition-transform motion-reduce:transition-none", open && "rotate-180")} />
       </button>
       <div id={regionId} hidden={!open} className="space-y-3 pb-4 text-sm leading-relaxed">
         {mounted ? children : null}

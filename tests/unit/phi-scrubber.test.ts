@@ -1,6 +1,8 @@
 import { describe, expect, it } from "vitest";
 import { PHI_TYPE_LABELS, containsPHI, scrubPHI, summarizeFindings } from "@/lib/phi-scrubber";
 import type { PhiType, ScrubResult } from "@/lib/types";
+import { planLibraries } from "@/lib/library";
+import { planTextOf } from "@/lib/schemas-phase2";
 
 /** Asserts `secret` is fully covered by a finding of `type` and no longer appears in `clean`. */
 function expectRedacted(text: string, secret: string, type: PhiType): ScrubResult {
@@ -279,6 +281,11 @@ const REVIEW_POSITIVES: [PhiType, string, string][] = [
   ["SSN", "SSN last four 6789", "6789"],
   ["MRN", "chart 4421", "4421"],
   ["ADDRESS", "Teacher at Lincoln Elementary School", "Lincoln Elementary School"],
+  // Lower-case places stay redacted next to the "the <word> of" phrase rule
+  ["ADDRESS", "lives in dayton of course", "dayton"],
+  ["ADDRESS", "moved to toledo last year", "toledo"],
+  ["ADDRESS", "she lives in the springfield area", "springfield"],
+  ["ADDRESS", "Moved to The Woodlands in May", "Woodlands"],
 ];
 
 const REVIEW_NEGATIVES: [string, string][] = [
@@ -301,6 +308,12 @@ const REVIEW_NEGATIVES: [string, string][] = [
   ["distances", "Drove 20 miles on the highway and walked 3 blocks down the road."],
   ["not a handle", "Scrolls on instagram every night."],
   ["capitalized word after in", "In General she sleeps poorly."],
+  // Positional phrases after a location cue ("stays at the ... of") are not places
+  ["edges of groups", "Leaves gatherings early, stays at the edges of groups or keeps conversations very short."],
+  ["fringes of the family", "Stays at the fringes of the family at holidays."],
+  ["outskirts", "Moved to the outskirts of town to avoid crowds."],
+  ["center of attention", "Stays at the center of attention, then crashes."],
+  ["edge alone", "Lives at the edge, always on guard."],
 ];
 
 describe("review regressions: identifiers the scrubber used to miss", () => {
@@ -312,6 +325,27 @@ describe("review regressions: identifiers the scrubber used to miss", () => {
 
 describe("review regressions: clinical text the scrubber used to over-redact", () => {
   it.each(REVIEW_NEGATIVES)("%s", (_label, text) => expectClean(text));
+});
+
+describe("curated plan wording", () => {
+  // The plan builder re-scrubs an item when the clinician edits it, so library wording must pass unchanged.
+  const lines = planLibraries.flatMap((lib) =>
+    lib.problems.flatMap((p) => [
+      p.label,
+      ...p.definitions.map(planTextOf),
+      ...p.longTermGoals.map(planTextOf),
+      ...p.shortTermObjectives.map((o) => o.text),
+    ]),
+  );
+
+  it("has library wording to check", () => {
+    expect(lines.length).toBeGreaterThan(100);
+  });
+
+  it("every problem, definition, goal and objective passes the scrubber unchanged", () => {
+    const flagged = lines.filter((l) => scrubPHI(l).findings.length > 0).map((l) => `${scrubPHI(l).clean}`);
+    expect(flagged).toEqual([]);
+  });
 });
 
 /* ------------------------------------------------------------------ */

@@ -72,6 +72,83 @@
     "rows": 7
   },
   "safetyNote": "Safety first: If you feel very sleepy, do not drive or use machines until you feel alert. If you get up at night, keep a soft light on so you don't trip or fall. If you start to need much less sleep than usual but feel full of energy, tell your counselor or doctor soon. Do not start, stop, or change sleep medicine without your doctor. This sheet is not for emergencies. If you have thoughts of hurting yourself or someone else, call or text 988 in the US, or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "es": {
+    "title": "Hábitos para dormir mejor",
+    "intro": "La mayoría de las personas duerme mal una noche de vez en cuando. Cuando los problemas para dormir siguen, los hábitos diarios pueden mejorarlos o empeorarlos. Esta hoja tiene una lista de hábitos que ayudan a muchas personas a dormir. No tiene que cambiar todo a la vez. Elija uno o dos para empezar. Su consejero le puede ayudar a elegir. Es posible que los hábitos solos no resuelvan los problemas de sueño que duran mucho tiempo, pero son una buena base para otro tipo de ayuda. Leer esta hoja toma unos 10 minutos.",
+    "sections": [
+      {
+        "heading": "Mantenga un horario fijo",
+        "steps": [
+          "Levántese a la misma hora todos los días, incluso los fines de semana y después de una mala noche. Este es uno de los hábitos que más ayudan.",
+          "Acuéstese cuando sienta sueño, no solo cansancio. Tener sueño significa que siente los ojos pesados y empieza a cabecear.",
+          "Trate de no compensar una mala noche durmiendo hasta tarde o acostándose muy temprano. Esto puede hacer más difícil la noche siguiente.",
+          "Si toma siestas, que sean cortas, de unos 20 a 30 minutos, y antes de media tarde. Su consejero le puede pedir que no tome siestas por un tiempo."
+        ]
+      },
+      {
+        "heading": "Haga de su cama un lugar para dormir",
+        "steps": [
+          "Use la cama solo para dormir y para tener relaciones sexuales. Vea televisión, use el celular, coma o trabaje en otro lugar.",
+          "Si no puede dormirse después de lo que le parecen unos 20 minutos, levántese. No mire el reloj. Solo calcule.",
+          "Vaya a otro cuarto o a otro lugar. Haga algo tranquilo con poca luz, como leer algo ligero, escuchar música suave o doblar ropa.",
+          "Regrese a la cama cuando vuelva a tener sueño. Hágalo las veces que necesite. Haga lo mismo si se despierta en la noche y no puede volver a dormirse.",
+          "Con el tiempo, su cuerpo aprende que la cama es un lugar para dormir, no para pasar horas sin dormir."
+        ]
+      },
+      {
+        "heading": "Relájese antes de dormir",
+        "steps": [
+          "Dese de 30 a 60 minutos para ir más despacio antes de acostarse. Baje las luces y haga algo relajante.",
+          "Si puede, deje a un lado las pantallas, como la televisión, la computadora y la tableta, durante este tiempo. La luz brillante y el contenido agitado pueden mantener su mente despierta.",
+          "Si las preocupaciones no le dejan dormir, escríbalas más temprano en la noche, con un siguiente paso para cada una. Luego deje la lista a un lado hasta mañana.",
+          "Voltee su reloj para que no pueda verlo desde la cama."
+        ]
+      },
+      {
+        "heading": "Cuide lo que come y bebe",
+        "steps": [
+          "La cafeína le puede quitar el sueño durante horas. Está en el café, el té, los refrescos, las bebidas energéticas, el chocolate y algunos medicamentos. Trate de dejarla al menos 6 horas antes de acostarse.",
+          "Al principio, el alcohol le puede dar sueño. Pero más tarde en la noche, interrumpe su sueño. Trate de no beber cerca de la hora de dormir.",
+          "La nicotina también le puede quitar el sueño. Evítela cerca de la hora de dormir.",
+          "Evite las comidas grandes o picantes tarde en la noche. Un bocadillo ligero está bien si tiene hambre.",
+          "Tome menos líquidos en la última hora o dos antes de acostarse, para no despertarse a ir al baño."
+        ]
+      },
+      {
+        "heading": "Ayude a su reloj interno",
+        "steps": [
+          "Reciba luz de afuera en la mañana, aunque sea por 10 a 15 minutos. La luz ayuda a ajustar su reloj interno.",
+          "Mueva el cuerpo la mayoría de los días. Trate de no hacer ejercicio fuerte en las últimas dos horas antes de acostarse.",
+          "Mantenga su cuarto oscuro, silencioso y fresco. Los tapones para los oídos, un antifaz o un ventilador pueden ayudar."
+        ]
+      },
+      {
+        "heading": "Una nota sobre el tiempo en la cama",
+        "body": "Algunos programas para el sueño le piden cambiar por un tiempo cuántas horas pasa en la cama. Esto puede funcionar bien, pero al principio le puede dar mucho sueño. Hágalo solo con la guía de su consejero o médico. Le van a dar seguimiento cada semana y le van a ayudar a mantenerse a salvo."
+      },
+      {
+        "heading": "Cuándo ver a un médico",
+        "steps": [
+          "Ronca fuerte, o alguien le ve jadear, ahogarse o dejar de respirar mientras duerme.",
+          "Siente mucho sueño durante el día, o se duerme sin querer.",
+          "Unas ganas de mover las piernas no le dejan dormir.",
+          "Los problemas para dormir siguen por más de unas semanas, aun después de probar estos hábitos.",
+          "Quiere empezar, dejar o cambiar un medicamento para dormir. Hable primero con su médico."
+        ]
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Día",
+        "Hábito que probé",
+        "¿Lo hice? (sí / en parte / no)",
+        "Calidad del sueño (0-10)",
+        "Notas"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: Si tiene mucho sueño, no maneje ni use máquinas hasta que se sienta alerta. Si se levanta en la noche, deje una luz suave encendida para no tropezar ni caerse. Si empieza a necesitar mucho menos sueño de lo normal pero se siente con mucha energía, dígaselo pronto a su consejero o médico. No empiece, deje ni cambie un medicamento para dormir sin hablar con su médico. Esta hoja no es para emergencias. Si tiene pensamientos de hacerse daño o de hacerle daño a otra persona, llame o envíe un mensaje de texto al 988 en EE. UU., o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
   "sources": [
     {
       "title": "AASM clinical practice guideline: behavioral and psychological treatments for long-term sleep problems in adults (Edinger et al.)",

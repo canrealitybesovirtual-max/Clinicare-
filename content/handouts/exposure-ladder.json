@@ -53,6 +53,63 @@
     "rows": 10
   },
   "safetyNote": "Safety first: Only practice steps that are safe. Exposure means facing things that feel scary but are not truly dangerous. Never practice anything that could get you hurt. If you have a health problem, such as heart or lung trouble, or you are pregnant, ask your doctor which steps are okay for you. Do not use alcohol or other drugs to get through a step. If a fear is linked to something very upsetting that happened to you, plan those steps with your counselor or therapist first. This skill is not for emergencies. In the US, call or text 988 or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "es": {
+    "title": "Escalera de exposición: enfrentar los miedos paso a paso",
+    "intro": "Cuando algo nos asusta, muchas veces nos alejamos de eso. Alejarse da alivio rápido. Pero con el tiempo, el miedo puede crecer y la vida se puede hacer más pequeña. Una escalera de exposición le ayuda a enfrentar un miedo en pasos pequeños, empezando por los más fáciles. Cada paso le ayuda a aprender que puede con más de lo que su miedo le dice. Puede armar la escalera con su consejero o terapeuta. Hacer la escalera toma unos 20 minutos.",
+    "sections": [
+      {
+        "heading": "Arme su escalera",
+        "steps": [
+          "Elija una meta. Que sea clara, como 'Tomar el autobús a la tienda sin compañía.'",
+          "Haga una lista de 6 a 10 pasos que lleven a esa meta. Empiece con pasos que se sientan un poco difíciles pero posibles. El último paso es su meta.",
+          "Califique qué tanto miedo le da cada paso, del 0 al 10. Un 0 significa nada de miedo. Un 10 significa el mayor miedo que pueda imaginar.",
+          "Ordene los pasos, del que da menos miedo al que da más. Escriba el paso más fácil en la primera fila del registro.",
+          "Trate de tener algunos pasos bajos (alrededor de 3 o 4), algunos del medio (5 o 6) y algunos altos (7 o más)."
+        ]
+      },
+      {
+        "heading": "Ejemplo de escalera",
+        "body": "Meta: Hacer compras sin compañía en una tienda llena de gente. Pasos: Sentarme en el carro en el estacionamiento de la tienda (3). Entrar con un amigo durante 5 minutos (4). Entrar sin compañía durante 5 minutos (5). Comprar una cosa mientras un amigo espera afuera (6). Hacer compras sin compañía a una hora tranquila (7). Hacer compras sin compañía a una hora con mucha gente (9)."
+      },
+      {
+        "heading": "Cómo practicar un paso",
+        "steps": [
+          "Empiece por el paso más bajo. Planee un día y una hora para hacerlo.",
+          "Antes de empezar, pregúntese: '¿Qué temo que pase?'",
+          "Haga el paso. Quédese el tiempo suficiente para aprender algo nuevo. Muchas veces el miedo sube al principio y luego baja.",
+          "No tiene que esperar a que su miedo llegue a 0. La meta es aprender que usted puede manejarlo.",
+          "Fíjese en las cosas que hace para sentirse más a salvo, como quedarse cerca de la salida, agarrarse de alguien o mantener la mente ocupada. Trate de dejarlas, poco a poco.",
+          "Después, pregúntese: ¿Pasó lo que temía? ¿Qué aprendí?",
+          "Repita el paso en días distintos hasta que se sienta más fácil. Luego suba al siguiente paso."
+        ]
+      },
+      {
+        "heading": "Consejos",
+        "steps": [
+          "Practique seguido. Practicar con regularidad ayuda más que hacerlo de vez en cuando.",
+          "Varíe. Pruebe el mismo paso en lugares distintos o a distintas horas del día.",
+          "Si un paso parece demasiado grande, agregue uno más pequeño en medio.",
+          "Sentir miedo durante la práctica es normal. Significa que está haciendo el trabajo. No es señal de peligro.",
+          "Reconozca el valor de cada paso, aunque sea pequeño.",
+          "Traiga esta hoja a su próxima cita."
+        ]
+      },
+      {
+        "heading": "Cómo usar el registro de práctica",
+        "body": "Escriba cada paso en la columna Paso, empezando por el más fácil. En la columna Miedo, escriba qué tanto miedo le da el paso antes de intentarlo. Cada vez que practique, escriba la fecha. Luego vuelva a calificar su miedo en la última columna. Puede que su miedo no baje mucho al principio. Está bien."
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Paso",
+        "Miedo (0-10)",
+        "Fecha de práctica",
+        "Miedo después (0-10)"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: Practique solo pasos que sean seguros. Exposición significa enfrentar cosas que dan miedo pero que no son peligrosas de verdad. Nunca practique algo con lo que pueda lastimarse. Si tiene un problema de salud, como problemas del corazón o de los pulmones, o si está embarazada, pregúntele a su médico qué pasos están bien para usted. No use alcohol ni otras drogas para poder hacer un paso. Si un miedo tiene que ver con algo muy doloroso que le pasó, planee esos pasos primero con su consejero o terapeuta. Esta habilidad no es para emergencias. En EE. UU., llame o envíe un mensaje de texto al 988, o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
   "sources": [
     {
       "title": "NICE guideline CG113: managing anxiety and panic in adults",

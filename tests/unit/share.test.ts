@@ -3,6 +3,7 @@ import { allHandouts } from "@/lib/library";
 import {
   SHARE_ROUTE,
   ShareLinkError,
+  hasSpanishShare,
   isShareableHandoutId,
   normalizeOrigin,
   shareUrl,
@@ -100,13 +101,55 @@ describe("shareUrl (src/lib/share.ts)", () => {
   });
 });
 
+describe("Spanish share links (/r/<id>/es)", () => {
+  const spanish = allHandouts.filter((h) => h.es);
+
+  it("exist for every handout with a translation and hold only the id and the language code", () => {
+    expect(spanish.length).toBeGreaterThan(0);
+    for (const h of spanish) {
+      expect(hasSpanishShare(h.id)).toBe(true);
+      expect(sharePath(h.id, "es")).toBe(`/r/${h.id}/es`);
+      const u = new URL(shareUrl(h.id, ORIGIN, "es"));
+      expect(u.pathname).toBe(`/r/${h.id}/es`);
+      expect(u.search + u.hash + u.username + u.password).toBe("");
+      expect(absoluteShareUrl(sharePath(h.id, "es"), ORIGIN)).toBe(shareUrl(h.id, ORIGIN, "es"));
+    }
+  });
+
+  it("keep the English link unchanged by default", () => {
+    for (const h of allHandouts) expect(sharePath(h.id)).toBe(sharePath(h.id, "en"));
+  });
+
+  it("are refused for anything that is not a library handout", () => {
+    for (const id of ["not-a-handout", "pmr-homework/es", "../pmr-homework", ""]) {
+      expect(hasSpanishShare(id)).toBe(false);
+      expect(() => sharePath(id, "es")).toThrow(ShareLinkError);
+    }
+  });
+});
+
 describe("absoluteShareUrl (browser half, src/components/handouts/share-link.ts)", () => {
   it("prefixes the origin to a validated share path", () => {
     for (const h of allHandouts) expect(absoluteShareUrl(sharePath(h.id), ORIGIN)).toBe(shareUrl(h.id, ORIGIN));
   });
 
   it("refuses anything that is not exactly /r/<id> on a bare origin", () => {
-    for (const p of ["/r/", "/r/a/b", "/r/A", "/r/pmr-homework?x=1", "/r/pmr-homework#x", "/handouts/pmr-homework", "r/pmr-homework", "//evil.example/r/x", "/r/../x"]) {
+    for (const p of [
+      "/r/",
+      "/r/a/b",
+      "/r/A",
+      "/r/pmr-homework?x=1",
+      "/r/pmr-homework#x",
+      "/handouts/pmr-homework",
+      "r/pmr-homework",
+      "//evil.example/r/x",
+      "/r/../x",
+      "/r/pmr-homework/en",
+      "/r/pmr-homework/ES",
+      "/r/pmr-homework/es/",
+      "/r/pmr-homework/es/extra",
+      "/r/pmr-homework/es?name=Jane",
+    ]) {
       expect(absoluteShareUrl(p, ORIGIN)).toBeNull();
     }
     for (const o of [`${ORIGIN}/x`, `${ORIGIN}?a=1`, "https://u:p@example.org", "javascript:x", "nope"]) {

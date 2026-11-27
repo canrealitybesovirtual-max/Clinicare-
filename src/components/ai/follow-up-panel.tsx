@@ -23,7 +23,7 @@ import {
   Sparkles,
   Users,
 } from "lucide-react";
-import { conditions, getMeasure, lexicon } from "@/lib/content";
+import { conditions, getMeasure, getSymptom, lexicon } from "@/lib/content";
 import {
   SURFACE_INFO,
   answerGateEffects,
@@ -59,18 +59,20 @@ const KIND_LABEL: Record<FollowUpQuestion["kind"], string> = {
 
 export function AddSymptomChip({ id, onAdd, hint }: { id: string; onAdd: (id: string) => void; hint?: string }) {
   const label = shortSymptomLabel(id);
+  const redFlag = Boolean(getSymptom(id)?.redFlag);
   return (
     <button
       type="button"
+      aria-label={`Add symptom: ${label}${redFlag ? " (red flag)" : ""}`}
       onClick={() => onAdd(id)}
-      className="inline-flex min-h-11 max-w-full items-center gap-2 rounded-full border border-accent/40 bg-accent-soft px-3.5 py-2 text-left text-sm font-medium text-text hover:border-accent"
+      className="inline-flex min-h-11 max-w-full items-start gap-2 rounded-xl border border-accent/40 bg-accent-soft px-3 py-2 text-left text-sm font-medium leading-snug text-text hover:border-accent"
     >
-      <Plus aria-hidden className="size-4 shrink-0 text-accent" />
+      <Plus aria-hidden className="mt-0.5 size-4 shrink-0 text-accent" />
       <span className="min-w-0">
-        <span className="sr-only">Add symptom: </span>
         {label}
         {hint ? <span className="block text-xs font-normal text-muted">{hint}</span> : null}
       </span>
+      {redFlag ? <ShieldAlert aria-hidden className="mt-0.5 size-4 shrink-0 text-crisis" /> : null}
     </button>
   );
 }
@@ -79,6 +81,7 @@ export function AddSymptomChip({ id, onAdd, hint }: { id: string; onAdd: (id: st
 
 function PatternCard({ p, onAdd }: { p: TriggerPattern; onAdd: (id: string) => void }) {
   const fear = p.objectLabels.join(" or ");
+  const otherKey = p.missing.filter((f) => f.kind === "core" && !p.addable.includes(f.symptomId));
   return (
     <li className="rounded-xl border border-border bg-surface p-4">
       <div className="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1">
@@ -103,41 +106,40 @@ function PatternCard({ p, onAdd }: { p: TriggerPattern; onAdd: (id: string) => v
         <BookOpen aria-hidden className="mt-0.5 size-4 shrink-0" />
         {p.dsmPointer}
       </p>
-      <div className="mt-3 grid gap-3 sm:grid-cols-2">
-        <div>
-          <p className="text-sm font-semibold">Documented ({p.matched.length})</p>
-          {p.matched.length ? (
-            <ul className="mt-1 space-y-1 text-sm">
-              {p.matched.map((f) => (
-                <li key={f.symptomId}>
-                  <span className="sr-only">Matched {f.kind}: </span>
-                  {shortSymptomLabel(f.symptomId)}
-                </li>
-              ))}
-            </ul>
-          ) : (
-            <p className="mt-1 text-sm text-muted">Nothing for this pattern yet.</p>
-          )}
-        </div>
-        <div>
-          <p className="text-sm font-semibold">
-            Not yet documented ({p.missing.length})
-          </p>
-          <p className="mt-1 text-sm text-muted">
-            Key features: {p.missing.filter((f) => f.kind === "core").map((f) => shortSymptomLabel(f.symptomId)).join("; ") || "all documented"}.
-          </p>
-        </div>
-      </div>
-      {p.addable.length ? (
-        <div className="mt-3">
-          <p className="text-sm font-semibold">If the client describes these, tap to add them</p>
-          <div className="mt-2 flex flex-wrap gap-2">
-            {p.addable.map((id) => (
-              <AddSymptomChip key={id} id={id} onAdd={onAdd} />
+      <div className="mt-3">
+        <p className="text-sm font-semibold">Documented ({p.matched.length})</p>
+        {p.matched.length ? (
+          <ul className="mt-1 list-disc space-y-0.5 pl-5 text-sm">
+            {p.matched.map((f) => (
+              <li key={f.symptomId}>
+                <span className="sr-only">Matched {f.kind}: </span>
+                {shortSymptomLabel(f.symptomId)}
+              </li>
             ))}
-          </div>
-        </div>
-      ) : null}
+          </ul>
+        ) : (
+          <p className="mt-0.5 text-sm text-muted">Nothing for this pattern yet.</p>
+        )}
+      </div>
+      <div className="mt-3">
+        <p className="text-sm font-semibold">Not yet documented ({p.missing.length})</p>
+        {p.addable.length ? (
+          <>
+            <p className="mt-0.5 text-sm text-muted">Tap to add the ones the client describes:</p>
+            <div className="mt-2 flex flex-wrap gap-2">
+              {p.addable.map((id) => (
+                <AddSymptomChip key={id} id={id} onAdd={onAdd} />
+              ))}
+            </div>
+          </>
+        ) : null}
+        {otherKey.length ? (
+          <p className="mt-2 text-sm text-muted">
+            {p.addable.length ? "Other key features: " : "Key features: "}
+            {otherKey.map((f) => shortSymptomLabel(f.symptomId)).join("; ")}.
+          </p>
+        ) : null}
+      </div>
       <details className="group mt-3">
         <summary className="flex min-h-11 cursor-pointer list-none items-center text-sm font-semibold text-accent underline underline-offset-2 [&::-webkit-details-marker]:hidden">
           What to clarify for this kind of fear
@@ -324,11 +326,17 @@ const GATE_FIELDS = ["duration", "impairment", "substancePossible", "medicalPoss
 export function FollowUpPanel({
   analysis,
   catalog,
+  step,
   className,
+  children,
 }: {
   analysis: SymptomAnalysis;
   catalog: ResourceCatalog;
+  /** Guided-step number shown before the heading (Symptom Finder). */
+  step?: number;
   className?: string;
+  /** Rendered at the end of the panel (the optional assistant). */
+  children?: React.ReactNode;
 }) {
   const client = useIsClientMode();
   const { state, set, toggleSymptom } = useSession();
@@ -408,19 +416,29 @@ export function FollowUpPanel({
     for (const k of GATE_FIELDS) if (gates[k] !== undefined && state[k] === gates[k]) Object.assign(revert, { [k]: "unknown" });
     if (Object.keys(revert).length > 0) set(revert);
     refocus.current = true;
-    setAnnouncement("Answer removed. The question is back in the list.");
+    setAnnouncement("Answer removed. The picture was updated.");
   };
 
   return (
-    <section aria-labelledby="fu-heading" className={cn("rounded-2xl border border-border bg-surface-2/60 p-4 sm:p-6", className)}>
-      <div className="flex flex-wrap items-center gap-2">
-        <Sparkles aria-hidden className="size-5 text-accent" />
-        <h2 id="fu-heading" className="text-lg font-semibold">
+    <section aria-labelledby="fu-heading" className={cn("rounded-xl border border-border bg-surface p-4 shadow-sm sm:p-6", className)}>
+      <div className="flex flex-wrap items-start gap-x-3 gap-y-2">
+        {step ? (
+          <span
+            aria-hidden
+            className="flex size-8 shrink-0 items-center justify-center rounded-full bg-accent-soft text-sm font-bold text-accent"
+          >
+            {step}
+          </span>
+        ) : (
+          <Sparkles aria-hidden className="mt-1 size-5 shrink-0 text-accent" />
+        )}
+        <h2 id="fu-heading" className="pt-0.5 text-lg font-semibold leading-snug">
+          {step ? <span className="sr-only">Step {step}: </span> : null}
           Help me ask more
         </h2>
-        <ClinicianReviewBadge className="ml-auto" />
+        <ClinicianReviewBadge className="sm:ml-auto" />
       </div>
-      <p className="mt-1 max-w-prose text-sm text-muted">
+      <p className="mt-2 max-w-prose text-sm text-muted">
         Suggested next questions, worked out on this device from what you typed and tapped. Tap an answer to update the
         picture. Nothing here is a diagnosis or a risk decision.
       </p>
@@ -503,9 +521,9 @@ export function FollowUpPanel({
                     <span className="block text-muted">{a.questionText}</span>
                     <span className="font-semibold">{a.answerLabels.join(", ")}</span>
                   </span>
-                  <Button type="button" variant="ghost" size="sm" onClick={() => undo(a)}>
+                  <Button type="button" variant="ghost" size="sm" aria-label={`Change answer to: ${a.questionText}`} onClick={() => undo(a)}>
                     <RotateCcw aria-hidden />
-                    Change<span className="sr-only"> answer to: {a.questionText}</span>
+                    Change
                   </Button>
                 </li>
               ))}
@@ -537,6 +555,8 @@ export function FollowUpPanel({
         ) : null}
 
         <Pointers hints={hints} catalog={catalog} />
+
+        {children}
 
         <p className="border-t border-border pt-3 text-xs text-muted">
           Questions come from the app&apos;s own question bank (original wording, awaiting clinical review). Answers stay in

@@ -62,6 +62,72 @@
     "rows": 7
   },
   "safetyNote": "Safety first: Grounding helps you come back to the present. It does not fix a situation that is unsafe. If you are in danger right now, or someone is hurting you, get to a safe place and call for help. If you often lose track of time, feel cut off from your body, or have memories that feel like they are happening again, tell your counselor or therapist. This skill is not for emergencies. In the US, call or text 988 or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "es": {
+    "title": "Anclarse al presente con el 5-4-3-2-1",
+    "intro": "Los sentimientos fuertes o los recuerdos dolorosos pueden alejar su mente del aquí y ahora. Puede sentir que está lejos o que no siente nada. Puede parecer que algo del pasado está pasando otra vez. Anclarse al presente usa sus cinco sentidos para traer su mente de vuelta al momento actual. Toma unos 2 a 5 minutos. Puede hacerlo casi en cualquier lugar, y mantiene los ojos abiertos todo el tiempo.",
+    "sections": [
+      {
+        "heading": "Antes de empezar",
+        "steps": [
+          "Mantenga los ojos abiertos. Mire a su alrededor.",
+          "Ponga los dos pies planos en el piso. Note el piso bajo sus pies.",
+          "Tome aire despacio una vez y suéltelo durante más tiempo."
+        ]
+      },
+      {
+        "heading": "Los pasos del 5-4-3-2-1",
+        "body": "Vaya despacio. Nombre cada cosa en voz alta o en su mente. Tómese su tiempo con cada sentido.",
+        "steps": [
+          "Mire. Nombre 5 cosas que puede ver, como una taza azul, una ventana o su zapato.",
+          "Toque. Nombre 4 cosas que puede sentir con el tacto, como su silla, su ropa, el piso o algo que tenga en la mano.",
+          "Escuche. Nombre 3 cosas que puede oír, como un ventilador, un carro afuera o su propia respiración.",
+          "Huela. Nombre 2 cosas que puede oler. Si no puede oler nada, nombre 2 olores que le gusten.",
+          "Saboree. Nombre 1 cosa que puede saborear. Puede tomar un sorbo de agua o pensar en una comida que le guste."
+        ]
+      },
+      {
+        "heading": "Revise cómo está al terminar",
+        "steps": [
+          "Diga dónde está y qué día es.",
+          "Si está a salvo en este momento, dígaselo a sí mismo. Por ejemplo: 'Estoy en mi cocina. Es martes. En este momento estoy a salvo.'",
+          "Note cómo se siente. Si todavía siente que está lejos, vuelva a hacer los pasos."
+        ]
+      },
+      {
+        "heading": "Otras formas de anclarse al presente",
+        "steps": [
+          "Sostenga una bebida fresca, o deje correr agua fresca sobre sus manos. Note cómo se siente.",
+          "Presione los pies contra el piso, o junte las palmas de las manos y empújelas unos segundos.",
+          "Cuente todas las cosas azules del cuarto, o nombre todos los colores que ve.",
+          "Lleve consigo un objeto pequeño, como una piedra lisa, para sostenerlo y notarlo.",
+          "Si uno de sus sentidos no le funciona bien, sáltelo. Use los sentidos que mejor le funcionen."
+        ]
+      },
+      {
+        "heading": "Consejos para practicar",
+        "steps": [
+          "Practique primero cuando sienta calma. Así los pasos le saldrán con más facilidad cuando los necesite.",
+          "Guarde una tarjeta pequeña con los pasos en su billetera o su bolsa.",
+          "Si su mente se distrae, está bien. Pase con calma al siguiente sentido.",
+          "Cuéntele a su consejero o terapeuta cómo le fue. Juntos pueden encontrar lo que mejor le funcione."
+        ]
+      },
+      {
+        "heading": "Cómo usar el registro de práctica",
+        "body": "Cada vez que practique, escriba qué estaba pasando. Califique cuánto malestar sentía antes y después, del 0 al 10. Un 0 significa nada de malestar. Un 10 significa el mayor malestar que pueda imaginar."
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Día",
+        "Qué estaba pasando",
+        "Malestar antes (0-10)",
+        "Malestar después (0-10)"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: Anclarse al presente le ayuda a volver al aquí y ahora. No arregla una situación que no es segura. Si está en peligro ahora mismo, o alguien le está haciendo daño, vaya a un lugar seguro y pida ayuda. Si muchas veces pierde la noción del tiempo, siente una desconexión de su cuerpo, o tiene recuerdos que se sienten como si estuvieran pasando otra vez, dígaselo a su consejero o terapeuta. Esta habilidad no es para emergencias. En EE. UU., llame o envíe un mensaje de texto al 988, o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
   "sources": [
     {
       "title": "Coping With Traumatic Events (health topic)",

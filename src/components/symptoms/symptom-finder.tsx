@@ -1,4 +1,9 @@
 "use client";
+/**
+ * Symptom Finder (spec screen 1), as guided steps: 1 describe, 2 check what was found, 3 help me ask more,
+ * 4 context, 5 add or remove symptoms. The text box comes first so it is on screen right away on a phone.
+ * Everything runs on this device and lives in memory-only session state (G5).
+ */
 import * as React from "react";
 import Link from "next/link";
 import {
@@ -8,6 +13,7 @@ import {
   CircleMinus,
   FlaskConical,
   History,
+  MessageCircleQuestion,
   Search,
   ShieldAlert,
   Square,
@@ -16,6 +22,7 @@ import {
   X,
 } from "lucide-react";
 import { getSymptom, lexicon } from "@/lib/content";
+import type { ResourceCatalog } from "@/lib/follow-up";
 import { searchSymptoms } from "@/lib/matcher";
 import type { Symptom } from "@/lib/schemas";
 import { useSession } from "@/state/session";
@@ -26,10 +33,13 @@ import { ChoiceGroup } from "@/components/ui/choice-group";
 import { Notice } from "@/components/ui/notice";
 import { ExternalLink } from "@/components/ui/external-link";
 import { PRIVATE_TEXT_FIELD_PROPS } from "@/components/ui/private-field";
+import { HubPrompt } from "@/components/hub/hub-prompt";
+import { AssistantPanel, type AssistantStatus } from "@/components/ai/assistant-panel";
+import { FollowUpPanel } from "@/components/ai/follow-up-panel";
+import { OnDeviceSuggestions } from "@/components/ai/on-device-suggestions";
 import { cn } from "@/lib/utils";
 import { useSymptomAnalysis, type SymptomAnalysis } from "./analysis";
 import { RedFlagBanner, RiskMissNote } from "./red-flag-banner";
-import { HubPrompt } from "@/components/hub/hub-prompt";
 import { Under18Notice } from "./under18-notice";
 import { useScrubbedField } from "./use-scrubbed-field";
 import {
@@ -82,27 +92,42 @@ function SymptomToggle({
   );
 }
 
-function SectionCard({
+/** One guided step: a numbered heading, an optional one-line hint (hidden on phones when `hintOnPhones` is false). */
+function Step({
+  n,
   id,
   title,
-  description,
+  hint,
+  hintOnPhones = true,
+  optional = false,
   children,
-  className,
 }: {
+  n: number;
   id: string;
   title: string;
-  description?: React.ReactNode;
+  hint?: React.ReactNode;
+  hintOnPhones?: boolean;
+  optional?: boolean;
   children: React.ReactNode;
-  className?: string;
 }) {
   return (
-    <section aria-labelledby={id} className={className}>
-      <Card className="space-y-4">
-        <div>
-          <h2 id={id} className="text-lg font-semibold">
-            {title}
-          </h2>
-          {description ? <p className="mt-1 text-sm text-muted">{description}</p> : null}
+    <section aria-labelledby={id}>
+      <Card className="space-y-4 p-4 sm:p-6">
+        <div className="flex items-start gap-3">
+          <span
+            aria-hidden
+            className="flex size-8 shrink-0 items-center justify-center rounded-full bg-accent-soft text-sm font-bold text-accent"
+          >
+            {n}
+          </span>
+          <div className="min-w-0 pt-0.5">
+            <h2 id={id} className="text-lg font-semibold leading-snug">
+              <span className="sr-only">Step {n}: </span>
+              {title}
+              {optional ? <span className="ml-2 text-sm font-normal text-muted">optional</span> : null}
+            </h2>
+            {hint ? <p className={cn("mt-0.5 text-sm text-muted", !hintOnPhones && "hidden sm:block")}>{hint}</p> : null}
+          </div>
         </div>
         {children}
       </Card>
@@ -124,40 +149,40 @@ function DiagnosesCta({ analysis, className, size = "lg" }: { analysis: SymptomA
   );
 }
 
-/* ------------------------------------------------------------------ free text */
+/* ------------------------------------------------------------------ step 1: describe */
 
-function FreeTextCard({ analysis }: { analysis: SymptomAnalysis }) {
+function DescribeStep({ analysis }: { analysis: SymptomAnalysis }) {
   const { state, set } = useSession();
   const field = useScrubbedField<HTMLTextAreaElement>(state.symptomText, (clean) => set({ symptomText: clean }));
   const hintId = React.useId();
-  const detected = analysis.match.matches;
 
   return (
-    <SectionCard
+    <Step
+      n={1}
       id="describe-heading"
       title="Describe the presentation"
-      description="Type what the client reports, in your words or theirs. Matching runs on this device only."
+      hint="In your words or theirs. Matching runs on this device."
+      hintOnPhones={false}
     >
       <div>
         <label htmlFor="symptom-text" className="text-sm font-semibold">
-          Symptoms and behaviors (no names, dates, places or other identifiers)
+          Symptoms and behaviors <span className="font-normal text-muted">(no names, dates or places)</span>
         </label>
-        <p id={hintId} className="mt-1 text-xs text-muted">
-          Likely identifiers are removed automatically about half a second after you stop typing, but do not rely on
-          that: leave them out.
-        </p>
         <textarea
           id="symptom-text"
           ref={field.ref}
           aria-describedby={hintId}
           value={field.draft}
           onChange={(e) => field.setDraft(e.target.value)}
-          onBlur={field.flushNow}
-          rows={6}
+          onBlur={field.onBlur}
+          rows={5}
           {...PRIVATE_TEXT_FIELD_PROPS}
-          placeholder="e.g., sudden panic out of nowhere, heart racing, now avoids crowds and buses"
+          placeholder="e.g., panic from dogs; heart racing; now avoids the park"
           className="mt-2 block w-full resize-y rounded-lg border border-input-border bg-surface px-3 py-2.5 text-base leading-relaxed text-text placeholder:text-muted"
         />
+        <p id={hintId} className="mt-1.5 text-xs text-muted">
+          Anything that looks like an identifier is removed as you type, but please leave identifiers out.
+        </p>
       </div>
 
       <div role="alert">
@@ -191,6 +216,7 @@ function FreeTextCard({ analysis }: { analysis: SymptomAnalysis }) {
 
       {/* Below the field, so a new banner never pushes the text box (and the caret) off-screen while typing. */}
       <RedFlagBanner flags={analysis.redFlags} className="" />
+      <RiskMissNote className="mb-0" />
 
       <div className="flex flex-wrap items-center gap-2">
         <span className="flex items-center gap-1.5 text-sm font-semibold text-muted">
@@ -217,112 +243,213 @@ function FreeTextCard({ analysis }: { analysis: SymptomAnalysis }) {
           </Button>
         ) : null}
       </div>
+    </Step>
+  );
+}
 
+/* ------------------------------------------------------------------ step 2: what was found */
+
+function FoundStep({ analysis }: { analysis: SymptomAnalysis }) {
+  const { state } = useSession();
+  const detected = analysis.match.matches;
+  const setAside = new Set(analysis.setAsideByAnswers);
+  return (
+    <Step n={2} id="found-heading" title="Check what was found" hint="Tap symptoms in step 5 to add anything that was missed.">
       <p aria-live="polite" className="sr-only">
         {detected.length} symptom{detected.length === 1 ? "" : "s"} detected from your text
         {analysis.absent.length ? `, ${analysis.absent.length} noted as absent` : ""}.
       </p>
-
-      <div className="space-y-4 border-t border-border pt-4">
-        <div>
-          <h3 className="flex items-center gap-2 text-sm font-semibold">
-            Detected from your text <Badge tone="accent">{detected.length}</Badge>
-          </h3>
-          {detected.length ? (
-            <ul className="mt-2 grid gap-1.5 sm:grid-cols-2">
-              {detected.map((m) => {
-                const s = getSymptom(m.symptomId);
-                return (
-                  <li key={m.symptomId} className="flex items-start gap-2 rounded-lg bg-accent-soft px-3 py-2 text-sm">
-                    <Check aria-hidden className="mt-0.5 size-4 shrink-0 text-accent" />
-                    <span className="min-w-0 flex-1">
-                      {s?.label ?? m.symptomId}
-                      <span className="block text-xs text-muted">matched “{m.phrase}”</span>
+      <div>
+        <h3 className="flex items-center gap-2 text-sm font-semibold">
+          Detected from your text <Badge tone="accent">{detected.length}</Badge>
+        </h3>
+        {detected.length ? (
+          <ul className="mt-2 grid gap-1.5 sm:grid-cols-2">
+            {detected.map((m) => {
+              const s = getSymptom(m.symptomId);
+              const aside = setAside.has(m.symptomId);
+              return (
+                <li
+                  key={m.symptomId}
+                  className={cn("flex items-start gap-2 rounded-lg px-3 py-2 text-sm", aside ? "bg-surface-2" : "bg-accent-soft")}
+                >
+                  <Check aria-hidden className={cn("mt-0.5 size-4 shrink-0", aside ? "text-muted" : "text-accent")} />
+                  <span className="min-w-0 flex-1">
+                    {s?.label ?? m.symptomId}
+                    <span className="block text-xs text-muted">
+                      matched “{m.phrase}”{aside ? " · set aside by your answer" : ""}
                     </span>
-                    {s?.redFlag ? (
-                      <ShieldAlert aria-label="Red flag" role="img" className="mt-0.5 size-4 shrink-0 text-crisis" />
-                    ) : null}
-                  </li>
-                );
-              })}
-            </ul>
-          ) : (
-            <p className="mt-2 text-sm text-muted">
-              Nothing detected yet. Everyday phrasings are recognized, such as “can’t leave the house” or “heart racing”.
-            </p>
-          )}
-        </div>
+                  </span>
+                  {s?.redFlag ? (
+                    <ShieldAlert aria-label="Red flag" role="img" className="mt-0.5 size-4 shrink-0 text-crisis" />
+                  ) : null}
+                </li>
+              );
+            })}
+          </ul>
+        ) : (
+          <p className="mt-2 text-sm text-muted">
+            Nothing detected yet. Everyday phrasings are recognized, such as “can’t leave the house” or “heart racing”.
+          </p>
+        )}
+      </div>
+      {analysis.absent.length ? (
         <div>
           <h3 className="flex items-center gap-2 text-sm font-semibold">
             Noted as absent <Badge tone="neutral">{analysis.absent.length}</Badge>
           </h3>
-          {analysis.absent.length ? (
-            <ul className="mt-2 grid gap-1.5 sm:grid-cols-2">
-              {analysis.absent.map((m) => {
-                const s = getSymptom(m.symptomId);
-                return (
-                  <li key={m.symptomId} className="flex items-start gap-2 rounded-lg bg-surface-2 px-3 py-2 text-sm">
-                    <CircleMinus aria-hidden className="mt-0.5 size-4 shrink-0 text-muted" />
-                    <span>
-                      {s?.label ?? m.symptomId}
-                      <span className="block text-xs text-muted">negated: “{m.phrase}”</span>
-                    </span>
-                  </li>
-                );
-              })}
-            </ul>
-          ) : (
-            <p className="mt-2 text-sm text-muted">
-              Denials such as “denies nightmares” or “no panic attacks” are listed here and not counted.
-            </p>
-          )}
+          <ul className="mt-2 grid gap-1.5 sm:grid-cols-2">
+            {analysis.absent.map((m) => {
+              const s = getSymptom(m.symptomId);
+              return (
+                <li key={m.symptomId} className="flex items-start gap-2 rounded-lg bg-surface-2 px-3 py-2 text-sm">
+                  <CircleMinus aria-hidden className="mt-0.5 size-4 shrink-0 text-muted" />
+                  <span>
+                    {s?.label ?? m.symptomId}
+                    <span className="block text-xs text-muted">negated: “{m.phrase}”</span>
+                  </span>
+                </li>
+              );
+            })}
+          </ul>
         </div>
-        {analysis.attributed.length ? (
-          <div>
-            <h3 className="flex items-center gap-2 text-sm font-semibold">
-              Family or past history (not scored) <Badge tone="neutral">{analysis.attributed.length}</Badge>
-            </h3>
-            <ul className="mt-2 grid gap-1.5 sm:grid-cols-2">
-              {analysis.attributed.map((m) => {
-                const s = getSymptom(m.symptomId);
-                return (
-                  <li key={m.symptomId} className="flex items-start gap-2 rounded-lg bg-surface-2 px-3 py-2 text-sm">
-                    <History aria-hidden className="mt-0.5 size-4 shrink-0 text-muted" />
-                    <span>
-                      {s?.label ?? m.symptomId}
-                      <span className="block text-xs text-muted">
-                        {m.reason === "family" ? "about a relative" : "resolved or past"}: “{m.phrase}”
-                      </span>
+      ) : (
+        <p className="text-xs text-muted">Denials such as “denies nightmares” are noted as absent and not counted.</p>
+      )}
+      {analysis.attributed.length ? (
+        <div>
+          <h3 className="flex items-center gap-2 text-sm font-semibold">
+            Family or past history (not scored) <Badge tone="neutral">{analysis.attributed.length}</Badge>
+          </h3>
+          <ul className="mt-2 grid gap-1.5 sm:grid-cols-2">
+            {analysis.attributed.map((m) => {
+              const s = getSymptom(m.symptomId);
+              return (
+                <li key={m.symptomId} className="flex items-start gap-2 rounded-lg bg-surface-2 px-3 py-2 text-sm">
+                  <History aria-hidden className="mt-0.5 size-4 shrink-0 text-muted" />
+                  <span>
+                    {s?.label ?? m.symptomId}
+                    <span className="block text-xs text-muted">
+                      {m.reason === "family" ? "about a relative" : "resolved or past"}: “{m.phrase}”
                     </span>
-                  </li>
-                );
-              })}
-            </ul>
-            <p className="mt-2 text-xs text-muted">
-              Mentions about relatives or resolved past history are not counted. Add a chip if it applies to the client now.
-            </p>
-          </div>
-        ) : null}
-        {analysis.cultural.length ? (
-          <Notice tone="info" title="Cultural concept of distress named">
-            <p>
-              The text names an idiom of distress (for example “ataque de nervios”, “nervios” or “thinking too much”). It is
-              not mapped to any condition. Ask what it means to the client, and consider the{" "}
-              <ExternalLink href={CFI_URL}>Cultural Formulation Interview</ExternalLink> (APA, external). Each condition’s
-              cultural notes are on the Diagnoses screen.
-            </p>
-          </Notice>
-        ) : null}
-      </div>
+                  </span>
+                </li>
+              );
+            })}
+          </ul>
+          <p className="mt-2 text-xs text-muted">
+            Mentions about relatives or resolved past history are not counted. Add a chip if it applies to the client now.
+          </p>
+        </div>
+      ) : null}
+      {analysis.cultural.length ? (
+        <Notice tone="info" title="Cultural concept of distress named">
+          <p>
+            The text names an idiom of distress (for example “ataque de nervios”, “nervios” or “thinking too much”). It is
+            not mapped to any condition. Ask what it means to the client, and consider the{" "}
+            <ExternalLink href={CFI_URL}>Cultural Formulation Interview</ExternalLink> (APA, external). Each condition’s
+            cultural notes are on the Diagnoses screen.
+          </p>
+        </Notice>
+      ) : null}
+
+      <OnDeviceSuggestions analysis={analysis} />
 
       {!state.under18 ? <DiagnosesCta analysis={analysis} size="md" className="lg:hidden" /> : null}
-    </SectionCard>
+    </Step>
   );
 }
 
-/* ------------------------------------------------------------------ chip picker */
+/* ------------------------------------------------------------------ step 3: help me ask more */
 
-function SymptomPicker({ analysis }: { analysis: SymptomAnalysis }) {
+function AskMoreStep({
+  analysis,
+  catalog,
+  assistant,
+}: {
+  analysis: SymptomAnalysis;
+  catalog: ResourceCatalog;
+  assistant: AssistantStatus;
+}) {
+  const { state } = useSession();
+  const empty = analysis.ids.length === 0 && analysis.triggers.length === 0;
+  if (state.under18) return null; // adult-only content (G12); the notice in step 4 says so
+  if (empty) {
+    return (
+      <Step n={3} id="askmore-heading" title="Help me ask more">
+        <p className="flex items-start gap-2 text-sm text-muted">
+          <MessageCircleQuestion aria-hidden className="mt-0.5 size-4 shrink-0" />
+          Once you describe the presentation, follow-up questions to consider asking appear here, with answers you can tap.
+        </p>
+      </Step>
+    );
+  }
+  return (
+    <FollowUpPanel analysis={analysis} catalog={catalog} step={3}>
+      <AssistantPanel status={assistant} analysis={analysis} />
+    </FollowUpPanel>
+  );
+}
+
+/* ------------------------------------------------------------------ step 4: context */
+
+function ContextStep() {
+  const { state, set } = useSession();
+  return (
+    <Step
+      n={4}
+      id="context-heading"
+      title="Add context"
+      hint="These change how patterns are scored. Leave “Not recorded” until you have asked."
+    >
+      <div className="space-y-5">
+        <ChoiceGroup legend="Duration" name="duration" value={state.duration} options={DURATION_CHOICES} onChange={(v) => set({ duration: v })} />
+        <ChoiceGroup
+          legend="Onset"
+          hint="For your reference; it does not change scores in Phase 1."
+          name="onset"
+          value={state.onset}
+          options={ONSET_CHOICES}
+          onChange={(v) => set({ onset: v })}
+        />
+        <ChoiceGroup
+          legend="Clinically significant distress or functional impairment"
+          name="impairment"
+          value={state.impairment}
+          options={TRI_CHOICES}
+          onChange={(v) => set({ impairment: v })}
+        />
+        <ChoiceGroup
+          legend="Substance or medication could explain the symptoms"
+          hint="Kept in this tab only; never stored or sent (42 CFR Part 2)."
+          name="substance"
+          value={state.substancePossible}
+          options={TRI_CHOICES}
+          onChange={(v) => set({ substancePossible: v })}
+        />
+        <ChoiceGroup
+          legend="A medical condition could explain the symptoms"
+          name="medical"
+          value={state.medicalPossible}
+          options={TRI_CHOICES}
+          onChange={(v) => set({ medicalPossible: v })}
+        />
+        <ChoiceGroup
+          legend="Client is under 18"
+          name="age"
+          value={state.under18 ? "minor" : "adult"}
+          options={AGE_CHOICES}
+          onChange={(v) => set({ under18: v === "minor" })}
+        />
+        {state.under18 ? <Under18Notice /> : null}
+      </div>
+    </Step>
+  );
+}
+
+/* ------------------------------------------------------------------ step 5: chip picker */
+
+function PickerStep({ analysis }: { analysis: SymptomAnalysis }) {
   const { state, toggleSymptom } = useSession();
   const [query, setQuery] = React.useState("");
   const search = useScrubbedField<HTMLInputElement>(query, setQuery);
@@ -337,10 +464,12 @@ function SymptomPicker({ analysis }: { analysis: SymptomAnalysis }) {
   );
 
   return (
-    <SectionCard
+    <Step
+      n={5}
       id="picker-heading"
-      title="Add symptoms"
-      description={`Search or browse the ${lexicon.symptoms.length} features in the Phase 1 lexicon. Tap to include or remove.`}
+      title="Add or remove symptoms"
+      optional
+      hint={`Search or browse the ${lexicon.symptoms.length} features in the lexicon. Tap to include or remove.`}
     >
       <div>
         <label htmlFor="symptom-search" className="text-sm font-semibold">
@@ -354,7 +483,7 @@ function SymptomPicker({ analysis }: { analysis: SymptomAnalysis }) {
             type="search"
             value={search.draft}
             onChange={(e) => search.setDraft(e.target.value)}
-            onBlur={search.flushNow}
+            onBlur={search.onBlur}
             {...PRIVATE_TEXT_FIELD_PROPS}
             placeholder="e.g., can't sleep, on edge"
             className="block min-h-11 w-full rounded-lg border border-input-border bg-surface pl-9 pr-3 text-base text-text placeholder:text-muted"
@@ -402,7 +531,7 @@ function SymptomPicker({ analysis }: { analysis: SymptomAnalysis }) {
                   <span className="flex-1">{g.label}</span>
                   {count ? <Badge tone="primary">{count} selected</Badge> : null}
                   <span className="text-xs font-normal text-muted">{g.items.length}</span>
-                  <ChevronDown aria-hidden className="size-4 text-muted transition-transform group-open:rotate-180" />
+                  <ChevronDown aria-hidden className="size-4 text-muted transition-transform motion-reduce:transition-none group-open:rotate-180" />
                 </summary>
                 <ul className="grid gap-2 border-t border-border bg-bg/60 p-3 sm:grid-cols-2">
                   {g.items.map((s) => (
@@ -421,11 +550,16 @@ function SymptomPicker({ analysis }: { analysis: SymptomAnalysis }) {
           })}
         </div>
       </div>
-    </SectionCard>
+    </Step>
   );
 }
 
-/* ------------------------------------------------------------------ summary + context */
+/* ------------------------------------------------------------------ running summary */
+
+function sourceOf(id: string, analysis: SymptomAnalysis, selected: ReadonlySet<string>): string {
+  if (selected.has(id)) return analysis.detectedIds.has(id) ? "Selected · in text" : "Selected";
+  return analysis.fromAnswers.has(id) ? "From your answers" : "From text";
+}
 
 function IncludedSummary({ analysis, className }: { analysis: SymptomAnalysis; className?: string }) {
   const { state, set, toggleSymptom } = useSession();
@@ -444,7 +578,7 @@ function IncludedSummary({ analysis, className }: { analysis: SymptomAnalysis; c
   });
   return (
     <section aria-labelledby="included-heading" className={className}>
-      <Card className="space-y-4">
+      <Card className="space-y-4 p-4 sm:p-5">
         <h2
           id="included-heading"
           ref={headingRef}
@@ -468,9 +602,7 @@ function IncludedSummary({ analysis, className }: { analysis: SymptomAnalysis; c
                 <li key={id} className="flex items-start gap-2 rounded-lg border border-border px-2.5 py-1.5 text-sm">
                   <span className="min-w-0 flex-1 py-1 leading-snug">
                     {s?.label ?? id}
-                    <span className="mt-0.5 block text-xs text-muted">
-                      {isSelected && analysis.detectedIds.has(id) ? "Selected · in text" : isSelected ? "Selected" : "From text"}
-                    </span>
+                    <span className="mt-0.5 block text-xs text-muted">{sourceOf(id, analysis, selected)}</span>
                   </span>
                   {isSelected ? (
                     <button
@@ -492,9 +624,7 @@ function IncludedSummary({ analysis, className }: { analysis: SymptomAnalysis; c
             })}
           </ul>
         ) : (
-          <p className="text-sm text-muted">
-            Nothing yet. Describe the presentation, try an example, or tap symptoms in the list.
-          </p>
+          <p className="text-sm text-muted">Nothing yet. Describe the presentation, try an example, or tap symptoms.</p>
         )}
         {state.under18 ? (
           <p className="rounded-lg bg-warn-bg p-3 text-sm font-medium text-warn-fg">
@@ -522,78 +652,23 @@ function IncludedSummary({ analysis, className }: { analysis: SymptomAnalysis; c
   );
 }
 
-function ContextCard() {
-  const { state, set } = useSession();
-  return (
-    <section aria-labelledby="context-heading">
-      <Card className="space-y-5">
-        <div>
-          <h2 id="context-heading" className="text-lg font-semibold">
-            Context
-          </h2>
-          <p className="mt-1 text-sm text-muted">Duration and impairment act as gates; rule-outs lower the score and add a flag.</p>
-        </div>
-        <ChoiceGroup legend="Duration" name="duration" value={state.duration} options={DURATION_CHOICES} onChange={(v) => set({ duration: v })} />
-        <ChoiceGroup
-          legend="Onset"
-          hint="For your reference; it does not change scores in Phase 1."
-          name="onset"
-          value={state.onset}
-          options={ONSET_CHOICES}
-          onChange={(v) => set({ onset: v })}
-        />
-        <ChoiceGroup
-          legend="Clinically significant distress or functional impairment"
-          name="impairment"
-          value={state.impairment}
-          options={TRI_CHOICES}
-          onChange={(v) => set({ impairment: v })}
-        />
-        <ChoiceGroup
-          legend="Substance or medication could explain the symptoms"
-          hint="Kept in this tab only; never stored or sent (42 CFR Part 2)."
-          name="substance"
-          value={state.substancePossible}
-          options={TRI_CHOICES}
-          onChange={(v) => set({ substancePossible: v })}
-        />
-        <ChoiceGroup
-          legend="A medical condition could explain the symptoms"
-          name="medical"
-          value={state.medicalPossible}
-          options={TRI_CHOICES}
-          onChange={(v) => set({ medicalPossible: v })}
-        />
-        <ChoiceGroup
-          legend="Client is under 18"
-          name="age"
-          value={state.under18 ? "minor" : "adult"}
-          options={AGE_CHOICES}
-          onChange={(v) => set({ under18: v === "minor" })}
-        />
-        {state.under18 ? <Under18Notice /> : null}
-      </Card>
-    </section>
-  );
-}
-
 /* ------------------------------------------------------------------ screen */
 
-export function SymptomFinder() {
+export function SymptomFinder({ catalog, assistant }: { catalog: ResourceCatalog; assistant: AssistantStatus }) {
   const analysis = useSymptomAnalysis();
-  const { state, resetCount } = useSession();
+  const { resetCount } = useSession();
   return (
     <>
-      <RiskMissNote />
-      {/* G6: substance-use symptoms in play (selected or matched) bring up the 42 CFR Part 2 prompt. */}
+      {/* G6: substance-use symptoms in play (selected, matched or answered) bring up the 42 CFR Part 2 prompt. */}
       {analysis.sud ? <HubPrompt context="sud" className="mb-6" /> : null}
       <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_23rem] lg:items-start">
         <div className="min-w-0 space-y-6">
           {/* Remount on every reset so drafts, search text and notices clear with the session (G5). */}
-          <FreeTextCard key={`text-${resetCount}`} analysis={analysis} />
-          <ContextCard />
-          <SymptomPicker key={`picker-${resetCount}`} analysis={analysis} />
-          {!state.under18 ? <DiagnosesCta analysis={analysis} className="hidden lg:flex" /> : null}
+          <DescribeStep key={`text-${resetCount}`} analysis={analysis} />
+          <FoundStep analysis={analysis} />
+          <AskMoreStep analysis={analysis} catalog={catalog} assistant={assistant} />
+          <ContextStep />
+          <PickerStep key={`picker-${resetCount}`} analysis={analysis} />
         </div>
         {/* Sticky on wide screens so the running list and its call to action stay in view while browsing chips. */}
         <IncludedSummary analysis={analysis} className="order-last min-w-0 lg:sticky lg:top-4 lg:order-none" />

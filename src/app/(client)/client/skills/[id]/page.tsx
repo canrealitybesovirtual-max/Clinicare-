@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { allHandouts, getAnyHandout } from "@/lib/library";
 import { ClientHandoutView } from "@/components/client/client-handout-view";
 
-/* Client mode (G3): one self-help skill sheet, plain language, crisis help on the page, no diagnosis labels. */
+/* Client mode (G3): one self-help skill sheet in English or Spanish, crisis help on the page, no diagnosis labels. */
 export const dynamicParams = false;
 
 export function generateStaticParams() {
@@ -19,5 +19,5 @@ export default async function ClientSkillPage({ params }: { params: Promise<{ id
   const { id } = await params;
   const handout = getAnyHandout(id);
   if (!handout) notFound();
-  return <ClientHandoutView handout={handout} back={{ href: "/client/skills", label: "All skills" }} />;
+  return <ClientHandoutView handout={handout} back={{ href: "/client/skills", label: { en: "All skills", es: "Todos los ejercicios" } }} />;
 }

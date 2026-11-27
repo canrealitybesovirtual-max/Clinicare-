@@ -36,6 +36,13 @@
  * setMedicalPossible, addTriggerCategory). A negation never removes a red-flag symptom (G9) and never
  * removes ids the caller protects (for example chips the clinician selected).
  *
+ * Question text names the described fear with the dictionary's curated object label ("dogs", "leaving the house"),
+ * never with the typed words. An answer that ties the fear to an event (addTriggerCategory "trauma-reminder") makes
+ * the trauma-reminder questions apply to the objects already described.
+ *
+ * Screens that keep duration, impairment, substance and medical in their own fields apply those answer effects with
+ * answerGateEffects() at click time and fold the rest with applyAnswers(..., { gates: "ignore" }).
+ *
  * Never in client mode: with mode "client" nextQuestions() returns [] (questions name conditions).
  */
 import { conditions as defaultConditions, lexicon } from "@/lib/content";

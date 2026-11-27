@@ -50,6 +50,61 @@
     "rows": 5
   },
   "safetyNote": "Safety first: Some thoughts need more help than a worksheet can give. If you have thoughts of hurting yourself or someone else, or thoughts that life is not worth living, do not wait for your next visit. Talk to someone now. In the US, call or text 988 or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "es": {
+    "title": "Registro de pensamientos",
+    "intro": "La forma en que pensamos sobre un momento puede cambiar cómo nos sentimos. Cuando llega un sentimiento fuerte, como tristeza, preocupación o enojo, muchas veces acaba de pasar un pensamiento por su mente. Esta hoja le ayuda a atrapar ese pensamiento, mirarlo de cerca y encontrar otras formas de ver las cosas. La meta no es tener solo pensamientos felices. La meta es ver el panorama completo. Cada anotación toma unos 10 a 15 minutos.",
+    "sections": [
+      {
+        "heading": "Cuándo llenarlo",
+        "body": "Llene una fila cuando note que su ánimo cambia. Si no puede hacerlo en ese momento, hágalo más tarde ese mismo día, mientras todavía se acuerda."
+      },
+      {
+        "heading": "Qué va en cada columna",
+        "steps": [
+          "Situación: Escriba qué estaba pasando. ¿Dónde estaba? ¿Quién estaba ahí? ¿Qué pasó? Quédese con los hechos, en pocas palabras.",
+          "Pensamiento: Escriba lo que pasó por su mente. Pregúntese: '¿Qué me estaba diciendo?' o '¿Qué pensé que iba a pasar?'",
+          "Sentimiento (0-10): Ponga nombre al sentimiento, como tristeza, miedo, enojo o vergüenza. Califique qué tan fuerte fue, del 0 al 10.",
+          "Otras formas de verlo: Mire el pensamiento como lo haría un amigo justo. Use las preguntas de abajo como ayuda.",
+          "Sentimiento después (0-10): Vuelva a calificar el mismo sentimiento después de buscar otras formas de verlo."
+        ]
+      },
+      {
+        "heading": "Preguntas para ver otros lados",
+        "steps": [
+          "¿Qué hechos apoyan este pensamiento? ¿Qué hechos no van con él?",
+          "¿Qué le diría a un amigo que tuviera este pensamiento?",
+          "¿Estoy saltando a lo peor que podría pasar? ¿Qué es lo más probable que pase?",
+          "¿Hay otra forma de explicar lo que pasó?",
+          "¿Va a importar esto dentro de una semana? ¿Dentro de un año?",
+          "Si el pensamiento es cierto, ¿qué podría hacer para sobrellevarlo?"
+        ]
+      },
+      {
+        "heading": "Ejemplo",
+        "body": "Situación: Una amiga no me contestó los mensajes en todo el día. Pensamiento: 'Está enojada conmigo.' Sentimiento: preocupación, 7. Otras formas de verlo: 'Puede que esté ocupada en el trabajo. Fue amable conmigo la semana pasada. Le puedo preguntar si todo está bien.' Sentimiento después: preocupación, 4."
+      },
+      {
+        "heading": "Consejos",
+        "steps": [
+          "Los pensamientos no son hechos. Son ideas que se le ocurren a su mente. Usted los puede revisar.",
+          "Puede que su sentimiento no baje mucho al principio. Hasta un cambio pequeño cuenta.",
+          "Si no se le ocurre otra forma de verlo, deje ese espacio en blanco. Hable de eso en su próxima cita.",
+          "Traiga esta hoja a su próxima cita."
+        ]
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Situación",
+        "Pensamiento",
+        "Sentimiento (0-10)",
+        "Otras formas de verlo",
+        "Sentimiento después (0-10)"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: Algunos pensamientos necesitan más ayuda de la que puede dar una hoja de trabajo. Si tiene pensamientos de hacerse daño o de hacerle daño a otra persona, o pensamientos de que no vale la pena vivir, no espere a su próxima cita. Hable con alguien ahora. En EE. UU., llame o envíe un mensaje de texto al 988, o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
   "sources": [
     {
       "title": "NICE guideline NG222: treatment and management in adults (includes CBT)",

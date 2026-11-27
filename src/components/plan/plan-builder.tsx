@@ -1,7 +1,7 @@
 "use client";
 import * as React from "react";
 import { useSearchParams } from "next/navigation";
-import { ArrowLeft, ArrowRight, BookOpen, RotateCcw, Users } from "lucide-react";
+import { ArrowLeft, ArrowRight, BookOpen, Check, ListOrdered, RotateCcw, Users } from "lucide-react";
 import { useSession } from "@/state/session";
 import { AdultOnly } from "@/components/measures/adult-only";
 import { Badge } from "@/components/ui/badge";
@@ -106,10 +106,6 @@ function BuilderInner({ options, interventions, measures, sudPrompt }: PlanBuild
 
   const update = React.useCallback((fn: (d: PlanDraft) => PlanDraft) => updateRef.current((prev) => (prev ? fn(prev) : prev)), []);
 
-  /* ---- small screens: the step select changes step only on "Go" (WCAG 3.2.2: no change of context on input) */
-  const [pickedStep, setPickedStep] = React.useState<PlanStepId>(step);
-  React.useEffect(() => setPickedStep(step), [step]);
-
   /* ---- choosing, switching and clearing the plan library */
   const [confirm, setConfirmState] = React.useState<{ kind: "switch"; to: string } | { kind: "clear" } | null>(null);
   // The confirm dialog has no trigger element: remember what opened it so focus can go back there on close.
@@ -199,86 +195,41 @@ function BuilderInner({ options, interventions, measures, sudPrompt }: PlanBuild
 
       <nav aria-label="Plan steps" className="no-print">
         <ol className="hidden flex-wrap gap-1.5 sm:flex">
-          {PLAN_STEPS.map((s, i) => {
-            const isCurrent = s.id === step;
-            const key = STEP_COUNT[s.id];
-            const n = key && counts ? counts[key] : 0;
-            return (
-              <li key={s.id}>
-                <button
-                  type="button"
-                  disabled={!draft && s.id !== "focus"}
-                  aria-current={isCurrent ? "step" : undefined}
-                  onClick={() => goTo(s.id)}
-                  className={cn(
-                    "inline-flex min-h-11 items-center gap-2 rounded-full border px-3 text-sm font-medium transition-colors disabled:opacity-50",
-                    "forced-colors:aria-[current=step]:outline forced-colors:aria-[current=step]:outline-2 forced-colors:aria-[current=step]:outline-[Highlight]",
-                    isCurrent
-                      ? "border-primary-solid bg-primary-solid text-primary-solid-fg"
-                      : "border-border bg-surface text-text hover:bg-surface-2",
-                  )}
-                >
-                  <span className="font-semibold">{i + 1}.</span> {s.label}{" "}
-                  {n > 0 ? (
-                    <span className={cn("rounded-full px-1.5 text-xs", isCurrent ? "bg-black/25" : "bg-accent-soft text-accent")}>
-                      {n}{" "}
-                      <span className="sr-only">chosen</span>
-                    </span>
-                  ) : null}
-                </button>
-              </li>
-            );
-          })}
+          <StepButtons step={step} counts={counts} hasDraft={Boolean(draft)} goTo={goTo} />
         </ol>
-        <div className="sm:hidden">
-          <p className="flex items-baseline justify-between text-sm">
-            <span className="font-semibold">
-              Step {index + 1} of {PLAN_STEPS.length}
-            </span>
-            <span className="text-muted">{current.label}</span>
-          </p>
-          <div aria-hidden className="mt-1.5 h-1.5 overflow-hidden rounded-full bg-border/70">
-            <div className="h-full rounded-full bg-accent" style={{ width: `${((index + 1) / PLAN_STEPS.length) * 100}%` }} />
-          </div>
-          <form
-            className="mt-3 flex items-end gap-2"
-            onSubmit={(e) => {
-              e.preventDefault();
-              if (draft && pickedStep !== step) goTo(pickedStep);
-            }}
+        {/* Phones: the step list folds away so the current step starts near the top of the screen. */}
+        {draft ? (
+          <Disclosure
+            title="All steps"
+            meta={`${index + 1} of ${PLAN_STEPS.length}`}
+            icon={ListOrdered}
+            bordered={false}
+            className="rounded-xl border border-border bg-surface px-4 sm:hidden"
+            bodyClassName="pb-3"
           >
-            <div className="min-w-0 flex-1">
-              <label htmlFor="plan-step-select" className="text-sm font-semibold">
-                Go to step
-              </label>
-              <select
-                id="plan-step-select"
-                value={pickedStep}
-                disabled={!draft}
-                onChange={(e) => setPickedStep(e.target.value as PlanStepId)}
-                className="mt-1.5 block min-h-11 w-full rounded-lg border border-input-border bg-surface px-3 text-base text-text"
-              >
-                {PLAN_STEPS.map((s, i) => (
-                  <option key={s.id} value={s.id}>
-                    {i + 1}. {s.label}
-                  </option>
-                ))}
-              </select>
-            </div>
-            <Button type="submit" variant="outline" disabled={!draft}>
-              Go
-            </Button>
-          </form>
-        </div>
+            <ol className="space-y-1.5">
+              <StepButtons step={step} counts={counts} hasDraft goTo={goTo} stacked />
+            </ol>
+          </Disclosure>
+        ) : null}
       </nav>
 
       <section aria-labelledby="plan-step-heading" className="space-y-5 rounded-xl border border-border bg-surface p-4 shadow-sm sm:p-6">
-        <h2 id="plan-step-heading" ref={headingRef} tabIndex={-1} className="text-xl font-bold leading-tight outline-none">
-          <span className="block text-sm font-semibold uppercase tracking-wide text-accent">
-            Step {index + 1} of {PLAN_STEPS.length}
-          </span>
-          {current.label}
-        </h2>
+        <div className="space-y-2">
+          <h2 id="plan-step-heading" ref={headingRef} tabIndex={-1} className="text-xl font-bold leading-tight outline-none">
+            <span className="block text-sm font-semibold uppercase tracking-wide text-accent">
+              Step {index + 1} of {PLAN_STEPS.length}
+            </span>
+            {current.label}
+          </h2>
+          {/* Progress is in the heading text; the bar is a visual echo of it. */}
+          <div aria-hidden className="h-1.5 max-w-3xl overflow-hidden rounded-full bg-border/70">
+            <div
+              className="h-full rounded-full bg-accent motion-safe:transition-[width] motion-safe:duration-300"
+              style={{ width: `${((index + 1) / PLAN_STEPS.length) * 100}%` }}
+            />
+          </div>
+        </div>
 
         {/* Small screens: Back / Next at the top too, so long steps do not need a scroll to move on. */}
         {draft && (prev || next) ? (
@@ -379,6 +330,52 @@ function BuilderInner({ options, interventions, measures, sudPrompt }: PlanBuild
   );
 }
 
+/** The step list: current step marked with aria-current, a check and a count once something is chosen there. */
+function StepButtons({
+  step,
+  counts,
+  hasDraft,
+  goTo,
+  stacked = false,
+}: {
+  step: PlanStepId;
+  counts: PlanCounts | null;
+  hasDraft: boolean;
+  goTo: (step: PlanStepId) => void;
+  stacked?: boolean;
+}) {
+  return PLAN_STEPS.map((s, i) => {
+    const isCurrent = s.id === step;
+    const key = STEP_COUNT[s.id];
+    const n = key && counts ? counts[key] : 0;
+    return (
+      <li key={s.id}>
+        <button
+          type="button"
+          disabled={!hasDraft && s.id !== "focus"}
+          aria-current={isCurrent ? "step" : undefined}
+          onClick={() => goTo(s.id)}
+          className={cn(
+            "inline-flex min-h-11 items-center gap-2 rounded-full border px-3 text-sm font-medium transition-colors disabled:opacity-50",
+            "forced-colors:aria-[current=step]:outline forced-colors:aria-[current=step]:outline-2 forced-colors:aria-[current=step]:outline-[Highlight]",
+            stacked && "w-full rounded-lg",
+            isCurrent ? "border-primary-solid bg-primary-solid text-primary-solid-fg" : "border-border bg-surface text-text hover:bg-surface-2",
+          )}
+        >
+          <span className="font-semibold">{i + 1}.</span> {s.label}{" "}
+          {n > 0 ? (
+            <span className={cn("inline-flex items-center gap-0.5 rounded-full px-1.5 text-xs", isCurrent ? "bg-black/25" : "bg-accent-soft text-accent")}>
+              <Check aria-hidden className="size-3" />
+              {n}
+              <span className="sr-only"> chosen</span>
+            </span>
+          ) : null}
+        </button>
+      </li>
+    );
+  });
+}
+
 function FocusStep({
   options,
   option,
@@ -457,9 +454,15 @@ function FocusStep({
           </Button>
         </div>
       ) : (
-        <p className="text-sm text-muted">
-          {options.length} plan libraries are available. Nothing is added to the plan until you check it.
-        </p>
+        <div className="rounded-xl border border-dashed border-border p-4 text-sm leading-relaxed">
+          <p className="font-semibold">How the builder works</p>
+          <ol className="mt-2 list-decimal space-y-1 pl-5 text-muted">
+            <li>Choose one of the {options.length} plan libraries above.</li>
+            <li>With the client, check the problems, signs, goals and objectives that fit, one step at a time.</li>
+            <li>Pick interventions and a measure schedule, then export a plan without identifiers.</li>
+          </ol>
+          <p className="mt-2 text-muted">Nothing is in the plan until you check it, and nothing is saved.</p>
+        </div>
       )}
     </div>
   );

@@ -5,14 +5,15 @@
  *    back to the clinician (question text is templated with dictionary labels, never with typed words);
  *  - the per-session opt-in for the optional Claude assistant and its server-sealed answer history.
  *
- * Module memory only: never storage, URL, cookie or log. Everything is tied to the session's `resetCount`, so
- * Clear session and the idle wipe make it read as empty at once; the stale values are dropped (and the on-device
- * model is switched off) the next time a screen that uses this store mounts.
+ * Module memory only: never storage, URL, cookie or log. Everything is tied to the session: after Clear session or
+ * the idle wipe (`resetCount` changes), and for a brand-new session (state still the untouched initialSession), it
+ * reads as empty at once; the stale values are dropped (and the on-device model is switched off) the next time a
+ * screen that uses this store renders.
  */
 import * as React from "react";
 import type { AnsweredRecord } from "@/lib/follow-up";
 import { disableSemanticModel } from "@/lib/semantic/client";
-import { useSession } from "@/state/session";
+import { initialSession, useSession } from "@/state/session";
 
 /** A follow-up answer as the panel shows it back. Curated strings only. */
 export interface FollowUpAnswer extends AnsweredRecord {
@@ -45,7 +46,7 @@ const fresh = (epoch: number): AiSessionState => ({
   assistantAnswered: [],
 });
 
-let store: AiSessionState = fresh(0);
+let store: AiSessionState;
 const listeners = new Set<() => void>();
 const subscribe = (l: () => void) => {
   listeners.add(l);
@@ -54,9 +55,8 @@ const subscribe = (l: () => void) => {
   };
 };
 const getSnapshot = () => store;
-const SERVER_SNAPSHOT = fresh(0);
 
-/** Per-epoch empty states, so readers get a stable object while a reset is pending. */
+/** One shared empty state per epoch, so readers get a stable object and "still empty" is an identity check. */
 const emptyByEpoch = new Map<number, AiSessionState>();
 function emptyFor(epoch: number): AiSessionState {
   let e = emptyByEpoch.get(epoch);
@@ -67,20 +67,24 @@ function emptyFor(epoch: number): AiSessionState {
   }
   return e;
 }
+store = emptyFor(0);
 
-export type AiSessionPatch = Partial<Omit<AiSessionState, "epoch">>;
+type AiSessionPatch = Partial<Omit<AiSessionState, "epoch">>;
 
 export function useAiSession(): [AiSessionState, (patch: AiSessionPatch | ((prev: AiSessionState) => AiSessionPatch)) => void] {
-  const { resetCount } = useSession();
-  const snap = React.useSyncExternalStore(subscribe, getSnapshot, () => SERVER_SNAPSHOT);
-  const current = snap.epoch === resetCount ? snap : emptyFor(resetCount);
+  const { state, resetCount } = useSession();
+  const snap = React.useSyncExternalStore(subscribe, getSnapshot, () => emptyFor(0));
+  // Nothing can be answered or switched on before the session holds something, so an untouched session is a new one.
+  const newSession = state === initialSession;
+  const stale = (s: AiSessionState) => s.epoch !== resetCount || (newSession && s !== emptyByEpoch.get(s.epoch));
+  const current = stale(snap) ? emptyFor(resetCount) : snap;
 
   React.useEffect(() => {
-    if (store.epoch === resetCount) return;
-    store = fresh(resetCount);
+    if (!stale(store)) return;
+    store = emptyFor(resetCount);
     disableSemanticModel(); // the worker keeps recent clause vectors; a new session starts with it off
     for (const l of listeners) l();
-  }, [resetCount]);
+  });
 
   const update = React.useCallback(
     (patch: AiSessionPatch | ((prev: AiSessionState) => AiSessionPatch)) => {

@@ -77,6 +77,88 @@
     "rows": 6
   },
   "safetyNote": "Safety first: This plan helps with strong feelings and urges. It is not enough on its own if you are thinking about suicide or might hurt yourself or someone else. If that happens, use your safety plan and get help now. In the US, call or text 988 or call 911. In other countries, call your local emergency number or visit findahelpline.com. If someone is hurting you, get to a safe place first. Resource only. This sheet does not replace care from a licensed professional.",
+  "es": {
+    "title": "Mi plan para los momentos difíciles",
+    "intro": "A veces los sentimientos se ponen tan fuertes que cuesta pensar. Puede sentir ganas de hacer algo que podría empeorar las cosas, como gritar, renunciar o alejarse de todos. Este plan le ayuda a pasar esos momentos sin empeorarlos. Estas habilidades no arreglan el problema. Le ayudan a dejar pasar la ola hasta que pueda pensar con más claridad. Llene este plan cuando esté en calma. Toma unos 15 minutos.",
+    "sections": [
+      {
+        "heading": "Conozca sus señales",
+        "body": "¿Qué le indica que se está formando un momento difícil? Escriba algunas señales en las líneas de abajo.",
+        "steps": [
+          "En mi cuerpo, noto: ________________________",
+          "En mis pensamientos, noto: ________________________",
+          "Siento ganas de: ________________________"
+        ]
+      },
+      {
+        "heading": "Primero: haga una pausa",
+        "steps": [
+          "Todavía no actúe según las ganas. Dígase: 'Ahora no. Puedo esperar 10 minutos.'",
+          "Si puede, aléjese de la situación. Salga del cuarto, o suelte lo que tenga en las manos.",
+          "Tome aire despacio una vez y suéltelo durante más tiempo."
+        ]
+      },
+      {
+        "heading": "Después: calme su cuerpo",
+        "body": "Los sentimientos fuertes viven en el cuerpo. Cuando su cuerpo se calma, su mente puede ponerse al día.",
+        "steps": [
+          "Refrésquese. Échese agua fresca en la cara, o sostenga algo frío por poco tiempo, como una bebida fría o una bolsa de hielo envuelta en un trapo.",
+          "Haga más lenta su respiración. Que cada vez que suelte el aire tarde un poco más que al tomarlo.",
+          "Gaste energía, si su cuerpo se lo permite. Camine rápido, suba escaleras o haga saltos de tijera unos minutos.",
+          "Apriete y suelte. Apriete las manos o suba los hombros durante 5 segundos. Luego déjelos relajarse."
+        ]
+      },
+      {
+        "heading": "Luego: pase los próximos minutos",
+        "body": "Elija cosas que le llenen la mente o que le den consuelo. Escoja unas que sean seguras y gratis o de bajo costo.",
+        "steps": [
+          "Haga algo que necesite toda su atención, como un rompecabezas, un juego, cocinar o limpiar.",
+          "Dele un trabajo a su mente, como contar hacia atrás desde 100 restando 7 cada vez, o nombrar todas las cosas azules del cuarto.",
+          "Llame o mándele un mensaje a alguien y hablen de otra cosa. O ayude a alguien con una tarea pequeña.",
+          "Busque algo que le reconforte, como una ducha tibia, una cobija suave, música tranquila, un olor que le guste o una taza de té tomada despacio.",
+          "Mis propias ideas: ________________________"
+        ]
+      },
+      {
+        "heading": "Recuerde por qué esperar ayuda",
+        "body": "Haga esta parte ahora, mientras está en calma. Luego léala cuando llegue un momento difícil.",
+        "steps": [
+          "Cuando actúo según las ganas, ¿qué suele pasar después? ________________",
+          "Cuando espero a que pase, ¿qué suele pasar después? ________________",
+          "Una nota corta para mí en un momento difícil: ________________"
+        ]
+      },
+      {
+        "heading": "Busque a alguien",
+        "steps": [
+          "Una persona a la que puedo llamar o mandarle un mensaje: ________________________",
+          "Un lugar al que puedo ir para estar con otras personas: ________________________",
+          "Mi consejero o terapeuta: ________________________"
+        ]
+      },
+      {
+        "heading": "Consejos",
+        "steps": [
+          "Practique estas habilidades cuando sienta un poco de malestar, no solo en una crisis. Así le saldrán con más facilidad cuando las necesite.",
+          "El agua fría y el ejercicio fuerte cambian el ritmo del corazón. Pregúntele primero a su médico si tiene un problema del corazón, un problema con la alimentación u otros problemas de salud, o si está embarazada. Mientras tanto, use opciones más suaves.",
+          "Estas habilidades son para un alivio de corto plazo. Si nota que las usa para evitar todos los sentimientos difíciles, hable con su consejero.",
+          "Guarde este plan donde pueda encontrarlo rápido, como en su bolsa o junto a su cama.",
+          "Si tiene pensamientos de suicidio o de hacerse daño, use su plan de seguridad y pida ayuda de inmediato."
+        ]
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Día",
+        "Qué lo provocó",
+        "Malestar antes (0-10)",
+        "Lo que probé",
+        "Malestar después (0-10)"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: Este plan ayuda con los sentimientos y las ganas fuertes. No es suficiente por sí solo si está pensando en el suicidio o si podría hacerse daño o hacerle daño a otra persona. Si eso pasa, use su plan de seguridad y busque ayuda ahora. En EE. UU., llame o envíe un mensaje de texto al 988, o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Si alguien le está haciendo daño, primero vaya a un lugar seguro. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
   "sources": [
     {
       "title": "DBT Skills Training Manual, Second Edition (Linehan)",

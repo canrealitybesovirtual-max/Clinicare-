@@ -57,6 +57,62 @@
     "rows": 6
   },
   "safetyNote": "Safety first: Pick tests that are safe. Do not plan tests that could hurt your health or safety, break the law, or cause real harm to your job or relationships. Some tests bring on strong body feelings, like a racing heart. If you have a health problem such as heart or lung trouble, or you are pregnant, check with your doctor first. If someone treats you badly because of who you are, that is not a problem with your thinking. Talk it over with your counselor. This skill is not for emergencies. If you have thoughts of hurting yourself or someone else, call or text 988 in the US, or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "es": {
+    "title": "Poner a prueba mis pensamientos: registro de experimentos",
+    "intro": "Nuestra mente siempre está adivinando lo que va a pasar. Cuando sentimos miedo o tenemos el ánimo bajo, estas suposiciones pueden ser duras, como 'Lo voy a arruinar' o 'Nada va a ayudar'. Pueden sentirse verdaderas aunque nunca las hayamos comprobado. Un experimento es una prueba pequeña y planeada en la vida real. Usted actúa como un científico. Pone a prueba una suposición y ve lo que pasa de verdad. No hay forma de fallar. Cada resultado le enseña algo. Planear una prueba toma de 15 a 20 minutos. Puede planearla con su consejero.",
+    "sections": [
+      {
+        "heading": "Paso 1: Elija un pensamiento para poner a prueba",
+        "steps": [
+          "Elija una suposición clara sobre lo que va a pasar. Por ejemplo: 'Si hago una pregunta en el trabajo, la gente va a pensar que soy tonto.'",
+          "Califique cuánto lo cree, del 0% (nada) al 100% (totalmente).",
+          "Ahora escriba otra forma en que podrían salir las cosas. Por ejemplo: 'La gente va a contestar mi pregunta y va a seguir con lo suyo.' Califique también cuánto cree esta."
+        ]
+      },
+      {
+        "heading": "Paso 2: Planee su prueba",
+        "steps": [
+          "Decida qué va a hacer, dónde y cuándo. Que sea algo pequeño y claro.",
+          "Decida de antemano cómo va a saber cuál suposición fue la correcta. Por ejemplo: 'Voy a fijarme si alguien se ríe o hace una mueca.'",
+          "Haga una lista de las cosas que suele hacer para sentirse a salvo, como repasar una y otra vez lo que va a decir o no mirar a la gente. Planee dejarlas durante la prueba. Pueden ocultar lo que pasa de verdad.",
+          "Piense en lo que podría estorbar y en cómo lo va a manejar."
+        ]
+      },
+      {
+        "heading": "Paso 3: Haga la prueba",
+        "steps": [
+          "Lleve a cabo su plan. Preste atención a lo que pasa a su alrededor, no solo a cómo se siente por dentro.",
+          "Está bien sentir nervios. No significa que la prueba esté saliendo mal."
+        ]
+      },
+      {
+        "heading": "Paso 4: Mire lo que pasó",
+        "steps": [
+          "Escriba lo que pasó de verdad. Quédese con los hechos, como lo que la gente dijo o hizo.",
+          "¿Se cumplió su primera suposición? ¿Toda, una parte o nada?",
+          "Si algo de lo que temía sí pasó, pregúntese: ¿Fue tan malo como esperaba? ¿Cómo lo manejé?",
+          "¿Qué aprendió? Vuelva a calificar su primera suposición, del 0% al 100%.",
+          "Planee su próxima prueba. Podría hacer la misma prueba en un lugar nuevo, o poner a prueba una duda que le quede."
+        ]
+      },
+      {
+        "heading": "Ejemplo",
+        "body": "Pensamiento: 'Si salgo a caminar cuando tengo el ánimo bajo, solo me voy a sentir peor.' Lo creo: 80%. Otra forma de verlo: 'Caminar podría ayudar un poco.' Lo creo: 20%. Prueba: Caminar alrededor de la cuadra 10 minutos el martes después del almuerzo. Calificar mi ánimo antes y después. Qué pasó: Mi ánimo subió de 3 a 5 de 10. Qué aprendí: Moverme me ayudó un poco, aunque no tenía ganas. Cuánto creo ahora mi primer pensamiento: 40%."
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Pensamiento que pongo a prueba (lo creo 0-100%)",
+        "Mi prueba: qué, dónde, cuándo",
+        "Lo que creo que va a pasar",
+        "Lo que pasó de verdad",
+        "Lo que aprendí",
+        "Cuánto lo creo ahora (0-100%)"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: Elija pruebas que sean seguras. No planee pruebas que puedan dañar su salud o su seguridad, que vayan contra la ley o que causen un daño real a su trabajo o a sus relaciones. Algunas pruebas producen sensaciones fuertes en el cuerpo, como el corazón acelerado. Si tiene un problema de salud, como problemas del corazón o de los pulmones, o si está embarazada, consulte primero con su médico. Si alguien le trata mal por ser quien es, eso no es un problema de su forma de pensar. Háblelo con su consejero. Esta habilidad no es para emergencias. Si tiene pensamientos de hacerse daño o de hacerle daño a otra persona, llame o envíe un mensaje de texto al 988 en EE. UU., o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
   "sources": [
     {
       "title": "Oxford Guide to Behavioural Experiments in Cognitive Therapy (Bennett-Levy, Butler, Fennell, Hackmann, Mueller and Westbrook, eds.)",

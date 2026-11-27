@@ -46,17 +46,11 @@ export function OnDeviceSuggestions({ analysis }: { analysis: SymptomAnalysis })
 
   return (
     <section aria-labelledby="ondevice-heading" className="rounded-xl border border-border bg-surface p-4">
-      <div className="flex flex-wrap items-start gap-3">
-        <Cpu aria-hidden className="mt-0.5 size-5 shrink-0 text-muted" />
-        <div className="min-w-0 flex-1">
-          <h3 id="ondevice-heading" className="text-base font-semibold">
-            Suggest more symptoms on this device
-          </h3>
-          <p className="mt-0.5 text-sm text-muted">
-            Optional. Finds lexicon symptoms that are worded differently in your note. The model (about {MB} MB) downloads
-            from this app only when you turn it on; your note never leaves this tab.
-          </p>
-        </div>
+      <div className="flex items-center gap-3">
+        <Cpu aria-hidden className="size-5 shrink-0 text-muted" />
+        <h3 id="ondevice-heading" className="min-w-0 flex-1 text-base font-semibold leading-snug">
+          Suggest more symptoms on this device
+        </h3>
         <button
           type="button"
           role="switch"
@@ -66,13 +60,16 @@ export function OnDeviceSuggestions({ analysis }: { analysis: SymptomAnalysis })
           onClick={toggle}
           className="group relative inline-flex h-11 w-[4.5rem] shrink-0 items-center rounded-full border border-border bg-surface-2 p-1 disabled:opacity-50 aria-checked:border-primary aria-checked:bg-primary/15"
         >
-          <span className="sr-only">{on ? "On" : "Off"}</span>
           <span
             aria-hidden
             className="size-8 rounded-full bg-muted transition-transform motion-reduce:transition-none group-aria-checked:translate-x-7 group-aria-checked:bg-primary-solid"
           />
         </button>
       </div>
+      <p className="mt-2 text-sm text-muted">
+        Optional. Finds lexicon symptoms that are worded differently in your note. The model (about {MB} MB) downloads
+        from this app only when you turn it on; your note never leaves this tab.
+      </p>
 
       <div aria-live="polite" className="mt-3 space-y-3 text-sm empty:hidden">
         {unsupported ? <p className="text-muted">{model.support.supported === false ? model.support.reason : ""}</p> : null}

@@ -94,6 +94,104 @@
   },
   "safetyNote": "Safety first: If you drink a lot, or take certain pills like sleeping pills or pills for nerves every day, stopping all at once can be dangerous. Talk with a doctor first. After a break from opioids or other drugs, your body can't handle as much as before. Using the amount you used to can cause an overdose. If you do use, don't use alone, and keep naloxone, a medicine that can reverse an opioid overdose, close by. If someone may have overdosed, call 911. For free, confidential help finding treatment in the US, call the SAMHSA National Helpline at 1-800-662-4357, any time, in English or Spanish. If you have thoughts of hurting yourself or someone else, call or text 988 in the US, or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
   "sud": true,
+  "es": {
+    "title": "Seguir en el camino: mi plan para prevenir recaídas",
+    "intro": "Hacer un cambio grande es un trabajo difícil. Los días difíciles y los tropiezos son comunes, y son parte de aprender. Este plan le ayuda a prepararse para ellos con tiempo, mientras se siente en calma y con la mente clara. Lo puede usar para un cambio como beber menos o dejar de beber o de usar drogas. También lo puede usar para evitar que regresen el ánimo bajo o la preocupación. Llénelo con su consejero, con sus propias palabras. Toma unos 20 a 30 minutos.",
+    "sections": [
+      {
+        "heading": "Por qué este cambio es importante para mí",
+        "body": "Escriba las razones que le mantienen en marcha. Piense en su salud, las personas que quiere, el trabajo, la fe o sus metas.",
+        "steps": [
+          "Una razón que me importa: ________________________",
+          "Otra razón: ________________________",
+          "Cómo ha mejorado mi vida desde que empecé: ________________________"
+        ]
+      },
+      {
+        "heading": "Mis momentos de alto riesgo",
+        "body": "Son momentos en los que es más difícil seguir con su plan. Pueden ser lugares, horas del día, eventos o sentimientos. Algunos comunes son el estrés, las preocupaciones de dinero, las peleas, las fiestas, el día de pago o estar sin compañía en la noche. Sentir aburrimiento, soledad, enojo, hambre o cansancio también puede ser un riesgo. Use palabras generales, no nombres.",
+        "steps": [
+          "Un lugar o evento de riesgo: ________________________",
+          "Una hora de riesgo: ________________________",
+          "Un sentimiento de riesgo: ________________________"
+        ]
+      },
+      {
+        "heading": "Mis señales de alerta temprana",
+        "body": "Los problemas muchas veces empiezan mucho antes de un desliz. Ponga atención a señales como estas.",
+        "steps": [
+          "Un pensamiento, como 'Solo uno no me va a hacer daño' o '¿Para qué?': ________________",
+          "Un cambio de ánimo, como sentir los nervios de punta o no sentir nada: ________________",
+          "Un cambio en lo que hago, como faltar a mis citas, quedarme en casa o guardar secretos: ________________",
+          "Un cambio en mi cuerpo, como dormir mal o no comer: ________________"
+        ]
+      },
+      {
+        "heading": "Lo que voy a hacer en su lugar",
+        "body": "Para cada momento de riesgo o señal de alerta, planee una forma de sobrellevarlo.",
+        "steps": [
+          "Evitar o irme: Cómo puedo alejarme de una situación de riesgo, o salir de ella: ________________",
+          "Esperar a que pase: Darles tiempo a las ganas para que pasen, como una ola. El registro para surfear las ganas puede ayudar.",
+          "Tener algo que hacer: Algo que mantenga ocupadas mis manos y mi mente: ________________",
+          "Buscar a alguien: Alguien con quien me puedo comunicar (escriba quién es para usted, no su nombre): ________________",
+          "Decir que no: Lo que voy a decir si alguien me ofrece: ________________",
+          "Cuidar mi cuerpo: Comer, descansar, tomar agua o moverme."
+        ]
+      },
+      {
+        "heading": "Personas y lugares que me apoyan",
+        "body": "El apoyo hace una gran diferencia. Puede venir de la familia, los amigos, un padrino o una madrina, un grupo de apoyo, una comunidad de fe o su consejero. Guarde sus datos de contacto en un lugar privado al que pueda llegar rápido. En esta hoja, escriba quiénes son para usted, no sus nombres.",
+        "steps": [
+          "Alguien a quien puedo acudir a cualquier hora: ________________",
+          "Un grupo o lugar donde siento apoyo: ________________",
+          "Mi consejero o clínica: ________________"
+        ]
+      },
+      {
+        "heading": "Si tengo un desliz",
+        "body": "Un desliz es un paso atrás. No tiene que convertirse en volver por completo a los viejos hábitos. No significa que haya fracasado ni que haya perdido su avance.",
+        "steps": [
+          "Pare y vaya a un lugar seguro.",
+          "Busque a alguien que le apoye, y cuénteselo pronto a su consejero.",
+          "Trátese con amabilidad. La culpa y la vergüenza pueden llevar a consumir más. La amabilidad le ayuda a volver al camino.",
+          "Mire qué le llevó al desliz. ¿Qué puede aprender de eso?",
+          "Regrese a su plan. Actualícelo con lo que aprendió."
+        ]
+      },
+      {
+        "heading": "Rutinas sanas que me mantienen fuerte",
+        "steps": [
+          "Sueño: ________________________",
+          "Comidas: ________________________",
+          "Movimiento: ________________________",
+          "Algo divertido o con sentido cada semana: ________________________"
+        ]
+      },
+      {
+        "heading": "Mantenga su plan al día",
+        "steps": [
+          "Revise su plan una vez a la semana, y después de cualquier momento difícil.",
+          "Guarde una copia donde pueda encontrarla rápido.",
+          "Cambie lo que no le ayudó y agregue lo que sí le ayudó."
+        ]
+      },
+      {
+        "heading": "Nota de privacidad",
+        "body": "Guarde este plan en un lugar privado. Si lo comparte con un programa de tratamiento por consumo de sustancias, puede llegar a ser parte de sus registros de tratamiento. Esos registros tienen una protección federal especial de la privacidad. La ley federal 42 CFR Part 2 prohíbe el uso o la divulgación no autorizados de estos registros. Pregúntele a su consejero cómo se guardan y se comparten sus registros."
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Semana",
+        "Momentos de riesgo que enfrenté",
+        "Señales de alerta que noté",
+        "Lo que me ayudó",
+        "Lo que voy a probar la próxima semana"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: Si bebe mucho, o toma ciertas pastillas todos los días, como pastillas para dormir o para los nervios, dejar de hacerlo de golpe puede ser peligroso. Hable primero con un médico. Después de un tiempo sin opioides u otras drogas, su cuerpo no aguanta tanto como antes. Usar la misma cantidad que antes puede causar una sobredosis. Si va a usar, no lo haga sin compañía, y tenga cerca naloxona, un medicamento que puede revertir una sobredosis de opioides. Si alguien pudo haber tenido una sobredosis, llame al 911. Para recibir ayuda gratuita y confidencial para encontrar tratamiento en EE. UU., llame a la Línea Nacional de Ayuda de SAMHSA (SAMHSA National Helpline) al 1-800-662-4357, a cualquier hora, en inglés o en español. Si tiene pensamientos de hacerse daño o de hacerle daño a otra persona, llame o envíe un mensaje de texto al 988 en EE. UU., o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
   "sources": [
     {
       "title": "Relapse prevention for alcohol and drug problems: that was Zen, this is Tao (Witkiewitz and Marlatt)",

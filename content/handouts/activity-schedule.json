@@ -44,6 +44,54 @@
     "rows": 14
   },
   "safetyNote": "Safety first: Pick activities that are safe for your body. If you have a health problem, or you have not been active in a while, ask your doctor before you start a new kind of exercise. Low mood can sometimes come with thoughts of death or of hurting yourself. If that happens, do not wait for your next visit. Talk to someone now. In the US, call or text 988 or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "es": {
+    "title": "Plan de actividades",
+    "intro": "Cuando su ánimo está bajo, es común hacer menos. Puede dejar de hacer cosas que antes disfrutaba, y las tareas de la casa se pueden acumular. Hacer menos puede bajar su ánimo todavía más. Un plan de actividades le ayuda a planear actividades pequeñas y fáciles de hacer, y a notar cómo le afectan. No tiene que esperar a tener ganas. Muchas veces, primero viene la acción y después llega el sentirse mejor. Planear su semana toma unos 15 minutos.",
+    "sections": [
+      {
+        "heading": "Dos tipos de actividades",
+        "body": "Trate de planear una mezcla de los dos tipos cada semana. Las actividades de disfrute son cosas que le gustan, como caminar, escuchar música, llamar a un amigo o pasar tiempo al aire libre. Las actividades de logro le dan la sensación de 'lo logré'. Por ejemplo, pagar una cuenta, lavar la ropa o cocinar una comida."
+      },
+      {
+        "heading": "Planee su semana",
+        "steps": [
+          "Piense en lo que es importante para usted, como la familia, los amigos, la salud, la fe, el trabajo o la diversión. Elija actividades que vayan con esas cosas.",
+          "Empiece con poco. Elija 1 o 2 actividades fáciles al día. Una caminata de 10 minutos cuenta.",
+          "Escriba cada actividad en el registro, junto al día en que piensa hacerla. Elija también una hora.",
+          "Divida las tareas grandes en partes pequeñas. En lugar de 'limpiar la casa', pruebe con 'lavar los platos'."
+        ]
+      },
+      {
+        "heading": "Después de cada actividad",
+        "steps": [
+          "Califique el Disfrute del 0 al 10. ¿Cuánto lo disfrutó? Un 0 significa nada. Un 10 significa muchísimo.",
+          "Califique el Logro del 0 al 10. ¿Cuánto sintió 'lo logré'? Un 0 significa nada. Un 10 significa mucho.",
+          "Si puede, califique justo después. Más tarde es fácil olvidar las partes buenas."
+        ]
+      },
+      {
+        "heading": "Consejos",
+        "steps": [
+          "Haga la actividad aunque no tenga ganas. Las ganas de hacer cosas muchas veces aparecen después de empezar.",
+          "Los números bajos están bien. Un 2 sigue siendo más que 0, y le dice algo útil.",
+          "Si se salta un día, simplemente empiece de nuevo al día siguiente. No necesita ponerse al día.",
+          "Si le ayuda, pídale a alguien que le acompañe.",
+          "Al final de la semana, mire hacia atrás. ¿Qué actividades le ayudaron más? Planee más de esas.",
+          "Traiga esta hoja a su próxima cita."
+        ]
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Día",
+        "Actividad",
+        "Disfrute (0-10)",
+        "Logro (0-10)"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: Elija actividades que sean seguras para su cuerpo. Si tiene un problema de salud, o hace tiempo que no hace actividad física, pregúntele a su médico antes de empezar un nuevo tipo de ejercicio. A veces, el ánimo bajo puede venir con pensamientos de muerte o de hacerse daño. Si eso pasa, no espere a su próxima cita. Hable con alguien ahora. En EE. UU., llame o envíe un mensaje de texto al 988, o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
   "sources": [
     {
       "title": "NICE guideline NG222: treatment and management in adults (includes behavioural activation)",

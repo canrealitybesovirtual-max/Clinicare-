@@ -5,9 +5,10 @@
  *
  * Privacy (G5, G17, docs/RESOURCES.md): the only things sent are a curated search type and a location that is
  * EITHER a 5-digit ZIP OR a city + state, validated in the browser with src/lib/outbound.ts. The city field runs
- * through the PHI scrubber (useScrubbedField). The ZIP field accepts digits only and is not scrubbed, because a
- * ZIP is itself the one location identifier the search is allowed to send. Everything lives in component memory,
- * is never put in a URL, title or storage, and is cleared by "Clear session" (remount on resetCount).
+ * through the PHI scrubber (useCityField), which lets an exact gazetteer city such as Austin or Charlotte through.
+ * The ZIP field accepts digits only and is not scrubbed, because a ZIP is itself the one location identifier the
+ * search is allowed to send. Everything lives in component memory, is never put in a URL, title or storage, and is
+ * cleared by "Clear session" (remount on resetCount).
  */
 import * as React from "react";
 import { Loader2, RefreshCw, Search } from "lucide-react";
@@ -29,9 +30,9 @@ import { ChoiceGroup } from "@/components/ui/choice-group";
 import { ExternalLink } from "@/components/ui/external-link";
 import { Notice } from "@/components/ui/notice";
 import { PRIVATE_TEXT_FIELD_PROPS } from "@/components/ui/private-field";
-import { useScrubbedField } from "@/components/symptoms/use-scrubbed-field";
 import { cn } from "@/lib/utils";
-import { checkLocation, type LocationMode } from "./location-check";
+import { checkLocation, type LocationMode, type PlaceIndex } from "./location-check";
+import { useCityField } from "./use-city-field";
 import { useSearchSettings } from "./search-context";
 import {
   FACILITY_TYPE_OPTIONS,
@@ -207,10 +208,13 @@ function ReferralSearchInner({ sudPrompt }: { sudPrompt: React.ReactNode }) {
 
   const [locMode, setLocMode] = React.useState<LocationMode>("zip");
   const [zip, setZip] = React.useState("");
-  const [city, setCity] = React.useState("");
-  const cityField = useScrubbedField<HTMLInputElement>(city, setCity);
+  const cityField = useCityField();
   const [stateCode, setStateCode] = React.useState("");
-  const [fieldError, setFieldError] = React.useState<{ field: "zip" | "city" | "state"; message: string } | null>(null);
+  const [fieldError, setFieldError] = React.useState<{ field: "zip" | "city" | "state"; message: string; identifier?: boolean } | null>(
+    null,
+  );
+  // True while the city is being checked against the gazetteer (it loads on demand), so a second submit waits.
+  const checkingRef = React.useRef(false);
   // Bumped on every failed submit; focus moves to the field AFTER React has applied aria-invalid / describedby.
   const [focusErrTick, setFocusErrTick] = React.useState(0);
   const [outcome, setOutcome] = React.useState<Outcome>({ status: "idle" });
@@ -271,15 +275,24 @@ function ReferralSearchInner({ sudPrompt }: { sudPrompt: React.ReactNode }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [focusErrTick]);
 
-  function onSubmit(e: React.FormEvent) {
+  async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
     // aria-disabled (not disabled) keeps focus on the button while a search runs; ignore extra submits.
-    if (loading) return;
+    if (loading || checkingRef.current) return;
     clearPresetNotice();
-    cityField.flushNow();
-    const check = checkLocation(locMode, { zip, city: cityField.draft, state: stateCode });
+    let city = "";
+    let places: PlaceIndex | null = null;
+    if (locMode === "city") {
+      checkingRef.current = true;
+      try {
+        ({ city, places } = await cityField.settle());
+      } finally {
+        checkingRef.current = false;
+      }
+    }
+    const check = checkLocation(locMode, { zip, city, state: stateCode }, places);
     if (!check.ok) {
-      setFieldError({ field: check.field, message: check.message });
+      setFieldError({ field: check.field, message: check.message, identifier: check.identifier });
       setFocusErrTick((n) => n + 1);
       return;
     }
@@ -299,7 +312,7 @@ function ReferralSearchInner({ sudPrompt }: { sudPrompt: React.ReactNode }) {
 
   return (
     <div className="space-y-5">
-      <form onSubmit={onSubmit} noValidate className="space-y-5" aria-label="Find care near a location">
+      <form onSubmit={(e) => void onSubmit(e)} noValidate className="space-y-5" aria-label="Find care near a location">
         <ChoiceGroup
           legend="What to find"
           name={fid("mode")}
@@ -423,23 +436,16 @@ function ReferralSearchInner({ sudPrompt }: { sudPrompt: React.ReactNode }) {
                 maxLength={40}
                 value={cityField.draft}
                 onChange={(e) => cityField.setDraft(e.target.value)}
-                onBlur={cityField.flushNow}
+                onBlur={cityField.onBlur}
                 aria-invalid={invalid("city") || undefined}
                 aria-describedby={[fid("cityhint"), fid("privacy"), invalid("city") ? errId : ""].filter(Boolean).join(" ")}
                 {...PRIVATE_TEXT_FIELD_PROPS}
                 className={cn(inputClass, "mt-1.5")}
               />
               <p id={fid("cityhint")} className="mt-1 text-xs text-muted">
-                USPS spelling, letters only, no accents (for example St. Louis or Canon City).
+                Just the city, as the US Postal Service spells it: letters only, no accents (for example St. Louis or
+                Canon City).
               </p>
-              <div role="alert">
-                {cityField.removed ? (
-                  <p className="mt-2 text-sm font-medium text-warn-fg">
-                    Possible identifier removed ({cityField.removed.map((r) => r.label).join(", ")}). Some city names are
-                    also first names; search by ZIP code instead.
-                  </p>
-                ) : null}
-              </div>
             </div>
             <div>
               <label htmlFor={fid("state")} className="text-sm font-semibold">
@@ -465,8 +471,15 @@ function ReferralSearchInner({ sudPrompt }: { sudPrompt: React.ReactNode }) {
           </div>
         )}
 
-        {/* Persistent alert container, so the message is announced even when focus is already in the field. */}
-        <div role="alert">
+        {/* Persistent alert container, so the message is announced even when focus is already in the field. It sits
+            below both location fields, so a notice added on blur never moves the State select under a tap. */}
+        <div role="alert" className="space-y-1">
+          {locMode === "city" && cityField.removed && !fieldError?.identifier ? (
+            <p className="text-sm font-medium text-warn-fg">
+              Possible identifier removed from the city ({cityField.removed.map((r) => r.label).join(", ")}). Type only
+              the city name, or search by ZIP code.
+            </p>
+          ) : null}
           {fieldError ? (
             <p id={errId} className="text-sm font-semibold text-crisis">
               {fieldError.message}

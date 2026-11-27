@@ -56,6 +56,67 @@
     "rows": 7
   },
   "safetyNote": "Safety first: Panic can feel like a heart attack. If you have chest pain, trouble breathing, or fainting that is new, different, or does not go away, call 911 or your local emergency number. It is always okay to get checked. This sheet is not for emergencies. If you have thoughts of hurting yourself or someone else, call or text 988 in the US, or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "es": {
+    "title": "Entender el ciclo del pánico",
+    "intro": "Un ataque de pánico es una ola de miedo fuerte que llega rápido. El corazón le puede latir muy fuerte. Puede sentir que le falta el aire, mareo o temblores. Puede tener la certeza de que algo terrible está por pasar. Los ataques de pánico se sienten horribles, pero pasan. Esta hoja muestra cómo un ataque de pánico se puede alimentar a sí mismo y cómo usted puede romper el ciclo. Leerla toma unos 10 minutos.",
+    "sections": [
+      {
+        "heading": "Cómo funciona el ciclo",
+        "body": "El pánico muchas veces sigue el mismo patrón. Cada paso alimenta al siguiente.",
+        "steps": [
+          "Algo lo desata. Puede ser un lugar, un pensamiento o una sensación del cuerpo, como un latido que se salta. A veces parece salir de la nada.",
+          "Usted nota una sensación en el cuerpo, como el corazón acelerado, el pecho apretado o aturdimiento.",
+          "Su mente interpreta la sensación como una señal de peligro. Puede pensar: 'Me está dando un ataque al corazón', 'Me voy a desmayar' o 'Estoy perdiendo el control'.",
+          "Ese pensamiento que asusta le da más miedo.",
+          "El miedo enciende la alarma de su cuerpo. Su corazón late más rápido y usted respira más rápido. Las sensaciones del cuerpo se vuelven más fuertes.",
+          "Las sensaciones más fuertes parecen probar que el pensamiento que asusta es cierto. Así el ciclo vuelve a empezar."
+        ]
+      },
+      {
+        "heading": "La alarma de su cuerpo",
+        "body": "Su cuerpo tiene una alarma natural. Le prepara para pelear o huir cuando hay peligro. Acelera su corazón y su respiración para mandar más sangre y aire a sus músculos. En un ataque de pánico, la alarma se activa cuando no hay un peligro real. Es como una alarma de humo que suena cuando se le quema el pan tostado. Suena fuerte y asusta, pero no hay fuego. La alarma no puede quedarse encendida al máximo para siempre. Aunque usted no haga nada, su cuerpo se calma solo."
+      },
+      {
+        "heading": "Lo que mantiene el pánico",
+        "body": "Estas cosas tienen sentido y dan alivio rápido. Pero pueden impedir que su mente aprenda que las sensaciones no son peligrosas. Con el tiempo, pueden hacer que el pánico sea más fuerte y que su mundo se haga más pequeño.",
+        "steps": [
+          "Alejarse de los lugares o cosas que relaciona con el pánico.",
+          "Hacer cosas para sentirse a salvo, como sentarse siempre cerca de la puerta o llevar siempre a alguien con usted.",
+          "Revisar su cuerpo una y otra vez buscando señales de un nuevo ataque.",
+          "Preocuparse mucho por cuándo va a llegar el próximo ataque."
+        ]
+      },
+      {
+        "heading": "Cómo romper el ciclo",
+        "steps": [
+          "Conozca el ciclo. Saber lo que está pasando le puede quitar parte del miedo.",
+          "Atrape el pensamiento que asusta. Pregúntese: '¿Esto es peligro de verdad, o es mi alarma que se activó otra vez? ¿Qué pasó la última vez que me sentí así?'",
+          "Deje que las sensaciones vengan y se vayan. Trate de no pelear con ellas. Dígase: 'Esto se siente mal, pero va a pasar.'",
+          "Quédese donde está, si es seguro. Irse le puede enseñar a su cerebro que acaba de escapar de un peligro.",
+          "Con su consejero o terapeuta, enfrente poco a poco los lugares y las sensaciones que ha estado evitando."
+        ]
+      },
+      {
+        "heading": "Hágase revisar por un médico",
+        "body": "Algunos problemas de salud pueden causar sensaciones parecidas al pánico. Por ejemplo, problemas del corazón, de los pulmones o de la tiroides, algunos medicamentos y demasiada cafeína. Si no lo ha hecho, vaya al médico para que revise su cuerpo. También vaya al médico si sus síntomas cambian o se sienten distintos de su pánico de siempre."
+      },
+      {
+        "heading": "Cómo usar el registro de práctica",
+        "body": "Cuando tenga un ataque de pánico o una ola fuerte de miedo, escríbalo lo antes posible. Anote qué estaba pasando, qué sintió en el cuerpo y el pensamiento que le asustó. Califique qué tan fuerte fue el miedo, del 0 al 10. Busque patrones. Traiga el registro a su próxima cita."
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Día",
+        "Qué estaba pasando",
+        "Sensaciones del cuerpo",
+        "Pensamiento que asusta",
+        "Miedo (0-10)"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: El pánico se puede sentir como un ataque al corazón. Si tiene dolor en el pecho, dificultad para respirar o desmayos que son nuevos, distintos o no se quitan, llame al 911 o al número de emergencias local. Siempre está bien ir a que le revisen. Esta hoja no es para emergencias. Si tiene pensamientos de hacerse daño o de hacerle daño a otra persona, llame o envíe un mensaje de texto al 988 en EE. UU., o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
   "sources": [
     {
       "title": "A cognitive approach to panic (Clark)",

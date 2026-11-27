@@ -50,6 +50,54 @@
   },
   "safetyNote": "Safety first: If you have been drinking a lot, or taking certain pills like sleeping pills or pills for nerves every day, stopping all at once can be dangerous. Talk with a doctor before you stop. Get medical help right away if you have shaking, sweating, a racing heart, confusion, or seizures, or if you see or hear things that aren't there. If someone may have overdosed, call 911. For free, confidential help finding treatment in the US, call the SAMHSA National Helpline at 1-800-662-4357, any time, in English or Spanish. If you have thoughts of hurting yourself or someone else, call or text 988 in the US, or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
   "sud": true,
+  "es": {
+    "title": "Dejar pasar las ganas: registro para surfear las ganas",
+    "intro": "Sentir ganas fuertes, o un antojo, es sentir un impulso fuerte de hacer algo. Puede ser beber, usar una droga, fumar o repetir otro hábito que quiere cambiar. Puede parecer que las ganas van a seguir creciendo hasta que usted ceda. Pero las ganas se parecen mucho a las olas del mar. Crecen, llegan a un punto alto y luego bajan, muchas veces antes de lo que usted espera. Surfear las ganas significa montarse en la ola sin pelear con ella y sin ceder. Cada vez que deja pasar una ola, aprende que sí puede. Practique cada vez que aparezcan las ganas. Escribir en el registro toma unos 2 minutos.",
+    "sections": [
+      {
+        "heading": "Cómo surfear las ganas",
+        "steps": [
+          "Note las ganas y póngales nombre: 'Estoy sintiendo ganas.' No tiene que hacerles caso.",
+          "Si puede, siéntese o póngase de pie en un lugar cómodo. Respire de forma normal y tranquila.",
+          "Note en qué parte del cuerpo siente las ganas. Puede ser en la boca, la garganta, el pecho, el estómago o las manos.",
+          "Sienta curiosidad. ¿Se sienten apretadas, calientes, con cosquilleo o pesadas? ¿Son grandes o pequeñas? ¿Se mueven?",
+          "Califique las ganas del 0 (nada) al 10 (las más fuertes que ha sentido).",
+          "Siga respirando con calma mientras las ganas suben. No las aleje ni les haga caso.",
+          "Siga notándolas. Cada pocos minutos, vuelva a calificarlas. Vea cómo cambian, llegan a su punto más alto y empiezan a bajar.",
+          "Cuando bajen, note que logró dejarlas pasar. Luego haga algo que le ayude, como tomar agua, salir a caminar o buscar a alguien que le apoye."
+        ]
+      },
+      {
+        "heading": "Si las ganas se sienten demasiado fuertes",
+        "steps": [
+          "Si puede, aléjese de lo que las provocó. Salga del cuarto o del lugar.",
+          "Busque a alguien que apoye sus metas.",
+          "Use otra habilidad, como la respiración lenta o una caminata corta. Luego, si quiere, vuelva a surfear las ganas.",
+          "Recuerde por qué este cambio es importante para usted."
+        ]
+      },
+      {
+        "heading": "Si cede",
+        "body": "Un desliz no borra su avance. Trátese con amabilidad. La culpa y la vergüenza pueden hacer que las ganas sean más fuertes. Escriba lo que pasó y lo que lo provocó. Hable de esto con su consejero. Cada vez que siente ganas, incluso si les hace caso, puede aprender algo para la próxima vez."
+      },
+      {
+        "heading": "Nota de privacidad",
+        "body": "No escriba su nombre, ni los nombres de otras personas o lugares, en esta hoja. Use palabras generales como 'fiesta' o 'después del trabajo'. Guarde la hoja en un lugar privado. Si la comparte con un programa de tratamiento por consumo de sustancias, puede llegar a ser parte de sus registros de tratamiento. Esos registros tienen una protección federal especial de la privacidad. La ley federal 42 CFR Part 2 prohíbe el uso o la divulgación no autorizados de estos registros. Pregúntele a su consejero cómo se guardan y se comparten sus registros."
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Día y hora",
+        "Qué provocó las ganas (sin nombres)",
+        "Dónde las sentí en el cuerpo",
+        "Ganas al empezar (0-10)",
+        "Ganas al final (0-10)",
+        "Lo que hice después"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: Si ha estado bebiendo mucho, o tomando ciertas pastillas todos los días, como pastillas para dormir o para los nervios, dejar de hacerlo de golpe puede ser peligroso. Hable con un médico antes de dejarlo. Busque ayuda médica de inmediato si tiene temblores, sudor, el corazón acelerado, confusión o convulsiones, o si ve u oye cosas que no están ahí. Si alguien pudo haber tenido una sobredosis, llame al 911. Para recibir ayuda gratuita y confidencial para encontrar tratamiento en EE. UU., llame a la Línea Nacional de Ayuda de SAMHSA (SAMHSA National Helpline) al 1-800-662-4357, a cualquier hora, en inglés o en español. Si tiene pensamientos de hacerse daño o de hacerle daño a otra persona, llame o envíe un mensaje de texto al 988 en EE. UU., o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
   "sources": [
     {
       "title": "Surfing the urge: brief mindfulness-based intervention for college student smokers (Bowen and Marlatt)",

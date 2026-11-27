@@ -598,6 +598,7 @@ the one two three several many few mother father mom dad parents family grandmot
 sister brother friend friends boyfriend girlfriend husband wife partner son daughter kids children roommate
 roommates same different another other order front back middle part fact general particular place places
 south north east west fact time line bed love tears shock spite turn mind control charge light private secret
+edge edges margin margins fringe fringes periphery outskirts sidelines corner corners
 `);
 /** Capitalized words after "in" that are not places ("in General", "in Group"). */
 const NOT_PLACE_AFTER_IN = words(
@@ -612,14 +613,22 @@ const LOWER_PLACE_Y = /\p{Ll}{3,}(?![\p{L}\p{N}])/yu;
 const SCHOOL_RE =
   /(?<!\p{L})(?:\p{Lu}\p{Ll}+[ \t]+){1,3}(?:Elementary|Middle|High|Junior[ \t]+High|Intermediate|Primary)[ \t]+School\b/gu;
 
-/** A single lower-case place word after a location cue ("lives in springfield"), or -1. */
-function readLowerPlace(text: string, pos: number): number {
+/** "the <word> of": a relational noun ("stays at the edges of groups"), never a lower-case town name. */
+const RELATIONAL_OF_Y = /[ \t]+of(?![\p{L}\p{N}])/yu;
+
+/**
+ * A single lower-case place word after a location cue ("lives in springfield"), or -1. `afterThe` is true when
+ * the cue ended in "the": a lower-case word then followed by "of" is part of a phrase, not a place.
+ */
+function readLowerPlace(text: string, pos: number, afterThe: boolean): number {
   const m = at(text, LOWER_PLACE_Y, pos);
   if (!m) return -1;
   const tok = m[0];
   const cap = capitalize(tok);
   if (NOT_LOWER_PLACE.has(tok) || wordLike(tok) || GEO_TOKENS.has(cap) || NON_NAME_WORDS.has(cap)) return -1;
-  return pos + tok.length;
+  const end = pos + tok.length;
+  if (afterThe && at(text, RELATIONAL_OF_Y, end)) return -1;
+  return end;
 }
 
 function detectAddresses(text: string, add: Add): void {
@@ -656,7 +665,7 @@ function detectAddresses(text: string, add: Add): void {
     const end = readPlace(text, pos, false);
     if (end > 0) add("ADDRESS", pos, end);
     else {
-      const lowEnd = readLowerPlace(text, pos); // "she lives in springfield"
+      const lowEnd = readLowerPlace(text, pos, /the[ \t]+$/i.test(m[0])); // "she lives in springfield"
       if (lowEnd > 0) add("ADDRESS", pos, lowEnd);
     }
   });

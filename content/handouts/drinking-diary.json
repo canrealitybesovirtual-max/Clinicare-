@@ -69,6 +69,73 @@
   },
   "safetyNote": "Safety first: If you drink a lot every day, stopping all at once can be dangerous. Talk with a doctor before you cut back or stop. Get medical help right away if you have shaking, sweating, a racing heart, confusion, or seizures, or if you see or hear things that aren't there. Never drive after drinking. Mixing alcohol with some medicines, such as pills for sleep, pain, or nerves, can be very dangerous. If you are pregnant or could be, the safest choice is not to drink. For free, confidential help finding treatment in the US, call the SAMHSA National Helpline at 1-800-662-4357, any time, in English or Spanish. If you have thoughts of hurting yourself or someone else, call or text 988 in the US, or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
   "sud": true,
+  "es": {
+    "title": "Diario de consumo de alcohol",
+    "intro": "Un diario de consumo de alcohol le ayuda a ver cuánto bebe, cuándo y qué está pasando a su alrededor. No hay respuestas correctas ni incorrectas. Solo escriba lo que pasa de verdad. En una o dos semanas, empiezan a verse patrones. Usted y su consejero pueden usarlos para planear los siguientes pasos. Leer esta hoja toma unos 10 minutos. Llenar el diario toma uno o dos minutos cada día.",
+    "sections": [
+      {
+        "heading": "Qué cuenta como una bebida",
+        "body": "Las bebidas vienen en muchos tamaños y con distinta cantidad de alcohol. Por eso, los expertos en salud cuentan 'bebidas estándar'. En EE. UU., una bebida estándar tiene unos 14 gramos (0.6 onzas) de alcohol puro. Cada una de estas es más o menos una bebida estándar:",
+        "steps": [
+          "12 onzas de cerveza normal (alrededor de 5% de alcohol)",
+          "5 onzas de vino (alrededor de 12% de alcohol)",
+          "1.5 onzas de licor, como vodka, whisky o ron (alrededor de 40% de alcohol; en la etiqueta puede decir 80 proof)"
+        ]
+      },
+      {
+        "heading": "Consejos para contar",
+        "steps": [
+          "Muchas latas, vasos y bebidas preparadas tienen más de una bebida estándar. Las cervezas fuertes y las cervezas de malta fuertes (malt liquor) muchas veces tienen más alcohol que la cerveza normal.",
+          "Una botella normal de vino de 750 mL tiene unas 5 bebidas estándar.",
+          "Revise en la etiqueta el porcentaje de alcohol. Muchas veces aparece como 'ABV'.",
+          "En casa, pruebe una vez a servir su bebida de siempre en una taza de medir. Mucha gente se sirve más de lo que cree."
+        ]
+      },
+      {
+        "heading": "Cómo llenar su diario",
+        "steps": [
+          "Llene una fila cada día, lo antes posible después de beber. Es fácil olvidarlo después.",
+          "Escriba '0' los días que no beba. Esos días también cuentan.",
+          "Escriba qué bebió y cuánto, como '2 cervezas grandes' o '3 copas de vino'. Luego sume las bebidas estándar.",
+          "Escriba el tipo de lugar y si estaba sin compañía o con otras personas. Por ejemplo, 'casa, sin compañía' o 'bar, con amigos'. No escriba nombres.",
+          "Escriba qué estaba pasando y cómo se sentía antes de beber, como 'estrés después del trabajo' o 'aburrimiento'."
+        ]
+      },
+      {
+        "heading": "Mi meta",
+        "body": "Si usted y su consejero ponen una meta, escríbala aquí. Su meta podría ser beber menos o dejar de beber. Es su decisión, tomada con su equipo de atención.",
+        "steps": [
+          "Máximo de bebidas que pienso tomar en un mismo día: ________",
+          "Días sin beber cada semana: ________",
+          "Por qué esta meta es importante para mí: ________________________"
+        ]
+      },
+      {
+        "heading": "Revisión de cada semana",
+        "steps": [
+          "¿Qué días o a qué horas bebí más?",
+          "¿Qué estaba pasando, o cómo me sentía, antes de esos momentos?",
+          "¿Qué me ayudó los días que bebí menos o no bebí?"
+        ]
+      },
+      {
+        "heading": "Nota de privacidad",
+        "body": "No escriba su nombre, ni los nombres de otras personas o lugares, en esta hoja. Guárdela en un lugar privado. Si la comparte con un programa de tratamiento por consumo de sustancias, puede llegar a ser parte de sus registros de tratamiento. Esos registros tienen una protección federal especial de la privacidad. La ley federal 42 CFR Part 2 prohíbe el uso o la divulgación no autorizados de estos registros. Pregúntele a su consejero cómo se guardan y se comparten sus registros."
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Día",
+        "Hora",
+        "Qué bebí y cuánto",
+        "Bebidas estándar",
+        "Tipo de lugar; sin compañía o con otras personas",
+        "Qué estaba pasando y cómo me sentía"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: Si bebe mucho todos los días, dejar de beber de golpe puede ser peligroso. Hable con un médico antes de beber menos o de dejarlo. Busque ayuda médica de inmediato si tiene temblores, sudor, el corazón acelerado, confusión o convulsiones, o si ve u oye cosas que no están ahí. Nunca maneje después de beber. Mezclar el alcohol con algunos medicamentos, como pastillas para dormir, para el dolor o para los nervios, puede ser muy peligroso. Si está embarazada o podría estarlo, lo más seguro es no beber. Para recibir ayuda gratuita y confidencial para encontrar tratamiento en EE. UU., llame a la Línea Nacional de Ayuda de SAMHSA (SAMHSA National Helpline) al 1-800-662-4357, a cualquier hora, en inglés o en español. Si tiene pensamientos de hacerse daño o de hacerle daño a otra persona, llame o envíe un mensaje de texto al 988 en EE. UU., o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
   "sources": [
     {
       "title": "What Is A Standard Drink?",

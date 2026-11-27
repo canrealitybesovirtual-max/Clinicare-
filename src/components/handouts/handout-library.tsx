@@ -6,7 +6,7 @@
  */
 import * as React from "react";
 import Link from "next/link";
-import { ChevronRight, Clock, Search, X } from "lucide-react";
+import { ChevronRight, ClipboardCheck, Clock, Languages, Search, X } from "lucide-react";
 import { useSession } from "@/state/session";
 import { useScrubbedField } from "@/components/symptoms/use-scrubbed-field";
 import { PRIVATE_TEXT_FIELD_PROPS } from "@/components/ui/private-field";
@@ -54,6 +54,7 @@ function LibraryInner({ cards, practiceTypes, interventions }: Props) {
     [cards, practice, intervention, logOnly, query],
   );
   const active = query !== "" || practice !== "" || intervention !== "" || logOnly;
+  const pendingReview = React.useMemo(() => cards.filter((c) => c.reviewPending).length, [cards]);
 
   return (
     <div className="space-y-5">
@@ -146,9 +147,17 @@ function LibraryInner({ cards, practiceTypes, interventions }: Props) {
         </Card>
       </section>
 
-      <p aria-live="polite" className="text-sm font-semibold">
-        {results.length === cards.length ? `${cards.length} handouts` : `${results.length} of ${cards.length} handouts`}
-      </p>
+      <div className="space-y-1">
+        <p aria-live="polite" className="text-sm font-semibold">
+          {results.length === cards.length ? `${cards.length} handouts` : `${results.length} of ${cards.length} handouts`}
+        </p>
+        {pendingReview > 0 ? (
+          <p className="text-xs text-muted">
+            {pendingReview === cards.length && cards.length > 1 ? `All ${cards.length}` : pendingReview}{" "}
+            {pendingReview === 1 ? "handout is" : "handouts are"} awaiting licensed clinical review.
+          </p>
+        ) : null}
+      </div>
 
       {results.length === 0 ? (
         <p className="rounded-xl border border-dashed border-border p-6 text-center text-sm text-muted">
@@ -179,10 +188,24 @@ function LibraryInner({ cards, practiceTypes, interventions }: Props) {
                   </Badge>
                   <Badge tone="neutral">Grades {c.readingLevel}</Badge>
                   {c.hasLog ? <Badge tone="accent">Practice log</Badge> : null}
+                  {c.hasSpanish ? (
+                    <Badge tone="neutral" title="Spanish version: screen, PDF and share link">
+                      <Languages aria-hidden className="size-3.5" />
+                      <span aria-hidden>ES</span>
+                      <span className="sr-only">Spanish version available</span>
+                    </Badge>
+                  ) : null}
                   {c.sud ? <Badge tone="warn">Part 2 notice on PDF</Badge> : null}
-                  {c.reviewPending ? <Badge tone="warn">Not yet clinically reviewed</Badge> : null}
+                  {/* G10 badge stays visible; neutral in the list so real warnings stand out (owner decision). */}
+                  {c.reviewPending ? (
+                    <Badge tone="neutral">
+                      <ClipboardCheck aria-hidden className="size-3.5" /> Not yet clinically reviewed
+                    </Badge>
+                  ) : null}
                 </div>
-                <p className="mt-2 text-xs text-muted">Open to print, download or share a link.</p>
+                <p className="mt-2 text-xs text-muted">
+                  Open to print, download or share a link{c.hasSpanish ? ", in English or Spanish" : ""}.
+                </p>
               </article>
             </li>
           ))}

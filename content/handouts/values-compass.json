@@ -63,6 +63,73 @@
     "rows": 7
   },
   "safetyNote": "Safety first: Thinking about what matters can bring up sadness, loss, or regret. That is normal. Go at your own pace, and talk about it with your counselor or therapist. If you start to feel hopeless, or have thoughts of death or of hurting yourself, do not wait for your next visit. Reach out now. In the US, call or text 988 or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "es": {
+    "title": "Brújula de valores: lo que me importa",
+    "intro": "Los valores son las cosas que más le importan. Tienen que ver con cómo quiere vivir y qué tipo de persona quiere ser. Un valor es como una dirección en una brújula. Nunca se llega a una dirección, pero siempre puede mirar hacia ella y dar un paso. Una meta es diferente. Una meta es algo que puede terminar, como una clase o un proyecto. Esta hoja le ayuda a ponerles nombre a sus valores y a elegir pasos pequeños hacia ellos. Toma unos 20 minutos. No hay respuestas correctas ni incorrectas.",
+    "sections": [
+      {
+        "heading": "Valores, metas y sentimientos",
+        "body": "Un valor es una dirección, como 'ser un padre o una madre que da cariño' o 'vivir con honestidad'. Una meta es una parada en el camino, como 'leerle a mi hijo tres noches esta semana'. Los sentimientos vienen y van. Puede dar un paso hacia un valor aunque sienta cansancio, tristeza o miedo."
+      },
+      {
+        "heading": "Paso 1: Mire las partes de su vida",
+        "body": "Lea la lista de abajo. Encierre en un círculo las 2 o 3 áreas que más le importan en este momento. Puede agregar las suyas.",
+        "steps": [
+          "La familia y las personas que cuido",
+          "La pareja o las relaciones cercanas",
+          "Los amigos y la comunidad",
+          "El trabajo, la escuela o aprender",
+          "La salud y cuidar mi cuerpo",
+          "La fe, la espiritualidad o el sentido de la vida, si eso es parte de su vida",
+          "La diversión, el descanso y el tiempo para crear",
+          "Ayudar a otros o hacer una diferencia"
+        ]
+      },
+      {
+        "heading": "Paso 2: Hágase algunas preguntas",
+        "steps": [
+          "¿Cuándo fue la última vez que me sentí más como soy de verdad? ¿Qué estaba haciendo?",
+          "¿Cómo quiero tratar a las personas que me rodean?",
+          "¿Qué seguiría haciendo aunque nadie lo viera nunca?",
+          "¿Qué quiero defender en la vida?",
+          "Si un amigo de confianza me describiera en mi mejor momento, ¿qué diría?"
+        ]
+      },
+      {
+        "heading": "Paso 3: Póngalo en palabras",
+        "body": "Para cada área que encerró en un círculo, escriba unas palabras sobre el camino que quiere seguir. Use sus propias palabras. Por ejemplo: 'Ser un papá paciente y divertido.' 'Estar presente para mis amigos.' 'Tratar mi cuerpo con cuidado.' Luego revise cada una. ¿Es algo que de verdad me importa? ¿O es un 'debería' que me dio otra persona? Usted elige sus valores."
+      },
+      {
+        "heading": "Paso 4: Elija un paso pequeño",
+        "steps": [
+          "Elija un valor para empezar.",
+          "Elija una acción pequeña que pueda hacer esta semana. Que sea tan pequeña que pueda hacerla incluso en un día difícil.",
+          "Decida cuándo y dónde la va a hacer. Por ejemplo: 'Mandarle un mensaje a mi hermana el domingo después del almuerzo.'",
+          "Espere algunos sentimientos difíciles o pensamientos de 'no puedo'. Pueden acompañarle mientras da el paso.",
+          "Escriba lo que hizo en el registro de abajo."
+        ]
+      },
+      {
+        "heading": "Consejos",
+        "steps": [
+          "Los valores no son un examen. Una distancia entre sus valores y su vida no es un fracaso. Le muestra por dónde empezar.",
+          "Sus valores pueden ser sobre su familia o su comunidad, no solo sobre usted. Está bien.",
+          "Los valores pueden cambiar con el tiempo. Vuelva a mirar esta hoja cada pocas semanas.",
+          "Traiga esta hoja a su próxima cita. Su consejero le puede ayudar a planear los siguientes pasos."
+        ]
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Día",
+        "Valor hacia el que avancé",
+        "Lo que hice",
+        "Cómo me fue"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: Pensar en lo que le importa puede despertar tristeza, sensación de pérdida o arrepentimiento. Eso es normal. Vaya a su propio ritmo y hable de esto con su consejero o terapeuta. Si empieza a sentirse sin esperanza, o tiene pensamientos de muerte o de hacerse daño, no espere a su próxima cita. Pida ayuda ahora. En EE. UU., llame o envíe un mensaje de texto al 988, o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
   "sources": [
     {
       "title": "Acceptance and commitment therapy: model, processes and outcomes (Hayes, Luoma, Bond, Masuda & Lillis)",

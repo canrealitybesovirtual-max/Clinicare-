@@ -7,6 +7,7 @@ import { allHandouts, getAnyHandout, interventions } from "@/lib/library";
 import type { Handout } from "@/lib/schemas";
 import type { Intervention } from "@/lib/schemas-phase2";
 import { orientationLabel, orientationsOf } from "@/components/interventions/orientation";
+import { clipText } from "./localize";
 
 export interface FilterOption {
   id: string;
@@ -22,19 +23,15 @@ export interface HandoutCardData {
   readingLevel: string;
   minutes: number;
   hasLog: boolean;
+  /** Has a Spanish translation (screen, PDF and share link). */
+  hasSpanish: boolean;
   sud: boolean;
   reviewPending: boolean;
   /** Approach families of the interventions that use this handout (see interventions/orientation.ts). */
   practiceTypes: string[];
   interventionIds: string[];
-  /** Lower-case text the on-device search matches against (title, intro, section headings). */
+  /** Lower-case text the on-device search matches against (title, intro, section headings, Spanish title). */
   searchText: string;
-}
-
-function clip(s: string, max: number): string {
-  if (s.length <= max) return s;
-  const cut = s.slice(0, max);
-  return `${cut.slice(0, Math.max(cut.lastIndexOf(" "), max - 20)).trimEnd()}…`;
 }
 
 /** Interventions whose handoutIds include this handout, by name. */
@@ -47,15 +44,16 @@ export function handoutCard(h: Handout): HandoutCardData {
   return {
     id: h.id,
     title: h.title,
-    blurb: clip(h.intro, 170),
+    blurb: clipText(h.intro, 170),
     readingLevel: h.readingLevel,
     minutes: h.estimatedMinutes,
     hasLog: Boolean(h.practiceLog),
+    hasSpanish: Boolean(h.es),
     sud: h.sud,
     reviewPending: h.reviewedBy === "PENDING",
     practiceTypes: [...new Set(related.flatMap((i) => orientationsOf(i)))],
     interventionIds: related.map((i) => i.id),
-    searchText: [h.title, h.intro, ...h.sections.map((s) => s.heading)].join(" ").toLowerCase(),
+    searchText: [h.title, h.intro, ...h.sections.map((s) => s.heading), h.es?.title ?? ""].join(" ").toLowerCase(),
   };
 }
 

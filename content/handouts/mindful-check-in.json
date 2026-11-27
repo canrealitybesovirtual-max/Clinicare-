@@ -62,6 +62,72 @@
     "rows": 7
   },
   "safetyNote": "Safety first: Turning inward can sometimes bring up strong feelings or memories. If that happens, open your eyes, look around the room, and feel your feet on the floor. You can stop at any time. Tell your counselor or therapist if a practice often makes you feel worse, panicky, or far away. This sheet is not for emergencies. If you have thoughts of hurting yourself or someone else, call or text 988 in the US, or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "es": {
+    "title": "Pausa de atención plena",
+    "intro": "Una pausa de atención plena es un descanso corto en su día. Usted se detiene unos minutos y nota lo que está pasando dentro y alrededor de usted. No trata de cambiar nada ni de hacer que desaparezca. Solo lo nota, con amabilidad. Esto puede ayudarle a salir del 'piloto automático' y a elegir qué hacer después. Toma unos 3 a 5 minutos. Puede hacerla sentado, de pie o incluso caminando.",
+    "sections": [
+      {
+        "heading": "Prepárese",
+        "steps": [
+          "Busque un lugar donde pueda hacer una pausa de unos minutos. Puede tener los ojos abiertos o cerrados. Haga lo que le dé seguridad y comodidad.",
+          "Siéntese o póngase de pie en una posición firme. Note sus pies en el piso."
+        ]
+      },
+      {
+        "heading": "Parte 1: ¿Qué hay aquí en este momento?",
+        "body": "Tómese un momento para notar lo que encuentra. No necesita arreglarlo.",
+        "steps": [
+          "Pensamientos: ¿Qué le está diciendo su mente? Puede ponerle un nombre, como 'planear' o 'preocuparme'.",
+          "Sentimientos: ¿Qué emociones hay? Tal vez calma, tristeza, tensión o una mezcla.",
+          "Cuerpo: ¿Qué siente en el cuerpo? Tal vez hombros tensos, la cara caliente u ojos cansados."
+        ]
+      },
+      {
+        "heading": "Parte 2: Encuentre su respiración",
+        "steps": [
+          "Lleve su atención a su respiración. Note el aire que entra y sale.",
+          "No necesita cambiar su respiración. Solo siga unas cuantas respiraciones, una a la vez.",
+          "Cuando su mente se distraiga, es normal. Con suavidad, tráigala de vuelta a la siguiente respiración.",
+          "Si poner atención a su respiración le resulta incómodo, mejor enfóquese en sus pies, sus manos o los sonidos del cuarto."
+        ]
+      },
+      {
+        "heading": "Parte 3: Amplíe su atención",
+        "steps": [
+          "Deje que su atención se extienda a todo su cuerpo, aquí donde está.",
+          "Note el cuarto a su alrededor: los sonidos, la luz y el aire sobre su piel.",
+          "Pregúntese: '¿Qué necesito en este momento?'"
+        ]
+      },
+      {
+        "heading": "Parte 4: Elija su siguiente paso",
+        "steps": [
+          "Elija una cosa pequeña para hacer después. Podría ser un vaso de agua, estirarse, decirse una palabra amable o volver a una tarea.",
+          "Siga con su día a su propio ritmo."
+        ]
+      },
+      {
+        "heading": "Consejos para practicar",
+        "steps": [
+          "Pruébelo de 1 a 3 veces al día. Únalo a algo que ya hace, como después de lavarse los dientes o antes del almuerzo.",
+          "Que sea corto está bien. Hasta 1 minuto cuenta.",
+          "No hay una forma 'correcta' de sentirse después de la pausa. La meta es notar, no relajarse.",
+          "Si usted reza o tiene una práctica espiritual, puede elegir unir la pausa a esa práctica. Usted decide.",
+          "Cuéntele a su consejero o terapeuta lo que nota."
+        ]
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Día",
+        "Hora",
+        "Lo que noté",
+        "Lo que elegí hacer después"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: Mirar hacia adentro a veces puede despertar sentimientos o recuerdos fuertes. Si eso pasa, abra los ojos, mire a su alrededor y sienta sus pies en el piso. Puede parar en cualquier momento. Dígale a su consejero o terapeuta si una práctica muchas veces le hace sentir peor, con pánico o como si estuviera lejos. Esta hoja no es para emergencias. Si tiene pensamientos de hacerse daño o de hacerle daño a otra persona, llame o envíe un mensaje de texto al 988 en EE. UU., o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
   "sources": [
     {
       "title": "Mindfulness-Based Cognitive Therapy, Second Edition (Segal, Williams & Teasdale)",

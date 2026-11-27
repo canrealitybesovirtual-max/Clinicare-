@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, ChevronDown, Clock, FileText, GraduationCap, HandHeart, ListTodo } from "lucide-react";
+import { ArrowLeft, Clock, FileText, GraduationCap, HandHeart, ListTodo } from "lucide-react";
 import { getAnyHandout, getIntervention, getPlanLibrary, interventions } from "@/lib/library";
 import type { Handout } from "@/lib/schemas";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
+import { Disclosure } from "@/components/ui/disclosure";
 import { Notice } from "@/components/ui/notice";
+import { HelpTip } from "@/components/symptoms/help-tip";
 import {
   ClinicianReviewBadge,
   Governance,
@@ -32,6 +34,33 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   const { id } = await params;
   return { title: getIntervention(id)?.name ?? "Intervention" };
 }
+
+function HandoutLinks({ handouts }: { handouts: Handout[] }) {
+  if (!handouts.length) {
+    return <p className="text-sm text-muted">No matching handout yet. See the third-party link-outs on the Handouts page.</p>;
+  }
+  return (
+    <ul className="space-y-1 text-sm">
+      {handouts.map((h) => (
+        <li key={h.id}>
+          <Link href={`/handouts/${h.id}`} className="inline-flex min-h-11 items-center gap-2 font-semibold text-accent underline underline-offset-2">
+            <FileText aria-hidden className="size-4 shrink-0" />
+            {h.title}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+const JUMP_LINKS = [
+  { href: "#steps", label: "Steps" },
+  { href: "#script", label: "Script" },
+  { href: "#handouts-inline", label: "Handouts", phoneOnly: true },
+  { href: "#cultural", label: "Cultural adaptations" },
+  { href: "#evidence", label: "Evidence" },
+  { href: "#sources", label: "Sources" },
+];
 
 function Section({ id, title, children }: { id: string; title: string; children: React.ReactNode }) {
   return (
@@ -87,6 +116,16 @@ export default async function InterventionPage({ params }: { params: Promise<{ i
       >
         <p>{iv.purpose}</p>
       </PageIntro>
+      <HelpTip title="How to use this page" className="mb-5">
+        <p>
+          Read the cautions first. The clinician steps say what to do; the script is original wording you can read aloud
+          or put in your own words, and Large text makes it easier to read in session.
+        </p>
+        <p>
+          Client handouts can be printed or shared as a link. Evidence results load from PubMed or ClinicalTrials.gov only
+          when you ask, and only the intervention&apos;s curated search term is sent.
+        </p>
+      </HelpTip>
 
       <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_20rem] lg:items-start">
         <div className="min-w-0 space-y-6">
@@ -115,6 +154,17 @@ export default async function InterventionPage({ params }: { params: Promise<{ i
             </Notice>
           </section>
 
+          <nav aria-label="On this page" className="-mt-2">
+            <ul className="flex flex-wrap gap-x-4 text-sm">
+              {JUMP_LINKS.map((l) => (
+                <li key={l.href} className={l.phoneOnly ? "lg:hidden" : undefined}>
+                  <a href={l.href} className="inline-flex min-h-11 items-center font-semibold text-accent underline underline-offset-2">
+                    {l.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </nav>
 
           <Section id="steps" title="Clinician steps">
             <ol className="list-decimal space-y-2.5 pl-5 text-sm leading-relaxed marker:font-semibold">
@@ -136,28 +186,12 @@ export default async function InterventionPage({ params }: { params: Promise<{ i
           </section>
 
           {/* Small screens: handouts right after the script (the sidebar card shows from lg). */}
-          <section aria-labelledby="handouts-inline" className="lg:hidden">
+          <section aria-labelledby="handouts-inline" className="scroll-mt-6 lg:hidden">
             <Card className="space-y-3">
               <h2 id="handouts-inline" className="text-lg font-semibold">
                 Client handouts
               </h2>
-            {handouts.length ? (
-              <ul className="space-y-1 text-sm">
-                {handouts.map((h) => (
-                  <li key={h.id}>
-                    <Link
-                      href={`/handouts/${h.id}`}
-                      className="inline-flex min-h-11 items-center gap-2 font-semibold text-accent underline underline-offset-2"
-                    >
-                      <FileText aria-hidden className="size-4 shrink-0" />
-                      {h.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            ) : (
-              <p className="text-sm text-muted">No matching handout yet. See the third-party link-outs on the Handouts page.</p>
-            )}
+              <HandoutLinks handouts={handouts} />
             </Card>
           </section>
 
@@ -175,22 +209,22 @@ export default async function InterventionPage({ params }: { params: Promise<{ i
                 Use only when the client asks for their faith to be part of the work. Open to see the consent reminder
                 first, then the variant.
               </p>
-              <details className="group rounded-xl border border-border">
-                <summary className="flex min-h-12 cursor-pointer list-none items-center justify-between gap-3 rounded-xl px-4 text-sm font-semibold hover:bg-surface-2 [&::-webkit-details-marker]:hidden">
-                  Show the consent reminder and the faith-integrated variant
-                  <ChevronDown aria-hidden className="size-4 shrink-0 transition-transform group-open:rotate-180" />
-                </summary>
-                <div className="space-y-4 border-t border-border p-4">
-                  <Notice tone="accent" title="Informed consent comes first" icon={HandHeart}>
-                    <p>{iv.faithIntegrated.consentNote}</p>
-                  </Notice>
-                  <HubPrompt context="faith-based" />
-                  <div>
-                    <h3 className="text-base font-semibold">The variant</h3>
-                    <p className="mt-1 text-sm leading-relaxed">{iv.faithIntegrated.note}</p>
-                  </div>
+              <Disclosure
+                title="Show the consent reminder and the faith-integrated variant"
+                icon={HandHeart}
+                bordered={false}
+                className="rounded-xl border border-border px-4"
+                bodyClassName="space-y-4 border-t border-border pt-4"
+              >
+                <Notice tone="accent" title="Informed consent comes first" icon={HandHeart}>
+                  <p>{iv.faithIntegrated.consentNote}</p>
+                </Notice>
+                <HubPrompt context="faith-based" />
+                <div>
+                  <h3 className="text-base font-semibold">The variant</h3>
+                  <p className="mt-1 leading-relaxed">{iv.faithIntegrated.note}</p>
                 </div>
-              </details>
+              </Disclosure>
             </Section>
           ) : null}
 
@@ -245,23 +279,7 @@ export default async function InterventionPage({ params }: { params: Promise<{ i
 
           <Card className="hidden space-y-3 lg:block">
             <h2 className="text-lg font-semibold">Client handouts</h2>
-            {handouts.length ? (
-              <ul className="space-y-1 text-sm">
-                {handouts.map((h) => (
-                  <li key={h.id}>
-                    <Link
-                      href={`/handouts/${h.id}`}
-                      className="inline-flex min-h-11 items-center gap-2 font-semibold text-accent underline underline-offset-2"
-                    >
-                      <FileText aria-hidden className="size-4 shrink-0" />
-                      {h.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            ) : (
-              <p className="text-sm text-muted">No matching handout yet. See the third-party link-outs on the Handouts page.</p>
-            )}
+            <HandoutLinks handouts={handouts} />
           </Card>
         </aside>
       </div>

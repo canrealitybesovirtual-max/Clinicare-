@@ -68,6 +68,79 @@
     "rows": 6
   },
   "safetyNote": "Safety first: Opposite action is not for urges to hurt yourself or someone else. If you have those urges, or thoughts of suicide, use your safety plan and get help now. In the US, call or text 988 or call 911. In other countries, call your local emergency number or visit findahelpline.com. If facing a fear means doing something hard on your body, check with your doctor first. Resource only. This sheet does not replace care from a licensed professional.",
+  "es": {
+    "title": "Práctica de acción opuesta",
+    "intro": "Cada sentimiento viene con ganas de hacer algo. El miedo dice 'huye'. La tristeza dice 'quédate en la cama'. La vergüenza dice 'escóndete'. El enojo dice 'pelea'. A veces esas ganas le ayudan. Pero a veces, hacerles caso hace que el sentimiento se vuelva más fuerte y no le deja avanzar. La acción opuesta significa hacer lo contrario de lo que el sentimiento le empuja a hacer, cuando hacerle caso no le ayudaría. Hacer esto una y otra vez puede cambiar cómo se siente. Planear una práctica toma unos 10 a 15 minutos.",
+    "sections": [
+      {
+        "heading": "Paso 1: Ponga nombre al sentimiento y a las ganas",
+        "steps": [
+          "¿Qué estoy sintiendo? Póngale un nombre, como miedo, tristeza, vergüenza o enojo.",
+          "¿Qué tan fuerte es, del 0 al 10?",
+          "¿Qué me está empujando a hacer este sentimiento?"
+        ]
+      },
+      {
+        "heading": "Paso 2: Mire lo que pasó de verdad",
+        "body": "Hágase estas preguntas. Diga la verdad. Puede hablarlas con alguien de confianza.",
+        "steps": [
+          "¿Qué pasó? Descríbalo como lo vería una cámara de video.",
+          "¿Qué historia me estoy contando sobre esto? ¿Podría haber otra forma de verlo?",
+          "¿El tamaño de este sentimiento va de acuerdo con lo que pasó?",
+          "Si sigo las ganas, ¿las cosas van a mejorar o empeorar?"
+        ]
+      },
+      {
+        "heading": "Paso 3: Elija su camino",
+        "steps": [
+          "Si el sentimiento va de acuerdo con lo que pasó y hacerle caso le ayudaría, adelante. O trabaje en resolver el problema. Un plan para resolver problemas puede ayudar.",
+          "Si el sentimiento es más grande que lo que pasó, o hacerle caso empeoraría las cosas, pruebe la acción opuesta."
+        ]
+      },
+      {
+        "heading": "Paso 4: Elija una acción opuesta",
+        "body": "Pregúntese: ¿Qué me empujan a hacer las ganas? ¿Qué me llevaría hacia el otro lado y aun así sería seguro? Que sea algo pequeño y claro: qué, cuándo y dónde. Aquí hay algunos ejemplos. Luego escriba los suyos.",
+        "steps": [
+          "En lugar de no ir a la fiesta, vaya 20 minutos y salude a dos personas.",
+          "En lugar de quedarse en la cama toda la mañana, levántese, vístase y salga a caminar un rato corto.",
+          "En lugar de esconderse después de un error, cuéntele a una persona de confianza lo que pasó.",
+          "En lugar de mandar un mensaje con enojo, espere una hora, salga a caminar y luego decida qué decir.",
+          "Mi propia acción opuesta: ________________________"
+        ]
+      },
+      {
+        "heading": "Paso 5: Inténtelo de verdad",
+        "steps": [
+          "Hágalo a propósito, no a medias. Si nota que está volviendo a lo que le piden las ganas, regrese a su plan.",
+          "Cambie también cómo se habla. Por ejemplo: 'Puedo con un paso pequeño.'",
+          "Siga adelante. Muchas veces los sentimientos cambian despacio, después de intentar algo muchas veces."
+        ]
+      },
+      {
+        "heading": "Paso 6: Note lo que pasa",
+        "steps": [
+          "Vuelva a calificar el sentimiento, del 0 al 10.",
+          "Puede que el sentimiento no cambie de inmediato. Está bien. Inténtelo otra vez la próxima vez.",
+          "Escriba lo que hizo en el registro de abajo, y tráigalo a su próxima cita."
+        ]
+      },
+      {
+        "heading": "Cuándo no usar la acción opuesta",
+        "body": "Algunos sentimientos le avisan que algo de verdad está mal. Si tiene miedo de alguien que le hace daño o le amenaza, ese miedo va de acuerdo con lo que está pasando. No trate de pasarlo por alto. Enfóquese en mantenerse a salvo y en buscar ayuda. Hable con su consejero sobre cualquier miedo grande antes de empezar a enfrentarlo."
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Sentimiento y ganas",
+        "¿Va de acuerdo con los hechos?",
+        "Acción opuesta que hice",
+        "Antes (0-10)",
+        "Después (0-10)"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: La acción opuesta no es para las ganas de hacerse daño o de hacerle daño a otra persona. Si tiene esas ganas, o pensamientos de suicidio, use su plan de seguridad y busque ayuda ahora. En EE. UU., llame o envíe un mensaje de texto al 988, o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Si enfrentar un miedo significa hacer algo exigente para su cuerpo, consulte primero con su médico. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
   "sources": [
     {
       "title": "DBT Skills Training Manual, Second Edition (Linehan)",

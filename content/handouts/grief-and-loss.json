@@ -74,6 +74,83 @@
     "rows": 7
   },
   "safetyNote": "Safety first: If you have thoughts of ending your life, or of wanting to join someone who died, please reach out now. You do not have to wait until it gets worse. In the US, call or text 988 or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "es": {
+    "title": "Vivir con el duelo y la pérdida",
+    "intro": "El duelo es la reacción natural a perder a alguien o algo que usted quiere. Puede venir después de una muerte. También puede venir después de un divorcio, la pérdida de un trabajo, una mudanza, un cambio en su salud o dejar su país. No hay una forma correcta de vivir el duelo ni un tiempo fijo. Esta hoja comparte algunas cosas que a muchas personas les ayudan. Tome lo que le sirva y deje el resto. Leerla toma unos 10 a 15 minutos.",
+    "sections": [
+      {
+        "heading": "Cómo se puede sentir el duelo",
+        "body": "El duelo afecta a toda la persona. Puede que note algunas de estas cosas, y pueden cambiar de un día a otro.",
+        "steps": [
+          "Sentimientos: tristeza, nostalgia, enojo, culpa, miedo, no sentir nada o incluso alivio. Es común tener sentimientos mezclados.",
+          "Cuerpo: cansancio, dormir demasiado o muy poco, comer más o menos, dolores o un peso en el pecho.",
+          "Pensamientos: dificultad para concentrarse, olvidar cosas o repasar lo que pasó una y otra vez.",
+          "Espíritu: preguntas sobre el sentido de la vida, la fe o por qué pasó esto."
+        ]
+      },
+      {
+        "heading": "El duelo llega en olas",
+        "body": "Muchas personas notan que el duelo va y viene. Algunos días puede sentir la pérdida con mucha fuerza. Otros días puede enfocarse en la vida diaria, como las tareas de la casa, el trabajo o nuevas rutinas. Las dos cosas son parte de sanar. Tomarse un descanso del duelo no significa que haya olvidado. Pasar tiempo con su duelo no significa que no esté avanzando."
+      },
+      {
+        "heading": "Cuidarse",
+        "steps": [
+          "Trate de mantener rutinas sencillas, como comer a horas regulares y levantarse a una hora fija.",
+          "Si puede, salga al aire libre o mueva el cuerpo un poco cada día.",
+          "Descanse cuando lo necesite. El duelo usa mucha energía.",
+          "Tenga cuidado con el alcohol y otras drogas. Pueden empeorar el sueño y el ánimo.",
+          "Deje que la gente le ayude con comidas, transporte o tareas. Dígales lo que necesita.",
+          "Si puede, deje para después las decisiones grandes, como mudarse, hasta que se sienta con más estabilidad."
+        ]
+      },
+      {
+        "heading": "Mantener la conexión con lo que perdió",
+        "steps": [
+          "Comparta historias y recuerdos con personas que conocieron a quien perdió.",
+          "Guarde una foto, un objeto o un lugar especial que le ayude a recordar.",
+          "Escríbale una carta a la persona, o escriba sobre lo que extraña.",
+          "Si así lo decide, participe en costumbres, oraciones o rituales que sean importantes para usted y su familia.",
+          "Haga algo que a esa persona le importaba, o algo que honre quién era."
+        ]
+      },
+      {
+        "heading": "Planear para los días difíciles",
+        "steps": [
+          "Los cumpleaños, los días festivos y los aniversarios pueden traer el duelo con fuerza otra vez. Esto es normal.",
+          "Planee con tiempo. Decida con quién quiere estar y qué quiere hacer.",
+          "Está bien cambiar las tradiciones de antes o empezar nuevas."
+        ]
+      },
+      {
+        "heading": "Buscar apoyo",
+        "steps": [
+          "Hable con personas de confianza. Puede decirles si solo quiere que le escuchen.",
+          "Piense en ir a un grupo de apoyo para el duelo. Los hospitales, los programas de hospicio y los grupos comunitarios o religiosos muchas veces tienen uno.",
+          "Hable con su consejero o médico sobre cómo se siente."
+        ]
+      },
+      {
+        "heading": "Cuándo pedir más ayuda",
+        "body": "Con el tiempo, el duelo muchas veces se vuelve más fácil de llevar, aunque la pérdida siga con usted. Hable con su consejero o médico si alguna de estas cosas le pasa.",
+        "steps": [
+          "Han pasado muchos meses y el dolor todavía le afecta la mayoría de sus días.",
+          "Le cuesta mucho hacer lo que necesita en casa, en el trabajo o con otras personas, por la pérdida.",
+          "Siente que su duelo no avanza, o siente que no tiene conexión con otras personas ni con la vida.",
+          "Está usando alcohol, drogas u otras cosas solo para poder pasar el día.",
+          "Tiene pensamientos de querer morir o de querer estar con la persona que murió. Si esto pasa, pida ayuda de inmediato."
+        ]
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Día",
+        "Cómo se presentó el duelo",
+        "Lo que ayudó, aunque fuera un poco"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: Si tiene pensamientos de quitarse la vida, o de querer reunirse con alguien que murió, por favor pida ayuda ahora. No tiene que esperar a que empeore. En EE. UU., llame o envíe un mensaje de texto al 988, o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
   "sources": [
     {
       "title": "Bereavement (health topic)",

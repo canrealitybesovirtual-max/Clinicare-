@@ -60,6 +60,65 @@
     "rows": 14
   },
   "safetyNote": "Safety first: If you feel very sleepy during the day, do not drive or use machines until you feel alert. Tell your doctor if you snore loudly or someone sees you gasp or stop breathing in your sleep. Also tell your doctor if you fall asleep during the day without meaning to. These can be signs of a health problem that needs care. If you start to need much less sleep than usual but feel full of energy, tell your counselor or doctor soon. Do not start, stop, or change sleep medicine without your doctor. This sheet is not for emergencies. If you have thoughts of hurting yourself or someone else, call or text 988 in the US, or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "es": {
+    "title": "Diario de sueño",
+    "intro": "Un diario de sueño es un registro sencillo de cómo duerme. Después de una o dos semanas, puede mostrar patrones que son difíciles de ver día a día. Usted y su consejero pueden usarlo para decidir qué cambiar. Toma unos 2 a 5 minutos cada mañana. Basta con su mejor cálculo. No necesita horas exactas.",
+    "sections": [
+      {
+        "heading": "Cómo llenarlo",
+        "steps": [
+          "Llene una fila cada mañana, más o menos dentro de la primera hora después de levantarse.",
+          "Día: Escriba el día de la semana, como lun o mar.",
+          "Hora de acostarme: Escriba la hora en que se acostó para pasar la noche.",
+          "Minutos para dormirme: Calcule cuánto tardó en dormirse después de apagar la luz.",
+          "Despertares: Escriba cuántas veces se despertó en la noche. Luego calcule cuántos minutos pasó sin dormir en total.",
+          "Hora de despertar: Escriba la hora en que se despertó por última vez.",
+          "Hora de levantarme: Escriba la hora en que se levantó de la cama para empezar su día.",
+          "Calidad del sueño: Califique qué tan bien durmió, del 0 (muy mal) al 10 (muy bien).",
+          "Siestas, cafeína, alcohol: Anote las siestas que tomó y a qué hora. Agregue el café, té, refrescos, bebidas energéticas o alcohol que tomó después del almuerzo. También agregue cualquier medicamento para dormir que haya tomado."
+        ]
+      },
+      {
+        "heading": "Ejemplo",
+        "body": "Mar: Me acosté a las 10:30 pm. Tardé unos 45 minutos en dormirme. Me desperté 2 veces y pasé unos 30 minutos sin dormir en total. Me desperté a las 6:00 am. Me levanté a las 6:20 am. Calidad del sueño: 4. Notas: siesta de 3:00 a 3:40 pm, café a las 4 pm."
+      },
+      {
+        "heading": "Consejos",
+        "steps": [
+          "No mire el reloj en la noche para llenar el diario. Mirar la hora puede hacer más difícil dormir. Solo calcule en la mañana.",
+          "Voltee su reloj para que no pueda verlo desde la cama.",
+          "Llene el diario en las noches buenas y en las malas, y también los fines de semana.",
+          "Por ahora, siga haciendo lo que hace normalmente, a menos que su consejero le pida cambiar algo.",
+          "Su consejero le puede dar otro formulario de diario. Usen el que mejor les funcione a los dos.",
+          "Traiga el diario a cada cita."
+        ]
+      },
+      {
+        "heading": "Revisar su diario",
+        "body": "Después de una o dos semanas, revise el diario con su consejero. Estas son algunas preguntas que pueden hacerse.",
+        "steps": [
+          "¿Cuánto tiempo paso en la cama? ¿Durante cuánto de ese tiempo duermo?",
+          "¿Mi hora de acostarme y de despertarme cambia mucho de un día a otro?",
+          "¿Las siestas, la cafeína o el alcohol parecen ir junto con las peores noches?",
+          "¿Qué fue diferente en mis mejores noches?"
+        ]
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Día",
+        "Hora de acostarme",
+        "Minutos para dormirme",
+        "Despertares y minutos sin dormir",
+        "Hora de despertar",
+        "Hora de levantarme",
+        "Calidad del sueño (0-10)",
+        "Siestas, cafeína, alcohol"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: Si tiene mucho sueño durante el día, no maneje ni use máquinas hasta que se sienta alerta. Dígale a su médico si ronca fuerte o si alguien le ve jadear o dejar de respirar mientras duerme. También dígale a su médico si se duerme durante el día sin querer. Estas pueden ser señales de un problema de salud que necesita atención. Si empieza a necesitar mucho menos sueño de lo normal pero se siente con mucha energía, dígaselo pronto a su consejero o médico. No empiece, deje ni cambie un medicamento para dormir sin hablar con su médico. Esta hoja no es para emergencias. Si tiene pensamientos de hacerse daño o de hacerle daño a otra persona, llame o envíe un mensaje de texto al 988 en EE. UU., o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
   "sources": [
     {
       "title": "AASM clinical practice guideline: behavioral and psychological treatments for long-term sleep problems in adults (Edinger et al.)",

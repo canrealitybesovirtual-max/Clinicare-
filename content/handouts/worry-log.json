@@ -50,6 +50,59 @@
     "rows": 8
   },
   "safetyNote": "Safety first: If a worry is about your safety right now, such as someone hurting or threatening you, do not save it for later. Get help now. If worry keeps you from sleeping, eating, or getting through the day, tell your counselor or doctor. This sheet is not for emergencies. If you have thoughts of hurting yourself or someone else, call or text 988 in the US, or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "es": {
+    "title": "Registro de preocupaciones",
+    "intro": "Todos nos preocupamos a veces. Pero la preocupación le puede quitar mucho tiempo y energía, y no dejarle dormir en la noche. Este registro le ayuda a ordenar sus preocupaciones. Algunas preocupaciones son sobre problemas con los que puede hacer algo. Otras son sobre cosas que no puede controlar en este momento. Ordenarlas le ayuda a elegir qué hacer después: hacer un plan, o dejar la preocupación a un lado por ahora. El registro y un rato corto para preocuparse toman unos 15 a 30 minutos al día.",
+    "sections": [
+      {
+        "heading": "Paso 1: Escríbala",
+        "steps": [
+          "Cuando aparezca una preocupación, escríbala en la columna Preocupación. Use pocas palabras, como 'hay que pagar la renta' o '¿y si me enfermo?'.",
+          "Ponerla en papel puede ayudar a que su mente la suelte por ahora."
+        ]
+      },
+      {
+        "heading": "Paso 2: Pregúntese: '¿Puedo hacer algo?'",
+        "body": "Pregúntese: ¿Esto es sobre un problema real que está pasando ahora? ¿Hay algo que pueda hacer al respecto, aunque sea algo pequeño? Escriba Sí o No en la segunda columna."
+      },
+      {
+        "heading": "Paso 3: Elija un siguiente paso",
+        "steps": [
+          "Si es Sí: Escriba un paso pequeño y claro, y cuándo lo va a hacer. Por ejemplo: 'Llamar al dueño de la vivienda el lunes a las 10.' Luego hágalo.",
+          "Si el problema es grande, divídalo en pasos más pequeños. Escriba solo el primero.",
+          "Si es No: La preocupación puede ser sobre algo que no puede cambiar, o un '¿y si...?' que tal vez nunca pase. Escriba 'Dejar a un lado' o 'Guardar para el rato de preocuparme'.",
+          "Luego regrese su mente a lo que está haciendo. Note lo que puede ver, oír y sentir a su alrededor."
+        ]
+      },
+      {
+        "heading": "Pruebe un rato diario para preocuparse",
+        "steps": [
+          "Elija una hora fija cada día para preocuparse, hasta por 30 minutos. Use el mismo lugar cada vez. Elija una hora bastante antes de acostarse.",
+          "Cuando aparezca una preocupación durante el día, escríbala. Dígase: 'Voy a pensar en esto en mi rato de preocuparme.'",
+          "En su rato de preocuparse, lea su lista. Puede que algunas preocupaciones ya no parezcan tan grandes. Táchelas.",
+          "Use el resto del tiempo para pensar en las demás o planear los siguientes pasos.",
+          "Cuando se acabe el tiempo, pare. Haga otra cosa, como salir a caminar o empezar una tarea."
+        ]
+      },
+      {
+        "heading": "Consejos",
+        "steps": [
+          "Dejar una preocupación para después puede sentirse raro al principio. Se vuelve más fácil con la práctica.",
+          "Algunas preocupaciones son sobre momentos difíciles de verdad, como el dinero, la vivienda, la salud o la seguridad. Su consejero le puede ayudar a encontrar apoyo o recursos.",
+          "Traiga este registro a su próxima cita."
+        ]
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Preocupación",
+        "¿Puedo hacer algo?",
+        "Siguiente paso"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: Si una preocupación es sobre su seguridad en este momento, como que alguien le esté haciendo daño o le esté amenazando, no la deje para después. Busque ayuda ahora. Si la preocupación no le deja dormir, comer o pasar el día, dígaselo a su consejero o médico. Esta hoja no es para emergencias. Si tiene pensamientos de hacerse daño o de hacerle daño a otra persona, llame o envíe un mensaje de texto al 988 en EE. UU., o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
   "sources": [
     {
       "title": "NICE guideline CG113: managing anxiety and panic in adults",

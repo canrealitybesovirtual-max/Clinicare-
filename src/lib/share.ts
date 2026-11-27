@@ -2,10 +2,11 @@
  * Share links for client handouts (spec section 3 screen 6 and section 11: "public resource URLs and QR codes
  * containing only resource IDs").
  *
- * A share link is exactly `<origin>/r/<handout id>`:
+ * A share link is exactly `<origin>/r/<handout id>`, or `<origin>/r/<handout id>/es` for the Spanish version:
  * - the id must be one of the handouts in the content library (src/lib/library.ts), so nothing else can ride along;
- * - no query string, no fragment, no credentials, no extra path segments: no client data, no clinician data, no
- *   typed text, no tracking parameters (G5);
+ * - the only other path segment allowed is the language code "es", and only for a handout with a Spanish translation;
+ * - no query string, no fragment, no credentials: no client data, no clinician data, no typed text, no tracking
+ *   parameters (G5);
  * - the origin is the app's own origin (window.location.origin in the browser), validated as a bare http(s) origin.
  *
  * Isomorphic and pure apart from reading window.location.origin when no origin is passed. Importing this module
@@ -13,6 +14,7 @@
  * which only prefix the current origin (src/components/handouts/share-link.ts).
  */
 import { allHandouts } from "./library";
+import type { Lang } from "./i18n/core";
 
 /** Route prefix of the public, client-facing handout pages (src/app/r/[id]). */
 export const SHARE_ROUTE = "/r";
@@ -21,6 +23,7 @@ export const SHARE_ROUTE = "/r";
 const ID_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 
 const SHAREABLE: ReadonlySet<string> = new Set(allHandouts.map((h) => h.id));
+const SPANISH: ReadonlySet<string> = new Set(allHandouts.filter((h) => h.es).map((h) => h.id));
 
 export class ShareLinkError extends Error {
   constructor(reason: string) {
@@ -39,10 +42,17 @@ export function isShareableHandoutId(id: unknown): id is string {
   return typeof id === "string" && id.length <= 80 && ID_RE.test(id) && SHAREABLE.has(id);
 }
 
-/** "/r/<id>" for a library handout; throws ShareLinkError for anything else. */
-export function sharePath(id: string): string {
+/** True when the handout has a Spanish version that a share link can open (/r/<id>/es). */
+export function hasSpanishShare(id: string): boolean {
+  return isShareableHandoutId(id) && SPANISH.has(id);
+}
+
+/** "/r/<id>" (or "/r/<id>/es") for a library handout; throws ShareLinkError for anything else. */
+export function sharePath(id: string, lang: Lang = "en"): string {
   if (!isShareableHandoutId(id)) throw new ShareLinkError("not a handout in the library");
-  return `${SHARE_ROUTE}/${id}`;
+  if (lang === "en") return `${SHARE_ROUTE}/${id}`;
+  if (!SPANISH.has(id)) throw new ShareLinkError("this handout has no Spanish version");
+  return `${SHARE_ROUTE}/${id}/es`;
 }
 
 /** A bare http(s) origin ("https://example.org", "http://localhost:3000"); throws for anything with more in it. */
@@ -61,10 +71,10 @@ export function normalizeOrigin(origin: string): string {
 
 /**
  * Absolute share link for a library handout on the given origin (default: the current page's origin).
- * The result contains the handout id and nothing else.
+ * The result contains the handout id, and "/es" for the Spanish version, and nothing else.
  */
-export function shareUrl(id: string, origin?: string): string {
-  const path = sharePath(id);
+export function shareUrl(id: string, origin?: string, lang: Lang = "en"): string {
+  const path = sharePath(id, lang);
   const base = origin ?? (typeof window !== "undefined" ? window.location.origin : undefined);
   if (!base) throw new ShareLinkError("no origin available");
   const o = normalizeOrigin(base);

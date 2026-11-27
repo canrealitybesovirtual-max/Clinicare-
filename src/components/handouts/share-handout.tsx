@@ -2,15 +2,15 @@
 /**
  * Share a handout with a client: a link to the public page /r/<id> on this site, a QR code drawn in the browser
  * (qrcode package, no network), a copy button, and the device share sheet where available.
- * The link holds the handout id only; `path` was validated against the content library on the server
- * (src/lib/share.ts). Nothing is stored, logged or sent by this component.
+ * The link holds the handout id only (plus "/es" for the Spanish version); `path` was validated against the content
+ * library on the server (src/lib/share.ts). Nothing is stored, logged or sent by this component.
  */
 import * as React from "react";
 import { Check, Copy, QrCode, Share2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { absoluteShareUrl } from "./share-link";
 
-export function ShareHandout({ path, title }: { path: string; title: string }) {
+export function ShareHandout({ path, title, spanish = false }: { path: string; title: string; spanish?: boolean }) {
   const [ready, setReady] = React.useState(false);
   const [url, setUrl] = React.useState<string | null>(null);
   const [qr, setQr] = React.useState<string | null>(null);
@@ -23,6 +23,9 @@ export function ShareHandout({ path, title }: { path: string; title: string }) {
   React.useEffect(() => {
     const u = absoluteShareUrl(path, window.location.origin);
     setUrl(u);
+    setQr(null);
+    setQrFailed(false);
+    setStatus("");
     setReady(true);
     setCanShare(typeof navigator !== "undefined" && typeof navigator.share === "function");
     if (!u) return;
@@ -88,8 +91,8 @@ export function ShareHandout({ path, title }: { path: string; title: string }) {
             className="block min-h-11 w-full rounded-lg border border-input-border bg-surface-2 px-3 font-mono text-sm text-text"
           />
           <p id={ids.note} className="text-xs text-muted">
-            The link contains only the handout id. Nothing about the client, the session or you is in the link or the
-            QR code, and nothing is sent when you copy or share it.
+            {spanish ? "This link opens the Spanish version. " : ""}The link contains only the handout id. Nothing about
+            the client, the session or you is in the link or the QR code, and nothing is sent when you copy or share it.
           </p>
           <div className="flex flex-wrap gap-2">
             <Button type="button" variant="primary" onClick={copy}>
