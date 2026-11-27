@@ -45,9 +45,15 @@ export function smsHref(instruction: string | null | undefined): string | null {
 export const KIND_ORDER: readonly ReferralKind[] = [
   "crisis",
   "helpline",
+  "violence-and-abuse",
   "veterans",
   "deaf-hoh",
   "lgbtq",
+  "perinatal",
+  "older-adults-and-caregivers",
+  "disability",
+  "indigenous",
+  "basic-needs",
   "peer-support",
   "low-cost",
   "directory",
@@ -66,6 +72,12 @@ export const KIND_LABELS: Record<ReferralKind, string> = {
   directory: "Provider directories",
   "substance-use": "Substance use treatment",
   medication: "Medication treatment for opioid use disorder",
+  "violence-and-abuse": "Violence and abuse",
+  perinatal: "Pregnancy and after birth",
+  "older-adults-and-caregivers": "Older adults and caregivers",
+  disability: "Disability and workplace accommodations",
+  indigenous: "Indigenous health services",
+  "basic-needs": "Housing and basic needs",
 };
 
 /** Kinds whose listings concern substance use care: show the 42 CFR Part 2 hub prompt. */

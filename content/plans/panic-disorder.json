@@ -18,32 +18,69 @@
         {
           "id": "pd-medical-review",
           "text": "Within the first 4 weeks, and before any sensation-provoking practice begins, the client and clinician confirm that a medical provider has reviewed possible heart, thyroid, breathing and medication causes of the sensations, and note any limits the provider sets.",
-          "interventionIds": []
+          "interventionIds": [],
+          "targets": ["physical-health-burden"]
         },
         {
           "id": "pd-episode-log",
           "text": "For the next 3 weeks, write down each panic episode within a few hours of it, noting where it happened, the first sensation noticed, the scariest thought with a belief rating (0-100) and what was done to cope.",
-          "interventionIds": ["thought-record", "catastrophic-misinterpretation-restructuring"]
+          "interventionIds": ["thought-record", "catastrophic-misinterpretation-restructuring"],
+          "targets": ["threat-monitoring"],
+          "step": "low-intensity"
         },
         {
           "id": "pd-cycle-walkthrough",
           "text": "By session 3, use one recent episode to explain in their own words how a body sensation, a frightening interpretation of it and rising alarm can feed each other in a loop.",
-          "interventionIds": ["catastrophic-misinterpretation-restructuring"]
+          "interventionIds": ["catastrophic-misinterpretation-restructuring"],
+          "targets": ["threat-monitoring"],
+          "step": "high-intensity"
         },
         {
           "id": "pd-prediction-review",
           "text": "Over weeks 3 to 8, complete at least 2 written reviews per week of a catastrophic prediction (evidence for it, evidence against it, a more balanced explanation), aiming for belief in the main feared outcome to fall to half of its starting rating or lower.",
-          "interventionIds": ["catastrophic-misinterpretation-restructuring", "thought-record"]
+          "interventionIds": ["catastrophic-misinterpretation-restructuring", "thought-record"],
+          "targets": ["threat-monitoring"],
+          "step": "high-intensity"
         },
         {
           "id": "pd-sensation-practice",
           "text": "After medical clearance, practice at least 3 sensation-provoking exercises chosen with the clinician (for example spinning in a chair, breathing through a thin straw or jogging in place) on at least 5 days a week for 4 weeks, recording fear (0-10), what was predicted and what actually happened after each trial.",
-          "interventionIds": ["interoceptive-exposure"]
+          "interventionIds": ["interoceptive-exposure"],
+          "targets": ["avoidance-escape", "threat-monitoring"],
+          "step": "high-intensity"
         },
         {
           "id": "pd-gad7-tracking",
           "text": "Complete the GAD-7 at the start of treatment and every 2 to 4 weeks after that. Because it tracks general anxiety rather than panic frequency, review the scores alongside the episode log, and revisit the plan together if neither has improved across 2 check-ins in a row.",
           "interventionIds": []
+        },
+        {
+          "id": "pd-guided-self-help",
+          "text": "If the client prefers a lighter-touch start, begin guided self-help based on CBT for panic with brief support contacts, review the GAD-7 every 2 weeks, and step up to individual therapy if it does not improve.",
+          "interventionIds": ["guided-self-help"],
+          "targets": ["threat-monitoring"],
+          "step": "low-intensity"
+        },
+        {
+          "id": "pd-applied-relaxation",
+          "text": "As an alternative or addition, learn applied relaxation over about 12 weekly sessions, building up to relaxing within 30 seconds, and use it in at least 3 everyday situations a week.",
+          "interventionIds": ["applied-relaxation"],
+          "targets": ["coping-skills", "threat-monitoring"],
+          "step": "high-intensity"
+        },
+        {
+          "id": "pd-psychodynamic-option",
+          "text": "If the client prefers to explore the emotional triggers and meaning of panic, agree by session 3 on panic-focused psychodynamic therapy from a trained clinician, reviewing the GAD-7 every 4 weeks.",
+          "interventionIds": ["short-term-psychodynamic-exploration"],
+          "targets": ["experiential-avoidance"],
+          "step": "high-intensity"
+        },
+        {
+          "id": "pd-culturally-adapted-option",
+          "text": "If body sensations carry culturally specific meanings or fears for the client, discuss a culturally adapted CBT approach and fit the explanations and exercises to the client's own understanding.",
+          "interventionIds": ["culturally-adapted-cbt", "cultural-formulation-exploration"],
+          "targets": ["threat-monitoring", "values-and-meaning"],
+          "step": "specialist"
         }
       ],
       "measureIds": ["gad-7"]
@@ -64,25 +101,69 @@
         {
           "id": "pd-habit-inventory",
           "text": "Within 2 weeks, build a written list with the clinician of every protective habit and avoided activity tied to panic, rating how necessary each one feels (0-100).",
-          "interventionIds": ["safety-behavior-reduction"]
+          "interventionIds": ["safety-behavior-reduction"],
+          "targets": ["safety-behaviors"],
+          "step": "high-intensity"
         },
         {
           "id": "pd-habit-fading",
           "text": "Over weeks 4 to 10, drop or delay at least 1 listed protective habit per week during planned practice, writing down the predicted outcome beforehand and the actual outcome afterward.",
-          "interventionIds": ["safety-behavior-reduction", "interoceptive-exposure"]
+          "interventionIds": ["safety-behavior-reduction", "interoceptive-exposure"],
+          "targets": ["safety-behaviors"],
+          "step": "high-intensity"
         },
         {
           "id": "pd-activity-return",
           "text": "By week 10, take back at least 2 activities that had been avoided because they stir up body sensations (for example a brisk walk or a cup of coffee, if medically safe), doing each one at least twice a week.",
-          "interventionIds": ["graded-in-vivo-exposure", "interoceptive-exposure"]
+          "interventionIds": ["graded-in-vivo-exposure", "interoceptive-exposure"],
+          "targets": ["avoidance-escape"],
+          "step": "high-intensity"
         },
         {
           "id": "pd-setback-plan",
           "text": "In the last 2 sessions, write a personal setback plan that lists at least 3 early warning signs, the 3 skills that helped most and the point at which to book a booster session.",
-          "interventionIds": ["catastrophic-misinterpretation-restructuring", "interoceptive-exposure", "safety-behavior-reduction"]
+          "interventionIds": ["catastrophic-misinterpretation-restructuring", "interoceptive-exposure", "safety-behavior-reduction"],
+          "targets": ["coping-skills"],
+          "step": "low-intensity"
         }
       ],
       "measureIds": ["gad-7"]
+    },
+    {
+      "id": "panic-keeping-gains",
+      "label": "Keeping progress with panic and handling setbacks",
+      "definitions": [
+        "Panic episodes have become rare, but the client worries that they will come back.",
+        "Has started to drop practice, or to slip back into protective habits, as things improve."
+      ],
+      "longTermGoals": [
+        "The client keeps facing body sensations and situations, and treats any setback as a cue to practice rather than a sign of failure."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "pd-maintenance-practice",
+          "text": "After the main course of therapy, keep doing at least 1 planned sensation or situation practice a week for 8 weeks, rating fear (0-10) each time.",
+          "interventionIds": ["interoceptive-exposure", "graded-in-vivo-exposure"],
+          "targets": ["avoidance-escape"],
+          "step": "low-intensity"
+        },
+        {
+          "id": "pd-early-signs",
+          "text": "By the last session, list at least 3 early signs that panic fears are coming back (for example new avoidance or checking the pulse) and the first step for each.",
+          "interventionIds": ["relapse-prevention-planning"],
+          "targets": ["coping-skills"],
+          "step": "low-intensity"
+        },
+        {
+          "id": "pd-booster-sessions",
+          "text": "Agree on 1 or 2 booster sessions in the 3 months after ending, with the GAD-7 at each.",
+          "interventionIds": ["relapse-prevention-planning"],
+          "targets": ["strengths-and-supports"],
+          "step": "low-intensity"
+        }
+      ],
+      "measureIds": ["gad-7"],
+      "handoutIds": ["body-sensation-practice-log"]
     }
   ],
   "collaborativeNote": "These are starting points for clinician review, not a finished plan. Rewrite each problem, goal and objective with the client in their own words, check that the numbers and timelines feel realistic to them, and record their agreement before anything is added to the plan. Confirm medical clearance before any sensation-provoking practice. Swap the examples for ones that fit the client's culture, faith, body and daily life. Do not add names or other identifying details. Resource only. Not a substitute for clinical judgment.",
@@ -93,9 +174,11 @@
     { "title": "A Tipping Point for Measurement-Based Care (Fortney et al.)", "publisher": "Psychiatric Services; reprinted in Focus (PubMed Central)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6996080/", "year": 2017 },
     { "title": "Implementing Measurement-Based Care in Behavioral Health: A Review (Lewis et al.)", "publisher": "JAMA Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/30566197/", "year": 2019 },
     { "title": "Shared decision making (NG197)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng197", "year": 2021 },
-    { "title": "PHQ and GAD-7 screeners (reproduction terms)", "publisher": "Pfizer / PHQ Screeners", "url": "https://www.phqscreeners.com" }
+    { "title": "PHQ and GAD-7 screeners (reproduction terms)", "publisher": "Pfizer / PHQ Screeners", "url": "https://www.phqscreeners.com" },
+    { "title": "A randomized controlled clinical trial of psychoanalytic psychotherapy for panic disorder (Milrod et al.)", "publisher": "American Journal of Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/17267789/", "year": 2007 },
+    { "title": "The Unified Protocol for Transdiagnostic Treatment of Emotional Disorders Compared With Diagnosis-Specific Protocols for Anxiety Disorders: A Randomized Clinical Trial (Barlow et al.)", "publisher": "JAMA Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/28768327/", "year": 2017 }
   ],
   "license": "original",
-  "lastVerified": "2026-11-26",
+  "lastVerified": "2026-11-27",
   "reviewedBy": "PENDING"
 }

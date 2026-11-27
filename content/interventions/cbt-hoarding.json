@@ -38,6 +38,7 @@
     "sorting-and-letting-go",
     "problem-solving-steps"
   ],
+  "orientationIds": ["cognitive-therapy", "behavior-therapy"],
   "sources": [
     {
       "title": "Waitlist-controlled trial of cognitive behavior therapy for hoarding disorder (Steketee et al.)",

@@ -1,0 +1,137 @@
+{
+  "id": "psychodynamic-therapy",
+  "name": "Psychodynamic psychotherapy",
+  "shortName": "Psychodynamic",
+  "family": "psychodynamic",
+  "summary": "Symptoms and recurring relationship patterns are understood as expressions of feelings, wishes and fears that are partly out of awareness. Therapy uses the relationship itself to notice these patterns as they happen, understand them and loosen their hold.",
+  "keyConcepts": [
+    { "term": "Unconscious conflict", "meaning": "Competing wishes, fears and values, partly out of awareness, that show up as symptoms, inhibitions or repeated choices that the person does not fully understand." },
+    { "term": "Defenses", "meaning": "Habitual ways of keeping painful feelings or thoughts out of awareness, from flexible ones such as humor to rigid ones such as denial or splitting." },
+    { "term": "Transference and countertransference", "meaning": "Feelings and expectations the client brings to the therapist from earlier relationships, and the clinician's own reactions, both used as information about relational patterns." },
+    { "term": "Attachment and object relations", "meaning": "Early relationships shape internal models of self and others that guide what a person expects and how they act in close relationships." },
+    { "term": "Mentalizing", "meaning": "The capacity to understand one's own and others' behavior in terms of thoughts, feelings and intentions; it tends to collapse under stress and attachment threat." },
+    { "term": "Supportive to expressive continuum", "meaning": "Work ranges from supportive (strengthening coping, reality testing and the alliance) to expressive (exploring and interpreting conflict), adjusted to the client's current resources." },
+    { "term": "Core conflictual relationship theme", "meaning": "A focal formulation that names a repeated pattern: what the person wishes for, how they expect others to respond, and how they then respond themselves." }
+  ],
+  "viewOfProblem": "Present difficulties are understood as rooted in patterns of feeling, defending and relating that developed to cope with earlier experiences and that now cause suffering or limit the person. Symptoms such as depression, anxiety or bodily distress can be ways of managing feelings that seem dangerous to know or express. The pattern usually appears in several relationships, including the therapeutic one.",
+  "viewOfChange": "Change comes from recognizing the recurring pattern as it happens, in the client's relationships and in the room, understanding the feelings and fears behind it, and experiencing a different kind of relationship with the therapist. Insight matters, but so does the emotional experience of the relationship and practice in acting differently. In time-limited models, work stays on one agreed focus.",
+  "therapistStance": "Attentive, curious and reflective. The clinician listens for themes, follows the client's associations, notices what is avoided, and comments on patterns, including those between client and therapist, with tact and timing. Interpretations are offered as hypotheses for joint exploration. In short-term models the clinician is more active and keeps the agreed focus.",
+  "sessionShape": [
+    "The client leads with what is on their mind; there is usually no set agenda.",
+    "The clinician listens for repeated themes, feelings that are hard to name, and links to the agreed focus.",
+    "Explore a recent relationship episode in detail: what was wished for, how others responded, how the client reacted.",
+    "Notice the same pattern in the therapy relationship when it appears, and explore it together.",
+    "Close by linking the session to the focus; in time-limited work, keep track of the session count and the ending."
+  ],
+  "goalStyle": "Goals name a relational or emotional pattern and how change will show in specific situations: for example, notice and name the urge to withdraw when feeling criticized at work, and try one alternative response in the next month. Write each goal with the client in their own words.",
+  "progressMarkers": [
+    "Client-reported change in the focal relationship pattern in specific situations.",
+    "Shifts in how the pattern shows up in the therapy relationship.",
+    "Symptom and functioning measures such as the PHQ-9 tracked across sessions.",
+    "Client and clinician ratings of the alliance, reviewed together."
+  ],
+  "typicalTechniques": [
+    "short-term-psychodynamic-exploration",
+    "dynamic-interpersonal-therapy",
+    "supportive-psychotherapy",
+    "mentalization-based-treatment",
+    "transference-focused-psychotherapy",
+    "good-psychiatric-management",
+    "eating-disorder-specialist-therapies"
+  ],
+  "relatedTechniques": ["interpersonal-psychotherapy", "schema-therapy"],
+  "missingTechniques": [
+    { "name": "Panic-focused psychodynamic psychotherapy (PFPP)", "note": "A twice-weekly, 12-week focal therapy for panic; one small RCT, overview and referral only." },
+    { "name": "Intensive short-term dynamic psychotherapy (ISTDP)", "note": "An active model focused on feelings, anxiety and defense; evidence mainly from developer-group reviews, overview and referral only." }
+  ],
+  "formulationIds": ["psychodynamic-ccrt", "dimensional-personality", "five-ps-biopsychosocial-spiritual"],
+  "models": [
+    {
+      "name": "Short-term psychodynamic psychotherapy (STPP) and dynamic interpersonal therapy",
+      "summary": "Time-limited therapies, often 16 to 30 sessions, that keep one relational focus. Variants include supportive-expressive therapy and dynamic interpersonal therapy (DIT) for depression.",
+      "evidenceTier": "guideline-recommended",
+      "evidence": "NICE NG222 (2022) includes short-term psychodynamic psychotherapy among options for depression, judged effective but less cost effective on average than higher-ranked options. A 2015 meta-analysis supported STPP for depression (Driessen et al., 2015).",
+      "trainingRequired": true
+    },
+    {
+      "name": "Mentalization-based treatment (MBT)",
+      "summary": "A structured treatment for borderline personality patterns that strengthens the capacity to mentalize, especially during attachment stress, in individual and group sessions.",
+      "evidenceTier": "research-supported",
+      "evidence": "Outpatient MBT reduced self-harm, suicide attempts and hospital admission more than structured clinical management in an RCT (Bateman and Fonagy, 2009), and MBT is one of the two most studied therapies in the 2020 Cochrane review of BPD treatments (Storebo et al., 2020).",
+      "trainingRequired": true
+    },
+    {
+      "name": "Transference-focused psychotherapy (TFP)",
+      "summary": "A twice-weekly treatment for borderline personality organization that works with split views of self and others as they appear in the therapy relationship, within a clear treatment contract.",
+      "evidenceTier": "research-supported",
+      "evidence": "In a 2006 RCT, TFP improved borderline symptoms, though schema-focused therapy led to more recovery and less dropout (Giesen-Bloo et al., 2006).",
+      "trainingRequired": true
+    },
+    {
+      "name": "Good psychiatric management (GPM)",
+      "summary": "A generalist, case-management-based approach to borderline personality patterns that combines psychoeducation, a focus on life outside therapy, and psychodynamically informed support; designed to be learned by general clinicians.",
+      "evidenceTier": "research-supported",
+      "evidence": "In a 2009 RCT with 180 patients, one year of general psychiatric management and one year of DBT led to similar improvements, including fewer self-harm episodes (McMain et al., 2009).",
+      "trainingRequired": false
+    },
+    {
+      "name": "Panic-focused psychodynamic psychotherapy and ISTDP",
+      "summary": "Two narrower models: PFPP for panic disorder, and ISTDP, an active approach to feelings and defenses used for personality and somatic presentations.",
+      "evidenceTier": "emerging",
+      "evidence": "One RCT with 49 adults found PFPP outperformed applied relaxation for panic (73 percent vs 39 percent response; Milrod et al., 2007). ISTDP evidence comes mainly from reviews by its own research group (Town and Driessen, 2013).",
+      "trainingRequired": true
+    }
+  ],
+  "evidenceTier": "guideline-recommended",
+  "evidenceSummary": "A pre-registered 2023 umbrella review concluded that psychodynamic therapy meets current standards for an empirically supported treatment in depressive, anxiety, personality and somatic symptom disorders (Leichsenring et al., 2023). NICE NG222 (2022) includes STPP among options for depression. For borderline personality patterns, MBT, TFP and GPM have RCT support (Bateman and Fonagy, 2009; Giesen-Bloo et al., 2006; McMain et al., 2009). Evidence for PFPP and ISTDP is narrower (Milrod et al., 2007; Town and Driessen, 2013).",
+  "bestFit": [
+    "Recurring relationship problems, long-standing low mood, or symptoms that have not responded to skills-based work.",
+    "Clients who want to understand where their patterns come from and are interested in exploring feelings and relationships.",
+    "Borderline and other personality patterns, through structured models such as MBT, TFP or GPM.",
+    "Somatic and anxiety presentations where emotional avoidance seems central."
+  ],
+  "cautions": [
+    "Open-ended expressive work can destabilize clients in acute crisis, with active psychosis or with very limited supports; start with supportive work and stabilization.",
+    "Interpretations are hypotheses. Offer them tentatively and check how they land, especially across cultural differences in meaning.",
+    "Watch for long treatments drifting without review; agree on a focus and revisit progress with measures.",
+    "Exploring the past must not become a search for hidden memories; follow memory and suggestion safeguards.",
+    "If exploration brings up thoughts of death or self-harm, follow your risk procedures and review crisis options: in the US call or text 988; elsewhere, the local emergency number or findahelpline.com."
+  ],
+  "whenToRefer": [
+    "Borderline personality patterns with recurrent self-harm, when you are not trained in MBT, TFP, GPM or DBT.",
+    "Requests for long-term psychoanalytic therapy, which call for clinicians with that specific training."
+  ],
+  "trainingRequired": false,
+  "trainingNote": "Psychodynamic principles are part of many graduate programs. Delivering a specific model such as DIT, MBT, TFP, PFPP or ISTDP requires training and supervised cases in that model; GPM was designed to be learned by generalist clinicians through brief training.",
+  "trainingPath": [
+    { "body": "Anna Freud (MBT training pathway)", "url": "https://www.annafreud.org/training/mentalization-based-treatment-training/", "note": "Stepped MBT training from basic to practitioner and supervisor levels." },
+    { "body": "British Psychoanalytic Council (transference-focused psychotherapy)", "url": "https://bpc.org.uk/professionals/kite-mark-therapist/tfp", "note": "Describes accredited TFP training and practitioner registration." }
+  ],
+  "ethicsPrompts": [
+    { "prompt": "Practice within your training: use structured models such as MBT or TFP only after training and with supervision, and describe your approach accurately to clients and referrers.", "legalIds": ["competence-and-scope-of-practice"] },
+    { "prompt": "When exploring childhood experiences, avoid suggestion and leading questions, and do not set out to uncover memories.", "legalIds": ["memory-and-suggestion-safeguards"] },
+    { "prompt": "Use your own reactions as information, and take strong or persistent ones to supervision or consultation.", "legalIds": ["multiple-relationships-and-boundaries"] }
+  ],
+  "culturalNotes": [
+    "Family closeness, deference to elders or reluctance to speak about parents can reflect cultural values rather than conflict or defense; ask before interpreting.",
+    "Transference also carries race, gender, class and power; name these dynamics when relevant rather than reading everything as early family history.",
+    "Consider whether a less directive, exploratory stance fits the client's expectations of help, and explain the way of working early."
+  ],
+  "handoutIds": ["my-relationships-map", "what-to-expect-in-therapy"],
+  "relatedPracticeIds": ["alliance-and-rupture-repair", "clinician-reactions-and-self-disclosure", "supervision-and-consultation", "ending-therapy-and-boosters"],
+  "relatedPopulationIds": ["cultural-adaptation"],
+  "sources": [
+    { "title": "The status of psychodynamic psychotherapy as an empirically supported treatment for common mental disorders: an umbrella review based on updated criteria (Leichsenring et al.)", "publisher": "World Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/37159376/", "year": 2023 },
+    { "title": "Depression in adults: treatment and management (NG222)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng222", "year": 2022 },
+    { "title": "The efficacy of short-term psychodynamic psychotherapy for depression: a meta-analysis update (Driessen et al.)", "publisher": "Clinical Psychology Review (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/26281018/", "year": 2015 },
+    { "title": "Randomized controlled trial of outpatient mentalization-based treatment versus structured clinical management (Bateman and Fonagy)", "publisher": "American Journal of Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/19833787/", "year": 2009 },
+    { "title": "Outpatient psychotherapy for borderline personality disorder: schema-focused therapy vs transference-focused psychotherapy (Giesen-Bloo et al.)", "publisher": "Archives of General Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/16754838/", "year": 2006 },
+    { "title": "A randomized trial of dialectical behavior therapy versus general psychiatric management for borderline personality disorder (McMain et al.)", "publisher": "American Journal of Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/19755574/", "year": 2009 },
+    { "title": "A randomized controlled clinical trial of psychoanalytic psychotherapy for panic disorder (Milrod et al.)", "publisher": "American Journal of Psychiatry", "url": "https://doi.org/10.1176/ajp.2007.164.2.265", "year": 2007 },
+    { "title": "Emerging evidence for intensive short-term dynamic psychotherapy with personality disorders and somatic disorders (Town and Driessen)", "publisher": "Vrije Universiteit Amsterdam research portal", "url": "https://research.vu.nl/en/publications/emerging-evidence-for-intensive-short-term-dynamic-psychotherapy-/", "year": 2013 },
+    { "title": "Psychological therapies for people with borderline personality disorder (Storebo et al.)", "publisher": "Cochrane Database of Systematic Reviews", "url": "https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD012955.pub2/full", "year": 2020 }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

@@ -19,35 +19,59 @@
           "interventionIds": [
             "collaborative-safety-planning",
             "lethal-means-counseling"
-          ]
+          ],
+          "targets": [
+            "coping-skills",
+            "hope-and-motivation"
+          ],
+          "step": "crisis-or-urgent"
         },
         {
           "id": "bpd-chain",
           "text": "Each week, review one hard moment step by step (trigger, feelings, urges, actions, results) and identify one point where a skill could be used.",
           "interventionIds": [
+            "behavioral-chain-analysis",
             "dbt-emotion-regulation-opposite-action"
-          ]
+          ],
+          "targets": [
+            "urges-and-impulsivity",
+            "emotion-dysregulation"
+          ],
+          "step": "high-intensity"
         },
         {
           "id": "bpd-distress-skills",
           "text": "By session 4, list 3 distress tolerance skills and use one during at least 3 urges a week, rating urge strength before and after.",
           "interventionIds": [
             "dbt-distress-tolerance"
-          ]
+          ],
+          "targets": [
+            "emotion-dysregulation",
+            "coping-skills"
+          ],
+          "step": "high-intensity"
         },
         {
           "id": "bpd-mindfulness",
           "text": "Practice a 5-minute mindfulness skill at least 5 days a week for 4 weeks.",
           "interventionIds": [
             "dbt-mindfulness-skills"
-          ]
+          ],
+          "targets": [
+            "emotion-dysregulation"
+          ],
+          "step": "high-intensity"
         },
         {
           "id": "bpd-interpersonal",
           "text": "Use a structured way of asking for what one needs in at least 2 conversations a week and note the outcome.",
           "interventionIds": [
             "dbt-interpersonal-effectiveness"
-          ]
+          ],
+          "targets": [
+            "interpersonal-difficulties"
+          ],
+          "step": "high-intensity"
         },
         {
           "id": "bpd-specialist",
@@ -55,7 +79,12 @@
           "interventionIds": [
             "mentalization-based-treatment",
             "schema-therapy"
-          ]
+          ],
+          "targets": [
+            "emotion-dysregulation",
+            "interpersonal-difficulties"
+          ],
+          "step": "specialist"
         },
         {
           "id": "bpd-tracking",
@@ -86,26 +115,106 @@
           "text": "By session 8, write down 3 personal values and one action a week that fits each.",
           "interventionIds": [
             "schema-therapy"
-          ]
+          ],
+          "targets": [
+            "values-and-meaning"
+          ],
+          "step": "high-intensity"
         },
         {
           "id": "bpd-self-kindness",
           "text": "Replace self-attack with a kind self-statement at least once a day for 4 weeks, logged.",
           "interventionIds": [
             "self-compassion-practice"
-          ]
+          ],
+          "targets": [
+            "self-criticism-shame"
+          ],
+          "step": "low-intensity"
         },
         {
           "id": "bpd-curiosity",
           "text": "In session, practice describing what another person may have felt or meant in 2 recent conflicts, with at least 2 possible views each.",
           "interventionIds": [
             "mentalization-based-treatment"
-          ]
+          ],
+          "targets": [
+            "interpersonal-difficulties"
+          ],
+          "step": "specialist"
         }
       ],
       "measureIds": [
         "phq-9",
         "gad-7"
+      ]
+    },
+    {
+      "id": "bpd-steady-generalist-care",
+      "label": "Getting steady, structured care focused on daily life and relationships",
+      "definitions": [
+        "Has had many crises, changes of clinician or breaks in care, and finds it hard to trust that care will last.",
+        "Work, study or daily structure has been disrupted, and relationship setbacks quickly lead to intense distress."
+      ],
+      "longTermGoals": [
+        "The client has steady, predictable care, more structure in daily life, and fewer and shorter crises."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "bpd-shared-understanding",
+          "text": "By session 3, share information about the pattern in plain words (including that most people improve over time), and agree on goals for work, study and relationships.",
+          "interventionIds": [
+            "good-psychiatric-management"
+          ],
+          "targets": [
+            "hope-and-motivation"
+          ],
+          "step": "high-intensity"
+        },
+        {
+          "id": "bpd-life-structure",
+          "text": "Over weeks 4 to 16, set and review 1 goal a month about work, study or daily structure, because progress in these areas supports emotional steadiness.",
+          "interventionIds": [
+            "good-psychiatric-management"
+          ],
+          "targets": [
+            "structural-stressors",
+            "values-and-meaning"
+          ],
+          "step": "high-intensity"
+        },
+        {
+          "id": "bpd-sensitivity-map",
+          "text": "By week 6, map together how feeling rejected or alone links to rises in distress and urges, and plan 1 response for each step.",
+          "interventionIds": [
+            "good-psychiatric-management",
+            "mentalization-based-treatment"
+          ],
+          "targets": [
+            "interpersonal-difficulties",
+            "emotion-dysregulation"
+          ],
+          "step": "high-intensity"
+        },
+        {
+          "id": "bpd-between-session-plan",
+          "text": "Agree on a crisis plan that says what the client will do, who they will contact and what the clinician can offer between sessions, and review it monthly. The clinician makes every risk decision.",
+          "interventionIds": [
+            "collaborative-safety-planning",
+            "good-psychiatric-management"
+          ],
+          "targets": [
+            "coping-skills"
+          ],
+          "step": "crisis-or-urgent"
+        }
+      ],
+      "measureIds": [
+        "phq-9"
+      ],
+      "handoutIds": [
+        "chain-analysis-sheet",
+        "daily-emotion-and-urge-tracker"
       ]
     }
   ],
@@ -135,6 +244,12 @@
       "publisher": "Archives of General Psychiatry (PubMed)",
       "url": "https://pubmed.ncbi.nlm.nih.gov/16754838/",
       "year": 2006
+    },
+    {
+      "title": "A randomized trial of dialectical behavior therapy versus general psychiatric management for borderline personality disorder (McMain et al.)",
+      "publisher": "American Journal of Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19755574/",
+      "year": 2009
     }
   ],
   "license": "original",

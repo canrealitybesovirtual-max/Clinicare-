@@ -552,6 +552,126 @@
       "license": "Public domain (US government); paraphrased",
       "lastVerified": "2026-11-27",
       "reviewedBy": "PENDING"
+    },
+    {
+      "id": "us-tobacco-use-adults",
+      "text": "In 2021, about 18.7% of US adults (roughly 46 million people) currently used a tobacco product, including cigarettes (11.5%) and e-cigarettes (4.5%), according to the National Health Interview Survey. Use was higher among adults with serious psychological distress.",
+      "value": "18.7%",
+      "region": "US",
+      "dataYear": "2021",
+      "publisher": "Centers for Disease Control and Prevention (CDC), National Health Interview Survey (MMWR, Cornelius et al.)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37141154/",
+      "sources": [
+        {
+          "title": "Tobacco product use among adults - United States, 2021 (Cornelius et al.)",
+          "publisher": "CDC Morbidity and Mortality Weekly Report (PubMed)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/37141154/",
+          "year": 2023
+        }
+      ],
+      "license": "Paraphrased from the published abstract (US government work)",
+      "lastVerified": "2026-11-27",
+      "reviewedBy": "PENDING"
+    },
+    {
+      "id": "us-sedative-misuse-past-year",
+      "text": "In 2015-2016 national survey data, about 12.6% of US adults (30.6 million) used a benzodiazepine in the past year and about 2.2% (5.3 million) misused one, most often without their own prescription. Misuse was highest at ages 18-25 (5.2%). These data are about ten years old.",
+      "value": "2.2%",
+      "region": "US",
+      "dataYear": "2015-2016",
+      "publisher": "Maust et al., Psychiatric Services (National Survey on Drug Use and Health data)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30554562/",
+      "sources": [
+        {
+          "title": "Benzodiazepine use and misuse among adults in the United States (Maust et al.)",
+          "publisher": "Psychiatric Services (PubMed)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30554562/",
+          "year": 2019
+        }
+      ],
+      "license": "Paraphrased from the published abstract",
+      "lastVerified": "2026-11-27",
+      "reviewedBy": "PENDING"
+    },
+    {
+      "id": "us-gambling-problems",
+      "text": "In the National Comorbidity Survey Replication, about 0.6% of US adults had a gambling disorder (then called pathological gambling) at some point in life, and 2.3% reported at least one gambling problem. The interviews were done in 2001-2003, so the data are more than 20 years old and predate legal online sports betting.",
+      "value": "0.6%",
+      "region": "US",
+      "dataYear": "2001-2003",
+      "publisher": "Kessler et al., Psychological Medicine (National Comorbidity Survey Replication)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18257941/",
+      "sources": [
+        {
+          "title": "DSM-IV pathological gambling in the National Comorbidity Survey Replication (Kessler et al.)",
+          "publisher": "Psychological Medicine (PubMed)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/18257941/",
+          "year": 2008
+        }
+      ],
+      "license": "Paraphrased from the published abstract",
+      "lastVerified": "2026-11-27",
+      "reviewedBy": "PENDING"
+    },
+    {
+      "id": "us-trichotillomania-prevalence",
+      "text": "In a January 2019 online survey of 10,169 US adults aged 18-69, drawn to resemble the general population, about 1.7% identified as having current trichotillomania (hair-pulling disorder), at similar rates in men and women. It was a self-report survey, not clinical interviews.",
+      "value": "1.7%",
+      "region": "US",
+      "dataYear": "2019",
+      "publisher": "Grant et al., Psychiatry Research (online survey of US adults)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32334275/",
+      "sources": [
+        {
+          "title": "Prevalence, gender correlates, and co-morbidity of trichotillomania (Grant et al.)",
+          "publisher": "Psychiatry Research (PubMed)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32334275/",
+          "year": 2020
+        }
+      ],
+      "license": "Paraphrased from the published abstract",
+      "lastVerified": "2026-11-27",
+      "reviewedBy": "PENDING"
+    },
+    {
+      "id": "us-skin-picking-prevalence",
+      "text": "In the same January 2019 online survey of 10,169 US adults aged 18-69, about 2.1% identified as having current skin-picking (excoriation) disorder and 3.1% reported it at some point in life. It was a self-report survey, not clinical interviews.",
+      "value": "2.1%",
+      "region": "US",
+      "dataYear": "2019",
+      "publisher": "Grant & Chamberlain, Journal of Psychiatric Research (online survey of US adults)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32781374/",
+      "sources": [
+        {
+          "title": "Prevalence of skin picking (excoriation) disorder (Grant & Chamberlain)",
+          "publisher": "Journal of Psychiatric Research (PubMed)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32781374/",
+          "year": 2020
+        }
+      ],
+      "license": "Paraphrased from the published abstract",
+      "lastVerified": "2026-11-27",
+      "reviewedBy": "PENDING"
+    },
+    {
+      "id": "us-pmdd-prevalence",
+      "text": "In a randomly selected US sample of 1,246 women aged 13-55 who rated symptoms daily over two ovulatory cycles, about 1.3% showed the full PMDD pattern, far fewer than estimates based on recall. The data were collected before the 2009 publication, so they are more than 15 years old.",
+      "value": "1.3%",
+      "region": "US",
+      "dataYear": "before 2009",
+      "publisher": "Gehlert et al., Psychological Medicine (urban and rural US sample)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18366818/",
+      "sources": [
+        {
+          "title": "The prevalence of premenstrual dysphoric disorder in a randomly selected group of urban and rural women (Gehlert et al.)",
+          "publisher": "Psychological Medicine (PubMed)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/18366818/",
+          "year": 2009
+        }
+      ],
+      "license": "Paraphrased from the published abstract",
+      "lastVerified": "2026-11-27",
+      "reviewedBy": "PENDING"
     }
   ]
 }

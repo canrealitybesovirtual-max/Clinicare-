@@ -1,0 +1,191 @@
+{
+  "id": "asking-for-changes-at-work",
+  "title": "Asking for Changes at Work",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 15,
+  "intro": "Health problems, including mental health problems, can make parts of work harder for a while. In the US, many workers have a legal right to reasonable changes at work that help them do their job. These changes are often called accommodations. This sheet helps you plan what to ask for and how to ask. It takes about 15 minutes.",
+  "sections": [
+    {
+      "heading": "Know your rights in the US",
+      "steps": [
+        "A federal law, the Americans with Disabilities Act (ADA), covers most employers with 15 or more workers.",
+        "If a health condition limits you in a big way, you may have a right to reasonable changes at work, unless a change would be too hard or too costly for the employer.",
+        "Many state laws cover smaller employers too.",
+        "Outside the US, other laws apply. Ask a local worker rights group or labor office."
+      ]
+    },
+    {
+      "heading": "Think about what is hard",
+      "body": "Focus on the tasks or times that are hard for you, not on a health label.",
+      "steps": [
+        "Parts of my job that are hard right now: ________________",
+        "When they are hardest (time of day, or kind of task): ________________"
+      ]
+    },
+    {
+      "heading": "Ideas for changes",
+      "body": "Here are some changes that help many people. Your needs may be different.",
+      "steps": [
+        "A flexible schedule, or a later start time.",
+        "Short breaks to rest or to use a coping skill.",
+        "Time off for health visits.",
+        "A quieter place to work, or headphones that block noise.",
+        "Instructions in writing, or tasks broken into smaller steps.",
+        "Working from home on some days, if the job allows it.",
+        "Regular check-ins with a supervisor about what to do first.",
+        "Changes I want to ask for: ________________"
+      ]
+    },
+    {
+      "heading": "How to ask",
+      "steps": [
+        "Tell your supervisor or human resources (HR) that you need a change at work because of a health condition. You do not need to use special legal words.",
+        "It is a good idea to ask in writing, by email or letter, and keep a copy.",
+        "Say what is hard and what change would help.",
+        "Expect some back-and-forth. Your employer may suggest other options.",
+        "Write down the date and what was said each time you talk."
+      ]
+    },
+    {
+      "heading": "What you need to share",
+      "steps": [
+        "In most cases, you do not have to tell your employer about a health condition unless you are asking for a change.",
+        "You usually do not have to share your full health history.",
+        "Your employer may ask for a note from your provider that explains your limits and how the change would help.",
+        "Your counselor or doctor can write a note only with your written OK. Talk with them about what the note will say.",
+        "Your employer must keep your health information private and apart from your regular work file."
+      ]
+    },
+    {
+      "heading": "If your request is turned down",
+      "steps": [
+        "Ask why, and ask whether a different change could work.",
+        "Get free, private advice from the Job Accommodation Network at askjan.org, or call 1-800-526-7234.",
+        "You can file a charge with the US Equal Employment Opportunity Commission at eeoc.gov. There are time limits, usually 180 or 300 days depending on your state, so do not wait too long.",
+        "It is against the law for an employer to punish you for asking."
+      ]
+    },
+    {
+      "heading": "Plan your request",
+      "body": "Use the table at the end. On each row, write one thing that is hard, a change that could help, and who you will ask. Later, write down what happened."
+    }
+  ],
+  "practiceLog": {
+    "columns": [
+      "What is hard at work",
+      "A change that could help",
+      "Who I will ask",
+      "What happened"
+    ],
+    "rows": 4
+  },
+  "safetyNote": "Safety first: Stress at work can build up. If you have thoughts of hurting yourself or someone else, get help now. In the US, call or text 988 or call 911. In other countries, call your local emergency number or visit findahelpline.com. This sheet is not legal advice. Resource only. This sheet does not replace care from a licensed professional.",
+  "sud": false,
+  "es": {
+    "title": "Cómo pedir cambios en el trabajo",
+    "intro": "Los problemas de salud, incluidos los de salud mental, pueden hacer más difíciles algunas partes del trabajo por un tiempo. En EE. UU., muchos trabajadores tienen el derecho legal a pedir cambios razonables en el trabajo que les ayuden a hacer su tarea. Estos cambios muchas veces se llaman adaptaciones o ajustes. Esta hoja le ayuda a planear qué pedir y cómo pedirlo. Toma unos 15 minutos.",
+    "sections": [
+      {
+        "heading": "Conozca sus derechos en EE. UU.",
+        "steps": [
+          "Una ley federal, la Ley de Estadounidenses con Discapacidades (ADA), cubre a la mayoría de los empleadores con 15 trabajadores o más.",
+          "Si un problema de salud le limita mucho, puede tener derecho a cambios razonables en el trabajo, a menos que un cambio sea demasiado difícil o caro para el empleador.",
+          "Muchas leyes estatales también cubren a empleadores más pequeños.",
+          "Fuera de EE. UU., se aplican otras leyes. Pregunte a un grupo local de derechos de los trabajadores o a una oficina de trabajo."
+        ]
+      },
+      {
+        "heading": "Pensar en lo que es difícil",
+        "body": "Fíjese en las tareas o los momentos que le cuestan, no en el nombre de un problema de salud.",
+        "steps": [
+          "Partes de mi trabajo que ahora son difíciles: ________________",
+          "Cuándo son más difíciles (hora del día, o tipo de tarea): ________________"
+        ]
+      },
+      {
+        "heading": "Ideas de cambios",
+        "body": "Estos son algunos cambios que ayudan a muchas personas. Sus necesidades pueden ser distintas.",
+        "steps": [
+          "Un horario flexible, o empezar más tarde.",
+          "Descansos cortos para reposar o para usar una forma de calmarse.",
+          "Tiempo libre para citas de salud.",
+          "Un lugar más tranquilo para trabajar, o auriculares que tapen el ruido.",
+          "Instrucciones por escrito, o tareas divididas en pasos más pequeños.",
+          "Trabajar desde la casa algunos días, si el trabajo lo permite.",
+          "Reuniones cortas y seguidas con un supervisor sobre qué hacer primero.",
+          "Cambios que quiero pedir: ________________"
+        ]
+      },
+      {
+        "heading": "Cómo pedirlo",
+        "steps": [
+          "Dígale a su supervisor o a recursos humanos (RR. HH.) que necesita un cambio en el trabajo por un problema de salud. No tiene que usar palabras legales especiales.",
+          "Es buena idea pedirlo por escrito, por correo electrónico o por carta, y guardar una copia.",
+          "Diga qué es difícil y qué cambio le ayudaría.",
+          "Espere que haya una conversación de ida y vuelta. Su empleador puede proponer otras opciones.",
+          "Anote la fecha y lo que se dijo cada vez que hablen."
+        ]
+      },
+      {
+        "heading": "Lo que tiene que contar",
+        "steps": [
+          "En la mayoría de los casos, no tiene que contarle a su empleador sobre un problema de salud a menos que pida un cambio.",
+          "Por lo general, no tiene que contar toda su historia de salud.",
+          "Su empleador puede pedir una nota de su proveedor que explique sus límites y cómo le ayudaría el cambio.",
+          "Su consejero o su médico solo pueden escribir una nota con su permiso por escrito. Hable con ellos sobre lo que va a decir la nota.",
+          "Su empleador debe mantener su información de salud en privado y aparte de su expediente normal de trabajo."
+        ]
+      },
+      {
+        "heading": "Si le dicen que no",
+        "steps": [
+          "Pregunte por qué, y pregunte si otro cambio podría funcionar.",
+          "Reciba consejos gratis y privados de la Red de Adaptaciones Laborales (Job Accommodation Network) en askjan.org, o llame al 1-800-526-7234.",
+          "Puede presentar una queja ante la Comisión para la Igualdad de Oportunidades en el Empleo de EE. UU. (EEOC) en eeoc.gov. Hay plazos, por lo general de 180 o 300 días según su estado, así que no espere mucho.",
+          "Es contra la ley que un empleador le castigue por pedir un cambio."
+        ]
+      },
+      {
+        "heading": "Planear su solicitud",
+        "body": "Use la tabla del final. En cada fila, escriba una cosa que es difícil, un cambio que podría ayudar y a quién se lo va a pedir. Después, anote lo que pasó."
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Lo que es difícil en el trabajo",
+        "Un cambio que podría ayudar",
+        "A quién se lo voy a pedir",
+        "Lo que pasó"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: El estrés del trabajo se puede acumular. Si tiene pensamientos de hacerse daño o de hacerle daño a otra persona, busque ayuda ahora. En EE. UU., llame o envíe un mensaje de texto al 988, o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Esta hoja no es un consejo legal. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "sources": [
+    {
+      "title": "Depression, PTSD, and other mental health conditions in the workplace: your legal rights",
+      "publisher": "US Equal Employment Opportunity Commission",
+      "url": "https://www.eeoc.gov/publications/depression-ptsd-other-mental-health-conditions-workplace-your-legal-rights",
+      "year": 2016
+    },
+    {
+      "title": "The mental health provider's role in a client's request for a reasonable accommodation at work",
+      "publisher": "US Equal Employment Opportunity Commission",
+      "url": "https://www.eeoc.gov/laws/guidance/mental-health-providers-role-clients-request-reasonable-accommodation-work"
+    },
+    {
+      "title": "How to file a charge of employment discrimination",
+      "publisher": "US Equal Employment Opportunity Commission",
+      "url": "https://www.eeoc.gov/how-file-charge-employment-discrimination"
+    },
+    {
+      "title": "Job Accommodation Network (JAN)",
+      "publisher": "Job Accommodation Network, US Department of Labor Office of Disability Employment Policy",
+      "url": "https://askjan.org/"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

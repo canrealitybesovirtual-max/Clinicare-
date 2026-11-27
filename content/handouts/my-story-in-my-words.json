@@ -1,0 +1,110 @@
+{
+  "id": "my-story-in-my-words",
+  "title": "My Story in My Words",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 15,
+  "intro": "Sometimes a problem starts to feel like it is who you are. 'I'm just a worrier.' 'I'm broken.' This sheet invites you to see the problem as something separate from you, with its own tricks and habits. That can make room to notice the times you stood up to it, and what those times say about you. It takes about 15 minutes, and you can come back to it.",
+  "sections": [
+    {
+      "heading": "Give the problem a name",
+      "body": "Choose a name for the problem that fits your experience. It could be 'the worry,' 'the heavy blanket,' 'the critic,' or anything that feels right to you. A name helps you talk about the problem as something that affects you, not something you are."
+    },
+    {
+      "heading": "How the problem works",
+      "steps": [
+        "When does the problem show up most? When is it quieter?",
+        "What does it tell you about yourself, other people, or the future?",
+        "How does it affect your days, your relationships, and your hopes?",
+        "What does it try to get you to do, or stop you from doing?"
+      ]
+    },
+    {
+      "heading": "Times you stood up to it",
+      "body": "Even strong problems do not win every time. Think of moments when the problem had less power, or when you did something it did not want you to do.",
+      "steps": [
+        "What happened? What did you do?",
+        "How did you manage it? What helped?",
+        "What does this say about what you value or care about?",
+        "Who in your life would not be surprised that you did this? What would they say about you?"
+      ]
+    },
+    {
+      "heading": "Your next chapter",
+      "steps": [
+        "If the problem had less say in your life, what would you be doing more of?",
+        "What is one small step toward that this week?",
+        "Who could support you in this next chapter?"
+      ]
+    },
+    {
+      "heading": "Go at your own pace",
+      "body": "You do not need to answer every question, or write about painful memories in detail. Write as much or as little as feels right. Bring what you write to your counselor if you would like to talk it over. Your story belongs to you."
+    }
+  ],
+  "safetyNote": "Safety first: Writing about your life can bring up strong feelings. If it does, take a break, and use a skill that helps you feel calm. This sheet is not for emergencies. If you have thoughts of hurting yourself or someone else, call or text 988 in the US, or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "es": {
+    "title": "Mi historia en mis palabras",
+    "intro": "A veces un problema empieza a sentirse como si fuera parte de quién es usted. 'Así soy yo, siempre preocupado'. 'Estoy roto'. Esta hoja le invita a ver el problema como algo aparte de usted, con sus propias mañas y costumbres. Eso puede dejar espacio para notar las veces que usted le hizo frente, y lo que esas veces dicen de usted. Toma unos 15 minutos, y puede volver a ella cuando quiera.",
+    "sections": [
+      {
+        "heading": "Póngale nombre al problema",
+        "body": "Escoja un nombre para el problema que vaya con lo que usted vive. Puede ser 'la preocupación', 'la cobija pesada', 'el crítico' o cualquier nombre que le parezca bien. Un nombre le ayuda a hablar del problema como algo que le afecta, no como algo que usted es."
+      },
+      {
+        "heading": "Cómo funciona el problema",
+        "steps": [
+          "¿Cuándo aparece más el problema? ¿Cuándo está más callado?",
+          "¿Qué le dice sobre usted, sobre otras personas o sobre el futuro?",
+          "¿Cómo afecta sus días, sus relaciones y sus esperanzas?",
+          "¿Qué trata de hacerle hacer, o qué trata de impedirle hacer?"
+        ]
+      },
+      {
+        "heading": "Las veces que le hizo frente",
+        "body": "Hasta los problemas fuertes no ganan siempre. Piense en momentos en que el problema tuvo menos poder, o en que usted hizo algo que el problema no quería que hiciera.",
+        "steps": [
+          "¿Qué pasó? ¿Qué hizo usted?",
+          "¿Cómo lo logró? ¿Qué le ayudó?",
+          "¿Qué dice esto de lo que usted valora o de lo que le importa?",
+          "¿Quién en su vida no se sorprendería de que usted hiciera esto? ¿Qué diría de usted?"
+        ]
+      },
+      {
+        "heading": "Su próximo capítulo",
+        "steps": [
+          "Si el problema tuviera menos poder en su vida, ¿qué estaría haciendo más?",
+          "¿Cuál es un paso pequeño hacia eso esta semana?",
+          "¿Quién le podría apoyar en este próximo capítulo?"
+        ]
+      },
+      {
+        "heading": "Vaya a su propio ritmo",
+        "body": "No tiene que contestar todas las preguntas, ni escribir con detalle sobre recuerdos dolorosos. Escriba tanto o tan poco como le parezca bien. Si quiere hablarlo, traiga lo que escribió a su consejero. Su historia es suya."
+      }
+    ],
+    "safetyNote": "La seguridad es lo primero: Escribir sobre su vida puede traer sentimientos fuertes. Si pasa, tome un descanso y use algo que le ayude a calmarse. Esta hoja no es para emergencias. Si tiene pensamientos de hacerse daño o de hacerle daño a otra persona, llame o envíe un mensaje de texto al 988 en EE. UU., o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "sources": [
+    {
+      "title": "Externalising Conversations (course on Michael White's narrative practice)",
+      "publisher": "Dulwich Centre",
+      "url": "https://dulwichcentre.com.au/courses/externalising-conversations/"
+    },
+    {
+      "title": "Narrative therapy (evidence summary)",
+      "publisher": "BluePages, Australian National University",
+      "url": "https://bluepages.anu.edu.au/psychological-treatments/narrative-therapy"
+    },
+    {
+      "title": "Narrative therapy for adults with major depressive disorder: improved symptom and interpersonal outcomes (Vromans and Schweitzer)",
+      "publisher": "Psychotherapy Research (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20306354/",
+      "year": 2011
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

@@ -210,7 +210,8 @@
     "mood-routine-tracker",
     "staying-well-plan",
     "activity-schedule",
-    "safety-plan"
+    "safety-plan",
+    "mood-highs-and-lows-plan"
   ],
   "statIds": [
     "us-bipolar-past-year"

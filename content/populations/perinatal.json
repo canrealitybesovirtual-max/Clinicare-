@@ -1,0 +1,88 @@
+{
+  "id": "perinatal",
+  "name": "Pregnancy and the first year after birth",
+  "group": "life-stage",
+  "summary": "Perinatal mental health for parents and partners: when to screen, anxiety, intrusive thoughts and birth trauma as well as low mood, checking for bipolar risk before antidepressants, adapting exposure and sleep work, and urgent routes for postpartum psychosis.",
+  "scopeNote": "For adults (18 and over) who are pregnant, recently gave birth, experienced pregnancy loss, or are partners and co-parents. The app never asks for or saves pregnancy status or reproductive history. Medicines in pregnancy and breastfeeding are a prescriber decision.",
+  "whyItMatters": "The USPSTF (2019) recommends offering counseling interventions to pregnant and postpartum people at increased risk of perinatal depression. ACOG's 2023 guideline recommends screening for depression and anxiety with a validated tool during pregnancy and after birth, and screening for bipolar disorder before starting antidepressants. NICE CG192 (2014, updated 2020) covers recognition and treatment of the full range of perinatal conditions. Depression also affects partners: about 1 in 10 fathers had prenatal or postpartum depression in a meta-analysis (Paulson and Bazemore, 2010). Postpartum psychosis is rare, about 1 to 2 per 1,000 births, but is an emergency that needs same-day psychiatric care (Bergink and colleagues, 2016).",
+  "askAbout": [
+    "How have you been feeling in yourself since the pregnancy or the birth, and has anything surprised you?",
+    "How is sleep going, and who could help protect some of it?",
+    "Do you get unwanted thoughts or images about the baby being hurt, and how do you react to them?",
+    "How did the birth go for you, and is any part of it still with you?",
+    "Who is around to help, and is home a safe place for you and the baby?",
+    "Have you or close relatives ever had very high moods, a postpartum illness or bipolar disorder?"
+  ],
+  "stereotypeCaution": "There is no single perinatal experience. Pregnancy and parenthood can bring joy, grief, ambivalence or relief, often at once, and feelings differ with loss, surrogacy, adoption, family structure, culture and circumstances. Do not assume the gender, relationship or role of a parent, and do not assume a pregnancy was wanted or unwanted; ask.",
+  "keyConsiderations": [
+    "Screen at more than one point: early pregnancy, later pregnancy and after birth, and whenever a parent or partner raises a concern.",
+    "Look beyond low mood: perinatal anxiety, panic, intrusive harm-related thoughts, trauma reactions after a difficult birth, and eating concerns are common and treatable.",
+    "Intrusive unwanted thoughts of harm that the parent finds horrifying and avoids are typical of anxiety and OCD and are not a sign of intent; postpartum psychosis is different and is an emergency (see the practice guide).",
+    "Before an antidepressant is considered, the prescriber needs to know about personal or family history of bipolar disorder, mania or postpartum psychosis.",
+    "Partners and co-parents can also develop depression and anxiety; include them in screening and support where the parent agrees.",
+    "Coordinate with obstetric, midwifery, primary care and pediatric teams with consent, and share a short safety plan if risk is present.",
+    "Parents of babies in neonatal intensive care, and those who have experienced pregnancy loss or stillbirth, may need specific support and grief work."
+  ],
+  "assessmentAdaptations": [
+    "Ask about sleep in context: broken sleep with a newborn is expected, but being unable to sleep when the baby sleeps, or hardly needing sleep, is worth exploring.",
+    "Ask gently about thoughts of self-harm and of harm to the baby, and separate unwanted intrusive thoughts from thoughts the parent agrees with or plans.",
+    "Ask about the birth experience and any feeling of threat, helplessness or loss, without assuming it was or was not traumatic.",
+    "Check for intimate partner violence privately, since it can begin or escalate in pregnancy."
+  ],
+  "sessionAdaptations": [
+    "Offer flexible formats: telehealth, shorter sessions, babies welcome in the room, and rescheduling without penalty.",
+    "Protect sleep as part of the plan: shared night feeds, a protected block of sleep, and asking for practical help.",
+    "Plan exposure work in pregnancy with the obstetric team where needed; vigorous interoceptive exercises (spinning, hard exercise, breath holding) may need to be changed or postponed.",
+    "Do not use sleep restriction for insomnia during pregnancy or with a young baby without careful thought; stimulus control and sleep scheduling around feeds are usually safer starting points."
+  ],
+  "interventionNotes": [
+    { "interventionId": "perinatal-depression-programs", "note": "Structured CBT- and IPT-based programs for prevention and treatment in pregnancy and after birth." },
+    { "interventionId": "interpersonal-psychotherapy", "note": "Fits role transitions, relationship strain and loss of support that often accompany a new baby." },
+    { "interventionId": "exposure-and-response-prevention", "note": "For harm-related intrusive thoughts, reduce avoidance of the baby and checking, with clear psychoeducation that the thoughts are not wishes." },
+    { "interventionId": "interoceptive-exposure", "note": "In pregnancy, change or postpone exercises that strain the body, and check with the obstetric team." },
+    { "interventionId": "cbti-sleep-restriction", "note": "Generally avoid during pregnancy and the early postpartum months; focus on protecting sleep opportunity instead." },
+    { "interventionId": "medication-referral", "note": "Questions about medicines in pregnancy or breastfeeding go to the prescriber; LactMed is a free reference they can use." },
+    { "orientationId": "interpersonal-therapies", "note": "Interpersonal approaches have strong evidence in the perinatal period and suit the changes in roles and relationships." }
+  ],
+  "measureNotes": [
+    "PHQ-9 items on sleep, appetite and energy can be raised by pregnancy and newborn care alone; the EPDS was designed to leave out most physical symptoms and is widely used in perinatal care.",
+    "Any positive answer about self-harm on the PHQ-9 or EPDS needs same-day follow-up by the clinician, whatever the total score.",
+    "The EPDS can also be offered to partners, though cut-offs differ in research; read results alongside the conversation."
+  ],
+  "measuresPending": [
+    { "name": "Edinburgh Postnatal Depression Scale (EPDS)", "url": "https://pubmed.ncbi.nlm.nih.gov/3651732/", "licenseKey": "EPDS" }
+  ],
+  "safetyNotes": [
+    "Confusion, sudden severe mood swings, not sleeping for days, strange beliefs or hallucinations after birth suggest postpartum psychosis: arrange same-day emergency psychiatric care and do not leave the parent alone with the baby until assessed.",
+    "Thoughts of suicide can arise during pregnancy and at any point after birth or loss; ask directly at every stage, and include who will care for the baby in safety planning.",
+    "In the US, the National Maternal Mental Health Hotline answers calls and texts at any time; for danger now, call 911 or the local emergency number."
+  ],
+  "cautions": [
+    "Do not advise starting, stopping or changing medicines in pregnancy or while breastfeeding; refer the question to the prescriber."
+  ],
+  "legalIds": ["reproductive-health-privacy", "mandatory-reporting"],
+  "ethicsIds": [],
+  "referralIds": ["national-maternal-mental-health-hotline", "postpartum-support-international", "988-lifeline", "national-domestic-violence-hotline"],
+  "referralKinds": ["perinatal"],
+  "handoutIds": ["new-parent-mood-help", "scary-thoughts-after-baby", "sleep-habits", "safety-plan"],
+  "topicIds": ["mood-after-baby"],
+  "practiceIds": ["postpartum-psychosis-vs-intrusive-thoughts", "collaborative-care-and-pcbh", "involving-family-and-supports", "ipv-screening-and-first-line-support"],
+  "formulationIds": ["five-ps-biopsychosocial-spiritual"],
+  "linkOuts": [
+    { "title": "Perinatal Depression", "publisher": "National Institute of Mental Health", "url": "https://www.nimh.nih.gov/health/publications/perinatal-depression", "note": "Plain-language overview, including the National Maternal Mental Health Hotline.", "lastVerified": "2026-11-27" },
+    { "title": "Drugs and Lactation Database (LactMed)", "publisher": "National Library of Medicine (NCBI Bookshelf)", "url": "https://www.ncbi.nlm.nih.gov/books/NBK501922/", "note": "Reference for prescribers on medicines during breastfeeding.", "lastVerified": "2026-11-27" },
+    { "title": "Antenatal and postnatal mental health: clinical management and service guidance (CG192)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/cg192", "lastVerified": "2026-11-27" }
+  ],
+  "sud": false,
+  "sources": [
+    { "title": "Interventions to Prevent Perinatal Depression: US Preventive Services Task Force Recommendation Statement", "publisher": "JAMA (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/30747971/", "year": 2019 },
+    { "title": "Screening and Diagnosis of Mental Health Conditions During Pregnancy and Postpartum: ACOG Clinical Practice Guideline No. 4", "publisher": "Obstetrics and Gynecology (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/37486660/", "year": 2023 },
+    { "title": "Antenatal and postnatal mental health: clinical management and service guidance (CG192)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/cg192", "year": 2020 },
+    { "title": "Prenatal and postpartum depression in fathers and its association with maternal depression: a meta-analysis (Paulson and Bazemore)", "publisher": "JAMA (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/20483973/", "year": 2010 },
+    { "title": "Postpartum Psychosis: Madness, Mania, and Melancholia in Motherhood (Bergink and colleagues)", "publisher": "American Journal of Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/27609245/", "year": 2016 },
+    { "title": "Perinatal Depression", "publisher": "National Institute of Mental Health", "url": "https://www.nimh.nih.gov/health/publications/perinatal-depression" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

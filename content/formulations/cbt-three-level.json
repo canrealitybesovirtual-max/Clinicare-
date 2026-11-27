@@ -1,0 +1,257 @@
+{
+  "id": "cbt-three-level",
+  "name": "CBT case conceptualization: descriptive, maintenance and longitudinal levels",
+  "shortName": "CBT levels",
+  "family": "cognitive-behavioral",
+  "orientationIds": [
+    "cognitive-therapy",
+    "behavior-therapy"
+  ],
+  "purpose": "A cognitive-behavioral conceptualization built in three levels over the course of therapy. First describe the difficulties in concrete terms. Then map what keeps them going in a recent example: situation, thoughts and images, emotions, body sensations, behaviors and what happened next. Later, when the person is ready, add the longer view: relevant earlier experiences, core beliefs, the rules and assumptions built on them, and the coping strategies that protect those beliefs. Strengths and resilience are mapped at every level.",
+  "whenToUse": [
+    "At the start of CBT, to agree on a shared maintenance cycle that explains why the chosen interventions make sense.",
+    "When a person keeps getting stuck in the same kind of situation and you want to show the cycle on paper.",
+    "Mid-therapy, when symptom change has stalled and long-standing beliefs or coping rules may be holding things in place."
+  ],
+  "structure": [
+    {
+      "id": "descriptive",
+      "label": "Level 1: Describe the difficulties",
+      "prompt": "List the main difficulties in concrete, observable terms, with how often and how much they interfere. Documented symptoms and questionnaire results from this session can be added as a starting point.",
+      "examples": [
+        "Panic-like surges three times a week, mostly on buses",
+        "Calling in sick about twice a month"
+      ],
+      "prefill": "session"
+    },
+    {
+      "id": "situation",
+      "label": "Situation or trigger",
+      "prompt": "One recent, specific example: where the person was, what was happening, and what they noticed first. Use kinds of places and people, not names.",
+      "examples": [
+        "On a crowded bus on the way to work"
+      ]
+    },
+    {
+      "id": "thoughts",
+      "label": "Thoughts and images",
+      "prompt": "What went through their mind, including images and predictions. Ask what was the worst they feared would happen.",
+      "examples": [
+        "I am going to faint and everyone will stare",
+        "An image of collapsing in the aisle"
+      ]
+    },
+    {
+      "id": "emotions",
+      "label": "Emotions",
+      "prompt": "The feelings that came with those thoughts, and how strong they were.",
+      "examples": [
+        "Fear, strong",
+        "Embarrassment"
+      ]
+    },
+    {
+      "id": "body",
+      "label": "Body sensations",
+      "prompt": "What the body did: heart, breathing, muscles, temperature, stomach.",
+      "examples": [
+        "Heart racing",
+        "Light-headed",
+        "Hot face"
+      ]
+    },
+    {
+      "id": "behaviors",
+      "label": "Behaviors",
+      "prompt": "What the person did, or stopped doing, to cope, including subtle safety behaviors and avoidance.",
+      "examples": [
+        "Got off two stops early",
+        "Held the rail tightly and kept eyes down"
+      ],
+      "factorIds": [
+        "avoidance-escape",
+        "safety-behaviors",
+        "reassurance-seeking-checking",
+        "low-reward-engagement",
+        "urges-and-impulsivity",
+        "repetitive-negative-thinking"
+      ]
+    },
+    {
+      "id": "consequences",
+      "label": "What happened next",
+      "prompt": "Short-term effects (often relief) and longer-term effects (often the fear growing or life narrowing). Draw the arrow back to the thoughts.",
+      "examples": [
+        "Relief at once",
+        "More convinced buses are dangerous; now walks 40 minutes instead"
+      ]
+    },
+    {
+      "id": "early-experiences",
+      "label": "Relevant earlier experiences",
+      "prompt": "Kinds of earlier experiences that may have shaped the beliefs, described only as much as the person wants to share. No names, dates or places.",
+      "examples": [
+        "Often criticized at school",
+        "A parent who was often unwell"
+      ]
+    },
+    {
+      "id": "core-beliefs",
+      "label": "Core beliefs",
+      "prompt": "Deep, general beliefs about the self, other people and the world that this pattern seems to rest on.",
+      "examples": [
+        "I am weak",
+        "Other people judge harshly"
+      ],
+      "factorIds": [
+        "negative-core-beliefs",
+        "self-criticism-shame"
+      ]
+    },
+    {
+      "id": "rules",
+      "label": "Rules and assumptions",
+      "prompt": "Conditional rules the person lives by, often in an if-then form, that link the core belief to everyday behavior.",
+      "examples": [
+        "If I show any weakness, people will reject me",
+        "I must always be in control"
+      ],
+      "factorIds": [
+        "perfectionism",
+        "intolerance-of-uncertainty"
+      ]
+    },
+    {
+      "id": "coping-strategies",
+      "label": "Strategies that protect the beliefs",
+      "prompt": "Long-standing ways of coping that keep the belief from being tested, such as over-preparing, avoiding, people-pleasing or never asking for help.",
+      "examples": [
+        "Over-prepares for every meeting",
+        "Never says no to requests"
+      ]
+    },
+    {
+      "id": "strengths",
+      "label": "Strengths and resilience",
+      "prompt": "Personal qualities, supports and values that can be used in therapy and that show the belief is not the whole story.",
+      "examples": [
+        "Kind and loyal to friends",
+        "Kept going to work through a hard year"
+      ],
+      "factorIds": [
+        "strengths-and-supports",
+        "values-and-meaning",
+        "coping-skills",
+        "hope-and-motivation"
+      ]
+    }
+  ],
+  "factorIds": [
+    "avoidance-escape",
+    "safety-behaviors",
+    "reassurance-seeking-checking",
+    "low-reward-engagement",
+    "urges-and-impulsivity",
+    "repetitive-negative-thinking",
+    "negative-core-beliefs",
+    "self-criticism-shame",
+    "perfectionism",
+    "intolerance-of-uncertainty",
+    "strengths-and-supports",
+    "values-and-meaning",
+    "coping-skills",
+    "hope-and-motivation"
+  ],
+  "steps": [
+    "Start with the descriptive level: agree on a short problem list and how each problem shows up in daily life.",
+    "Choose one recent, specific episode and map it together, box by box, writing the person's own words.",
+    "Ask what happened next in the short and long term, and draw the arrows that loop back to the thoughts and feelings.",
+    "Ask the person what they notice about the cycle and where they could break in; link that to the first intervention.",
+    "Build the longitudinal level later, once there is trust and a few cycles have been mapped; offer it as a hypothesis.",
+    "Weave in strengths at each level, and update the conceptualization as therapy tests it."
+  ],
+  "collaborativeTips": [
+    "Draw the cycle on paper or a whiteboard in session and give the person a copy.",
+    "Use Socratic questions rather than telling: What did you make of that? What did you do next? What happened then?",
+    "Ask the person to map one more cycle between sessions; their own example teaches more than ours."
+  ],
+  "cautions": [
+    "A formulation is a working hypothesis, not a diagnosis. Keep diagnosis names and codes out of the shared version, and revise the formulation when new information does not fit.",
+    "Do not push for details of earlier painful or traumatic experiences to complete the longitudinal level; it can wait, and some people never need it in detail.",
+    "Avoid framing realistic concerns, discrimination or real danger as distorted thinking; check the evidence in the person's actual context.",
+    "A formulation never scores, grades or decides risk. If thoughts of suicide, self-harm or harm to others come up, pause the formulation and follow your own assessment and local protocol; in the US the 988 Lifeline is available by call or text, elsewhere use the local emergency number or findahelpline.com."
+  ],
+  "conditionIds": [
+    "major-depressive-disorder",
+    "generalized-anxiety-disorder",
+    "panic-disorder",
+    "social-anxiety-disorder",
+    "persistent-depressive-disorder"
+  ],
+  "interventionIds": [
+    "thought-record",
+    "behavioral-experiments",
+    "core-belief-work",
+    "behavioral-activation",
+    "safety-behavior-reduction",
+    "rebt-disputation"
+  ],
+  "handoutIds": [
+    "what-keeps-it-going",
+    "thought-record",
+    "thinking-traps",
+    "behavioral-experiment-record"
+  ],
+  "practiceIds": [
+    "socratic-questioning",
+    "session-structure",
+    "between-session-practice"
+  ],
+  "populationIds": [],
+  "legalIds": [],
+  "worksheet": true,
+  "sud": false,
+  "linkOuts": [
+    {
+      "title": "Collaborative Case Conceptualization: Working Effectively with Clients in Cognitive-Behavioral Therapy (Kuyken, Padesky and Dudley)",
+      "publisher": "Guilford Press",
+      "url": "https://www.guilford.com/books/Collaborative-Case-Conceptualization/Kuyken-Padesky-Dudley/9781462504480",
+      "note": "Book describing the three-level, collaborative approach (summarized here in original words)."
+    }
+  ],
+  "measuresPending": [],
+  "sources": [
+    {
+      "title": "Case conceptualization research in cognitive behavior therapy: a state of the science review (Easden and Kazantzis)",
+      "publisher": "Journal of Clinical Psychology",
+      "url": "https://doi.org/10.1002/jclp.22516",
+      "year": 2018
+    },
+    {
+      "title": "Collaborative Case Conceptualization: Working Effectively with Clients in Cognitive-Behavioral Therapy (Kuyken, Padesky and Dudley)",
+      "publisher": "Guilford Press",
+      "url": "https://www.guilford.com/books/Collaborative-Case-Conceptualization/Kuyken-Padesky-Dudley/9781462504480"
+    },
+    {
+      "title": "Depression in adults: treatment and management (NG222)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng222",
+      "year": 2022
+    },
+    {
+      "title": "Generalised anxiety disorder and panic disorder in adults: management (CG113)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg113",
+      "year": 2011
+    },
+    {
+      "title": "Is diagnosis enough to guide interventions in mental health? Using case formulation in clinical practice (Macneil et al.)",
+      "publisher": "BMC Medicine",
+      "url": "https://doi.org/10.1186/1741-7015-10-111",
+      "year": 2012
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

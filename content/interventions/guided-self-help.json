@@ -1,0 +1,183 @@
+{
+  "id": "guided-self-help",
+  "name": "Guided self-help and supported digital CBT",
+  "modality": "Low-intensity CBT - guided self-help",
+  "conditions": [
+    "major-depressive-disorder",
+    "generalized-anxiety-disorder",
+    "panic-disorder",
+    "social-anxiety-disorder",
+    "bulimia-nervosa",
+    "binge-eating-disorder",
+    "insomnia-disorder"
+  ],
+  "evidenceLevel": "A meta-analysis found guided self-help about as effective as face-to-face therapy for depression and anxiety (Cuijpers et al., 2010), and an individual patient data network meta-analysis found guided internet CBT more effective than unguided versions for moderate to severe depression (Karyotaki et al., 2021). NICE lists guided self-help first among options for less severe depression (NG222), at step 2 for GAD and for mild to moderate panic disorder (CG113), for adults with social anxiety who decline CBT (CG159), and for binge eating disorder (offer) and bulimia nervosa (consider) (NG69). NICE early value assessments list some digitally enabled therapies for depression and anxiety for UK use while evidence is gathered. For insomnia, the AASM (2021) strongly recommends multicomponent CBT-I; supported digital programs are one way to deliver it, and the VA CBT-i Coach app is a companion to CBT-I with a clinician rather than a stand-alone program.",
+  "evidenceGrades": [
+    {
+      "body": "NICE",
+      "guideline": "Depression in adults: treatment and management (NG222)",
+      "year": 2022,
+      "conditionId": "major-depressive-disorder",
+      "population": "Adults with a new episode of less severe depression",
+      "direction": "for",
+      "strength": "first-line option; consider the least intrusive option (guided self-help) first",
+      "url": "https://www.nice.org.uk/guidance/ng222/chapter/Recommendations"
+    },
+    {
+      "body": "NICE",
+      "guideline": "Generalised anxiety disorder and panic disorder in adults: management (CG113)",
+      "year": 2011,
+      "conditionId": "generalized-anxiety-disorder",
+      "population": "Step 2: GAD not improved after education and active monitoring",
+      "direction": "for",
+      "strength": "offer",
+      "url": "https://www.nice.org.uk/guidance/cg113/chapter/Recommendations"
+    },
+    {
+      "body": "NICE",
+      "guideline": "Generalised anxiety disorder and panic disorder in adults: management (CG113)",
+      "year": 2011,
+      "conditionId": "panic-disorder",
+      "population": "Mild to moderate panic disorder (individual facilitated self-help)",
+      "direction": "for",
+      "strength": "offer or refer",
+      "url": "https://www.nice.org.uk/guidance/cg113/chapter/Recommendations"
+    },
+    {
+      "body": "NICE",
+      "guideline": "Social anxiety disorder: recognition, assessment and treatment (CG159)",
+      "year": 2013,
+      "conditionId": "social-anxiety-disorder",
+      "population": "Adults who decline CBT and want another psychological intervention (CBT-based supported self-help)",
+      "direction": "for",
+      "strength": "offer",
+      "url": "https://www.nice.org.uk/guidance/cg159/chapter/Recommendations"
+    },
+    {
+      "body": "NICE",
+      "guideline": "Eating disorders: recognition and treatment (NG69)",
+      "year": 2017,
+      "conditionId": "binge-eating-disorder",
+      "population": "Adults with binge eating disorder (eating-disorder-focused guided self-help)",
+      "direction": "for",
+      "strength": "offer",
+      "url": "https://www.nice.org.uk/guidance/ng69/chapter/Recommendations"
+    },
+    {
+      "body": "NICE",
+      "guideline": "Eating disorders: recognition and treatment (NG69)",
+      "year": 2017,
+      "conditionId": "bulimia-nervosa",
+      "population": "Adults with bulimia nervosa (eating-disorder-focused guided self-help)",
+      "direction": "for",
+      "strength": "consider",
+      "url": "https://www.nice.org.uk/guidance/ng69/chapter/Recommendations"
+    }
+  ],
+  "minutes": {
+    "min": 15,
+    "max": 30
+  },
+  "purpose": "A low-intensity format in which the client works through structured, CBT-based materials (a book, workbook, website or app), with short, regular contacts with a trained practitioner, usually 6 to 8 contacts in person, by phone or online. The practitioner does not deliver the therapy content; they explain the approach, help set goals, encourage completion, solve problems with barriers, and review progress and outcomes. Fits stepped care: start with the least intensive option likely to help, and step up if progress is not enough.",
+  "steps": [
+    "Assess fit: severity, risk, reading level, language, access to technology, motivation and preference. Step up instead when risk is high, symptoms are severe, or self-help has not helped before.",
+    "Choose CBT-based materials that suit the problem and the client's literacy and language; prefer free, reputable materials, and link out to them rather than copying worksheets.",
+    "First contact: explain how the format and support will work, agree on goals, and plan when and where the client will work on the materials.",
+    "Support contacts: review what the client read and practiced, recognize effort, solve problems with barriers, and agree on the next section; keep contacts short and focused.",
+    "Check outcomes at each contact with an agreed measure (PHQ-9 and GAD-7 are built in here), and ask about risk.",
+    "Step up to high-intensity therapy if there is little improvement after about 4 to 6 weeks, if symptoms worsen, or if risk increases.",
+    "Close with a plan to keep using the skills and to seek help early if symptoms return."
+  ],
+  "script": [
+    "You'll work through a step-by-step program on your own time, and we'll check in briefly every week or two to see how it's going.",
+    "What would you most like to be different by the end?",
+    "When during the week could you set aside time for it? What might get in the way?",
+    "It sounds like that part was hard to get through. Let's figure out what would make it easier.",
+    "If this isn't helping enough after a few weeks, we'll move to something more intensive. That's part of the plan, not a failure."
+  ],
+  "contraindications": [
+    "Not a first choice for severe symptoms, high suicide risk, psychosis, or clients for whom self-help has not worked before; offer high-intensity therapy.",
+    "Check reading level, language, vision, hearing and digital access; adapt materials or choose another format.",
+    "Review apps and websites for privacy, data use and evidence before recommending them (see the mental health app evaluation guide). Never ask clients to type identifying details into this app.",
+    "For eating disorders, coordinate medical monitoring where weight, purging or other physical risks are present.",
+    "This intervention does not assess or decide risk. If suicidal thoughts, self-harm or risk to others come up, pause and follow your setting's risk-assessment and safety-planning procedures. Keep crisis options visible: 988 Suicide & Crisis Lifeline (US, call or text), the local emergency number, and findahelpline.com for other countries."
+  ],
+  "culturalAdaptations": [
+    "Choose materials in the client's language with culturally relevant examples; some programs have adapted versions.",
+    "Include family or a trusted person in support if the client wishes.",
+    "Consider privacy at home, shared devices and data costs when recommending digital programs.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "handoutIds": [
+    "between-session-practice-plan",
+    "activity-schedule",
+    "sleep-diary"
+  ],
+  "orientationIds": [
+    "cognitive-therapy"
+  ],
+  "sources": [
+    {
+      "title": "Is guided self-help as effective as face-to-face psychotherapy for depression and anxiety disorders? A systematic review and meta-analysis of comparative outcome studies (Cuijpers et al.)",
+      "publisher": "Psychological Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20406528/",
+      "year": 2010
+    },
+    {
+      "title": "Internet-based cognitive behavioral therapy for depression: a systematic review and individual patient data network meta-analysis (Karyotaki et al.)",
+      "publisher": "JAMA Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33471111/",
+      "year": 2021
+    },
+    {
+      "title": "Depression in adults: treatment and management (NG222)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng222",
+      "year": 2022
+    },
+    {
+      "title": "Generalised anxiety disorder and panic disorder in adults: management (CG113)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg113",
+      "year": 2011
+    },
+    {
+      "title": "Social anxiety disorder: recognition, assessment and treatment (CG159)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg159",
+      "year": 2013
+    },
+    {
+      "title": "Eating disorders: recognition and treatment (NG69)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng69",
+      "year": 2017
+    },
+    {
+      "title": "Digitally enabled therapies for adults with depression: early value assessment (HTG675)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/htg675",
+      "year": 2023
+    },
+    {
+      "title": "Digitally enabled therapies for adults with anxiety disorders: early value assessment (HTG676)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/htg676",
+      "year": 2023
+    },
+    {
+      "title": "Behavioral and psychological treatments for chronic insomnia disorder in adults: an American Academy of Sleep Medicine clinical practice guideline (Edinger et al.)",
+      "publisher": "Journal of Clinical Sleep Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33164742/",
+      "year": 2021
+    },
+    {
+      "title": "Mobile app: CBT-i Coach (companion to in-person CBT for insomnia)",
+      "publisher": "US Department of Veterans Affairs, National Center for PTSD",
+      "url": "https://www.ptsd.va.gov/appvid/mobile/cbticoach_app_public.asp"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

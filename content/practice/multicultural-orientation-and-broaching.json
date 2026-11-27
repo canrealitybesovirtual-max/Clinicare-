@@ -1,0 +1,129 @@
+{
+  "id": "multicultural-orientation-and-broaching",
+  "title": "Multicultural orientation and broaching",
+  "category": "communication-and-access",
+  "summary": "Bringing culture into the room with humility: noticing cultural opportunities, raising identity and context (broaching) early and when relevant, repairing cultural ruptures, and a private self-reflection for the clinician about their own identities and assumptions.",
+  "whenToUse": [
+    "Early in therapy, as part of the first sessions.",
+    "When culture, identity, discrimination, faith or migration come up, directly or indirectly.",
+    "After a moment that may have landed as a microaggression or a cultural misunderstanding.",
+    "When your own background differs from or closely matches the client's."
+  ],
+  "steps": [
+    {
+      "heading": "Adopt a stance of cultural humility",
+      "body": "Approach each client's identities with curiosity rather than assumptions, accept that you will not know everything, and treat the client as the expert on their own culture."
+    },
+    {
+      "heading": "Broach early",
+      "body": "Say early on that identity and culture can matter in therapy, and invite the client to bring them in when they want. Name visible differences between you if it seems relevant, and ask how they feel about working with you."
+    },
+    {
+      "heading": "Notice cultural opportunities",
+      "body": "Cultural opportunities are moments when a client's identity or context is relevant to what they are saying. Respond by exploring rather than moving past them."
+    },
+    {
+      "heading": "Repair cultural ruptures",
+      "items": [
+        "Name the moment and your part in it, without defensiveness.",
+        "Invite the client's experience and listen.",
+        "Apologize where it fits and ask what would help.",
+        "Take it to consultation, not to the client to educate you."
+      ]
+    },
+    {
+      "heading": "Private self-reflection",
+      "body": "Outside the session, reflect on your own identities across areas such as age, disability, religion, ethnicity, social class, sexual orientation, Indigenous heritage, national origin and gender, and how they shape what you notice and assume. Keep this reflection private. Never type anything about a client into the app."
+    }
+  ],
+  "prompts": [
+    "People's backgrounds, identities and experiences, including experiences of discrimination, often shape what brings them to therapy. If any of that is part of what is going on for you, I would like to hear about it, whenever you are ready.",
+    "I notice we come from different backgrounds. How is it for you to talk with me about this?",
+    "You mentioned your family would see this differently. Can you tell me more about how they would understand it?",
+    "I think what I said earlier may have come across as dismissive of your experience. I am sorry. Can you tell me how it landed for you?"
+  ],
+  "cautions": [
+    "Do not assume what someone's identity means to them, or that a shared identity guarantees understanding.",
+    "Broaching is not a one-time script. Return to it when relevant, and follow the client's lead on depth.",
+    "Do not ask clients to educate you about their culture as a substitute for your own learning.",
+    "Experiences of discrimination are real stressors, not distortions to be challenged."
+  ],
+  "evidenceSummary": "A 2018 narrative review (Davis and colleagues) describes the multicultural orientation framework of cultural humility, cultural opportunities and cultural comfort. A 2011 study (Owen and colleagues) found that clients' ratings of their therapists' multicultural orientation predicted outcomes. Hook and colleagues (2013) found that perceived cultural humility was associated with a stronger alliance and better outcomes. A 2018 meta-analysis (Soto and colleagues) found that culturally adapted treatments and therapist multicultural competence were associated with better outcomes. APA Multicultural Guidelines (2017) set out an ecological approach to identity and context.",
+  "forClinicianReview": true,
+  "crisisPanel": false,
+  "sud": false,
+  "relatedInterventionIds": [
+    "cultural-formulation-exploration",
+    "culturally-adapted-cbt",
+    "racial-trauma-and-race-based-stress",
+    "power-and-gender-role-analysis",
+    "lgbtq-affirmative-cbt"
+  ],
+  "relatedHandoutIds": [],
+  "relatedFormulationIds": [
+    "minority-stress",
+    "five-ps-biopsychosocial-spiritual"
+  ],
+  "relatedLegalIds": [
+    "competence-and-scope-of-practice",
+    "conversion-practices"
+  ],
+  "relatedPracticeIds": [
+    "alliance-and-rupture-repair",
+    "working-with-interpreters",
+    "supervision-and-consultation",
+    "clinician-reactions-and-self-disclosure"
+  ],
+  "relatedPopulationIds": [
+    "cultural-adaptation",
+    "lgbtq-affirmative",
+    "indigenous-peoples",
+    "refugees-and-asylum-seekers",
+    "spiritually-integrated",
+    "men-and-masculinity"
+  ],
+  "linkOuts": [
+    {
+      "title": "Multicultural Guidelines: An Ecological Approach to Context, Identity, and Intersectionality",
+      "publisher": "American Psychological Association",
+      "url": "https://www.apa.org/about/policy/multicultural-guidelines",
+      "lastVerified": "2026-11-27"
+    }
+  ],
+  "measuresPending": [],
+  "sources": [
+    {
+      "title": "The multicultural orientation framework: a narrative review (Davis et al.)",
+      "publisher": "Psychotherapy, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29565626/",
+      "year": 2018
+    },
+    {
+      "title": "Clients' perceptions of their psychotherapists' multicultural orientation (Owen, Tao, Leach and Rodolfa)",
+      "publisher": "Psychotherapy, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21639652/",
+      "year": 2011
+    },
+    {
+      "title": "Cultural humility: measuring openness to culturally diverse clients (Hook, Davis, Owen, Worthington and Utsey)",
+      "publisher": "Journal of Counseling Psychology, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23647387/",
+      "year": 2013
+    },
+    {
+      "title": "Cultural adaptations and therapist multicultural competence: two meta-analytic reviews (Soto, Smith, Griner, Domenech Rodríguez and Bernal)",
+      "publisher": "Journal of Clinical Psychology, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30091201/",
+      "year": 2018
+    },
+    {
+      "title": "Multicultural Guidelines: An Ecological Approach to Context, Identity, and Intersectionality",
+      "publisher": "American Psychological Association",
+      "url": "https://www.apa.org/about/policy/multicultural-guidelines",
+      "year": 2017
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

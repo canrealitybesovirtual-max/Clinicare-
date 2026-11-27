@@ -1,0 +1,293 @@
+{
+  "id": "safety-plan-easy-read",
+  "title": "My Safety Plan (Easy Read)",
+  "audience": "client",
+  "readingLevel": "3-5 (easy read)",
+  "estimatedMinutes": 30,
+  "intro": "This is a safety plan in easy words. It helps you get through a very hard time. A hard time could be when you think about suicide. Make your plan when you feel calmer. Make it with your counselor or someone you trust. Use your own words. It takes about 30 minutes.",
+  "sections": [
+    {
+      "heading": "How to use your plan",
+      "steps": [
+        "Keep your plan close by.",
+        "When things get hard, start at Part 2.",
+        "If one idea does not help, try the next one.",
+        "You can go to Part 5 at any time."
+      ]
+    },
+    {
+      "heading": "My reasons to keep going",
+      "body": "Write what matters to you. It could be people, pets, faith, or plans.",
+      "steps": [
+        "A reason to keep going: ________________",
+        "Something I look forward to: ________________"
+      ]
+    },
+    {
+      "heading": "Part 1: My warning signs",
+      "body": "What happens first when things start to get hard?",
+      "steps": [
+        "What I think: ________________",
+        "What I feel: ________________",
+        "What I do, or stop doing: ________________",
+        "Times that are harder for me: ________________"
+      ]
+    },
+    {
+      "heading": "Part 2: Ways to calm down",
+      "body": "Things I can do on my own. The goal is to get through the next hour.",
+      "steps": [
+        "Something that calms my body: ________________",
+        "Something that keeps my mind busy: ________________",
+        "Something that comforts me: ________________"
+      ]
+    },
+    {
+      "heading": "Part 3: People and places",
+      "body": "Being with others can help. You do not have to talk about how you feel. Write how to reach people on paper only.",
+      "steps": [
+        "A person I like to be with: ________________",
+        "A place with people where I feel okay: ________________",
+        "A person I can tell 'I am not okay': ________________",
+        "Another person I can tell: ________________"
+      ]
+    },
+    {
+      "heading": "Part 4: Make my space safer",
+      "body": "Hard feelings often pass. Keep away from things you could use to hurt yourself. This can save your life. Plan this with your counselor and someone you trust.",
+      "steps": [
+        "Guns: Ask someone you trust to keep your guns away from your home for now. Check the law where you live first.",
+        "If that cannot happen: Keep your guns locked and unloaded. Lock the bullets in a different place. Let someone else keep the keys.",
+        "Medicines: Keep only what you need at home. Ask someone you trust to keep the rest. Take old medicines to a take-back place. Many drug stores have one.",
+        "Alcohol and drugs: They can make it harder to stay safe. Try to keep them out of your home for now.",
+        "One step I will take: ________________",
+        "Someone who can help me: ________________"
+      ]
+    },
+    {
+      "heading": "Part 5: Get help now",
+      "body": "You can get help any time, day or night. You do not have to wait until things feel very bad.",
+      "steps": [
+        "My counselor: ________________",
+        "My doctor or clinic: ________________",
+        "My clinic's after-hours line: ________________",
+        "The nearest emergency room: ________________",
+        "In the US, call or text 988. You can also chat at 988lifeline.org.",
+        "For help in Spanish, call 988 and press 2.",
+        "Veterans: Call 988 and press 1. Or text 838255.",
+        "Deaf or hard of hearing: Use 988 in sign language by video at 988lifeline.org. Or dial 711, then 988.",
+        "In danger right now? Call 911. Or go to the nearest emergency room.",
+        "Outside the US: Call your local emergency number. Or find a crisis line at findahelpline.com."
+      ]
+    },
+    {
+      "heading": "Keep your plan up to date",
+      "steps": [
+        "Look at your plan with your counselor every few visits.",
+        "Look at it again after a hard time.",
+        "Cross out what did not help. Add what did help.",
+        "If you want, give a copy to someone you trust."
+      ]
+    },
+    {
+      "heading": "About this sheet",
+      "body": "This plan was written for this resource. It uses easy words. It is not the Stanley-Brown Safety Plan. Your counselor may use a different form. It can help to read this sheet with your counselor or someone you trust."
+    }
+  ],
+  "practiceLog": {
+    "columns": [
+      "Day",
+      "What I used from my plan",
+      "Did it help? (0-10)",
+      "What I want to change"
+    ],
+    "rows": 5
+  },
+  "safetyNote": "Safety first: This plan does not take the place of getting help. Do you feel you might act on thoughts of suicide? Get help now. Do not wait. Do you feel you might hurt someone else? Get help now too. In the US, call or text 988. Or call 911. Or go to the nearest emergency room. In other countries, call your local emergency number. Or visit findahelpline.com. It is always okay to ask for help. Resource only. This sheet does not replace care from a licensed professional.",
+  "sud": false,
+  "es": {
+    "title": "Mi plan de seguridad (lectura fácil)",
+    "intro": "Este es un plan de seguridad en palabras fáciles. Le ayuda a pasar un momento muy difícil. Un momento difícil puede ser cuando piensa en el suicidio. Haga su plan cuando se sienta más tranquilo. Hágalo con su consejero o con alguien de confianza. Use sus propias palabras. Toma unos 30 minutos.",
+    "sections": [
+      {
+        "heading": "Cómo usar su plan",
+        "steps": [
+          "Tenga su plan cerca.",
+          "Cuando las cosas se pongan difíciles, empiece en la Parte 2.",
+          "Si una idea no le ayuda, pruebe la siguiente.",
+          "Puede ir a la Parte 5 en cualquier momento."
+        ]
+      },
+      {
+        "heading": "Mis razones para seguir",
+        "body": "Escriba lo que le importa. Pueden ser personas, mascotas, la fe o planes.",
+        "steps": [
+          "Una razón para seguir: ________________",
+          "Algo que espero con ganas: ________________"
+        ]
+      },
+      {
+        "heading": "Parte 1: Mis señales de alerta",
+        "body": "¿Qué pasa primero cuando las cosas se empiezan a poner difíciles?",
+        "steps": [
+          "Lo que pienso: ________________",
+          "Lo que siento: ________________",
+          "Lo que hago, o dejo de hacer: ________________",
+          "Momentos que son más difíciles para mí: ________________"
+        ]
+      },
+      {
+        "heading": "Parte 2: Formas de calmarme",
+        "body": "Cosas que puedo hacer sin ayuda. La meta es pasar la próxima hora.",
+        "steps": [
+          "Algo que calma mi cuerpo: ________________",
+          "Algo que mantiene ocupada mi mente: ________________",
+          "Algo que me da consuelo: ________________"
+        ]
+      },
+      {
+        "heading": "Parte 3: Personas y lugares",
+        "body": "Estar con otras personas puede ayudar. No tiene que hablar de cómo se siente. Escriba cómo comunicarse con ellas solo en papel.",
+        "steps": [
+          "Una persona con quien me gusta estar: ________________",
+          "Un lugar con gente donde me siento bien: ________________",
+          "Una persona a quien le puedo decir 'No estoy bien': ________________",
+          "Otra persona a quien se lo puedo decir: ________________"
+        ]
+      },
+      {
+        "heading": "Parte 4: Hacer más seguro mi espacio",
+        "body": "Los sentimientos difíciles muchas veces pasan. Aléjese de las cosas que podría usar para hacerse daño. Esto puede salvar su vida. Planee esto con su consejero y con alguien de confianza.",
+        "steps": [
+          "Armas de fuego: Pida a alguien de confianza que guarde sus armas fuera de su casa por ahora. Primero revise la ley del lugar donde vive.",
+          "Si eso no se puede: Tenga sus armas bajo llave y sin balas. Guarde las balas bajo llave en otro lugar. Deje que otra persona tenga las llaves.",
+          "Medicamentos: Tenga en casa solo lo que necesita. Pida a alguien de confianza que guarde el resto. Lleve los medicamentos viejos a un sitio de devolución. Muchas farmacias tienen uno.",
+          "Alcohol y drogas: Pueden hacer más difícil estar a salvo. Trate de no tenerlos en su casa por ahora.",
+          "Un paso que voy a dar: ________________",
+          "Alguien que me puede ayudar: ________________"
+        ]
+      },
+      {
+        "heading": "Parte 5: Pedir ayuda ahora",
+        "body": "Puede pedir ayuda a cualquier hora, de día o de noche. No tiene que esperar a sentirse muy mal.",
+        "steps": [
+          "Mi consejero: ________________",
+          "Mi médico o clínica: ________________",
+          "La línea de mi clínica fuera de horario: ________________",
+          "La sala de emergencias más cercana: ________________",
+          "En EE. UU., llame o envíe un mensaje de texto al 988. También puede chatear en 988lifeline.org.",
+          "Para ayuda en español, llame al 988 y marque 2.",
+          "Veteranos: Llame al 988 y marque 1. O envíe un mensaje de texto al 838255.",
+          "Personas sordas o con dificultad para oír: Use el 988 en lenguaje de señas por video en 988lifeline.org. O marque 711 y luego 988.",
+          "¿Está en peligro ahora mismo? Llame al 911. O vaya a la sala de emergencias más cercana.",
+          "Fuera de EE. UU.: Llame al número de emergencias local. O busque una línea de crisis en findahelpline.com."
+        ]
+      },
+      {
+        "heading": "Mantener su plan al día",
+        "steps": [
+          "Revise su plan con su consejero cada pocas citas.",
+          "Revíselo otra vez después de un momento difícil.",
+          "Tache lo que no le ayudó. Agregue lo que sí le ayudó.",
+          "Si quiere, dele una copia a alguien de confianza."
+        ]
+      },
+      {
+        "heading": "Sobre esta hoja",
+        "body": "Este plan se escribió para este recurso. Usa palabras fáciles. No es el Plan de Seguridad Stanley-Brown (Stanley-Brown Safety Plan). Su consejero puede usar otro formulario. Puede ayudar leer esta hoja con su consejero o con alguien de confianza."
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Día",
+        "Lo que usé de mi plan",
+        "¿Me ayudó? (0-10)",
+        "Lo que quiero cambiar"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: Este plan no reemplaza pedir ayuda. ¿Siente que podría actuar según pensamientos de suicidio? Pida ayuda ahora. No espere. ¿Siente que podría hacerle daño a otra persona? Pida ayuda ahora también. En EE. UU., llame o envíe un mensaje de texto al 988. O llame al 911. O vaya a la sala de emergencias más cercana. En otros países, llame al número de emergencias local. O visite findahelpline.com. Siempre está bien pedir ayuda. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "sources": [
+    {
+      "title": "Safety planning intervention: a brief intervention to mitigate suicide risk (Stanley and Brown)",
+      "publisher": "Cognitive and Behavioral Practice",
+      "url": "https://doi.org/10.1016/j.cbpra.2011.01.001",
+      "year": 2012
+    },
+    {
+      "title": "Comparison of the safety planning intervention with follow-up vs usual care of suicidal patients treated in the emergency department (Stanley et al.)",
+      "publisher": "JAMA Psychiatry (PubMed Central)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6142908/",
+      "year": 2018
+    },
+    {
+      "title": "VA/DoD Clinical Practice Guideline: Assessment and Management of Patients at Risk for Suicide",
+      "publisher": "US Department of Veterans Affairs and Department of Defense",
+      "url": "https://www.healthquality.va.gov/guidelines/MH/srb/",
+      "year": 2024
+    },
+    {
+      "title": "CALM: Counseling on Access to Lethal Means",
+      "publisher": "Suicide Prevention Resource Center (SPRC)",
+      "url": "https://sprc.org/online-library/calm-counseling-on-access-to-lethal-means"
+    },
+    {
+      "title": "Drug Disposal: Drug Take Back Options",
+      "publisher": "US Food and Drug Administration",
+      "url": "https://www.fda.gov/drugs/disposal-unused-medicines-what-you-should-know/drug-disposal-drug-take-back-options"
+    },
+    {
+      "title": "988 Suicide & Crisis Lifeline",
+      "publisher": "988 Lifeline",
+      "url": "https://988lifeline.org"
+    },
+    {
+      "title": "Is the 988 Lifeline available in other languages? (FAQ)",
+      "publisher": "988 Lifeline",
+      "url": "https://988lifeline.org/faq/calling-the-988-lifeline/faq-is-the-988-lifeline-available-in-other-languages-for-non-english-speakers/"
+    },
+    {
+      "title": "988 for Deaf, hard of hearing and hearing loss",
+      "publisher": "988 Lifeline",
+      "url": "https://988lifeline.org/deaf-hard-of-hearing-hearing-loss/"
+    },
+    {
+      "title": "Veterans Crisis Line",
+      "publisher": "US Department of Veterans Affairs",
+      "url": "https://www.veteranscrisisline.net/"
+    },
+    {
+      "title": "Find A Helpline (international directory)",
+      "publisher": "Find A Helpline",
+      "url": "https://findahelpline.com"
+    },
+    {
+      "title": "Mental health problems in people with learning disabilities: prevention, assessment and management (NG54)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng54",
+      "year": 2016
+    },
+    {
+      "title": "Making written information easier to understand for people with learning disabilities: guidance for people who commission or produce Easy Read information (revised edition)",
+      "publisher": "UK Department of Health (GOV.UK)",
+      "url": "https://www.gov.uk/government/publications/making-written-information-easier-to-understand-for-people-with-learning-disabilities-guidance-for-people-who-commission-or-produce-easy-read-information-revised-edition-2010",
+      "year": 2010
+    },
+    {
+      "title": "Health Literacy Universal Precautions Toolkit, 3rd edition",
+      "publisher": "Agency for Healthcare Research and Quality",
+      "url": "https://www.ahrq.gov/health-literacy/improve/precautions/index.html",
+      "year": 2024
+    },
+    {
+      "title": "An open randomized controlled trial of the effects of linguistic simplification and mediation on the comprehension of easy read text by people with intellectual disabilities (Buell et al.)",
+      "publisher": "Journal of Applied Research in Intellectual Disabilities (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31652030/",
+      "year": 2020
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

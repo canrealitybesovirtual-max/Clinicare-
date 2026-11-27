@@ -1,0 +1,158 @@
+{
+  "id": "intake-assessment",
+  "title": "Adult intake assessment structure",
+  "category": "professional-practice",
+  "summary": "An outline for a first biopsychosocial assessment with adults: reason for coming, current difficulties, history, health, substance use, trauma, safety, strengths, culture and goals. Nothing is typed into the app about the client; this is a checklist for your own process.",
+  "whenToUse": [
+    "At the start of a new treatment episode.",
+    "When reassessing after a long gap, a crisis or a major change.",
+    "When training or supervising new clinicians."
+  ],
+  "steps": [
+    {
+      "heading": "Open and set the frame",
+      "items": [
+        "Explain the purpose, how long it will take, and confidentiality and its limits.",
+        "Ask what brought them now, in their own words, and what they hope for."
+      ]
+    },
+    {
+      "heading": "Current difficulties",
+      "items": [
+        "Main concerns, when they started, how often and how intense, and what makes them better or worse.",
+        "Effects on work, study, relationships, self-care and sleep.",
+        "Brief built-in measures (GAD-7, PHQ-9) where they fit."
+      ]
+    },
+    {
+      "heading": "History",
+      "items": [
+        "Past mental health care, what helped and what did not.",
+        "Family history of mental health and substance use problems.",
+        "Developmental, education and work history; relationships and supports.",
+        "Legal, housing and financial situation, and other social needs."
+      ]
+    },
+    {
+      "heading": "Health and medicines",
+      "items": [
+        "Physical health, pain, recent changes, and the date of the last medical check.",
+        "Current medicines, supplements and who prescribes them.",
+        "Pregnancy or recent birth, where relevant."
+      ]
+    },
+    {
+      "heading": "Substance use",
+      "body": "Ask about alcohol, tobacco and other substances in a matter-of-fact way. Records that include substance-use information may fall under 42 CFR Part 2; follow your setting's consent rules before sharing."
+    },
+    {
+      "heading": "Trauma",
+      "body": "Ask briefly whether difficult or frightening experiences have affected them, and make clear they can choose how much to say and when. Details can wait."
+    },
+    {
+      "heading": "Safety",
+      "body": "Ask directly about thoughts of suicide, self-harm and harming others, current and past. Use a prevention-oriented approach to understanding risk; never a score or a level. Plan next steps together."
+    },
+    {
+      "heading": "Culture, strengths and goals",
+      "items": [
+        "Identity, culture, faith, language and how the client understands their difficulties.",
+        "Strengths, values, interests and what has helped them cope.",
+        "Their goals and preferences for treatment."
+      ]
+    },
+    {
+      "heading": "Close and plan",
+      "body": "Share your initial understanding in plain words, agree on next steps and check how the assessment felt."
+    }
+  ],
+  "prompts": [
+    "What made you decide to come in now?",
+    "Some people have had experiences that still affect them. You do not need to give details today. Is that something that is part of what brings you here?",
+    "Many people who feel this low have thoughts of ending their life. Have you had thoughts like that?",
+    "How would you describe what is going on, in your own words or in the way your family or community would?",
+    "What has helped you get through hard times before?"
+  ],
+  "cautions": [
+    "The app never stores intake information and has no fields for client identifiers. Keep your clinical record in your own system.",
+    "Assessment is not diagnosis by checklist. Possible conditions suggested elsewhere in the app are for clinician review only.",
+    "Do not push for trauma details in a first session; offer choice and control.",
+    "Substance-use information needs Part 2 care before any disclosure.",
+    "Adult scope only. For anyone under 18, follow child and adolescent services and safeguarding procedures."
+  ],
+  "adaptations": [
+    {
+      "context": "Interpreters",
+      "adaptation": "Book a qualified interpreter, double the time, and brief them before the session."
+    },
+    {
+      "context": "Older adults",
+      "adaptation": "Ask about memory, hearing and vision, and allow breaks; involve family only with consent."
+    },
+    {
+      "context": "Neurodivergent clients",
+      "adaptation": "Offer written questions in advance, a quieter room and breaks; ask how they prefer to communicate."
+    }
+  ],
+  "evidenceSummary": "The American Psychiatric Association practice guideline on the psychiatric evaluation of adults (third edition, summarized in 2015 by Silverman and colleagues) recommends assessing current and past symptoms, substance use, trauma, medical history, suicide and violence risk, and cultural factors. NICE guideline CG123 (2011) describes identification and assessment of common mental health problems and pathways to care.",
+  "forClinicianReview": true,
+  "crisisPanel": true,
+  "sud": true,
+  "relatedInterventionIds": [
+    "cultural-formulation-exploration",
+    "collaborative-safety-planning",
+    "motivational-interviewing"
+  ],
+  "relatedHandoutIds": [
+    "what-to-expect-in-therapy",
+    "my-health-information-rights"
+  ],
+  "relatedFormulationIds": [
+    "five-ps-biopsychosocial-spiritual",
+    "co-occurring-and-level-of-care"
+  ],
+  "relatedLegalIds": [
+    "42-cfr-part-2",
+    "hipaa-privacy-basics",
+    "mandatory-reporting",
+    "duty-to-warn-protect"
+  ],
+  "relatedPracticeIds": [
+    "mental-status-exam",
+    "self-harm-assessment-and-formulation",
+    "trauma-informed-care",
+    "multicultural-orientation-and-broaching",
+    "first-sessions-and-role-induction",
+    "diagnostic-reasoning-checks"
+  ],
+  "relatedPopulationIds": [
+    "older-adults",
+    "autistic-adults",
+    "cultural-adaptation"
+  ],
+  "linkOuts": [],
+  "measuresPending": [],
+  "sources": [
+    {
+      "title": "The American Psychiatric Association practice guidelines for the psychiatric evaluation of adults (Silverman et al.)",
+      "publisher": "American Journal of Psychiatry, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26234607/",
+      "year": 2015
+    },
+    {
+      "title": "Common mental health problems: identification and pathways to care (CG123)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg123",
+      "year": 2011
+    },
+    {
+      "title": "Self-harm: assessment, management and preventing recurrence (NG225)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng225",
+      "year": 2022
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

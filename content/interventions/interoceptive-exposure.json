@@ -2,7 +2,7 @@
   "id": "interoceptive-exposure",
   "name": "Interoceptive exposure",
   "modality": "Exposure - interoceptive",
-  "conditions": ["panic-disorder", "agoraphobia"],
+  "conditions": ["panic-disorder", "agoraphobia", "sedative-hypnotic-use-disorder"],
   "evidenceLevel": "Core component of CBT for panic disorder, which NICE CG113 recommends; APA Division 12 lists CBT for panic with strong research support (check the current rating). A 2018 component network meta-analysis (Pompoli et al.) linked interoceptive exposure with better efficacy and acceptability in panic CBT packages. A 2013 randomized trial (Deacon et al.) found that brief, low-intensity exercises were more often followed by fear sensitization, supporting longer and more intense practice once safety is confirmed.",
   "minutes": { "min": 30, "max": 50 },
   "purpose": "Brings on feared body sensations (racing heart, dizziness, breathlessness, feeling unreal) on purpose and in a planned way, so the client learns that the sensations are bearable and not dangerous. It targets fear of the sensations themselves and tests catastrophic predictions directly. Use it after psychoeducation and medical clearance, alongside cognitive work and in-vivo exposure.",
@@ -41,7 +41,8 @@
     "Consider modesty and dress when choosing exercises such as running in place, and offer privacy where possible.",
     "Where family or community members see deliberate discomfort as harmful, explain the rationale carefully and, with the client's consent, involve them in psychoeducation."
   ],
-  "handoutIds": ["panic-cycle"],
+  "handoutIds": ["panic-cycle", "body-sensation-practice-log"],
+  "orientationIds": ["behavior-therapy"],
   "sources": [
     {
       "title": "Generalised anxiety disorder and panic disorder in adults: management (CG113)",

@@ -1,0 +1,127 @@
+{
+  "id": "dialectical-behavior-therapy",
+  "name": "Dialectical behavior therapy (DBT)",
+  "shortName": "DBT",
+  "family": "contextual",
+  "summary": "A comprehensive treatment for pervasive emotion dysregulation that balances acceptance and change. Full DBT combines individual therapy, a skills group, between-session coaching and a therapist consultation team; skills-only formats are a separate, lighter option.",
+  "keyConcepts": [
+    { "term": "Biosocial formulation", "meaning": "High emotional sensitivity and reactivity interact with an environment that dismissed or punished emotional expression, so the person never learned to understand, trust or regulate emotions." },
+    { "term": "Dialectics", "meaning": "Holding two truths at once, especially acceptance and change: the client's behavior makes sense given their history and situation, and new ways of acting are still needed." },
+    { "term": "Target hierarchy", "meaning": "Individual sessions address life-threatening behavior first, then behavior that interferes with therapy, then quality-of-life problems, then skills building." },
+    { "term": "Self-monitoring of emotions and urges", "meaning": "A daily record of emotions, urges, target behaviors and skills used, reviewed at the start of each individual session to set the agenda." },
+    { "term": "Chain and solution analysis", "meaning": "A detailed, moment-by-moment review of the links leading to and following a target behavior, used to find points where skills could change the outcome." },
+    { "term": "Validation", "meaning": "Communicating that the client's emotions and actions make sense in context, at graded levels, as a counterweight to change strategies." },
+    { "term": "Consultation team", "meaning": "A weekly meeting where DBT clinicians support each other's adherence, motivation and wellbeing; it is part of the treatment, not an optional extra." }
+  ],
+  "viewOfProblem": "Self-harm, suicidal behavior, impulsive actions and relationship crises are understood as attempts to manage overwhelming emotion, or as the consequences of emotion dysregulation, in a person who lacks the skills or the supportive environment to do otherwise. These behaviors are learned and are often reinforced by short-term relief.",
+  "viewOfChange": "Change comes from building a life worth living: reducing dangerous and therapy-interfering behavior, learning mindfulness, distress tolerance, emotion regulation and interpersonal effectiveness skills, generalizing them to daily life through coaching, and being held in a validating relationship that also pushes for change. Later stages can address trauma and broader life goals.",
+  "therapistStance": "Warm, validating and nonjudgmental, combined with a firm, direct focus on change and on agreed commitments. Clinicians move between acceptance and change strategies, between reciprocal and irreverent communication, and they treat their own limits openly. Clear agreements about between-session contact protect both client and clinician.",
+  "sessionShape": [
+    "Review the daily emotions and urges record.",
+    "Set the agenda by the target hierarchy: any life-threatening behavior first, then therapy-interfering behavior, then quality-of-life targets.",
+    "Do a chain analysis of the highest-priority behavior since the last session.",
+    "Generate solutions and rehearse the skills that fit the links in the chain.",
+    "Strengthen commitment and troubleshoot what could get in the way.",
+    "Skills are taught in a separate weekly group, with homework reviewed there."
+  ],
+  "goalStyle": "Goals follow the target hierarchy: first stop or reduce life-threatening behavior, then therapy-interfering behavior, then quality-of-life goals that build a life worth living. Each is written as an observable behavior with a frequency (for example, use a distress tolerance skill instead of self-harm when urges reach 70 or above). Write each goal with the client in their own words.",
+  "progressMarkers": [
+    "Frequency of target behaviors on the daily record.",
+    "Urge ratings and skills used, from the daily record.",
+    "Attendance and completion of skills homework.",
+    "Progress on the client's own life-worth-living goals."
+  ],
+  "typicalTechniques": [
+    "dbt-mindfulness-skills",
+    "dbt-distress-tolerance",
+    "dbt-emotion-regulation-opposite-action",
+    "dbt-interpersonal-effectiveness",
+    "behavioral-chain-analysis",
+    "suicide-specific-psychotherapies"
+  ],
+  "relatedTechniques": ["collaborative-safety-planning", "mindful-check-in"],
+  "missingTechniques": [
+    { "name": "Commitment strategies", "note": "Devil's advocate, foot in the door and similar strategies are taught in DBT training; overview only, no library entry." },
+    { "name": "Between-session skills coaching", "note": "Brief coaching calls with clear limits are part of comprehensive DBT and need a team policy, not an app script." }
+  ],
+  "formulationIds": ["functional-analysis", "dimensional-personality", "transdiagnostic-process-map"],
+  "models": [
+    {
+      "name": "Comprehensive (standard) DBT",
+      "summary": "Individual therapy, skills group, between-session coaching and a consultation team, usually for at least six months to a year, for recurrent self-harm and emotion dysregulation.",
+      "evidenceTier": "guideline-recommended",
+      "evidence": "NICE CG78 (2009) advises considering DBT for women with borderline personality disorder for whom reducing recurrent self-harm is a priority. A Cochrane review of 75 RCTs found that BPD-specific psychotherapies, most often DBT and MBT, reduced BPD severity compared with usual treatment, with low-quality evidence (Storebo et al., 2020).",
+      "trainingRequired": true
+    },
+    {
+      "name": "DBT skills training alone",
+      "summary": "The four skills modules taught in a group or individually, without the full set of DBT modes; useful as an adjunct when comprehensive DBT is not needed or not available.",
+      "evidenceTier": "emerging",
+      "evidence": "A 2015 systematic review of 17 trials found preliminary support for stand-alone DBT skills training across several problems (Valentine et al., 2015); in a component trial, versions that included skills training did about as well as standard DBT on suicide-related outcomes (Linehan et al., 2015).",
+      "trainingRequired": true
+    },
+    {
+      "name": "DBT-PTSD",
+      "summary": "A phase-based program for PTSD after childhood abuse with marked emotion dysregulation, combining DBT skills with trauma-focused exposure, compassion and acceptance work. It is a separate protocol with its own training; refer when it fits.",
+      "evidenceTier": "emerging",
+      "evidence": "In a multicenter RCT with 193 women with childhood-abuse PTSD and borderline features, both DBT-PTSD and CPT improved PTSD symptoms, with larger gains and lower early dropout in DBT-PTSD (Bohus et al., 2020).",
+      "trainingRequired": true
+    },
+    {
+      "name": "Radically open DBT (RO DBT)",
+      "summary": "A separate treatment for over-controlled problems such as refractory depression, targeting social signaling, openness and connection rather than impulsivity.",
+      "evidenceTier": "emerging",
+      "evidence": "In one RCT with 250 adults with refractory depression, RO DBT reduced depressive symptoms more than usual care right after treatment (about 5 points on the HRSD at 7 months), with no significant difference at 18 months (Lynch et al., 2020).",
+      "trainingRequired": true
+    }
+  ],
+  "evidenceTier": "guideline-recommended",
+  "evidenceSummary": "Comprehensive DBT is the most studied psychotherapy for recurrent self-harm and borderline personality patterns. NICE CG78 (2009) advises considering it for women with BPD when reducing recurrent self-harm is a priority, and a 2020 Cochrane review supports BPD-specific therapies, mainly DBT and MBT, over usual treatment, with low-quality evidence (Storebo et al., 2020). Skills-only formats have preliminary support (Valentine et al., 2015). DBT-PTSD (Bohus et al., 2020) and RO DBT (Lynch et al., 2020) each have one main RCT.",
+  "bestFit": [
+    "Recurrent self-harm or suicidal behavior with pervasive emotion dysregulation.",
+    "Borderline personality patterns, and other presentations with impulsive coping and intense, unstable emotions.",
+    "Clients who can commit to a structured, multi-mode program over many months.",
+    "Skills-only groups for clients who need emotion regulation tools without the full program."
+  ],
+  "cautions": [
+    "Calling a skills group or a handout DBT does not make it DBT. Be clear with clients and referrers whether you offer comprehensive DBT or DBT-informed skills.",
+    "Life-threatening behavior always comes first. Use your service's suicide risk procedures and a written safety plan, and make crisis options clear: in the US call or text 988; elsewhere, the local emergency number or findahelpline.com.",
+    "Between-session coaching needs a written policy on availability, response times and what to do in an emergency.",
+    "Do not start trauma processing in standard DBT until life-threatening behavior is under control; DBT-PTSD is a separate trained protocol.",
+    "Avoid using DBT language to dismiss real invalidation or abuse in the client's current environment."
+  ],
+  "whenToRefer": [
+    "Recurrent self-harm or suicide attempts when you cannot provide the full DBT modes: refer to a comprehensive DBT program.",
+    "PTSD after childhood abuse with severe emotion dysregulation: consider referral to a DBT-PTSD or other trauma-focused specialist."
+  ],
+  "trainingRequired": true,
+  "trainingNote": "DBT is a trained, team-delivered treatment. Clinicians competent in DBT skills can teach individual skills, but comprehensive DBT, DBT-PTSD and RO DBT each need formal training, a consultation team and ongoing adherence work. Certification is available through an independent board.",
+  "trainingPath": [
+    { "body": "DBT-Linehan Board of Certification", "url": "https://dbt-lbc.org/", "note": "Independent certification of DBT clinicians and programs; it certifies but does not provide training." },
+    { "body": "Linehan Institute (official DBT training)", "url": "https://www.linehaninstitute.org/dbt-training", "note": "Names the official providers of intensive DBT training and explains the route to certification." }
+  ],
+  "ethicsPrompts": [
+    { "prompt": "Practice within your training: describe your service accurately as comprehensive DBT or DBT-informed skills, and offer the full program only with a trained team.", "legalIds": ["competence-and-scope-of-practice"] },
+    { "prompt": "Set and document a between-session contact policy before offering coaching, including emergencies and after-hours limits.", "legalIds": ["between-session-contact-policy", "crisis-988-or-911"] },
+    { "prompt": "Group skills training needs agreed confidentiality rules for members and a plan for what happens when a member is at risk.", "legalIds": ["group-confidentiality"] }
+  ],
+  "culturalNotes": [
+    "The biosocial account can sound like blame of the family; present it as a mismatch between temperament and environment, and ask how emotion was treated in the client's family and culture.",
+    "Interpersonal effectiveness scripts assume direct requests; adapt them where indirect, respectful or family-mediated communication is the norm.",
+    "Skills groups should reflect members' languages, literacy and life circumstances; adapt examples rather than the core skills."
+  ],
+  "handoutIds": ["opposite-action-practice", "hard-moment-plan", "chain-analysis-sheet", "daily-emotion-and-urge-tracker"],
+  "relatedPracticeIds": ["validation-levels", "group-formats", "supervision-and-consultation", "between-session-practice"],
+  "relatedPopulationIds": ["sexual-violence-and-trafficking-survivors", "justice-involved"],
+  "sources": [
+    { "title": "Psychological therapies for people with borderline personality disorder (Storebo et al.)", "publisher": "Cochrane Database of Systematic Reviews", "url": "https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD012955.pub2/full", "year": 2020 },
+    { "title": "Borderline personality disorder: recognition and management (CG78)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/cg78", "year": 2009 },
+    { "title": "Dialectical behavior therapy for high suicide risk in individuals with borderline personality disorder: a randomized clinical trial and component analysis (Linehan et al.)", "publisher": "JAMA Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/25806661/", "year": 2015 },
+    { "title": "The use of dialectical behavior therapy skills training as stand-alone treatment: a systematic review of the treatment outcome literature (Valentine et al.)", "publisher": "Journal of Clinical Psychology (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/25042066/", "year": 2015 },
+    { "title": "Dialectical behavior therapy for PTSD vs cognitive processing therapy for women with childhood abuse-related PTSD: a randomized clinical trial (Bohus et al.)", "publisher": "JAMA Psychiatry", "url": "https://jamanetwork.com/journals/jamapsychiatry/fullarticle/2768029", "year": 2020 },
+    { "title": "Refractory depression: mechanisms and efficacy of radically open dialectical behaviour therapy (RefraMED): findings of a randomised trial on benefits and harms (Lynch et al.)", "publisher": "British Journal of Psychiatry (PubMed Central)", "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7282863/", "year": 2020 }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

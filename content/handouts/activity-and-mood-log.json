@@ -1,0 +1,102 @@
+{
+  "id": "activity-and-mood-log",
+  "title": "Activity and Mood Log",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 10,
+  "intro": "How you spend your time and how you feel are linked. When mood is low, that link can be hard to see. This log helps you track what you do, hour by hour, and how your mood changes. After a few days, you and your counselor can look for patterns and plan small changes. It takes about 10 minutes to read, and a few minutes a day to fill in.",
+  "sections": [
+    {
+      "heading": "The pull to pull back",
+      "body": "When something hard happens, it is natural to want to pull back. You may stay in, put things off, or tune out with TV or your phone. Pulling back brings relief for a while. But it can also cut you off from the things that help you feel better, and problems can grow. Then mood drops further. This log helps you see this loop in your own life, so you can choose a different step."
+    },
+    {
+      "heading": "How to fill in the log",
+      "steps": [
+        "Fill in a row for each hour you are awake. If you cannot do it every hour, fill it in 3 or 4 times a day, while you still remember.",
+        "Write what you were doing, even if it was 'lying in bed' or 'scrolling on my phone.' Nothing is too small.",
+        "Write if you were alone or with others. You do not need to write any names.",
+        "Rate your mood from 0 (lowest) to 10 (best).",
+        "Rate how much you enjoyed it, and how much it gave you a sense of getting something done, each from 0 to 10."
+      ]
+    },
+    {
+      "heading": "What to look for",
+      "steps": [
+        "Times of day when your mood is lowest or highest.",
+        "Activities that go with a better mood, even a little better.",
+        "Activities that go with a lower mood, or that you do to escape.",
+        "Things you used to do that are missing now."
+      ]
+    },
+    {
+      "heading": "A different path",
+      "body": "When you notice the pull to pull back, try this. Name the feeling. Pick one small action that fits what matters to you. Do it for a short time, and notice what changes. Your counselor can help you plan these steps."
+    }
+  ],
+  "practiceLog": {
+    "columns": ["Time", "What I was doing", "Alone or with others", "Mood (0-10)", "Enjoyment (0-10)", "Got something done (0-10)"],
+    "rows": 18
+  },
+  "safetyNote": "Safety first: Low mood can sometimes come with thoughts of death or of hurting yourself. If that happens, do not wait for your next visit. Talk to someone now. In the US, call or text 988 or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "es": {
+    "title": "Registro de actividades y ánimo",
+    "intro": "La forma en que usa su tiempo y cómo se siente van juntas. Cuando el ánimo está bajo, cuesta ver esa unión. Este registro le ayuda a anotar lo que hace, hora por hora, y cómo cambia su ánimo. Después de unos días, usted y su consejero pueden buscar patrones y planear cambios pequeños. Leerlo toma unos 10 minutos, y llenarlo toma unos minutos al día.",
+    "sections": [
+      {
+        "heading": "Las ganas de alejarse",
+        "body": "Cuando pasa algo difícil, es natural querer alejarse. Puede quedarse en casa, dejar las cosas para después o desconectarse con la tele o el teléfono. Alejarse da alivio por un rato. Pero también le puede apartar de las cosas que le ayudan a sentirse mejor, y los problemas pueden crecer. Así el ánimo baja más. Este registro le ayuda a ver este ciclo en su propia vida, para que pueda escoger otro paso."
+      },
+      {
+        "heading": "Cómo llenar el registro",
+        "steps": [
+          "Llene una fila por cada hora que esté despierto. Si no puede hacerlo cada hora, llénelo 3 o 4 veces al día, mientras todavía se acuerda.",
+          "Escriba lo que estaba haciendo, aunque sea 'acostado en la cama' o 'mirando el teléfono'. Nada es demasiado pequeño.",
+          "Escriba si estaba solo o con otras personas. No necesita escribir nombres.",
+          "Califique su ánimo del 0 (lo más bajo) al 10 (lo mejor).",
+          "Califique cuánto lo disfrutó, y cuánto le hizo sentir que logró algo, cada uno del 0 al 10."
+        ]
+      },
+      {
+        "heading": "Qué buscar",
+        "steps": [
+          "Las horas del día en que su ánimo está más bajo o más alto.",
+          "Las actividades que van con un mejor ánimo, aunque sea un poco mejor.",
+          "Las actividades que van con un ánimo más bajo, o que hace para escapar.",
+          "Las cosas que antes hacía y que ahora faltan."
+        ]
+      },
+      {
+        "heading": "Otro camino",
+        "body": "Cuando note las ganas de alejarse, pruebe esto. Póngale nombre al sentimiento. Escoja una acción pequeña que vaya con lo que le importa. Hágala por un rato corto, y fíjese en lo que cambia. Su consejero le puede ayudar a planear estos pasos."
+      }
+    ],
+    "practiceLog": {
+      "columns": ["Hora", "Lo que estaba haciendo", "Solo o con otras personas", "Ánimo (0-10)", "Disfrute (0-10)", "Logré algo (0-10)"]
+    },
+    "safetyNote": "La seguridad es lo primero: El ánimo bajo a veces puede venir con pensamientos de muerte o de hacerse daño. Si eso pasa, no espere a su próxima cita. Hable con alguien ahora. En EE. UU., llame o envíe un mensaje de texto al 988 o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "sources": [
+    {
+      "title": "Cochrane review CD013305: behavioural activation therapy in adults (Uphoff et al.)",
+      "publisher": "Cochrane Database of Systematic Reviews",
+      "url": "https://doi.org/10.1002/14651858.CD013305.pub2",
+      "year": 2020
+    },
+    {
+      "title": "Behavioral Activation for Depression",
+      "publisher": "APA Division 12, Society of Clinical Psychology",
+      "url": "https://div12.org/treatment/behavioral-activation-for-depression/"
+    },
+    {
+      "title": "Behavioural activation for depression: an update of meta-analysis of effectiveness and sub group analysis (Ekers et al.)",
+      "publisher": "PLoS ONE (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24936656/",
+      "year": 2014
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

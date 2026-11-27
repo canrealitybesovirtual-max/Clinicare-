@@ -1,0 +1,93 @@
+{
+  "id": "present-centered-therapy",
+  "name": "Present-centered therapy for PTSD (non-trauma-focused option)",
+  "modality": "Present-centered therapy (non-trauma-focused, problem-solving)",
+  "conditions": ["ptsd"],
+  "evidenceLevel": "The VA/DoD 2023 PTSD guideline suggests (weak for) present-centered therapy as a non-trauma-focused alternative, in the same tier as cognitive therapy for PTSD and written exposure therapy; its strong recommendations are for prolonged exposure, cognitive processing therapy and EMDR, and it found insufficient evidence for several other non-trauma-focused therapies, such as stress inoculation training and interpersonal psychotherapy. A Cochrane review found moderate-quality evidence that present-centered therapy reduces PTSD severity compared with control conditions, low-quality evidence that did not show it to be as effective as trauma-focused CBT, and lower dropout than trauma-focused CBT (Belsher et al., 2019). It was first designed as a comparison treatment in trials, which may bias results against it.",
+  "minutes": { "min": 45, "max": 60 },
+  "purpose": "Present-centered therapy helps people with PTSD manage how it affects their life today without going over the trauma in detail. Sessions explain how trauma reactions show up in work, relationships, sleep and mood, and then use structured problem-solving on the stressors the client brings each week, with a simple between-session log of current difficulties. It is a reasonable option for clients who decline or cannot yet engage in trauma-focused therapy, when trauma-focused therapy is not available, or as a step toward it. It is typically delivered in about 10 to 12 weekly sessions from a published manual.",
+  "steps": [
+    "Offer the full range of options first, including the trauma-focused therapies with stronger evidence, and record the client's informed choice. Make clear that choosing a present-focused approach now does not rule out trauma-focused work later.",
+    "Agree on the frame: sessions focus on current life, and the client is not asked to describe the trauma in detail. If the client brings it up, listen supportively and return to how it affects life now.",
+    "Give plain-language information about common trauma reactions and how they can affect sleep, anger, trust, closeness, work and health.",
+    "Ask the client to keep a short weekly log of current stressors and reactions, and use it to choose the focus of each session.",
+    "Work through problems step by step: define the problem, brainstorm options, weigh them, pick one, plan the first step, then review what happened.",
+    "Track symptoms over time with a measure your setting uses and review progress with the client. If progress stalls, revisit options such as a recommended trauma-focused therapy or a medication evaluation.",
+    "Close with a review of skills the client found useful and a plan for future stress."
+  ],
+  "script": [
+    "We will focus on how things are going in your life right now. You will not need to describe what happened in detail.",
+    "After hard experiences, reactions often show up in sleep, temper, trust or work. Which of these fit for you?",
+    "Each week, jot down a couple of situations that were stressful, and we will pick one to work on together.",
+    "Let's break this problem into small steps and choose one to try before next time.",
+    "Some people later decide to work on the memories directly. That door stays open whenever you want it."
+  ],
+  "contraindications": [
+    "Present-centered therapy is not a substitute for addressing current danger. Ongoing violence or imminent suicide risk come first. This app does not judge risk; you do. Crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com.",
+    "Evidence is weaker than for the strongly recommended trauma-focused therapies. Share this openly so the choice is informed, and review it if symptoms do not improve.",
+    "Co-occurring substance problems, psychosis or severe dissociation may need integrated or specialist care. Do not record substance-use details in this app."
+  ],
+  "culturalAdaptations": [
+    "A present-focused approach can suit clients for whom speaking about trauma details is culturally or personally unacceptable. Ask about this directly rather than assuming.",
+    "Current stressors may include racism, migration stress, poverty or unsafe housing. Treat these as real problems to work on, not only as thoughts to change.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "handoutIds": ["common-reactions-after-trauma", "problem-solving-steps"],
+  "orientationIds": ["integrative-common-factors"],
+  "evidenceGrades": [
+    {
+      "body": "VA/DoD",
+      "guideline": "Management of Posttraumatic Stress Disorder and Acute Stress Disorder",
+      "year": 2023,
+      "conditionId": "ptsd",
+      "population": "Adults with PTSD (non-trauma-focused option)",
+      "direction": "for",
+      "strength": "weak for (suggest)",
+      "url": "https://health.mil/Reference-Center/Publications/2024/01/04/Psychotherapy-for-PTSD"
+    },
+    {
+      "body": "Cochrane",
+      "guideline": "Present-centered therapy (PCT) for post-traumatic stress disorder (PTSD) in adults",
+      "year": 2019,
+      "conditionId": "ptsd",
+      "population": "Adults with PTSD",
+      "direction": "for",
+      "strength": "moderate-quality evidence versus control; not shown non-inferior to trauma-focused CBT",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31742672/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Present-centered therapy (PCT) for post-traumatic stress disorder (PTSD) in adults (Belsher et al.)",
+      "publisher": "Cochrane Database of Systematic Reviews (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31742672/",
+      "year": 2019
+    },
+    {
+      "title": "PTSD: Present Centered Therapy (fact sheet)",
+      "publisher": "Psychological Health Center of Excellence, Defense Health Agency",
+      "url": "https://health.mil/Reference-Center/Publications/2026/06/15/PTSD-Present-Centered-Therapy",
+      "year": 2026
+    },
+    {
+      "title": "Overview of psychotherapy for PTSD",
+      "publisher": "National Center for PTSD, US Department of Veterans Affairs",
+      "url": "https://www.ptsd.va.gov/professional/treat/txessentials/overview_therapy.asp"
+    },
+    {
+      "title": "Psychotherapy for PTSD (summary of the 2023 VA/DoD guideline)",
+      "publisher": "Psychological Health Center of Excellence, Defense Health Agency",
+      "url": "https://health.mil/Reference-Center/Publications/2024/01/04/Psychotherapy-for-PTSD",
+      "year": 2024
+    },
+    {
+      "title": "VA/DoD Clinical Practice Guideline for Management of Posttraumatic Stress Disorder and Acute Stress Disorder",
+      "publisher": "US Department of Veterans Affairs and Department of Defense",
+      "url": "https://www.healthquality.va.gov/guidelines/MH/ptsd/",
+      "year": 2023
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

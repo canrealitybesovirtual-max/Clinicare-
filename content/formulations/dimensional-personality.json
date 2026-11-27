@@ -1,0 +1,191 @@
+{
+  "id": "dimensional-personality",
+  "name": "Dimensional view of personality functioning (ICD-11 and HiTOP)",
+  "shortName": "Dimensional personality",
+  "family": "classification",
+  "orientationIds": [],
+  "purpose": "Reference notes on describing long-standing personality difficulties in dimensions rather than fixed types. ICD-11 first asks how much personality functioning is affected (in how a person sees themselves and in relationships), graded as personality difficulty, mild, moderate or severe, and then which trait domains stand out. The research model HiTOP places personality traits within broad spectra shared with other conditions. For formulation, severity points to how intensive and coordinated care may need to be, and prominent traits point to the focus and style of therapy. These notes support clinical thinking; they never decide a diagnosis.",
+  "whenToUse": [
+    "When long-standing patterns in self-image and relationships are central to the presentation.",
+    "When a categorical label feels stigmatizing or poorly fitting and a description of functioning and traits would help the plan.",
+    "When planning intensity of care and choosing a therapy focus for long-standing interpersonal difficulties."
+  ],
+  "structure": [
+    {
+      "id": "functioning",
+      "label": "Personality functioning",
+      "prompt": "Self: stability of identity, self-worth, accuracy of self-view and ability to direct oneself. Relationships: interest in and capacity for close relationships, understanding others' perspectives, and managing conflict.",
+      "examples": []
+    },
+    {
+      "id": "severity",
+      "label": "Severity",
+      "prompt": "ICD-11 grades personality difficulty (below the threshold for disorder) and mild, moderate and severe levels, based on how widespread and serious the problems in functioning are and how much harm or distress they cause.",
+      "examples": []
+    },
+    {
+      "id": "traits",
+      "label": "Prominent trait domains",
+      "prompt": "Negative affectivity (frequent, intense negative emotions), detachment (keeping emotional and social distance), dissociality (disregard for others' rights and feelings), disinhibition (acting on impulse), and anankastia (rigid control and perfectionism). Any number may be noted.",
+      "examples": []
+    },
+    {
+      "id": "borderline-pattern",
+      "label": "Borderline pattern qualifier",
+      "prompt": "An optional ICD-11 qualifier for a pattern of instability in relationships, self-image and emotions with marked impulsivity, kept partly for continuity with existing treatment research.",
+      "examples": []
+    },
+    {
+      "id": "hitop",
+      "label": "HiTOP spectra",
+      "prompt": "HiTOP groups symptoms and traits into broad spectra (such as internalizing, detachment, disinhibited and antagonistic externalizing, and thought disorder) that cut across traditional categories.",
+      "examples": []
+    },
+    {
+      "id": "using-it",
+      "label": "Using it in formulation",
+      "prompt": "Describe functioning and traits in plain words the person recognizes, link them to the patterns in the formulation, and use severity to plan intensity, coordination and crisis planning.",
+      "examples": [
+        "Strong emotions and quick reactions in close relationships (negative affectivity, disinhibition)"
+      ]
+    }
+  ],
+  "steps": [
+    "Gather a longitudinal picture from several sources where possible, across settings and over years, not one crisis.",
+    "Describe self and relationship functioning and prominent traits in plain, non-judgmental words.",
+    "Consider other explanations, including trauma, mood or psychotic episodes, neurodevelopmental conditions, substances and medical causes.",
+    "Use severity and traits to plan care intensity and focus, and share the description with the person.",
+    "Leave any formal classification to your own full assessment."
+  ],
+  "collaborativeTips": [
+    "Many people find a description of traits and strengths less stigmatizing than a category name; ask what language they prefer.",
+    "Link each trait to how it has helped as well as how it hurts."
+  ],
+  "cautions": [
+    "These notes never establish a diagnosis. Classification follows a full assessment by a qualified clinician.",
+    "Personality labels can follow people and affect how services treat them; use them only when they help care, and explain them.",
+    "Strong emotions after trauma, or during a mood episode, are not by themselves evidence of a personality disorder.",
+    "A formulation never scores, grades or decides risk. If thoughts of suicide, self-harm or harm to others come up, pause the formulation and follow your own assessment and local protocol; in the US the 988 Lifeline is available by call or text, elsewhere use the local emergency number or findahelpline.com."
+  ],
+  "conditionIds": [
+    "borderline-personality-disorder"
+  ],
+  "interventionIds": [
+    "good-psychiatric-management",
+    "mentalization-based-treatment",
+    "dbt-emotion-regulation-opposite-action",
+    "schema-therapy",
+    "transference-focused-psychotherapy",
+    "stair-skills-training"
+  ],
+  "handoutIds": [],
+  "practiceIds": [
+    "diagnostic-reasoning-checks"
+  ],
+  "populationIds": [],
+  "legalIds": [
+    "treatment-plans-and-client-access"
+  ],
+  "codes": [
+    {
+      "system": "ICD-11",
+      "code": "QE50.7",
+      "label": "Personality difficulty"
+    },
+    {
+      "system": "ICD-11",
+      "code": "6D10.0",
+      "label": "Mild personality disorder"
+    },
+    {
+      "system": "ICD-11",
+      "code": "6D10.1",
+      "label": "Moderate personality disorder"
+    },
+    {
+      "system": "ICD-11",
+      "code": "6D10.2",
+      "label": "Severe personality disorder"
+    },
+    {
+      "system": "ICD-11",
+      "code": "6D10.Z",
+      "label": "Personality disorder, severity unspecified"
+    },
+    {
+      "system": "ICD-11",
+      "code": "6D11.0",
+      "label": "Negative affectivity in personality disorder or personality difficulty"
+    },
+    {
+      "system": "ICD-11",
+      "code": "6D11.1",
+      "label": "Detachment in personality disorder or personality difficulty"
+    },
+    {
+      "system": "ICD-11",
+      "code": "6D11.2",
+      "label": "Dissociality in personality disorder or personality difficulty"
+    },
+    {
+      "system": "ICD-11",
+      "code": "6D11.3",
+      "label": "Disinhibition in personality disorder or personality difficulty"
+    },
+    {
+      "system": "ICD-11",
+      "code": "6D11.4",
+      "label": "Anankastia in personality disorder or personality difficulty"
+    },
+    {
+      "system": "ICD-11",
+      "code": "6D11.5",
+      "label": "Borderline pattern"
+    },
+    {
+      "system": "ICD-10-CM",
+      "code": "F60.3",
+      "label": "Borderline personality disorder"
+    },
+    {
+      "system": "ICD-10-CM",
+      "code": "F60.9",
+      "label": "Personality disorder, unspecified"
+    }
+  ],
+  "dsmPointer": "See DSM-5-TR: Personality Disorders (Section II) and the Alternative DSM-5 Model for Personality Disorders (Section III).",
+  "worksheet": false,
+  "sud": false,
+  "linkOuts": [
+    {
+      "title": "Clinical descriptions and diagnostic requirements for ICD-11 mental, behavioural and neurodevelopmental disorders (CDDR)",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/publications/i/item/9789240077263",
+      "note": "WHO clinical descriptions and requirements for ICD-11, including personality disorders."
+    }
+  ],
+  "measuresPending": [],
+  "sources": [
+    {
+      "title": "Application of the ICD-11 classification of personality disorders (Bach and First)",
+      "publisher": "BMC Psychiatry (PubMed Central)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6206910/",
+      "year": 2018
+    },
+    {
+      "title": "The Hierarchical Taxonomy of Psychopathology (HiTOP): a dimensional alternative to traditional nosologies (Kotov et al.)",
+      "publisher": "Journal of Abnormal Psychology (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28333488/",
+      "year": 2017
+    },
+    {
+      "title": "Clinical descriptions and diagnostic requirements for ICD-11 mental, behavioural and neurodevelopmental disorders (CDDR)",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/publications/i/item/9789240077263",
+      "year": 2024
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

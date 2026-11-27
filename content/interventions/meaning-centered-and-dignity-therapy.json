@@ -1,0 +1,88 @@
+{
+  "id": "meaning-centered-and-dignity-therapy",
+  "name": "Meaning-centered psychotherapy and dignity therapy (serious illness): overview and referral",
+  "modality": "Existential - meaning-centered",
+  "conditions": [
+    "adjustment-disorder",
+    "major-depressive-disorder",
+    "prolonged-grief-disorder"
+  ],
+  "evidenceLevel": "In a randomized trial with adults with advanced cancer (Breitbart et al., 2015), meaning-centered group psychotherapy improved spiritual well-being and quality of life and reduced depression, hopelessness and desire for hastened death more than supportive group therapy. In a randomized trial of dignity therapy for terminally ill patients (Chochinov et al., 2011), distress did not differ between groups, but participants rated dignity therapy as more helpful, including for their sense of dignity and for their families. Evidence comes mainly from palliative and cancer care; use for grief relies on caregiver adaptations that are still being studied.",
+  "minutes": {
+    "min": 45,
+    "max": 60
+  },
+  "purpose": "Two brief, structured approaches for people facing serious or life-limiting illness. Meaning-centered psychotherapy, developed by William Breitbart from Viktor Frankl's work, helps people reconnect with sources of meaning despite illness: their life story and legacy, the attitude they take toward limits, creativity and responsibility, and experiences of love, beauty and humor; it runs about 7 to 8 sessions, individual or group. Dignity therapy, developed by Harvey Chochinov, is a brief guided conversation about what matters most, key memories, roles and wishes for loved ones, edited into a document the person can leave to family. This entry is an overview for planning and referral.",
+  "steps": [
+    "Confirm fit and training, and coordinate with the client's medical and palliative care team; respect energy limits and medical priorities.",
+    "Meaning-centered work (overview): introduce meaning as something that can still be found, then explore sources of meaning session by session: the client's story and what they are proud of, how they want to meet limits, responsibilities and creative acts, and connections with people, nature, art and humor.",
+    "Use short experiential exercises and between-session reflection, adapted to the client's energy.",
+    "Dignity therapy (overview): a trained clinician guides a conversation on important memories, roles, accomplishments, hopes and messages for loved ones; the transcript is edited and returned for the client to review and share as they choose.",
+    "Involve family as the client wishes, and plan bereavement support for family where relevant.",
+    "Screen for depression, anxiety and pain, which may need specific treatment alongside this work, and coordinate care."
+  ],
+  "script": [
+    "Even with everything the illness has taken, what still gives your days meaning?",
+    "What parts of your life are you most proud of? What would you like people to remember?",
+    "How do you want to face the limits this illness brings?",
+    "Is there anything you would want your family to know, or to hear from you?",
+    "There's a structured way to put this into a document for your family, if that's something you'd like."
+  ],
+  "contraindications": [
+    "Assess and treat severe depression, delirium or uncontrolled pain first; meaning-centered work does not replace that care.",
+    "Respect a client's choice not to talk about death or legacy; never push.",
+    "Requests for hastened death or wishes to die need careful clinical assessment and coordination with the care team; this app does not assess or decide risk. Crisis options: 988 Suicide & Crisis Lifeline (US, call or text), the local emergency number, and findahelpline.com.",
+    "Full protocols require training; steps here are overview-level only."
+  ],
+  "culturalAdaptations": [
+    "Beliefs about illness, death, legacy and talking openly about dying vary widely; follow the client's and family's preferences about disclosure and who is present.",
+    "Sources of meaning may be collective (family, community, ancestors) more than individual; use the client's frame.",
+    "A dignity document can be made in the client's language and in a form that feels meaningful, such as a letter or recording.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "faithIntegrated": {
+    "note": "Spirituality and religion are often central sources of meaning near the end of life. When the client asks, explore their faith, rituals and hopes in their own words and, with consent, coordinate with a chaplain or faith leader of their choosing.",
+    "consentNote": "Offer only if the client raises faith or spirituality and asks to include it. Before starting, explain what the faith-integrated option involves, that it is optional, that the same intervention is available without religious content, and that the client can change their mind at any time; document informed consent in your own clinical record, not in this app. Follow the client's own tradition and words, and never introduce, impose, endorse or challenge beliefs (AACC Code of Ethics: consent before spiritual interventions, client-led integration; ACA Code of Ethics 2014, A.2 informed consent and A.4.b personal values)."
+  },
+  "trainingRequired": "Meaning-centered psychotherapy and dignity therapy: trained clinicians only for the full protocols (for example, the Memorial Sloan Kettering meaning-centered psychotherapy training program); steps here are overview-level only.",
+  "handoutIds": [
+    "values-compass",
+    "my-story-in-my-words"
+  ],
+  "orientationIds": [
+    "existential-therapy"
+  ],
+  "sources": [
+    {
+      "title": "Meaning-centered group psychotherapy: an effective intervention for improving psychological well-being in patients with advanced cancer (Breitbart et al.)",
+      "publisher": "Journal of Clinical Oncology (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25646186/",
+      "year": 2015
+    },
+    {
+      "title": "Effect of dignity therapy on distress and end-of-life experience in terminally ill patients: a randomised controlled trial (Chochinov et al.)",
+      "publisher": "Lancet Oncology (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21741309/",
+      "year": 2011
+    },
+    {
+      "title": "Meaning-Centered Psychotherapy training program for cancer care providers",
+      "publisher": "Memorial Sloan Kettering Cancer Center",
+      "url": "https://www.mskcc.org/departments/psychiatry-behavioral-sciences/psycho-oncology-education-training-institute/course-meaning-centered-psychotherapy-cancer-patients"
+    },
+    {
+      "title": "AACC Code of Ethics",
+      "publisher": "American Association of Christian Counselors",
+      "url": "https://aacc.net/aacc-code-of-ethics/"
+    },
+    {
+      "title": "ACA Code of Ethics (2014) and ethics resources",
+      "publisher": "American Counseling Association",
+      "url": "https://www.counseling.org/resources/ethics",
+      "year": 2014
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

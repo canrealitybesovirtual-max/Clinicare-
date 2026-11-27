@@ -1,0 +1,68 @@
+{
+  "id": "mindfulness-oriented-recovery-enhancement",
+  "name": "Mindfulness-oriented recovery enhancement (MORE) for chronic pain with opioid misuse - overview and referral",
+  "modality": "Mindfulness-based group program (mindfulness, reappraisal and savoring)",
+  "conditions": ["opioid-use-disorder", "somatic-symptom-disorder"],
+  "evidenceLevel": "In a randomized trial in primary care with 250 adults who had chronic pain, were on long-term opioid therapy and were misusing their opioids, 8 weekly 2-hour MORE groups led to larger, sustained reductions in opioid misuse and pain symptoms, as well as lower opioid doses, distress and craving, than supportive group therapy over 9 months (Garland et al., 2022). An earlier pilot trial showed feasibility and preliminary efficacy (Garland et al., 2014). The trial population was mostly White and recruited in one US state, and no major guideline grades MORE specifically yet.",
+  "minutes": { "min": 10, "max": 20 },
+  "purpose": "MORE is a structured group program for people living with chronic pain who are taking opioids in ways that worry them or their prescriber. It combines three kinds of training: mindfulness, to notice pain and cravings without being swept along by them; reappraisal, to find more helpful ways of seeing stressful situations; and savoring, to strengthen the ability to feel pleasure and meaning from everyday positive experiences, which chronic pain and opioid use can blunt. It is delivered over about 8 weekly group sessions with daily home practice. This entry covers overview and referral only, and the time estimate is for that conversation. It contains no session materials and no fields for recording anyone's opioid use.",
+  "steps": [
+    "Ask about the client's pain, how it affects daily life, and their own concerns about their medications, in a non-judgmental way.",
+    "Explain MORE in plain language as one option among several: a group that teaches mindfulness, more helpful thinking about stress and pain, and ways to enjoy everyday positive moments more fully.",
+    "Coordinate with the prescriber, with consent. Medication decisions, including any change in opioid dose, belong to the prescriber and should never be abrupt.",
+    "Check overdose risk and make sure the client has naloxone and knows how to use it. If opioid use disorder may be present, discuss medication treatment for opioid use disorder as well.",
+    "Refer to a clinician or program trained in MORE, or to other evidence-based pain and substance-use care if MORE is not available (for example CBT or ACT for chronic pain, and medication treatment).",
+    "Meanwhile, offer a brief mindfulness practice and pacing ideas the client can try, and follow up on how they are managing.",
+    "Follow up to confirm the referral was completed and the client was able to start."
+  ],
+  "script": [
+    "Living with pain day after day is hard, and it makes sense to rely on medicine to get through it.",
+    "There is a group program that helps people notice pain and cravings without being pulled along by them, and enjoy good moments more.",
+    "It is not about forcing you off your medicine. Any change there is a decision with your prescriber.",
+    "Would you be open to hearing more about it, or about other options for pain?",
+    "Nothing you tell me about your medicines goes into this app. Your records about this have extra legal protection."
+  ],
+  "contraindications": [
+    "Do not advise reducing or stopping opioids. Abrupt tapering can cause withdrawal, worsen pain and raise overdose and suicide risk; tapering decisions are made with the prescriber, gradually and collaboratively.",
+    "Make sure anyone taking opioids has naloxone available. Reduced tolerance after cutting down raises overdose risk.",
+    "Mindfulness can bring up distressing memories or sensations for trauma survivors. Offer choice, eyes-open options and grounding, and coordinate trauma care where needed.",
+    "If the client reports suicidal thoughts, address safety first. This app does not judge risk; you do. Crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com.",
+    "Do not enter details about anyone's opioid or other substance use into this app; nothing is stored or sent. Any note or export about substance use must carry this notice: 42 CFR Part 2 prohibits unauthorized use or disclosure of these records."
+  ],
+  "culturalAdaptations": [
+    "Some clients link mindfulness to religious practice. Explain it as attention training that can be practised in a secular way or connected to the client's own contemplative tradition, as they prefer.",
+    "Beliefs about pain, medicine and endurance differ across cultures and families. Ask what the client believes about their pain before suggesting new ways to relate to it.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "trainingRequired": "MORE: trained clinicians only. Deliver only after the official MORE training and, where offered, certification through the developer's training program, with fidelity monitoring. Otherwise refer.",
+  "handoutIds": ["mindful-check-in"],
+  "orientationIds": ["mindfulness-and-compassion-based-therapies", "positive-psychology"],
+  "sources": [
+    {
+      "title": "Mindfulness-oriented recovery enhancement vs supportive group therapy for co-occurring opioid misuse and chronic pain in primary care: a randomized clinical trial (Garland et al.)",
+      "publisher": "JAMA Internal Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35226053/",
+      "year": 2022
+    },
+    {
+      "title": "Mindfulness-oriented recovery enhancement for chronic pain and prescription opioid misuse: results from an early-stage randomized controlled trial (Garland et al.)",
+      "publisher": "Journal of Consulting and Clinical Psychology (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24491075/",
+      "year": 2014
+    },
+    {
+      "title": "CDC clinical practice guideline for prescribing opioids for pain, United States, 2022 (Dowell et al.)",
+      "publisher": "MMWR Recommendations and Reports (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36327391/",
+      "year": 2022
+    },
+    {
+      "title": "Become MORE certified (official training)",
+      "publisher": "Eric Garland, PhD (treatment developer)",
+      "url": "https://drericgarland.com/training-in-more/"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

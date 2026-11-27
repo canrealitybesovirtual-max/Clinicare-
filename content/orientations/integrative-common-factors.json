@@ -1,0 +1,142 @@
+{
+  "id": "integrative-common-factors",
+  "name": "Integrative practice and the common factors (contextual model)",
+  "shortName": "Integrative",
+  "family": "integrative",
+  "summary": "Most clinicians draw on more than one model. Integrative practice combines methods deliberately, grounded in the factors that matter across all therapies: the alliance, empathy, expectations, a credible rationale, and responsiveness to the person in front of you.",
+  "keyConcepts": [
+    { "term": "Contextual model", "meaning": "Therapy works through a real relationship, the creation of hope through a believable explanation of the problem and a plan, and specific actions that the client and clinician carry out together." },
+    { "term": "Common factors", "meaning": "Ingredients shared by effective therapies, such as the alliance, empathy, positive regard, agreement on goals and collaboration, which relate to outcome across models." },
+    { "term": "Technical eclecticism", "meaning": "Selecting techniques from different models according to what has worked for similar problems, without merging the theories behind them (for example a multimodal assessment of behavior, affect, sensation, imagery, cognition, relationships and biology)." },
+    { "term": "Assimilative and theoretical integration", "meaning": "Working from one home theory while importing methods from others, or combining theories into a new model, as in cognitive analytic therapy or cyclical psychodynamics." },
+    { "term": "Transdiagnostic and process-based work", "meaning": "Targeting processes that cut across diagnoses, such as avoidance, rumination or self-criticism, with whichever evidence-based methods change them for this person." },
+    { "term": "Responsiveness", "meaning": "Adjusting stance, methods and pacing in light of the client's characteristics, preferences, culture and feedback, moment to moment and over the course of therapy." }
+  ],
+  "viewOfProblem": "No single theory explains all problems. Difficulties are understood through a broad formulation that includes biological, psychological, social, cultural and spiritual factors, and through the processes that keep them going for this person. Low hope, a weak alliance or a poor fit between client and method can themselves stand in the way of change.",
+  "viewOfChange": "Change comes from a strong working alliance, a shared and credible understanding of the problem, rising hope, and specific methods chosen to fit the problem and the person. Progress is monitored, and the plan is revised with the client when therapy is not on track. Integration is deliberate and explainable, not a random mix of techniques.",
+  "therapistStance": "Collaborative, flexible and evidence-informed. The clinician explains the plan and why it fits, asks for feedback on the alliance and progress, repairs ruptures openly, and adapts stance and methods to the client's preferences, culture and response, while staying within their own training.",
+  "sessionShape": [
+    "Check in, review any outcome or alliance measure, and ask what the client needs from today.",
+    "Revisit the shared formulation briefly and choose today's focus.",
+    "Use the method that fits the current target, drawing on the relevant library technique.",
+    "Check how the method is landing and adjust if it is not helping.",
+    "Agree on between-session steps and ask for feedback on the session."
+  ],
+  "goalStyle": "Goals combine the client's own priorities with measurable markers drawn from whichever model is guiding the current phase, and are reviewed regularly against outcome data: for example, raise the score on my own 0 to 10 scale of coping at work from 3 to 6 and bring the PHQ-9 below 10 within 12 weeks. Write each goal with the client in their own words.",
+  "progressMarkers": [
+    "Session-by-session outcome measures such as the PHQ-9 or GAD-7, compared with the expected course.",
+    "Alliance and session feedback from the client, discussed openly.",
+    "Progress on the client's own goals, rated by the client.",
+    "Signs that therapy is not on track, which prompt a review of the plan, intensity or approach."
+  ],
+  "typicalTechniques": [
+    "motivational-interviewing",
+    "decisional-balance",
+    "unified-protocol",
+    "supportive-psychotherapy",
+    "present-centered-therapy",
+    "good-psychiatric-management",
+    "schema-therapy",
+    "bipolar-psychoeducation",
+    "reminiscence-and-life-review",
+    "suicide-bereavement-support"
+  ],
+  "relatedTechniques": ["problem-solving", "person-centered-reflective-listening", "cultural-formulation-exploration"],
+  "missingTechniques": [
+    { "name": "Cognitive analytic therapy (CAT)", "note": "A time-limited integration of cognitive and psychodynamic ideas built on reciprocal roles; overview only." },
+    { "name": "Multimodal assessment", "note": "Lazarus's structured review of seven modalities to choose techniques; overview only." }
+  ],
+  "formulationIds": ["five-ps-biopsychosocial-spiritual", "transdiagnostic-process-map", "co-occurring-and-level-of-care"],
+  "models": [
+    {
+      "name": "Common factors and the contextual model",
+      "summary": "A framework that explains how therapies work through the relationship, expectations and specific actions, and that guides alliance-building, feedback and responsiveness in any model.",
+      "evidenceTier": "research-supported",
+      "evidence": "Wampold's 2015 review found strong evidence that the alliance, empathy, expectations and cultural adaptation matter for outcome; a 2018 meta-analysis of 295 studies found an alliance-outcome correlation of about .28 (Fluckiger et al., 2018).",
+      "trainingRequired": false
+    },
+    {
+      "name": "Present-centered and supportive therapies",
+      "summary": "Structured therapies that focus on current problems, coping and support without trauma processing or interpretation, often used as active comparisons and as treatments in their own right.",
+      "evidenceTier": "guideline-recommended",
+      "evidence": "The VA/DoD 2023 PTSD guideline suggests present-centered therapy, one tier below its strong recommendations for CPT, PE and EMDR.",
+      "trainingRequired": false
+    },
+    {
+      "name": "Transdiagnostic protocols (Unified Protocol)",
+      "summary": "Barlow's modular treatment for emotional disorders that targets shared processes such as avoidance and emotion regulation across anxiety and depression.",
+      "evidenceTier": "research-supported",
+      "evidence": "In a 2017 equivalence trial with 223 adults, the Unified Protocol was as effective as single-disorder protocols for anxiety disorders, with less dropout (Barlow et al., 2017).",
+      "trainingRequired": true
+    },
+    {
+      "name": "Process-based therapy",
+      "summary": "Hofmann and Hayes's approach of building person-specific models of the processes that keep a problem going and choosing evidence-based methods to change them, organized by an extended evolutionary meta-model.",
+      "evidenceTier": "limited",
+      "evidence": "Described in 2020 as a framework for organizing evidence-based methods rather than a new therapy, with little outcome data so far (Hayes, Hofmann and Ciarrochi, 2020).",
+      "trainingRequired": false
+    }
+  ],
+  "evidenceTier": "guideline-recommended",
+  "evidenceSummary": "Relationship factors predict outcome across therapies: the alliance (Fluckiger et al., 2018), empathy and agreement on goals, as summarized by the APA interdivisional task force (Norcross and Lambert, 2018) and Wampold's 2015 review. Adapting therapy to client characteristics also helps: accommodating preferences lowered dropout and improved outcomes (Swift et al., 2018), and less directive approaches did better for highly reactant clients (Beutler et al., 2018). Among integrative treatments, present-centered therapy is suggested in the VA/DoD 2023 PTSD guideline and the Unified Protocol matched single-disorder protocols in a 2017 trial. APA's 2005 policy defines evidence-based practice as integrating research with clinical expertise and patient characteristics, culture and preferences.",
+  "bestFit": [
+    "Clients with several co-occurring problems, where one model does not fit everything.",
+    "Clients for whom a first approach has stalled, after reviewing the alliance and formulation.",
+    "Mixed-orientation teams, supervision and training, as a shared language.",
+    "Any therapy, as the base of alliance, feedback and responsiveness."
+  ],
+  "cautions": [
+    "Integration is not permission to improvise outside your training; each borrowed method still needs the competence it calls for.",
+    "Switching methods too often can confuse clients and dilute effective treatment; change course for a reason and explain it.",
+    "For conditions with clear first-line treatments, such as PTSD, OCD or insomnia, make sure the client is offered them.",
+    "Monitoring is part of responsiveness. If outcome measures or feedback show worsening or thoughts of death or self-harm, follow your risk procedures and review crisis options: in the US call or text 988; elsewhere, the local emergency number or findahelpline.com."
+  ],
+  "whenToRefer": [
+    "When the method that best fits the client's problem is outside your training.",
+    "When repeated reviews show no progress: consult, then consider a different clinician, a specialist program or a higher level of care."
+  ],
+  "responsiveness": [
+    { "characteristic": "High reactance", "adaptation": "Clients who resist being told what to do tend to do better with a less directive stance: offer choices, use self-directed tasks, and avoid pushing homework or interpretations.", "evidence": "A 2018 meta-analysis of 13 studies found a large benefit of less directive therapy for highly reactant clients (Beutler, Edwards and Someah, 2018).", "practiceIds": ["preferences-goals-and-readiness", "alliance-and-rupture-repair"] },
+    { "characteristic": "Coping style", "adaptation": "Clients who cope by acting out or blaming others may benefit more from skill-building and symptom-focused methods; clients who cope by turning inward may benefit more from insight and awareness-focused methods.", "evidence": "Matching treatment to coping style was among the adaptations reviewed by the APA interdivisional task force (Norcross and Wampold, 2018).", "practiceIds": ["preferences-goals-and-readiness"] },
+    { "characteristic": "Preferences", "adaptation": "Ask about preferred format, focus, pace, directiveness and clinician characteristics, and accommodate them where possible, explaining when an alternative has stronger evidence.", "evidence": "In a 2018 meta-analysis, accommodating client preferences lowered dropout and modestly improved outcomes (Swift et al., 2018).", "practiceIds": ["preferences-goals-and-readiness", "shared-decision-making"] },
+    { "characteristic": "Readiness for change", "adaptation": "Match the work to where the client is: explore ambivalence before planning action, and plan action and maintenance once the client is committed.", "evidence": "Stage of change was among the client characteristics the APA interdivisional task force linked to adapting therapy (Norcross and Wampold, 2018).", "practiceIds": ["preferences-goals-and-readiness"] },
+    { "characteristic": "Religious or spiritual commitment", "adaptation": "For clients who want it, integrate their faith into the work with informed consent and in their own terms; never introduce or impose religious content.", "evidence": "Religiously and spiritually integrated therapies reduced distress about as well as standard approaches, with added spiritual well-being (Captari et al., 2018).", "practiceIds": ["shared-decision-making"] },
+    { "characteristic": "Culture and identity", "adaptation": "Adapt language, examples, goals and delivery to the client's culture while keeping a treatment's core elements, and broach identity and power when relevant.", "evidence": "Culturally adapted interventions outperformed comparisons across 99 studies (Soto et al., 2018).", "practiceIds": ["multicultural-orientation-and-broaching"] },
+    { "characteristic": "Not on track", "adaptation": "When session measures show no change or worsening, review the alliance, formulation, fit and intensity with the client, consult, and consider a step up in care.", "evidence": "APA's 2005 policy on evidence-based practice treats ongoing monitoring of progress and adjusting treatment as essential.", "practiceIds": ["outcome-monitoring", "alliance-and-rupture-repair"] }
+  ],
+  "trainingRequired": false,
+  "trainingNote": "Integrative practice rests on broad training, supervision and outcome monitoring. Each specific method you integrate still requires its own training; transdiagnostic protocols such as the Unified Protocol have dedicated training.",
+  "trainingPath": [
+    { "body": "Society for the Exploration of Psychotherapy Integration (SEPI)", "url": "https://sepiweb.org/", "note": "International society for psychotherapy integration, with conferences and the Journal of Psychotherapy Integration." },
+    { "body": "Unified Protocol Institute", "url": "https://unifiedprotocol.com/training", "note": "Training levels and consultation in the Unified Protocol." }
+  ],
+  "ethicsPrompts": [
+    { "prompt": "Practice within your training: integrate only methods you are competent in, and get training or consultation before adding new ones.", "legalIds": ["competence-and-scope-of-practice"] },
+    { "prompt": "Explain changes of approach to the client as part of ongoing informed consent, and record them in the plan.", "legalIds": ["treatment-plans-and-client-access", "ethical-decision-making"] }
+  ],
+  "culturalNotes": [
+    "The alliance and expectations are shaped by culture; ask what the client expects therapy and a therapist to be like.",
+    "Feedback measures may feel unfamiliar or intrusive to some clients; explain their purpose and invite honest answers.",
+    "Integrating faith, family or traditional healing that the client values is part of responsiveness when the client asks for it."
+  ],
+  "handoutIds": ["what-to-expect-in-therapy", "session-check-in-card", "my-therapy-summary"],
+  "relatedPracticeIds": ["alliance-and-rupture-repair", "outcome-monitoring", "preferences-goals-and-readiness", "shared-decision-making", "multicultural-orientation-and-broaching", "supervision-and-consultation"],
+  "relatedPopulationIds": ["cultural-adaptation", "spiritually-integrated"],
+  "sources": [
+    { "title": "How important are the common factors in psychotherapy? An update (Wampold)", "publisher": "World Psychiatry (PubMed Central)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4592639", "year": 2015 },
+    { "title": "Psychotherapy relationships that work III (Norcross and Lambert)", "publisher": "Psychotherapy (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/30335448/", "year": 2018 },
+    { "title": "The alliance in adult psychotherapy: a meta-analytic synthesis (Fluckiger, Del Re, Wampold and Horvath)", "publisher": "Psychotherapy (APA)", "url": "https://doi.org/10.1037/pst0000172", "year": 2018 },
+    { "title": "A new therapy for each patient: evidence-based relationships and responsiveness (Norcross and Wampold)", "publisher": "Journal of Clinical Psychology (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/30334258/", "year": 2018 },
+    { "title": "Adapting psychotherapy to patient reactance level: a meta-analytic review (Beutler, Edwards and Someah)", "publisher": "Journal of Clinical Psychology", "url": "https://doi.org/10.1002/jclp.22682", "year": 2018 },
+    { "title": "The impact of accommodating client preference in psychotherapy: a meta-analysis (Swift, Callahan, Cooper and Parkin)", "publisher": "Journal of Clinical Psychology (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/30091140/", "year": 2018 },
+    { "title": "Integrating clients' religion and spirituality within psychotherapy: a comprehensive meta-analysis (Captari et al.)", "publisher": "Journal of Clinical Psychology (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/30221353/", "year": 2018 },
+    { "title": "Cultural adaptations and therapist multicultural competence: two meta-analytic reviews (Soto et al.)", "publisher": "Journal of Clinical Psychology (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/30091201/", "year": 2018 },
+    { "title": "Policy Statement on Evidence-Based Practice in Psychology", "publisher": "American Psychological Association", "url": "https://www.apa.org/practice/guidelines/evidence-based-statement", "year": 2005 },
+    { "title": "The Unified Protocol for transdiagnostic treatment of emotional disorders compared with diagnosis-specific protocols for anxiety disorders: a randomized clinical trial (Barlow et al.)", "publisher": "JAMA Psychiatry", "url": "https://doi.org/10.1001/jamapsychiatry.2017.2164", "year": 2017 },
+    { "title": "A process-based approach to psychological diagnosis and treatment: the conceptual and treatment utility of an extended evolutionary meta model (Hayes, Hofmann and Ciarrochi)", "publisher": "Clinical Psychology Review (PubMed Central)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7680437", "year": 2020 },
+    { "title": "Psychotherapy for PTSD (VA/DoD 2023 guideline summary)", "publisher": "Psychological Health Center of Excellence, Defense Health Agency", "url": "https://health.mil/Reference-Center/Publications/2024/01/04/Psychotherapy-for-PTSD", "year": 2024 }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

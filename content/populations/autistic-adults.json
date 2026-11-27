@@ -1,0 +1,88 @@
+{
+  "id": "autistic-adults",
+  "name": "Autistic adults",
+  "group": "disability-and-communication",
+  "summary": "Neurodiversity-affirming adaptations for autistic adults: concrete, written and visual therapy, a sensory plan, support with naming emotions, telling sensory overload and burnout apart from social anxiety, masking and suicide risk, and routes to adult assessment.",
+  "scopeNote": "For adults (18 and over), whether or not they have a formal autism diagnosis. The app never asks for or saves a diagnosis or assessment result; screening tools are link-outs, and recognition or referral for assessment is a conversation with the person.",
+  "whyItMatters": "NICE CG142 (2012, updated 2021) recommends adapting psychosocial interventions for autistic adults with more concrete and structured methods, visual and written information, and attention to the sensory environment. In a specialist adult diagnostic clinic, 66 percent of adults newly diagnosed with Asperger's syndrome reported suicidal thoughts and 35 percent reported plans or attempts (Cassidy and colleagues, 2014); camouflaging autistic traits and unmet support needs were later linked to suicidality (Cassidy and colleagues, 2018). A Swedish population study found premature mortality, including suicide, raised among autistic people (Hirvikoski and colleagues, 2016). Autistic adults have described autistic burnout as exhaustion, loss of skills and lower tolerance to stimulation after long periods of strain (Raymaker and colleagues, 2020).",
+  "askAbout": [
+    "How do you like to communicate in sessions: talking, writing, typing, pictures or a mix?",
+    "Is there anything about this room, the lighting, sounds or timing that we could change?",
+    "Would it help to have an agenda in advance and a written summary afterwards?",
+    "How do you notice your emotions, and are there words, scales or colors that work for you?",
+    "Do you spend a lot of energy hiding or adjusting how you act around other people?",
+    "What interests or routines help you feel steady, and how could we use them here?"
+  ],
+  "stereotypeCaution": "Autistic people differ widely in communication, support needs, interests and preferences. Some prefer identity-first language (autistic person), others person-first; ask. Do not assume someone lacks empathy, has no friends, cannot work, or has no interest in relationships, and do not treat autistic traits themselves as the problem to fix.",
+  "keyConsiderations": [
+    "Aim to reduce distress and support the person's own goals, not to make them appear less autistic.",
+    "Sensory overload, social exhaustion and autistic burnout can look like social anxiety, depression or avoidance; ask what drives the avoidance before planning exposure.",
+    "Masking or camouflaging, hiding traits to fit in, is often exhausting and has been linked with depression and suicidality.",
+    "Alexithymia, difficulty identifying and naming emotions, is common; build emotional vocabulary with concrete tools rather than expecting it.",
+    "Co-occurring anxiety, depression, ADHD, sleep problems and gastrointestinal or other physical health issues are common and each deserves its own assessment.",
+    "Many adults recognize themselves as autistic only in adulthood; recognition can bring relief, grief or both, and adult assessment routes vary by region and can have long waits.",
+    "Workplace and study accommodations, and peer communities run by autistic people, can matter as much as therapy."
+  ],
+  "assessmentAdaptations": [
+    "Ask concrete, specific questions one at a time, avoid idioms and hypothetical leaps, and allow extra time to answer, including in writing.",
+    "Do not rely on eye contact, facial expression or tone to judge mood; ask the person directly how they feel and how they usually show it.",
+    "Ask about sensory sensitivities, routines and change, and what happens when demands exceed capacity, including shutdowns or meltdowns.",
+    "When autism has not been identified before and the person is interested, discuss adult assessment and a brief screening questionnaire as a link-out, not as a diagnosis."
+  ],
+  "sessionAdaptations": [
+    "Keep a predictable structure: the same time and room, an agenda shared in advance, clear start and finish, and notice of any changes.",
+    "Use written, visual and concrete materials, such as diagrams, numbered steps and rating scales, and fewer metaphors; check that words are understood literally as intended.",
+    "Agree on a sensory plan for sessions: lighting, noise, seating, fidget items, breaks and the option to keep the camera off on video.",
+    "Use special interests as bridges for examples, motivation and rapport, when the person welcomes it.",
+    "Offer longer or more sessions when needed, and involve a supporter only with the person's consent."
+  ],
+  "interventionNotes": [
+    { "interventionId": "thought-record", "note": "Use a structured, visual version with fixed columns and examples, and practise in session before any home use." },
+    { "interventionId": "graded-in-vivo-exposure", "note": "Separate fear from sensory discomfort first; exposure to sensations that are painful or overwhelming is not the goal, and accommodations may be the better answer." },
+    { "interventionId": "behavioral-activation", "note": "Plan activity with energy limits in mind to avoid burnout, and include restorative time alone." },
+    { "interventionId": "problem-solving", "note": "Concrete, step-by-step problem-solving suits many autistic adults; write each step down." },
+    { "interventionId": "collaborative-safety-planning", "note": "Write the plan in clear, literal steps and include sensory soothing and ways to reach help by text if speaking is hard." },
+    { "orientationId": "behavior-therapy", "note": "Functional analysis helps separate what a behavior does for the person (for example, reducing sensory load) from assumptions about its cause." }
+  ],
+  "measureNotes": [
+    "PHQ-9 and GAD-7 wording can be read very literally; check how the person interpreted items such as feeling down or restless, and offer to read items together.",
+    "Difficulty identifying emotions can lower or raise scores; combine scores with observed changes in sleep, routines, shutdowns and functioning.",
+    "Autism screening questionnaires are not diagnostic and can miss people who mask; use them only to support a referral conversation."
+  ],
+  "measuresPending": [
+    { "name": "Autism Spectrum Quotient, 10-item adult short form (AQ-10)", "url": "https://pubmed.ncbi.nlm.nih.gov/22265366/", "licenseKey": "AQ-10" }
+  ],
+  "safetyNotes": [
+    "Suicidal thoughts and attempts are reported far more often by autistic adults than by the general population; ask directly and literally, for example whether they have thought about killing themselves.",
+    "Distress may show as shutdown, withdrawal or a change in routines rather than as words; agree in advance how the person will signal that they are not safe.",
+    "Offer crisis options that do not require speaking, such as texting 988 or Crisis Text Line in the US."
+  ],
+  "cautions": [
+    "Do not set therapy goals of suppressing harmless autistic behaviors such as stimming, special interests or preferred routines.",
+    "Facilitated communication, in which another person guides the hand of someone who uses a keyboard or letter board, is not a valid way to obtain the person's own words; use only communication the person produces independently or with established augmentative tools."
+  ],
+  "legalIds": ["competence-and-scope-of-practice", "digital-accessibility"],
+  "ethicsIds": [],
+  "referralIds": ["job-accommodation-network", "988-lifeline", "crisis-text-line"],
+  "referralKinds": ["disability"],
+  "handoutIds": ["session-check-in-card", "between-session-practice-plan", "what-to-expect-in-therapy"],
+  "topicIds": [],
+  "practiceIds": ["intake-assessment", "mental-status-exam", "between-session-practice", "teach-back-and-plain-language", "diagnostic-reasoning-checks"],
+  "formulationIds": ["functional-analysis"],
+  "linkOuts": [
+    { "title": "Autism spectrum disorder in adults: diagnosis and management (CG142)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/cg142", "lastVerified": "2026-11-27" },
+    { "title": "Autism Spectrum Disorder", "publisher": "National Institute of Mental Health", "url": "https://www.nimh.nih.gov/health/publications/autism-spectrum-disorder", "lastVerified": "2026-11-27" }
+  ],
+  "sud": false,
+  "sources": [
+    { "title": "Autism spectrum disorder in adults: diagnosis and management (CG142)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/cg142", "year": 2021 },
+    { "title": "Suicidal ideation and suicide plans or attempts in adults with Asperger's syndrome attending a specialist diagnostic clinic: a clinical cohort study (Cassidy and colleagues)", "publisher": "Lancet Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/26360578/", "year": 2014 },
+    { "title": "Risk markers for suicidality in autistic adults (Cassidy and colleagues)", "publisher": "Molecular Autism (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/30083306/", "year": 2018 },
+    { "title": "Premature mortality in autism spectrum disorder (Hirvikoski and colleagues)", "publisher": "British Journal of Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/26541693/", "year": 2016 },
+    { "title": "Having all of your internal resources exhausted beyond measure and being left with no clean-up crew: defining autistic burnout (Raymaker and colleagues)", "publisher": "Autism in Adulthood (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/32851204/", "year": 2020 },
+    { "title": "Toward brief Red Flags for autism screening: the Short Autism Spectrum Quotient and the Short Quantitative Checklist in 1,000 cases and 3,000 controls (Allison and colleagues)", "publisher": "Journal of the American Academy of Child and Adolescent Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/22265366/", "year": 2012 }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

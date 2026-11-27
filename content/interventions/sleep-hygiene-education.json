@@ -38,6 +38,7 @@
     "Night prayer, religious fasting and shift work shape sleep routines. Build advice around the client's schedule. Translate handouts or use a professional interpreter when needed."
   ],
   "handoutIds": ["sleep-habits", "sleep-diary"],
+  "orientationIds": ["behavior-therapy"],
   "sources": [
     { "title": "Behavioral and psychological treatments for chronic insomnia disorder in adults: an American Academy of Sleep Medicine clinical practice guideline (Edinger et al.)", "publisher": "Journal of Clinical Sleep Medicine (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/33164742/", "year": 2021 },
     { "title": "Behavioral and Psychological Treatments for Insomnia: patient guide", "publisher": "American Academy of Sleep Medicine", "url": "https://aasm.org/wp-content/uploads/2021/08/Behavioral-and-Psychological-Treatments-for-Insomnia-Patient-Guide.pdf", "year": 2021 },

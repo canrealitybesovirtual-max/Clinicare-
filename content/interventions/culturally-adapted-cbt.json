@@ -1,0 +1,57 @@
+{
+  "id": "culturally-adapted-cbt",
+  "name": "Culturally adapted CBT for traumatized refugees and ethnic minority clients (CA-CBT) - overview and referral",
+  "modality": "Culturally adapted CBT (CA-CBT) for trauma and panic",
+  "conditions": ["ptsd", "panic-disorder"],
+  "evidenceLevel": "In a randomized cross-over trial with 40 Cambodian refugees whose PTSD and panic attacks had not responded to medication, culturally adapted CBT produced large improvements in PTSD, anxiety sensitivity and culturally specific panic attacks compared with delayed treatment (Hinton et al., 2005). The developers describe 12 key aspects of adapting CBT for traumatized refugees and ethnic minority groups, including attention to body sensations and their cultural meanings (Hinton et al., 2012). Trials are small and mostly from the developers' group, so evidence is promising but limited.",
+  "minutes": { "min": 10, "max": 20 },
+  "purpose": "Culturally adapted CBT (CA-CBT) was developed with traumatized refugee and ethnic minority populations and was first tested with Cambodian refugees. It recognizes that many people experience trauma and anxiety mainly through the body, and that cultural explanations can make bodily sensations (for example dizziness, neck tension or palpitations) seem dangerous, which fuels panic and trauma memories. Treatment works with these culturally specific fears, uses metaphors and practices that fit the client's culture (for example stretching paired with calming self-statements, or images from local traditions), and teaches emotion regulation and psychological flexibility. This entry covers overview and referral only, and the time estimate is for that conversation. It contains no protocol materials.",
+  "steps": [
+    "Ask how the client and their community understand their distress, including what bodily sensations mean to them and what they fear might happen. Use cultural formulation questions.",
+    "Ask about traumatic experiences only as far as the client wants to share, and about current stressors such as migration status, housing, work, family separation and discrimination.",
+    "Explain in plain language that frightening body sensations and memories can feed each other, and that there are treatments adapted to fit the client's culture and ways of understanding.",
+    "Discuss options, including culturally adapted CBT where available, other trauma-focused therapies with interpreter support, and community-based programs. Support an informed choice.",
+    "Refer to a clinician or service experienced with culturally adapted treatment for refugees and ethnic minority clients, with a trained professional interpreter where needed.",
+    "Meanwhile, offer simple, culturally fitting calming practices and help with practical needs.",
+    "Follow up to confirm the referral was completed and the client was able to start."
+  ],
+  "script": [
+    "When you feel these sensations in your body, what do you worry is happening?",
+    "In your community, how do people explain this kind of suffering? What do people usually do to feel better?",
+    "Sometimes body sensations and painful memories set each other off. There are treatments that work on both, in ways that fit your culture.",
+    "We will use an interpreter you trust, so you can speak in your own language.",
+    "Would you like help finding someone who does this kind of work?"
+  ],
+  "contraindications": [
+    "Ongoing threats, such as unsafe housing, exploitation or risk of detention or deportation, need practical and legal help alongside or before therapy. Connect the client with legal aid or refugee services.",
+    "Rule out medical causes of physical symptoms with the client's medical provider, especially when sensations are new or severe.",
+    "If the client has suicidal thoughts, address safety first. This app does not judge risk; you do. Crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com.",
+    "Do not assume a client's beliefs from their nationality or ethnicity. Cultural adaptation starts from the individual client's own understanding.",
+    "Do not attempt CA-CBT protocols without training in them."
+  ],
+  "culturalAdaptations": [
+    "This entry is itself a cultural adaptation. Adapt further with the client: language, metaphors, spiritual practices, gender of the clinician, and family involvement.",
+    "Respect traditional and religious healing practices the client uses, and coordinate where helpful and safe.",
+    "Use a trained professional interpreter rather than family members, especially children, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "trainingRequired": "CA-CBT: trained clinicians only. There is no formal certifying body; deliver only after training in the model from its developers' published materials and workshops, with consultation, and with competence in working through interpreters. Otherwise refer.",
+  "handoutIds": ["breathing-practice", "panic-cycle"],
+  "orientationIds": ["cognitive-therapy", "multicultural-feminist-liberation"],
+  "sources": [
+    {
+      "title": "A randomized controlled trial of cognitive-behavior therapy for Cambodian refugees with treatment-resistant PTSD and panic attacks: a cross-over design (Hinton et al.)",
+      "publisher": "Journal of Traumatic Stress (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16382423/",
+      "year": 2005
+    },
+    {
+      "title": "Adapting CBT for traumatized refugees and ethnic minority patients: examples from culturally adapted CBT (CA-CBT) (Hinton et al.)",
+      "publisher": "Transcultural Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22508639/",
+      "year": 2012
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

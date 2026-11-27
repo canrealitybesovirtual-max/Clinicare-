@@ -46,6 +46,7 @@
     "consentNote": "Offer only if the client raises faith or spirituality as a resource, and only after informed consent. Explain that the faith element is optional, that the standard version works without it, and that the client can change or stop it at any time. Use the client's own beliefs and words; never introduce or impose religious content. Record the consent discussion in your own clinical record, not in this app. See the AACC Code of Ethics on consent for spiritual interventions and the ACA Code of Ethics on informed consent and not imposing counselor values."
   },
   "handoutIds": ["breathing-practice"],
+  "orientationIds": ["behavior-therapy"],
   "sources": [
     {
       "title": "Relaxation Techniques: What You Need To Know",

@@ -1,0 +1,107 @@
+{
+  "id": "existential-therapy",
+  "name": "Existential and meaning-centered therapies (including logotherapy)",
+  "shortName": "Existential",
+  "family": "existential",
+  "summary": "Distress is understood in the light of the basic givens of human life, such as mortality, freedom, isolation and the search for meaning. The therapist offers presence and honest engagement while the client explores what gives their life meaning and how to live by it.",
+  "keyConcepts": [
+    { "term": "Existential givens", "meaning": "Concerns every person faces: death and limits, freedom and responsibility for choices, ultimate aloneness, and the need to find or make meaning." },
+    { "term": "Will to meaning", "meaning": "Frankl's view that the search for meaning is a primary human motive, and that meaning can be found through what we create, what we experience and love, and the stance we take toward unavoidable suffering." },
+    { "term": "Authenticity", "meaning": "Living in line with one's own values and choices rather than avoiding them or deferring entirely to others' expectations." },
+    { "term": "Existential anxiety and guilt", "meaning": "Normal unease that comes with freedom, uncertainty and unlived possibilities, distinguished from anxiety that needs symptom-focused treatment." },
+    { "term": "Presence", "meaning": "The therapist's full, genuine attention in the here and now, as one human being facing these questions alongside another." }
+  ],
+  "viewOfProblem": "Many problems involve a struggle with the givens of life: a serious illness that confronts the person with mortality, a loss that empties life of meaning, a choice the person cannot face, or isolation that feels unbearable. Avoiding these questions can show up as anxiety, numbness, despair or rigid ways of living. These concerns are seen as part of being human, not as signs of illness.",
+  "viewOfChange": "Change comes from facing these concerns openly in a supportive relationship, taking ownership of choices, and discovering or reaffirming sources of meaning such as relationships, work, creativity, faith or legacy. Meaning-centered and dignity approaches use structured sessions to help people with serious illness or at the end of life connect with what matters and what they want to leave behind.",
+  "therapistStance": "Present, genuine and philosophically curious. The clinician engages as a person, tolerates uncertainty and hard questions without rushing to fix them, and respects the client's freedom to find their own answers. Structured meaning-centered formats are more guided and psychoeducational.",
+  "sessionShape": [
+    "Open with what is weighing on the client now.",
+    "Explore the deeper concern beneath the presenting problem, such as loss of meaning, a choice or fear of death.",
+    "Reflect and question together, honoring the client's beliefs and doubts.",
+    "In structured formats, work through the session's theme, such as sources of meaning or legacy.",
+    "Close by naming one way the client wants to live their values or meaning this week."
+  ],
+  "goalStyle": "Goals describe meaning, choice and engagement in the client's terms: for example, identify three sources of meaning and plan one activity linked to each over the next month, or make a decision the client has been avoiding about care or relationships. Write each goal with the client in their own words.",
+  "progressMarkers": [
+    "Client's sense of meaning and purpose, described or rated by the client.",
+    "Engagement in chosen, meaningful activities.",
+    "Symptom measures, where low mood or anxiety are also present."
+  ],
+  "typicalTechniques": [
+    "existential-meaning-exploration",
+    "meaning-centered-and-dignity-therapy",
+    "reminiscence-and-life-review"
+  ],
+  "relatedTechniques": ["act-values-clarification", "person-centered-reflective-listening"],
+  "missingTechniques": [
+    { "name": "Socratic dialogue toward meaning (logotherapy)", "note": "Frankl's guided questioning to help a person find meaning in their situation; overview only." },
+    { "name": "Dereflection and paradoxical intention", "note": "Logotherapy techniques for shifting attention away from oneself or approaching a feared outcome with humor; overview only, limited evidence." }
+  ],
+  "formulationIds": ["five-ps-biopsychosocial-spiritual", "moral-injury"],
+  "models": [
+    {
+      "name": "Meaning-centered and dignity approaches",
+      "summary": "Structured, time-limited approaches that help people facing serious illness or the end of life reflect on sources of meaning, identity and legacy.",
+      "evidenceTier": "research-supported",
+      "evidence": "A 2015 meta-analysis of existential therapies found the clearest benefits for meaning-centered approaches, with moderate effects on psychopathology and larger effects on meaning in life (Vos, Craig and Cooper, 2015).",
+      "trainingRequired": false
+    },
+    {
+      "name": "Existential psychotherapy",
+      "summary": "Open-ended exploration of the givens of existence, choice and authenticity, in the traditions of Yalom, May and European existential analysis.",
+      "evidenceTier": "limited",
+      "evidence": "In the same 2015 meta-analysis, experiential-existential approaches without a meaning-centered structure showed no clear effect, from few and small studies (Vos, Craig and Cooper, 2015).",
+      "trainingRequired": false
+    },
+    {
+      "name": "Logotherapy",
+      "summary": "Frankl's meaning-centered therapy, using Socratic dialogue, dereflection and paradoxical intention.",
+      "evidenceTier": "emerging",
+      "evidence": "A 2025 meta-analysis of 35 studies found large effects on depressive symptoms against active controls, but with high heterogeneity, many non-randomized designs and most studies from a few regions (Cornelius-White et al., 2025).",
+      "trainingRequired": false
+    }
+  ],
+  "evidenceTier": "research-supported",
+  "evidenceSummary": "Evidence is strongest for structured, meaning-centered approaches: a 2015 meta-analysis found moderate effects on psychopathology and larger effects on meaning in life, while open-ended experiential-existential approaches showed no clear effect, based on few and small studies (Vos, Craig and Cooper, 2015). A 2025 meta-analysis of logotherapy reported large effects on depressive symptoms but high heterogeneity and many non-randomized studies. No major guideline recommends existential therapy as a stand-alone treatment; use it alongside evidence-based care for depression or anxiety.",
+  "bestFit": [
+    "Serious or life-limiting illness, aging and end-of-life concerns.",
+    "Grief, major losses and life transitions that bring questions of meaning.",
+    "Clients who want to reflect on purpose, values, faith or legacy.",
+    "Adjustment problems where the core concern is choice or meaning rather than a symptom pattern."
+  ],
+  "cautions": [
+    "Existential distress can sit alongside depression or suicidal thinking; screen for these and treat them, rather than framing all despair as philosophical.",
+    "Talk of death and meaninglessness can raise risk. Follow your risk procedures and review crisis options: in the US call or text 988; elsewhere, the local emergency number or findahelpline.com.",
+    "Respect the client's own beliefs; do not steer toward or away from religious or spiritual answers.",
+    "In palliative care, coordinate with the care team and respect the person's energy, symptoms and wishes about pacing."
+  ],
+  "whenToRefer": [
+    "Depression or anxiety severe enough to need first-line treatment, alongside existential work.",
+    "Spiritual distress that the client wants addressed within their faith: offer a chaplain or faith leader, with consent."
+  ],
+  "trainingRequired": false,
+  "trainingNote": "Existential sensitivity can be developed through reading, supervision and personal reflection. Structured meaning-centered protocols have manuals and training for palliative settings, and logotherapy has accredited training institutes.",
+  "trainingPath": [
+    { "body": "Viktor Frankl Institute Vienna (accreditation)", "url": "https://viktorfrankl.org/accreditationENG.html", "note": "Accreditation of logotherapy and existential analysis training institutes worldwide." }
+  ],
+  "ethicsPrompts": [
+    { "prompt": "Practice within your training: offer structured meaning-centered or logotherapy techniques only after learning them, and use supervision when working with dying clients.", "legalIds": ["competence-and-scope-of-practice"] },
+    { "prompt": "When end-of-life wishes or decisions come up, check capacity and the legal framework for advance planning, and coordinate with the care team.", "legalIds": ["decision-making-capacity", "psychiatric-advance-directives"] }
+  ],
+  "culturalNotes": [
+    "Meaning, death and the self are understood very differently across cultures and faiths; let the client's worldview lead.",
+    "For many people, meaning is found in family, ancestors, community or God rather than in individual choice; honor that.",
+    "Ask about rituals and practices around illness and death that matter to the client and their family."
+  ],
+  "handoutIds": ["values-compass", "grief-and-loss"],
+  "relatedPracticeIds": ["clinician-reactions-and-self-disclosure", "ending-therapy-and-boosters"],
+  "relatedPopulationIds": ["serious-medical-illness", "older-adults", "spiritually-integrated"],
+  "sources": [
+    { "title": "Existential therapies: a meta-analysis of their effects on psychological outcomes (Vos, Craig and Cooper)", "publisher": "Journal of Consulting and Clinical Psychology (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/25045907/", "year": 2015 },
+    { "title": "Logotherapy for depressive symptoms: a meta-analysis of passive and active control studies (Cornelius-White et al.)", "publisher": "Journal of Humanistic Counseling (Missouri State BearWorks)", "url": "https://bearworks.missouristate.edu/articles00/131/", "year": 2025 },
+    { "title": "Viktor Frankl Institute: accreditation of logotherapy training", "publisher": "Viktor Frankl Institute Vienna", "url": "https://viktorfrankl.org/accreditationENG.html" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

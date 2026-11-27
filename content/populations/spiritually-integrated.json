@@ -1,0 +1,81 @@
+{
+  "id": "spiritually-integrated",
+  "name": "Spiritually integrated care",
+  "group": "culture-and-identity",
+  "summary": "Client-led integration of religion and spirituality across traditions, including secular and nonreligious clients: an original spiritual history, a consent checkpoint, practical faith considerations in treatment plans, spiritual struggles and religious harm.",
+  "scopeNote": "For adults (18 and over). The app never asks for or saves a person's religion, beliefs or practices. Integration happens only when the person asks for it, and the clinician never promotes or discourages any belief.",
+  "whyItMatters": "A meta-analysis of 97 studies found that psychotherapies integrating clients' religion and spirituality did as well as or better than standard versions on psychological outcomes and better on spiritual outcomes (Captari and colleagues, 2018). Religiously integrated CBT for depression in people with chronic medical illness performed comparably to conventional CBT in a pilot trial (Koenig and colleagues, 2015). Spiritual struggles, such as feeling abandoned or punished by God, predicted higher mortality among medically ill older adults (Pargament and colleagues, 2001), so asking about struggle matters as much as asking about comfort. Brief spiritual history frameworks such as HOPE (Anandarajah and Hight, 2001) and FICA (Puchalski and Romer, 2000) show that a few respectful questions can open the topic.",
+  "askAbout": [
+    "Is religion, spirituality or a sense of meaning important in your life, and in what way?",
+    "Would you like your beliefs or practices to be part of our work, not part of it, or are you unsure for now?",
+    "Where do you find hope, strength or peace when things are hard?",
+    "Is there a community, leader or practice that supports you, and would you want them involved?",
+    "Have your beliefs or your community also been a source of pain, guilt, fear or conflict?",
+    "Are there practices such as fasting, prayer times, dietary rules or rest days that our plan should work around?"
+  ],
+  "stereotypeCaution": "Belonging to a tradition tells you little about what a person believes or practices. People hold beliefs with different strength, mix traditions, doubt, leave and return, and some find meaning without religion at all. Do not assume religious views on mental health, sexuality, medication or family roles from affiliation; ask what the person believes and wants.",
+  "keyConsiderations": [
+    "Integration is client-led and needs informed consent: describe what spiritually integrated work would and would not involve, and check consent again if the focus shifts.",
+    "Stay within competence. Know the difference between respecting and using a person's beliefs in therapy and giving religious guidance, which belongs to their faith leaders.",
+    "With consent, collaborate with a chaplain, clergy member or faith leader the person chooses; agree first on what may be shared.",
+    "Spiritual struggles (anger at God, guilt, doubt, conflict with a community) deserve the same care as spiritual comfort and are not signs of weak faith.",
+    "Religious and spiritual harm, including spiritual abuse and coercive control by a leader or group, can be a form of trauma; explore it with care and without attacking the person's faith.",
+    "For secular and nonreligious clients, meaning, values and community still matter; do not assume that spirituality is relevant, or that it is not."
+  ],
+  "assessmentAdaptations": [
+    "Offer a brief spiritual history early and as an option, using original questions like those above; FICA and HOPE are published frameworks to read before adapting the questions to your own voice.",
+    "Distinguish culturally shared religious experiences from symptoms by learning what is usual and accepted in the person's tradition, asking the person and, with consent, their community.",
+    "When guilt or fear centers on religious rules, explore whether it fits the person's own tradition or has the repetitive, doubting pattern of scrupulosity.",
+    "Ask how beliefs shape views on medication, therapy and help-seeking, and whether any community members disapprove of treatment."
+  ],
+  "sessionAdaptations": [
+    "Plan around practices: fasting can affect medication timing and energy (raise timing questions with the prescriber), prayer times and rest days affect scheduling, and dietary rules matter in behavioral activation and exposure plans.",
+    "Ask about preferences for the clinician's gender and for modest settings or chaperones where these matter to the person.",
+    "With consent, use the person's own sacred texts, practices or images to support coping, values work or self-compassion; avoid offering your own beliefs.",
+    "For scrupulosity, keep exposure and response prevention as the core and, with consent, consult a clergy member the person trusts about what the tradition actually requires."
+  ],
+  "interventionNotes": [
+    { "interventionId": "religiously-integrated-cbt", "note": "Integrates the person's own faith resources into cognitive and behavioral work; use only when the person asks for it." },
+    { "interventionId": "exposure-and-response-prevention", "note": "In religious scrupulosity, design exposures that respect the tradition's actual requirements, agreed with the person and, if they wish, a trusted faith leader." },
+    { "interventionId": "existential-meaning-exploration", "note": "Fits clients who want to explore meaning, purpose or suffering in spiritual or secular terms." },
+    { "interventionId": "behavioral-activation", "note": "Include worship, service and community practices as valued activities when they matter to the person, and respect dietary and rest-day rules." },
+    { "orientationId": "existential-therapy", "note": "Questions of meaning, death and freedom can be explored with religious and nonreligious clients alike." }
+  ],
+  "measureNotes": [
+    "Some PHQ-9 and GAD-7 items, such as guilt or worry, can overlap with religious language about sin or moral concern; ask what an answer meant before reading it as a symptom.",
+    "Published religious and spiritual struggle scales exist but are not built into this app; read them in the research literature before using them."
+  ],
+  "measuresPending": [],
+  "safetyNotes": [
+    "Spiritual struggle, shame or fear of punishment can sit alongside suicidal thoughts; ask directly. Faith-based reasons for living can be included in a safety plan if the person names them.",
+    "Coercive groups or leaders can isolate people and control contact with services; ask about freedom to leave, to use phones and to seek care."
+  ],
+  "cautions": [
+    "Never use religious or spiritual framing to pressure a person about sexual orientation, gender identity, staying in an unsafe relationship or stopping medication.",
+    "Do not pray with, preach to or advise a client on religious matters unless that is within your role, competence and code, and the person has clearly asked for it."
+  ],
+  "legalIds": ["conversion-practices", "multiple-relationships-and-boundaries", "competence-and-scope-of-practice"],
+  "ethicsIds": ["aacc-code-of-ethics", "aca-code-of-ethics", "apa-ethical-principles-psychologists"],
+  "referralIds": ["988-lifeline"],
+  "referralKinds": [],
+  "handoutIds": ["values-compass", "kind-self-talk", "three-emotion-systems"],
+  "topicIds": [],
+  "practiceIds": ["multicultural-orientation-and-broaching", "preferences-goals-and-readiness", "shared-decision-making"],
+  "formulationIds": ["five-ps-biopsychosocial-spiritual"],
+  "linkOuts": [
+    { "title": "Spirituality and medical practice: using the HOPE questions as a practical tool for spiritual assessment (Anandarajah and Hight)", "publisher": "American Family Physician (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/11195773/", "note": "A published spiritual history framework; read it before writing questions in your own words.", "lastVerified": "2026-11-27" },
+    { "title": "Taking a spiritual history allows clinicians to understand patients more fully (Puchalski and Romer)", "publisher": "Journal of Palliative Medicine (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/15859737/", "note": "Describes the FICA spiritual history; FICA itself is copyrighted, so it is linked here and not reproduced.", "lastVerified": "2026-11-27" },
+    { "title": "Spirituality in Cancer Care (PDQ)", "publisher": "National Cancer Institute", "url": "https://www.cancer.gov/about-cancer/coping/day-to-day/faith-and-spirituality/spirituality-pdq", "note": "Health professional summary on spiritual assessment and care in serious illness.", "lastVerified": "2026-11-27" }
+  ],
+  "sud": false,
+  "sources": [
+    { "title": "Integrating clients' religion and spirituality within psychotherapy: a comprehensive meta-analysis (Captari and colleagues)", "publisher": "Journal of Clinical Psychology (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/30221353/", "year": 2018 },
+    { "title": "Religious vs. conventional cognitive behavioral therapy for major depression in persons with chronic medical illness: a pilot randomized trial (Koenig and colleagues)", "publisher": "Journal of Nervous and Mental Disease (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/25816046/", "year": 2015 },
+    { "title": "Religious struggle as a predictor of mortality among medically ill elderly patients: a 2-year longitudinal study (Pargament and colleagues)", "publisher": "Archives of Internal Medicine (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/11493130/", "year": 2001 },
+    { "title": "Spirituality and medical practice: using the HOPE questions as a practical tool for spiritual assessment (Anandarajah and Hight)", "publisher": "American Family Physician (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/11195773/", "year": 2001 },
+    { "title": "Taking a spiritual history allows clinicians to understand patients more fully (Puchalski and Romer)", "publisher": "Journal of Palliative Medicine (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/15859737/", "year": 2000 }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

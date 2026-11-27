@@ -2,7 +2,7 @@
   "id": "applied-relaxation",
   "name": "Applied relaxation",
   "modality": "Relaxation - applied (coping skill)",
-  "conditions": ["generalized-anxiety-disorder", "panic-disorder"],
+  "conditions": ["generalized-anxiety-disorder", "panic-disorder", "sedative-hypnotic-use-disorder"],
   "evidenceLevel": "GAD: NICE CG113 lists applied relaxation as a high-intensity psychological option alongside CBT, and Hayes-Skelton et al. (2013) describe it as an efficacious treatment for GAD. Panic: APA Division 12 lists applied relaxation for panic with modest research support (check the current rating), and a 2018 component network meta-analysis (Pompoli et al.) linked muscle relaxation components with lower efficacy in panic CBT. For panic, prefer CBT with interoceptive exposure and use applied relaxation as a second-line or adjunct option.",
   "minutes": { "min": 45, "max": 60 },
   "purpose": "A structured program delivered over a series of weekly sessions. It teaches the client to notice the earliest signs of anxiety and to relax quickly in everyday situations. Training moves from full progressive muscle relaxation to shorter forms (release-only, cue-controlled, differential and rapid relaxation), then to applying the skill in real situations, then to keeping it up. NICE links treatment manuals for CBT and applied relaxation to CG113. This entry outlines the stages for orientation; use the full manual when delivering the program.",
@@ -42,7 +42,8 @@
     "note": "If the client wishes, the cue word may be a word or short phrase from their faith (for example, a word for peace), and the client may pair rapid relaxation with a brief silent prayer. The client chooses the words and when to use them.",
     "consentNote": "Offer only if the client raises faith or spirituality as a resource, and only after informed consent. Explain that the faith element is optional, that the standard version works without it, and that the client can change or stop it at any time. Use the client's own beliefs and words; never introduce or impose religious content. Record the consent discussion in your own clinical record, not in this app. See the AACC Code of Ethics on consent for spiritual interventions and the ACA Code of Ethics on informed consent and not imposing counselor values."
   },
-  "handoutIds": ["pmr-homework", "breathing-practice"],
+  "handoutIds": ["pmr-homework", "breathing-practice", "applied-relaxation-steps"],
+  "orientationIds": ["behavior-therapy"],
   "sources": [
     {
       "title": "Generalised anxiety disorder and panic disorder in adults: management (CG113)",

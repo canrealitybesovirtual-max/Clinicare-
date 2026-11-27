@@ -1,0 +1,160 @@
+{
+  "id": "co-occurring-and-level-of-care",
+  "name": "Co-occurring mental health and substance use: integrated formulation and level of care",
+  "shortName": "Co-occurring care",
+  "family": "care-systems",
+  "orientationIds": [
+    "integrative-common-factors"
+  ],
+  "purpose": "A framework for people with both mental health and substance use concerns. It treats both as primary and works on them at the same time, in one plan, matched to the person's stage of readiness. The four-quadrant view (low or high severity of each) helps decide who leads care and how services coordinate, and multidimensional level-of-care tools guide how intensive care should be. Those tools are summarized here only in general terms, with links to the official sources; nothing here scores or places anyone. 42 CFR Part 2 prohibits unauthorized use or disclosure of these records.",
+  "whenToUse": [
+    "When mental health symptoms and substance use are both present, whichever seems to have come first.",
+    "When deciding whether outpatient, intensive outpatient, residential or inpatient care, or medically managed withdrawal, should be discussed.",
+    "When care is split between services and needs a shared plan."
+  ],
+  "structure": [
+    {
+      "id": "both-primary",
+      "label": "Both concerns are primary",
+      "prompt": "Assess and plan for mental health and substance use together from the start, without waiting for one to resolve first. Ask how each affects the other in the person's own experience.",
+      "examples": [
+        "Drinking to get to sleep, then anxiety the next day"
+      ]
+    },
+    {
+      "id": "quadrants",
+      "label": "Four-quadrant view",
+      "prompt": "Low or high severity of mental health symptoms crossed with low or high severity of substance use. It suggests which setting is best placed to lead care and how much coordination is needed, not a placement decision.",
+      "examples": []
+    },
+    {
+      "id": "readiness",
+      "label": "Stage-wise, person-centered care",
+      "prompt": "Match the approach to readiness: engagement and motivational work first when change feels far off, active treatment and relapse prevention when the person is ready, with harm reduction throughout.",
+      "examples": []
+    },
+    {
+      "id": "dimensions",
+      "label": "Multidimensional level-of-care thinking",
+      "prompt": "Level-of-care frameworks look across several areas: withdrawal and medication needs, physical health, mental health and cognition, use-related risks, the recovery environment, and the person's own preferences and barriers. Use the official tools and training for any placement decision.",
+      "examples": []
+    },
+    {
+      "id": "coordination",
+      "label": "Coordination and consent",
+      "prompt": "Who is involved, what information can be shared with the person's consent, and how hand-offs between services happen.",
+      "examples": []
+    }
+  ],
+  "steps": [
+    "Screen for both concerns in every assessment, with permission and without judgment.",
+    "Map how mental health symptoms and substance use affect each other, in the person's words.",
+    "Agree on goals the person cares about, including harm-reduction goals.",
+    "Check safety needs that change the level of care: withdrawal risk, overdose risk, suicidal thoughts and medical problems, using your own assessment and protocol.",
+    "Use the official level-of-care criteria or tool your service uses, with trained staff, and record the reasoning, not a number from this app.",
+    "Coordinate with consent, and mark substance-use records with the 42 CFR Part 2 notice."
+  ],
+  "collaborativeTips": [
+    "Ask what the substance does for the person before discussing change; it makes the plan feel fair.",
+    "Offer choices about the level of care and explain each option in plain words."
+  ],
+  "cautions": [
+    "Records that identify a person as having a substance use disorder, created by a covered program, are protected by 42 CFR Part 2. Share only with written consent or as the rule allows. 42 CFR Part 2 prohibits unauthorized use or disclosure of these records.",
+    "Withdrawal from alcohol, benzodiazepines and some other substances can be dangerous; medical assessment comes first when withdrawal is possible.",
+    "This framework does not score severity or decide placement; follow your service's licensed tools and your own clinical judgment.",
+    "A formulation never scores, grades or decides risk. If thoughts of suicide, self-harm or harm to others come up, pause the formulation and follow your own assessment and local protocol; in the US the 988 Lifeline is available by call or text, elsewhere use the local emergency number or findahelpline.com."
+  ],
+  "conditionIds": [
+    "alcohol-use-disorder",
+    "opioid-use-disorder",
+    "cannabis-use-disorder",
+    "stimulant-use-disorder"
+  ],
+  "interventionIds": [
+    "motivational-interviewing",
+    "integrated-ptsd-sud-treatment",
+    "relapse-prevention-planning",
+    "contingency-management",
+    "moud-referral",
+    "community-reinforcement-approach"
+  ],
+  "handoutIds": [
+    "relapse-prevention-plan",
+    "high-risk-situations-plan",
+    "mutual-help-options"
+  ],
+  "practiceIds": [
+    "stepped-care-and-level-of-care",
+    "recovery-and-harm-reduction",
+    "care-transitions-and-warm-handoffs"
+  ],
+  "populationIds": [
+    "justice-involved",
+    "housing-instability"
+  ],
+  "legalIds": [
+    "42-cfr-part-2"
+  ],
+  "worksheet": false,
+  "sud": true,
+  "linkOuts": [
+    {
+      "title": "TIP 42: Substance Use Treatment for Persons With Co-Occurring Disorders (PEP20-02-01-004)",
+      "publisher": "Substance Abuse and Mental Health Services Administration",
+      "url": "https://store.samhsa.gov/product/tip-42-substance-use-treatment-persons-co-occurring-disorders/pep20-02-01-004"
+    },
+    {
+      "title": "The ASAM Criteria, Fourth Edition",
+      "publisher": "American Society of Addiction Medicine",
+      "url": "https://www.asam.org/asam-criteria/asam-criteria-4th-edition",
+      "note": "Official ASAM Criteria materials; the criteria are copyrighted and are not reproduced here."
+    },
+    {
+      "title": "Toward a national standard for service intensity assessment and planning for mental health care",
+      "publisher": "National Council for Mental Wellbeing",
+      "url": "https://www.thenationalcouncil.org/resources/service-intensity-assessment-and-planning",
+      "note": "Overview of LOCUS and related level-of-care tools."
+    }
+  ],
+  "measuresPending": [
+    {
+      "name": "The ASAM Criteria",
+      "url": "https://www.asam.org/asam-criteria/asam-criteria-4th-edition",
+      "licenseKey": "ASAM Criteria",
+      "note": "Copyrighted multidimensional criteria; use the official materials and training. Not built in."
+    },
+    {
+      "name": "LOCUS (Level of Care Utilization System)",
+      "url": "https://psychiatryonline.org/doi/abs/10.1176/appi.ps.54.11.1461",
+      "licenseKey": "LOCUS",
+      "note": "Copyrighted level-of-care instrument from the American Association for Community Psychiatry. Not built in."
+    }
+  ],
+  "sources": [
+    {
+      "title": "TIP 42: Substance Use Treatment for Persons With Co-Occurring Disorders (PEP20-02-01-004)",
+      "publisher": "Substance Abuse and Mental Health Services Administration",
+      "url": "https://store.samhsa.gov/product/tip-42-substance-use-treatment-persons-co-occurring-disorders/pep20-02-01-004",
+      "year": 2020
+    },
+    {
+      "title": "The ASAM Criteria, Fourth Edition",
+      "publisher": "American Society of Addiction Medicine",
+      "url": "https://www.asam.org/asam-criteria/asam-criteria-4th-edition"
+    },
+    {
+      "title": "Level-of-care decision making in behavioral health services: the LOCUS and the CALOCUS (Sowers et al.)",
+      "publisher": "Psychiatric Services",
+      "url": "https://psychiatryonline.org/doi/abs/10.1176/appi.ps.54.11.1461",
+      "year": 2003
+    },
+    {
+      "title": "Toward a national standard for service intensity assessment and planning for mental health care",
+      "publisher": "National Council for Mental Wellbeing",
+      "url": "https://www.thenationalcouncil.org/resources/service-intensity-assessment-and-planning"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

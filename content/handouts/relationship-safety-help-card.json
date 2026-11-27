@@ -1,0 +1,137 @@
+{
+  "id": "relationship-safety-help-card",
+  "title": "Help Card: Numbers to Keep",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 5,
+  "intro": "This card lists free, private help you can reach at any hour. Read it when you are alone. Keep it only if it is safe for you to do so. You can also learn the numbers by heart and throw the card away. You do not need to write anything on it.",
+  "sections": [
+    {
+      "heading": "Numbers to keep",
+      "steps": [
+        "The Hotline: call 1-800-799-7233 at any hour. TTY: 1-800-787-3224.",
+        "Text: send START to 88788.",
+        "Chat: thehotline.org",
+        "Emergency: 911",
+        "Crisis line: call or text 988"
+      ]
+    },
+    {
+      "heading": "Keep this card safe",
+      "steps": [
+        "If someone might look through your things, fold this card small and keep it where they would not look. Or learn the numbers and throw it away.",
+        "Someone may be able to see the history, texts, or location on your phone or computer. When you can, use a device the other person cannot get into, like a friend's phone or a library computer.",
+        "If you are reading this on a screen and someone comes near, close it right away.",
+        "Clear calls or texts to help lines only if that is safe. A history that is suddenly empty can also raise questions."
+      ]
+    },
+    {
+      "heading": "Signs a relationship may not be safe",
+      "body": "Abuse is not only hitting. It can also look like this:",
+      "steps": [
+        "Checking your phone, money, or where you go, or keeping you from friends and family",
+        "Name-calling, threats, or making you feel afraid",
+        "Pushing, grabbing, choking, or hurting you in any way",
+        "Forcing or pressuring you into sex",
+        "Threats to hurt you, your children, or your pets, or to take the children away",
+        "Controlling your birth control or your choices about pregnancy"
+      ]
+    },
+    {
+      "heading": "You deserve to be safe",
+      "body": "Abuse is never your fault. Advocates at The Hotline can listen, help you think through your choices, and help you make a plan to stay safer, whether you stay, leave, or have already left. You do not have to give your name, and you decide what to do."
+    },
+    {
+      "heading": "If you are in danger now",
+      "steps": [
+        "Call 911.",
+        "Go to a safe place, like a neighbor's home, a store, or another public place.",
+        "In some areas you can text 911 if it is not safe to talk. If you call and cannot speak, stay on the line."
+      ]
+    }
+  ],
+  "safetyNote": "Safety first: If you are in danger now, call 911. In the US, you can call the National Domestic Violence Hotline at 1-800-799-7233 or text START to 88788. If you have thoughts of hurting yourself, call or text 988. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sud": false,
+  "es": {
+    "title": "Tarjeta de ayuda: números para guardar",
+    "intro": "Esta tarjeta tiene ayuda gratis y privada que puede buscar a cualquier hora. Léala cuando esté a solas. Guárdela solo si es seguro para usted. También puede aprenderse los números de memoria y botar la tarjeta. No tiene que escribir nada en ella.",
+    "sections": [
+      {
+        "heading": "Números para guardar",
+        "steps": [
+          "The Hotline: llame al 1-800-799-7233 a cualquier hora. TTY: 1-800-787-3224.",
+          "Mensaje de texto: envíe START al 88788.",
+          "Chat: thehotline.org",
+          "Emergencias: 911",
+          "Línea de crisis: llame o envíe un mensaje de texto al 988"
+        ]
+      },
+      {
+        "heading": "Mantenga segura esta tarjeta",
+        "steps": [
+          "Si alguien podría revisar sus cosas, doble la tarjeta en pequeño y guárdela donde esa persona no buscaría. O apréndase los números y bótela.",
+          "Alguien podría ver el historial, los mensajes o la ubicación de su teléfono o computadora. Cuando pueda, use un aparato al que la otra persona no tenga acceso, como el teléfono de una amistad o una computadora de la biblioteca.",
+          "Si está leyendo esto en una pantalla y alguien se acerca, ciérrela de inmediato.",
+          "Borre las llamadas o los mensajes a las líneas de ayuda solo si es seguro. Un historial vacío de repente también puede despertar sospechas."
+        ]
+      },
+      {
+        "heading": "Señales de que una relación podría no ser segura",
+        "body": "El abuso no es solo golpear. También puede verse así:",
+        "steps": [
+          "Revisar su teléfono, su dinero o a dónde va, o alejarle de sus amistades y su familia",
+          "Insultos, amenazas o hacerle sentir miedo",
+          "Empujarle, agarrarle, apretarle el cuello o lastimarle de cualquier forma",
+          "Obligarle o presionarle a tener relaciones sexuales",
+          "Amenazas de lastimarle a usted, a sus hijos o a sus mascotas, o de quitarle a los hijos",
+          "Controlar sus métodos anticonceptivos o sus decisiones sobre el embarazo"
+        ]
+      },
+      {
+        "heading": "Usted merece estar a salvo",
+        "body": "El abuso nunca es su culpa. Las personas que atienden The Hotline le pueden escuchar, ayudarle a pensar en sus opciones y ayudarle a hacer un plan para estar más segura o seguro, ya sea que se quede, que se vaya o que ya se haya ido. No tiene que dar su nombre, y usted decide qué hacer."
+      },
+      {
+        "heading": "Si está en peligro ahora",
+        "steps": [
+          "Llame al 911.",
+          "Vaya a un lugar seguro, como la casa de un vecino, una tienda u otro lugar público.",
+          "En algunos lugares puede enviar un mensaje de texto al 911 si no es seguro hablar. Si llama y no puede hablar, no cuelgue."
+        ]
+      }
+    ],
+    "safetyNote": "La seguridad es lo primero: Si está en peligro ahora, llame al 911. En EE. UU., puede llamar a la Línea Nacional de Violencia Doméstica (National Domestic Violence Hotline) al 1-800-799-7233 o enviar un mensaje de texto con la palabra START al 88788. Si tiene pensamientos de hacerse daño, llame o envíe un mensaje de texto al 988. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "linkOuts": [
+    {
+      "title": "The Hotline",
+      "publisher": "National Domestic Violence Hotline",
+      "url": "https://www.thehotline.org/",
+      "note": "Free, private chat, information and help with safety planning, any time.",
+      "lastVerified": "2026-11-27"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Domestic Violence (health topic; lists the National Domestic Violence Hotline call, TTY, text and chat options)",
+      "publisher": "MedlinePlus, U.S. National Library of Medicine",
+      "url": "https://medlineplus.gov/domesticviolence.html",
+      "year": 2025
+    },
+    {
+      "title": "National Domestic Violence Hotline",
+      "publisher": "The Hotline",
+      "url": "https://www.thehotline.org/"
+    },
+    {
+      "title": "Screening for intimate partner violence, elder abuse, and abuse of vulnerable adults: US Preventive Services Task Force final recommendation statement",
+      "publisher": "JAMA (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30357305/",
+      "year": 2018
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

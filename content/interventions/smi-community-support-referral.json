@@ -1,0 +1,116 @@
+{
+  "id": "smi-community-support-referral",
+  "name": "Community and recovery supports for serious mental illness: supported employment, assertive community treatment, clubhouses and peer support (referral)",
+  "modality": "Care coordination - community and recovery supports for serious mental illness",
+  "conditions": ["schizophrenia", "bipolar-i-disorder"],
+  "evidenceLevel": "The VA/DoD 2023 schizophrenia guideline recommends assertive community treatment, Individual Placement and Support (IPS) supported employment, and psychosocial interventions for patients and families. NICE CG178 (2014) recommends offering supported employment programs to people with psychosis who want to work and considering peer support. A meta-analysis of randomized trials found IPS increased competitive employment (risk ratio about 1.6), job tenure and income, with less clear effects on quality of life or symptoms (Frederick and VanderWeele, 2019). A Cochrane review found intensive case management may reduce hospitalization and improve retention and social functioning, especially in models faithful to assertive community treatment (Dieterich et al., 2017). A review rated evidence for peer support services as moderate (Chinman et al., 2014).",
+  "minutes": { "min": 15, "max": 30 },
+  "purpose": "Recovery from serious mental illness depends on much more than symptom control: work, a home, friends, purpose and support in the community. This entry helps clinicians connect clients with evidence-based community services. Individual Placement and Support helps people who want to work find and keep regular paid jobs quickly, with ongoing support and benefits counseling. Assertive community treatment brings a multidisciplinary team to people in their own surroundings, for those with frequent crises or hospital stays. Clubhouses are member-run communities offering work-ordered days, social connection and help with jobs, education and housing. Peer support and peer-run services offer help from people with lived experience. It complements coordinated specialty care for a first episode of psychosis.",
+  "steps": [
+    "Ask about the client's own goals for work, study, housing, relationships and daily life, and what support they would welcome.",
+    "If the client wants to work, refer to an IPS supported employment program where available. Emphasize that wanting to work is the main requirement, and that benefits counseling can explain how earnings affect disability benefits.",
+    "If the client has frequent crises, hospital stays, homelessness or difficulty engaging with clinic-based care, discuss a referral to assertive community treatment or intensive case management.",
+    "Offer information about clubhouses, peer support, peer-run warm lines and peer respite options in the area, and about family and carer support groups.",
+    "For a first episode of psychosis, refer to coordinated specialty care, which usually includes supported employment and education.",
+    "Help with practical barriers: transport, phone access, identification documents, housing applications and benefits. Use local 211 or community resource directories.",
+    "With the client's consent, coordinate with the treating team and share only what is needed.",
+    "Follow up to check whether the client was able to connect and whether the service fits their goals."
+  ],
+  "script": [
+    "What would you like your life to look like a year from now: work, school, where you live, who you spend time with?",
+    "There are programs that help people find regular jobs quickly and keep them, with support along the way.",
+    "There are also places run by and for people with lived experience, where you can connect with others and get help with work or housing.",
+    "Would you like me to help you get in touch with one of these?",
+    "You decide what feels right. We can start with one small step."
+  ],
+  "contraindications": [
+    "Do not make work, housing or program participation a condition of mental health care.",
+    "During an acute episode, crisis care and stabilization come first. This app does not judge risk; you do. Crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com.",
+    "Earnings can affect disability benefits and health coverage. Refer to benefits counseling rather than giving financial advice.",
+    "Share information with community services only with the client's consent, and avoid sharing more than needed. Do not enter identifying details into this app."
+  ],
+  "culturalAdaptations": [
+    "Work, independence and family roles carry different meanings across cultures. Build goals from the client's values rather than a fixed model of recovery.",
+    "Look for services in the client's language and peer workers who share relevant lived or cultural experience.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "handoutIds": ["staying-well-plan"],
+  "evidenceGrades": [
+    {
+      "body": "VA/DoD",
+      "guideline": "Management of First-Episode Psychosis and Schizophrenia",
+      "year": 2023,
+      "conditionId": "schizophrenia",
+      "population": "Adults with schizophrenia",
+      "direction": "for",
+      "strength": "recommend (assertive community treatment; IPS supported employment)",
+      "url": "https://health.mil/Reference-Center/Publications/2024/05/01/SCZ-Psychosocial-Interventions-2024"
+    },
+    {
+      "body": "NICE",
+      "guideline": "Psychosis and schizophrenia in adults: prevention and management (CG178)",
+      "year": 2014,
+      "conditionId": "schizophrenia",
+      "population": "Adults with psychosis or schizophrenia who wish to find or return to work",
+      "direction": "for",
+      "strength": "offer (supported employment programmes); consider (peer support)",
+      "url": "https://www.nice.org.uk/guidance/cg178/chapter/Recommendations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "SCZ Psychosocial Interventions (2023 VA/DoD guideline fact sheet)",
+      "publisher": "Psychological Health Center of Excellence, Defense Health Agency",
+      "url": "https://health.mil/Reference-Center/Publications/2024/05/01/SCZ-Psychosocial-Interventions-2024",
+      "year": 2024
+    },
+    {
+      "title": "Psychosis and schizophrenia in adults: prevention and management (CG178): recommendations",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg178/chapter/Recommendations",
+      "year": 2014
+    },
+    {
+      "title": "Supported employment: meta-analysis and review of randomized controlled trials of individual placement and support (Frederick and VanderWeele)",
+      "publisher": "PLoS One (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30785954/",
+      "year": 2019
+    },
+    {
+      "title": "Intensive case management for severe mental illness (Dieterich et al.)",
+      "publisher": "Cochrane Database of Systematic Reviews (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28067944/",
+      "year": 2017
+    },
+    {
+      "title": "Peer support services for individuals with serious mental illnesses: assessing the evidence (Chinman et al.)",
+      "publisher": "Psychiatric Services (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24549400/",
+      "year": 2014
+    },
+    {
+      "title": "Supported Employment Evidence-Based Practices (EBP) KIT",
+      "publisher": "Substance Abuse and Mental Health Services Administration",
+      "url": "https://store.samhsa.gov/product/Supported-Employment-Evidence-Based-Practices-EBP-Kit/SMA08-4364",
+      "year": 2009
+    },
+    {
+      "title": "Assertive Community Treatment (ACT) Evidence-Based Practices (EBP) KIT",
+      "publisher": "Substance Abuse and Mental Health Services Administration",
+      "url": "https://www.samhsa.gov/resource/ebp/assertive-community-treatment-act-evidence-based-practices-ebp-kit"
+    },
+    {
+      "title": "International directory of clubhouses",
+      "publisher": "Clubhouse International",
+      "url": "https://clubhouse-intl.org/what-we-do/international-directory/"
+    },
+    {
+      "title": "Recovery After an Initial Schizophrenia Episode (RAISE)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/research/research-funded-by-nimh/research-initiatives/recovery-after-an-initial-schizophrenia-episode-raise"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

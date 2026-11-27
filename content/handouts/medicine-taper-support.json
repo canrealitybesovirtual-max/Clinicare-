@@ -1,0 +1,178 @@
+{
+  "id": "medicine-taper-support",
+  "title": "Cutting Down Sleep or Nerve Pills Safely",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 10,
+  "intro": "Some medicines for sleep or nerves can be hard to stop once your body is used to them. These include alprazolam, clonazepam, diazepam, lorazepam, and zolpidem. Stopping suddenly can be dangerous. With a plan made with your prescriber, most people can cut down slowly and safely. This sheet explains what to expect and what can help. Reading it takes about 10 minutes.",
+  "sections": [
+    {
+      "heading": "Never stop suddenly",
+      "body": "If you have taken these medicines most days for more than a few weeks, stopping all at once can cause strong withdrawal. In rare cases this includes seizures, which can be life-threatening. Always talk with your prescriber before you cut down or stop."
+    },
+    {
+      "heading": "What a taper is like",
+      "steps": [
+        "Your prescriber lowers the dose in small steps, with weeks between steps. You set the pace together, and it can be slowed or paused.",
+        "A taper often takes months, and sometimes longer. Going slowly is not failing.",
+        "Some people switch to a longer-acting medicine first. Your prescriber will decide if this fits you.",
+        "Do not take extra pills, borrow pills, or buy pills from others. Pills bought on the street may contain fentanyl."
+      ]
+    },
+    {
+      "heading": "What you may feel",
+      "body": "Some people feel little change. Others notice these for a while:",
+      "steps": [
+        "Trouble sleeping",
+        "Feeling nervous, restless, or cranky",
+        "Headaches, muscle aches, or shaky hands",
+        "Being extra sensitive to light or sound",
+        "Tell your prescriber if these are hard to cope with. The pace can change."
+      ]
+    },
+    {
+      "heading": "Get emergency help right away if",
+      "body": "Call 911 or go to the nearest emergency room if you or someone else notices any of these.",
+      "steps": [
+        "A seizure",
+        "Confusion, or seeing or hearing things that are not there",
+        "A racing heart with feeling very unwell"
+      ]
+    },
+    {
+      "heading": "Skills that help during a taper",
+      "steps": [
+        "Get up at the same time every day, even after a bad night.",
+        "Use the bed only for sleep. If you cannot sleep, get up and do something calm until you feel sleepy.",
+        "Practice slow breathing or muscle relaxation every day, not only when you feel stressed.",
+        "Cut down on caffeine, and avoid alcohol. Alcohol with these medicines is dangerous, and it makes sleep worse.",
+        "Ask your counselor about talk therapy for sleep or worry. It can make a taper easier."
+      ]
+    },
+    {
+      "heading": "My taper notes",
+      "steps": [
+        "Questions for my prescriber: ________",
+        "Skills I will practice: ________",
+        "Kind of support I will ask for: ________"
+      ]
+    },
+    {
+      "heading": "Privacy note",
+      "body": "Do not write your name, or the names of other people or places, on this sheet. Keep it somewhere private. If you share it with a substance use treatment program, it may become part of your treatment records. Those records have special federal privacy protection. 42 CFR Part 2 prohibits unauthorized use or disclosure of these records. Ask your counselor how your records are kept and shared."
+    }
+  ],
+  "safetyNote": "Safety first: Do not stop these medicines suddenly. Get emergency help for a seizure or confusion. Mixing these medicines with alcohol or opioids can slow or stop breathing. If someone may have overdosed, call 911. For free, confidential help finding treatment in the US, call the SAMHSA National Helpline at 1-800-662-4357, any time, in English or Spanish. If you have thoughts of hurting yourself or someone else, get help now. In the US, call or text 988, or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sud": true,
+  "es": {
+    "title": "Cómo reducir las pastillas para dormir o para los nervios",
+    "intro": "Algunas medicinas para dormir o para los nervios pueden ser difíciles de dejar cuando el cuerpo se acostumbra a ellas. Entre ellas están el alprazolam, el clonazepam, el diazepam, el lorazepam y el zolpidem. Dejarlas de golpe puede ser peligroso. Con un plan hecho con quien se las receta, la mayoría de las personas puede reducirlas poco a poco y sin peligro. Esta hoja explica qué esperar y qué puede ayudar. Leerla toma unos 10 minutos.",
+    "sections": [
+      {
+        "heading": "Nunca las deje de golpe",
+        "body": "Si ha tomado estas medicinas casi todos los días por más de unas semanas, dejarlas de golpe puede causar una abstinencia fuerte. En casos raros puede causar convulsiones, que pueden poner en peligro la vida. Siempre hable con quien se las receta antes de reducirlas o dejarlas."
+      },
+      {
+        "heading": "Cómo es una reducción gradual",
+        "steps": [
+          "Quien se las receta baja la dosis en pasos pequeños, con semanas entre un paso y otro. Ustedes ponen el ritmo juntos, y se puede ir más lento o hacer una pausa.",
+          "Muchas veces la reducción toma meses, y a veces más. Ir despacio no es fracasar.",
+          "Algunas personas primero cambian a una medicina de efecto más largo. Quien se las receta decidirá si esto le conviene.",
+          "No tome pastillas de más, no pida pastillas prestadas y no compre pastillas a otras personas. Las pastillas compradas en la calle pueden tener fentanilo."
+        ]
+      },
+      {
+        "heading": "Lo que puede sentir",
+        "body": "Algunas personas casi no sienten cambios. Otras notan esto por un tiempo:",
+        "steps": [
+          "Problemas para dormir",
+          "Nervios, inquietud o mal humor",
+          "Dolores de cabeza, dolores musculares o manos temblorosas",
+          "Más sensibilidad a la luz o al ruido",
+          "Dígale a quien se las receta si le cuesta mucho aguantar esto. El ritmo puede cambiar."
+        ]
+      },
+      {
+        "heading": "Busque ayuda de emergencia de inmediato si",
+        "body": "Llame al 911 o vaya a la sala de emergencias más cercana si usted u otra persona nota algo de esto.",
+        "steps": [
+          "Una convulsión",
+          "Confusión, o ver u oír cosas que no están ahí",
+          "El corazón muy acelerado y sentirse muy mal"
+        ]
+      },
+      {
+        "heading": "Habilidades que ayudan durante la reducción",
+        "steps": [
+          "Levántese a la misma hora todos los días, aunque haya pasado una mala noche.",
+          "Use la cama solo para dormir. Si no puede dormir, levántese y haga algo tranquilo hasta que le dé sueño.",
+          "Practique la respiración lenta o la relajación de los músculos todos los días, no solo cuando sienta estrés.",
+          "Tome menos cafeína, y no tome alcohol. El alcohol con estas medicinas es peligroso, y empeora el sueño.",
+          "Pregúntele a su consejero por la terapia para el sueño o la preocupación. Puede hacer más fácil la reducción."
+        ]
+      },
+      {
+        "heading": "Mis notas sobre la reducción",
+        "steps": [
+          "Preguntas para quien me receta: ________",
+          "Habilidades que voy a practicar: ________",
+          "Tipo de apoyo que voy a pedir: ________"
+        ]
+      },
+      {
+        "heading": "Nota de privacidad",
+        "body": "No escriba su nombre, ni los nombres de otras personas o lugares, en esta hoja. Guárdela en un lugar privado. Si la comparte con un programa de tratamiento por consumo de sustancias, puede llegar a ser parte de sus registros de tratamiento. Esos registros tienen una protección federal especial de la privacidad. La ley federal 42 CFR Part 2 prohíbe el uso o la divulgación no autorizados de estos registros. Pregúntele a su consejero cómo se guardan y se comparten sus registros."
+      }
+    ],
+    "safetyNote": "La seguridad es lo primero: No deje estas medicinas de golpe. Busque ayuda de emergencia si hay una convulsión o confusión. Mezclar estas medicinas con alcohol o con opioides puede hacer que la persona respire más lento o que deje de respirar. Si alguien pudo haber tenido una sobredosis, llame al 911. Para recibir ayuda gratuita y confidencial para encontrar tratamiento en EE. UU., llame a la Línea Nacional de Ayuda de SAMHSA (SAMHSA National Helpline) al 1-800-662-4357, a cualquier hora, en inglés o en español. Si tiene pensamientos de hacerse daño o de hacerle daño a otra persona, busque ayuda ahora. En EE. UU., llame o envíe un mensaje de texto al 988, o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "sources": [
+    {
+      "title": "Joint clinical practice guideline on benzodiazepine tapering: considerations when risks outweigh benefits (Brunner et al.)",
+      "publisher": "Journal of General Internal Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40526204/",
+      "year": 2025
+    },
+    {
+      "title": "Randomized clinical trial of supervised tapering and cognitive behavior therapy to facilitate benzodiazepine discontinuation in older adults with chronic insomnia (Morin et al.)",
+      "publisher": "American Journal of Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/14754783/",
+      "year": 2004
+    },
+    {
+      "title": "Alprazolam (drug information)",
+      "publisher": "MedlinePlus, U.S. National Library of Medicine",
+      "url": "https://medlineplus.gov/druginfo/meds/a684001.html"
+    },
+    {
+      "title": "Lorazepam (drug information)",
+      "publisher": "MedlinePlus, U.S. National Library of Medicine",
+      "url": "https://medlineplus.gov/druginfo/meds/a682053.html"
+    },
+    {
+      "title": "Zolpidem (drug information)",
+      "publisher": "MedlinePlus, U.S. National Library of Medicine",
+      "url": "https://medlineplus.gov/druginfo/meds/a693025.html"
+    },
+    {
+      "title": "National Helpline",
+      "publisher": "SAMHSA",
+      "url": "https://www.samhsa.gov/find-help/helplines/national-helpline"
+    },
+    {
+      "title": "42 CFR 2.32: notice to accompany disclosure (federal confidentiality rule for substance use treatment records)",
+      "publisher": "eCFR, U.S. Government Publishing Office",
+      "url": "https://www.ecfr.gov/current/title-42/chapter-I/subchapter-A/part-2/subpart-C/section-2.32",
+      "year": 2024
+    },
+    {
+      "title": "Confidentiality of substance use treatment records (42 CFR Part 2)",
+      "publisher": "U.S. Department of Health and Human Services",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/hipaa-part-2/index.html"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

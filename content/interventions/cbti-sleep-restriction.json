@@ -40,7 +40,8 @@
     "Shared beds and rooms are common. Agree on a plan that respects household members, for example where the client will wait until the sleep window starts."
   ],
   "trainingRequired": "CBT-I sleep restriction: deliver only with CBT-I training (for example, behavioral sleep medicine training) or under supervision of a CBT-I-trained clinician. Otherwise refer to a behavioral sleep medicine provider or a supervised CBT-I program.",
-  "handoutIds": ["sleep-diary", "sleep-habits"],
+  "handoutIds": ["sleep-diary", "sleep-habits", "sleep-window-guide", "how-sleep-works"],
+  "orientationIds": ["behavior-therapy"],
   "sources": [
     { "title": "Behavioral and psychological treatments for chronic insomnia disorder in adults: an American Academy of Sleep Medicine clinical practice guideline (Edinger et al.)", "publisher": "Journal of Clinical Sleep Medicine (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/33164742/", "year": 2021 },
     { "title": "Behavioral and psychological treatments for chronic insomnia disorder in adults: an AASM systematic review, meta-analysis and GRADE assessment", "publisher": "Journal of Clinical Sleep Medicine (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/33164741/", "year": 2021 },

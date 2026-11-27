@@ -1,0 +1,214 @@
+{
+  "id": "phase-based-trauma-sequencing",
+  "name": "Phase-based trauma treatment and sequencing decisions",
+  "shortName": "Trauma sequencing",
+  "family": "trauma-and-moral-injury",
+  "orientationIds": [
+    "trauma-focused-therapies"
+  ],
+  "purpose": "A guide to deciding when, and whether, to add a stabilization phase before trauma-focused therapy. The classic phase-oriented model has three stages: safety and stabilization, processing of trauma memories, and reintegration into daily life. Current guidelines recommend trauma-focused therapies as first-line care for post-traumatic stress, and trials show that many people, including those with childhood or repeated trauma, benefit without a long, mandatory stabilization phase. Sequencing is therefore a case-by-case clinical decision with a review date, not a default waiting period.",
+  "whenToUse": [
+    "When planning treatment for post-traumatic stress, especially after repeated or early-life trauma.",
+    "When the ICD-11 pattern of complex PTSD may apply: post-traumatic stress plus lasting problems with emotion regulation, self-concept and relationships.",
+    "When someone has been in stabilization work for a long time and trauma-focused therapy has not started.",
+    "When current safety, dissociation or self-harm raise the question of what to do first."
+  ],
+  "structure": [
+    {
+      "id": "safety-and-stabilization",
+      "label": "Phase 1: Safety and stabilization",
+      "prompt": "Establish current safety, a working alliance, psychoeducation and enough emotion-regulation and grounding skills to take part in therapy. Keep this phase focused and time-limited, with a planned review.",
+      "examples": [
+        "Agree on a grounding plan for sessions",
+        "Link with housing or legal help if the person is still in danger"
+      ]
+    },
+    {
+      "id": "processing",
+      "label": "Phase 2: Processing trauma memories",
+      "prompt": "A recommended trauma-focused therapy, chosen with the person and delivered by a trained clinician. Skills from phase 1 continue alongside.",
+      "examples": [
+        "Weekly sessions of a chosen protocol with between-session practice"
+      ]
+    },
+    {
+      "id": "reintegration",
+      "label": "Phase 3: Reintegration",
+      "prompt": "Rebuilding relationships, roles, meaning and plans for the future, and preparing for setbacks.",
+      "examples": [
+        "Returning to work or study",
+        "Reconnecting with community or faith"
+      ]
+    },
+    {
+      "id": "evidence",
+      "label": "What the evidence says about sequencing",
+      "prompt": "Expert consensus once favored a stabilization phase for complex presentations. Later reviews found little evidence that a mandatory phase improves outcomes, and trials of trauma-focused therapies included many people with complex histories who did well. Delaying processing can itself cause harm by prolonging symptoms.",
+      "examples": []
+    },
+    {
+      "id": "when-to-sequence",
+      "label": "When a brief focus on safety first may make sense",
+      "prompt": "Ongoing danger (for example a current abusive relationship), a current suicidal crisis or frequent self-harm, dissociation so severe the person cannot stay present in sessions, unmanaged withdrawal or intoxication, or acute psychosis or mania. Even then, set a review date and start trauma-focused work as soon as the barrier is addressed.",
+      "examples": [
+        "Safety plan and lethal-means counseling in place before memory work",
+        "Dissociation screening and grounding practice first"
+      ]
+    },
+    {
+      "id": "complex-ptsd",
+      "label": "Complex PTSD (ICD-11)",
+      "prompt": "ICD-11 describes complex PTSD as post-traumatic stress together with lasting disturbances in self-organization: difficulty regulating emotions, a persistent negative view of oneself with shame or guilt, and difficulty feeling close to others. Treatment usually uses the same trauma-focused therapies, sometimes with more sessions and added skills work.",
+      "examples": []
+    }
+  ],
+  "steps": [
+    "Assess current safety, ongoing threat, self-harm, dissociation and substance use before choosing a start point; do not decide risk with a score.",
+    "Explain the treatment options and the evidence in plain words, including that stabilization is not always needed first.",
+    "If you sequence, name the specific barrier, the skills or changes that would address it, and a review date (for example in four to six sessions).",
+    "Choose a recommended trauma-focused therapy that fits the person's preferences and that you or a referral partner are trained to deliver.",
+    "Keep grounding and emotion-regulation skills available during processing, and plan for reintegration and relapse prevention."
+  ],
+  "collaborativeTips": [
+    "Let the person decide how much of their story to tell during assessment; details can wait for the processing phase.",
+    "Make the plan predictable: what each phase involves, how long, and how you will both know it is time to move on."
+  ],
+  "cautions": [
+    "Do not use memory-recovery techniques or suggest that someone has hidden trauma memories; work only with what the person remembers and reports.",
+    "Do not offer routine single-session psychological debriefing straight after a traumatic event; guidelines advise against it.",
+    "Trauma-focused protocols require formal training; refer when the needed therapy is outside your competence.",
+    "Severe dissociation calls for specialist assessment; this page does not cover dissociative presentations in depth.",
+    "A formulation never scores, grades or decides risk. If thoughts of suicide, self-harm or harm to others come up, pause the formulation and follow your own assessment and local protocol; in the US the 988 Lifeline is available by call or text, elsewhere use the local emergency number or findahelpline.com."
+  ],
+  "conditionIds": [
+    "ptsd"
+  ],
+  "interventionIds": [
+    "trauma-psychoeducation-and-grounding",
+    "stair-skills-training",
+    "prolonged-exposure",
+    "cognitive-processing-therapy",
+    "cognitive-therapy-for-ptsd",
+    "emdr",
+    "written-exposure-therapy",
+    "narrative-exposure-therapy",
+    "present-centered-therapy",
+    "dbt-distress-tolerance",
+    "collaborative-safety-planning"
+  ],
+  "handoutIds": [
+    "trauma-therapy-what-to-expect",
+    "common-reactions-after-trauma",
+    "grounding-5-4-3-2-1"
+  ],
+  "practiceIds": [
+    "trauma-informed-care",
+    "self-harm-assessment-and-formulation"
+  ],
+  "populationIds": [
+    "refugees-and-asylum-seekers",
+    "sexual-violence-and-trafficking-survivors",
+    "military-and-veterans"
+  ],
+  "legalIds": [
+    "memory-and-suggestion-safeguards",
+    "contested-practices"
+  ],
+  "codes": [
+    {
+      "system": "ICD-11",
+      "code": "6B40",
+      "label": "Post traumatic stress disorder"
+    },
+    {
+      "system": "ICD-11",
+      "code": "6B41",
+      "label": "Complex post traumatic stress disorder"
+    },
+    {
+      "system": "ICD-10-CM",
+      "code": "F43.10",
+      "label": "Post-traumatic stress disorder, unspecified"
+    },
+    {
+      "system": "ICD-10-CM",
+      "code": "F43.11",
+      "label": "Post-traumatic stress disorder, acute"
+    },
+    {
+      "system": "ICD-10-CM",
+      "code": "F43.12",
+      "label": "Post-traumatic stress disorder, chronic"
+    }
+  ],
+  "dsmPointer": "See DSM-5-TR: Trauma- and Stressor-Related Disorders (Posttraumatic Stress Disorder). ICD-10-CM has no separate code for complex PTSD.",
+  "trainingRequired": "Trained clinicians only for the trauma-focused protocols (for example prolonged exposure, cognitive processing therapy, cognitive therapy for PTSD, EMDR, narrative exposure therapy and written exposure therapy). Each has its own training route.",
+  "trainingPath": [
+    {
+      "body": "EMDR International Association (EMDRIA)",
+      "url": "https://www.emdria.org",
+      "note": "Training and certification standards for EMDR therapy."
+    },
+    {
+      "body": "International Society for Traumatic Stress Studies (ISTSS)",
+      "url": "https://istss.org/clinical-resources/trauma-treatment/istss-prevention-and-treatment-guidelines/",
+      "note": "Treatment guidelines and complex PTSD position papers; links to training resources."
+    }
+  ],
+  "worksheet": false,
+  "sud": false,
+  "linkOuts": [
+    {
+      "title": "ISTSS Prevention and Treatment Guidelines (PTSD, with position papers on complex PTSD)",
+      "publisher": "International Society for Traumatic Stress Studies",
+      "url": "https://istss.org/clinical-resources/trauma-treatment/istss-prevention-and-treatment-guidelines/"
+    },
+    {
+      "title": "Post-traumatic stress disorder (NG116)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng116"
+    }
+  ],
+  "measuresPending": [],
+  "sources": [
+    {
+      "title": "ISTSS Expert Consensus Treatment Guidelines for Complex PTSD in Adults (Cloitre et al.)",
+      "publisher": "International Society for Traumatic Stress Studies (listed by Psychotraumanet)",
+      "url": "https://psychotraumanet.org/en/node/2101",
+      "year": 2012
+    },
+    {
+      "title": "ISTSS Prevention and Treatment Guidelines (PTSD, with position papers on complex PTSD)",
+      "publisher": "International Society for Traumatic Stress Studies",
+      "url": "https://istss.org/clinical-resources/trauma-treatment/istss-prevention-and-treatment-guidelines/",
+      "year": 2019
+    },
+    {
+      "title": "Critical analysis of the current treatment guidelines for complex PTSD in adults (De Jongh et al.)",
+      "publisher": "Depression and Anxiety",
+      "url": "https://doi.org/10.1002/da.22469",
+      "year": 2016
+    },
+    {
+      "title": "Psychological interventions for ICD-11 complex PTSD symptoms: systematic review and meta-analysis (Karatzias et al.)",
+      "publisher": "Psychological Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30857567/",
+      "year": 2019
+    },
+    {
+      "title": "The management of posttraumatic stress disorder and acute stress disorder: synopsis of the 2023 VA/DoD clinical practice guideline",
+      "publisher": "Annals of Internal Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38408360/",
+      "year": 2024
+    },
+    {
+      "title": "Post-traumatic stress disorder (NG116)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng116",
+      "year": 2018
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

@@ -16,7 +16,8 @@
     "prolonged-grief-disorder",
     "specific-phobia",
     "illness-anxiety-disorder",
-    "somatic-symptom-disorder"
+    "somatic-symptom-disorder",
+    "body-focused-repetitive-behaviors"
   ],
   "evidenceLevel": "Moderate evidence for acceptance-based treatments in anxiety; emerging evidence as a stand-alone component. Acceptance components outperformed inactive comparisons in a meta-analysis of 66 laboratory studies (Levin et al., 2012). In RCTs, an acceptance-based behavior therapy matched applied relaxation for GAD (Hayes-Skelton et al., 2013), ACT matched CBT for social anxiety (Craske et al., 2014), and ACT outperformed relaxation training for OCD (Twohig et al., 2010). ACT for substance use showed a small-to-medium effect over active comparisons in an initial meta-analysis (Lee et al., 2015). PTSD: emerging evidence; ACT is not among the PTSD psychotherapies recommended or suggested in the 2023 VA/DoD guideline (see the 2023 synopsis). APA Division 12 rating not verified this session; check div12.org.",
   "minutes": { "min": 15, "max": 30 },
@@ -58,6 +59,7 @@
     "consentNote": "Before any faith-integrated variant, explain its purpose and alternatives, confirm the client's right to decline or stop at any time, and document informed consent (AACC Code of Ethics; ACA Code of Ethics). Faith integration is client-led. Never impose beliefs or suggest that distress reflects weak faith."
   },
   "handoutIds": ["mindful-check-in", "values-compass"],
+  "orientationIds": ["acceptance-and-commitment-therapy"],
   "sources": [
     { "title": "Acceptance and Commitment Therapy, Second Edition: The Process and Practice of Mindful Change (Hayes, Strosahl & Wilson)", "publisher": "Guilford Press", "url": "https://www.guilford.com/books/Acceptance-and-Commitment-Therapy/Hayes-Strosahl-Wilson/9781462528943", "year": 2012 },
     { "title": "The impact of treatment components suggested by the psychological flexibility model: a meta-analysis of laboratory-based component studies (Levin et al.)", "publisher": "Behavior Therapy (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/23046777/", "year": 2012 },

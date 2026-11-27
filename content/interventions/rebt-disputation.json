@@ -1,0 +1,74 @@
+{
+  "id": "rebt-disputation",
+  "name": "REBT: ABC model and disputing unhelpful beliefs",
+  "modality": "Rational emotive behavior therapy (REBT)",
+  "conditions": [
+    "major-depressive-disorder",
+    "generalized-anxiety-disorder",
+    "social-anxiety-disorder",
+    "adjustment-disorder"
+  ],
+  "evidenceLevel": "APA Division 12 lists REBT for depression with modest research support. A 2018 meta-analysis of REBT trials (David et al.) found moderate effects across outcomes compared with control conditions, with variable study quality. Guidelines generally recommend CBT rather than REBT by name.",
+  "minutes": {
+    "min": 30,
+    "max": 50
+  },
+  "purpose": "Developed by Albert Ellis, REBT holds that events (A) do not directly cause emotional and behavioral consequences (C); beliefs about the events (B) play the central role. It separates rigid demands ('I must succeed,' 'others must treat me fairly') and what follows from them (awfulizing, 'I can't stand it,' and rating the whole self or others) from flexible preferences. Disputing (D) these beliefs leads to an effective new outlook (E) and to unconditional acceptance of self, others and life, so the client can feel healthy negative emotions (concern, sadness, annoyance) instead of unhealthy ones (anxiety, depression, rage).",
+  "steps": [
+    "Pick one specific, recent episode. Identify the activating event (A) and the emotional and behavioral consequences (C) first.",
+    "Find the beliefs (B) that link them: demands ('must,' 'should,' 'have to'), awfulizing, low frustration tolerance ('I can't bear it') and global rating ('I'm worthless,' 'he's a total jerk').",
+    "Tell healthy negative emotions apart from unhealthy ones, and agree on a realistic goal (for example, disappointment instead of despair).",
+    "Dispute from several angles: empirical (where is the evidence it must be so?), logical (does it follow that because I want it, it must happen?) and functional (how does believing this help me reach my goals?).",
+    "Build an effective new belief based on preference: 'I strongly want to succeed, but I don't have to. If I fail, it's bad, not the end of the world, and it doesn't make me a failure.'",
+    "Strengthen the new belief with homework: a written ABC sheet, rehearsing the new belief, and behavioral tasks such as staying in a mildly uncomfortable situation to build tolerance.",
+    "Work toward unconditional self-acceptance: rate actions, not the whole person."
+  ],
+  "script": [
+    "Let's look at what happened, how you felt, and what you were telling yourself in between.",
+    "I notice the word 'must' in there. What would change if it were a strong wish instead of a must?",
+    "Is it truly unbearable, or very hard and still something you've gotten through before?",
+    "Does one mistake make you a failure as a whole person, or a person who made a mistake?",
+    "Sadness about this makes sense. Let's see if we can move from despair to a sadness you can work with."
+  ],
+  "contraindications": [
+    "Disputing can feel invalidating if done too early or too forcefully. Build the relationship first, reflect the client's pain, and keep a collaborative tone.",
+    "Do not dispute beliefs about real danger, abuse or discrimination as irrational; validate the reality and focus on what helps from here.",
+    "Grief, trauma and severe depression may need a different main approach; use belief work as one part of the plan.",
+    "This intervention does not assess or decide risk. If suicidal thoughts, self-harm or risk to others come up, pause and follow your setting's risk-assessment and safety-planning procedures. Keep crisis options visible: 988 Suicide & Crisis Lifeline (US, call or text), the local emergency number, and findahelpline.com for other countries."
+  ],
+  "culturalAdaptations": [
+    "Words like 'must' and 'should' can express duties the client and their community value. Explore which obligations the client chooses to keep as values and which rigid demands cause harm.",
+    "A direct disputing style does not suit everyone; use a gentle, curious Socratic tone where directness may read as disrespect.",
+    "Unconditional acceptance may connect with ideas in the client's own tradition; use their framing if they raise it.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "trainingRequired": "REBT: training recommended for full REBT practice (for example, Albert Ellis Institute practica).",
+  "handoutIds": [
+    "thinking-traps",
+    "thought-record"
+  ],
+  "orientationIds": [
+    "cognitive-therapy"
+  ],
+  "sources": [
+    {
+      "title": "Rational Emotive Behavioral Therapy for Depression",
+      "publisher": "APA Division 12, Society of Clinical Psychology",
+      "url": "https://div12.org/treatment/rational-emotive-behavioral-therapy-for-depression"
+    },
+    {
+      "title": "50 years of rational-emotive and cognitive-behavioral therapy: a systematic review and meta-analysis (David et al.)",
+      "publisher": "Journal of Clinical Psychology (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28898411/",
+      "year": 2018
+    },
+    {
+      "title": "REBT trainings",
+      "publisher": "Albert Ellis Institute",
+      "url": "https://albertellis.org/product-category/trainings"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

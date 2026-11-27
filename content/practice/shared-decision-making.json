@@ -1,0 +1,133 @@
+{
+  "id": "shared-decision-making",
+  "title": "Shared decision making about treatment",
+  "category": "measurement-and-goals",
+  "summary": "A three-step conversation (team talk, option talk, decision talk) for choosing a treatment together, using curated information about the options and the client's own priorities. The option grid tool lays out options side by side, with a plain-language view for the client.",
+  "whenToUse": [
+    "When more than one reasonable treatment exists, including watchful waiting or medicine.",
+    "When the client asks what you recommend, or when you are about to recommend something.",
+    "When a guideline recommendation has a preference-sensitive choice (for example therapy, medicine or both)."
+  ],
+  "steps": [
+    {
+      "heading": "Team talk: make it a shared choice",
+      "body": "Say that there is a choice, that options differ in what they ask of the client, and that their priorities matter to the decision. Check whether they want to be involved and how much."
+    },
+    {
+      "heading": "Option talk: compare the options",
+      "items": [
+        "List the realistic options, including doing nothing new for now and checking in again.",
+        "For each: what the client would actually do, how often and for how long, what practice is involved between sessions, what the evidence says, and what it costs in time and effort.",
+        "Use plain language and say what is uncertain.",
+        "Offer a public decision aid where one exists."
+      ]
+    },
+    {
+      "heading": "Decision talk: decide together",
+      "items": [
+        "Ask what matters most to them (speed, side effects, time, privacy, talking versus doing).",
+        "Check understanding with teach-back.",
+        "Agree on a choice or on when you will decide.",
+        "Plan when you will review whether the choice is working."
+      ]
+    },
+    {
+      "heading": "Record the decision",
+      "body": "Note the options discussed, the client's priorities and the decision, without identifiers in any copy that leaves the session."
+    }
+  ],
+  "prompts": [
+    "There is more than one good way forward here, and the right one depends partly on what matters to you. Can we look at them together?",
+    "One option asks you to practice facing situations between sessions; another is more about talking through what happened. How do those sound?",
+    "What matters most to you in choosing: how fast it works, how much time it takes, or something else?",
+    "So I know I explained it clearly, can you tell me in your own words how these two options differ?"
+  ],
+  "cautions": [
+    "Shared decision making is not handing the decision over. Give your view and its reasons when asked.",
+    "Only list options you can offer or refer to, and say when an option needs a specially trained clinician.",
+    "The option grid uses curated library data and never ranks options or chooses one.",
+    "Client-facing copies never name a diagnosis or code; the tool checks this.",
+    "A safety concern is not a preference-sensitive choice. Crisis steps come first."
+  ],
+  "adaptations": [
+    {
+      "context": "Low literacy or a second language",
+      "adaptation": "Use fewer options at a time, plain numbers, pictures or a qualified interpreter, and teach-back after each option."
+    },
+    {
+      "context": "Family involvement",
+      "adaptation": "With the client's consent, include the people who will support the choice, while keeping the decision with the client."
+    }
+  ],
+  "evidenceSummary": "The three-talk model was described by Elwyn and colleagues (2017). A 2024 Cochrane review (Stacey and colleagues) found that decision aids improve knowledge, help people feel clearer about what matters to them and increase participation. NICE guideline NG197 (2021) sets out shared decision making as standard practice. A 2018 meta-analysis (Swift and colleagues) found lower dropout when preferences were accommodated.",
+  "forClinicianReview": true,
+  "crisisPanel": false,
+  "sud": false,
+  "relatedInterventionIds": [
+    "motivational-interviewing",
+    "medication-referral",
+    "decisional-balance"
+  ],
+  "relatedHandoutIds": [
+    "questions-about-my-care",
+    "questions-for-my-prescriber"
+  ],
+  "relatedFormulationIds": [],
+  "relatedLegalIds": [
+    "decision-making-capacity",
+    "treatment-plans-and-client-access"
+  ],
+  "relatedPracticeIds": [
+    "preferences-goals-and-readiness",
+    "teach-back-and-plain-language",
+    "combined-care-decision-points",
+    "working-with-interpreters"
+  ],
+  "relatedPopulationIds": [],
+  "toolHref": "/tools/option-grid",
+  "linkOuts": [
+    {
+      "title": "PTSD Treatment Decision Aid",
+      "publisher": "US Department of Veterans Affairs, National Center for PTSD",
+      "url": "https://www.ptsd.va.gov/apps/decisionaid/",
+      "note": "Interactive comparison of trauma treatments for clients to explore before or after a session.",
+      "lastVerified": "2026-11-27"
+    },
+    {
+      "title": "Shared decision making (NG197)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng197",
+      "lastVerified": "2026-11-27"
+    }
+  ],
+  "measuresPending": [],
+  "sources": [
+    {
+      "title": "A three-talk model for shared decision making: multistage consultation process (Elwyn et al.)",
+      "publisher": "BMJ, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29109079/",
+      "year": 2017
+    },
+    {
+      "title": "Decision aids for people facing health treatment or screening decisions (Stacey et al.)",
+      "publisher": "Cochrane Database of Systematic Reviews, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38284415/",
+      "year": 2024
+    },
+    {
+      "title": "Shared decision making (NG197)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng197",
+      "year": 2021
+    },
+    {
+      "title": "The impact of accommodating client preference in psychotherapy: a meta-analysis (Swift, Callahan, Cooper and Parkin)",
+      "publisher": "Journal of Clinical Psychology, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30091140/",
+      "year": 2018
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

@@ -41,6 +41,7 @@
     "Check that words such as 'panic' and 'attack' translate without stigma, and use the client's own words for the experience."
   ],
   "handoutIds": ["panic-cycle", "thought-record"],
+  "orientationIds": ["cognitive-therapy"],
   "sources": [
     {
       "title": "A cognitive approach to panic (Clark)",

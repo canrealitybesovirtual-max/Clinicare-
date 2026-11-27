@@ -18,42 +18,67 @@
           "text": "Within 1 week, attend a medical assessment, and agree with the care team which warning signs (fainting, chest pain, very low weight) mean same-day care.",
           "interventionIds": [
             "eating-disorder-medical-monitoring"
-          ]
+          ],
+          "targets": [
+            "physical-health-burden"
+          ],
+          "step": "specialist"
         },
         {
           "id": "an-regular-eating",
           "text": "By week 4, eat 3 meals and 2 or 3 snacks a day at planned times on at least 5 days a week, recorded in a log.",
           "interventionIds": [
             "cbt-e-eating-disorders"
-          ]
+          ],
+          "targets": [
+            "avoidance-escape"
+          ],
+          "step": "specialist"
         },
         {
           "id": "an-weighing",
           "text": "Each session, complete collaborative weighing and discuss the trend without changing the plan based on a single reading.",
           "interventionIds": [
             "cbt-e-eating-disorders"
-          ]
+          ],
+          "targets": [
+            "avoidance-escape",
+            "threat-monitoring"
+          ],
+          "step": "specialist"
         },
         {
           "id": "an-motivation",
           "text": "By session 4, write the costs and benefits of the eating problem in own words, and 2 reasons for change.",
           "interventionIds": [
             "motivational-interviewing"
-          ]
+          ],
+          "targets": [
+            "hope-and-motivation"
+          ],
+          "step": "high-intensity"
         },
         {
           "id": "an-self-kindness",
           "text": "Practice a kind response to body criticism at least once a day for 4 weeks.",
           "interventionIds": [
             "self-compassion-practice"
-          ]
+          ],
+          "targets": [
+            "self-criticism-shame"
+          ],
+          "step": "high-intensity"
         },
         {
           "id": "an-safety",
           "text": "By session 2, complete a written safety plan and review it monthly.",
           "interventionIds": [
             "collaborative-safety-planning"
-          ]
+          ],
+          "targets": [
+            "coping-skills"
+          ],
+          "step": "crisis-or-urgent"
         },
         {
           "id": "an-level-of-care",
@@ -61,12 +86,83 @@
           "interventionIds": [
             "eating-disorder-medical-monitoring",
             "short-term-psychodynamic-exploration"
-          ]
+          ],
+          "targets": [
+            "physical-health-burden"
+          ],
+          "step": "specialist"
         }
       ],
       "measureIds": [
         "phq-9",
         "gad-7"
+      ]
+    },
+    {
+      "id": "an-specialist-and-medical-care",
+      "label": "Medical risk and the need for specialist eating-disorder care",
+      "definitions": [
+        "Has low weight, rapid weight loss, dizziness, fainting, or abnormal results on medical tests.",
+        "Has not yet started, or has stopped, specialist eating-disorder treatment."
+      ],
+      "longTermGoals": [
+        "Medical risk is monitored and managed by the care team, and the client takes part in specialist treatment that suits them."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "an-monitoring-schedule",
+          "text": "By week 2, agree with the medical team how often weight, vital signs and blood tests will be checked, and which results will lead to an urgent review.",
+          "interventionIds": [
+            "eating-disorder-medical-monitoring"
+          ],
+          "targets": [
+            "physical-health-burden"
+          ],
+          "step": "specialist"
+        },
+        {
+          "id": "an-specialist-therapy",
+          "text": "By week 4, start or be referred to a specialist eating-disorder therapy chosen with the client (for example eating-disorder-focused CBT, MANTRA or specialist supportive clinical management).",
+          "interventionIds": [
+            "eating-disorder-specialist-therapies"
+          ],
+          "targets": [
+            "perfectionism",
+            "negative-core-beliefs"
+          ],
+          "step": "specialist"
+        },
+        {
+          "id": "an-urgent-signs",
+          "text": "If the medical team flags high risk (for example very low weight, fainting, chest pain or abnormal blood results), the clinician supports a same-day medical assessment and a review of the level of care.",
+          "interventionIds": [
+            "eating-disorder-medical-monitoring"
+          ],
+          "targets": [
+            "physical-health-burden"
+          ],
+          "step": "crisis-or-urgent"
+        },
+        {
+          "id": "an-support-at-meals",
+          "text": "With consent, involve a family member or support person in at least 2 sessions to plan support around meals.",
+          "interventionIds": [
+            "eating-disorder-specialist-therapies"
+          ],
+          "targets": [
+            "strengths-and-supports"
+          ],
+          "step": "specialist"
+        }
+      ],
+      "measureIds": [
+        "phq-9"
+      ],
+      "practiceIds": [
+        "eating-disorder-medical-risk"
+      ],
+      "handoutIds": [
+        "eating-concerns-warning-signs"
       ]
     }
   ],

@@ -2,7 +2,7 @@
   "id": "prolonged-exposure",
   "name": "Prolonged exposure (PE) - overview and referral",
   "modality": "Trauma-focused exposure therapy (manualized protocol)",
-  "conditions": ["ptsd"],
+  "conditions": ["ptsd", "acute-stress-disorder"],
   "evidenceLevel": "First-line trauma-focused psychotherapy. The VA/DoD 2023 guideline strongly recommends individual, manualized trauma-focused psychotherapies, including PE. The APA PTSD guideline (2017; updated 2025) recommends PE. NICE NG116 recommends individual trauma-focused CBT, a category that includes prolonged exposure, for adults presenting more than one month after a trauma.",
   "minutes": { "min": 10, "max": 20 },
   "purpose": "PE is a manualized trauma-focused protocol that combines repeated, guided recounting of the trauma memory (imaginal exposure) with gradual approach to safe but avoided reminders in daily life (in-vivo exposure), plus psychoeducation and breathing retraining. It is commonly delivered in roughly 8 to 15 weekly sessions of about 90 minutes. This library entry covers overview and referral only, and the time estimate is for that conversation. It deliberately contains no protocol scripts. Deliver PE only after formal training with ongoing consultation.",
@@ -36,7 +36,8 @@
     "Ask the provider about professional interpreter use and whether interpreters are briefed on trauma content."
   ],
   "trainingRequired": "PE: trained clinicians only. Deliver only after completing a recognized intensive PE workshop with case consultation (for example, through the program founded by the treatment developer or an equivalent recognized program). Otherwise refer.",
-  "handoutIds": [],
+  "handoutIds": ["trauma-therapy-what-to-expect"],
+  "orientationIds": ["trauma-focused-therapies", "behavior-therapy"],
   "sources": [
     {
       "title": "The management of posttraumatic stress disorder and acute stress disorder: synopsis of the 2023 VA/DoD clinical practice guideline",

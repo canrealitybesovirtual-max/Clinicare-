@@ -49,6 +49,8 @@
     { "label": "Anemia or vitamin deficiencies", "type": "medical", "note": "Iron, B12 or folate deficiency can cause fatigue, poor focus and low mood. Ask about recent blood work." },
     { "label": "Obstructive sleep apnea", "type": "medical", "note": "Loud snoring, witnessed pauses in breathing and daytime sleepiness suggest a sleep evaluation." },
     { "label": "Neurological and other medical illness", "type": "medical", "note": "Stroke, Parkinson's disease, multiple sclerosis, dementia, chronic pain, cancer and post-viral illness can cause or mimic depressive symptoms." },
+    { "label": "Delirium (sudden confusion)", "type": "medical", "note": "Confusion, drowsiness or attention that comes and goes over hours or days, often with an infection, surgery, dehydration, alcohol or sedative withdrawal or a medicine change, points to delirium (ICD-10-CM F05; ICD-11 6D70). It needs same-day medical assessment, not a mental health formulation (NICE CG103)." },
+    { "label": "Mild or major neurocognitive disorder", "type": "medical", "note": "A gradual decline in memory, thinking, planning or daily functioning, especially in later life, calls for a cognitive evaluation through primary care or a memory service (ICD-10-CM G31.84, F06.7x or F03.9x; ICD-11 6D71 or 6D80-6D8Z). Low mood, apathy, anxiety or new psychotic symptoms can be early signs (NICE NG97)." },
     { "label": "Medication effects", "type": "substance", "note": "Some medicines, such as corticosteroids, interferon, isotretinoin and certain hormonal treatments, have been linked to mood changes. Review the medication list with the prescriber." },
     { "label": "Alcohol, sedative or stimulant effects", "type": "substance", "note": "Heavy use, intoxication or withdrawal (e.g., a stimulant crash) can produce depressive symptoms. This app does not store substance-use information." },
     { "label": "History of manic or hypomanic episodes", "type": "psychiatric", "note": "Ask about past periods of high energy, little need for sleep, racing ideas or risky spending. Such a history points toward bipolar disorder and changes treatment; refer for psychiatric evaluation." },
@@ -95,7 +97,7 @@
     { "name": "Suicide risk screening and safety planning", "evidence": "Clinical standard of care. If PHQ-9 item 9 is above 0 or the client reports suicidal thoughts, follow up with a structured screen (e.g., C-SSRS, link-out only) and safety-planning resources.", "note": "The clinician decides on risk level and next steps. Crisis resources (988, local emergency number, findahelpline.com) stay visible on every screen." },
     { "name": "Referral for medication evaluation", "evidence": "NICE NG222 advises against routinely offering antidepressants first-line for less severe depression unless the person prefers them; for more severe depression a combination of individual CBT and an antidepressant may be offered.", "note": "Refer to psychiatry, a primary care provider or a psychiatric nurse practitioner, especially with psychotic features, mixed features, a bipolar history or high risk." }
   ],
-  "handouts": ["activity-schedule", "thought-record", "safety-plan"],
+  "handouts": ["activity-schedule", "thought-record", "safety-plan", "understanding-low-mood", "activity-and-mood-log", "activity-ideas-menu", "thinking-traps"],
   "statIds": ["us-mde-past-year-2025", "us-mde-past-year-2021", "global-depression-2021", "global-mental-health-conditions"],
   "culturalNotes": [
     "Many clients, especially from cultures where emotional distress carries stigma, present depression through the body: fatigue, pain, headaches, poor sleep or a 'heavy heart'. Ask about mood and interest directly, in the client's own words.",
@@ -114,6 +116,8 @@
   "licensedDsm": false,
   "wileyLicensed": false,
   "sources": [
+    { "title": "Delirium: prevention, diagnosis and management in hospital and long-term care (CG103)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/cg103", "year": 2010 },
+    { "title": "Dementia: assessment, management and support for people living with dementia and their carers (NG97)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng97", "year": 2018 },
     { "title": "Depression (health topic)", "publisher": "National Institute of Mental Health", "url": "https://www.nimh.nih.gov/health/topics/depression" },
     { "title": "Depression in adults: treatment and management (NG222)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng222", "year": 2022 },
     { "title": "ICD-11 MMS: 6A70 Single episode depressive disorder", "publisher": "World Health Organization", "url": "https://icd.who.int/browse/latest-release/mms/en#578635574" },

@@ -18,6 +18,9 @@
           "text": "Within 2 weeks, attend a medical check-up and share the eating pattern with the physician, with the client's consent.",
           "interventionIds": [
             "eating-disorder-medical-monitoring"
+          ],
+          "targets": [
+            "physical-health-burden"
           ]
         },
         {
@@ -25,40 +28,125 @@
           "text": "Within 4 weeks, start eating-disorder-focused guided self-help or group CBT and keep a daily food and mood log.",
           "interventionIds": [
             "cbt-e-eating-disorders"
-          ]
+          ],
+          "targets": [
+            "urges-and-impulsivity"
+          ],
+          "step": "low-intensity"
         },
         {
           "id": "bed-regular-eating",
           "text": "By week 4, eat 3 meals and 2 or 3 snacks at planned times on at least 5 days a week, with no long gaps.",
           "interventionIds": [
             "cbt-e-eating-disorders"
-          ]
+          ],
+          "targets": [
+            "urges-and-impulsivity"
+          ],
+          "step": "low-intensity"
         },
         {
           "id": "bed-urge-awareness",
           "text": "Practice a 3-minute mindful pause when an urge to binge comes, at least 3 times a week, and record what happened.",
           "interventionIds": [
             "mindfulness-meditation"
-          ]
+          ],
+          "targets": [
+            "urges-and-impulsivity"
+          ],
+          "step": "low-intensity"
         },
         {
           "id": "bed-self-kindness",
           "text": "Replace self-criticism after eating with a kind self-statement daily for 4 weeks.",
           "interventionIds": [
             "self-compassion-practice"
-          ]
+          ],
+          "targets": [
+            "self-criticism-shame"
+          ],
+          "step": "low-intensity"
         },
         {
           "id": "bed-medication",
           "text": "If binges have not decreased by week 8, discuss a medication evaluation as an adjunct.",
           "interventionIds": [
             "medication-referral"
-          ]
+          ],
+          "step": "high-intensity"
         }
       ],
       "measureIds": [
         "phq-9",
         "gad-7"
+      ]
+    },
+    {
+      "id": "bed-specialist-and-medical-care",
+      "label": "Finding the right level of eating-disorder care, with respectful health checks",
+      "definitions": [
+        "Has repeated episodes of eating a large amount with a sense of losing control, followed by distress, without regular efforts to make up for it.",
+        "Has had health care that focused on weight in a way that felt shaming, and now avoids check-ups."
+      ],
+      "longTermGoals": [
+        "The client takes part in the right level of treatment, starting with guided self-help where it suits, and has health care that feels respectful."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "bed-guided-programme",
+          "text": "Begin eating-disorder-focused guided self-help, or a group program if the client prefers, and review eating episodes together every 2 weeks.",
+          "interventionIds": [
+            "guided-self-help"
+          ],
+          "targets": [
+            "urges-and-impulsivity"
+          ],
+          "step": "low-intensity"
+        },
+        {
+          "id": "bed-step-up",
+          "text": "If guided self-help is not acceptable or has not helped after 4 weeks, move to individual eating-disorder-focused CBT or interpersonal therapy from a trained clinician.",
+          "interventionIds": [
+            "eating-disorder-specialist-therapies"
+          ],
+          "targets": [
+            "urges-and-impulsivity",
+            "interpersonal-difficulties"
+          ],
+          "step": "specialist"
+        },
+        {
+          "id": "bed-respectful-checks",
+          "text": "With consent, share with the medical team that treatment focuses on regular eating and the loss-of-control episodes rather than weight loss, and agree on any physical health checks.",
+          "interventionIds": [
+            "eating-disorder-medical-monitoring"
+          ],
+          "targets": [
+            "physical-health-burden",
+            "self-criticism-shame"
+          ]
+        },
+        {
+          "id": "bed-step-by-step-review",
+          "text": "Over weeks 4 to 12, go through 1 recent episode each week step by step (feelings, thoughts, situation and what came before) to find a point where a different action could fit.",
+          "interventionIds": [
+            "behavioral-chain-analysis"
+          ],
+          "targets": [
+            "urges-and-impulsivity",
+            "emotion-dysregulation"
+          ],
+          "step": "high-intensity"
+        }
+      ],
+      "measureIds": [
+        "phq-9"
+      ],
+      "practiceIds": [
+        "eating-disorder-medical-risk"
+      ],
+      "handoutIds": [
+        "eating-concerns-warning-signs"
       ]
     }
   ],
@@ -76,6 +164,12 @@
       "publisher": "American Journal of Psychiatry (PubMed)",
       "url": "https://pubmed.ncbi.nlm.nih.gov/19074978/",
       "year": 2009
+    },
+    {
+      "title": "Eating disorders: recognition and treatment (NG69)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/NG69/chapter/Recommendations",
+      "year": 2017
     }
   ],
   "license": "original",

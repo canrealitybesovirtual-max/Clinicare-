@@ -1,0 +1,69 @@
+{
+  "id": "lgbtq-affirmative-cbt",
+  "name": "LGBTQ-affirmative CBT targeting minority stress",
+  "modality": "Affirmative transdiagnostic CBT (minority-stress-focused)",
+  "conditions": ["major-depressive-disorder", "generalized-anxiety-disorder", "social-anxiety-disorder", "alcohol-use-disorder"],
+  "evidenceLevel": "In a randomized trial with 63 young adult gay and bisexual men, a 10-session transdiagnostic CBT adapted to target minority stress (ESTEEM) reduced depressive symptoms, alcohol use problems and some sexual health risks compared with a waitlist (Pachankis et al., 2015). A version adapted for young sexual minority women, many of them transgender or nonbinary (EQuIP), showed initial support for reducing depression, anxiety and heavy drinking (Pachankis et al., 2020). Both are small early trials against waitlists. The APA's guidelines for practice with sexual minority persons (2021) and with transgender and gender nonconforming people (2015) call for affirmative practice informed by minority stress.",
+  "minutes": { "min": 45, "max": 60 },
+  "purpose": "Lesbian, gay, bisexual, transgender, queer and other sexual and gender minority people face higher rates of depression, anxiety and substance problems, largely because of minority stress: discrimination and rejection, the constant expectation of rejection, hiding one's identity, and absorbing negative messages about oneself. Affirmative CBT uses standard CBT skills (emotion awareness, cognitive flexibility, assertiveness, reducing avoidance) and applies them to these specific stressors, while affirming the client's identity as healthy and valid. It separates realistic responses to real discrimination, which are validated, from over-general predictions of rejection that limit the client's life. It never aims to change sexual orientation or gender identity.",
+  "steps": [
+    "Signal an affirming stance from the first contact: use the client's chosen name and pronouns, and ask open questions without assuming anyone's identity. Do not record identity details in this app.",
+    "Ask how experiences of discrimination, rejection, family reactions, concealment and community connection have affected the client's mood, drinking or anxiety.",
+    "Build a shared map linking minority stressors to the client's thoughts, emotions and coping (for example, expecting rejection leads to avoidance and drinking at social events).",
+    "Validate accurate perceptions of discrimination and risk. Work cognitively only on patterns the client wants to change, such as assuming everyone will reject them or harsh self-judgment rooted in stigma.",
+    "Practise skills: noticing and naming emotions, assertive communication (including when and how to come out, which is the client's choice), coping with rejection, and reducing avoidance in ways that are safe in the client's setting.",
+    "Strengthen supports and pride: affirming relationships, chosen family, community spaces and role models, as the client wishes.",
+    "Address safety: risk of violence, unsafe housing, family rejection and suicidal thoughts, and link to affirming services and crisis lines.",
+    "Track progress with measures your setting uses and review goals with the client."
+  ],
+  "script": [
+    "I want this to be a place where you can be fully yourself. What name and pronouns would you like me to use?",
+    "How have other people's reactions to who you are affected you?",
+    "Some of the fear of rejection makes sense, because rejection has really happened. Let's look at when that fear protects you and when it keeps you from things you want.",
+    "Coming out, and to whom, is always your choice. We can think it through together if you want.",
+    "Who are the people or places where you feel accepted?"
+  ],
+  "contraindications": [
+    "Never attempt to change, suppress or discourage a person's sexual orientation or gender identity. These practices are harmful and are restricted or banned in many places; they appear here only as a caution.",
+    "Do not challenge accurate perceptions of discrimination or danger, and help the client weigh real safety risks before any step such as coming out.",
+    "Sexual and gender minority people, especially young adults and transgender people, have higher rates of suicidal thoughts. Ask about safety. This app does not judge risk; you do. Crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com.",
+    "Do not enter identity, relationship or substance-use details about the client into this app; nothing is stored or sent. Any note or export about substance use must carry this notice: 42 CFR Part 2 prohibits unauthorized use or disclosure of these records.",
+    "Examine your own assumptions and seek consultation or training if this area is new to you."
+  ],
+  "culturalAdaptations": [
+    "Minority stress intersects with racism, religion, immigration status, disability and class. Ask how these combine in the client's life rather than treating identity as one dimension.",
+    "Faith can be a source of both conflict and strength. Follow the client's lead and, if they wish, connect them with affirming faith communities.",
+    "Use a trained professional interpreter rather than family members, especially when family may not know about the client's identity, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "handoutIds": ["kind-self-talk", "thought-record"],
+  "orientationIds": ["cognitive-therapy", "multicultural-feminist-liberation"],
+  "sources": [
+    {
+      "title": "LGB-affirmative cognitive-behavioral therapy for young adult gay and bisexual men: a randomized controlled trial of a transdiagnostic minority stress approach (Pachankis et al.)",
+      "publisher": "Journal of Consulting and Clinical Psychology (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26147563/",
+      "year": 2015
+    },
+    {
+      "title": "A transdiagnostic minority stress intervention for gender diverse sexual minority women's depression, anxiety, and unhealthy alcohol use: a randomized controlled trial (Pachankis et al.)",
+      "publisher": "Journal of Consulting and Clinical Psychology (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32437174/",
+      "year": 2020
+    },
+    {
+      "title": "The APA guidelines for psychological practice with sexual minority persons: an executive summary of the 2021 revision",
+      "publisher": "American Psychologist (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35143229/",
+      "year": 2022
+    },
+    {
+      "title": "Guidelines for psychological practice with transgender and gender nonconforming people",
+      "publisher": "American Psychologist (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26653312/",
+      "year": 2015
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

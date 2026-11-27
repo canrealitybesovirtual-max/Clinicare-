@@ -1,0 +1,150 @@
+{
+  "id": "body-checking-log",
+  "title": "Checking Less: Body and Mirror Log",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 10,
+  "intro": "Checking how you look, comparing yourself with others, hiding parts of your body, or asking others how you look can bring quick relief. But the relief fades fast, and the worry often grows. This log helps you notice these habits and cut back step by step, with your counselor's help. It takes about 10 minutes to start, then a few minutes a day.",
+  "sections": [
+    {
+      "heading": "Habits to notice",
+      "steps": [
+        "Checking in mirrors, windows, or phone cameras",
+        "Pinching, measuring, or touching a body part to check it",
+        "Comparing your looks with other people or photos",
+        "Covering up with clothes, hair, makeup, or how you stand",
+        "Asking others if you look okay",
+        "Avoiding mirrors, photos, or places where people can see you",
+        "Spending a long time grooming, or taking and deleting many photos"
+      ]
+    },
+    {
+      "heading": "A step-by-step plan",
+      "body": "Pick one habit to work on first. Make a small, clear goal with your counselor. When that feels easier, take the next step.",
+      "steps": [
+        "Count the habit for a few days without trying to change it.",
+        "Then set a limit, like checking the mirror only twice a day.",
+        "Delay the urge: wait 10 minutes and notice what happens to it.",
+        "Drop one hiding or covering habit at a time, in a planned way.",
+        "Ask others less often how you look. You can tell them about your plan."
+      ]
+    },
+    {
+      "heading": "Using mirrors in a helpful way",
+      "body": "Your counselor may practice this with you first.",
+      "steps": [
+        "Stand at a normal distance, about an arm's length away, in normal light.",
+        "Look at your whole face or body, not just the part that worries you.",
+        "Describe what you see in plain, neutral words, like brown hair or round chin, instead of judging words.",
+        "Set a time limit, then walk away, even if the urge to keep checking is strong.",
+        "Skip magnifying mirrors and very bright or harsh light."
+      ]
+    },
+    {
+      "heading": "When the urge is strong",
+      "steps": [
+        "Notice the urge and give it a number from 0 to 10.",
+        "Remind yourself that urges rise and fall on their own.",
+        "Do something that keeps your hands or attention busy.",
+        "Be kind to yourself. Change takes practice."
+      ]
+    },
+    {
+      "heading": "Before big changes to your looks",
+      "body": "Many people with these worries think about cosmetic treatments. Talk it over with your counselor first. Treatments often do not ease this kind of worry."
+    }
+  ],
+  "practiceLog": {
+    "columns": [
+      "Day and time",
+      "Habit (what I did or wanted to do)",
+      "Urge (0-10)",
+      "What I did instead",
+      "Urge after (0-10)"
+    ],
+    "rows": 10
+  },
+  "safetyNote": "Safety first: If worry about how you look leads to thoughts of hurting yourself or of suicide, get help now. If you have thoughts of hurting yourself or someone else, get help now. In the US, call or text 988, or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sud": false,
+  "es": {
+    "title": "Revisar menos: registro del cuerpo y del espejo",
+    "intro": "Revisar cómo se ve, compararse con otros, esconder partes del cuerpo o preguntar a otros cómo se ve puede dar un alivio rápido. Pero el alivio se pasa pronto, y muchas veces la preocupación crece. Este registro le ayuda a notar estos hábitos y a reducirlos paso a paso, con la ayuda de su consejero. Empezar toma unos 10 minutos, y luego unos minutos al día.",
+    "sections": [
+      {
+        "heading": "Hábitos para notar",
+        "steps": [
+          "Mirarse en espejos, ventanas o la cámara del teléfono",
+          "Pellizcar, medir o tocar una parte del cuerpo para revisarla",
+          "Comparar su apariencia con otras personas o fotos",
+          "Cubrirse con ropa, el pelo, maquillaje o la forma de pararse",
+          "Preguntar a otros si se ve bien",
+          "Evitar espejos, fotos o lugares donde la gente le puede ver",
+          "Pasar mucho tiempo arreglándose, o tomar y borrar muchas fotos"
+        ]
+      },
+      {
+        "heading": "Un plan paso a paso",
+        "body": "Escoja primero un solo hábito. Ponga una meta pequeña y clara con su consejero. Cuando eso sea más fácil, dé el siguiente paso.",
+        "steps": [
+          "Cuente el hábito por unos días sin tratar de cambiarlo.",
+          "Luego ponga un límite, como mirarse al espejo solo dos veces al día.",
+          "Aplace el impulso: espere 10 minutos y note qué le pasa.",
+          "Deje un hábito de esconderse o cubrirse a la vez, de forma planeada.",
+          "Pregunte a otros con menos frecuencia cómo se ve. Les puede contar su plan."
+        ]
+      },
+      {
+        "heading": "Cómo usar el espejo de forma útil",
+        "body": "Su consejero puede practicar esto con usted primero.",
+        "steps": [
+          "Párese a una distancia normal, más o menos a un brazo del espejo, con luz normal.",
+          "Mire toda la cara o todo el cuerpo, no solo la parte que le preocupa.",
+          "Describa lo que ve con palabras sencillas y neutras, como pelo café o barbilla redonda, en lugar de palabras que juzgan.",
+          "Ponga un límite de tiempo, y luego aléjese, aunque las ganas de seguir mirando sean fuertes.",
+          "No use espejos de aumento ni luz muy fuerte o dura."
+        ]
+      },
+      {
+        "heading": "Cuando el impulso es fuerte",
+        "steps": [
+          "Note el impulso y dele un número de 0 a 10.",
+          "Recuerde que los impulsos suben y bajan solos.",
+          "Haga algo que le ocupe las manos o la atención.",
+          "Sea amable con usted. Cambiar requiere práctica."
+        ]
+      },
+      {
+        "heading": "Antes de hacer cambios grandes en su apariencia",
+        "body": "Muchas personas con estas preocupaciones piensan en tratamientos estéticos. Háblelo primero con su consejero. Muchas veces los tratamientos no calman este tipo de preocupación."
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Día y hora",
+        "Hábito (qué hice o quise hacer)",
+        "Impulso (0-10)",
+        "Qué hice en su lugar",
+        "Impulso después (0-10)"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: Si la preocupación por su apariencia le lleva a pensar en hacerse daño o en el suicidio, busque ayuda ahora. Si tiene pensamientos de hacerse daño o de hacerle daño a otra persona, busque ayuda ahora. En EE. UU., llame o envíe un mensaje de texto al 988, o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "sources": [
+    {
+      "title": "Obsessive-compulsive disorder and body dysmorphic disorder: treatment (CG31)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg31",
+      "year": 2005
+    },
+    {
+      "title": "Cognitive-behavioral therapy for body dysmorphic disorder: a systematic review and meta-analysis of randomized controlled trials (Harrison et al.)",
+      "publisher": "Clinical Psychology Review (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27393916/",
+      "year": 2016
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

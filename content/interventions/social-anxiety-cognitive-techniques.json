@@ -40,7 +40,8 @@
     "Clients speaking a second language may worry about accent or grammar. Separate language-learning goals from social-anxiety targets, and include experiments in the language the client actually uses.",
     "Clients from marginalized groups may face real scrutiny. Name this, and help the client tell realistic caution apart from fears that go beyond the evidence. Culturally adapted psychotherapies tend to outperform unadapted versions (Hall et al., 2016)."
   ],
-  "handoutIds": ["social-situations-practice", "behavioral-experiment-record"],
+  "handoutIds": ["social-situations-practice", "behavioral-experiment-record", "social-nervousness-cycle"],
+  "orientationIds": ["cognitive-therapy"],
   "sources": [
     { "title": "Social anxiety disorder: recognition, assessment and treatment (CG159)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/cg159", "year": 2013 },
     { "title": "Psychological and pharmacological interventions for social anxiety disorder in adults: a systematic review and network meta-analysis (Mayo-Wilson et al.)", "publisher": "The Lancet Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/26361000/", "year": 2014 },

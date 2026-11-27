@@ -1,0 +1,159 @@
+{
+  "id": "helping-someone-at-risk",
+  "title": "Helping Someone Who May Be Thinking About Suicide",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 10,
+  "intro": "If you are worried that someone you care about is thinking about suicide, you can help. You do not need special training. Caring, listening, and helping them connect with support can make a real difference. This sheet gives simple steps. Reading it takes about 10 minutes.",
+  "sections": [
+    {
+      "heading": "Warning signs",
+      "body": "Take these seriously, especially if they are new, are getting worse, or follow a loss or a painful event:",
+      "steps": [
+        "Talking about wanting to die, being a burden, or having no reason to live",
+        "Looking for ways to end their life, like searching online or getting a gun",
+        "Saying goodbye, or giving away things that matter to them",
+        "Pulling away from people, or big changes in sleep",
+        "Drinking or using drugs more",
+        "Acting very agitated or reckless, or showing big mood swings"
+      ]
+    },
+    {
+      "heading": "Ask directly",
+      "body": "Ask in a calm, caring way: are you thinking about suicide? Asking does not put the idea in their head. It shows you care and opens the door to help."
+    },
+    {
+      "heading": "Listen",
+      "steps": [
+        "Let them talk. Try not to argue, lecture, or rush to fix things.",
+        "Say back what you hear: it sounds like you feel trapped.",
+        "Thank them for telling you.",
+        "Do not promise to keep it a secret. You may need to get help."
+      ]
+    },
+    {
+      "heading": "Help keep them safe",
+      "steps": [
+        "Ask if they have a plan, or have thought about how.",
+        "Help put time and distance between them and anything they could use, like guns or a large supply of pills. Ask a counselor for the sheet about making home safer.",
+        "If they have a safety plan, help them use it.",
+        "If they may act soon, call 911, and stay with them if it is safe for you."
+      ]
+    },
+    {
+      "heading": "Help them connect",
+      "steps": [
+        "Call or text 988 together, or help them chat at 988lifeline.org.",
+        "Help them make and get to an appointment with a doctor or counselor.",
+        "Help them reach other people who care, like friends, family, or a faith leader.",
+        "Veterans and service members can call 988 and press 1, or text 838255."
+      ]
+    },
+    {
+      "heading": "Follow up",
+      "body": "Check in over the next days and weeks with a call, a text, or a visit. Ask how they are doing and what would help. Staying in touch matters."
+    },
+    {
+      "heading": "Take care of yourself",
+      "body": "Supporting someone through a crisis is hard. Talk with someone you trust, and get support for yourself. You can call or text 988 for yourself too."
+    }
+  ],
+  "safetyNote": "Safety first: If someone is in danger right now, call 911. In the US, you can call or text 988 at any time for help, or for advice about someone else. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sud": false,
+  "es": {
+    "title": "Cómo ayudar a alguien que podría estar pensando en el suicidio",
+    "intro": "Si le preocupa que alguien que usted quiere esté pensando en el suicidio, usted puede ayudar. No necesita una preparación especial. Preocuparse, escuchar y ayudarle a buscar apoyo puede hacer una gran diferencia. Esta hoja da pasos sencillos. Leerla toma unos 10 minutos.",
+    "sections": [
+      {
+        "heading": "Señales de alerta",
+        "body": "Tómelas en serio, sobre todo si son nuevas, si están empeorando o si vienen después de una pérdida o de algo doloroso:",
+        "steps": [
+          "Hablar de querer morir, de ser una carga o de no tener razones para vivir",
+          "Buscar formas de quitarse la vida, como buscar en internet o conseguir un arma",
+          "Despedirse, o regalar cosas que son importantes para la persona",
+          "Alejarse de la gente, o cambios grandes en el sueño",
+          "Beber o usar drogas más que antes",
+          "Estar muy agitada o actuar sin cuidado, o tener cambios fuertes de humor"
+        ]
+      },
+      {
+        "heading": "Pregunte directamente",
+        "body": "Pregunte con calma y con cariño: ¿estás pensando en el suicidio? Preguntar no le mete la idea en la cabeza. Muestra que le importa y abre la puerta a la ayuda."
+      },
+      {
+        "heading": "Escuche",
+        "steps": [
+          "Deje que hable. Trate de no discutir, no sermonear y no apurarse a arreglar las cosas.",
+          "Repita lo que oye: parece que te sientes atrapado.",
+          "Agradézcale por contárselo.",
+          "No prometa guardar el secreto. Puede que tenga que buscar ayuda."
+        ]
+      },
+      {
+        "heading": "Ayude a que esté a salvo",
+        "steps": [
+          "Pregunte si tiene un plan, o si ha pensado cómo.",
+          "Ayude a poner tiempo y distancia entre la persona y lo que podría usar, como armas o muchas pastillas. Pídale a un consejero la hoja sobre cómo hacer la casa más segura.",
+          "Si tiene un plan de seguridad, ayúdele a usarlo.",
+          "Si podría actuar pronto, llame al 911, y quédese con la persona si es seguro para usted."
+        ]
+      },
+      {
+        "heading": "Ayúdele a buscar apoyo",
+        "steps": [
+          "Llamen o envíen un mensaje de texto al 988 juntos, o ayúdele a usar el chat en 988lifeline.org.",
+          "Ayúdele a pedir una cita con un médico o un consejero, y a llegar a ella.",
+          "Ayúdele a buscar a otras personas que le quieren, como amistades, familiares o un líder religioso.",
+          "Los veteranos y los miembros de las fuerzas armadas pueden llamar al 988 y marcar 1, o enviar un mensaje de texto al 838255."
+        ]
+      },
+      {
+        "heading": "Siga en contacto",
+        "body": "Comuníquese en los próximos días y semanas con una llamada, un mensaje o una visita. Pregunte cómo está y qué le ayudaría. Seguir en contacto es importante."
+      },
+      {
+        "heading": "Cuídese usted también",
+        "body": "Apoyar a alguien en una crisis es difícil. Hable con alguien de confianza, y busque apoyo para usted. También puede llamar o enviar un mensaje de texto al 988 para usted."
+      }
+    ],
+    "safetyNote": "La seguridad es lo primero: Si alguien está en peligro en este momento, llame al 911. En EE. UU., puede llamar o enviar un mensaje de texto al 988 a cualquier hora para recibir ayuda, o consejos sobre otra persona. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "linkOuts": [
+    {
+      "title": "Help Someone Else",
+      "publisher": "988 Suicide & Crisis Lifeline",
+      "url": "https://988lifeline.org/help-someone-else/",
+      "note": "Tips for talking with and supporting someone who may be in crisis.",
+      "lastVerified": "2026-11-27"
+    },
+    {
+      "title": "Warning Signs of Suicide",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/publications/warning-signs-of-suicide",
+      "note": "A short guide to warning signs and how to help, in English and Spanish.",
+      "lastVerified": "2026-11-27"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Warning Signs of Suicide",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/publications/warning-signs-of-suicide"
+    },
+    {
+      "title": "Help Someone Else",
+      "publisher": "988 Suicide & Crisis Lifeline",
+      "url": "https://988lifeline.org/help-someone-else/"
+    },
+    {
+      "title": "Does asking about suicide and related behaviours induce suicidal ideation? What is the evidence? (Dazzi et al.)",
+      "publisher": "Psychological Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24998511/",
+      "year": 2014
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

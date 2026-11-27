@@ -36,7 +36,8 @@
     "Telehealth delivery may help where access, transport or stigma are barriers."
   ],
   "trainingRequired": "CPT: trained clinicians only. Deliver only after completing a recognized CPT training (for example, a workshop by an approved trainer plus case consultation through the treatment developers' training program). Otherwise refer.",
-  "handoutIds": [],
+  "handoutIds": ["trauma-therapy-what-to-expect"],
+  "orientationIds": ["trauma-focused-therapies", "cognitive-therapy"],
   "sources": [
     {
       "title": "The management of posttraumatic stress disorder and acute stress disorder: synopsis of the 2023 VA/DoD clinical practice guideline",

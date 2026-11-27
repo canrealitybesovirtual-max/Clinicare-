@@ -1,0 +1,289 @@
+{
+  "id": "tobacco-use-disorder",
+  "name": "Tobacco use disorder (nicotine dependence)",
+  "icd10cm": [
+    {
+      "code": "F17.200",
+      "label": "Nicotine dependence, unspecified, uncomplicated"
+    },
+    {
+      "code": "F17.201",
+      "label": "Nicotine dependence, unspecified, in remission"
+    },
+    {
+      "code": "F17.203",
+      "label": "Nicotine dependence unspecified, with withdrawal"
+    },
+    {
+      "code": "F17.210",
+      "label": "Nicotine dependence, cigarettes, uncomplicated"
+    },
+    {
+      "code": "F17.211",
+      "label": "Nicotine dependence, cigarettes, in remission"
+    },
+    {
+      "code": "F17.213",
+      "label": "Nicotine dependence, cigarettes, with withdrawal"
+    },
+    {
+      "code": "F17.220",
+      "label": "Nicotine dependence, chewing tobacco, uncomplicated"
+    },
+    {
+      "code": "F17.290",
+      "label": "Nicotine dependence, other tobacco product, uncomplicated"
+    }
+  ],
+  "icd11": [
+    {
+      "code": "6C4A.1",
+      "label": "Harmful pattern of use of nicotine"
+    },
+    {
+      "code": "6C4A.2",
+      "label": "Nicotine dependence"
+    }
+  ],
+  "dsmPointer": "See DSM-5-TR: Substance-Related and Addictive Disorders — Tobacco Use Disorder",
+  "summary": "Regular use of cigarettes, nicotine vapes, cigars, smokeless tobacco or nicotine pouches that the client finds hard to stop: strong cravings, using soon after waking, irritability, restlessness or poor focus without it, and quit attempts that have not lasted. Tobacco use is more common among people with mental health and other substance use conditions and remains the leading preventable cause of disease and death in the US. Ask about use at every visit, advise quitting in a respectful way, and combine behavioral support with FDA-approved medicine through a prescriber (USPSTF, 2021); a quitline can add free coaching. Nicotine withdrawal can affect mood, sleep and focus for a few weeks, and quitting can change the levels of some psychiatric medicines, so tell the prescriber about a quit date. The 42 CFR Part 2 definition of a substance use disorder leaves out tobacco, but this app treats all substance use the same careful way: nothing is stored or sent, and exports carry the notice. 42 CFR Part 2 prohibits unauthorized use or disclosure of these records. For clinician review only; this is not a diagnosis.",
+  "features": [
+    {
+      "symptomId": "tobacco-unsuccessful-quit",
+      "kind": "core",
+      "weight": 5
+    },
+    {
+      "symptomId": "tobacco-craving-withdrawal",
+      "kind": "core",
+      "weight": 4
+    },
+    {
+      "symptomId": "tobacco-use-pattern",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "irritability",
+      "kind": "associated",
+      "weight": 1,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "restlessness",
+      "kind": "associated",
+      "weight": 1,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "concentration-difficulty",
+      "kind": "associated",
+      "weight": 1
+    },
+    {
+      "symptomId": "subjective-anxiety-stress",
+      "kind": "associated",
+      "weight": 1
+    },
+    {
+      "symptomId": "depressed-mood",
+      "kind": "associated",
+      "weight": 1
+    }
+  ],
+  "minCore": 1,
+  "durationGate": {
+    "minWeeks": 4,
+    "note": "Ask how much and how often the client uses each product, for how long, and about past quit attempts. Check the timing DSM-5-TR and ICD-11 describe."
+  },
+  "impairmentRequired": true,
+  "ruleOuts": [
+    {
+      "label": "Cannabis or other substances smoked or vaped",
+      "type": "substance",
+      "note": "Ask what is in the vape or joint; THC products and tobacco are often used together and need separate plans. This app does not store or send substance-use information."
+    },
+    {
+      "label": "Tobacco-related lung, heart and other illness",
+      "type": "medical",
+      "note": "Coordinate with primary care; health problems are a common reason to quit and can change which medicines suit the client."
+    },
+    {
+      "label": "Withdrawal mistaken for worsening anxiety or depression",
+      "type": "psychiatric",
+      "note": "Irritability, restlessness, low mood and poor sleep in the first weeks after quitting are often withdrawal; plan for them rather than restarting."
+    },
+    {
+      "label": "Medicine levels that change when smoking stops",
+      "type": "medical",
+      "note": "Smoking affects the blood levels of some medicines, including some antipsychotics; ask the client to tell the prescriber before quitting so doses can be reviewed."
+    }
+  ],
+  "specifiers": [
+    {
+      "label": "ICD-10-CM coding notes",
+      "note": "F17.2xx codes nicotine dependence by product (cigarettes, chewing tobacco, other products such as vapes) and status (uncomplicated, in remission, with withdrawal). Z72.0 records tobacco use without dependence. DSM-5-TR applies its own severity and remission specifiers: See DSM-5-TR."
+    },
+    {
+      "label": "ICD-11 coding notes",
+      "note": "6C4A.1 is a harmful pattern of use of nicotine and 6C4A.2 is nicotine dependence. Check the WHO ICD-11 browser for current qualifiers."
+    },
+    {
+      "label": "42 CFR Part 2 and tobacco",
+      "note": "The Part 2 definition of a substance use disorder excludes tobacco and caffeine (42 CFR 2.11). This app still shows the Part 2 notice on tobacco content as a conservative default."
+    }
+  ],
+  "differentials": [
+    {
+      "label": "Tobacco use",
+      "icd10cm": "Z72.0",
+      "distinguishing": "Regular or occasional use without cravings, withdrawal or failed quit attempts."
+    },
+    {
+      "label": "Cannabis dependence, uncomplicated",
+      "icd10cm": "F12.20",
+      "distinguishing": "Loss of control centers on THC products, which are often smoked or vaped with tobacco."
+    },
+    {
+      "label": "Generalized anxiety disorder",
+      "icd10cm": "F41.1",
+      "distinguishing": "Worry and tension that predate tobacco use or continue long after withdrawal has passed."
+    }
+  ],
+  "comorbidities": [
+    {
+      "conditionId": "major-depressive-disorder",
+      "label": "Major depressive disorder",
+      "note": "Smoking is more common with depression; plan extra support for mood in the first weeks after a quit date."
+    },
+    {
+      "conditionId": "schizophrenia",
+      "label": "Schizophrenia",
+      "note": "Smoking rates are high in people with psychosis; offer cessation support and alert the prescriber, since quitting can change medicine levels."
+    },
+    {
+      "conditionId": "alcohol-use-disorder",
+      "label": "Alcohol use disorder",
+      "note": "Drinking is a common trigger for smoking; plan for both together. 42 CFR Part 2 prohibits unauthorized use or disclosure of these records."
+    },
+    {
+      "conditionId": "cannabis-use-disorder",
+      "label": "Cannabis use disorder",
+      "note": "Tobacco and cannabis are often used together; quitting one can raise urges for the other. 42 CFR Part 2 prohibits unauthorized use or disclosure of these records."
+    }
+  ],
+  "measures": [
+    "phq-9",
+    "gad-7"
+  ],
+  "measuresPending": [
+    {
+      "name": "Fagerström Test for Nicotine Dependence (FTND)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/1932883/",
+      "note": "License pending — link out only",
+      "licenseKey": "FTND"
+    }
+  ],
+  "interventions": [
+    {
+      "name": "Ask, advise and offer behavioral support",
+      "evidence": "USPSTF (2021), grade A: ask all adults about tobacco use, advise them to stop, and provide behavioral interventions and FDA-approved pharmacotherapy for cessation to nonpregnant adults.",
+      "note": "Brief, respectful advice at every visit; set a quit date or a cut-down plan the client chooses."
+    },
+    {
+      "name": "Referral for cessation medication (prescriber)",
+      "evidence": "USPSTF (2021): FDA-approved options include nicotine replacement therapy, bupropion and varenicline. A Cochrane network meta-analysis (Cahill et al., 2013) found varenicline and combination nicotine replacement more effective than single forms of nicotine replacement.",
+      "note": "Prescribing decisions rest with the prescriber. The USPSTF found the evidence on e-cigarettes for quitting insufficient."
+    },
+    {
+      "name": "Motivational interviewing",
+      "evidence": "Used to build readiness when a client is unsure about quitting; part of standard behavioral support.",
+      "note": "Explore what tobacco does for the client (stress, routine, social ties) and their own reasons to stop."
+    },
+    {
+      "name": "Urge coping and relapse prevention",
+      "evidence": "Part of behavioral cessation support.",
+      "note": "Plan for trigger times (waking, coffee, drinking, stress), practice riding out urges, and treat a slip as information rather than failure."
+    },
+    {
+      "name": "Contingency management (program-based)",
+      "evidence": "Incentive programs are used in some cessation services.",
+      "note": "Refer to programs that offer it."
+    }
+  ],
+  "handouts": [
+    "my-quit-tobacco-plan",
+    "urge-surfing-log"
+  ],
+  "statIds": [
+    "us-tobacco-use-adults"
+  ],
+  "culturalNotes": [
+    "Tobacco has ceremonial and spiritual meaning in many American Indian and Alaska Native communities, distinct from commercial tobacco use. Ask about this respectfully and focus cessation support on commercial products.",
+    "Targeted marketing, menthol products and higher smoking rates in some communities reflect structural factors, not personal failure. Talk about this without blame.",
+    "Smoking can be woven into work breaks, family life and friendships; quitting may mean changing social routines. Ask who in the client's life would support a quit attempt.",
+    "Hookah, bidis, kreteks and chewing products such as betel quid with tobacco may not be called 'smoking' by the client; ask about each product by name.",
+    "Use a trained professional interpreter, not family members, and check that key terms carry the meaning you intend.",
+    "Faith and spiritual practice can be a source of support. Use faith-integrated approaches only when the client asks for them and after informed consent (see the AACC Code of Ethics for faith-based counselors)."
+  ],
+  "sud": true,
+  "strongMinAreas": 2,
+  "licensedDsm": false,
+  "wileyLicensed": false,
+  "sources": [
+    {
+      "title": "Interventions for tobacco smoking cessation in adults, including pregnant persons: USPSTF recommendation statement",
+      "publisher": "JAMA (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33464343/",
+      "year": 2021
+    },
+    {
+      "title": "Tobacco product use among adults - United States, 2021 (Cornelius et al.)",
+      "publisher": "CDC Morbidity and Mortality Weekly Report (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37141154/",
+      "year": 2023
+    },
+    {
+      "title": "Pharmacological interventions for smoking cessation: an overview and network meta-analysis (Cahill et al.)",
+      "publisher": "Cochrane Database of Systematic Reviews (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23728690/",
+      "year": 2013
+    },
+    {
+      "title": "The Fagerström Test for Nicotine Dependence (Heatherton et al.)",
+      "publisher": "British Journal of Addiction (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/1932883/",
+      "year": 1991
+    },
+    {
+      "title": "42 CFR 2.11 Definitions (substance use disorder; excludes tobacco and caffeine)",
+      "publisher": "eCFR, U.S. Government Publishing Office",
+      "url": "https://www.ecfr.gov/current/title-42/chapter-I/subchapter-A/part-2/subpart-A/section-2.11",
+      "year": 2024
+    },
+    {
+      "title": "ICD-11 for Mortality and Morbidity Statistics (browser)",
+      "publisher": "World Health Organization",
+      "url": "https://icd.who.int/browse/latest-release/mms/en"
+    },
+    {
+      "title": "ICD-10-CM (official code set)",
+      "publisher": "CDC National Center for Health Statistics",
+      "url": "https://www.cdc.gov/nchs/icd/icd-10-cm/index.html"
+    },
+    {
+      "title": "ICD-10-CM codes checked with the NLM Clinical Table Search Service",
+      "publisher": "National Library of Medicine",
+      "url": "https://clinicaltables.nlm.nih.gov/apidoc/icd10cm/v3/doc.html"
+    },
+    {
+      "title": "AACC Code of Ethics",
+      "publisher": "American Association of Christian Counselors",
+      "url": "https://aacc.net/aacc-code-of-ethics/"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

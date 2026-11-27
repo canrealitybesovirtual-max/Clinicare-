@@ -1,0 +1,113 @@
+{
+  "id": "session-structure",
+  "title": "Session structure and agenda setting",
+  "category": "session-process",
+  "summary": "A predictable shape for a session: check-in and measure, a bridge from last time, a shared agenda, review of between-session practice, the main work, new practice, and a summary with feedback. Includes lighter versions for client-led orientations. The session flow timer keeps the steps on time.",
+  "whenToUse": [
+    "In structured therapies such as cognitive behavioral, behavioral, interpersonal and problem-solving work.",
+    "When sessions drift, run over or end without a clear next step.",
+    "When a client is overwhelmed and needs a predictable frame."
+  ],
+  "steps": [
+    {
+      "heading": "Check in and measure",
+      "body": "Ask how the week went and give the agreed measure. Check safety if anything suggests risk. Keep it to a few minutes."
+    },
+    {
+      "heading": "Bridge from last session",
+      "body": "Ask what stayed with them from last time and whether anything has changed."
+    },
+    {
+      "heading": "Set the agenda together",
+      "items": [
+        "Ask what they want to make sure you cover today.",
+        "Add your own items, with a brief reason.",
+        "Agree on order and rough time for each; park what does not fit."
+      ]
+    },
+    {
+      "heading": "Review between-session practice",
+      "body": "Review practice before new content, so it matters. Treat not-done practice as useful information, not failure."
+    },
+    {
+      "heading": "Main work",
+      "body": "Work on the top agenda item with one method at a time. Check in on how it is going midway."
+    },
+    {
+      "heading": "Agree on new practice",
+      "body": "Design the next practice together, with a clear rationale, and write it down."
+    },
+    {
+      "heading": "Summarize and ask for feedback",
+      "body": "Ask the client to summarize the main point, then ask what was helpful and what was not."
+    }
+  ],
+  "prompts": [
+    "What would you most like us to make sure we get to today?",
+    "I would also like to spend some time on the sleep plan. Shall we start with your item and leave the last 15 minutes for that?",
+    "Before we move on, what did you notice when you tried the practice?",
+    "What is the main thing you are taking away from today?"
+  ],
+  "cautions": [
+    "Structure serves the client, not the reverse. A crisis or a strong emotion takes priority over the agenda.",
+    "A rigid agenda can feel controlling to some clients; explain the reason and invite them to shape it.",
+    "Leave real time for feedback at the end, not the last 30 seconds."
+  ],
+  "adaptations": [
+    {
+      "context": "Humanistic and psychodynamic work",
+      "adaptation": "Use a lighter frame: an opening check-in, open space led by the client, and a short closing reflection, without a formal agenda."
+    },
+    {
+      "context": "Telehealth",
+      "adaptation": "Confirm the client's location and a backup phone number at the start, and agree what to do if the connection drops."
+    },
+    {
+      "context": "Attention or memory difficulties",
+      "adaptation": "Write the agenda where both of you can see it and give a written summary at the end."
+    }
+  ],
+  "evidenceSummary": "Agenda setting, homework review and summaries are part of the competences used to deliver cognitive behavioral therapy and of standard competence ratings. In a 2012 analysis of two trials (Webb and colleagues), therapist adherence to the structure of cognitive therapy was linked with clients learning cognitive skills. NICE guideline NG222 (2022) recommends delivering psychological treatments as structured, manualized courses for depression.",
+  "forClinicianReview": true,
+  "crisisPanel": false,
+  "sud": false,
+  "relatedInterventionIds": [
+    "problem-solving",
+    "behavioral-activation",
+    "thought-record"
+  ],
+  "relatedHandoutIds": [
+    "between-session-practice-plan",
+    "session-check-in-card"
+  ],
+  "relatedFormulationIds": [],
+  "relatedLegalIds": [],
+  "relatedPracticeIds": [
+    "between-session-practice",
+    "outcome-monitoring",
+    "socratic-questioning",
+    "first-sessions-and-role-induction",
+    "telehealth-sessions"
+  ],
+  "relatedPopulationIds": [],
+  "toolHref": "/tools/session",
+  "linkOuts": [],
+  "measuresPending": [],
+  "sources": [
+    {
+      "title": "Predictors of patient cognitive therapy skills and symptom change in two randomized clinical trials: the role of therapist adherence and the therapeutic alliance (Webb et al.)",
+      "publisher": "Journal of Consulting and Clinical Psychology, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22468907/",
+      "year": 2012
+    },
+    {
+      "title": "Depression in adults: treatment and management (NG222)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng222",
+      "year": 2022
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

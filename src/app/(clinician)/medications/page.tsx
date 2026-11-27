@@ -56,6 +56,16 @@ export default function MedicationsPage() {
         </p>
       </Notice>
 
+      <p className="-mt-2 mb-6 max-w-3xl">
+        <Link
+          href="/medications/effects"
+          className="inline-flex min-h-11 items-center gap-1.5 text-sm font-semibold text-accent underline underline-offset-2"
+        >
+          Medicines with mental health effects, label check and red flags
+          <ArrowRight aria-hidden className="size-4" />
+        </Link>
+      </p>
+
       <MedicationBrowser items={items} categories={categories} />
 
       <section aria-labelledby="med-about" className="mt-10">

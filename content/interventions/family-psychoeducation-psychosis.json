@@ -6,18 +6,20 @@
     "schizophrenia",
     "bipolar-i-disorder"
   ],
-  "evidenceLevel": "A Cochrane review (Pharoah et al., 2010) found family intervention reduced relapse and hospital admission in schizophrenia; NICE CG178 recommends family intervention for people with psychosis who live with or are in close contact with family.",
+  "evidenceLevel": "A Cochrane review (Pharoah et al., 2010) found family intervention reduced relapse and hospital admission in schizophrenia. NICE CG178 recommends offering family intervention to people with psychosis who live with or are in close contact with family, and specifies its structure: including the person with psychosis if practical, lasting 3 months to 1 year, with at least 10 planned sessions, in single-family or multi-family format, and including negotiated problem-solving or crisis management work. NICE also recommends offering carers an education and support programme. The VA/DoD 2023 schizophrenia guideline recommends psychosocial interventions for patients and families.",
   "minutes": {
     "min": 60,
     "max": 90
   },
-  "purpose": "Works with the client and family together over several months to share information about psychosis, lower stress at home, improve communication and problem-solving, and plan for early signs of relapse. It supports carers too.",
+  "purpose": "Works with the client and family together over 3 months to a year, usually for at least 10 planned sessions, to share information about psychosis, lower stress at home, improve communication and problem-solving, and plan for early signs of relapse and for crises. Families can choose single-family sessions or a multi-family group. It supports carers too.",
   "steps": [
     "Get the client's consent about what will be shared and who will take part.",
     "Share information about psychosis, treatment and recovery in plain language, and invite questions.",
     "Help the family spot early warning signs of relapse and agree on a plan.",
     "Teach calm, clear communication and step-by-step problem-solving.",
-    "Address carer stress and connect the family with carer support."
+    "Address carer stress and connect the family with carer support.",
+    "Agree on the format and length with the family (single-family or multi-family group; at least 10 planned sessions over 3 months to a year), and include the client in sessions whenever practical.",
+    "Write down a shared relapse and crisis plan: early signs, who does what, and who to contact, and review it at later sessions."
   ],
   "script": [
     "Psychosis is common and treatable, and families play a big part in recovery.",
@@ -35,14 +37,33 @@
     "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
   ],
   "handoutIds": [
-    "staying-well-plan"
+    "staying-well-plan",
+    "listening-to-someone-you-love"
   ],
+  "orientationIds": ["systemic-family-and-couples-therapy"],
   "sources": [
     {
       "title": "Family intervention for schizophrenia (Pharoah et al.)",
       "publisher": "Cochrane Database of Systematic Reviews (PubMed)",
       "url": "https://pubmed.ncbi.nlm.nih.gov/21154340/",
       "year": 2010
+    },
+    {
+      "title": "Psychosis and schizophrenia in adults: prevention and management (CG178): recommendations",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg178/chapter/Recommendations",
+      "year": 2014
+    },
+    {
+      "title": "SCZ Psychosocial Interventions (2023 VA/DoD guideline fact sheet)",
+      "publisher": "Psychological Health Center of Excellence, Defense Health Agency",
+      "url": "https://health.mil/Reference-Center/Publications/2024/05/01/SCZ-Psychosocial-Interventions-2024",
+      "year": 2024
+    },
+    {
+      "title": "All in the Family: An Introduction for Clinicians to Evidence-Based Family-Based Interventions for Schizophrenia",
+      "publisher": "Psychological Health Center of Excellence, Defense Health Agency",
+      "url": "https://health.mil/Military-Health-Topics/Centers-of-Excellence/Psychological-Health-Center-of-Excellence/Clinicians-Corner-Blog/Evidence-Based-Practice-Data-and-Research/All-in-the-Family-An-Introduction-for-Clinicians-to-Evidence-Based-Family-Based-Interventions-for-Schizophrenia"
     },
     {
       "title": "Psychosis and schizophrenia in adults: prevention and management (CG178)",

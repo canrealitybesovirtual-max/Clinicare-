@@ -1,0 +1,119 @@
+{
+  "id": "behavioral-couples-therapy",
+  "name": "Behavioral couples therapy (substance use, and depression with relationship distress)",
+  "modality": "Couple therapy - behavioral",
+  "conditions": [
+    "alcohol-use-disorder",
+    "cannabis-use-disorder",
+    "opioid-use-disorder",
+    "stimulant-use-disorder",
+    "major-depressive-disorder"
+  ],
+  "evidenceLevel": "For alcohol and drug use, a meta-analysis (Powers et al., 2008) found behavioral couples therapy (BCT) better than individual treatment at follow-up for frequency and consequences of use and for relationship satisfaction. NICE CG115 recommends offering BCT for harmful drinking or mild alcohol dependence when a willing partner is available and there are no signs of current domestic abuse. For depression, NICE NG222 (2022) advises considering BCT when relationship problems may be contributing or a partner could help, over 15 to 20 sessions; a Cochrane review (Barbato et al., 2018) found couple therapy similar to individual therapy for depressive symptoms, with low-quality evidence.",
+  "evidenceGrades": [
+    {
+      "body": "NICE",
+      "guideline": "Alcohol-use disorders: diagnosis, assessment and management of harmful drinking and alcohol dependence (CG115)",
+      "year": 2011,
+      "conditionId": "alcohol-use-disorder",
+      "population": "Harmful drinking or mild alcohol dependence, with a regular partner willing to take part and no current domestic abuse",
+      "direction": "for",
+      "strength": "offer",
+      "url": "https://www.nice.org.uk/guidance/cg115/chapter/Recommendations"
+    },
+    {
+      "body": "NICE",
+      "guideline": "Depression in adults: treatment and management (NG222)",
+      "year": 2022,
+      "conditionId": "major-depressive-disorder",
+      "population": "Less severe or more severe depression with relationship problems that may contribute, or where involving the partner may help",
+      "direction": "for",
+      "strength": "consider",
+      "url": "https://www.nice.org.uk/guidance/ng222/chapter/Recommendations"
+    }
+  ],
+  "minutes": {
+    "min": 50,
+    "max": 60
+  },
+  "purpose": "Treats alcohol or drug use, or depression, by working with the client and their partner together, on the idea that relationship stress and substance use or low mood feed each other. For substance use, it combines a short daily recovery agreement (the client states their intention for the day and the partner expresses support, sometimes including support for prescribed medication), more shared positive activities, communication skills and relapse planning. For depression, it focuses on more positive exchanges, better communication and joint problem-solving to reduce relationship distress. Usually 12 to 20 weekly sessions.",
+  "steps": [
+    "Screen each partner privately for intimate partner violence, coercive control and fear of the partner; if present, do not offer joint work and focus on safety and individual treatment.",
+    "Check that the partner is willing, supports the goal and, for substance-focused BCT, is not currently misusing substances.",
+    "Explain the rationale: relationship stress and substance use or low mood can keep each other going, and improving the relationship supports recovery.",
+    "Substance use (overview): set up a short daily recovery agreement in the couple's own words and a calendar to mark it, including support for any medication the client is prescribed.",
+    "Increase positive exchanges: notice and say one thing each day the partner did that you appreciated, and plan shared enjoyable activities each week.",
+    "Teach communication skills: listening and reflecting, expressing feelings directly, and planned problem discussions at a set time.",
+    "Plan together for high-risk situations and lapses, including what each partner will do and how to get help.",
+    "Track progress with agreed measures (for example, PHQ-9 for depression), and plan for ending and ongoing recovery."
+  ],
+  "script": [
+    "Before we meet together, I'll talk with each of you on your own for a few minutes. I do this with every couple.",
+    "Stress between you and the drinking seem to feed each other. This therapy works on both at the same time.",
+    "Each day, you could take a minute together: you say your plan for the day, and your partner says they support you.",
+    "This week, notice one thing your partner does that you appreciate, and tell them.",
+    "If a slip happens, what will each of you do?"
+  ],
+  "contraindications": [
+    "Do not offer joint sessions when there is current intimate partner violence, coercive control or fear of the partner (NICE CG115 makes this explicit for alcohol); offer individual treatment and safety planning, and share hotline information discreetly.",
+    "Substance-focused BCT needs a partner who is not currently misusing substances and who supports the recovery goal.",
+    "Withdrawal from alcohol, sedatives or opioids can be dangerous; coordinate medical management with a prescriber or medically supervised program.",
+    "Substance-use information is protected under 42 CFR Part 2. This app does not store or send it; keep records in your protected clinical system, and include the Part 2 notice on any export that mentions substance use.",
+    "This intervention does not assess or decide risk. If suicidal thoughts, self-harm or risk to others come up, pause and follow your setting's risk-assessment and safety-planning procedures. Keep crisis options visible: 988 Suicide & Crisis Lifeline (US, call or text), the local emergency number, and findahelpline.com for other countries."
+  ],
+  "culturalAdaptations": [
+    "Define couple inclusively, including same-sex and unmarried partners.",
+    "Gender roles, family involvement and attitudes to alcohol and drugs vary; adapt the recovery agreement to the couple's values and language.",
+    "Stigma about substance use may be strong in the couple's community; discuss privacy and who knows about treatment.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "trainingRequired": "Behavioral couples therapy: training in couple therapy and in substance use treatment recommended; practice within your competence.",
+  "handoutIds": [
+    "couples-pause-and-repair",
+    "relationship-safety-help-card",
+    "high-risk-situations-plan"
+  ],
+  "orientationIds": [
+    "systemic-family-and-couples-therapy",
+    "behavior-therapy"
+  ],
+  "sources": [
+    {
+      "title": "PHCoE Evidence Brief: Behavioral Couples Therapy for Alcohol Use Disorder",
+      "publisher": "Psychological Health Center of Excellence, Defense Health Agency",
+      "url": "https://health.mil/Reference-Center/Publications/2021/04/26/PHCoE-Evidence-Brief-Behavioral-Couples-Therapy-for-Alcohol-Use-Disorder-508"
+    },
+    {
+      "title": "Behavioral couples therapy (BCT) for alcohol and drug use disorders: a meta-analysis (Powers, Vedel and Emmelkamp)",
+      "publisher": "Clinical Psychology Review (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18374464/",
+      "year": 2008
+    },
+    {
+      "title": "Alcohol-use disorders: diagnosis, assessment and management of harmful drinking (high-risk drinking) and alcohol dependence (CG115)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg115",
+      "year": 2011
+    },
+    {
+      "title": "CG115 update information (behavioural couples therapy and domestic abuse, 2022)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/CG115/chapter/update-information"
+    },
+    {
+      "title": "Depression in adults: treatment and management (NG222)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng222",
+      "year": 2022
+    },
+    {
+      "title": "Couple therapy for depression (Barbato, D'Avanzo and Parabiaghi)",
+      "publisher": "Cochrane Database of Systematic Reviews",
+      "url": "https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD004188.pub3/information",
+      "year": 2018
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

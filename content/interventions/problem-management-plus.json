@@ -1,0 +1,115 @@
+{
+  "id": "problem-management-plus",
+  "name": "Problem Management Plus (PM+) and related WHO scalable interventions",
+  "modality": "Low-intensity CBT - transdiagnostic (WHO)",
+  "conditions": [
+    "adjustment-disorder",
+    "major-depressive-disorder",
+    "generalized-anxiety-disorder",
+    "ptsd"
+  ],
+  "evidenceLevel": "PM+ is a WHO five-session program for adults with distress in communities affected by adversity, designed for delivery by trained and supervised non-specialists. Randomized trials in Pakistan (Rahman et al., 2016) and Kenya (Bryant et al., 2017) found less distress, anxiety or depression than enhanced usual care. A 2023 meta-analysis of PM+ and Step-by-Step (Schäfer et al.) found a small to medium benefit for distress that lasted to follow-up, with very low certainty of evidence and wide variation between studies.",
+  "minutes": {
+    "min": 60,
+    "max": 90
+  },
+  "purpose": "A brief WHO program, usually five weekly sessions, for adults with distress such as low mood, worry or stress after adversity, in settings with few specialists. Trained helpers teach four strategies: managing stress (slow breathing), managing problems (structured problem-solving), getting going and keeping doing (behavioral activation), and strengthening social support. Related WHO formats are Self-Help Plus, a five-session group course with an illustrated guide (Doing What Matters in Times of Stress), and group interpersonal therapy for depression. WHO materials carry their own license; link to WHO rather than copying them.",
+  "steps": [
+    "Check fit: PM+ is for adults with distress and impaired daily functioning; screen for problems that need other care (for example, psychosis, imminent suicide risk, severe substance use) and refer.",
+    "Use the WHO manual and training. Helpers need training, supervised practice and regular supervision by a mental health professional.",
+    "Session 1 (overview): engagement, information about adversity and distress, and managing stress with slow breathing.",
+    "Sessions 2 and 3 (overview): managing problems by separating solvable from unsolvable ones and working through a solvable one step by step; start 'get going, keep doing' with small pleasant and task activities.",
+    "Session 4 (overview): strengthening social support by identifying trusted people or groups and planning one way to connect.",
+    "Session 5 (overview): review all strategies, plan how to keep using them, and recognize progress.",
+    "Check distress and functioning each session with the measure your program uses, and refer when the client does not improve or risk rises.",
+    "Adapt words for distress, examples and pictures with local communities, as WHO describes."
+  ],
+  "script": [
+    "Many people feel this way after what you've been through. This program teaches a few practical skills to help manage it.",
+    "Let's practice slowing our breathing together for a couple of minutes.",
+    "Of all the problems you mentioned, which one can you do something about right now?",
+    "What's one small activity you used to enjoy, or a task you've been putting off, that you could do this week?",
+    "Who is someone you trust that you could reach out to this week?"
+  ],
+  "contraindications": [
+    "PM+ is not designed for people with psychosis, severe cognitive impairment, imminent suicide risk or severe substance dependence; refer to specialist care.",
+    "Non-specialist delivery requires training and regular supervision; do not deliver without them.",
+    "Do not reproduce WHO manuals or worksheets in this app; link to WHO publications and follow their license terms.",
+    "Address urgent practical needs (safety, food, shelter, medical care, legal help) first or alongside.",
+    "This intervention does not assess or decide risk. If suicidal thoughts, self-harm or risk to others come up, pause and follow your setting's risk-assessment and safety-planning procedures. Keep crisis options visible: 988 Suicide & Crisis Lifeline (US, call or text), the local emergency number, and findahelpline.com for other countries."
+  ],
+  "culturalAdaptations": [
+    "PM+ was built to be adapted; WHO describes adapting terms for distress, examples and images with local communities.",
+    "Social support may include extended family, community and faith groups; follow the client's view of who is trustworthy.",
+    "For refugees and displaced people, consider legal status, loss and ongoing danger, and connect with humanitarian services.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "trainingRequired": "PM+ and Self-Help Plus: helpers deliver them only after WHO-based training and with ongoing supervision by a mental health professional.",
+  "handoutIds": [
+    "problem-solving-steps",
+    "my-relationships-map",
+    "breathing-practice",
+    "activity-schedule"
+  ],
+  "orientationIds": [
+    "cognitive-therapy",
+    "behavior-therapy"
+  ],
+  "sources": [
+    {
+      "title": "Problem Management Plus (PM+): individual psychological help for adults impaired by distress in communities exposed to adversity",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/publications/i/item/problem-management-plus-(-pm-)-individual-psychological-help-for-adults-impaired-by-distress-in-communities-exposed-to-adversity",
+      "year": 2016
+    },
+    {
+      "title": "Problem Management Plus (PM+) psychological intervention for individuals: training manual",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/publications/i/item/9789240109926"
+    },
+    {
+      "title": "Self-Help Plus (SH+)",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/publications/i/item/9789240035119"
+    },
+    {
+      "title": "Doing What Matters in Times of Stress: an illustrated guide",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/publications/i/item/9789240003927",
+      "year": 2020
+    },
+    {
+      "title": "Guided self-help intervention reduces refugees' psychological distress and improves wellbeing in humanitarian crises",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/news/item/23-01-2020-guided-self-help-intervention-reduces-refugees-psychological-distress-and-improves-wellbeing-in-humanitarian-crises",
+      "year": 2020
+    },
+    {
+      "title": "Group Interpersonal Therapy (IPT) for Depression (WHO generic field-trial version 1.0)",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/publications/i/item/group-interpersonal-therapy-for-depression",
+      "year": 2016
+    },
+    {
+      "title": "Effect of a multicomponent behavioral intervention in adults impaired by psychological distress in a conflict-affected area of Pakistan: a randomized clinical trial (Rahman et al.)",
+      "publisher": "JAMA (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27837602/",
+      "year": 2016
+    },
+    {
+      "title": "Effectiveness of a brief behavioural intervention on psychological distress among women with a history of gender-based violence in urban Kenya: a randomised clinical trial (Bryant et al.)",
+      "publisher": "PLoS Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28809935/",
+      "year": 2017
+    },
+    {
+      "title": "World Health Organization's low-intensity psychosocial interventions: a systematic review and meta-analysis of the effects of Problem Management Plus and Step-by-Step (Schäfer et al.)",
+      "publisher": "World Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37713578/",
+      "year": 2023
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

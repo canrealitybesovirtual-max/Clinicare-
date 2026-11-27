@@ -2,7 +2,7 @@
   "id": "mood",
   "title": "Low mood: key features, course and mood elevation",
   "domain": "mood",
-  "about": "Low mood, loss of interest, the course of a depressed mood, and the bipolar and borderline questions that change the picture: past high stretches, how far they went, how ups and downs run over time, and how close relationships go.",
+  "about": "Low mood, loss of interest, the course of a depressed mood, and the bipolar and borderline questions that change the picture: past high stretches, how far they went, how ups and downs run over time, and how close relationships go. It also covers mood that follows the menstrual cycle and the harms of gambling, which often travel with low mood.",
   "questions": [
     {
       "id": "mood-interest",
@@ -549,6 +549,164 @@
         "cyclothymic-disorder"
       ],
       "priority": 20
+    },
+    {
+      "id": "mood-cycle-timing",
+      "kind": "discriminate",
+      "domain": "mood",
+      "text": "Do the mood changes come in the days before the period and fade soon after it starts, with symptom-free days in between, and has this been checked with daily ratings?",
+      "why": "Memory of past cycles is unreliable. Daily ratings over at least two cycles show whether mood truly follows the cycle or whether another condition runs all month and only worsens before the period, which changes the plan.",
+      "options": [
+        {
+          "id": "rated",
+          "label": "Yes, shown on daily ratings over at least two cycles",
+          "effects": {
+            "addSymptomIds": [
+              "luteal-phase-timing"
+            ]
+          }
+        },
+        {
+          "id": "recall",
+          "label": "Yes, but only from memory so far",
+          "note": "Ask the client to rate symptoms daily for two cycles (see the DRSP link-out) before relying on the cycle link."
+        },
+        {
+          "id": "all-month",
+          "label": "Present all month, only worse before the period",
+          "effects": {
+            "negateSymptomIds": [
+              "luteal-phase-timing"
+            ]
+          },
+          "note": "This fits premenstrual worsening of another condition; assess and treat that condition."
+        },
+        {
+          "id": "perimenopause",
+          "label": "Cycles are irregular or have stopped, with hot flashes, night sweats or new sleep problems",
+          "effects": {
+            "setMedicalPossible": "yes"
+          },
+          "surfaces": [
+            "medical-referral"
+          ],
+          "note": "Consider perimenopausal mood change and suggest a medical review (NAMS, 2018)."
+        },
+        {
+          "id": "unsure",
+          "label": "Not sure yet",
+          "keepOpen": true
+        }
+      ],
+      "showWhen": {
+        "symptomIds": [
+          "premenstrual-mood-symptoms",
+          "premenstrual-impairment",
+          "luteal-phase-timing"
+        ],
+        "conditionIds": [
+          "premenstrual-dysphoric-disorder"
+        ]
+      },
+      "targets": [
+        "luteal-phase-timing"
+      ],
+      "discriminates": [
+        "premenstrual-dysphoric-disorder",
+        "major-depressive-disorder",
+        "bipolar-ii-disorder",
+        "borderline-personality-disorder"
+      ],
+      "priority": 20
+    },
+    {
+      "id": "gambling-harms",
+      "kind": "core",
+      "domain": "mood",
+      "select": "many",
+      "text": "Ask how gambling has gone lately: betting more or for longer than planned, chasing losses, hiding it, debts or borrowing, and how much of the day it takes up.",
+      "why": "Loss of control, chasing losses and hidden debts show whether gambling has become a problem in its own right. Ask without judgment; NICE (NG248, 2025) also advises asking directly about suicide, since gambling harms can be a strong risk factor.",
+      "options": [
+        {
+          "id": "control",
+          "label": "Bets more or for longer than planned, or cannot cut down",
+          "effects": {
+            "addSymptomIds": [
+              "gambling-impaired-control"
+            ]
+          }
+        },
+        {
+          "id": "chasing",
+          "label": "Gambles again to win back losses",
+          "effects": {
+            "addSymptomIds": [
+              "chasing-losses"
+            ]
+          }
+        },
+        {
+          "id": "hiding-debts",
+          "label": "Hides gambling, has debts or borrows to gamble or cover losses",
+          "effects": {
+            "addSymptomIds": [
+              "gambling-concealment-harm"
+            ]
+          },
+          "note": "Offer money and debt advice and talk about blocking tools (NICE NG248)."
+        },
+        {
+          "id": "preoccupied",
+          "label": "Thinks about gambling much of the day",
+          "effects": {
+            "addSymptomIds": [
+              "gambling-preoccupation"
+            ]
+          }
+        },
+        {
+          "id": "none",
+          "label": "None of these",
+          "exclusive": true,
+          "effects": {
+            "negateSymptomIds": [
+              "gambling-impaired-control",
+              "chasing-losses",
+              "gambling-concealment-harm",
+              "gambling-preoccupation"
+            ]
+          }
+        },
+        {
+          "id": "not-yet",
+          "label": "Not asked yet",
+          "keepOpen": true,
+          "exclusive": true
+        }
+      ],
+      "showWhen": {
+        "symptomIds": [
+          "gambling-preoccupation",
+          "chasing-losses",
+          "gambling-impaired-control",
+          "gambling-concealment-harm"
+        ],
+        "conditionIds": [
+          "gambling-disorder"
+        ]
+      },
+      "targets": [
+        "gambling-impaired-control",
+        "chasing-losses",
+        "gambling-concealment-harm",
+        "gambling-preoccupation"
+      ],
+      "discriminates": [
+        "gambling-disorder",
+        "bipolar-i-disorder",
+        "major-depressive-disorder"
+      ],
+      "priority": 15
     }
   ],
   "sources": [
@@ -588,6 +746,24 @@
       "title": "Personality Disorders (statistics)",
       "publisher": "National Institute of Mental Health",
       "url": "https://www.nimh.nih.gov/health/statistics/personality-disorders"
+    },
+    {
+      "title": "Management of premenstrual disorders: ACOG Clinical Practice Guideline No. 7",
+      "publisher": "Obstetrics & Gynecology (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37973069/",
+      "year": 2023
+    },
+    {
+      "title": "Guidelines for the evaluation and treatment of perimenopausal depression: summary and recommendations (Maki et al.)",
+      "publisher": "Menopause (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30179986/",
+      "year": 2018
+    },
+    {
+      "title": "Gambling-related harms: identification, assessment and management (NG248): recommendations",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng248/chapter/recommendations",
+      "year": 2025
     }
   ],
   "license": "original",

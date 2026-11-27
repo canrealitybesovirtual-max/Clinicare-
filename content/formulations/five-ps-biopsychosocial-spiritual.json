@@ -1,0 +1,279 @@
+{
+  "id": "five-ps-biopsychosocial-spiritual",
+  "name": "5 Ps biopsychosocial-spiritual formulation",
+  "shortName": "5 Ps grid",
+  "family": "integrative",
+  "orientationIds": [
+    "integrative-common-factors"
+  ],
+  "purpose": "A shared map of why this person is struggling now. The 5 Ps (presenting, predisposing, precipitating, perpetuating and protective factors) are crossed with four domains (biological, psychological, social, and cultural or spiritual), so physical health, life circumstances, culture and faith sit next to thoughts and feelings. It works across orientations, links each maintaining factor to interventions for clinician review, and gives the protective row equal weight so the plan builds on strengths as well as problems.",
+  "whenToUse": [
+    "After the first one or two assessment sessions, to pull the history into one picture before choosing goals.",
+    "When several problems are present at once and you need to decide where to start.",
+    "When treatment has stalled: re-formulating often shows a maintaining factor nobody is working on.",
+    "With a multidisciplinary team, as a common language that does not depend on one therapy model."
+  ],
+  "structure": [
+    {
+      "id": "presenting",
+      "label": "Presenting concerns",
+      "prompt": "What the person is struggling with now and how it affects daily life, in their own words where possible. Documented symptoms and questionnaire results from this session can be added as a starting point.",
+      "examples": [
+        "Low mood most days and pulling back from friends",
+        "Worry that makes it hard to start work tasks",
+        "Poor sleep for several months"
+      ],
+      "prefill": "session"
+    },
+    {
+      "id": "predisposing",
+      "label": "Predisposing factors",
+      "prompt": "What made the person more vulnerable before the current difficulties began: temperament, family history, early experiences, long-standing beliefs, health and social circumstances.",
+      "examples": [
+        "A long-standing belief of not being good enough",
+        "Growing up where feelings were not talked about",
+        "A family history of low mood"
+      ],
+      "factorIds": [
+        "intolerance-of-uncertainty",
+        "emotion-dysregulation",
+        "self-criticism-shame",
+        "negative-core-beliefs",
+        "perfectionism",
+        "physical-health-burden",
+        "low-social-support",
+        "structural-stressors"
+      ],
+      "groupByDomain": true
+    },
+    {
+      "id": "precipitating",
+      "label": "Precipitating factors",
+      "prompt": "What set the current episode off, or made things worse recently. Look for changes in the weeks or months before the difficulties started.",
+      "examples": [
+        "A relationship ended",
+        "A new role at work with less support",
+        "A health scare or a new diagnosis in the family"
+      ],
+      "factorIds": [
+        "sleep-rhythm-disruption",
+        "interpersonal-difficulties",
+        "trauma-memory-intrusions",
+        "physical-health-burden",
+        "structural-stressors"
+      ],
+      "groupByDomain": true
+    },
+    {
+      "id": "perpetuating",
+      "label": "Perpetuating factors",
+      "prompt": "What keeps the difficulties going now. These are the main targets for treatment: patterns of avoidance, thinking habits, sleep, relationships and practical stressors that hold the problem in place.",
+      "examples": [
+        "Avoiding phone calls brings relief, then more worry",
+        "Going over the same problem late into the night",
+        "Money worries that have no plan yet"
+      ],
+      "factorIds": [
+        "avoidance-escape",
+        "safety-behaviors",
+        "repetitive-negative-thinking",
+        "intolerance-of-uncertainty",
+        "threat-monitoring",
+        "reassurance-seeking-checking",
+        "emotion-dysregulation",
+        "experiential-avoidance",
+        "cognitive-fusion",
+        "self-criticism-shame",
+        "negative-core-beliefs",
+        "perfectionism",
+        "low-reward-engagement",
+        "sleep-rhythm-disruption",
+        "interpersonal-difficulties",
+        "urges-and-impulsivity",
+        "trauma-memory-intrusions",
+        "physical-health-burden",
+        "low-social-support",
+        "structural-stressors"
+      ],
+      "groupByDomain": true
+    },
+    {
+      "id": "protective",
+      "label": "Protective factors and strengths",
+      "prompt": "What helps or has helped: people, faith or culture, skills, interests, values and past successes. These are as important as the problems, and they guide which goals and supports fit the person.",
+      "examples": [
+        "A close sibling who checks in",
+        "Faith community and prayer",
+        "Got through a hard time before by keeping a routine"
+      ],
+      "factorIds": [
+        "strengths-and-supports",
+        "values-and-meaning",
+        "coping-skills",
+        "hope-and-motivation"
+      ],
+      "groupByDomain": true
+    },
+    {
+      "id": "summary",
+      "label": "Our working explanation",
+      "prompt": "Two to four plain sentences that link the factors: because of these earlier experiences, when this happened, these patterns kept it going; these strengths will help. Write it so the person would recognize it and could correct it.",
+      "examples": [
+        "Pressure at work came on top of a long habit of doubting yourself. Avoiding calls gave relief but let the worry grow. Your sister and your faith have helped before and can help again."
+      ]
+    }
+  ],
+  "factorIds": [
+    "avoidance-escape",
+    "safety-behaviors",
+    "repetitive-negative-thinking",
+    "intolerance-of-uncertainty",
+    "threat-monitoring",
+    "reassurance-seeking-checking",
+    "emotion-dysregulation",
+    "experiential-avoidance",
+    "cognitive-fusion",
+    "self-criticism-shame",
+    "negative-core-beliefs",
+    "perfectionism",
+    "low-reward-engagement",
+    "sleep-rhythm-disruption",
+    "interpersonal-difficulties",
+    "urges-and-impulsivity",
+    "trauma-memory-intrusions",
+    "physical-health-burden",
+    "low-social-support",
+    "structural-stressors",
+    "strengths-and-supports",
+    "values-and-meaning",
+    "coping-skills",
+    "hope-and-motivation"
+  ],
+  "steps": [
+    "Explain the purpose in plain words: a shared picture that can change, not a label or a verdict.",
+    "Start with the presenting concerns and how they affect daily life, then ask what was happening around the time things changed (precipitating).",
+    "Ask about earlier life, health, family and culture to understand vulnerability (predisposing), without pushing for trauma details the person is not ready to share.",
+    "Map what keeps it going (perpetuating): what the person does to cope, what happens next, and what practical stressors stay unsolved.",
+    "Give equal time to strengths and supports (protective), including faith, culture and community when the person brings them up.",
+    "Check each domain column for gaps: physical health, medicines and substances; thoughts and feelings; relationships, work and money; culture, identity and spiritual life.",
+    "Write a short shared summary together, ask what is missing or wrong, and agree which one or two perpetuating factors to work on first.",
+    "Revisit the formulation at review points and after any new information."
+  ],
+  "collaborativeTips": [
+    "Use the person's own words for problems and strengths; offer factor names only as suggestions.",
+    "Ask permission before writing anything down, and offer them a copy of the shared summary.",
+    "Present links as questions: I wonder whether avoiding calls is part of what keeps the worry going. Does that fit?",
+    "Leave out diagnosis names and codes in the shared version; they belong in the record, not on the person's map."
+  ],
+  "cautions": [
+    "A formulation is a working hypothesis, not a diagnosis. Keep diagnosis names and codes out of the shared version, and revise the formulation when new information does not fit.",
+    "Social and structural stressors such as poverty, discrimination or an unsafe home are real problems, not distortions. Do not frame them as thinking errors; pair the formulation with practical help and advocacy.",
+    "Some people find seeing their difficulties written down upsetting. Go at their pace and keep the protective row visible.",
+    "Ask about faith and spirituality only as the person wishes, and never use them to explain away distress.",
+    "A formulation never scores, grades or decides risk. If thoughts of suicide, self-harm or harm to others come up, pause the formulation and follow your own assessment and local protocol; in the US the 988 Lifeline is available by call or text, elsewhere use the local emergency number or findahelpline.com."
+  ],
+  "conditionIds": [
+    "major-depressive-disorder",
+    "generalized-anxiety-disorder",
+    "adjustment-disorder",
+    "ptsd",
+    "panic-disorder",
+    "social-anxiety-disorder"
+  ],
+  "interventionIds": [
+    "cultural-formulation-exploration",
+    "motivational-interviewing",
+    "problem-solving",
+    "solution-focused-questions",
+    "act-values-clarification",
+    "behavioral-activation"
+  ],
+  "handoutIds": [
+    "what-keeps-it-going",
+    "my-therapy-summary",
+    "values-compass"
+  ],
+  "practiceIds": [
+    "intake-assessment",
+    "shared-decision-making",
+    "problem-prioritization",
+    "self-harm-assessment-and-formulation"
+  ],
+  "populationIds": [
+    "cultural-adaptation",
+    "spiritually-integrated"
+  ],
+  "legalIds": [
+    "treatment-plans-and-client-access"
+  ],
+  "worksheet": true,
+  "sud": false,
+  "linkOuts": [
+    {
+      "title": "Good practice guidelines on the use of psychological formulation",
+      "publisher": "British Psychological Society, Division of Clinical Psychology",
+      "url": "https://www.bps.org.uk/guideline/good-practice-guidelines-use-psychological-formulation",
+      "note": "UK professional guidance on what good formulation looks like and how to use it collaboratively."
+    },
+    {
+      "title": "SAMHSA's Working Definition of Recovery (PEP12-RECDEF)",
+      "publisher": "Substance Abuse and Mental Health Services Administration",
+      "url": "https://library.samhsa.gov/product/samhsas-working-definition-recovery/pep12-recdef",
+      "note": "Recovery dimensions and principles that can inform the protective row."
+    }
+  ],
+  "measuresPending": [],
+  "sources": [
+    {
+      "title": "The need for a new medical model: a challenge for biomedicine (Engel)",
+      "publisher": "Science (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/847460/",
+      "year": 1977
+    },
+    {
+      "title": "A biopsychosocial-spiritual model for the care of patients at the end of life (Sulmasy)",
+      "publisher": "The Gerontologist (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12415130/",
+      "year": 2002
+    },
+    {
+      "title": "Is diagnosis enough to guide interventions in mental health? Using case formulation in clinical practice (Macneil et al.)",
+      "publisher": "BMC Medicine",
+      "url": "https://doi.org/10.1186/1741-7015-10-111",
+      "year": 2012
+    },
+    {
+      "title": "Case conceptualization research in cognitive behavior therapy: a state of the science review (Easden and Kazantzis)",
+      "publisher": "Journal of Clinical Psychology",
+      "url": "https://doi.org/10.1002/jclp.22516",
+      "year": 2018
+    },
+    {
+      "title": "Good practice guidelines on the use of psychological formulation",
+      "publisher": "British Psychological Society, Division of Clinical Psychology",
+      "url": "https://www.bps.org.uk/guideline/good-practice-guidelines-use-psychological-formulation",
+      "year": 2011
+    },
+    {
+      "title": "Practice Guidelines for the Psychiatric Evaluation of Adults, Third Edition",
+      "publisher": "American Psychiatric Association Publishing",
+      "url": "https://psychiatryonline.org/doi/10.1176/appi.books.9780890426760.pe02",
+      "year": 2015
+    },
+    {
+      "title": "Conceptual framework for personal recovery in mental health: systematic review and narrative synthesis (Leamy et al.)",
+      "publisher": "British Journal of Psychiatry",
+      "url": "https://doi.org/10.1192/bjp.bp.110.083733",
+      "year": 2011
+    },
+    {
+      "title": "SAMHSA's Working Definition of Recovery (PEP12-RECDEF)",
+      "publisher": "Substance Abuse and Mental Health Services Administration",
+      "url": "https://library.samhsa.gov/product/samhsas-working-definition-recovery/pep12-recdef",
+      "year": 2012
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

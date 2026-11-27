@@ -1,0 +1,87 @@
+{
+  "id": "behavioral-chain-analysis",
+  "name": "Behavioral chain analysis",
+  "modality": "DBT - behavioral analysis",
+  "conditions": [
+    "borderline-personality-disorder",
+    "bulimia-nervosa",
+    "binge-eating-disorder",
+    "alcohol-use-disorder",
+    "cannabis-use-disorder",
+    "stimulant-use-disorder",
+    "major-depressive-disorder"
+  ],
+  "evidenceLevel": "Chain analysis is a core assessment method in dialectical behavior therapy (DBT), the therapy with the most trials for borderline personality disorder, where it has reduced self-harm (Cochrane review, Storebø et al., 2020; NICE CG78). Trials test DBT as a whole, so evidence for chain analysis on its own is limited. Functional analysis of behavior is also standard in CBT for eating disorders and substance use.",
+  "minutes": {
+    "min": 20,
+    "max": 50
+  },
+  "purpose": "A detailed, step-by-step review of one specific episode of a target behavior (for example, self-harm, a binge, using a substance, or an outburst) to understand what led to it and what kept it going: vulnerabilities, the prompting event, the chain of thoughts, feelings, body sensations and actions, the behavior itself, and its consequences. It then finds where a different skill or change could break the chain next time, and how to repair any harm done. Done together and without blame.",
+  "steps": [
+    "Agree on one specific episode of one target behavior, ideally recent, and describe the behavior exactly (what, how much, how long).",
+    "Identify vulnerabilities in the hours or days before: sleep, hunger, illness, substance use, stress, conflict.",
+    "Identify the prompting event: what happened just before the chain started, inside or outside the client.",
+    "Go link by link from the prompting event to the behavior: thoughts, emotions, body sensations, urges and actions, in as much detail as the client can recall. Slow down where the chain speeds up.",
+    "Describe the consequences, short-term (relief, escape) and longer-term (shame, harm, conflict), including how others responded.",
+    "Solution analysis: for key links, ask what skill, change or plan could have broken the chain (for example, a distress tolerance skill at the urge, or more sleep at the vulnerability), and choose one or two to practice.",
+    "Plan repair where the behavior affected the client or others, and plan how to reduce vulnerabilities this week.",
+    "Keep crisis resources visible throughout, especially when the behavior was self-harm."
+  ],
+  "script": [
+    "Let's slow it down and go through it step by step, like a film. There's no blame here; we're trying to understand it.",
+    "What was going on in the day or two before? How were you sleeping and eating?",
+    "What happened right before it started? And then what did you think, and feel in your body?",
+    "Where along this chain could something different have happened?",
+    "Which one skill do you want to practice at that point this week?"
+  ],
+  "contraindications": [
+    "Chain analysis does not assess or decide risk. When the behavior is self-harm or a suicide attempt, also follow your setting's risk-assessment and safety-planning procedures. Keep crisis options visible: 988 Suicide & Crisis Lifeline (US, call or text), the local emergency number, and findahelpline.com.",
+    "A detailed review can bring up shame or strong emotion. Keep it collaborative and paced, avoid moralizing, and pause to ground if the client becomes overwhelmed.",
+    "When the behavior involves substance use, records of it are protected under 42 CFR Part 2. Keep them in your protected clinical record, and do not type identifying details into this app.",
+    "Full DBT, including how chain analysis targets behavior across treatment, requires training; outside a DBT program, use it as a structured functional analysis within your own scope."
+  ],
+  "culturalAdaptations": [
+    "Use the client's own words for emotions and urges, and include cultural and family events as possible prompting events or vulnerabilities.",
+    "Shame about the behavior may be shaped by family, community or faith; acknowledge it and keep the stance non-judgmental.",
+    "Treat experiences of discrimination or unsafe surroundings as real vulnerabilities, not only internal links.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "trainingRequired": "Chain analysis within DBT: trained clinicians only for the full treatment (see the DBT-Linehan Board of Certification and official DBT training); the general functional-analysis steps fit within CBT scope.",
+  "handoutIds": [
+    "chain-analysis-sheet",
+    "daily-emotion-and-urge-tracker",
+    "hard-moment-plan"
+  ],
+  "orientationIds": [
+    "dialectical-behavior-therapy",
+    "behavior-therapy"
+  ],
+  "sources": [
+    {
+      "title": "Psychological therapies for people with borderline personality disorder (Storebø et al.)",
+      "publisher": "Cochrane Database of Systematic Reviews",
+      "url": "https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD012955.pub2/full",
+      "year": 2020
+    },
+    {
+      "title": "Borderline personality disorder: recognition and management (CG78)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg78",
+      "year": 2009
+    },
+    {
+      "title": "Chain Analysis in Dialectical Behavior Therapy (Rizvi)",
+      "publisher": "Guilford Press",
+      "url": "https://www.guilford.com/books/Chain-Analysis-in-Dialectical-Behavior-Therapy/Shireen-Rizvi/9781462538904",
+      "year": 2019
+    },
+    {
+      "title": "DBT-Linehan Board of Certification",
+      "publisher": "DBT-Linehan Board of Certification",
+      "url": "https://dbt-lbc.org/"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

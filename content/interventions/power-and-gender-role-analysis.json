@@ -1,0 +1,81 @@
+{
+  "id": "power-and-gender-role-analysis",
+  "name": "Power and gender-role analysis (feminist, empowerment-focused work)",
+  "modality": "Feminist and multicultural therapy",
+  "conditions": [
+    "major-depressive-disorder",
+    "ptsd",
+    "adjustment-disorder",
+    "generalized-anxiety-disorder"
+  ],
+  "evidenceLevel": "Grounded in feminist and multicultural practice and in APA guidelines for practice with girls and women (2018) and with boys and men (2018), which ask clinicians to consider gender socialization, power, discrimination and violence in assessment and treatment. Trials of feminist therapy as a distinct treatment are few; this is a collaborative assessment and empowerment method to use within an evidence-based plan.",
+  "minutes": {
+    "min": 30,
+    "max": 50
+  },
+  "purpose": "Helps the client explore how messages about gender and other identities, and differences in power in relationships, work, family and society, have shaped their distress, choices and self-blame. Together, client and clinician separate what belongs to the client from what comes from context, such as harassment, unequal caregiving loads, discrimination or rigid role expectations, then plan steps that widen the client's choice, voice and access to resources. Suitable for clients of any gender.",
+  "steps": [
+    "Invite the client to describe identity and context in their own words (gender, race, culture, class, sexuality, disability, age, faith), and name the power difference in the therapy relationship itself.",
+    "Gender-role analysis: list messages the client learned about how people of their gender should think, feel and act; note where each came from and what it costs and gives them today.",
+    "Power analysis: map sources of power and constraint in the client's life (money, time, safety, information, support, legal status) and how they bear on the presenting problem.",
+    "Separate internal from external: for a specific problem, sort which parts reflect the client's choices and which reflect circumstances or others' actions, and revisit self-blame in that light.",
+    "Choose which messages the client wants to keep, adapt or let go, and plan small actions that widen choice and voice.",
+    "Build a resource plan of practical, legal, financial, community and peer supports; where there is violence or coercion, put safety planning and specialized services first.",
+    "Fold the analysis into the overall treatment plan (for example, alongside CBT for depression or trauma-focused therapy)."
+  ],
+  "script": [
+    "Growing up, what did you learn about what someone like you is supposed to be?",
+    "Which of those messages still help you, and which ones cost you?",
+    "Let's look at what's in your control here and what isn't. How much of this have you been blaming yourself for?",
+    "Who has more say in this situation, and how does that shape your options?",
+    "What's one step that would give you a little more choice this week?"
+  ],
+  "contraindications": [
+    "Keep the client in charge of their conclusions; do not impose the clinician's own political or personal views (ACA Code of Ethics on personal values).",
+    "Where there is intimate partner violence or coercive control, plan any assertive steps with safety in mind; changes can raise danger.",
+    "Use alongside, not instead of, treatments with strong evidence for the presenting problem (for example, trauma-focused therapy for PTSD).",
+    "This intervention does not assess or decide risk. If suicidal thoughts, self-harm or risk to others come up, pause and follow your setting's risk-assessment and safety-planning procedures. Keep crisis options visible: 988 Suicide & Crisis Lifeline (US, call or text), the local emergency number, and findahelpline.com for other countries."
+  ],
+  "culturalAdaptations": [
+    "Gender roles are shaped by culture, faith and family; explore them with respect and let the client decide which traditions to keep.",
+    "Consider intersecting identities and the specific forms of discrimination the client faces.",
+    "Use affirming language with transgender, nonbinary and gender-diverse clients, and ask which words they use.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "handoutIds": [
+    "my-story-in-my-words",
+    "values-compass"
+  ],
+  "orientationIds": [
+    "multicultural-feminist-liberation"
+  ],
+  "sources": [
+    {
+      "title": "Guidelines for Psychological Practice with Girls and Women",
+      "publisher": "American Psychological Association",
+      "url": "https://www.apa.org/about/policy/psychological-practice-girls-women",
+      "year": 2018
+    },
+    {
+      "title": "APA Guidelines for Psychological Practice with Boys and Men",
+      "publisher": "American Psychological Association",
+      "url": "https://www.apa.org/about/policy/boys-men-practice-guidelines.pdf",
+      "year": 2018
+    },
+    {
+      "title": "Multicultural Guidelines: An Ecological Approach to Context, Identity, and Intersectionality",
+      "publisher": "American Psychological Association",
+      "url": "https://www.apa.org/about/policy/multicultural-guidelines",
+      "year": 2017
+    },
+    {
+      "title": "ACA Code of Ethics (2014) and ethics resources",
+      "publisher": "American Counseling Association",
+      "url": "https://www.counseling.org/resources/ethics",
+      "year": 2014
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

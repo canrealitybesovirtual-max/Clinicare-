@@ -1,0 +1,89 @@
+{
+  "id": "metacognitive-therapy",
+  "name": "Metacognitive therapy (MCT): overview and referral",
+  "modality": "Metacognitive therapy",
+  "conditions": [
+    "generalized-anxiety-disorder",
+    "major-depressive-disorder",
+    "obsessive-compulsive-disorder",
+    "ptsd"
+  ],
+  "evidenceLevel": "A 2018 meta-analysis (Normann and Morina) found large improvements with MCT for anxiety and depression and, where compared, outcomes at least as good as CBT; many trials were small and run by groups linked to the developer. In a randomized trial for generalized anxiety (Nordahl et al., 2018), MCT led to higher recovery rates than CBT, maintained at two years; a randomized trial in depression (Callesen et al., 2020) also compared MCT with CBT. MCT is not named as a first-line option in NICE guidance; check current guidelines for each condition.",
+  "minutes": {
+    "min": 45,
+    "max": 60
+  },
+  "purpose": "Developed by Adrian Wells, MCT targets how a person relates to their thoughts rather than what the thoughts say. It holds that distress lasts because of a thinking style called the cognitive attentional syndrome: long bouts of worry or rumination, attention locked onto threat, and coping that backfires, such as suppressing thoughts or seeking reassurance. Beliefs about thinking drive this style, for example 'worrying keeps me prepared' or 'my worry is uncontrollable and could harm me.' MCT changes those beliefs and builds flexible control of attention. This entry is an overview for planning and referral; it is not the protocol.",
+  "steps": [
+    "Confirm fit and training. MCT is delivered by clinicians trained through the MCT Institute; otherwise, refer, or use these ideas to inform a CBT plan.",
+    "Case formulation (overview): map a recent episode: the trigger thought, the worry or rumination that followed, the beliefs about that thinking (positive and negative), and the coping that kept it going.",
+    "Share the model: the problem is the time spent worrying or ruminating and the beliefs that drive it, not the content of each thought.",
+    "Attention training (overview): a short, structured listening exercise practiced daily that shifts attention between sounds; the aim is flexible attention control, not distraction or relaxation.",
+    "Detached mindfulness (overview): practice noticing a trigger thought and letting it be, without analyzing, suppressing or acting on it.",
+    "Postponement: when a trigger thought shows up, put off engaging with it until a short set time later in the day; many clients find they no longer need the time.",
+    "Test beliefs about uncontrollability and danger (for example, with postponement experiments and trying to lose control of worry on purpose), then beliefs that worry or rumination is useful.",
+    "Reduce coping that backfires, such as reassurance seeking, threat monitoring and thought suppression, and build a relapse-prevention plan."
+  ],
+  "script": [
+    "Everyone has negative thoughts. What seems to keep you stuck is the time you spend going over them.",
+    "Let's look at what you believe about your worrying. Does part of you think it helps? Does part of you think it's out of control?",
+    "Next time that thought pops up, see if you can notice it and leave it alone, like watching a train go by without getting on.",
+    "Let's try putting the worrying off until a set time later today and see what happens.",
+    "This approach works best with a therapist trained in it. I can help you find one if you'd like."
+  ],
+  "contraindications": [
+    "Full MCT requires training. Use these steps as an overview only.",
+    "Do not postpone or 'let be' thoughts about suicide, self-harm or harm to others, or urgent safety problems; assess them directly.",
+    "Real, current problems need practical help as well; postponement is for repetitive thinking, not for decisions that must be made now.",
+    "Not a stand-alone treatment for psychosis, mania or severe depression; coordinate care and a medication evaluation.",
+    "This intervention does not assess or decide risk. If suicidal thoughts, self-harm or risk to others come up, pause and follow your setting's risk-assessment and safety-planning procedures. Keep crisis options visible: 988 Suicide & Crisis Lifeline (US, call or text), the local emergency number, and findahelpline.com for other countries."
+  ],
+  "culturalAdaptations": [
+    "Many communities describe distress as 'thinking too much.' This idiom often fits the MCT idea of repetitive thinking; use the client's words.",
+    "Beliefs that worry shows care or responsibility may be valued in the client's family or culture. Explore them with respect, and frame change as caring in a less costly way.",
+    "Attention training relies on sounds; for clients who are deaf or hard of hearing, ask a trained MCT clinician about adapted versions.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "trainingRequired": "MCT: trained clinicians only for the full treatment (MCT Institute training and registration); steps here are overview-level only.",
+  "handoutIds": [
+    "why-worry-sticks",
+    "worry-log"
+  ],
+  "orientationIds": [
+    "cognitive-therapy"
+  ],
+  "sources": [
+    {
+      "title": "The efficacy of metacognitive therapy: a systematic review and meta-analysis (Normann and Morina)",
+      "publisher": "Frontiers in Psychology (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30487770/",
+      "year": 2018
+    },
+    {
+      "title": "Metacognitive therapy versus cognitive-behavioural therapy in adults with generalised anxiety disorder (Nordahl et al.)",
+      "publisher": "BJPsych Open (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30294448/",
+      "year": 2018
+    },
+    {
+      "title": "Metacognitive therapy versus cognitive behaviour therapy in adults with major depression: a parallel single-blind randomised trial (Callesen et al.)",
+      "publisher": "Scientific Reports (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32398710/",
+      "year": 2020
+    },
+    {
+      "title": "'Thinking too much': a systematic review of a common idiom of distress (Kaiser et al.)",
+      "publisher": "Social Science & Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26584235/",
+      "year": 2015
+    },
+    {
+      "title": "Metacognitive Therapy Institute (training and registered therapists)",
+      "publisher": "MCT Institute",
+      "url": "https://mct-institute.co.uk/"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

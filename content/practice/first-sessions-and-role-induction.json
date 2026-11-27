@@ -1,0 +1,140 @@
+{
+  "id": "first-sessions-and-role-induction",
+  "title": "First sessions, informed consent and role induction",
+  "category": "session-process",
+  "summary": "How to open therapy so clients know what to expect: how therapy works, length, roles, ups and downs, confidentiality and its limits, and how to give feedback. Also covers attendance and therapy-interfering behavior, handled without shaming.",
+  "whenToUse": [
+    "At the first contact and first session of any therapy.",
+    "When a client has never had therapy, or had a poor experience before.",
+    "When attendance becomes irregular or something gets in the way of the work."
+  ],
+  "steps": [
+    {
+      "heading": "Explain how therapy works",
+      "items": [
+        "What a session looks like and what you will each do.",
+        "How long treatment usually takes for this kind of concern, and that you will review progress together.",
+        "That progress is rarely a straight line and that feeling worse at times can be part of the work.",
+        "That their feedback, including criticism, is welcome and useful."
+      ]
+    },
+    {
+      "heading": "Cover informed consent essentials",
+      "items": [
+        "Confidentiality and its limits, in plain words, including safety and legal duties.",
+        "Fees, cancellations, contact between sessions and what to do in a crisis.",
+        "Telehealth and technology risks, if used.",
+        "Records, who can see them, and the client's right to access them.",
+        "Alternatives to this treatment, including medicine and other therapies."
+      ]
+    },
+    {
+      "heading": "Ask about expectations",
+      "body": "Ask what they expect therapy to be like and how long they expect to come. Correct misunderstandings gently and agree on a first review point."
+    },
+    {
+      "heading": "Plan for attendance",
+      "items": [
+        "Ask what might make it hard to attend (transport, work, childcare, money, health).",
+        "Agree what to do if they need to cancel and how you will follow up after a missed session.",
+        "Offer reminders by a channel they choose."
+      ]
+    },
+    {
+      "heading": "When something gets in the way",
+      "body": "If missed sessions, lateness, not doing agreed practice or other behavior interferes with therapy, name it as a shared problem, explore causes, and solve it together. In priority order: safety first, then whatever interferes with therapy happening, then quality-of-life goals."
+    }
+  ],
+  "prompts": [
+    "Many people are not sure what therapy will be like. Can I tell you how I usually work, and then hear what you were expecting?",
+    "Some weeks may feel harder before they feel better. If that happens, I would really like you to tell me.",
+    "What could make it hard to get here regularly? Let's plan for that now.",
+    "We have missed a few sessions lately. I am not upset; I want to understand what is getting in the way so we can fix it together."
+  ],
+  "cautions": [
+    "Consent is a conversation, not a form. Check understanding and return to it when the plan changes.",
+    "Never threaten discharge as a first response to missed sessions; explore barriers first.",
+    "Explain confidentiality limits before sensitive disclosures, not after.",
+    "Dialectical behavior therapy's full treatment hierarchy is for trained clinicians; here it is used only as a general priority order."
+  ],
+  "adaptations": [
+    {
+      "context": "Interpreters",
+      "adaptation": "Allow extra time for consent and check understanding with teach-back through a qualified interpreter."
+    },
+    {
+      "context": "Past coercive care",
+      "adaptation": "Spend more time on choice, rights and how to stop or pause, and be explicit about what is voluntary."
+    }
+  ],
+  "evidenceSummary": "A 2012 meta-analysis (Swift and Greenberg) estimated that about one in five adult clients ends therapy prematurely, with higher rates in some settings. A 1999 review (Walitzer, Dermen and Connors) found that preparing clients for treatment, including role induction, improved attendance and engagement. Professional codes (APA 2017, ACA 2014, NASW 2021) require informed consent covering confidentiality limits, fees and the nature of treatment.",
+  "forClinicianReview": true,
+  "crisisPanel": false,
+  "sud": false,
+  "relatedInterventionIds": [
+    "motivational-interviewing",
+    "person-centered-reflective-listening"
+  ],
+  "relatedHandoutIds": [
+    "what-to-expect-in-therapy",
+    "my-health-information-rights",
+    "video-session-guide",
+    "questions-about-my-care"
+  ],
+  "relatedFormulationIds": [],
+  "relatedLegalIds": [
+    "informed-consent-technology",
+    "hipaa-privacy-basics",
+    "between-session-contact-policy",
+    "treatment-plans-and-client-access"
+  ],
+  "relatedPracticeIds": [
+    "alliance-and-rupture-repair",
+    "preferences-goals-and-readiness",
+    "session-structure",
+    "ending-therapy-and-boosters",
+    "telehealth-sessions"
+  ],
+  "relatedPopulationIds": [],
+  "linkOuts": [],
+  "measuresPending": [],
+  "sources": [
+    {
+      "title": "Premature discontinuation in adult psychotherapy: a meta-analysis (Swift and Greenberg)",
+      "publisher": "Journal of Consulting and Clinical Psychology, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22506792/",
+      "year": 2012
+    },
+    {
+      "title": "Strategies for preparing clients for treatment: a review (Walitzer, Dermen and Connors)",
+      "publisher": "Behavior Modification, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/9926524/",
+      "year": 1999
+    },
+    {
+      "title": "Ethical Principles of Psychologists and Code of Conduct",
+      "publisher": "American Psychological Association",
+      "url": "https://www.apa.org/ethics/code"
+    },
+    {
+      "title": "ACA Code of Ethics (2014) and ethics resources",
+      "publisher": "American Counseling Association",
+      "url": "https://www.counseling.org/resources/ethics",
+      "year": 2014
+    },
+    {
+      "title": "Code of Ethics",
+      "publisher": "National Association of Social Workers",
+      "url": "https://www.socialworkers.org/About/Ethics/Code-of-Ethics/Code-of-Ethics-English",
+      "year": 2021
+    },
+    {
+      "title": "Psychotherapies (health topic)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/topics/psychotherapies"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

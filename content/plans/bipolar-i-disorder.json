@@ -6,7 +6,7 @@
       "label": "Highs and lows that disrupt life and safety",
       "definitions": [
         "Has had at least one period of days with much less sleep, racing ideas, big plans or spending, and actions that caused serious problems at home, work or with money.",
-        "Has periods of low mood, low energy and withdrawal that take up weeks.",
+        "Has periods of low mood and low energy, with pulling back from people, that last for weeks.",
         "Sleep and daily routine shift sharply before or during episodes."
       ],
       "longTermGoals": [
@@ -18,14 +18,19 @@
           "text": "Within 2 weeks, attend a psychiatric evaluation and bring a written list of questions about medication benefits and side effects.",
           "interventionIds": [
             "medication-referral"
-          ]
+          ],
+          "step": "specialist"
         },
         {
           "id": "bp1-psychoeducation",
           "text": "By session 4, describe in own words at least 3 personal early warning signs of a high and 3 of a low.",
           "interventionIds": [
             "bipolar-psychoeducation"
-          ]
+          ],
+          "targets": [
+            "sleep-rhythm-disruption"
+          ],
+          "step": "high-intensity"
         },
         {
           "id": "bp1-rhythms",
@@ -33,7 +38,11 @@
           "interventionIds": [
             "interpersonal-social-rhythm-therapy",
             "sleep-hygiene-education"
-          ]
+          ],
+          "targets": [
+            "sleep-rhythm-disruption"
+          ],
+          "step": "high-intensity"
         },
         {
           "id": "bp1-staying-well",
@@ -41,7 +50,11 @@
           "interventionIds": [
             "relapse-prevention-planning",
             "family-psychoeducation-psychosis"
-          ]
+          ],
+          "targets": [
+            "coping-skills"
+          ],
+          "step": "high-intensity"
         },
         {
           "id": "bp1-safety-plan",
@@ -49,7 +62,12 @@
           "interventionIds": [
             "collaborative-safety-planning",
             "lethal-means-counseling"
-          ]
+          ],
+          "targets": [
+            "coping-skills",
+            "hope-and-motivation"
+          ],
+          "step": "crisis-or-urgent"
         },
         {
           "id": "bp1-tracking",
@@ -62,6 +80,82 @@
       "measureIds": [
         "phq-9",
         "gad-7"
+      ]
+    },
+    {
+      "id": "bp1-early-signs-and-family",
+      "label": "Early warning signs, sleep changes and family stress around mood episodes",
+      "definitions": [
+        "Past episodes followed changes in sleep, routine or stress that were noticed late.",
+        "Conflict at home rises around mood changes, and family members are unsure how to help."
+      ],
+      "longTermGoals": [
+        "Early signs are noticed and acted on quickly with an agreed plan, and family life is calmer and more supportive."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "bp1-early-sign-list",
+          "text": "By session 6, write the client's personal list of early signs of a high and of a low (for example sleeping less, more spending or pulling back from people), with a matching action and contact for each.",
+          "interventionIds": [
+            "bipolar-relapse-signature-plan"
+          ],
+          "targets": [
+            "sleep-rhythm-disruption"
+          ],
+          "step": "high-intensity"
+        },
+        {
+          "id": "bp1-daily-record",
+          "text": "For 8 weeks, record mood, hours of sleep and daily routine anchors each day, and look at the record together at each session to catch changes early.",
+          "interventionIds": [
+            "bipolar-relapse-signature-plan",
+            "interpersonal-social-rhythm-therapy"
+          ],
+          "targets": [
+            "sleep-rhythm-disruption"
+          ],
+          "step": "low-intensity"
+        },
+        {
+          "id": "bp1-protect-sleep",
+          "text": "When the record shows 2 nights in a row of much less sleep than usual, follow the agreed sleep-protection steps and contact the prescriber or clinician the same week.",
+          "interventionIds": [
+            "bipolar-relapse-signature-plan"
+          ],
+          "targets": [
+            "sleep-rhythm-disruption"
+          ]
+        },
+        {
+          "id": "bp1-family-sessions",
+          "text": "With consent, take part in family-focused sessions with a trained clinician over 3 to 9 months (information about the condition, communication practice and problem solving together).",
+          "interventionIds": [
+            "family-focused-therapy-bipolar"
+          ],
+          "targets": [
+            "interpersonal-difficulties",
+            "strengths-and-supports"
+          ],
+          "step": "specialist"
+        },
+        {
+          "id": "bp1-community-supports",
+          "text": "If work, housing or daily structure have been disrupted, discuss by week 8 supported employment, peer support or other community services, and refer if the client wants.",
+          "interventionIds": [
+            "smi-community-support-referral"
+          ],
+          "targets": [
+            "structural-stressors"
+          ],
+          "step": "specialist"
+        }
+      ],
+      "measureIds": [
+        "phq-9"
+      ],
+      "handoutIds": [
+        "mood-highs-and-lows-plan",
+        "mood-routine-tracker"
       ]
     }
   ],
@@ -91,6 +185,12 @@
       "publisher": "American Journal of Psychiatry (PubMed)",
       "url": "https://pubmed.ncbi.nlm.nih.gov/17728418/",
       "year": 2007
+    },
+    {
+      "title": "Psychosocial and Recovery-Oriented Therapy for Bipolar Disorder",
+      "publisher": "Psychological Health Center of Excellence, Defense Health Agency",
+      "url": "https://health.mil/Reference-Center/Publications/2023/12/14/Psychosocial-and-Recovery-Oriented-Therapy-for-Bipolar-Disorder",
+      "year": 2023
     }
   ],
   "license": "original",

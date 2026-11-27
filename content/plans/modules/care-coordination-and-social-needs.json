@@ -1,0 +1,111 @@
+{
+  "id": "care-coordination-and-social-needs",
+  "title": "Care coordination and practical needs",
+  "summary": "For any plan when care is spread across several services or practical needs affect mental health. Objectives cover consent-based coordination, warm handoffs and a brief social needs check; specific psychosocial problems with Z codes are in the psychosocial problems module.",
+  "appliesTo": "any",
+  "problems": [
+    {
+      "id": "cc-coordination",
+      "label": "Care spread across several services, with gaps in communication",
+      "definitions": [
+        "Sees more than 1 health or social care provider (for example a primary care clinician, prescriber, specialist or case manager) and information is not shared, or the plans conflict.",
+        "Has unmet needs for medical care, medicines, benefits or practical support that affect mental health."
+      ],
+      "longTermGoals": [
+        "Care is coordinated with the client's consent, everyone involved knows their part, and practical needs are linked to the right services."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "cc-consent-map",
+          "text": "By session 3, list with the client the services involved in their care and decide together which ones the clinician may contact, with a signed release for each where one is required.",
+          "interventionIds": [],
+          "targets": [
+            "strengths-and-supports"
+          ]
+        },
+        {
+          "id": "cc-update-letter",
+          "text": "By week 4, with consent, send a brief update to the primary care clinician or prescriber that covers the focus of the plan and any questions about medicines or physical health.",
+          "interventionIds": [
+            "medication-referral"
+          ],
+          "targets": [
+            "physical-health-burden"
+          ]
+        },
+        {
+          "id": "cc-needs-check",
+          "text": "By session 2, ask about practical needs (food, housing, utilities, transport, safety, income and benefits) with a brief social needs screen, and agree on which needs to act on first.",
+          "interventionIds": [],
+          "targets": [
+            "structural-stressors"
+          ]
+        },
+        {
+          "id": "cc-warm-handoff",
+          "text": "For each referral the client wants, make a warm handoff where possible (a joint call or a direct introduction) and confirm at the next session whether the first contact happened.",
+          "interventionIds": [],
+          "targets": [
+            "low-social-support",
+            "strengths-and-supports"
+          ]
+        },
+        {
+          "id": "cc-review",
+          "text": "At each plan review, check every open referral and practical need with the client, and update the plan.",
+          "interventionIds": [],
+          "targets": [
+            "structural-stressors"
+          ]
+        }
+      ],
+      "measureIds": [],
+      "practiceIds": [
+        "collaborative-care-and-pcbh",
+        "care-transitions-and-warm-handoffs",
+        "combined-care-decision-points"
+      ],
+      "linkOuts": [
+        {
+          "title": "211: free help finding local services",
+          "publisher": "211 (United Way Worldwide)",
+          "url": "https://211.org/"
+        },
+        {
+          "title": "Find a Health Center",
+          "publisher": "Health Resources and Services Administration",
+          "url": "https://findahealthcenter.hrsa.gov/"
+        }
+      ]
+    }
+  ],
+  "collaborativeNote": "Share only what the client agrees to share, and only what each service needs. Keep the client at the center of every handoff. Do not add names or other identifying details. Resource only. Not a substitute for clinical judgment.",
+  "sources": [
+    {
+      "title": "Collaborative care for depression and anxiety problems (Archer et al.)",
+      "publisher": "Cochrane Database of Systematic Reviews (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23076925/",
+      "year": 2012
+    },
+    {
+      "title": "Accountable Health Communities: addressing social needs through Medicare and Medicaid (Alley et al.)",
+      "publisher": "New England Journal of Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26731305/",
+      "year": 2016
+    },
+    {
+      "title": "Using Z Codes: The Social Determinants of Health (SDOH) Data Journey to Better Outcomes",
+      "publisher": "Centers for Medicare & Medicaid Services, Office of Minority Health",
+      "url": "https://www.cms.gov/files/document/zcodes-infographic.pdf"
+    },
+    {
+      "title": "Depression in adults: treatment and management (NG222)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng222",
+      "year": 2022
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

@@ -1,0 +1,157 @@
+{
+  "id": "postpartum-psychosis-vs-intrusive-thoughts",
+  "title": "After birth: postpartum psychosis versus unwanted intrusive thoughts of harm",
+  "category": "safety-and-risk",
+  "summary": "Two very different things can both involve thoughts about the baby being harmed. Postpartum psychosis is a psychiatric emergency that usually starts within the first weeks after birth. Unwanted, horrifying intrusive thoughts of accidental or deliberate harm are common in new parents, are typical of perinatal obsessive-compulsive presentations, and on their own do not show an intent to harm. This guide helps the clinician tell them apart, act fast on the first and avoid unneeded escalation of the second, while keeping their own judgment.",
+  "whenToUse": [
+    "A new parent describes thoughts or images of the baby being hurt, or of hurting the baby.",
+    "A client in the first weeks after birth shows confusion, sudden mood swings, very little sleep, unusual beliefs or hallucinations.",
+    "A client with bipolar disorder, past postpartum psychosis or a close relative with it is pregnant or has recently given birth.",
+    "Family members report the new parent is not themselves, suspicious or acting strangely."
+  ],
+  "steps": [
+    {
+      "heading": "Ask about the thoughts in a calm, normalizing way",
+      "body": "Many new parents have scary thoughts they never say aloud for fear of losing their baby. Explain that such thoughts are common, that you need to understand them to help, and the limits of confidentiality."
+    },
+    {
+      "heading": "Look for features that point to intrusive thoughts",
+      "items": [
+        "The thoughts feel unwanted, senseless and horrifying to the parent.",
+        "The parent avoids the baby, knives, bathing or being alone with the baby, or checks and seeks reassurance, because of the thoughts.",
+        "There is no wish to act, and the parent is distressed by the very idea.",
+        "Reality testing is intact: the parent knows the thoughts come from their own mind."
+      ]
+    },
+    {
+      "heading": "Look for features that point to postpartum psychosis",
+      "items": [
+        "Onset usually within days to the first few weeks after birth, often rapid.",
+        "Confusion or disorientation, marked agitation, severe insomnia or not needing sleep.",
+        "Rapidly shifting mood, elation or severe depression.",
+        "Hallucinations, delusions (for example that the baby is evil, replaced or must be saved by dying), or bizarre behavior.",
+        "Thoughts of harm that the parent does not experience as unwanted, or that fit delusional beliefs."
+      ]
+    },
+    {
+      "heading": "Act at once when psychosis is possible",
+      "body": "Possible postpartum psychosis needs same-day emergency psychiatric assessment; NICE CG192 sets immediate assessment within 4 hours of referral. Do not leave the parent alone with the baby until a medical assessment has been made, involve the partner or family with consent where possible, and call emergency services if anyone is in danger. Physical causes (infection, thyroid problems, medicines) also need checking."
+    },
+    {
+      "heading": "Respond helpfully to intrusive thoughts",
+      "items": [
+        "Explain what intrusive thoughts are and that they do not mean the parent will act.",
+        "Assess mood, sleep, anxiety and suicidal thoughts, which often occur alongside.",
+        "Offer or refer for treatment such as cognitive behavioral therapy with exposure and response prevention, and a medication evaluation where helpful.",
+        "Involve supports and plan for rest and feeding help.",
+        "Child-protection reporting is not automatic for ego-dystonic thoughts alone; base any report on your full assessment, consultation and your state's law."
+      ]
+    },
+    {
+      "heading": "Plan ahead for higher-risk clients",
+      "body": "For clients with bipolar disorder or past postpartum psychosis, work with the prescriber and obstetric team during pregnancy on a written plan for the first weeks after birth: sleep protection, early warning signs, who to call and how to get urgent assessment."
+    }
+  ],
+  "prompts": [
+    "Lots of new parents have sudden, frightening thoughts about the baby getting hurt. Has anything like that happened to you?",
+    "When that thought comes, how do you feel about it? What do you do afterwards?",
+    "Have you been able to sleep when the baby sleeps, or has your mind been racing?",
+    "Have you noticed anything strange or confusing, like hearing or seeing things others do not, or feeling that something is very wrong with the baby?"
+  ],
+  "cautions": [
+    "Postpartum psychosis is an emergency even when the parent seems calm in the session; symptoms can change within hours.",
+    "Do not treat every disclosure of a scary thought as a risk of harm; unneeded escalation can drive parents away from care. Do not dismiss thoughts that are welcome, fit delusional beliefs or come with plans either.",
+    "Suicide risk is raised in perinatal mental illness; ask directly.",
+    "This guide does not decide risk or whether to report; the clinician does, with consultation and the law in their state.",
+    "In the US, the National Maternal Mental Health Hotline answers calls and texts at 1-833-852-6262 at any time; for danger, call 911 or the local emergency number."
+  ],
+  "adaptations": [
+    {
+      "context": "Partners and non-birthing parents",
+      "adaptation": "Partners can also have intrusive thoughts and perinatal depression. Ask them too, and include them in planning when the birthing parent agrees."
+    },
+    {
+      "context": "Cultural expectations of new parents",
+      "adaptation": "Ask about postpartum customs, family roles and stigma around mental illness, which may shape what the parent feels safe to say and what support is available."
+    }
+  ],
+  "evidenceSummary": "A 2016 review (Bergink, Rasgon and Wisner) describes postpartum psychosis as a psychiatric emergency with rapid onset, usually within weeks of birth, closely linked to bipolar disorder. A 2016 meta-analysis (Wesseloo and colleagues) found high rates of postpartum recurrence in women with bipolar disorder or past postpartum psychosis, especially without medication in pregnancy. A 2008 study (Fairbrother and Woody) found unwanted thoughts of harming the baby were common in new mothers and not linked to aggressive behavior. NICE CG192 (2014, updated) asks for immediate specialist assessment within 4 hours when postpartum psychosis is suspected. ACOG Clinical Practice Guideline 5 (2023) covers treatment and management of perinatal mental health conditions.",
+  "forClinicianReview": true,
+  "crisisPanel": true,
+  "sud": false,
+  "relatedInterventionIds": [
+    "exposure-and-response-prevention",
+    "ocd-appraisal-cognitive-therapy",
+    "perinatal-depression-programs",
+    "medication-referral"
+  ],
+  "relatedHandoutIds": [
+    "scary-thoughts-after-baby",
+    "new-parent-mood-help",
+    "understanding-unwanted-thoughts"
+  ],
+  "relatedFormulationIds": [],
+  "relatedLegalIds": [
+    "mandatory-reporting",
+    "crisis-and-involuntary-holds",
+    "crisis-988-or-911"
+  ],
+  "relatedPracticeIds": [
+    "violence-risk-prompts",
+    "self-harm-assessment-and-formulation",
+    "combined-care-decision-points"
+  ],
+  "relatedPopulationIds": [
+    "perinatal"
+  ],
+  "linkOuts": [
+    {
+      "title": "Postpartum Support International",
+      "publisher": "Postpartum Support International",
+      "url": "https://www.postpartum.net/",
+      "note": "Support, provider directory and information for perinatal mental health."
+    }
+  ],
+  "measuresPending": [
+    {
+      "name": "Edinburgh Postnatal Depression Scale (EPDS)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/3651732/",
+      "licenseKey": "EPDS"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Postpartum psychosis: madness, mania, and melancholia in motherhood (Bergink, Rasgon and Wisner)",
+      "publisher": "American Journal of Psychiatry, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27609245/",
+      "year": 2016
+    },
+    {
+      "title": "Risk of postpartum relapse in bipolar disorder and postpartum psychosis: a systematic review and meta-analysis (Wesseloo et al.)",
+      "publisher": "American Journal of Psychiatry, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26514657/",
+      "year": 2016
+    },
+    {
+      "title": "New mothers' thoughts of harm related to the newborn (Fairbrother and Woody)",
+      "publisher": "Archives of Women's Mental Health, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18463941/",
+      "year": 2008
+    },
+    {
+      "title": "Antenatal and postnatal mental health: clinical management and service guidance (CG192)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg192",
+      "year": 2014
+    },
+    {
+      "title": "Treatment and management of mental health conditions during pregnancy and postpartum (Clinical Practice Guideline No. 5)",
+      "publisher": "American College of Obstetricians and Gynecologists",
+      "url": "https://www.acog.org/clinical/clinical-guidance/clinical-practice-guideline/articles/2023/06/treatment-and-management-of-mental-health-conditions-during-pregnancy-and-postpartum",
+      "year": 2023
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

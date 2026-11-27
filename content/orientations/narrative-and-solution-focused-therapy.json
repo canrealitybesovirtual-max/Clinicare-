@@ -1,0 +1,100 @@
+{
+  "id": "narrative-and-solution-focused-therapy",
+  "name": "Narrative and solution-focused therapies",
+  "shortName": "Narrative and solution-focused",
+  "family": "postmodern",
+  "summary": "Two collaborative, strengths-based approaches. Narrative therapy separates the person from the problem and helps them author a preferred story of their life. Solution-focused brief therapy builds on what already works and on a clear picture of the future the client wants.",
+  "keyConcepts": [
+    { "term": "Externalizing", "meaning": "Talking about the problem as something separate from the person (the worry, the anger) so they can examine its influence and their own influence over it." },
+    { "term": "Dominant and preferred stories", "meaning": "The problem-saturated story a person has come to live by, and the alternative story built from overlooked experiences of resistance, skill and value." },
+    { "term": "Unique outcomes", "meaning": "Moments when the problem did not win or had less influence, used as starting points for a new story." },
+    { "term": "Preferred future", "meaning": "In SFBT, a detailed description of what life will be like when things are better, often reached through a miracle-style question." },
+    { "term": "Exceptions and scaling", "meaning": "Times the problem was absent or smaller, and 0 to 10 scales used to notice progress and the next small step." },
+    { "term": "Decentered, not-knowing stance", "meaning": "The client is the expert on their life; the therapist asks questions from curiosity rather than from a theory of what is wrong." }
+  ],
+  "viewOfProblem": "Problems are not seen as inside the person. In narrative therapy they gain power through stories, often shaped by wider cultural messages about who people should be, that leave out the person's skills and values. In SFBT, the focus is less on understanding the problem than on describing the solution; knowing exactly how a problem works is not needed to change it.",
+  "viewOfChange": "In narrative therapy, change comes from mapping the problem's effects, finding unique outcomes, and thickening a preferred story with witnesses and documents. In SFBT, change comes from describing the preferred future in concrete detail, finding exceptions, doing more of what works, and taking small steps measured on a scale. Both approaches see clients as resourceful.",
+  "therapistStance": "Respectful, curious and transparent. The narrative therapist asks questions that deconstruct problem stories and their cultural context; the solution-focused therapist uses careful, future-oriented questions and compliments real strengths. Both avoid imposing expert interpretations.",
+  "sessionShape": [
+    "Ask what the client hopes to get from today's session.",
+    "Narrative: name and externalize the problem, map its effects, then look for unique outcomes.",
+    "Solution-focused: describe the preferred future, scale where things are now, and explore exceptions.",
+    "Identify one small sign of progress or one small next step.",
+    "Close with feedback, compliments on real strengths, and an invitation to notice what goes well."
+  ],
+  "goalStyle": "Goals describe signs of the preferred future or the preferred story, in the client's words: for example, move from 3 to 5 on the scale of handling mornings, noticed by doing the school run calmly on three days. Write each goal with the client in their own words.",
+  "progressMarkers": [
+    "Movement on 0 to 10 scaling questions over sessions.",
+    "Signs of the preferred future that the client reports noticing.",
+    "Client's description of the problem's influence becoming smaller.",
+    "Symptom measures, where a specific mental health condition is also being treated."
+  ],
+  "typicalTechniques": ["solution-focused-questions", "narrative-externalizing"],
+  "relatedTechniques": ["motivational-interviewing", "existential-meaning-exploration"],
+  "missingTechniques": [
+    { "name": "Definitional ceremonies and outsider witnesses", "note": "Narrative practice in which chosen others witness and respond to a preferred story; overview only." },
+    { "name": "Therapeutic documents and letters", "note": "Letters and certificates that record a person's preferred story; overview only." }
+  ],
+  "formulationIds": ["five-ps-biopsychosocial-spiritual"],
+  "models": [
+    {
+      "name": "Solution-focused brief therapy (SFBT)",
+      "summary": "de Shazer and Berg's brief, future-focused approach built on preferred-future, exception and scaling questions.",
+      "evidenceTier": "research-supported",
+      "evidence": "A 2013 systematic review of controlled outcome studies found the strongest support in adults with depressive symptoms, though study quality varied (Gingerich and Peterson, 2013); a 2024 umbrella review summarizes later reviews.",
+      "trainingRequired": false
+    },
+    {
+      "name": "Narrative therapy",
+      "summary": "White and Epston's approach built on externalizing conversations, re-authoring and witnessing.",
+      "evidenceTier": "emerging",
+      "evidence": "An uncontrolled trial of an eight-session narrative therapy program for adults with depression reported improvements in symptoms and relationships (Vromans and Schweitzer, 2011); controlled trials are few.",
+      "trainingRequired": false
+    }
+  ],
+  "evidenceTier": "research-supported",
+  "evidenceSummary": "SFBT has a body of controlled studies, with the clearest support for depressive symptoms in adults but variable study quality (Gingerich and Peterson, 2013; umbrella review 2024). Narrative therapy has few controlled trials; an uncontrolled study in depression was promising (Vromans and Schweitzer, 2011), and the ANU BluePages summary judges the evidence too limited to recommend it as a stand-alone treatment for depression. Neither has a NICE or APA Division 12 recommendation for the conditions in this app.",
+  "bestFit": [
+    "Clients who want brief, practical, future-focused work.",
+    "Clients who feel defined by a problem or by labels and want to reclaim their own story.",
+    "Settings with few sessions, such as single-session or walk-in services.",
+    "As an add-on to guideline-recommended care, to strengthen hope and engagement."
+  ],
+  "cautions": [
+    "Do not skip risk assessment because the conversation is future-focused. If thoughts of death or self-harm come up, follow your risk procedures and review crisis options: in the US call or text 988; elsewhere, the local emergency number or findahelpline.com.",
+    "Focusing only on solutions can feel dismissive to a client who needs their pain acknowledged first; validate before moving on.",
+    "Externalizing must not be used to avoid responsibility for harm to others, such as violence.",
+    "For conditions with strong first-line treatments, such as OCD, PTSD or bipolar disorder, use these approaches alongside those treatments, not instead of them."
+  ],
+  "whenToRefer": [
+    "Presentations that need a disorder-specific evidence-based protocol.",
+    "No movement on the client's own scale after several sessions: review the approach together and consider alternatives."
+  ],
+  "trainingRequired": false,
+  "trainingNote": "Both approaches can be learned through workshops and supervised practice; neither has a single certifying body. SFBT associations and narrative practice centers offer structured courses.",
+  "trainingPath": [
+    { "body": "Solution Focused Brief Therapy Association (SFBTA)", "url": "https://sfbta.org/", "note": "Association for SFBT practitioners, with a treatment manual, events and training links." },
+    { "body": "Dulwich Centre", "url": "https://dulwichcentre.com.au/courses/externalising-conversations/", "note": "Courses in narrative practice, including externalizing conversations." }
+  ],
+  "ethicsPrompts": [
+    { "prompt": "Practice within your training: learn narrative and solution-focused methods through structured training, and describe them honestly to clients as approaches with emerging or moderate evidence.", "legalIds": ["competence-and-scope-of-practice"] },
+    { "prompt": "Brief or single-session formats still need a clear consent conversation and a plan for follow-up or referral.", "legalIds": ["treatment-plans-and-client-access"] }
+  ],
+  "culturalNotes": [
+    "Narrative therapy explicitly examines how cultural messages and power shape problem stories; invite clients to name the messages that affect them.",
+    "Storytelling traditions and community witnessing fit many cultures well; ask whom the client would want as witnesses.",
+    "Scaling and miracle questions can be hard to translate; use concrete images and the client's own language."
+  ],
+  "handoutIds": ["my-story-in-my-words", "coping-cards"],
+  "relatedPracticeIds": ["preferences-goals-and-readiness", "first-sessions-and-role-induction", "goal-attainment-scaling"],
+  "relatedPopulationIds": ["indigenous-peoples", "refugees-and-asylum-seekers"],
+  "sources": [
+    { "title": "Effectiveness of solution-focused brief therapy: a systematic qualitative review of controlled outcome studies (Gingerich and Peterson)", "publisher": "Research on Social Work Practice (SAGE)", "url": "https://staticssl.sagepub.com/sites/default/files/Gingerich%20and%20Peterson%20%282013%29%20Effectiveness%20of%20solution-focused%20brief%20therapy.pdf", "year": 2013 },
+    { "title": "Effectiveness of solution-focused brief therapy: an umbrella review of systematic reviews and meta-analyses", "publisher": "Psychotherapy Research", "url": "https://doi.org/10.1080/10503307.2024.2406540", "year": 2024 },
+    { "title": "Narrative therapy for adults with major depressive disorder: improved symptom and interpersonal outcomes (Vromans and Schweitzer)", "publisher": "Psychotherapy Research (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/20306354/", "year": 2011 },
+    { "title": "Narrative therapy (evidence summary)", "publisher": "BluePages, Australian National University", "url": "https://bluepages.anu.edu.au/psychological-treatments/narrative-therapy" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

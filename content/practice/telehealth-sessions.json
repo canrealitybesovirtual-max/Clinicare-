@@ -1,0 +1,112 @@
+{
+  "id": "telehealth-sessions",
+  "title": "Video and phone sessions: per-session safety and adaptations",
+  "category": "documents",
+  "summary": "A short checklist for every video or phone session: confirm where the client is right now, know the emergency number and dispatch for that place (911 dialed from the clinician's phone reaches the clinician's own area), have a backup number and an agreed emergency contact, check privacy (headphones, who else is there, a safe word where partner violence is possible), and agree what happens if the call drops. Also covers adapting assessment and therapy to the screen.",
+  "whenToUse": [
+    "At the start of every video or phone session, not only the first.",
+    "When setting up telehealth with a new client (informed consent for technology).",
+    "When a client joins from a new or unusual place (a car, a workplace, another state or country).",
+    "Before a session where risk is likely to be discussed."
+  ],
+  "steps": [
+    {
+      "heading": "At the start of every session",
+      "items": [
+        "Confirm the client's current location (address or a precise description) and that they are somewhere they can talk.",
+        "Confirm a backup phone number in case the video fails.",
+        "Know how to reach emergency services for the client's location: calling 911 from your own phone connects to your local dispatch, not theirs, so keep the number for their local emergency dispatch or plan to ask them or their emergency contact to call.",
+        "Confirm the emergency contact the client agreed to at intake is still right."
+      ]
+    },
+    {
+      "heading": "Check privacy",
+      "items": [
+        "Ask who else is in the room or within hearing, and suggest headphones.",
+        "Agree on a safe word or gesture that means the client cannot talk freely, especially where partner violence or family control is possible.",
+        "Use your service's approved, secure platform, and a private space on your side too.",
+        "Do not record sessions unless your service has a clear policy and the client has given informed consent."
+      ]
+    },
+    {
+      "heading": "Plan for a dropped call",
+      "body": "Agree at the start: if the connection fails, you will call the backup number within a few minutes. If the client was in crisis and you cannot reach them, follow your emergency plan (emergency contact, local emergency services for their location)."
+    },
+    {
+      "heading": "Adapt assessment and therapy",
+      "items": [
+        "Frame the camera so you can see the face and upper body; ask about anything you cannot see, such as agitation or intoxication.",
+        "Check affect and understanding more often, and summarize out loud.",
+        "Share worksheets on screen or send blank handouts through approved channels; never ask clients to send photos of completed forms to personal devices.",
+        "Adapt exposure, behavioral experiments and grounding to the home setting, and agree safety steps beforehand."
+      ]
+    },
+    {
+      "heading": "Know the rules for where the client is",
+      "body": "Licensure, consent and emergency-hold rules usually follow the client's location. Check them when a client joins from another state or country, and see the telehealth jurisdiction topic in the legal hub."
+    }
+  ],
+  "prompts": [
+    "Before we start, can you tell me where you are right now, and is it a private place to talk?",
+    "If we get cut off, I will call you back on the number you gave me. Is that still the best number?",
+    "If at any point you cannot talk freely, just say the word we agreed, and I will change the subject.",
+    "Who is your emergency contact these days? Is it still okay for me to call them if I am ever worried about your safety and cannot reach you?"
+  ],
+  "cautions": [
+    "Dialing 911 from the clinician's phone reaches the clinician's local dispatch, not the client's; know the right number for the client's location before you need it.",
+    "Telehealth may not suit every client or every moment (for example acute risk with no safe place or support); offer in-person care where needed.",
+    "Audio-only sessions limit what you can observe; ask more and document the modality.",
+    "This guide does not judge risk; the clinician does, following the service's emergency procedures.",
+    "The app keeps no locations, phone numbers or contacts; record them in your own secure record system."
+  ],
+  "adaptations": [
+    {
+      "context": "Clients who are Deaf or hard of hearing",
+      "adaptation": "Arrange a qualified sign language interpreter on the platform or captioning, test the setup in advance, and agree how the interpreter joins and leaves."
+    },
+    {
+      "context": "Clients with limited data or devices",
+      "adaptation": "Offer phone sessions, lower video quality or sessions from a private space at a clinic or library where possible, and keep handouts short."
+    }
+  ],
+  "evidenceSummary": "The American Psychological Association guidelines for the practice of telepsychology (revised 2024) cover competence, informed consent, confidentiality, security and practice across jurisdictions. The 2018 best-practice statement on videoconferencing-based telemental health from the American Psychiatric Association and the American Telemedicine Association (Shore and colleagues) recommends confirming the client's location, emergency contacts and local emergency resources at the start of sessions, and planning for technology failure. The US Department of Health and Human Services telehealth guidance describes informed consent for telebehavioral health.",
+  "forClinicianReview": true,
+  "crisisPanel": true,
+  "sud": true,
+  "relatedInterventionIds": ["grounding-5-4-3-2-1"],
+  "relatedHandoutIds": ["video-session-guide"],
+  "relatedFormulationIds": [],
+  "relatedLegalIds": ["telehealth-jurisdiction", "informed-consent-technology", "crisis-988-or-911", "international-privacy"],
+  "relatedPracticeIds": ["ipv-screening-and-first-line-support", "self-harm-assessment-and-formulation", "in-session-de-escalation", "working-with-interpreters"],
+  "relatedPopulationIds": ["deaf-and-hard-of-hearing", "rural-and-agricultural"],
+  "linkOuts": [
+    {
+      "title": "Preparing for a video visit (patient guide)",
+      "publisher": "US Department of Health and Human Services (telehealth.hhs.gov)",
+      "url": "https://telehealth.hhs.gov/patients/preparing-for-a-video-visit"
+    }
+  ],
+  "measuresPending": [],
+  "sources": [
+    {
+      "title": "Guidelines for the practice of telepsychology (2024 revision)",
+      "publisher": "American Psychological Association",
+      "url": "https://www.apa.org/about/policy/telepsychology-revisions",
+      "year": 2024
+    },
+    {
+      "title": "Best practices in videoconferencing-based telemental health, April 2018 (Shore et al.)",
+      "publisher": "Telemedicine and e-Health, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30358514/",
+      "year": 2018
+    },
+    {
+      "title": "Informed consent for telebehavioral health",
+      "publisher": "US Department of Health and Human Services (telehealth.hhs.gov)",
+      "url": "https://telehealth.hhs.gov/providers/telehealth-for-behavioral-health/preparing-patients-for-telebehavioral-health/informed-consent-for-telebehavioral-health/"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

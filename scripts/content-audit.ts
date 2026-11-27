@@ -27,6 +27,12 @@ import { MedicationsFileSchema } from "../src/lib/schemas-medications";
 import { HealthTopicsFileSchema } from "../src/lib/schemas-topics";
 import { EthicsCodeSchema, LegalTopicSchema } from "../src/lib/schemas-hub";
 import { FollowUpBankFileSchema, TriggerObjectsFileSchema } from "../src/lib/schemas-follow-up";
+import { FormulationSchema } from "../src/lib/schemas-formulations";
+import { OrientationSchema } from "../src/lib/schemas-orientations";
+import { PlanModuleSchema } from "../src/lib/schemas-phase2";
+import { PracticeGuideSchema } from "../src/lib/schemas-practice";
+import { MedicationEffectsFileSchema } from "../src/lib/schemas-care";
+import { PopulationSchema } from "../src/lib/schemas-populations";
 
 /**
  * Non-clinical lookup data (geography tables): no clinical wording, so no clinical review, but they must
@@ -85,6 +91,12 @@ export const RULES: readonly Rule[] = [
   { match: /^crisis-lines\.json$/, schema: CrisisLinesSchema, kind: "clinical" },
   { match: /^follow-ups\/[^/]+\.json$/, schema: FollowUpBankFileSchema, kind: "clinical", idField: "id" },
   { match: /^trigger-objects\.json$/, schema: TriggerObjectsFileSchema, kind: "clinical" },
+  { match: /^formulations\/[^/]+\.json$/, schema: FormulationSchema, kind: "clinical", idField: "id" },
+  { match: /^orientations\/[^/]+\.json$/, schema: OrientationSchema, kind: "clinical", idField: "id" },
+  { match: /^plans\/modules\/[^/]+\.json$/, schema: PlanModuleSchema, kind: "clinical", idField: "id" },
+  { match: /^practice\/[^/]+\.json$/, schema: PracticeGuideSchema, kind: "clinical", idField: "id" },
+  { match: /^care\/medication-effects\.json$/, schema: MedicationEffectsFileSchema, kind: "clinical", idField: "id" },
+  { match: /^populations\/[^/]+\.json$/, schema: PopulationSchema, kind: "clinical", idField: "id" },
   { match: /^referrals\/(?:zcta-centroids|us-places)\.json$/, schema: DataFileSchema, kind: "data" },
   { match: /^licenses\.json$/, schema: LicensesSchema, kind: "registry" },
   { match: /^integrations\.json$/, schema: IntegrationsCatalogSchema, kind: "registry" },

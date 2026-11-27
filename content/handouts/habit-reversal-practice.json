@@ -1,0 +1,136 @@
+{
+  "id": "habit-reversal-practice",
+  "title": "Changing a Body Habit: Practice Guide",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 15,
+  "intro": "Many people pull their hair, pick their skin, bite their nails, or chew their cheeks or lips, often without noticing. These habits can be hard to stop, and they are nothing to be ashamed of. This guide shows a step-by-step way to change them, with your counselor's help. It takes about 15 minutes to read and start.",
+  "sections": [
+    {
+      "heading": "Step 1: Notice the habit",
+      "body": "You cannot change what you do not notice. For a week, keep track each time you do the habit or feel the urge.",
+      "steps": [
+        "Where and when does it happen? For example, in bed, in the car, or on the phone.",
+        "What are you feeling? For example, bored, tense, tired, or upset.",
+        "What are your early warning signs? For example, your hand moving toward your face, or feeling for rough spots."
+      ]
+    },
+    {
+      "heading": "Step 2: Use a competing action",
+      "body": "When you notice the urge or the first movement, do something with the same body part that makes the habit hard to do. Keep it up for about 1 minute, or until the urge passes.",
+      "steps": [
+        "Make a fist, or press your hands flat on your legs.",
+        "Hold an object, like a stress ball or a smooth stone.",
+        "Fold your arms, or sit on your hands for a short time.",
+        "My competing action: ________"
+      ]
+    },
+    {
+      "heading": "Step 3: Change your surroundings",
+      "steps": [
+        "Wear gloves, bandages, or long sleeves at high-risk times.",
+        "Keep tweezers, magnifying mirrors, and other tools out of easy reach.",
+        "Dim bright mirror lights, or spend less time in front of mirrors.",
+        "Keep your hands busy with a small fidget toy while you watch TV or read."
+      ]
+    },
+    {
+      "heading": "Step 4: Get support",
+      "steps": [
+        "If you want, choose a person you trust to remind you kindly.",
+        "Praise yourself for each urge you notice and ride out.",
+        "Expect slips. Notice what happened, and try again."
+      ]
+    },
+    {
+      "heading": "Taking care of your skin or scalp",
+      "body": "See a doctor if you have open sores, signs of infection like redness, warmth, or pus, or a fever. Swallowing pulled hair can cause stomach problems. Tell your doctor if you have stomach pain."
+    }
+  ],
+  "practiceLog": {
+    "columns": [
+      "Day and time",
+      "Where I was; what I was doing",
+      "Urge (0-10)",
+      "Did the habit? (yes or no)",
+      "Competing action I used"
+    ],
+    "rows": 10
+  },
+  "safetyNote": "Safety first: If these habits leave you feeling hopeless, or you have thoughts of hurting yourself, get help now. If you have thoughts of hurting yourself or someone else, get help now. In the US, call or text 988, or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sud": false,
+  "es": {
+    "title": "Cómo cambiar un hábito del cuerpo: guía de práctica",
+    "intro": "Muchas personas se jalan el pelo, se pellizcan la piel, se muerden las uñas o se muerden las mejillas o los labios, muchas veces sin darse cuenta. Estos hábitos pueden ser difíciles de dejar, y no son motivo de vergüenza. Esta guía muestra una forma paso a paso de cambiarlos, con la ayuda de su consejero. Leerla y empezar toma unos 15 minutos.",
+    "sections": [
+      {
+        "heading": "Paso 1: Note el hábito",
+        "body": "No puede cambiar lo que no nota. Durante una semana, anote cada vez que hace el hábito o siente las ganas.",
+        "steps": [
+          "¿Dónde y cuándo pasa? Por ejemplo, en la cama, en el carro o al hablar por teléfono.",
+          "¿Qué siente? Por ejemplo, aburrimiento, tensión, cansancio o malestar.",
+          "¿Cuáles son sus primeras señales? Por ejemplo, la mano que va hacia la cara, o buscar partes ásperas con los dedos."
+        ]
+      },
+      {
+        "heading": "Paso 2: Use una acción que compite",
+        "body": "Cuando note las ganas o el primer movimiento, haga algo con la misma parte del cuerpo que haga difícil el hábito. Siga así por 1 minuto más o menos, o hasta que pasen las ganas.",
+        "steps": [
+          "Cierre el puño, o apoye las manos planas sobre las piernas.",
+          "Sostenga un objeto, como una pelota antiestrés o una piedra lisa.",
+          "Cruce los brazos, o siéntese sobre las manos por un rato.",
+          "Mi acción que compite: ________"
+        ]
+      },
+      {
+        "heading": "Paso 3: Cambie lo que le rodea",
+        "steps": [
+          "Use guantes, curitas o mangas largas en los momentos de más riesgo.",
+          "Mantenga las pinzas, los espejos de aumento y otras herramientas fuera de su alcance fácil.",
+          "Baje las luces fuertes del espejo, o pase menos tiempo frente a los espejos.",
+          "Mantenga las manos ocupadas con un juguete pequeño para las manos mientras ve televisión o lee."
+        ]
+      },
+      {
+        "heading": "Paso 4: Busque apoyo",
+        "steps": [
+          "Si quiere, escoja a una persona de confianza que se lo recuerde con cariño.",
+          "Felicítese por cada vez que nota las ganas y las deja pasar.",
+          "Espere algunas recaídas. Note qué pasó, y vuelva a intentarlo."
+        ]
+      },
+      {
+        "heading": "Cuidar la piel o el cuero cabelludo",
+        "body": "Vea a un médico si tiene heridas abiertas, señales de infección como enrojecimiento, calor o pus, o fiebre. Tragarse el pelo que se jala puede causar problemas en el estómago. Dígale a su médico si le duele el estómago."
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Día y hora",
+        "Dónde estaba; qué hacía",
+        "Ganas (0-10)",
+        "¿Hice el hábito? (sí o no)",
+        "Acción que compite que usé"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: Si estos hábitos le hacen sentir que no hay esperanza, o tiene pensamientos de hacerse daño, busque ayuda ahora. Si tiene pensamientos de hacerse daño o de hacerle daño a otra persona, busque ayuda ahora. En EE. UU., llame o envíe un mensaje de texto al 988, o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "sources": [
+    {
+      "title": "The efficacy of habit reversal therapy for tics, habit disorders, and stuttering: a meta-analytic review (Bate, Malouff, Thorsteinsson and Bhullar)",
+      "publisher": "Clinical Psychology Review (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21549664/",
+      "year": 2011
+    },
+    {
+      "title": "Pharmacological and behavioral treatment for trichotillomania: an updated systematic review with meta-analysis (Farhat et al.)",
+      "publisher": "Depression and Anxiety (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32390221/",
+      "year": 2020
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

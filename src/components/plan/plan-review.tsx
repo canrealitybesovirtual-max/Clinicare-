@@ -1,11 +1,13 @@
 "use client";
 import * as React from "react";
-import { Download, FileText, LoaderCircle, ShieldAlert } from "lucide-react";
+import { Compass, Download, FileText, LoaderCircle, ShieldAlert } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Disclosure } from "@/components/ui/disclosure";
 import { Notice } from "@/components/ui/notice";
 import { PART2_NOTICE } from "@/lib/referral-links";
 import { usePlan } from "./plan-context";
-import { planCounts, toPlanExport } from "./plan-model";
+import { FACTOR_KIND_LABELS, formulationCoverage, planCounts, toPlanExport } from "./plan-model";
 import { NextStep } from "@/components/content/content-meta";
 
 type ExportState = { kind: "pdf" | "docx"; status: "busy" | "done" | "error" } | null;
@@ -21,12 +23,83 @@ function Bullets({ items, empty }: { items: string[]; empty: string }) {
   );
 }
 
-/** Step 8: read the plan back, then export it (PDF or DOCX) without identifiers. */
+/**
+ * For clinician review: tapped formulation targets that no chosen objective works on, and chosen objectives that are
+ * linked to none of them. Shown only when the optional formulation step was used. A gap is a prompt, not an error.
+ */
+function FormulationCheck() {
+  const { draft, targetMap, goTo } = usePlan();
+  const coverage = formulationCoverage(draft);
+  if (!coverage.targets.length) return null;
+  const gaps = coverage.targets.filter((t) => !t.refs.length);
+  const name = (id: string) => targetMap.get(id)?.label ?? id;
+  return (
+    <section aria-labelledby="review-formulation" className="space-y-3 rounded-xl border border-border bg-surface p-4 sm:p-5">
+      <div className="flex flex-wrap items-center gap-2">
+        <Compass aria-hidden className="size-5 text-accent" />
+        <h3 id="review-formulation" className="text-base font-semibold">
+          Formulation check
+        </h3>
+        <Badge tone="info" className="uppercase tracking-wide">
+          For clinician review
+        </Badge>
+      </div>
+      <p className="text-sm leading-relaxed text-muted">
+        How the chosen objectives line up with the processes and strengths you tapped. A gap is something to talk over
+        with the client, not an error.
+      </p>
+      {gaps.length ? (
+        <Notice tone="neutral" title="Not yet worked on by any chosen objective">
+          <ul className="list-disc space-y-1 pl-5">
+            {gaps.map((t) => (
+              <li key={t.id}>{name(t.id)}</li>
+            ))}
+          </ul>
+        </Notice>
+      ) : (
+        <p className="text-sm">Every process or strength you tapped is worked on by at least one chosen objective.</p>
+      )}
+      {coverage.unlinked.length ? (
+        <Notice tone="neutral" title="Chosen objectives not linked to a tapped process or strength">
+          <ul className="list-disc space-y-1 pl-5">
+            {coverage.unlinked.map((u) => (
+              <li key={u.ref}>
+                <span className="font-semibold">{u.ref}:</span> {u.text}
+              </li>
+            ))}
+          </ul>
+          <p className="text-xs text-muted">Link them under Link to your formulation in the Objectives step, or keep them if they fit for another reason.</p>
+        </Notice>
+      ) : null}
+      {gaps.length || coverage.unlinked.length ? (
+        <Button type="button" variant="outline" size="sm" className="min-h-11" onClick={() => goTo("objectives")}>
+          Go to Objectives
+        </Button>
+      ) : null}
+      <Disclosure title="Full map" meta={`${coverage.targets.length} chosen`} bordered={false} bodyClassName="pb-1">
+        <ul className="space-y-1.5 text-sm">
+          {coverage.targets.map((t) => {
+            const f = targetMap.get(t.id);
+            return (
+              <li key={t.id}>
+                <span className="font-semibold">{name(t.id)}</span>
+                {f ? <span className="text-muted"> · {FACTOR_KIND_LABELS[f.kind]}</span> : null}
+                <span className="block text-xs text-muted">{t.refs.length ? `Worked on in: ${t.refs.join("; ")}` : "No chosen objective yet."}</span>
+              </li>
+            );
+          })}
+        </ul>
+      </Disclosure>
+    </section>
+  );
+}
+
+/** Step 9: read the plan back, then export it (PDF or DOCX) without identifiers. */
 export function ReviewStep() {
-  const { draft, option, interventionMap, measures, goTo } = usePlan();
+  const { draft, option, interventionMap, measures, modules, targets, goTo } = usePlan();
   const plan = React.useMemo(
-    () => toPlanExport(draft, { option, interventions: interventionMap, measures }),
-    [draft, option, interventionMap, measures],
+    () => toPlanExport(draft, { option, interventions: interventionMap, measures, modules, targets }),
+    [draft, option, interventionMap, measures, modules, targets],
   );
   const counts = planCounts(draft);
   const [exporting, setExporting] = React.useState<ExportState>(null);
@@ -62,6 +135,8 @@ export function ReviewStep() {
         </Notice>
       ) : null}
 
+      <FormulationCheck />
+
       <div className="space-y-5 rounded-xl border border-border bg-surface-2 p-4 sm:p-5">
         <p className="text-sm">
           <span className="font-semibold">Plan library:</span> {option.label}
@@ -76,11 +151,19 @@ export function ReviewStep() {
           ) : null}{" "}
           <span className="text-muted">· See DSM-5-TR.</span>
         </p>
+        {plan.moduleNotes?.length ? (
+          <p className="text-sm">
+            <span className="font-semibold">Modules in this plan:</span> {plan.moduleNotes.map((m) => m.title).join("; ")}
+          </p>
+        ) : null}
         {plan.problems.map((p, i) => (
           <section key={i} aria-labelledby={`review-problem-${i}`} className="space-y-2.5">
             <h3 id={`review-problem-${i}`} className="text-base font-semibold">
               Problem {i + 1}: {p.label}
             </h3>
+            {p.zCodes?.length ? (
+              <p className="text-xs text-muted">Reference Z codes (circumstances, not a diagnosis): {p.zCodes.join("; ")}</p>
+            ) : null}
             <h4 className="text-sm font-semibold text-muted">Behavioral definitions</h4>
             <Bullets items={p.definitions} empty="None selected." />
             <h4 className="text-sm font-semibold text-muted">Long-term goals</h4>
@@ -93,6 +176,7 @@ export function ReviewStep() {
                     {o.text}
                     <span className="block text-xs text-muted">
                       Interventions: {o.interventions.length ? o.interventions.join("; ") : "to be chosen"}
+                      {o.careLevel ? ` · Usual level of care: ${o.careLevel}` : ""}
                     </span>
                   </li>
                 ))}

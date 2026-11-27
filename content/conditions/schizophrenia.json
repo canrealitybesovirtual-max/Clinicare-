@@ -112,7 +112,12 @@
     {
       "label": "Delirium, seizures and other medical causes",
       "type": "medical",
-      "note": "Infection, metabolic problems, brain tumors, autoimmune encephalitis, temporal lobe epilepsy and thyroid disease can cause psychosis; sudden onset, confusion or fluctuating attention need urgent medical assessment."
+      "note": "Infection, metabolic problems, brain tumors, autoimmune encephalitis, temporal lobe epilepsy and thyroid disease can cause psychosis; sudden onset, confusion or fluctuating attention need urgent medical assessment. Sudden confusion or attention that comes and goes suggests delirium (ICD-10-CM F05; ICD-11 6D70), which needs same-day medical assessment (NICE CG103)."
+    },
+    {
+      "label": "Mild or major neurocognitive disorder",
+      "type": "medical",
+      "note": "A gradual decline in memory, thinking, planning or daily functioning, especially in later life, calls for a cognitive evaluation through primary care or a memory service (ICD-10-CM G31.84, F06.7x or F03.9x; ICD-11 6D71 or 6D80-6D8Z). Low mood, apathy, anxiety or new psychotic symptoms can be early signs (NICE NG97)."
     },
     {
       "label": "Medication effects",
@@ -236,7 +241,9 @@
   "handouts": [
     "staying-well-plan",
     "safety-plan",
-    "sleep-habits"
+    "sleep-habits",
+    "understanding-unusual-experiences",
+    "voices-coping-plan"
   ],
   "statIds": [
     "us-schizophrenia-prevalence"
@@ -337,6 +344,18 @@
       "title": "AACC Code of Ethics",
       "publisher": "American Association of Christian Counselors",
       "url": "https://aacc.net/aacc-code-of-ethics/"
+    },
+    {
+      "title": "Delirium: prevention, diagnosis and management in hospital and long-term care (CG103)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg103",
+      "year": 2010
+    },
+    {
+      "title": "Dementia: assessment, management and support for people living with dementia and their carers (NG97)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng97",
+      "year": 2018
     }
   ],
   "license": "original",

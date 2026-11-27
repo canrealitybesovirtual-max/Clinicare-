@@ -51,6 +51,7 @@
   },
   "trainingRequired": "Individual skills can be taught by clinicians competent in DBT skills. Comprehensive DBT (individual therapy, skills group, phone coaching and a consultation team) requires formal DBT training.",
   "handoutIds": ["assertive-communication"],
+  "orientationIds": ["dialectical-behavior-therapy"],
   "sources": [
     { "title": "DBT Skills Training Manual, Second Edition (Linehan)", "publisher": "Guilford Press", "url": "https://www.guilford.com/books/DBT-Skills-Training-Manual/Marsha-Linehan/9781462516995", "year": 2015 },
     { "title": "Psychological therapies for people with borderline personality disorder (Storebo et al.)", "publisher": "Cochrane Database of Systematic Reviews", "url": "https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD012955.pub2/full", "year": 2020 },

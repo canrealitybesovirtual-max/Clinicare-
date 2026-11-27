@@ -1,0 +1,176 @@
+{
+  "id": "gambling-change-plan",
+  "title": "My Gambling Change Plan",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 20,
+  "intro": "Gambling can start as fun and slowly take over your money, time, and relationships. If you want to cut back or stop, a plan helps. This sheet helps you spot your triggers, put up barriers to gambling, handle urges, and get support. It takes about 20 minutes to fill in with your counselor.",
+  "sections": [
+    {
+      "heading": "Why I want to change",
+      "steps": [
+        "What gambling has cost me: ________",
+        "What I want instead: ________"
+      ]
+    },
+    {
+      "heading": "My triggers",
+      "body": "Triggers can be times, places, feelings, or events, like payday, sports games, ads, boredom, stress, or wanting to win back losses.",
+      "steps": [
+        "My triggers: ________",
+        "What I will do instead: ________"
+      ]
+    },
+    {
+      "heading": "Put up barriers",
+      "steps": [
+        "Ask casinos, betting apps, and your state about self-exclusion. It bans you from gambling for a set time.",
+        "Put blocking software on your phone and computer, and delete betting apps.",
+        "Ask your bank about blocking gambling charges on your cards.",
+        "Carry only the cash you need, and leave cards at home when you can.",
+        "If you both agree it would help, ask a trusted person to help manage money for a while."
+      ]
+    },
+    {
+      "heading": "When an urge hits",
+      "steps": [
+        "Remind yourself that urges rise and then fall, often within 15 to 30 minutes.",
+        "Do something else: call someone, go for a walk, or leave the place.",
+        "Think about the whole story, not just the wins. Remember how you felt after losing.",
+        "Chasing losses usually leads to bigger losses."
+      ]
+    },
+    {
+      "heading": "Money steps",
+      "steps": [
+        "List your debts, and talk with a free, nonprofit credit counselor.",
+        "Pay key bills first, like rent and food, as soon as you are paid.",
+        "Be careful with loans or cash advances to cover gambling debts."
+      ]
+    },
+    {
+      "heading": "Support",
+      "steps": [
+        "Call the National Problem Gambling Helpline at 1-800-GAMBLER, any time.",
+        "Gamblers Anonymous and other groups offer free meetings in person and online.",
+        "Family members can get support too, for example from Gam-Anon."
+      ]
+    },
+    {
+      "heading": "Take dark thoughts seriously",
+      "body": "Gambling problems, debt, and shame can lead to very dark thoughts. People with serious gambling problems are at higher risk of suicide. If you have thoughts of ending your life, call or text 988 right away, or call 911."
+    }
+  ],
+  "practiceLog": {
+    "columns": [
+      "Day",
+      "Urge (0-10)",
+      "What set it off",
+      "What I did",
+      "Money gambled, if any"
+    ],
+    "rows": 7
+  },
+  "safetyNote": "Safety first: Money worries and shame can lead to thoughts of suicide. If you have these thoughts, get help right away. For gambling help, call the National Problem Gambling Helpline at 1-800-GAMBLER, any time. If you have thoughts of hurting yourself or someone else, get help now. In the US, call or text 988, or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sud": false,
+  "es": {
+    "title": "Mi plan para cambiar mi forma de apostar",
+    "intro": "Las apuestas pueden empezar como diversión y poco a poco quedarse con su dinero, su tiempo y sus relaciones. Si quiere apostar menos o dejarlo, un plan ayuda. Esta hoja le ayuda a notar lo que le da ganas, a poner barreras para no apostar, a manejar las ganas y a buscar apoyo. Llenarla con su consejero toma unos 20 minutos.",
+    "sections": [
+      {
+        "heading": "Por qué quiero cambiar",
+        "steps": [
+          "Lo que me han costado las apuestas: ________",
+          "Lo que quiero en su lugar: ________"
+        ]
+      },
+      {
+        "heading": "Lo que me da ganas de apostar",
+        "body": "Pueden ser momentos, lugares, emociones o eventos, como el día de pago, los partidos, los anuncios, el aburrimiento, el estrés o las ganas de recuperar lo perdido.",
+        "steps": [
+          "Lo que me da ganas: ________",
+          "Qué voy a hacer en su lugar: ________"
+        ]
+      },
+      {
+        "heading": "Ponga barreras",
+        "steps": [
+          "Pregunte a los casinos, a las aplicaciones de apuestas y a su estado por la autoexclusión. Le prohíbe apostar por un tiempo fijo.",
+          "Instale programas de bloqueo en su teléfono y su computadora, y borre las aplicaciones de apuestas.",
+          "Pregúntele a su banco si puede bloquear los cobros de apuestas en sus tarjetas.",
+          "Lleve solo el efectivo que necesita, y deje las tarjetas en casa cuando pueda.",
+          "Si los dos están de acuerdo en que ayudaría, pídale a una persona de confianza que le ayude a manejar el dinero por un tiempo."
+        ]
+      },
+      {
+        "heading": "Cuando le llegan las ganas",
+        "steps": [
+          "Recuerde que las ganas suben y luego bajan, muchas veces en 15 a 30 minutos.",
+          "Haga otra cosa: llame a alguien, salga a caminar o váyase del lugar.",
+          "Piense en toda la historia, no solo en lo que ganó. Recuerde cómo se sintió después de perder.",
+          "Tratar de recuperar lo perdido casi siempre lleva a perder más."
+        ]
+      },
+      {
+        "heading": "Pasos con el dinero",
+        "steps": [
+          "Haga una lista de sus deudas, y hable con un asesor de crédito gratis y sin fines de lucro.",
+          "Pague primero lo más importante, como la renta y la comida, apenas reciba su pago.",
+          "Tenga cuidado con los préstamos o los adelantos de efectivo para pagar deudas de apuestas."
+        ]
+      },
+      {
+        "heading": "Apoyo",
+        "steps": [
+          "Llame a la Línea Nacional de Ayuda para Problemas con el Juego (National Problem Gambling Helpline) al 1-800-GAMBLER, a cualquier hora.",
+          "Jugadores Anónimos (Gamblers Anonymous) y otros grupos tienen reuniones gratis en persona y en línea.",
+          "Los familiares también pueden recibir apoyo, por ejemplo de Gam-Anon."
+        ]
+      },
+      {
+        "heading": "Tome en serio los pensamientos oscuros",
+        "body": "Los problemas con las apuestas, las deudas y la vergüenza pueden llevar a pensamientos muy oscuros. Las personas con problemas serios con las apuestas tienen más riesgo de suicidio. Si piensa en quitarse la vida, llame o envíe un mensaje de texto al 988 de inmediato, o llame al 911."
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Día",
+        "Ganas (0-10)",
+        "Qué me dio ganas",
+        "Qué hice",
+        "Dinero apostado, si hubo"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: Las preocupaciones de dinero y la vergüenza pueden llevar a pensamientos de suicidio. Si tiene estos pensamientos, busque ayuda de inmediato. Para recibir ayuda con el juego, llame a la Línea Nacional de Ayuda para Problemas con el Juego (National Problem Gambling Helpline) al 1-800-GAMBLER, a cualquier hora. Si tiene pensamientos de hacerse daño o de hacerle daño a otra persona, busque ayuda ahora. En EE. UU., llame o envíe un mensaje de texto al 988, o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "sources": [
+    {
+      "title": "Gambling-related harms: identification, assessment and management (NG248)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng248",
+      "year": 2025
+    },
+    {
+      "title": "Gambling disorder, increased mortality, suicidality, and associated comorbidity: a longitudinal nationwide register study (Karlsson and Håkansson)",
+      "publisher": "Journal of Behavioral Addictions (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30427214/",
+      "year": 2018
+    },
+    {
+      "title": "A systematic review of land-based self-exclusion programs (Kotter et al.)",
+      "publisher": "Journal of Gambling Studies (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29721719/",
+      "year": 2019
+    },
+    {
+      "title": "Gamblers Anonymous as a recovery pathway: a scoping review (Schuler et al.)",
+      "publisher": "Journal of Gambling Studies (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27040972/",
+      "year": 2016
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

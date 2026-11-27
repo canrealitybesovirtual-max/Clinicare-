@@ -1,0 +1,125 @@
+{
+  "id": "engagement-and-attendance",
+  "title": "Engagement, attendance and fit of therapy",
+  "summary": "For any plan when sessions are being missed, therapy does not yet feel like a fit, or practical barriers get in the way. Objectives set shared expectations, reduce barriers and invite feedback on the work.",
+  "appliesTo": "any",
+  "problems": [
+    {
+      "id": "eng-engagement",
+      "label": "Missed sessions, doubts about therapy or practical barriers to attending",
+      "definitions": [
+        "Has missed or cancelled 2 or more sessions in a row, or often arrives late, for reasons that may include practical barriers, doubts about therapy or low energy.",
+        "Says therapy does not feel like a fit, or that the goals or methods are not what they expected.",
+        "Faces practical barriers such as travel, cost, childcare, work hours, language, or no private space for video sessions."
+      ],
+      "longTermGoals": [
+        "The client and clinician share an understanding of the goals and methods of therapy, practical barriers are smaller, and attendance supports the plan."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "eng-expectations",
+          "text": "In the first 2 sessions, talk through what therapy will involve (length, session structure, between-session practice, and confidentiality and its limits) along with the client's preferences and hopes, and write down at least 1 shared goal in the client's words.",
+          "interventionIds": [
+            "person-centered-reflective-listening",
+            "solution-focused-questions"
+          ],
+          "targets": [
+            "hope-and-motivation"
+          ]
+        },
+        {
+          "id": "eng-barriers",
+          "text": "By session 3, list the practical barriers to attending (for example travel, cost, hours, childcare or privacy at home) and agree on at least 1 change for each that is within reach, such as a different time, video sessions or help with costs.",
+          "interventionIds": [
+            "problem-solving"
+          ],
+          "targets": [
+            "structural-stressors"
+          ]
+        },
+        {
+          "id": "eng-session-feedback",
+          "text": "At every session for the first 6 weeks, ask for brief feedback on the session and the working relationship, and act on at least 1 suggestion whenever a concern comes up.",
+          "interventionIds": [],
+          "targets": [
+            "hope-and-motivation"
+          ]
+        },
+        {
+          "id": "eng-missed-session-plan",
+          "text": "By session 3, agree on what will happen after a missed session (for example a check-in message within 2 working days) and how the client prefers to be contacted, without adding contact details to this plan.",
+          "interventionIds": [],
+          "targets": [
+            "strengths-and-supports"
+          ]
+        },
+        {
+          "id": "eng-mixed-feelings",
+          "text": "If the client is unsure about continuing, use at least 1 session by week 6 to explore mixed feelings about therapy openly, and decide together whether to change the approach, pause, or refer to another service.",
+          "interventionIds": [
+            "motivational-interviewing"
+          ],
+          "targets": [
+            "hope-and-motivation"
+          ]
+        }
+      ],
+      "measureIds": [],
+      "practiceIds": [
+        "first-sessions-and-role-induction",
+        "preferences-goals-and-readiness",
+        "alliance-and-rupture-repair",
+        "outcome-monitoring",
+        "telehealth-sessions"
+      ],
+      "handoutIds": [
+        "what-to-expect-in-therapy",
+        "questions-about-my-care",
+        "session-check-in-card",
+        "video-session-guide"
+      ]
+    }
+  ],
+  "collaborativeNote": "Missed sessions are information, not a judgment about the client. Ask about barriers and about how therapy feels, and change the approach when the client's preferences call for it. Do not add names or other identifying details. Resource only. Not a substitute for clinical judgment.",
+  "sources": [
+    {
+      "title": "Premature discontinuation in adult psychotherapy: a meta-analysis (Swift and Greenberg)",
+      "publisher": "Journal of Consulting and Clinical Psychology (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22506792/",
+      "year": 2012
+    },
+    {
+      "title": "Psychotherapy relationships that work III (Norcross and Lambert)",
+      "publisher": "Psychotherapy (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30335448/",
+      "year": 2018
+    },
+    {
+      "title": "The impact of accommodating client preference in psychotherapy: a meta-analysis (Swift et al.)",
+      "publisher": "Journal of Clinical Psychology (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30091140/",
+      "year": 2018
+    },
+    {
+      "title": "Alliance rupture repair: a meta-analysis (Eubanks, Muran and Safran)",
+      "publisher": "Psychotherapy (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30335462/",
+      "year": 2018
+    },
+    {
+      "title": "Collecting and delivering progress feedback: a meta-analysis of routine outcome monitoring (Lambert, Whipple and Kleinstauber)",
+      "publisher": "Psychotherapy (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30335463/",
+      "year": 2018
+    },
+    {
+      "title": "Shared decision making (NG197)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng197",
+      "year": 2021
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

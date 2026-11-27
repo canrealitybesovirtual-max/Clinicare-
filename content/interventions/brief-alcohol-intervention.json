@@ -1,0 +1,109 @@
+{
+  "id": "brief-alcohol-intervention",
+  "name": "Alcohol screening and brief intervention",
+  "modality": "Screening and brief intervention (motivational interviewing style)",
+  "conditions": ["alcohol-use-disorder"],
+  "evidenceLevel": "The US Preventive Services Task Force (2018, grade B) recommends screening adults 18 and older for unhealthy alcohol use in primary care and providing brief behavioral counseling to those who screen positive; a 2025 draft update was posted. The VA/DoD 2021 guideline suggests (weak for) a single initial brief intervention for people with unhealthy alcohol use who do not have alcohol use disorder. A Cochrane review found moderate-quality evidence that brief interventions reduce drinking in hazardous and harmful drinkers compared with minimal or no intervention, and that longer counseling adds little (Kaner et al., 2018). Brief intervention alone is not a treatment for alcohol use disorder.",
+  "minutes": { "min": 5, "max": 20 },
+  "purpose": "A short, respectful conversation, usually 5 to 15 minutes and sometimes repeated, that helps people who drink more than is safe for them think about their drinking and decide on a change. It follows a validated screen and uses a motivational interviewing style: asking permission, giving personal feedback, offering clear advice, inviting the client's own reasons and plan, and arranging follow-up. When the screen or conversation suggests alcohol use disorder, the next step is assessment and treatment, including medication options, not brief advice alone. This app does not include an alcohol screening tool. Use your setting's licensed screener, or the WHO AUDIT or the AUDIT-C as link-outs (their licenses for use in this app are not yet confirmed), and never enter responses here.",
+  "steps": [
+    "Ask permission to talk about alcohol, and explain that you ask everyone because drinking affects health, sleep, mood and medications.",
+    "Screen with a validated tool your setting uses (for example the WHO AUDIT or the AUDIT-C, opened as link-outs). Do not enter answers into this app.",
+    "Give brief, personal feedback: how the client's drinking compares with current low-risk guidance, and how it may connect to problems they have mentioned (sleep, mood, blood pressure, injuries, relationships).",
+    "Give clear, respectful advice to cut down, or to stop where any amount is risky (for example during pregnancy, with certain medications or health conditions, or before driving).",
+    "Ask for the client's view and reasons for change. Offer a menu of options (setting a drink limit, alcohol-free days, tracking drinks, changing routines or company) and let the client choose a goal.",
+    "If there are signs of alcohol use disorder or possible withdrawal, arrange further assessment, discuss medication for alcohol use disorder and specialist or mutual-help support, and get medical input before any sudden stop.",
+    "Agree on follow-up (a phone call or next visit) to review progress and adjust the plan."
+  ],
+  "script": [
+    "Would it be okay if we talked for a few minutes about alcohol? I ask everyone, because it can affect sleep, mood and health.",
+    "From what you have shared, your drinking is above the level that is considered lower risk. How do you feel about that?",
+    "As your clinician, I would recommend cutting down. What would you like to do, if anything?",
+    "Some people set a limit, take some days off, or keep a drink diary. Which of these sounds doable for you?",
+    "Let's check in again soon to see how it is going."
+  ],
+  "contraindications": [
+    "Heavy daily drinking can lead to dangerous withdrawal if stopped suddenly. Get medical input before advising abrupt stopping, and know your local options for withdrawal management.",
+    "Brief advice is not enough for alcohol use disorder. Offer or refer for assessment, treatment and medication options.",
+    "Alcohol combined with sedatives, opioids or sleep medications raises overdose risk. Coordinate with the prescriber.",
+    "If the client reports suicidal thoughts, address safety first. This app does not judge risk; you do. Crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com.",
+    "Screening tools other than the PHQ-9 and GAD-7 are link-outs only in this app because their licenses are not yet confirmed. Do not copy their items into notes generated here.",
+    "Do not enter details about anyone's alcohol use into this app; nothing is stored or sent. Any note or export about substance use must carry this notice: 42 CFR Part 2 prohibits unauthorized use or disclosure of these records."
+  ],
+  "culturalAdaptations": [
+    "Drinking norms, abstinence for religious reasons, and stigma differ widely. Ask about the client's own norms and avoid assumptions based on background.",
+    "Standard drink sizes differ by country and beverage. Use local guidance and examples the client recognizes.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "handoutIds": ["cutting-down-alcohol-safely", "drinking-diary"],
+  "orientationIds": ["humanistic-experiential-therapy"],
+  "evidenceGrades": [
+    {
+      "body": "USPSTF",
+      "guideline": "Unhealthy alcohol use in adolescents and adults: screening and behavioral counseling interventions",
+      "year": 2018,
+      "population": "Adults 18 years or older in primary care, including pregnant people",
+      "direction": "for",
+      "strength": "grade B",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30422199/"
+    },
+    {
+      "body": "VA/DoD",
+      "guideline": "Management of Substance Use Disorders",
+      "year": 2021,
+      "population": "Adults with unhealthy alcohol use without alcohol use disorder",
+      "direction": "for",
+      "strength": "weak for (suggest a single initial brief intervention)",
+      "url": "https://health.mil/Reference-Center/Publications/2021/04/26/PHCoE-Evidence-Brief-Alcohol-Interventions-for-Unhealthy-Alcohol-Use-508"
+    },
+    {
+      "body": "Cochrane",
+      "guideline": "Effectiveness of brief alcohol interventions in primary care populations",
+      "year": 2018,
+      "population": "Hazardous and harmful drinkers in primary care",
+      "direction": "for",
+      "strength": "moderate-quality evidence",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29476653/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Screening and behavioral counseling interventions to reduce unhealthy alcohol use in adolescents and adults: US Preventive Services Task Force recommendation statement",
+      "publisher": "JAMA (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30422199/",
+      "year": 2018
+    },
+    {
+      "title": "Effectiveness of brief alcohol interventions in primary care populations (Kaner et al.)",
+      "publisher": "Cochrane Database of Systematic Reviews (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29476653/",
+      "year": 2018
+    },
+    {
+      "title": "PHCoE Evidence Brief: Alcohol Interventions for Unhealthy Alcohol Use",
+      "publisher": "Psychological Health Center of Excellence, Defense Health Agency",
+      "url": "https://health.mil/Reference-Center/Publications/2021/04/26/PHCoE-Evidence-Brief-Alcohol-Interventions-for-Unhealthy-Alcohol-Use-508",
+      "year": 2021
+    },
+    {
+      "title": "VA/DoD SUD clinical practice guideline: provider summary",
+      "publisher": "US Department of Veterans Affairs and Department of Defense",
+      "url": "https://www.healthquality.va.gov/guidelines/MH/sud/VADoDSUDCPGProviderSummary.pdf",
+      "year": 2021
+    },
+    {
+      "title": "AUDIT: the Alcohol Use Disorders Identification Test - guidelines for use in primary health care",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/publications/i/item/WHO-MSD-MSB-01.6a",
+      "year": 2001
+    },
+    {
+      "title": "Core Resource on Alcohol",
+      "publisher": "National Institute on Alcohol Abuse and Alcoholism",
+      "url": "https://niaaa.nih.gov/health-professionals-communities/core-resource-on-alcohol"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

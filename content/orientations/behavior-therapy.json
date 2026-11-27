@@ -1,0 +1,159 @@
+{
+  "id": "behavior-therapy",
+  "name": "Behavior therapy (learning-based approaches)",
+  "shortName": "Behavior therapy",
+  "family": "behavioral",
+  "summary": "Problems are learned patterns kept going by their consequences. Work starts from a functional analysis of what triggers a behavior and what it achieves, then changes the pattern through exposure, activation, skills practice and changes to reinforcement.",
+  "keyConcepts": [
+    { "term": "Respondent learning", "meaning": "Cues that were paired with danger or distress come to trigger fear or craving on their own; new learning in the presence of the cue can compete with the old association." },
+    { "term": "Operant learning", "meaning": "Behavior that is followed by relief, reward or attention becomes more likely; behavior that is followed by loss or punishment becomes less likely." },
+    { "term": "Avoidance as maintenance", "meaning": "Escape and avoidance bring short-term relief, which reinforces them, and stop the person from learning that the feared outcome is unlikely or bearable." },
+    { "term": "Functional analysis", "meaning": "Mapping antecedents, the behavior and its short- and long-term consequences, so the treatment targets what the behavior does for the person, not only what it looks like." },
+    { "term": "Inhibitory learning", "meaning": "Exposure works by building new, competing learning rather than erasing fear; varied practice, expectancy violation and dropping safety behaviors strengthen it." },
+    { "term": "Shaping and reinforcement", "meaning": "Building a new behavior in small, achievable steps and making sure each step is followed by something rewarding." }
+  ],
+  "viewOfProblem": "Distress and impairment are seen as patterns of behavior and emotion that were learned and are being maintained now by their consequences. Low mood shrinks contact with rewarding activity; anxiety is kept going by avoidance and safety behaviors; habits and substance use continue because they bring quick relief or reward. The question is less why the problem started than what keeps it going today.",
+  "viewOfChange": "Change comes from changing contingencies and building new learning: approaching what has been avoided until expectations are disconfirmed, scheduling activity that brings mastery and pleasure, practicing skills, and arranging rewards for the new pattern. Progress is tracked with data, and the plan is revised when the data say it is not working.",
+  "therapistStance": "Warm, practical and coach-like. The clinician explains the learning rationale in plain words, plans experiments and exposure steps together with the client, models and rehearses skills, reinforces effort, and treats setbacks as information. Choice and consent guide every exposure step.",
+  "sessionShape": [
+    "Review monitoring records and measures since the last session.",
+    "Agree on the target behavior and the step for this session.",
+    "Practice in session: an exposure task, a skills rehearsal or activity planning.",
+    "Problem-solve barriers and plan rewards for the new behavior.",
+    "Set specific between-session practice with a simple way to record it."
+  ],
+  "goalStyle": "Goals name an observable behavior, how often, and by when: for example, complete steps 1 to 4 of the exposure ladder with distress ratings recorded, schedule and complete three valued activities each week, or reduce checking from 2 hours to under 30 minutes a day. Write each goal with the client in their own words.",
+  "progressMarkers": [
+    "Frequency, duration or intensity counts from self-monitoring.",
+    "Distress ratings (0 to 100) at the start and end of exposure practice, and what the client learned.",
+    "Steps completed on an exposure ladder or activity plan.",
+    "Symptom measures such as the PHQ-9 or GAD-7 across sessions."
+  ],
+  "typicalTechniques": [
+    "behavioral-activation",
+    "graded-in-vivo-exposure",
+    "imaginal-exposure",
+    "interoceptive-exposure",
+    "exposure-and-response-prevention",
+    "safety-behavior-reduction",
+    "one-session-treatment-phobia",
+    "applied-tension",
+    "applied-relaxation",
+    "progressive-muscle-relaxation",
+    "diaphragmatic-breathing",
+    "habit-reversal-training",
+    "contingency-management",
+    "community-reinforcement-approach",
+    "craft-for-family-members",
+    "behavioral-chain-analysis",
+    "assertiveness-training",
+    "communication-skills-training",
+    "couples-relationship-skills",
+    "behavioral-couples-therapy",
+    "problem-solving",
+    "worry-time",
+    "stress-inoculation-training",
+    "relapse-prevention-planning",
+    "cbti-stimulus-control",
+    "cbti-sleep-restriction",
+    "brief-behavioral-treatment-insomnia",
+    "sleep-hygiene-education",
+    "physical-activity",
+    "prolonged-exposure",
+    "stair-skills-training",
+    "integrated-ptsd-sud-treatment",
+    "interpersonal-social-rhythm-therapy",
+    "family-focused-therapy-bipolar",
+    "cbt-health-anxiety",
+    "cbt-bdd",
+    "cbt-hoarding",
+    "cbt-e-eating-disorders",
+    "cbt-adult-adhd",
+    "problem-management-plus",
+    "social-connection-and-loneliness",
+    "late-life-depression-programs",
+    "dementia-caregiver-support"
+  ],
+  "relatedTechniques": ["behavioral-experiments", "urge-surfing"],
+  "missingTechniques": [
+    { "name": "Self-management (self-control) therapy for depression", "note": "Self-monitoring, self-evaluation and self-reinforcement as a stand-alone program; not yet a library entry." },
+    { "name": "Behavioral contracting", "note": "A written agreement on target behaviors and rewards; currently covered only inside contingency management." }
+  ],
+  "formulationIds": ["functional-analysis", "disorder-maintenance-models", "transdiagnostic-process-map", "fear-avoidance-pain"],
+  "models": [
+    {
+      "name": "Exposure-based therapies",
+      "summary": "Graded, imaginal and interoceptive exposure and exposure with response prevention, built on inhibitory learning: approach feared cues, drop safety behaviors and test predictions until new learning takes hold.",
+      "evidenceTier": "guideline-recommended",
+      "evidence": "NICE CG113 (2011) and CG159 (2013) recommend CBT packages built on exposure for panic and social anxiety, and NICE CG31 (2005) recommends exposure and response prevention for OCD.",
+      "trainingRequired": false
+    },
+    {
+      "name": "Behavioral activation",
+      "summary": "Scheduling and approaching rewarding and valued activity, with functional analysis of avoidance and rumination, to rebuild contact with reinforcement in depression.",
+      "evidenceTier": "guideline-recommended",
+      "evidence": "NICE NG222 (2022) lists group and individual behavioural activation among options for depression; a 2014 meta-analysis of 26 trials supported its effects (Ekers et al.).",
+      "trainingRequired": false
+    },
+    {
+      "name": "Contingency management and community reinforcement",
+      "summary": "Structured incentives for verified behavior change, and programs that make a substance-free life more rewarding than use; delivered within programs with testing, funding and compliance review.",
+      "evidenceTier": "guideline-recommended",
+      "evidence": "NICE CG51 (2007) recommends contingency management for people who misuse drugs, and a 2006 meta-analysis found it improves abstinence across drug, alcohol and tobacco use, most clearly for stimulants (Prendergast et al., 2006).",
+      "trainingRequired": true
+    }
+  ],
+  "evidenceTier": "guideline-recommended",
+  "evidenceSummary": "Behavioral methods are among the best-supported psychological treatments. NICE NG222 (2022) lists behavioural activation for depression; NICE CG31 (2005) recommends exposure and response prevention for OCD; NICE CG113 (2011) and CG159 (2013) recommend exposure-based CBT for panic and social anxiety; the AASM (2021) and the American College of Physicians (2016) recommend CBT for insomnia, built on stimulus control and sleep restriction, as the first treatment for chronic insomnia. APA Division 12 lists self-management therapy for depression and cognitive and behavioral therapies for GAD; check the current listings, which are under re-evaluation.",
+  "bestFit": [
+    "Anxiety, OCD, phobias, insomnia, habit problems and depression with withdrawal and avoidance.",
+    "Clients who prefer practical, step-by-step work with visible progress.",
+    "Clients for whom extended talk-based insight work is hard, including some with cognitive or language barriers, using simple steps and visual records.",
+    "Substance use, when combined with structured programs and family involvement."
+  ],
+  "cautions": [
+    "Exposure must be consented, collaborative and graded; never pressure or surprise a client into a feared situation.",
+    "Check medical issues before interoceptive exposure (for example heart or lung disease, pregnancy, seizures) and coordinate with the medical team.",
+    "With ME/CFS or long COVID, effort can trigger a delayed crash 12 to 48 hours later; use pacing coordinated with the medical team rather than graded increases in activity.",
+    "Sleep restriction is unsafe without screening in bipolar disorder, seizure disorders, untreated sleep apnea and for people who drive or operate machinery; follow CBT-I training and screening.",
+    "Exposure to trauma memories belongs within a trauma-focused protocol delivered by a trained clinician.",
+    "If practice brings up thoughts of death or self-harm, stop, follow your risk procedures, and review crisis options: in the US call or text 988; elsewhere, the local emergency number or findahelpline.com."
+  ],
+  "whenToRefer": [
+    "Severe or treatment-resistant OCD, hoarding or phobias that need intensive or specialist exposure programs.",
+    "Substance use that needs medical withdrawal management or medication treatment."
+  ],
+  "trainingRequired": false,
+  "trainingNote": "Activation, relaxation, problem-solving and simple graded exposure are part of general CBT training. ERP for complex OCD, CBT-I sleep restriction, prolonged exposure and contingency management call for specific training, supervision or a structured program.",
+  "trainingPath": [
+    { "body": "Academy of Cognitive and Behavioral Therapies", "url": "https://academyofcbt.org/certification", "note": "Certification in cognitive and behavioral therapies based on a rated session and case write-up." },
+    { "body": "Center for the Treatment and Study of Anxiety, University of Pennsylvania", "url": "https://www.med.upenn.edu/ctsa/workshops_ptsd.html", "note": "Workshops and consultation in prolonged exposure from the program founded by its developer." }
+  ],
+  "ethicsPrompts": [
+    { "prompt": "Practice within your training: deliver ERP for severe OCD, sleep restriction or trauma exposure only with the training and supervision they require, and refer otherwise.", "legalIds": ["competence-and-scope-of-practice"] },
+    { "prompt": "Exposure involves planned discomfort. Explain the rationale, the client's right to pace and stop, and the expected short-term distress before starting.", "legalIds": ["treatment-plans-and-client-access"] }
+  ],
+  "culturalNotes": [
+    "Build exposure ladders and activity plans from situations and activities that matter in the client's own life and community.",
+    "Some avoidance is wise. Separate fear-driven avoidance from realistic caution about discrimination, violence or unsafe settings before planning exposure.",
+    "Rewards and reinforcers differ across people and cultures; let the client choose them."
+  ],
+  "handoutIds": ["exposure-ladder", "activity-schedule", "erp-practice-log", "facing-fears-what-to-expect", "activity-and-mood-log"],
+  "relatedPracticeIds": ["between-session-practice", "goal-attainment-scaling", "outcome-monitoring", "goals-by-orientation"],
+  "relatedPopulationIds": ["post-exertional-malaise", "autistic-adults", "intellectual-disability"],
+  "sources": [
+    { "title": "Depression in adults: treatment and management (NG222)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng222", "year": 2022 },
+    { "title": "Obsessive-compulsive disorder and body dysmorphic disorder: treatment (CG31)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/cg31", "year": 2005 },
+    { "title": "Generalised anxiety disorder and panic disorder in adults: management (CG113)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/cg113", "year": 2011 },
+    { "title": "Social anxiety disorder: recognition, assessment and treatment (CG159)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/cg159", "year": 2013 },
+    { "title": "Behavioural activation for depression: an update of meta-analysis of effectiveness and sub group analysis (Ekers et al.)", "publisher": "PLoS ONE (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/24936656/", "year": 2014 },
+    { "title": "Drug misuse in over 16s: psychosocial interventions (CG51)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/cg51", "year": 2007 },
+    { "title": "Contingency management for treatment of substance use disorders: a meta-analysis (Prendergast et al.)", "publisher": "Addiction (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/17034434/", "year": 2006 },
+    { "title": "Behavioral and psychological treatments for chronic insomnia disorder in adults: an American Academy of Sleep Medicine clinical practice guideline (Edinger et al.)", "publisher": "Journal of Clinical Sleep Medicine (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/33164742/", "year": 2021 },
+    { "title": "Management of chronic insomnia disorder in adults: a clinical practice guideline from the American College of Physicians (Qaseem et al.)", "publisher": "Annals of Internal Medicine (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/27136449/", "year": 2016 },
+    { "title": "Psychological Treatments (treatment index)", "publisher": "APA Division 12, Society of Clinical Psychology", "url": "https://div12.org/psychological-treatments/treatments/" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

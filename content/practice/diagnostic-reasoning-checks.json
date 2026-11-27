@@ -1,0 +1,94 @@
+{
+  "id": "diagnostic-reasoning-checks",
+  "title": "Diagnostic reasoning checks and common biases",
+  "category": "documents",
+  "summary": "Short checks to run before settling on a working formulation or diagnosis: stopping too early, looking only for confirming evidence, ignoring how common a condition is, putting new symptoms down to a known mental health problem, and misreading culture as pathology. The app's suggestions are patterns for review; these checks help the clinician use them without being steered by them.",
+  "whenToUse": [
+    "Before recording a working diagnosis or formulation.",
+    "When a pattern seemed obvious early in the first session.",
+    "When a client's symptoms changed, or new physical symptoms appeared, during treatment.",
+    "When the client's culture, language, age, disability or identity differs from the clinician's."
+  ],
+  "steps": [
+    {
+      "heading": "Premature closure",
+      "body": "Ask what else could explain the picture before stopping. Compare at least two possible patterns side by side, and list what you have not yet asked."
+    },
+    {
+      "heading": "Confirmation bias",
+      "body": "Look for the features that would argue against your leading idea as actively as those that support it. Missing core features matter as much as matched ones."
+    },
+    {
+      "heading": "Base rates",
+      "body": "Weigh how common each possibility is in the setting you work in. A rare condition with a striking feature is still rarer than a common one with an ordinary feature."
+    },
+    {
+      "heading": "Diagnostic overshadowing",
+      "body": "Do not put new physical or psychological symptoms down to an existing mental health diagnosis, intellectual disability or substance use without checking. Ask about medical causes and medicines, and refer for medical evaluation when the picture is unusual or changes."
+    },
+    {
+      "heading": "Cultural misattribution",
+      "body": "Ask how the client and their community understand what is happening. Beliefs, idioms of distress and mistrust rooted in real experiences of discrimination can be misread as symptoms. Research shows racial disparities in the diagnosis of psychotic disorders in the US; use the cultural formulation and interpreters, and seek consultation."
+    },
+    {
+      "heading": "Anchoring on other people's labels",
+      "body": "A diagnosis in a referral or old record is a hypothesis to check, not a fact to inherit."
+    },
+    {
+      "heading": "Write down the reasoning",
+      "items": [
+        "The possibilities you considered and why each was kept or set aside.",
+        "What would change your mind.",
+        "Medical and substance-related causes checked or still to check.",
+        "When you will review."
+      ]
+    }
+  ],
+  "prompts": [
+    "Before we go further, I want to make sure I understand this from your point of view. How do you make sense of what has been happening?",
+    "Is there anything about this that does not fit with how I have described it?",
+    "When did these new symptoms start? Has anything changed in your health or medicines?"
+  ],
+  "cautions": [
+    "The app's suggestions are rule-based patterns from a small adult knowledge base; they are not likelihoods and not diagnoses.",
+    "Confirm against the DSM-5-TR or ICD criteria and a full clinical interview; See DSM-5-TR.",
+    "Absence of a pattern from the app's list says nothing about the client.",
+    "Reasoning checks support judgment; they do not replace consultation or supervision when you are unsure."
+  ],
+  "evidenceSummary": "A 2003 paper (Croskerry) describes cognitive errors in diagnosis, including premature closure, anchoring and confirmation bias, and strategies to reduce them. A 2005 review (Garb) summarizes research on clinical judgment and decision making in mental health. A 2014 review (Schwartz and Blankenship) found that Black Americans in the US were diagnosed with psychotic disorders at higher rates than other groups across studies, suggesting bias in diagnosis.",
+  "forClinicianReview": true,
+  "crisisPanel": false,
+  "sud": true,
+  "relatedInterventionIds": ["cultural-formulation-exploration"],
+  "relatedHandoutIds": [],
+  "relatedFormulationIds": ["five-ps-biopsychosocial-spiritual", "transdiagnostic-process-map"],
+  "relatedLegalIds": ["language-access-interpreters"],
+  "relatedPracticeIds": ["intake-assessment", "medication-induced-psychiatric-symptoms", "multicultural-orientation-and-broaching", "working-with-interpreters", "supervision-and-consultation"],
+  "relatedPopulationIds": ["cultural-adaptation", "intellectual-disability"],
+  "toolHref": "/diagnoses/compare",
+  "linkOuts": [],
+  "measuresPending": [],
+  "sources": [
+    {
+      "title": "The importance of cognitive errors in diagnosis and strategies to minimize them (Croskerry)",
+      "publisher": "Academic Medicine, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12915363/",
+      "year": 2003
+    },
+    {
+      "title": "Clinical judgment and decision making (Garb)",
+      "publisher": "Annual Review of Clinical Psychology, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17716082/",
+      "year": 2005
+    },
+    {
+      "title": "Racial disparities in psychotic disorder diagnosis: a review of empirical literature (Schwartz and Blankenship)",
+      "publisher": "World Journal of Psychiatry, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25540728/",
+      "year": 2014
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

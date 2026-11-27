@@ -1,0 +1,75 @@
+{
+  "id": "ocd-appraisal-cognitive-therapy",
+  "name": "Cognitive therapy for OCD appraisals (responsibility, importance and control of thoughts)",
+  "modality": "Cognitive therapy for OCD (appraisal-focused, with behavioral experiments)",
+  "conditions": ["obsessive-compulsive-disorder"],
+  "evidenceLevel": "NICE CG31 (2005) says cognitive therapy adapted for OCD may be considered as an addition to exposure and response prevention (ERP) to enhance long-term symptom reduction, and on its own for adults who refuse or cannot engage with treatments that include ERP; ERP-based CBT remains the core psychological treatment. In a randomized trial, individual cognitive therapy and ERP produced similar improvements, with no significant differences (Whittal et al., 2005). The approach builds on the cognitive-behavioral model in which distress comes from how a person interprets ordinary intrusive thoughts, especially as signs of responsibility for harm (Salkovskis, 1985).",
+  "minutes": { "min": 45, "max": 60 },
+  "purpose": "Almost everyone has unwanted intrusive thoughts, images or urges. In OCD, the problem is not the thoughts themselves but what they are taken to mean: for example, that having a thought makes it more likely to happen or is as bad as doing it, that the person is responsible for preventing any possible harm, that thoughts are very important and must be controlled, or that uncertainty is intolerable. These appraisals drive anxiety and the rituals, checking, reassurance seeking and avoidance that keep the cycle going. Appraisal-focused cognitive therapy helps the client step back from these meanings, test them with behavioral experiments, and build a less threatening explanation of the problem. It is usually combined with ERP.",
+  "steps": [
+    "Normalize intrusions: share that most people report unwanted thoughts like these, and that the content says nothing about a person's character or intentions.",
+    "Map the cycle with the client: trigger, intrusive thought, the meaning the client gives it, anxiety, then rituals, reassurance seeking, checking or avoidance, and how these keep the meaning alive.",
+    "Build two alternative explanations side by side: the client's feared explanation (for example, that they are dangerous) and a different one (that they are someone very worried about causing harm). Look at the evidence for each together.",
+    "Work on inflated responsibility, for example by listing everyone and everything that contributes to a feared outcome and dividing a circle into shares, so the client's own share becomes visible.",
+    "Test beliefs about thoughts with behavioral experiments planned with the client, such as trying to suppress a neutral thought to see what happens, or testing whether thinking about an event makes it happen.",
+    "Address beliefs about certainty and control, and link the work to exposure: dropping rituals and tolerating uncertainty is how the new explanation gets tested in daily life.",
+    "Agree on ways to notice when thinking work turns into reassurance or mental reviewing, and keep exposure and response prevention central.",
+    "Review progress with a measure your setting uses and plan for setbacks."
+  ],
+  "script": [
+    "Most people have strange or upsetting thoughts pop into their heads. What matters is what we make of them.",
+    "When this thought shows up, what do you think it means about you?",
+    "Let's look at two possible explanations: that you are dangerous, or that you are someone who cares a lot about not causing harm. Which fits the facts better?",
+    "Who else, and what else, plays a part if something bad happened? Let's share out the responsibility.",
+    "Shall we try a small experiment to see what really happens when you have this thought and do not act on it?",
+    "If we start going round in circles, that may be the worry asking for reassurance. Let's notice that and step back."
+  ],
+  "contraindications": [
+    "Cognitive work can slide into reassurance or debating the content of obsessions. Do not reassure repeatedly or argue about whether a feared event will happen; keep the focus on how the client relates to the thought.",
+    "Intrusive sexual, aggressive or harm-related thoughts are common in OCD and are often misinterpreted as signs of risk. If you are unsure, consult a clinician with OCD expertise rather than acting on the content alone.",
+    "When thoughts are welcomed rather than unwanted, or there are plans or intent, a different assessment is needed. This app does not judge risk; you do. Crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com.",
+    "Behavioral experiments are planned with the client's agreement and are never used to shock or catch out the client."
+  ],
+  "culturalAdaptations": [
+    "Religious or moral obsessions (scrupulosity) need care. With the client's consent, consulting a trusted faith leader about what the tradition actually requires can help separate faith from OCD.",
+    "Beliefs about the power of thoughts, blessings or curses can be cultural rather than OCD-related. Explore what is shared in the client's community before treating a belief as an appraisal to test.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "handoutIds": ["understanding-unwanted-thoughts", "checking-and-reassurance-log"],
+  "orientationIds": ["cognitive-therapy"],
+  "evidenceGrades": [
+    {
+      "body": "NICE",
+      "guideline": "Obsessive-compulsive disorder and body dysmorphic disorder: treatment (CG31)",
+      "year": 2005,
+      "conditionId": "obsessive-compulsive-disorder",
+      "population": "Adults with OCD (as an addition to ERP, or for those who cannot engage with ERP)",
+      "direction": "for",
+      "strength": "may be considered",
+      "url": "https://www.nice.org.uk/guidance/cg31/chapter/Recommendations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Obsessive-compulsive disorder and body dysmorphic disorder: treatment (CG31): recommendations",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg31/chapter/Recommendations",
+      "year": 2005
+    },
+    {
+      "title": "Obsessional-compulsive problems: a cognitive-behavioural analysis (Salkovskis)",
+      "publisher": "Behaviour Research and Therapy (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/4051930/",
+      "year": 1985
+    },
+    {
+      "title": "Treatment of obsessive-compulsive disorder: cognitive behavior therapy vs. exposure and response prevention (Whittal et al.)",
+      "publisher": "Behaviour Research and Therapy (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15913543/",
+      "year": 2005
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

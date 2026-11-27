@@ -58,7 +58,7 @@
     "For clients who distrust police or government, do not suggest law-enforcement storage first; offer trusted private options.",
     "Medicines may be shared within families or kept as traditional remedies. Ask respectfully about everything in the home."
   ],
-  "handoutIds": ["safety-plan"],
+  "handoutIds": ["safety-plan", "safer-home-for-family"],
   "sources": [
     { "title": "CALM: Counseling on Access to Lethal Means", "publisher": "Suicide Prevention Resource Center", "url": "https://sprc.org/online-library/calm-counseling-on-access-to-lethal-means" },
     { "title": "Lethal means counseling, distribution of cable locks, and safe firearm storage practices among the Mississippi National Guard: a factorial randomized controlled trial, 2018-2020 (Anestis et al.)", "publisher": "American Journal of Public Health (DOI)", "url": "https://doi.org/10.2105/AJPH.2020.306019", "year": 2021 },

@@ -65,6 +65,7 @@ Rule: every external call sends only a standard code, a curated keyword, a drug 
 - **Use in app:** Boxed warnings and label info for clinician reference
 - **Phase:** 3
 - **Privacy rule:** Drug names only
+- **Also used by:** /medications/effects label check (round 4): the same /api/drug-label route with a curated medication id; the browser only filters the returned boxed-warning and warnings text for mood, behavior, sleep and thinking sentences. No new upstream call.
 
 ## NPPES NPI Registry
 - **Category:** Referrals

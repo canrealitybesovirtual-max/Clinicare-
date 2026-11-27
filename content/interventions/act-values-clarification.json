@@ -54,6 +54,7 @@
     "consentNote": "Before any faith-integrated variant, explain its purpose and alternatives, confirm the client's right to decline or stop at any time, and document informed consent (AACC Code of Ethics; ACA Code of Ethics). Faith integration is client-led. Never impose beliefs or suggest that distress reflects weak faith."
   },
   "handoutIds": ["values-compass"],
+  "orientationIds": ["acceptance-and-commitment-therapy"],
   "sources": [
     { "title": "Acceptance and commitment therapy: model, processes and outcomes (Hayes, Luoma, Bond, Masuda & Lillis)", "publisher": "Behaviour Research and Therapy (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/16300724/", "year": 2006 },
     { "title": "Acceptance and Commitment Therapy, Second Edition: The Process and Practice of Mindful Change (Hayes, Strosahl & Wilson)", "publisher": "Guilford Press", "url": "https://www.guilford.com/books/Acceptance-and-Commitment-Therapy/Hayes-Strosahl-Wilson/9781462528943", "year": 2012 },

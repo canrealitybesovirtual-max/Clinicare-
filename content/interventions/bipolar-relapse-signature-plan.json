@@ -1,0 +1,90 @@
+{
+  "id": "bipolar-relapse-signature-plan",
+  "name": "Early warning signs and relapse plan for mood highs and lows (relapse signature)",
+  "modality": "Psychoeducation and relapse prevention (early warning signs plan)",
+  "conditions": ["bipolar-i-disorder", "bipolar-ii-disorder", "cyclothymic-disorder"],
+  "evidenceLevel": "NICE CG185 (2014, updated 2025) recommends that care plans include personal triggers and early warning signs of relapse, the person's own coping strategies, and who to contact in a crisis, shared with carers if the person agrees. In a randomized trial, teaching people to recognize early signs of manic relapse and seek early treatment lengthened time to manic relapse and improved social functioning and employment, with no effect on depressive relapse (Perry et al., 1999). An older Cochrane review found early-warning-sign interventions improved time to recurrence, hospitalization and functioning, but with data gaps and possible bias (Morriss et al., 2007); an updated Cochrane review is in progress. The VA/DoD 2023 guideline suggests non-brief psychoeducation among adjunctive psychotherapies.",
+  "minutes": { "min": 30, "max": 50 },
+  "purpose": "Many people notice a personal pattern of early changes before a high or a low, sometimes called a relapse signature: for example sleeping less without feeling tired, starting many projects, spending more, or, before a low, withdrawing and losing interest. Mapping these signs, tracking mood and sleep each day, and agreeing ahead of time what to do and who to call helps people act early, when changes are easier to reverse. This plan supports, and does not replace, medication and other treatment. It works best when written in the client's own words and shared, with consent, with the people and clinicians they choose.",
+  "steps": [
+    "Explain the idea of personal early warning signs and why acting early helps. Invite the client to lead.",
+    "Go back over one or two past highs and lows together, step by step, to find the earliest changes in sleep, energy, thinking, activity, spending, mood and relationships. Ask what others noticed first.",
+    "Separate signs into stages: very early signs, signs that things are building, and signs that a crisis is close. Write them in the client's words.",
+    "For each stage, agree on actions: protecting regular sleep and routine, cutting back on stimulation and commitments, avoiding alcohol and drugs, postponing big decisions and spending, contacting the prescriber early, and asking named supporters for help.",
+    "Add triggers the client knows about (for example travel across time zones, night shifts, stressful events, stopping medication) and plans for them.",
+    "Set up simple daily tracking of mood, sleep and routine, and agree how often to review it together.",
+    "List who to contact and how: the prescriber, the care team, trusted people, and crisis options. With consent, share the plan with them.",
+    "Review and update the plan after any episode, near miss or change in treatment."
+  ],
+  "script": [
+    "Most people notice small changes before a high or a low. What were the very first things you, or people close to you, noticed last time?",
+    "Let's write these down in your own words, from the earliest signs to the signs that things are getting serious.",
+    "For each stage, what would help you get back on track? Who would you want to call?",
+    "Keeping sleep and daily routine steady is one of the most powerful things you can do.",
+    "Would you like to share this plan with anyone, so they know how to help?"
+  ],
+  "contraindications": [
+    "The plan supports medication management by the prescriber and does not replace it. Do not suggest changing or stopping medication without the prescriber.",
+    "If signs of mania, psychosis or severe depression are present now, contact the prescriber or care team promptly rather than only planning. This app does not judge risk; you do. Crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com.",
+    "Check that the supporters named are safe and willing to help, and respect the client's choices about who sees the plan.",
+    "Cutting back on sleep for any reason can trigger highs. Avoid sleep restriction techniques unless the prescriber is closely involved."
+  ],
+  "culturalAdaptations": [
+    "Describe signs in the client's own terms, which may be spiritual, physical or social rather than medical.",
+    "Family and community roles in noticing changes and helping differ. Ask who the client trusts to speak up early.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "handoutIds": ["mood-highs-and-lows-plan", "mood-routine-tracker"],
+  "orientationIds": ["cognitive-therapy"],
+  "evidenceGrades": [
+    {
+      "body": "NICE",
+      "guideline": "Bipolar disorder: assessment and management (CG185), care planning",
+      "year": 2014,
+      "conditionId": "bipolar-i-disorder",
+      "population": "Adults with bipolar disorder",
+      "direction": "for",
+      "strength": "develop a care plan including triggers and early warning signs",
+      "url": "https://www.nice.org.uk/guidance/cg185/chapter/Recommendations"
+    },
+    {
+      "body": "VA/DoD",
+      "guideline": "Management of Bipolar Disorder",
+      "year": 2023,
+      "conditionId": "bipolar-i-disorder",
+      "population": "Adults with bipolar I or II disorder who are not acutely manic",
+      "direction": "for",
+      "strength": "weak for (non-brief psychoeducation among adjunctive psychotherapies)",
+      "url": "https://health.mil/Reference-Center/Publications/2023/12/14/Psychosocial-and-Recovery-Oriented-Therapy-for-Bipolar-Disorder"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Bipolar disorder: assessment and management (CG185): recommendations",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg185/chapter/Recommendations",
+      "year": 2014
+    },
+    {
+      "title": "Randomised controlled trial of efficacy of teaching patients with bipolar disorder to identify early symptoms of relapse and obtain treatment (Perry et al.)",
+      "publisher": "BMJ (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/9888904/",
+      "year": 1999
+    },
+    {
+      "title": "Interventions for helping people recognise early signs of recurrence in bipolar disorder (Morriss et al.)",
+      "publisher": "Cochrane Database of Systematic Reviews (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17253526/",
+      "year": 2007
+    },
+    {
+      "title": "Psychosocial and Recovery Oriented Therapy for Bipolar Disorder (2023 VA/DoD guideline)",
+      "publisher": "Psychological Health Center of Excellence, Defense Health Agency",
+      "url": "https://health.mil/Reference-Center/Publications/2023/12/14/Psychosocial-and-Recovery-Oriented-Therapy-for-Bipolar-Disorder",
+      "year": 2023
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

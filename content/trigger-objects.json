@@ -162,6 +162,7 @@
       "clinicianNote": "The fear is tied to a frightening event (for example \"since the attack\" or \"since the accident\"). Ask what happened, when, and whether the client relives it; pace trauma questions, and offer safety questions.",
       "conditionHints": [
         "ptsd",
+        "acute-stress-disorder",
         "adjustment-disorder",
         "specific-phobia"
       ],

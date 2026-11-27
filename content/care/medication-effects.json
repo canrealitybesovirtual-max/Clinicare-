@@ -1,0 +1,325 @@
+{
+  "id": "medication-effects",
+  "title": "Medicines with mental health effects in their labeling",
+  "about": "Examples of medicines whose current US FDA labeling lists psychiatric effects, from asthma, acne, inflammation, epilepsy, malaria, HIV and hepatitis care as well as psychiatric medicines. Summaries are in the app's own words, checked against the current labels. They are prompts to ask about timing and to talk with the prescriber, never a finding that a medicine caused a client's symptoms, and never advice to start, stop or change a medicine.",
+  "effects": [
+    {
+      "id": "montelukast",
+      "medicine": "Montelukast",
+      "usedFor": "Asthma and allergy symptoms",
+      "effects": [
+        "anxiety-agitation",
+        "irritability-aggression",
+        "low-mood",
+        "sleep-change",
+        "suicidal-thoughts"
+      ],
+      "labelStatus": "boxed-warning",
+      "summary": "The label carries a boxed warning for serious neuropsychiatric events, reported in people with and without a psychiatric history: agitation, aggression, depression, sleep disturbance, suicidal thoughts and behavior and others. The label asks people to watch for behavior changes and to contact a health care provider straight away if they occur.",
+      "medicationIds": [],
+      "links": [
+        {
+          "title": "Montelukast: drug information",
+          "publisher": "MedlinePlus (US National Library of Medicine)",
+          "url": "https://medlineplus.gov/druginfo/meds/a600014.html"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Montelukast sodium tablets: current prescribing information",
+          "publisher": "DailyMed (US National Library of Medicine), FDA label",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=c9ec1996-6a54-4622-b8a6-57dea49f6b35",
+          "year": 2026
+        }
+      ]
+    },
+    {
+      "id": "isotretinoin",
+      "medicine": "Isotretinoin",
+      "usedFor": "Severe acne",
+      "effects": [
+        "low-mood",
+        "psychosis",
+        "suicidal-thoughts",
+        "irritability-aggression"
+      ],
+      "labelStatus": "warning",
+      "summary": "Warnings and precautions list depression, psychosis and, rarely, suicidal thoughts and behavior and aggressive or violent behavior. The prescriber is asked to check for these before and during treatment and to stop the medicine if they appear. Its boxed warning is about pregnancy.",
+      "medicationIds": [],
+      "links": [
+        {
+          "title": "Isotretinoin: drug information",
+          "publisher": "MedlinePlus (US National Library of Medicine)",
+          "url": "https://medlineplus.gov/druginfo/meds/a681043.html"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Isotretinoin capsules: current prescribing information",
+          "publisher": "DailyMed (US National Library of Medicine), FDA label",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=9f1c8971-c6dc-4708-848b-5cee50b6c32a",
+          "year": 2026
+        }
+      ]
+    },
+    {
+      "id": "corticosteroids",
+      "medicine": "Corticosteroids taken by mouth or injection (for example prednisone)",
+      "usedFor": "Inflammation, asthma flares, autoimmune and many other conditions",
+      "effects": [
+        "mania-activation",
+        "sleep-change",
+        "low-mood",
+        "psychosis",
+        "anxiety-agitation"
+      ],
+      "labelStatus": "precaution",
+      "summary": "The prednisone label notes that mental changes can appear, from euphoria, insomnia, mood swings and personality change to severe depression and psychosis, and that existing mood or psychotic problems can get worse. A 2006 review describes these effects as more likely with higher doses. Stopping after longer use can be dangerous, so changes go through the prescriber.",
+      "medicationIds": [],
+      "links": [
+        {
+          "title": "Prednisone: drug information",
+          "publisher": "MedlinePlus (US National Library of Medicine)",
+          "url": "https://medlineplus.gov/druginfo/meds/a601102.html"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Prednisone tablets: current prescribing information",
+          "publisher": "DailyMed (US National Library of Medicine), FDA label",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=318fdf0d-c03a-4b48-a380-b7bb630363fb",
+          "year": 2026
+        },
+        {
+          "title": "Psychiatric adverse effects of corticosteroids (Warrington and Bostwick)",
+          "publisher": "Mayo Clinic Proceedings, via PubMed (US National Library of Medicine)",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/17036562/",
+          "year": 2006
+        }
+      ]
+    },
+    {
+      "id": "levetiracetam",
+      "medicine": "Levetiracetam",
+      "usedFor": "Epilepsy",
+      "effects": [
+        "irritability-aggression",
+        "low-mood",
+        "psychosis",
+        "suicidal-thoughts"
+      ],
+      "labelStatus": "warning",
+      "summary": "Warnings and precautions describe behavior changes, including irritability and aggression, psychotic symptoms and suicidal thoughts, and ask for monitoring of mood and behavior. Like other epilepsy medicines it carries the class warning about suicidal thoughts. Stopping suddenly can trigger seizures, so changes go through the prescriber.",
+      "medicationIds": [],
+      "links": [
+        {
+          "title": "Levetiracetam: drug information",
+          "publisher": "MedlinePlus (US National Library of Medicine)",
+          "url": "https://medlineplus.gov/druginfo/meds/a699059.html"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Levetiracetam tablets: current prescribing information",
+          "publisher": "DailyMed (US National Library of Medicine), FDA label",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=5feca839-8554-739b-e063-6394a90a4e65",
+          "year": 2026
+        }
+      ]
+    },
+    {
+      "id": "antiepileptic-class",
+      "medicine": "Antiepileptic medicines as a class",
+      "usedFor": "Epilepsy, and some also for mood, pain, migraine or alcohol use",
+      "effects": [
+        "suicidal-thoughts",
+        "low-mood"
+      ],
+      "labelStatus": "warning",
+      "summary": "Antiepileptic medicines carry a class warning that they raise the risk of suicidal thoughts or behavior, whatever they are prescribed for, from as early as a week after starting. Labels ask for monitoring of new or worse depression, suicidal thoughts and unusual changes in mood or behavior. Several curated medicines below can be checked live.",
+      "medicationIds": [
+        "topiramate",
+        "lamotrigine",
+        "valproate",
+        "carbamazepine",
+        "gabapentin"
+      ],
+      "links": [],
+      "sources": [
+        {
+          "title": "Topiramate tablets: current prescribing information",
+          "publisher": "DailyMed (US National Library of Medicine), FDA label",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=3f99b26b-79b9-4efb-aa2c-2868e1e126c8",
+          "year": 2026
+        }
+      ],
+      "sud": true
+    },
+    {
+      "id": "mefloquine",
+      "medicine": "Mefloquine",
+      "usedFor": "Malaria prevention and treatment",
+      "effects": [
+        "anxiety-agitation",
+        "low-mood",
+        "psychosis",
+        "suicidal-thoughts",
+        "sleep-change"
+      ],
+      "labelStatus": "boxed-warning",
+      "summary": "The boxed warning says mefloquine can cause neuropsychiatric reactions that may last after it is stopped, and that it should not be prescribed for prevention in people with major psychiatric disorders. Reported effects range from anxiety, paranoia and depression to hallucinations, psychotic behavior and suicidal thoughts.",
+      "medicationIds": [],
+      "links": [
+        {
+          "title": "Mefloquine: drug information",
+          "publisher": "MedlinePlus (US National Library of Medicine)",
+          "url": "https://medlineplus.gov/druginfo/meds/a603030.html"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Mefloquine hydrochloride tablets: current prescribing information",
+          "publisher": "DailyMed (US National Library of Medicine), FDA label",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=09716a24-d7da-42b2-af29-c03a1b6670bd",
+          "year": 2025
+        }
+      ]
+    },
+    {
+      "id": "efavirenz",
+      "medicine": "Efavirenz (alone or in combination products)",
+      "usedFor": "HIV treatment",
+      "effects": [
+        "low-mood",
+        "suicidal-thoughts",
+        "psychosis",
+        "sleep-change"
+      ],
+      "labelStatus": "warning",
+      "summary": "Labels describe serious psychiatric effects, including severe depression, suicidal thoughts, aggressive behavior and paranoid or manic reactions, and recommend prompt medical evaluation for serious psychiatric symptoms. Nervous system effects such as poor sleep and unusual dreams are common early on.",
+      "medicationIds": [],
+      "links": [
+        {
+          "title": "Efavirenz: drug information",
+          "publisher": "MedlinePlus (US National Library of Medicine)",
+          "url": "https://medlineplus.gov/druginfo/meds/a699004.html"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Efavirenz: drug information",
+          "publisher": "MedlinePlus (US National Library of Medicine)",
+          "url": "https://medlineplus.gov/druginfo/meds/a699004.html"
+        }
+      ]
+    },
+    {
+      "id": "alpha-interferons",
+      "medicine": "Alpha interferons (for example peginterferon alfa-2a)",
+      "usedFor": "Hepatitis and some other conditions",
+      "effects": [
+        "low-mood",
+        "suicidal-thoughts",
+        "irritability-aggression",
+        "psychosis",
+        "mania-activation"
+      ],
+      "labelStatus": "boxed-warning",
+      "summary": "The boxed warning says alpha interferons can cause or worsen fatal or life-threatening neuropsychiatric disorders. Reported reactions include depression, suicidal and homicidal thoughts, relapse of drug use, aggressive behavior, psychosis and mania, in people with and without past psychiatric illness.",
+      "medicationIds": [],
+      "links": [
+        {
+          "title": "Peginterferon alfa-2a injection: drug information",
+          "publisher": "MedlinePlus (US National Library of Medicine)",
+          "url": "https://medlineplus.gov/druginfo/meds/a605029.html"
+        }
+      ],
+      "sources": [
+        {
+          "title": "Pegasys (peginterferon alfa-2a): current prescribing information",
+          "publisher": "DailyMed (US National Library of Medicine), FDA label",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=d9290e5b-6d40-2318-e053-2995a90a9916",
+          "year": 2026
+        }
+      ],
+      "sud": true
+    },
+    {
+      "id": "stimulants",
+      "medicine": "Stimulant medicines for ADHD",
+      "usedFor": "ADHD and some sleep disorders",
+      "effects": [
+        "psychosis",
+        "mania-activation",
+        "anxiety-agitation",
+        "sleep-change"
+      ],
+      "labelStatus": "warning",
+      "summary": "Labels warn that stimulants can cause psychotic or manic symptoms in people with no history of them and can worsen existing psychotic or bipolar illness, and ask prescribers to check for these first. The boxed warning is about misuse and dependence.",
+      "medicationIds": [
+        "methylphenidate",
+        "amphetamine",
+        "lisdexamfetamine"
+      ],
+      "links": [],
+      "sources": [
+        {
+          "title": "Methylphenidate hydrochloride extended-release tablets: current prescribing information",
+          "publisher": "DailyMed (US National Library of Medicine), FDA label",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=be8580bc-0eb2-4eb6-a4cc-4ebbeb33424d",
+          "year": 2026
+        }
+      ],
+      "sud": true
+    },
+    {
+      "id": "antidepressants",
+      "medicine": "Antidepressants",
+      "usedFor": "Depression, anxiety and several other conditions",
+      "effects": [
+        "suicidal-thoughts",
+        "mania-activation",
+        "anxiety-agitation"
+      ],
+      "labelStatus": "boxed-warning",
+      "summary": "The class boxed warning describes a higher risk of suicidal thoughts and behavior in children, adolescents and young adults in short-term trials, and asks for close monitoring for worsening and suicidal thoughts, especially early on and after dose changes. Labels also warn about a switch into mania or hypomania, and ask prescribers to screen for bipolar disorder.",
+      "medicationIds": [
+        "sertraline",
+        "fluoxetine",
+        "escitalopram",
+        "venlafaxine",
+        "bupropion"
+      ],
+      "links": [],
+      "sources": [
+        {
+          "title": "Sertraline hydrochloride tablets: current prescribing information",
+          "publisher": "DailyMed (US National Library of Medicine), FDA label",
+          "url": "https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=687ebdc4-6946-454e-8d46-3207488ccf32",
+          "year": 2026
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Prevalence of prescription medications with depression as a potential adverse effect among adults in the United States (Qato, Ozenberger and Olfson)",
+      "publisher": "JAMA, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29896627/",
+      "year": 2018
+    },
+    {
+      "title": "openFDA drug label API (current FDA labeling)",
+      "publisher": "US Food and Drug Administration",
+      "url": "https://open.fda.gov/apis/drug/label/"
+    },
+    {
+      "title": "DailyMed",
+      "publisher": "US National Library of Medicine",
+      "url": "https://dailymed.nlm.nih.gov/dailymed/"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

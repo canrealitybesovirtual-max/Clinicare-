@@ -1,0 +1,108 @@
+{
+  "id": "in-session-de-escalation",
+  "title": "De-escalation and acute distress in the session",
+  "category": "safety-and-risk",
+  "summary": "What to do when a client becomes very agitated, angry, panicked or dissociated in the room or on video: keep everyone safe, slow things down, listen for what the person needs, offer real choices and set clear limits. Summarized in the app's own words from the Project BETA consensus principles and NICE NG10, with a clear point at which to call for help.",
+  "whenToUse": [
+    "A client is raising their voice, pacing, making threats or seems close to losing control.",
+    "A client is in acute panic or a dissociative state and cannot engage with the session.",
+    "A family member or other person in the session or waiting room becomes agitated.",
+    "A video session becomes heated or the client seems unsafe where they are."
+  ],
+  "steps": [
+    {
+      "heading": "Keep space and an exit",
+      "body": "Keep at least two arm lengths away, do not block the door for either of you and stay at the same eye level. Move other people and objects that could be thrown out of the way if you can do so calmly. Know in advance how to summon help in your building."
+    },
+    {
+      "heading": "One calm voice",
+      "body": "Agree that only one person speaks to the client. Introduce yourself if needed, use their preferred name and speak slowly and quietly."
+    },
+    {
+      "heading": "Use short, simple language",
+      "body": "Keep sentences short and concrete, repeat key messages and allow time for the person to take them in. Avoid jargon, sarcasm and long explanations."
+    },
+    {
+      "heading": "Find out what they want or feel",
+      "body": "Ask what they need right now, or name what you see (frustration, fear, feeling unheard). Many escalations ease once the person feels their concern has been heard."
+    },
+    {
+      "heading": "Listen, then agree where you can",
+      "body": "Show you are listening by summarizing what you heard. Agree with what you honestly can (the facts, the principle, or that others would feel the same), or agree to disagree."
+    },
+    {
+      "heading": "Set clear, respectful limits",
+      "body": "Say plainly which behavior is not acceptable and what will happen, without threats. Offer realistic choices so the person keeps some control: sitting or standing, a short break, water, stepping outside with you or rescheduling."
+    },
+    {
+      "heading": "Know when to call for help",
+      "items": [
+        "Weapons, credible threats to harm someone, or violence that is starting.",
+        "The client says they will act on suicidal intent now and will not stay safe.",
+        "Confusion, a very fast heart rate, chest pain, fainting or signs of intoxication or withdrawal that may be medical.",
+        "In those situations, step away to safety and call emergency services or your on-site response; in the US, 988 can also advise on a mental health crisis."
+      ]
+    },
+    {
+      "heading": "Panic or dissociation in the room",
+      "body": "For panic, stay calm and matter of fact, slow your own breathing, and remind the client that the feelings peak and pass. For dissociation, orient the person to the present: their name, the room, the date, what they can see and hear, feet on the floor and a cold drink or textured object. Check for medical causes if the picture is unusual."
+    },
+    {
+      "heading": "Debrief afterwards",
+      "body": "When things are calm, talk with the client about what happened, what helped and what could be different next time, and update any safety or crisis plan. Debrief with colleagues, document what happened and look after yourself."
+    }
+  ],
+  "prompts": [
+    "I can see you are really upset. I want to understand. Can you tell me what is going on right now?",
+    "It sounds like you feel nobody has been listening. That would make anyone angry.",
+    "I want to keep talking with you. I need us both to stay seated while we do. Would some water help?",
+    "We can take a five-minute break, or we can keep going more slowly. Which would you prefer?",
+    "You are here in my office. It is Tuesday afternoon. Can you feel your feet on the floor?"
+  ],
+  "cautions": [
+    "Your safety and the client's come first; leave and call for help rather than staying in a dangerous situation.",
+    "Do not touch, corner or argue with an agitated person, and do not make promises you cannot keep.",
+    "On video, you cannot intervene physically: confirm the client's location and a backup phone number at the start of every session so emergency services can reach them if needed.",
+    "This guide does not judge risk or decide on emergency action; the clinician and the service protocol do.",
+    "Restraint and medication are emergency-setting interventions for trained teams only."
+  ],
+  "adaptations": [
+    {
+      "context": "Video sessions",
+      "adaptation": "Use the same calm, short language, ask the client to sit somewhere comfortable, and agree in advance what you will do if the call drops during distress (call back on the backup number, then the emergency contact or emergency services)."
+    },
+    {
+      "context": "Trauma histories",
+      "adaptation": "Raised voices, closed doors or sudden movement can feel threatening. Explain what you are doing before you do it and offer control over the door, seating and pace."
+    }
+  ],
+  "evidenceSummary": "The 2012 consensus statement of the American Association for Emergency Psychiatry Project BETA de-escalation workgroup (Richmond and colleagues) sets out core domains of verbal de-escalation, including respecting personal space, one person speaking, concise language, identifying wants and feelings, active listening, agreeing or agreeing to disagree, setting limits, offering choices and debriefing. NICE NG10 (2015) recommends de-escalation as the first response to agitation and aggression in mental health, health and community settings.",
+  "forClinicianReview": true,
+  "crisisPanel": true,
+  "sud": true,
+  "relatedInterventionIds": ["grounding-5-4-3-2-1", "diaphragmatic-breathing", "dbt-distress-tolerance"],
+  "relatedHandoutIds": ["grounding-5-4-3-2-1", "anger-cycle-and-time-out", "hard-moment-plan"],
+  "relatedFormulationIds": [],
+  "relatedLegalIds": ["crisis-988-or-911", "clinician-personal-safety", "duty-to-warn-protect", "crisis-and-involuntary-holds"],
+  "relatedPracticeIds": ["violence-risk-prompts", "telehealth-sessions", "trauma-informed-care"],
+  "relatedPopulationIds": [],
+  "linkOuts": [],
+  "measuresPending": [],
+  "sources": [
+    {
+      "title": "Verbal de-escalation of the agitated patient: consensus statement of the American Association for Emergency Psychiatry Project BETA De-escalation Workgroup (Richmond et al.)",
+      "publisher": "Western Journal of Emergency Medicine, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22461917/",
+      "year": 2012
+    },
+    {
+      "title": "Violence and aggression: short-term management in mental health, health and community settings (NG10)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng10",
+      "year": 2015
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

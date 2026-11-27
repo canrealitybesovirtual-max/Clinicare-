@@ -1,0 +1,159 @@
+{
+  "id": "chain-analysis-sheet",
+  "title": "Chain Analysis Sheet",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 20,
+  "intro": "A hard moment, like an outburst, shutting down, or acting on an urge, rarely comes out of nowhere. It is usually the last link in a chain of events, thoughts, feelings, and urges. Looking at the chain link by link, after the moment has passed, can show you where you could step in next time. Fill this in with your counselor, or on your own when you feel calm. It takes about 20 minutes.",
+  "sections": [
+    {
+      "heading": "Before you start",
+      "body": "Only do this when you are safe and calm. If you are in danger, or you have urges to hurt yourself right now, stop. Use your safety plan, or call or text 988. Be curious, not harsh. The goal is to understand, not to blame."
+    },
+    {
+      "heading": "Step 1: the behavior",
+      "body": "What exactly did you do, or not do? Describe it the way a video camera would see it: what, where, when, and for how long. Keep it short."
+    },
+    {
+      "heading": "Step 2: what made you more open to it",
+      "body": "Think about the hours and days before. What made a hard moment more likely?",
+      "steps": [
+        "Poor sleep, hunger, pain, or illness.",
+        "Stress that had been building up.",
+        "Feeling alone, or a recent conflict or loss.",
+        "Skipping things that usually help you, like routines or prescribed medicine."
+      ]
+    },
+    {
+      "heading": "Step 3: what set it off",
+      "body": "What happened right before the chain started? It might be something outside you, like a text or a comment. Or it might be something inside you, like a memory. Pick the event without which the behavior most likely would not have happened."
+    },
+    {
+      "heading": "Step 4: the links",
+      "body": "In the log below, write each link between what set it off and the behavior, in order. Include each kind of link.",
+      "steps": [
+        "Thoughts: what went through your mind?",
+        "Feelings: what emotions came up, and how strong were they?",
+        "Body: what did you notice in your body?",
+        "Urges: what did you feel pulled to do?",
+        "Actions: what did you do, step by step?"
+      ]
+    },
+    {
+      "heading": "Step 5: what happened after",
+      "steps": [
+        "Right away: what changed? Did you feel relief, or did something stop?",
+        "Later: how did you feel hours or days afterward?",
+        "For others: how did it affect the people around you?",
+        "What does this tell you about what keeps the behavior going?"
+      ]
+    },
+    {
+      "heading": "Step 6: what you could do next time",
+      "body": "Go back through the chain. At each link, ask, 'What could I do here instead?' Even one change early in the chain can lead to a different ending. Think of skills you know, like pausing, calming your body, checking the facts, doing the opposite of the urge, or reaching out to someone."
+    },
+    {
+      "heading": "Step 7: repair",
+      "body": "If someone was hurt, including you, what could you do to make things right? This might be an apology, fixing something, or taking care of yourself. Then think about how to be less open to a hard moment next time, like getting more sleep or asking for help earlier."
+    }
+  ],
+  "practiceLog": {
+    "columns": ["Link (what came next)", "Thought, feeling, body sense, urge, or action", "What I could do here next time"],
+    "rows": 10
+  },
+  "safetyNote": "Safety first: If you have urges to hurt yourself or someone else right now, stop this sheet and use your safety plan. In the US, call or text 988 or call 911. In other countries, call your local emergency number or visit findahelpline.com. Bring this sheet to your counselor. Resource only. This sheet does not replace care from a licensed professional.",
+  "sud": false,
+  "es": {
+    "title": "Hoja para revisar la cadena",
+    "intro": "Un momento difícil, como un arranque de enojo, cerrarse o hacer algo por un impulso, casi nunca sale de la nada. Por lo general es el último eslabón de una cadena de hechos, pensamientos, sentimientos e impulsos. Mirar la cadena eslabón por eslabón, cuando ya pasó el momento, le puede mostrar dónde podría actuar la próxima vez. Llene esta hoja con su consejero, o solo cuando se sienta tranquilo. Toma unos 20 minutos.",
+    "sections": [
+      {
+        "heading": "Antes de empezar",
+        "body": "Haga esto solo cuando esté seguro y tranquilo. Si está en peligro, o tiene ganas de hacerse daño ahora mismo, pare. Use su plan de seguridad, o llame o envíe un mensaje de texto al 988. Tenga curiosidad, no sea duro con usted. La meta es entender, no culpar."
+      },
+      {
+        "heading": "Paso 1: lo que hizo",
+        "body": "¿Qué hizo exactamente, o qué dejó de hacer? Descríbalo como lo vería una cámara de video: qué, dónde, cuándo y por cuánto tiempo. Que sea corto."
+      },
+      {
+        "heading": "Paso 2: lo que le hizo más frágil",
+        "body": "Piense en las horas y los días de antes. ¿Qué hizo más probable un momento difícil?",
+        "steps": [
+          "Dormir mal, hambre, dolor o una enfermedad.",
+          "Estrés que se venía acumulando.",
+          "Sentirse solo, o un pleito o una pérdida reciente.",
+          "Dejar de lado cosas que suelen ayudarle, como sus rutinas o el medicamento que le recetaron."
+        ]
+      },
+      {
+        "heading": "Paso 3: lo que lo desató",
+        "body": "¿Qué pasó justo antes de que empezara la cadena? Puede ser algo de afuera, como un mensaje o un comentario. O puede ser algo de adentro, como un recuerdo. Escoja el hecho sin el cual lo más seguro es que no habría pasado lo que hizo."
+      },
+      {
+        "heading": "Paso 4: los eslabones",
+        "body": "En el registro de abajo, escriba cada eslabón entre lo que lo desató y lo que hizo, en orden. Incluya cada tipo de eslabón.",
+        "steps": [
+          "Pensamientos: ¿qué le pasó por la mente?",
+          "Sentimientos: ¿qué emociones aparecieron, y qué tan fuertes fueron?",
+          "Cuerpo: ¿qué notó en su cuerpo?",
+          "Impulsos: ¿qué sintió ganas de hacer?",
+          "Acciones: ¿qué hizo, paso a paso?"
+        ]
+      },
+      {
+        "heading": "Paso 5: lo que pasó después",
+        "steps": [
+          "Enseguida: ¿qué cambió? ¿Sintió alivio, o algo se detuvo?",
+          "Más tarde: ¿cómo se sintió horas o días después?",
+          "Para otros: ¿cómo les afectó a las personas cercanas?",
+          "¿Qué le dice esto sobre lo que hace que esto se siga repitiendo?"
+        ]
+      },
+      {
+        "heading": "Paso 6: lo que podría hacer la próxima vez",
+        "body": "Vuelva a recorrer la cadena. En cada eslabón, pregúntese: '¿Qué podría hacer aquí en vez de eso?' Hasta un solo cambio al principio de la cadena puede llevar a otro final. Piense en habilidades que conoce, como hacer una pausa, calmar su cuerpo, revisar los hechos, hacer lo contrario de lo que pide el impulso o buscar a alguien."
+      },
+      {
+        "heading": "Paso 7: reparar",
+        "body": "Si alguien salió lastimado, incluso usted, ¿qué podría hacer para arreglar las cosas? Puede ser pedir disculpas, arreglar algo o cuidarse. Luego piense cómo estar menos frágil la próxima vez, como dormir más o pedir ayuda antes."
+      }
+    ],
+    "practiceLog": {
+      "columns": ["Eslabón (lo que vino después)", "Pensamiento, sentimiento, sensación, impulso o acción", "Lo que podría hacer aquí la próxima vez"]
+    },
+    "safetyNote": "La seguridad es lo primero: Si ahora mismo tiene ganas de hacerse daño o de hacerle daño a otra persona, deje esta hoja y use su plan de seguridad. En EE. UU., llame o envíe un mensaje de texto al 988 o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Traiga esta hoja a su consejero. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "linkOuts": [
+    {
+      "title": "988 Suicide & Crisis Lifeline",
+      "publisher": "988 Lifeline (US)",
+      "url": "https://988lifeline.org",
+      "note": "Call, text or chat 988 any time, day or night.",
+      "lastVerified": "2026-11-27"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Chain Analysis in Dialectical Behavior Therapy (Rizvi)",
+      "publisher": "Guilford Press",
+      "url": "https://www.guilford.com/books/Chain-Analysis-in-Dialectical-Behavior-Therapy/Shireen-Rizvi/9781462538904",
+      "year": 2019
+    },
+    {
+      "title": "Psychological therapies for people with borderline personality disorder (Storebo et al.)",
+      "publisher": "Cochrane Database of Systematic Reviews",
+      "url": "https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD012955.pub2/full",
+      "year": 2020
+    },
+    {
+      "title": "DBT Skills Training Manual, Second Edition (Linehan); link-out for the official skills forms",
+      "publisher": "Guilford Press",
+      "url": "https://www.guilford.com/books/DBT-Skills-Training-Manual/Marsha-Linehan/9781462516995",
+      "year": 2015
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

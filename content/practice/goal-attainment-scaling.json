@@ -1,0 +1,106 @@
+{
+  "id": "goal-attainment-scaling",
+  "title": "Goal attainment scaling",
+  "category": "measurement-and-goals",
+  "summary": "A method for measuring progress on one to three personal goals: describe five levels of outcome for each goal, from much less than expected to much more than expected, then rate where the client is at review. The goal tool computes the standard summary score in memory only.",
+  "whenToUse": [
+    "When the client's goals are personal and a standard symptom measure does not capture them.",
+    "Alongside the GAD-7 or PHQ-9, to show progress on what matters to the client.",
+    "In rehabilitation, chronic illness, pain, older adult or disability work where function is the focus."
+  ],
+  "steps": [
+    {
+      "heading": "Choose one to three goals",
+      "body": "Pick goals the client cares about and that can change within the review period. More than three makes the levels hard to write well."
+    },
+    {
+      "heading": "Write the expected level first",
+      "body": "The middle level (0) is the realistic expected outcome at review. Write it as something observable."
+    },
+    {
+      "heading": "Write the other four levels",
+      "items": [
+        "+2: much more than expected.",
+        "+1: somewhat more than expected.",
+        "0: the expected level.",
+        "-1: somewhat less than expected (often where the client is now).",
+        "-2: much less than expected (worse than now, or no change if the client starts at -1)."
+      ]
+    },
+    {
+      "heading": "Agree on a starting level and a review date",
+      "body": "Most people start at -1. If things could get worse, starting at -1 leaves room to record that at -2. Agree on the review session number."
+    },
+    {
+      "heading": "Rate at review and compute the summary",
+      "body": "Rate each goal with the client. The summary T-score uses the Kiresuk and Sherman formula with an assumed correlation of 0.3 between goals: 50 means goals were met as expected, above 50 better than expected, below 50 less than expected. Optional weights let the client mark one goal as more important."
+    },
+    {
+      "heading": "Talk about it",
+      "body": "The number is a starting point for discussion: what helped, what got in the way, and whether the goals still fit."
+    }
+  ],
+  "prompts": [
+    "If things go about as well as we can realistically expect by our review, what would that look like?",
+    "And if it went much better than that, what would be different?",
+    "Where would you say you are on this goal right now?",
+    "Looking back at how we described these levels, where are you today?"
+  ],
+  "cautions": [
+    "The quality of the scale depends on how clearly the levels are written; vague levels give unreliable ratings.",
+    "Do not compare T-scores between clients; each scale is personal.",
+    "The 0.3 correlation is a convention, not a measured value. Treat small T-score differences with caution.",
+    "Write levels without identifiers. Exports print blank lines for names and dates."
+  ],
+  "evidenceSummary": "Goal attainment scaling was introduced by Kiresuk and Sherman (1968) to evaluate community mental health programs, including the T-score formula used here. A 2009 practical guide (Turner-Stokes) describes how to write levels, use weights and calculate the summary score, with the assumed correlation of 0.3 between goals. The method is free to use.",
+  "forClinicianReview": true,
+  "crisisPanel": false,
+  "sud": false,
+  "relatedInterventionIds": [
+    "solution-focused-questions",
+    "act-committed-action",
+    "problem-solving"
+  ],
+  "relatedHandoutIds": [
+    "between-session-practice-plan",
+    "my-therapy-summary"
+  ],
+  "relatedFormulationIds": [],
+  "relatedLegalIds": [],
+  "relatedPracticeIds": [
+    "goals-by-orientation",
+    "outcome-monitoring"
+  ],
+  "relatedPopulationIds": [
+    "older-adults",
+    "traumatic-brain-injury",
+    "disability-affirming",
+    "serious-medical-illness"
+  ],
+  "toolHref": "/tools/goals",
+  "linkOuts": [],
+  "measuresPending": [],
+  "sources": [
+    {
+      "title": "Goal attainment scaling: a general method for evaluating comprehensive community mental health programs (Kiresuk and Sherman)",
+      "publisher": "Community Mental Health Journal, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24185570/",
+      "year": 1968
+    },
+    {
+      "title": "Goal attainment scaling (GAS) in rehabilitation: a practical guide (Turner-Stokes)",
+      "publisher": "Clinical Rehabilitation, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19179355/",
+      "year": 2009
+    },
+    {
+      "title": "Writing SMART rehabilitation goals and achieving goal attainment scaling: a practical guide (Bovend'Eerdt, Botell and Wade)",
+      "publisher": "Clinical Rehabilitation, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19237435/",
+      "year": 2009
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

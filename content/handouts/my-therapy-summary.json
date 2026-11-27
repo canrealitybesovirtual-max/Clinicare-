@@ -1,0 +1,160 @@
+{
+  "id": "my-therapy-summary",
+  "title": "My Therapy Summary",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 20,
+  "intro": "When therapy is coming to an end, or before a long break, it helps to write down what you learned. This summary is your own record of what you worked on and what helped. Fill it in with your counselor near your last visits. Keep it somewhere easy to find, and read it now and then. It takes about 20 minutes.",
+  "sections": [
+    {
+      "heading": "What I came in for",
+      "body": "In your own words, write what was hard when you started, and what you hoped would change.",
+      "steps": [
+        "What was hard when I started: ________________",
+        "What I hoped would change: ________________"
+      ]
+    },
+    {
+      "heading": "What has changed",
+      "steps": [
+        "Changes I have noticed in myself: ________________",
+        "Changes other people have noticed: ________________",
+        "What still feels hard, and what I will keep working on: ________________"
+      ]
+    },
+    {
+      "heading": "What helped most",
+      "body": "List the skills, ideas, and habits that made a difference. Include the sheets or tools you used.",
+      "steps": [
+        "Skills that helped me: ________________",
+        "Sheets or tools I want to keep using: ________________",
+        "Thoughts or sayings that help me: ________________",
+        "People and places that help me: ________________"
+      ]
+    },
+    {
+      "heading": "Keeping it going",
+      "steps": [
+        "Choose one or two skills to keep practicing each week, even when you feel well.",
+        "Set a reminder to read this summary once a month for the next 6 months.",
+        "Expect ups and downs. A bad day or a bad week does not mean you are back where you started. It is a chance to use your skills.",
+        "If you also have a staying-well plan with your early warning signs, keep it with this summary."
+      ]
+    },
+    {
+      "heading": "When to come back",
+      "body": "Coming back for a visit or a few check-ins is a smart step, not a failure. Many clinics offer short 'booster' visits to help you stay on track.",
+      "steps": [
+        "Signs that I could use a check-in: ________________",
+        "How to book a visit: ________________",
+        "If my counselor is not available, I can contact: ________________"
+      ]
+    },
+    {
+      "heading": "How to use the monthly log",
+      "body": "Once a month, write which skills you used, and rate how you have been from 0 to 10. A 0 means very hard. A 10 means very well. If your ratings keep going down, or you answer yes to a check-in, book a visit."
+    }
+  ],
+  "practiceLog": {
+    "columns": [
+      "Month",
+      "Skills I used",
+      "How I have been (0-10)",
+      "Do I want a check-in? (yes / no)"
+    ],
+    "rows": 6
+  },
+  "safetyNote": "Safety first: If things get much harder after therapy ends, you do not have to wait for a check-in. If you have thoughts of hurting yourself or someone else, get help now. In the US, call or text 988 or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sud": false,
+  "es": {
+    "title": "Resumen de mi terapia",
+    "intro": "Cuando la terapia está por terminar, o antes de una pausa larga, ayuda escribir lo que aprendió. Este resumen es su propio registro de lo que trabajó y de lo que le ayudó. Llénelo con su consejero cerca de sus últimas citas. Guárdelo en un lugar fácil de encontrar, y léalo de vez en cuando. Toma unos 20 minutos.",
+    "sections": [
+      {
+        "heading": "Por qué vine",
+        "body": "Con sus propias palabras, escriba lo que era difícil cuando empezó, y lo que esperaba que cambiara.",
+        "steps": [
+          "Lo que era difícil cuando empecé: ________________",
+          "Lo que esperaba que cambiara: ________________"
+        ]
+      },
+      {
+        "heading": "Lo que ha cambiado",
+        "steps": [
+          "Cambios que he notado en mí: ________________",
+          "Cambios que otras personas han notado: ________________",
+          "Lo que todavía es difícil, y en lo que voy a seguir trabajando: ________________"
+        ]
+      },
+      {
+        "heading": "Lo que más me ayudó",
+        "body": "Haga una lista de las habilidades, ideas y hábitos que hicieron una diferencia. Incluya las hojas o herramientas que usó.",
+        "steps": [
+          "Habilidades que me ayudaron: ________________",
+          "Hojas o herramientas que quiero seguir usando: ________________",
+          "Pensamientos o frases que me ayudan: ________________",
+          "Personas y lugares que me ayudan: ________________"
+        ]
+      },
+      {
+        "heading": "Seguir adelante",
+        "steps": [
+          "Elija una o dos habilidades para seguir practicando cada semana, aunque se sienta bien.",
+          "Ponga un recordatorio para leer este resumen una vez al mes durante los próximos 6 meses.",
+          "Espere tener altas y bajas. Un mal día o una mala semana no quiere decir que volvió al principio. Es una oportunidad para usar sus habilidades.",
+          "Si también tiene un plan para mantenerse bien con sus primeras señales de alerta, guárdelo junto con este resumen."
+        ]
+      },
+      {
+        "heading": "Cuándo volver",
+        "body": "Volver para una cita o para unas pocas citas de control es un paso inteligente, no un fracaso. Muchas clínicas ofrecen citas cortas de refuerzo para ayudarle a seguir bien.",
+        "steps": [
+          "Señales de que me vendría bien una cita de control: ________________",
+          "Cómo pedir una cita: ________________",
+          "Si mi consejero no está disponible, puedo contactar a: ________________"
+        ]
+      },
+      {
+        "heading": "Cómo usar el registro mensual",
+        "body": "Una vez al mes, escriba qué habilidades usó, y califique cómo ha estado del 0 al 10. Un 0 quiere decir muy difícil. Un 10 quiere decir muy bien. Si sus números siguen bajando, o si contesta que sí quiere una cita de control, pida una cita."
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Mes",
+        "Habilidades que usé",
+        "Cómo he estado (0-10)",
+        "¿Quiero una cita de control? (sí / no)"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: Si las cosas se ponen mucho más difíciles después de terminar la terapia, no tiene que esperar a una cita de control. Si tiene pensamientos de hacerse daño o de hacerle daño a otra persona, busque ayuda ahora. En EE. UU., llame o envíe un mensaje de texto al 988, o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "sources": [
+    {
+      "title": "Depression in adults (QS8), quality statement 3: preventing relapse",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/qs8/chapter/Quality-statement-3-Preventing-relapse"
+    },
+    {
+      "title": "Reducing relapse and recurrence in unipolar depression: a comparative meta-analysis of cognitive-behavioral therapy's effects (Vittengl et al.)",
+      "publisher": "Journal of Consulting and Clinical Psychology (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17563164/",
+      "year": 2007
+    },
+    {
+      "title": "Depression in adults: treatment and management (NG222)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng222",
+      "year": 2022
+    },
+    {
+      "title": "Psychotherapies",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/topics/psychotherapies"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

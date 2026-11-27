@@ -51,6 +51,7 @@
     "Use the client's own language and metaphors for beliefs and evidence, and work with a professional interpreter when needed. Culturally adapted psychotherapies tend to outperform unadapted versions (Hall et al., 2016)."
   ],
   "handoutIds": ["behavioral-experiment-record", "thought-record"],
+  "orientationIds": ["cognitive-therapy"],
   "sources": [
     { "title": "Oxford Guide to Behavioural Experiments in Cognitive Therapy (Bennett-Levy, Butler, Fennell, Hackmann, Mueller and Westbrook, eds.)", "publisher": "Oxford University Press", "url": "https://academic.oup.com/book/1220", "year": 2004 },
     { "title": "Efficacy of exposure versus cognitive therapy in anxiety disorders: systematic review and meta-analysis (Ougrin)", "publisher": "BMC Psychiatry", "url": "https://bmcpsychiatry.biomedcentral.com/articles/10.1186/1471-244X-11-200", "year": 2011 },

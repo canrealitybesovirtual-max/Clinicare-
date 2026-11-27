@@ -79,7 +79,7 @@
     { "name": "Applied relaxation", "evidence": "APA Division 12 has listed applied relaxation for panic with modest research support (verify the current rating).", "note": "Second-line or adjunctive option. Some clients feel more anxious when they first relax; prepare them for this." },
     { "name": "Referral for medication evaluation", "evidence": "NICE CG113 names an SSRI as the first-line medication for panic disorder and advises against benzodiazepines for this condition.", "note": "Refer to psychiatry, a primary care provider or a psychiatric nurse practitioner. Prescribing decisions rest with the prescriber." }
   ],
-  "handouts": ["panic-cycle", "breathing-practice", "thought-record"],
+  "handouts": ["panic-cycle", "breathing-practice", "thought-record", "body-sensation-practice-log", "facing-fears-what-to-expect"],
   "statIds": ["us-panic-disorder-past-year", "us-any-anxiety-past-year", "global-anxiety-disorders-2021"],
   "culturalNotes": [
     "Some Latino clients, particularly of Caribbean background, may describe an 'ataque de nervios'. It often erupts after a family shock or conflict and tends to be more emotionally expressive than a typical panic attack, so the two overlap only in part. Ask what happened just before and what the episode means to the client and family.",

@@ -1,0 +1,101 @@
+{
+  "id": "three-good-things",
+  "title": "Three Good Things",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 5,
+  "intro": "The mind is built to notice problems. That helps keep us safe, but it can also mean that good moments slip by unnoticed. This simple practice trains your attention to notice what goes well, too. It takes about 5 minutes each evening.",
+  "sections": [
+    {
+      "heading": "How to do it",
+      "steps": [
+        "Each evening, think back over your day.",
+        "Write down three things that went well, or that you were glad about. They can be small, like a good cup of coffee, a kind word, or finishing a task.",
+        "For each one, write why it happened, or what part you played in it.",
+        "Take a moment to remember how it felt."
+      ]
+    },
+    {
+      "heading": "Why it can help",
+      "body": "Writing good things down, and thinking about why they happened, can shift your attention over time. Studies of practices like this one have found small but real gains in well-being for many people. It works best when you keep it up for at least a week or two."
+    },
+    {
+      "heading": "Tips",
+      "steps": [
+        "Small things count. You do not need big events.",
+        "Try to write different things each day.",
+        "If you are having a hard day and cannot think of three, write one. That is fine.",
+        "Do it at the same time each day, like before bed, so it becomes a habit."
+      ]
+    },
+    {
+      "heading": "What this practice is not",
+      "body": "This is not about pretending everything is fine or ignoring real problems. Hard things and good things can both be true. If you feel worse after doing this, or it feels forced, talk with your counselor. There are other practices you can try."
+    }
+  ],
+  "practiceLog": {
+    "columns": ["Day", "Good thing 1", "Good thing 2", "Good thing 3", "Why they happened"],
+    "rows": 7
+  },
+  "safetyNote": "Safety first: If your days feel empty, or you have thoughts of death or of hurting yourself, this practice is not enough on its own. Talk to someone now. In the US, call or text 988 or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "es": {
+    "title": "Tres cosas buenas",
+    "intro": "La mente está hecha para notar los problemas. Eso nos ayuda a estar a salvo, pero también puede hacer que los buenos momentos pasen sin que los notemos. Esta práctica sencilla entrena su atención para notar también lo que sale bien. Toma unos 5 minutos cada noche.",
+    "sections": [
+      {
+        "heading": "Cómo hacerlo",
+        "steps": [
+          "Cada noche, piense en cómo fue su día.",
+          "Escriba tres cosas que salieron bien, o que le alegraron. Pueden ser pequeñas, como una buena taza de café, una palabra amable o terminar una tarea.",
+          "Para cada una, escriba por qué pasó, o qué hizo usted para que pasara.",
+          "Tómese un momento para recordar cómo se sintió."
+        ]
+      },
+      {
+        "heading": "Por qué puede ayudar",
+        "body": "Escribir las cosas buenas, y pensar en por qué pasaron, puede cambiar su atención con el tiempo. Los estudios de prácticas como esta han encontrado mejoras pequeñas pero reales en el bienestar de muchas personas. Funciona mejor si la sigue haciendo por lo menos una o dos semanas."
+      },
+      {
+        "heading": "Consejos",
+        "steps": [
+          "Las cosas pequeñas cuentan. No hace falta que sean cosas grandes.",
+          "Trate de escribir cosas distintas cada día.",
+          "Si tiene un día difícil y no se le ocurren tres, escriba una. Está bien.",
+          "Hágalo a la misma hora cada día, como antes de dormir, para que se vuelva un hábito."
+        ]
+      },
+      {
+        "heading": "Lo que esta práctica no es",
+        "body": "No se trata de fingir que todo está bien ni de no ver los problemas reales. Las cosas difíciles y las cosas buenas pueden ser ciertas a la vez. Si se siente peor después de hacerla, o se siente forzado, hable con su consejero. Hay otras prácticas que puede probar."
+      }
+    ],
+    "practiceLog": {
+      "columns": ["Día", "Cosa buena 1", "Cosa buena 2", "Cosa buena 3", "Por qué pasaron"]
+    },
+    "safetyNote": "La seguridad es lo primero: Si sus días se sienten vacíos, o tiene pensamientos de muerte o de hacerse daño, esta práctica sola no es suficiente. Hable con alguien ahora. En EE. UU., llame o envíe un mensaje de texto al 988 o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "sources": [
+    {
+      "title": "Positive psychology progress: empirical validation of interventions (Seligman et al.)",
+      "publisher": "American Psychologist (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16045394/",
+      "year": 2005
+    },
+    {
+      "title": "Positive psychology interventions: a meta-analysis of randomized controlled studies (Bolier et al.)",
+      "publisher": "BMC Public Health (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23390882/",
+      "year": 2013
+    },
+    {
+      "title": "Effectiveness of positive psychology interventions: a systematic review and meta-analysis (Carr et al.)",
+      "publisher": "Journal of Positive Psychology (Taylor & Francis)",
+      "url": "https://doi.org/10.1080/17439760.2020.1818807",
+      "year": 2021
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

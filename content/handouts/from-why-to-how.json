@@ -1,0 +1,117 @@
+{
+  "id": "from-why-to-how",
+  "title": "From Why to How: Getting Unstuck",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 10,
+  "intro": "Sometimes the mind gets stuck going over the same questions. Why did this happen? Why do I feel this way? What's wrong with me? This going over and over is sometimes called dwelling. It can feel like solving a problem, but it usually leaves you feeling worse and more stuck. This sheet shows you how to spot it and switch to a more helpful way of thinking. It takes about 10 minutes to read.",
+  "sections": [
+    {
+      "heading": "Dwelling or solving a problem?",
+      "body": "Solving a problem moves you toward a next step. Dwelling goes around in circles. Here is a quick test. After 10 minutes of thinking about it, do you have a plan or a new idea? Or do you just feel worse? If you feel worse and have no plan, you are probably dwelling."
+    },
+    {
+      "heading": "Spot your triggers and early signs",
+      "body": "Dwelling often starts in the same kinds of situations. Look for your own patterns. Here are some common ones.",
+      "steps": [
+        "Times, like late at night, first thing in the morning, or when you are alone.",
+        "Places, like in bed, in the car, or in the shower.",
+        "Moods, like feeling tired, lonely, criticized, or let down.",
+        "Body signs, like a heavy chest, slumped shoulders, or staring into space."
+      ]
+    },
+    {
+      "heading": "Switch from why to how",
+      "body": "'Why' questions are big and vague, so the mind can never finish them. 'How' questions are concrete, and they point to action. Try swapping your question.",
+      "steps": [
+        "'Why does this always happen to me?' becomes 'How did this happen, step by step?'",
+        "'Why can't I get over it?' becomes 'How can I take care of myself today?'",
+        "'Why am I like this?' becomes 'What is one small thing I can do next?'",
+        "'Why did they say that?' becomes 'How could I find out what they meant, or how could I respond?'"
+      ]
+    },
+    {
+      "heading": "Make if-then plans",
+      "body": "Plan ahead what you will do when dwelling starts. Use this form: 'If I notice this, then I will do that.' Here are some examples.",
+      "steps": [
+        "'If I start going over the day while lying in bed, then I will picture my calm place.'",
+        "'If I sit in the car thinking after work, then I will turn on music and drive home.'",
+        "'If I catch myself asking why, then I will ask what one next step could be.'"
+      ]
+    },
+    {
+      "heading": "Get absorbed in the present",
+      "body": "Dwelling pulls you into your head. Doing something that takes your full attention pulls you back out. Try something that uses your senses or your hands, like cooking, a game, a walk where you notice sounds and colors, or a talk with someone."
+    }
+  ],
+  "practiceLog": {
+    "columns": ["Day", "What set it off", "The why question", "The how question I switched to", "What I did next"],
+    "rows": 7
+  },
+  "safetyNote": "Safety first: If your thoughts turn to death, ending your life, or not wanting to be here, do not wait. Talk to someone now. In the US, call or text 988 or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "es": {
+    "title": "Del por qué al cómo: salir del atasco",
+    "intro": "A veces la mente se queda atorada dándole vueltas a las mismas preguntas. ¿Por qué pasó esto? ¿Por qué me siento así? ¿Qué me pasa? A este darle vueltas y vueltas a veces se le llama rumiar. Puede parecer que está resolviendo un problema, pero casi siempre le deja peor y más atorado. Esta hoja le muestra cómo notarlo y cómo cambiar a una forma de pensar que ayude más. Leerla toma unos 10 minutos.",
+    "sections": [
+      {
+        "heading": "¿Darle vueltas o resolver un problema?",
+        "body": "Resolver un problema le lleva hacia un siguiente paso. Darle vueltas es andar en círculos. Aquí hay una prueba rápida. Después de pensar en eso 10 minutos, ¿tiene un plan o una idea nueva? ¿O solo se siente peor? Si se siente peor y no tiene un plan, lo más seguro es que le está dando vueltas."
+      },
+      {
+        "heading": "Note lo que lo desata y las primeras señales",
+        "body": "Darle vueltas muchas veces empieza en el mismo tipo de situaciones. Busque sus propios patrones. Aquí hay algunos comunes.",
+        "steps": [
+          "Horas, como tarde en la noche, al despertar o cuando está solo.",
+          "Lugares, como en la cama, en el carro o en la ducha.",
+          "Ánimos, como sentirse cansado, solo, criticado o decepcionado.",
+          "Señales del cuerpo, como el pecho pesado, los hombros caídos o la mirada perdida."
+        ]
+      },
+      {
+        "heading": "Cambie el por qué por el cómo",
+        "body": "Las preguntas de 'por qué' son grandes y vagas, así que la mente nunca las termina. Las preguntas de 'cómo' son concretas, y llevan a la acción. Pruebe cambiar su pregunta.",
+        "steps": [
+          "'¿Por qué siempre me pasa esto?' se vuelve '¿Cómo pasó esto, paso a paso?'",
+          "'¿Por qué no lo puedo superar?' se vuelve '¿Cómo me puedo cuidar hoy?'",
+          "'¿Por qué soy así?' se vuelve '¿Qué cosa pequeña puedo hacer ahora?'",
+          "'¿Por qué dijeron eso?' se vuelve '¿Cómo podría saber qué quisieron decir, o cómo podría responder?'"
+        ]
+      },
+      {
+        "heading": "Haga planes de 'si pasa esto, haré aquello'",
+        "body": "Planee de antemano lo que hará cuando empiece a darle vueltas. Use esta forma: 'Si noto esto, entonces haré aquello'. Aquí hay algunos ejemplos.",
+        "steps": [
+          "'Si empiezo a repasar el día acostado en la cama, entonces imaginaré mi lugar tranquilo'.",
+          "'Si me quedo pensando en el carro después del trabajo, entonces pondré música y manejaré a casa'.",
+          "'Si me pesco preguntándome por qué, entonces me preguntaré cuál podría ser un siguiente paso'."
+        ]
+      },
+      {
+        "heading": "Métase de lleno en el presente",
+        "body": "Darle vueltas le mete en su cabeza. Hacer algo que necesita toda su atención le saca de ahí. Pruebe algo que use sus sentidos o sus manos, como cocinar, un juego, una caminata fijándose en sonidos y colores, o una charla con alguien."
+      }
+    ],
+    "practiceLog": {
+      "columns": ["Día", "Qué lo desató", "La pregunta de por qué", "La pregunta de cómo que usé", "Lo que hice después"]
+    },
+    "safetyNote": "La seguridad es lo primero: Si sus pensamientos van hacia la muerte, quitarse la vida o no querer estar aquí, no espere. Hable con alguien ahora. En EE. UU., llame o envíe un mensaje de texto al 988 o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "sources": [
+    {
+      "title": "Rumination-focused cognitive-behavioural therapy for residual depression: phase II randomised controlled trial (Watkins et al.)",
+      "publisher": "British Journal of Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21778171/",
+      "year": 2011
+    },
+    {
+      "title": "Depression in adults: treatment and management (NG222)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng222",
+      "year": 2022
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

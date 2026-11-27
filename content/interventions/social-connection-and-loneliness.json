@@ -1,0 +1,99 @@
+{
+  "id": "social-connection-and-loneliness",
+  "name": "Social connection and loneliness interventions",
+  "modality": "CBT and behavioral - social connection",
+  "conditions": [
+    "major-depressive-disorder",
+    "persistent-depressive-disorder",
+    "adjustment-disorder",
+    "prolonged-grief-disorder",
+    "social-anxiety-disorder"
+  ],
+  "evidenceLevel": "A meta-analysis of interventions to reduce loneliness (Masi et al., 2011) found that approaches addressing unhelpful social thinking, such as expecting rejection, had larger effects than those that only increased social contact, support or skills. Weaker social relationships are linked with higher mortality risk (Holt-Lunstad et al., 2010), and the 2023 US Surgeon General's advisory calls on health systems to assess and address social connection. Social prescribing through link workers is part of NHS England's personalised care model.",
+  "minutes": {
+    "min": 30,
+    "max": 50
+  },
+  "purpose": "Helps clients who feel lonely or isolated build connection that feels meaningful to them. Combines a brief look at the size, quality and kind of the client's connections; work on social thoughts that keep loneliness going (expecting rejection, mind-reading, assuming others don't want contact); graded social activation, starting with small low-risk contacts; and links to community groups, volunteering, peer support or social prescribing services.",
+  "steps": [
+    "Ask about loneliness directly and without stigma, and separate being alone, which some people enjoy, from feeling lonely.",
+    "Map current connections together: who the client sees, talks to and feels close to, and who they want more or less contact with; note barriers such as transport, money, disability, language, caregiving or work hours.",
+    "Notice social thoughts and predictions ('they'll think I'm boring,' 'no one wants to hear from me'), and test them with behavioral experiments.",
+    "Plan graded social activation: small, specific steps such as replying to a message, a short call, attending part of a group, or volunteering for an hour.",
+    "Link to community resources the client chooses: interest groups, cultural community groups, peer support, programs for older adults or students, or social prescribing and community connector services.",
+    "Address related problems: social anxiety, depression, grief, hearing loss or mobility limits may need their own treatment or accommodations.",
+    "Review what the client tried and how it felt, and adjust; aim for quality and meaning, not just more contact."
+  ],
+  "script": [
+    "Lots of people feel lonely, even when they're around others. Can you tell me what it's like for you?",
+    "Who do you feel even a little connected to right now? Who would you like to be closer to?",
+    "When you think about reaching out, what do you expect will happen?",
+    "What's one small step you could try this week, like a short message to someone?",
+    "Are there groups or activities nearby that match something you care about?"
+  ],
+  "contraindications": [
+    "Isolation can signal depression, grief, an unsafe relationship that restricts contact, or changes in thinking or hearing; assess and address these.",
+    "When someone controls who the client may see or talk to, consider coercive control and prioritize safety planning.",
+    "Respect preferences: the goal is connection that feels meaningful to the client, not a set amount of social contact.",
+    "Check that recommended groups and online communities are safe and suitable, especially for clients at risk of exploitation.",
+    "This intervention does not assess or decide risk. If suicidal thoughts, self-harm or risk to others come up, pause and follow your setting's risk-assessment and safety-planning procedures. Keep crisis options visible: 988 Suicide & Crisis Lifeline (US, call or text), the local emergency number, and findahelpline.com for other countries."
+  ],
+  "culturalAdaptations": [
+    "Norms about friendship, family contact and asking for help differ; build on connections the client's culture values.",
+    "For immigrants, refugees and people far from family, consider language, loss of community and discrimination, and look for cultural community groups.",
+    "Adapt for disability and access needs, such as accessible venues, online groups and captioning.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "faithIntegrated": {
+    "note": "If faith is meaningful to the client and they ask to include it, a faith community, study group or service can be one source of connection, chosen by the client within their own tradition.",
+    "consentNote": "Offer only if the client raises faith or spirituality and asks to include it. Before starting, explain what the faith-integrated option involves, that it is optional, that the same intervention is available without religious content, and that the client can change their mind at any time; document informed consent in your own clinical record, not in this app. Follow the client's own tradition and words, and never introduce, impose, endorse or challenge beliefs (AACC Code of Ethics: consent before spiritual interventions, client-led integration; ACA Code of Ethics 2014, A.2 informed consent and A.4.b personal values)."
+  },
+  "handoutIds": [
+    "social-connection-plan",
+    "my-relationships-map",
+    "thinking-traps"
+  ],
+  "orientationIds": [
+    "cognitive-therapy",
+    "behavior-therapy"
+  ],
+  "sources": [
+    {
+      "title": "A meta-analysis of interventions to reduce loneliness (Masi et al.)",
+      "publisher": "Personality and Social Psychology Review (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20716644/",
+      "year": 2011
+    },
+    {
+      "title": "Social relationships and mortality risk: a meta-analytic review (Holt-Lunstad et al.)",
+      "publisher": "PLoS Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20668659/",
+      "year": 2010
+    },
+    {
+      "title": "Our Epidemic of Loneliness and Isolation: The US Surgeon General's Advisory on the Healing Effects of Social Connection and Community",
+      "publisher": "US Department of Health and Human Services",
+      "url": "https://www.hhs.gov/sites/default/files/surgeon-general-social-connection-advisory.pdf",
+      "year": 2023
+    },
+    {
+      "title": "Social prescribing: reference guide and technical annex for primary care networks",
+      "publisher": "NHS England",
+      "url": "https://www.england.nhs.uk/long-read/social-prescribing-reference-guide-and-technical-annex-for-primary-care-networks/"
+    },
+    {
+      "title": "AACC Code of Ethics",
+      "publisher": "American Association of Christian Counselors",
+      "url": "https://aacc.net/aacc-code-of-ethics/"
+    },
+    {
+      "title": "ACA Code of Ethics (2014) and ethics resources",
+      "publisher": "American Counseling Association",
+      "url": "https://www.counseling.org/resources/ethics",
+      "year": 2014
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

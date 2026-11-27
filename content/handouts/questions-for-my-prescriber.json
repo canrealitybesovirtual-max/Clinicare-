@@ -1,0 +1,172 @@
+{
+  "id": "questions-for-my-prescriber",
+  "title": "Questions for My Prescriber",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 10,
+  "intro": "Your prescriber is the doctor, nurse practitioner, or other provider who orders your medicine. Visits can be short, so it helps to plan your questions ahead of time. Pick the questions that matter most to you, and bring this sheet to your visit. Write the answers down, or ask for them in writing. It takes about 10 minutes.",
+  "sections": [
+    {
+      "heading": "Before your visit",
+      "steps": [
+        "Make a list of every medicine you take. Include vitamins, herbs, supplements, and medicines you buy without a prescription.",
+        "Write down any changes you have noticed since your last visit, good or bad.",
+        "If you are pregnant, could become pregnant, or are breastfeeding, plan to say so."
+      ]
+    },
+    {
+      "heading": "About a new medicine",
+      "steps": [
+        "What is this medicine for, and how could it help me?",
+        "How long until I notice a change? How will we know if it is working?",
+        "How and when do I take it? With food, or without?",
+        "What should I do if I miss a dose?",
+        "Are there other choices, including ones without medicine?"
+      ]
+    },
+    {
+      "heading": "About side effects and safety",
+      "steps": [
+        "What side effects are common, and do they go away?",
+        "Which side effects mean I should call you right away?",
+        "Is it safe with my other medicines, vitamins, or supplements?",
+        "Is it safe to drink alcohol or use other drugs while I take it?",
+        "Can it make me sleepy? Is it safe to drive?",
+        "Is it safe if I am pregnant, planning a pregnancy, or breastfeeding?"
+      ]
+    },
+    {
+      "heading": "About stopping or changing",
+      "body": "Do not stop or change a medicine on your own, even if you feel better or have side effects. Some medicines need to be lowered slowly. Your prescriber can make a plan with you.",
+      "steps": [
+        "How long will I need to take this?",
+        "If I want to stop, how can we do it safely?",
+        "What might I feel if I stop too fast?"
+      ]
+    },
+    {
+      "heading": "About cost and refills",
+      "steps": [
+        "Is there a lower-cost or generic version?",
+        "How do I get refills, and how early should I ask?",
+        "Will I need any blood tests or check-ups?"
+      ]
+    },
+    {
+      "heading": "My own questions",
+      "steps": [
+        "A question I have: ________________",
+        "Another question: ________________"
+      ]
+    },
+    {
+      "heading": "How to use the log",
+      "body": "Between visits, write down what you notice after starting or changing a medicine, good or bad. Bring the log to your next visit so you and your prescriber can look at it together."
+    }
+  ],
+  "practiceLog": {
+    "columns": [
+      "Date",
+      "Medicine and what I noticed",
+      "Side effects, if any",
+      "Question to ask"
+    ],
+    "rows": 7
+  },
+  "safetyNote": "Safety first: Do not start, stop, or change a medicine without talking with your prescriber or pharmacist. Call them soon about any side effect that worries you. Call 911 for trouble breathing, swelling of the face or throat, fainting, or a seizure. If you have new or worse thoughts of hurting yourself or someone else, get help now. In the US, call or text 988 or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sud": false,
+  "es": {
+    "title": "Preguntas para quien me receta",
+    "intro": "Quien le receta es el médico, el enfermero practicante u otro proveedor que le indica su medicamento. Las citas pueden ser cortas, así que ayuda planear sus preguntas antes. Elija las preguntas que más le importan y traiga esta hoja a su cita. Escriba las respuestas, o pida que se las den por escrito. Toma unos 10 minutos.",
+    "sections": [
+      {
+        "heading": "Antes de su cita",
+        "steps": [
+          "Haga una lista de todos los medicamentos que toma. Incluya vitaminas, hierbas, suplementos y medicinas que compra sin receta.",
+          "Escriba los cambios que ha notado desde su última cita, buenos o malos.",
+          "Si está embarazada, podría quedar embarazada o está dando pecho, planee decirlo."
+        ]
+      },
+      {
+        "heading": "Sobre un medicamento nuevo",
+        "steps": [
+          "¿Para qué es este medicamento, y cómo me podría ayudar?",
+          "¿Cuánto tiempo pasa hasta que note un cambio? ¿Cómo vamos a saber si está funcionando?",
+          "¿Cómo y cuándo lo tomo? ¿Con comida o sin comida?",
+          "¿Qué hago si se me olvida una dosis?",
+          "¿Hay otras opciones, incluso algunas sin medicamentos?"
+        ]
+      },
+      {
+        "heading": "Sobre los efectos secundarios y la seguridad",
+        "steps": [
+          "¿Qué efectos secundarios son comunes, y se quitan con el tiempo?",
+          "¿Qué efectos secundarios quieren decir que debo llamarle de inmediato?",
+          "¿Es seguro con mis otros medicamentos, vitaminas o suplementos?",
+          "¿Es seguro tomar alcohol o usar otras drogas mientras lo tomo?",
+          "¿Me puede dar sueño? ¿Es seguro manejar?",
+          "¿Es seguro si estoy embarazada, si planeo un embarazo o si estoy dando pecho?"
+        ]
+      },
+      {
+        "heading": "Sobre dejarlo o cambiarlo",
+        "body": "No deje ni cambie un medicamento por su cuenta, aunque se sienta mejor o tenga efectos secundarios. Algunos medicamentos se deben bajar poco a poco. Quien le receta puede hacer un plan con usted.",
+        "steps": [
+          "¿Por cuánto tiempo lo voy a tener que tomar?",
+          "Si lo quiero dejar, ¿cómo lo podemos hacer de forma segura?",
+          "¿Qué podría sentir si lo dejo muy rápido?"
+        ]
+      },
+      {
+        "heading": "Sobre el costo y las recetas",
+        "steps": [
+          "¿Hay una versión más barata o genérica?",
+          "¿Cómo pido más medicina, y con cuánto tiempo antes lo debo pedir?",
+          "¿Voy a necesitar exámenes de sangre o citas de control?"
+        ]
+      },
+      {
+        "heading": "Mis propias preguntas",
+        "steps": [
+          "Una pregunta que tengo: ________________",
+          "Otra pregunta: ________________"
+        ]
+      },
+      {
+        "heading": "Cómo usar el registro",
+        "body": "Entre citas, escriba lo que nota después de empezar o cambiar un medicamento, bueno o malo. Traiga el registro a su próxima cita para que usted y quien le receta lo vean juntos."
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Fecha",
+        "Medicamento y lo que noté",
+        "Efectos secundarios, si hay",
+        "Pregunta que quiero hacer"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: No empiece, deje ni cambie un medicamento sin hablar con quien se lo receta o con su farmacéutico. Llámeles pronto por cualquier efecto secundario que le preocupe. Llame al 911 si tiene problemas para respirar, si se le hincha la cara o la garganta, si se desmaya o si tiene una convulsión. Si tiene pensamientos nuevos o más fuertes de hacerse daño o de hacerle daño a otra persona, busque ayuda ahora. En EE. UU., llame o envíe un mensaje de texto al 988, o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "sources": [
+    {
+      "title": "Mental Health Medications",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/topics/mental-health-medications"
+    },
+    {
+      "title": "Taking medicines: what to ask your provider",
+      "publisher": "MedlinePlus, US National Library of Medicine",
+      "url": "https://medlineplus.gov/ency/patientinstructions/000535.htm"
+    },
+    {
+      "title": "Shared decision making (NG197)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng197",
+      "year": 2021
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

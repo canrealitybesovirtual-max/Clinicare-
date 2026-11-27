@@ -1,0 +1,268 @@
+{
+  "id": "suicide-and-self-harm-safety",
+  "title": "Suicidal thoughts and self-harm: safety-focused objectives",
+  "summary": "Objectives for collaborative safety work in any plan when the client describes thoughts of suicide or self-harm, now or recently. The clinician assesses risk directly and makes every decision about risk and level of care; this module only offers wording for the plan.",
+  "appliesTo": "any",
+  "problems": [
+    {
+      "id": "ss-suicidal-thoughts",
+      "label": "Thoughts of suicide, with a need for a shared written safety plan",
+      "definitions": [
+        "Describes thoughts of death, of not wanting to be alive or of ending their life, now or in recent weeks, when asked directly by the clinician.",
+        "Has times of intense distress when hope drops quickly and it becomes hard to think of reasons for living or of anyone to reach out to.",
+        "Has access to means that could be used for self-harm, and has not yet talked through ways to put time and distance between self and those means."
+      ],
+      "longTermGoals": [
+        "The client has a written safety plan, made together with the clinician, that they know how to use and can reach quickly in a hard moment.",
+        "The client can name reasons for living and people and services to contact, and the time between a suicidal crisis and any means of harm is made longer."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "ss-plan-same-session",
+          "text": "In the same session that suicidal thoughts come up, the clinician assesses risk directly and writes a safety plan with the client in the client's words: personal warning signs, coping steps they can take alone, people and places that help, professional and crisis contacts (call or text 988 in the US, or the local emergency number elsewhere) and steps to make their surroundings safer. The clinician makes every decision about risk and level of care; this plan never rates risk.",
+          "interventionIds": [
+            "collaborative-safety-planning"
+          ],
+          "targets": [
+            "coping-skills",
+            "strengths-and-supports"
+          ],
+          "step": "crisis-or-urgent"
+        },
+        {
+          "id": "ss-means-safety",
+          "text": "Within 1 week of making the safety plan, agree with the client, and a support person if the client wishes, on at least 1 specific step that puts time and distance between the client and lethal means (for example storing firearms away from home, or locking up or reducing stored medicines), and check at the next session whether each step happened.",
+          "interventionIds": [
+            "lethal-means-counseling"
+          ],
+          "targets": [
+            "urges-and-impulsivity"
+          ],
+          "step": "crisis-or-urgent"
+        },
+        {
+          "id": "ss-plan-reachable",
+          "text": "By the next session, keep the safety plan where it can be reached in under a minute (for example a photo on the phone or a card in a wallet) and, if the client chooses, share it with at least 1 trusted person.",
+          "interventionIds": [
+            "collaborative-safety-planning"
+          ],
+          "targets": [
+            "strengths-and-supports",
+            "low-social-support"
+          ]
+        },
+        {
+          "id": "ss-reasons-for-living",
+          "text": "By week 4, write down at least 3 personal reasons for living or for staying safe (for example people, pets, faith, plans or values) and add them to the safety plan.",
+          "interventionIds": [
+            "collaborative-safety-planning",
+            "act-values-clarification"
+          ],
+          "targets": [
+            "values-and-meaning",
+            "hope-and-motivation"
+          ]
+        },
+        {
+          "id": "ss-plan-review",
+          "text": "At every session while suicidal thoughts are present, and at each plan review, go over the safety plan together: what was used, what helped, what got in the way, and which contacts or steps need updating. The clinician reassesses risk directly each time.",
+          "interventionIds": [
+            "collaborative-safety-planning"
+          ],
+          "targets": [
+            "coping-skills"
+          ]
+        },
+        {
+          "id": "ss-after-crisis-contact",
+          "text": "After any emergency visit, crisis call or hospital stay, the clinician arranges a follow-up contact within 7 days and, with the client's consent, brief caring contacts (a call, letter or message) in the weeks that follow.",
+          "interventionIds": [
+            "collaborative-safety-planning"
+          ],
+          "targets": [
+            "strengths-and-supports"
+          ],
+          "step": "crisis-or-urgent"
+        },
+        {
+          "id": "ss-suicide-focused-therapy",
+          "text": "If suicidal thoughts continue or come back, the clinician and client discuss by week 6 a therapy that targets suicidal thoughts and behavior directly (for example cognitive therapy for suicide prevention, collaborative assessment-based approaches or dialectical behavior therapy, from trained clinicians) or a referral, and agree on next steps.",
+          "interventionIds": [
+            "suicide-specific-psychotherapies"
+          ],
+          "targets": [
+            "hope-and-motivation",
+            "emotion-dysregulation"
+          ],
+          "step": "specialist"
+        }
+      ],
+      "measureIds": [
+        "phq-9"
+      ],
+      "practiceIds": [
+        "caring-contacts",
+        "care-transitions-and-warm-handoffs"
+      ],
+      "handoutIds": [
+        "safety-plan-easy-read",
+        "after-a-crisis-next-steps",
+        "helping-someone-at-risk"
+      ]
+    },
+    {
+      "id": "ss-self-harm-coping",
+      "label": "Self-harm used to get through overwhelming feelings",
+      "definitions": [
+        "Describes hurting themselves on purpose (for example cutting, burning or hitting) to get relief from intense emotion, numbness or self-hatred, with or without thoughts of suicide.",
+        "Hides injuries or puts off medical care for them, and feels shame after episodes.",
+        "Can name situations or feelings that often come before an episode, or is willing to start noticing them."
+      ],
+      "longTermGoals": [
+        "The client has safer ways to get through intense feelings, gets care for any injuries, and self-harm becomes less frequent and less severe, at a pace the client agrees to."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "sh-assessment",
+          "text": "At first disclosure, and whenever the pattern changes, the clinician carries out a direct, non-judgmental psychosocial assessment that includes suicidal thoughts and checks that any wound has had medical care. Risk is never judged by a score or a tool.",
+          "interventionIds": [
+            "collaborative-safety-planning"
+          ],
+          "targets": [
+            "emotion-dysregulation"
+          ]
+        },
+        {
+          "id": "sh-wound-care",
+          "text": "By week 2, agree on how injuries will be looked after safely and when to seek urgent medical care, so that shame never delays treatment of a wound.",
+          "interventionIds": [],
+          "targets": [
+            "self-criticism-shame"
+          ]
+        },
+        {
+          "id": "sh-alternatives",
+          "text": "By week 4, list at least 4 actions that bring some relief without injury (for example holding something very cold, hard exercise, paced breathing or reaching out to someone) and use one during at least 2 urges a week, rating the urge (0-10) before and after.",
+          "interventionIds": [
+            "dbt-distress-tolerance",
+            "urge-surfing"
+          ],
+          "targets": [
+            "urges-and-impulsivity",
+            "coping-skills"
+          ],
+          "step": "low-intensity"
+        },
+        {
+          "id": "sh-chain",
+          "text": "Over weeks 2 to 8, go through at least 1 recent episode or near-miss every 2 weeks step by step (vulnerabilities, trigger, thoughts, feelings, urges, consequences) to find at least 2 points where a different action could fit.",
+          "interventionIds": [
+            "behavioral-chain-analysis"
+          ],
+          "targets": [
+            "urges-and-impulsivity",
+            "emotion-dysregulation"
+          ],
+          "step": "high-intensity"
+        },
+        {
+          "id": "sh-kinder-response",
+          "text": "Over weeks 4 to 10, practice a kind self-response after urges or episodes at least 3 times a week in place of self-criticism, and note the effect on the next urge.",
+          "interventionIds": [
+            "self-compassion-practice"
+          ],
+          "targets": [
+            "self-criticism-shame"
+          ],
+          "step": "low-intensity"
+        },
+        {
+          "id": "sh-structured-therapy",
+          "text": "If self-harm continues, discuss by week 8 a structured therapy designed for repeated self-harm (for example dialectical behavior therapy or mentalization-based treatment, from trained clinicians) and agree on a referral if it fits.",
+          "interventionIds": [
+            "suicide-specific-psychotherapies",
+            "mentalization-based-treatment"
+          ],
+          "targets": [
+            "emotion-dysregulation",
+            "interpersonal-difficulties"
+          ],
+          "step": "specialist"
+        }
+      ],
+      "measureIds": [
+        "phq-9"
+      ],
+      "practiceIds": [
+        "self-harm-assessment-and-formulation"
+      ],
+      "handoutIds": [
+        "chain-analysis-sheet",
+        "daily-emotion-and-urge-tracker",
+        "safety-plan-easy-read"
+      ]
+    }
+  ],
+  "collaborativeNote": "Safety work is done with the client, never to them. The clinician assesses risk directly and makes every decision about risk, level of care and emergency steps; nothing in this module scores, rates or predicts risk. Keep crisis contacts current and in view: 988 by call or text in the US, the local emergency number, or findahelpline.com elsewhere. Use the client's own words. Do not add names or other identifying details. Resource only. Not a substitute for clinical judgment.",
+  "crisisPanel": true,
+  "sources": [
+    {
+      "title": "Self-harm: assessment, management and preventing recurrence (NG225)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng225",
+      "year": 2022
+    },
+    {
+      "title": "VA/DoD Clinical Practice Guideline: Assessment and Management of Patients at Risk for Suicide",
+      "publisher": "US Department of Veterans Affairs and Department of Defense",
+      "url": "https://www.healthquality.va.gov/guidelines/MH/srb/",
+      "year": 2024
+    },
+    {
+      "title": "Comparison of the Safety Planning Intervention With Follow-up vs Usual Care of Suicidal Patients Treated in the Emergency Department (Stanley et al.)",
+      "publisher": "JAMA Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29998307/",
+      "year": 2018
+    },
+    {
+      "title": "Safety planning-type interventions for suicide prevention: meta-analysis (Nuij et al.)",
+      "publisher": "British Journal of Psychiatry (DOI)",
+      "url": "https://doi.org/10.1192/bjp.2021.50",
+      "year": 2021
+    },
+    {
+      "title": "CALM: Counseling on Access to Lethal Means",
+      "publisher": "Suicide Prevention Resource Center",
+      "url": "https://sprc.org/online-library/calm-counseling-on-access-to-lethal-means"
+    },
+    {
+      "title": "A randomized trial of dialectical behavior therapy versus general psychiatric management for borderline personality disorder (McMain et al.)",
+      "publisher": "American Journal of Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19755574/",
+      "year": 2009
+    },
+    {
+      "title": "Suicide Prevention (health topic)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/topics/suicide-prevention"
+    },
+    {
+      "title": "988 Suicide & Crisis Lifeline",
+      "publisher": "988 Lifeline / SAMHSA",
+      "url": "https://988lifeline.org"
+    },
+    {
+      "title": "Find A Helpline (international directory)",
+      "publisher": "Find A Helpline",
+      "url": "https://findahelpline.com"
+    },
+    {
+      "title": "PHQ and GAD-7 screeners (reproduction terms)",
+      "publisher": "Pfizer / PHQ Screeners",
+      "url": "https://www.phqscreeners.com"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

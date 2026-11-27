@@ -1,0 +1,122 @@
+{
+  "id": "teach-back-and-plain-language",
+  "title": "Teach-back and plain-language psychoeducation",
+  "category": "communication-and-access",
+  "summary": "How to explain things so they are remembered: plain words, small chunks, ask-tell-ask (elicit, provide, elicit) and teach-back, where the client explains the idea back in their own words. Includes how to talk about measure totals in plain numbers.",
+  "whenToUse": [
+    "Whenever you explain a model, a treatment option, a plan or a measure result.",
+    "With every client, not only those you think have low health literacy.",
+    "At the end of sessions, to check what the client is taking away."
+  ],
+  "steps": [
+    {
+      "heading": "Ask first",
+      "body": "Find out what the client already knows or believes about the topic, and what they want to know."
+    },
+    {
+      "heading": "Tell in small chunks",
+      "items": [
+        "One or two key ideas at a time, in everyday words.",
+        "Use concrete examples from their own life.",
+        "Use numbers simply: 4 out of 10 people rather than 40 percent, and say what a total usually means.",
+        "Offer a picture, a drawing or a short written summary."
+      ]
+    },
+    {
+      "heading": "Ask again",
+      "body": "Ask what they make of it, and how it fits their experience."
+    },
+    {
+      "heading": "Teach-back",
+      "body": "Ask the client to explain the idea or plan back in their own words. Frame it as checking your explanation, not testing them. If something is missed, explain again differently and check again."
+    },
+    {
+      "heading": "Reading measures aloud",
+      "body": "If you read a questionnaire aloud, read each item as written in a neutral tone, offer the answer options each time, and note in the record that it was read aloud."
+    }
+  ],
+  "prompts": [
+    "What have you heard about this kind of therapy before?",
+    "I want to make sure I explained this well. Can you tell me in your own words what we are going to try this week?",
+    "Your total today was 12 out of a possible 27. Last month it was 18, so it has come down by about a third. How does that fit with how you have been feeling?",
+    "That was a lot of information. What is the one thing you most want to remember?"
+  ],
+  "cautions": [
+    "Teach-back checks your explanation, not the client's intelligence. Avoid asking do you understand, which invites a yes.",
+    "Avoid jargon and diagnostic labels the client has not chosen to use.",
+    "Too much information at once overwhelms. Stop after each chunk.",
+    "Written materials should be in plain language and the client's preferred language; the app's client handouts are written at about a 6th to 8th grade reading level."
+  ],
+  "adaptations": [
+    {
+      "context": "Interpreters",
+      "adaptation": "Use teach-back after each segment, since meaning can shift in translation."
+    },
+    {
+      "context": "Cognitive impairment or intellectual disability",
+      "adaptation": "Use shorter sentences, pictures and repetition, and involve a support person with consent."
+    }
+  ],
+  "evidenceSummary": "A 2009 meta-analysis (Donker and colleagues) found that brief passive psychoeducation reduced symptoms of depression and psychological distress. The AHRQ Health Literacy Universal Precautions Toolkit (3rd edition, 2024) recommends teach-back for all patients. A 2026 systematic review and meta-analysis (Vick and colleagues) found that teach-back in clinical communication improved patient understanding and recall.",
+  "forClinicianReview": true,
+  "crisisPanel": false,
+  "sud": false,
+  "relatedInterventionIds": [
+    "trauma-psychoeducation-and-grounding",
+    "bipolar-psychoeducation",
+    "sleep-hygiene-education"
+  ],
+  "relatedHandoutIds": [
+    "questions-about-my-care",
+    "what-to-expect-in-therapy"
+  ],
+  "relatedFormulationIds": [],
+  "relatedLegalIds": [
+    "digital-accessibility",
+    "language-access-interpreters"
+  ],
+  "relatedPracticeIds": [
+    "working-with-interpreters",
+    "shared-decision-making",
+    "outcome-monitoring",
+    "between-session-practice"
+  ],
+  "relatedPopulationIds": [
+    "intellectual-disability",
+    "older-adults",
+    "traumatic-brain-injury"
+  ],
+  "linkOuts": [
+    {
+      "title": "Health Literacy Universal Precautions Toolkit, 3rd edition",
+      "publisher": "Agency for Healthcare Research and Quality",
+      "url": "https://www.ahrq.gov/health-literacy/improve/precautions/index.html",
+      "note": "Includes a tool on the teach-back method.",
+      "lastVerified": "2026-11-27"
+    }
+  ],
+  "measuresPending": [],
+  "sources": [
+    {
+      "title": "Psychoeducation for depression, anxiety and psychological distress: a meta-analysis (Donker, Griffiths, Cuijpers and Christensen)",
+      "publisher": "BMC Medicine, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20015347/",
+      "year": 2009
+    },
+    {
+      "title": "Health Literacy Universal Precautions Toolkit, 3rd edition",
+      "publisher": "Agency for Healthcare Research and Quality",
+      "url": "https://www.ahrq.gov/health-literacy/improve/precautions/index.html",
+      "year": 2024
+    },
+    {
+      "title": "Teach-back in clinical communication: a systematic review and meta-analysis (Vick et al.)",
+      "publisher": "Journal of General Internal Medicine, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42693371/",
+      "year": 2026
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

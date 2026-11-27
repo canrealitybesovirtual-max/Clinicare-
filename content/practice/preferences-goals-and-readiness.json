@@ -1,0 +1,134 @@
+{
+  "id": "preferences-goals-and-readiness",
+  "title": "Preferences, goal consensus and readiness for change",
+  "category": "measurement-and-goals",
+  "summary": "How to ask about a client's treatment preferences, reach shared goals and gauge readiness, then match your stance to where they are. Readiness is a working hypothesis you discuss, not a label you record.",
+  "whenToUse": [
+    "At intake and whenever a new treatment choice comes up.",
+    "When a client seems ambivalent, hesitant about a method, or keeps agreeing without following through.",
+    "When the client's goals and the referrer's or family's goals differ."
+  ],
+  "steps": [
+    {
+      "heading": "Ask about preferences directly",
+      "items": [
+        "Format: individual, group, couple or family; in person, video or phone; session length and frequency.",
+        "Style: more structured and directive, or more open and exploratory; homework or no homework.",
+        "Content: whether faith, culture, identity or family should be part of the work, and how.",
+        "Clinician characteristics that matter to them (language, gender, background), and what you can or cannot offer.",
+        "Past therapy: what helped, what did not, and what they never want to repeat."
+      ]
+    },
+    {
+      "heading": "Build goal consensus",
+      "body": "Write goals in the client's words first, then agree how you will both know they are moving. Where your view differs, say so openly and look for the overlap. Revisit goals at every review."
+    },
+    {
+      "heading": "Explore importance and confidence",
+      "body": "Ask how important a change is and how confident they feel, each on a 0 to 10 line they choose. Follow up with why it is not lower, and what would move it one point higher. These are conversation tools, not scores."
+    },
+    {
+      "heading": "Treat stage of change as a hypothesis",
+      "items": [
+        "Not yet considering: offer information, explore what matters to them, avoid pushing a plan.",
+        "Weighing it up: explore both sides of the ambivalence without arguing for change.",
+        "Getting ready: help them choose concrete first steps and anticipate obstacles.",
+        "Making changes: support skills, practice and problem solving.",
+        "Keeping changes: plan for setbacks and how to restart after a lapse."
+      ]
+    },
+    {
+      "heading": "Match your stance",
+      "body": "Early in readiness, a guiding style consistent with motivational interviewing usually fits better than action-heavy methods. Shift toward structured tasks as readiness grows, and check that the shift still fits."
+    }
+  ],
+  "prompts": [
+    "People get the most out of therapy when it fits how they like to work. What would make sessions feel right for you?",
+    "Some people want me to bring exercises and structure; others want more space to talk things through. Where are you on that?",
+    "Is your faith or culture something you would like us to include in this work, leave out, or decide later?",
+    "On a line from 0 to 10, how important is this change to you right now? Why that number and not a lower one?",
+    "What would need to happen for you to feel a bit more confident you could do it?"
+  ],
+  "cautions": [
+    "Do not record stage of change or readiness as a fixed client trait; it shifts week to week and by topic.",
+    "Honoring a preference does not mean offering something outside your competence or an approach with evidence of harm; explain the limits and refer when needed.",
+    "Preferences can reflect past discrimination or poor care. Ask about the experience behind a strong preference.",
+    "Readiness talk never replaces a safety check. Low readiness to change does not mean low concern about risk."
+  ],
+  "adaptations": [
+    {
+      "context": "Substance use",
+      "adaptation": "Goals may range from cutting down to stopping; honor the client's goal, discuss safety, and avoid making abstinence a condition of care. This topic shows the 42 CFR Part 2 notice in exports."
+    },
+    {
+      "context": "Clients referred by others",
+      "adaptation": "Separate the referrer's goals from the client's, and be transparent about what you will report back."
+    }
+  ],
+  "evidenceSummary": "A 2018 meta-analysis (Swift, Callahan, Cooper and Parkin) found that clients whose treatment preferences were accommodated were less likely to drop out and had somewhat better outcomes. A 2018 meta-analysis (Tryon, Birch and Verkuilen) linked goal consensus and collaboration with better outcomes. A 2018 meta-analysis (Krebs and colleagues) found that pre-treatment stage of change predicted outcome. SAMHSA TIP 35 (2019) describes stage-matched, MI-consistent approaches.",
+  "forClinicianReview": true,
+  "crisisPanel": false,
+  "sud": true,
+  "relatedInterventionIds": [
+    "motivational-interviewing",
+    "decisional-balance",
+    "person-centered-reflective-listening"
+  ],
+  "relatedHandoutIds": [
+    "weighing-a-change",
+    "questions-about-my-care"
+  ],
+  "relatedFormulationIds": [],
+  "relatedLegalIds": [
+    "42-cfr-part-2"
+  ],
+  "relatedPracticeIds": [
+    "shared-decision-making",
+    "goals-by-orientation",
+    "alliance-and-rupture-repair",
+    "first-sessions-and-role-induction",
+    "recovery-and-harm-reduction"
+  ],
+  "relatedPopulationIds": [
+    "spiritually-integrated",
+    "cultural-adaptation"
+  ],
+  "toolHref": "/tools/option-grid",
+  "linkOuts": [],
+  "measuresPending": [],
+  "sources": [
+    {
+      "title": "The impact of accommodating client preference in psychotherapy: a meta-analysis (Swift, Callahan, Cooper and Parkin)",
+      "publisher": "Journal of Clinical Psychology, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30091140/",
+      "year": 2018
+    },
+    {
+      "title": "Meta-analyses of the relation of goal consensus and collaboration to psychotherapy outcome (Tryon, Birch and Verkuilen)",
+      "publisher": "Psychotherapy, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30335451/",
+      "year": 2018
+    },
+    {
+      "title": "Stages of change and psychotherapy outcomes: a review and meta-analysis (Krebs, Norcross, Nicholson and Prochaska)",
+      "publisher": "Journal of Clinical Psychology, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30335193/",
+      "year": 2018
+    },
+    {
+      "title": "Stages of change (Norcross, Krebs and Prochaska)",
+      "publisher": "Journal of Clinical Psychology, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21157930/",
+      "year": 2011
+    },
+    {
+      "title": "TIP 35: Enhancing Motivation for Change in Substance Use Disorder Treatment (PEP19-02-01-003)",
+      "publisher": "Substance Abuse and Mental Health Services Administration",
+      "url": "https://store.samhsa.gov/product/tip-35-enhancing-motivation-change-substance-use-disorder-treatment/pep19-02-01-003",
+      "year": 2019
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

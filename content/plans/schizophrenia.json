@@ -18,28 +18,40 @@
           "text": "Within 1 week, complete a referral to an early psychosis or coordinated specialty care program, or to psychiatry, and attend the first appointment.",
           "interventionIds": [
             "coordinated-specialty-care-referral"
-          ]
+          ],
+          "step": "specialist"
         },
         {
           "id": "sz-medication",
           "text": "Attend medication appointments and bring questions about benefits and side effects to each visit.",
           "interventionIds": [
             "medication-referral"
-          ]
+          ],
+          "step": "specialist"
         },
         {
           "id": "sz-cbtp",
           "text": "By week 8, start CBT for psychosis, and develop at least 2 coping strategies for distressing voices or thoughts.",
           "interventionIds": [
             "cbt-for-psychosis"
-          ]
+          ],
+          "targets": [
+            "threat-monitoring",
+            "coping-skills"
+          ],
+          "step": "specialist"
         },
         {
           "id": "sz-family",
           "text": "With consent, involve family in at least 4 family sessions over 3 months, focused on information, communication and an early-warning plan.",
           "interventionIds": [
             "family-psychoeducation-psychosis"
-          ]
+          ],
+          "targets": [
+            "interpersonal-difficulties",
+            "strengths-and-supports"
+          ],
+          "step": "specialist"
         },
         {
           "id": "sz-routine",
@@ -47,7 +59,12 @@
           "interventionIds": [
             "sleep-hygiene-education",
             "physical-activity"
-          ]
+          ],
+          "targets": [
+            "sleep-rhythm-disruption",
+            "physical-health-burden"
+          ],
+          "step": "low-intensity"
         },
         {
           "id": "sz-safety-plan",
@@ -55,7 +72,12 @@
           "interventionIds": [
             "collaborative-safety-planning",
             "lethal-means-counseling"
-          ]
+          ],
+          "targets": [
+            "coping-skills",
+            "hope-and-motivation"
+          ],
+          "step": "crisis-or-urgent"
         },
         {
           "id": "sz-tracking",
@@ -67,6 +89,85 @@
       ],
       "measureIds": [
         "phq-9"
+      ]
+    },
+    {
+      "id": "sz-voices-roles-and-family",
+      "label": "Distressing voices or beliefs, lost roles and strain on the family",
+      "definitions": [
+        "Hears voices or holds beliefs that bring fear, distress or conflict, and current ways of coping help only a little.",
+        "Has lost work, study or social roles, or spends most days with little structure.",
+        "Family members feel stressed or unsure how to respond to the client's experiences."
+      ],
+      "longTermGoals": [
+        "The client has more control over distressing experiences, a stronger role in work, study or community life, and family support that helps."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "sz-voices-coping-plan",
+          "text": "By week 10, with a clinician trained in CBT for psychosis, write a coping plan for voices or distressing beliefs with at least 3 strategies, and rate distress (0-10) before and after using them.",
+          "interventionIds": [
+            "cbt-for-psychosis"
+          ],
+          "targets": [
+            "threat-monitoring",
+            "coping-skills"
+          ],
+          "step": "specialist"
+        },
+        {
+          "id": "sz-look-at-a-belief",
+          "text": "Over weeks 8 to 20, at the client's pace, look together at what supports and what does not support 1 distressing belief, and test 1 prediction that follows from it.",
+          "interventionIds": [
+            "cbt-for-psychosis"
+          ],
+          "targets": [
+            "threat-monitoring"
+          ],
+          "step": "specialist"
+        },
+        {
+          "id": "sz-family-intervention",
+          "text": "With consent, offer structured family intervention (at least 10 sessions over 3 to 12 months) covering information, communication, problem solving and a shared early-signs plan.",
+          "interventionIds": [
+            "family-psychoeducation-psychosis"
+          ],
+          "targets": [
+            "interpersonal-difficulties",
+            "strengths-and-supports"
+          ],
+          "step": "specialist"
+        },
+        {
+          "id": "sz-supported-work",
+          "text": "By week 8, if the client wants work or study, refer to supported employment (individual placement and support) or education support, and review progress monthly.",
+          "interventionIds": [
+            "smi-community-support-referral"
+          ],
+          "targets": [
+            "structural-stressors",
+            "values-and-meaning"
+          ],
+          "step": "specialist"
+        },
+        {
+          "id": "sz-peer-and-community",
+          "text": "By week 6, offer at least 1 peer support or community option (for example a clubhouse or peer group) and plan a first visit if the client wishes.",
+          "interventionIds": [
+            "smi-community-support-referral",
+            "supportive-psychotherapy"
+          ],
+          "targets": [
+            "low-social-support"
+          ]
+        }
+      ],
+      "measureIds": [
+        "phq-9"
+      ],
+      "handoutIds": [
+        "understanding-unusual-experiences",
+        "voices-coping-plan"
       ]
     }
   ],
@@ -96,6 +197,17 @@
       "publisher": "Cochrane Database of Systematic Reviews (PubMed)",
       "url": "https://pubmed.ncbi.nlm.nih.gov/21154340/",
       "year": 2010
+    },
+    {
+      "title": "Supported Employment Evidence-Based Practices (EBP) KIT",
+      "publisher": "Substance Abuse and Mental Health Services Administration",
+      "url": "https://store.samhsa.gov/product/supported-employment-evidence-based-practices-ebp-kit/sma08-4364"
+    },
+    {
+      "title": "Psychosocial Interventions for Schizophrenia (2024)",
+      "publisher": "Psychological Health Center of Excellence, Defense Health Agency",
+      "url": "https://health.mil/Reference-Center/Publications/2024/05/01/SCZ-Psychosocial-Interventions-2024",
+      "year": 2024
     }
   ],
   "license": "original",

@@ -2,7 +2,7 @@
   "id": "worry",
   "title": "Worry: generalized worry, obsessions and health anxiety",
   "domain": "worry",
-  "about": "Worry and obsessive-compulsive questions: what the worry is about (everyday matters, intrusive thoughts, illness or appearance), how it is handled (rituals, checking, reassurance), body symptoms versus fear of illness, and how belongings affect the home.",
+  "about": "Worry and obsessive-compulsive questions: what the worry is about (everyday matters, intrusive thoughts, illness or appearance), how it is handled (rituals, checking, reassurance), body symptoms versus fear of illness, how belongings affect the home, and what drives hair pulling or skin picking.",
   "questions": [
     {
       "id": "worry-scope",
@@ -577,6 +577,90 @@
         "obsessive-compulsive-disorder"
       ],
       "priority": 20
+    },
+    {
+      "id": "bfrb-pattern",
+      "kind": "discriminate",
+      "domain": "worry",
+      "select": "many",
+      "text": "When the client pulls hair or picks skin, what is it mostly about: an urge, tension or habit; fixing how something looks; a fear or obsession; a belief that something is under the skin; or wanting to hurt themselves?",
+      "why": "The same behavior can belong to different patterns. Urge- or habit-driven pulling and picking responds to habit reversal; fixing a perceived flaw, obsessions, fixed beliefs and self-harm each need a different plan, and self-harm needs a safety conversation.",
+      "options": [
+        {
+          "id": "urge-habit",
+          "label": "An urge, tension relief or habit, often without noticing",
+          "note": "Fits a body-focused repetitive behavior pattern; habit reversal works on both focused and automatic episodes."
+        },
+        {
+          "id": "fix-appearance",
+          "label": "Fixing a flaw they believe others notice",
+          "effects": {
+            "addSymptomIds": [
+              "appearance-preoccupation"
+            ]
+          },
+          "note": "Explore appearance concerns and mirror checking."
+        },
+        {
+          "id": "obsession",
+          "label": "Driven by an obsession or fear, such as contamination",
+          "effects": {
+            "addSymptomIds": [
+              "obsessions"
+            ]
+          }
+        },
+        {
+          "id": "belief",
+          "label": "A fixed belief that something is under the skin, such as parasites",
+          "effects": {
+            "addSymptomIds": [
+              "paranoia-delusions"
+            ]
+          },
+          "surfaces": [
+            "psychiatric-referral",
+            "medical-referral"
+          ],
+          "note": "Arrange psychiatric and medical evaluation."
+        },
+        {
+          "id": "self-harm",
+          "label": "To hurt themselves or to relieve emotional pain through injury",
+          "effects": {
+            "addSymptomIds": [
+              "self-harm"
+            ]
+          },
+          "surfaces": [
+            "crisis-resources",
+            "safety-plan"
+          ],
+          "note": "Ask directly about suicidal thoughts and plan for safety together."
+        },
+        {
+          "id": "unsure",
+          "label": "Not sure yet",
+          "keepOpen": true,
+          "exclusive": true
+        }
+      ],
+      "showWhen": {
+        "symptomIds": [
+          "hair-pulling",
+          "skin-picking",
+          "bfrb-attempts-to-stop"
+        ],
+        "conditionIds": [
+          "body-focused-repetitive-behaviors"
+        ]
+      },
+      "discriminates": [
+        "body-focused-repetitive-behaviors",
+        "body-dysmorphic-disorder",
+        "obsessive-compulsive-disorder"
+      ],
+      "priority": 20
     }
   ],
   "sources": [
@@ -614,6 +698,12 @@
       "publisher": "Depression and Anxiety (PubMed)",
       "url": "https://pubmed.ncbi.nlm.nih.gov/20336804/",
       "year": 2010
+    },
+    {
+      "title": "Treating trichotillomania: a meta-analysis of treatment effects and moderators for behavior therapy and serotonin reuptake inhibitors (McGuire et al.)",
+      "publisher": "Journal of Psychiatric Research (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25108618/",
+      "year": 2014
     }
   ],
   "license": "original",

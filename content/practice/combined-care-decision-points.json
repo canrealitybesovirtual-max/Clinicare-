@@ -1,0 +1,129 @@
+{
+  "id": "combined-care-decision-points",
+  "title": "When guidelines call for combined or medical care, and talking about adherence",
+  "category": "medical-interface",
+  "summary": "For several presentations, guidelines recommend medication or medical care alongside psychological therapy, or urgent specialist involvement. This guide lists those decision points in the app's own words, with the guideline behind each, so the therapist knows when to raise a medication evaluation, and how to talk about taking medicines without judgment. The clinician and client decide; prescribing belongs to prescribers.",
+  "whenToUse": [
+    "When planning treatment for more severe, chronic or recurrent presentations.",
+    "When a client asks whether they need medication, or wants to avoid it.",
+    "When therapy alone is not helping as expected.",
+    "When a client has stopped, skipped or is unsure about a prescribed medicine."
+  ],
+  "steps": [
+    {
+      "heading": "Know the main decision points",
+      "items": [
+        "More severe depression: NICE NG222 lists a combination of individual CBT and an antidepressant among the first options.",
+        "Depression with psychotic symptoms: NICE NG222 recommends referral to specialist mental health services; treat it as urgent.",
+        "Depression not responding: NG222 suggests review if there is no response after about 4 weeks of an antidepressant, or 4 to 6 weeks of therapy or combined treatment.",
+        "Obsessive-compulsive problems with severe functional impairment: NICE CG31 recommends combined SSRI treatment and CBT with exposure and response prevention.",
+        "Post-traumatic stress: NICE NG116 places trauma-focused psychological therapy first, and medication can be considered when the person prefers it.",
+        "Bipolar disorder and psychosis: medication is central, with psychological interventions alongside (NICE CG185 and CG178).",
+        "Alcohol use: NICE CG115 suggests considering acamprosate or naltrexone together with a psychological intervention for some people, and medically assisted withdrawal when dependence is significant.",
+        "Opioid use: medications for opioid use disorder are a core part of care (VA/DoD substance use guideline).",
+        "Borderline personality disorder: NICE CG78 advises that medication should not be used specifically for the disorder itself; psychological therapy is the main treatment."
+      ]
+    },
+    {
+      "heading": "Raise a medication evaluation well",
+      "body": "Explain why you are suggesting it, what an evaluation involves and that the client stays in charge of the decision. Offer to share your observations with the prescriber, with consent, and keep therapy going alongside."
+    },
+    {
+      "heading": "Talk about adherence without blame",
+      "items": [
+        "Ask in a way that makes it easy to be honest: most people miss doses sometimes.",
+        "Explore whether missed doses are unintentional (forgetting, cost, routine) or intentional (side effects, beliefs, stigma, feeling better).",
+        "Ask what the client believes about the medicine and what matters most to them.",
+        "Encourage the client to bring concerns to the prescriber rather than stopping alone, because some medicines cause withdrawal or relapse when stopped suddenly.",
+        "Practical aids (routines, reminders, pill organizers) help unintentional missed doses; shared decisions help intentional ones."
+      ]
+    },
+    {
+      "heading": "Coordinate",
+      "body": "Agree who does what between therapist and prescriber, how you will share progress and what you will do if symptoms worsen or side effects appear. See the red-flag card for effects that need same-day action."
+    }
+  ],
+  "prompts": [
+    "Many people find it hard to take medicines exactly as prescribed. How has it been going for you?",
+    "What do you think about the medicine? Is there anything that worries you about it?",
+    "Some people do best with therapy and medication together. Would you be open to talking with a prescriber about that?",
+    "If you are thinking of stopping, could we plan that with your prescriber first, so it is done safely?"
+  ],
+  "cautions": [
+    "Therapists do not advise on starting, stopping or changing doses; pass questions to the prescriber.",
+    "Guideline decision points describe usual care; the client's preferences, history and circumstances shape the actual decision.",
+    "Depression with psychotic symptoms, mania and suspected postpartum psychosis need urgent psychiatric involvement.",
+    "Substance-use treatment details are protected; 42 CFR Part 2 prohibits unauthorized use or disclosure of these records.",
+    "Nothing here decides treatment or risk; the clinician and client do, with the prescriber."
+  ],
+  "evidenceSummary": "NICE NG222 (2022) sets out first-line options for less severe and more severe depression, referral for depression with psychotic symptoms and further-line treatment after limited response. NICE CG31 (2005) recommends combined treatment for OCD with severe functional impairment. NICE NG116 (2018) puts trauma-focused psychological therapy first for PTSD and allows medication by preference. NICE CG185 (2014, updated) and CG178 (2014) describe medication with psychological interventions for bipolar disorder and psychosis. NICE CG115 (2011) covers medicines for alcohol dependence with psychological support. NICE CG78 (2009) advises against medication specifically for borderline personality disorder. NICE CG76 (2009) covers involving patients in decisions about medicines and supporting adherence.",
+  "forClinicianReview": true,
+  "crisisPanel": false,
+  "sud": true,
+  "relatedInterventionIds": ["medication-referral", "moud-referral", "motivational-interviewing", "neuromodulation-referral", "coordinated-specialty-care-referral"],
+  "relatedHandoutIds": ["questions-for-my-prescriber", "medicines-for-opioid-use"],
+  "relatedFormulationIds": [],
+  "relatedLegalIds": ["42-cfr-part-2", "competence-and-scope-of-practice"],
+  "relatedPracticeIds": ["stepped-care-and-level-of-care", "psychotropic-red-flags", "shared-decision-making", "collaborative-care-and-pcbh"],
+  "relatedPopulationIds": [],
+  "linkOuts": [],
+  "measuresPending": [],
+  "sources": [
+    {
+      "title": "Depression in adults: treatment and management (NG222)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng222",
+      "year": 2022
+    },
+    {
+      "title": "Obsessive-compulsive disorder and body dysmorphic disorder: treatment (CG31)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg31",
+      "year": 2005
+    },
+    {
+      "title": "Post-traumatic stress disorder (NG116)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng116",
+      "year": 2018
+    },
+    {
+      "title": "Bipolar disorder: assessment and management (CG185)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg185",
+      "year": 2014
+    },
+    {
+      "title": "Psychosis and schizophrenia in adults: prevention and management (CG178)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg178",
+      "year": 2014
+    },
+    {
+      "title": "Alcohol-use disorders: diagnosis, assessment and management of harmful drinking and alcohol dependence (CG115)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg115",
+      "year": 2011
+    },
+    {
+      "title": "Borderline personality disorder: recognition and management (CG78)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg78",
+      "year": 2009
+    },
+    {
+      "title": "Medicines adherence: involving patients in decisions about prescribed medicines and supporting adherence (CG76)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg76",
+      "year": 2009
+    },
+    {
+      "title": "VA/DoD Clinical Practice Guideline for the Management of Substance Use Disorders (provider summary)",
+      "publisher": "US Department of Veterans Affairs and Department of Defense",
+      "url": "https://www.healthquality.va.gov/guidelines/MH/sud/VADoDSUDCPGProviderSummary.pdf"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

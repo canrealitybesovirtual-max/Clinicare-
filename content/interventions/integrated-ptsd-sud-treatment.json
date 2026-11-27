@@ -1,0 +1,102 @@
+{
+  "id": "integrated-ptsd-sud-treatment",
+  "name": "Integrated treatment of PTSD with co-occurring substance use (exposure-based) - overview and referral",
+  "modality": "Trauma-focused exposure therapy integrated with substance-use relapse prevention (manualized)",
+  "conditions": ["ptsd", "alcohol-use-disorder", "cannabis-use-disorder", "opioid-use-disorder", "stimulant-use-disorder"],
+  "evidenceLevel": "NICE NG116 (2018) advises against excluding people from PTSD treatment solely because of drug or alcohol misuse, and the VA/DoD 2023 PTSD guideline states that co-occurring conditions, including substance use disorders, should not prevent people from receiving recommended PTSD treatment. In a randomized trial, an integrated exposure-based therapy (COPE) plus usual care improved PTSD more than usual care alone, without worsening substance dependence (Mills et al., 2012). In veterans with PTSD and alcohol use disorder, integrated prolonged exposure reduced PTSD more than integrated coping skills therapy, with similar drops in drinking (Norman et al., 2019). A Cochrane review rated the evidence mostly low quality: trauma-focused therapy delivered alongside substance-use treatment did better than usual care for PTSD, but fewer people completed it, and there was little evidence for non-trauma-focused integrated programs (Roberts et al., 2016).",
+  "minutes": { "min": 10, "max": 20 },
+  "purpose": "Many people with PTSD also use alcohol or drugs to cope, and for years they were told to stop using before trauma treatment could begin. Current guidelines and trials support treating both at the same time. Integrated protocols such as COPE combine trauma-focused exposure work with relapse-prevention skills in one plan delivered by one team, so that substance use and trauma reactions are addressed together. This entry covers overview, coordination and referral only, and the time estimate is for that conversation. It contains no protocol scripts and no fields for recording anyone's substance use.",
+  "steps": [
+    "Explain that the client does not have to stop using completely before working on trauma, and that treating both together is a recognized approach.",
+    "Check medical safety first: risk of withdrawal (especially alcohol, sedatives or opioids), overdose risk and any need for medically supervised withdrawal. Coordinate with medical providers. Make sure anyone using opioids knows about naloxone and medications for opioid use disorder.",
+    "Discuss options with the client: an integrated exposure-based program, a recommended trauma-focused therapy delivered alongside substance-use treatment, and medication evaluation for either problem. Support an informed choice.",
+    "Refer to a clinician or program trained in an integrated protocol, or arrange closely coordinated care between the trauma therapist and the substance-use team. Share information only with the client's written consent and in line with 42 CFR Part 2.",
+    "Agree on practical rules in advance, for example rescheduling a session if the client arrives intoxicated, and a plan for lapses that keeps the door open rather than ending treatment.",
+    "Offer interim support while the client waits (a crisis plan, sleep basics, coping skills for urges) without starting trauma memory work.",
+    "Follow up to confirm the referral was completed and the client was able to start."
+  ],
+  "script": [
+    "A lot of people use drinking or drugs to get through hard memories. That makes sense, and it does not mean you have to wait to get help with the memories.",
+    "There are treatments that work on both at the same time, with one team.",
+    "We would plan for safety first, including what to do if you slip.",
+    "Nothing you tell me about using goes into this app. Your records about this have extra legal protection.",
+    "Would you like help finding a program that does this kind of combined treatment?"
+  ],
+  "contraindications": [
+    "Possible alcohol, sedative or benzodiazepine withdrawal can be dangerous and needs medical assessment before or alongside therapy.",
+    "Overdose risk rises after any period of reduced use because tolerance drops. Make sure the client has naloxone and knows how to get emergency help.",
+    "Do not advise stopping or changing medications for opioid use disorder; those decisions belong to the prescriber, and stopping raises overdose risk.",
+    "Current safety threats come first. This app does not judge risk; you do. Crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com.",
+    "Do not enter details about anyone's substance use into this app; nothing is stored or sent. Any note or export about substance use must carry this notice: 42 CFR Part 2 prohibits unauthorized use or disclosure of these records.",
+    "Do not attempt exposure protocols without training in them."
+  ],
+  "culturalAdaptations": [
+    "Stigma about substance use and about trauma can be strong in families and communities. Use non-judgmental, person-first language and ask what recovery means to the client.",
+    "Some clients prefer culturally specific or faith-based recovery supports alongside treatment. Ask, and include them in the plan if the client wants.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "trainingRequired": "Integrated exposure-based protocols (for example COPE): trained clinicians only. Deliver only after training in the specific protocol, including prolonged exposure training and competence in substance-use treatment, with ongoing consultation. Otherwise refer or coordinate care.",
+  "handoutIds": ["trauma-therapy-what-to-expect", "high-risk-situations-plan"],
+  "orientationIds": ["trauma-focused-therapies", "behavior-therapy"],
+  "evidenceGrades": [
+    {
+      "body": "NICE",
+      "guideline": "Post-traumatic stress disorder (NG116), recommendation on comorbid drug or alcohol misuse",
+      "year": 2018,
+      "conditionId": "ptsd",
+      "population": "People with PTSD and co-occurring drug or alcohol misuse",
+      "direction": "for",
+      "strength": "do not exclude from treatment solely on this basis",
+      "url": "https://www.nice.org.uk/guidance/ng116/chapter/Recommendations"
+    },
+    {
+      "body": "Cochrane",
+      "guideline": "Psychological therapies for post-traumatic stress disorder and comorbid substance use disorder",
+      "year": 2016,
+      "conditionId": "ptsd",
+      "population": "Adults with PTSD and a substance use disorder",
+      "direction": "for",
+      "strength": "low to very low quality evidence for trauma-focused therapy alongside substance-use treatment",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27040448/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Integrated exposure-based therapy for co-occurring posttraumatic stress disorder and substance dependence: a randomized controlled trial (Mills et al.)",
+      "publisher": "JAMA (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22893166/",
+      "year": 2012
+    },
+    {
+      "title": "Efficacy of integrated exposure therapy vs integrated coping skills therapy for comorbid posttraumatic stress disorder and alcohol use disorder (Norman et al.)",
+      "publisher": "JAMA Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31017639/",
+      "year": 2019
+    },
+    {
+      "title": "Psychological therapies for post-traumatic stress disorder and comorbid substance use disorder (Roberts et al.)",
+      "publisher": "Cochrane Database of Systematic Reviews (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27040448/",
+      "year": 2016
+    },
+    {
+      "title": "Integrated Treatment of OEF/OIF Veterans With PTSD and Substance Use Disorders (COPE trial, NCT01338506)",
+      "publisher": "ClinicalTrials.gov (National Library of Medicine)",
+      "url": "https://clinicaltrials.gov/study/NCT01338506"
+    },
+    {
+      "title": "Treatment of Co-Occurring PTSD and Substance Use Disorder in VA",
+      "publisher": "National Center for PTSD, US Department of Veterans Affairs",
+      "url": "https://www.ptsd.va.gov/professional/treat/cooccurring/tx_sud_va.asp"
+    },
+    {
+      "title": "Post-traumatic stress disorder (NG116): recommendations",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng116/chapter/Recommendations",
+      "year": 2018
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

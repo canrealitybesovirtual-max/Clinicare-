@@ -59,6 +59,7 @@
   },
   "trainingRequired": "Brief in-session practices can be taught by clinicians who have a regular personal practice and training in mindfulness-based interventions. Delivering a full MBCT, MBSR or MBRP program requires teacher training in that program; Check NICE NG222 for its delivery standards before running a group mindfulness programme for depression.",
   "handoutIds": ["mindful-check-in", "breathing-practice"],
+  "orientationIds": ["mindfulness-and-compassion-based-therapies"],
   "sources": [
     { "title": "Depression in adults: treatment and management (NG222)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng222", "year": 2022 },
     { "title": "Depression in adults quality standard (QS8), statement 3: preventing relapse", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/qs8/chapter/Quality-statement-3-Preventing-relapse" },

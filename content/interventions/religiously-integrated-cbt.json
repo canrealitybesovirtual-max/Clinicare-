@@ -42,6 +42,7 @@
   },
   "trainingRequired": "Requires competence in standard CBT and in religious and spiritual diversity. Review the Duke RCBT manual for the client's tradition (link out only) before use.",
   "handoutIds": ["thought-record", "activity-schedule", "coping-cards", "kind-self-talk"],
+  "orientationIds": ["cognitive-therapy"],
   "sources": [
     { "title": "Religious vs. conventional cognitive behavioral therapy for major depression in persons with chronic medical illness: a pilot randomized trial (Koenig et al.)", "publisher": "Journal of Nervous and Mental Disease", "url": "https://doi.org/10.1097/NMD.0000000000000273", "year": 2015 },
     { "title": "Religiously integrated cognitive behavioral therapy: a new method of treatment for major depression in patients with chronic medical illness (Pearce et al.)", "publisher": "Psychotherapy", "url": "https://doi.org/10.1037/a0036448", "year": 2015 },

@@ -7,7 +7,8 @@
     { "code": "F43.12", "label": "Post-traumatic stress disorder, chronic" }
   ],
   "icd11": [
-    { "code": "6B40", "label": "Post traumatic stress disorder" }
+    { "code": "6B40", "label": "Post traumatic stress disorder" },
+    { "code": "6B41", "label": "Complex post traumatic stress disorder" }
   ],
   "dsmPointer": "See DSM-5-TR: Trauma- and Stressor-Related Disorders — Posttraumatic Stress Disorder",
   "summary": "A persistent sense of current threat after a traumatic event, long after the danger has passed. The trauma memory stays poorly integrated, so reminders set it off as if the danger were present, and the client draws harsh conclusions from the event about safety, trust or their own worth. Strategies that bring short-term relief, such as avoiding reminders, pushing the memory away, staying on guard or shutting feelings down, keep the memory from being updated. In session, watch for vivid sensory reliving, a narrative that jumps or stalls, and sudden shifts in arousal. ICD-11 frames PTSD around re-experiencing in the present, avoidance and a sense of ongoing threat; complex PTSD (6B41) adds problems with emotion regulation, self-worth and relationships. For clinician review only; this is not a diagnosis.",
@@ -48,7 +49,7 @@
     { "label": "With dissociative symptoms", "note": "Use when depersonalization or derealization is a regular part of the picture, not only during flashbacks. Teach grounding early and pace trauma-focused work; check that substances or a medical cause are not driving the episodes." },
     { "label": "With delayed expression", "note": "Applies when the client coped, or had only scattered symptoms, for a long time and the picture filled out much later, often after a new stressor, a loss or a reminder. Ask what changed around the time things worsened. See DSM-5-TR for the timing threshold." },
     { "label": "Acute vs. chronic status (ICD-10-CM F43.11 / F43.12)", "note": "ICD-10-CM fifth characters for status; F43.10 is the fallback when status is not documented. Confirm the duration convention your coding guidance or payer uses." },
-    { "label": "Complex PTSD (ICD-11 6B41)", "note": "ICD-11 only. Adds lasting problems with emotion regulation, a negative sense of self and relationship difficulties, usually after prolonged or repeated trauma. There is no separate ICD-10-CM code." }
+    { "label": "Complex PTSD (ICD-11 6B41)", "note": "ICD-11 only. The core PTSD picture plus lasting 'disturbances in self-organization': trouble regulating emotions (flooding or shutting down), a persistently negative view of oneself (shame, guilt, feeling worthless) and difficulty feeling close to others or keeping relationships. It usually follows prolonged or repeated trauma that was hard to escape, such as childhood abuse, domestic violence or torture. There is no separate ICD-10-CM code: document it with F43.10-F43.12 and describe the self-organization problems in the note. Many clients do well with standard trauma-focused therapy; when emotion regulation or safety is fragile, a phase-based sequence (stabilization skills, then trauma processing, then reintegration) can help (see the phase-based trauma sequencing formulation). A meta-analysis (Karatzias et al., 2019) found CBT, exposure and EMDR reduced complex PTSD symptoms, with less evidence on relationship difficulties." }
   ],
   "differentials": [
     { "label": "Acute stress disorder (ICD-10-CM title: Acute stress reaction)", "icd10cm": "F43.0", "distinguishing": "The same kinds of reactions, seen only in the first weeks after the event; reassess at about a month, since many settle on their own." },
@@ -56,14 +57,16 @@
     { "label": "Prolonged grief disorder", "icd10cm": "F43.81", "distinguishing": "After a death, the focus is on longing for the person and difficulty accepting the loss, rather than fear-based re-experiencing. ICD-11 uses at least 6 months after the death; DSM-5-TR uses about 12 months for adults (confirm the duration in DSM-5-TR). Both can follow a traumatic loss." },
     { "label": "Panic disorder", "icd10cm": "F41.0", "distinguishing": "Attacks arise unexpectedly rather than mainly in response to trauma reminders." },
     { "label": "Major depressive disorder", "distinguishing": "Low mood and loss of interest without trauma-linked re-experiencing and avoidance. Often co-occurs with PTSD." },
-    { "label": "Complex PTSD (ICD-11 6B41; no separate ICD-10-CM code)", "distinguishing": "PTSD features plus pervasive problems with emotion regulation, self-concept and relationships." }
+    { "label": "Complex PTSD (ICD-11 6B41; no separate ICD-10-CM code)", "distinguishing": "PTSD features plus pervasive problems with emotion regulation, self-concept and relationships." },
+    { "label": "Borderline personality disorder", "icd10cm": "F60.3", "distinguishing": "Both involve emotion dysregulation and relationship difficulties. Complex PTSD tends to show a steady, negative sense of self and pulling away from relationships, tied to trauma; in one latent class study, frantic efforts to avoid abandonment, an unstable sense of self, unstable and intense relationships and impulsiveness most separated borderline patterns from complex PTSD (Cloitre et al., 2014). Both can be present." }
   ],
   "comorbidities": [
     { "conditionId": "major-depressive-disorder", "label": "Major depressive disorder", "note": "Depression often accompanies PTSD and raises suicide risk. Screen with PHQ-9 and ask directly about suicidal thoughts." },
     { "conditionId": "panic-disorder", "label": "Panic disorder", "note": "Panic attacks are common in PTSD, both cued by reminders and unexpected. Assess panic disorder separately." },
     { "conditionId": "generalized-anxiety-disorder", "label": "Generalized anxiety disorder", "note": "Broad worry about safety may reflect PTSD or co-occurring GAD." },
     { "label": "Alcohol or other substance use", "note": "Some people use substances to manage arousal or sleep. Screen and refer for integrated care as needed. This app does not store or transmit substance-use information." },
-    { "label": "Traumatic brain injury", "note": "Common after assaults, blasts and vehicle crashes; can complicate assessment and treatment pacing." }
+    { "label": "Traumatic brain injury", "note": "Common after assaults, blasts and vehicle crashes; can complicate assessment and treatment pacing." },
+    { "conditionId": "borderline-personality-disorder", "label": "Borderline personality disorder", "note": "Often co-occurs with PTSD after childhood trauma; consider complex PTSD as well, and plan emotion-regulation skills and safety alongside trauma-focused work." }
   ],
   "measures": ["phq-9"],
   "measuresPending": [
@@ -78,7 +81,7 @@
     { "name": "Grounding skills (e.g., 5-4-3-2-1 senses)", "evidence": "Stabilization skill used within trauma-focused care; not a stand-alone PTSD treatment.", "note": "Helps clients reorient during flashbacks or dissociation. Teach early and practice in session." },
     { "name": "Referral for medication evaluation", "evidence": "NICE NG116 suggests considering venlafaxine or an SSRI such as sertraline for adults, based on preference. The VA/DoD 2023 guideline recommends against benzodiazepines for PTSD.", "note": "Refer to psychiatry, a primary care provider or a psychiatric nurse practitioner. Prescribing decisions rest with the prescriber." }
   ],
-  "handouts": ["grounding-5-4-3-2-1", "breathing-practice", "safety-plan"],
+  "handouts": ["grounding-5-4-3-2-1", "breathing-practice", "safety-plan", "common-reactions-after-trauma", "trauma-therapy-what-to-expect", "nightmare-rescripting-practice"],
   "statIds": ["us-ptsd-past-year", "global-mental-health-conditions"],
   "culturalNotes": [
     "Refugees, asylum seekers and people from war-affected areas may have repeated or ongoing trauma and current threats such as immigration risk or unsafe housing. Address current safety and basic needs alongside trauma-focused work.",
@@ -102,6 +105,9 @@
     { "title": "Post-Traumatic Stress Disorder (health topic)", "publisher": "National Institute of Mental Health", "url": "https://www.nimh.nih.gov/health/topics/post-traumatic-stress-disorder-ptsd" },
     { "title": "Post-traumatic stress disorder (NG116)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng116", "year": 2018 },
     { "title": "ICD-11 MMS: 6B40 Post traumatic stress disorder", "publisher": "World Health Organization", "url": "https://icd.who.int/browse/latest-release/mms/en#2070699808" },
+    { "title": "ICD-11 MMS: 6B41 Complex post traumatic stress disorder", "publisher": "World Health Organization", "url": "https://icd.who.int/browse/2024-01/mms/en#585833559" },
+    { "title": "Psychological interventions for ICD-11 complex PTSD symptoms: systematic review and meta-analysis (Karatzias et al.)", "publisher": "Psychological Medicine (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/30857567/", "year": 2019 },
+    { "title": "Distinguishing PTSD, complex PTSD, and borderline personality disorder: a latent class analysis (Cloitre et al.)", "publisher": "European Journal of Psychotraumatology (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/25279111/", "year": 2014 },
     { "title": "ICD-10-CM (official code set)", "publisher": "CDC National Center for Health Statistics", "url": "https://www.cdc.gov/nchs/icd/icd-10-cm/index.html" },
     { "title": "The management of posttraumatic stress disorder and acute stress disorder: synopsis of the 2023 VA/DoD clinical practice guideline", "publisher": "Annals of Internal Medicine (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/38408360/", "year": 2024 },
     { "title": "Clinical Practice Guideline for the Treatment of PTSD: treatments", "publisher": "American Psychological Association", "url": "https://www.apa.org/ptsd-guideline/treatments" },

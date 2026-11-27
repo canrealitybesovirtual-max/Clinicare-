@@ -1,0 +1,191 @@
+{
+  "id": "mood-highs-and-lows-plan",
+  "title": "My Plan for Mood Highs and Lows",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 20,
+  "intro": "Big shifts in mood, energy, and sleep often start with small changes. Many people learn their own early signs of a high or a low. Spotting them early, and acting fast, can keep a small change from turning into a big one. Fill in this plan with your counselor or prescriber when you feel steady, and share it with someone you trust. It takes about 20 minutes. To follow your mood each day, use the Mood, Sleep and Routine Tracker.",
+  "sections": [
+    {
+      "heading": "Early signs of a high",
+      "body": "These are common signs that mood and energy are climbing. Circle the ones that fit you, and add your own.",
+      "steps": [
+        "Needing much less sleep, but not feeling tired",
+        "Thoughts racing, or talking faster or more than usual",
+        "Starting lots of new plans, or feeling unusually sure of yourself",
+        "Spending more money, or making big choices quickly",
+        "Feeling cranky, impatient, or easily set off",
+        "My own early signs of a high: ________"
+      ]
+    },
+    {
+      "heading": "Early signs of a low",
+      "steps": [
+        "Sleeping much more or much less than usual",
+        "Pulling away from people, or not answering messages",
+        "Losing interest in things you usually enjoy",
+        "Feeling slowed down, tired, or heavy",
+        "Feeling hopeless, or like a burden to others",
+        "My own early signs of a low: ________"
+      ]
+    },
+    {
+      "heading": "If I notice a high, I will",
+      "steps": [
+        "Protect my sleep: keep regular bed and wake times, and wind down in a dark, quiet room.",
+        "Cut back on stimulation: fewer plans, no screens late at night, and no caffeine after noon.",
+        "Stay away from alcohol, drugs, and energy drinks.",
+        "Call my prescriber within a day or two.",
+        "Put off big choices and big purchases. Hand over my cards or keys to a trusted person, if we agreed on this ahead of time.",
+        "Other steps I will take: ________"
+      ]
+    },
+    {
+      "heading": "If I notice a low, I will",
+      "steps": [
+        "Keep a daily routine: get up at the same time, eat meals, and get some daylight.",
+        "Plan one small, doable activity each day.",
+        "Reach out to someone, even by text.",
+        "Call my counselor or prescriber.",
+        "Other steps I will take: ________"
+      ]
+    },
+    {
+      "heading": "Agreements made ahead of time",
+      "body": "When you feel steady, you can agree with a trusted person on what they will do if they see early signs. Write down what you both agree to.",
+      "steps": [
+        "Signs they may notice first: ________",
+        "What I want them to do or say: ________",
+        "What I agree to hand over for a while, such as cards or car keys: ________"
+      ]
+    },
+    {
+      "heading": "People to contact",
+      "body": "Write phone numbers on your paper copy only.",
+      "steps": [
+        "My prescriber: ________",
+        "My counselor: ________",
+        "A trusted person: ________"
+      ]
+    },
+    {
+      "heading": "Get help right away if",
+      "steps": [
+        "You go days with very little sleep and still feel full of energy.",
+        "You see or hear things others do not, or feel that people are against you.",
+        "You feel out of control, or someone may get hurt.",
+        "You have thoughts of suicide. Call or text 988."
+      ]
+    }
+  ],
+  "safetyNote": "Safety first: Do not stop or change your medicine on your own. Talk with your prescriber first. If you or someone else may be in danger, get help now. If you have thoughts of hurting yourself or someone else, get help now. In the US, call or text 988, or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sud": false,
+  "es": {
+    "title": "Mi plan para los altibajos del ánimo",
+    "intro": "Los cambios grandes de ánimo, energía y sueño muchas veces empiezan con cambios pequeños. Muchas personas aprenden a notar sus primeras señales de una subida o de una bajada. Notarlas pronto, y actuar rápido, puede evitar que un cambio pequeño se vuelva grande. Llene este plan con su consejero o con quien le receta sus medicinas cuando se sienta estable, y compártalo con alguien de confianza. Toma unos 20 minutos. Para seguir su ánimo cada día, use el registro de ánimo, sueño y rutina.",
+    "sections": [
+      {
+        "heading": "Primeras señales de una subida",
+        "body": "Estas son señales comunes de que el ánimo y la energía están subiendo. Marque las que le pasan a usted, y agregue las suyas.",
+        "steps": [
+          "Necesitar mucho menos sueño, sin sentir cansancio",
+          "Pensamientos muy rápidos, o hablar más rápido o más de lo normal",
+          "Empezar muchos planes nuevos, o sentirse mucho más seguro de lo normal",
+          "Gastar más dinero, o tomar decisiones grandes muy rápido",
+          "Sentir mal humor, impaciencia o enojo fácil",
+          "Mis propias señales de una subida: ________"
+        ]
+      },
+      {
+        "heading": "Primeras señales de una bajada",
+        "steps": [
+          "Dormir mucho más o mucho menos de lo normal",
+          "Alejarse de la gente, o no contestar los mensajes",
+          "Perder el interés en cosas que suele disfrutar",
+          "Sentirse lento, cansado o pesado",
+          "Sentir que no hay esperanza, o que es una carga para otros",
+          "Mis propias señales de una bajada: ________"
+        ]
+      },
+      {
+        "heading": "Si noto una subida, voy a",
+        "steps": [
+          "Cuidar mi sueño: acostarme y levantarme a horas fijas, y relajarme en un cuarto oscuro y tranquilo.",
+          "Bajar los estímulos: menos planes, nada de pantallas tarde en la noche y nada de cafeína después del mediodía.",
+          "No tomar alcohol, drogas ni bebidas energéticas.",
+          "Llamar a quien me receta en uno o dos días.",
+          "Dejar para después las decisiones y las compras grandes. Darle mis tarjetas o mis llaves a una persona de confianza, si lo acordamos antes.",
+          "Otros pasos que voy a tomar: ________"
+        ]
+      },
+      {
+        "heading": "Si noto una bajada, voy a",
+        "steps": [
+          "Mantener una rutina diaria: levantarme a la misma hora, comer y salir a la luz del día.",
+          "Planear una actividad pequeña y fácil cada día.",
+          "Buscar a alguien, aunque sea por mensaje.",
+          "Llamar a mi consejero o a quien me receta.",
+          "Otros pasos que voy a tomar: ________"
+        ]
+      },
+      {
+        "heading": "Acuerdos hechos de antemano",
+        "body": "Cuando se sienta estable, puede acordar con una persona de confianza qué hará si ve primeras señales. Escriban lo que acuerden.",
+        "steps": [
+          "Señales que esa persona puede notar primero: ________",
+          "Qué quiero que haga o que me diga: ________",
+          "Qué acepto entregar por un tiempo, como tarjetas o llaves del carro: ________"
+        ]
+      },
+      {
+        "heading": "Personas a quienes llamar",
+        "body": "Escriba los números de teléfono solo en su copia de papel.",
+        "steps": [
+          "Quien me receta: ________",
+          "Mi consejero: ________",
+          "Una persona de confianza: ________"
+        ]
+      },
+      {
+        "heading": "Busque ayuda de inmediato si",
+        "steps": [
+          "Pasa días durmiendo muy poco y aun así se siente lleno de energía.",
+          "Ve u oye cosas que otros no ven ni oyen, o siente que la gente está en su contra.",
+          "Siente que pierde el control, o alguien podría salir herido.",
+          "Tiene pensamientos de suicidio. Llame o envíe un mensaje de texto al 988."
+        ]
+      }
+    ],
+    "safetyNote": "La seguridad es lo primero: No deje ni cambie su medicina por su cuenta. Hable primero con quien se la receta. Si usted u otra persona podría estar en peligro, busque ayuda ahora. Si tiene pensamientos de hacerse daño o de hacerle daño a otra persona, busque ayuda ahora. En EE. UU., llame o envíe un mensaje de texto al 988, o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "sources": [
+    {
+      "title": "Interventions for helping people recognise early signs of recurrence in bipolar disorder (Morriss et al.)",
+      "publisher": "Cochrane Database of Systematic Reviews (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17253526/",
+      "year": 2007
+    },
+    {
+      "title": "Bipolar disorder: assessment and management (CG185)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg185",
+      "year": 2014
+    },
+    {
+      "title": "Adjunctive psychotherapy for bipolar disorder: a systematic review and component network meta-analysis (Miklowitz et al.)",
+      "publisher": "JAMA Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33052390/",
+      "year": 2021
+    },
+    {
+      "title": "Group psychoeducation for stabilised bipolar disorders: 5-year outcome of a randomised clinical trial (Colom et al.)",
+      "publisher": "British Journal of Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19252157/",
+      "year": 2009
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

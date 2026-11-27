@@ -1,0 +1,112 @@
+{
+  "id": "somatic-and-parts-based-therapies",
+  "name": "Somatic and parts-based therapies (Somatic Experiencing, Sensorimotor Psychotherapy, IFS)",
+  "shortName": "Somatic and parts-based",
+  "family": "somatic-parts",
+  "summary": "Popular approaches that work with bodily sensation or with different parts of the self, mostly for trauma. Clients often ask about them. Their evidence is still emerging or limited, they are not first-line PTSD treatments, and all three require training through their own institutes.",
+  "keyConcepts": [
+    { "term": "Interoception and tracking", "meaning": "Paying close, curious attention to bodily sensations in the moment, as a way to notice and work with stress responses." },
+    { "term": "Titration", "meaning": "Approaching distressing material in very small amounts so the nervous system is not overwhelmed." },
+    { "term": "Pendulation", "meaning": "Moving attention back and forth between a distressing sensation and a neutral or comfortable one, to build a sense of capacity." },
+    { "term": "Resourcing", "meaning": "Identifying and strengthening sensations, images, memories or relationships that bring a sense of steadiness before and during difficult work." },
+    { "term": "Parts", "meaning": "In IFS, the mind is seen as made of sub-personalities: protective parts that manage or react to pain, and wounded parts that carry it." },
+    { "term": "Self-led relating", "meaning": "IFS describes a calm, curious core self that can relate to parts with compassion; unblending means stepping back from a part enough to relate to it." }
+  ],
+  "viewOfProblem": "Somatic approaches see trauma as leaving incomplete or stuck defensive responses in the body, so that the nervous system stays braced for threat or shut down. IFS sees distress as the work of protective parts trying to keep painful experiences of wounded parts out of awareness, sometimes in extreme ways. Both are clinical models; their mechanisms are not well tested.",
+  "viewOfChange": "Somatic approaches aim to restore regulation by tracking sensation, titrating and pendulating between distress and resources, and allowing defensive responses to complete in small steps. Sensorimotor Psychotherapy integrates body-based work with cognitive and emotional processing. IFS aims for the client to relate to protective parts with curiosity and compassion so that they relax, allowing wounded parts to be witnessed and relieved.",
+  "therapistStance": "Slow, attuned and highly attentive to signs of overwhelm. The clinician invites and never forces attention to the body or to parts, asks permission before any movement or touch, and keeps the pace within the client's tolerance.",
+  "sessionShape": [
+    "Check in and agree on the focus and pace for today.",
+    "Establish resources and a sense of present-moment safety.",
+    "Track sensation or get to know a part, in small steps.",
+    "Pause and return to resources whenever arousal rises too far.",
+    "Ground and orient to the room before ending, and check how the client is leaving."
+  ],
+  "goalStyle": "Goals describe regulation and functioning the client can notice: for example, use a resourcing practice to settle within a few minutes when startled on most days, or reduce how often a protective pattern such as shutting down takes over at work. Write each goal with the client in their own words.",
+  "progressMarkers": [
+    "Client ratings of how often they can settle after activation.",
+    "PTSD and mood measures tracked across sessions, alongside the client's own goals.",
+    "Client reports of change in the targeted protective or avoidance pattern."
+  ],
+  "typicalTechniques": [],
+  "relatedTechniques": ["grounding-5-4-3-2-1", "trauma-psychoeducation-and-grounding", "yoga-mind-body", "mindful-check-in"],
+  "missingTechniques": [
+    { "name": "Somatic Experiencing session work", "note": "Overview only: the model is taught in a multi-year professional training and has no library entry or script." },
+    { "name": "Internal Family Systems parts work", "note": "Overview only: the IFS Institute describes its Level 1 training as the route to clinical use." }
+  ],
+  "formulationIds": ["phase-based-trauma-sequencing"],
+  "models": [
+    {
+      "name": "Somatic Experiencing (SE)",
+      "summary": "Levine's body-oriented trauma approach based on tracking sensation, titration, pendulation and resourcing; touch is sometimes used.",
+      "evidenceTier": "emerging",
+      "evidence": "One RCT with 63 adults found large improvements in PTSD and depression compared with a waitlist (Brom et al., 2017); a 2021 scoping review rated study quality as mixed and named touch as a key method-specific factor (Kuhfuss et al., 2021).",
+      "trainingRequired": true
+    },
+    {
+      "name": "Sensorimotor Psychotherapy",
+      "summary": "Ogden's integration of body-based interventions with cognitive and emotional processing for trauma and attachment difficulties.",
+      "evidenceTier": "limited",
+      "evidence": "No systematic review specific to Sensorimotor Psychotherapy was found; a 2019 meta-analysis of body- and movement-oriented PTSD interventions found a moderate pooled effect with considerable heterogeneity (van de Kamp et al., 2019).",
+      "trainingRequired": true
+    },
+    {
+      "name": "Internal Family Systems (IFS)",
+      "summary": "Schwartz's parts-based model in which the client relates to protective and wounded parts from a calm, curious core self.",
+      "evidenceTier": "limited",
+      "evidence": "Evidence is limited to a 2013 proof-of-concept RCT in rheumatoid arthritis against an education control (Shadick et al., 2013) and small uncontrolled studies in PTSD, such as a single-group trial with 17 adults (NCT05155930).",
+      "trainingRequired": true
+    }
+  ],
+  "evidenceTier": "emerging",
+  "evidenceSummary": "Evidence is emerging for Somatic Experiencing, with one small waitlist-controlled RCT (Brom et al., 2017) and a scoping review of mixed-quality studies (Kuhfuss et al., 2021), and limited for Sensorimotor Psychotherapy and IFS (van de Kamp et al., 2019; Shadick et al., 2013). None of these approaches appears among the recommended PTSD treatments in the VA/DoD (2023), NICE (2018) or APA guidelines. Past listings in registries, such as the discontinued SAMHSA NREPP, are not current endorsements.",
+  "bestFit": [
+    "Clients who ask for a body-oriented or parts-based approach, after they have heard about first-line options and their evidence.",
+    "As an adjunct to guideline-recommended trauma treatment, for clients who find body awareness or parts language helpful.",
+    "Clients who have not engaged with or benefited from first-line options and make an informed choice."
+  ],
+  "cautions": [
+    "These are not first-line PTSD treatments. Tell clients about the recommended options and the state of the evidence before starting, and record that conversation.",
+    "Touch needs explicit, informed, revocable consent, clear boundaries, and attention to trauma history, culture and power; many clients and settings should not use it at all.",
+    "Body focus can trigger panic, flashbacks or dissociation; go slowly, keep eyes open if the client prefers, and stop when the client wants to.",
+    "Parts language must not suggest hidden memories, dissociative identities or abuse that the client does not report; follow memory and suggestion safeguards.",
+    "With dissociative or complex presentations, combine any of these methods with stabilization and consultation.",
+    "If the work brings up thoughts of death or self-harm, stop, follow your risk procedures, and review crisis options: in the US call or text 988; elsewhere, the local emergency number or findahelpline.com."
+  ],
+  "whenToRefer": [
+    "PTSD where the client has not been offered a first-line trauma-focused therapy: offer or refer for one.",
+    "Clients who want one of these models: refer to a clinician trained and current in it, and stay involved if you are the main clinician."
+  ],
+  "trainingRequired": true,
+  "trainingNote": "Trained clinicians only. Each model has its own professional training through its institute, and none should be improvised from reading. Generic grounding and body awareness skills from the library can be used within your general training.",
+  "trainingPath": [
+    { "body": "Somatic Experiencing International", "url": "https://traumahealing.org/professional-training/", "note": "Multi-year professional training leading to the SE Practitioner certificate." },
+    { "body": "Sensorimotor Psychotherapy Institute", "url": "https://sensorimotorpsychotherapy.org/admissions", "note": "Training levels for licensed mental health professionals, with consultation." },
+    { "body": "IFS Institute", "url": "https://ifs-institute.com/trainings/level-1", "note": "Level 1 training, which the institute describes as required before clinical use of IFS." }
+  ],
+  "ethicsPrompts": [
+    { "prompt": "Practice within your training: use these models only after completing their training, and do not improvise them from books or videos.", "legalIds": ["competence-and-scope-of-practice"] },
+    { "prompt": "When offering an approach with emerging or limited evidence, explain the evidence and the first-line alternatives as part of informed consent.", "legalIds": ["emerging-treatments-and-psychedelics", "contested-practices"] },
+    { "prompt": "Before any touch or body-based intervention, follow a written consent process and your board's rules on physical contact.", "legalIds": ["touch-and-body-based-work"] },
+    { "prompt": "Avoid suggestion when working with parts or body memories, and document neutrally.", "legalIds": ["memory-and-suggestion-safeguards"] }
+  ],
+  "culturalNotes": [
+    "Norms about touch, body awareness and talking about inner parts vary widely across cultures, genders and faiths; ask, and offer alternatives.",
+    "Some clients have traditional or spiritual frameworks for the body or for inner voices; explore these respectfully rather than translating them into the model's terms.",
+    "Gender and power differences matter especially in body-based work; discuss them openly."
+  ],
+  "handoutIds": ["grounding-5-4-3-2-1", "trauma-therapy-what-to-expect"],
+  "relatedPracticeIds": ["trauma-informed-care", "unwanted-effects-of-therapy", "shared-decision-making"],
+  "relatedPopulationIds": ["sexual-violence-and-trafficking-survivors"],
+  "sources": [
+    { "title": "Somatic Experiencing for posttraumatic stress disorder: a randomized controlled outcome study (Brom et al.)", "publisher": "Journal of Traumatic Stress (PubMed Central)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5518443", "year": 2017 },
+    { "title": "Somatic experiencing - effectiveness and key factors of a body-oriented trauma therapy: a scoping literature review (Kuhfuss et al.)", "publisher": "European Journal of Psychotraumatology (PubMed Central)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8276649", "year": 2021 },
+    { "title": "Body- and movement-oriented interventions for posttraumatic stress disorder: a systematic review and meta-analysis (van de Kamp et al.)", "publisher": "Journal of Traumatic Stress (PubMed Central)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6973294", "year": 2019 },
+    { "title": "A randomized controlled trial of an Internal Family Systems-based psychotherapeutic intervention on outcomes in rheumatoid arthritis: a proof-of-concept study (Shadick et al.)", "publisher": "Journal of Rheumatology", "url": "https://www.jrheum.org/content/40/11/1831", "year": 2013 },
+    { "title": "Evaluation of the Efficacy of Internal Family Systems (IFS) Therapy (NCT05155930)", "publisher": "ClinicalTrials.gov (NIH)", "url": "https://clinicaltrials.gov/study/NCT05155930" },
+    { "title": "Psychotherapy for PTSD (VA/DoD 2023 guideline summary)", "publisher": "Psychological Health Center of Excellence, Defense Health Agency", "url": "https://health.mil/Reference-Center/Publications/2024/01/04/Psychotherapy-for-PTSD", "year": 2024 }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

@@ -1,0 +1,159 @@
+{
+  "id": "self-harm-assessment-and-formulation",
+  "title": "Self-harm and suicide: assessment and prevention-oriented formulation",
+  "category": "safety-and-risk",
+  "summary": "A collaborative psychosocial assessment and a written risk formulation that explains why risk may rise or fall for this person and what will help, instead of a prediction. It follows NICE NG225 in using no risk scale, score or low, medium or high grouping to decide care, and it links straight to safety planning, lethal means counseling and crisis resources.",
+  "whenToUse": [
+    "When a client discloses thoughts of suicide, self-harm or a recent act of self-harm.",
+    "When a screening answer (for example the PHQ-9 item on thoughts of death or self-harm) is above zero.",
+    "At intake, and again at transitions: after a crisis, at discharge, when a major loss or change happens.",
+    "When others raise concern about the client's safety."
+  ],
+  "steps": [
+    {
+      "heading": "Set up the conversation",
+      "body": "Explain why you are asking and what happens with what the client tells you, including the limits of confidentiality. Ask directly and calmly; asking about suicide does not plant the idea."
+    },
+    {
+      "heading": "Understand the person's experience",
+      "items": [
+        "Current thoughts of suicide or self-harm: how often, how strong, how long they last and how the client copes with them.",
+        "Any plan, preparation, rehearsal or recent act, and what the client expected or wanted from it.",
+        "Past self-harm and suicide attempts, including the most serious, and what happened afterwards.",
+        "Access to means, especially firearms and stored medicines.",
+        "Hopelessness, feeling a burden, agitation, poor sleep, intoxication and recent losses or humiliations.",
+        "Reasons for living, people and pets, faith, future plans and what has helped before."
+      ]
+    },
+    {
+      "heading": "Write the formulation in four parts",
+      "body": "Write a short narrative the client could recognize, instead of a risk level. Pisani and colleagues describe four parts:",
+      "items": [
+        "Risk status: how this person's background and history compare with others (for example past attempts), which does not change quickly.",
+        "Risk state: how this person is now compared with their own usual, which can change within hours.",
+        "Available resources: internal strengths and external supports that can be drawn on now.",
+        "Foreseeable changes: events in the coming days or weeks that could raise risk (an anniversary, a court date, discharge, a relationship ending) and what to do about each."
+      ]
+    },
+    {
+      "heading": "Agree the plan with the client",
+      "items": [
+        "Make or update a safety plan in the client's own words.",
+        "Counsel on reducing access to means and agree who will help.",
+        "Treat what drives the risk (depression, sleep, pain, substance use, trauma, relationships) and say how.",
+        "Agree the next contact and what the client will do if things get worse before then.",
+        "Involve supports the client agrees to."
+      ]
+    },
+    {
+      "heading": "Decide on the level of support",
+      "body": "Use your formulation, the client's view and your service's protocol to decide whether outpatient care with closer follow-up is enough, or whether crisis, emergency or inpatient assessment is needed. If you believe a client may act on suicidal intent now, follow your crisis protocol before anything else."
+    },
+    {
+      "heading": "Document the reasoning",
+      "body": "Record what you asked, what the client said, your formulation, the options considered, the plan agreed and why. A clear rationale protects the client and you better than a number."
+    }
+  ],
+  "prompts": [
+    "Sometimes when people feel the way you are describing, they have thoughts of ending their life. Have you had thoughts like that?",
+    "When the thoughts are at their worst, what do they tell you? What helps them pass?",
+    "Have you ever acted on those thoughts, or come close? What was happening then?",
+    "Is there a gun, or a supply of medicines, where you live? Could we talk about putting time and distance between you and them for now?",
+    "What is keeping you going right now, even a little?",
+    "What could happen over the next few weeks that might make things harder? What would we do then?"
+  ],
+  "cautions": [
+    "Do not use risk scales, tools or a low, medium or high label to predict suicide or to decide who gets treatment or is discharged (NICE NG225).",
+    "A client who denies suicidal thoughts can still be at risk; base the formulation on the whole picture, not one answer.",
+    "Screening and assessment instruments other than the built-in PHQ-9 are link-outs only; a screening answer is a prompt to ask, never a verdict.",
+    "Self-harm without suicidal intent still needs care, and repeated self-harm should never be dismissed as attention seeking.",
+    "Nothing in this app decides risk. The clinician, the client and the service protocol do.",
+    "If the client may act now, call emergency services or follow your crisis protocol; in the US call or text 988, elsewhere use the local emergency number or findahelpline.com."
+  ],
+  "adaptations": [
+    {
+      "context": "Cultural and faith background",
+      "adaptation": "Ask how the client and their community understand suicide and self-harm, and whether shame, religious beliefs or fear of consequences may make disclosure harder. Use interpreters, never family members, for this conversation."
+    },
+    {
+      "context": "Telehealth sessions",
+      "adaptation": "Confirm the client's location and a backup number at the start of every video session, and know the local emergency number for where they are, before the risk conversation starts."
+    }
+  ],
+  "evidenceSummary": "NICE NG225 (2022) recommends a psychosocial assessment and a risk formulation as part of every assessment, and advises against risk tools, scales and global low, medium or high stratification to predict suicide or to decide on treatment or discharge. A 2016 paper (Pisani, Murrie and Silverman) proposes a prevention-oriented formulation of risk status, risk state, resources and foreseeable changes. The VA/DoD suicide risk guideline (2024) supports structured evaluation, safety planning and lethal means counseling.",
+  "forClinicianReview": true,
+  "crisisPanel": true,
+  "sud": true,
+  "relatedInterventionIds": [
+    "collaborative-safety-planning",
+    "lethal-means-counseling",
+    "suicide-specific-psychotherapies",
+    "behavioral-chain-analysis"
+  ],
+  "relatedHandoutIds": [
+    "safety-plan",
+    "safety-plan-easy-read",
+    "safer-home-for-family",
+    "after-a-crisis-next-steps"
+  ],
+  "relatedFormulationIds": [
+    "five-ps-biopsychosocial-spiritual"
+  ],
+  "relatedLegalIds": [
+    "crisis-988-or-911",
+    "crisis-and-involuntary-holds",
+    "duty-to-warn-protect",
+    "erpo-and-firearm-transfer"
+  ],
+  "relatedPracticeIds": [
+    "caring-contacts",
+    "care-transitions-and-warm-handoffs",
+    "violence-risk-prompts",
+    "telehealth-sessions"
+  ],
+  "relatedPopulationIds": [
+    "military-and-veterans"
+  ],
+  "toolHref": "/tools/safety-plan",
+  "linkOuts": [],
+  "measuresPending": [
+    {
+      "name": "Columbia Suicide Severity Rating Scale (C-SSRS)",
+      "url": "https://cssrs.columbia.edu",
+      "licenseKey": "C-SSRS"
+    },
+    {
+      "name": "Ask Suicide-Screening Questions (ASQ)",
+      "url": "https://www.nimh.nih.gov/research/research-conducted-at-nimh/asq-toolkit-materials",
+      "licenseKey": "ASQ"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Self-harm: assessment, management and preventing recurrence (NG225)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng225",
+      "year": 2022
+    },
+    {
+      "title": "Reformulating suicide risk formulation: from prediction to prevention (Pisani, Murrie and Silverman)",
+      "publisher": "Academic Psychiatry, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26667005/",
+      "year": 2016
+    },
+    {
+      "title": "VA/DoD Clinical Practice Guideline: Assessment and Management of Patients at Risk for Suicide",
+      "publisher": "US Department of Veterans Affairs and Department of Defense",
+      "url": "https://www.healthquality.va.gov/guidelines/MH/srb/"
+    },
+    {
+      "title": "Comparison of the Safety Planning Intervention with follow-up vs usual care of suicidal patients treated in the emergency department (Stanley et al.)",
+      "publisher": "JAMA Psychiatry, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29998307/",
+      "year": 2018
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

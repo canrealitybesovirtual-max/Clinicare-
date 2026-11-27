@@ -1,0 +1,106 @@
+{
+  "id": "cbt-and-act-for-chronic-pain",
+  "name": "CBT and acceptance and commitment therapy (ACT) for chronic pain",
+  "modality": "CBT for chronic pain and ACT for chronic pain (pacing, goals and values)",
+  "conditions": ["somatic-symptom-disorder", "major-depressive-disorder", "insomnia-disorder", "opioid-use-disorder"],
+  "evidenceLevel": "NICE NG193 (2021) recommends considering ACT or CBT for pain, delivered by appropriately trained professionals, for people aged 16 and over with chronic primary pain. A Cochrane review of 59 studies found CBT has small or very small benefits for pain, disability and distress, with mostly moderate-quality evidence, and that evidence for ACT and behavior therapy was moderate to very low quality, so their benefits are uncertain (Williams et al., 2020). The CDC 2022 opioid guideline states that nonopioid and nonpharmacologic therapies are preferred for chronic pain. CBT for chronic pain was disseminated nationally in the VA with improvements in patient outcomes (Stewart et al., 2015). Pain reprocessing therapy, which targets beliefs that pain signals ongoing damage, gave large improvements in one trial for chronic back pain (Ashar et al., 2022) and is still emerging.",
+  "minutes": { "min": 45, "max": 60 },
+  "purpose": "Psychological treatments for chronic pain aim to improve how people live with pain, not only how much it hurts. CBT for chronic pain teaches how pain works, goal setting, activity pacing, relaxation, coping with unhelpful pain-related thoughts, sleep strategies and planning for flare-ups. ACT for pain helps people make room for pain and distress instead of struggling against them, notice when the fight with pain is taking over their life, and take steps toward what they value. Both focus on function, valued activity and quality of life. They work best within coordinated care that includes medical review and physical rehabilitation.",
+  "steps": [
+    "Check that the pain has had appropriate medical assessment, and refer back promptly for new, changing or worrying symptoms. Coordinate with the client's medical providers, with consent.",
+    "Validate the pain as real. Explain that psychological approaches do not mean the pain is imagined; they change how the nervous system and daily life respond to it.",
+    "Explore the impact of pain on activity, sleep, mood, work and relationships, and the cycles that keep it going (for example, doing too much on good days and crashing, or avoiding activity out of fear of harm).",
+    "Set goals based on what matters to the client, such as walking a grandchild to school, rather than on pain scores.",
+    "Teach pacing: find a starting level of activity the client can manage on good and bad days, plan rest breaks before pain peaks, and build up gradually.",
+    "Add skills from CBT (relaxation, attention shifting, working with catastrophic thoughts about pain, sleep strategies) or from ACT (willingness, defusion from pain-related thoughts, values-based action), matched to the client.",
+    "Make a flare-up plan together: early signs, what to reduce, what to keep doing, and when to seek medical help.",
+    "Track function and quality of life over time, and review the plan with the client and the care team."
+  ],
+  "script": [
+    "Your pain is real. What we will work on is how it affects your life and what you can do on hard days.",
+    "If the pain were a little less in charge, what would you be doing more of?",
+    "On good days, many people do a lot and then pay for it. Let's find a pace you can keep up on good and bad days.",
+    "Thoughts like 'this will never get better' are understandable. Let's see how they affect what you do.",
+    "Let's make a plan for flare-ups now, so you know what to do when one comes."
+  ],
+  "contraindications": [
+    "New, severe or changing pain, or warning signs such as weakness, numbness, weight loss, fever or loss of bladder or bowel control, need prompt medical evaluation.",
+    "For people with post-exertional malaise (a delayed crash after effort, as in ME/CFS or long COVID), use energy management and pacing with medical coordination, not fixed step-by-step increases in activity.",
+    "Do not advise reducing or stopping opioids or other pain medicines. Changes are planned with the prescriber, gradually and with the client's agreement.",
+    "Chronic pain raises the risk of depression and suicidal thoughts. Ask about safety. This app does not judge risk; you do. Crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com.",
+    "Do not enter details about anyone's opioid or other substance use into this app. Any note or export about substance use must carry this notice: 42 CFR Part 2 prohibits unauthorized use or disclosure of these records."
+  ],
+  "culturalAdaptations": [
+    "How people express and explain pain varies by culture, gender and faith. Ask about the client's own explanation and use it as a starting point.",
+    "Some people have experienced their pain being dismissed, sometimes because of race, gender or weight. Acknowledge this directly to build trust.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "handoutIds": ["pacing-and-flare-plan", "values-compass"],
+  "orientationIds": ["cognitive-therapy", "acceptance-and-commitment-therapy"],
+  "evidenceGrades": [
+    {
+      "body": "NICE",
+      "guideline": "Chronic pain (primary and secondary) in over 16s (NG193)",
+      "year": 2021,
+      "population": "People aged 16 and over with chronic primary pain",
+      "direction": "for",
+      "strength": "consider (ACT or CBT for pain)",
+      "url": "https://www.nice.org.uk/guidance/ng193/chapter/Recommendations"
+    },
+    {
+      "body": "Cochrane",
+      "guideline": "Psychological therapies for the management of chronic pain (excluding headache) in adults",
+      "year": 2020,
+      "population": "Adults with chronic pain",
+      "direction": "for",
+      "strength": "small or very small benefits for CBT (mostly moderate-quality evidence); ACT uncertain",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32794606/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Chronic pain (primary and secondary) in over 16s: assessment of all chronic pain and management of chronic primary pain (NG193): recommendations",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng193/chapter/Recommendations",
+      "year": 2021
+    },
+    {
+      "title": "Psychological therapies for the management of chronic pain (excluding headache) in adults (Williams et al.)",
+      "publisher": "Cochrane Database of Systematic Reviews (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32794606/",
+      "year": 2020
+    },
+    {
+      "title": "CDC clinical practice guideline for prescribing opioids for pain, United States, 2022 (Dowell et al.)",
+      "publisher": "MMWR Recommendations and Reports (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36327391/",
+      "year": 2022
+    },
+    {
+      "title": "National dissemination of cognitive-behavioral therapy for chronic pain in veterans: therapist and patient-level outcomes (Stewart et al.)",
+      "publisher": "Clinical Journal of Pain (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25171637/",
+      "year": 2015
+    },
+    {
+      "title": "Cognitive Behavioral Therapy for Chronic Pain: Therapist Manual",
+      "publisher": "US Department of Veterans Affairs",
+      "url": "https://www.va.gov/PAINMANAGEMENT/docs/CBT-CP_Therapist_Manual.pdf"
+    },
+    {
+      "title": "Effect of pain reprocessing therapy vs placebo and usual care for patients with chronic back pain: a randomized clinical trial (Ashar et al.)",
+      "publisher": "JAMA Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34586357/",
+      "year": 2022
+    },
+    {
+      "title": "Myalgic encephalomyelitis (or encephalopathy)/chronic fatigue syndrome: diagnosis and management (NG206): recommendations",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng206/chapter/Recommendations",
+      "year": 2021
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

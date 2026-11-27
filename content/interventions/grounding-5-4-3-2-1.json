@@ -2,7 +2,7 @@
   "id": "grounding-5-4-3-2-1",
   "name": "5-4-3-2-1 sensory grounding",
   "modality": "Grounding / stabilization skill",
-  "conditions": ["ptsd", "panic-disorder"],
+  "conditions": ["ptsd", "panic-disorder", "acute-stress-disorder"],
   "evidenceLevel": "Clinical consensus; little direct trial evidence. SAMHSA TIP 57 describes grounding as a core skill for helping trauma survivors who are overwhelmed by memories or dissociating to reconnect with the present. It is a stabilization skill, not a stand-alone PTSD treatment: NICE NG116 and the VA/DoD 2023 guideline recommend trauma-focused psychotherapies as first-line care.",
   "minutes": { "min": 3, "max": 10 },
   "purpose": "Moves attention away from distressing memories, flashbacks, dissociation or spiraling fear and toward what the senses pick up right now: 5 things seen, 4 felt, 3 heard, 2 smelled and 1 tasted. It helps the client re-orient to time and place during high distress and builds a sense of control. Teach it early, practice it when calm, and use it to close sessions that stir up strong feelings.",
@@ -46,6 +46,7 @@
     "consentNote": "Offer only if the client raises faith or spirituality as a resource, and only after informed consent. Explain that the faith element is optional, that the standard version works without it, and that the client can change or stop it at any time. Use the client's own beliefs and words; never introduce or impose religious content. Record the consent discussion in your own clinical record, not in this app. See the AACC Code of Ethics on consent for spiritual interventions and the ACA Code of Ethics on informed consent and not imposing counselor values."
   },
   "handoutIds": ["grounding-5-4-3-2-1"],
+  "orientationIds": ["trauma-focused-therapies"],
   "sources": [
     {
       "title": "TIP 57: Trauma-Informed Care in Behavioral Health Services",

@@ -1,0 +1,91 @@
+{
+  "id": "intolerance-of-uncertainty-cbt",
+  "name": "Intolerance-of-uncertainty CBT for generalized worry",
+  "modality": "CBT - intolerance of uncertainty",
+  "conditions": [
+    "generalized-anxiety-disorder"
+  ],
+  "evidenceLevel": "Developed by Michel Dugas and colleagues. In randomized trials, this CBT reduced worry and anxiety compared with a waitlist, with gains kept at follow-up (Dugas et al., 2003, group format), and did at least as well as applied relaxation (Dugas et al., 2010). NICE CG113 (2011) recommends offering CBT based on trial manuals for GAD when step 2 interventions have not helped or functioning is markedly impaired.",
+  "evidenceGrades": [
+    {
+      "body": "NICE",
+      "guideline": "Generalised anxiety disorder and panic disorder in adults: management (CG113)",
+      "year": 2011,
+      "conditionId": "generalized-anxiety-disorder",
+      "population": "Adults with GAD and marked functional impairment, or not helped by step 2 (CBT for GAD in general; this is one tested protocol)",
+      "direction": "for",
+      "strength": "offer",
+      "url": "https://www.nice.org.uk/guidance/cg113/chapter/Recommendations"
+    }
+  ],
+  "minutes": {
+    "min": 50,
+    "max": 60
+  },
+  "purpose": "Targets the finding that people who worry a lot often find uncertainty very hard to bear, and use worry, reassurance seeking, over-checking, avoidance or procrastination to try to remove it. The treatment helps the client recognize this pattern, test it in daily life with behavioral experiments, solve real current problems more effectively, and face 'what if' worries through written exposure, instead of trying to make life certain.",
+  "steps": [
+    "Psychoeducation: separate worries about current, solvable problems from worries about hypothetical future events, and introduce intolerance of uncertainty as a reason worry keeps going.",
+    "Worry awareness: the client logs worries for a week and sorts them into the two types.",
+    "List the client's uncertainty-driven behaviors: reassurance seeking, checking, gathering too much information, avoiding decisions, handing tasks to others or procrastinating.",
+    "Behavioral experiments: pick small daily experiments that leave some uncertainty in place (for example, ordering a new dish, sending an email after one read-through), predict what will happen and how the client will cope, then record what happened.",
+    "Problem-solving training for current problems: build a constructive attitude toward problems, define them, generate options, decide, act and review (see the problem-solving entry).",
+    "Written exposure for hypothetical worries: the client writes the feared scenario in detail and rereads it daily without seeking reassurance, until the distress eases.",
+    "Review and plan for setbacks: name early signs of returning certainty seeking and the experiments that helped."
+  ],
+  "script": [
+    "It sounds like not knowing is one of the hardest parts for you.",
+    "Worry can feel like it keeps you safe, but it doesn't make the future any more certain.",
+    "What small thing could you do this week while leaving a bit of uncertainty in place? What do you predict will happen?",
+    "For this worry, is it a problem you can work on now, or a 'what if' about the future?",
+    "Let's write the 'what if' out in full and read it each day, so your mind learns it can sit with it."
+  ],
+  "contraindications": [
+    "Written exposure to feared scenarios is not for traumatic memories without trauma-focused training, or for unwanted harm thoughts that may be part of OCD; assess first.",
+    "Do not frame realistic concerns (unsafe housing, abuse, immigration risk, illness) as intolerance of uncertainty; link the client to practical help.",
+    "Behavioral experiments must never involve real risk to safety, health or finances.",
+    "This intervention does not assess or decide risk. If suicidal thoughts, self-harm or risk to others come up, pause and follow your setting's risk-assessment and safety-planning procedures. Keep crisis options visible: 988 Suicide & Crisis Lifeline (US, call or text), the local emergency number, and findahelpline.com for other countries."
+  ],
+  "culturalAdaptations": [
+    "Planning ahead and protecting family can be core cultural values; frame change as reducing costly worry, not as caring less.",
+    "'Thinking too much' and similar idioms may describe the worry; use the client's terms.",
+    "Choose experiments that fit the client's daily life, resources and community norms.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "handoutIds": [
+    "why-worry-sticks",
+    "behavioral-experiment-record",
+    "problem-solving-steps"
+  ],
+  "orientationIds": [
+    "cognitive-therapy"
+  ],
+  "sources": [
+    {
+      "title": "Group cognitive-behavioral therapy for generalized anxiety disorder: treatment outcome and long-term follow-up (Dugas et al.)",
+      "publisher": "Journal of Consulting and Clinical Psychology (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12924687/",
+      "year": 2003
+    },
+    {
+      "title": "A randomized clinical trial of cognitive-behavioral therapy and applied relaxation for adults with generalized anxiety disorder (Dugas et al.)",
+      "publisher": "Behavior Therapy (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20171327/",
+      "year": 2010
+    },
+    {
+      "title": "Generalised anxiety disorder and panic disorder in adults: management (CG113)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg113",
+      "year": 2011
+    },
+    {
+      "title": "'Thinking too much': a systematic review of a common idiom of distress (Kaiser et al.)",
+      "publisher": "Social Science & Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26584235/",
+      "year": 2015
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

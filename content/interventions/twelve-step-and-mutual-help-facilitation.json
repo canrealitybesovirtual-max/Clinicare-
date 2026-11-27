@@ -1,0 +1,99 @@
+{
+  "id": "twelve-step-and-mutual-help-facilitation",
+  "name": "Twelve-step facilitation and active linkage to mutual-help groups",
+  "modality": "Care coordination - twelve-step facilitation and active linkage to mutual-help groups",
+  "conditions": ["alcohol-use-disorder", "opioid-use-disorder", "stimulant-use-disorder", "cannabis-use-disorder", "gambling-disorder"],
+  "evidenceLevel": "A Cochrane review found high-quality evidence that manualized Alcoholics Anonymous and twelve-step facilitation interventions increase abstinence more than other established treatments such as CBT, that non-manualized versions may perform as well as those treatments, and that they probably reduce healthcare costs (Kelly et al., 2020). The VA/DoD 2021 guideline gives twelve-step facilitation a weak-for recommendation for alcohol use disorder. In a randomized trial, intensive referral (linking patients with group volunteers and checking on attendance) increased group involvement and abstinence compared with standard referral (Timko et al., 2007). Evidence for other substances, for gambling and for non-twelve-step groups is more limited.",
+  "minutes": { "min": 10, "max": 30 },
+  "purpose": "Mutual-help groups offer free, ongoing, peer-based support that is available long after formal treatment ends, often in the evenings and on weekends when cravings and isolation peak. Twelve-step facilitation is a structured way of encouraging and supporting involvement: explaining what groups are like, helping the client choose one, linking them actively rather than handing over a list, and reviewing their experience. The client chooses the group. Options include twelve-step fellowships (for example Alcoholics Anonymous, Narcotics Anonymous, Gamblers Anonymous), secular groups (for example SMART Recovery), faith-based and culturally specific groups, groups for women, and family groups such as Al-Anon. This works best alongside, not instead of, other treatment and medication.",
+  "steps": [
+    "Ask about past experiences with groups, good and bad, and what put the client off or helped.",
+    "Describe the range of options in neutral terms, including twelve-step, secular, faith-based, culturally specific, online and in-person groups, and groups for family members. Respect the client's beliefs and preferences.",
+    "Address common worries: having to speak, religious language, anonymity, whether people taking medication for opioid or alcohol use disorder are welcome. Note that medication treatment is compatible with recovery and that clients can look for groups that welcome it.",
+    "Link actively: look up local or online meetings together, suggest trying several different meetings, and where possible help the client connect with a volunteer or member who can meet them there.",
+    "Agree on a small, concrete first step (for example, two meetings before the next session) and plan for barriers such as transport, childcare or social anxiety.",
+    "At the next sessions, ask what the client noticed, what felt helpful or uncomfortable, and whether to continue, switch groups or try something else.",
+    "Keep the group in its place: an addition to treatment, medication and other supports, not a replacement."
+  ],
+  "script": [
+    "Some people find it really helps to talk with others who have been through the same thing. Have you ever tried a group?",
+    "There are lots of kinds: some are spiritual, some are not, some are online, some are for women, some are for families.",
+    "It is normal for the first meeting to feel strange. Most people try a few before finding one that fits.",
+    "Would it help to look up a meeting together right now?",
+    "Taking a prescribed medicine for this is treatment. If a group makes you feel unwelcome for that, we can find a different one."
+  ],
+  "contraindications": [
+    "Do not require group attendance as a condition of care, and do not suggest that medication for opioid or alcohol use disorder conflicts with recovery.",
+    "Some groups or members discourage prescribed medication. Prepare the client for this and help them find groups that support medication treatment.",
+    "Clients with severe social anxiety, trauma histories or past harm in group settings may need gradual steps, a companion, online options or a different form of support.",
+    "Current safety threats come first. This app does not judge risk; you do. Crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com.",
+    "Do not enter details about anyone's substance use or group attendance into this app; nothing is stored or sent. Any note or export about substance use must carry this notice: 42 CFR Part 2 prohibits unauthorized use or disclosure of these records."
+  ],
+  "culturalAdaptations": [
+    "Offer culturally specific options where available (for example groups rooted in Indigenous traditions, groups in the client's language, or groups for LGBTQ+ people) and let the client lead the choice.",
+    "Religious or spiritual language in some groups suits some clients and alienates others. Present secular and faith-based options side by side.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "handoutIds": ["mutual-help-options"],
+  "evidenceGrades": [
+    {
+      "body": "Cochrane",
+      "guideline": "Alcoholics Anonymous and other 12-step programs for alcohol use disorder",
+      "year": 2020,
+      "conditionId": "alcohol-use-disorder",
+      "population": "Adults with alcohol use disorder",
+      "direction": "for",
+      "strength": "high-quality evidence for manualized AA/TSF increasing abstinence",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32159228/"
+    },
+    {
+      "body": "VA/DoD",
+      "guideline": "Management of Substance Use Disorders",
+      "year": 2021,
+      "conditionId": "alcohol-use-disorder",
+      "population": "Adults with alcohol use disorder",
+      "direction": "for",
+      "strength": "weak for",
+      "url": "https://health.mil/Reference-Center/Publications/2021/04/26/PHCoE-Evidence-Brief-12-Step-Facilitation-For-AUD-KO-052020-508-0"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Alcoholics Anonymous and other 12-step programs for alcohol use disorder (Kelly et al.)",
+      "publisher": "Cochrane Database of Systematic Reviews (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32159228/",
+      "year": 2020
+    },
+    {
+      "title": "PHCoE Evidence Brief: 12-Step Facilitation for AUD",
+      "publisher": "Psychological Health Center of Excellence, Defense Health Agency",
+      "url": "https://health.mil/Reference-Center/Publications/2021/04/26/PHCoE-Evidence-Brief-12-Step-Facilitation-For-AUD-KO-052020-508-0",
+      "year": 2021
+    },
+    {
+      "title": "A randomized controlled trial of intensive referral to 12-step self-help groups: one-year outcomes (Timko et al.)",
+      "publisher": "Drug and Alcohol Dependence (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17524574/",
+      "year": 2007
+    },
+    {
+      "title": "Who are the anonymous? Involvement and predictors of Gamblers Anonymous attendance among disordered gamblers presenting for treatment (McGrath et al.)",
+      "publisher": "Journal of Gambling Studies (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29691703/",
+      "year": 2018
+    },
+    {
+      "title": "Alcoholics Anonymous",
+      "publisher": "Alcoholics Anonymous World Services",
+      "url": "https://www.aa.org/"
+    },
+    {
+      "title": "SMART Recovery",
+      "publisher": "SMART Recovery",
+      "url": "https://smartrecovery.org/"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

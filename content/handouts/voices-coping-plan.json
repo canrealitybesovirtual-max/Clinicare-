@@ -1,0 +1,168 @@
+{
+  "id": "voices-coping-plan",
+  "title": "Coping With Voices: My Log and Early Signs Plan",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 15,
+  "intro": "Many people who hear voices or have other unusual experiences find ways to cope that work for them. This sheet has 2 parts. The log helps you track what you try and how well it works. The early signs plan helps you notice when things are getting harder, so you can act early. Fill it in with your counselor. It takes about 15 minutes to start.",
+  "sections": [
+    {
+      "heading": "Coping ideas to try",
+      "body": "Different things work for different people, and at different times. Try a few and see.",
+      "steps": [
+        "Hum, sing quietly, or talk with someone. For some people this makes voices quieter.",
+        "Listen to music with headphones.",
+        "Get busy with something that takes focus, like a puzzle, cooking, or a game.",
+        "Move your body: walk, stretch, or do chores.",
+        "Tell the voices you will listen later, at a set time.",
+        "Check it out: ask a trusted person what they think before you act on what a voice says.",
+        "Remind yourself: this is a voice, and I do not have to do what it says.",
+        "Slow your breathing, or name 5 things you can see around you."
+      ]
+    },
+    {
+      "heading": "How to use the log",
+      "body": "Write one row each time an experience is hard. Rate how upsetting it was before and after, from 0 (not at all) to 10 (the worst). Over time, you will learn what helps you most."
+    },
+    {
+      "heading": "My early signs",
+      "body": "Things often get harder slowly, over days or weeks. Think about past hard times. What did you or others notice first?",
+      "steps": [
+        "Sleep changes, like staying up late or waking a lot: ________",
+        "Feeling more worried, suspicious, or on edge: ________",
+        "Pulling away from people, or stopping things I enjoy: ________",
+        "Voices getting louder, more frequent, or more upsetting: ________",
+        "Other signs I or others notice: ________"
+      ]
+    },
+    {
+      "heading": "If I notice early signs, I will",
+      "steps": [
+        "Tell my counselor, care team, or a trusted person within a day.",
+        "Protect my sleep and cut down on stress where I can.",
+        "Stay away from cannabis, alcohol, and other drugs.",
+        "Take my medicine as prescribed, and ask my prescriber if anything should change.",
+        "Use the coping ideas that work best for me: ________"
+      ]
+    },
+    {
+      "heading": "People to contact",
+      "body": "Write phone numbers on your paper copy only.",
+      "steps": [
+        "My care team: ________",
+        "A trusted person: ________",
+        "Any time, day or night: call or text 988."
+      ]
+    },
+    {
+      "heading": "Get help right away if",
+      "steps": [
+        "Voices tell you to hurt yourself or someone else, and it is hard to resist.",
+        "You feel very unsafe or very confused.",
+        "You have thoughts of suicide."
+      ]
+    }
+  ],
+  "practiceLog": {
+    "columns": [
+      "Day and time",
+      "What happened (no names)",
+      "Upset before (0-10)",
+      "What I tried",
+      "Upset after (0-10)"
+    ],
+    "rows": 10
+  },
+  "safetyNote": "Safety first: If voices push you to harm yourself or others, or you feel unsafe, get help now. If you have thoughts of hurting yourself or someone else, get help now. In the US, call or text 988, or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sud": false,
+  "es": {
+    "title": "Cómo afrontar las voces: mi registro y mi plan de señales",
+    "intro": "Muchas personas que oyen voces o tienen otras experiencias inusuales encuentran formas de afrontarlas que les funcionan. Esta hoja tiene 2 partes. El registro le ayuda a anotar lo que prueba y qué tan bien le funciona. El plan de señales le ayuda a notar cuándo las cosas se están poniendo más difíciles, para actuar pronto. Llénela con su consejero. Empezar toma unos 15 minutos.",
+    "sections": [
+      {
+        "heading": "Ideas para probar",
+        "body": "A cada persona le sirven cosas distintas, y en momentos distintos. Pruebe algunas y vea.",
+        "steps": [
+          "Tararee, cante en voz baja o hable con alguien. A algunas personas esto les baja las voces.",
+          "Escuche música con auriculares.",
+          "Ocúpese en algo que le pida atención, como un rompecabezas, cocinar o un juego.",
+          "Mueva el cuerpo: camine, estírese o haga quehaceres.",
+          "Dígales a las voces que las va a escuchar más tarde, a una hora fija.",
+          "Consulte: pregúntele a una persona de confianza qué piensa antes de hacer lo que dice una voz.",
+          "Recuérdese: es una voz, y no tengo que hacer lo que dice.",
+          "Respire más despacio, o nombre 5 cosas que puede ver a su alrededor."
+        ]
+      },
+      {
+        "heading": "Cómo usar el registro",
+        "body": "Escriba una fila cada vez que una experiencia sea difícil. Califique cuánto le afectó antes y después, de 0 (nada) a 10 (lo peor). Con el tiempo, va a aprender qué le ayuda más."
+      },
+      {
+        "heading": "Mis primeras señales",
+        "body": "Muchas veces las cosas se ponen difíciles poco a poco, en días o semanas. Piense en momentos difíciles del pasado. ¿Qué notó usted, o qué notaron otros, primero?",
+        "steps": [
+          "Cambios en el sueño, como trasnochar o despertarse mucho: ________",
+          "Sentir más preocupación, desconfianza o tensión: ________",
+          "Alejarme de la gente, o dejar cosas que disfruto: ________",
+          "Voces más fuertes, más seguidas o que me afectan más: ________",
+          "Otras señales que yo u otros notamos: ________"
+        ]
+      },
+      {
+        "heading": "Si noto primeras señales, voy a",
+        "steps": [
+          "Decírselo a mi consejero, a mi equipo de atención o a una persona de confianza en un día.",
+          "Cuidar mi sueño y bajar el estrés donde pueda.",
+          "No usar cannabis, alcohol ni otras drogas.",
+          "Tomar mi medicina como me la recetaron, y preguntar a quien me la receta si hay que cambiar algo.",
+          "Usar las ideas que mejor me funcionan: ________"
+        ]
+      },
+      {
+        "heading": "Personas a quienes llamar",
+        "body": "Escriba los números de teléfono solo en su copia de papel.",
+        "steps": [
+          "Mi equipo de atención: ________",
+          "Una persona de confianza: ________",
+          "A cualquier hora, de día o de noche: llame o envíe un mensaje de texto al 988."
+        ]
+      },
+      {
+        "heading": "Busque ayuda de inmediato si",
+        "steps": [
+          "Las voces le dicen que se haga daño o que le haga daño a otra persona, y le cuesta resistir.",
+          "Se siente muy inseguro o muy confundido.",
+          "Tiene pensamientos de suicidio."
+        ]
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Día y hora",
+        "Qué pasó (sin nombres)",
+        "Malestar antes (0-10)",
+        "Qué probé",
+        "Malestar después (0-10)"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: Si las voces le empujan a hacerse daño o a hacerle daño a otros, o se siente inseguro, busque ayuda ahora. Si tiene pensamientos de hacerse daño o de hacerle daño a otra persona, busque ayuda ahora. En EE. UU., llame o envíe un mensaje de texto al 988, o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "sources": [
+    {
+      "title": "Psychosis and schizophrenia in adults: prevention and management (CG178)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg178",
+      "year": 2014
+    },
+    {
+      "title": "Training to recognise the early signs of recurrence in schizophrenia (Morriss et al.)",
+      "publisher": "Cochrane Database of Systematic Reviews (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23450559/",
+      "year": 2013
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

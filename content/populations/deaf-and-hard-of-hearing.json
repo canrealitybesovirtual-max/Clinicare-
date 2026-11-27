@@ -1,0 +1,77 @@
+{
+  "id": "deaf-and-hard-of-hearing",
+  "name": "Deaf and hard of hearing adults",
+  "group": "disability-and-communication",
+  "summary": "Language-affirming care for Deaf, DeafBlind and hard of hearing adults: sign-fluent clinicians where possible, qualified and Deaf interpreters, language deprivation, not mistaking language or culture for symptoms, video access and written-English differences.",
+  "scopeNote": "For adults (18 and over). The app never asks for or saves hearing status, language or disability. Communication access is arranged by the service, at no cost to the person, and is never the client's job to provide.",
+  "whyItMatters": "Deaf people experience higher rates of common mental health problems alongside major barriers to care, and many regard themselves as a cultural and language minority; services with professionals who communicate directly in sign language improve access (Fellinger and colleagues, 2012). Language deprivation, the lack of full access to any language in early childhood, can lead to lasting difficulties with language, thinking and behavior that are easily mistaken for psychosis or intellectual disability (Hall and colleagues, 2017). Under the Americans with Disabilities Act, US health providers must ensure effective communication, including qualified interpreters, at no cost to the person.",
+  "askAbout": [
+    "Which language or communication method do you prefer: a sign language, spoken language with lipreading, captions, writing or a mix?",
+    "Would you prefer a clinician who signs, or an interpreter, and do you have preferences about which interpreter?",
+    "How would you like to handle video sessions: lighting, camera position, captions or a video relay service?",
+    "How do you feel about Deaf community and identity, and are there Deaf-led services you use or would like?",
+    "Have past health care experiences been hard because of communication, and what would help this time?"
+  ],
+  "stereotypeCaution": "Deaf and hard of hearing people differ in language, identity and preferences: some are culturally Deaf and use sign language, others were deafened later and use spoken language, and many use both. Do not assume someone can lipread, read English fluently or wants hearing technology, and do not judge intelligence or mental state from speech or written English.",
+  "keyConsiderations": [
+    "Where possible, offer a clinician fluent in the person's sign language; working through an interpreter is second best for therapy, though often necessary.",
+    "Use qualified interpreters with mental health experience. A Certified Deaf Interpreter working alongside a hearing interpreter can help when the person has limited language or uses non-standard signing.",
+    "Never use family members, friends or children as interpreters, and avoid using staff who sign casually.",
+    "Video remote interpreting can fail with poor connections, small screens or people with limited language or vision; have an in-person option.",
+    "Written English may be a second language; keep written materials short and plain, and offer to go through them together.",
+    "Deaf community networks can be small, so confidentiality concerns, including about interpreters, may be strong; discuss them openly."
+  ],
+  "assessmentAdaptations": [
+    "Assess in the person's preferred language. Disordered or limited signing or written English can reflect language deprivation, not thought disorder.",
+    "Do not read Deaf cultural norms, such as direct communication, strong facial expression or touch to gain attention, as symptoms.",
+    "Ask about language history: age of hearing loss, early access to sign or spoken language, schooling and family communication.",
+    "If psychosis is a question, involve a clinician or interpreter experienced in Deaf mental health before concluding anything."
+  ],
+  "sessionAdaptations": [
+    "Arrange seating so the person can see you and the interpreter clearly, with good light on faces and no window behind you.",
+    "Speak to the person, not the interpreter, and allow extra time; brief the interpreter on the session's aims in advance where appropriate.",
+    "On video, check lighting, camera framing to include hands, captions and the stability of the connection before starting.",
+    "Use visual materials, demonstrations and practice in session rather than relying on written homework."
+  ],
+  "interventionNotes": [
+    { "interventionId": "thought-record", "note": "Use visual or signed versions; the person can record thoughts by video in sign language instead of writing in English." },
+    { "interventionId": "progressive-muscle-relaxation", "note": "Teach by demonstration and visual cues rather than spoken scripts with closed eyes." },
+    { "interventionId": "mindfulness-meditation", "note": "Adapt practices that rely on listening, such as sound awareness or eyes-closed guidance, to visual or body-based versions." },
+    { "interventionId": "collaborative-safety-planning", "note": "Include crisis routes the person can use without voice, such as ASL videophone or text, and test them together." }
+  ],
+  "measureNotes": [
+    "The PHQ-9 and GAD-7 in written English may not be valid for people whose first language is a sign language; use a validated signed version where one exists, or go through items with a qualified interpreter and treat results with caution.",
+    "Items about hearing, concentration or restlessness may be read differently; ask what each answer meant."
+  ],
+  "measuresPending": [],
+  "safetyNotes": [
+    "In the US, the 988 Lifeline offers crisis support in American Sign Language by videophone, and 988 also accepts texts; TTY users can dial 711, then 988.",
+    "Make sure emergency plans include how the person will be contacted and how responders will communicate with them."
+  ],
+  "cautions": [
+    "Do not rely on lipreading or written notes for assessment or therapy when the person's preferred language is a sign language."
+  ],
+  "legalIds": ["language-access-interpreters", "digital-accessibility"],
+  "ethicsIds": [],
+  "referralIds": ["988-lifeline-asl", "crisis-text-line"],
+  "referralKinds": ["deaf-hoh"],
+  "handoutIds": ["video-session-guide", "what-to-expect-in-therapy"],
+  "topicIds": ["disability-and-wellbeing"],
+  "practiceIds": ["working-with-interpreters", "telehealth-sessions", "mental-status-exam"],
+  "formulationIds": [],
+  "linkOuts": [
+    { "title": "American Sign Language", "publisher": "National Institute on Deafness and Other Communication Disorders", "url": "https://www.nidcd.nih.gov/health/american-sign-language", "lastVerified": "2026-11-27" },
+    { "title": "Telecommunications Relay Service (TRS)", "publisher": "Federal Communications Commission", "url": "https://www.fcc.gov/consumers/guides/telecommunications-relay-service-trs", "note": "Relay and video relay options for phone contact.", "lastVerified": "2026-11-27" },
+    { "title": "Hearing Disorders and Deafness", "publisher": "MedlinePlus (U.S. National Library of Medicine)", "url": "https://medlineplus.gov/hearingdisordersanddeafness.html", "lastVerified": "2026-11-27" }
+  ],
+  "sud": false,
+  "sources": [
+    { "title": "Mental health of deaf people (Fellinger, Holzinger and Pollard)", "publisher": "Lancet (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/22423884/", "year": 2012 },
+    { "title": "Language deprivation syndrome: a possible neurodevelopmental disorder with sociocultural origins (Hall, Levin and Anderson)", "publisher": "Social Psychiatry and Psychiatric Epidemiology (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/28204923/", "year": 2017 },
+    { "title": "ADA Requirements: Effective Communication", "publisher": "U.S. Department of Justice, Civil Rights Division", "url": "https://www.ada.gov/resources/effective-communication/" },
+    { "title": "Hearing Disorders and Deafness", "publisher": "MedlinePlus (U.S. National Library of Medicine)", "url": "https://medlineplus.gov/hearingdisordersanddeafness.html" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

@@ -1,0 +1,420 @@
+{
+  "id": "disorder-maintenance-models",
+  "name": "Disorder-specific maintenance models",
+  "shortName": "Maintenance models",
+  "family": "cognitive-behavioral",
+  "orientationIds": [
+    "cognitive-therapy",
+    "behavior-therapy"
+  ],
+  "purpose": "Short, original summaries of the best-known cognitive-behavioral models of what keeps specific problems going, each with the interventions it explains in the order they are usually used. A model helps you explain the rationale for a treatment and choose the next step. It is a starting hypothesis to test against the person's own examples, not a description of who they are.",
+  "whenToUse": [
+    "When the presentation clearly fits one pattern and you want to share the matching maintenance cycle with the person.",
+    "When explaining why a specific treatment step (such as dropping safety behaviors or sleep restriction) will help.",
+    "When a treatment is not working, to check which part of the cycle is still active."
+  ],
+  "structure": [
+    {
+      "id": "panic",
+      "label": "Panic: catastrophic misinterpretation of body sensations",
+      "prompt": "A normal body sensation is read as a sign of immediate catastrophe. Fear then strengthens the sensation, which seems to confirm the danger, and the loop escalates within minutes. Watching the body, safety behaviors and avoidance stop the person from learning that the sensations are harmless.",
+      "examples": [
+        "A skipped heartbeat is noticed",
+        "It is read as a heart attack starting",
+        "Fear speeds the heart further",
+        "Sitting down and gripping something seems to prevent collapse, so the fear is never tested"
+      ],
+      "conditionIds": [
+        "panic-disorder",
+        "agoraphobia"
+      ],
+      "interventionIds": [
+        "catastrophic-misinterpretation-restructuring",
+        "interoceptive-exposure",
+        "safety-behavior-reduction",
+        "behavioral-experiments",
+        "graded-in-vivo-exposure"
+      ],
+      "reference": {
+        "title": "A cognitive approach to panic (Clark)",
+        "publisher": "Behaviour Research and Therapy",
+        "url": "https://doi.org/10.1016/0005-7967(86)90011-2",
+        "year": 1986
+      }
+    },
+    {
+      "id": "social-anxiety",
+      "label": "Social anxiety: self-focus and safety behaviors",
+      "prompt": "In social situations, attention turns inward to an internal image of how one seems, which is usually far worse than how others see the person. Safety behaviors (avoiding eye contact, rehearsing, holding a glass tightly) make the person seem less at ease and keep the fear untested, and replaying the event afterwards feeds the next round of anticipation.",
+      "examples": [
+        "Before: predicting saying something foolish",
+        "During: monitoring voice and face, rehearsing sentences",
+        "After: replaying the conversation for hours"
+      ],
+      "conditionIds": [
+        "social-anxiety-disorder"
+      ],
+      "interventionIds": [
+        "social-anxiety-cognitive-techniques",
+        "safety-behavior-reduction",
+        "behavioral-experiments",
+        "graded-in-vivo-exposure"
+      ],
+      "reference": {
+        "title": "Social anxiety disorder: recognition, assessment and treatment (CG159)",
+        "publisher": "National Institute for Health and Care Excellence",
+        "url": "https://www.nice.org.uk/guidance/cg159",
+        "year": 2013
+      }
+    },
+    {
+      "id": "ptsd",
+      "label": "Post-traumatic stress: a sense of current threat",
+      "prompt": "The trauma memory is poorly linked to its context, so reminders trigger reliving as if the danger were happening now, and negative appraisals of the event and of oneself keep the sense of threat alive. Avoidance, suppression, rumination and excessive safety behaviors prevent the memory and the appraisals from being updated.",
+      "examples": [
+        "A smell triggers a vivid here-and-now memory",
+        "Belief: I am never safe anywhere",
+        "Avoiding reminders and staying on guard"
+      ],
+      "conditionIds": [
+        "ptsd"
+      ],
+      "interventionIds": [
+        "trauma-psychoeducation-and-grounding",
+        "cognitive-therapy-for-ptsd",
+        "cognitive-processing-therapy",
+        "prolonged-exposure",
+        "written-exposure-therapy",
+        "emdr"
+      ],
+      "reference": {
+        "title": "A cognitive model of posttraumatic stress disorder (Ehlers and Clark)",
+        "publisher": "Behaviour Research and Therapy (PubMed)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/10761279/",
+        "year": 2000
+      }
+    },
+    {
+      "id": "generalized-anxiety",
+      "label": "Generalized worry: uncertainty and beliefs about worry",
+      "prompt": "Difficulty tolerating uncertainty fuels a chain of what-if worries. Beliefs that worry helps (it prepares me, it prevents bad things) keep it going, while beliefs that worry is uncontrollable or dangerous add worry about worry. Avoiding uncertain situations and seeking reassurance keep the uncertainty intolerable.",
+      "examples": [
+        "What if I lose my job, then what if I cannot pay rent",
+        "I have to worry or I will be caught off guard",
+        "Checking the news and asking others to feel sure"
+      ],
+      "conditionIds": [
+        "generalized-anxiety-disorder"
+      ],
+      "interventionIds": [
+        "worry-time",
+        "intolerance-of-uncertainty-cbt",
+        "metacognitive-therapy",
+        "applied-relaxation",
+        "problem-solving"
+      ],
+      "reference": {
+        "title": "Generalized anxiety disorder: a preliminary test of a conceptual model (Dugas et al.)",
+        "publisher": "Behaviour Research and Therapy (PubMed)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/9613027/",
+        "year": 1998
+      }
+    },
+    {
+      "id": "ocd",
+      "label": "Obsessions and compulsions: inflated responsibility",
+      "prompt": "Unwanted intrusive thoughts are common. The problem starts when the thought is taken to mean the person is responsible for preventing harm. Compulsions, checking, reassurance and neutralizing bring brief relief, strengthen the sense of responsibility and prevent learning that the feared harm does not follow.",
+      "examples": [
+        "Intrusive image of a fire",
+        "Appraisal: if I do not check the stove, any fire will be my fault",
+        "Checking six times, then asking a partner to confirm"
+      ],
+      "conditionIds": [
+        "obsessive-compulsive-disorder"
+      ],
+      "interventionIds": [
+        "exposure-and-response-prevention",
+        "ocd-appraisal-cognitive-therapy",
+        "act-cognitive-defusion"
+      ],
+      "reference": {
+        "title": "Obsessional-compulsive problems: a cognitive-behavioural analysis (Salkovskis)",
+        "publisher": "Behaviour Research and Therapy",
+        "url": "https://doi.org/10.1016/0005-7967(85)90105-6",
+        "year": 1985
+      }
+    },
+    {
+      "id": "depression",
+      "label": "Low mood: lost reward and rumination",
+      "prompt": "Stress and loss lower activity and reward; withdrawal brings short relief from effort but removes the activities that lift mood. Negative views of self, world and future and long stretches of rumination deepen the low mood and make the next step feel pointless.",
+      "examples": [
+        "Stops seeing friends to avoid effort",
+        "Lies in bed thinking about what is wrong",
+        "Mood drops further; the next invitation is declined"
+      ],
+      "conditionIds": [
+        "major-depressive-disorder",
+        "persistent-depressive-disorder"
+      ],
+      "interventionIds": [
+        "behavioral-activation",
+        "thought-record",
+        "rumination-focused-cbt",
+        "problem-solving",
+        "mindfulness-based-cognitive-therapy"
+      ],
+      "reference": {
+        "title": "Depression in adults: treatment and management (NG222)",
+        "publisher": "National Institute for Health and Care Excellence",
+        "url": "https://www.nice.org.uk/guidance/ng222",
+        "year": 2022
+      }
+    },
+    {
+      "id": "insomnia",
+      "label": "Insomnia: predisposing, precipitating and perpetuating factors",
+      "prompt": "Some people are more prone to poor sleep; a stressor sets off a bad patch; then the person's understandable responses (long hours in bed, napping, irregular times, trying hard to sleep, clock-watching) weaken the sleep drive and link the bed with wakefulness, so the insomnia outlasts the stressor.",
+      "examples": [
+        "A stressful month at work",
+        "Going to bed early and lying awake for hours",
+        "Bed becomes a place of frustration"
+      ],
+      "conditionIds": [
+        "insomnia-disorder"
+      ],
+      "interventionIds": [
+        "cbti-stimulus-control",
+        "cbti-sleep-restriction",
+        "brief-behavioral-treatment-insomnia",
+        "sleep-hygiene-education"
+      ],
+      "reference": {
+        "title": "A behavioral perspective on insomnia treatment (Spielman, Caruso and Glovinsky)",
+        "publisher": "Psychiatric Clinics of North America (PubMed)",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/3332317/",
+        "year": 1987
+      }
+    },
+    {
+      "id": "health-anxiety",
+      "label": "Health worry: threat-focused attention and checking",
+      "prompt": "Ordinary body sensations or uncertain test results are read as signs of serious illness. Attention to the body makes sensations more noticeable, and checking, searching online and seeking medical reassurance bring brief relief while keeping the belief and the doubt alive.",
+      "examples": [
+        "A headache is read as a tumor",
+        "Searching symptoms late at night",
+        "A normal test brings relief that lasts a day"
+      ],
+      "conditionIds": [
+        "illness-anxiety-disorder",
+        "somatic-symptom-disorder"
+      ],
+      "interventionIds": [
+        "cbt-health-anxiety",
+        "safety-behavior-reduction",
+        "behavioral-experiments",
+        "mindful-check-in"
+      ]
+    },
+    {
+      "id": "eating",
+      "label": "Eating concerns: overvalued shape and weight",
+      "prompt": "Self-worth judged largely by shape, weight or control over eating drives strict dieting. Dieting and hunger make binge eating more likely, compensatory behaviors follow, and checking or avoiding the body keeps the concern alive. Mood intolerance, perfectionism and low self-esteem can add further loops.",
+      "examples": [
+        "Rigid food rules",
+        "A break in the rules leads to a binge",
+        "Compensating, then stricter rules"
+      ],
+      "conditionIds": [
+        "anorexia-nervosa",
+        "bulimia-nervosa",
+        "binge-eating-disorder"
+      ],
+      "interventionIds": [
+        "eating-disorder-medical-monitoring",
+        "cbt-e-eating-disorders",
+        "eating-disorder-specialist-therapies"
+      ],
+      "reference": {
+        "title": "Eating disorders: recognition and treatment (NG69)",
+        "publisher": "National Institute for Health and Care Excellence",
+        "url": "https://www.nice.org.uk/guidance/ng69",
+        "year": 2017
+      }
+    },
+    {
+      "id": "body-image",
+      "label": "Appearance concern: self-focused image and rituals",
+      "prompt": "Attention narrows onto a disliked feature and a distorted internal image of it. Comparing, mirror checking, camouflaging and seeking reassurance or cosmetic fixes bring brief relief and keep the preoccupation strong.",
+      "examples": [
+        "Checking the mirror before leaving and avoiding photos",
+        "Comparing the feature with others in every room"
+      ],
+      "conditionIds": [
+        "body-dysmorphic-disorder"
+      ],
+      "interventionIds": [
+        "cbt-bdd",
+        "exposure-and-response-prevention",
+        "safety-behavior-reduction"
+      ],
+      "reference": {
+        "title": "Obsessive-compulsive disorder and body dysmorphic disorder: treatment (CG31)",
+        "publisher": "National Institute for Health and Care Excellence",
+        "url": "https://www.nice.org.uk/guidance/cg31",
+        "year": 2005
+      }
+    },
+    {
+      "id": "specific-fear",
+      "label": "Specific fears: avoidance and untested predictions",
+      "prompt": "A feared object or situation is predicted to lead to harm or unbearable fear. Avoidance and escape bring relief and prevent learning that the fear peaks and passes or that the harm is unlikely. With blood and injection fears, a drop in blood pressure can cause fainting, which needs its own approach.",
+      "examples": [
+        "Crossing the road to avoid dogs",
+        "Never having a blood test"
+      ],
+      "conditionIds": [
+        "specific-phobia"
+      ],
+      "interventionIds": [
+        "graded-in-vivo-exposure",
+        "one-session-treatment-phobia",
+        "applied-tension"
+      ]
+    }
+  ],
+  "steps": [
+    "Check that the model fits by mapping a recent episode with the person, not by assuming.",
+    "Draw the cycle in the person's own words and point to where the treatment step will break it.",
+    "Use the listed interventions in order as a guide, adjusted for the person's preferences and progress, within your training and scope.",
+    "When more than one model fits, start with the problem that interferes most or drives the others, and revisit the formulation as it changes."
+  ],
+  "collaborativeTips": [
+    "Ask the person to test the model: if it is right, what would we expect to happen when you drop this safety behavior?",
+    "Pair the model with the matching client handout so they can explain it to someone they trust."
+  ],
+  "cautions": [
+    "These summaries are original descriptions of published models, for orientation only. They are not diagnostic descriptions and do not replace assessment, the full treatment manuals or training.",
+    "Rule out medical and substance-related causes where symptoms could have them (for example heart rhythm problems in panic, thyroid or medication effects in anxiety and low mood, and medical risk in eating concerns).",
+    "Eating concerns can carry serious medical risk: coordinate medical monitoring before and during psychological treatment.",
+    "A formulation never scores, grades or decides risk. If thoughts of suicide, self-harm or harm to others come up, pause the formulation and follow your own assessment and local protocol; in the US the 988 Lifeline is available by call or text, elsewhere use the local emergency number or findahelpline.com."
+  ],
+  "conditionIds": [
+    "panic-disorder",
+    "agoraphobia",
+    "social-anxiety-disorder",
+    "ptsd",
+    "generalized-anxiety-disorder",
+    "obsessive-compulsive-disorder",
+    "major-depressive-disorder",
+    "insomnia-disorder",
+    "illness-anxiety-disorder",
+    "anorexia-nervosa",
+    "bulimia-nervosa",
+    "binge-eating-disorder",
+    "body-dysmorphic-disorder",
+    "specific-phobia"
+  ],
+  "interventionIds": [
+    "catastrophic-misinterpretation-restructuring",
+    "social-anxiety-cognitive-techniques",
+    "cognitive-therapy-for-ptsd",
+    "intolerance-of-uncertainty-cbt",
+    "exposure-and-response-prevention",
+    "behavioral-activation",
+    "cbti-stimulus-control",
+    "cbt-health-anxiety",
+    "cbt-e-eating-disorders",
+    "cbt-bdd"
+  ],
+  "handoutIds": [
+    "panic-cycle",
+    "why-worry-sticks",
+    "social-nervousness-cycle",
+    "understanding-unwanted-thoughts",
+    "understanding-low-mood",
+    "how-sleep-works",
+    "health-worry-cycle",
+    "common-reactions-after-trauma"
+  ],
+  "practiceIds": [
+    "diagnostic-reasoning-checks"
+  ],
+  "populationIds": [],
+  "legalIds": [],
+  "worksheet": false,
+  "sud": false,
+  "linkOuts": [],
+  "measuresPending": [],
+  "sources": [
+    {
+      "title": "A cognitive approach to panic (Clark)",
+      "publisher": "Behaviour Research and Therapy",
+      "url": "https://doi.org/10.1016/0005-7967(86)90011-2",
+      "year": 1986
+    },
+    {
+      "title": "A cognitive model of posttraumatic stress disorder (Ehlers and Clark)",
+      "publisher": "Behaviour Research and Therapy (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/10761279/",
+      "year": 2000
+    },
+    {
+      "title": "A behavioral perspective on insomnia treatment (Spielman, Caruso and Glovinsky)",
+      "publisher": "Psychiatric Clinics of North America (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/3332317/",
+      "year": 1987
+    },
+    {
+      "title": "Generalized anxiety disorder: a preliminary test of a conceptual model (Dugas et al.)",
+      "publisher": "Behaviour Research and Therapy (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/9613027/",
+      "year": 1998
+    },
+    {
+      "title": "Obsessional-compulsive problems: a cognitive-behavioural analysis (Salkovskis)",
+      "publisher": "Behaviour Research and Therapy",
+      "url": "https://doi.org/10.1016/0005-7967(85)90105-6",
+      "year": 1985
+    },
+    {
+      "title": "Social anxiety disorder: recognition, assessment and treatment (CG159)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg159",
+      "year": 2013
+    },
+    {
+      "title": "Generalised anxiety disorder and panic disorder in adults: management (CG113)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg113",
+      "year": 2011
+    },
+    {
+      "title": "Depression in adults: treatment and management (NG222)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng222",
+      "year": 2022
+    },
+    {
+      "title": "Eating disorders: recognition and treatment (NG69)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng69",
+      "year": 2017
+    },
+    {
+      "title": "Obsessive-compulsive disorder and body dysmorphic disorder: treatment (CG31)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg31",
+      "year": 2005
+    },
+    {
+      "title": "Post-traumatic stress disorder (NG116)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng116",
+      "year": 2018
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

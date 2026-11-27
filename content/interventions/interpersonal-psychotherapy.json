@@ -41,7 +41,8 @@
     "consentNote": "Offer only if the client raises faith or spirituality and asks to include it. Before starting, explain what a faith-integrated approach involves, that it is optional, that the same intervention is available without religious content, and that the client can change their mind at any time; document the client's informed consent. Follow the client's own tradition and words, and never introduce, impose, endorse or challenge beliefs (AACC Code of Ethics: consent before spiritual interventions, client-led integration; ACA Code of Ethics 2014, A.2 informed consent and A.4.b personal values)."
   },
   "trainingRequired": "IPT: formal training and supervised cases are recommended before delivering the full therapy (for example, ISIPT therapist certification lists at least 16 hours of introductory IPT training plus supervision). Steps here are overview-level only.",
-  "handoutIds": ["grief-and-loss", "assertive-communication"],
+  "handoutIds": ["grief-and-loss", "assertive-communication", "my-relationships-map"],
+  "orientationIds": ["interpersonal-therapies"],
   "sources": [
     { "title": "Depression in adults: treatment and management (NG222)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng222", "year": 2022 },
     { "title": "Depression in adults (NG222): rationale and impact", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng222/chapter/Rationale-and-impact", "year": 2022 },

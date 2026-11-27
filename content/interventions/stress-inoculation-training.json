@@ -1,0 +1,108 @@
+{
+  "id": "stress-inoculation-training",
+  "name": "Stress inoculation training (SIT)",
+  "modality": "CBT - coping skills",
+  "conditions": [
+    "ptsd",
+    "adjustment-disorder",
+    "generalized-anxiety-disorder",
+    "acute-stress-disorder"
+  ],
+  "evidenceLevel": "Developed by Donald Meichenbaum. A meta-analysis of SIT for stress and anxiety (Saunders et al., 1996) found less anxiety and better performance under stress. For PTSD, SIT reduced symptoms in female assault survivors but less than prolonged exposure (Foa et al., 1999). The 2017 VA/DoD PTSD guideline suggested SIT as a non-trauma-focused option; the 2023 update lists it among therapies with insufficient evidence to recommend for or against. Trauma-focused therapies remain first-line for PTSD.",
+  "evidenceGrades": [
+    {
+      "body": "VA/DoD",
+      "guideline": "Management of Posttraumatic Stress Disorder and Acute Stress Disorder (2023)",
+      "year": 2023,
+      "conditionId": "ptsd",
+      "direction": "insufficient",
+      "strength": "insufficient evidence to recommend for or against",
+      "url": "https://www.ptsd.va.gov/professional/treat/txessentials/overview_therapy.asp"
+    },
+    {
+      "body": "VA/DoD",
+      "guideline": "Management of Posttraumatic Stress Disorder and Acute Stress Disorder (2017)",
+      "year": 2017,
+      "conditionId": "ptsd",
+      "direction": "for",
+      "strength": "weak for (suggested non-trauma-focused option)",
+      "url": "https://psychiatryonline.org/doi/10.1176/appi.focus.16408"
+    }
+  ],
+  "minutes": {
+    "min": 45,
+    "max": 60
+  },
+  "purpose": "Builds coping skills for stress and anxiety in three overlapping phases: making sense of the client's stress reactions together, learning and rehearsing coping skills, and applying them to graded real stressors so the client becomes better protected against future stress. Useful for ongoing or expected stressors, and as a coping-focused option for trauma-related symptoms when a client does not want, or cannot yet access, trauma-focused therapy.",
+  "steps": [
+    "Conceptualization: explore the client's stressors and reactions (thoughts, body, behavior), separate what can and cannot be changed, and reframe stress as manageable phases: preparing, facing it, coping with the peak, and looking back.",
+    "Skills: teach two or three skills that fit the client, such as paced breathing, muscle relaxation, coping self-statements, problem-solving, assertive communication and shifting attention on purpose.",
+    "Rehearsal: practice the skills in session with imagery and role play of specific stressors, starting with milder ones.",
+    "Application: the client uses the skills with real stressors in a planned, graded way and records what happened.",
+    "Relapse prevention: anticipate high-stress periods and setbacks, plan which skills to use, and schedule booster sessions if needed.",
+    "Track symptoms with an agreed measure and adjust the plan."
+  ],
+  "script": [
+    "Let's break this stress into stages: getting ready, facing it, handling the hardest moment, and looking back.",
+    "What do you usually tell yourself in that moment? What could you say that would help you get through it?",
+    "Let's practice the breathing now while you picture the start of that meeting.",
+    "This week, try it in one real situation that's a bit stressful, not the hardest one.",
+    "What went well, and what would you change next time?"
+  ],
+  "contraindications": [
+    "For PTSD, discuss trauma-focused therapies (such as CPT, PE or EMDR) as first-line options; SIT is a coping-focused alternative.",
+    "Do not use stress coping to help a client put up with ongoing abuse, unsafe work or other harm; address safety and practical change first.",
+    "Breathing and relaxation can trigger panic or dissociation in some clients; keep practice brief, let the client keep eyes open, and offer grounding instead if needed.",
+    "This intervention does not assess or decide risk. If suicidal thoughts, self-harm or risk to others come up, pause and follow your setting's risk-assessment and safety-planning procedures. Keep crisis options visible: 988 Suicide & Crisis Lifeline (US, call or text), the local emergency number, and findahelpline.com for other countries."
+  ],
+  "culturalAdaptations": [
+    "Coping self-statements work best in the client's own language and style, including sayings or family wisdom they find meaningful.",
+    "Treat stressors linked to discrimination, migration or poverty as real, and include community and practical supports in the plan.",
+    "Adapt relaxation methods to the client's preferences, such as movement or music.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "handoutIds": [
+    "breathing-practice",
+    "pmr-homework",
+    "coping-cards",
+    "problem-solving-steps"
+  ],
+  "orientationIds": [
+    "cognitive-therapy",
+    "behavior-therapy"
+  ],
+  "sources": [
+    {
+      "title": "The effect of stress inoculation training on anxiety and performance (Saunders et al.)",
+      "publisher": "Journal of Occupational Health Psychology (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/9547044/",
+      "year": 1996
+    },
+    {
+      "title": "A comparison of exposure therapy, stress inoculation training, and their combination for reducing posttraumatic stress disorder in female assault victims (Foa et al.)",
+      "publisher": "Journal of Consulting and Clinical Psychology (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/10224729/",
+      "year": 1999
+    },
+    {
+      "title": "Overview of psychotherapy for PTSD (reflects the 2023 VA/DoD guideline)",
+      "publisher": "US Department of Veterans Affairs, National Center for PTSD",
+      "url": "https://www.ptsd.va.gov/professional/treat/txessentials/overview_therapy.asp"
+    },
+    {
+      "title": "VA/DoD 2023 clinical practice guideline for the management of PTSD",
+      "publisher": "US Department of Veterans Affairs, National Center for PTSD",
+      "url": "https://www.ptsd.va.gov/professional/treat/txessentials/cpg_ptsd_management.asp",
+      "year": 2023
+    },
+    {
+      "title": "VA/DoD clinical practice guideline for the management of posttraumatic stress disorder and acute stress disorder (2017): clinician summary",
+      "publisher": "Focus (American Psychiatric Association Publishing)",
+      "url": "https://psychiatryonline.org/doi/10.1176/appi.focus.16408",
+      "year": 2018
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

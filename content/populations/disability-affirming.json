@@ -1,0 +1,79 @@
+{
+  "id": "disability-affirming",
+  "name": "Disability-affirming practice",
+  "group": "disability-and-communication",
+  "summary": "Care for disabled adults that treats disability as part of a person's life, not the presumed cause of their distress: diagnostic overshadowing, ableism, physical and communication access, privacy when an attendant is present, abuse risk, measure confounds and adapting activity-based work.",
+  "scopeNote": "For adults (18 and over) with physical, sensory, chronic health or other disabilities. The app never asks for or saves disability status or diagnoses. Accommodations are arranged with the person, at their direction.",
+  "whyItMatters": "About 1.3 billion people, 16 percent of the world's population, experience significant disability (WHO, 2023). In a 2021 survey of 714 US physicians, 82.4 percent reported that people with significant disability have a worse quality of life than nondisabled people, and only 40.7 percent were very confident they could give disabled patients the same quality of care (Iezzoni and colleagues, 2021), a reminder that clinicians' assumptions can shape care. APA guidelines for assessment of and intervention with persons with disabilities (2012) call for accessible, unbiased practice. Adults with disabilities face a higher risk of violence than nondisabled adults (Hughes and colleagues, 2012).",
+  "askAbout": [
+    "What would make it easier for you to get here, use this space or join by video?",
+    "How would you like to talk about your disability, if at all, and what words do you use for it?",
+    "What do you want help with, and how much does disability play into that, in your view?",
+    "Does someone assist you with daily care, and would you like them present for any part of our sessions?",
+    "Have you met barriers or unfair treatment at work, in health care or in public that are weighing on you?",
+    "Does anyone who helps you ever hurt you, control you or take your money?"
+  ],
+  "stereotypeCaution": "Disability is a broad and varied experience, and many disabled people describe good lives. Do not assume that distress comes from the disability, that the person wishes to be cured, or that a disability means poor quality of life; ask what matters to the person and where the barriers are.",
+  "keyConsiderations": [
+    "Watch for diagnostic overshadowing in both directions: putting all distress down to disability, or missing physical causes of new symptoms.",
+    "Ableism, including inaccessible services and lowered expectations, is a real stressor and can be internalized; name it when it appears.",
+    "Check access in advance: step-free entry, accessible restrooms, seating, lighting, scent and noise, parking, and telehealth that works with assistive technology.",
+    "When a personal care attendant or family member assists, discuss confidentiality and offer time alone; the person decides who stays.",
+    "Disabled adults face a higher risk of abuse by partners, family members and paid caregivers, including withholding equipment, medicines or care; ask privately.",
+    "Disability identity and community can be a source of strength; peer and disability-led organizations may help as much as therapy."
+  ],
+  "assessmentAdaptations": [
+    "Offer more time, breaks and alternative formats (large print, screen-reader friendly documents, captioning) for intake and questionnaires.",
+    "Separate fatigue, pain, sleep and concentration problems caused by a health condition from those related to mood, with the medical team where needed.",
+    "Ask about the barriers in the person's environment as well as their symptoms, and record barriers as targets for change.",
+    "Ask how flare-ups, relapses or changes in function affect mood and plans."
+  ],
+  "sessionAdaptations": [
+    "Plan sessions around energy and symptoms: timing, length, breaks and the option of telehealth or a different format on low-energy days.",
+    "Build goals around participation and values rather than only around function; involve the person in measuring what matters to them.",
+    "Practise self-advocacy skills for accommodations at work, in study and in health care, if the person wants that."
+  ],
+  "interventionNotes": [
+    { "interventionId": "behavioral-activation", "note": "Choose activities by energy cost and access, not by a standard list; include rest and restorative activity, and plan for flare days." },
+    { "interventionId": "graded-in-vivo-exposure", "note": "Separate fear-based avoidance from avoidance due to real access barriers, pain or fatigue before planning exposure." },
+    { "interventionId": "act-values-clarification", "note": "Values-based goals can be pursued in many ways, which suits changing or limited function." },
+    { "interventionId": "cbt-and-act-for-chronic-pain", "note": "For pain alongside disability, coordinate with the medical team and adjust activity goals to the condition." },
+    { "interventionId": "ipv-safety-planning", "note": "Include threats to withhold care, equipment, medicines or transport, and plan for safe access to them." }
+  ],
+  "measureNotes": [
+    "PHQ-9 items on fatigue, sleep, appetite, slowed movement and concentration can be raised by conditions such as spinal cord injury, multiple sclerosis or chronic fatigue; ask what each answer reflects.",
+    "GAD-7 items on restlessness and trouble relaxing can reflect pain or spasticity; note this when reading scores.",
+    "Offer questionnaires in accessible formats, and do not count completion with help as less valid."
+  ],
+  "measuresPending": [],
+  "safetyNotes": [
+    "Ask about suicidal thoughts directly and do not assume that wishing for death is an understandable response to disability; treat it as you would for anyone.",
+    "Signs of abuse or neglect by a caregiver call for action under your local adult protective services or reporting rules."
+  ],
+  "cautions": [
+    "Do not set goals for the person, such as walking unaided or reducing equipment use, that they have not chosen."
+  ],
+  "legalIds": ["digital-accessibility", "decision-making-capacity", "mandatory-reporting"],
+  "ethicsIds": [],
+  "referralIds": ["job-accommodation-network", "988-lifeline-asl", "988-lifeline"],
+  "referralKinds": ["disability"],
+  "handoutIds": ["asking-for-changes-at-work", "pacing-and-flare-plan", "kind-self-talk"],
+  "topicIds": ["disability-and-wellbeing"],
+  "practiceIds": ["goal-attainment-scaling", "involving-family-and-supports", "telehealth-sessions", "diagnostic-reasoning-checks"],
+  "formulationIds": [],
+  "linkOuts": [
+    { "title": "Office of Disability Employment Policy", "publisher": "U.S. Department of Labor", "url": "https://www.dol.gov/agencies/odep", "lastVerified": "2026-11-27" },
+    { "title": "Disability and Health Overview", "publisher": "Centers for Disease Control and Prevention", "url": "https://www.cdc.gov/disability-and-health/about/", "lastVerified": "2026-11-27" },
+    { "title": "Disabilities", "publisher": "MedlinePlus (U.S. National Library of Medicine)", "url": "https://medlineplus.gov/disabilities.html", "lastVerified": "2026-11-27" }
+  ],
+  "sud": false,
+  "sources": [
+    { "title": "Disability (fact sheet)", "publisher": "World Health Organization", "url": "https://www.who.int/news-room/fact-sheets/detail/disability-and-health", "year": 2023 },
+    { "title": "Physicians' perceptions of people with disability and their health care (Iezzoni and colleagues)", "publisher": "Health Affairs (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/33523739/", "year": 2021 },
+    { "title": "Guidelines for assessment of and intervention with persons with disabilities", "publisher": "American Psychologist (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/22103887/", "year": 2012 },
+    { "title": "Prevalence and risk of violence against adults with disabilities: a systematic review and meta-analysis of observational studies (Hughes and colleagues)", "publisher": "Lancet (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/22377290/", "year": 2012 }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

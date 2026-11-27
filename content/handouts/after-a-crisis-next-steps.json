@@ -1,0 +1,237 @@
+{
+  "id": "after-a-crisis-next-steps",
+  "title": "After a Crisis: My Next Steps",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 15,
+  "intro": "You may have just left an emergency room, a hospital, or a crisis center. Or you may have called or texted a crisis line. The first few weeks after a crisis can be hard, and extra support during this time can help a lot. This sheet helps you plan these weeks with your care team and the people you trust. Fill it in before you leave, or at your first visit after. It takes about 15 minutes.",
+  "sections": [
+    {
+      "heading": "My first appointment",
+      "body": "Try to see a counselor or doctor within a few days, and no later than a week, after a crisis. If you do not have a visit set up yet, ask for one before you leave.",
+      "steps": [
+        "Who I will see: ________________",
+        "Date and time: ________________",
+        "How I will get there, or how I will join by phone or video: ________________",
+        "If I need to change the time, I will call: ________________"
+      ]
+    },
+    {
+      "heading": "People may check on me",
+      "body": "Your care team may call, text, or send a card or letter in the weeks after a crisis. These short check-ins are a normal part of care. You do not have to say much. It is okay to answer, 'I am doing okay,' or, 'Today is a hard day.'",
+      "steps": [
+        "How I like to be checked on (call, text, or letter): ________________"
+      ]
+    },
+    {
+      "heading": "Look over my safety plan",
+      "steps": [
+        "Go over your safety plan with your counselor at your first visit. Change anything that did not help.",
+        "Keep a copy with you, like on paper in your bag or wallet.",
+        "If you want, share it with one person you trust so they know how to help.",
+        "If you do not have a safety plan yet, ask your counselor to make one with you."
+      ]
+    },
+    {
+      "heading": "Make home safer for now",
+      "body": "During a hard time, putting distance between you and things you could use to hurt yourself can save a life. Ask your counselor for the sheet about making home safer.",
+      "steps": [
+        "Guns: For now, ask someone you trust to store your guns away from your home, if the law where you live allows it. If that cannot happen, keep them locked and unloaded, and lock the bullets in a different place.",
+        "Medicines: Keep only a small supply at home. Ask someone you trust to hold the rest. Take medicines you no longer use to a take-back site.",
+        "Alcohol and drugs: Try to keep them out of your home for now. They can make hard feelings stronger and make it harder to stay safe."
+      ]
+    },
+    {
+      "heading": "Take care of the basics",
+      "steps": [
+        "Take your medicines the way your prescriber told you. Ask about any side effects that worry you.",
+        "Try to sleep, eat, and get up at regular times.",
+        "Plan one small thing each day that you used to enjoy, even for 10 minutes.",
+        "Go easy on yourself. It is okay to put off big decisions for a while."
+      ]
+    },
+    {
+      "heading": "People who can help",
+      "body": "Pick a few people you can be with or talk to. They do not need to know every detail. Write how to reach them on your paper copy only.",
+      "steps": [
+        "Someone I can call or text: ________________",
+        "Someone I can spend time with: ________________",
+        "What I want them to know about how to help me: ________________"
+      ]
+    },
+    {
+      "heading": "Get help right away",
+      "body": "Do not wait for your next visit if any of these happen.",
+      "steps": [
+        "Thoughts of suicide come back or get stronger, or you start to make a plan.",
+        "You feel you cannot keep yourself safe, even for the next hour.",
+        "You have a strong reaction to a medicine and feel very unwell.",
+        "In the US, call or text 988 at any time. For Spanish, call 988 and press 2. Veterans can call 988 and press 1, or text 838255.",
+        "If you are in danger right now, call 911 or go to the nearest emergency room."
+      ]
+    },
+    {
+      "heading": "How to use the check-in log",
+      "body": "Each day for the next 2 weeks, rate how you are doing from 0 to 10. A 0 means the hardest you have felt. A 10 means the best you can imagine. If a low number comes with thoughts of suicide, use your safety plan or call 988. Bring the log to your visits."
+    }
+  ],
+  "practiceLog": {
+    "columns": [
+      "Day",
+      "How I am doing (0-10)",
+      "What helped today",
+      "Who I talked to"
+    ],
+    "rows": 14
+  },
+  "safetyNote": "Safety first: If you might act on thoughts of suicide, or of hurting yourself or someone else, get help now. In the US, call or text 988, call 911, or go to the nearest emergency room. In other countries, call your local emergency number or visit findahelpline.com. It is always okay to reach out again, even if you just left care. Resource only. This sheet does not replace care from a licensed professional.",
+  "sud": false,
+  "es": {
+    "title": "Después de una crisis: mis próximos pasos",
+    "intro": "Puede que acabe de salir de una sala de emergencias, de un hospital o de un centro de crisis. O puede que haya llamado o escrito a una línea de crisis. Las primeras semanas después de una crisis pueden ser difíciles, y tener más apoyo en este tiempo puede ayudar mucho. Esta hoja le ayuda a planear estas semanas con su equipo de cuidado y con las personas en quienes confía. Llénela antes de salir, o en su primera cita después. Toma unos 15 minutos.",
+    "sections": [
+      {
+        "heading": "Mi primera cita",
+        "body": "Trate de ver a un consejero o a un médico en unos pocos días, y no más de una semana, después de una crisis. Si todavía no tiene una cita, pida una antes de salir.",
+        "steps": [
+          "A quién voy a ver: ________________",
+          "Fecha y hora: ________________",
+          "Cómo voy a llegar, o cómo me voy a conectar por teléfono o video: ________________",
+          "Si necesito cambiar la hora, voy a llamar a: ________________"
+        ]
+      },
+      {
+        "heading": "Es posible que me llamen para ver cómo estoy",
+        "body": "Su equipo de cuidado puede llamarle, escribirle o enviarle una tarjeta o una carta en las semanas después de una crisis. Estos contactos cortos son una parte normal del cuidado. No tiene que decir mucho. Está bien contestar: 'Estoy bien', o: 'Hoy es un día difícil'.",
+        "steps": [
+          "Cómo prefiero que me contacten (llamada, mensaje o carta): ________________"
+        ]
+      },
+      {
+        "heading": "Revisar mi plan de seguridad",
+        "steps": [
+          "Revise su plan de seguridad con su consejero en su primera cita. Cambie lo que no le ayudó.",
+          "Lleve una copia con usted, por ejemplo en papel en su bolsa o su billetera.",
+          "Si quiere, compártalo con una persona de confianza para que sepa cómo ayudarle.",
+          "Si todavía no tiene un plan de seguridad, pídale a su consejero que lo haga con usted."
+        ]
+      },
+      {
+        "heading": "Hacer más segura la casa por ahora",
+        "body": "En un momento difícil, poner distancia entre usted y las cosas que podría usar para hacerse daño puede salvar una vida. Pídale a su consejero la hoja sobre cómo hacer más segura la casa.",
+        "steps": [
+          "Armas de fuego: Por ahora, pídale a una persona de confianza que guarde sus armas fuera de su casa, si la ley del lugar donde vive lo permite. Si eso no es posible, manténgalas bajo llave y descargadas, y guarde las balas bajo llave en otro lugar.",
+          "Medicamentos: Tenga en casa solo una cantidad pequeña. Pídale a una persona de confianza que guarde el resto. Lleve los medicamentos que ya no usa a un sitio de devolución.",
+          "Alcohol y drogas: Trate de no tenerlos en su casa por ahora. Pueden hacer más fuertes los sentimientos difíciles y hacer más difícil mantenerse a salvo."
+        ]
+      },
+      {
+        "heading": "Cuidar lo básico",
+        "steps": [
+          "Tome sus medicamentos como se los indicó quien se los receta. Pregunte por cualquier efecto secundario que le preocupe.",
+          "Trate de dormir, comer y levantarse a horas fijas.",
+          "Planee cada día una cosa pequeña que antes disfrutaba, aunque sea por 10 minutos.",
+          "Sea amable con usted. Está bien dejar para después las decisiones grandes por un tiempo."
+        ]
+      },
+      {
+        "heading": "Personas que me pueden ayudar",
+        "body": "Elija a unas pocas personas con quienes pueda estar o hablar. No tienen que saber todos los detalles. Escriba cómo comunicarse con ellas solo en su copia de papel.",
+        "steps": [
+          "Alguien a quien puedo llamar o escribir: ________________",
+          "Alguien con quien puedo pasar tiempo: ________________",
+          "Lo que quiero que sepan sobre cómo ayudarme: ________________"
+        ]
+      },
+      {
+        "heading": "Buscar ayuda de inmediato",
+        "body": "No espere a su próxima cita si pasa alguna de estas cosas.",
+        "steps": [
+          "Los pensamientos de suicidio vuelven o se hacen más fuertes, o empieza a hacer un plan.",
+          "Siente que no puede mantenerse a salvo, ni siquiera por la próxima hora.",
+          "Tiene una reacción fuerte a un medicamento y se siente muy mal.",
+          "En EE. UU., llame o envíe un mensaje de texto al 988 a cualquier hora. Para español, llame al 988 y marque 2. Los veteranos pueden llamar al 988 y marcar 1, o enviar un mensaje de texto al 838255.",
+          "Si está en peligro ahora mismo, llame al 911 o vaya a la sala de emergencias más cercana."
+        ]
+      },
+      {
+        "heading": "Cómo usar el registro diario",
+        "body": "Cada día de las próximas 2 semanas, califique cómo está, del 0 al 10. Un 0 es lo más difícil que ha sentido. Un 10 es lo mejor que se puede imaginar. Si un número bajo viene con pensamientos de suicidio, use su plan de seguridad o llame al 988. Lleve el registro a sus citas."
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Día",
+        "Cómo estoy (0-10)",
+        "Lo que me ayudó hoy",
+        "Con quién hablé"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: Si podría actuar según pensamientos de suicidio, o de hacerse daño o de hacerle daño a otra persona, busque ayuda ahora. En EE. UU., llame o envíe un mensaje de texto al 988, llame al 911 o vaya a la sala de emergencias más cercana. En otros países, llame al número de emergencias local o visite findahelpline.com. Siempre está bien volver a pedir ayuda, aunque acabe de salir de su cuidado. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "sources": [
+    {
+      "title": "Comparison of the safety planning intervention with follow-up vs usual care of suicidal patients treated in the emergency department (Stanley et al.)",
+      "publisher": "JAMA Psychiatry (PubMed Central)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6142908/",
+      "year": 2018
+    },
+    {
+      "title": "A randomized controlled trial of postcrisis suicide prevention (Motto and Bostrom)",
+      "publisher": "Psychiatric Services (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11376235/",
+      "year": 2001
+    },
+    {
+      "title": "Self-harm: assessment, management and preventing recurrence (NG225)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng225",
+      "year": 2022
+    },
+    {
+      "title": "VA/DoD Clinical Practice Guideline: Assessment and Management of Patients at Risk for Suicide",
+      "publisher": "US Department of Veterans Affairs and Department of Defense",
+      "url": "https://www.healthquality.va.gov/guidelines/MH/srb/",
+      "year": 2024
+    },
+    {
+      "title": "CALM: Counseling on Access to Lethal Means",
+      "publisher": "Suicide Prevention Resource Center (SPRC)",
+      "url": "https://sprc.org/online-library/calm-counseling-on-access-to-lethal-means"
+    },
+    {
+      "title": "Drug Disposal: Drug Take Back Options",
+      "publisher": "US Food and Drug Administration",
+      "url": "https://www.fda.gov/drugs/disposal-unused-medicines-what-you-should-know/drug-disposal-drug-take-back-options"
+    },
+    {
+      "title": "Warning Signs of Suicide",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/publications/warning-signs-of-suicide"
+    },
+    {
+      "title": "988 Suicide & Crisis Lifeline",
+      "publisher": "988 Lifeline",
+      "url": "https://988lifeline.org"
+    },
+    {
+      "title": "Is the 988 Lifeline available in other languages? (FAQ)",
+      "publisher": "988 Lifeline",
+      "url": "https://988lifeline.org/faq/calling-the-988-lifeline/faq-is-the-988-lifeline-available-in-other-languages-for-non-english-speakers/"
+    },
+    {
+      "title": "Veterans Crisis Line",
+      "publisher": "US Department of Veterans Affairs",
+      "url": "https://www.veteranscrisisline.net/"
+    },
+    {
+      "title": "Find A Helpline (international directory)",
+      "publisher": "Find A Helpline",
+      "url": "https://findahelpline.com"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

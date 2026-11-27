@@ -1,0 +1,83 @@
+{
+  "id": "cultural-adaptation",
+  "name": "Cultural adaptation of any therapy",
+  "group": "culture-and-identity",
+  "summary": "A method for fitting any library intervention to a person's language, culture and context while keeping the parts that make it work: Bernal's eight dimensions, Hwang's adaptation framework and plain prompts to ask rather than assume.",
+  "scopeNote": "For adults (18 and over). The app never asks for or saves a person's ethnicity, culture, language, faith or immigration status. Use these notes as prompts for a conversation the person chooses to have, and record only what your own records policy allows.",
+  "whyItMatters": "Meta-analyses find that culturally adapted psychological treatments do better on average than the same treatments delivered without adaptation (Griner and Smith, 2006; Hall and colleagues, 2016), and clients' ratings of their therapist's multicultural competence are linked with better outcomes (Soto and colleagues, 2018). Bernal and colleagues (1995) described eight dimensions along which a treatment can be fitted to a person's world: language, persons, metaphors, content, concepts, goals, methods and context. Hwang's psychotherapy adaptation and modification framework (2006) adds a stepwise way to adapt while protecting the active ingredients. The APA Multicultural Guidelines (2017) frame the task ecologically: identity is layered and shaped by context, power and history.",
+  "askAbout": [
+    "What would you like me to understand about your background, community or culture that matters for this work?",
+    "Which language do you prefer for talking about feelings, and which for anything written?",
+    "How does your family or community usually understand problems like this one, and what do they suggest doing?",
+    "Who, if anyone, would you like involved in decisions about your care?",
+    "Have you had experiences with health care or with people from my background that I should know about?",
+    "Are there sayings, stories or images from your own life that would make these ideas clearer?",
+    "Does anything in this plan clash with your values, beliefs or daily obligations?"
+  ],
+  "stereotypeCaution": "Culture is something to learn from each person, not a list of traits. Group-level research describes averages; the person in front of you may hold several identities, relate to their heritage in their own way, and disagree with their community. Start from curiosity, say your assumptions out loud so they can be corrected, and let the person lead.",
+  "keyConsiderations": [
+    "Use Bernal's eight dimensions as a checklist, not a script: language, persons (the match and relationship between client and clinician), metaphors, content, concepts, goals, methods and context.",
+    "Keep the core: name the active ingredients of the treatment you are adapting (for example, approaching feared situations in exposure, or scheduling valued activity in behavioral activation) and adapt how they are delivered, not whether they happen.",
+    "Notice power and history. Discrimination, migration, colonization and unequal access to care can shape symptoms, trust and what feels safe to say.",
+    "Broach culture early and plainly; many people wait for the clinician to signal that the topic is welcome.",
+    "Roles of family and community in decisions vary widely. Ask before involving anyone, and respect a wish for privacy from one's own community.",
+    "Distress may be described through the body, through relationships or in spiritual terms. Explore each description in the person's words before translating it into clinical language.",
+    "Record what was adapted and why, so the adaptation can be reviewed with the person and with supervision."
+  ],
+  "assessmentAdaptations": [
+    "Offer a qualified interpreter whenever the person prefers another language. Do not rely on family members, and never on children.",
+    "Use the cultural formulation exploration in the library to hear the person's own explanation of the problem, cultural identity, stressors, supports and past help-seeking.",
+    "Ask what an experience means to the person and their community before deciding what it is, so a shared belief or practice is not mistaken for a symptom.",
+    "Ask whether racism, immigration-related stress, poverty or unsafe housing are part of the picture, and note them as context rather than as personal deficits."
+  ],
+  "sessionAdaptations": [
+    "Translate concepts, not only words: test whether examples, metaphors and practice tasks fit the person's daily life, and replace those that do not.",
+    "Agree on goals in the person's terms, which may include family harmony, faith, work or community roles alongside symptom change.",
+    "Adjust methods to what feels respectful to the person, such as more structure or more conversation, a different pace, or written material in their language.",
+    "Check the fit every few sessions and invite correction; adaptation is ongoing, not a one-time step."
+  ],
+  "interventionNotes": [
+    { "interventionId": "culturally-adapted-cbt", "note": "The library entry for planned cultural adaptation of CBT. Work through the eight dimensions with the person and keep the core techniques intact." },
+    { "interventionId": "cultural-formulation-exploration", "note": "Start here: the person's own explanation of the problem, identity, stressors and supports shape every later adaptation." },
+    { "interventionId": "behavioral-activation", "note": "Build activity lists from the person's own valued roles, rituals and community life rather than from a standard menu." },
+    { "interventionId": "problem-management-plus", "note": "Designed to be adapted to local language and context; consider it where language, distance or cost limit other options." },
+    { "orientationId": "multicultural-feminist-liberation", "note": "This orientation puts identity, power and context at the center of the formulation and can frame the whole adaptation." }
+  ],
+  "measureNotes": [
+    "Use the PHQ-9 and GAD-7 in the person's preferred language from an official translation. Cut-offs were developed in particular populations, so read scores alongside the person's own account.",
+    "Distress described through the body (pain, fatigue, poor sleep) more than through mood words can shift self-report scores in either direction; ask what each answer meant.",
+    "Where a measure has not been studied in the person's community, treat the score as one view among several, not as more objective than the conversation."
+  ],
+  "measuresPending": [],
+  "safetyNotes": [
+    "Ask about safety in the person's preferred language and in more than one way; some languages and communities have few direct words for suicidal thoughts.",
+    "Discrimination, isolation and immigration stress can add to risk. Ask about them during safety planning, and include the person's own reasons for living and trusted community supports in the plan."
+  ],
+  "cautions": [
+    "Do not use a person's culture to explain away symptoms that need care, and do not treat a cultural or religious practice as pathology without understanding it.",
+    "Surface changes alone, such as a translated handout or a matched clinician, are not a full adaptation; check that content, concepts and goals fit too."
+  ],
+  "legalIds": ["language-access-interpreters", "competence-and-scope-of-practice"],
+  "ethicsIds": ["apa-ethical-principles-psychologists", "aca-code-of-ethics"],
+  "referralIds": ["988-lifeline-spanish", "findahelpline"],
+  "referralKinds": [],
+  "handoutIds": ["what-to-expect-in-therapy", "questions-about-my-care"],
+  "topicIds": ["racism-and-discrimination-stress"],
+  "practiceIds": ["multicultural-orientation-and-broaching", "working-with-interpreters", "teach-back-and-plain-language", "preferences-goals-and-readiness"],
+  "formulationIds": ["five-ps-biopsychosocial-spiritual", "minority-stress"],
+  "linkOuts": [
+    { "title": "Health Information in Multiple Languages", "publisher": "MedlinePlus (U.S. National Library of Medicine)", "url": "https://medlineplus.gov/languages/languages.html", "note": "Free patient information in many languages to share alongside the app's English and Spanish handouts.", "lastVerified": "2026-11-27" }
+  ],
+  "sud": false,
+  "sources": [
+    { "title": "Ecological validity and cultural sensitivity for outcome research: issues for the cultural adaptation and development of psychosocial treatments with Hispanics (Bernal, Bonilla and Bellido)", "publisher": "Journal of Abnormal Child Psychology (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/7759675/", "year": 1995 },
+    { "title": "The psychotherapy adaptation and modification framework: application to Asian Americans (Hwang)", "publisher": "American Psychologist (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/17032070/", "year": 2006 },
+    { "title": "Culturally adapted mental health intervention: a meta-analytic review (Griner and Smith)", "publisher": "Psychotherapy (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/22122142/", "year": 2006 },
+    { "title": "A meta-analysis of cultural adaptations of psychological interventions (Hall and colleagues)", "publisher": "Behavior Therapy (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/27993346/", "year": 2016 },
+    { "title": "Cultural adaptations and therapist multicultural competence: two meta-analytic reviews (Soto and colleagues)", "publisher": "Journal of Clinical Psychology (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/30091201/", "year": 2018 },
+    { "title": "Multicultural Guidelines: An Ecological Approach to Context, Identity, and Intersectionality", "publisher": "American Psychological Association", "url": "https://www.apa.org/about/policy/multicultural-guidelines", "year": 2017 }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

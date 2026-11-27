@@ -1,0 +1,97 @@
+{
+  "id": "core-belief-work",
+  "name": "Core belief work (downward arrow, continuum, positive data log)",
+  "modality": "CBT - belief-level cognitive work",
+  "conditions": [
+    "persistent-depressive-disorder",
+    "major-depressive-disorder",
+    "social-anxiety-disorder",
+    "borderline-personality-disorder"
+  ],
+  "evidenceLevel": "Work on assumptions and core beliefs is a standard later-stage part of Beck's cognitive therapy, which APA Division 12 lists for depression and which NICE NG222 (2022) includes within individual CBT. Trials test the whole therapy rather than this component, so evidence for it on its own is limited. Schema therapy is a separate, longer protocol (see that entry).",
+  "minutes": {
+    "min": 30,
+    "max": 50
+  },
+  "purpose": "Helps the client identify and slowly revise long-standing, global beliefs about themselves, others and the world (for example, 'I'm a failure' or 'people can't be trusted') and the rules that protect them ('if I don't do everything perfectly, I'll be rejected'). Usually comes after the client can already work with day-to-day thoughts. The aim is not to argue the belief away but to build a fairer, believable alternative and gather evidence for it over weeks.",
+  "steps": [
+    "Start with recurring thoughts the client already tracks. Use the downward arrow: 'If that were true, what would it mean about you?' Repeat until a global belief appears.",
+    "Name the belief and the rules and assumptions around it, in the client's words. Rate how strongly the client believes each (0 to 100) now and when most upset.",
+    "Build a shared formulation: how the belief may have developed (key experiences), and how rules and behaviors keep it going today.",
+    "Use a continuum: define the two ends of a quality such as worth or competence in concrete terms, place the client and others on a 0 to 100 line, and look at how all-or-nothing the belief is.",
+    "Do a historical review: look across life periods for experiences that fit the old belief and ones that do not, and how the client explained the ones that did not fit.",
+    "Draft a fairer new belief together (for example, 'I have strengths and limits, like everyone'), and start a positive data log: each day, write small, specific events that fit it.",
+    "Test the rules with behavioral experiments, such as doing a task to a good-enough standard and seeing what happens.",
+    "Re-rate the old and new beliefs every few weeks; expect slow change and setbacks."
+  ],
+  "script": [
+    "Suppose that thought were true. What would it say about you as a person?",
+    "That sounds like a belief you've carried for a long time. It makes sense, given what you went through.",
+    "Let's not try to throw it away all at once. What would be a fairer way to put it, one you could start to believe even a little?",
+    "This week, write down small moments that fit the new belief, even tiny ones. Our minds tend to skip over them.",
+    "How strongly do you believe the old idea today, from 0 to 100? And the new one?"
+  ],
+  "contraindications": [
+    "Core beliefs can be painful to name. Go at the client's pace, keep sessions grounded in the present, and make sure basic coping skills are in place first.",
+    "When a belief is tied to trauma (for example, 'it was my fault'), consider a trauma-focused therapy such as cognitive processing therapy rather than belief work alone.",
+    "Beliefs that reflect real, ongoing mistreatment or discrimination are not distortions. Validate the reality and focus on what the client concludes about themselves.",
+    "For long-standing personality patterns, consider structured longer-term therapies (for example DBT, MBT or schema therapy) with trained clinicians.",
+    "This intervention does not assess or decide risk. If suicidal thoughts, self-harm or risk to others come up, pause and follow your setting's risk-assessment and safety-planning procedures. Keep crisis options visible: 988 Suicide & Crisis Lifeline (US, call or text), the local emergency number, and findahelpline.com for other countries."
+  ],
+  "culturalAdaptations": [
+    "Self-worth may be tied to family, community or faith more than to individual achievement. Phrase old and new beliefs in the client's own frame.",
+    "Explore how racism, sexism, homophobia, ableism or poverty may have shaped beliefs such as 'I don't belong,' and name those forces rather than placing the problem only in the client.",
+    "In families that value obligation, a belief about letting others down may carry extra weight; explore it with respect.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "faithIntegrated": {
+    "note": "When faith matters to the client and they ask for it, the historical review and the new belief can draw on teachings from their own tradition about worth, mercy or grace, in their words (see the religiously integrated CBT entry). The client chooses which sources, if any, to use.",
+    "consentNote": "Offer only if the client raises faith or spirituality and asks to include it. Before starting, explain what the faith-integrated option involves, that it is optional, that the same intervention is available without religious content, and that the client can change their mind at any time; document informed consent in your own clinical record, not in this app. Follow the client's own tradition and words, and never introduce, impose, endorse or challenge beliefs (AACC Code of Ethics: consent before spiritual interventions, client-led integration; ACA Code of Ethics 2014, A.2 informed consent and A.4.b personal values)."
+  },
+  "trainingRequired": "Core belief work: CBT training and supervision recommended (for example, Beck Institute or Academy of Cognitive and Behavioral Therapies certification paths).",
+  "handoutIds": [
+    "positive-data-log",
+    "thought-record",
+    "kind-self-talk"
+  ],
+  "orientationIds": [
+    "cognitive-therapy"
+  ],
+  "sources": [
+    {
+      "title": "Cognitive Therapy for Depression",
+      "publisher": "APA Division 12, Society of Clinical Psychology",
+      "url": "https://div12.org/treatment/cognitive-therapy-for-depression/"
+    },
+    {
+      "title": "Depression in adults: treatment and management (NG222)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng222",
+      "year": 2022
+    },
+    {
+      "title": "CBT certification",
+      "publisher": "Beck Institute for Cognitive Behavior Therapy",
+      "url": "https://beckinstitute.org/certification/"
+    },
+    {
+      "title": "Certification",
+      "publisher": "Academy of Cognitive and Behavioral Therapies",
+      "url": "https://academyofcbt.org/certification"
+    },
+    {
+      "title": "AACC Code of Ethics",
+      "publisher": "American Association of Christian Counselors",
+      "url": "https://aacc.net/aacc-code-of-ethics/"
+    },
+    {
+      "title": "ACA Code of Ethics (2014) and ethics resources",
+      "publisher": "American Counseling Association",
+      "url": "https://www.counseling.org/resources/ethics",
+      "year": 2014
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

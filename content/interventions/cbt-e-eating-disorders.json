@@ -40,8 +40,10 @@
   ],
   "trainingRequired": "CBT-E: training and supervision recommended; refer to an eating disorder specialist when weight is low or medical risk is present.",
   "handoutIds": [
-    "regular-eating-plan"
+    "regular-eating-plan",
+    "eating-concerns-warning-signs"
   ],
+  "orientationIds": ["cognitive-therapy", "behavior-therapy"],
   "sources": [
     {
       "title": "Transdiagnostic cognitive-behavioral therapy for patients with eating disorders: a two-site trial with 60-week follow-up (Fairburn et al.)",

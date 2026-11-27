@@ -1,0 +1,111 @@
+{
+  "id": "involving-family-and-supports",
+  "title": "Involving family and other supports",
+  "category": "formats-and-settings",
+  "summary": "When and how to involve family members, partners, friends or carers in an adult client's care: consent and scope, what can be shared, what privacy law allows when the client is present or lacks capacity, supporting carers with information, and noticing carers' own needs.",
+  "whenToUse": [
+    "When a client wants a support person to come to a session or to be kept informed.",
+    "When family members contact you with concerns.",
+    "When relapse prevention or safety planning would benefit from someone the client trusts.",
+    "When a carer appears strained or unwell."
+  ],
+  "steps": [
+    {
+      "heading": "Start with the client's wishes",
+      "items": [
+        "Ask who matters to them and who they want involved, if anyone.",
+        "Agree what can be shared, with whom, and for what purpose.",
+        "Record consent and review it, since it can change."
+      ]
+    },
+    {
+      "heading": "Know what privacy rules allow",
+      "body": "Privacy law generally lets you share relevant information with family when the client agrees or does not object after being given the chance, and in some situations when the client lacks capacity or there is a serious and imminent threat. Listening to family is always allowed. Check your local law and setting policy."
+    },
+    {
+      "heading": "Plan a joint session",
+      "items": [
+        "Agree on the purpose with the client beforehand.",
+        "Give the support person information about the problem, the treatment and how they can help.",
+        "Ask what they notice and what they find hard.",
+        "End with clear next steps, including what to do in a crisis."
+      ]
+    },
+    {
+      "heading": "Support the carer",
+      "body": "Ask carers how they are coping, and offer information about carer support and their own help, separate from the client's care."
+    },
+    {
+      "heading": "When you cannot share",
+      "body": "If the client does not consent, you can still listen, give general information that does not concern the client, and point the family to their own support and crisis resources."
+    }
+  ],
+  "prompts": [
+    "Is there anyone you would like to be involved in your care, or kept up to date? What would you be comfortable with me sharing?",
+    "Your mother called with some worries. I did not tell her anything about you. Would you like us to talk about whether and how to involve her?",
+    "To the support person: what have you noticed that worries you, and what has helped?",
+    "Looking after someone can be exhausting. How are you doing yourself?"
+  ],
+  "cautions": [
+    "Do not confirm a client is in your care to someone without consent unless the law allows it.",
+    "Family involvement must not become a channel for control or abuse; screen privately where that is a concern.",
+    "Information about substance use may need specific Part 2 consent before sharing.",
+    "In a crisis, safety comes first; know your local rules on sharing to prevent serious harm."
+  ],
+  "evidenceSummary": "NICE guideline NG150 (2020) recommends identifying, informing and supporting adult carers, including assessing their own needs. A 2013 systematic review (Meis and colleagues) found that couple and family involvement in adult mental health treatment is associated with benefits across several conditions. NICE CG136 (2011) sets out involving families and carers in line with the person's wishes.",
+  "forClinicianReview": true,
+  "crisisPanel": false,
+  "sud": true,
+  "relatedInterventionIds": [
+    "family-psychoeducation-psychosis",
+    "family-focused-therapy-bipolar",
+    "craft-for-family-members",
+    "dementia-caregiver-support"
+  ],
+  "relatedHandoutIds": [
+    "helping-someone-at-risk",
+    "listening-to-someone-you-love"
+  ],
+  "relatedFormulationIds": [],
+  "relatedLegalIds": [
+    "hipaa-privacy-basics",
+    "decision-making-capacity",
+    "42-cfr-part-2",
+    "psychiatric-advance-directives"
+  ],
+  "relatedPracticeIds": [
+    "couples-and-conjoint-sessions",
+    "care-transitions-and-warm-handoffs",
+    "recovery-and-harm-reduction"
+  ],
+  "relatedPopulationIds": [
+    "older-adults",
+    "intellectual-disability",
+    "serious-medical-illness"
+  ],
+  "linkOuts": [],
+  "measuresPending": [],
+  "sources": [
+    {
+      "title": "Supporting adult carers (NG150)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng150",
+      "year": 2020
+    },
+    {
+      "title": "Couple and family involvement in adult mental health treatment: a systematic review (Meis et al.)",
+      "publisher": "Clinical Psychology Review, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23321286/",
+      "year": 2013
+    },
+    {
+      "title": "Service user experience in adult mental health: improving the experience of care for people using adult NHS mental health services (CG136)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg136",
+      "year": 2011
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

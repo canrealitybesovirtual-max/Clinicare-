@@ -1,0 +1,163 @@
+{
+  "id": "pacing-and-flare-plan",
+  "title": "Pacing and My Flare Plan",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 20,
+  "intro": "Living with pain, tiredness, or a long-term illness often means good days and bad days. Many people push hard on good days and then crash for days after. Pacing means spreading your energy out more evenly, so you can do more of what matters with fewer crashes. This sheet also helps you plan for flares, the times when symptoms get worse. It takes about 20 minutes to fill in with your care team.",
+  "sections": [
+    {
+      "heading": "Your energy budget",
+      "body": "Think of your energy as a budget. Each day you have a certain amount, and it can change from day to day. The goal is to stay inside your budget, not to push past it.",
+      "steps": [
+        "Notice what drains your energy. Physical tasks, thinking tasks, strong feelings, noise, and time with people all count.",
+        "Notice your early signs of doing too much, like more pain, a heavy tiredness, poor sleep, or a foggy mind.",
+        "Notice when symptoms show up. Some people feel fine during an activity and crash 1 or 2 days later."
+      ]
+    },
+    {
+      "heading": "How to pace",
+      "steps": [
+        "Break big tasks into smaller parts, and spread them over the day or the week.",
+        "Rest before you feel worn out, not after. Short, planned rests help.",
+        "Switch between kinds of tasks, like moving, sitting, and thinking tasks.",
+        "Plan your week so a busy day is followed by an easier day.",
+        "On good days, resist the urge to catch up on everything.",
+        "Base your activity level on what you can do on most days without a crash, not on your best day."
+      ]
+    },
+    {
+      "heading": "A note on doing more",
+      "body": "If doing more makes you crash a day or two later, do not push through it. Talk with your doctor before you try to build up activity. For some people, pushing harder each week makes things worse. Any increase should be small, planned with your care team, and only if your body handles it well."
+    },
+    {
+      "heading": "My flare plan",
+      "body": "Fill this in when you feel well, so it is ready when you need it.",
+      "steps": [
+        "Early signs that a flare is starting: ________",
+        "Things that help me during a flare, like rest, heat or cold, medicines my doctor approved, gentle movement, or quiet: ________",
+        "Things I will put on hold during a flare: ________",
+        "Who can help with meals, care, or errands: ________",
+        "How I will get back to my usual pace after a flare: start low, then build back slowly."
+      ]
+    },
+    {
+      "heading": "When to call the doctor",
+      "steps": [
+        "The flare is much worse than, or different from, your usual flares.",
+        "You have new symptoms, like a fever, new weakness or numbness, or trouble with your bladder or bowels.",
+        "Your usual plan is not helping after a few days.",
+        "Call 911 for chest pain, trouble breathing, sudden weakness on one side, or the worst headache of your life."
+      ]
+    },
+    {
+      "heading": "Mood and long-term illness",
+      "body": "Living with symptoms every day can wear down your mood. If you feel hopeless or very low, tell your doctor or counselor. Support helps."
+    }
+  ],
+  "practiceLog": {
+    "columns": [
+      "Day",
+      "Main activities",
+      "Rest breaks",
+      "Symptoms (0-10)",
+      "Notes for next time"
+    ],
+    "rows": 7
+  },
+  "safetyNote": "Safety first: Call 911 for chest pain, trouble breathing, or sudden weakness on one side of the body. If you have thoughts of hurting yourself or someone else, get help now. In the US, call or text 988, or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sud": false,
+  "es": {
+    "title": "Cómo dosificar mi energía y mi plan para los brotes",
+    "intro": "Vivir con dolor, cansancio o una enfermedad de largo plazo muchas veces significa días buenos y días malos. Muchas personas se esfuerzan mucho los días buenos y luego se derrumban por varios días. Dosificar es repartir mejor su energía, para que pueda hacer más de lo que le importa con menos caídas. Esta hoja también le ayuda a planear para los brotes, los momentos en que los síntomas empeoran. Llenarla con su equipo de atención toma unos 20 minutos.",
+    "sections": [
+      {
+        "heading": "Su presupuesto de energía",
+        "body": "Piense en su energía como un presupuesto. Cada día tiene una cantidad, y puede cambiar de un día a otro. La meta es quedarse dentro del presupuesto, no pasarse.",
+        "steps": [
+          "Note qué le gasta la energía. Cuentan las tareas físicas, las tareas de pensar, las emociones fuertes, el ruido y el tiempo con otras personas.",
+          "Note sus primeras señales de hacer demasiado, como más dolor, un cansancio pesado, dormir mal o la mente nublada.",
+          "Note cuándo aparecen los síntomas. Algunas personas se sienten bien durante una actividad y se derrumban 1 o 2 días después."
+        ]
+      },
+      {
+        "heading": "Cómo dosificar",
+        "steps": [
+          "Divida las tareas grandes en partes pequeñas, y repártalas en el día o en la semana.",
+          "Descanse antes de agotarse, no después. Los descansos cortos y planeados ayudan.",
+          "Alterne distintos tipos de tareas, como moverse, estar sentado y pensar.",
+          "Planee su semana para que después de un día ocupado venga un día más tranquilo.",
+          "En los días buenos, no trate de ponerse al día con todo.",
+          "Base su nivel de actividad en lo que puede hacer casi todos los días sin derrumbarse, no en su mejor día."
+        ]
+      },
+      {
+        "heading": "Una nota sobre hacer más",
+        "body": "Si hacer más le hace derrumbarse uno o dos días después, no se fuerce. Hable con su médico antes de tratar de aumentar la actividad. A algunas personas, esforzarse más cada semana las empeora. Cualquier aumento debe ser pequeño, planeado con su equipo de atención, y solo si su cuerpo lo tolera bien."
+      },
+      {
+        "heading": "Mi plan para los brotes",
+        "body": "Llénelo cuando se sienta bien, para tenerlo listo cuando lo necesite.",
+        "steps": [
+          "Primeras señales de que empieza un brote: ________",
+          "Lo que me ayuda en un brote, como descansar, calor o frío, medicinas que aprobó mi médico, moverme suave o estar en silencio: ________",
+          "Lo que voy a dejar en pausa durante un brote: ________",
+          "Quién me puede ayudar con las comidas, los cuidados o los mandados: ________",
+          "Cómo voy a volver a mi ritmo normal después de un brote: empezar con poco, y subir poco a poco."
+        ]
+      },
+      {
+        "heading": "Cuándo llamar al médico",
+        "steps": [
+          "El brote es mucho peor que sus brotes de siempre, o es distinto.",
+          "Tiene síntomas nuevos, como fiebre, debilidad o adormecimiento nuevos, o problemas para orinar o para ir al baño.",
+          "Su plan de siempre no le ayuda después de unos días.",
+          "Llame al 911 si tiene dolor de pecho, problemas para respirar, debilidad repentina en un lado del cuerpo o el peor dolor de cabeza de su vida."
+        ]
+      },
+      {
+        "heading": "El ánimo y las enfermedades de largo plazo",
+        "body": "Vivir con síntomas todos los días puede desgastar el ánimo. Si siente que no hay esperanza o se siente muy mal, dígaselo a su médico o a su consejero. El apoyo ayuda."
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Día",
+        "Actividades principales",
+        "Descansos",
+        "Síntomas (0-10)",
+        "Notas para la próxima vez"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: Llame al 911 si tiene dolor de pecho, problemas para respirar o debilidad repentina en un lado del cuerpo. Si tiene pensamientos de hacerse daño o de hacerle daño a otra persona, busque ayuda ahora. En EE. UU., llame o envíe un mensaje de texto al 988, o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "sources": [
+    {
+      "title": "Myalgic encephalomyelitis (or encephalopathy)/chronic fatigue syndrome: diagnosis and management (NG206)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng206",
+      "year": 2021
+    },
+    {
+      "title": "Chronic pain (primary and secondary) in over 16s: assessment of all chronic pain and management of chronic primary pain (NG193)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng193",
+      "year": 2021
+    },
+    {
+      "title": "Activity pacing, avoidance, endurance, and associations with patient functioning in chronic pain: a systematic review and meta-analysis (Andrews, Strong and Meredith)",
+      "publisher": "Archives of Physical Medicine and Rehabilitation (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22728699/",
+      "year": 2012
+    },
+    {
+      "title": "Chronic Pain (health topic)",
+      "publisher": "MedlinePlus, U.S. National Library of Medicine",
+      "url": "https://medlineplus.gov/chronicpain.html"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

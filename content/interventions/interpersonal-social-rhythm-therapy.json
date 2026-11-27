@@ -41,6 +41,7 @@
     "mood-routine-tracker",
     "sleep-diary"
   ],
+  "orientationIds": ["interpersonal-therapies", "behavior-therapy"],
   "sources": [
     {
       "title": "Two-year outcomes for interpersonal and social rhythm therapy in individuals with bipolar I disorder (Frank et al.)",

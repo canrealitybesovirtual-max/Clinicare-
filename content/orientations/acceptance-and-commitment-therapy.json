@@ -1,0 +1,119 @@
+{
+  "id": "acceptance-and-commitment-therapy",
+  "name": "Acceptance and commitment therapy (ACT) and acceptance-based behavioral therapies",
+  "shortName": "ACT",
+  "family": "contextual",
+  "summary": "The aim is psychological flexibility: making room for difficult thoughts and feelings, stepping back from unhelpful ones, and taking steps toward what matters. Success is judged by workability in the person's life rather than by symptom removal.",
+  "keyConcepts": [
+    { "term": "Psychological flexibility", "meaning": "Being in contact with the present moment, open to inner experience, and able to keep or change behavior in the service of chosen values." },
+    { "term": "Functional contextualism", "meaning": "A thought or feeling is judged by what it does in a given context, not by whether it is true; the question is whether acting on it works for the person." },
+    { "term": "Experiential avoidance", "meaning": "Efforts to escape or control unwanted thoughts, feelings and sensations that bring short-term relief but narrow life over time." },
+    { "term": "Cognitive fusion and defusion", "meaning": "Fusion is treating a thought as literal truth or a command; defusion is noticing it as a passing event of the mind so it has less pull." },
+    { "term": "Values and committed action", "meaning": "Freely chosen directions for living, and concrete, repeated steps toward them, even with discomfort present." },
+    { "term": "Workability", "meaning": "The test for any strategy: has doing this helped you build the life you want over time?" }
+  ],
+  "viewOfProblem": "Suffering is a normal part of human life; problems grow when the struggle to avoid or control inner experience takes over. A person fused with the thought I can't cope, and avoiding every situation that might bring anxiety, may feel safer today while their life gets smaller. The target is this rigid pattern of fusion, avoidance and disconnection from values, not the presence of difficult feelings as such.",
+  "viewOfChange": "Change comes from building six interrelated processes: acceptance, defusion, contact with the present moment, self-as-context, values and committed action. Exercises, metaphors and experiential practice help the client notice the cost of avoidance, make room for discomfort, and act on values. Symptoms often ease as a side effect, but the measure of success is a fuller, more values-consistent life.",
+  "therapistStance": "Compassionate, equal and experiential. The clinician models openness and acknowledges that the same processes apply to the clinician too. Sessions favor experiential exercises and metaphors over persuasion, and the clinician avoids arguing with thoughts. The client's own values, not the clinician's, guide the work.",
+  "sessionShape": [
+    "Brief present-moment check-in.",
+    "Review the committed actions from last time and what showed up when trying them.",
+    "Explore one process the client is stuck in, such as avoidance or fusion, using an experiential exercise or metaphor.",
+    "Connect the work to a value the client named.",
+    "Agree on a small committed action for the week and name the barriers likely to show up."
+  ],
+  "goalStyle": "Goals describe values-consistent actions and workability rather than symptom removal: for example, take part in a weekly social activity that reflects the value of connection, even if anxiety is present, three times in the next month. Write each goal with the client in their own words.",
+  "progressMarkers": [
+    "Number of committed actions taken, rated by the client.",
+    "Client ratings of how closely the week matched their values.",
+    "Ratings of willingness and of how strongly difficult thoughts held them back.",
+    "Symptom and functioning measures tracked alongside, without making symptom removal the goal."
+  ],
+  "typicalTechniques": [
+    "act-values-clarification",
+    "act-acceptance-willingness",
+    "act-cognitive-defusion",
+    "act-present-moment-self-as-context",
+    "act-committed-action",
+    "cbt-and-act-for-chronic-pain"
+  ],
+  "relatedTechniques": ["mindfulness-meditation", "urge-surfing", "mindful-check-in"],
+  "missingTechniques": [
+    { "name": "ACT Matrix", "note": "A brief four-quadrant way of mapping toward and away moves; the formulation framework covers workability in original wording." },
+    { "name": "Acceptance-based behavioral therapy for GAD", "note": "Roemer and Orsillo's acceptance-based protocol for worry; overview only, not yet a library entry." },
+    { "name": "Emotion regulation therapy", "note": "Mennin and Fresco's protocol for GAD and depression, with one RCT; overview only." }
+  ],
+  "formulationIds": ["act-flexibility", "transdiagnostic-process-map", "fear-avoidance-pain"],
+  "models": [
+    {
+      "name": "Acceptance and commitment therapy (ACT)",
+      "summary": "Hayes and colleagues' model built on the psychological flexibility processes, delivered individually, in groups or as brief and digital formats.",
+      "evidenceTier": "guideline-recommended",
+      "evidence": "NICE NG193 (2021) lists ACT among the psychological therapies for chronic primary pain. Meta-analyses find ACT outperforms waitlist and usual care and is broadly comparable to CBT across anxiety, depression and substance use (A-Tjak et al., 2015; Gloster et al., 2020).",
+      "trainingRequired": false
+    },
+    {
+      "name": "Acceptance-based behavioral therapy for GAD",
+      "summary": "Roemer and Orsillo's approach combines mindfulness and acceptance of internal experience with action in valued domains for people with chronic worry.",
+      "evidenceTier": "emerging",
+      "evidence": "In a 2008 waitlist-controlled RCT with 31 adults, most treated participants no longer showed GAD-level symptoms after treatment (Roemer, Orsillo and Salters-Pedneault, 2008); a later trial found it comparable to applied relaxation (Hayes-Skelton et al., 2013).",
+      "trainingRequired": false
+    },
+    {
+      "name": "Emotion regulation therapy",
+      "summary": "Mennin and Fresco's treatment targets the motivational and regulatory processes behind worry and rumination in GAD with or without depression.",
+      "evidenceTier": "emerging",
+      "evidence": "One RCT reported gains in emotion regulation and in GAD and depression symptoms (Mennin et al., 2018).",
+      "trainingRequired": false
+    }
+  ],
+  "evidenceTier": "guideline-recommended",
+  "evidenceSummary": "ACT has a broad and growing evidence base. NICE NG193 (2021) includes it among psychological therapies for chronic primary pain, and meta-analyses find effects broadly comparable to CBT for anxiety, depression and substance use, with outcomes better than waitlist and usual care (A-Tjak et al., 2015; Gloster et al., 2020). Component studies support values and acceptance work (Levin et al., 2012). Related acceptance-based protocols for GAD have emerging evidence from small trials (Roemer et al., 2008; Mennin et al., 2018).",
+  "bestFit": [
+    "Chronic pain, long-term health conditions and situations that cannot be changed, where acceptance and values-based living are central.",
+    "Clients stuck in long struggles to control anxiety, worry or intrusive thoughts.",
+    "Clients who connect with metaphor, experiential practice and personal values.",
+    "Transdiagnostic or mixed presentations where one flexible model is useful."
+  ],
+  "cautions": [
+    "Acceptance never means accepting abuse, danger or injustice. Separate inner experiences to make room for from outer situations that need change or protection.",
+    "Values work must follow the client's values, not the clinician's or the family's.",
+    "Present-moment and mindfulness exercises can bring up trauma memories or dissociation for some clients; keep them brief, eyes-open and optional, and ground afterward.",
+    "Metaphors and abstract exercises may not land with every client; check understanding and use concrete examples.",
+    "If hopelessness or thoughts of death show up, pause the exercise, follow your risk procedures, and review crisis options: in the US call or text 988; elsewhere, the local emergency number or findahelpline.com."
+  ],
+  "whenToRefer": [
+    "Severe, acute presentations such as psychosis, mania or high suicide risk that need a higher level of care alongside or before ACT.",
+    "OCD or PTSD that has not responded to ACT alone: offer or refer for ERP or a trauma-focused protocol."
+  ],
+  "trainingRequired": false,
+  "trainingNote": "ACT has no single certifying body. Clinicians usually learn it through workshops by peer-reviewed trainers, consultation groups and supervised practice.",
+  "trainingPath": [
+    { "body": "Association for Contextual Behavioral Science (ACBS)", "url": "https://contextualscience.org/", "note": "Professional association for ACT; lists peer-reviewed trainers, consultation and training events." }
+  ],
+  "ethicsPrompts": [
+    { "prompt": "Practice within your training: learn ACT through structured training and consultation before using it as your main model.", "legalIds": ["competence-and-scope-of-practice"] },
+    { "prompt": "When goals shift from symptom reduction to values and functioning, agree this with the client and record it in the plan.", "legalIds": ["treatment-plans-and-client-access"] }
+  ],
+  "culturalNotes": [
+    "Values may be collective, family or faith centered; explore them in the client's own framework rather than assuming personal autonomy is the main value.",
+    "Acceptance and mindfulness language overlaps with some religious and contemplative traditions; ask how the client relates to these ideas and avoid imposing a spiritual frame.",
+    "Choose metaphors that fit the client's life and culture, and drop ones that do not translate."
+  ],
+  "handoutIds": ["values-compass", "unhooking-from-thoughts", "mindful-check-in"],
+  "relatedPracticeIds": ["goals-by-orientation", "between-session-practice", "validation-levels"],
+  "relatedPopulationIds": ["serious-medical-illness", "spiritually-integrated"],
+  "sources": [
+    { "title": "Chronic pain (primary and secondary) in over 16s: assessment of all chronic pain and management of chronic primary pain (NG193)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng193", "year": 2021 },
+    { "title": "Acceptance and commitment therapy: model, processes and outcomes (Hayes, Luoma, Bond, Masuda & Lillis)", "publisher": "Behaviour Research and Therapy (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/16300724/", "year": 2006 },
+    { "title": "A meta-analysis of the efficacy of acceptance and commitment therapy for clinically relevant mental and physical health problems (A-Tjak et al.)", "publisher": "Psychotherapy and Psychosomatics (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/25547522/", "year": 2015 },
+    { "title": "The empirical status of acceptance and commitment therapy: a review of meta-analyses (Gloster et al.)", "publisher": "Journal of Contextual Behavioral Science", "url": "https://doi.org/10.1016/j.jcbs.2020.09.009", "year": 2020 },
+    { "title": "The impact of treatment components suggested by the psychological flexibility model: a meta-analysis of laboratory-based component studies (Levin et al.)", "publisher": "Behavior Therapy (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/23046777/", "year": 2012 },
+    { "title": "Efficacy of an acceptance-based behavior therapy for generalized anxiety disorder: evaluation in a randomized controlled trial (Roemer, Orsillo & Salters-Pedneault)", "publisher": "Journal of Consulting and Clinical Psychology (PubMed Central)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2596727", "year": 2008 },
+    { "title": "A randomized clinical trial comparing an acceptance-based behavior therapy to applied relaxation for generalized anxiety disorder (Hayes-Skelton, Roemer & Orsillo)", "publisher": "Journal of Consulting and Clinical Psychology (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/23647281/", "year": 2013 },
+    { "title": "A randomized controlled trial of emotion regulation therapy for generalized anxiety disorder with and without co-occurring depression (Mennin et al.)", "publisher": "Journal of Consulting and Clinical Psychology (PubMed Central)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5841545", "year": 2018 }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

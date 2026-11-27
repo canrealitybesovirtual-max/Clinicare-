@@ -1,0 +1,109 @@
+{
+  "id": "clinician-postvention",
+  "title": "After a client dies by suicide: steps and support for the clinician",
+  "category": "safety-and-risk",
+  "summary": "Losing a client to suicide is one of the hardest experiences in clinical work, and many clinicians go through it. This guide covers the first steps (telling a supervisor, contacting the insurer or legal counsel as your policy requires, confidentiality after death and contact with the family), getting support for yourself, a learning-focused review rather than blame, and supporting other clients and bereaved family members.",
+  "whenToUse": [
+    "In the hours and days after you learn that a client has died, or may have died, by suicide.",
+    "When supporting a colleague or supervisee after a client's death.",
+    "When planning a service postvention policy before it is needed."
+  ],
+  "steps": [
+    {
+      "heading": "First steps",
+      "items": [
+        "Tell your supervisor, clinical lead or a trusted senior colleague as soon as you can.",
+        "Follow your service's policy: incident reporting, informing the professional liability insurer and, where advised, legal counsel.",
+        "Secure the record. Do not alter or add to past entries; any new note is dated as written now.",
+        "Check what you may share: confidentiality continues after death, and access by family usually depends on who is the legal representative. Ask your privacy officer or counsel before releasing information."
+      ]
+    },
+    {
+      "heading": "Contact with the family",
+      "body": "Expressing condolences and offering to listen is usually appropriate and humane; agree it first with your supervisor and counsel where your policy requires. You can acknowledge your own sadness and the relationship without discussing the content of therapy. Attending a funeral is a personal decision; ask the family if you are unsure whether it would be welcome."
+    },
+    {
+      "heading": "Look after yourself",
+      "items": [
+        "Expect grief, shock, guilt, self-doubt, anxiety about other clients and fear of blame; these are common and usually ease with time and support.",
+        "Talk with colleagues, peers who have had the same experience and, if helpful, your own therapist.",
+        "Reduce your caseload or take time off if you need it, and plan cover for urgent client needs.",
+        "If you have thoughts of suicide yourself, get help now: in the US call or text 988, elsewhere the local emergency number or findahelpline.com."
+      ]
+    },
+    {
+      "heading": "Review to learn, not to blame",
+      "body": "A structured review with supportive colleagues looks at what happened, what was known at the time and what the service can learn. It should be separate from legal processes and focused on systems as well as individual decisions. Hindsight makes events look more predictable than they were."
+    },
+    {
+      "heading": "Support others affected",
+      "items": [
+        "Other clients who knew the person (for example group members) may need information and support, within confidentiality limits.",
+        "Bereaved family and friends can be offered information about suicide bereavement support, which is a known risk period for them too.",
+        "Colleagues and front-desk staff may be affected as well."
+      ]
+    }
+  ],
+  "prompts": [
+    "I was so sorry to hear about your loss. I cared about working with them. If it would help to talk, I am here to listen.",
+    "I am not able to talk about what was said in sessions, but I can tell you they mattered to me.",
+    "Can we set aside time this week to talk about how you are doing after this?"
+  ],
+  "cautions": [
+    "Do not change or back-date clinical records.",
+    "Confidentiality and record access after death follow law and policy that vary by place; check before sharing.",
+    "Avoid blaming yourself or others in the first days; leave judgments to a structured review.",
+    "Your own safety matters: seek help if grief turns into thoughts of self-harm.",
+    "This guide is support and orientation, not legal advice."
+  ],
+  "evidenceSummary": "A 2021 systematic review (Sandford, Kirtley, Thwaites and O'Connor) found that the death of a patient by suicide has a substantial emotional and professional impact on mental health practitioners, including grief, guilt, self-doubt and changes in practice, and that support from colleagues and organizations helps. A 2014 review (Pitman and colleagues) found that people bereaved by suicide have raised risks of suicide and mental health problems, which is why services offer postvention support to families and friends.",
+  "forClinicianReview": true,
+  "crisisPanel": true,
+  "sud": false,
+  "relatedInterventionIds": [
+    "suicide-bereavement-support"
+  ],
+  "relatedHandoutIds": [
+    "after-a-suicide-loss"
+  ],
+  "relatedFormulationIds": [],
+  "relatedLegalIds": [
+    "clinician-wellbeing-and-impairment",
+    "hipaa-privacy-basics",
+    "record-retention-overview",
+    "subpoenas-and-court-orders"
+  ],
+  "relatedPracticeIds": [
+    "supervision-and-consultation",
+    "clinician-reactions-and-self-disclosure",
+    "group-formats"
+  ],
+  "relatedPopulationIds": [
+    "first-responders-and-health-workers"
+  ],
+  "linkOuts": [],
+  "measuresPending": [],
+  "sources": [
+    {
+      "title": "The impact on mental health practitioners of the death of a patient by suicide: a systematic review (Sandford et al.)",
+      "publisher": "Clinical Psychology and Psychotherapy, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32914489/",
+      "year": 2021
+    },
+    {
+      "title": "Exploring the impact on primary care mental health practitioners of the death of a patient by suicide: an IPA study (Sandford et al.)",
+      "publisher": "Psychology and Psychotherapy, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36117447/",
+      "year": 2023
+    },
+    {
+      "title": "Effects of suicide bereavement on mental health and suicide risk (Pitman et al.)",
+      "publisher": "Lancet Psychiatry, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26360405/",
+      "year": 2014
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

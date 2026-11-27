@@ -1,0 +1,302 @@
+{
+  "id": "premenstrual-dysphoric-disorder",
+  "name": "Premenstrual dysphoric disorder (PMDD)",
+  "icd10cm": [
+    {
+      "code": "F32.81",
+      "label": "Premenstrual dysphoric disorder"
+    }
+  ],
+  "icd11": [
+    {
+      "code": "GA34.41",
+      "label": "Premenstrual dysphoric disorder"
+    }
+  ],
+  "dsmPointer": "See DSM-5-TR: Depressive Disorders — Premenstrual Dysphoric Disorder",
+  "summary": "Mood symptoms that track the menstrual cycle: irritability or anger, low mood, tension and sudden mood shifts that rise in the late part of the cycle and fade once the period is under way, with a clear symptom-free stretch each month and a real effect on work, relationships or daily life. Memory of past cycles is unreliable, so ask the client to rate symptoms daily for at least two cycles before relying on this pattern; daily ratings also show whether another condition runs all month and only worsens before the period. ACOG (2023) supports a multimodal approach: SSRIs or hormonal options through a prescriber, psychological counseling such as CBT, exercise and self-help strategies. Ask about suicidal thoughts, which can rise in the premenstrual days. New mood problems with irregular cycles, hot flashes or night sweats in midlife point to perimenopausal depression, which needs its own assessment and a medical review (NAMS, 2018). For clinician review only; this is not a diagnosis.",
+  "features": [
+    {
+      "symptomId": "luteal-phase-timing",
+      "kind": "core",
+      "weight": 5
+    },
+    {
+      "symptomId": "premenstrual-mood-symptoms",
+      "kind": "core",
+      "weight": 4
+    },
+    {
+      "symptomId": "premenstrual-impairment",
+      "kind": "core",
+      "weight": 3
+    },
+    {
+      "symptomId": "irritability",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "depressed-mood",
+      "kind": "associated",
+      "weight": 1,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "mood-swings",
+      "kind": "associated",
+      "weight": 1
+    },
+    {
+      "symptomId": "subjective-anxiety-stress",
+      "kind": "associated",
+      "weight": 1,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "fatigue",
+      "kind": "associated",
+      "weight": 1,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "concentration-difficulty",
+      "kind": "associated",
+      "weight": 1
+    },
+    {
+      "symptomId": "appetite-change",
+      "kind": "associated",
+      "weight": 1
+    },
+    {
+      "symptomId": "insomnia",
+      "kind": "associated",
+      "weight": 1,
+      "group": "sleep"
+    },
+    {
+      "symptomId": "hypersomnia",
+      "kind": "associated",
+      "weight": 1,
+      "group": "sleep"
+    },
+    {
+      "symptomId": "anhedonia",
+      "kind": "associated",
+      "weight": 1
+    }
+  ],
+  "minCore": 2,
+  "durationGate": {
+    "minWeeks": 8,
+    "note": "Daily ratings across at least two cycles are needed before relying on this pattern; recall alone tends to overstate the link with the cycle. See DSM-5-TR for how the timing is defined."
+  },
+  "impairmentRequired": true,
+  "requiredFeatures": [
+    {
+      "symptomId": "luteal-phase-timing",
+      "note": "The link with the menstrual cycle (symptoms before the period that fade once it starts, with symptom-free days in between) is not documented. Check it with daily ratings over at least two cycles (see DSM-5-TR) before relying on this suggestion."
+    }
+  ],
+  "ruleOuts": [
+    {
+      "label": "Thyroid disease, anemia, migraine and other conditions that flare with the cycle",
+      "type": "medical",
+      "note": "Ask for a medical review when physical symptoms are prominent or new."
+    },
+    {
+      "label": "Perimenopause",
+      "type": "medical",
+      "note": "Irregular cycles, hot flashes, night sweats and new sleep problems in midlife suggest perimenopausal mood change; refer to primary care or gynecology."
+    },
+    {
+      "label": "Hormonal contraceptives and other medicines",
+      "type": "substance",
+      "note": "Starting, stopping or changing hormonal treatment can change mood; review with the prescriber."
+    },
+    {
+      "label": "Premenstrual worsening of another condition",
+      "type": "psychiatric",
+      "note": "Depression, anxiety, bipolar disorder or a long-standing pattern of mood instability that is present all month but worse before the period calls for treating that condition."
+    }
+  ],
+  "specifiers": [
+    {
+      "label": "Provisional until daily ratings confirm the cycle link",
+      "note": "Record that the pattern is based on recall until at least two cycles of daily ratings are available."
+    },
+    {
+      "label": "ICD-10-CM F32.81 and ICD-11 GA34.41",
+      "note": "ICD-10-CM codes PMDD with the depressive disorders (F32.81). ICD-11 places it in the genitourinary chapter (GA34.41) and links it to the depressive disorders. Premenstrual tension syndrome without marked mood symptoms is N94.3."
+    },
+    {
+      "label": "Perimenopausal mood change (descriptive)",
+      "note": "New or returning depression during the menopausal transition, often with sleep disruption and hot flashes; assess for a depressive episode and coordinate with a medical clinician (NAMS, 2018)."
+    }
+  ],
+  "differentials": [
+    {
+      "label": "Premenstrual tension syndrome",
+      "icd10cm": "N94.3",
+      "distinguishing": "Mainly physical or milder mood symptoms before the period without marked effect on daily life."
+    },
+    {
+      "label": "Major depressive disorder",
+      "icd10cm": "F32.9",
+      "distinguishing": "Low mood or loss of interest that continues across the whole cycle, perhaps worse before the period."
+    },
+    {
+      "label": "Bipolar II disorder",
+      "icd10cm": "F31.81",
+      "distinguishing": "Mood episodes, including periods of elevated mood, that do not follow the cycle."
+    },
+    {
+      "label": "Dysthymic disorder",
+      "icd10cm": "F34.1",
+      "distinguishing": "Low mood on most days for years, not limited to the premenstrual days."
+    },
+    {
+      "label": "Borderline personality disorder",
+      "icd10cm": "F60.3",
+      "distinguishing": "Mood shifts tied to relationships and fear of being left, across the whole month."
+    }
+  ],
+  "comorbidities": [
+    {
+      "conditionId": "major-depressive-disorder",
+      "label": "Major depressive disorder",
+      "note": "Depression can co-occur or worsen before the period; daily ratings help separate the two. Screen with the PHQ-9."
+    },
+    {
+      "conditionId": "generalized-anxiety-disorder",
+      "label": "Generalized anxiety disorder",
+      "note": "Anxiety that runs all month may worsen premenstrually; treat both."
+    }
+  ],
+  "measures": [
+    "phq-9",
+    "gad-7"
+  ],
+  "measuresPending": [
+    {
+      "name": "Daily Record of Severity of Problems (DRSP)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16172836/",
+      "note": "License pending — link out only; a daily rating form completed across at least two cycles",
+      "licenseKey": "DRSP"
+    }
+  ],
+  "interventions": [
+    {
+      "name": "Daily symptom ratings across two cycles",
+      "evidence": "Prospective daily ratings, such as the Daily Record of Severity of Problems (Endicott et al., 2006), are the standard way to show the cycle link; ACOG (2023) covers diagnosis before treatment.",
+      "note": "Ask the client to rate mood, irritability, sleep and daily functioning every day; review the pattern together before relying on it."
+    },
+    {
+      "name": "Referral for medication evaluation (SSRIs or hormonal options)",
+      "evidence": "ACOG (2023) includes hormonal and nonhormonal medicines. A Cochrane review (Marjoribanks et al., 2013) found SSRIs reduced premenstrual symptoms, taken either all month or only in the late part of the cycle.",
+      "note": "Refer to primary care, gynecology, psychiatry or a psychiatric nurse practitioner. Prescribing decisions rest with the prescriber."
+    },
+    {
+      "name": "Cognitive behavioral therapy",
+      "evidence": "ACOG (2023) includes psychological counseling among treatment options for premenstrual disorders.",
+      "note": "Plan for high-symptom days, notice harsh self-talk, and practice communication and coping skills before the predictable hard week."
+    },
+    {
+      "name": "Exercise, sleep and self-help routines",
+      "evidence": "ACOG (2023) includes exercise, nutrition and self-help strategies as part of a multimodal approach.",
+      "note": "Regular movement, steady sleep and lighter scheduling in the premenstrual days."
+    },
+    {
+      "name": "Problem-solving and planning around the cycle",
+      "evidence": "Practical skill used within CBT.",
+      "note": "Use the daily ratings to anticipate hard days and plan workload, conflicts and support in advance."
+    }
+  ],
+  "handouts": [
+    "monthly-mood-tracker",
+    "kind-self-talk"
+  ],
+  "statIds": [
+    "us-pmdd-prevalence"
+  ],
+  "culturalNotes": [
+    "Talking about menstruation can be taboo or embarrassing in some families and communities. Use the client's own words for periods and the cycle, and offer a clinician of a preferred gender when possible.",
+    "Premenstrual mood changes are sometimes dismissed as 'just PMS' or as a character flaw. Validate the experience and explain that it is a recognized, treatable pattern.",
+    "Transgender, nonbinary and intersex clients may menstruate or have cyclical symptoms; use inclusive language and ask about hormone treatment.",
+    "Religious practices around menstruation, such as rules on prayer, fasting or ritual purity, can shape how symptoms are experienced and reported. Ask what matters to the client.",
+    "Use a trained professional interpreter, not family members, and check that key terms carry the meaning you intend.",
+    "Faith and spiritual practice can be a source of support. Use faith-integrated approaches only when the client asks for them and after informed consent (see the AACC Code of Ethics for faith-based counselors)."
+  ],
+  "sud": false,
+  "strongMinAreas": 2,
+  "redFlagRules": [
+    {
+      "type": "suicidality",
+      "message": "Suicide-related content is documented in this input. Suicidal thoughts can rise in the premenstrual days; ask directly, plan for the predictable high-risk days, and follow your risk protocol."
+    },
+    {
+      "type": "mania",
+      "capAt": "moderate",
+      "message": "Manic or hypomanic signs are documented. Mood shifts with elevated periods point to a bipolar-spectrum pattern; screen for bipolar disorder and refer for psychiatric evaluation."
+    }
+  ],
+  "licensedDsm": false,
+  "wileyLicensed": false,
+  "sources": [
+    {
+      "title": "Management of premenstrual disorders: ACOG Clinical Practice Guideline No. 7",
+      "publisher": "Obstetrics & Gynecology (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37973069/",
+      "year": 2023
+    },
+    {
+      "title": "Guidelines for the evaluation and treatment of perimenopausal depression: summary and recommendations (Maki et al.)",
+      "publisher": "Menopause (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30179986/",
+      "year": 2018
+    },
+    {
+      "title": "Daily Record of Severity of Problems (DRSP): reliability and validity (Endicott et al.)",
+      "publisher": "Archives of Women's Mental Health (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16172836/",
+      "year": 2006
+    },
+    {
+      "title": "Selective serotonin reuptake inhibitors for premenstrual syndrome (Marjoribanks et al.)",
+      "publisher": "Cochrane Database of Systematic Reviews (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23744611/",
+      "year": 2013
+    },
+    {
+      "title": "The prevalence of premenstrual dysphoric disorder in a randomly selected group of urban and rural women (Gehlert et al.)",
+      "publisher": "Psychological Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18366818/",
+      "year": 2009
+    },
+    {
+      "title": "ICD-11 for Mortality and Morbidity Statistics (browser)",
+      "publisher": "World Health Organization",
+      "url": "https://icd.who.int/browse/latest-release/mms/en"
+    },
+    {
+      "title": "ICD-10-CM (official code set)",
+      "publisher": "CDC National Center for Health Statistics",
+      "url": "https://www.cdc.gov/nchs/icd/icd-10-cm/index.html"
+    },
+    {
+      "title": "ICD-10-CM codes checked with the NLM Clinical Table Search Service",
+      "publisher": "National Library of Medicine",
+      "url": "https://clinicaltables.nlm.nih.gov/apidoc/icd10cm/v3/doc.html"
+    },
+    {
+      "title": "AACC Code of Ethics",
+      "publisher": "American Association of Christian Counselors",
+      "url": "https://aacc.net/aacc-code-of-ethics/"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

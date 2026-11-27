@@ -32,13 +32,50 @@ export const InterventionSchema = z.object({
 });
 export type Intervention = z.infer<typeof InterventionSchema>;
 
+/**
+ * Stepped-care level of an objective (optional tag, shown as a badge and a filter in the builder). It describes
+ * the usual intensity of the work, never a decision about the client: the clinician chooses the level of care.
+ */
+export const CARE_STEPS = ["low-intensity", "high-intensity", "specialist", "crisis-or-urgent"] as const;
+export const CareStepSchema = z.enum(CARE_STEPS);
+export type CareStep = z.infer<typeof CareStepSchema>;
+export const CARE_STEP_LABELS: Record<CareStep, string> = {
+  "low-intensity": "Low intensity",
+  "high-intensity": "High intensity",
+  specialist: "Specialist care",
+  "crisis-or-urgent": "Crisis or urgent care",
+};
+
 export const PlanObjectiveSchema = z.object({
   id: slug,
   text: z.string().min(15), // SMART, measurable, original wording, editable in the builder
   interventionIds: z.array(slug), // links into the interventions library
   // G6: the objective records substance use for this client. Selecting it makes the export carry the Part 2 notice.
   sud: z.boolean().default(false),
+  // Formulation targets this objective works on: curated factor ids of the transdiagnostic process map
+  // (content/formulations/transdiagnostic-process-map.json). Checked in src/lib/plan-modules.ts (planContentProblems).
+  targets: z.array(slug).min(1).max(4).optional(),
+  step: CareStepSchema.optional(),
 });
+export type PlanObjective = z.infer<typeof PlanObjectiveSchema>;
+
+/** An ICD-10-CM Z code (factors influencing health status, Z55-Z65 and nearby) with its official code title. */
+export const ZCodeSchema = z
+  .object({
+    code: z.string().regex(/^Z\d{2}(\.\w{1,4})?$/, "ICD-10-CM Z code"),
+    label: z.string().min(5).max(120),
+  })
+  .strict();
+export type ZCode = z.infer<typeof ZCodeSchema>;
+
+/** A link to an official resource the clinician may share (never a scraped or re-hosted worksheet, G8). */
+export const PlanLinkOutSchema = z
+  .object({
+    title: z.string().min(3).max(120),
+    publisher: z.string().min(2).max(120),
+    url: z.url().refine((u) => u.startsWith("https://"), "https URLs only"),
+  })
+  .strict();
 
 /**
  * A behavioral definition or long-term goal: plain original wording, or { text, sud: true } when the item records
@@ -59,7 +96,15 @@ export const PlanProblemSchema = z.object({
   longTermGoals: z.array(PlanTextSchema).min(1),
   shortTermObjectives: z.array(PlanObjectiveSchema).min(3),
   measureIds: z.array(slug), // built-in measures for tracking progress (license-confirmed only)
+  // Psychosocial problems only: reference Z codes the clinician may record (never a diagnosis, G3).
+  zCodes: z.array(ZCodeSchema).min(1).max(6).optional(),
+  // Optional links shown with the problem: formulation frameworks, practice guides and client handouts.
+  formulationIds: z.array(slug).max(4).optional(),
+  practiceIds: z.array(slug).max(6).optional(),
+  handoutIds: z.array(slug).max(6).optional(),
+  linkOuts: z.array(PlanLinkOutSchema).max(4).optional(),
 });
+export type PlanProblem = z.infer<typeof PlanProblemSchema>;
 
 export const PlanLibrarySchema = z.object({
   conditionId: slug,
@@ -69,3 +114,24 @@ export const PlanLibrarySchema = z.object({
   ...governance,
 });
 export type PlanLibrary = z.infer<typeof PlanLibrarySchema>;
+
+/**
+ * A cross-cutting plan module (content/plans/modules/<id>.json): problems that can be added to any plan library
+ * (appliesTo "any") or to the listed condition libraries, such as safety-focused objectives, sleep, engagement or
+ * psychosocial (Z code) problems. Same original-wording rules as the libraries (G2). Objectives in a module may
+ * link any library intervention (no condition match is required). A module with sud: true makes every export that
+ * includes one of its items carry the 42 CFR Part 2 notice (G6). crisisPanel: the builder shows crisis resources
+ * inline next to the module (G9); nothing in a module decides or rates risk.
+ */
+export const PlanModuleSchema = z.object({
+  id: slug,
+  title: z.string().min(5).max(90),
+  summary: z.string().min(30).max(400),
+  appliesTo: z.union([z.literal("any"), z.array(slug).min(1)]),
+  problems: z.array(PlanProblemSchema).min(1).max(10),
+  collaborativeNote: z.string().min(20),
+  sud: z.boolean().default(false),
+  crisisPanel: z.boolean().default(false),
+  ...governance,
+});
+export type PlanModule = z.infer<typeof PlanModuleSchema>;

@@ -37,8 +37,10 @@
   ],
   "handoutIds": [
     "checking-and-reassurance-log",
-    "mindful-check-in"
+    "mindful-check-in",
+    "health-worry-cycle"
   ],
+  "orientationIds": ["cognitive-therapy", "behavior-therapy"],
   "sources": [
     {
       "title": "Clinical and cost-effectiveness of cognitive behaviour therapy for health anxiety in medical patients (Tyrer et al.)",

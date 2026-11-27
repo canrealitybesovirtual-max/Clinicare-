@@ -44,6 +44,7 @@
     "mindful-check-in",
     "values-compass"
   ],
+  "orientationIds": ["mindfulness-and-compassion-based-therapies", "cognitive-therapy"],
   "sources": [
     {
       "title": "Efficacy of mindfulness-based cognitive therapy in prevention of depressive relapse: an individual patient data meta-analysis (Kuyken et al.)",

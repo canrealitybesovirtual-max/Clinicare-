@@ -1,0 +1,75 @@
+{
+  "id": "one-session-treatment-phobia",
+  "name": "One-session treatment (OST) for specific phobia",
+  "modality": "Exposure - massed single session",
+  "conditions": [
+    "specific-phobia"
+  ],
+  "evidenceLevel": "Developed by Lars-Göran Öst (1989). A review of OST trials (Zlomke and Davis, 2008) found that most adults improved substantially after a single session of up to about three hours, with gains maintained at follow-up. A meta-analysis of phobia treatments (Wolitzky-Taylor et al., 2008) found exposure-based treatments outperformed other approaches and that more sessions tended to give better results, so some clients need more than one.",
+  "minutes": {
+    "min": 120,
+    "max": 180
+  },
+  "purpose": "Compresses graduated exposure, modeling by the clinician and behavioral experiments into one extended session for a circumscribed fear, such as of animals, heights, flying, enclosed spaces or injections. The client tests feared predictions directly and learns new information about the feared object and their own coping. Followed by self-directed practice to keep the gains.",
+  "steps": [
+    "Assessment session (about one hour, before treatment): define the fear and feared predictions, build a hierarchy, check medical history, explain the rationale and get informed consent, including the right to stop at any time.",
+    "Plan logistics: arrange the feared stimulus (for example, a contained spider, a tall building, or a needle and a willing nurse) and a setting where each step can be done safely.",
+    "In the treatment session, start well within the client's tolerance. The clinician models each step first, then invites the client to try it.",
+    "At each step, ask for the specific prediction ('what will happen if...?'), do the step, and review what actually happened. Move up when the client is ready; stay until fear clearly eases or the prediction has been tested.",
+    "Phase out safety behaviors during the session (for example, gloves, looking away, holding the clinician's arm).",
+    "End at or near the top of the hierarchy where possible, and have the client sum up what they learned in their own words.",
+    "Plan self-directed practice for the following weeks with a written list of situations, and offer a follow-up check or another session if needed."
+  ],
+  "script": [
+    "Today we'll take this one step at a time. I'll show you each step first. You decide when you're ready, and you can stop at any time.",
+    "What do you think will happen if you move your hand closer?",
+    "Let's find out. What did you notice?",
+    "Your body is calming down even though the spider is still here. What does that tell you?",
+    "Over the next few weeks, keep practicing on your own so the new learning sticks."
+  ],
+  "contraindications": [
+    "Blood, injection or injury fears can cause fainting from a drop in blood pressure. Teach applied tension first and do exposure seated or lying down (see the applied tension entry).",
+    "Check medical conditions before intense exposure (heart disease, asthma, pregnancy, seizures) and get medical advice where needed. Never use exposure that involves real danger.",
+    "For fears that are part of panic disorder, agoraphobia, OCD or PTSD, use the approach for that problem; OST is for circumscribed fears.",
+    "The client agrees to each step. Never use force or deception; stopping is always allowed.",
+    "This intervention does not assess or decide risk. If suicidal thoughts, self-harm or risk to others come up, pause and follow your setting's risk-assessment and safety-planning procedures. Keep crisis options visible: 988 Suicide & Crisis Lifeline (US, call or text), the local emergency number, and findahelpline.com for other countries."
+  ],
+  "culturalAdaptations": [
+    "Some fears carry cultural or religious meaning (for example, beliefs about certain animals) or reflect real local dangers; explore meaning and realistic risk before planning exposure.",
+    "Respect preferences about physical closeness, the clinician's gender and the setting for a long session.",
+    "Plan the long session around the client's work, caregiving and transport needs.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "trainingRequired": "Exposure therapy training and supervision recommended before delivering extended single-session exposure.",
+  "handoutIds": [
+    "facing-fears-what-to-expect",
+    "exposure-ladder",
+    "applied-tension-practice"
+  ],
+  "orientationIds": [
+    "behavior-therapy"
+  ],
+  "sources": [
+    {
+      "title": "One-session treatment for specific phobias (Öst)",
+      "publisher": "Behaviour Research and Therapy (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2914000/",
+      "year": 1989
+    },
+    {
+      "title": "One-session treatment of specific phobias: a detailed description and review of treatment efficacy (Zlomke and Davis)",
+      "publisher": "Behavior Therapy (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18721635/",
+      "year": 2008
+    },
+    {
+      "title": "Psychological approaches in the treatment of specific phobias: a meta-analysis (Wolitzky-Taylor et al.)",
+      "publisher": "Clinical Psychology Review (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18410984/",
+      "year": 2008
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

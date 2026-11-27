@@ -1,0 +1,185 @@
+{
+  "id": "breathing-and-grounding-easy-read",
+  "title": "Breathing and Grounding (Easy Read)",
+  "audience": "client",
+  "readingLevel": "3-5 (easy read)",
+  "estimatedMinutes": 10,
+  "intro": "This sheet shows two easy ways to feel calmer. Slow breathing helps your body settle down. Grounding helps your mind come back to right now. You can use them almost anywhere. Each one takes about 5 minutes.",
+  "sections": [
+    {
+      "heading": "Slow breathing: get ready",
+      "steps": [
+        "Sit or lie down.",
+        "Let your shoulders drop.",
+        "Put one hand on your belly."
+      ]
+    },
+    {
+      "heading": "Slow breathing: the steps",
+      "steps": [
+        "Breathe in slowly through your nose. Count to 4.",
+        "Let your belly push your hand out.",
+        "Breathe out slowly. Count to 6.",
+        "Keep each breath soft and quiet.",
+        "Keep going for about 5 minutes.",
+        "Is counting to 4 and 6 too hard? Try 2 in and 3 out."
+      ]
+    },
+    {
+      "heading": "Grounding: 5-4-3-2-1",
+      "body": "Keep your eyes open. Put your feet flat on the floor. Go slowly.",
+      "steps": [
+        "Look. Name 5 things you can see.",
+        "Touch. Name 4 things you can feel.",
+        "Listen. Name 3 things you can hear.",
+        "Smell. Name 2 things you can smell. Or name 2 smells you like.",
+        "Taste. Name 1 thing you can taste. Or take a sip of water."
+      ]
+    },
+    {
+      "heading": "When you finish",
+      "steps": [
+        "Say where you are.",
+        "Say what day it is.",
+        "Are you safe right now? Tell yourself: 'I am safe right now.'",
+        "Do you still feel far away? Do the steps again."
+      ]
+    },
+    {
+      "heading": "When to use these skills",
+      "steps": [
+        "Practice every day when you feel okay.",
+        "Use them when you start to feel upset or tense.",
+        "Use slow breathing at bedtime.",
+        "Tell your counselor how it went."
+      ]
+    },
+    {
+      "heading": "How to use the log",
+      "body": "Each time you practice, write the skill you used. Rate how upset you felt before and after. Use a number from 0 to 10. A 0 means not upset at all. A 10 means very, very upset."
+    }
+  ],
+  "practiceLog": {
+    "columns": [
+      "Day",
+      "Skill I used",
+      "Upset before (0-10)",
+      "Upset after (0-10)"
+    ],
+    "rows": 7
+  },
+  "safetyNote": "Safety first: Breathe gently. Do not force big or fast breaths. Do you feel dizzy or short of breath? Stop and breathe normally. Do you have a lung or heart problem, or are you pregnant? Ask your doctor first. Do you have new chest pain or trouble breathing? Get medical help right away. Grounding does not fix an unsafe place. Is someone hurting you? Get to a safe place and call for help. Do you often lose track of time or feel far away from your body? Tell your counselor. These skills are not for emergencies. In the US, call or text 988 or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sud": false,
+  "es": {
+    "title": "Respirar despacio y anclarse al presente (lectura fácil)",
+    "intro": "Esta hoja muestra dos formas fáciles de sentirse más tranquilo. Respirar despacio ayuda a que su cuerpo se calme. Anclarse al presente ayuda a que su mente vuelva al ahora. Las puede usar casi en cualquier lugar. Cada una toma unos 5 minutos.",
+    "sections": [
+      {
+        "heading": "Respirar despacio: prepararse",
+        "steps": [
+          "Siéntese o acuéstese.",
+          "Deje caer los hombros.",
+          "Ponga una mano sobre su barriga."
+        ]
+      },
+      {
+        "heading": "Respirar despacio: los pasos",
+        "steps": [
+          "Tome aire despacio por la nariz. Cuente hasta 4.",
+          "Deje que su barriga empuje la mano hacia afuera.",
+          "Suelte el aire despacio. Cuente hasta 6.",
+          "Que cada respiración sea suave y callada.",
+          "Siga así unos 5 minutos.",
+          "¿Le cuesta contar hasta 4 y hasta 6? Pruebe con 2 al tomar aire y 3 al soltarlo."
+        ]
+      },
+      {
+        "heading": "Anclarse al presente: 5-4-3-2-1",
+        "body": "Tenga los ojos abiertos. Ponga los pies planos en el piso. Vaya despacio.",
+        "steps": [
+          "Mire. Nombre 5 cosas que puede ver.",
+          "Toque. Nombre 4 cosas que puede sentir.",
+          "Escuche. Nombre 3 cosas que puede oír.",
+          "Huela. Nombre 2 cosas que puede oler. O nombre 2 olores que le gustan.",
+          "Pruebe. Nombre 1 cosa que puede saborear. O tome un trago de agua."
+        ]
+      },
+      {
+        "heading": "Al terminar",
+        "steps": [
+          "Diga dónde está.",
+          "Diga qué día es.",
+          "¿Está a salvo ahora? Dígase: 'Estoy a salvo ahora'.",
+          "¿Todavía se siente lejos? Haga los pasos otra vez."
+        ]
+      },
+      {
+        "heading": "Cuándo usar estas habilidades",
+        "steps": [
+          "Practique todos los días cuando se sienta bien.",
+          "Úselas cuando empiece a sentirse molesto o tenso.",
+          "Respire despacio a la hora de dormir.",
+          "Cuéntele a su consejero cómo le fue."
+        ]
+      },
+      {
+        "heading": "Cómo usar el registro",
+        "body": "Cada vez que practique, escriba la habilidad que usó. Califique qué tan molesto se sentía antes y después. Use un número del 0 al 10. Un 0 quiere decir nada molesto. Un 10 quiere decir muy, muy molesto."
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Día",
+        "Habilidad que usé",
+        "Molestia antes (0-10)",
+        "Molestia después (0-10)"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: Respire con suavidad. No fuerce respiraciones grandes o rápidas. ¿Se siente mareado o le falta el aire? Pare y respire normal. ¿Tiene un problema del pulmón o del corazón, o está embarazada? Pregunte primero a su médico. ¿Tiene un dolor nuevo en el pecho o problemas para respirar? Busque ayuda médica de inmediato. Anclarse al presente no arregla un lugar que no es seguro. ¿Alguien le está haciendo daño? Vaya a un lugar seguro y pida ayuda. ¿Muchas veces pierde la noción del tiempo o se siente lejos de su cuerpo? Dígaselo a su consejero. Estas habilidades no son para emergencias. En EE. UU., llame o envíe un mensaje de texto al 988, o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "sources": [
+    {
+      "title": "Relaxation Techniques: What You Need To Know",
+      "publisher": "National Center for Complementary and Integrative Health (NCCIH)",
+      "url": "https://www.nccih.nih.gov/health/relaxation-techniques-what-you-need-to-know"
+    },
+    {
+      "title": "Breathing exercises for stress",
+      "publisher": "NHS (UK National Health Service)",
+      "url": "https://www.nhs.uk/mental-health/self-help/guides-tools-and-activities/breathing-exercises-for-stress/"
+    },
+    {
+      "title": "Coping With Traumatic Events (health topic)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/topics/coping-with-traumatic-events"
+    },
+    {
+      "title": "Mental health problems in people with learning disabilities: prevention, assessment and management (NG54)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng54",
+      "year": 2016
+    },
+    {
+      "title": "Making written information easier to understand for people with learning disabilities: guidance for people who commission or produce Easy Read information (revised edition)",
+      "publisher": "UK Department of Health (GOV.UK)",
+      "url": "https://www.gov.uk/government/publications/making-written-information-easier-to-understand-for-people-with-learning-disabilities-guidance-for-people-who-commission-or-produce-easy-read-information-revised-edition-2010",
+      "year": 2010
+    },
+    {
+      "title": "Health Literacy Universal Precautions Toolkit, 3rd edition",
+      "publisher": "Agency for Healthcare Research and Quality",
+      "url": "https://www.ahrq.gov/health-literacy/improve/precautions/index.html",
+      "year": 2024
+    },
+    {
+      "title": "An open randomized controlled trial of the effects of linguistic simplification and mediation on the comprehension of easy read text by people with intellectual disabilities (Buell et al.)",
+      "publisher": "Journal of Applied Research in Intellectual Disabilities (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31652030/",
+      "year": 2020
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

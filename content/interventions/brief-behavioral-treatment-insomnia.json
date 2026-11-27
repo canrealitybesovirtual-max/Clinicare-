@@ -1,0 +1,88 @@
+{
+  "id": "brief-behavioral-treatment-insomnia",
+  "name": "Brief behavioral treatment for insomnia (BBTI)",
+  "modality": "Brief behavioral therapy for insomnia (sleep restriction and stimulus control)",
+  "conditions": ["insomnia-disorder", "sedative-hypnotic-use-disorder"],
+  "evidenceLevel": "The VA/DoD 2025 chronic insomnia guideline recommends CBT for insomnia and suggests brief behavioral therapy for insomnia as a treatment option. The AASM 2021 guideline suggests (conditional) multicomponent brief therapies for chronic insomnia in adults, alongside a strong recommendation for full CBT for insomnia. In a randomized trial with 79 older adults, two sessions plus two phone calls delivered by a nurse led to a response in 67% versus 25% with printed education, with benefits maintained at 6 months (Buysse et al., 2011).",
+  "minutes": { "min": 20, "max": 45 },
+  "purpose": "BBTI is a short, behavior-focused version of CBT for insomnia designed for primary care, older adults and settings where longer therapy is hard to provide. Over about four weeks (often two visits and two brief phone calls), it teaches how sleep drive and the body clock work and applies a few simple rules: spend less time in bed, keep a fixed wake-up time every day, go to bed only when sleepy, and get up if unable to sleep. Time in bed is set from a sleep diary and adjusted each week. It can be delivered by trained nurses, counselors and other clinicians, and can support people who want to reduce reliance on sleeping pills with their prescriber.",
+  "steps": [
+    "Screen for conditions that need medical evaluation first: loud snoring, gasping or breathing pauses at night, restless legs, very irregular shift work, or marked daytime sleepiness. Refer for a sleep evaluation where these are present.",
+    "Check for situations where restricting time in bed needs extra care or should be avoided (see cautions), and coordinate with the prescriber when the client takes sleep or mood medication.",
+    "Ask the client to keep a sleep diary for 1 to 2 weeks, and use it to estimate average actual sleep time.",
+    "Explain how sleep drive and the body clock work, and why spending long periods awake in bed weakens the link between bed and sleep.",
+    "Agree on a fixed wake-up time for every day of the week, and set an initial time in bed close to the average sleep time (not less than about 5 to 6 hours).",
+    "Add the rules: go to bed only when sleepy, get up and do something calm if unable to sleep, use the bed only for sleep and intimacy, and avoid daytime naps or keep them short.",
+    "Review the diary weekly, by visit or phone. When sleep fills most of the time in bed, extend it by about 15 minutes; if it does not, keep it or shorten it slightly.",
+    "If the client wants to reduce sleeping pills, plan any taper with the prescriber; do not advise stopping on your own."
+  ],
+  "script": [
+    "Let's keep a sleep diary for a week or two so we can see your real pattern.",
+    "Lying in bed awake for a long time can teach the body that bed is a place for being awake. We want to change that.",
+    "We will pick one wake-up time for every day, even weekends, and a shorter window in bed for now.",
+    "If you cannot sleep, get up and do something calm, then go back when you feel sleepy.",
+    "The first week or two can feel tiring. That usually means it is starting to work. Please avoid driving if you feel drowsy.",
+    "As your sleep gets more solid, we will widen the window bit by bit."
+  ],
+  "contraindications": [
+    "Bipolar disorder or a history of mania or hypomania: sleep loss can trigger mood episodes. Avoid restricting time in bed, or use it only with the prescriber's close involvement.",
+    "Seizure disorders: sleep loss can make seizures more likely. Coordinate with the treating clinician.",
+    "Drowsy driving and safety-critical work (for example commercial driving or operating machinery): plan around temporary sleepiness, use a gentler schedule or defer.",
+    "Untreated sleep apnea or other causes of marked daytime sleepiness: refer for evaluation first.",
+    "Falls risk and frailty in older adults: getting out of bed at night can raise fall risk. Plan a safe, lit route and a nearby chair.",
+    "Stopping sedative or hypnotic medications suddenly can cause withdrawal and rebound insomnia. Any taper is planned with the prescriber. Do not record substance-use details in this app; any note or export about substance use must carry this notice: 42 CFR Part 2 prohibits unauthorized use or disclosure of these records.",
+    "Insomnia with suicidal thoughts needs a safety check first. This app does not judge risk; you do. Crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com."
+  ],
+  "culturalAdaptations": [
+    "Sleep customs differ, including shared beds, afternoon rest and night prayers. Fit the schedule around what matters to the client.",
+    "Housing conditions such as shared rooms, noise or caregiving at night affect what is possible. Problem-solve rather than assuming a standard bedroom.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "handoutIds": ["sleep-window-guide", "sleep-diary"],
+  "orientationIds": ["behavior-therapy"],
+  "evidenceGrades": [
+    {
+      "body": "VA/DoD",
+      "guideline": "Management of Chronic Insomnia Disorder and Obstructive Sleep Apnea",
+      "year": 2025,
+      "conditionId": "insomnia-disorder",
+      "population": "Adults with chronic insomnia disorder",
+      "direction": "for",
+      "strength": "suggest (brief behavioral therapy for insomnia)",
+      "url": "https://health.mil/Reference-Center/Publications/2025/11/26/Treating-Insomnia-Providers-Guide"
+    },
+    {
+      "body": "AASM",
+      "guideline": "Behavioral and psychological treatments for chronic insomnia disorder in adults",
+      "year": 2021,
+      "conditionId": "insomnia-disorder",
+      "population": "Adults with chronic insomnia disorder",
+      "direction": "for",
+      "strength": "conditional (multicomponent brief therapies for insomnia)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33164742/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Efficacy of brief behavioral treatment for chronic insomnia in older adults (Buysse et al.)",
+      "publisher": "Archives of Internal Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21263078/",
+      "year": 2011
+    },
+    {
+      "title": "Behavioral and psychological treatments for chronic insomnia disorder in adults: an American Academy of Sleep Medicine clinical practice guideline (Edinger et al.)",
+      "publisher": "Journal of Clinical Sleep Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33164742/",
+      "year": 2021
+    },
+    {
+      "title": "Treating Insomnia: Providers Guide (2025 VA/DoD Chronic Insomnia Disorder and OSA guideline)",
+      "publisher": "Psychological Health Center of Excellence, Defense Health Agency",
+      "url": "https://health.mil/Reference-Center/Publications/2025/11/26/Treating-Insomnia-Providers-Guide",
+      "year": 2025
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

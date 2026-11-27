@@ -1,0 +1,137 @@
+{
+  "id": "care-transitions-and-warm-handoffs",
+  "title": "Care transitions and warm handoffs",
+  "category": "care-coordination",
+  "summary": "The days around a move between services (discharge from a hospital or emergency department, a step down from intensive care, a referral to a new clinician) carry extra risk and often lose people. This guide covers contact before discharge, a first appointment within about a week, medicine reconciliation with the prescriber, an updated safety plan, consent-based sharing of the minimum necessary information, and closing the loop.",
+  "whenToUse": [
+    "Before and after discharge from inpatient psychiatric care, a crisis unit or an emergency department.",
+    "When stepping a client up or down between outpatient, intensive outpatient, partial hospital or residential care.",
+    "When referring a client to another clinician or service, or receiving one.",
+    "When a client moves, changes insurance or ends with you and needs ongoing care elsewhere."
+  ],
+  "steps": [
+    {
+      "heading": "Make contact before the move",
+      "body": "When you know a client is in hospital or about to be discharged, contact the discharging team (with the client's authorization where needed) and, if possible, speak with the client before they leave. A known face or voice on the other side makes the first appointment more likely to happen."
+    },
+    {
+      "heading": "Book the first appointment within about a week",
+      "body": "Aim for a first outpatient contact within seven days of discharge, earlier when the client was admitted for suicidal crisis or self-harm. Give the date, time, place or video link, and the name of the person they will see, before discharge.",
+      "items": [
+        "Agree how the client will get there or join.",
+        "Plan a same-day outreach if the appointment is missed.",
+        "Offer a brief call in between if the wait is longer than a few days."
+      ]
+    },
+    {
+      "heading": "Reconcile medicines with the prescriber",
+      "body": "Ask the discharging team or prescriber for the current medicine list and any changes made in hospital. Confirm who will prescribe from now on and when the client will next see them. Questions about doses, starting or stopping belong to the prescriber."
+    },
+    {
+      "heading": "Update the safety plan and lethal means",
+      "body": "Review the safety plan made in hospital, or make one together, in the client's own words. Revisit access to firearms, stored medicines and other means, including any changes at home since the admission."
+    },
+    {
+      "heading": "Involve supports, with consent",
+      "body": "With the client's agreement, invite a family member or other support to the discharge conversation or first session, and agree what they can be told. Respect the client's choices about who is involved."
+    },
+    {
+      "heading": "Share the minimum necessary",
+      "body": "Use a valid authorization when one is required, and send only what the receiving clinician needs: the reason for referral, current risks and safety plan, medicines, what has helped and what has not, and who to contact. Substance-use disorder treatment records from a Part 2 program need consent that meets 42 CFR Part 2 and must carry the Part 2 notice.",
+      "items": [
+        "The release-of-information tool builds a form with blank lines for identifiers.",
+        "The referral letter tool writes a summary without identifiers.",
+        "Check state law, which may add requirements for mental health records."
+      ]
+    },
+    {
+      "heading": "Do a warm handoff",
+      "body": "Where possible, introduce the client to the receiving clinician in person or on a three-way call or video, rather than only sending a referral. Explain to the client what the new service does and what to expect at the first visit."
+    },
+    {
+      "heading": "Close the loop",
+      "body": "Confirm that the first appointment happened. If it did not, follow up with the client and the receiving service, and stay involved until care is established or the client clearly declines."
+    }
+  ],
+  "prompts": [
+    "Before you leave the hospital, I would like us to set a time to meet in the next few days. What day works best for you?",
+    "Did your medicines change while you were there? Let us make sure your prescriber and I have the same list.",
+    "Is it okay if I talk with your new therapist before your first visit, so you do not have to tell your story from the beginning?",
+    "If you cannot make the appointment, how would you like me to reach you?"
+  ],
+  "cautions": [
+    "The weeks after psychiatric discharge carry a much higher suicide rate than other times; a booked appointment is not the same as a completed one.",
+    "Do not share more than the receiving service needs, and never share psychotherapy notes under a general authorization.",
+    "Substance-use disorder treatment records from a Part 2 program need Part 2 consent; 42 CFR Part 2 prohibits unauthorized use or disclosure of these records.",
+    "This guide does not judge risk or decide the level of care; the clinicians involved do.",
+    "Releases, letters and checklists made in this app hold no identifiers; names and dates are written by hand on the printout."
+  ],
+  "adaptations": [
+    {
+      "context": "Telehealth follow-up",
+      "adaptation": "Test the video link with the client before discharge, confirm their location and a backup phone number at the start of the first call, and know the emergency number for where they will be."
+    },
+    {
+      "context": "Clients with unstable housing",
+      "adaptation": "Coordinate with case management or the shelter, agree on a reachable contact point and choose a first appointment location the client can actually get to."
+    }
+  ],
+  "evidenceSummary": "A 2017 systematic review and meta-analysis (Chung and colleagues) found suicide rates in the first three months after psychiatric discharge far higher than in the general population, highest soon after discharge. A 2018 cohort study (Stanley and colleagues) found safety planning with structured follow-up calls after an emergency visit was associated with less suicidal behavior and more treatment engagement. A 2012 Cochrane review (Archer and colleagues) found collaborative care with structured coordination improved depression and anxiety outcomes. A 2015 study in integrated primary care (Horevitz and colleagues) found that a warm handoff was linked to treatment uptake. NICE NG225 (2022) asks for initial aftercare within 48 hours after self-harm.",
+  "forClinicianReview": true,
+  "crisisPanel": true,
+  "sud": true,
+  "relatedInterventionIds": ["collaborative-safety-planning", "lethal-means-counseling", "medication-referral", "smi-community-support-referral"],
+  "relatedHandoutIds": ["after-a-crisis-next-steps", "safety-plan", "questions-for-my-prescriber", "my-health-information-rights"],
+  "relatedFormulationIds": ["co-occurring-and-level-of-care"],
+  "relatedLegalIds": ["hipaa-privacy-basics", "42-cfr-part-2", "crisis-and-involuntary-holds", "continuity-and-professional-will"],
+  "relatedPracticeIds": ["caring-contacts", "stepped-care-and-level-of-care", "collaborative-care-and-pcbh", "involving-family-and-supports"],
+  "relatedPopulationIds": ["housing-instability"],
+  "toolHref": "/tools/care-transition",
+  "linkOuts": [],
+  "measuresPending": [],
+  "sources": [
+    {
+      "title": "Suicide rates after discharge from psychiatric facilities: a systematic review and meta-analysis (Chung et al.)",
+      "publisher": "JAMA Psychiatry, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28564699/",
+      "year": 2017
+    },
+    {
+      "title": "Comparison of the Safety Planning Intervention with follow-up vs usual care of suicidal patients treated in the emergency department (Stanley et al.)",
+      "publisher": "JAMA Psychiatry, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29998307/",
+      "year": 2018
+    },
+    {
+      "title": "Self-harm: assessment, management and preventing recurrence (NG225)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng225",
+      "year": 2022
+    },
+    {
+      "title": "Collaborative care for depression and anxiety problems (Archer et al.)",
+      "publisher": "Cochrane Database of Systematic Reviews, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23076925/",
+      "year": 2012
+    },
+    {
+      "title": "Depression treatment uptake in integrated primary care: how a warm handoff and other factors affect decision making by Latinos (Horevitz et al.)",
+      "publisher": "Psychiatric Services, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25873022/",
+      "year": 2015
+    },
+    {
+      "title": "Minimum necessary requirement",
+      "publisher": "US Department of Health and Human Services",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/minimum-necessary-requirement/index.html"
+    },
+    {
+      "title": "HIPAA and 42 CFR Part 2",
+      "publisher": "US Department of Health and Human Services",
+      "url": "https://www.hhs.gov/hipaa/part-2/"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

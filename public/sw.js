@@ -14,12 +14,14 @@ const PAGES = [
   "/",
   "/symptoms",
   "/diagnoses",
+  "/diagnoses/compare",
   "/measures",
   "/plan",
   "/interventions",
   "/handouts",
   "/referrals",
   "/medications",
+  "/medications/effects",
   "/ethics",
   "/tools",
   "/about",
@@ -27,6 +29,10 @@ const PAGES = [
   "/client/help",
   "/client/skills",
   "/client/calm",
+  "/formulations",
+  "/formulations/builder",
+  "/orientations",
+  "/practice",
 ];
 const PAGE_SET = new Set(PAGES);
 
@@ -40,6 +46,8 @@ const DYNAMIC_PAGES = [
   /^\/client\/skills\/[a-z0-9-]+$/,
   /^\/r\/[a-z0-9-]+$/,
   /^\/r\/[a-z0-9-]+\/es$/,
+  /^\/formulations\/[a-z0-9-]+$/,
+  /^\/orientations\/[a-z0-9-]+$/,
 ];
 
 const NEVER = [/^\/api\//, /^\/models\//, /^\/ort\//];

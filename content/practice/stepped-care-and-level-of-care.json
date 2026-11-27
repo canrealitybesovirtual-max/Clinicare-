@@ -1,0 +1,140 @@
+{
+  "id": "stepped-care-and-level-of-care",
+  "title": "Stepped care, level of care and what to do when treatment is not helping",
+  "category": "care-coordination",
+  "summary": "Guidelines arrange care in steps, from low-intensity help to high-intensity therapy, combined or specialist care and crisis or inpatient services. This guide summarizes, in the app's own words, what NICE and WHO place at each step for common presentations, when to review progress, and the options when someone is not improving: stepping up, stepping across to a different approach, or adding medical care. The clinician and client choose the level of care together; nothing here ranks or decides.",
+  "whenToUse": [
+    "When planning the first treatment offer after assessment.",
+    "At planned reviews, especially when GAD-7 or PHQ-9 totals are not changing or are getting worse.",
+    "When risk, functioning or the client's circumstances change.",
+    "When considering intensive outpatient, partial hospital, residential, inpatient or crisis services."
+  ],
+  "steps": [
+    {
+      "heading": "Match the first step to severity, history and preference",
+      "items": [
+        "Depression (NICE NG222): for less severe depression, guided self-help, group CBT or behavioral activation, individual CBT or behavioral activation, exercise groups, interpersonal or counseling approaches, or problem-solving are options; for more severe depression, individual CBT or behavioral activation, often combined with an antidepressant, are offered first.",
+        "Generalized anxiety and panic (NICE CG113): psychoeducation and active monitoring, then low-intensity work such as guided self-help or psychoeducational groups, then high-intensity CBT, applied relaxation or medication, then specialist care for complex or treatment-resistant problems, very marked impairment or a serious risk of self-harm.",
+        "Obsessive-compulsive presentations (NICE CG31): lower-intensity CBT with exposure and response prevention for milder problems, more intensive CBT with exposure and response prevention or medication, then combined and specialist care as severity or non-response increases.",
+        "Eating disorders (NICE NG69): specialist eating disorder therapies with physical monitoring, with day, residential or inpatient care when outpatient care cannot keep someone physically safe.",
+        "Low-resource and non-specialist settings (WHO mhGAP, 2023): psychological interventions delivered by trained non-specialists are recommended for several conditions, with referral pathways for complex care."
+      ]
+    },
+    {
+      "heading": "Agree review points before starting",
+      "body": "Agree with the client when you will review progress (for example every four to six sessions, and at each change) and how: their own sense of change, functioning and a measure such as the GAD-7 or PHQ-9 tracked over time."
+    },
+    {
+      "heading": "When progress is limited, check the basics first",
+      "items": [
+        "Is the formulation still right? Has anything been missed (medical causes, substance use, trauma, sleep, an undisclosed stressor)?",
+        "Is the alliance working, and does the client agree with the goals and methods?",
+        "Is the treatment being delivered as intended, at enough intensity, with practice between sessions?",
+        "Are practical barriers getting in the way: attendance, cost, transport, caring roles, housing?"
+      ]
+    },
+    {
+      "heading": "Then consider the options",
+      "items": [
+        "Step up: more sessions, more frequent sessions, a higher-intensity therapy or a group added to individual work.",
+        "Step across: a different evidence-based therapy that suits the person better.",
+        "Add or review medical care: a medication evaluation, or a medicine review with the current prescriber.",
+        "Specialist care: a specialist service for the presentation (for example eating disorders, psychosis, OCD, trauma).",
+        "Intensive services: intensive outpatient or partial hospital programs when weekly sessions are not enough but the client can live at home.",
+        "Residential or inpatient care, and crisis services, when safety or functioning cannot be managed in the community."
+      ]
+    },
+    {
+      "heading": "Use level-of-care tools as aids, not decisions",
+      "body": "Services may use structured level-of-care instruments such as LOCUS for mental health or the ASAM Criteria for substance use. They are licensed and are link-outs only here. They support a discussion; they do not replace clinical judgment or the client's view."
+    },
+    {
+      "heading": "Plan the step and close the loop",
+      "body": "When care changes, agree the plan with the client, share the minimum necessary with consent, book the first contact and check that it happened. Stepping down again when the client is better is part of stepped care too."
+    }
+  ],
+  "prompts": [
+    "We said we would look at how things are going around now. How do you feel things have changed since we started?",
+    "Your scores have not moved much over the last few weeks. I would like us to think together about why, and what we could change.",
+    "One option is to add a medication evaluation alongside our sessions. How would you feel about that?",
+    "Some programs meet several times a week while you live at home. Would something like that be possible for you?"
+  ],
+  "cautions": [
+    "Steps describe the usual intensity of care, not a judgment about the person; clients can start at any step their needs call for.",
+    "Do not keep a client at a step that is not helping just because it is the first step; review and change.",
+    "Safety concerns may need crisis or emergency care at any point; follow your crisis protocol.",
+    "Level-of-care instruments are licensed link-outs only; the app builds in no level-of-care score.",
+    "Substance-use treatment records discussed during referral are protected; 42 CFR Part 2 prohibits unauthorized use or disclosure of these records."
+  ],
+  "evidenceSummary": "NICE NG222 (2022) sets out treatment options for less severe and more severe depression and reviewing treatment that is not working. NICE CG113 (2011, updated 2020) and CG123 (2011) describe stepped-care models for anxiety and common mental health problems. NICE CG31 (2005) describes stepped care for OCD and body dysmorphic disorder. NICE NG69 (2017, updated 2020) covers eating disorder care and admission. WHO mhGAP recommendations (2023) cover psychological interventions delivered in non-specialist settings. A 2005 review (Bower and Gilbody) discusses the access, effectiveness and efficiency of stepped care in psychological therapies.",
+  "forClinicianReview": true,
+  "crisisPanel": true,
+  "sud": true,
+  "relatedInterventionIds": ["guided-self-help", "behavioral-activation", "medication-referral", "eating-disorder-specialist-therapies", "neuromodulation-referral"],
+  "relatedHandoutIds": ["questions-about-my-care"],
+  "relatedFormulationIds": ["co-occurring-and-level-of-care", "transdiagnostic-process-map"],
+  "relatedLegalIds": ["documentation-and-medical-necessity", "crisis-and-involuntary-holds"],
+  "relatedPracticeIds": ["outcome-monitoring", "problem-prioritization", "combined-care-decision-points", "collaborative-care-and-pcbh", "care-transitions-and-warm-handoffs", "shared-decision-making"],
+  "relatedPopulationIds": [],
+  "toolHref": "/tools/trend",
+  "linkOuts": [],
+  "measuresPending": [
+    {
+      "name": "LOCUS (Level of Care Utilization System)",
+      "url": "https://psychiatryonline.org/doi/abs/10.1176/appi.ps.54.11.1461",
+      "licenseKey": "LOCUS"
+    },
+    {
+      "name": "The ASAM Criteria",
+      "url": "https://www.asam.org/asam-criteria/asam-criteria-4th-edition",
+      "licenseKey": "ASAM Criteria"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Depression in adults: treatment and management (NG222)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng222",
+      "year": 2022
+    },
+    {
+      "title": "Generalised anxiety disorder and panic disorder in adults: management (CG113)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg113",
+      "year": 2011
+    },
+    {
+      "title": "Common mental health problems: identification and pathways to care (CG123)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg123",
+      "year": 2011
+    },
+    {
+      "title": "Obsessive-compulsive disorder and body dysmorphic disorder: treatment (CG31)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg31",
+      "year": 2005
+    },
+    {
+      "title": "Eating disorders: recognition and treatment (NG69)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng69",
+      "year": 2017
+    },
+    {
+      "title": "WHO issues new and updated recommendations on treatment of mental, neurological and substance use conditions (mhGAP guideline 2023)",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/news/item/20-11-2023-who-issues-new-and-updated-recommendations-on-treatment-of-mental--neurological-and-substance-use-conditions",
+      "year": 2023
+    },
+    {
+      "title": "Stepped care in psychological therapies: access, effectiveness and efficiency (Bower and Gilbody)",
+      "publisher": "British Journal of Psychiatry, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15630118/",
+      "year": 2005
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

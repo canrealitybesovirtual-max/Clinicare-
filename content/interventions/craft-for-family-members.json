@@ -1,0 +1,96 @@
+{
+  "id": "craft-for-family-members",
+  "name": "Community reinforcement and family training (CRAFT) for a concerned family member - overview and referral",
+  "modality": "Behavioral skills for concerned family members (CRAFT)",
+  "conditions": ["alcohol-use-disorder", "opioid-use-disorder", "stimulant-use-disorder", "cannabis-use-disorder", "gambling-disorder"],
+  "evidenceLevel": "In randomized trials, CRAFT helped concerned family members engage treatment-refusing loved ones in treatment more often than Al-Anon facilitation or confrontational family interventions: 64% versus 13% and 30% for problem drinking (Miller et al., 1999), and about 59 to 77% versus 29% for illicit drug use (Meyers et al., 2002). A review concluded that CRAFT is superior to traditional programs for engaging treatment-resistant people (Roozen et al., 2010). Family members' own wellbeing improved across approaches. A Danish trial found group, individual and self-help formats all helped, without significant differences between them (Hellum et al., 2022). For gambling, a self-help workbook based on CRAFT improved some outcomes for family members but did not increase treatment entry (Hodgins et al., 2007).",
+  "minutes": { "min": 10, "max": 20 },
+  "purpose": "CRAFT is for the client who is worried about an adult family member or partner who drinks, uses drugs or gambles and will not seek help. The client, not the person using, is the focus. It teaches the family member to look after their own wellbeing and safety, to communicate in a positive, specific way, to reward times without use, to step back from shielding the person from the natural results of use, and to recognize good moments to invite the person into treatment. It is a respectful alternative to confrontation or cutting off contact. This entry covers overview and referral only, and the time estimate is for that conversation. Never record details about the person using; they are not your client and have not consented.",
+  "steps": [
+    "Listen to the client's worries and acknowledge the strain. Ask how the situation is affecting their own health, sleep, money and safety.",
+    "Ask about safety first: violence, threats, control, weapons in the home, or fear of the person when they are using. If there is any violence, start with relationship safety planning before any other step, and offer the national domestic violence hotline or local services.",
+    "Explain what CRAFT offers: help for the client themselves, communication skills, ways to reward times without use, letting natural consequences happen where safe, and planning when and how to invite the person into treatment.",
+    "Refer to a clinician or program trained in CRAFT, or to a CRAFT-based group or self-help program if that suits the client better. Include the client's own needs (for example their mood, sleep or anxiety) in the plan.",
+    "Talk only about the client's experiences and choices. Do not record identifying or substance-use details about the family member.",
+    "Help the client prepare information about treatment options (local services, medication treatment, mutual-help groups) so it is ready if the person agrees to get help.",
+    "Follow up on the client's wellbeing and safety at later sessions, whether or not the family member engages."
+  ],
+  "script": [
+    "It sounds exhausting to worry about someone you love this much. How are you doing in all of this?",
+    "Before anything else, are you safe at home? Has anyone hurt you, threatened you or made you afraid?",
+    "There is a program that helps family members, not by confronting the person, but by changing how you communicate and what you reward.",
+    "It also helps you look after yourself, whatever the other person decides.",
+    "Many family members using this approach see their loved one agree to get help. Would you like to find a program near you?"
+  ],
+  "contraindications": [
+    "Where there is intimate partner or family violence, do not coach the client to set limits or allow consequences in ways that could raise danger. Safety planning comes first. In the US, the National Domestic Violence Hotline can help; in an emergency, call the local emergency number.",
+    "CRAFT is not a way to control or monitor another adult. Keep the focus on the client's own choices and wellbeing.",
+    "If the family member is at risk of overdose, the client may benefit from carrying naloxone and knowing how to use it.",
+    "If the client or the family member is at risk of suicide, address that first. This app does not judge risk; you do. Crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com.",
+    "Do not enter details about anyone's substance use or gambling into this app; nothing is stored or sent. Any note or export about substance use must carry this notice: 42 CFR Part 2 prohibits unauthorized use or disclosure of these records."
+  ],
+  "culturalAdaptations": [
+    "Family roles, loyalty and shame about addiction differ across cultures. Ask who in the family holds influence and what kind of approach would feel respectful.",
+    "In some families, an elder, faith leader or other trusted person may be the best one to invite the loved one into treatment. Explore this with the client.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "trainingRequired": "CRAFT: trained clinicians only. Deliver the full program only after CRAFT training with certification or consultation through the developers' training program (Robert J. Meyers, PhD, and colleagues). Otherwise refer, or point the client to a CRAFT-based group or self-help resource.",
+  "handoutIds": ["listening-to-someone-you-love", "relationship-safety-help-card"],
+  "orientationIds": ["behavior-therapy", "systemic-family-and-couples-therapy"],
+  "evidenceGrades": [
+    {
+      "body": "other",
+      "guideline": "Community reinforcement and family training: systematic review (Roozen et al., Addiction)",
+      "year": 2010,
+      "population": "Concerned significant others of treatment-resistant people with substance use problems",
+      "direction": "for",
+      "strength": "superior to traditional programs for treatment engagement",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20626372/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Community reinforcement and family training: an effective option to engage treatment-resistant substance-abusing individuals in treatment (Roozen et al.)",
+      "publisher": "Addiction (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20626372/",
+      "year": 2010
+    },
+    {
+      "title": "Engaging the unmotivated in treatment for alcohol problems: a comparison of three strategies for intervention through family members (Miller et al.)",
+      "publisher": "Journal of Consulting and Clinical Psychology (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/10535235/",
+      "year": 1999
+    },
+    {
+      "title": "A randomized trial of two methods for engaging treatment-refusing drug users through concerned significant others (Meyers et al.)",
+      "publisher": "Journal of Consulting and Clinical Psychology (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12362968/",
+      "year": 2002
+    },
+    {
+      "title": "Primary outcome from a cluster-randomized trial of three formats for delivering CRAFT to the significant others of problem drinkers (Hellum et al.)",
+      "publisher": "BMC Public Health (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35538465/",
+      "year": 2022
+    },
+    {
+      "title": "Minimal treatment approaches for concerned significant others of problem gamblers: a randomized controlled trial (Hodgins et al.)",
+      "publisher": "Journal of Gambling Studies (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17245662/",
+      "year": 2007
+    },
+    {
+      "title": "CRAFT Behavior Therapy: Treatment Entry Component (NCT00842036)",
+      "publisher": "ClinicalTrials.gov (National Library of Medicine)",
+      "url": "https://clinicaltrials.gov/study/NCT00842036"
+    },
+    {
+      "title": "CRA and CRAFT training and certification",
+      "publisher": "Robert J. Meyers, PhD and Associates",
+      "url": "https://www.robertjmeyersphd.com"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

@@ -1,0 +1,237 @@
+{
+  "id": "activity-ideas-menu",
+  "title": "Activity Ideas Menu",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 10,
+  "intro": "When mood is low, it can be hard to think of things to do. This menu gives you ideas to choose from. Pick ones that fit your body, your budget, and what matters to you. Small is fine. Even a 5-minute activity counts. It takes about 10 minutes to read.",
+  "sections": [
+    {
+      "heading": "At home",
+      "steps": [
+        "Listen to a favorite song or album.",
+        "Cook or bake something simple.",
+        "Tidy one drawer or one shelf.",
+        "Watch a funny show or video.",
+        "Take a warm shower or bath."
+      ]
+    },
+    {
+      "heading": "Moving your body",
+      "steps": [
+        "Walk around the block or to the end of the street.",
+        "Stretch for 5 minutes.",
+        "Dance to one song.",
+        "Do seated exercises, like arm circles or leg lifts in a chair.",
+        "Work in a garden, or care for a plant."
+      ]
+    },
+    {
+      "heading": "Connecting with others",
+      "steps": [
+        "Send a short text to someone you miss.",
+        "Call a family member or friend.",
+        "Sit in a public place, like a park or a library, around other people.",
+        "Join a class, club, or group, online or in person.",
+        "Help a neighbor with a small task."
+      ]
+    },
+    {
+      "heading": "Learning and making things",
+      "steps": [
+        "Draw, color, or doodle.",
+        "Write a few lines in a journal.",
+        "Learn a few words in a new language.",
+        "Do a puzzle or a word game.",
+        "Fix or build something small."
+      ]
+    },
+    {
+      "heading": "Caring for yourself",
+      "steps": [
+        "Eat a meal at a regular time.",
+        "Drink a glass of water.",
+        "Go to bed and get up at steady times.",
+        "Book a health checkup.",
+        "Spend 10 minutes outside in daylight."
+      ]
+    },
+    {
+      "heading": "Meaning, faith, and values",
+      "steps": [
+        "Pray, meditate, or spend quiet time thinking about what matters to you.",
+        "Go to a place of worship or a spiritual group, if that fits you.",
+        "Volunteer, even for an hour.",
+        "Do something kind for someone, without telling them.",
+        "Spend time in nature and notice what you see."
+      ]
+    },
+    {
+      "heading": "Free or low-cost",
+      "steps": [
+        "Visit a public library.",
+        "Go to a free museum day or a community event.",
+        "Watch the sunrise or the sunset.",
+        "Swap books or recipes with a friend.",
+        "Look through old photos that bring back good memories."
+      ]
+    },
+    {
+      "heading": "If moving around is hard",
+      "steps": [
+        "Sit by a window and watch the sky.",
+        "Listen to an audiobook, a podcast, or the radio.",
+        "Do gentle stretches in bed or in a chair.",
+        "Call someone instead of going out.",
+        "Try slow breathing for 3 minutes."
+      ]
+    },
+    {
+      "heading": "How to use the menu",
+      "steps": [
+        "Pick 2 or 3 ideas for this week.",
+        "Plan when you will do each one, with a day and a time.",
+        "Start with the easiest one.",
+        "Afterward, rate how much you enjoyed it, and how much it gave you a sense of getting something done.",
+        "Add your own ideas to the list."
+      ]
+    }
+  ],
+  "practiceLog": {
+    "columns": ["Idea", "Day and time I planned", "Did it? (yes / partly / no)", "Enjoyment (0-10)", "Got something done (0-10)"],
+    "rows": 7
+  },
+  "safetyNote": "Safety first: Pick activities that are safe for your body. If you have a health problem, or you have not been active in a while, ask your doctor before you start a new kind of exercise. Low mood can sometimes come with thoughts of death or of hurting yourself. If that happens, do not wait for your next visit. Talk to someone now. In the US, call or text 988 or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "es": {
+    "title": "Menú de ideas de actividades",
+    "intro": "Cuando el ánimo está bajo, cuesta pensar en cosas que hacer. Este menú le da ideas para escoger. Escoja las que vayan con su cuerpo, con su bolsillo y con lo que le importa. Algo pequeño está bien. Hasta una actividad de 5 minutos cuenta. Leerlo toma unos 10 minutos.",
+    "sections": [
+      {
+        "heading": "En casa",
+        "steps": [
+          "Escuche una canción o un disco que le guste.",
+          "Cocine u hornee algo sencillo.",
+          "Ordene un cajón o una repisa.",
+          "Vea un programa o un video chistoso.",
+          "Dese una ducha o un baño tibio."
+        ]
+      },
+      {
+        "heading": "Mover el cuerpo",
+        "steps": [
+          "Camine alrededor de la cuadra o hasta el final de la calle.",
+          "Estírese durante 5 minutos.",
+          "Baile una canción.",
+          "Haga ejercicios sentado, como círculos con los brazos o subir las piernas en una silla.",
+          "Trabaje en un jardín, o cuide una planta."
+        ]
+      },
+      {
+        "heading": "Estar con otras personas",
+        "steps": [
+          "Mande un mensaje corto a alguien que extraña.",
+          "Llame a un familiar o a un amigo.",
+          "Siéntese en un lugar público, como un parque o una biblioteca, cerca de otras personas.",
+          "Únase a una clase, un club o un grupo, por internet o en persona.",
+          "Ayude a un vecino con una tarea pequeña."
+        ]
+      },
+      {
+        "heading": "Aprender y hacer cosas",
+        "steps": [
+          "Dibuje, coloree o haga garabatos.",
+          "Escriba unas líneas en un diario.",
+          "Aprenda unas palabras en otro idioma.",
+          "Haga un rompecabezas o un juego de palabras.",
+          "Arregle o construya algo pequeño."
+        ]
+      },
+      {
+        "heading": "Cuidarse",
+        "steps": [
+          "Coma a una hora fija.",
+          "Tome un vaso de agua.",
+          "Acuéstese y levántese a horas fijas.",
+          "Haga una cita para un chequeo de salud.",
+          "Pase 10 minutos afuera con la luz del día."
+        ]
+      },
+      {
+        "heading": "Sentido, fe y valores",
+        "steps": [
+          "Rece, medite o pase un rato en silencio pensando en lo que le importa.",
+          "Vaya a un lugar de culto o a un grupo espiritual, si eso va con usted.",
+          "Haga trabajo voluntario, aunque sea una hora.",
+          "Haga algo amable por alguien, sin decírselo.",
+          "Pase tiempo en la naturaleza y fíjese en lo que ve."
+        ]
+      },
+      {
+        "heading": "Gratis o de bajo costo",
+        "steps": [
+          "Visite una biblioteca pública.",
+          "Vaya a un museo en un día gratis o a un evento de la comunidad.",
+          "Mire la salida o la puesta del sol.",
+          "Intercambie libros o recetas con un amigo.",
+          "Mire fotos viejas que le traigan buenos recuerdos."
+        ]
+      },
+      {
+        "heading": "Si le cuesta moverse",
+        "steps": [
+          "Siéntese junto a una ventana y mire el cielo.",
+          "Escuche un audiolibro, un pódcast o la radio.",
+          "Haga estiramientos suaves en la cama o en una silla.",
+          "Llame a alguien en vez de salir.",
+          "Pruebe respirar despacio durante 3 minutos."
+        ]
+      },
+      {
+        "heading": "Cómo usar el menú",
+        "steps": [
+          "Escoja 2 o 3 ideas para esta semana.",
+          "Planee cuándo hará cada una, con un día y una hora.",
+          "Empiece con la más fácil.",
+          "Después, califique cuánto la disfrutó, y cuánto le hizo sentir que logró algo.",
+          "Agregue sus propias ideas a la lista."
+        ]
+      }
+    ],
+    "practiceLog": {
+      "columns": ["Idea", "Día y hora que planeé", "¿La hice? (sí / en parte / no)", "Disfrute (0-10)", "Logré algo (0-10)"]
+    },
+    "safetyNote": "La seguridad es lo primero: Escoja actividades que sean seguras para su cuerpo. Si tiene un problema de salud, o hace tiempo que no se mueve mucho, pregunte a su médico antes de empezar un tipo nuevo de ejercicio. El ánimo bajo a veces puede venir con pensamientos de muerte o de hacerse daño. Si eso pasa, no espere a su próxima cita. Hable con alguien ahora. En EE. UU., llame o envíe un mensaje de texto al 988 o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "linkOuts": [
+    {
+      "title": "Benefits of Exercise",
+      "publisher": "MedlinePlus, US National Library of Medicine",
+      "url": "https://medlineplus.gov/benefitsofexercise.html",
+      "note": "Plain-language page on staying active, in English and Spanish.",
+      "lastVerified": "2026-11-27"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Behavioral Activation for Depression",
+      "publisher": "APA Division 12, Society of Clinical Psychology",
+      "url": "https://div12.org/treatment/behavioral-activation-for-depression/"
+    },
+    {
+      "title": "Cochrane review CD013305: behavioural activation therapy in adults (Uphoff et al.)",
+      "publisher": "Cochrane Database of Systematic Reviews",
+      "url": "https://doi.org/10.1002/14651858.CD013305.pub2",
+      "year": 2020
+    },
+    {
+      "title": "Top 10 Things to Know About the Second Edition of the Physical Activity Guidelines for Americans",
+      "publisher": "Office of Disease Prevention and Health Promotion, US Department of Health and Human Services",
+      "url": "https://odphp.health.gov/our-work/nutrition-physical-activity/physical-activity-guidelines/current-guidelines/top-10-things-know",
+      "year": 2018
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

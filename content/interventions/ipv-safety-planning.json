@@ -1,0 +1,107 @@
+{
+  "id": "ipv-safety-planning",
+  "name": "Intimate partner violence: safety planning and danger review",
+  "modality": "Care coordination - intimate partner violence safety planning and advocacy referral",
+  "conditions": ["ptsd", "major-depressive-disorder", "adjustment-disorder", "generalized-anxiety-disorder"],
+  "evidenceLevel": "The US Preventive Services Task Force (2018, grade B) recommends screening women of reproductive age for intimate partner violence and providing or referring those who screen positive to ongoing support services. A Cochrane review found that intensive advocacy may improve short-term quality of life and reduce physical abuse for women recruited from shelters, and brief advocacy may give small short-term mental health benefits, though most studies were underpowered (Rivas et al., 2015). In an 11-city study, the Danger Assessment's risk factors distinguished intimate partner femicide cases from other abused women (Campbell et al., 2009), and prior non-fatal strangulation was linked with more than 7 times the odds of being killed by a partner, compared with other abused women (Glass et al., 2008). WHO's 2013 clinical guidelines recommend first-line support for women who disclose violence, including help to increase their safety.",
+  "minutes": { "min": 20, "max": 50 },
+  "purpose": "Safety planning for intimate partner violence is different from suicide safety planning. It helps a person who is being hurt, threatened or controlled by a partner or ex-partner think through ways to stay safer, whether they stay, are preparing to leave, or have left. It includes a careful look at warning signs of serious danger, plans for emergencies, protection of children and pets, technology safety, legal options and connection to specialist advocacy. The person experiencing violence makes the decisions; the clinician offers information, options and support. Nothing in this app scores danger or decides what the client should do.",
+  "steps": [
+    "Ask about relationship safety only in private, never in front of a partner, family member or child old enough to repeat it, and use a professional interpreter rather than family.",
+    "Respond to disclosure with belief and support: thank the client, say it is not their fault, and ask what they need now.",
+    "Review signs linked with serious or lethal danger, using your clinical judgment: a partner's access to guns, past choking or strangulation, recent or planned separation, threats to kill, violence that is becoming more frequent or severe, violence during pregnancy, extreme jealousy and control, and forced sex. A structured tool such as the Danger Assessment can be used by trained, certified staff as a link-out; this app does not score it.",
+    "Plan for emergencies: safe places to go, people who can help, a code word, an escape route, and keeping keys, money, phone, medications and copies of documents ready or with someone trusted.",
+    "Plan for the situation the client chooses: staying (safer rooms, de-escalation, avoiding areas with weapons), leaving (timing, because danger often rises around separation, shelter options, protective orders), or after leaving (changing routines, workplace and school safety).",
+    "Cover technology safety: location sharing, shared accounts, spyware, and safer ways to contact help, such as a friend's phone or a hotline call rather than browser searches.",
+    "Consider the risk of a written plan being found. Offer to keep it brief, memorized, coded or held by a trusted person, and be careful about what goes into records or patient portals the partner might see.",
+    "Connect with specialist advocacy and legal support. In the US, the National Domestic Violence Hotline is available at 1-800-799-7233 or by texting START to 88788. Know your local reporting duties, including for any children at risk.",
+    "Follow up at every contact, and update the plan as circumstances change."
+  ],
+  "script": [
+    "I ask everyone about safety at home. Has a partner or ex-partner ever hurt you, threatened you or made you afraid?",
+    "Thank you for telling me. This is not your fault, and you do not deserve to be treated this way.",
+    "You know your situation best. Whatever you decide about the relationship, we can plan ways to keep you safer.",
+    "Has your partner ever choked you, threatened to kill you, or does your partner have access to a gun? These things help me understand how dangerous things might be.",
+    "Is it safe for you to have a written plan, or would it be better to keep it in your head or with someone you trust?",
+    "There are advocates you can call or text any time who know about shelters, legal options and safety planning."
+  ],
+  "contraindications": [
+    "If the client is in immediate danger, help them reach emergency services or a safe place now. This app does not judge risk; you do. In an emergency, call the local emergency number; for suicidal crisis in the US, call or text 988; elsewhere, use findahelpline.com.",
+    "Do not offer couples therapy or joint sessions when there is violence, coercive control or fear of a partner. They can increase danger.",
+    "Do not pressure the client to leave or stay. Leaving can be the most dangerous period, and the decision belongs to the client.",
+    "Never contact the partner or share information with them, and be careful with appointment reminders, voicemails and portal messages.",
+    "Mandatory reporting rules differ by jurisdiction (for example for child abuse, elder abuse or certain injuries). Know your local duties and explain limits of confidentiality honestly.",
+    "Do not enter identifying details about the client, the partner or children into this app."
+  ],
+  "culturalAdaptations": [
+    "Immigration status, language, faith, family expectations, disability and sexual or gender identity can shape both the danger and the options. Ask, and connect with culturally specific advocacy where available (for example StrongHearts for Native American and Alaska Native people in the US).",
+    "Partners can use cultural or religious beliefs, or immigration threats, as tools of control. Name these patterns gently when the client describes them.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "handoutIds": ["relationship-safety-help-card"],
+  "evidenceGrades": [
+    {
+      "body": "USPSTF",
+      "guideline": "Screening for intimate partner violence, elder abuse, and abuse of vulnerable adults",
+      "year": 2018,
+      "population": "Women of reproductive age",
+      "direction": "for",
+      "strength": "grade B (screen and provide or refer to ongoing support services)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30357305/"
+    },
+    {
+      "body": "Cochrane",
+      "guideline": "Advocacy interventions to reduce or eliminate violence and promote the physical and psychosocial well-being of women who experience intimate partner abuse",
+      "year": 2015,
+      "population": "Women experiencing intimate partner abuse",
+      "direction": "for",
+      "strength": "uncertain magnitude; possible benefits from intensive and brief advocacy",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26632986/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Screening for intimate partner violence, elder abuse, and abuse of vulnerable adults: US Preventive Services Task Force final recommendation statement",
+      "publisher": "JAMA (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30357305/",
+      "year": 2018
+    },
+    {
+      "title": "Advocacy interventions to reduce or eliminate violence and promote the physical and psychosocial well-being of women who experience intimate partner abuse (Rivas et al.)",
+      "publisher": "Cochrane Database of Systematic Reviews (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26632986/",
+      "year": 2015
+    },
+    {
+      "title": "The Danger Assessment: validation of a lethality risk assessment instrument for intimate partner femicide (Campbell et al.)",
+      "publisher": "Journal of Interpersonal Violence (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18667689/",
+      "year": 2009
+    },
+    {
+      "title": "Non-fatal strangulation is an important risk factor for homicide of women (Glass et al.)",
+      "publisher": "Journal of Emergency Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17961956/",
+      "year": 2008
+    },
+    {
+      "title": "Responding to intimate partner violence and sexual violence against women: WHO clinical and policy guidelines",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/publications/i/item/9789241548595",
+      "year": 2013
+    },
+    {
+      "title": "Danger Assessment training and certification",
+      "publisher": "Johns Hopkins School of Nursing",
+      "url": "https://nursing.jhu.edu/faculty-research/research/areas-of-expertise/community-global-health/da-ta-center"
+    },
+    {
+      "title": "National Domestic Violence Hotline",
+      "publisher": "The Hotline",
+      "url": "https://www.thehotline.org"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

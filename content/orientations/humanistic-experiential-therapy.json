@@ -1,0 +1,127 @@
+{
+  "id": "humanistic-experiential-therapy",
+  "name": "Humanistic and experiential therapies (person-centered, emotion-focused, gestalt and MI)",
+  "shortName": "Humanistic-experiential",
+  "family": "humanistic-experiential",
+  "summary": "People have an inner drive toward growth that flourishes in a relationship of empathy, acceptance and genuineness. Experiential models add active, emotion-focused tasks; motivational interviewing applies the same spirit to resolving ambivalence about change.",
+  "keyConcepts": [
+    { "term": "Core conditions", "meaning": "Accurate empathy, unconditional positive regard and congruence (genuineness) from the therapist, experienced by the client, as the ground for change." },
+    { "term": "Actualizing tendency", "meaning": "The view that people naturally move toward growth and self-direction when the conditions allow it." },
+    { "term": "Emotion schemes", "meaning": "In emotion-focused therapy, learned networks of emotion, memory, bodily sense and meaning that are activated in the moment; maladaptive ones, such as core shame or fear, are a target for change." },
+    { "term": "Marker-guided tasks", "meaning": "The therapist watches for signs (markers) of a specific emotional difficulty, such as self-criticism or unfinished business, and offers a matching task such as chair work." },
+    { "term": "Process guiding", "meaning": "Following the client's experience closely while gently guiding attention toward the feelings and meanings that matter most." },
+    { "term": "MI spirit", "meaning": "Partnership, acceptance, compassion and evocation: drawing out the client's own reasons for change rather than supplying them." }
+  ],
+  "viewOfProblem": "Distress arises when people lose touch with their own experience, for example by living by others' expectations, avoiding painful emotions, or holding a harsh view of themselves. In emotion-focused terms, core maladaptive emotions such as shame or fear of abandonment, often from earlier experiences, drive current suffering. In MI, being stuck is understood as normal ambivalence rather than denial or resistance.",
+  "viewOfChange": "Change comes from being deeply understood and accepted, which helps the person accept and explore their own experience. Experiential work helps clients arrive at painful emotions, make sense of them, and transform them by accessing adaptive emotions such as compassion, protective anger or grief. In MI, the client talks themselves into change as their own reasons are evoked and strengthened.",
+  "therapistStance": "Empathic, accepting and genuine. The person-centered clinician follows rather than leads; the emotion-focused clinician follows and also guides, offering tasks at markers; the MI clinician is a partner who listens reflectively and evokes change talk. In all three, the client is the expert on their own experience.",
+  "sessionShape": [
+    "Begin where the client is: what feels most important today.",
+    "Listen closely and reflect, deepening toward feelings and meanings.",
+    "In experiential work, notice markers and, with consent, offer a matching task such as two-chair work.",
+    "In MI, reflect ambivalence, evoke reasons for change and, when ready, plan next steps together.",
+    "Close by summarizing what the client discovered or decided, in their words."
+  ],
+  "goalStyle": "Goals are defined by the client from their own experience and may describe a way of being rather than a symptom count: for example, feel able to speak up about my needs with my family, or decide whether to change my drinking. In MI, goals track readiness, importance and confidence. Write each goal with the client in their own words.",
+  "progressMarkers": [
+    "Client's own description of change in how they feel and relate to themselves.",
+    "Ratings of importance, confidence and readiness for change (MI).",
+    "Symptom and functioning measures, chosen and reviewed with the client.",
+    "Client ratings of the relationship and of each session's helpfulness."
+  ],
+  "typicalTechniques": [
+    "person-centered-reflective-listening",
+    "counselling-for-depression",
+    "emotion-focused-chair-work",
+    "gestalt-awareness-experiments",
+    "emotionally-focused-couples-work",
+    "motivational-interviewing",
+    "decisional-balance",
+    "brief-alcohol-intervention"
+  ],
+  "relatedTechniques": ["self-compassion-practice", "existential-meaning-exploration"],
+  "missingTechniques": [
+    { "name": "Empathic exploration and evocative unfolding", "note": "Emotion-focused tasks for unclear feelings and puzzling reactions; currently covered only inside chair work." },
+    { "name": "Focusing (clearing a space)", "note": "Gendlin's practice of attending to a felt sense in the body; limited controlled evidence." }
+  ],
+  "formulationIds": ["five-ps-biopsychosocial-spiritual"],
+  "models": [
+    {
+      "name": "Person-centered therapy and counselling for depression",
+      "summary": "Rogers's nondirective therapy built on the core conditions; counselling for depression is a structured, evidence-based version developed for depression services.",
+      "evidenceTier": "guideline-recommended",
+      "evidence": "NICE NG222 (2022) includes counselling among options for depression, judged effective but less cost effective on average than higher-ranked options; therapist empathy predicts outcome across therapies (Elliott et al., 2018: mean r of about .28).",
+      "trainingRequired": false
+    },
+    {
+      "name": "Emotion-focused therapy (EFT)",
+      "summary": "Greenberg and colleagues' experiential therapy that combines an empathic relationship with marker-guided tasks such as chair work to transform maladaptive emotion schemes.",
+      "evidenceTier": "research-supported",
+      "evidence": "APA Division 12 lists EFT for depression with modest support (status pending re-evaluation). In a 2006 RCT, adding emotion-focused tasks to a client-centered relationship improved depression more than the relationship alone (Goldman, Greenberg and Angus, 2006).",
+      "trainingRequired": true
+    },
+    {
+      "name": "Gestalt therapy",
+      "summary": "Awareness-focused work on present experience, contact and unfinished business, using experiments in session.",
+      "evidenceTier": "limited",
+      "evidence": "Gestalt therapy has a long clinical tradition but few controlled trials (StatPearls overview, 2025); its chair work is better tested within EFT.",
+      "trainingRequired": false
+    },
+    {
+      "name": "Motivational interviewing (MI)",
+      "summary": "Miller and Rollnick's collaborative conversation style for strengthening a person's own motivation and commitment to change.",
+      "evidenceTier": "guideline-recommended",
+      "evidence": "NICE CG115 (2011) advises a motivational intervention with the core elements of MI as part of the first assessment for harmful drinking; meta-analyses show small but consistent effects across many behaviors (Lundahl et al., 2010).",
+      "trainingRequired": false
+    }
+  ],
+  "evidenceTier": "guideline-recommended",
+  "evidenceSummary": "Relationship factors central to humanistic work, especially empathy, predict outcome across therapies (Elliott et al., 2018). NICE NG222 (2022) includes counselling among options for depression, and NICE CG115 (2011) recommends motivational interventions in alcohol care. Emotion-focused therapy has RCT support for depression (Goldman et al., 2006) and a feasibility trial in GAD (Timulak et al., 2022). Gestalt therapy has limited controlled evidence.",
+  "bestFit": [
+    "Clients who want to explore their feelings and identity in a nondirective or emotion-focused way.",
+    "Less severe depression, grief and adjustment to life changes.",
+    "Ambivalence about change in drinking, health behaviors or treatment (MI).",
+    "Shame, self-criticism and unresolved hurt in relationships (emotion-focused chair work)."
+  ],
+  "cautions": [
+    "A purely nondirective stance may be too slow for severe depression, OCD, PTSD or high risk; combine it with guideline-recommended treatment.",
+    "Chair work and evocative tasks can be overwhelming for clients with trauma or dissociation; ask permission, pace carefully and ground afterward.",
+    "MI is not a technique for getting clients to do what the clinician wants; keep to the client's goals and values.",
+    "Empathic acceptance does not replace risk assessment. If thoughts of death or self-harm come up, follow your risk procedures and review crisis options: in the US call or text 988; elsewhere, the local emergency number or findahelpline.com."
+  ],
+  "whenToRefer": [
+    "Presentations that need a specific evidence-based protocol, such as OCD, PTSD or eating disorders, alongside or instead of nondirective work.",
+    "Requests for full emotion-focused therapy when you are not trained in it."
+  ],
+  "trainingRequired": false,
+  "trainingNote": "Person-centered skills and MI-consistent conversation are part of general training, though MI proficiency improves with coached feedback. Emotion-focused therapy and its chair tasks require specific training and supervised practice.",
+  "trainingPath": [
+    { "body": "International Society for Emotion Focused Therapy (ISEFT)", "url": "https://iseft.wildapricot.org/", "note": "Training standards and recognized trainers for emotion-focused therapy." },
+    { "body": "Motivational Interviewing Network of Trainers (MINT)", "url": "https://motivationalinterviewing.org/", "note": "MI training and trainers, including coached feedback on recorded practice." }
+  ],
+  "ethicsPrompts": [
+    { "prompt": "Practice within your training: use chair work and other evocative emotion-focused tasks only with training and supervision.", "legalIds": ["competence-and-scope-of-practice"] },
+    { "prompt": "Ask permission before any experiential task, explain what it involves, and make clear the client can stop at any time.", "legalIds": ["treatment-plans-and-client-access"] }
+  ],
+  "culturalNotes": [
+    "Directness about feelings and talking to an empty chair can feel strange or disrespectful in some cultures; explain the purpose and offer alternatives such as writing or imagery.",
+    "Self-direction and autonomy are not universal goals; let the client define growth in terms of family, community or faith when that fits.",
+    "MI's emphasis on autonomy can be reframed around the client's responsibilities to others when that is what matters to them."
+  ],
+  "handoutIds": ["weighing-a-change", "kind-self-talk"],
+  "relatedPracticeIds": ["alliance-and-rupture-repair", "preferences-goals-and-readiness", "clinician-reactions-and-self-disclosure"],
+  "relatedPopulationIds": ["men-and-masculinity", "older-adults"],
+  "sources": [
+    { "title": "Therapist empathy and client outcome: an updated meta-analysis (Elliott, Bohart, Watson and Murphy)", "publisher": "Psychotherapy (author manuscript, University of Strathclyde)", "url": "https://strathprints.strath.ac.uk/66200/", "year": 2018 },
+    { "title": "Depression in adults: treatment and management (NG222)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng222", "year": 2022 },
+    { "title": "The effects of adding specific emotion-focused interventions to the therapeutic relationship in the treatment of depression (Goldman, Greenberg and Angus)", "publisher": "Psychotherapy Research", "url": "https://doi.org/10.1080/10503300600589456", "year": 2006 },
+    { "title": "A comparison of emotion-focused therapy and cognitive-behavioral therapy in the treatment of generalized anxiety disorder: results of a feasibility randomized controlled trial (Timulak et al.)", "publisher": "Psychotherapy (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/35113639/", "year": 2022 },
+    { "title": "Gestalt Therapy (StatPearls)", "publisher": "NCBI Bookshelf, National Library of Medicine", "url": "https://www.ncbi.nlm.nih.gov/books/NBK613291/", "year": 2025 },
+    { "title": "Alcohol-use disorders: diagnosis, assessment and management of harmful drinking (high-risk drinking) and alcohol dependence (CG115)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/cg115", "year": 2011 },
+    { "title": "A meta-analysis of motivational interviewing: twenty-five years of empirical studies (Lundahl et al.)", "publisher": "Research on Social Work Practice (Utah State University repository)", "url": "https://digitalcommons.usu.edu/sswa_facpubs/199", "year": 2010 },
+    { "title": "Psychological Treatments (treatment index)", "publisher": "APA Division 12, Society of Clinical Psychology", "url": "https://div12.org/psychological-treatments/treatments/" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

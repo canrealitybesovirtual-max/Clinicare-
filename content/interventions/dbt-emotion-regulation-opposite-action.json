@@ -49,7 +49,8 @@
     "consentNote": "Before any faith-integrated variant, explain its purpose and alternatives, confirm the client's right to decline or stop at any time, and document informed consent (AACC Code of Ethics; ACA Code of Ethics). Faith integration is client-led. Never impose beliefs or suggest that distress reflects weak faith."
   },
   "trainingRequired": "Individual skills can be taught by clinicians competent in DBT skills. Comprehensive DBT (individual therapy, skills group, phone coaching and a consultation team) requires formal DBT training.",
-  "handoutIds": ["opposite-action-practice", "activity-schedule"],
+  "handoutIds": ["opposite-action-practice", "activity-schedule", "daily-emotion-and-urge-tracker"],
+  "orientationIds": ["dialectical-behavior-therapy"],
   "sources": [
     { "title": "DBT Skills Training Manual, Second Edition (Linehan)", "publisher": "Guilford Press", "url": "https://www.guilford.com/books/DBT-Skills-Training-Manual/Marsha-Linehan/9781462516995", "year": 2015 },
     { "title": "Treatment of shame in borderline personality disorder (Rizvi, doctoral dissertation; basis of the Rizvi & Linehan 2005 opposite-action pilot in Cognitive and Behavioral Practice)", "publisher": "University of Washington ResearchWorks", "url": "https://digital.lib.washington.edu/researchworks/handle/1773/9125", "year": 2004 },

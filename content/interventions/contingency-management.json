@@ -2,7 +2,7 @@
   "id": "contingency-management",
   "name": "Contingency management (CM) - program-based overview and referral",
   "modality": "Behavioral - contingency management (incentive-based)",
-  "conditions": ["alcohol-use-disorder", "cannabis-use-disorder", "opioid-use-disorder", "stimulant-use-disorder"],
+  "conditions": ["alcohol-use-disorder", "cannabis-use-disorder", "opioid-use-disorder", "stimulant-use-disorder", "tobacco-use-disorder"],
   "evidenceLevel": "The strongest evidence is for drug use, especially stimulants. A 2006 meta-analysis across drug, alcohol and tobacco use found that CM improves abstinence (Prendergast et al., 2006), and a 2023 HHS ASPE report describes evidence for CM in alcohol, cannabis and tobacco use disorders as well. For alcohol use disorder specifically, evidence is emerging. In an RCT with outpatients who had serious mental illness and alcohol dependence, people earning incentives for alcohol-negative urine tests (ethyl glucuronide, EtG) were about three times as likely to test negative during treatment (McDonell et al., 2017). A Military Health System evidence brief, however, rated the evidence insufficient for CM as a primary AUD treatment and questionable as an adjunct in early recovery. Offer CM only within an established program.",
   "minutes": { "min": 10, "max": 30 },
   "purpose": "CM gives tangible, immediate rewards (for example, vouchers or prize draws) when a client shows an objectively checked target behavior, usually a test showing no recent alcohol or drug use, or attending sessions. Rewards come right away and consistently, often grow with continued success, and reset after a positive or missed test. CM works by making the healthy choice more rewarding in the short term. It was pioneered by Stephen Higgins, Nancy Petry and colleagues. CM must be run as a structured program with reliable testing, a budget, trained staff and attention to legal limits on patient incentives; a solo clinician should not improvise it. This entry is an overview so clinicians can explain CM and refer.",
@@ -40,6 +40,7 @@
   ],
   "trainingRequired": "Contingency management: deliver only within a structured program with staff trained in CM, reliable biochemical testing, a funded incentive system, and compliance review of federal and state rules on patient incentives. Otherwise refer to a program that offers CM.",
   "handoutIds": ["drinking-diary"],
+  "orientationIds": ["behavior-therapy"],
   "sources": [
     { "title": "Contingency management for treatment of substance use disorders: a meta-analysis (Prendergast et al.)", "publisher": "Addiction (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/17034434/", "year": 2006 },
     { "title": "Ethyl glucuronide-based contingency management for outpatients with co-occurring alcohol use disorders and serious mental illness (McDonell et al.)", "publisher": "American Journal of Psychiatry (DOI)", "url": "https://doi.org/10.1176/appi.ajp.2016.16050627", "year": 2017 },

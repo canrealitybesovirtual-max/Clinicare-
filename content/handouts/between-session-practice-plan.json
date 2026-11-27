@@ -1,0 +1,141 @@
+{
+  "id": "between-session-practice-plan",
+  "title": "My Between-Visit Practice Plan",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 10,
+  "intro": "What you do between visits is where a lot of change happens. A clear, small plan makes practice easier to start and to keep going. Make this plan with your counselor at the end of a visit. Bring it back next time, even if practice did not go as planned. Making the plan takes about 10 minutes.",
+  "sections": [
+    {
+      "heading": "My plan for this week",
+      "steps": [
+        "What I will practice: ________________",
+        "When I will do it (day and time): ________________",
+        "Where I will do it: ________________",
+        "How long, or how many times: ________________",
+        "What will remind me (an alarm, a note, or a daily habit like breakfast): ________________"
+      ]
+    },
+    {
+      "heading": "Make it small enough",
+      "body": "Rate how sure you are that you can do this plan, from 0 to 10. A 0 means not sure at all. A 10 means completely sure. If your number is below 7, make the plan smaller or easier until you get to 7 or more.",
+      "steps": [
+        "How sure I am (0-10): ____"
+      ]
+    },
+    {
+      "heading": "Plan for what might get in the way",
+      "body": "Think ahead about what could stop you, and what you will do about it.",
+      "steps": [
+        "Something that might get in the way: ________________",
+        "What I will do if that happens: ________________",
+        "Something else that might get in the way: ________________",
+        "What I will do then: ________________"
+      ]
+    },
+    {
+      "heading": "Tips that help",
+      "steps": [
+        "Link the practice to something you already do every day, like brushing your teeth.",
+        "Start with a few minutes. A short practice done often helps more than a long practice done once.",
+        "Keep this sheet where you will see it.",
+        "If you miss a day, start again the next day. Missing a day is part of learning."
+      ]
+    },
+    {
+      "heading": "What to bring back",
+      "body": "Bring this sheet to your next visit. What did not work is just as useful to talk about as what did. Your counselor can help you change the plan.",
+      "steps": [
+        "What I noticed when I practiced: ________________",
+        "A question I have: ________________"
+      ]
+    }
+  ],
+  "practiceLog": {
+    "columns": [
+      "Day",
+      "Did I practice? (yes / partly / no)",
+      "What got in the way",
+      "What I noticed"
+    ],
+    "rows": 7
+  },
+  "safetyNote": "Safety first: Practice should feel like a stretch, not like danger. If a practice task feels unsafe, stop and talk with your counselor first. If you have thoughts of hurting yourself or someone else, get help now. In the US, call or text 988 or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sud": false,
+  "es": {
+    "title": "Mi plan de práctica entre citas",
+    "intro": "Mucho del cambio pasa en lo que usted hace entre citas. Un plan claro y pequeño hace más fácil empezar a practicar y seguir haciéndolo. Haga este plan con su consejero al final de una cita. Tráigalo la próxima vez, aunque la práctica no haya salido como pensaba. Hacer el plan toma unos 10 minutos.",
+    "sections": [
+      {
+        "heading": "Mi plan para esta semana",
+        "steps": [
+          "Lo que voy a practicar: ________________",
+          "Cuándo lo voy a hacer (día y hora): ________________",
+          "Dónde lo voy a hacer: ________________",
+          "Por cuánto tiempo, o cuántas veces: ________________",
+          "Lo que me lo va a recordar (una alarma, una nota o algo que hago a diario, como desayunar): ________________"
+        ]
+      },
+      {
+        "heading": "Hacerlo lo bastante pequeño",
+        "body": "Califique del 0 al 10 qué tan seguro está de que puede cumplir este plan. Un 0 quiere decir nada seguro. Un 10 quiere decir totalmente seguro. Si su número es menor que 7, haga el plan más pequeño o más fácil hasta llegar a 7 o más.",
+        "steps": [
+          "Qué tan seguro estoy (0-10): ____"
+        ]
+      },
+      {
+        "heading": "Planear lo que se puede atravesar",
+        "body": "Piense antes en lo que le podría detener, y en lo que va a hacer.",
+        "steps": [
+          "Algo que se podría atravesar: ________________",
+          "Lo que voy a hacer si eso pasa: ________________",
+          "Otra cosa que se podría atravesar: ________________",
+          "Lo que voy a hacer entonces: ________________"
+        ]
+      },
+      {
+        "heading": "Consejos que ayudan",
+        "steps": [
+          "Junte la práctica con algo que ya hace todos los días, como lavarse los dientes.",
+          "Empiece con unos pocos minutos. Una práctica corta hecha seguido ayuda más que una práctica larga hecha una sola vez.",
+          "Ponga esta hoja donde la pueda ver.",
+          "Si un día no practica, vuelva a empezar al día siguiente. Fallar un día es parte de aprender."
+        ]
+      },
+      {
+        "heading": "Qué traer a la próxima cita",
+        "body": "Traiga esta hoja a su próxima cita. Hablar de lo que no funcionó es tan útil como hablar de lo que sí funcionó. Su consejero le puede ayudar a cambiar el plan.",
+        "steps": [
+          "Lo que noté cuando practiqué: ________________",
+          "Una pregunta que tengo: ________________"
+        ]
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Día",
+        "¿Practiqué? (sí / en parte / no)",
+        "Lo que se atravesó",
+        "Lo que noté"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: La práctica debe sentirse como un reto, no como un peligro. Si una tarea de práctica no se siente segura, pare y hable primero con su consejero. Si tiene pensamientos de hacerse daño o de hacerle daño a otra persona, busque ayuda ahora. En EE. UU., llame o envíe un mensaje de texto al 988, o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "sources": [
+    {
+      "title": "Quantity and quality of homework compliance: a meta-analysis of relations with outcome in cognitive behavior therapy (Kazantzis et al.)",
+      "publisher": "Behavior Therapy (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27816086/",
+      "year": 2016
+    },
+    {
+      "title": "Psychotherapies",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/topics/psychotherapies"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

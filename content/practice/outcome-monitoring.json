@@ -1,0 +1,163 @@
+{
+  "id": "outcome-monitoring",
+  "title": "Routine outcome monitoring and not-on-track review",
+  "category": "measurement-and-goals",
+  "summary": "A feedback-informed workflow: give a brief measure at every session, look at the trend with the client, and when progress is off track, review the alliance, formulation, fit, dose and safety before changing the plan. The GAD-7 and PHQ-9 are built in; other measures are link-outs.",
+  "whenToUse": [
+    "From the first session of any treatment episode, to set a baseline.",
+    "At every session or at a fixed interval agreed with the client, before the main work.",
+    "When a client says things are fine but the trend says otherwise, or the reverse.",
+    "At planned reviews (for example every 6 to 8 sessions) and before ending."
+  ],
+  "steps": [
+    {
+      "heading": "Choose and explain the measure",
+      "body": "Pick a measure that fits the main concern and that the client can complete in a few minutes. Explain why you use it: to see together whether therapy is helping and to catch problems early. Ask how they feel about filling it in.",
+      "items": [
+        "Built in: GAD-7 for anxiety and PHQ-9 for low mood (license confirmed).",
+        "Link-out only: functioning and session feedback measures, whose licenses are pending.",
+        "A personal goal rating (for example goal attainment scaling) can sit alongside a standard measure."
+      ]
+    },
+    {
+      "heading": "Look at the result together",
+      "items": [
+        "Give the total and what it usually means in plain words, without labels the client has not heard.",
+        "Ask whether it matches their week. Their view is data too.",
+        "Look at item patterns (sleep, energy, worry) for topics to explore.",
+        "Check item 9 of the PHQ-9 every time it is used, and respond in person to any answer above zero."
+      ]
+    },
+    {
+      "heading": "Read the trend, not one point",
+      "body": "Plot totals by session number in the trend tool. One bad week is common. A change of the size the tool marks as meaningful, kept over two or more sessions, deserves attention. The tool shows response, remission and meaningful-change markers with their sources; it never decides anything."
+    },
+    {
+      "heading": "When progress is not on track",
+      "body": "If totals are flat or worse after several sessions, or worse than at the start, run a structured review with the client before simply continuing.",
+      "items": [
+        "Alliance: are we working on what matters to you, in a way that suits you?",
+        "Formulation: is something keeping the problem going that we have not named (sleep, substances, a relationship, money, discrimination, pain)?",
+        "Fit and dose: is this the right method, frequency and session length?",
+        "Practice: is between-session work realistic, and what gets in the way?",
+        "Medical and medication factors: does a check with primary care or a prescriber make sense?",
+        "Consultation and stepping up: would supervision, a specialist or a more intensive service help?",
+        "Safety: ask again, directly, about thoughts of harming self or others."
+      ]
+    },
+    {
+      "heading": "Record the review, not just the number",
+      "body": "Note what you and the client decided and when you will look again. Session numbers are enough; the trend tool does not use dates."
+    }
+  ],
+  "prompts": [
+    "I use a short questionnaire each time so we can both see whether things are moving in the right direction. Is that all right with you?",
+    "Your total this week is a bit higher than last time. Does that match how the week felt?",
+    "These numbers have stayed about the same for a while. That tells me something about what I am doing, not about you. Can we look at what to change?",
+    "If you had to pick one thing that would show you therapy is working, what would it be?"
+  ],
+  "cautions": [
+    "A measure supports judgment; it does not replace it. Never change level of care or risk management on a total alone.",
+    "Do not build in or reproduce licensed measures that are not confirmed in the license registry; use the link-outs.",
+    "Reading items aloud changes how some people answer. If you read a measure aloud, note it.",
+    "Feedback helps most when the client sees it and you act on it; collecting scores without discussing them adds burden without benefit.",
+    "Cultural and language factors affect how symptoms are reported. A low total does not rule out distress expressed in other ways."
+  ],
+  "adaptations": [
+    {
+      "context": "Low literacy or vision",
+      "adaptation": "Offer large print or read the items aloud with neutral wording, record that you did, and use the same method each time."
+    },
+    {
+      "context": "Groups",
+      "adaptation": "Collect measures privately before group and review them individually; never share one person's results with the group."
+    },
+    {
+      "context": "Telehealth",
+      "adaptation": "Read the items or share the questions on screen; agree on what you will do if an answer suggests risk while you are not in the same room."
+    }
+  ],
+  "evidenceSummary": "A 2018 meta-analysis (Lambert, Whipple and Kleinstäuber) found that routine progress feedback improved outcomes, most clearly for clients who were not on track. A 2021 multilevel meta-analysis (de Jong and colleagues) found small benefits on outcome and dropout, larger when feedback was used with clinical support tools. A 2016 Cochrane review (Kendrick and colleagues) found uncertain benefit of simply collecting measures in common mental health care, which supports discussing and acting on results rather than only collecting them. Reliable and clinically significant change methods come from Jacobson and Truax (1991).",
+  "forClinicianReview": true,
+  "crisisPanel": true,
+  "sud": false,
+  "relatedInterventionIds": [
+    "motivational-interviewing",
+    "relapse-prevention-planning"
+  ],
+  "relatedHandoutIds": [
+    "session-check-in-card",
+    "my-therapy-summary"
+  ],
+  "relatedFormulationIds": [
+    "transdiagnostic-process-map",
+    "five-ps-biopsychosocial-spiritual"
+  ],
+  "relatedLegalIds": [
+    "documentation-and-medical-necessity"
+  ],
+  "relatedPracticeIds": [
+    "alliance-and-rupture-repair",
+    "unwanted-effects-of-therapy",
+    "goal-attainment-scaling",
+    "stepped-care-and-level-of-care",
+    "teach-back-and-plain-language",
+    "self-harm-assessment-and-formulation"
+  ],
+  "relatedPopulationIds": [],
+  "toolHref": "/tools/trend",
+  "linkOuts": [],
+  "measuresPending": [
+    {
+      "name": "Work and Social Adjustment Scale (WSAS)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11983645/",
+      "licenseKey": "WSAS"
+    },
+    {
+      "name": "Outcome Rating Scale and Session Rating Scale (ORS and SRS)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34484027/",
+      "licenseKey": "ORS-SRS"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Collecting and delivering progress feedback: a meta-analysis of routine outcome monitoring (Lambert, Whipple and Kleinstäuber)",
+      "publisher": "Psychotherapy, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30335463/",
+      "year": 2018
+    },
+    {
+      "title": "Using progress feedback to improve outcomes and reduce drop-out, treatment duration, and deterioration: a multilevel meta-analysis (de Jong et al.)",
+      "publisher": "Clinical Psychology Review, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33721605/",
+      "year": 2021
+    },
+    {
+      "title": "Routine use of patient reported outcome measures (PROMs) for improving treatment of common mental health disorders in adults (Kendrick et al.)",
+      "publisher": "Cochrane Database of Systematic Reviews, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27409972/",
+      "year": 2016
+    },
+    {
+      "title": "Clinical significance: a statistical approach to defining meaningful change in psychotherapy research (Jacobson and Truax)",
+      "publisher": "Journal of Consulting and Clinical Psychology, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2002127/",
+      "year": 1991
+    },
+    {
+      "title": "Routine outcome monitoring (ROM) and feedback: research review and recommendations (Barkham et al.)",
+      "publisher": "Psychotherapy Research, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36931228/",
+      "year": 2023
+    },
+    {
+      "title": "The PHQ-9: validity of a brief depression severity measure (Kroenke, Spitzer and Williams)",
+      "publisher": "Journal of General Internal Medicine, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11556941/",
+      "year": 2001
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

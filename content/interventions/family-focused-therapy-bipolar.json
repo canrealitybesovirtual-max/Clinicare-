@@ -1,0 +1,90 @@
+{
+  "id": "family-focused-therapy-bipolar",
+  "name": "Family-focused therapy for bipolar disorder - overview and referral",
+  "modality": "Family intervention (psychoeducation, communication and problem-solving skills)",
+  "conditions": ["bipolar-i-disorder", "bipolar-ii-disorder"],
+  "evidenceLevel": "NICE CG185 (2014, updated 2025) recommends offering a family intervention to adults with bipolar disorder who live with or are in close contact with their family, offering carers an education and support programme, and offering a structured psychological intervention (individual, group or family) designed for bipolar disorder to prevent relapse. The VA/DoD 2023 bipolar guideline suggests adding psychotherapy to medication for people who are not acutely manic, listing family or conjoint therapy among the options, with insufficient evidence to prefer one therapy over another. In a randomized trial, 21 sessions of family-focused therapy plus medication improved symptoms after an episode and medication adherence compared with brief crisis management (Miklowitz et al., 2003).",
+  "minutes": { "min": 10, "max": 20 },
+  "purpose": "Family-focused therapy works with the client and the people they live with or are close to, after a mood episode or during a stable period. It has three parts: shared education about mood episodes, early warning signs, medication, sleep and stress, leading to a family relapse prevention plan; communication skills such as listening, giving positive feedback and asking for change calmly; and practical problem-solving for issues the family chooses. It is usually delivered in about 12 to 21 sessions over several months, alongside medication. This entry covers overview and referral only, and the time estimate is for that conversation. It contains no protocol scripts.",
+  "steps": [
+    "Ask the client who they live with or are close to, how mood changes have affected those relationships, and whether they would like family involved.",
+    "Get the client's consent about who takes part and what is shared. Ask about any violence, control or fear at home first; if present, joint sessions may not be safe.",
+    "Explain what family-focused therapy offers and compare it with other options (individual CBT, interpersonal and social rhythm therapy, group psychoeducation, carer support programs). Support an informed choice.",
+    "Refer to a clinician trained in family-focused therapy or another manualized family intervention for mood disorders. Coordinate with the prescriber, with consent.",
+    "Meanwhile, help the client and family start a shared plan listing personal early signs of highs and lows, who to contact and what helps, and point carers to support for themselves.",
+    "Follow up to confirm the referral was completed and the family was able to start."
+  ],
+  "script": [
+    "Mood highs and lows affect the whole family. Would you like the people close to you to be part of your care?",
+    "This kind of therapy helps everyone understand the early signs, talk with less tension, and solve problems together.",
+    "You decide who comes and what we share.",
+    "Families often feel worried and tired too. There is support for them as well.",
+    "Would you like help finding a therapist who does this?"
+  ],
+  "contraindications": [
+    "Do not proceed without the client's consent, and respect their wishes about what is shared.",
+    "Where there is family violence, coercive control or a family member who is a source of harm, do not use joint sessions; safety planning comes first.",
+    "During acute mania, psychosis or a severe depressive episode, prioritize medical care and stabilization. If mania appears to be emerging, contact the prescriber promptly.",
+    "If the client has suicidal thoughts, address safety first. This app does not judge risk; you do. Crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com.",
+    "Family therapy supports, but does not replace, medication management by the prescriber."
+  ],
+  "culturalAdaptations": [
+    "Families hold different explanations for mood changes (medical, spiritual, moral). Start from their view and build shared understanding rather than correcting them.",
+    "Who counts as family varies; include chosen family, partners or elders if the client wishes.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "trainingRequired": "Family-focused therapy: trained clinicians only. There is no formal certifying body; deliver only after training in the model (developer workshops and the published treatment manual) with supervision or consultation. Otherwise refer.",
+  "handoutIds": ["mood-highs-and-lows-plan", "listening-to-someone-you-love"],
+  "orientationIds": ["systemic-family-and-couples-therapy", "behavior-therapy"],
+  "evidenceGrades": [
+    {
+      "body": "NICE",
+      "guideline": "Bipolar disorder: assessment and management (CG185)",
+      "year": 2014,
+      "conditionId": "bipolar-i-disorder",
+      "population": "Adults with bipolar disorder living with or in close contact with family",
+      "direction": "for",
+      "strength": "offer (family intervention)",
+      "url": "https://www.nice.org.uk/guidance/cg185/chapter/Recommendations"
+    },
+    {
+      "body": "VA/DoD",
+      "guideline": "Management of Bipolar Disorder",
+      "year": 2023,
+      "conditionId": "bipolar-i-disorder",
+      "population": "Adults with bipolar I or II disorder who are not acutely manic",
+      "direction": "for",
+      "strength": "weak for (suggest psychotherapy, including family or conjoint therapy, as an adjunct to medication)",
+      "url": "https://health.mil/Reference-Center/Publications/2023/12/14/Psychosocial-and-Recovery-Oriented-Therapy-for-Bipolar-Disorder"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Bipolar disorder: assessment and management (CG185): recommendations",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg185/chapter/Recommendations",
+      "year": 2014
+    },
+    {
+      "title": "Psychosocial and Recovery Oriented Therapy for Bipolar Disorder (2023 VA/DoD guideline)",
+      "publisher": "Psychological Health Center of Excellence, Defense Health Agency",
+      "url": "https://health.mil/Reference-Center/Publications/2023/12/14/Psychosocial-and-Recovery-Oriented-Therapy-for-Bipolar-Disorder",
+      "year": 2023
+    },
+    {
+      "title": "Synopsis of the 2023 US Department of Veterans Affairs and US Department of Defense clinical practice guideline for the management of bipolar disorder",
+      "publisher": "Journal of Clinical Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39832345/",
+      "year": 2025
+    },
+    {
+      "title": "A randomized study of family-focused psychoeducation and pharmacotherapy in the outpatient management of bipolar disorder (Miklowitz et al.)",
+      "publisher": "Archives of General Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12963672/",
+      "year": 2003
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

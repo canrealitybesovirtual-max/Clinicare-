@@ -1,0 +1,116 @@
+{
+  "id": "session-check-in-card",
+  "title": "My Visit Check-In Card",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 5,
+  "intro": "This card helps you get the most out of each visit. Fill in the first part before your visit. Fill in the second part at the end, and share it with your counselor if you feel okay doing so. There are no right or wrong answers. It takes about 5 minutes.",
+  "sections": [
+    {
+      "heading": "Before my visit",
+      "steps": [
+        "What I most want to talk about today: ________________",
+        "Something that happened since my last visit: ________________",
+        "How my practice went: ________________",
+        "A question I have: ________________"
+      ]
+    },
+    {
+      "heading": "At the end of my visit",
+      "body": "Circle yes, partly, or no. Add a few words if you like.",
+      "steps": [
+        "I felt heard, understood, and respected: yes / partly / no",
+        "We worked on what matters most to me: yes / partly / no",
+        "The way we worked today was a good fit for me: yes / partly / no",
+        "Overall, today's visit was right for me: yes / partly / no",
+        "One thing that would make next time better: ________________"
+      ]
+    },
+    {
+      "heading": "Why this helps",
+      "body": "Counselors want to know how visits are going for you. Honest feedback, even when it feels awkward, helps your counselor adjust. It is one of the best ways to make therapy work for you."
+    },
+    {
+      "heading": "About this card",
+      "body": "This card was written for this resource. It is not a test, and nothing on it is added up or graded. Your counselor may also use a short rating form. If so, they will explain how it works."
+    }
+  ],
+  "practiceLog": {
+    "columns": [
+      "Visit",
+      "Main thing I wanted to talk about",
+      "Felt heard? (yes / partly / no)",
+      "One thing for next time"
+    ],
+    "rows": 6
+  },
+  "safetyNote": "Safety first: This card is not for emergencies, and your counselor may not read it until your next visit. If you have thoughts of hurting yourself or someone else, tell someone now. In the US, call or text 988 or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sud": false,
+  "es": {
+    "title": "Mi tarjeta para cada cita",
+    "intro": "Esta tarjeta le ayuda a sacar el mayor provecho de cada cita. Llene la primera parte antes de su cita. Llene la segunda parte al final, y compártala con su consejero si se siente bien al hacerlo. No hay respuestas buenas ni malas. Toma unos 5 minutos.",
+    "sections": [
+      {
+        "heading": "Antes de mi cita",
+        "steps": [
+          "Lo que más quiero hablar hoy: ________________",
+          "Algo que pasó desde mi última cita: ________________",
+          "Cómo me fue con la práctica: ________________",
+          "Una pregunta que tengo: ________________"
+        ]
+      },
+      {
+        "heading": "Al final de mi cita",
+        "body": "Marque sí, en parte o no. Agregue unas palabras si quiere.",
+        "steps": [
+          "Me sentí escuchado, comprendido y respetado: sí / en parte / no",
+          "Trabajamos en lo que más me importa: sí / en parte / no",
+          "La forma en que trabajamos hoy me quedó bien: sí / en parte / no",
+          "En general, la cita de hoy fue buena para mí: sí / en parte / no",
+          "Una cosa que haría mejor la próxima vez: ________________"
+        ]
+      },
+      {
+        "heading": "Por qué esto ayuda",
+        "body": "Los consejeros quieren saber cómo le van las citas. Dar su opinión sincera, aunque se sienta incómodo, le ayuda a su consejero a hacer cambios. Es una de las mejores formas de hacer que la terapia le sirva."
+      },
+      {
+        "heading": "Sobre esta tarjeta",
+        "body": "Esta tarjeta se escribió para este recurso. No es una prueba, y nada de lo que escriba se suma ni se califica. Su consejero también puede usar un formulario corto para calificar las citas. Si es así, le va a explicar cómo funciona."
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Cita",
+        "Lo principal que quería hablar",
+        "¿Me sentí escuchado? (sí / en parte / no)",
+        "Una cosa para la próxima vez"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: Esta tarjeta no es para emergencias, y puede que su consejero no la lea hasta su próxima cita. Si tiene pensamientos de hacerse daño o de hacerle daño a otra persona, dígaselo a alguien ahora. En EE. UU., llame o envíe un mensaje de texto al 988, o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "sources": [
+    {
+      "title": "The alliance in adult psychotherapy: a meta-analytic synthesis (Flückiger et al.)",
+      "publisher": "Psychotherapy (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29792475/",
+      "year": 2018
+    },
+    {
+      "title": "Collecting and delivering progress feedback: a meta-analysis of routine outcome monitoring (Lambert et al.)",
+      "publisher": "Psychotherapy (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30335463/",
+      "year": 2018
+    },
+    {
+      "title": "Using progress feedback to improve outcomes and reduce drop-out, treatment duration, and deterioration: a multilevel meta-analysis (de Jong et al.)",
+      "publisher": "Clinical Psychology Review (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33721605/",
+      "year": 2021
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

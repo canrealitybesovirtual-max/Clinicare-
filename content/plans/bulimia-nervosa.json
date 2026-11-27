@@ -18,47 +18,138 @@
           "text": "Within 1 week, attend a medical assessment, and agree with the care team which warning signs (fainting, chest pain, very low weight) mean same-day care.",
           "interventionIds": [
             "eating-disorder-medical-monitoring"
-          ]
+          ],
+          "targets": [
+            "physical-health-burden"
+          ],
+          "step": "specialist"
         },
         {
           "id": "bn-self-help",
           "text": "Within 4 weeks, start eating-disorder-focused guided self-help or CBT and complete weekly self-monitoring.",
           "interventionIds": [
             "cbt-e-eating-disorders"
-          ]
+          ],
+          "targets": [
+            "urges-and-impulsivity"
+          ],
+          "step": "low-intensity"
         },
         {
           "id": "bn-regular-eating",
           "text": "By week 4, eat 3 meals and 2 or 3 snacks a day at planned times on at least 5 days a week.",
           "interventionIds": [
             "cbt-e-eating-disorders"
-          ]
+          ],
+          "targets": [
+            "urges-and-impulsivity"
+          ],
+          "step": "high-intensity"
         },
         {
           "id": "bn-urges",
           "text": "Use a distress tolerance skill during at least 3 binge or purge urges a week and record the outcome.",
           "interventionIds": [
             "dbt-distress-tolerance"
-          ]
+          ],
+          "targets": [
+            "urges-and-impulsivity",
+            "emotion-dysregulation"
+          ],
+          "step": "high-intensity"
         },
         {
           "id": "bn-shame",
           "text": "Practice a kind self-statement after any binge, instead of compensating, for 4 weeks.",
           "interventionIds": [
             "self-compassion-practice"
-          ]
+          ],
+          "targets": [
+            "self-criticism-shame"
+          ],
+          "step": "high-intensity"
         },
         {
           "id": "bn-medication",
           "text": "If binge frequency has not dropped by week 8, discuss a medication evaluation as an adjunct.",
           "interventionIds": [
             "medication-referral"
-          ]
+          ],
+          "step": "high-intensity"
         }
       ],
       "measureIds": [
         "phq-9",
         "gad-7"
+      ]
+    },
+    {
+      "id": "bn-specialist-and-medical-care",
+      "label": "Finding the right level of eating-disorder care, with medical checks",
+      "definitions": [
+        "Has repeated cycles of eating a large amount with a sense of losing control, then trying to make up for it (for example vomiting, laxatives or fasting).",
+        "Has physical effects such as dizziness, swollen cheeks, dental problems or abnormal blood salts."
+      ],
+      "longTermGoals": [
+        "The client takes part in the right level of treatment, starting with guided self-help where it suits, and physical risks are monitored."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "bn-guided-self-help",
+          "text": "Begin eating-disorder-focused guided self-help with brief support sessions, logging eating episodes each week and reviewing them together.",
+          "interventionIds": [
+            "guided-self-help"
+          ],
+          "targets": [
+            "urges-and-impulsivity"
+          ],
+          "step": "low-intensity"
+        },
+        {
+          "id": "bn-step-up",
+          "text": "If guided self-help is not acceptable to the client or has not helped after 4 weeks, move to individual eating-disorder-focused CBT from a trained clinician.",
+          "interventionIds": [
+            "eating-disorder-specialist-therapies",
+            "cbt-e-eating-disorders"
+          ],
+          "targets": [
+            "urges-and-impulsivity",
+            "perfectionism"
+          ],
+          "step": "specialist"
+        },
+        {
+          "id": "bn-blood-checks",
+          "text": "With consent, agree with the medical team on checks of blood salts and heart rhythm when purging is frequent, and on which results need an urgent review.",
+          "interventionIds": [
+            "eating-disorder-medical-monitoring"
+          ],
+          "targets": [
+            "physical-health-burden"
+          ],
+          "step": "specialist"
+        },
+        {
+          "id": "bn-step-by-step-review",
+          "text": "Over weeks 4 to 12, go through 1 recent episode each week step by step to find a point where a different action could fit.",
+          "interventionIds": [
+            "behavioral-chain-analysis"
+          ],
+          "targets": [
+            "urges-and-impulsivity",
+            "emotion-dysregulation"
+          ],
+          "step": "high-intensity"
+        }
+      ],
+      "measureIds": [
+        "phq-9"
+      ],
+      "practiceIds": [
+        "eating-disorder-medical-risk"
+      ],
+      "handoutIds": [
+        "eating-concerns-warning-signs"
       ]
     }
   ],
@@ -82,6 +173,12 @@
       "publisher": "Archives of General Psychiatry (PubMed)",
       "url": "https://pubmed.ncbi.nlm.nih.gov/21727255/",
       "year": 2011
+    },
+    {
+      "title": "Eating disorders: recognition and treatment (NG69)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/NG69/chapter/Recommendations",
+      "year": 2017
     }
   ],
   "license": "original",

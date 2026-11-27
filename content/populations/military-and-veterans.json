@@ -1,0 +1,85 @@
+{
+  "id": "military-and-veterans",
+  "name": "Veterans and service members",
+  "group": "service-and-work",
+  "summary": "Military-informed care in community settings: asking whether someone has served, military culture and transition, VA eligibility, community care and emergency suicidal-crisis care, military sexual trauma, moral injury, and lethal means including duty and personal firearms.",
+  "scopeNote": "For adults (18 and over) who have served, are serving (including National Guard and Reserve), and their adult family members. The app never asks for or saves service history, discharge status, rank or VA records.",
+  "whyItMatters": "After deployment to Iraq, 15.6 to 17.1 percent of soldiers and Marines screened positive for depression, anxiety or PTSD, yet only 23 to 40 percent of them sought care, and those with problems were twice as likely to worry about stigma and other barriers (Hoge and colleagues, 2004). Moral injury, distress after acts that violate one's own moral code, was described by Litz and colleagues (2009) as distinct from fear-based trauma. VA states that it may provide or cover emergency mental health care, and up to 90 days of related services, for eligible veterans at risk of immediate self-harm even if they are not enrolled in VA health care, and that care related to military sexual trauma is free, including for many people with an Other Than Honorable discharge. The VA/DoD PTSD guideline (2023) recommends trauma-focused psychotherapies such as cognitive processing therapy, prolonged exposure and written exposure therapy.",
+  "askAbout": [
+    "Have you, or has someone close to you, ever served in the military, including the National Guard or Reserve?",
+    "What was your branch and role, and what was the move back to civilian life like?",
+    "Are there experiences from service that still weigh on you, including things you saw, did or failed to prevent?",
+    "Do you use VA care, would you like help finding out what you can use, or do you prefer care outside VA?",
+    "Is there a firearm at home or one you carry for work, and would you be open to talking about safe storage?",
+    "Who from your unit, family or community do you trust most right now?"
+  ],
+  "stereotypeCaution": "Military service is varied: many veterans never deployed, served in non-combat roles or have no lasting problems, and military culture differs by branch, era and role. Do not assume PTSD, violence or a particular political or personal view, and do not assume the person wants VA care or wants to talk about combat.",
+  "keyConsiderations": [
+    "Ask everyone whether they have served, since many veterans are never asked in community care and may not volunteer it.",
+    "Military culture values mission, duty, unit loyalty and self-reliance; framing therapy as training, strategy or getting back to effectiveness can help engagement.",
+    "The transition out of service can bring loss of identity, purpose and community, and practical stressors such as work, money and housing.",
+    "Moral injury, through guilt, shame, betrayal or loss of meaning, may need attention alongside fear-based trauma; see the moral injury formulation.",
+    "Military sexual trauma affects people of all genders. VA provides free care related to it, and eligibility does not depend on standard length-of-service requirements.",
+    "Discharge status affects VA eligibility for some services but not for emergency suicidal-crisis care or care related to military sexual trauma for many people; check current VA rules.",
+    "When VA cannot provide care nearby or in a timely way, VA community care may pay for care with community providers, subject to eligibility and authorization."
+  ],
+  "assessmentAdaptations": [
+    "Ask about deployments, roles, training accidents, blast exposure and head injuries, and military sexual trauma, using plain words and without pressing for detail.",
+    "Screen for PTSD, depression, alcohol use, sleep problems, pain and brain injury, which often occur together.",
+    "Ask about firearms at home and in the vehicle, including personal and duty weapons, as a routine safety question.",
+    "Ask about family, partners and children, who may be affected by deployments and readjustment."
+  ],
+  "sessionAdaptations": [
+    "Explain the plan, its structure and the evidence for it plainly; many service members and veterans value a clear mission and measurable progress.",
+    "Respect the person's choice about how much to say about specific events, while explaining how trauma-focused therapy works.",
+    "With consent, involve partners or family in psychoeducation and couple-based options.",
+    "Coordinate with VA or military providers when the person uses both, with releases that specify what will be shared."
+  ],
+  "interventionNotes": [
+    { "interventionId": "cognitive-processing-therapy", "note": "Recommended in the VA/DoD guideline; useful for guilt and moral injury themes as well as fear." },
+    { "interventionId": "prolonged-exposure", "note": "Recommended in the VA/DoD guideline; agree in advance how sessions fit around work, duty and family." },
+    { "interventionId": "written-exposure-therapy", "note": "A shorter trauma-focused option recommended in the VA/DoD guideline that some veterans find easier to complete." },
+    { "interventionId": "lethal-means-counseling", "note": "Discuss secure storage or temporary transfer of firearms in a way that respects the person's identity and values around firearms." },
+    { "interventionId": "cbct-for-ptsd", "note": "A couple-based option when a partner wants to be involved and the relationship is safe." },
+    { "orientationId": "trauma-focused-therapies", "note": "The trauma-focused profile compares the main PTSD therapies and their training paths." }
+  ],
+  "measureNotes": [
+    "The PHQ-9 and GAD-7 can be used alongside a brief PTSD screen; a positive screen calls for a fuller assessment, not a label.",
+    "Some veterans underreport symptoms because of stigma or worry about duty status and benefits; explain how results are used and kept."
+  ],
+  "measuresPending": [
+    { "name": "Primary Care PTSD Screen for DSM-5 (PC-PTSD-5)", "url": "https://www.ptsd.va.gov/professional/assessment/screens/pc-ptsd.asp", "licenseKey": "PC-PTSD-5" }
+  ],
+  "safetyNotes": [
+    "In the US, the Veterans Crisis Line is reached by calling 988 and pressing 1, texting 838255, or by chat, at any time; it serves veterans, service members and their families.",
+    "VA states that eligible veterans at risk of immediate self-harm can go to any emergency department, and VA may cover the care even if they are not enrolled; ask the emergency department to contact VA.",
+    "VA lists seeking access to guns or pills among warning signs; ask about firearm access every time safety is discussed, and offer secure storage or temporary transfer options."
+  ],
+  "cautions": [
+    "A civilian clinician is not a military or fitness-for-duty evaluator; keep treatment separate from any duty, security clearance or disability evaluation, and see the legal topic on military confidentiality."
+  ],
+  "legalIds": ["military-confidentiality", "treating-and-forensic-roles", "erpo-and-firearm-transfer"],
+  "ethicsIds": [],
+  "referralIds": ["veterans-crisis-line", "vet-center-call-center", "military-onesource", "va-caregiver-support-line", "va-homeless-veterans-call-center"],
+  "referralKinds": ["veterans"],
+  "handoutIds": ["trauma-therapy-what-to-expect", "safer-home-for-family", "nightmare-rescripting-practice", "common-reactions-after-trauma"],
+  "topicIds": ["military-life"],
+  "practiceIds": ["self-harm-assessment-and-formulation", "trauma-informed-care", "involving-family-and-supports"],
+  "formulationIds": ["moral-injury", "phase-based-trauma-sequencing"],
+  "linkOuts": [
+    { "title": "Veteran Suicide Prevention (including emergency mental health care)", "publisher": "U.S. Department of Veterans Affairs", "url": "https://www.va.gov/health-care/health-needs-conditions/mental-health/suicide-prevention/", "lastVerified": "2026-11-27" },
+    { "title": "Military Sexual Trauma (MST)", "publisher": "U.S. Department of Veterans Affairs", "url": "https://www.va.gov/health-care/health-needs-conditions/military-sexual-trauma/", "lastVerified": "2026-11-27" },
+    { "title": "Community Care", "publisher": "U.S. Department of Veterans Affairs", "url": "https://www.va.gov/COMMUNITYCARE/index.asp", "note": "Eligibility and how community providers work with VA.", "lastVerified": "2026-11-27" }
+  ],
+  "sud": false,
+  "sources": [
+    { "title": "Combat duty in Iraq and Afghanistan, mental health problems, and barriers to care (Hoge and colleagues)", "publisher": "New England Journal of Medicine (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/15229303/", "year": 2004 },
+    { "title": "Moral injury and moral repair in war veterans: a preliminary model and intervention strategy (Litz and colleagues)", "publisher": "Clinical Psychology Review (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/19683376/", "year": 2009 },
+    { "title": "Veteran Suicide Prevention", "publisher": "U.S. Department of Veterans Affairs", "url": "https://www.va.gov/health-care/health-needs-conditions/mental-health/suicide-prevention/" },
+    { "title": "Military Sexual Trauma (MST)", "publisher": "U.S. Department of Veterans Affairs", "url": "https://www.va.gov/health-care/health-needs-conditions/military-sexual-trauma/" },
+    { "title": "VA/DoD Clinical Practice Guideline for Management of Posttraumatic Stress Disorder and Acute Stress Disorder", "publisher": "U.S. Department of Veterans Affairs and Department of Defense", "url": "https://www.healthquality.va.gov/guidelines/MH/ptsd/", "year": 2023 }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

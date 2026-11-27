@@ -12,6 +12,7 @@ import {
   type HubContext,
   type LegalJurisdiction,
   type LegalTopic,
+  type LegalTopicKind,
   type VerificationMethod,
 } from "@/lib/schemas-hub";
 import type { FacetIndex } from "./facet-index";
@@ -82,8 +83,23 @@ export const HUB_CONTEXT_LABELS: Record<HubContext, string> = {
   telehealth: "Telehealth and distance care",
   assessment: "Measures, assessment and suggestions",
   "duty-to-warn": "Threats of harm, abuse or imminent self-harm",
-  technology: "Technology and digital tools",
+  technology: "Technology, AI and digital tools",
+  "emerging-treatment": "Emerging or limited-evidence treatments",
+  "letters-and-forms": "Letters, forms and court requests",
+  groups: "Group therapy and group programs",
 };
+
+/** Section headings for the two kinds of legal topic. */
+export const LEGAL_KIND_LABELS: Record<LegalTopicKind, string> = {
+  legal: "Laws and regulations",
+  "ethics-practice": "Ethics in practice",
+};
+
+/** Badge for where a topic applies. Ethics-in-practice topics without a country list apply wherever you practice. */
+export function topicPlaceLabel(t: Pick<LegalTopic, "kind" | "jurisdiction" | "appliesIn">): string {
+  if (t.kind === "ethics-practice" && t.jurisdiction === "INTL" && !t.appliesIn?.length) return "Any country: check your own code";
+  return jurisdictionLabel(t.jurisdiction, t.appliesIn);
+}
 
 export { HUB_CONTEXTS };
 

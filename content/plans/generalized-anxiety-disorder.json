@@ -18,27 +18,63 @@
         {
           "id": "gad-worry-baseline",
           "text": "For the next 2 weeks, log worry at least 3 times a day (topic, estimated minutes spent, distress 0-10) to set a baseline for daily worry time.",
-          "interventionIds": ["worry-time"]
+          "interventionIds": ["worry-time"],
+          "targets": ["repetitive-negative-thinking"],
+          "step": "low-intensity"
         },
         {
           "id": "gad-worry-postponement",
           "text": "From week 3, postpone worries to one set 15 to 20 minute worry period on at least 5 days a week, aiming to cut estimated daily worry time to half of the baseline or less by week 8.",
-          "interventionIds": ["worry-time"]
+          "interventionIds": ["worry-time"],
+          "targets": ["repetitive-negative-thinking"],
+          "step": "low-intensity"
         },
         {
           "id": "gad-sort-and-solve",
           "text": "By week 5, sort at least 5 logged worries into 'problems I can act on now' and 'what-if worries I cannot solve today', and work through a structured problem-solving sheet for at least 1 actionable problem each week.",
-          "interventionIds": ["problem-solving", "worry-time"]
+          "interventionIds": ["problem-solving", "worry-time"],
+          "targets": ["repetitive-negative-thinking", "intolerance-of-uncertainty"],
+          "step": "low-intensity"
         },
         {
           "id": "gad-prediction-testing",
           "text": "Over weeks 4 to 10, complete at least 2 thought records per week on worry predictions, rating how likely the feared outcome seems before and after, and later noting whether it actually happened.",
-          "interventionIds": ["thought-record"]
+          "interventionIds": ["thought-record"],
+          "targets": ["repetitive-negative-thinking"],
+          "step": "high-intensity"
         },
         {
           "id": "gad-score-tracking",
           "text": "Complete the GAD-7 at intake and every 2 to 4 weeks, plus the PHQ-9 at intake to check for low mood (repeating it on the same schedule if it is raised). Review the score trend together, and revisit the plan, the intensity of treatment or referral options if scores have not improved across 2 check-ins in a row.",
           "interventionIds": []
+        },
+        {
+          "id": "gad-guided-self-help",
+          "text": "If the client prefers a lighter-touch start, begin guided self-help based on CBT with brief support contacts every 1 to 2 weeks, review the GAD-7 at each contact, and step up to individual therapy if it does not improve.",
+          "interventionIds": ["guided-self-help"],
+          "targets": ["repetitive-negative-thinking"],
+          "step": "low-intensity"
+        },
+        {
+          "id": "gad-acceptance-and-values",
+          "text": "Over weeks 4 to 12, practice making room for anxious thoughts and feelings while taking at least 3 valued actions a week that worry had been crowding out.",
+          "interventionIds": ["act-acceptance-willingness", "act-values-clarification", "act-committed-action"],
+          "targets": ["experiential-avoidance", "values-and-meaning"],
+          "step": "high-intensity"
+        },
+        {
+          "id": "gad-mindfulness-practice",
+          "text": "For 6 weeks, practice a mindfulness exercise for at least 10 minutes on 5 days a week and note how quickly attention returns after drifting into worry.",
+          "interventionIds": ["mindfulness-meditation", "mindful-check-in"],
+          "targets": ["repetitive-negative-thinking", "cognitive-fusion"],
+          "step": "low-intensity"
+        },
+        {
+          "id": "gad-transdiagnostic-option",
+          "text": "If worry comes with low mood or other anxiety, discuss by week 4 a transdiagnostic emotion-focused CBT program from a trained clinician (for example the Unified Protocol).",
+          "interventionIds": ["unified-protocol"],
+          "targets": ["emotion-dysregulation", "experiential-avoidance"],
+          "step": "high-intensity"
         }
       ],
       "measureIds": ["gad-7", "phq-9"]
@@ -58,27 +94,37 @@
         {
           "id": "gad-early-tension-signs",
           "text": "Within 2 weeks, name at least 3 personal early body signs of building tension (for example a clenched jaw, shallow breathing or raised shoulders) and note in a daily log when each one shows up.",
-          "interventionIds": ["applied-relaxation"]
+          "interventionIds": ["applied-relaxation"],
+          "targets": ["threat-monitoring"],
+          "step": "high-intensity"
         },
         {
           "id": "gad-pmr-practice",
           "text": "Over the next 3 weeks, practice full progressive muscle relaxation for 15 to 20 minutes on at least 5 days a week, rating tension 0-10 before and after each session.",
-          "interventionIds": ["progressive-muscle-relaxation"]
+          "interventionIds": ["progressive-muscle-relaxation"],
+          "targets": ["coping-skills"],
+          "step": "low-intensity"
         },
         {
           "id": "gad-quick-relaxation",
           "text": "Over weeks 4 to 10, work with the clinician through shorter relaxation steps (release-only, cue-controlled and rapid versions) until the client can relax noticeably in about a minute, then use the quick version at least 5 times a day when early tension signs appear.",
-          "interventionIds": ["applied-relaxation", "progressive-muscle-relaxation"]
+          "interventionIds": ["applied-relaxation", "progressive-muscle-relaxation"],
+          "targets": ["coping-skills"],
+          "step": "high-intensity"
         },
         {
           "id": "gad-slow-breathing",
           "text": "For 2 weeks, practice slow belly breathing for 5 minutes twice a day, and use it before at least 1 expected stressful moment each day.",
-          "interventionIds": ["diaphragmatic-breathing"]
+          "interventionIds": ["diaphragmatic-breathing"],
+          "targets": ["coping-skills"],
+          "step": "low-intensity"
         },
         {
           "id": "gad-sleep-routine",
           "text": "For 4 weeks, keep a wake-up time that varies by no more than 30 minutes, move worrying and planning out of bedtime and into the daytime worry period, and log minutes to fall asleep each morning. If sleep has not improved by week 6, discuss a referral for cognitive behavioral therapy for insomnia or a medical review.",
-          "interventionIds": ["worry-time", "progressive-muscle-relaxation"]
+          "interventionIds": ["worry-time", "progressive-muscle-relaxation"],
+          "targets": ["sleep-rhythm-disruption", "repetitive-negative-thinking"],
+          "step": "low-intensity"
         }
       ],
       "measureIds": ["gad-7"]
@@ -98,30 +144,90 @@
         {
           "id": "gad-certainty-habit-list",
           "text": "Within 3 weeks, list at least 8 checking, reassurance or avoidance habits and rate how uneasy it would feel (0-100) to skip each one.",
-          "interventionIds": ["safety-behavior-reduction"]
+          "interventionIds": ["safety-behavior-reduction"],
+          "targets": ["reassurance-seeking-checking", "intolerance-of-uncertainty"],
+          "step": "high-intensity"
         },
         {
           "id": "gad-uncertainty-practice",
           "text": "Over weeks 4 to 12, carry out at least 3 planned uncertainty practices a week (for example sending an email after one read-through or choosing a restaurant without checking reviews), writing down the feared result and what actually happened.",
-          "interventionIds": ["safety-behavior-reduction"]
+          "interventionIds": ["safety-behavior-reduction", "intolerance-of-uncertainty-cbt"],
+          "targets": ["intolerance-of-uncertainty"],
+          "step": "high-intensity"
         },
         {
           "id": "gad-reassurance-limit",
           "text": "By week 8, cut reassurance-seeking about any single topic to once a day or less, tracked with a simple daily tally.",
-          "interventionIds": ["safety-behavior-reduction"]
+          "interventionIds": ["safety-behavior-reduction"],
+          "targets": ["reassurance-seeking-checking"],
+          "step": "high-intensity"
         },
         {
           "id": "gad-stalled-decisions",
           "text": "By week 10, use a step-by-step problem-solving method to make at least 2 decisions that had been put off, each within a time limit agreed in session.",
-          "interventionIds": ["problem-solving"]
+          "interventionIds": ["problem-solving"],
+          "targets": ["intolerance-of-uncertainty"],
+          "step": "low-intensity"
         },
         {
           "id": "gad-keep-it-going",
           "text": "In the final 2 sessions, write a short plan naming the skills that helped most, at least 3 signs that worry is creeping back and when to ask for a booster session.",
-          "interventionIds": ["worry-time", "applied-relaxation", "thought-record"]
+          "interventionIds": ["worry-time", "applied-relaxation", "thought-record"],
+          "targets": ["coping-skills"],
+          "step": "low-intensity"
+        },
+        {
+          "id": "gad-uncertainty-explained",
+          "text": "By session 4, describe in the client's own words how trying to remove all doubt keeps worry going, using at least 2 examples from the worry log.",
+          "interventionIds": ["intolerance-of-uncertainty-cbt"],
+          "targets": ["intolerance-of-uncertainty"],
+          "step": "high-intensity"
+        },
+        {
+          "id": "gad-written-worry-exposure",
+          "text": "Over weeks 6 to 10, for worries that cannot be solved, write out the feared scenario in detail and read it daily for 20 to 30 minutes until the distress lessens, rating distress (0-10) before and after.",
+          "interventionIds": ["intolerance-of-uncertainty-cbt", "imaginal-exposure"],
+          "targets": ["intolerance-of-uncertainty", "experiential-avoidance"],
+          "step": "high-intensity"
         }
       ],
       "measureIds": ["gad-7"]
+    },
+    {
+      "id": "gad-beliefs-about-worry",
+      "label": "Beliefs about worry itself: that it cannot be controlled, is dangerous, or helps",
+      "definitions": [
+        "Believes worry cannot be stopped once it starts, or that it could cause harm such as losing control or becoming ill.",
+        "Also believes worry is useful, for example that it prepares for the worst or shows that they care."
+      ],
+      "longTermGoals": [
+        "The client sees worry as a process they can step back from and postpone, and spends much less of the day worrying."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "gad-postpone-worry",
+          "text": "With a clinician trained in metacognitive therapy, practice noticing a worry trigger and postponing the worry to a set time at least once a day for 4 weeks, rating each week how uncontrollable worry feels (0-100).",
+          "interventionIds": ["metacognitive-therapy"],
+          "targets": ["repetitive-negative-thinking"],
+          "step": "specialist"
+        },
+        {
+          "id": "gad-let-thoughts-be",
+          "text": "Over weeks 3 to 8, practice letting a worry thought be there without engaging with it or pushing it away, for a few minutes at least 3 times a day.",
+          "interventionIds": ["metacognitive-therapy", "mindful-check-in"],
+          "targets": ["cognitive-fusion", "repetitive-negative-thinking"],
+          "step": "high-intensity"
+        },
+        {
+          "id": "gad-test-control-belief",
+          "text": "By week 6, run at least 2 experiments that test the belief that worry cannot be controlled or is dangerous (for example trying on purpose to lose control of a worry), recording the prediction and the result.",
+          "interventionIds": ["metacognitive-therapy", "behavioral-experiments"],
+          "targets": ["repetitive-negative-thinking"],
+          "step": "high-intensity"
+        }
+      ],
+      "measureIds": ["gad-7"],
+      "handoutIds": ["why-worry-sticks"]
     }
   ],
   "collaborativeNote": "These are starting points for clinician review, not a finished plan. Rewrite each goal and objective with the client in their own words, check that the practice amounts fit their schedule and energy, and record their agreement before anything is added to the plan. Separate realistic concerns that call for practical help (for example money, housing or immigration stress) from worry that is out of proportion, and adjust relaxation work for pain, injury, pregnancy or trauma history. Do not add names or other identifying details. Resource only. Not a substitute for clinical judgment.",
@@ -135,9 +241,14 @@
     { "title": "A Tipping Point for Measurement-Based Care (Fortney et al.)", "publisher": "Psychiatric Services; reprinted in Focus (PubMed Central)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6996080/", "year": 2017 },
     { "title": "Implementing Measurement-Based Care in Behavioral Health: A Review (Lewis et al.)", "publisher": "JAMA Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/30566197/", "year": 2019 },
     { "title": "Shared decision making (NG197)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng197", "year": 2021 },
-    { "title": "PHQ and GAD-7 screeners (reproduction terms)", "publisher": "Pfizer / PHQ Screeners", "url": "https://www.phqscreeners.com" }
+    { "title": "PHQ and GAD-7 screeners (reproduction terms)", "publisher": "Pfizer / PHQ Screeners", "url": "https://www.phqscreeners.com" },
+    { "title": "Cognitive and Behavioral Therapies for Generalized Anxiety Disorder", "publisher": "APA Division 12, Society of Clinical Psychology", "url": "https://div12.org/treatment/cognitive-and-behavioral-therapies-for-generalized-anxiety-disorder/" },
+    { "title": "The efficacy of metacognitive therapy: a systematic review and meta-analysis (Normann and Morina)", "publisher": "Frontiers in Psychology", "url": "https://www.frontiersin.org/articles/10.3389/fpsyg.2018.02211", "year": 2018 },
+    { "title": "Metacognitive therapy versus cognitive-behavioural therapy in adults with generalised anxiety disorder (Nordahl et al.)", "publisher": "BJPsych Open (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/30294448/", "year": 2018 },
+    { "title": "A randomized clinical trial comparing an acceptance-based behavior therapy to applied relaxation for generalized anxiety disorder (Hayes-Skelton et al.)", "publisher": "Journal of Consulting and Clinical Psychology (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/23647281/", "year": 2013 },
+    { "title": "The Unified Protocol for Transdiagnostic Treatment of Emotional Disorders Compared With Diagnosis-Specific Protocols for Anxiety Disorders: A Randomized Clinical Trial (Barlow et al.)", "publisher": "JAMA Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/28768327/", "year": 2017 }
   ],
   "license": "original",
-  "lastVerified": "2026-11-26",
+  "lastVerified": "2026-11-27",
   "reviewedBy": "PENDING"
 }

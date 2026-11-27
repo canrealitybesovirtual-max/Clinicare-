@@ -1,0 +1,141 @@
+{
+  "id": "monthly-mood-tracker",
+  "title": "Monthly Mood Tracker",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 5,
+  "intro": "Some people notice that their mood, energy, or body changes in a pattern each month, often in the week or two before their period. Tracking every day for at least 2 cycles can show whether there is a pattern. This can help you and your doctor plan care. Reading this sheet takes about 5 minutes. Each day takes a minute or two.",
+  "sections": [
+    {
+      "heading": "How to fill it in",
+      "steps": [
+        "Start on any day. Write the cycle day. Day 1 is the first day of bleeding. Count up from there.",
+        "Write yes on days you bleed or spot.",
+        "Each evening, rate each area from 0 to 3: 0 is not at all, 1 is a little, 2 is quite a bit, and 3 is a lot.",
+        "Use a new sheet for each cycle. Keep going for at least 2 cycles.",
+        "You do not need to write dates. Cycle day numbers are enough."
+      ]
+    },
+    {
+      "heading": "Areas to rate",
+      "steps": [
+        "Low or tearful: feeling sad or down, or crying easily",
+        "Tense: feeling on edge or keyed up",
+        "Irritable: short-tempered or easily annoyed",
+        "Mood swings: feelings that change quickly",
+        "Body: bloating, sore breasts, headaches, or aches",
+        "Impact: how much your mood or body got in the way of work, home, or people"
+      ]
+    },
+    {
+      "heading": "Looking at your pattern",
+      "body": "Bring your sheets to your doctor or counselor. Together, look at whether the ratings rise in the days before bleeding and drop within a few days after it starts."
+    },
+    {
+      "heading": "Things that may help",
+      "steps": [
+        "Regular sleep, meals, and movement.",
+        "Plan lighter days when you expect a hard time, if you can.",
+        "Talk with your doctor about treatment choices, including talk therapy and medicines."
+      ]
+    },
+    {
+      "heading": "Get help sooner if you need it",
+      "body": "If at any time you have thoughts of suicide, or feel you cannot keep yourself safe, get help right away. Do not wait to finish tracking."
+    }
+  ],
+  "practiceLog": {
+    "columns": [
+      "Cycle day",
+      "Bleeding (yes or no)",
+      "Low (0-3)",
+      "Tense (0-3)",
+      "Irritable (0-3)",
+      "Mood swings (0-3)",
+      "Body (0-3)",
+      "Impact (0-3)"
+    ],
+    "rows": 35
+  },
+  "safetyNote": "Safety first: Mood changes before a period can be strong. If they bring thoughts of suicide, get help right away. If you have thoughts of hurting yourself or someone else, get help now. In the US, call or text 988, or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sud": false,
+  "es": {
+    "title": "Registro mensual del ánimo",
+    "intro": "Algunas personas notan que su ánimo, su energía o su cuerpo cambian con un patrón cada mes, muchas veces en la semana o las dos semanas antes de la regla. Anotar todos los días por al menos 2 ciclos puede mostrar si hay un patrón. Esto les puede ayudar a usted y a su médico a planear la atención. Leer esta hoja toma unos 5 minutos. Cada día toma uno o dos minutos.",
+    "sections": [
+      {
+        "heading": "Cómo llenarlo",
+        "steps": [
+          "Empiece cualquier día. Escriba el día del ciclo. El día 1 es el primer día de sangrado. Cuente desde ahí.",
+          "Escriba sí los días que sangra o mancha.",
+          "Cada noche, califique cada área de 0 a 3: 0 es nada, 1 es un poco, 2 es bastante y 3 es mucho.",
+          "Use una hoja nueva para cada ciclo. Siga por al menos 2 ciclos.",
+          "No necesita escribir fechas. Basta con el número del día del ciclo."
+        ]
+      },
+      {
+        "heading": "Áreas para calificar",
+        "steps": [
+          "Ánimo bajo: tristeza, desánimo o llorar fácil",
+          "Tensión: sentirse con los nervios de punta o acelerado",
+          "Irritabilidad: poca paciencia o molestarse fácil",
+          "Cambios de humor: emociones que cambian rápido",
+          "Cuerpo: hinchazón, dolor en los senos, dolores de cabeza u otros dolores",
+          "Efecto: cuánto le estorbaron el ánimo o el cuerpo en el trabajo, la casa o con la gente"
+        ]
+      },
+      {
+        "heading": "Cómo ver su patrón",
+        "body": "Lleve sus hojas a su médico o a su consejero. Juntos, vean si las calificaciones suben en los días antes del sangrado y bajan pocos días después de que empieza."
+      },
+      {
+        "heading": "Lo que puede ayudar",
+        "steps": [
+          "Dormir, comer y moverse con horarios regulares.",
+          "Si puede, planee días más ligeros cuando espere un momento difícil.",
+          "Hable con su médico sobre las opciones de tratamiento, como la terapia y las medicinas."
+        ]
+      },
+      {
+        "heading": "Busque ayuda antes si la necesita",
+        "body": "Si en cualquier momento tiene pensamientos de suicidio, o siente que no puede mantenerse a salvo, busque ayuda de inmediato. No espere a terminar el registro."
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Día del ciclo",
+        "Sangrado (sí o no)",
+        "Ánimo bajo (0-3)",
+        "Tensión (0-3)",
+        "Irritabilidad (0-3)",
+        "Cambios de humor (0-3)",
+        "Cuerpo (0-3)",
+        "Efecto (0-3)"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: Los cambios de ánimo antes de la regla pueden ser fuertes. Si traen pensamientos de suicidio, busque ayuda de inmediato. Si tiene pensamientos de hacerse daño o de hacerle daño a otra persona, busque ayuda ahora. En EE. UU., llame o envíe un mensaje de texto al 988, o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "sources": [
+    {
+      "title": "Management of premenstrual disorders: ACOG Clinical Practice Guideline No. 7",
+      "publisher": "Obstetrics and Gynecology (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37973069/",
+      "year": 2023
+    },
+    {
+      "title": "Premenstrual disorders (Yonkers and Simoni)",
+      "publisher": "American Journal of Obstetrics and Gynecology (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28571724/",
+      "year": 2018
+    },
+    {
+      "title": "Premenstrual Syndrome (health topic)",
+      "publisher": "MedlinePlus, U.S. National Library of Medicine",
+      "url": "https://medlineplus.gov/premenstrualsyndrome.html"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

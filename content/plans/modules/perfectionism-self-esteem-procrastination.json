@@ -1,0 +1,221 @@
+{
+  "id": "perfectionism-self-esteem-procrastination",
+  "title": "Perfectionism, low self-esteem and procrastination",
+  "summary": "Transdiagnostic problems that keep many difficulties going. Objectives use cognitive and behavioral methods (behavioral experiments, belief-level work, positive data logs), compassion-focused practice and values-based action.",
+  "appliesTo": "any",
+  "problems": [
+    {
+      "id": "per-perfectionism",
+      "label": "Very high standards and fear of mistakes that cost time, rest or relationships",
+      "definitions": [
+        "Sets standards for work, home, appearance or other areas that are rarely met, and judges self harshly when they are not.",
+        "Spends extra hours checking, redoing or over-preparing, or avoids tasks where mistakes might show."
+      ],
+      "longTermGoals": [
+        "The client keeps standards that are high but flexible, makes more room for rest and relationships, and judges self less harshly."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "per-rules-and-costs",
+          "text": "By session 3, list at least 3 areas where standards are very high, the costs and benefits of each, and the rules behind them (for example that anything less than perfect is a failure).",
+          "interventionIds": [
+            "thought-record",
+            "core-belief-work"
+          ],
+          "targets": [
+            "perfectionism"
+          ],
+          "step": "low-intensity"
+        },
+        {
+          "id": "per-good-enough-experiments",
+          "text": "Over weeks 3 to 10, carry out at least 1 behavioral experiment every 2 weeks that tests what happens when a task is done to a good-enough standard (for example sending an email after a single check), rating the predicted and the actual result.",
+          "interventionIds": [
+            "behavioral-experiments"
+          ],
+          "targets": [
+            "perfectionism",
+            "safety-behaviors"
+          ],
+          "step": "high-intensity"
+        },
+        {
+          "id": "per-less-checking",
+          "text": "By week 6, cut checking or redoing on 1 chosen task to half of the baseline count, tracked daily.",
+          "interventionIds": [
+            "behavioral-experiments"
+          ],
+          "targets": [
+            "perfectionism",
+            "reassurance-seeking-checking"
+          ],
+          "step": "low-intensity"
+        },
+        {
+          "id": "per-kind-response",
+          "text": "Over weeks 4 to 10, respond to at least 3 mistakes a week with a kind, balanced self-statement in place of self-criticism.",
+          "interventionIds": [
+            "self-compassion-practice"
+          ],
+          "targets": [
+            "self-criticism-shame"
+          ],
+          "step": "low-intensity"
+        }
+      ],
+      "measureIds": []
+    },
+    {
+      "id": "per-low-self-esteem",
+      "label": "A low, fixed view of self that shapes daily choices",
+      "definitions": [
+        "Often describes self in sweeping negative terms (for example not good enough or unlikable) and discounts praise or successes.",
+        "Avoids opportunities, rarely speaks up, or puts others' needs first in ways the client wishes were different."
+      ],
+      "longTermGoals": [
+        "The client holds a fairer, kinder and more balanced view of self, and acts more often on their own needs and goals."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "per-name-the-belief",
+          "text": "By session 4, identify the central negative belief about self and how strongly it is held (0-100), and trace together where it came from and what keeps it going.",
+          "interventionIds": [
+            "core-belief-work"
+          ],
+          "targets": [
+            "negative-core-beliefs"
+          ],
+          "step": "high-intensity"
+        },
+        {
+          "id": "per-positive-data",
+          "text": "For 6 weeks, write down at least 3 pieces of evidence a week that fit a fairer view of self, and re-rate belief in the old view every 2 weeks.",
+          "interventionIds": [
+            "core-belief-work",
+            "thought-record"
+          ],
+          "targets": [
+            "negative-core-beliefs"
+          ],
+          "step": "low-intensity"
+        },
+        {
+          "id": "per-act-against-belief",
+          "text": "By week 8, take at least 2 actions the old belief would have ruled out (for example sharing an opinion or asking for help) and note what actually happened.",
+          "interventionIds": [
+            "behavioral-experiments",
+            "assertiveness-training"
+          ],
+          "targets": [
+            "avoidance-escape",
+            "negative-core-beliefs"
+          ],
+          "step": "high-intensity"
+        },
+        {
+          "id": "per-strengths",
+          "text": "By week 6, list at least 5 personal strengths or qualities with a recent example of each, with input from a trusted person if the client wishes.",
+          "interventionIds": [
+            "positive-psychology-practices"
+          ],
+          "targets": [
+            "strengths-and-supports"
+          ],
+          "step": "low-intensity"
+        }
+      ],
+      "measureIds": [],
+      "handoutIds": [
+        "positive-data-log",
+        "thinking-traps"
+      ]
+    },
+    {
+      "id": "per-procrastination",
+      "label": "Putting off important tasks, with stress and guilt as deadlines get closer",
+      "definitions": [
+        "Puts off starting or finishing tasks that matter to the client (for example work, study, bills or health appointments) until close to or past the deadline.",
+        "Feels stuck, overwhelmed or guilty about delayed tasks, and turns to easier activities instead."
+      ],
+      "longTermGoals": [
+        "The client starts and finishes important tasks closer to their own plans, with less last-minute stress."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "per-delay-log",
+          "text": "For 2 weeks, log delayed tasks, what was done instead, and the feeling just before switching away, to find the main pattern.",
+          "interventionIds": [
+            "behavioral-activation"
+          ],
+          "targets": [
+            "avoidance-escape",
+            "experiential-avoidance"
+          ],
+          "step": "low-intensity"
+        },
+        {
+          "id": "per-small-steps",
+          "text": "Over weeks 3 to 8, break 1 delayed task a week into steps of 10 to 25 minutes, schedule the first step, and record whether it happened.",
+          "interventionIds": [
+            "behavioral-activation",
+            "problem-solving"
+          ],
+          "targets": [
+            "avoidance-escape"
+          ],
+          "step": "low-intensity"
+        },
+        {
+          "id": "per-start-with-discomfort",
+          "text": "By week 4, link at least 2 delayed tasks to personal values and practice starting for a set 10 minutes while the discomfort is still there.",
+          "interventionIds": [
+            "act-values-clarification",
+            "act-committed-action",
+            "act-acceptance-willingness"
+          ],
+          "targets": [
+            "experiential-avoidance",
+            "values-and-meaning"
+          ],
+          "step": "low-intensity"
+        },
+        {
+          "id": "per-check-other-causes",
+          "text": "If attention, organization or mood problems seem to drive the pattern, the clinician reviews this by week 6 and discusses a further assessment or a change to the plan.",
+          "interventionIds": []
+        }
+      ],
+      "measureIds": []
+    }
+  ],
+  "collaborativeNote": "These patterns often protect something the client values, such as doing well or being accepted. Explore that function together before working to change it, and keep the pace collaborative. Do not add names or other identifying details. Resource only. Not a substitute for clinical judgment.",
+  "sources": [
+    {
+      "title": "The efficacy of randomised controlled trials of cognitive behaviour therapy for perfectionism: a systematic review and meta-analysis (Galloway et al.)",
+      "publisher": "Cognitive Behaviour Therapy (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34346282/",
+      "year": 2022
+    },
+    {
+      "title": "A systematic review and meta-analysis of CBT interventions based on the Fennell model of low self-esteem (Kolubinski et al.)",
+      "publisher": "Psychiatry Research (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30201116/",
+      "year": 2018
+    },
+    {
+      "title": "Treating Procrastination Using Cognitive Behavior Therapy: A Pragmatic Randomized Controlled Trial Comparing Treatment Delivered via the Internet or in Groups (Rozental et al.)",
+      "publisher": "Behavior Therapy (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29530258/",
+      "year": 2018
+    },
+    {
+      "title": "The nature of procrastination: a meta-analytic and theoretical review of quintessential self-regulatory failure (Steel)",
+      "publisher": "Psychological Bulletin (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17201571/",
+      "year": 2007
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

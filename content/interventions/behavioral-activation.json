@@ -33,7 +33,8 @@
     "Watch for signs of an elevated mood state (much less need for sleep, racing thoughts, unusually risky activity). Refer for assessment; increasing activity is not appropriate during an elevated state.",
     "Severe low mood with psychotic features, high risk, or inability to care for oneself needs psychiatric referral. BA may be part of care, but not the only step.",
     "Avoid overloading the schedule. Too many tasks too soon can lead to failure and self-criticism.",
-    "Respect real limits from poverty, caregiving, disability or unsafe neighborhoods. Choose low-cost, accessible activities."
+    "Respect real limits from poverty, caregiving, disability or unsafe neighborhoods. Choose low-cost, accessible activities.",
+    "Post-exertional malaise (for example, in ME/CFS or long COVID): if symptoms flare hours to days after effort, schedule activities within the client's energy limits (pacing) and favor low-effort, valued activities over steady increases; coordinate with the medical team and scale back after any crash (NICE NG206)."
   ],
   "culturalAdaptations": [
     "Define 'valued activities' with the client. In more collectivist cultures, family, community and caregiving roles may matter more than individual leisure.",
@@ -46,7 +47,8 @@
     "note": "If the client names faith or spirituality as a value, they may choose to schedule related activities (for example, attending services, set times for prayer or meditation, volunteering through a faith community, or reading sacred texts). The client decides which activities to include and how often.",
     "consentNote": "Offer only if the client raises faith or spirituality as a resource, and only after informed consent. Explain that the faith element is optional, that the standard version works without it, and that the client can change or stop it at any time. Use the client's own beliefs and words; never introduce or impose religious content. Record the consent discussion in your own clinical record, not in this app. See the AACC Code of Ethics on consent for spiritual interventions and the ACA Code of Ethics on informed consent and not imposing counselor values."
   },
-  "handoutIds": ["activity-schedule"],
+  "handoutIds": ["activity-schedule", "activity-and-mood-log", "activity-ideas-menu"],
+  "orientationIds": ["behavior-therapy"],
   "sources": [
     {
       "title": "Depression in adults: treatment and management (NG222)",
@@ -116,6 +118,12 @@
       "publisher": "American Counseling Association",
       "url": "https://www.counseling.org/resources/ethics",
       "year": 2014
+    },
+    {
+      "title": "Myalgic encephalomyelitis (or encephalopathy)/chronic fatigue syndrome: diagnosis and management (NG206)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng206",
+      "year": 2021
     }
   ],
   "license": "original",

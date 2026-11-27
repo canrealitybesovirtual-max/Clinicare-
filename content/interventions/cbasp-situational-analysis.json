@@ -1,0 +1,85 @@
+{
+  "id": "cbasp-situational-analysis",
+  "name": "CBASP (cognitive behavioral analysis system of psychotherapy): overview and referral",
+  "modality": "CBASP - integrative, for chronic depression",
+  "conditions": [
+    "persistent-depressive-disorder",
+    "major-depressive-disorder"
+  ],
+  "evidenceLevel": "In a large trial for chronic depression (Keller et al., 2000), CBASP and nefazodone each helped about half of participants, and the combination helped about three quarters. A 2016 meta-analysis (Negt et al.) supported CBASP for chronic depression, especially combined with medication. In the REVAMP trial (Kocsis et al., 2009), adding CBASP or brief supportive therapy after medication nonresponse did not improve outcomes over medication changes alone. NICE NG222 (2022) recommends CBT for chronic depressive symptoms that covers avoidance, rumination and interpersonal difficulties, without naming CBASP.",
+  "minutes": {
+    "min": 45,
+    "max": 60
+  },
+  "purpose": "Developed by James McCullough for chronic or early-onset depression. CBASP proposes that people with long-standing depression often lose sight of how their own behavior shapes what happens with others, often after harmful early relationships. It combines behavioral, cognitive and interpersonal methods: structured analysis of specific interpersonal situations, work on how past significant others shape expectations of the therapist, and disciplined personal involvement by the therapist. This entry is an overview for planning and referral; it is not the protocol.",
+  "steps": [
+    "Confirm fit and training. CBASP is delivered by clinicians trained and supervised in it; otherwise, refer.",
+    "Situational analysis (overview): the client describes one recent, specific interpersonal situation with a clear start and end: what happened, what they thought, what they did, what they wanted to happen and what actually happened. Together, client and clinician revise the thoughts and actions that blocked the wanted outcome.",
+    "Significant-other history (overview): early on, review key people from the client's past and the conclusions drawn from them, to form hypotheses about what the client may expect from the therapist.",
+    "Interpersonal discrimination exercise (overview): when such an expectation shows up in therapy, help the client notice how the clinician's actual response differs from the expected one.",
+    "Disciplined personal involvement (overview): the trained clinician selectively shares their own reaction to the client's behavior to show its effect on others.",
+    "Practice new behaviors between sessions and review real situations each week; coordinate with medication care where it is part of the plan.",
+    "Track symptoms over time (for example, PHQ-9); chronic depression often changes slowly."
+  ],
+  "script": [
+    "Let's pick one recent moment with someone, with a clear start and end, and walk through it step by step.",
+    "What did you want to happen? And what actually happened?",
+    "What did you think or do that helped get you there, and what got in the way?",
+    "You expected me to be critical just now. What did I actually do?",
+    "This therapy works best with someone trained in it. I can help you find a trained clinician if you're interested."
+  ],
+  "contraindications": [
+    "Full CBASP requires training and supervision; therapist self-involvement in particular needs trained use.",
+    "When there is a history of childhood maltreatment, watch the impact of the significant-other history; a trauma-focused approach may also be needed.",
+    "Severe or chronic depression often benefits from combined treatment; coordinate a medication evaluation and higher levels of care when needed.",
+    "Where there is intimate partner violence, do not rehearse assertive confrontation that could raise danger; prioritize safety planning.",
+    "This intervention does not assess or decide risk. If suicidal thoughts, self-harm or risk to others come up, pause and follow your setting's risk-assessment and safety-planning procedures. Keep crisis options visible: 988 Suicide & Crisis Lifeline (US, call or text), the local emergency number, and findahelpline.com for other countries."
+  ],
+  "culturalAdaptations": [
+    "What counts as a good outcome in an interpersonal situation depends on culture, family roles and power. Let the client define the wanted outcome in their own context.",
+    "Treat experiences of discrimination as real interpersonal situations, not only as perceptions to correct.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "trainingRequired": "CBASP: trained clinicians only (CBASP certification involves workshops and supervised cases); steps here are overview-level only.",
+  "handoutIds": [
+    "understanding-low-mood"
+  ],
+  "orientationIds": [
+    "cognitive-therapy",
+    "interpersonal-therapies"
+  ],
+  "sources": [
+    {
+      "title": "Depression in adults: treatment and management (NG222)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng222",
+      "year": 2022
+    },
+    {
+      "title": "A comparison of nefazodone, the cognitive behavioral-analysis system of psychotherapy, and their combination for the treatment of chronic depression (Keller et al.)",
+      "publisher": "New England Journal of Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/10816183/",
+      "year": 2000
+    },
+    {
+      "title": "The treatment of chronic depression with cognitive behavioral analysis system of psychotherapy: a systematic review and meta-analysis of randomized-controlled clinical trials (Negt et al.)",
+      "publisher": "Brain and Behavior (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27247856/",
+      "year": 2016
+    },
+    {
+      "title": "Cognitive behavioral analysis system of psychotherapy and brief supportive psychotherapy for augmentation of antidepressant nonresponse in chronic depression: the REVAMP trial (Kocsis et al.)",
+      "publisher": "Archives of General Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19884606/",
+      "year": 2009
+    },
+    {
+      "title": "CBASP certification",
+      "publisher": "CBASP National Training Program",
+      "url": "https://www.cbasp.org/cert.htm"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

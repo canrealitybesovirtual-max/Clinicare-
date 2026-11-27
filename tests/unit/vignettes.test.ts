@@ -46,7 +46,13 @@ type ConditionId =
   | "body-dysmorphic-disorder"
   | "cannabis-use-disorder"
   | "opioid-use-disorder"
-  | "stimulant-use-disorder";
+  | "stimulant-use-disorder"
+  | "acute-stress-disorder"
+  | "sedative-hypnotic-use-disorder"
+  | "gambling-disorder"
+  | "tobacco-use-disorder"
+  | "body-focused-repetitive-behaviors"
+  | "premenstrual-dysphoric-disorder";
 
 interface Expectation {
   status: ScoringResult["status"];
@@ -377,14 +383,15 @@ const VIGNETTES: Vignette[] = [
     expect: { status: "ok", top: ["ptsd"], strength: { ptsd: "moderate" } },
   },
   {
-    name: "trauma symptoms 2 weeks after the event: duration flag (acute stress reaction territory)",
+    name: "trauma symptoms 2 weeks after the event: the acute stress pattern leads, PTSD carries the duration flag",
     text: "Car accident 2 weeks ago. Since the accident she has nightmares, flashbacks, won't drive, and is jumpy and on guard.",
     toggles: { duration: "2to4w" },
     expect: {
       status: "ok",
-      top: ["ptsd"],
-      maxStrength: "possible",
+      top: ["acute-stress-disorder", "ptsd"],
+      strength: { "acute-stress-disorder": "strong", ptsd: "possible" },
       flags: { ptsd: ["duration"] },
+      matched: ["recent-trauma-past-month"],
     },
   },
   {
@@ -1430,6 +1437,231 @@ const VIGNETTES: Vignette[] = [
       part2: true,
     },
   },
+  /* ------------------------------------------------------------- acute stress (first month after a trauma) */
+  {
+    name: "acute stress: car crash 10 days ago with reliving, avoidance, numbing and feeling unreal",
+    text: "Was in a car accident 10 days ago. Nightmares every night, flashbacks, avoids driving, jumpy, can't sleep, feels numb and unreal.",
+    toggles: { duration: "2to4w" },
+    expect: {
+      status: "ok",
+      top: ["acute-stress-disorder"],
+      strength: { "acute-stress-disorder": "strong" },
+      flags: { ptsd: ["duration"] },
+      matched: ["recent-trauma-past-month", "derealization-depersonalization"],
+    },
+  },
+  {
+    name: "acute stress: assault last week, dissociation and poor sleep",
+    text: "Was assaulted last week walking home. Since then she feels unreal and numb, has nightmares, avoids the street where it happened, can't sleep and is on edge.",
+    toggles: { duration: "lt2w" },
+    expect: { status: "ok", top: ["acute-stress-disorder"], strength: { "acute-stress-disorder": "strong" } },
+  },
+  {
+    name: "acute stress: a recent event alone stays moderate until reactions are documented",
+    text: "Car accident yesterday, otherwise doing ok.",
+    toggles: { duration: "lt2w" },
+    expect: {
+      status: "ok",
+      top: ["acute-stress-disorder"],
+      strength: { "acute-stress-disorder": "moderate" },
+      flags: { "acute-stress-disorder": ["breadth"] },
+    },
+  },
+  {
+    name: "acute stress: house fire three weeks ago with reliving and feeling unreal",
+    text: "Was in a house fire three weeks ago. Keeps reliving it in flashbacks, avoids the kitchen, feels unreal, can't concentrate at work.",
+    toggles: { duration: "2to4w" },
+    expect: { status: "ok", top: ["acute-stress-disorder"], maxStrength: "moderate" },
+  },
+  {
+    name: "chronic PTSD does not surface the first-month pattern",
+    text: "Assaulted two years ago. Nightmares, flashbacks, avoids the area, jumpy, can't sleep, feels numb.",
+    toggles: { duration: "gte6m" },
+    expect: { status: "ok", top: ["ptsd"], excludes: ["acute-stress-disorder"] },
+  },
+  {
+    name: "a recent non-traumatic stressor is not read as a recent trauma",
+    text: "Lost my job last week and can't stop thinking about the layoff, feeling down.",
+    toggles: { duration: "2to4w" },
+    expect: { status: "ok", top: ["adjustment-disorder"], excludes: ["acute-stress-disorder", "ptsd"], notMatched: ["recent-trauma-past-month"] },
+  },
+
+  /* ------------------------------------------------------------- sedatives, hypnotics and anxiolytics (Part 2) */
+  {
+    name: "sedative use disorder: extra Xanax, early refills, mixing with alcohol and withdrawal between doses",
+    text: "Takes more xanax than prescribed, runs out of xanax early, shaky when the xanax wears off, mixes xanax with alcohol.",
+    toggles: { duration: "gte6m" },
+    expect: {
+      status: "ok",
+      top: ["sedative-hypnotic-use-disorder"],
+      strength: { "sedative-hypnotic-use-disorder": "moderate" },
+      flags: { "sedative-hypnotic-use-disorder": ["red-flag", "substance"] },
+      redFlags: ["withdrawal"],
+      part2: true,
+    },
+  },
+  {
+    name: "sedative use disorder: nightly zolpidem with extra doses and sleep driving",
+    text: "Ambien every night for years, takes extra ambien, sleep driving on ambien, can't remember things.",
+    toggles: { duration: "gte6m" },
+    expect: { status: "ok", top: ["sedative-hypnotic-use-disorder"], matched: ["sedative-despite-harm"], part2: true },
+  },
+  {
+    name: "sedative use disorder: benzodiazepines from friends and failed tapers",
+    text: "Xanax every day for panic, takes extra xanax, gets benzos from friends, tried to taper off xanax twice and could not.",
+    toggles: { duration: "gte6m" },
+    expect: { status: "ok", top: ["sedative-hypnotic-use-disorder"], matched: ["sedative-impaired-control", "sedative-use-pattern"], part2: true },
+  },
+  {
+    name: "use as prescribed with rebound between doses: no use disorder suggested, the withdrawal flag stays visible",
+    text: "On klonopin for years as prescribed, rebound anxiety between doses.",
+    toggles: { duration: "gte6m" },
+    expect: { status: "insufficient", matched: ["sedative-use-pattern", "sedative-withdrawal-signs"], redFlags: ["withdrawal"] },
+  },
+
+  /* ------------------------------------------------------------- gambling */
+  {
+    name: "gambling disorder: sports betting, chasing losses, borrowing and lying about it",
+    text: "Sports betting every day on his phone, bets more to win it back, borrowed money to gamble, lied about gambling to his wife, irritable and can't sleep.",
+    toggles: { duration: "gte6m" },
+    expect: { status: "ok", top: ["gambling-disorder"], strength: { "gambling-disorder": "moderate" }, noFlags: { "gambling-disorder": ["red-flag"] } },
+  },
+  {
+    name: "gambling disorder with thoughts of being better off dead: the suicide flag is raised, no Part 2 content",
+    text: "Lost our savings gambling, chasing my losses, can't stop betting, thinks everyone would be better off without me.",
+    toggles: { duration: "gte6m" },
+    expect: {
+      status: "ok",
+      top: ["gambling-disorder"],
+      flags: { "gambling-disorder": ["red-flag"] },
+      redFlags: ["suicidality"],
+    },
+  },
+  {
+    name: "gambling only during a high: mood elevation leads and gambling stays low",
+    text: "Not sleeping for days and feels on top of the world, betting is out of control, chasing losses.",
+    toggles: { duration: "2to4w" },
+    expect: {
+      status: "ok",
+      includes: ["gambling-disorder", "bipolar-i-disorder"],
+      strength: { "gambling-disorder": "possible" },
+      flags: { "gambling-disorder": ["red-flag"] },
+      redFlags: ["mania"],
+    },
+  },
+
+  /* ------------------------------------------------------------- tobacco and nicotine (Part 2 notice, conservative) */
+  {
+    name: "tobacco use disorder: a pack a day, cravings and failed quit attempts",
+    text: "Smokes a pack a day, tried to quit cigarettes three times, craving cigarettes, irritable without a cigarette.",
+    toggles: { duration: "gte6m" },
+    expect: { status: "ok", top: ["tobacco-use-disorder"], strength: { "tobacco-use-disorder": "strong" }, part2: true },
+  },
+  {
+    name: "tobacco use disorder: nicotine vaping with cravings and quit attempts",
+    text: "Vapes nicotine all day since college, cravings for my vape, cranky without my vape, tried to quit nicotine twice.",
+    toggles: { duration: "gte6m" },
+    expect: { status: "ok", top: ["tobacco-use-disorder"], matched: ["tobacco-use-pattern", "tobacco-craving-withdrawal", "tobacco-unsuccessful-quit"], part2: true },
+  },
+  {
+    name: "tobacco use disorder: smoking despite COPD",
+    text: "Daily smoker, still smokes despite copd, tried the nicotine patch, craving a cigarette within minutes of waking.",
+    toggles: { duration: "gte6m" },
+    expect: { status: "ok", top: ["tobacco-use-disorder"], strength: { "tobacco-use-disorder": "moderate" }, part2: true },
+  },
+  {
+    name: "cannabis smoking is not read as tobacco",
+    text: "Smokes weed every day, can't quit smoking weed, irritable without weed.",
+    toggles: { duration: "gte6m" },
+    expect: {
+      status: "ok",
+      top: ["cannabis-use-disorder"],
+      excludes: ["tobacco-use-disorder"],
+      notMatched: ["tobacco-use-pattern", "tobacco-unsuccessful-quit", "tobacco-craving-withdrawal"],
+      part2: true,
+    },
+  },
+
+  /* ------------------------------------------------------------- hair pulling and skin picking */
+  {
+    name: "hair pulling with failed attempts to stop and hiding bald spots",
+    text: "Pulls out her hair at night, bald spots from pulling, can't stop pulling, wears a hat to hide the bald spots, ashamed.",
+    toggles: { duration: "gte6m" },
+    expect: { status: "ok", top: ["body-focused-repetitive-behaviors"], matched: ["hair-pulling", "bfrb-attempts-to-stop"] },
+  },
+  {
+    name: "eyelash pulling while studying, with low mood and anxiety",
+    text: "Pulls out her eyelashes while studying, tried to stop pulling many times, fake eyelashes to hide them, feels down and anxious.",
+    toggles: { duration: "gte6m" },
+    expect: { status: "ok", top: ["body-focused-repetitive-behaviors"], strength: { "body-focused-repetitive-behaviors": "strong" } },
+  },
+  {
+    name: "skin picking with sores, attempts to stop and covering scabs",
+    text: "Picks at her skin until it bleeds, picks scabs, tried to stop picking, covers the scabs with makeup, anxious.",
+    toggles: { duration: "gte6m" },
+    expect: { status: "ok", top: ["body-focused-repetitive-behaviors"], matched: ["skin-picking", "bfrb-distress-concealment"] },
+  },
+  {
+    name: "picking to fix a perceived flaw: body dysmorphic concerns lead",
+    text: "Hates her nose, convinced she is ugly, hours in front of the mirror, picks at her skin to fix the flaws, had plastic surgery twice.",
+    toggles: { duration: "gte6m" },
+    expect: {
+      status: "ok",
+      top: ["body-dysmorphic-disorder"],
+      strength: { "body-focused-repetitive-behaviors": "possible" },
+      flags: { "body-focused-repetitive-behaviors": ["partial-core"] },
+    },
+  },
+
+  /* ------------------------------------------------------------- premenstrual mood */
+  {
+    name: "PMDD pattern confirmed with daily ratings over two cycles",
+    text: "Irritable and tearful the week before my period, fights with my partner before my period, better once my period starts, tracked over two cycles.",
+    toggles: { duration: "1to6m" },
+    expect: { status: "ok", top: ["premenstrual-dysphoric-disorder"], strength: { "premenstrual-dysphoric-disorder": "strong" } },
+  },
+  {
+    name: "premenstrual symptoms by recall only: held at moderate until the cycle link is documented",
+    text: "Irritable before my period and fights with my partner before my period.",
+    toggles: { duration: "1to6m" },
+    expect: {
+      status: "ok",
+      top: ["premenstrual-dysphoric-disorder"],
+      strength: { "premenstrual-dysphoric-disorder": ["moderate", "possible"] },
+      flags: { "premenstrual-dysphoric-disorder": ["required"] },
+    },
+  },
+  {
+    name: "premenstrual suicidal thoughts: the suicide flag is raised on the premenstrual pattern",
+    text: "Hopeless and has thoughts of suicide the week before my period, gone once my period starts.",
+    toggles: { duration: "1to6m" },
+    expect: {
+      status: "ok",
+      top: ["premenstrual-dysphoric-disorder"],
+      flags: { "premenstrual-dysphoric-disorder": ["red-flag"] },
+      redFlags: ["suicidality"],
+    },
+  },
+  {
+    name: "low mood all month is not read as a premenstrual pattern",
+    text: "Feels down most days all month, lost interest in everything, can't sleep, feels worthless, worse before my period.",
+    toggles: { duration: "1to6m" },
+    expect: { status: "ok", top: ["major-depressive-disorder"], excludes: ["premenstrual-dysphoric-disorder"] },
+  },
+
+  /* ------------------------------------------------------------- perinatal psychosis and complex trauma */
+  {
+    name: "voices after childbirth: psychosis red flag, no forced match",
+    text: "Hearing voices since the baby was born, not sleeping.",
+    toggles: { duration: "lt2w" },
+    expect: { status: "insufficient", matched: ["postpartum-onset-psychosis"], redFlags: ["psychosis"] },
+  },
+  {
+    name: "childhood abuse with reliving plus fear of abandonment: PTSD and borderline patterns both surface",
+    text: "Abused throughout childhood. Flashbacks and nightmares, avoids reminders, terrified of being abandoned, unstable relationships, feels empty inside.",
+    toggles: { duration: "gte6m" },
+    expect: { status: "ok", includes: ["ptsd", "borderline-personality-disorder"], matched: ["traumatic-event-exposure"] },
+  },
 ];
 
 describe("clinical vignettes (real content)", () => {
@@ -1573,6 +1805,20 @@ describe("vignettes: gates lower the score and say why", () => {
   });
 });
 
+describe("vignettes: codes carried on round 4 suggestions", () => {
+  it("PTSD carries both ICD-11 codes (6B40 and complex PTSD 6B41) and still only ICD-10-CM F43.1x", () => {
+    const s = suggestion(analyze("assaulted 6 months ago. nightmares most nights, flashbacks, avoids the area where it happened, jumpy, always on guard", { duration: "gte6m" }).result, "ptsd");
+    expect(s?.icd11.map((c) => c.code)).toEqual(["6B40", "6B41"]);
+    for (const c of s?.icd10cm ?? []) expect(c.code).toMatch(/^F43\.1[012]$/);
+  });
+
+  it("the first-month pattern carries ICD-10-CM F43.0 and ICD-11 QE84", () => {
+    const s = suggestion(analyze("Car accident 2 weeks ago, nightmares, flashbacks, won't drive, jumpy.", { duration: "2to4w" }).result, "acute-stress-disorder");
+    expect(s?.icd10cm.map((c) => c.code)).toEqual(["F43.0"]);
+    expect(s?.icd11.map((c) => c.code)).toEqual(["QE84"]);
+  });
+});
+
 describe("vignettes: PHI is scrubbed first", () => {
   it("removes planted identifiers before matching", () => {
     const v = VIGNETTES.find((x) => x.name.startsWith("identifiers are scrubbed"));
@@ -1638,6 +1884,22 @@ describe("phrase-level behavior on the real lexicon", () => {
     ["Can't stop thinking about the divorce.", ["stressor-preoccupation", "identifiable-stressor"], []],
     ["Her husband died last spring.", ["bereavement"], []],
     ["Faints at the sight of blood.", ["dizziness", "blood-injury-fainting"], []],
+    // Round 4 lexicon: idioms and everyday wording that must not trigger the new patterns.
+    ["I'm pulling my hair out over this project.", [], []],
+    ["Plucks her eyebrows.", [], []],
+    ["Picks her kids up from school.", [], []],
+    ["Panic attack last week.", ["panic-attacks-unspecified"], []],
+    ["Had an accident at work last week.", [], []],
+    ["Two weeks ago she was in a car accident.", ["traumatic-event-exposure", "recent-trauma-past-month"], []],
+    ["Non-smoker.", [], []],
+    ["Quit smoking ten years ago.", [], []],
+    ["Denies tobacco use.", [], ["tobacco-use-pattern"]],
+    ["No hair pulling or skin picking.", [], ["hair-pulling", "skin-picking"]],
+    ["Before my period I get cramps.", [], []],
+    // Nightly sleeping pills document both the sedative pattern and the insomnia safety habit.
+    ["Takes sleeping pills every night.", ["sleep-compensatory-behaviors", "sedative-use-pattern"], []],
+    // A red flag after childbirth is never swallowed by the general hallucination entry.
+    ["Hearing voices since the baby was born.", ["postpartum-onset-psychosis"], []],
   ] as [string, string[], string[]][])("%s", (text, positive, negated) => {
     const m = matchSymptoms(text, lexicon.symptoms);
     expect(ids(m.matches)).toEqual(positive);

@@ -30,6 +30,8 @@
   "ruleOuts": [
     { "label": "Hyperthyroidism", "type": "medical", "note": "Can cause restlessness, tremor, poor sleep and anxiety. Consider thyroid testing through the client's medical provider." },
     { "label": "Other medical conditions with anxiety as a direct effect", "type": "medical", "note": "For example cardiac arrhythmia, chronic lung disease, uncontrolled diabetes or neurological illness. Coordinate with medical care when onset is late in life or tied to a new illness." },
+    { "label": "Delirium (sudden confusion)", "type": "medical", "note": "Confusion, drowsiness or attention that comes and goes over hours or days, often with an infection, surgery, dehydration, alcohol or sedative withdrawal or a medicine change, points to delirium (ICD-10-CM F05; ICD-11 6D70). It needs same-day medical assessment, not a mental health formulation (NICE CG103)." },
+    { "label": "Mild or major neurocognitive disorder", "type": "medical", "note": "A gradual decline in memory, thinking, planning or daily functioning, especially in later life, calls for a cognitive evaluation through primary care or a memory service (ICD-10-CM G31.84, F06.7x or F03.9x; ICD-11 6D71 or 6D80-6D8Z). Low mood, apathy, anxiety or new psychotic symptoms can be early signs (NICE NG97)." },
     { "label": "Medication effects", "type": "substance", "note": "Corticosteroids, stimulants, bronchodilators, thyroid hormone and some other medicines can cause anxiety or insomnia. Review the medication list with the prescriber." },
     { "label": "Caffeine, stimulants or nicotine", "type": "substance", "note": "High intake can mimic or worsen chronic tension and poor sleep." },
     { "label": "Alcohol or sedative withdrawal", "type": "substance", "note": "Daily rebound anxiety between drinks or doses can look like generalized worry. Refer for medical assessment if withdrawal is possible. This app does not store substance-use information." },
@@ -67,7 +69,7 @@
     { "name": "Mindfulness-based approaches (complementary)", "evidence": "NCCIH notes evidence that mindfulness and meditation may help anxiety, including a 2023 randomized trial in which MBSR was noninferior to escitalopram.", "note": "Offer as an adjunct or alternative based on client preference. Adapt for trauma history (e.g., eyes-open options)." },
     { "name": "Referral for medication evaluation", "evidence": "NICE CG113 names an SSRI (sertraline) as the first-line medication for GAD at step 3.", "note": "Refer to psychiatry, a primary care provider or a psychiatric nurse practitioner. Prescribing decisions rest with the prescriber." }
   ],
-  "handouts": ["worry-log", "pmr-homework", "breathing-practice"],
+  "handouts": ["worry-log", "pmr-homework", "breathing-practice", "why-worry-sticks", "applied-relaxation-steps"],
   "statIds": ["us-gad-past-year", "us-any-anxiety-past-year", "global-anxiety-disorders-2021"],
   "culturalNotes": [
     "In many settings, chronic worry is described through idioms like 'thinking too much', 'nerves' or 'nervios'. These overlap only in part with GAD, depression or PTSD; ask what the phrase means for the client rather than treating it as a symptom label.",
@@ -86,6 +88,8 @@
   "licensedDsm": false,
   "wileyLicensed": false,
   "sources": [
+    { "title": "Delirium: prevention, diagnosis and management in hospital and long-term care (CG103)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/cg103", "year": 2010 },
+    { "title": "Dementia: assessment, management and support for people living with dementia and their carers (NG97)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng97", "year": 2018 },
     { "title": "Anxiety Disorders (health topic)", "publisher": "National Institute of Mental Health", "url": "https://www.nimh.nih.gov/health/topics/anxiety-disorders" },
     { "title": "Generalised anxiety disorder and panic disorder in adults: management (CG113)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/cg113", "year": 2011 },
     { "title": "ICD-11 MMS: 6B00 Generalised anxiety disorder", "publisher": "World Health Organization", "url": "https://icd.who.int/browse/latest-release/mms/en" },

@@ -45,6 +45,7 @@
   },
   "trainingRequired": "Use imagery rescripting of trauma memories only with training and supervision in imagery rescripting or trauma-focused CBT, as part of a trauma-focused treatment plan, not as a stand-alone improvised technique. Rescripting of non-trauma social or depressive images also benefits from training and supervision.",
   "handoutIds": ["grounding-5-4-3-2-1"],
+  "orientationIds": ["cognitive-therapy", "trauma-focused-therapies"],
   "sources": [
     { "title": "Imagery rescripting as a clinical intervention for aversive memories: a meta-analysis (Morina, Lancee and Arntz)", "publisher": "Journal of Behavior Therapy and Experimental Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/27855298/", "year": 2017 },
     { "title": "Efficacy of imagery rescripting in treating mental disorders associated with aversive memories: an updated meta-analysis (Kip, Schoppe, Arntz and Morina)", "publisher": "Journal of Anxiety Disorders (University of Amsterdam repository)", "url": "https://dare.uva.nl/id/73f388d6-dbb7-4c73-aa50-534f771acb18", "year": 2023 },

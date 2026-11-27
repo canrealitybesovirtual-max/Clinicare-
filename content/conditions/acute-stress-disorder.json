@@ -1,0 +1,364 @@
+{
+  "id": "acute-stress-disorder",
+  "name": "Acute stress disorder (acute stress reaction)",
+  "icd10cm": [
+    {
+      "code": "F43.0",
+      "label": "Acute stress reaction"
+    }
+  ],
+  "icd11": [
+    {
+      "code": "QE84",
+      "label": "Acute stress reaction"
+    }
+  ],
+  "dsmPointer": "See DSM-5-TR: Trauma- and Stressor-Related Disorders — Acute Stress Disorder",
+  "summary": "Strong reactions in the days and weeks after a traumatic event: the event keeps coming back in memories, dreams or flashbacks, the client steers clear of reminders, sleeps badly and feels on edge, and may feel numb, unreal or cut off from what happened. Many early reactions ease with safety, rest and ordinary support, so the first steps are practical help, active monitoring and a planned check-in rather than treatment for everyone. When reactions are marked or not settling, brief trauma-focused CBT within the month lowers the chance of later PTSD; single-session psychological debriefing does not help and can make things worse. ICD-11 lists acute stress reaction (QE84) among reasons for contact with services, not as a mental disorder, while DSM-5-TR describes acute stress disorder for the first month. Reassess for PTSD at about one month. For clinician review only; this is not a diagnosis.",
+  "features": [
+    {
+      "symptomId": "recent-trauma-past-month",
+      "kind": "core",
+      "weight": 5
+    },
+    {
+      "symptomId": "intrusive-memories",
+      "kind": "associated",
+      "weight": 3,
+      "group": "reexperiencing",
+      "breadthArea": true
+    },
+    {
+      "symptomId": "flashbacks",
+      "kind": "associated",
+      "weight": 3,
+      "group": "reexperiencing",
+      "breadthArea": true
+    },
+    {
+      "symptomId": "nightmares",
+      "kind": "associated",
+      "weight": 3,
+      "group": "reexperiencing",
+      "breadthArea": true
+    },
+    {
+      "symptomId": "cue-reactivity",
+      "kind": "associated",
+      "weight": 2,
+      "group": "reexperiencing",
+      "breadthArea": true
+    },
+    {
+      "symptomId": "avoidance-trauma-reminders",
+      "kind": "associated",
+      "weight": 3,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "derealization-depersonalization",
+      "kind": "associated",
+      "weight": 2,
+      "group": "dissociation",
+      "breadthArea": true
+    },
+    {
+      "symptomId": "emotional-numbing-detachment",
+      "kind": "associated",
+      "weight": 2,
+      "group": "dissociation",
+      "breadthArea": true
+    },
+    {
+      "symptomId": "trauma-memory-gaps",
+      "kind": "associated",
+      "weight": 2,
+      "group": "dissociation",
+      "breadthArea": true
+    },
+    {
+      "symptomId": "hypervigilance",
+      "kind": "associated",
+      "weight": 2,
+      "group": "arousal",
+      "breadthArea": true
+    },
+    {
+      "symptomId": "startle",
+      "kind": "associated",
+      "weight": 2,
+      "group": "arousal",
+      "breadthArea": true
+    },
+    {
+      "symptomId": "insomnia",
+      "kind": "associated",
+      "weight": 1
+    },
+    {
+      "symptomId": "concentration-difficulty",
+      "kind": "associated",
+      "weight": 1
+    },
+    {
+      "symptomId": "irritability",
+      "kind": "associated",
+      "weight": 1
+    },
+    {
+      "symptomId": "negative-beliefs",
+      "kind": "associated",
+      "weight": 1
+    },
+    {
+      "symptomId": "traumatic-event-exposure",
+      "kind": "associated",
+      "weight": 1
+    }
+  ],
+  "minCore": 1,
+  "durationGate": {
+    "minWeeks": 0,
+    "note": "This pattern covers only the first month after the event (see DSM-5-TR for the window it uses). Reactions that last beyond about a month point to PTSD or another trauma-related pattern; reassess then."
+  },
+  "impairmentRequired": true,
+  "ruleOuts": [
+    {
+      "label": "Head injury or concussion during the event",
+      "type": "medical",
+      "note": "Poor focus, headaches, irritability, dizziness and memory gaps can come from a head injury. Ask about loss of consciousness or confusion at the time and refer for medical assessment."
+    },
+    {
+      "label": "Delirium after injury, surgery or intensive care",
+      "type": "medical",
+      "note": "Confusion or attention that comes and goes over hours or days after an injury, an operation or an ICU stay needs same-day medical review, not a trauma formulation."
+    },
+    {
+      "label": "Pain, injuries and medication effects",
+      "type": "medical",
+      "note": "Pain, opioid or steroid treatment and disturbed hospital sleep can add to arousal, poor sleep and low mood."
+    },
+    {
+      "label": "Alcohol, drug or sedative use or withdrawal",
+      "type": "substance",
+      "note": "Some people drink more or use sedatives to sleep after a trauma, and intoxication or withdrawal can look like dissociation or agitation. This app does not store substance-use information."
+    },
+    {
+      "label": "Brief psychotic disorder",
+      "type": "psychiatric",
+      "note": "Hallucinations or fixed false beliefs after a severe stressor are not part of this pattern; arrange an urgent psychiatric evaluation."
+    },
+    {
+      "label": "Panic attacks unrelated to the event",
+      "type": "psychiatric",
+      "note": "Attacks that come out of the blue, rather than with reminders, suggest a separate panic pattern."
+    }
+  ],
+  "specifiers": [
+    {
+      "label": "ICD-10-CM F43.0 and ICD-11 QE84",
+      "note": "F43.0 carries the ICD-10-CM title Acute stress reaction and is the code DSM-5-TR uses for acute stress disorder. ICD-11 treats acute stress reaction (QE84) as an expected response that may still need support, outside the chapter on mental disorders."
+    },
+    {
+      "label": "Prominent dissociation (descriptive)",
+      "note": "Feeling unreal, numb or unable to recall parts of the event. Teach grounding early, check for head injury, substances and delirium, and pace any trauma-focused work."
+    },
+    {
+      "label": "Active monitoring plan (descriptive)",
+      "note": "Record what support the client has, a check-in date within the month, and what would prompt earlier contact (for example worsening sleep, drinking more, or thoughts of suicide)."
+    }
+  ],
+  "differentials": [
+    {
+      "label": "Posttraumatic stress disorder, unspecified",
+      "icd10cm": "F43.10",
+      "distinguishing": "The same kinds of reactions still present beyond about a month after the event, or starting later."
+    },
+    {
+      "label": "Adjustment disorder, unspecified",
+      "icd10cm": "F43.20",
+      "distinguishing": "Distress after a hard life event that was not traumatic in the clinical sense, without the reliving and avoidance pattern."
+    },
+    {
+      "label": "Brief psychotic disorder",
+      "icd10cm": "F23",
+      "distinguishing": "Hallucinations, delusions or disorganized speech after a severe stressor; needs urgent psychiatric care."
+    },
+    {
+      "label": "Postconcussional syndrome",
+      "icd10cm": "F07.81",
+      "distinguishing": "Headache, dizziness, poor focus and irritability after a head injury, with or without fear-based reliving."
+    },
+    {
+      "label": "Panic disorder",
+      "icd10cm": "F41.0",
+      "distinguishing": "Repeated unexpected attacks and worry about the next one, rather than reactions tied to the event and its reminders."
+    }
+  ],
+  "comorbidities": [
+    {
+      "conditionId": "ptsd",
+      "label": "Posttraumatic stress disorder",
+      "note": "Most people with early reactions recover; for those who do not, PTSD can follow. Book a reassessment at about one month."
+    },
+    {
+      "conditionId": "major-depressive-disorder",
+      "label": "Major depressive disorder",
+      "note": "Low mood can follow a trauma, especially with losses or injury. Screen with the PHQ-9 and ask directly about suicidal thoughts."
+    },
+    {
+      "conditionId": "alcohol-use-disorder",
+      "label": "Alcohol or other substance use",
+      "note": "Drinking or sedative use to sleep or calm down can start after a trauma. Ask without judgment; this app does not store or send substance-use information. 42 CFR Part 2 prohibits unauthorized use or disclosure of these records."
+    }
+  ],
+  "measures": [
+    "phq-9",
+    "gad-7"
+  ],
+  "measuresPending": [
+    {
+      "name": "PTSD Checklist for DSM-5 (PCL-5)",
+      "url": "https://www.ptsd.va.gov/professional/assessment/adult-sr/ptsd-checklist.asp",
+      "note": "License pending — link out only; useful for tracking symptoms over the first month, not as a cutoff for this pattern",
+      "licenseKey": "PCL-5"
+    },
+    {
+      "name": "Columbia Suicide Severity Rating Scale (C-SSRS)",
+      "url": "https://cssrs.columbia.edu",
+      "note": "License pending — link out only",
+      "licenseKey": "C-SSRS"
+    }
+  ],
+  "interventions": [
+    {
+      "name": "Psychological first aid and practical support",
+      "evidence": "WHO psychological first aid guide (2011): a humane, practical approach for people in the first days and weeks after a crisis; not a treatment in itself.",
+      "note": "Check safety and basic needs, listen without pressing for detail, link the client with people and services, and give accurate information about common reactions. Do not offer single-session psychological debriefing (NICE NG116, recommendation 1.6.5; Cochrane review, 2002)."
+    },
+    {
+      "name": "Active monitoring with a planned check-in",
+      "evidence": "NICE NG116 (2018), recommendation 1.6.4: consider active monitoring for subthreshold symptoms within a month of a trauma and arrange follow-up within a month.",
+      "note": "Agree a check-in date, what to watch for and how to reach you sooner. Reassess for PTSD at about one month."
+    },
+    {
+      "name": "Brief trauma-focused CBT within the first month",
+      "evidence": "NICE NG116, recommendation 1.6.15: offer individual trauma-focused CBT to adults with acute stress disorder or clinically important symptoms within a month of a trauma (for example cognitive processing therapy, cognitive therapy for PTSD, narrative exposure or prolonged exposure). In an RCT, exposure-based therapy for acute stress disorder led to less later PTSD than cognitive restructuring (Bryant et al., 2008).",
+      "note": "For marked or persisting reactions. Trauma-focused protocols are for trained clinicians; pace the work and teach grounding first if dissociation is strong."
+    },
+    {
+      "name": "Grounding, sleep and daily-routine support",
+      "evidence": "Stabilization skills used within trauma-focused care; not a stand-alone treatment.",
+      "note": "Grounding for flashbacks or feeling unreal, simple sleep routines, and gradual return to usual activities and people."
+    },
+    {
+      "name": "Referral for medication evaluation (for another condition or severe sleep problems)",
+      "evidence": "NICE NG116, recommendation 1.6.24: do not offer drug treatments, including benzodiazepines, to prevent PTSD in adults.",
+      "note": "Refer when another condition or severe sleep disruption needs a prescriber's view. Prescribing decisions rest with the prescriber."
+    }
+  ],
+  "handouts": [
+    "common-reactions-after-trauma",
+    "after-a-disaster-self-care",
+    "grounding-5-4-3-2-1"
+  ],
+  "statIds": [],
+  "culturalNotes": [
+    "After disasters, war or community violence, whole families and neighborhoods may be affected at once. Ask about current safety, housing, missing relatives and access to food and money before anything else.",
+    "People show early distress in different ways, through the body (aches, tiredness, stomach upset), through spiritual or moral language, or through idioms such as 'nerves'. Ask what the client calls what is happening and what usually helps in their community.",
+    "Shame, family honor, immigration fears or past experiences with police can make people reluctant to describe an assault. Let the client decide how much to share and when, and explain confidentiality and its limits plainly.",
+    "Grief and trauma often arrive together after sudden deaths. Respect mourning customs and religious rites, which can be an important part of recovery.",
+    "Use a trained professional interpreter, not family members, and check that key terms carry the meaning you intend.",
+    "Faith and spiritual practice can be a source of support. Use faith-integrated approaches only when the client asks for them and after informed consent (see the AACC Code of Ethics for faith-based counselors)."
+  ],
+  "sud": false,
+  "strongMinAreas": 3,
+  "redFlagRules": [
+    {
+      "type": "suicidality",
+      "message": "Suicide-related content is documented in this input. Thoughts of suicide can rise in the weeks after a trauma, especially with injury, loss or heavy drinking; ask directly and follow your risk protocol."
+    },
+    {
+      "type": "psychosis",
+      "message": "Psychotic symptoms are documented and are not part of this pattern. Consider a brief psychotic reaction, delirium, a head injury or substance effects, and arrange an urgent evaluation."
+    }
+  ],
+  "licensedDsm": false,
+  "wileyLicensed": false,
+  "sources": [
+    {
+      "title": "Post-traumatic stress disorder (NG116): recommendations 1.6.4, 1.6.5, 1.6.15 and 1.6.24",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng116/chapter/recommendations",
+      "year": 2018
+    },
+    {
+      "title": "Psychological first aid: guide for field workers",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/publications/i/item/9789241548205",
+      "year": 2011
+    },
+    {
+      "title": "Treatment of acute stress disorder: a randomized controlled trial (Bryant et al.)",
+      "publisher": "Archives of General Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18519824/",
+      "year": 2008
+    },
+    {
+      "title": "Psychological debriefing for preventing post traumatic stress disorder (PTSD) (Rose et al.)",
+      "publisher": "Cochrane Database of Systematic Reviews (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12076399/",
+      "year": 2002
+    },
+    {
+      "title": "The management of posttraumatic stress disorder and acute stress disorder: synopsis of the 2023 VA/DoD clinical practice guideline",
+      "publisher": "Annals of Internal Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38408360/",
+      "year": 2024
+    },
+    {
+      "title": "Acute Stress Disorder (for professionals)",
+      "publisher": "National Center for PTSD, US Department of Veterans Affairs",
+      "url": "https://www.ptsd.va.gov/professional/treat/essentials/acute_stress_disorder.asp"
+    },
+    {
+      "title": "PTSD Checklist for DSM-5 (PCL-5)",
+      "publisher": "National Center for PTSD, US Department of Veterans Affairs",
+      "url": "https://www.ptsd.va.gov/professional/assessment/adult-sr/ptsd-checklist.asp"
+    },
+    {
+      "title": "The Columbia Lighthouse Project (C-SSRS)",
+      "publisher": "Columbia University",
+      "url": "https://cssrs.columbia.edu"
+    },
+    {
+      "title": "ICD-11 for Mortality and Morbidity Statistics (browser)",
+      "publisher": "World Health Organization",
+      "url": "https://icd.who.int/browse/latest-release/mms/en"
+    },
+    {
+      "title": "Clinical descriptions and diagnostic requirements for ICD-11 mental, behavioural and neurodevelopmental disorders (CDDR)",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/publications/i/item/9789240077263",
+      "year": 2024
+    },
+    {
+      "title": "ICD-10-CM (official code set)",
+      "publisher": "CDC National Center for Health Statistics",
+      "url": "https://www.cdc.gov/nchs/icd/icd-10-cm/index.html"
+    },
+    {
+      "title": "ICD-10-CM codes checked with the NLM Clinical Table Search Service",
+      "publisher": "National Library of Medicine",
+      "url": "https://clinicaltables.nlm.nih.gov/apidoc/icd10cm/v3/doc.html"
+    },
+    {
+      "title": "AACC Code of Ethics",
+      "publisher": "American Association of Christian Counselors",
+      "url": "https://aacc.net/aacc-code-of-ethics/"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

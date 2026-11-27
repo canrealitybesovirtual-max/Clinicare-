@@ -1,0 +1,166 @@
+{
+  "id": "fear-avoidance-pain",
+  "name": "Fear-avoidance formulation for persistent pain",
+  "shortName": "Fear-avoidance and pain",
+  "family": "health-and-pain",
+  "orientationIds": [
+    "behavior-therapy",
+    "acceptance-and-commitment-therapy"
+  ],
+  "purpose": "A model of how pain can become disabling. When pain is read as a sign of serious harm, fear of pain and movement grows, which leads to avoidance and constant watchfulness for pain. Over time avoidance brings deconditioning, disability and low mood, which make pain harder to live with. When pain is read as unpleasant but not dangerous, people keep moving and are more likely to recover. The model helps choose between graded exposure (for high fear), graded activity (for low activity without high fear) and pacing (for energy-limited conditions).",
+  "whenToUse": [
+    "When persistent pain comes with fear of movement, avoidance of activity or strong worry about what the pain means.",
+    "When disability seems greater than the medical findings alone would explain.",
+    "When choosing between exposure, graded activity and pacing approaches with the person and their medical team."
+  ],
+  "structure": [
+    {
+      "id": "pain-experience",
+      "label": "Pain experience",
+      "prompt": "The pain itself, its pattern and what makes it better or worse, after medical assessment of the cause.",
+      "examples": []
+    },
+    {
+      "id": "catastrophizing",
+      "label": "Threatening interpretations",
+      "prompt": "Beliefs that pain means damage or that it will get worse and become unbearable.",
+      "examples": [
+        "If it hurts, I am making the injury worse"
+      ]
+    },
+    {
+      "id": "fear",
+      "label": "Fear of pain and movement",
+      "prompt": "Fear of specific movements or activities, and watchfulness for any sign of pain.",
+      "examples": [
+        "Afraid to bend or lift"
+      ]
+    },
+    {
+      "id": "avoidance",
+      "label": "Avoidance and protective behavior",
+      "prompt": "Activities stopped, guarding, resting a lot and asking others to take over tasks.",
+      "examples": [
+        "No longer gardening or carrying shopping"
+      ]
+    },
+    {
+      "id": "consequences",
+      "label": "Disuse, disability and mood",
+      "prompt": "Deconditioning, loss of roles and pleasure, low mood and sleep problems that make pain worse.",
+      "examples": []
+    },
+    {
+      "id": "recovery-path",
+      "label": "The recovery path",
+      "prompt": "Pain understood as unpleasant but not dangerous, gradual return to valued activity, and confidence that grows with practice.",
+      "examples": []
+    },
+    {
+      "id": "choosing",
+      "label": "Choosing an approach",
+      "prompt": "High fear of movement: graded exposure to feared activities. Low activity without high fear: graded activity toward goals. Energy-limited conditions with symptom worsening after exertion: pacing within limits, never a fixed push-through plan.",
+      "examples": []
+    }
+  ],
+  "steps": [
+    "Confirm the person has had medical assessment and agree what the team has said about safety of movement.",
+    "Map a recent pain episode: what they thought it meant, what they felt, what they did and what happened next.",
+    "Ask what the person most wants to get back to, and use that as the direction for activity goals.",
+    "Choose graded exposure, graded activity or pacing based on fear level and whether symptoms worsen after exertion, and plan with the medical team.",
+    "Track function and valued activity, not only pain intensity."
+  ],
+  "collaborativeTips": [
+    "Validate that the pain is real; the model explains disability, it does not say pain is imagined.",
+    "Use the person's own goals, such as walking a grandchild to school, to set the steps."
+  ],
+  "cautions": [
+    "For conditions with post-exertional symptom worsening, such as ME/CFS and some long COVID presentations, do not use fixed graded exercise increases; use pacing within energy limits, coordinated with the medical team.",
+    "New, changing or red-flag pain symptoms need medical review before any activity plan.",
+    "The model does not mean pain is psychological or that the person is to blame.",
+    "A formulation never scores, grades or decides risk. If thoughts of suicide, self-harm or harm to others come up, pause the formulation and follow your own assessment and local protocol; in the US the 988 Lifeline is available by call or text, elsewhere use the local emergency number or findahelpline.com."
+  ],
+  "conditionIds": [
+    "somatic-symptom-disorder",
+    "major-depressive-disorder",
+    "insomnia-disorder"
+  ],
+  "interventionIds": [
+    "cbt-and-act-for-chronic-pain",
+    "graded-in-vivo-exposure",
+    "behavioral-activation",
+    "act-acceptance-willingness",
+    "physical-activity",
+    "progressive-muscle-relaxation"
+  ],
+  "handoutIds": [
+    "pacing-and-flare-plan",
+    "movement-plan"
+  ],
+  "practiceIds": [
+    "collaborative-care-and-pcbh"
+  ],
+  "populationIds": [
+    "post-exertional-malaise",
+    "serious-medical-illness"
+  ],
+  "legalIds": [],
+  "worksheet": false,
+  "sud": false,
+  "linkOuts": [
+    {
+      "title": "Chronic pain (primary and secondary) in over 16s: assessment of all chronic pain and management of chronic primary pain (NG193)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng193"
+    },
+    {
+      "title": "Myalgic encephalomyelitis (or encephalopathy)/chronic fatigue syndrome: diagnosis and management (NG206)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng206",
+      "note": "Energy management and pacing; advises against graded exercise therapy for ME/CFS."
+    }
+  ],
+  "measuresPending": [
+    {
+      "name": "PEG three-item pain scale",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19418100/",
+      "licenseKey": "PEG",
+      "note": "Brief pain intensity and interference measure; link out only until its terms are confirmed in content/licenses.json."
+    }
+  ],
+  "sources": [
+    {
+      "title": "Fear-avoidance and its consequences in chronic musculoskeletal pain: a state of the art (Vlaeyen and Linton)",
+      "publisher": "Pain",
+      "url": "https://doi.org/10.1016/S0304-3959(99)00242-0",
+      "year": 2000
+    },
+    {
+      "title": "Fear-avoidance model of chronic musculoskeletal pain: 12 years on (Vlaeyen and Linton)",
+      "publisher": "Pain",
+      "url": "https://doi.org/10.1016/j.pain.2011.12.009",
+      "year": 2012
+    },
+    {
+      "title": "Chronic pain (primary and secondary) in over 16s: assessment of all chronic pain and management of chronic primary pain (NG193)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng193",
+      "year": 2021
+    },
+    {
+      "title": "Myalgic encephalomyelitis (or encephalopathy)/chronic fatigue syndrome: diagnosis and management (NG206)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng206",
+      "year": 2021
+    },
+    {
+      "title": "Development and initial validation of the PEG, a three-item scale assessing pain intensity and interference (Krebs et al.)",
+      "publisher": "Journal of General Internal Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19418100/",
+      "year": 2009
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

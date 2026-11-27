@@ -1,0 +1,113 @@
+{
+  "id": "medication-induced-psychiatric-symptoms",
+  "title": "When a medicine may be causing mental health symptoms",
+  "category": "medical-interface",
+  "summary": "Many common medicines, including some for asthma, acne, inflammation, epilepsy, malaria, HIV and hepatitis, list depression, anxiety, sleep problems, agitation, psychosis or suicidal thoughts among their warnings. This guide covers asking about medicines and timing, checking the current FDA label, and raising the question with the prescriber. It is education only: the app never advises starting, stopping or changing a medicine.",
+  "whenToUse": [
+    "Mood, anxiety, sleep, behavior or thinking changed soon after a new medicine, a dose change or stopping one.",
+    "Symptoms do not fit the client's history or pattern, or started suddenly without a clear stressor.",
+    "A client is taking a medicine known for neuropsychiatric warnings (for example montelukast, isotretinoin, systemic corticosteroids, levetiracetam, mefloquine, efavirenz or interferon).",
+    "Before suggesting a psychiatric medication evaluation, to give the prescriber the full picture."
+  ],
+  "steps": [
+    {
+      "heading": "Ask about every medicine and its timing",
+      "items": [
+        "Prescription medicines, over-the-counter products, supplements and recent courses (for example a steroid burst).",
+        "When each was started, changed or stopped, and when the symptoms began.",
+        "Whether the symptoms ease or worsen with doses, and whether anyone else noticed a change.",
+        "Past reactions to the same or similar medicines."
+      ]
+    },
+    {
+      "heading": "Check the current label",
+      "body": "Look up the medicine's current FDA label (boxed warning first, then warnings and precautions). For medicines in the app's reference list, the label check on the medicine effects page loads only the curated medicine name and highlights sentences about mood, behavior, sleep and thinking. For others, use DailyMed or MedlinePlus."
+    },
+    {
+      "heading": "Raise it with the prescriber",
+      "body": "With the client's agreement, contact the prescriber or encourage the client to, describing the symptoms, their timing and what you saw on the label. The prescriber decides whether the medicine is involved and what to do. Encourage the client not to stop a medicine on their own: some must be tapered, and stopping others suddenly can be dangerous."
+    },
+    {
+      "heading": "Keep assessing, not assuming",
+      "body": "A medicine effect is one possible explanation among several. Continue your usual assessment, including safety, and do not delay treatment of significant symptoms while the medicine question is checked."
+    },
+    {
+      "heading": "Act fast on red flags",
+      "body": "New suicidal thoughts or behavior, severe agitation, hallucinations or confusion after a medicine change need same-day contact with the prescriber or urgent medical care. If the client may act on suicidal thoughts now, follow your crisis protocol."
+    }
+  ],
+  "prompts": [
+    "Have you started, stopped or changed any medicines, including inhalers, creams, steroids or supplements, in the last few months?",
+    "When did you first notice the change in your mood or sleep? What else was happening around then?",
+    "Would it be okay if I contacted your prescriber about what you have noticed, so they can check whether the medicine could be part of it?",
+    "Please do not stop the medicine on your own. Let us get your prescriber's advice first."
+  ],
+  "cautions": [
+    "Education only, never prescribing advice: questions about doses, stopping, switching or alternatives go to the prescriber.",
+    "Label warnings describe possible effects reported for a medicine; they do not show that a given client's symptoms come from it.",
+    "Some medicines are dangerous to stop suddenly (for example corticosteroids after longer use, antiepileptic medicines).",
+    "Lookups send only a curated medicine name; never type a client's details into a search.",
+    "Suicidal thoughts are never explained away by a medicine; assess and respond to safety in the usual way."
+  ],
+  "evidenceSummary": "A 2018 US survey analysis (Qato and colleagues, JAMA) estimated that 37.2% of adults used at least one prescription medicine with depression listed as a potential adverse effect, and that depression was more common with use of several such medicines. A 2006 review (Warrington and Bostwick) describes psychiatric effects of corticosteroids, from insomnia and mood changes to mania and psychosis. Current FDA labels carry a boxed warning for serious neuropsychiatric events with montelukast and for neuropsychiatric reactions with mefloquine and alpha interferons, and warnings about depression, psychosis or suicidal thoughts for isotretinoin, levetiracetam, efavirenz and antiepileptic medicines as a class (labels checked 2026).",
+  "forClinicianReview": true,
+  "crisisPanel": true,
+  "sud": false,
+  "relatedInterventionIds": ["medication-referral"],
+  "relatedHandoutIds": ["questions-for-my-prescriber"],
+  "relatedFormulationIds": [],
+  "relatedLegalIds": [],
+  "relatedPracticeIds": ["psychotropic-red-flags", "combined-care-decision-points", "diagnostic-reasoning-checks"],
+  "relatedPopulationIds": ["older-adults", "serious-medical-illness"],
+  "toolHref": "/medications/effects",
+  "linkOuts": [
+    {
+      "title": "Montelukast: drug information",
+      "publisher": "MedlinePlus (US National Library of Medicine)",
+      "url": "https://medlineplus.gov/druginfo/meds/a600014.html"
+    },
+    {
+      "title": "Isotretinoin: drug information",
+      "publisher": "MedlinePlus (US National Library of Medicine)",
+      "url": "https://medlineplus.gov/druginfo/meds/a681043.html"
+    },
+    {
+      "title": "Prednisone: drug information",
+      "publisher": "MedlinePlus (US National Library of Medicine)",
+      "url": "https://medlineplus.gov/druginfo/meds/a601102.html"
+    },
+    {
+      "title": "Levetiracetam: drug information",
+      "publisher": "MedlinePlus (US National Library of Medicine)",
+      "url": "https://medlineplus.gov/druginfo/meds/a699059.html"
+    }
+  ],
+  "measuresPending": [],
+  "sources": [
+    {
+      "title": "Prevalence of prescription medications with depression as a potential adverse effect among adults in the United States (Qato, Ozenberger and Olfson)",
+      "publisher": "JAMA, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29896627/",
+      "year": 2018
+    },
+    {
+      "title": "Psychiatric adverse effects of corticosteroids (Warrington and Bostwick)",
+      "publisher": "Mayo Clinic Proceedings, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17036562/",
+      "year": 2006
+    },
+    {
+      "title": "openFDA drug label API (current FDA labeling)",
+      "publisher": "US Food and Drug Administration",
+      "url": "https://open.fda.gov/apis/drug/label/"
+    },
+    {
+      "title": "Mefloquine: drug information",
+      "publisher": "MedlinePlus (US National Library of Medicine)",
+      "url": "https://medlineplus.gov/druginfo/meds/a603030.html"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

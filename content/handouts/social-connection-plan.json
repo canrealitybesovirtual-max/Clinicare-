@@ -1,0 +1,172 @@
+{
+  "id": "social-connection-plan",
+  "title": "My Social Connection Plan",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 15,
+  "intro": "Feeling close to other people is good for your mood, your health, and your sleep. When life gets hard, it is easy to pull away, and then it gets harder to reach back out. This plan helps you take small steps toward the people and groups that matter to you. Make it with your counselor. It takes about 15 minutes.",
+  "sections": [
+    {
+      "heading": "Why small steps matter",
+      "body": "You do not need a lot of friends. A few good connections can help, and so can small moments, like a chat with a neighbor. Start small and build up over time."
+    },
+    {
+      "heading": "People I would like to be closer to",
+      "body": "Think of people you have lost touch with, or would like to know better. Write first names only.",
+      "steps": [
+        "Someone I could reach out to: ________________",
+        "Someone else: ________________",
+        "A small way to reach out (a text, a call, or a short visit): ________________"
+      ]
+    },
+    {
+      "heading": "Places and groups",
+      "body": "Groups can be a low-pressure way to be around people who share your interests.",
+      "steps": [
+        "A class, club, team, or hobby group.",
+        "A faith or cultural community.",
+        "Volunteering, like at a food bank, an animal shelter, or a library.",
+        "A support group, in person or online.",
+        "One I would like to try: ________________"
+      ]
+    },
+    {
+      "heading": "What might get in the way",
+      "body": "Here are some common barriers, with one idea for each. Add your own.",
+      "steps": [
+        "Feeling nervous: Start with a short, low-key step, like a text or a 10-minute visit.",
+        "Low energy: Plan contact for the time of day when you feel best.",
+        "Money or travel: Look for free events, or connect by phone or video.",
+        "Not knowing what to say: Plan one or two questions to ask, like 'How have you been?'",
+        "My own barrier, and one idea: ________________"
+      ]
+    },
+    {
+      "heading": "My step this week",
+      "steps": [
+        "What I will do: ________________",
+        "When I will do it: ________________",
+        "How sure I am that I can do it (0-10): ____"
+      ]
+    },
+    {
+      "heading": "If it does not go well",
+      "body": "Sometimes people do not reply, or a visit feels awkward. This happens to everyone. It does not mean you failed. Try again, try someone else, or try a different step. Talk with your counselor about what happened."
+    },
+    {
+      "heading": "How to use the log",
+      "body": "Each time you connect with someone, write who or where, and what you did. Rate how you felt after, from 0 to 10. A 0 means very bad. A 10 means very good. Look for patterns with your counselor."
+    }
+  ],
+  "practiceLog": {
+    "columns": [
+      "Day",
+      "Who or where",
+      "What I did",
+      "How I felt after (0-10)"
+    ],
+    "rows": 7
+  },
+  "safetyNote": "Safety first: Feeling very alone can sometimes come with thoughts of suicide. If that happens, reach out now. In the US, call or text 988 at any time to talk with someone. In an emergency, call 911. In other countries, call your local emergency number or visit findahelpline.com. If you meet someone you only know online, meet in a public place and tell a person you trust where you will be. Resource only. This sheet does not replace care from a licensed professional.",
+  "sud": false,
+  "es": {
+    "title": "Mi plan para conectar con otras personas",
+    "intro": "Sentirse cerca de otras personas es bueno para su ánimo, su salud y su sueño. Cuando la vida se pone difícil, es fácil alejarse, y luego cuesta más volver a buscar a los demás. Este plan le ayuda a dar pasos pequeños hacia las personas y los grupos que le importan. Hágalo con su consejero. Toma unos 15 minutos.",
+    "sections": [
+      {
+        "heading": "Por qué importan los pasos pequeños",
+        "body": "No necesita tener muchos amigos. Unas pocas relaciones buenas pueden ayudar, y también los momentos pequeños, como platicar con un vecino. Empiece con poco y vaya subiendo con el tiempo."
+      },
+      {
+        "heading": "Personas a quienes quiero estar más cerca",
+        "body": "Piense en personas con quienes perdió el contacto, o a quienes le gustaría conocer mejor. Escriba solo el primer nombre.",
+        "steps": [
+          "Alguien a quien podría buscar: ________________",
+          "Otra persona: ________________",
+          "Una forma pequeña de buscarle (un mensaje, una llamada o una visita corta): ________________"
+        ]
+      },
+      {
+        "heading": "Lugares y grupos",
+        "body": "Los grupos pueden ser una forma tranquila de estar con personas que tienen sus mismos gustos.",
+        "steps": [
+          "Una clase, un club, un equipo o un grupo de pasatiempos.",
+          "Una comunidad de fe o cultural.",
+          "Hacer trabajo voluntario, por ejemplo en un banco de comida, un refugio de animales o una biblioteca.",
+          "Un grupo de apoyo, en persona o en internet.",
+          "Uno que me gustaría probar: ________________"
+        ]
+      },
+      {
+        "heading": "Lo que se puede atravesar",
+        "body": "Aquí hay algunas barreras comunes, con una idea para cada una. Agregue las suyas.",
+        "steps": [
+          "Sentirse nervioso: Empiece con un paso corto y tranquilo, como un mensaje o una visita de 10 minutos.",
+          "Poca energía: Planee el contacto para la hora del día en que se siente mejor.",
+          "Dinero o transporte: Busque eventos gratis, o conéctese por teléfono o video.",
+          "No saber qué decir: Piense en una o dos preguntas, como '¿Cómo has estado?'.",
+          "Mi propia barrera, y una idea: ________________"
+        ]
+      },
+      {
+        "heading": "Mi paso de esta semana",
+        "steps": [
+          "Lo que voy a hacer: ________________",
+          "Cuándo lo voy a hacer: ________________",
+          "Qué tan seguro estoy de que lo puedo hacer (0-10): ____"
+        ]
+      },
+      {
+        "heading": "Si no sale bien",
+        "body": "A veces la gente no contesta, o una visita se siente incómoda. Esto le pasa a todo el mundo. No quiere decir que usted falló. Inténtelo otra vez, busque a otra persona o pruebe otro paso. Hable con su consejero de lo que pasó."
+      },
+      {
+        "heading": "Cómo usar el registro",
+        "body": "Cada vez que se conecte con alguien, escriba con quién o dónde, y lo que hizo. Califique cómo se sintió después, del 0 al 10. Un 0 quiere decir muy mal. Un 10 quiere decir muy bien. Busque patrones junto con su consejero."
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Día",
+        "Con quién o dónde",
+        "Lo que hice",
+        "Cómo me sentí después (0-10)"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: Sentirse muy solo a veces puede venir con pensamientos de suicidio. Si eso pasa, pida ayuda ahora. En EE. UU., llame o envíe un mensaje de texto al 988 a cualquier hora para hablar con alguien. En una emergencia, llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Si va a ver a alguien que solo conoce por internet, véanse en un lugar público y dígale a una persona de confianza dónde va a estar. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "sources": [
+    {
+      "title": "Our Epidemic of Loneliness and Isolation: The US Surgeon General's Advisory on the Healing Effects of Social Connection and Community",
+      "publisher": "US Department of Health and Human Services",
+      "url": "https://www.hhs.gov/sites/default/files/surgeon-general-social-connection-advisory.pdf",
+      "year": 2023
+    },
+    {
+      "title": "Social relationships and mortality risk: a meta-analytic review (Holt-Lunstad et al.)",
+      "publisher": "PLoS Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20668659/",
+      "year": 2010
+    },
+    {
+      "title": "Problem Management Plus (PM+): individual psychological help for adults impaired by distress in communities exposed to adversity",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/publications/i/item/problem-management-plus-(-pm-)-individual-psychological-help-for-adults-impaired-by-distress-in-communities-exposed-to-adversity",
+      "year": 2016
+    },
+    {
+      "title": "988 Suicide & Crisis Lifeline",
+      "publisher": "988 Lifeline",
+      "url": "https://988lifeline.org"
+    },
+    {
+      "title": "Find A Helpline (international directory)",
+      "publisher": "Find A Helpline",
+      "url": "https://findahelpline.com"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

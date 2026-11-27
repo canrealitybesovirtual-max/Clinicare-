@@ -1,0 +1,156 @@
+{
+  "id": "couples-pause-and-repair",
+  "title": "Couples: Pause, Listen, and Repair",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 15,
+  "intro": "Every couple argues. What matters most is how you argue and how you make up afterward. This sheet gives you simple tools to slow down, take turns listening, and repair after a hard talk. Practice them first on small topics, with your counselor's help. Reading it together takes about 15 minutes.",
+  "sections": [
+    {
+      "heading": "Is this right for us?",
+      "body": "These tools are for couples where both people feel safe. They are not for a relationship where one person is afraid of the other, or is being hurt, threatened, controlled, or forced into things. If that is happening, talk with your counselor alone. In the US, you can call the National Domestic Violence Hotline at 1-800-799-7233 or text START to 88788."
+    },
+    {
+      "heading": "Start gently",
+      "steps": [
+        "Pick a good time. Ask: is now a good time to talk about the budget?",
+        "Start with how you feel and what you need, not with blame: I feel stressed about money. I'd like us to make a plan together.",
+        "Talk about one topic at a time.",
+        "Skip words like always and never."
+      ]
+    },
+    {
+      "heading": "Take turns: talker and listener",
+      "body": "This is a simple way to slow a talk down so each person feels heard. Decide who talks first.",
+      "steps": [
+        "The talker speaks for a short time about their own feelings and needs, using I words.",
+        "The listener does not argue or fix. They say back what they heard in their own words: it sounds like you feel left out when I work late.",
+        "The talker says if that is right, or adds what was missed.",
+        "Then switch. Keep going until both of you feel understood.",
+        "Solve the problem later, once you both feel heard."
+      ]
+    },
+    {
+      "heading": "Take a pause",
+      "body": "When your heart is racing or you feel flooded, it is hard to listen. Take a break.",
+      "steps": [
+        "Agree on a pause word or signal ahead of time.",
+        "Say when you will come back, like in 20 to 30 minutes.",
+        "During the break, calm your body. Try not to rehearse the argument.",
+        "Come back and try again, or set another time."
+      ]
+    },
+    {
+      "heading": "Repair",
+      "body": "Repair means reaching out to fix hurt feelings after a fight, or even during one. Small repairs add up.",
+      "steps": [
+        "Say sorry for your part: I'm sorry I raised my voice.",
+        "Name something you understand about your partner's view.",
+        "Use a touch, a smile, or a kind word, if your partner welcomes it.",
+        "Ask: what would help you feel better about this?"
+      ]
+    },
+    {
+      "heading": "Notice the good",
+      "body": "Couples do better when they notice and say what they appreciate. Each day, write down one thing your partner did that you liked, and tell them."
+    }
+  ],
+  "practiceLog": {
+    "columns": [
+      "Day",
+      "Something I appreciated",
+      "Did I tell my partner? (yes or no)",
+      "A repair one of us tried"
+    ],
+    "rows": 7
+  },
+  "safetyNote": "Safety first: If you feel afraid of your partner, or you are being hurt, threatened, or controlled, these tools are not the right fit. Talk with your counselor alone. In the US, you can call the National Domestic Violence Hotline at 1-800-799-7233 or text START to 88788. If you are in danger now, call 911. If you have thoughts of hurting yourself or someone else, get help now. In the US, call or text 988, or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sud": false,
+  "es": {
+    "title": "En pareja: hacer una pausa, escuchar y reparar",
+    "intro": "Todas las parejas discuten. Lo que más importa es cómo discuten y cómo hacen las paces después. Esta hoja les da herramientas sencillas para ir más despacio, escucharse por turnos y reparar después de una conversación difícil. Practíquenlas primero con temas pequeños, con la ayuda de su consejero. Leerla juntos toma unos 15 minutos.",
+    "sections": [
+      {
+        "heading": "¿Esto es para nosotros?",
+        "body": "Estas herramientas son para parejas en las que las dos personas se sienten seguras. No son para una relación en la que una persona le tiene miedo a la otra, o está siendo lastimada, amenazada, controlada u obligada a hacer cosas. Si eso está pasando, hable a solas con su consejero. En EE. UU., puede llamar a la Línea Nacional de Violencia Doméstica (National Domestic Violence Hotline) al 1-800-799-7233 o enviar un mensaje de texto con la palabra START al 88788."
+      },
+      {
+        "heading": "Empiecen con suavidad",
+        "steps": [
+          "Escojan un buen momento. Pregunte: ¿es buen momento para hablar del presupuesto?",
+          "Empiece con lo que siente y lo que necesita, no con culpas: Me siento estresado por el dinero. Me gustaría que hiciéramos un plan juntos.",
+          "Hablen de un tema a la vez.",
+          "No usen palabras como siempre y nunca."
+        ]
+      },
+      {
+        "heading": "Por turnos: quien habla y quien escucha",
+        "body": "Esta es una forma sencilla de ir más despacio para que cada persona se sienta escuchada. Decidan quién habla primero.",
+        "steps": [
+          "Quien habla lo hace por poco tiempo sobre sus propias emociones y necesidades, hablando de sí mismo.",
+          "Quien escucha no discute ni trata de arreglar. Repite con sus palabras lo que oyó: parece que te sientes dejado de lado cuando trabajo hasta tarde.",
+          "Quien habla dice si eso es correcto, o agrega lo que faltó.",
+          "Luego cambien. Sigan hasta que los dos se sientan comprendidos.",
+          "Resuelvan el problema después, cuando los dos se sientan escuchados."
+        ]
+      },
+      {
+        "heading": "Hagan una pausa",
+        "body": "Cuando el corazón se acelera o se siente desbordado, es difícil escuchar. Tomen un descanso.",
+        "steps": [
+          "Acuerden antes una palabra o una señal para la pausa.",
+          "Digan cuándo van a volver, como en 20 a 30 minutos.",
+          "Durante la pausa, calme su cuerpo. Trate de no ensayar la discusión.",
+          "Vuelvan e inténtenlo otra vez, o pongan otra hora."
+        ]
+      },
+      {
+        "heading": "Reparar",
+        "body": "Reparar es acercarse para sanar los sentimientos heridos después de una pelea, o incluso durante ella. Las reparaciones pequeñas suman.",
+        "steps": [
+          "Pida perdón por su parte: Perdón por subir la voz.",
+          "Diga algo que entiende del punto de vista de su pareja.",
+          "Use una caricia, una sonrisa o una palabra amable, si su pareja lo acepta.",
+          "Pregunte: ¿qué te ayudaría a sentirte mejor con esto?"
+        ]
+      },
+      {
+        "heading": "Noten lo bueno",
+        "body": "A las parejas les va mejor cuando notan y dicen lo que aprecian. Cada día, anote una cosa que hizo su pareja y que le gustó, y dígaselo."
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Día",
+        "Algo que aprecié",
+        "¿Se lo dije a mi pareja? (sí o no)",
+        "Una reparación que alguno de los dos intentó"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: Si le tiene miedo a su pareja, o le están lastimando, amenazando o controlando, estas herramientas no son para usted. Hable a solas con su consejero. En EE. UU., puede llamar a la Línea Nacional de Violencia Doméstica (National Domestic Violence Hotline) al 1-800-799-7233 o enviar un mensaje de texto con la palabra START al 88788. Si está en peligro ahora, llame al 911. Si tiene pensamientos de hacerse daño o de hacerle daño a otra persona, busque ayuda ahora. En EE. UU., llame o envíe un mensaje de texto al 988, o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "sources": [
+    {
+      "title": "Couple therapy for depression (Barbato, D'Avanzo and Parabiaghi)",
+      "publisher": "Cochrane Database of Systematic Reviews (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29882960/",
+      "year": 2018
+    },
+    {
+      "title": "Alcohol-use disorders (CG115): update information on behavioural couples therapy and domestic abuse",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/CG115/chapter/update-information",
+      "year": 2022
+    },
+    {
+      "title": "Domestic Violence (health topic; lists the National Domestic Violence Hotline call, TTY, text and chat options)",
+      "publisher": "MedlinePlus, U.S. National Library of Medicine",
+      "url": "https://medlineplus.gov/domesticviolence.html",
+      "year": 2025
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

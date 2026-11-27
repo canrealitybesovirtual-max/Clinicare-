@@ -1,0 +1,149 @@
+{
+  "id": "ipv-screening-and-first-line-support",
+  "title": "Intimate partner violence: asking safely and first-line support",
+  "category": "safety-and-risk",
+  "summary": "How to ask about intimate partner violence in private, respond to a disclosure with first-line support (the WHO LIVES approach, described here in the app's own words), recognize red flags such as coercive control, strangulation, stalking and reproductive coercion, notice possible trafficking, and document with care. Safety planning for partner violence is a separate intervention, and the client decides every step.",
+  "whenToUse": [
+    "As routine, private inquiry at intake and when a client's presentation or history suggests it.",
+    "When a client describes injuries, fear of a partner, controlling behavior or sudden isolation.",
+    "When depression, anxiety, trauma symptoms, substance use or suicidal thoughts appear in the context of a relationship.",
+    "When a partner insists on attending, answers for the client or controls their phone and appointments."
+  ],
+  "steps": [
+    {
+      "heading": "Ask only in private",
+      "body": "Ask when no partner, family member or child old enough to repeat it is present, including off camera on video. Use a professional interpreter, never a family member or friend. If privacy cannot be assured, do not ask that day; find another way to see the client alone."
+    },
+    {
+      "heading": "Frame the question and ask simply",
+      "body": "Say you ask everyone, explain the limits of confidentiality (including any reporting duties in your state) and ask in plain words about fear, being hurt, threatened or controlled."
+    },
+    {
+      "heading": "Respond with first-line support",
+      "items": [
+        "Listen closely and without judgment; let the client set the pace.",
+        "Ask what they need and what worries them most: emotional, physical, social, practical.",
+        "Validate: say you believe them, that it is not their fault and that they do not deserve it.",
+        "Enhance safety: talk through what could happen and what they could do, if they want to.",
+        "Support: connect them, with consent, to services such as an advocate, a hotline, legal aid, health care and shelter."
+      ]
+    },
+    {
+      "heading": "Notice red flags",
+      "items": [
+        "Strangulation or choking, at any time: a strong marker of later serious harm, and a reason for medical evaluation.",
+        "Threats to kill, a partner's access to a firearm, escalating frequency or severity and a recent or planned separation.",
+        "Coercive control: monitoring, restricting money, phone, friends or movement, and threats about children, pets or immigration status.",
+        "Stalking and tracking through phones, apps or devices.",
+        "Reproductive coercion: pressure about pregnancy, interfering with contraception.",
+        "Possible trafficking: someone else controls the client's documents, wages, housing or movement, or they are made to work or sell sex."
+      ]
+    },
+    {
+      "heading": "Offer safety planning when the client wants it",
+      "body": "Partner-violence safety planning is distinct from suicide safety planning. It covers staying and leaving, technology safety, children and an escape plan, and it is often best done with a trained advocate. Written plans can be dangerous if found; agree on what is safe to keep."
+    },
+    {
+      "heading": "Document with care",
+      "items": [
+        "Record what the client said and any injuries observed, in neutral language, and your response and referrals.",
+        "Consider who can read the record or patient portal and whether a partner has access; follow your service's policy for sensitive notes.",
+        "Know your state's mandatory reporting rules, which may apply to child abuse, elder or dependent adult abuse, or certain injuries."
+      ]
+    }
+  ],
+  "prompts": [
+    "Because relationships affect health so much, I ask everyone this. Has a partner ever hurt you, threatened you or made you afraid?",
+    "Does anyone check your phone, control your money or stop you from seeing people?",
+    "Has anyone ever put their hands around your neck or choked you, even once?",
+    "Thank you for telling me. This is not your fault. What would be most helpful right now?",
+    "Would it be okay if we talked about what you could do if things got dangerous at home?"
+  ],
+  "cautions": [
+    "Never ask with a partner or family member present, and never use them as interpreters.",
+    "Do not push a client to leave; leaving can be the most dangerous time, and the client knows their situation best.",
+    "Couples or conjoint sessions are usually not appropriate while one partner fears the other.",
+    "Structured danger instruments (for example the Danger Assessment) need training and a license and are link-outs only; they never replace the client's own judgment and your conversation.",
+    "This guide does not decide risk or what the client should do. If anyone is in immediate danger, call emergency services."
+  ],
+  "adaptations": [
+    {
+      "context": "Video sessions",
+      "adaptation": "Agree on a safe word or gesture that means the client cannot talk freely, check that headphones are in use, and agree what you will do if the call ends suddenly."
+    },
+    {
+      "context": "Same-sex and gender-diverse relationships",
+      "adaptation": "Use the client's terms for their partner and relationship, and know that threats to out someone can be part of coercive control."
+    },
+    {
+      "context": "Immigrant clients",
+      "adaptation": "Threats about immigration status can be used to control; connect the client with legal aid that knows immigration protections for survivors."
+    }
+  ],
+  "evidenceSummary": "The US Preventive Services Task Force (2018) recommends screening women of reproductive age for intimate partner violence and referring those who screen positive to ongoing support services, and found insufficient evidence on screening older or vulnerable adults for abuse. WHO clinical guidance (2013) and its clinical handbook (2014) describe first-line support for women subjected to violence. Research on femicide (Campbell and colleagues, 2003) and non-fatal strangulation (Glass and colleagues, 2008) identifies threats, firearm access, separation and strangulation as markers of serious harm. The Danger Assessment was validated in 2009 (Campbell and colleagues).",
+  "forClinicianReview": true,
+  "crisisPanel": true,
+  "sud": true,
+  "relatedInterventionIds": ["ipv-safety-planning", "trauma-psychoeducation-and-grounding", "lethal-means-counseling"],
+  "relatedHandoutIds": ["relationship-safety-help-card", "common-reactions-after-trauma"],
+  "relatedFormulationIds": [],
+  "relatedLegalIds": ["mandatory-reporting", "language-access-interpreters", "hipaa-privacy-basics", "reproductive-health-privacy"],
+  "relatedPracticeIds": ["violence-risk-prompts", "working-with-interpreters", "couples-and-conjoint-sessions", "telehealth-sessions", "trauma-informed-care"],
+  "relatedPopulationIds": ["sexual-violence-and-trafficking-survivors", "refugees-and-asylum-seekers", "lgbtq-affirmative"],
+  "linkOuts": [
+    {
+      "title": "National Domestic Violence Hotline",
+      "publisher": "National Domestic Violence Hotline",
+      "url": "https://www.thehotline.org/",
+      "note": "US: call 1-800-799-7233, or text START to 88788. Confidential, any time."
+    }
+  ],
+  "measuresPending": [
+    {
+      "name": "Danger Assessment (training required)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18667689/",
+      "licenseKey": "Danger Assessment"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Screening for intimate partner violence, elder abuse, and abuse of vulnerable adults: US Preventive Services Task Force final recommendation statement",
+      "publisher": "JAMA, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30357305/",
+      "year": 2018
+    },
+    {
+      "title": "Responding to intimate partner violence and sexual violence against women: WHO clinical and policy guidelines",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/publications/i/item/9789241548595",
+      "year": 2013
+    },
+    {
+      "title": "Health care for women subjected to intimate partner violence or sexual violence: a clinical handbook",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/publications/i/item/WHO-RHR-14.26",
+      "year": 2014
+    },
+    {
+      "title": "Risk factors for femicide in abusive relationships: results from a multisite case control study (Campbell et al.)",
+      "publisher": "American Journal of Public Health, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12835191/",
+      "year": 2003
+    },
+    {
+      "title": "Non-fatal strangulation is an important risk factor for homicide of women (Glass et al.)",
+      "publisher": "Journal of Emergency Medicine, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17961956/",
+      "year": 2008
+    },
+    {
+      "title": "The Danger Assessment: validation of a lethality risk assessment instrument for intimate partner femicide (Campbell et al.)",
+      "publisher": "Journal of Interpersonal Violence, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18667689/",
+      "year": 2009
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

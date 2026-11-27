@@ -1,0 +1,222 @@
+{
+  "id": "sleep-habits-easy-read",
+  "title": "Better Sleep Habits (Easy Read)",
+  "audience": "client",
+  "readingLevel": "3-5 (easy read)",
+  "estimatedMinutes": 10,
+  "intro": "Everyone has a bad night sometimes. Some habits can help you sleep better. You do not have to change everything at once. Pick one or two habits to start. Your counselor can help you choose. Reading this sheet takes about 10 minutes.",
+  "sections": [
+    {
+      "heading": "Keep a steady schedule",
+      "steps": [
+        "Get up at the same time every day. Do this on weekends too.",
+        "Go to bed when you feel sleepy.",
+        "After a bad night, try not to sleep late.",
+        "If you nap, keep it short. Nap for 20 to 30 minutes.",
+        "Nap before the middle of the afternoon."
+      ]
+    },
+    {
+      "heading": "Use your bed for sleep",
+      "steps": [
+        "Use your bed only for sleep and sex.",
+        "Watch TV and use your phone somewhere else.",
+        "Can't fall asleep after about 20 minutes? Get up. Do not check the clock. Just guess.",
+        "Do something calm in dim light. Go back to bed when you feel sleepy."
+      ]
+    },
+    {
+      "heading": "Slow down before bed",
+      "steps": [
+        "Take 30 to 60 minutes to wind down.",
+        "Dim the lights.",
+        "Put away screens if you can.",
+        "Worried? Write your worries down earlier in the evening.",
+        "Turn your clock so you can't see it from bed."
+      ]
+    },
+    {
+      "heading": "Food and drinks",
+      "steps": [
+        "Stop coffee, tea, soda, and energy drinks at least 6 hours before bed.",
+        "Alcohol can wake you up later in the night. Try not to drink close to bedtime.",
+        "Nicotine can keep you awake. Avoid it close to bedtime.",
+        "Skip big or spicy meals late at night.",
+        "Drink less in the last 1 or 2 hours before bed."
+      ]
+    },
+    {
+      "heading": "Help your body clock",
+      "steps": [
+        "Get morning light outside for 10 to 15 minutes.",
+        "Move your body most days.",
+        "Keep your bedroom dark, quiet, and cool."
+      ]
+    },
+    {
+      "heading": "A note about time in bed",
+      "body": "Some sleep programs change how long you stay in bed. This can make you very sleepy at first. Only do this with your counselor or doctor helping you."
+    },
+    {
+      "heading": "See a doctor if",
+      "steps": [
+        "You snore loudly.",
+        "Someone sees you gasp or stop breathing in your sleep.",
+        "You feel very sleepy in the day.",
+        "Your legs feel like they need to move, and it keeps you awake.",
+        "Sleep trouble lasts more than a few weeks.",
+        "You want to start, stop, or change a sleep medicine."
+      ]
+    },
+    {
+      "heading": "How to use the log",
+      "body": "Each day, write the habit you tried. Did you do it? Then rate your sleep from 0 to 10. A 0 means very bad sleep. A 10 means great sleep."
+    }
+  ],
+  "practiceLog": {
+    "columns": [
+      "Day",
+      "Habit I tried",
+      "Did I do it? (yes / partly / no)",
+      "Sleep quality (0-10)",
+      "Notes"
+    ],
+    "rows": 7
+  },
+  "safetyNote": "Safety first: Do you feel very sleepy? Do not drive or use machines until you feel alert. If you get up at night, use a soft light so you do not fall. Do you need much less sleep than usual but feel full of energy? Tell your counselor or doctor soon. Do not start, stop, or change sleep medicine without your doctor. This sheet is not for emergencies. If you have thoughts of hurting yourself or someone else, call or text 988 in the US, or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sud": false,
+  "es": {
+    "title": "Mejores hábitos para dormir (lectura fácil)",
+    "intro": "Todos pasamos una mala noche a veces. Algunos hábitos le pueden ayudar a dormir mejor. No tiene que cambiar todo a la vez. Elija uno o dos hábitos para empezar. Su consejero le puede ayudar a elegir. Leer esta hoja toma unos 10 minutos.",
+    "sections": [
+      {
+        "heading": "Tener un horario fijo",
+        "steps": [
+          "Levántese a la misma hora todos los días. Hágalo también los fines de semana.",
+          "Acuéstese cuando tenga sueño.",
+          "Después de una mala noche, trate de no dormir hasta tarde.",
+          "Si toma una siesta, que sea corta. Duerma de 20 a 30 minutos.",
+          "Tome la siesta antes de la mitad de la tarde."
+        ]
+      },
+      {
+        "heading": "Usar la cama para dormir",
+        "steps": [
+          "Use su cama solo para dormir y para tener relaciones sexuales.",
+          "Vea la tele y use su teléfono en otro lugar.",
+          "¿No se duerme después de unos 20 minutos? Levántese. No mire el reloj. Solo calcule.",
+          "Haga algo tranquilo con poca luz. Vuelva a la cama cuando tenga sueño."
+        ]
+      },
+      {
+        "heading": "Ir más despacio antes de dormir",
+        "steps": [
+          "Tómese de 30 a 60 minutos para relajarse.",
+          "Baje las luces.",
+          "Guarde las pantallas si puede.",
+          "¿Tiene preocupaciones? Escríbalas más temprano en la noche.",
+          "Voltee el reloj para no verlo desde la cama."
+        ]
+      },
+      {
+        "heading": "Comidas y bebidas",
+        "steps": [
+          "Deje el café, el té, los refrescos y las bebidas energéticas al menos 6 horas antes de dormir.",
+          "El alcohol le puede despertar más tarde en la noche. Trate de no tomar cerca de la hora de dormir.",
+          "La nicotina le puede quitar el sueño. Evítela cerca de la hora de dormir.",
+          "No coma comidas grandes o picantes tarde en la noche.",
+          "Tome menos líquidos en las últimas 1 o 2 horas antes de dormir."
+        ]
+      },
+      {
+        "heading": "Ayudar al reloj de su cuerpo",
+        "steps": [
+          "Reciba luz de la mañana afuera por 10 a 15 minutos.",
+          "Mueva el cuerpo casi todos los días.",
+          "Tenga su cuarto oscuro, callado y fresco."
+        ]
+      },
+      {
+        "heading": "Una nota sobre el tiempo en la cama",
+        "body": "Algunos programas para dormir cambian cuánto tiempo pasa en la cama. Esto le puede dar mucho sueño al principio. Hágalo solo con la ayuda de su consejero o su médico."
+      },
+      {
+        "heading": "Vaya al médico si",
+        "steps": [
+          "Ronca muy fuerte.",
+          "Alguien le ve ahogarse o dejar de respirar mientras duerme.",
+          "Tiene mucho sueño durante el día.",
+          "Siente que sus piernas se tienen que mover, y eso no le deja dormir.",
+          "Los problemas para dormir duran más de unas semanas.",
+          "Quiere empezar, dejar o cambiar una medicina para dormir."
+        ]
+      },
+      {
+        "heading": "Cómo usar el registro",
+        "body": "Cada día, escriba el hábito que probó. ¿Lo hizo? Luego califique su sueño del 0 al 10. Un 0 quiere decir que durmió muy mal. Un 10 quiere decir que durmió muy bien."
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Día",
+        "Hábito que probé",
+        "¿Lo hice? (sí / en parte / no)",
+        "Calidad del sueño (0-10)",
+        "Notas"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: ¿Tiene mucho sueño? No maneje ni use máquinas hasta que se sienta despierto. Si se levanta en la noche, use una luz suave para no caerse. ¿Necesita dormir mucho menos que de costumbre pero se siente lleno de energía? Dígaselo pronto a su consejero o a su médico. No empiece, deje ni cambie una medicina para dormir sin su médico. Esta hoja no es para emergencias. Si tiene pensamientos de hacerse daño o de hacerle daño a otra persona, llame o envíe un mensaje de texto al 988 en EE. UU., o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "sources": [
+    {
+      "title": "AASM clinical practice guideline: behavioral and psychological treatments for long-term sleep problems in adults (Edinger et al.)",
+      "publisher": "Journal of Clinical Sleep Medicine, American Academy of Sleep Medicine",
+      "url": "https://doi.org/10.5664/jcsm.8986",
+      "year": 2021
+    },
+    {
+      "title": "Caffeine effects on sleep taken 0, 3, or 6 hours before going to bed (Drake et al.)",
+      "publisher": "Journal of Clinical Sleep Medicine",
+      "url": "https://doi.org/10.5664/jcsm.3170",
+      "year": 2013
+    },
+    {
+      "title": "Healthy Sleep (health topic)",
+      "publisher": "MedlinePlus, US National Library of Medicine",
+      "url": "https://medlineplus.gov/healthysleep.html"
+    },
+    {
+      "title": "Drowsy Driving",
+      "publisher": "National Highway Traffic Safety Administration",
+      "url": "https://www.nhtsa.gov/risky-driving/drowsy-driving"
+    },
+    {
+      "title": "Mental health problems in people with learning disabilities: prevention, assessment and management (NG54)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng54",
+      "year": 2016
+    },
+    {
+      "title": "Making written information easier to understand for people with learning disabilities: guidance for people who commission or produce Easy Read information (revised edition)",
+      "publisher": "UK Department of Health (GOV.UK)",
+      "url": "https://www.gov.uk/government/publications/making-written-information-easier-to-understand-for-people-with-learning-disabilities-guidance-for-people-who-commission-or-produce-easy-read-information-revised-edition-2010",
+      "year": 2010
+    },
+    {
+      "title": "Health Literacy Universal Precautions Toolkit, 3rd edition",
+      "publisher": "Agency for Healthcare Research and Quality",
+      "url": "https://www.ahrq.gov/health-literacy/improve/precautions/index.html",
+      "year": 2024
+    },
+    {
+      "title": "An open randomized controlled trial of the effects of linguistic simplification and mediation on the comprehension of easy read text by people with intellectual disabilities (Buell et al.)",
+      "publisher": "Journal of Applied Research in Intellectual Disabilities (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31652030/",
+      "year": 2020
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

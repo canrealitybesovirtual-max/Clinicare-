@@ -49,6 +49,7 @@
     "consentNote": "Offer only if the client raises faith or spirituality and asks to include it. Before starting, explain what the faith-integrated option involves, that it is optional, that the same intervention is available without religious content, and that the client can change their mind at any time; document informed consent. Follow the client's own tradition and words, and never introduce, impose, endorse or challenge beliefs (AACC Code of Ethics: informed consent before spiritual interventions, client-led integration; ACA Code of Ethics 2014, A.2 informed consent and A.4.b personal values)."
   },
   "handoutIds": ["movement-plan", "breathing-practice"],
+  "orientationIds": ["mindfulness-and-compassion-based-therapies"],
   "sources": [
     { "title": "Yoga: Effectiveness and Safety", "publisher": "National Center for Complementary and Integrative Health (NCCIH)", "url": "https://www.nccih.nih.gov/health/yoga-effectiveness-and-safety" },
     { "title": "Yoga for Health: What the Science Says (clinical digest)", "publisher": "National Center for Complementary and Integrative Health (NCCIH)", "url": "https://www.nccih.nih.gov/health/providers/digest/yoga-for-health" },

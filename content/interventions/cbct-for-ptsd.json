@@ -1,0 +1,81 @@
+{
+  "id": "cbct-for-ptsd",
+  "name": "Cognitive-behavioral conjoint therapy (CBCT) for PTSD: overview and referral",
+  "modality": "Couple therapy - trauma-focused CBT",
+  "conditions": [
+    "ptsd"
+  ],
+  "evidenceLevel": "In a randomized trial with 40 couples (Monson et al., 2012), CBCT reduced PTSD symptoms and improved relationship satisfaction more than a waitlist. The National Center for PTSD describes the evidence for trauma-focused couple therapy as promising but limited, and it is not yet known whether it works as well as individual trauma-focused therapy, which remains first-line in the 2023 VA/DoD guideline.",
+  "minutes": {
+    "min": 75,
+    "max": 90
+  },
+  "purpose": "A 15-session couple therapy developed by Candice Monson and Steffany Fredman that treats PTSD and strengthens the relationship at the same time. Its three phases are: understanding PTSD and its effects on the relationship, with safety and rationale; building communication and reversing avoidance as a couple; and joint cognitive work in which partners examine trauma-related beliefs together (for example, about trust, blame and safety). For couples where both partners want to work together and there is no violence or coercion. This entry is an overview for planning and referral; it is not the manual.",
+  "steps": [
+    "Screen each partner privately for intimate partner violence, coercive control and fear of the partner before any joint session; if present, do not offer CBCT and focus on safety (see the couples and conjoint sessions guide).",
+    "Confirm fit and training. CBCT is delivered by clinicians trained in it; otherwise, refer, and consider individual trauma-focused therapy.",
+    "Phase 1 (overview): explain PTSD and how avoidance and numbing affect both partners, and agree on goals and on handling conflict safely in and between sessions.",
+    "Phase 2 (overview): build communication skills (listening, sharing thoughts and feelings, solving problems together) and plan shared activities that reverse avoidance.",
+    "Phase 3 (overview): use the couple's stronger communication to examine trauma-related beliefs together, such as about blame, trust, power and intimacy, and reach more balanced conclusions.",
+    "Track PTSD symptoms and relationship satisfaction with agreed measures, and review progress together.",
+    "Plan for ending, with skills to keep using and signs that more help is needed."
+  ],
+  "script": [
+    "PTSD affects both of you, not only the person who went through the trauma. This therapy works with you as a team.",
+    "Before we start, I'll meet with each of you on your own for a few minutes. That's routine for couple work.",
+    "What have the two of you stopped doing since this started? What would you like to get back?",
+    "When you hear your partner say that, what do you understand them to be thinking?",
+    "CBCT works best with a therapist trained in it. I can help you find one, or we can talk about individual trauma therapy too."
+  ],
+  "contraindications": [
+    "Do not offer CBCT when there is current intimate partner violence, coercive control or fear of the partner; offer individual support and safety planning instead.",
+    "Both partners must consent freely; never use joint sessions to pressure a partner into disclosing details.",
+    "Active substance dependence, acute psychosis or severe suicidality in either partner may need attention first.",
+    "Full CBCT requires training; steps here are overview-level only.",
+    "This intervention does not assess or decide risk. If suicidal thoughts, self-harm or risk to others come up, pause and follow your setting's risk-assessment and safety-planning procedures. Keep crisis options visible: 988 Suicide & Crisis Lifeline (US, call or text), the local emergency number, and findahelpline.com for other countries."
+  ],
+  "culturalAdaptations": [
+    "Gender roles, privacy norms and comfort with talking about trauma within a couple vary; ask what each partner is willing to share.",
+    "Define couple inclusively, including same-sex and unmarried partners.",
+    "For military and veteran couples, consider deployment, reintegration and military culture.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "trainingRequired": "CBCT for PTSD: trained clinicians only (workshop training and consultation through the developers' training team); steps here are overview-level only.",
+  "handoutIds": [
+    "common-reactions-after-trauma",
+    "couples-pause-and-repair",
+    "trauma-therapy-what-to-expect"
+  ],
+  "orientationIds": [
+    "systemic-family-and-couples-therapy",
+    "trauma-focused-therapies"
+  ],
+  "sources": [
+    {
+      "title": "Effect of cognitive-behavioral couple therapy for PTSD: a randomized controlled trial (Monson et al.)",
+      "publisher": "JAMA (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22893167/",
+      "year": 2012
+    },
+    {
+      "title": "Overview of psychotherapy for PTSD (reflects the 2023 VA/DoD guideline)",
+      "publisher": "US Department of Veterans Affairs, National Center for PTSD",
+      "url": "https://www.ptsd.va.gov/professional/treat/txessentials/overview_therapy.asp"
+    },
+    {
+      "title": "VA/DoD 2023 clinical practice guideline for the management of PTSD",
+      "publisher": "US Department of Veterans Affairs, National Center for PTSD",
+      "url": "https://www.ptsd.va.gov/professional/treat/txessentials/cpg_ptsd_management.asp",
+      "year": 2023
+    },
+    {
+      "title": "Cognitive-Behavioral Conjoint Therapy for PTSD: Harnessing the Healing Power of Relationships (Monson and Fredman)",
+      "publisher": "Guilford Press",
+      "url": "https://www.guilford.com/books/Cognitive-Behavioral-Conjoint-Therapy-for-PTSD/Monson-Fredman/9781462505531",
+      "year": 2012
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

@@ -1,0 +1,124 @@
+{
+  "id": "how-sleep-works",
+  "title": "How Sleep Works",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 10,
+  "intro": "Sleep is not something you can force. It comes when your body is ready. Knowing how sleep works can help you stop fighting it and set up the right conditions instead. This sheet explains the two systems that control sleep, how a bed can turn into a place for being awake, and why trying harder makes sleep harder. It takes about 10 minutes to read.",
+  "sections": [
+    {
+      "heading": "System 1: your sleep drive",
+      "body": "From the moment you wake up, a pull toward sleep builds in your body, a bit like hunger builds between meals. The longer you are awake and active, the stronger it gets. Naps, sleeping in, and lying in bed for long hours use up some of this pull. Then it is harder to fall asleep and stay asleep at night."
+    },
+    {
+      "heading": "System 2: your body clock",
+      "body": "Your body has an inner clock that runs on about a 24-hour cycle. It tells you when to feel sleepy and when to feel alert. Light, especially morning light, sets the clock. A steady wake-up time keeps it on track. Changing your sleep times a lot, like on weekends, can throw it off, a bit like jet lag."
+    },
+    {
+      "heading": "When the bed becomes a place for being awake",
+      "body": "If you often lie in bed awake, worrying, checking the time, or using your phone, your brain starts to link the bed with being awake and upset. Then just getting into bed can make you feel alert. Some people fall asleep more easily on the couch than in their own bed. This is a learned habit, and it can be unlearned."
+    },
+    {
+      "heading": "Why trying harder backfires",
+      "body": "Sleep is like a shy animal. The harder you chase it, the more it runs away. Trying hard to sleep makes your mind and body more alert. Worry about the next day adds to this. Sleep comes more easily when you stop trying and let it happen."
+    },
+    {
+      "heading": "What helps",
+      "steps": [
+        "Get up at the same time every day, even after a bad night.",
+        "Get outside light in the morning.",
+        "Go to bed when you feel sleepy, not just tired or bored.",
+        "Use the bed only for sleep and sex. Do other things in another room.",
+        "If you are awake for what feels like a long time, get up and do something calm in dim light. Go back to bed when you feel sleepy.",
+        "Cut back on naps, or keep them short and early in the day.",
+        "Give yourself time to wind down before bed."
+      ]
+    },
+    {
+      "heading": "When to see a doctor",
+      "steps": [
+        "Loud snoring, gasping, or pauses in breathing while you sleep.",
+        "Strong urges to move your legs at night.",
+        "Falling asleep during the day without meaning to.",
+        "Sleep problems that started with a new medicine or health problem."
+      ]
+    }
+  ],
+  "safetyNote": "Safety first: If you feel very sleepy, do not drive or use machines until you feel alert. Do not start, stop, or change sleep medicine without your doctor. This sheet is not for emergencies. If you have thoughts of hurting yourself or someone else, call or text 988 in the US, or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "es": {
+    "title": "Cómo funciona el sueño",
+    "intro": "El sueño no se puede forzar. Llega cuando su cuerpo está listo. Saber cómo funciona el sueño le puede ayudar a dejar de pelear con él y a preparar lo que necesita. Esta hoja explica los dos sistemas que controlan el sueño, cómo la cama se puede volver un lugar para estar despierto y por qué esforzarse más hace más difícil dormir. Leerla toma unos 10 minutos.",
+    "sections": [
+      {
+        "heading": "Sistema 1: sus ganas de dormir",
+        "body": "Desde que se despierta, en su cuerpo van creciendo las ganas de dormir, un poco como crece el hambre entre comidas. Cuanto más tiempo pasa despierto y activo, más fuertes son. Las siestas, quedarse dormido hasta tarde y pasar muchas horas en la cama gastan parte de esas ganas. Así cuesta más dormirse y seguir dormido de noche."
+      },
+      {
+        "heading": "Sistema 2: el reloj de su cuerpo",
+        "body": "Su cuerpo tiene un reloj interno que sigue un ciclo de más o menos 24 horas. Le dice cuándo tener sueño y cuándo estar alerta. La luz, sobre todo la de la mañana, pone en hora el reloj. Levantarse a la misma hora lo mantiene en orden. Cambiar mucho sus horas de dormir, como los fines de semana, lo puede desajustar, un poco como cuando se viaja a otro país."
+      },
+      {
+        "heading": "Cuando la cama se vuelve un lugar para estar despierto",
+        "body": "Si muchas veces está en la cama despierto, preocupado, mirando la hora o usando el teléfono, su cerebro empieza a unir la cama con estar despierto y molesto. Entonces solo meterse en la cama le puede poner alerta. Algunas personas se duermen más fácil en el sofá que en su propia cama. Es un hábito aprendido, y se puede desaprender."
+      },
+      {
+        "heading": "Por qué esforzarse más sale al revés",
+        "body": "El sueño es como un animal tímido. Cuanto más lo persigue, más se aleja. Esforzarse mucho por dormir pone más alerta a su mente y a su cuerpo. La preocupación por el día siguiente lo empeora. El sueño llega más fácil cuando deja de intentarlo y lo deja venir."
+      },
+      {
+        "heading": "Lo que ayuda",
+        "steps": [
+          "Levántese a la misma hora todos los días, aunque haya tenido una mala noche.",
+          "Reciba luz de afuera en la mañana.",
+          "Acuéstese cuando tenga sueño, no solo cuando esté cansado o aburrido.",
+          "Use la cama solo para dormir y para tener relaciones sexuales. Haga las demás cosas en otro cuarto.",
+          "Si está despierto durante lo que parece mucho tiempo, levántese y haga algo tranquilo con poca luz. Vuelva a la cama cuando tenga sueño.",
+          "Tome menos siestas, o que sean cortas y temprano en el día.",
+          "Dese tiempo para relajarse antes de acostarse."
+        ]
+      },
+      {
+        "heading": "Cuándo ir al médico",
+        "steps": [
+          "Ronquidos fuertes, ahogos o pausas al respirar mientras duerme.",
+          "Ganas muy fuertes de mover las piernas de noche.",
+          "Quedarse dormido de día sin querer.",
+          "Problemas de sueño que empezaron con un medicamento nuevo o un problema de salud."
+        ]
+      }
+    ],
+    "safetyNote": "La seguridad es lo primero: Si tiene mucho sueño, no maneje ni use máquinas hasta que se sienta alerta. No empiece, deje ni cambie un medicamento para dormir sin su médico. Esta hoja no es para emergencias. Si tiene pensamientos de hacerse daño o de hacerle daño a otra persona, llame o envíe un mensaje de texto al 988 en EE. UU., o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "linkOuts": [
+    {
+      "title": "Healthy Sleep",
+      "publisher": "MedlinePlus, US National Library of Medicine",
+      "url": "https://medlineplus.gov/healthysleep.html",
+      "note": "Plain-language page on sleep, in English and Spanish.",
+      "lastVerified": "2026-11-27"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Behavioral and Psychological Treatments for Insomnia: patient guide",
+      "publisher": "American Academy of Sleep Medicine",
+      "url": "https://aasm.org/wp-content/uploads/2021/08/Behavioral-and-Psychological-Treatments-for-Insomnia-Patient-Guide.pdf",
+      "year": 2021
+    },
+    {
+      "title": "Insomnia (health topic)",
+      "publisher": "National Heart, Lung, and Blood Institute",
+      "url": "https://www.nhlbi.nih.gov/health/insomnia"
+    },
+    {
+      "title": "Behavioral and psychological treatments for chronic insomnia disorder in adults: an American Academy of Sleep Medicine clinical practice guideline (Edinger et al.)",
+      "publisher": "Journal of Clinical Sleep Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33164742/",
+      "year": 2021
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

@@ -1,0 +1,144 @@
+{
+  "id": "trauma-focused-therapies",
+  "name": "Trauma-focused therapies for PTSD",
+  "shortName": "Trauma-focused",
+  "family": "trauma-focused",
+  "summary": "A family of structured treatments that help people process traumatic memories and change the beliefs and avoidance that keep PTSD going. Most adults can start trauma-focused work directly; some need added preparation first. Trauma-informed care, by contrast, is a way of working that applies in every setting.",
+  "keyConcepts": [
+    { "term": "Trauma-focused versus trauma-informed", "meaning": "Trauma-focused therapies directly target trauma memories and their meanings; trauma-informed care is a set of principles (safety, choice, collaboration, trust, empowerment, attention to culture) for any service." },
+    { "term": "Processing the memory", "meaning": "Approaching the memory in a planned way, through imaginal exposure, written accounts, cognitive work or bilateral stimulation, so it becomes a past event rather than a present threat." },
+    { "term": "Stuck points and appraisals", "meaning": "Beliefs about the trauma and its meaning (it was my fault, the world is completely dangerous) that keep a sense of current threat, shame or guilt going." },
+    { "term": "Avoidance and safety behaviors", "meaning": "Avoiding reminders, memories and feelings brings short-term relief but stops recovery; reducing them is part of most protocols." },
+    { "term": "Window of tolerance", "meaning": "A teaching idea for the range of arousal in which a person can think and feel at the same time; grounding helps return to it when arousal is too high or too low." },
+    { "term": "Phase-oriented sequencing", "meaning": "Starting with safety and skills before memory processing; current guidelines support trauma-focused work for most adults without a long stabilization phase, adding preparation when there is current danger, active self-harm or severe dissociation." }
+  ],
+  "viewOfProblem": "PTSD is understood as a failure of natural recovery after trauma: the memory stays raw and intrusive, reminders trigger threat responses, and avoidance and negative beliefs about the self, others and the world prevent the memory from being processed. Shame, guilt and anger often keep it going as much as fear does. Ongoing danger, such as current violence, is a safety problem first, not a symptom.",
+  "viewOfChange": "Change comes from approaching the memory and its reminders in a structured, supported way and from updating the meanings attached to it. Different protocols do this through repeated imaginal and in vivo exposure, written accounts, Socratic work on stuck points, updating the memory with new information, or bilateral stimulation while holding the memory in mind. Skills for regulating emotion and relationships can be added before or alongside processing when needed.",
+  "therapistStance": "Calm, warm and steady, combined with a clear structure and a firm, compassionate commitment to approaching avoided material. The clinician explains the rationale, follows trauma-informed principles of choice and collaboration, and is confident that the client can tolerate the work.",
+  "sessionShape": [
+    "Check symptoms and current safety, and review the week's practice.",
+    "Review the PTSD measure if one is used and link change to the work.",
+    "Do the session's core task: imaginal exposure, a written account, work on a stuck point, or memory processing.",
+    "Process the experience together and reinforce what was learned.",
+    "Ground before leaving, and agree on between-session practice such as listening to a recording or in vivo exposure."
+  ],
+  "goalStyle": "Goals fit the current phase of treatment: in preparation, specific safety and skills goals; in processing, completing the protocol's sessions and reducing avoidance of named reminders; in later work, reconnecting with valued roles and relationships. Write each goal with the client in their own words.",
+  "progressMarkers": [
+    "Change on a PTSD symptom measure across sessions, used as a link-out where its license is not confirmed.",
+    "Belief ratings for key stuck points.",
+    "Return to avoided places, activities and relationships, rated by the client.",
+    "Depression and anxiety measures such as the PHQ-9 and GAD-7 alongside."
+  ],
+  "typicalTechniques": [
+    "cognitive-processing-therapy",
+    "prolonged-exposure",
+    "emdr",
+    "cognitive-therapy-for-ptsd",
+    "written-exposure-therapy",
+    "narrative-exposure-therapy",
+    "imagery-rescripting",
+    "imagery-rehearsal-therapy",
+    "stair-skills-training",
+    "cbct-for-ptsd",
+    "integrated-ptsd-sud-treatment",
+    "racial-trauma-and-race-based-stress",
+    "trauma-psychoeducation-and-grounding",
+    "grounding-5-4-3-2-1"
+  ],
+  "relatedTechniques": ["present-centered-therapy", "dbt-distress-tolerance", "interpersonal-psychotherapy"],
+  "missingTechniques": [
+    { "name": "Brief eclectic psychotherapy for PTSD (BEPP)", "note": "An integrative psychodynamic and CBT protocol with a conditional APA recommendation; overview and referral only." }
+  ],
+  "formulationIds": ["phase-based-trauma-sequencing", "moral-injury", "cbt-three-level"],
+  "models": [
+    {
+      "name": "Trauma-focused CBT protocols (CPT, PE, cognitive therapy for PTSD)",
+      "summary": "Manualized protocols that combine memory processing with work on beliefs and avoidance, usually over 8 to 15 sessions.",
+      "evidenceTier": "guideline-recommended",
+      "evidence": "The VA/DoD 2023 guideline strongly recommends CPT and PE and suggests cognitive therapy for PTSD; NICE NG116 (2018) recommends individual trauma-focused CBT for adults; the APA PTSD guideline (2017) recommends CPT, cognitive therapy and PE; check its 2025 update for current ratings.",
+      "trainingRequired": true
+    },
+    {
+      "name": "EMDR",
+      "summary": "Eye movement desensitization and reprocessing: an eight-phase protocol in which the client holds aspects of the memory in mind during bilateral stimulation.",
+      "evidenceTier": "guideline-recommended",
+      "evidence": "The VA/DoD 2023 guideline strongly recommends EMDR, and NICE NG116 (2018) recommends it for adults more than 3 months after non-combat trauma; the APA 2025 update lists it among suggested treatments, a rating that is debated.",
+      "trainingRequired": true
+    },
+    {
+      "name": "Brief and narrative exposure (WET, NET)",
+      "summary": "Written exposure therapy uses five sessions of structured writing about the trauma; narrative exposure therapy builds a life-story narrative that places traumatic events in context, often used with refugees.",
+      "evidenceTier": "guideline-recommended",
+      "evidence": "The VA/DoD 2023 guideline suggests WET, which was noninferior to CPT and to PE in RCTs with lower dropout (Sloan et al., 2018; 2023). NET had a conditional APA recommendation in 2017 and a 2019 meta-analysis of 16 RCTs (Lely et al., 2019).",
+      "trainingRequired": true
+    },
+    {
+      "name": "Skills-based and imagery approaches (STAIR, imagery rescripting, imagery rehearsal for nightmares)",
+      "summary": "Emotion regulation and interpersonal skills before or alongside processing, and imagery methods that change the meaning or ending of trauma memories and nightmares.",
+      "evidenceTier": "emerging",
+      "evidence": "STAIR improved PTSD and emotion regulation in RCTs with women survivors (Cloitre et al., 2010; 2024); a 2017 meta-analysis of imagery rescripting found large effects in mostly pre-post studies (Morina, Lancee and Arntz, 2017).",
+      "trainingRequired": true
+    },
+    {
+      "name": "Trauma-informed stabilization and psychoeducation",
+      "summary": "Grounding, psychoeducation about common reactions, and safety planning, used in any setting and as preparation; not a stand-alone PTSD treatment.",
+      "evidenceTier": "limited",
+      "evidence": "SAMHSA TIP 57 (2014) sets out trauma-informed principles for behavioral health services; stabilization alone is not recommended as a PTSD treatment in current guidelines.",
+      "trainingRequired": false
+    }
+  ],
+  "evidenceTier": "guideline-recommended",
+  "evidenceSummary": "Trauma-focused psychotherapies are the first-line treatment for PTSD in adults. The VA/DoD 2023 guideline strongly recommends CPT, PE and EMDR and suggests cognitive therapy for PTSD, WET and present-centered therapy. NICE NG116 (2018) recommends individual trauma-focused CBT and, for non-combat trauma after 3 months, EMDR. The APA guideline (2017) recommends CPT, cognitive therapy and PE; check its 2025 update for current ratings. Evidence for STAIR, imagery rescripting and NET is promising but smaller. Somatic and parts-based approaches are not included in these recommendations.",
+  "bestFit": [
+    "Adults with PTSD or significant posttraumatic stress symptoms, including after childhood, military, sexual or refugee trauma.",
+    "Clients who are ready to approach the memory with support, or who can become ready with brief preparation.",
+    "Brief formats (WET) when attendance or time is limited.",
+    "Couple formats (CBCT) when a partner is willing to take part and the relationship is safe."
+  ],
+  "cautions": [
+    "Check for current danger, such as ongoing violence, before memory work; safety planning comes first.",
+    "Active self-harm, recent suicide attempts or severe dissociation call for added preparation, close monitoring and consultation; follow your risk procedures and review crisis options: in the US call or text 988; elsewhere, the local emergency number or findahelpline.com.",
+    "Do not set out to recover memories or suggest that trauma happened; work with what the client remembers and follow memory and suggestion safeguards.",
+    "Routine single-session debriefing soon after trauma is not recommended and may do harm; offer psychological first aid and watchful follow-up instead.",
+    "Deliver protocols as designed; improvised memory work without training can increase distress and dropout."
+  ],
+  "whenToRefer": [
+    "PTSD when you are not trained in a recommended trauma-focused protocol: refer to a clinician who is.",
+    "PTSD with severe emotion dysregulation and self-harm: consider DBT-PTSD or another specialist program.",
+    "PTSD with substance use that needs medical withdrawal management or medication treatment."
+  ],
+  "trainingRequired": false,
+  "trainingNote": "Trauma-informed principles, grounding and psychoeducation belong in every clinician's practice. CPT, PE, EMDR, cognitive therapy for PTSD, WET, NET, STAIR and imagery methods each require recognized training with case consultation before independent use.",
+  "trainingPath": [
+    { "body": "CPT for PTSD (treatment developers' training program)", "url": "https://cptforptsd.com/", "note": "Workshops, consultation and provider rosters for cognitive processing therapy." },
+    { "body": "Center for the Treatment and Study of Anxiety, University of Pennsylvania", "url": "https://www.med.upenn.edu/ctsa/workshops_ptsd.html", "note": "Prolonged exposure workshops and consultation from the program founded by its developer." },
+    { "body": "EMDR International Association (EMDRIA)", "url": "https://www.emdria.org/emdr-basic-training-policies-requirements/", "note": "Standards for approved EMDR basic training, including consultation hours." },
+    { "body": "International Society for Traumatic Stress Studies (ISTSS)", "url": "https://istss.org/clinical-resources/trauma-treatment/istss-prevention-and-treatment-guidelines/", "note": "Prevention and treatment guidelines and links to training resources." }
+  ],
+  "ethicsPrompts": [
+    { "prompt": "Practice within your training: deliver CPT, PE, EMDR and other trauma protocols only after recognized training and consultation, and refer otherwise.", "legalIds": ["competence-and-scope-of-practice"] },
+    { "prompt": "Avoid suggestion: do not search for hidden memories, and document what the client reports in neutral words.", "legalIds": ["memory-and-suggestion-safeguards"] },
+    { "prompt": "If you may be asked to give evidence about a client's trauma, keep the treating role separate from any forensic role.", "legalIds": ["treating-and-forensic-roles"] }
+  ],
+  "culturalNotes": [
+    "Meanings of trauma, shame and help-seeking vary; explore the client's own understanding and any community or spiritual practices that support healing.",
+    "Racism, displacement and historical trauma can be part of the traumatic context; name them when relevant and avoid treating them as personal pathology.",
+    "Work with professional interpreters trained in trauma work, and plan for the interpreter's wellbeing too."
+  ],
+  "handoutIds": ["grounding-5-4-3-2-1", "trauma-therapy-what-to-expect", "common-reactions-after-trauma", "nightmare-rescripting-practice"],
+  "relatedPracticeIds": ["trauma-informed-care", "supervision-and-consultation", "working-with-interpreters"],
+  "relatedPopulationIds": ["military-and-veterans", "refugees-and-asylum-seekers", "sexual-violence-and-trafficking-survivors", "first-responders-and-health-workers"],
+  "sources": [
+    { "title": "Psychotherapy for PTSD (VA/DoD 2023 guideline summary)", "publisher": "Psychological Health Center of Excellence, Defense Health Agency", "url": "https://health.mil/Reference-Center/Publications/2024/01/04/Psychotherapy-for-PTSD", "year": 2024 },
+    { "title": "VA/DoD Clinical Practice Guideline for the Management of Posttraumatic Stress Disorder and Acute Stress Disorder", "publisher": "US Department of Veterans Affairs and Department of Defense", "url": "https://www.healthquality.va.gov/guidelines/MH/ptsd/", "year": 2023 },
+    { "title": "Post-traumatic stress disorder (NG116)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng116", "year": 2018 },
+    { "title": "Clinical Practice Guideline for the Treatment of PTSD: treatments", "publisher": "American Psychological Association", "url": "https://www.apa.org/ptsd-guideline/treatments" },
+    { "title": "A brief exposure-based treatment vs cognitive processing therapy for posttraumatic stress disorder: a randomized noninferiority clinical trial (Sloan, Marx, Lee and Resick)", "publisher": "JAMA Psychiatry", "url": "https://jamanetwork.com/journals/jamapsychiatry/fullarticle/2669771", "year": 2018 },
+    { "title": "The effectiveness of narrative exposure therapy: a review, meta-analysis and meta-regression analysis (Lely et al.)", "publisher": "European Journal of Psychotraumatology (DOI)", "url": "https://doi.org/10.1080/20008198.2018.1550344", "year": 2019 },
+    { "title": "TIP 57: Trauma-Informed Care in Behavioral Health Services", "publisher": "Substance Abuse and Mental Health Services Administration", "url": "https://www.samhsa.gov/resource/dbhis/tip-57-trauma-informed-care-behavioral-health-services", "year": 2014 },
+    { "title": "ISTSS prevention and treatment guidelines", "publisher": "International Society for Traumatic Stress Studies", "url": "https://istss.org/clinical-resources/trauma-treatment/istss-prevention-and-treatment-guidelines/" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

@@ -1,0 +1,115 @@
+{
+  "id": "grief-rebuilding-log",
+  "title": "Grief and Rebuilding Log",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 10,
+  "intro": "After a loss, people tend to move back and forth between two kinds of time. Some time goes to the loss itself, like remembering, missing, and feeling the pain. Other time goes to rebuilding daily life, like handling tasks, trying new things, and resting from grief. Both are healthy and needed. This log helps you notice the balance and take small steps when one side gets stuck. It takes about 10 minutes to read, and a few minutes a day to fill in.",
+  "sections": [
+    {
+      "heading": "Two kinds of time",
+      "steps": [
+        "Time with the loss: looking at photos, visiting places, crying, talking about the person, or thinking about what you have lost.",
+        "Time rebuilding: daily tasks, work, new roles you have taken on, seeing friends, trying something new, or simply resting from grief."
+      ]
+    },
+    {
+      "heading": "Why moving back and forth helps",
+      "body": "If all your time goes to the loss, grief can feel endless and life can come to a stop. If all your time goes to staying busy, the pain can stay locked away and come out in other ways. Moving between the two gives you room to grieve and breaks to rest. There is no right amount of each. The balance often changes over time."
+    },
+    {
+      "heading": "When reminders feel too hard",
+      "body": "Many people avoid places, objects, or talk that bring the loss close. This makes sense. But avoiding too much can keep grief stuck. With your counselor, you can list the reminders you avoid and face them slowly, one small step at a time.",
+      "steps": [
+        "Choose a reminder that feels a little hard, not the hardest one.",
+        "Plan when and how you will face it, and who could be with you.",
+        "Stay with it for a while, and let the feelings come.",
+        "Afterward, do something kind for yourself."
+      ]
+    },
+    {
+      "heading": "Small steps back into life",
+      "body": "Grief can make the world shrink. Each week, choose one small step back into a part of life that matters to you. You might call a friend, go back to a hobby, join a group, or take on a task the person used to do. It is not disloyal to enjoy something again."
+    },
+    {
+      "heading": "Days that matter",
+      "body": "Birthdays, anniversaries, and holidays can bring grief back strongly. Plan ahead for these days. Decide how you want to remember the person, and who you want to be with."
+    }
+  ],
+  "practiceLog": {
+    "columns": ["Day", "Time with the loss (what I did)", "Time rebuilding (what I did)", "A reminder I faced, if any", "What helped, even a little"],
+    "rows": 7
+  },
+  "safetyNote": "Safety first: If you have thoughts of ending your life, or of wanting to be with someone who died, please reach out now. You do not have to wait until it gets worse. In the US, call or text 988 or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "es": {
+    "title": "Registro del duelo y de volver a construir",
+    "intro": "Después de una pérdida, las personas suelen ir y venir entre dos tipos de tiempo. Una parte del tiempo es para la pérdida, como recordar, extrañar y sentir el dolor. Otra parte es para volver a armar la vida diaria, como hacer tareas, probar cosas nuevas y descansar del duelo. Las dos son sanas y necesarias. Este registro le ayuda a notar el equilibrio y a dar pasos pequeños cuando un lado se queda atorado. Leerlo toma unos 10 minutos, y llenarlo toma unos minutos al día.",
+    "sections": [
+      {
+        "heading": "Dos tipos de tiempo",
+        "steps": [
+          "Tiempo con la pérdida: mirar fotos, visitar lugares, llorar, hablar de la persona o pensar en lo que perdió.",
+          "Tiempo para volver a construir: tareas diarias, trabajo, nuevos papeles que ha tomado, ver a sus amigos, probar algo nuevo o simplemente descansar del duelo."
+        ]
+      },
+      {
+        "heading": "Por qué ayuda ir y venir",
+        "body": "Si todo su tiempo es para la pérdida, el duelo puede sentirse sin fin y la vida se puede detener. Si todo su tiempo es para mantenerse ocupado, el dolor puede quedarse encerrado y salir de otras formas. Ir y venir entre los dos le da espacio para el duelo y pausas para descansar. No hay una cantidad correcta de cada uno. El equilibrio muchas veces cambia con el tiempo."
+      },
+      {
+        "heading": "Cuando los recuerdos se sienten muy difíciles",
+        "body": "Muchas personas evitan lugares, objetos o charlas que les acercan la pérdida. Tiene sentido. Pero evitar demasiado puede dejar el duelo atorado. Con su consejero, puede hacer una lista de las cosas que evita y enfrentarlas despacio, un paso pequeño a la vez.",
+        "steps": [
+          "Escoja algo que le cueste un poco, no lo más difícil.",
+          "Planee cuándo y cómo lo va a enfrentar, y quién podría estar con usted.",
+          "Quédese con eso un rato, y deje que lleguen los sentimientos.",
+          "Después, haga algo amable por usted."
+        ]
+      },
+      {
+        "heading": "Pasos pequeños para volver a la vida",
+        "body": "El duelo puede hacer que el mundo se achique. Cada semana, escoja un paso pequeño para volver a una parte de la vida que le importa. Puede llamar a un amigo, volver a un pasatiempo, unirse a un grupo o hacerse cargo de una tarea que la persona solía hacer. No es una falta de lealtad volver a disfrutar algo."
+      },
+      {
+        "heading": "Días importantes",
+        "body": "Los cumpleaños, los aniversarios y los días festivos pueden traer el duelo con fuerza. Prepárese para esos días. Decida cómo quiere recordar a la persona, y con quién quiere estar."
+      }
+    ],
+    "practiceLog": {
+      "columns": ["Día", "Tiempo con la pérdida (lo que hice)", "Tiempo para volver a construir (lo que hice)", "Algo que enfrenté, si hubo", "Lo que ayudó, aunque fuera un poco"]
+    },
+    "safetyNote": "La seguridad es lo primero: Si tiene pensamientos de quitarse la vida, o de querer estar con alguien que murió, por favor busque ayuda ahora. No tiene que esperar a que empeore. En EE. UU., llame o envíe un mensaje de texto al 988 o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "linkOuts": [
+    {
+      "title": "Bereavement",
+      "publisher": "MedlinePlus, US National Library of Medicine",
+      "url": "https://medlineplus.gov/bereavement.html",
+      "note": "Plain-language page on grief and coping, in English and Spanish.",
+      "lastVerified": "2026-11-27"
+    }
+  ],
+  "sources": [
+    {
+      "title": "The dual process model of coping with bereavement: a decade on (Stroebe & Schut)",
+      "publisher": "Omega: Journal of Death and Dying (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21058610/",
+      "year": 2010
+    },
+    {
+      "title": "Treatment of complicated grief: a comparison between cognitive-behavioral therapy and supportive counseling (Boelen et al.)",
+      "publisher": "Journal of Consulting and Clinical Psychology (DOI)",
+      "url": "https://doi.org/10.1037/0022-006X.75.2.277",
+      "year": 2007
+    },
+    {
+      "title": "Center for Prolonged Grief: resources and training for clinicians",
+      "publisher": "Columbia University School of Social Work",
+      "url": "https://prolongedgrief.columbia.edu/for-clinicians/"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

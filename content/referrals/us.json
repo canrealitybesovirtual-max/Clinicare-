@@ -449,6 +449,198 @@
       "lastVerified": "unverified",
       "verification": "Well-known organization URL; not checked online on 2026-11-27 (chadd.org was not reachable from the build sandbox).",
       "sources": [{ "title": "CHADD", "publisher": "Children and Adults with Attention-Deficit/Hyperactivity Disorder", "url": "https://chadd.org/" }]
+    },
+    {
+      "id": "national-domestic-violence-hotline",
+      "name": "National Domestic Violence Hotline",
+      "description": "Free, confidential support for people experiencing abuse in a relationship and for people worried about someone: safety planning, emotional support and connection to local shelters and advocates, by phone, text or online chat.",
+      "url": "https://www.thehotline.org/",
+      "phone": "1-800-799-7233",
+      "phoneNote": "1-800-799-SAFE. TTY: 1-800-787-3224",
+      "text": "Text START to 88788",
+      "region": "US",
+      "kind": "violence-and-abuse",
+      "notes": [
+        "Online chat is offered from the website.",
+        "If anyone is in danger now, call 911.",
+        "Suggest a safe phone or device: call, text and browsing history can be seen by an abusive partner."
+      ],
+      "lastVerified": "2026-11-27",
+      "verification": "Phone, TTY and the START-to-88788 text route confirmed 2026-11-27 on MedlinePlus Intimate Partner Violence (NLM, fetched directly), which links thehotline.org. thehotline.org itself was not reachable from the build sandbox; hours and languages are not listed here because they were not confirmed.",
+      "sources": [
+        { "title": "Intimate Partner Violence", "publisher": "MedlinePlus (U.S. National Library of Medicine)", "url": "https://medlineplus.gov/intimatepartnerviolence.html" },
+        { "title": "The Hotline", "publisher": "National Domestic Violence Hotline", "url": "https://www.thehotline.org/" }
+      ]
+    },
+    {
+      "id": "rainn-sexual-assault-hotline",
+      "name": "National Sexual Assault Hotline (RAINN)",
+      "description": "Free, confidential support for anyone affected by sexual violence, at any time since it happened. Callers are connected with a trained staff member at a local sexual assault service provider who can talk through medical care, forensic exams and reporting options.",
+      "url": "https://www.rainn.org/",
+      "phone": "1-800-656-4673",
+      "phoneNote": "1-800-656-HOPE",
+      "region": "US",
+      "kind": "violence-and-abuse",
+      "notes": ["Adults generally decide for themselves whether to report; check your own reporting duties, which differ by state and setting."],
+      "lastVerified": "unverified",
+      "verification": "Phone number confirmed 2026-11-27 on MedlinePlus Sexual Assault (NLM, fetched directly). The rainn.org URL is from prior knowledge and the site was not reachable from the build sandbox; confirm the URL and any chat route before release.",
+      "sources": [
+        { "title": "Sexual Assault", "publisher": "MedlinePlus (U.S. National Library of Medicine)", "url": "https://medlineplus.gov/sexualassault.html" }
+      ]
+    },
+    {
+      "id": "national-maternal-mental-health-hotline",
+      "name": "National Maternal Mental Health Hotline",
+      "description": "Free, confidential mental health support by phone or text before, during and after pregnancy, for parents and their families, with English- and Spanish-speaking counselors.",
+      "url": "https://mchb.hrsa.gov/national-maternal-mental-health-hotline",
+      "phone": "1-833-852-6262",
+      "phoneNote": "1-833-TLC-MAMA",
+      "text": "Text 1-833-852-6262",
+      "region": "US",
+      "kind": "perinatal",
+      "languages": ["en", "es"],
+      "hours": "24/7",
+      "audience": "People who are pregnant or have recently had a baby, and their families",
+      "notes": ["Not an emergency service: for urgent safety concerns call or text 988, or call 911."],
+      "lastVerified": "unverified",
+      "verification": "Phone and text number, 24/7 hours and English and Spanish counselors confirmed 2026-11-27 on the NIMH Perinatal Depression page (fetched directly). The HRSA page URL is from prior knowledge and mchb.hrsa.gov was not reachable from the build sandbox; confirm it before release.",
+      "sources": [
+        { "title": "Perinatal Depression", "publisher": "National Institute of Mental Health", "url": "https://www.nimh.nih.gov/health/publications/perinatal-depression" }
+      ]
+    },
+    {
+      "id": "postpartum-support-international",
+      "name": "Postpartum Support International",
+      "description": "Nonprofit with information and support groups for mental health during pregnancy and after birth, including pages for partners and dads, help with postpartum psychosis, and a Spanish-language site.",
+      "url": "https://www.postpartum.net/",
+      "region": "US",
+      "kind": "perinatal",
+      "languages": ["en", "es"],
+      "notes": ["Spanish site: es.postpartum.net.", "Support groups are not crisis care. In a crisis, call or text 988."],
+      "lastVerified": "2026-11-27",
+      "verification": "URL confirmed 2026-11-27 as linked from the NIMH Perinatal Depression page and MedlinePlus Postpartum Depression (both fetched directly), which also link its partner, dads, postpartum psychosis and Spanish pages. postpartum.net itself was not reachable from the build sandbox.",
+      "sources": [
+        { "title": "Perinatal Depression", "publisher": "National Institute of Mental Health", "url": "https://www.nimh.nih.gov/health/publications/perinatal-depression" },
+        { "title": "Postpartum Depression", "publisher": "MedlinePlus (U.S. National Library of Medicine)", "url": "https://medlineplus.gov/postpartumdepression.html" }
+      ]
+    },
+    {
+      "id": "alzheimers-association",
+      "name": "Alzheimer's Association",
+      "description": "National nonprofit with information for people living with dementia and their families: caregiving, grief as the illness progresses, safety and abuse, and links to local chapters.",
+      "url": "https://www.alz.org/",
+      "region": "US",
+      "kind": "older-adults-and-caregivers",
+      "notes": ["Check the website for its helpline and local support group details."],
+      "lastVerified": "2026-11-27",
+      "verification": "URL confirmed 2026-11-27 as linked from MedlinePlus Alzheimer's Caregivers (fetched directly), along with its caregiving, grief and abuse pages. alz.org itself was not reachable from the build sandbox, so no phone number is listed.",
+      "sources": [
+        { "title": "Alzheimer's Caregivers", "publisher": "MedlinePlus (U.S. National Library of Medicine)", "url": "https://medlineplus.gov/alzheimerscaregivers.html" }
+      ]
+    },
+    {
+      "id": "area-agencies-on-aging-directory",
+      "name": "Area Agencies on Aging and Title VI Native aging programs (USAging directory)",
+      "description": "Directory of local Area Agencies on Aging and Title VI Native American aging programs, which connect older adults and family caregivers with local services such as in-home help, meals, transport and caregiver support.",
+      "url": "https://www.usaging.org/ourmembers",
+      "region": "US",
+      "kind": "older-adults-and-caregivers",
+      "lastVerified": "2026-11-27",
+      "verification": "URL confirmed 2026-11-27 as linked from MedlinePlus Disabilities and Caregivers (both fetched directly). usaging.org itself was not reachable from the build sandbox.",
+      "sources": [
+        { "title": "Disabilities", "publisher": "MedlinePlus (U.S. National Library of Medicine)", "url": "https://medlineplus.gov/disabilities.html" }
+      ]
+    },
+    {
+      "id": "long-term-care-ombudsman-finder",
+      "name": "Long-Term Care Ombudsman program finder",
+      "description": "Finds the state Long-Term Care Ombudsman program, which advocates for residents of nursing homes and assisted living, including concerns about neglect or abuse.",
+      "url": "https://theconsumervoice.org/get-help/",
+      "region": "US",
+      "kind": "older-adults-and-caregivers",
+      "notes": ["Abuse of an older or dependent adult can trigger a mandatory report; see the Ethics & Legal Hub on mandatory reporting."],
+      "lastVerified": "2026-11-27",
+      "verification": "URL confirmed 2026-11-27 as linked from MedlinePlus Elder Abuse (fetched directly). theconsumervoice.org itself was not reachable from the build sandbox.",
+      "sources": [
+        { "title": "Elder Abuse", "publisher": "MedlinePlus (U.S. National Library of Medicine)", "url": "https://medlineplus.gov/elderabuse.html" }
+      ]
+    },
+    {
+      "id": "va-caregiver-support-line",
+      "name": "VA Caregiver Support Line",
+      "description": "Help for family caregivers of veterans: questions about VA caregiver programs and applications, and connection to a local VA caregiver support team.",
+      "url": "https://www.va.gov/family-and-caregiver-benefits/health-and-disability/comprehensive-assistance-for-family-caregivers/",
+      "phone": "855-260-3274",
+      "phoneNote": "TTY: 711",
+      "region": "US",
+      "kind": "older-adults-and-caregivers",
+      "hours": "Mon-Fri, 8 a.m.-8 p.m. Eastern",
+      "audience": "Family caregivers of veterans",
+      "lastVerified": "2026-11-27",
+      "verification": "Number, TTY 711 and hours confirmed 2026-11-27 on the VA family caregiver program page (va.gov, fetched directly).",
+      "sources": [
+        { "title": "Program of Comprehensive Assistance for Family Caregivers", "publisher": "U.S. Department of Veterans Affairs", "url": "https://www.va.gov/family-and-caregiver-benefits/health-and-disability/comprehensive-assistance-for-family-caregivers/" }
+      ]
+    },
+    {
+      "id": "va-homeless-veterans-call-center",
+      "name": "VA National Call Center for Homeless Veterans",
+      "description": "Around-the-clock line for veterans who are homeless or at risk of losing housing: connects them with local VA homeless programs, housing support and other VA services.",
+      "url": "https://www.va.gov/homeless/nationalcallcenter.asp",
+      "phone": "877-424-3838",
+      "phoneNote": "1-877-4AID-VET",
+      "region": "US",
+      "kind": "basic-needs",
+      "hours": "24/7",
+      "audience": "Veterans who are homeless or at risk of becoming homeless",
+      "notes": ["Web chat is offered on the official page.", "For thoughts of suicide: call 988 and press 1, or text 838255."],
+      "lastVerified": "2026-11-27",
+      "verification": "Number, 24/7 availability and web chat confirmed 2026-11-27 on the VA National Call Center for Homeless Veterans page (va.gov, fetched directly).",
+      "sources": [
+        { "title": "National Call Center for Homeless Veterans", "publisher": "U.S. Department of Veterans Affairs", "url": "https://www.va.gov/homeless/nationalcallcenter.asp" }
+      ]
+    },
+    {
+      "id": "job-accommodation-network",
+      "name": "Job Accommodation Network (JAN)",
+      "description": "Free, confidential guidance on workplace accommodations and disability employment questions for workers, job seekers and employers, with accommodation ideas organized by condition.",
+      "url": "https://askjan.org/",
+      "region": "US",
+      "kind": "disability",
+      "lastVerified": "2026-11-27",
+      "verification": "askjan.org confirmed 2026-11-27 through a MedlinePlus Chronic Pain link to its accommodation page for employees (fetched directly). askjan.org itself was not reachable from the build sandbox, so no phone number is listed.",
+      "sources": [
+        { "title": "Chronic Pain", "publisher": "MedlinePlus (U.S. National Library of Medicine)", "url": "https://medlineplus.gov/chronicpain.html" }
+      ]
+    },
+    {
+      "id": "military-onesource",
+      "name": "Military OneSource",
+      "description": "Department of Defense information and support for service members, National Guard and Reserve members and their families, including help with deployment, relocation and family life.",
+      "url": "https://www.militaryonesource.mil/",
+      "region": "US",
+      "kind": "veterans",
+      "audience": "Service members, National Guard and Reserve members, and their families",
+      "notes": ["Check the website for its call and chat options and who is eligible after leaving service."],
+      "lastVerified": "2026-11-27",
+      "verification": "militaryonesource.mil confirmed 2026-11-27 through a MedlinePlus Veterans and Military Family Health link to its deployment resources for families (fetched directly). The site itself was not reachable from the build sandbox, so no phone number is listed.",
+      "sources": [
+        { "title": "Veterans and Military Family Health", "publisher": "MedlinePlus (U.S. National Library of Medicine)", "url": "https://medlineplus.gov/veteransandmilitaryfamilyhealth.html" }
+      ]
+    },
+    {
+      "id": "ihs-behavioral-health",
+      "name": "Indian Health Service (IHS)",
+      "description": "Federal health service for members of federally recognized American Indian and Alaska Native Tribes, delivered with Tribal and urban Indian health programs. Its site lists facilities, including behavioral health services.",
+      "url": "https://www.ihs.gov/",
+      "region": "US",
+      "kind": "indigenous",
+      "notes": ["Many Tribes run their own health and behavioral health programs; ask the client which services they use and prefer."],
+      "lastVerified": "unverified",
+      "verification": "ihs.gov confirmed as the official domain on 2026-11-27 through a MedlinePlus Health Disparities link to an IHS fact sheet (fetched directly). ihs.gov was not reachable from the build sandbox, so its behavioral health pages were not checked; confirm before release.",
+      "sources": [
+        { "title": "Health Disparities", "publisher": "MedlinePlus (U.S. National Library of Medicine)", "url": "https://medlineplus.gov/healthdisparities.html" }
+      ]
     }
   ]
 }

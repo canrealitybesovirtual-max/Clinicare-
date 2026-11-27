@@ -36,8 +36,10 @@
   ],
   "handoutIds": [
     "checking-and-reassurance-log",
-    "exposure-ladder"
+    "exposure-ladder",
+    "body-checking-log"
   ],
+  "orientationIds": ["cognitive-therapy", "behavior-therapy"],
   "sources": [
     {
       "title": "Efficacy and posttreatment effects of therapist-delivered cognitive behavioral therapy vs supportive psychotherapy for adults with body dysmorphic disorder (Wilhelm et al.)",

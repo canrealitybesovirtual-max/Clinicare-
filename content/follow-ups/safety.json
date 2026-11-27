@@ -54,7 +54,11 @@
           "social-withdrawal",
           "emotional-numbing-detachment",
           "traumatic-event-exposure",
-          "reckless-self-destructive"
+          "reckless-self-destructive",
+          "gambling-concealment-harm",
+          "chasing-losses",
+          "sedative-despite-harm",
+          "recent-trauma-past-month"
         ],
         "conditionIds": [
           "major-depressive-disorder",
@@ -75,7 +79,11 @@
           "body-dysmorphic-disorder",
           "cannabis-use-disorder",
           "opioid-use-disorder",
-          "stimulant-use-disorder"
+          "stimulant-use-disorder",
+          "acute-stress-disorder",
+          "gambling-disorder",
+          "sedative-hypnotic-use-disorder",
+          "premenstrual-dysphoric-disorder"
         ],
         "redFlags": ["suicidality", "homicidality", "psychosis", "mania", "withdrawal", "eating-disorder-medical"],
         "triggerCategories": ["trauma-reminder"],

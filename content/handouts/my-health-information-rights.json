@@ -1,0 +1,142 @@
+{
+  "id": "my-health-information-rights",
+  "title": "My Health Information Rights",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 10,
+  "intro": "In the US, a federal privacy law called HIPAA gives you rights over your health information. This sheet explains the main ones in plain words. Your state may give you even more protection. Your clinic also has a privacy notice that explains how it uses your information. You can ask for a copy. Reading this sheet takes about 10 minutes.",
+  "sections": [
+    {
+      "heading": "You can see and get a copy of your records",
+      "steps": [
+        "Ask your clinic for a copy of your records. If they keep them on a computer, you can ask for an electronic copy.",
+        "The clinic may ask you to make the request in writing. They must answer within a set time. Ask how long it will take.",
+        "They may charge a fair fee for making copies, but not a fee for looking for your records.",
+        "Some private notes that a therapist keeps apart from your main record may not be included. Ask your counselor how this works."
+      ]
+    },
+    {
+      "heading": "You can ask to fix mistakes",
+      "body": "If something in your record is wrong or missing, you can ask in writing to have it changed. The clinic may say no, but it must tell you why in writing. You can then write a letter saying you disagree and ask that it be kept with your record."
+    },
+    {
+      "heading": "You can choose how the clinic contacts you",
+      "steps": [
+        "You can ask the clinic to call you at a different number, or to send mail to a different address.",
+        "This can help if someone at home might see or hear things you want to keep private.",
+        "The clinic must agree to requests that are reasonable. You do not have to explain why you are asking."
+      ]
+    },
+    {
+      "heading": "You can ask to limit what is shared",
+      "steps": [
+        "You can ask your clinic not to share some of your information. They do not always have to agree.",
+        "If you pay in full yourself for a visit or service, you can ask them not to tell your health plan about it. In most cases, they must agree.",
+        "You can ask for a list of some of the times your information was shared for reasons other than your care, payment, or the clinic's day-to-day work."
+      ]
+    },
+    {
+      "heading": "Extra protection for some records",
+      "body": "Records from many substance use treatment programs have extra federal privacy protection. In most cases, these programs need your written OK before they share your records. Ask the program to explain the rules and what you are agreeing to before you sign."
+    },
+    {
+      "heading": "Some apps and websites are not covered",
+      "body": "These rules cover most clinics, doctors, hospitals, and health plans. They often do not cover health apps or websites that you choose to use on your own. Read an app's privacy policy before you share health details with it."
+    },
+    {
+      "heading": "If you think your rights were not respected",
+      "steps": [
+        "Talk to the clinic's privacy officer first. The clinic's privacy notice says how to reach them.",
+        "You can file a complaint with the US Office for Civil Rights at hhs.gov/ocr. In most cases, you need to file within 180 days of when you found out about the problem.",
+        "A clinic is not allowed to punish you for making a complaint.",
+        "Your state may also have its own office for privacy complaints."
+      ]
+    }
+  ],
+  "safetyNote": "Safety first: If someone could harm you after seeing your health information, tell your clinic and ask for private ways to reach you. If you are in danger, call 911. If you have thoughts of hurting yourself or someone else, call or text 988 in the US. In other countries, call your local emergency number or visit findahelpline.com. This sheet is not legal advice. Resource only. This sheet does not replace care from a licensed professional.",
+  "sud": false,
+  "es": {
+    "title": "Mis derechos sobre mi información de salud",
+    "intro": "En EE. UU., una ley federal de privacidad llamada HIPAA le da derechos sobre su información de salud. Esta hoja explica los principales con palabras sencillas. Su estado puede darle aún más protección. Su clínica también tiene un aviso de privacidad que explica cómo usa su información. Puede pedir una copia. Leer esta hoja toma unos 10 minutos.",
+    "sections": [
+      {
+        "heading": "Puede ver sus registros y recibir una copia",
+        "steps": [
+          "Pida a su clínica una copia de sus registros. Si los guardan en una computadora, puede pedir una copia electrónica.",
+          "Puede que la clínica le pida que haga la solicitud por escrito. Deben contestar dentro de un plazo fijo. Pregunte cuánto va a tardar.",
+          "Pueden cobrar un precio justo por hacer las copias, pero no por buscar sus registros.",
+          "Puede que no se incluyan algunas notas privadas que un terapeuta guarda aparte de su registro principal. Pregúntele a su consejero cómo funciona."
+        ]
+      },
+      {
+        "heading": "Puede pedir que corrijan errores",
+        "body": "Si algo en su registro está mal o falta, puede pedir por escrito que lo cambien. La clínica puede decir que no, pero debe decirle por qué por escrito. Después usted puede escribir una carta para decir que no está de acuerdo, y pedir que la guarden junto con su registro."
+      },
+      {
+        "heading": "Puede elegir cómo le contacta la clínica",
+        "steps": [
+          "Puede pedirle a la clínica que le llame a otro número, o que le mande el correo a otra dirección.",
+          "Esto puede ayudar si alguien en su casa podría ver u oír cosas que usted quiere mantener en privado.",
+          "La clínica debe aceptar las solicitudes razonables. No tiene que explicar por qué lo pide."
+        ]
+      },
+      {
+        "heading": "Puede pedir que limiten lo que se comparte",
+        "steps": [
+          "Puede pedirle a su clínica que no comparta parte de su información. No siempre tienen que aceptar.",
+          "Si usted paga todo de su bolsillo por una cita o un servicio, puede pedir que no le avisen a su plan de salud. En la mayoría de los casos, deben aceptar.",
+          "Puede pedir una lista de algunas de las veces en que se compartió su información por razones que no son su cuidado, el pago o el trabajo diario de la clínica."
+        ]
+      },
+      {
+        "heading": "Protección extra para algunos registros",
+        "body": "Los registros de muchos programas de tratamiento por uso de sustancias tienen protección federal extra de privacidad. En la mayoría de los casos, estos programas necesitan su permiso por escrito antes de compartir sus registros. Pida al programa que le explique las reglas y lo que está aceptando antes de firmar."
+      },
+      {
+        "heading": "Algunas aplicaciones y sitios web no están cubiertos",
+        "body": "Estas reglas cubren a la mayoría de las clínicas, médicos, hospitales y planes de salud. Muchas veces no cubren las aplicaciones o los sitios web de salud que usted elige usar por su cuenta. Lea las reglas de privacidad de una aplicación antes de darle datos de su salud."
+      },
+      {
+        "heading": "Si cree que no respetaron sus derechos",
+        "steps": [
+          "Hable primero con la persona encargada de la privacidad en la clínica. El aviso de privacidad dice cómo comunicarse con ella.",
+          "Puede presentar una queja ante la Oficina de Derechos Civiles de EE. UU. en hhs.gov/ocr. En la mayoría de los casos, debe presentarla dentro de los 180 días después de que supo del problema.",
+          "Una clínica no puede castigarle por presentar una queja.",
+          "Su estado también puede tener su propia oficina para quejas de privacidad."
+        ]
+      }
+    ],
+    "safetyNote": "La seguridad es lo primero: Si alguien le podría hacer daño después de ver su información de salud, dígaselo a su clínica y pida formas privadas de contactarle. Si está en peligro, llame al 911. Si tiene pensamientos de hacerse daño o de hacerle daño a otra persona, llame o envíe un mensaje de texto al 988 en EE. UU. En otros países, llame al número de emergencias local o visite findahelpline.com. Esta hoja no es un consejo legal. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "sources": [
+    {
+      "title": "Your Rights Under HIPAA",
+      "publisher": "US Department of Health and Human Services, Office for Civil Rights",
+      "url": "https://www.hhs.gov/hipaa/for-individuals/guidance-materials-for-consumers/index.html"
+    },
+    {
+      "title": "Individuals' right under HIPAA to access their health information",
+      "publisher": "US Department of Health and Human Services, Office for Civil Rights",
+      "url": "https://www.hhs.gov/hipaa/for-individuals/right-to-access/index.html"
+    },
+    {
+      "title": "Notice of Privacy Practices",
+      "publisher": "US Department of Health and Human Services, Office for Civil Rights",
+      "url": "https://www.hhs.gov/hipaa/for-individuals/notice-privacy-practices/index.html"
+    },
+    {
+      "title": "HIPAA complaint process",
+      "publisher": "US Department of Health and Human Services, Office for Civil Rights",
+      "url": "https://www.hhs.gov/hipaa/filing-a-complaint/complaint-process/index.html"
+    },
+    {
+      "title": "The HIPAA Privacy Rule and 42 CFR Part 2",
+      "publisher": "US Department of Health and Human Services",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/hipaa-part-2/index.html"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

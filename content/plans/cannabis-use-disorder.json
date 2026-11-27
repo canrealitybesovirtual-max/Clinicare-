@@ -32,7 +32,12 @@
             "motivational-interviewing",
             "decisional-balance"
           ],
-          "sud": true
+          "sud": true,
+          "targets": [
+            "hope-and-motivation",
+            "values-and-meaning"
+          ],
+          "step": "low-intensity"
         },
         {
           "id": "cud-tracking",
@@ -40,7 +45,11 @@
           "interventionIds": [
             "relapse-prevention-planning"
           ],
-          "sud": true
+          "sud": true,
+          "targets": [
+            "urges-and-impulsivity"
+          ],
+          "step": "low-intensity"
         },
         {
           "id": "cud-urges",
@@ -48,7 +57,11 @@
           "interventionIds": [
             "urge-surfing"
           ],
-          "sud": true
+          "sud": true,
+          "targets": [
+            "urges-and-impulsivity"
+          ],
+          "step": "low-intensity"
         },
         {
           "id": "cud-incentives",
@@ -56,7 +69,11 @@
           "interventionIds": [
             "contingency-management"
           ],
-          "sud": true
+          "sud": true,
+          "targets": [
+            "urges-and-impulsivity"
+          ],
+          "step": "specialist"
         },
         {
           "id": "cud-plan",
@@ -64,13 +81,91 @@
           "interventionIds": [
             "relapse-prevention-planning"
           ],
-          "sud": true
+          "sud": true,
+          "targets": [
+            "coping-skills"
+          ],
+          "step": "high-intensity"
         }
       ],
       "measureIds": [
         "phq-9",
         "gad-7"
       ]
+    },
+    {
+      "id": "cud-recovery-supports",
+      "label": "Building daily life, relationships and supports that make change in cannabis use last",
+      "definitions": [
+        {
+          "text": "Most free time, friends or routines are linked to cannabis use, and other rewarding activities have dropped away.",
+          "sud": true
+        },
+        {
+          "text": "Has few people who support the change, or relationships at home are strained by use.",
+          "sud": true
+        }
+      ],
+      "longTermGoals": [
+        {
+          "text": "The client has rewarding activities, relationships and supports that fit the goal they chose.",
+          "sud": true
+        }
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "cud-community-reinforcement",
+          "text": "With a clinician trained in the community reinforcement approach, by week 6 plan at least 2 rewarding activities a week without cannabis (for example work, social or leisure) and a trial period without use that the client agrees to.",
+          "interventionIds": [
+            "community-reinforcement-approach"
+          ],
+          "sud": true,
+          "targets": [
+            "low-reward-engagement",
+            "values-and-meaning"
+          ],
+          "step": "specialist"
+        },
+        {
+          "id": "cud-mutual-help",
+          "text": "By week 4, explore mutual-help options that fit the client (for example NA, SMART Recovery, or faith-based or culturally specific groups) and, if interested, attend at least 1 meeting and talk it over at the next session.",
+          "interventionIds": [
+            "twelve-step-and-mutual-help-facilitation"
+          ],
+          "sud": true,
+          "targets": [
+            "low-social-support",
+            "strengths-and-supports"
+          ],
+          "step": "low-intensity"
+        },
+        {
+          "id": "cud-couples-option",
+          "text": "If the client has a partner who supports the change and there is no abuse or coercive control, discuss by week 4 behavioral couples therapy, and refer if it fits.",
+          "interventionIds": [
+            "behavioral-couples-therapy"
+          ],
+          "sud": true,
+          "targets": [
+            "interpersonal-difficulties",
+            "strengths-and-supports"
+          ],
+          "step": "specialist"
+        },
+        {
+          "id": "cud-step-by-step-review",
+          "text": "Over weeks 3 to 10, go through 1 recent time of use every 2 weeks step by step (what came before, thoughts, feelings, urges and what followed) and agree on 1 change.",
+          "interventionIds": [
+            "behavioral-chain-analysis"
+          ],
+          "sud": true,
+          "targets": [
+            "urges-and-impulsivity"
+          ],
+          "step": "high-intensity"
+        }
+      ],
+      "measureIds": []
     }
   ],
   "collaborativeNote": "Write goals and objectives with the client in their own words. Timelines and targets are examples to adapt; the client decides what matters, and the clinician checks safety and fit. Every item in this plan records substance use: the export carries the 42 CFR Part 2 notice.",
@@ -98,6 +193,18 @@
       "publisher": "Cochrane Database of Systematic Reviews (PubMed)",
       "url": "https://pubmed.ncbi.nlm.nih.gov/27149547/",
       "year": 2016
+    },
+    {
+      "title": "Contingency management for treatment of substance use disorders: a meta-analysis (Prendergast et al.)",
+      "publisher": "Addiction (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17034434/",
+      "year": 2006
+    },
+    {
+      "title": "Alcoholics Anonymous and other 12-step programs for alcohol use disorder (Kelly et al.)",
+      "publisher": "Cochrane Database of Systematic Reviews (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32159228/",
+      "year": 2020
     }
   ],
   "license": "original",

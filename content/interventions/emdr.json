@@ -37,7 +37,8 @@
     "Consider the client's own understanding of trauma and healing, and look for a provider who will respect it."
   ],
   "trainingRequired": "EMDR: trained clinicians only. Deliver only after completing an EMDRIA-approved basic training (which includes required consultation hours) or an equivalent recognized national association training, with ongoing consultation. Otherwise refer.",
-  "handoutIds": [],
+  "handoutIds": ["trauma-therapy-what-to-expect"],
+  "orientationIds": ["trauma-focused-therapies"],
   "sources": [
     {
       "title": "Post-traumatic stress disorder (NG116)",

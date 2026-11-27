@@ -1,0 +1,79 @@
+{
+  "id": "transference-focused-psychotherapy",
+  "name": "Transference-focused psychotherapy (TFP): overview and referral",
+  "modality": "Psychodynamic - transference-focused",
+  "conditions": [
+    "borderline-personality-disorder"
+  ],
+  "evidenceLevel": "APA Division 12 lists TFP for borderline personality disorder (rated strong but controversial research support; check the current page). In a randomized trial (Doering et al., 2010), TFP led to fewer dropouts and suicide attempts and better functioning than treatment by experienced community psychotherapists. In a multiwave trial, TFP, DBT and supportive therapy all brought improvement (Clarkin et al., 2007), while schema-focused therapy outperformed TFP over three years (Giesen-Bloo et al., 2006). There are fewer trials than for DBT.",
+  "minutes": {
+    "min": 45,
+    "max": 50
+  },
+  "purpose": "A twice-weekly psychodynamic therapy developed by Otto Kernberg, John Clarkin, Frank Yeomans and colleagues. It proposes that the client's experience of self and others is split into extreme, unconnected images (for example, an all-good caretaker and an all-bad abandoner) that are lived out in relationships, including with the therapist. The trained therapist sets a clear treatment contract, then works in the here and now on the shifting patterns in the therapy relationship to help the client bring these images together. This entry is an overview for planning and referral; it is not a protocol.",
+  "steps": [
+    "Confirm fit and training. TFP is delivered by clinicians trained and supervised in it; otherwise, refer to a trained provider or program.",
+    "Treatment contract (overview): before therapy begins, clinician and client agree on roles, frequency, and how self-harm, crises and threats to the treatment will be handled.",
+    "Identify the active relationship pattern (overview): notice the pairing of self and other images present in the session, and the emotion that links them.",
+    "Clarification, confrontation and interpretation (overview): first clarify the client's experience, then gently point out contradictions, then offer hypotheses about why the patterns shift.",
+    "Give priority to threats to safety and to the treatment over other themes, using the contract.",
+    "Generalist clinicians can borrow the clear frame and the habit of naming relationship patterns as they appear, without interpretive work."
+  ],
+  "script": [
+    "Before we start, let's agree on how we'll work together, including what we'll do if things feel unsafe.",
+    "A moment ago I seemed like someone who wanted to help; now it sounds like I seem cold and uncaring. Can we look at that shift together?",
+    "What do you notice in yourself when it feels like I'm against you?",
+    "This therapy is intensive and works best with someone trained in it. I can help you find a program."
+  ],
+  "contraindications": [
+    "Full TFP requires training and supervision; interpretive work without training can increase distress.",
+    "It needs a stable frame and twice-weekly sessions for a year or more; consider access, cost and the client's capacity to commit.",
+    "Active psychosis, substance use that dominates daily life, or patterns in which the contract cannot hold need specialist assessment first.",
+    "This intervention does not assess or decide risk. If suicidal thoughts, self-harm or risk to others come up, pause and follow your setting's risk-assessment and safety-planning procedures. Keep crisis options visible: 988 Suicide & Crisis Lifeline (US, call or text), the local emergency number, and findahelpline.com for other countries."
+  ],
+  "culturalAdaptations": [
+    "Ideas about authority, family loyalty and showing anger toward a helper vary; a trained clinician should explore how culture shapes what is expressed in the therapy relationship.",
+    "Consider the cultural fit and practical demands of a long, intensive therapy, and offer alternatives where needed.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "trainingRequired": "TFP: trained clinicians only (training with accredited teacher-supervisors through the International Society of Transference-Focused Psychotherapy and national bodies such as the British Psychoanalytic Council); steps here are overview-level only.",
+  "handoutIds": [
+    "what-to-expect-in-therapy"
+  ],
+  "orientationIds": [
+    "psychodynamic-therapy"
+  ],
+  "sources": [
+    {
+      "title": "Transference-Focused Therapy for Borderline Personality Disorder",
+      "publisher": "APA Division 12, Society of Clinical Psychology",
+      "url": "https://div12.org/treatment/transference-focused-therapy-for-borderline-personality-disorder/"
+    },
+    {
+      "title": "Transference-focused psychotherapy v. treatment by community psychotherapists for borderline personality disorder: randomised controlled trial (Doering et al.)",
+      "publisher": "British Journal of Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20435966/",
+      "year": 2010
+    },
+    {
+      "title": "Evaluating three treatments for borderline personality disorder: a multiwave study (Clarkin et al.)",
+      "publisher": "American Journal of Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17541052/",
+      "year": 2007
+    },
+    {
+      "title": "Outpatient psychotherapy for borderline personality disorder: randomized trial of schema-focused therapy vs transference-focused psychotherapy (Giesen-Bloo et al.)",
+      "publisher": "Archives of General Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16754838/",
+      "year": 2006
+    },
+    {
+      "title": "Transference-focused psychotherapy (accredited training and practitioners)",
+      "publisher": "British Psychoanalytic Council",
+      "url": "https://bpc.org.uk/professionals/kite-mark-therapist/tfp"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

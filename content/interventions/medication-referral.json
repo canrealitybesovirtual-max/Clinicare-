@@ -24,7 +24,10 @@
     "schizophrenia",
     "somatic-symptom-disorder",
     "body-dysmorphic-disorder",
-    "hoarding-disorder"
+    "hoarding-disorder",
+    "sedative-hypnotic-use-disorder",
+    "tobacco-use-disorder",
+    "premenstrual-dysphoric-disorder"
   ],
   "evidenceLevel": "Guidelines include medication as an option, alone or with psychotherapy, for several conditions. Examples: NICE NG222 (depression; antidepressants are not routinely offered first-line for less severe depression unless the person prefers them); NICE CG113 (GAD and panic disorder); NICE CG159 (social anxiety, where antidepressants are usually less helpful than individual CBT); NICE CG31 (OCD, SSRIs for moderate or severe impairment); the APA PTSD guideline (updated 2025; check its current medication ratings); the APA 2018 alcohol pharmacotherapy guideline (naltrexone or acamprosate for moderate to severe AUD); and ACP 2016 with AASM (CBT-I first for chronic insomnia, with short-term medication considered if CBT-I is not enough). Prolonged grief: in one large trial, an antidepressant helped co-occurring depressive symptoms but did not improve grief outcomes (Shear et al., 2016), so refer for the depression rather than for grief itself. Decisions belong to the prescriber and the client.",
   "minutes": { "min": 10, "max": 20 },
@@ -67,7 +70,7 @@
     "note": "If the client's faith community has views about medication, the client may wish to talk with a trusted faith leader, and the clinician can explore how the client sees medication fitting with their beliefs (for example, as one means of care). The client leads; the clinician neither endorses nor challenges religious views about treatment.",
     "consentNote": "Offer only if the client raises faith or spirituality and asks to include it. Before starting, explain what the faith-integrated option involves, that it is optional, that the same intervention is available without religious content, and that the client can change their mind at any time; document informed consent. Follow the client's own tradition and words, and never introduce, impose, endorse or challenge beliefs (AACC Code of Ethics: informed consent before spiritual interventions, client-led integration; ACA Code of Ethics 2014, A.2 informed consent and A.4.b personal values)."
   },
-  "handoutIds": [],
+  "handoutIds": ["questions-for-my-prescriber"],
   "sources": [
     { "title": "Mental Health Medications (health topic)", "publisher": "National Institute of Mental Health", "url": "https://www.nimh.nih.gov/health/topics/mental-health-medications" },
     { "title": "Depression in adults: treatment and management (NG222)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng222", "year": 2022 },

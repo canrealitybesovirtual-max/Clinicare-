@@ -52,7 +52,8 @@
     "consentNote": "Before any faith-integrated variant, explain its purpose and alternatives, confirm the client's right to decline or stop at any time, and document informed consent (AACC Code of Ethics; ACA Code of Ethics). Faith integration is client-led. Never impose beliefs or suggest that distress reflects weak faith."
   },
   "trainingRequired": "Individual skills can be taught by clinicians competent in DBT skills. Comprehensive DBT (individual therapy, skills group, phone coaching and a consultation team) requires formal DBT training; DBT-PTSD is a separate specialized protocol with its own training.",
-  "handoutIds": ["hard-moment-plan", "coping-cards", "grounding-5-4-3-2-1", "breathing-practice", "safety-plan"],
+  "handoutIds": ["hard-moment-plan", "coping-cards", "grounding-5-4-3-2-1", "breathing-practice", "safety-plan", "daily-emotion-and-urge-tracker"],
+  "orientationIds": ["dialectical-behavior-therapy"],
   "sources": [
     { "title": "DBT Skills Training Manual, Second Edition (Linehan)", "publisher": "Guilford Press", "url": "https://www.guilford.com/books/DBT-Skills-Training-Manual/Marsha-Linehan/9781462516995", "year": 2015 },
     { "title": "Psychological therapies for people with borderline personality disorder (Storebo et al.)", "publisher": "Cochrane Database of Systematic Reviews", "url": "https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD012955.pub2/full", "year": 2020 },

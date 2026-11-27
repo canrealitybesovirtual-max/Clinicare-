@@ -45,8 +45,10 @@
   },
   "handoutIds": [
     "assertive-communication",
-    "problem-solving-steps"
+    "problem-solving-steps",
+    "couples-pause-and-repair"
   ],
+  "orientationIds": ["systemic-family-and-couples-therapy", "behavior-therapy"],
   "sources": [
     {
       "title": "Meta-analysis of couple therapy: effects across outcomes, designs, timeframes, and other moderators (Roddy et al.)",

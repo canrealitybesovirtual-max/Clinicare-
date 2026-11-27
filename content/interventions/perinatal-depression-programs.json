@@ -1,0 +1,113 @@
+{
+  "id": "perinatal-depression-programs",
+  "name": "Perinatal depression prevention and treatment programs (counseling during pregnancy and after birth)",
+  "modality": "CBT- and interpersonal-therapy-based perinatal programs (prevention and treatment)",
+  "conditions": ["major-depressive-disorder", "generalized-anxiety-disorder", "obsessive-compulsive-disorder"],
+  "evidenceLevel": "The US Preventive Services Task Force (2019, grade B) recommends that clinicians provide or refer pregnant and postpartum people at increased risk of depression to counseling interventions, citing convincing evidence for cognitive behavioral and interpersonal approaches; a 2025 draft update keeps the counseling recommendation. NICE CG192 (2014) recommends assessment within 2 weeks of referral and psychological interventions within 1 month, and immediate assessment (within 4 hours) for suspected postpartum psychosis. In trials, an interpersonal-therapy-based prenatal program (ROSE) lowered postpartum depression at 6 months from 31% to 16% among mothers on public assistance (Zlotnick et al., 2016), and the WHO Thinking Healthy approach, delivered by community health workers, more than halved depression rates at 6 and 12 months in rural Pakistan (Rahman et al., 2008).",
+  "minutes": { "min": 20, "max": 60 },
+  "purpose": "Pregnancy and the first year after birth are times of raised risk for depression and anxiety, and for frightening intrusive thoughts about the baby. Structured, brief programs help: CBT-based courses (for example Mothers and Babies, or WHO's Thinking Healthy, which community workers can deliver) teach mood skills, pleasant activities and support-seeking, and interpersonal-therapy-based programs (for example ROSE) focus on role changes, relationships and social support. This entry helps clinicians offer or refer to these programs, screen with appropriate tools, and route urgent concerns, including possible postpartum psychosis, without delay. Program materials are not reproduced here; link out to them.",
+  "steps": [
+    "Ask about mood, anxiety, sleep beyond what the baby's schedule explains, intrusive thoughts, support, relationship safety and practical stress at prenatal and postnatal contacts. Screen with a validated tool your setting uses (the PHQ-9 is built in; the Edinburgh Postnatal Depression Scale is a link-out because its license is not yet confirmed for this app).",
+    "Act urgently on signs of possible postpartum psychosis, especially in the first weeks after birth: confusion, severe sleeplessness, unusual beliefs, hallucinations or rapid mood swings. Arrange same-day emergency assessment. See the practice guide on postpartum psychosis versus intrusive thoughts.",
+    "For unwanted, distressing intrusive thoughts of harm to the baby that the parent finds horrifying and avoids, give reassurance that these are common, assess sensitively, and offer treatment; do not assume risk from the content alone.",
+    "For people at increased risk, offer or refer to a counseling program during pregnancy or soon after birth (CBT-based or interpersonal-therapy-based, in group, individual, home-visiting or online formats).",
+    "For current depression or anxiety, offer or refer for a structured psychological therapy within weeks, and coordinate with the prescriber or obstetric team about medication options and breastfeeding questions.",
+    "Involve partners and family supports if the client wishes, and connect with practical help (sleep protection, childcare, financial and housing support).",
+    "Share national supports: in the US, the National Maternal Mental Health Hotline (call or text 1-833-TLC-MAMA) and Postpartum Support International. For any crisis, call or text 988 or the local emergency number.",
+    "Follow up within a few weeks, and keep checking through the first year after birth."
+  ],
+  "script": [
+    "Many people feel low, anxious or overwhelmed during pregnancy or after a baby. It is common and it is treatable.",
+    "Some new parents have sudden scary thoughts about their baby being hurt. These thoughts are very common, and having them does not mean you would act on them.",
+    "There are short programs that teach skills for mood and stress and help you build support. Would you like to hear about them?",
+    "How are you sleeping when the baby is asleep? Who helps you with the baby?",
+    "If you ever feel confused, cannot sleep at all, or hear or see things others do not, please get help the same day.",
+    "In the US, you can call or text 1-833-TLC-MAMA any time to talk with a counselor."
+  ],
+  "contraindications": [
+    "Possible postpartum psychosis is a psychiatric emergency. Do not wait for a routine appointment; arrange immediate assessment.",
+    "If the parent expresses intent or plans to harm themselves or the baby, follow emergency procedures. This app does not judge risk; you do. Crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com.",
+    "Medication decisions in pregnancy and breastfeeding belong to the prescriber, weighing the risks of untreated illness too. Do not advise stopping medication.",
+    "Screen for intimate partner violence privately, since risk can rise during pregnancy and after birth.",
+    "Do not enter identifying details about the parent or the baby into this app."
+  ],
+  "culturalAdaptations": [
+    "Postpartum customs (rest periods, special foods, family roles) differ across cultures and can be protective. Build on them and ask about pressures they may create.",
+    "Stigma about maternal depression and fear of child protection involvement can stop people from speaking up. Explain confidentiality and its limits clearly and kindly.",
+    "Partners, fathers and non-birthing parents can also struggle. Ask about them and offer support. Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "handoutIds": ["new-parent-mood-help", "scary-thoughts-after-baby"],
+  "orientationIds": ["cognitive-therapy", "interpersonal-therapies"],
+  "evidenceGrades": [
+    {
+      "body": "USPSTF",
+      "guideline": "Perinatal depression: preventive interventions",
+      "year": 2019,
+      "population": "Pregnant and postpartum people at increased risk of perinatal depression",
+      "direction": "for",
+      "strength": "grade B (provide or refer to counseling interventions)",
+      "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/perinatal-depression-preventive-interventions"
+    },
+    {
+      "body": "NICE",
+      "guideline": "Antenatal and postnatal mental health (CG192)",
+      "year": 2014,
+      "population": "Women with mental health problems in pregnancy and the postnatal period",
+      "direction": "for",
+      "strength": "offer psychological interventions within 1 month of initial assessment",
+      "url": "https://www.nice.org.uk/guidance/cg192/chapter/Recommendations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Perinatal depression: preventive interventions (final recommendation statement)",
+      "publisher": "US Preventive Services Task Force",
+      "url": "https://www.uspreventiveservicestaskforce.org/uspstf/recommendation/perinatal-depression-preventive-interventions",
+      "year": 2019
+    },
+    {
+      "title": "Interventions to prevent perinatal depression: US Preventive Services Task Force recommendation statement",
+      "publisher": "JAMA (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30747971/",
+      "year": 2019
+    },
+    {
+      "title": "Antenatal and postnatal mental health: clinical management and service guidance (CG192): recommendations",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg192/chapter/Recommendations",
+      "year": 2014
+    },
+    {
+      "title": "Randomized controlled trial to prevent postpartum depression in mothers on public assistance (Zlotnick et al.)",
+      "publisher": "Journal of Affective Disorders (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26454186/",
+      "year": 2016
+    },
+    {
+      "title": "Cognitive behaviour therapy-based intervention by community health workers for mothers with depression and their infants in rural Pakistan: a cluster-randomised controlled trial (Rahman et al.)",
+      "publisher": "The Lancet (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18790313/",
+      "year": 2008
+    },
+    {
+      "title": "Thinking Healthy: a manual for psychosocial management of perinatal depression",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/publications/i/item/WHO-MSD-MER-15.1",
+      "year": 2015
+    },
+    {
+      "title": "Effects of a postpartum depression intervention: subgroup analyses from a cluster randomized trial of Mothers and Babies (Tandon et al.)",
+      "publisher": "Frontiers in Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/42368824/",
+      "year": 2026
+    },
+    {
+      "title": "National Maternal Mental Health Hotline",
+      "publisher": "Health Resources and Services Administration, Maternal and Child Health Bureau",
+      "url": "https://mchb.hrsa.gov/national-maternal-mental-health-hotline"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

@@ -1,0 +1,151 @@
+{
+  "id": "moral-injury",
+  "name": "Moral injury formulation and referral",
+  "shortName": "Moral injury",
+  "family": "trauma-and-moral-injury",
+  "orientationIds": [
+    "trauma-focused-therapies",
+    "existential-therapy"
+  ],
+  "purpose": "A way to understand lasting distress after doing, failing to prevent, witnessing or being betrayed in events that violate deeply held moral beliefs, common in military, first-responder and health-care work but not limited to them. Moral injury is not a diagnosis. Its center is guilt, shame, anger, disgust and loss of trust or meaning, rather than fear, so formulations and treatment targets differ from fear-based models of post-traumatic stress, though the two often occur together.",
+  "whenToUse": [
+    "When guilt, shame, betrayal or loss of faith and meaning dominate the story more than fear.",
+    "After events involving harm to others, decisions with no good options, or betrayal by leaders or institutions.",
+    "When post-traumatic stress treatment has helped fear but guilt, shame or withdrawal remain."
+  ],
+  "structure": [
+    {
+      "id": "events",
+      "label": "Potentially morally injurious events",
+      "prompt": "Acts by oneself, by others, or by leaders or institutions that went against the person's moral code, described only as much as the person wants.",
+      "examples": [
+        "Had to choose which patient received care first",
+        "Ordered to act against conscience"
+      ]
+    },
+    {
+      "id": "moral-emotions",
+      "label": "Moral emotions",
+      "prompt": "Guilt (I did something bad), shame (I am bad), anger and disgust, and grief for what was lost.",
+      "examples": []
+    },
+    {
+      "id": "meaning",
+      "label": "Beliefs, meaning and trust",
+      "prompt": "Changes in beliefs about oneself, other people, the world or faith, and in trust toward leaders or institutions.",
+      "examples": [
+        "I cannot be forgiven",
+        "No one can be trusted"
+      ]
+    },
+    {
+      "id": "behavior",
+      "label": "Withdrawal and self-punishment",
+      "prompt": "Pulling back from people and from good things, self-handicapping, self-punishment and, sometimes, substance use or self-harm.",
+      "examples": []
+    },
+    {
+      "id": "difference",
+      "label": "How it differs from fear-based formulations",
+      "prompt": "Exposure that lowers fear may not shift guilt or shame. Treatment adds work on moral appraisals, self-compassion, repair and meaning, and sometimes spiritual care.",
+      "examples": []
+    },
+    {
+      "id": "repair",
+      "label": "Paths toward repair",
+      "prompt": "Making sense of context and responsibility realistically, self-compassion, forgiveness where the person seeks it, amends or service, reconnecting with others, and spiritual or faith support when wanted.",
+      "examples": [
+        "Writing to a person who was harmed, without sending it",
+        "Volunteering in a way that fits values"
+      ]
+    }
+  ],
+  "steps": [
+    "Ask about guilt, shame and betrayal directly, alongside fear and threat, when there has been exposure to morally difficult events.",
+    "Listen for the person's own moral code and what they believe the event says about them.",
+    "Separate realistic responsibility from hindsight bias and from responsibility that belonged to others or to the situation.",
+    "Plan repair work in the person's terms, and offer chaplaincy or faith support if they want it.",
+    "Refer to clinicians trained in moral-injury-focused approaches when needed."
+  ],
+  "collaborativeTips": [
+    "Do not rush to reassure; premature reassurance can feel like the event is not being taken seriously.",
+    "Respect that some acts carry real moral weight; the goal is a livable relationship with what happened, not denial."
+  ],
+  "cautions": [
+    "Moral injury is not a diagnosis and has no validated cut-off; do not label people with it.",
+    "Guilt and shame raise the importance of asking about suicidal thoughts; follow your own assessment and protocol.",
+    "Structured programs such as Adaptive Disclosure and Impact of Killing are delivered by trained clinicians; this page is an overview for formulation and referral.",
+    "A formulation never scores, grades or decides risk. If thoughts of suicide, self-harm or harm to others come up, pause the formulation and follow your own assessment and local protocol; in the US the 988 Lifeline is available by call or text, elsewhere use the local emergency number or findahelpline.com."
+  ],
+  "conditionIds": [
+    "ptsd",
+    "major-depressive-disorder",
+    "prolonged-grief-disorder"
+  ],
+  "interventionIds": [
+    "cognitive-processing-therapy",
+    "self-compassion-practice",
+    "compassion-focused-imagery",
+    "existential-meaning-exploration",
+    "act-values-clarification",
+    "religiously-integrated-cbt"
+  ],
+  "handoutIds": [
+    "kind-self-talk"
+  ],
+  "practiceIds": [
+    "supervision-and-consultation"
+  ],
+  "populationIds": [
+    "military-and-veterans",
+    "first-responders-and-health-workers"
+  ],
+  "legalIds": [
+    "military-confidentiality"
+  ],
+  "trainingRequired": "Trained clinicians only for structured moral-injury programs such as Adaptive Disclosure and Impact of Killing; this page gives an overview for formulation and referral.",
+  "trainingPath": [
+    {
+      "body": "Guilford Press: Adaptive Disclosure (Litz, Lebowitz, Gray and Nash)",
+      "url": "https://www.guilford.com/books/Adaptive-Disclosure/Litz-Lebowitz-Gray-Nash/9781462533831",
+      "note": "Treatment manual for military trauma, loss and moral injury; for trained clinicians."
+    }
+  ],
+  "worksheet": false,
+  "sud": false,
+  "linkOuts": [
+    {
+      "title": "Moral Injury (resource summary authored by the National Center for PTSD)",
+      "publisher": "SAMHSA Disaster Behavioral Health Information Series",
+      "url": "https://www.samhsa.gov/resource/dbhis/moral-injury"
+    }
+  ],
+  "measuresPending": [],
+  "sources": [
+    {
+      "title": "Moral injury and moral repair in war veterans: a preliminary model and intervention strategy (Litz et al.)",
+      "publisher": "Clinical Psychology Review (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19683376/",
+      "year": 2009
+    },
+    {
+      "title": "Impact of killing in war: a randomized, controlled pilot trial (Maguen et al.)",
+      "publisher": "Journal of Clinical Psychology",
+      "url": "https://doi.org/10.1002/jclp.22471",
+      "year": 2017
+    },
+    {
+      "title": "Moral Injury (resource summary authored by the National Center for PTSD)",
+      "publisher": "SAMHSA Disaster Behavioral Health Information Series",
+      "url": "https://www.samhsa.gov/resource/dbhis/moral-injury"
+    },
+    {
+      "title": "Adaptive Disclosure: A New Treatment for Military Trauma, Loss, and Moral Injury (Litz, Lebowitz, Gray and Nash)",
+      "publisher": "Guilford Press",
+      "url": "https://www.guilford.com/books/Adaptive-Disclosure/Litz-Lebowitz-Gray-Nash/9781462533831"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

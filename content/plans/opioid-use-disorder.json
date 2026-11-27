@@ -31,7 +31,8 @@
           "interventionIds": [
             "naloxone-overdose-education"
           ],
-          "sud": true
+          "sud": true,
+          "step": "crisis-or-urgent"
         },
         {
           "id": "oud-moud",
@@ -39,7 +40,8 @@
           "interventionIds": [
             "moud-referral"
           ],
-          "sud": true
+          "sud": true,
+          "step": "specialist"
         },
         {
           "id": "oud-retention",
@@ -48,7 +50,11 @@
             "moud-referral",
             "contingency-management"
           ],
-          "sud": true
+          "sud": true,
+          "targets": [
+            "hope-and-motivation"
+          ],
+          "step": "specialist"
         },
         {
           "id": "oud-goals",
@@ -56,7 +62,12 @@
           "interventionIds": [
             "motivational-interviewing"
           ],
-          "sud": true
+          "sud": true,
+          "targets": [
+            "hope-and-motivation",
+            "values-and-meaning"
+          ],
+          "step": "low-intensity"
         },
         {
           "id": "oud-urges",
@@ -65,7 +76,11 @@
             "urge-surfing",
             "relapse-prevention-planning"
           ],
-          "sud": true
+          "sud": true,
+          "targets": [
+            "urges-and-impulsivity"
+          ],
+          "step": "low-intensity"
         },
         {
           "id": "oud-safety",
@@ -74,13 +89,105 @@
             "collaborative-safety-planning",
             "lethal-means-counseling"
           ],
-          "sud": true
+          "sud": true,
+          "targets": [
+            "coping-skills"
+          ],
+          "step": "crisis-or-urgent"
         }
       ],
       "measureIds": [
         "phq-9",
         "gad-7"
       ]
+    },
+    {
+      "id": "oud-recovery-supports",
+      "label": "Building daily life, relationships and supports that make change in opioid use last",
+      "definitions": [
+        {
+          "text": "Most free time, friends or routines are linked to opioid use, and other rewarding activities have dropped away.",
+          "sud": true
+        },
+        {
+          "text": "Has few people who support the change, or relationships at home are strained by use.",
+          "sud": true
+        }
+      ],
+      "longTermGoals": [
+        {
+          "text": "The client has rewarding activities, relationships and supports that fit the goal they chose.",
+          "sud": true
+        }
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "oud-community-reinforcement",
+          "text": "With a clinician trained in the community reinforcement approach, by week 6 plan at least 2 rewarding activities a week without opioid (for example work, social or leisure) and a trial period without use that the client agrees to.",
+          "interventionIds": [
+            "community-reinforcement-approach"
+          ],
+          "sud": true,
+          "targets": [
+            "low-reward-engagement",
+            "values-and-meaning"
+          ],
+          "step": "specialist"
+        },
+        {
+          "id": "oud-mutual-help",
+          "text": "By week 4, explore mutual-help options that fit the client (for example NA, SMART Recovery, or faith-based or culturally specific groups) and, if interested, attend at least 1 meeting and talk it over at the next session.",
+          "interventionIds": [
+            "twelve-step-and-mutual-help-facilitation"
+          ],
+          "sud": true,
+          "targets": [
+            "low-social-support",
+            "strengths-and-supports"
+          ],
+          "step": "low-intensity"
+        },
+        {
+          "id": "oud-couples-option",
+          "text": "If the client has a partner who supports the change and there is no abuse or coercive control, discuss by week 4 behavioral couples therapy, and refer if it fits.",
+          "interventionIds": [
+            "behavioral-couples-therapy"
+          ],
+          "sud": true,
+          "targets": [
+            "interpersonal-difficulties",
+            "strengths-and-supports"
+          ],
+          "step": "specialist"
+        },
+        {
+          "id": "oud-trauma-link",
+          "text": "If trauma symptoms and opioid use feed each other, discuss by week 6 integrated treatment for both, alongside medication treatment.",
+          "interventionIds": [
+            "integrated-ptsd-sud-treatment"
+          ],
+          "sud": true,
+          "targets": [
+            "trauma-memory-intrusions",
+            "urges-and-impulsivity"
+          ],
+          "step": "specialist"
+        },
+        {
+          "id": "oud-pain-link",
+          "text": "If chronic pain is part of the picture, discuss with the prescriber, with consent, a pain plan that includes psychological approaches such as a mindfulness-based group program.",
+          "interventionIds": [
+            "mindfulness-oriented-recovery-enhancement",
+            "cbt-and-act-for-chronic-pain"
+          ],
+          "sud": true,
+          "targets": [
+            "physical-health-burden"
+          ],
+          "step": "specialist"
+        }
+      ],
+      "measureIds": []
     }
   ],
   "collaborativeNote": "Write goals and objectives with the client in their own words. Timelines and targets are examples to adapt; the client decides what matters, and the clinician checks safety and fit. Every item in this plan records substance use: the export carries the 42 CFR Part 2 notice.",
@@ -120,6 +227,28 @@
       "publisher": "Addiction (PubMed)",
       "url": "https://pubmed.ncbi.nlm.nih.gov/27028542/",
       "year": 2016
+    },
+    {
+      "title": "TIP 63: Medications for Opioid Use Disorder",
+      "publisher": "Substance Abuse and Mental Health Services Administration",
+      "url": "https://store.samhsa.gov/product/tip-63-medications-opioid-use-disorder/pep21-02-01-002"
+    },
+    {
+      "title": "Evidence Brief: Community Reinforcement Approach for Alcohol Use Disorder",
+      "publisher": "Psychological Health Center of Excellence, Defense Health Agency",
+      "url": "https://health.mil/Reference-Center/Publications/2021/04/26/PHCoE-Evidence-Brief-Community-Reinforcement-Approach-for-Alcohol-Use-Disorder-508"
+    },
+    {
+      "title": "Alcoholics Anonymous and other 12-step programs for alcohol use disorder (Kelly et al.)",
+      "publisher": "Cochrane Database of Systematic Reviews (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32159228/",
+      "year": 2020
+    },
+    {
+      "title": "Mindfulness-Oriented Recovery Enhancement vs Supportive Group Therapy for Co-occurring Opioid Misuse and Chronic Pain in Primary Care: A Randomized Clinical Trial (Garland et al.)",
+      "publisher": "JAMA Internal Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35226053/",
+      "year": 2022
     }
   ],
   "license": "original",

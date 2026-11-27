@@ -1,0 +1,63 @@
+{
+  "id": "reminiscence-and-life-review",
+  "name": "Reminiscence and life review with older adults",
+  "modality": "Reminiscence and life review (structured recall of life experiences)",
+  "conditions": ["major-depressive-disorder", "adjustment-disorder", "prolonged-grief-disorder"],
+  "evidenceLevel": "A meta-analysis of reminiscence interventions in older adults found moderate improvements in ego-integrity and depressive symptoms and small gains in purpose in life, mastery and wellbeing, mostly maintained at follow-up; effects on depression were larger in people who were depressed or had chronic physical illness and in structured life-review therapy (Pinquart and Forstmeier, 2012). An earlier meta-analysis also found benefits for psychological wellbeing (Bohlmeijer et al., 2007). For people living with dementia, a Cochrane review found inconsistent, often small effects that vary by setting, with probable benefits for mood and cognition in individual sessions and for communication in groups (Woods et al., 2018).",
+  "minutes": { "min": 30, "max": 60 },
+  "purpose": "Reminiscence invites older adults to recall and share memories, often with prompts such as photos, music or objects, and can lift mood and strengthen connection. Life review goes further: it moves through the whole life story in a structured way, looking at both good and painful periods, so the person can make sense of their life, recognize strengths and come to terms with regrets. Life-review therapy is a more focused form used for depression. These approaches are low-intensity and acceptable to many older adults, and can be delivered individually or in groups.",
+  "steps": [
+    "Explain the purpose and ask whether the client would like to look back over their life. Make clear they choose what to share and can skip any period.",
+    "Screen for trauma, recent losses and grief beforehand, and agree on how to pause if a memory becomes too painful.",
+    "Choose a format with the client: simple reminiscence (sharing favorite memories, often in a group), or structured life review moving through childhood, adolescence, adulthood and later life over several sessions.",
+    "Use prompts that fit the client's life and senses: photos, music, recipes, places, objects, or a family tree.",
+    "In life review, invite reflection on meaning: what the client is proud of, what they learned, how they coped with hard times, and what they would still like to do or say.",
+    "When regrets or painful memories arise, listen, validate and help the client place them in the context of their whole life, without pushing for detail.",
+    "Consider creating something lasting if the client wants, such as a memory book, recording or letter to family.",
+    "Track mood over time and refer for other treatment if depression or grief does not improve."
+  ],
+  "script": [
+    "Would you like to tell me about some of the important times in your life?",
+    "You choose what to talk about. If any part feels too painful, we can skip it or come back to it later.",
+    "What were you proudest of at that time? How did you get through the hard parts?",
+    "Looking back, what has mattered most to you?",
+    "Is there anything you would still like to do, or say to someone?"
+  ],
+  "contraindications": [
+    "Recalling the past can bring up trauma, such as war, abuse, displacement or loss. Do not press for detail; if trauma reactions appear, slow down, use grounding, and consider a trauma-focused assessment.",
+    "Life review is not a substitute for treatment of moderate to severe depression. Monitor mood and step up care if needed.",
+    "Sudden confusion or a rapid change in memory needs medical assessment.",
+    "If the client expresses hopelessness or wishes to die, address safety first. This app does not judge risk; you do. Crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com.",
+    "In groups, set agreements about privacy and respect, and do not record identifying details of members in this app."
+  ],
+  "culturalAdaptations": [
+    "Cultures differ in how life stories are told and what is private. Follow the client's lead about family secrets, honor and loss.",
+    "For refugees and people from communities affected by war or persecution, life review may touch collective trauma. Offer choice about which periods to cover.",
+    "Include faith, migration, work and community history as the client wishes. Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "handoutIds": ["my-story-in-my-words"],
+  "orientationIds": ["existential-therapy", "integrative-common-factors"],
+  "sources": [
+    {
+      "title": "Effects of reminiscence interventions on psychosocial outcomes: a meta-analysis (Pinquart and Forstmeier)",
+      "publisher": "Aging and Mental Health (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22304736/",
+      "year": 2012
+    },
+    {
+      "title": "The effects of reminiscence on psychological well-being in older adults: a meta-analysis (Bohlmeijer et al.)",
+      "publisher": "Aging and Mental Health (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17558580/",
+      "year": 2007
+    },
+    {
+      "title": "Reminiscence therapy for dementia (Woods et al.)",
+      "publisher": "Cochrane Database of Systematic Reviews (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29493789/",
+      "year": 2018
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

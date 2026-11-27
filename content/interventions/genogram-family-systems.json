@@ -45,7 +45,8 @@
     "consentNote": "Offer only if the client raises faith or spirituality and asks to include it. Before starting, explain what a faith-integrated approach involves, that it is optional, that the same intervention is available without religious content, and that the client can change their mind at any time; document the client's informed consent. Follow the client's own tradition and words, and never introduce, impose, endorse or challenge beliefs (AACC Code of Ethics: consent before spiritual interventions, client-led integration; ACA Code of Ethics 2014, A.2 informed consent and A.4.b personal values)."
   },
   "trainingRequired": "Building a genogram is within general clinical practice. Delivering Bowen or structural family therapy, or couples therapy such as behavioural couples therapy, requires systemic training and supervision (see the AAMFT Code of Ethics on competence).",
-  "handoutIds": [],
+  "handoutIds": ["my-relationships-map"],
+  "orientationIds": ["systemic-family-and-couples-therapy"],
   "sources": [
     { "title": "Reading and interpreting genograms: a systematic approach", "publisher": "Journal of Family Practice", "url": "https://cdn.mdedge.com/files/s3fs-public/jfp-archived-issues/1988-volume_26-27/JFP_1988-04_v26_i4_reading-and-interpreting-genograms-a-sys.pdf", "year": 1988 },
     { "title": "Alcohol-use disorders: diagnosis, assessment and management of harmful drinking (high-risk drinking) and alcohol dependence (CG115)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/cg115", "year": 2011 },

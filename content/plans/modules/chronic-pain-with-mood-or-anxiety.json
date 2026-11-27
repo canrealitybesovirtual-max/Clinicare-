@@ -1,0 +1,173 @@
+{
+  "id": "chronic-pain-with-mood-or-anxiety",
+  "title": "Chronic pain with low mood, worry or poor sleep",
+  "summary": "For long-term pain alongside depression, anxiety, trauma or sleep problems: function goals over pain intensity, pacing, fear of movement, acceptance-based skills, sleep and coordination with the medical team. Objectives about opioid medicines record substance use and carry the Part 2 notice.",
+  "appliesTo": [
+    "major-depressive-disorder",
+    "persistent-depressive-disorder",
+    "generalized-anxiety-disorder",
+    "ptsd",
+    "insomnia-disorder",
+    "somatic-symptom-disorder",
+    "adjustment-disorder",
+    "opioid-use-disorder"
+  ],
+  "problems": [
+    {
+      "id": "pain-function",
+      "label": "Long-term pain that limits daily life, with low mood, worry or poor sleep",
+      "definitions": [
+        "Has had pain for 3 months or longer that limits work, home, social or leisure activity.",
+        "Avoids movement or activity for fear of more pain or harm, or does too much on good days and then is laid up for several days.",
+        "Describes low mood, worry, irritability or poor sleep that rise and fall with the pain."
+      ],
+      "longTermGoals": [
+        "The client does more of what matters to them despite pain, with steadier activity, better sleep and mood, and care that is coordinated with their medical team."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "pain-function-goals",
+          "text": "By session 3, set at least 2 function goals with the client (for example walking to the shop or 2 hours of gardening) rather than goals about pain intensity alone.",
+          "interventionIds": [
+            "cbt-and-act-for-chronic-pain",
+            "act-values-clarification"
+          ],
+          "targets": [
+            "values-and-meaning",
+            "physical-health-burden"
+          ],
+          "step": "low-intensity"
+        },
+        {
+          "id": "pain-pacing",
+          "text": "Over weeks 2 to 8, use activity pacing: find a starting level that works on both good and bad days, then build up by small planned amounts each week, logging activity and pain. If effort is followed by a crash 12 to 48 hours later, pace without planned increases and coordinate with the medical team.",
+          "interventionIds": [
+            "cbt-and-act-for-chronic-pain"
+          ],
+          "targets": [
+            "avoidance-escape",
+            "physical-health-burden"
+          ],
+          "step": "low-intensity"
+        },
+        {
+          "id": "pain-fear-of-movement",
+          "text": "Over weeks 4 to 10, with medical agreement, approach at least 2 avoided movements or activities step by step and test feared predictions about harm.",
+          "interventionIds": [
+            "graded-in-vivo-exposure",
+            "behavioral-experiments"
+          ],
+          "targets": [
+            "avoidance-escape",
+            "threat-monitoring"
+          ],
+          "step": "high-intensity"
+        },
+        {
+          "id": "pain-acceptance",
+          "text": "Over weeks 3 to 10, practice an acceptance or mindfulness skill during pain flare-ups on at least 4 days a week, and rate how much the pain gets in the way of what matters (0-10).",
+          "interventionIds": [
+            "act-acceptance-willingness",
+            "mindfulness-meditation"
+          ],
+          "targets": [
+            "experiential-avoidance"
+          ],
+          "step": "low-intensity"
+        },
+        {
+          "id": "pain-sleep",
+          "text": "By week 4, if sleep is poor, start CBT for insomnia steps adapted for pain (sleep diary, a fixed time out of bed, and getting up when unable to sleep).",
+          "interventionIds": [
+            "cbti-stimulus-control",
+            "brief-behavioral-treatment-insomnia"
+          ],
+          "targets": [
+            "sleep-rhythm-disruption"
+          ],
+          "step": "low-intensity"
+        },
+        {
+          "id": "pain-coordination",
+          "text": "By week 4, with consent, share the plan with the client's medical team and agree on one plan for flare-ups, medicines and activity.",
+          "interventionIds": [
+            "medication-referral"
+          ],
+          "targets": [
+            "physical-health-burden"
+          ]
+        },
+        {
+          "id": "pain-opioid-review",
+          "text": "If the client takes opioid pain medicines and has concerns about how they are being used, discuss them with the client and, with consent, with the prescriber, including safer use, overdose education and other treatment options.",
+          "interventionIds": [
+            "naloxone-overdose-education",
+            "mindfulness-oriented-recovery-enhancement"
+          ],
+          "sud": true,
+          "targets": [
+            "physical-health-burden"
+          ],
+          "step": "specialist"
+        }
+      ],
+      "measureIds": [
+        "phq-9",
+        "gad-7"
+      ],
+      "formulationIds": [
+        "fear-avoidance-pain"
+      ],
+      "handoutIds": [
+        "pacing-and-flare-plan"
+      ]
+    }
+  ],
+  "collaborativeNote": "Pain is real whatever its cause. Set goals about what the client wants to do, not only about pain levels, and agree every activity change with the medical team. Items about opioid use record substance use, so an export that includes them carries the 42 CFR Part 2 notice. Do not add names or other identifying details. Resource only. Not a substitute for clinical judgment.",
+  "sources": [
+    {
+      "title": "Psychological therapies for the management of chronic pain (excluding headache) in adults (Williams et al.)",
+      "publisher": "Cochrane Database of Systematic Reviews (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32794606/",
+      "year": 2020
+    },
+    {
+      "title": "Chronic pain (primary and secondary) in over 16s: assessment of all chronic pain and management of chronic primary pain (NG193)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng193",
+      "year": 2021
+    },
+    {
+      "title": "The fear-avoidance model of pain (Vlaeyen, Crombez and Linton)",
+      "publisher": "Pain (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27428892/",
+      "year": 2016
+    },
+    {
+      "title": "CDC Clinical Practice Guideline for Prescribing Opioids for Pain, United States, 2022 (Dowell et al.)",
+      "publisher": "MMWR Recommendations and Reports (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36327391/",
+      "year": 2022
+    },
+    {
+      "title": "Mindfulness-Oriented Recovery Enhancement vs Supportive Group Therapy for Co-occurring Opioid Misuse and Chronic Pain in Primary Care: A Randomized Clinical Trial (Garland et al.)",
+      "publisher": "JAMA Internal Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35226053/",
+      "year": 2022
+    },
+    {
+      "title": "Myalgic encephalomyelitis (or encephalopathy)/chronic fatigue syndrome: diagnosis and management (NG206)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng206",
+      "year": 2021
+    },
+    {
+      "title": "PHQ and GAD-7 screeners (reproduction terms)",
+      "publisher": "Pfizer / PHQ Screeners",
+      "url": "https://www.phqscreeners.com"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

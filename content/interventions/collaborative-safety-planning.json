@@ -21,7 +21,8 @@
     "anorexia-nervosa",
     "schizophrenia",
     "body-dysmorphic-disorder",
-    "opioid-use-disorder"
+    "opioid-use-disorder",
+    "gambling-disorder"
   ],
   "evidenceLevel": "A meta-analysis of 6 studies (3,536 participants) found that safety planning-type interventions reduced suicidal behavior (relative risk about 0.57; number needed to treat 16) but not suicidal thoughts (Nuij et al., 2021). In a VA emergency department cohort study, the Safety Planning Intervention plus follow-up phone calls was linked with 45% fewer suicidal behaviors over 6 months and more outpatient mental health visits (Stanley et al., 2018; observational, mostly male veterans). The 2024 VA/DoD suicide risk guideline highlights crisis response and safety planning, including means safety. NICE NG225 (self-harm, 2022) advises against using risk tools or low/medium/high risk categories to predict suicide or to decide who gets care.",
   "minutes": { "min": 20, "max": 45 },
@@ -68,7 +69,7 @@
     "note": "If the client chooses, the plan can include prayer, sacred texts, worship, or contacting a trusted faith leader as coping steps or supports, and faith-based reasons for living in the client's own words. The clinician does not introduce religious arguments against suicide and never suggests that suicidal thoughts reflect weak faith.",
     "consentNote": "Offer only if the client raises faith or spirituality and asks to include it. Before starting, explain what the faith-integrated option involves, that it is optional, that the same intervention is available without religious content, and that the client can change their mind at any time; document informed consent. Follow the client's own tradition and words, and never introduce, impose, endorse or challenge beliefs (AACC Code of Ethics: informed consent before spiritual interventions, client-led integration; ACA Code of Ethics 2014, A.2 informed consent and A.4.b personal values)."
   },
-  "handoutIds": ["safety-plan", "hard-moment-plan", "coping-cards"],
+  "handoutIds": ["safety-plan", "hard-moment-plan", "coping-cards", "safety-plan-easy-read", "after-a-crisis-next-steps"],
   "sources": [
     { "title": "Safety planning-type interventions for suicide prevention: meta-analysis (Nuij et al.)", "publisher": "British Journal of Psychiatry (DOI)", "url": "https://doi.org/10.1192/bjp.2021.50", "year": 2021 },
     { "title": "Comparison of the Safety Planning Intervention with follow-up vs usual care of suicidal patients treated in the emergency department (Stanley et al.)", "publisher": "JAMA Psychiatry (PubMed Central)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6142908/", "year": 2018 },

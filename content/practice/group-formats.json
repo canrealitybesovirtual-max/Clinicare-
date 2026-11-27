@@ -1,0 +1,140 @@
+{
+  "id": "group-formats",
+  "title": "Group therapy formats",
+  "category": "formats-and-settings",
+  "summary": "An overview of three common group formats for adults: structured cognitive behavioral groups, dialectical behavior therapy skills groups (trained clinicians only), and interpersonal process groups. Covers screening, preparation, ground rules, co-leadership, confidentiality and telehealth groups.",
+  "whenToUse": [
+    "When a group format fits the client's needs and preferences, or offers peer support individual work cannot.",
+    "When a guideline recommends group treatment first (for example group cognitive behavioral therapy for less severe depression).",
+    "When planning a new group or reviewing an existing one."
+  ],
+  "steps": [
+    {
+      "heading": "Choose the format",
+      "items": [
+        "Structured cognitive behavioral groups: a set number of sessions, a shared curriculum, practice between sessions, and a leader who teaches and coaches.",
+        "Dialectical behavior therapy skills groups: weekly skills teaching in mindfulness, distress tolerance, emotion regulation and interpersonal effectiveness, usually alongside individual therapy and a consultation team. Trained clinicians only.",
+        "Interpersonal process groups: members learn from how they relate to each other in the group, with the leader drawing attention to here-and-now patterns."
+      ]
+    },
+    {
+      "heading": "Screen and prepare",
+      "items": [
+        "Meet each person individually first to check fit, goals and readiness.",
+        "Ask about safety, current crises and anything that could make group unsafe for them or others.",
+        "Explain what will happen, group rules and what members can expect in the first sessions."
+      ]
+    },
+    {
+      "heading": "Set agreements",
+      "items": [
+        "Confidentiality among members, and its limits (members are not bound the way clinicians are).",
+        "Attendance, lateness and contact between members outside the group.",
+        "Respect, speaking for yourself, and how to raise concerns."
+      ]
+    },
+    {
+      "heading": "Co-lead and run sessions",
+      "body": "Plan roles with your co-leader, debrief after each session, and keep a balance between structure and responsiveness. Build cohesion early: it is linked to better outcomes."
+    },
+    {
+      "heading": "Monitor and follow up",
+      "body": "Use brief measures privately, check on members who withdraw or miss sessions, and offer individual follow-up when needed."
+    },
+    {
+      "heading": "Telehealth groups",
+      "body": "Confirm each member's location and a backup number at every session, agree on privacy (no one else in the room, headphones), and have a plan if someone becomes unsafe while online."
+    }
+  ],
+  "prompts": [
+    "In this group, what is said here stays here. I am bound by confidentiality, and I will ask each of you to agree to keep what others share private too.",
+    "I notice several people went quiet after that. What happened in the group just then?",
+    "Before we start, let's check in briefly: one word for how you are arriving today."
+  ],
+  "cautions": [
+    "Group members cannot guarantee confidentiality; tell members this plainly and do not promise it.",
+    "Some people are not suited to group at a particular time (for example acute crisis or severe social anxiety without preparation); offer another format or preparation first.",
+    "Dialectical behavior therapy skills groups are part of a treatment program; delivering them without training and consultation is outside most clinicians' competence.",
+    "Never share one member's measures or disclosures with the group."
+  ],
+  "adaptations": [
+    {
+      "context": "Telehealth",
+      "adaptation": "Keep groups smaller, use cameras on where possible, and assign one co-leader to watch the chat and members' wellbeing."
+    },
+    {
+      "context": "Culture and language",
+      "adaptation": "Consider groups in the members' own language or for people with shared identities, and adapt examples and materials."
+    }
+  ],
+  "evidenceSummary": "NICE guideline NG222 (2022) recommends group cognitive behavioral therapy among first-line options for less severe depression. A 2016 meta-analysis (Burlingame and colleagues) found no significant outcome differences between individual and group formats when treatment, patients and dose were comparable. A 2018 meta-analysis (Burlingame, McClendon and Yang) found that group cohesion is associated with better outcomes. A 2015 trial (Linehan and colleagues) supports the skills training component of dialectical behavior therapy. The American Group Psychotherapy Association guidelines were updated in 2025 (Bernard and colleagues).",
+  "forClinicianReview": true,
+  "crisisPanel": false,
+  "sud": false,
+  "relatedInterventionIds": [
+    "dbt-mindfulness-skills",
+    "dbt-distress-tolerance",
+    "dbt-emotion-regulation-opposite-action",
+    "dbt-interpersonal-effectiveness",
+    "behavioral-activation",
+    "problem-management-plus"
+  ],
+  "relatedHandoutIds": [],
+  "relatedFormulationIds": [],
+  "relatedLegalIds": [
+    "group-confidentiality",
+    "competence-and-scope-of-practice"
+  ],
+  "relatedPracticeIds": [
+    "outcome-monitoring",
+    "first-sessions-and-role-induction",
+    "telehealth-sessions",
+    "supervision-and-consultation"
+  ],
+  "relatedPopulationIds": [],
+  "linkOuts": [
+    {
+      "title": "DBT-Linehan Board of Certification",
+      "publisher": "DBT-Linehan Board of Certification",
+      "url": "https://dbt-lbc.org/",
+      "note": "Certification for clinicians and programs delivering dialectical behavior therapy, including skills groups.",
+      "lastVerified": "2026-11-27"
+    }
+  ],
+  "measuresPending": [],
+  "sources": [
+    {
+      "title": "Depression in adults: treatment and management (NG222)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng222",
+      "year": 2022
+    },
+    {
+      "title": "Outcome differences between individual and group formats when identical and nonidentical treatments, patients, and doses are compared: a 25-year meta-analytic perspective (Burlingame, Seebeck, Janis et al.)",
+      "publisher": "Psychotherapy, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27918191/",
+      "year": 2016
+    },
+    {
+      "title": "Cohesion in group therapy: a meta-analysis (Burlingame, McClendon and Yang)",
+      "publisher": "Psychotherapy, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30335452/",
+      "year": 2018
+    },
+    {
+      "title": "Clinical practice guidelines for group psychotherapy (Bernard et al.)",
+      "publisher": "International Journal of Group Psychotherapy, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40111275/",
+      "year": 2025
+    },
+    {
+      "title": "Dialectical behavior therapy for high suicide risk in individuals with borderline personality disorder: a randomized clinical trial and component analysis (Linehan et al.)",
+      "publisher": "JAMA Psychiatry, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25806661/",
+      "year": 2015
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

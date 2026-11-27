@@ -37,7 +37,8 @@
     "Clients may prefer a clinician of a particular gender or background, especially after sexual violence. Include this preference in the referral."
   ],
   "trainingRequired": "WET: trained clinicians only. Deliver only after completing a recognized WET training workshop with case consultation. Otherwise refer.",
-  "handoutIds": [],
+  "handoutIds": ["trauma-therapy-what-to-expect"],
+  "orientationIds": ["trauma-focused-therapies"],
   "sources": [
     { "title": "VA/DoD Clinical Practice Guideline for Management of PTSD and Acute Stress Disorder: provider summary", "publisher": "US Department of Veterans Affairs and Department of Defense", "url": "https://www.healthquality.va.gov/guidelines/MH/ptsd/VA-DoD-CPG-PTSD-Provider-Summary.pdf", "year": 2023 },
     { "title": "The management of posttraumatic stress disorder and acute stress disorder: synopsis of the 2023 VA/DoD clinical practice guideline", "publisher": "Annals of Internal Medicine (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/38408360/", "year": 2024 },

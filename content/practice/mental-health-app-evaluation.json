@@ -1,0 +1,87 @@
+{
+  "id": "mental-health-app-evaluation",
+  "title": "Evaluating mental health apps and digital tools with a client",
+  "category": "documents",
+  "summary": "A structured way to look at an app or digital program before suggesting it, or when a client is already using one: who made it and how it makes money, what it does with personal data, whether there is evidence behind it, whether it is easy to use, and whether it fits the treatment plan. Based on published expert frameworks in the app's own words. The app endorses no products.",
+  "whenToUse": [
+    "A client asks whether an app is worth using, or is already using one between sessions.",
+    "You are considering an app for between-session practice (mood tracking, CBT-I, mindfulness, exposure support).",
+    "A client is offered a prescription digital program by another clinician or a health plan.",
+    "Your service is deciding which digital tools to recommend."
+  ],
+  "steps": [
+    {
+      "heading": "Access and background",
+      "items": [
+        "Who made it, who funds it and how it makes money (subscription, advertising, data sharing)?",
+        "Does it work on the client's device, offline, in their language and with accessibility features they need?",
+        "Is it still updated?"
+      ]
+    },
+    {
+      "heading": "Privacy and safety",
+      "items": [
+        "Is there a readable privacy policy? What data are collected, where are they stored, and are they shared or sold?",
+        "Can the client delete their data and use the app without an account or real name?",
+        "Many consumer apps are not covered by HIPAA; assume anything entered could be shared unless the policy clearly says otherwise.",
+        "What does the app do when someone types about suicide or self-harm, and are crisis resources easy to find?"
+      ]
+    },
+    {
+      "heading": "Evidence and clinical foundation",
+      "items": [
+        "Is it based on an established approach, and is the content accurate?",
+        "Has this app (not just the approach) been studied, and in people like the client?",
+        "Does it claim to diagnose or treat? Some programs are regulated as medical devices; check what the clearance covers."
+      ]
+    },
+    {
+      "heading": "Ease of use and engagement",
+      "body": "Ask the client to try it in the session or for a few days. Is it easy, does it fit their day, and would they keep using it?"
+    },
+    {
+      "heading": "Fit with the treatment plan",
+      "body": "Agree what the app is for (practice, tracking, reminders), how you will use what it shows in sessions, and whether the client wants to share any data with you. Review whether it is helping at the next session."
+    }
+  ],
+  "prompts": [
+    "What do you like about the app? What made you choose it?",
+    "Have you looked at what it does with the information you put in? Shall we check together?",
+    "If you use it for practice between sessions, how would you like to bring what you notice into our sessions?"
+  ],
+  "cautions": [
+    "Do not ask clients to send app data to personal devices or accounts; use your service's approved systems only.",
+    "Ratings in app stores say little about clinical quality or privacy.",
+    "An app is a supplement, not a crisis service; make sure the client knows how to get urgent help.",
+    "This app names no recommended products and does not connect to any other app."
+  ],
+  "evidenceSummary": "A 2019 expert consensus paper (Torous and colleagues, World Psychiatry) proposed standards for mental health apps covering data safety and privacy, effectiveness, user experience and integration into care. A 2020 study (Lagan and colleagues, npj Digital Medicine) turned expert evaluation frameworks into objective questions about access, privacy, clinical foundation, engagement and therapeutic goal, which underpin the MIND app database.",
+  "forClinicianReview": true,
+  "crisisPanel": false,
+  "sud": false,
+  "relatedInterventionIds": ["guided-self-help"],
+  "relatedHandoutIds": ["my-health-information-rights"],
+  "relatedFormulationIds": [],
+  "relatedLegalIds": ["informed-consent-technology", "hipaa-privacy-basics", "fda-cds", "ai-in-clinical-practice"],
+  "relatedPracticeIds": ["between-session-practice", "telehealth-sessions", "shared-decision-making"],
+  "relatedPopulationIds": [],
+  "linkOuts": [],
+  "measuresPending": [],
+  "sources": [
+    {
+      "title": "Towards a consensus around standards for smartphone apps and digital mental health (Torous et al.)",
+      "publisher": "World Psychiatry, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30600619/",
+      "year": 2019
+    },
+    {
+      "title": "Actionable health app evaluation: translating expert frameworks into objective metrics (Lagan et al.)",
+      "publisher": "npj Digital Medicine, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32821855/",
+      "year": 2020
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

@@ -43,6 +43,7 @@
     "values-compass",
     "grief-and-loss"
   ],
+  "orientationIds": ["existential-therapy"],
   "sources": [
     {
       "title": "Existential therapies: a meta-analysis of their effects on psychological outcomes (Vos, Craig and Cooper)",

@@ -1,0 +1,131 @@
+{
+  "id": "ending-therapy-and-boosters",
+  "title": "Ending therapy, boosters and relapse prevention",
+  "category": "session-process",
+  "summary": "Planning endings from the start: reviewing progress, consolidating what helped, tapering sessions, booster sessions and a keeping-well plan, plus what to do after an unplanned ending so the client is never left without a path back.",
+  "whenToUse": [
+    "From the first session, by naming that therapy has an end and how it will be decided.",
+    "When goals are mostly met, progress has plateaued, or the client wants to stop.",
+    "After missed sessions or a client stops coming without explanation.",
+    "When you are leaving a job, moving or closing a practice."
+  ],
+  "steps": [
+    {
+      "heading": "Raise the ending early",
+      "body": "Agree on how you will both know it is time to stop, and review that at each planned review."
+    },
+    {
+      "heading": "Review progress together",
+      "items": [
+        "Compare where things are now with where they started, using measures and the client's own view.",
+        "Name what helped, in the client's words.",
+        "Name what is still hard and whether it needs more work now or later."
+      ]
+    },
+    {
+      "heading": "Make a keeping-well plan",
+      "items": [
+        "Early warning signs and triggers that have mattered before.",
+        "The skills that helped and how to keep practicing them.",
+        "Who can help, and what to do if old patterns return.",
+        "Crisis resources, written down."
+      ]
+    },
+    {
+      "heading": "Taper and offer boosters",
+      "body": "Space the last sessions further apart, and offer one or more booster sessions after ending where possible. For recurrent depression, discuss continuation or relapse-prevention therapy and any medicine plan with the prescriber."
+    },
+    {
+      "heading": "Say goodbye well",
+      "body": "Talk about the relationship ending, including feelings about it. Thank the client for the work."
+    },
+    {
+      "heading": "After an unplanned ending",
+      "items": [
+        "Reach out once or twice by the client's agreed channel with a short message that includes no clinical detail.",
+        "Offer a final session or a referral, and include crisis resources.",
+        "Document the outreach and close the episode in line with your setting's policy."
+      ]
+    }
+  ],
+  "prompts": [
+    "Looking back at when we started, what feels different now?",
+    "What would be the first signs that things were starting to slip, and what would you do then?",
+    "How would you feel about spacing out our next sessions and having a check-in a couple of months after we finish?",
+    "Ending can bring up mixed feelings. How is it for you to think about stopping?",
+    "Message template without clinical detail: Hello, this is ____ from ____. I noticed we have not been in touch and wanted to check in. If you would like to book another appointment or talk about other options, you can reach me at ____. If you are ever in crisis, call or text 988 in the US or your local emergency number."
+  ],
+  "cautions": [
+    "Ending must never feel like abandonment. Give notice, a plan, and a way to return or a referral.",
+    "Do not end therapy abruptly when a client is in crisis; stabilize and arrange continuing care first.",
+    "Outreach messages carry no diagnosis or clinical details. The app never sends messages.",
+    "If you are leaving, arrange continuity of care and records in line with your professional will or setting's policy."
+  ],
+  "evidenceSummary": "A 2007 meta-analysis (Vittengl and colleagues) found that continuation-phase cognitive therapy reduced relapse and recurrence in depression. NICE quality standard QS8 (statement 3) calls for discussing relapse prevention with people who have recovered from depression. A 2017 survey (Norcross and colleagues) found broad agreement among therapists of different orientations on termination behaviors such as reviewing progress, discussing feelings about ending and planning for the future. Professional codes (APA, ACA, NASW) require reasonable steps to avoid abandonment.",
+  "forClinicianReview": true,
+  "crisisPanel": true,
+  "sud": false,
+  "relatedInterventionIds": [
+    "relapse-prevention-planning",
+    "mindfulness-based-cognitive-therapy",
+    "bipolar-relapse-signature-plan"
+  ],
+  "relatedHandoutIds": [
+    "my-therapy-summary",
+    "staying-well-plan",
+    "mood-highs-and-lows-plan"
+  ],
+  "relatedFormulationIds": [],
+  "relatedLegalIds": [
+    "continuity-and-professional-will",
+    "record-retention-overview"
+  ],
+  "relatedPracticeIds": [
+    "outcome-monitoring",
+    "first-sessions-and-role-induction",
+    "caring-contacts",
+    "care-transitions-and-warm-handoffs"
+  ],
+  "relatedPopulationIds": [],
+  "linkOuts": [],
+  "measuresPending": [],
+  "sources": [
+    {
+      "title": "Reducing relapse and recurrence in unipolar depression: a comparative meta-analysis of cognitive-behavioral therapy's effects (Vittengl, Clark, Dunn and Jarrett)",
+      "publisher": "Journal of Consulting and Clinical Psychology, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17563164/",
+      "year": 2007
+    },
+    {
+      "title": "Depression in adults quality standard (QS8), statement 3: preventing relapse",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/qs8/chapter/Quality-statement-3-Preventing-relapse"
+    },
+    {
+      "title": "Do all therapists do that when saying goodbye? A study of commonalities in termination behaviors (Norcross, Zimmerman, Greenberg and Swift)",
+      "publisher": "Psychotherapy, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28263653/",
+      "year": 2017
+    },
+    {
+      "title": "Premature discontinuation in adult psychotherapy: a meta-analysis (Swift and Greenberg)",
+      "publisher": "Journal of Consulting and Clinical Psychology, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22506792/",
+      "year": 2012
+    },
+    {
+      "title": "Ethical Principles of Psychologists and Code of Conduct",
+      "publisher": "American Psychological Association",
+      "url": "https://www.apa.org/ethics/code"
+    },
+    {
+      "title": "Code of Ethics",
+      "publisher": "National Association of Social Workers",
+      "url": "https://www.socialworkers.org/About/Ethics/Code-of-Ethics/Code-of-Ethics-English",
+      "year": 2021
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

@@ -1,0 +1,128 @@
+{
+  "id": "progress-review-and-stepping-up",
+  "title": "When progress stalls: review, adjust or step up",
+  "summary": "A structured review for any plan when the measures or the client say progress has stalled: look at the trend together, re-check the formulation, the dose and fit of the work and the working relationship, look for missed factors, then decide together whether to adjust, step up or refer. The clinician makes every decision.",
+  "appliesTo": "any",
+  "problems": [
+    {
+      "id": "prog-stalled",
+      "label": "Progress has stalled on the current plan",
+      "definitions": [
+        "Scores on the chosen measure have not improved meaningfully over 2 or more check-ins, or have got worse, despite regular sessions.",
+        "The client says therapy is not helping, or has stopped doing between-session practice."
+      ],
+      "longTermGoals": [
+        "The reasons for limited progress are understood, and the plan changes in a way the client agrees with, including stepping up care or referral when that fits."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "prog-look-together",
+          "text": "Within 1 session of noticing limited progress, show the client the measure trend, ask for their view of what is and is not helping, and agree on what to review.",
+          "interventionIds": [],
+          "targets": [
+            "hope-and-motivation"
+          ]
+        },
+        {
+          "id": "prog-formulation-check",
+          "text": "By the next session, revisit the formulation together and check that the main processes keeping the difficulties going are targeted by the current objectives; add or change at least 1 objective if they are not.",
+          "interventionIds": []
+        },
+        {
+          "id": "prog-dose-and-fit",
+          "text": "Check the dose and fit of the work (attendance, between-session practice, whether the approach suits the client's preferences, and whether the clinician is trained in it) and agree on at least 1 change.",
+          "interventionIds": []
+        },
+        {
+          "id": "prog-relationship",
+          "text": "Ask directly about the working relationship and any strains in it, and address a rupture openly if there is one.",
+          "interventionIds": []
+        },
+        {
+          "id": "prog-missed-factors",
+          "text": "Review factors that may have been missed or have changed (for example a medical cause, medicines, sleep, a co-occurring condition, ongoing trauma or abuse, or social stressors) and plan next steps for any that are found.",
+          "interventionIds": [],
+          "targets": [
+            "physical-health-burden",
+            "structural-stressors"
+          ]
+        },
+        {
+          "id": "prog-step-up",
+          "text": "If progress is still limited after these changes, discuss stepping up together: more frequent or longer sessions, a different evidence-based therapy, adding a medication evaluation, or referral to specialist care; record the client's choice.",
+          "interventionIds": [
+            "medication-referral"
+          ],
+          "step": "specialist"
+        },
+        {
+          "id": "prog-safety",
+          "text": "At every progress review, ask directly about suicidal thoughts and other safety concerns, because a lack of progress can bring hopelessness. The clinician makes every risk decision.",
+          "interventionIds": [
+            "collaborative-safety-planning"
+          ],
+          "targets": [
+            "hope-and-motivation"
+          ]
+        }
+      ],
+      "measureIds": [
+        "phq-9",
+        "gad-7"
+      ],
+      "formulationIds": [
+        "transdiagnostic-process-map"
+      ],
+      "practiceIds": [
+        "outcome-monitoring",
+        "stepped-care-and-level-of-care",
+        "alliance-and-rupture-repair",
+        "combined-care-decision-points",
+        "diagnostic-reasoning-checks",
+        "between-session-practice"
+      ]
+    }
+  ],
+  "collaborativeNote": "Limited progress is a shared problem to solve, not a failure of the client. Review the trend openly, ask for the client's view first, and decide every change together. A measure score is screening information for clinician review, never a decision. Do not add names or other identifying details. Resource only. Not a substitute for clinical judgment.",
+  "sources": [
+    {
+      "title": "Depression in adults: treatment and management (NG222)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng222",
+      "year": 2022
+    },
+    {
+      "title": "Generalised anxiety disorder and panic disorder in adults: management (CG113)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg113",
+      "year": 2011
+    },
+    {
+      "title": "Stepped care treatment delivery for depression: a systematic review and meta-analysis (van Straten et al.)",
+      "publisher": "Psychological Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25065653/",
+      "year": 2015
+    },
+    {
+      "title": "Collecting and delivering progress feedback: a meta-analysis of routine outcome monitoring (Lambert, Whipple and Kleinstauber)",
+      "publisher": "Psychotherapy (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30335463/",
+      "year": 2018
+    },
+    {
+      "title": "Alliance rupture repair: a meta-analysis (Eubanks, Muran and Safran)",
+      "publisher": "Psychotherapy (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30335462/",
+      "year": 2018
+    },
+    {
+      "title": "The impact of accommodating client preference in psychotherapy: a meta-analysis (Swift et al.)",
+      "publisher": "Journal of Clinical Psychology (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30091140/",
+      "year": 2018
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

@@ -1,0 +1,122 @@
+{
+  "id": "my-relationships-map",
+  "title": "My Relationships Map",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 15,
+  "intro": "The people in our lives can bring support, stress, or both. This sheet helps you map your relationships, see who helps with what, and notice where you would like things to change. You do not need to write full names. Use initials or roles, like 'my sister' or 'a coworker.' It takes about 15 minutes to fill in.",
+  "sections": [
+    {
+      "heading": "Step 1: draw your circles",
+      "body": "On a blank page, draw three circles inside each other, like a target. Put yourself in the middle.",
+      "steps": [
+        "Circle 1, closest to you: the people you feel closest to and could turn to in a hard time.",
+        "Circle 2: people who matter to you, but who you are less close to.",
+        "Circle 3: people you see or talk to now and then, like neighbors, coworkers, or group members.",
+        "Some people may not fit in any circle, or may be people you used to be close to. You can write them outside the circles."
+      ]
+    },
+    {
+      "heading": "Step 2: who helps with what",
+      "body": "For each person, think about what they give you, and what you give them. People help in different ways.",
+      "steps": [
+        "Listening and comfort.",
+        "Practical help, like a ride, child care, or help with a task.",
+        "Advice or information.",
+        "Fun, laughter, or shared interests."
+      ]
+    },
+    {
+      "heading": "Step 3: notice strain and conflict",
+      "body": "Mark any relationships that feel tense, painful, or one-sided. What is the strain about? Is it a disagreement, a change in roles, or losing touch? Has this pattern shown up in other relationships too?"
+    },
+    {
+      "heading": "Step 4: changes you would like",
+      "steps": [
+        "Who would you like to see or talk to more?",
+        "Is there a relationship you would like to repair? What is one small step toward that?",
+        "Is there a relationship where you would like more space or clearer limits?",
+        "Where could you meet new people, like a class, a group, or a place of worship?"
+      ]
+    },
+    {
+      "heading": "Talk it over",
+      "body": "Bring your map to your counselor. Together, you can pick one change to work on first. Small steps, like one text or one call, often matter more than big plans."
+    }
+  ],
+  "practiceLog": {
+    "columns": ["Person (initials or role)", "Circle (1, 2, or 3)", "How they help", "Any strain or conflict", "Change I would like"],
+    "rows": 10
+  },
+  "safetyNote": "Safety first: If someone in your life hurts, threatens, or controls you, your safety comes first. Talk with your counselor about a safety plan, and keep this sheet where that person cannot find it. In the US, you can call the National Domestic Violence Hotline at 1-800-799-7233 or text START to 88788. If you are in danger right now, call 911. If you have thoughts of hurting yourself or someone else, call or text 988 in the US. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "es": {
+    "title": "Mapa de mis relaciones",
+    "intro": "Las personas en nuestra vida pueden traer apoyo, estrés o las dos cosas. Esta hoja le ayuda a hacer un mapa de sus relaciones, ver quién le ayuda con qué y notar dónde le gustaría que las cosas cambiaran. No necesita escribir nombres completos. Use iniciales o papeles, como 'mi hermana' o 'un compañero de trabajo'. Llenarla toma unos 15 minutos.",
+    "sections": [
+      {
+        "heading": "Paso 1: dibuje sus círculos",
+        "body": "En una hoja en blanco, dibuje tres círculos uno dentro de otro, como un tiro al blanco. Póngase usted en el centro.",
+        "steps": [
+          "Círculo 1, el más cercano a usted: las personas con las que se siente más cerca y a las que podría acudir en un momento difícil.",
+          "Círculo 2: personas que le importan, pero con las que tiene menos cercanía.",
+          "Círculo 3: personas que ve o con las que habla de vez en cuando, como vecinos, compañeros de trabajo o gente de un grupo.",
+          "Puede que algunas personas no quepan en ningún círculo, o que sean personas con las que antes era cercano. Puede escribirlas afuera de los círculos."
+        ]
+      },
+      {
+        "heading": "Paso 2: quién le ayuda con qué",
+        "body": "Para cada persona, piense en lo que le da a usted y en lo que usted le da. Las personas ayudan de formas distintas.",
+        "steps": [
+          "Escuchar y consolar.",
+          "Ayuda práctica, como llevarle a algún lado, cuidar a los niños o ayudar con una tarea.",
+          "Consejos o información.",
+          "Diversión, risas o gustos en común."
+        ]
+      },
+      {
+        "heading": "Paso 3: note la tensión y los conflictos",
+        "body": "Marque las relaciones que se sientan tensas, dolorosas o en las que solo da un lado. ¿De qué se trata la tensión? ¿Es un desacuerdo, un cambio de papeles o haber perdido el contacto? ¿Este patrón ha aparecido también en otras relaciones?"
+      },
+      {
+        "heading": "Paso 4: cambios que le gustaría hacer",
+        "steps": [
+          "¿A quién le gustaría ver más o con quién le gustaría hablar más?",
+          "¿Hay una relación que le gustaría arreglar? ¿Cuál es un paso pequeño hacia eso?",
+          "¿Hay una relación en la que le gustaría más espacio o límites más claros?",
+          "¿Dónde podría conocer gente nueva, como en una clase, un grupo o un lugar de culto?"
+        ]
+      },
+      {
+        "heading": "Háblelo",
+        "body": "Traiga su mapa a su consejero. Juntos pueden escoger un cambio para trabajar primero. Los pasos pequeños, como un mensaje o una llamada, muchas veces importan más que los planes grandes."
+      }
+    ],
+    "practiceLog": {
+      "columns": ["Persona (iniciales o papel)", "Círculo (1, 2 o 3)", "Cómo me ayuda", "Tensión o conflicto", "Cambio que me gustaría"]
+    },
+    "safetyNote": "La seguridad es lo primero: Si alguien en su vida le hace daño, le amenaza o le controla, su seguridad va primero. Hable con su consejero sobre un plan de seguridad, y guarde esta hoja donde esa persona no la pueda encontrar. En EE. UU., puede llamar a la Línea Nacional de Violencia Doméstica (National Domestic Violence Hotline) al 1-800-799-7233 o enviar un mensaje de texto con la palabra START al 88788. Si está en peligro ahora mismo, llame al 911. Si tiene pensamientos de hacerse daño o de hacerle daño a otra persona, llame o envíe un mensaje de texto al 988 en EE. UU. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "sources": [
+    {
+      "title": "Group Interpersonal Therapy (IPT) for Depression (WHO generic field-trial version 1.0)",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/publications/i/item/group-interpersonal-therapy-for-depression",
+      "year": 2016
+    },
+    {
+      "title": "Interpersonal psychotherapy for mental health problems: a comprehensive meta-analysis (Cuijpers et al.)",
+      "publisher": "American Journal of Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27032627/",
+      "year": 2016
+    },
+    {
+      "title": "Problem Management Plus (PM+): individual psychological help for adults impaired by distress in communities exposed to adversity",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/publications/i/item/problem-management-plus-(-pm-)-individual-psychological-help-for-adults-impaired-by-distress-in-communities-exposed-to-adversity"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

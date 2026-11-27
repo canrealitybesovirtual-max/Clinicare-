@@ -1,0 +1,208 @@
+{
+  "id": "perinatal-adaptations",
+  "title": "Pregnancy and the year after birth",
+  "summary": "Adaptations for mood and anxiety plans during pregnancy and the first year after birth or pregnancy loss: infant-care roles, sleep protection, partner support, coordination with obstetric and pediatric care, screening timing, and urgent routing for sudden severe changes after birth.",
+  "appliesTo": [
+    "major-depressive-disorder",
+    "persistent-depressive-disorder",
+    "generalized-anxiety-disorder",
+    "obsessive-compulsive-disorder",
+    "panic-disorder",
+    "ptsd",
+    "bipolar-i-disorder",
+    "bipolar-ii-disorder"
+  ],
+  "problems": [
+    {
+      "id": "peri-mood-and-new-roles",
+      "label": "Low mood or anxiety during pregnancy or after birth, alongside the demands of infant care",
+      "definitions": [
+        "Is pregnant, or within the first year after a birth or pregnancy loss, and describes low mood, worry, irritability or feeling overwhelmed on most days.",
+        "Has very little sleep or time for self because of infant care, feeding or other children, and little practical help.",
+        "Feels guilt or shame about not feeling the way they expected to as a parent, and may hide how they feel."
+      ],
+      "longTermGoals": [
+        "The client feels more supported and more able to care for self and baby, mood and anxiety improve, and the care team works together."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "peri-measure-timing",
+          "text": "Give the PHQ-9 (and the GAD-7 when anxiety is present) at intake and every 2 to 4 weeks, with extra check-ins in late pregnancy and in the first weeks after birth. Perinatal-specific screens are not built in; use them only through their own licensed sources.",
+          "interventionIds": []
+        },
+        {
+          "id": "peri-protect-sleep",
+          "text": "By week 3, agree on a plan with the client, and a partner or support person if they wish, that protects at least 1 longer stretch of sleep on most nights (for example shared night feeds or a set rest time).",
+          "interventionIds": [
+            "problem-solving"
+          ],
+          "targets": [
+            "sleep-rhythm-disruption",
+            "low-social-support"
+          ],
+          "step": "low-intensity"
+        },
+        {
+          "id": "peri-practical-help",
+          "text": "By week 4, list practical tasks (meals, chores, appointments, other children) and ask for help with at least 2 of them from people or services the client chooses.",
+          "interventionIds": [
+            "problem-solving",
+            "interpersonal-psychotherapy"
+          ],
+          "targets": [
+            "low-social-support",
+            "interpersonal-difficulties"
+          ],
+          "step": "low-intensity"
+        },
+        {
+          "id": "peri-role-change",
+          "text": "Over weeks 3 to 10, work on the changes in roles and relationships that came with the pregnancy or birth (for example with a partner, at work or in how the client sees themselves), using an interpersonal or cognitive behavioral approach the client prefers.",
+          "interventionIds": [
+            "perinatal-depression-programs",
+            "interpersonal-psychotherapy",
+            "behavioral-activation"
+          ],
+          "targets": [
+            "interpersonal-difficulties"
+          ],
+          "step": "high-intensity"
+        },
+        {
+          "id": "peri-coordination",
+          "text": "By week 4, with consent, share a brief update with the obstetric, midwifery or pediatric clinician and with the prescriber, including any questions about medicines during pregnancy or while feeding.",
+          "interventionIds": [
+            "medication-referral"
+          ],
+          "targets": [
+            "physical-health-burden"
+          ]
+        }
+      ],
+      "measureIds": [
+        "phq-9",
+        "gad-7"
+      ],
+      "practiceIds": [
+        "postpartum-psychosis-vs-intrusive-thoughts"
+      ],
+      "handoutIds": [
+        "new-parent-mood-help"
+      ],
+      "linkOuts": [
+        {
+          "title": "National Maternal Mental Health Hotline",
+          "publisher": "Health Resources and Services Administration",
+          "url": "https://mchb.hrsa.gov/national-maternal-mental-health-hotline"
+        },
+        {
+          "title": "Postpartum Support International",
+          "publisher": "Postpartum Support International",
+          "url": "https://www.postpartum.net/"
+        }
+      ]
+    },
+    {
+      "id": "peri-unwanted-thoughts-and-urgent-signs",
+      "label": "Frightening thoughts about the baby, or sudden changes that need urgent care",
+      "definitions": [
+        "Has unwanted, upsetting thoughts or images of harm coming to the baby, does not want to act on them, and avoids some care tasks because of them (for example bathing the baby alone).",
+        "Shows a sudden change in the days or weeks after birth, such as confusion, going without sleep without feeling tired, unusual beliefs, or seeing or hearing things others do not, which calls for same-day medical assessment."
+      ],
+      "longTermGoals": [
+        "Unwanted thoughts are understood and lose their grip, and any urgent warning signs are acted on quickly."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "peri-urgent-routing",
+          "text": "If signs of a sudden, severe change after birth are present (for example confusion, unusual beliefs, hallucinations or days without sleep), the clinician arranges a same-day emergency psychiatric assessment and does not wait for the next session. The clinician makes this decision; the plan does not.",
+          "interventionIds": [],
+          "step": "crisis-or-urgent"
+        },
+        {
+          "id": "peri-thoughts-explained",
+          "text": "By session 2, explain in plain words that unwanted thoughts of harm are common after birth, are different from intentions, and tend to fade when they are not fought or avoided, and check the client's understanding in their own words.",
+          "interventionIds": [
+            "ocd-appraisal-cognitive-therapy"
+          ],
+          "targets": [
+            "cognitive-fusion"
+          ],
+          "step": "low-intensity"
+        },
+        {
+          "id": "peri-return-to-care-tasks",
+          "text": "Over weeks 3 to 8, return step by step to at least 2 avoided care tasks with the clinician's guidance, and cut back related checking or reassurance-seeking.",
+          "interventionIds": [
+            "exposure-and-response-prevention",
+            "graded-in-vivo-exposure"
+          ],
+          "targets": [
+            "avoidance-escape",
+            "reassurance-seeking-checking"
+          ],
+          "step": "high-intensity"
+        },
+        {
+          "id": "peri-safety-check",
+          "text": "At each session, the clinician asks directly about thoughts of suicide and about any thoughts of harming the baby that the client does not experience as unwanted, and follows the safety plan and local procedures if they are present. The clinician makes every risk decision.",
+          "interventionIds": [
+            "collaborative-safety-planning"
+          ],
+          "targets": [
+            "coping-skills"
+          ],
+          "step": "crisis-or-urgent"
+        }
+      ],
+      "measureIds": [],
+      "practiceIds": [
+        "postpartum-psychosis-vs-intrusive-thoughts"
+      ],
+      "handoutIds": [
+        "scary-thoughts-after-baby"
+      ],
+      "linkOuts": [
+        {
+          "title": "National Maternal Mental Health Hotline",
+          "publisher": "Health Resources and Services Administration",
+          "url": "https://mchb.hrsa.gov/national-maternal-mental-health-hotline"
+        }
+      ]
+    }
+  ],
+  "collaborativeNote": "Plan with the client around feeding, sleep and childcare, and with their consent include a partner or support person. Unwanted thoughts of harm are common after birth; sudden confusion, unusual beliefs or days without sleep need same-day emergency care. The clinician makes every risk decision. Do not add names or other identifying details. Resource only. Not a substitute for clinical judgment.",
+  "sources": [
+    {
+      "title": "Treatment and Management of Mental Health Conditions During Pregnancy and Postpartum (Clinical Practice Guideline No. 5)",
+      "publisher": "American College of Obstetricians and Gynecologists",
+      "url": "https://www.acog.org/clinical/clinical-guidance/clinical-practice-guideline/articles/2023/06/treatment-and-management-of-mental-health-conditions-during-pregnancy-and-postpartum",
+      "year": 2023
+    },
+    {
+      "title": "Antenatal and postnatal mental health: clinical management and service guidance (CG192)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg192",
+      "year": 2014
+    },
+    {
+      "title": "Interventions to Prevent Perinatal Depression: US Preventive Services Task Force Recommendation Statement",
+      "publisher": "JAMA (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30747971/",
+      "year": 2019
+    },
+    {
+      "title": "Perinatal Depression",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/publications/perinatal-depression"
+    },
+    {
+      "title": "PHQ and GAD-7 screeners (reproduction terms)",
+      "publisher": "Pfizer / PHQ Screeners",
+      "url": "https://www.phqscreeners.com"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

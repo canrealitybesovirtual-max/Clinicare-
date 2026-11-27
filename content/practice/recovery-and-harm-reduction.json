@@ -1,0 +1,143 @@
+{
+  "id": "recovery-and-harm-reduction",
+  "title": "Recovery-oriented practice and harm reduction",
+  "category": "communication-and-access",
+  "summary": "A stance that shapes goals and plan wording: recovery as a personal journey toward a meaningful life (connection, hope, identity, meaning and empowerment), and harm reduction as meeting people where they are and supporting any positive change, including with substance use.",
+  "whenToUse": [
+    "When writing goals and plans with people living with long-term or recurring mental health or substance use problems.",
+    "When a client does not want, or is not ready for, abstinence or symptom elimination.",
+    "When services have felt coercive or stigmatizing to the client."
+  ],
+  "steps": [
+    {
+      "heading": "Start from the person's own goals",
+      "body": "Ask what a good life would look like for them, beyond symptoms. Write goals in their words, about the life they want."
+    },
+    {
+      "heading": "Use the recovery dimensions",
+      "items": [
+        "Connectedness: relationships, peer support, community.",
+        "Hope: belief that things can improve, and stories of others who have.",
+        "Identity: a sense of self beyond illness or substance use.",
+        "Meaning: valued roles, work, faith, creativity.",
+        "Empowerment: choice, control, and building on strengths."
+      ]
+    },
+    {
+      "heading": "Support any positive change",
+      "body": "In harm reduction, any reduction in harm counts: using less, using more safely, fewer risky situations, or more contact with care. Abstinence is one goal among several, not a condition of care."
+    },
+    {
+      "heading": "Offer practical safety",
+      "items": [
+        "Overdose education and naloxone where opioids or other substances may be involved.",
+        "Safer-use information from trusted public health sources.",
+        "Links to medicine for opioid or alcohol use, mutual help and peer support, as the client wishes."
+      ]
+    },
+    {
+      "heading": "Watch the language",
+      "body": "Use person-first or the person's own words. Avoid labels such as addict, abuser or non-compliant in notes and plans."
+    }
+  ],
+  "prompts": [
+    "If things were going well in your life a year from now, what would you be doing?",
+    "You do not want to stop completely right now. What changes would make things safer or better for you, even a little?",
+    "Who in your life, or what kind of support, helps you feel more like yourself?",
+    "Would it be useful to talk about how to stay safer if you do use, including what to do in an overdose?"
+  ],
+  "cautions": [
+    "Harm reduction is not an absence of concern; continue to talk about risks, including overdose and withdrawal, honestly.",
+    "Alcohol and sedative withdrawal can be dangerous; any plan to stop suddenly needs medical advice.",
+    "Records that include substance-use information may be protected by 42 CFR Part 2; follow consent rules before sharing.",
+    "Recovery language should never be used to deny people care or to blame them for setbacks."
+  ],
+  "adaptations": [
+    {
+      "context": "Serious mental illness",
+      "adaptation": "Combine recovery goals with practical support (housing, work, benefits) and peer support, and plan for early warning signs."
+    },
+    {
+      "context": "Housing instability",
+      "adaptation": "Start with immediate needs and safety; therapy goals can follow once basic needs are being met."
+    }
+  ],
+  "evidenceSummary": "A 2011 systematic review (Leamy and colleagues) identified the CHIME framework of personal recovery: connectedness, hope, identity, meaning and empowerment. A 2014 review (Slade and colleagues) describes uses and misuses of recovery in services. A 2017 paper (Hawk and colleagues) sets out harm reduction principles for healthcare settings. WHO guidance (2021) promotes person-centred, recovery-oriented and rights-based community mental health services.",
+  "forClinicianReview": true,
+  "crisisPanel": false,
+  "sud": true,
+  "relatedInterventionIds": [
+    "motivational-interviewing",
+    "naloxone-overdose-education",
+    "moud-referral",
+    "twelve-step-and-mutual-help-facilitation",
+    "smi-community-support-referral",
+    "act-values-clarification"
+  ],
+  "relatedHandoutIds": [
+    "overdose-safety",
+    "cutting-down-alcohol-safely",
+    "mutual-help-options",
+    "staying-well-plan"
+  ],
+  "relatedFormulationIds": [
+    "co-occurring-and-level-of-care"
+  ],
+  "relatedLegalIds": [
+    "42-cfr-part-2",
+    "psychiatric-advance-directives"
+  ],
+  "relatedPracticeIds": [
+    "preferences-goals-and-readiness",
+    "goals-by-orientation",
+    "shared-decision-making"
+  ],
+  "relatedPopulationIds": [
+    "housing-instability",
+    "justice-involved"
+  ],
+  "linkOuts": [
+    {
+      "title": "Guidance on community mental health services: promoting person-centred and rights-based approaches",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/publications/i/item/9789240025707",
+      "lastVerified": "2026-11-27"
+    }
+  ],
+  "measuresPending": [],
+  "sources": [
+    {
+      "title": "Conceptual framework for personal recovery in mental health: systematic review and narrative synthesis (Leamy, Bird, Le Boutillier, Williams and Slade)",
+      "publisher": "British Journal of Psychiatry, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22130746/",
+      "year": 2011
+    },
+    {
+      "title": "Uses and abuses of recovery: implementing recovery-oriented practices in mental health systems (Slade et al.)",
+      "publisher": "World Psychiatry, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24497237/",
+      "year": 2014
+    },
+    {
+      "title": "Harm reduction principles for healthcare settings (Hawk, Coulter, Egan et al.)",
+      "publisher": "Harm Reduction Journal, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29065896/",
+      "year": 2017
+    },
+    {
+      "title": "Guidance on community mental health services: promoting person-centred and rights-based approaches",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/publications/i/item/9789240025707",
+      "year": 2021
+    },
+    {
+      "title": "TIP 35: Enhancing Motivation for Change in Substance Use Disorder Treatment (PEP19-02-01-003)",
+      "publisher": "Substance Abuse and Mental Health Services Administration",
+      "url": "https://store.samhsa.gov/product/tip-35-enhancing-motivation-change-substance-use-disorder-treatment/pep19-02-01-003",
+      "year": 2019
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

@@ -1,18 +1,22 @@
 "use client";
 import * as React from "react";
 import Link from "next/link";
-import { ClipboardList, GraduationCap, ListPlus, Plus } from "lucide-react";
+import { ClipboardList, GraduationCap, ListPlus, Plus, TrendingUp } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ChoiceGroup } from "@/components/ui/choice-group";
 import { Notice } from "@/components/ui/notice";
 import { minutesLabel } from "@/components/interventions/format";
+import { CARE_STEPS, CARE_STEP_LABELS, type CareStep } from "@/lib/schemas-phase2";
 import { usePlan } from "./plan-context";
+import { ObjectiveTags, ProblemExtras } from "./plan-extras";
 import { PlanItem } from "./plan-item";
+import { ModuleGroup, ModulePicker } from "./plan-module-picker";
 import {
   MEASURE_SCHEDULES,
   REVIEW_INTERVALS,
   addCustomItem,
+  addModule,
   addCustomProblem,
   isCustom,
   removeCustomItem,
@@ -48,9 +52,44 @@ function NeedProblems() {
 
 /* ------------------------------------------------------------------ problems */
 
+function ProblemRow({ problem, onRemoved }: { problem: PlanProblemDraft; onRemoved: () => void }) {
+  const { update } = usePlan();
+  return (
+    <PlanItem
+      item={problem.label}
+      kind="problem statement"
+      onToggle={(sel) => update((d) => toggleProblem(d, problem.id, sel))}
+      onText={(t) => update((d) => setProblemLabel(d, problem.id, t))}
+      onRemove={
+        isCustom(problem.label)
+          ? () => {
+              update((d) => removeCustomProblem(d, problem.id));
+              onRemoved();
+            }
+          : undefined
+      }
+    >
+      {isCustom(problem.label) ? (
+        <p className="text-xs text-muted">Add its definitions, goals and objectives in the next steps.</p>
+      ) : (
+        <div className="space-y-2">
+          <p className="text-xs text-muted">
+            {problem.moduleId ? "Module" : "Library"}: {problem.definitions.length} definitions · {problem.goals.length} goals ·{" "}
+            {problem.objectives.length} objectives
+          </p>
+          <ProblemExtras problem={problem} />
+        </div>
+      )}
+    </PlanItem>
+  );
+}
+
 export function ProblemsStep() {
-  const { draft, update } = usePlan();
+  const { draft, modules, update } = usePlan();
   const addRef = React.useRef<HTMLButtonElement>(null);
+  const focusAdd = () => addRef.current?.focus();
+  const own = draft.problems.filter((p) => !p.moduleId);
+  const added = draft.moduleIds.flatMap((id) => modules.filter((m) => m.id === id));
   return (
     <div className="space-y-4">
       <p className="text-sm leading-relaxed text-muted">
@@ -58,36 +97,26 @@ export function ProblemsStep() {
         in the plan until you check it.
       </p>
       <ul className="space-y-3">
-        {draft.problems.map((p) => (
-          <PlanItem
-            key={p.id}
-            item={p.label}
-            kind="problem statement"
-            onToggle={(sel) => update((d) => toggleProblem(d, p.id, sel))}
-            onText={(t) => update((d) => setProblemLabel(d, p.id, t))}
-            onRemove={
-              isCustom(p.label)
-                ? () => {
-                    update((d) => removeCustomProblem(d, p.id));
-                    addRef.current?.focus();
-                  }
-                : undefined
-            }
-          >
-            {isCustom(p.label) ? (
-              <p className="text-xs text-muted">Add its definitions, goals and objectives in the next steps.</p>
-            ) : (
-              <p className="text-xs text-muted">
-                Library: {p.definitions.length} definitions · {p.goals.length} goals · {p.objectives.length} objectives
-              </p>
-            )}
-          </PlanItem>
+        {own.map((p) => (
+          <ProblemRow key={p.id} problem={p} onRemoved={focusAdd} />
         ))}
       </ul>
+      {added.map((m) => (
+        <ModuleGroup key={m.id} module={m} onRemoved={focusAdd}>
+          <ul className="space-y-3">
+            {draft.problems
+              .filter((p) => p.moduleId === m.id)
+              .map((p) => (
+                <ProblemRow key={p.id} problem={p} onRemoved={focusAdd} />
+              ))}
+          </ul>
+        </ModuleGroup>
+      ))}
       <Button ref={addRef} type="button" variant="outline" onClick={() => update((d) => addCustomProblem(d).draft)}>
         <Plus aria-hidden />
         Add a problem in the client’s words
       </Button>
+      <ModulePicker />
     </div>
   );
 }
@@ -114,12 +143,20 @@ const LIST_META: Record<ItemList, { kind: string; plural: string; intro: string 
   },
 };
 
-function ProblemList({ problem, list }: { problem: PlanProblemDraft; list: ItemList }) {
-  const { update } = usePlan();
+type LevelFilter = CareStep | "all";
+
+/** Whether an objective shows a care-level badge or, once a formulation is tapped, its targets or link chips. */
+const hasTags = (o: PlanObjectiveDraft, chosen: readonly string[]) =>
+  Boolean(o.step || (chosen.length && (o.selected || o.targets.some((t) => chosen.includes(t)))));
+
+function ProblemList({ problem, list, level = "all" }: { problem: PlanProblemDraft; list: ItemList; level?: LevelFilter }) {
+  const { draft, update } = usePlan();
   const meta = LIST_META[list];
   const addRef = React.useRef<HTMLButtonElement>(null);
   const headingId = React.useId();
-  const items = problem[list];
+  // The care-level filter hides unchecked objectives of other levels; checked ones always stay in view.
+  const items =
+    list === "objectives" && level !== "all" ? problem.objectives.filter((o) => o.selected || o.step === level) : problem[list];
   return (
     <section aria-labelledby={headingId} className="space-y-3">
       <h3 id={headingId} className="text-base font-semibold">
@@ -138,11 +175,17 @@ function ProblemList({ problem, list }: { problem: PlanProblemDraft; list: ItemL
                 update((d) => removeCustomItem(d, problem.id, list, i.id));
                 addRef.current?.focus();
               }}
-            />
+            >
+              {list === "objectives" && hasTags(i as PlanObjectiveDraft, draft.formulationTargets) ? (
+                <ObjectiveTags problem={problem} objective={i as PlanObjectiveDraft} />
+              ) : null}
+            </PlanItem>
           ))}
         </ul>
       ) : (
-        <p className="text-sm text-muted">No {meta.plural} yet for this problem.</p>
+        <p className="text-sm text-muted">
+          {level !== "all" && problem.objectives.length ? `No ${CARE_STEP_LABELS[level].toLowerCase()} objectives for this problem.` : `No ${meta.plural} yet for this problem.`}
+        </p>
       )}
       <Button ref={addRef} type="button" variant="outline" size="sm" className="min-h-11" onClick={() => update((d) => addCustomItem(d, problem.id, list).draft)}>
         <Plus aria-hidden />
@@ -152,15 +195,32 @@ function ProblemList({ problem, list }: { problem: PlanProblemDraft; list: ItemL
   );
 }
 
+const LEVEL_OPTIONS: readonly { value: LevelFilter; label: string }[] = [
+  { value: "all", label: "All levels" },
+  ...CARE_STEPS.map((c) => ({ value: c, label: CARE_STEP_LABELS[c] })),
+];
+
 export function ListStep({ list }: { list: ItemList }) {
   const { draft } = usePlan();
+  const [level, setLevel] = React.useState<LevelFilter>("all");
   const problems = selectedProblems(draft);
   if (!problems.length) return <NeedProblems />;
+  const tagged = list === "objectives" && problems.some((p) => p.objectives.some((o) => o.step));
   return (
     <div className="space-y-6">
       <p className="text-sm leading-relaxed text-muted">{LIST_META[list].intro}</p>
+      {tagged ? (
+        <ChoiceGroup
+          legend="Show objectives by usual level of care"
+          hint="Stepped-care tags describe the usual intensity of the work, not the client. You choose the level of care; checked objectives always stay in view."
+          name="plan-objective-level"
+          value={level}
+          options={LEVEL_OPTIONS}
+          onChange={setLevel}
+        />
+      ) : null}
       {problems.map((p) => (
-        <ProblemList key={p.id} problem={p} list={list} />
+        <ProblemList key={p.id} problem={p} list={list} level={level} />
       ))}
     </div>
   );
@@ -312,6 +372,59 @@ export function InterventionsStep() {
 
 /* ------------------------------------------------------------------ measures */
 
+/** Id of the module that holds the non-response review (content/plans/modules). */
+export const PROGRESS_REVIEW_MODULE_ID = "progress-review-and-stepping-up";
+
+/**
+ * Non-response navigator: what to look at when progress stalls, with the progress-review module one tap away.
+ * Original guidance for clinician review; it never decides the level of care.
+ */
+function ProgressNavigator() {
+  const { draft, update, modules, measures, goTo } = usePlan();
+  const module = modules.find((m) => m.id === PROGRESS_REVIEW_MODULE_ID);
+  const added = draft.moduleIds.includes(PROGRESS_REVIEW_MODULE_ID);
+  return (
+    <Notice tone="neutral" icon={TrendingUp} title="If progress stalls" titleAs="h3">
+      <p>
+        Look at the trend together at each review. If scores have not improved over 2 or more check-ins, review the
+        formulation, the dose and fit of the work and the working relationship, and check for missed factors, before
+        deciding together whether to adjust, step up or refer. For clinician review: the decision is yours and the
+        client&apos;s.
+      </p>
+      <ul className="flex flex-wrap gap-x-4">
+        <li>
+          <Link href="/practice/outcome-monitoring" className="inline-flex min-h-11 items-center font-semibold text-accent underline underline-offset-2">
+            Outcome monitoring guide
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/practice/stepped-care-and-level-of-care"
+            className="inline-flex min-h-11 items-center font-semibold text-accent underline underline-offset-2"
+          >
+            Stepped care and level of care
+          </Link>
+        </li>
+      </ul>
+      {module ? (
+        added ? (
+          <p className="flex flex-wrap items-center gap-2">
+            <span>The progress review module is in this plan.</span>
+            <Button type="button" variant="outline" size="sm" className="min-h-11" onClick={() => goTo("problems")}>
+              Go to Problems
+            </Button>
+          </p>
+        ) : (
+          <Button type="button" variant="outline" size="sm" className="min-h-11" onClick={() => update((d) => addModule(d, module, measures))}>
+            <Plus aria-hidden />
+            Add the progress review module
+          </Button>
+        )
+      ) : null}
+    </Notice>
+  );
+}
+
 export function MeasuresStep() {
   const { draft, update, measures } = usePlan();
   const suggested = suggestedMeasureIds(draft);
@@ -367,6 +480,7 @@ export function MeasuresStep() {
           <p>{PLAN_PHQ9_NOTE}</p>
         </Notice>
       ) : null}
+      <ProgressNavigator />
       <ChoiceGroup
         legend="Review the plan together"
         hint="How often you and the client look at progress and update the plan."

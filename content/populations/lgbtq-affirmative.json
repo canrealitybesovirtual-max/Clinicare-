@@ -1,0 +1,80 @@
+{
+  "id": "lgbtq-affirmative",
+  "name": "LGBTQ+ affirmative practice",
+  "group": "culture-and-identity",
+  "summary": "Affirmative care for lesbian, gay, bisexual, transgender, queer and gender-diverse adults: minority stress as a lens, intake without assumptions, safety around disclosure, and the clinician's role in letters for adult gender-affirming care.",
+  "scopeNote": "For adults (18 and over). The app never asks for or saves sexual orientation, gender identity, sex assigned at birth, a chosen name or pronouns, and gender incongruence is never among its suggestions. Use names and pronouns out loud; type no identifying detail into any field.",
+  "whyItMatters": "Meyer's minority stress model (2003) links higher rates of depression, anxiety and substance use among sexual minority people to stigma, prejudice and discrimination: events of rejection or violence, expecting rejection, concealing identity and taking in negative messages. An LGB-affirmative CBT adaptation that targets these processes reduced depression and other outcomes in a trial with young adult gay and bisexual men (Pachankis and colleagues, 2015). APA practice guidelines for lesbian, gay and bisexual clients (2012) and for transgender and gender nonconforming people (2015) call for affirmative, informed care. ICD-11 moved gender incongruence out of the mental disorders chapter (Reed and colleagues, 2016), and the WPATH Standards of Care version 8 (2022) set out the assessing clinician's role for adults seeking gender-affirming medical care.",
+  "askAbout": [
+    "What name and pronouns would you like me to use here, and are there places, such as letters or calls, where I should use something different?",
+    "Who in your life knows about your identity, and who would you rather did not?",
+    "How have family, friends, work, faith or community responded, and where do you feel most yourself?",
+    "Have you had experiences of being treated badly in health care that I should know about?",
+    "Are there people or communities that support you that you would like to bring into our work?",
+    "Is there anything about relationships or sex you would like to talk about, now or later?"
+  ],
+  "stereotypeCaution": "Sexual orientation and gender identity tell you nothing certain about a person's problems, relationships or goals. Many LGBTQ+ people come to therapy for reasons unrelated to identity; others want identity at the center. Do not assume distress comes from identity, and do not assume it does not. Ask, and follow the person's lead.",
+  "keyConsiderations": [
+    "Use the person's name and pronouns consistently, and correct yourself briefly when you slip. The app has no field for them; ask how the person wants to be named in records and letters.",
+    "Use intake wording that does not assume a gender, a partner's gender, a family form or a sexual orientation.",
+    "Minority stress offers a shared language: experiences of prejudice or violence, expecting rejection, hiding identity and internalized stigma can each be explored and worked with.",
+    "Disclosure is the person's decision. Talk through the costs and benefits of being out in each setting, and protect confidentiality with family, workplaces and insurers.",
+    "For adult gender-affirming medical care, the WPATH Standards of Care version 8 describe an assessment of informed decision-making and of any co-occurring conditions that need care, not a test of whether someone is transgender enough. Write letters with the minimum necessary information.",
+    "Laws and coverage rules on gender-affirming care, records and conversion practices change often and differ by jurisdiction; check the current rules where you and the client are located.",
+    "Know your own competence and limits, seek consultation when needed, and refer to experienced affirming clinicians when that serves the person."
+  ],
+  "assessmentAdaptations": [
+    "Ask about minority stress experiences directly and without assuming them: rejection, harassment, violence, discrimination at work or in housing, and stress from concealment.",
+    "Include partner violence in screening for all relationships; threats to out a partner can be part of coercive control.",
+    "Ask about substance use, sexual health and eating concerns as you would with anyone, without assuming they are linked to identity.",
+    "Separate gender dysphoria or distress about the body from depression or anxiety, and note when distress eases with social support or affirming care."
+  ],
+  "sessionAdaptations": [
+    "Make affirming signals visible and honest, but let the person decide how much identity is part of the work.",
+    "Work with internalized stigma using cognitive and compassion-based methods, alongside practical help with safety and support.",
+    "Help the person build or reconnect with affirming community and chosen family when they want that.",
+    "When family members join a session, agree first on what may be shared and how the person wants to be named."
+  ],
+  "interventionNotes": [
+    { "interventionId": "lgbtq-affirmative-cbt", "note": "Targets minority stress processes directly, such as expected rejection, concealment and internalized stigma, alongside standard CBT skills." },
+    { "interventionId": "self-compassion-practice", "note": "Useful where shame and internalized stigma are prominent; let the person choose language that fits their identity." },
+    { "interventionId": "ipv-safety-planning", "note": "Adapt to same-gender and transgender relationships, including threats to out a partner and barriers to shelters or services." },
+    { "interventionId": "act-values-clarification", "note": "Can help a person decide how out to be in each part of life based on their own values rather than fear." },
+    { "orientationId": "systemic-family-and-couples-therapy", "note": "Family and couple work can support acceptance and repair, but only with the person's consent and never to change identity." }
+  ],
+  "measureNotes": [
+    "The PHQ-9 and GAD-7 work for LGBTQ+ adults; read raised scores alongside minority stress and recent events of rejection or violence.",
+    "Measures with sex-specific norms can misrepresent transgender and nonbinary people. Use a measure's scoring only as designed, note the limitation, and lean on change over time within the person."
+  ],
+  "measuresPending": [],
+  "safetyNotes": [
+    "Suicidal thoughts are reported more often by LGBTQ+ people, a difference research ties to rejection, victimization and isolation rather than to identity. Ask directly, and build affirming people and places into safety plans.",
+    "Check whether home is safe; rejection by family or a partner can mean unsafe or unstable housing.",
+    "In the US, the Trevor Project serves LGBTQ+ people under 25 (in this adult-only app, ages 18 to 24), and Trans Lifeline offers peer support by and for trans people; check each service's hours on its site."
+  ],
+  "cautions": [
+    "Efforts to change sexual orientation or gender identity are unsupported by evidence and linked with harm. Never offer them; faith-integrated work may explore a conflict between faith and identity at the person's own lead, never with a goal of changing orientation or identity.",
+    "Do not require a person to tell their whole history before helping, and do not ask about bodies or transition beyond what the care in front of you needs."
+  ],
+  "legalIds": ["conversion-practices", "treating-and-forensic-roles", "hipaa-privacy-basics", "competence-and-scope-of-practice"],
+  "ethicsIds": ["apa-ethical-principles-psychologists"],
+  "referralIds": ["trans-lifeline", "trevor-project-young-adults", "lgbt-national-help-center", "988-lifeline"],
+  "referralKinds": ["lgbtq"],
+  "handoutIds": ["kind-self-talk", "social-connection-plan", "relationship-safety-help-card"],
+  "topicIds": [],
+  "practiceIds": ["multicultural-orientation-and-broaching", "intake-assessment", "couples-and-conjoint-sessions", "ipv-screening-and-first-line-support"],
+  "formulationIds": ["minority-stress"],
+  "linkOuts": [],
+  "sud": false,
+  "sources": [
+    { "title": "Prejudice, social stress, and mental health in lesbian, gay, and bisexual populations: conceptual issues and research evidence (Meyer)", "publisher": "Psychological Bulletin (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/12956539/", "year": 2003 },
+    { "title": "LGB-affirmative cognitive-behavioral therapy for young adult gay and bisexual men: a randomized controlled trial of a transdiagnostic minority stress approach (Pachankis and colleagues)", "publisher": "Journal of Consulting and Clinical Psychology (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/26147563/", "year": 2015 },
+    { "title": "Guidelines for psychological practice with lesbian, gay, and bisexual clients", "publisher": "American Psychologist (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/21875169/", "year": 2012 },
+    { "title": "Guidelines for psychological practice with transgender and gender nonconforming people", "publisher": "American Psychologist (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/26653312/", "year": 2015 },
+    { "title": "Standards of Care for the Health of Transgender and Gender Diverse People, Version 8 (Coleman and colleagues)", "publisher": "International Journal of Transgender Health (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/36238954/", "year": 2022 },
+    { "title": "Disorders related to sexuality and gender identity in the ICD-11 (Reed and colleagues)", "publisher": "World Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/27717275/", "year": 2016 }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

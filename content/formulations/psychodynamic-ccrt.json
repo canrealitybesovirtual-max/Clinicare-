@@ -1,0 +1,185 @@
+{
+  "id": "psychodynamic-ccrt",
+  "name": "Psychodynamic relational formulation (core conflictual themes and cyclical patterns)",
+  "shortName": "Relationship pattern",
+  "family": "psychodynamic",
+  "orientationIds": [
+    "psychodynamic-therapy",
+    "interpersonal-therapies",
+    "integrative-common-factors"
+  ],
+  "purpose": "A focal formulation of a repeating relationship pattern. From several short stories of interactions with important people, the clinician and client look for a recurring theme: what the person wishes for from others, how others respond or are expected to respond, and how the person then feels and acts, including how they treat themselves. The pattern often shows up in the therapy relationship too. This page summarizes the core conflictual relationship theme method and the cyclical maladaptive pattern in original words; reciprocal roles in cognitive analytic therapy and the interpersonal-affective focus in dynamic interpersonal therapy are close relatives.",
+  "whenToUse": [
+    "When difficulties keep showing up in relationships in a similar way across different people and settings.",
+    "In time-limited psychodynamic or interpersonal work, to agree on one focus for the therapy.",
+    "When ruptures or strong reactions in the therapy relationship seem to repeat a pattern from outside it."
+  ],
+  "structure": [
+    {
+      "id": "episodes",
+      "label": "Relationship episodes",
+      "prompt": "Several short, concrete stories of recent interactions with specific people (use roles, not names): what happened, what the person wanted, what the other did, how it ended.",
+      "examples": [
+        "Asked a manager for time off and was told it was a bad time",
+        "A friend cancelled plans at the last minute"
+      ]
+    },
+    {
+      "id": "wish",
+      "label": "Wish: what the person wants from others",
+      "prompt": "The need or wish that runs through the episodes, in the person's own terms.",
+      "examples": [
+        "To be taken seriously",
+        "To be cared for without having to ask"
+      ]
+    },
+    {
+      "id": "response-of-other",
+      "label": "Response of the other, expected or actual",
+      "prompt": "How others respond, or how the person expects them to respond, often based on earlier relationships.",
+      "examples": [
+        "They dismiss me",
+        "They get irritated and pull away"
+      ]
+    },
+    {
+      "id": "response-of-self",
+      "label": "Response of the self",
+      "prompt": "What the person feels, thinks and does in reply, including symptoms and how they then treat themselves.",
+      "examples": [
+        "Goes quiet and gives in, then feels resentful",
+        "Tells themselves they are too needy"
+      ]
+    },
+    {
+      "id": "defenses",
+      "label": "Ways of protecting against painful feelings",
+      "prompt": "Habitual ways of keeping difficult feelings out of awareness or at a distance, noted with curiosity rather than judgment.",
+      "examples": [
+        "Making a joke when sad",
+        "Staying busy to avoid feeling alone"
+      ]
+    },
+    {
+      "id": "in-therapy",
+      "label": "How the pattern may show up between us",
+      "prompt": "Expected reactions in the therapy relationship, and the clinician's own reactions as information about the pattern, discussed in supervision when strong.",
+      "examples": [
+        "May agree with everything and not say when something is unhelpful",
+        "Clinician notices an urge to rescue"
+      ]
+    },
+    {
+      "id": "new-experience",
+      "label": "A different ending",
+      "prompt": "What new relational experience, in therapy and outside it, could loosen the pattern, and what a small, realistic step would be.",
+      "examples": [
+        "Saying no to one request this week and noticing what happens"
+      ]
+    }
+  ],
+  "steps": [
+    "Invite several brief relationship stories over the first sessions, including at least one from the therapy itself when it arises.",
+    "Look for the most repeated wish, response of other and response of self across the stories.",
+    "Offer the pattern as a tentative, shared description, in the person's own words, and ask whether it fits.",
+    "Use the pattern as the focus: notice it when it appears, including in the room, and explore alternatives.",
+    "Track ruptures and repairs in the alliance as part of the work, and revise the pattern if new stories do not fit."
+  ],
+  "collaborativeTips": [
+    "Name the pattern with warmth: it was a sensible way to cope with earlier relationships, even if it costs a lot now.",
+    "Keep interpretations close to what the person has said, and check them rather than insisting.",
+    "Write the pattern as a short cycle the person can recognize between sessions."
+  ],
+  "cautions": [
+    "Structured psychodynamic therapies (for example time-limited dynamic psychotherapy, dynamic interpersonal therapy, mentalization-based treatment, transference-focused psychotherapy) and cognitive analytic therapy need formal training and supervision. This page is an overview for formulation and referral, not a manual.",
+    "Interpretations of the therapy relationship can feel exposing; build safety and the alliance first, and avoid this focus during an acute crisis.",
+    "A formulation is a working hypothesis, not a diagnosis. Keep diagnosis names and codes out of the shared version, and revise the formulation when new information does not fit.",
+    "A formulation never scores, grades or decides risk. If thoughts of suicide, self-harm or harm to others come up, pause the formulation and follow your own assessment and local protocol; in the US the 988 Lifeline is available by call or text, elsewhere use the local emergency number or findahelpline.com."
+  ],
+  "conditionIds": [
+    "major-depressive-disorder",
+    "persistent-depressive-disorder",
+    "borderline-personality-disorder",
+    "generalized-anxiety-disorder",
+    "somatic-symptom-disorder"
+  ],
+  "interventionIds": [
+    "short-term-psychodynamic-exploration",
+    "dynamic-interpersonal-therapy",
+    "mentalization-based-treatment",
+    "interpersonal-psychotherapy",
+    "transference-focused-psychotherapy",
+    "supportive-psychotherapy"
+  ],
+  "handoutIds": [
+    "my-relationships-map"
+  ],
+  "practiceIds": [
+    "alliance-and-rupture-repair",
+    "clinician-reactions-and-self-disclosure",
+    "supervision-and-consultation"
+  ],
+  "populationIds": [],
+  "legalIds": [],
+  "trainingRequired": "Trained clinicians only for the named structured therapies: time-limited dynamic psychotherapy, dynamic interpersonal therapy, mentalization-based treatment, transference-focused psychotherapy and cognitive analytic therapy each have their own training and supervision routes.",
+  "trainingPath": [
+    {
+      "body": "Association for Cognitive Analytic Therapy (ACAT)",
+      "url": "https://www.acat.me.uk/cat-explained/what-cat-sessions-are-like/relationship-roles",
+      "note": "Explains reciprocal roles and lists training routes for cognitive analytic therapy."
+    },
+    {
+      "body": "American Psychological Association: Brief Dynamic Therapy (Levenson)",
+      "url": "https://www.apa.org/pubs/books/brief-dynamic-therapy-third-edition",
+      "note": "Reference text for time-limited dynamic psychotherapy and the cyclical maladaptive pattern."
+    }
+  ],
+  "worksheet": true,
+  "sud": false,
+  "linkOuts": [
+    {
+      "title": "Relationship roles (cognitive analytic therapy explained)",
+      "publisher": "Association for Cognitive Analytic Therapy",
+      "url": "https://www.acat.me.uk/cat-explained/what-cat-sessions-are-like/relationship-roles"
+    },
+    {
+      "title": "Brief Dynamic Therapy, Third Edition (Levenson; time-limited dynamic psychotherapy)",
+      "publisher": "American Psychological Association",
+      "url": "https://www.apa.org/pubs/books/brief-dynamic-therapy-third-edition"
+    }
+  ],
+  "measuresPending": [],
+  "sources": [
+    {
+      "title": "The status of psychodynamic psychotherapy as an empirically supported treatment for common mental disorders: an umbrella review (Leichsenring et al.)",
+      "publisher": "World Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37159376/",
+      "year": 2023
+    },
+    {
+      "title": "The accuracy of therapists' interpretations and the outcome of dynamic psychotherapy (Crits-Christoph, Cooper and Luborsky)",
+      "publisher": "Journal of Consulting and Clinical Psychology",
+      "url": "https://doi.org/10.1037/0022-006X.56.4.490",
+      "year": 1988
+    },
+    {
+      "title": "Brief Dynamic Therapy, Third Edition (Levenson; time-limited dynamic psychotherapy)",
+      "publisher": "American Psychological Association",
+      "url": "https://www.apa.org/pubs/books/brief-dynamic-therapy-third-edition"
+    },
+    {
+      "title": "Relationship roles (cognitive analytic therapy explained)",
+      "publisher": "Association for Cognitive Analytic Therapy",
+      "url": "https://www.acat.me.uk/cat-explained/what-cat-sessions-are-like/relationship-roles"
+    },
+    {
+      "title": "Is diagnosis enough to guide interventions in mental health? Using case formulation in clinical practice (Macneil et al.)",
+      "publisher": "BMC Medicine",
+      "url": "https://doi.org/10.1186/1741-7015-10-111",
+      "year": 2012
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

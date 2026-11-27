@@ -1,0 +1,197 @@
+{
+  "id": "act-flexibility",
+  "name": "ACT psychological flexibility formulation",
+  "shortName": "ACT processes",
+  "family": "contextual",
+  "orientationIds": [
+    "acceptance-and-commitment-therapy",
+    "mindfulness-and-compassion-based-therapies"
+  ],
+  "purpose": "A formulation in terms of six linked processes and their flexible counterparts: being present versus being lost in past or future; acceptance versus avoiding inner experience; stepping back from thoughts versus being ruled by them; a flexible sense of self versus being stuck in a self-story; clear values versus unclear ones; and committed action versus inaction or impulsive escape. The key question is workability: does what the person is doing move their life toward what matters, or away from it?",
+  "whenToUse": [
+    "When the struggle with thoughts, feelings or pain has become as much of a problem as the thoughts, feelings or pain themselves.",
+    "When symptom reduction is not the only goal, for example with chronic pain, long-term illness or recurring distress.",
+    "To plan ACT work by choosing which process to strengthen first."
+  ],
+  "structure": [
+    {
+      "id": "present-moment",
+      "label": "Present-moment awareness or getting lost in past and future",
+      "prompt": "How much time is spent replaying the past or rehearsing the future, and how easily the person can come back to what is happening now.",
+      "examples": [
+        "Mind is on tomorrow's meeting during dinner with family"
+      ],
+      "factorIds": [
+        "repetitive-negative-thinking",
+        "threat-monitoring"
+      ]
+    },
+    {
+      "id": "acceptance",
+      "label": "Willingness or avoidance of inner experience",
+      "prompt": "What feelings, memories, urges or sensations the person tries hardest to get rid of, and what that effort costs.",
+      "examples": [
+        "Stays home to avoid anxiety, misses friends' events"
+      ],
+      "factorIds": [
+        "experiential-avoidance",
+        "avoidance-escape"
+      ]
+    },
+    {
+      "id": "defusion",
+      "label": "Stepping back from thoughts or being ruled by them",
+      "prompt": "Which thoughts are taken as facts or orders, and what happens when the person treats them that way.",
+      "examples": [
+        "The thought I will mess this up stops every job application"
+      ],
+      "factorIds": [
+        "cognitive-fusion"
+      ]
+    },
+    {
+      "id": "self",
+      "label": "A flexible sense of self or a rigid self-story",
+      "prompt": "Stories about who the person is that limit what they will try, and whether they can notice themselves as larger than any one story.",
+      "examples": [
+        "I am the anxious one, so I cannot travel"
+      ],
+      "factorIds": [
+        "negative-core-beliefs",
+        "self-criticism-shame"
+      ]
+    },
+    {
+      "id": "values",
+      "label": "Clear values or unclear direction",
+      "prompt": "What the person cares about in relationships, work, health, community or faith, in their own words, and how clear that direction feels.",
+      "examples": [
+        "Being a present, playful parent"
+      ],
+      "factorIds": [
+        "values-and-meaning"
+      ]
+    },
+    {
+      "id": "committed-action",
+      "label": "Committed action or inaction and impulsive escape",
+      "prompt": "Small, values-based steps the person is or is not taking, and patterns of giving up, avoiding or acting on urges.",
+      "examples": [
+        "Has not called a friend for months",
+        "Quits tasks when discomfort rises"
+      ],
+      "factorIds": [
+        "low-reward-engagement",
+        "urges-and-impulsivity",
+        "hope-and-motivation"
+      ]
+    },
+    {
+      "id": "workability",
+      "label": "Workability",
+      "prompt": "For the main coping strategies: what has this helped with in the short term, what has it cost in the long term, and has it moved life toward what matters?",
+      "examples": [
+        "Skipping meals out to avoid feeling sick in public: fewer worries in the moment, but missing birthdays and work lunches"
+      ]
+    },
+    {
+      "id": "toward-away",
+      "label": "Toward and away moves",
+      "prompt": "Sort recent actions into those that moved toward what matters and those that moved away, and note the inner experiences (thoughts, feelings, urges) that showed up before each away move.",
+      "examples": [
+        "Toward: went to the class despite nerves",
+        "Away: cancelled a visit after the thought they will judge me"
+      ]
+    }
+  ],
+  "factorIds": [
+    "repetitive-negative-thinking",
+    "threat-monitoring",
+    "experiential-avoidance",
+    "avoidance-escape",
+    "cognitive-fusion",
+    "negative-core-beliefs",
+    "self-criticism-shame",
+    "values-and-meaning",
+    "low-reward-engagement",
+    "urges-and-impulsivity",
+    "hope-and-motivation"
+  ],
+  "steps": [
+    "Ask what the person has tried to feel better and do a workability check on each strategy.",
+    "Rate, together and roughly, how strong each of the six processes is right now, using recent examples rather than a score.",
+    "Explore values early, so the work has a direction the person cares about.",
+    "Choose one or two processes to strengthen first and link them to experiential exercises.",
+    "Set small committed actions toward values and review them with curiosity, not judgment."
+  ],
+  "collaborativeTips": [
+    "Use the person's own metaphors where possible; they stick better than ours.",
+    "Validate how sensible the struggle has been before suggesting a different relationship with the experience.",
+    "Keep the focus on what the person does, in the direction they choose."
+  ],
+  "cautions": [
+    "Acceptance never means accepting abuse, danger or injustice. When the problem is an unsafe situation or a solvable practical problem, act on the situation.",
+    "ACT is not a reason to stop evidence-based specific treatments, medication or medical care the person needs.",
+    "A formulation is a working hypothesis, not a diagnosis. Keep diagnosis names and codes out of the shared version, and revise the formulation when new information does not fit.",
+    "A formulation never scores, grades or decides risk. If thoughts of suicide, self-harm or harm to others come up, pause the formulation and follow your own assessment and local protocol; in the US the 988 Lifeline is available by call or text, elsewhere use the local emergency number or findahelpline.com."
+  ],
+  "conditionIds": [
+    "generalized-anxiety-disorder",
+    "major-depressive-disorder",
+    "obsessive-compulsive-disorder",
+    "somatic-symptom-disorder",
+    "social-anxiety-disorder"
+  ],
+  "interventionIds": [
+    "act-acceptance-willingness",
+    "act-cognitive-defusion",
+    "act-present-moment-self-as-context",
+    "act-values-clarification",
+    "act-committed-action",
+    "cbt-and-act-for-chronic-pain"
+  ],
+  "handoutIds": [
+    "values-compass",
+    "unhooking-from-thoughts",
+    "mindful-check-in"
+  ],
+  "practiceIds": [
+    "goals-by-orientation"
+  ],
+  "populationIds": [],
+  "legalIds": [],
+  "worksheet": true,
+  "sud": false,
+  "linkOuts": [
+    {
+      "title": "Association for Contextual Behavioral Science",
+      "publisher": "ACBS",
+      "url": "https://contextualscience.org",
+      "note": "Professional association for ACT; training and research resources."
+    }
+  ],
+  "measuresPending": [],
+  "sources": [
+    {
+      "title": "A meta-analysis of the efficacy of acceptance and commitment therapy for clinically relevant mental and physical health problems (A-Tjak et al.)",
+      "publisher": "Psychotherapy and Psychosomatics (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25547522/",
+      "year": 2015
+    },
+    {
+      "title": "Acceptance and commitment therapy: model, processes and outcomes (Hayes et al.)",
+      "publisher": "Behaviour Research and Therapy",
+      "url": "https://doi.org/10.1016/j.brat.2005.06.006",
+      "year": 2006
+    },
+    {
+      "title": "The future of intervention science: process-based therapy (Hofmann and Hayes)",
+      "publisher": "Clinical Psychological Science (PubMed Central)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6350520/",
+      "year": 2019
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

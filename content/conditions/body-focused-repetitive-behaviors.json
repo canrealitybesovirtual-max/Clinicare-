@@ -1,0 +1,300 @@
+{
+  "id": "body-focused-repetitive-behaviors",
+  "name": "Body-focused repetitive behavior disorders (hair pulling, skin picking)",
+  "icd10cm": [
+    {
+      "code": "F63.3",
+      "label": "Trichotillomania",
+      "featureIds": [
+        "hair-pulling"
+      ]
+    },
+    {
+      "code": "F42.4",
+      "label": "Excoriation (skin-picking) disorder",
+      "featureIds": [
+        "skin-picking"
+      ]
+    }
+  ],
+  "icd11": [
+    {
+      "code": "6B25.0",
+      "label": "Trichotillomania"
+    },
+    {
+      "code": "6B25.1",
+      "label": "Excoriation disorder"
+    }
+  ],
+  "dsmPointer": "See DSM-5-TR: Obsessive-Compulsive and Related Disorders — Trichotillomania (Hair-Pulling Disorder) and Excoriation (Skin-Picking) Disorder",
+  "summary": "Repeated pulling of hair or picking of skin that leaves visible hair loss, sores or scars, despite real efforts to stop. Some episodes are focused (to ease tension, an itch-like urge or a sense that something feels uneven) and others happen on autopilot while reading, scrolling, driving or watching TV; brief relief is often followed by shame. Many clients hide the effects and avoid haircuts, swimming, doctors or closeness. Unlike OCD, the behavior is not driven by an obsession; unlike body dysmorphic disorder, it is not mainly about fixing a perceived flaw; unlike self-harm, the aim is not to hurt oneself, so ask directly. Behavior therapy built on habit reversal (awareness training, a competing response and changes to triggers) has the strongest evidence, and adding acceptance or emotion-regulation skills may help further. For clinician review only; this is not a diagnosis.",
+  "features": [
+    {
+      "symptomId": "hair-pulling",
+      "kind": "core",
+      "weight": 5,
+      "group": "pulling-picking"
+    },
+    {
+      "symptomId": "skin-picking",
+      "kind": "core",
+      "weight": 5,
+      "group": "pulling-picking"
+    },
+    {
+      "symptomId": "bfrb-attempts-to-stop",
+      "kind": "core",
+      "weight": 4
+    },
+    {
+      "symptomId": "bfrb-distress-concealment",
+      "kind": "core",
+      "weight": 3
+    },
+    {
+      "symptomId": "subjective-anxiety-stress",
+      "kind": "associated",
+      "weight": 1,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "depressed-mood",
+      "kind": "associated",
+      "weight": 1,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "worthlessness-guilt",
+      "kind": "associated",
+      "weight": 1
+    },
+    {
+      "symptomId": "social-situation-avoidance",
+      "kind": "associated",
+      "weight": 1,
+      "breadthArea": true
+    }
+  ],
+  "minCore": 2,
+  "durationGate": {
+    "minWeeks": 0,
+    "note": "Ask how long pulling or picking has gone on, how it varies with stress, and what triggers it; no minimum duration is applied here (see DSM-5-TR)."
+  },
+  "impairmentRequired": true,
+  "ruleOuts": [
+    {
+      "label": "Skin and hair conditions",
+      "type": "medical",
+      "note": "Eczema, acne, scabies, alopecia areata and other dermatological problems can cause itching, hair loss or sores; refer to primary care or dermatology, and treat infected wounds."
+    },
+    {
+      "label": "Stimulant use",
+      "type": "substance",
+      "note": "Methamphetamine, cocaine and high doses of prescription stimulants can cause picking. This app does not store or send substance-use information."
+    },
+    {
+      "label": "Picking or pulling driven by obsessions, a perceived flaw, psychosis or intent to self-harm",
+      "type": "psychiatric",
+      "note": "Contamination fears (OCD), fixing a perceived defect (body dysmorphic disorder), a fixed belief in parasites under the skin (psychosis) or wanting to hurt oneself (self-harm) each call for a different plan."
+    }
+  ],
+  "specifiers": [
+    {
+      "label": "Trichotillomania (ICD-10-CM F63.3; ICD-11 6B25.0)",
+      "note": "Record the sites (scalp, eyebrows, eyelashes, beard or elsewhere), whether hair is chewed or swallowed (a medical concern), and the main triggers."
+    },
+    {
+      "label": "Excoriation disorder (ICD-10-CM F42.4; ICD-11 6B25.1)",
+      "note": "Older references code skin picking under L98.1 (factitial dermatitis); current ICD-10-CM has F42.4. Record the sites, wounds and any infections."
+    },
+    {
+      "label": "Focused or automatic episodes (descriptive)",
+      "note": "Ask how much happens with awareness and how much on autopilot; awareness training targets automatic episodes, and urge and emotion skills target focused ones."
+    }
+  ],
+  "differentials": [
+    {
+      "label": "Obsessive-compulsive disorder (ICD-10-CM title: Mixed obsessional thoughts and acts)",
+      "icd10cm": "F42.2",
+      "distinguishing": "Pulling or picking is a ritual driven by an obsession, such as fear of contamination, rather than an urge or habit in its own right."
+    },
+    {
+      "label": "Body dysmorphic disorder",
+      "icd10cm": "F45.22",
+      "distinguishing": "Picking or plucking aims to fix a defect the client believes others notice, alongside mirror checking and comparing."
+    },
+    {
+      "label": "Nonsuicidal self-harm",
+      "icd10cm": "R45.88",
+      "distinguishing": "The aim is to hurt oneself or to relieve emotional pain through injury; ask directly."
+    },
+    {
+      "label": "Delusional disorders",
+      "icd10cm": "F22",
+      "distinguishing": "Picking follows a fixed belief, for example that parasites live under the skin."
+    },
+    {
+      "label": "Stereotyped movement disorders",
+      "icd10cm": "F98.4",
+      "distinguishing": "Repetitive movements, often from childhood and alongside developmental conditions, without a focus on hair or skin."
+    }
+  ],
+  "comorbidities": [
+    {
+      "conditionId": "obsessive-compulsive-disorder",
+      "label": "Obsessive-compulsive disorder",
+      "note": "Often co-occurs; assess separately, since exposure and response prevention and habit reversal target different processes."
+    },
+    {
+      "conditionId": "generalized-anxiety-disorder",
+      "label": "Generalized anxiety disorder",
+      "note": "Anxiety is the most common companion of skin picking in US survey data (Grant & Chamberlain, 2020)."
+    },
+    {
+      "conditionId": "major-depressive-disorder",
+      "label": "Major depressive disorder",
+      "note": "Shame and hiding can feed low mood; screen with the PHQ-9."
+    },
+    {
+      "conditionId": "adult-adhd",
+      "label": "Adult ADHD",
+      "note": "ADHD is among the common co-occurring conditions (Grant et al., 2020); restlessness and boredom can drive automatic episodes."
+    }
+  ],
+  "measures": [
+    "phq-9",
+    "gad-7"
+  ],
+  "measuresPending": [
+    {
+      "name": "Massachusetts General Hospital Hairpulling Scale (MGH-HPS)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/8657844/",
+      "note": "License pending — link out only",
+      "licenseKey": "MGH-HPS"
+    }
+  ],
+  "interventions": [
+    {
+      "name": "Habit reversal training (awareness training, competing response, social support)",
+      "evidence": "Meta-analysis (Bate et al., 2011): habit reversal showed a large effect for tic and habit disorders. Meta-analysis of trichotillomania trials (McGuire et al., 2014): behavior therapy had a large pooled effect, larger than serotonin reuptake inhibitors.",
+      "note": "Track episodes, notice early warning signs, and practice a competing response (for example clenching the hands for a minute) until the urge passes."
+    },
+    {
+      "name": "Stimulus control (changing triggers and access)",
+      "evidence": "Part of the multicomponent behavior therapy packages tested in trichotillomania trials (McGuire et al., 2014).",
+      "note": "Gloves or fidget items during high-risk activities, short nails, covering mirrors or dimming bright bathroom lights, and changing routines where episodes cluster."
+    },
+    {
+      "name": "Acceptance- or emotion-focused skills added to behavior therapy",
+      "evidence": "McGuire et al. (2014): behavior therapy trials that added mood-focused techniques showed larger effects than those with traditional components only.",
+      "note": "ACT or DBT skills help the client make room for urges, shame and boredom without acting on them."
+    },
+    {
+      "name": "Self-compassion and shame reduction",
+      "evidence": "Shame and hiding are common and keep clients from seeking care.",
+      "note": "Normalize the behavior, separate it from the client's worth, and set goals around reduction and repair rather than perfection."
+    },
+    {
+      "name": "Referral for medication evaluation",
+      "evidence": "McGuire et al. (2014): serotonin reuptake inhibitors showed a moderate pooled effect for trichotillomania.",
+      "note": "Refer to a psychiatrist, primary care provider or psychiatric nurse practitioner when behavior therapy alone is not enough. Prescribing decisions rest with the prescriber."
+    },
+    {
+      "name": "Medical and dermatology care for wounds or swallowed hair",
+      "evidence": "Medical safety step alongside psychological care.",
+      "note": "Refer for infected or deep wounds, and urgently for abdominal pain or vomiting in someone who swallows hair."
+    }
+  ],
+  "handouts": [
+    "habit-reversal-practice",
+    "mindful-check-in"
+  ],
+  "statIds": [
+    "us-trichotillomania-prevalence",
+    "us-skin-picking-prevalence"
+  ],
+  "culturalNotes": [
+    "Hair and skin carry personal, cultural and religious meaning (head coverings, beards, braids and other protective styles, and beauty norms). Ask what hair loss or marks mean to the client and who notices them.",
+    "Wigs, scarves, hats and makeup may be cultural or religious choices as well as ways to hide; do not assume concealment.",
+    "Some families view pulling or picking as a bad habit or a lack of willpower; offer a clear, non-blaming explanation and involve family only with the client's agreement.",
+    "Access to dermatology and specialized behavior therapy varies widely; telehealth and structured self-help can bridge gaps.",
+    "Use a trained professional interpreter, not family members, and check that key terms carry the meaning you intend.",
+    "Faith and spiritual practice can be a source of support. Use faith-integrated approaches only when the client asks for them and after informed consent (see the AACC Code of Ethics for faith-based counselors)."
+  ],
+  "sud": false,
+  "strongMinAreas": 2,
+  "redFlagRules": [
+    {
+      "type": "suicidality",
+      "message": "Suicide-related content is documented in this input. Shame and hiding are common with pulling and picking; ask directly about suicidal thoughts and self-harm and follow your risk protocol."
+    },
+    {
+      "type": "psychosis",
+      "message": "Psychotic symptoms are documented. Picking driven by a fixed belief, for example in parasites under the skin, needs psychiatric and medical evaluation."
+    }
+  ],
+  "licensedDsm": false,
+  "wileyLicensed": false,
+  "sources": [
+    {
+      "title": "The efficacy of habit reversal therapy for tics, habit disorders, and stuttering: a meta-analytic review (Bate et al.)",
+      "publisher": "Clinical Psychology Review (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21549664/",
+      "year": 2011
+    },
+    {
+      "title": "Treating trichotillomania: a meta-analysis of treatment effects and moderators for behavior therapy and serotonin reuptake inhibitors (McGuire et al.)",
+      "publisher": "Journal of Psychiatric Research (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25108618/",
+      "year": 2014
+    },
+    {
+      "title": "Prevalence, gender correlates, and co-morbidity of trichotillomania (Grant et al.)",
+      "publisher": "Psychiatry Research (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32334275/",
+      "year": 2020
+    },
+    {
+      "title": "Prevalence of skin picking (excoriation) disorder (Grant & Chamberlain)",
+      "publisher": "Journal of Psychiatric Research (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32781374/",
+      "year": 2020
+    },
+    {
+      "title": "The Massachusetts General Hospital (MGH) Hairpulling Scale: 1. development and factor analyses (Keuthen et al.)",
+      "publisher": "Psychotherapy and Psychosomatics (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/8657844/",
+      "year": 1995
+    },
+    {
+      "title": "ICD-11 for Mortality and Morbidity Statistics (browser)",
+      "publisher": "World Health Organization",
+      "url": "https://icd.who.int/browse/latest-release/mms/en"
+    },
+    {
+      "title": "Clinical descriptions and diagnostic requirements for ICD-11 mental, behavioural and neurodevelopmental disorders (CDDR)",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/publications/i/item/9789240077263",
+      "year": 2024
+    },
+    {
+      "title": "ICD-10-CM (official code set)",
+      "publisher": "CDC National Center for Health Statistics",
+      "url": "https://www.cdc.gov/nchs/icd/icd-10-cm/index.html"
+    },
+    {
+      "title": "ICD-10-CM codes checked with the NLM Clinical Table Search Service",
+      "publisher": "National Library of Medicine",
+      "url": "https://clinicaltables.nlm.nih.gov/apidoc/icd10cm/v3/doc.html"
+    },
+    {
+      "title": "AACC Code of Ethics",
+      "publisher": "American Association of Christian Counselors",
+      "url": "https://aacc.net/aacc-code-of-ethics/"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

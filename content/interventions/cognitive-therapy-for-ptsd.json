@@ -1,0 +1,103 @@
+{
+  "id": "cognitive-therapy-for-ptsd",
+  "name": "Cognitive therapy for PTSD (Ehlers and Clark model) - overview and referral",
+  "modality": "Trauma-focused cognitive therapy (manualized protocol)",
+  "conditions": ["ptsd", "acute-stress-disorder"],
+  "evidenceLevel": "NICE NG116 (2018) lists cognitive therapy for PTSD among the individual trauma-focused CBT interventions to offer adults with PTSD symptoms more than 1 month after a trauma, and adults with acute stress disorder or clinically important symptoms within the first month. The VA/DoD 2023 PTSD guideline suggests (weak for) Ehlers' cognitive therapy for PTSD, below its strong recommendations for prolonged exposure, cognitive processing therapy and EMDR. In a randomized trial, a 7-day intensive format worked as well as 3 months of weekly sessions, and both outperformed supportive therapy and a waiting list (Ehlers et al., 2014). An earlier trial found it effective for recent-onset PTSD, while a self-help booklet was not (Ehlers et al., 2003).",
+  "minutes": { "min": 10, "max": 20 },
+  "purpose": "Cognitive therapy for PTSD is based on the idea that PTSD persists when a person sees the trauma or its aftermath as a sign of serious current threat. Two things keep that sense of threat going: personal meanings of the trauma (for example, 'I am permanently damaged' or 'it was my fault'), and a trauma memory that is poorly linked to its context, so reminders trigger it as if it were happening now. Unhelpful coping, such as suppressing memories, constant checking for danger or avoiding reminders, then blocks change. Treatment works on all three: it updates the meanings attached to the worst moments of the memory, helps the person notice what triggers the memory and tell then from now, and drops the coping that keeps the problem going, while helping the person take back the parts of life the trauma took away. It can be given weekly over about 3 months or in an intensive format over about a week, with boosters. This entry covers overview and referral only; the time estimate is for that conversation. It deliberately contains no protocol scripts.",
+  "steps": [
+    "Give brief, plain-language information about common reactions after trauma and explain that several effective trauma-focused therapies exist, including cognitive therapy for PTSD.",
+    "Describe what to expect in general terms: building a shared picture of what keeps the reactions going, working on the most painful moments of the memory and what they came to mean, learning to spot triggers and tell past from present, sometimes visiting the place where the trauma happened with the therapist, and planning steps to reclaim activities and relationships.",
+    "Compare options with the client (cognitive therapy for PTSD, cognitive processing therapy, prolonged exposure, EMDR, written exposure therapy, medication evaluation) and support an informed choice. Ask about preferred format (weekly or intensive) and practical barriers.",
+    "Screen for issues that affect timing or level of care: current safety and suicide risk, ongoing threat or abuse, severe dissociation, psychosis and substance problems. Address urgent needs first. Do not record substance-use details in this app.",
+    "If you are not trained in this model, refer to a clinician who has completed recognized training with supervision or consultation. Share information with the receiving clinician only with the client's consent.",
+    "Offer interim support while the client waits (sleep basics, grounding, a crisis plan) without starting memory work.",
+    "Follow up to confirm the referral was completed and the client was able to start."
+  ],
+  "script": [
+    "After something frightening, it is common to keep feeling that danger is still close, even when you are safe now.",
+    "This therapy helps you look at what the worst moments came to mean to you, and whether those meanings still fit what you know now.",
+    "You also learn to notice what sets off the memories and to tell the difference between then and now.",
+    "Part of the work is getting back things you have stopped doing since it happened.",
+    "It can be done weekly, or in a shorter, more intensive block. A therapist with special training would do it with you.",
+    "You can take time to decide, and we can talk about other options too."
+  ],
+  "contraindications": [
+    "Current safety threats (ongoing violence, imminent suicide risk) come first. This app does not judge risk; you do. Crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com.",
+    "Severe dissociation, active psychosis or an elevated mood state need assessment by the treating clinician before memory work starts.",
+    "NICE NG116 advises against excluding people from PTSD treatment solely because of co-occurring drug or alcohol misuse. Plan timing and integrated care with the treating clinician.",
+    "Site visits and other reminder work are planned with the client, never imposed, and are not done where the place itself is still unsafe.",
+    "Do not attempt memory updating or other protocol steps without training in the model."
+  ],
+  "culturalAdaptations": [
+    "Personal meanings of trauma (shame, guilt, honor, spiritual explanations) are shaped by culture and faith. Explore them with curiosity rather than treating them as errors.",
+    "Ask whether the client prefers a therapist of a particular gender or background, especially after sexual violence, and include this in the referral.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "trainingRequired": "Cognitive therapy for PTSD: trained clinicians only. Deliver only after training in the model with ongoing supervision or consultation; the Oxford Centre for Anxiety Disorders and Trauma (OxCADAT) provides therapist training materials for this treatment. Otherwise refer.",
+  "handoutIds": ["trauma-therapy-what-to-expect", "common-reactions-after-trauma"],
+  "orientationIds": ["trauma-focused-therapies", "cognitive-therapy"],
+  "evidenceGrades": [
+    {
+      "body": "NICE",
+      "guideline": "Post-traumatic stress disorder (NG116), recommendations 1.6.15 and 1.6.16",
+      "year": 2018,
+      "conditionId": "ptsd",
+      "population": "Adults with PTSD symptoms more than 1 month after a trauma, or acute stress disorder within the first month",
+      "direction": "for",
+      "strength": "offer",
+      "url": "https://www.nice.org.uk/guidance/ng116/chapter/Recommendations"
+    },
+    {
+      "body": "VA/DoD",
+      "guideline": "Management of Posttraumatic Stress Disorder and Acute Stress Disorder",
+      "year": 2023,
+      "conditionId": "ptsd",
+      "population": "Adults with PTSD",
+      "direction": "for",
+      "strength": "weak for (suggest)",
+      "url": "https://health.mil/Reference-Center/Publications/2024/01/04/Psychotherapy-for-PTSD"
+    }
+  ],
+  "sources": [
+    {
+      "title": "A randomized controlled trial of 7-day intensive and standard weekly cognitive therapy for PTSD and emotion-focused supportive therapy (Ehlers et al.)",
+      "publisher": "American Journal of Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24480899/",
+      "year": 2014
+    },
+    {
+      "title": "A randomized controlled trial of cognitive therapy, a self-help booklet, and repeated assessments as early interventions for posttraumatic stress disorder (Ehlers et al.)",
+      "publisher": "Archives of General Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/14557148/",
+      "year": 2003
+    },
+    {
+      "title": "Post-traumatic stress disorder (NG116): recommendations",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng116/chapter/Recommendations",
+      "year": 2018
+    },
+    {
+      "title": "Psychotherapy for PTSD (summary of the 2023 VA/DoD guideline)",
+      "publisher": "Psychological Health Center of Excellence, Defense Health Agency",
+      "url": "https://health.mil/Reference-Center/Publications/2024/01/04/Psychotherapy-for-PTSD",
+      "year": 2024
+    },
+    {
+      "title": "The management of posttraumatic stress disorder and acute stress disorder: synopsis of the 2023 VA/DoD clinical practice guideline",
+      "publisher": "Annals of Internal Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38408360/",
+      "year": 2024
+    },
+    {
+      "title": "Preventing and treating post-traumatic stress disorder (OxCADAT)",
+      "publisher": "Department of Experimental Psychology, University of Oxford",
+      "url": "https://www.psy.ox.ac.uk/preventing-and-treating-post-traumatic-stress-disorder"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

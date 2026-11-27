@@ -1,0 +1,133 @@
+{
+  "id": "thinking-traps",
+  "title": "Thinking Traps",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 15,
+  "intro": "Thinking traps are habits of the mind that everyone falls into, especially when stressed or low. They make things look worse than they are. They are not your fault, and spotting them is a skill you can learn. This sheet lists common traps, with an example and a kinder question for each one. It takes about 15 minutes to read.",
+  "sections": [
+    {
+      "heading": "How to use this sheet",
+      "body": "When your mood drops, ask yourself, 'What was going through my mind just then?' Then look at the lists below. Does the thought fit one or more traps? If so, try the question for that trap. You are not trying to think only happy thoughts. You are looking for a view that is fair and true."
+    },
+    {
+      "heading": "Common thinking traps, part 1",
+      "steps": [
+        "All or nothing. Seeing things as all good or all bad, with nothing in between. Example: 'If it isn't perfect, I failed.' Ask: 'Is there a middle ground? What would good enough look like?'",
+        "Mind reading. Being sure you know what others think, and it is usually bad. Example: 'She thinks I'm boring.' Ask: 'What do I really know? Could there be another reason for what she did?'",
+        "Fortune telling. Being sure that things will go badly. Example: 'I'll mess up the interview.' Ask: 'What else could happen? How have things turned out before?'",
+        "Expecting the worst. Jumping to the worst thing that could happen. Example: 'This headache must be something terrible.' Ask: 'What is most likely? If the worst did happen, how would I cope?'",
+        "Always and never. Turning one event into a rule about everything. Example: 'I always ruin things.' Ask: 'Is it really always? When has it gone differently?'",
+        "Only seeing the bad. Focusing on one bad part and missing the rest. Example: 'One person frowned, so my talk went badly.' Ask: 'What else happened? What does the whole picture look like?'"
+      ]
+    },
+    {
+      "heading": "Common thinking traps, part 2",
+      "steps": [
+        "Brushing off the good. Telling yourself that good things do not count. Example: 'They only said that to be nice.' Ask: 'What if it does count? Would I brush it off for a friend?'",
+        "Should rules. Harsh rules about how you or others must act. Example: 'I should never feel nervous.' Ask: 'Is this rule fair? Could I say I would like to, instead of I should?'",
+        "Name-calling. Calling yourself a harsh name because of one thing. Example: 'I forgot again. I'm an idiot.' Ask: 'Would I call a friend that? What is a fairer way to describe what happened?'",
+        "Taking all the blame. Blaming yourself for things that had many causes. Example: 'The party was dull because of me.' Ask: 'What else played a part? How much of this was really up to me?'",
+        "Feelings as facts. Believing something is true because it feels true. Example: 'I feel useless, so I must be useless.' Ask: 'Is a feeling the same as a fact? What do the facts say?'"
+      ]
+    },
+    {
+      "heading": "After you spot a trap",
+      "steps": [
+        "Write the thought and the trap or traps you spotted.",
+        "Answer the question for that trap.",
+        "Write a fairer thought, one that is kind and also true.",
+        "Notice how strong your feeling is now, from 0 to 10."
+      ]
+    },
+    {
+      "heading": "Tips",
+      "steps": [
+        "Most thoughts fit more than one trap. That is fine. Pick the one that seems closest.",
+        "It gets easier with practice. At first, you may only spot traps hours later.",
+        "If a fairer thought does not feel true yet, that is okay. Feelings often take time to catch up."
+      ]
+    }
+  ],
+  "practiceLog": {
+    "columns": ["What happened", "The thought", "Trap or traps I spotted", "Fairer thought", "Feeling after (0-10)"],
+    "rows": 7
+  },
+  "safetyNote": "Safety first: Some thoughts need more help than a worksheet can give. If you have thoughts of hurting yourself or someone else, or thoughts that life is not worth living, do not wait for your next visit. Talk to someone now. In the US, call or text 988 or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "es": {
+    "title": "Trampas del pensamiento",
+    "intro": "Las trampas del pensamiento son costumbres de la mente en las que todos caemos, sobre todo con estrés o con el ánimo bajo. Hacen que las cosas se vean peor de lo que son. No son su culpa, y notarlas es algo que se puede aprender. Esta hoja da una lista de trampas comunes, con un ejemplo y una pregunta más amable para cada una. Leerla toma unos 15 minutos.",
+    "sections": [
+      {
+        "heading": "Cómo usar esta hoja",
+        "body": "Cuando su ánimo baje, pregúntese: '¿Qué me estaba pasando por la mente en ese momento?' Luego mire las listas de abajo. ¿El pensamiento se parece a una o más trampas? Si es así, pruebe la pregunta de esa trampa. No se trata de pensar solo cosas alegres. Se trata de buscar una forma de ver las cosas que sea justa y cierta."
+      },
+      {
+        "heading": "Trampas comunes del pensamiento, parte 1",
+        "steps": [
+          "Todo o nada. Ver las cosas como todo bueno o todo malo, sin nada en medio. Ejemplo: 'Si no queda perfecto, fracasé'. Pregunte: '¿Hay un punto medio? ¿Cómo sería algo suficientemente bueno?'",
+          "Leer la mente. Estar seguro de saber lo que piensan los demás, y casi siempre es algo malo. Ejemplo: 'Ella cree que soy aburrido'. Pregunte: '¿Qué sé de verdad? ¿Podría haber otra razón para lo que hizo?'",
+          "Adivinar el futuro. Estar seguro de que las cosas saldrán mal. Ejemplo: 'Me va a ir mal en la entrevista'. Pregunte: '¿Qué otra cosa podría pasar? ¿Cómo han salido las cosas antes?'",
+          "Esperar lo peor. Saltar a lo peor que podría pasar. Ejemplo: 'Este dolor de cabeza debe ser algo terrible'. Pregunte: '¿Qué es lo más probable? Si pasara lo peor, ¿cómo lo manejaría?'",
+          "Siempre y nunca. Convertir una sola cosa en una regla para todo. Ejemplo: 'Siempre lo arruino todo'. Pregunte: '¿De verdad es siempre? ¿Cuándo ha salido distinto?'",
+          "Ver solo lo malo. Fijarse en una parte mala y no ver el resto. Ejemplo: 'Una persona frunció la cara, así que mi charla salió mal'. Pregunte: '¿Qué más pasó? ¿Cómo se ve todo el cuadro?'"
+        ]
+      },
+      {
+        "heading": "Trampas comunes del pensamiento, parte 2",
+        "steps": [
+          "Quitarle valor a lo bueno. Decirse que las cosas buenas no cuentan. Ejemplo: 'Solo lo dijeron para ser amables'. Pregunte: '¿Y si sí cuenta? ¿Le quitaría valor si le pasara a un amigo?'",
+          "Reglas de 'debería'. Reglas duras sobre cómo debe actuar usted o los demás. Ejemplo: 'Nunca debería ponerme nervioso'. Pregunte: '¿Es justa esta regla? ¿Podría decir me gustaría, en vez de debería?'",
+          "Ponerse apodos. Llamarse con un nombre duro por una sola cosa. Ejemplo: 'Se me olvidó otra vez. Soy un tonto'. Pregunte: '¿Le diría eso a un amigo? ¿Cuál es una forma más justa de decir lo que pasó?'",
+          "Echarse toda la culpa. Culparse por cosas que tuvieron muchas causas. Ejemplo: 'La fiesta fue aburrida por mi culpa'. Pregunte: '¿Qué más influyó? ¿Cuánto de esto dependía de verdad de mí?'",
+          "Tomar sentimientos como hechos. Creer que algo es cierto porque se siente cierto. Ejemplo: 'Me siento inútil, así que debo ser inútil'. Pregunte: '¿Un sentimiento es lo mismo que un hecho? ¿Qué dicen los hechos?'"
+        ]
+      },
+      {
+        "heading": "Después de notar una trampa",
+        "steps": [
+          "Escriba el pensamiento y la trampa o trampas que notó.",
+          "Conteste la pregunta de esa trampa.",
+          "Escriba un pensamiento más justo, que sea amable y también cierto.",
+          "Fíjese qué tan fuerte es su sentimiento ahora, del 0 al 10."
+        ]
+      },
+      {
+        "heading": "Consejos",
+        "steps": [
+          "Muchos pensamientos se parecen a más de una trampa. Está bien. Escoja la que más se parezca.",
+          "Con la práctica se hace más fácil. Al principio, puede que note las trampas horas después.",
+          "Si un pensamiento más justo todavía no se siente cierto, está bien. Los sentimientos muchas veces tardan en ponerse al día."
+        ]
+      }
+    ],
+    "practiceLog": {
+      "columns": ["Qué pasó", "El pensamiento", "Trampa o trampas que noté", "Pensamiento más justo", "Sentimiento después (0-10)"]
+    },
+    "safetyNote": "La seguridad es lo primero: Algunos pensamientos necesitan más ayuda de la que puede dar una hoja de trabajo. Si tiene pensamientos de hacerse daño o de hacerle daño a otra persona, o pensamientos de que la vida no vale la pena, no espere a su próxima cita. Hable con alguien ahora. En EE. UU., llame o envíe un mensaje de texto al 988 o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "sources": [
+    {
+      "title": "Cognitive Behavior Therapy: Basics and Beyond, Third Edition (J. S. Beck)",
+      "publisher": "Guilford Press",
+      "url": "https://www.guilford.com/books/Cognitive-Behavior-Therapy/Judith-Beck/9781462544196",
+      "year": 2020
+    },
+    {
+      "title": "The efficacy of cognitive behavioral therapy: a review of meta-analyses (Hofmann et al.)",
+      "publisher": "Cognitive Therapy and Research (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23459093/",
+      "year": 2012
+    },
+    {
+      "title": "Depression in adults: treatment and management (NG222)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng222",
+      "year": 2022
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

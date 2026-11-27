@@ -1,0 +1,176 @@
+{
+  "id": "video-session-guide",
+  "title": "Getting Ready for a Video Visit",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 10,
+  "intro": "Many counseling visits now happen by video or by phone. A little planning can make these visits more private and less stressful. Use this sheet before your first video visit, and look at it again if anything changes. It takes about 10 minutes.",
+  "sections": [
+    {
+      "heading": "Find a private spot",
+      "steps": [
+        "Choose a place where others cannot hear you, like a room with the door closed, or outside away from people.",
+        "Use headphones or earbuds if you can. Then only you can hear your counselor.",
+        "If it is safe to do so, tell the people you live with that you need some private time.",
+        "Never join a visit while you are driving."
+      ]
+    },
+    {
+      "heading": "Check your device",
+      "steps": [
+        "Charge your phone, tablet, or computer, or keep it plugged in.",
+        "Test the link, camera, and sound the day before. Your clinic may help you test it.",
+        "Close other apps, and turn off alerts so they do not pop up during the visit.",
+        "Use a private internet connection if you can. Free public Wi-Fi, like at a cafe, is less private.",
+        "Use your own device if you can, not a shared or work computer."
+      ]
+    },
+    {
+      "heading": "Make a backup plan",
+      "body": "Calls sometimes drop. Agree on a plan with your counselor at your first video visit.",
+      "steps": [
+        "If the video stops, we will (for example, my counselor calls my phone): ________________",
+        "If we cannot reconnect within 5 minutes, I will call the clinic at: ________________",
+        "If video is hard for you, ask whether a visit by phone only is an option."
+      ]
+    },
+    {
+      "heading": "At the start of each visit",
+      "steps": [
+        "Your counselor will ask where you are. This lets them send help to the right place in an emergency.",
+        "Say if anyone else is in the room or might hear you.",
+        "You can ask your counselor if they are in a private place too.",
+        "Do not record the visit unless you and your counselor both agree."
+      ]
+    },
+    {
+      "heading": "If it is not safe to talk",
+      "body": "Sometimes a person at home may be listening, or it may not feel safe to speak. Plan a signal with your counselor ahead of time.",
+      "steps": [
+        "A word or phrase that means 'someone can hear me': ________________",
+        "A sign that means 'I need to end the call now': ________________",
+        "When you use the signal, your counselor can change the subject, or end the call and follow the plan you made together.",
+        "If someone at home hurts you, scares you, or controls you, you can call the National Domestic Violence Hotline in the US at 1-800-799-7233, or text START to 88788."
+      ]
+    },
+    {
+      "heading": "After the visit",
+      "steps": [
+        "Take a few minutes before you go back to your day. Stretch, drink some water, or step outside.",
+        "Close the app, and put away any notes you do not want others to see.",
+        "Write down anything you want to remember or practice."
+      ]
+    }
+  ],
+  "safetyNote": "Safety first: A video visit is not an emergency service. If your counselor thinks you are in danger during a visit, they may send help to the place you said you were. If you are in danger and the call drops, do not wait to reconnect. In the US, call or text 988 or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sud": false,
+  "es": {
+    "title": "Cómo prepararme para una cita por video",
+    "intro": "Hoy muchas citas de consejería se hacen por video o por teléfono. Planear un poco puede hacer que estas citas sean más privadas y den menos estrés. Use esta hoja antes de su primera cita por video, y vuelva a verla si algo cambia. Toma unos 10 minutos.",
+    "sections": [
+      {
+        "heading": "Buscar un lugar privado",
+        "steps": [
+          "Elija un lugar donde otras personas no puedan oírle, como un cuarto con la puerta cerrada, o afuera lejos de la gente.",
+          "Use auriculares si puede. Así solo usted oye a su consejero.",
+          "Si es seguro hacerlo, dígales a las personas con quienes vive que necesita un rato a solas.",
+          "Nunca se conecte a una cita mientras maneja."
+        ]
+      },
+      {
+        "heading": "Revisar su aparato",
+        "steps": [
+          "Cargue su teléfono, tableta o computadora, o déjelo conectado.",
+          "Pruebe el enlace, la cámara y el sonido el día antes. Su clínica le puede ayudar a probarlo.",
+          "Cierre las demás aplicaciones y apague los avisos para que no salgan durante la cita.",
+          "Use una conexión a internet privada si puede. El wifi público y gratis, como el de un café, es menos privado.",
+          "Use su propio aparato si puede, no una computadora compartida o del trabajo."
+        ]
+      },
+      {
+        "heading": "Tener un plan por si falla",
+        "body": "A veces las llamadas se cortan. Acuerde un plan con su consejero en su primera cita por video.",
+        "steps": [
+          "Si el video se corta, vamos a (por ejemplo, mi consejero me llama al teléfono): ________________",
+          "Si no nos podemos volver a conectar en 5 minutos, voy a llamar a la clínica al: ________________",
+          "Si el video se le hace difícil, pregunte si puede tener la cita solo por teléfono."
+        ]
+      },
+      {
+        "heading": "Al empezar cada cita",
+        "steps": [
+          "Su consejero le va a preguntar dónde está. Así puede mandar ayuda al lugar correcto en una emergencia.",
+          "Diga si hay otra persona en el cuarto o si alguien le podría oír.",
+          "Puede preguntarle a su consejero si también está en un lugar privado.",
+          "No grabe la cita a menos que usted y su consejero estén de acuerdo."
+        ]
+      },
+      {
+        "heading": "Si no es seguro hablar",
+        "body": "A veces una persona en la casa puede estar escuchando, o puede no sentirse seguro para hablar. Planee una señal con su consejero antes.",
+        "steps": [
+          "Una palabra o frase que quiere decir 'alguien me puede oír': ________________",
+          "Una seña que quiere decir 'necesito terminar la llamada ya': ________________",
+          "Cuando use la señal, su consejero puede cambiar de tema, o terminar la llamada y seguir el plan que hicieron juntos.",
+          "Si alguien en su casa le hace daño, le da miedo o le controla, en EE. UU. puede llamar a la Línea Nacional de Violencia Doméstica (National Domestic Violence Hotline) al 1-800-799-7233 o enviar un mensaje de texto con la palabra START al 88788."
+        ]
+      },
+      {
+        "heading": "Después de la cita",
+        "steps": [
+          "Tómese unos minutos antes de volver a sus cosas. Estírese, tome agua o salga un momento.",
+          "Cierre la aplicación y guarde las notas que no quiera que otros vean.",
+          "Escriba lo que quiera recordar o practicar."
+        ]
+      }
+    ],
+    "safetyNote": "La seguridad es lo primero: Una cita por video no es un servicio de emergencias. Si su consejero cree que usted está en peligro durante una cita, puede mandar ayuda al lugar donde usted dijo que estaba. Si está en peligro y la llamada se corta, no espere a volver a conectarse. En EE. UU., llame o envíe un mensaje de texto al 988, o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "sources": [
+    {
+      "title": "Preparing for a video visit",
+      "publisher": "HHS Telehealth (Health Resources and Services Administration)",
+      "url": "https://telehealth.hhs.gov/patients/preparing-for-a-video-visit"
+    },
+    {
+      "title": "Informed consent for telebehavioral health",
+      "publisher": "HHS Telehealth",
+      "url": "https://telehealth.hhs.gov/providers/telehealth-for-behavioral-health/preparing-patients-for-telebehavioral-health/informed-consent-for-telebehavioral-health/"
+    },
+    {
+      "title": "HIPAA and audio-only telehealth",
+      "publisher": "US Department of Health and Human Services",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/hipaa-audio-telehealth/index.html"
+    },
+    {
+      "title": "Best practices in videoconferencing-based telemental health, April 2018 (Shore et al.)",
+      "publisher": "Telemedicine and e-Health (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30358514/",
+      "year": 2018
+    },
+    {
+      "title": "Guidelines for the practice of telepsychology",
+      "publisher": "American Psychological Association",
+      "url": "https://www.apa.org/about/policy/telepsychology-revisions"
+    },
+    {
+      "title": "National Domestic Violence Hotline",
+      "publisher": "The Hotline",
+      "url": "https://www.thehotline.org"
+    },
+    {
+      "title": "988 Suicide & Crisis Lifeline",
+      "publisher": "988 Lifeline",
+      "url": "https://988lifeline.org"
+    },
+    {
+      "title": "Find A Helpline (international directory)",
+      "publisher": "Find A Helpline",
+      "url": "https://findahelpline.com"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

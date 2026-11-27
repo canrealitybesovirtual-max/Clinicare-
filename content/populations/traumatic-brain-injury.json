@@ -1,0 +1,76 @@
+{
+  "id": "traumatic-brain-injury",
+  "name": "History of brain injury or concussion",
+  "group": "disability-and-communication",
+  "summary": "Adapting trauma-focused therapy, CBT and sleep treatment for adults with a history of concussion or brain injury: overlapping symptoms, memory aids and shorter steps, setting expectations of recovery, and when to refer for neuropsychological assessment.",
+  "scopeNote": "For adults (18 and over). The app never asks for or saves injury history or test results. Brain injury is assessed and managed with the medical team; these notes cover adapting psychological care around it.",
+  "whyItMatters": "Brain injury can follow blasts, falls, crashes, sports and assaults, and may be under-recognized after interpersonal violence (National Center for PTSD). In intimate partner violence, repeated blows to the head and strangulation can cause brain injury over time (Kwako and colleagues, 2011). Irritability, poor concentration, sleep problems and headaches overlap between PTSD, depression and concussion. The National Center for PTSD summarizes evidence that people with PTSD and a history of brain injury, mainly mild, do about as well in cognitive processing therapy and prolonged exposure as those without one, and notes that the VA/DoD guideline on post-acute mild brain injury recommends setting expectations of recovery and treating co-occurring conditions.",
+  "askAbout": [
+    "Have you ever had a blow to the head, a blast, a fall or a crash where you were dazed, confused or lost time?",
+    "Has anyone ever choked or strangled you, even briefly?",
+    "What changes have you noticed in memory, attention, headaches, sleep, mood or temper since then?",
+    "What helps you remember things day to day, such as phone reminders, notes or another person?",
+    "What would make our sessions easier to follow: shorter sessions, breaks, written summaries or someone joining you?"
+  ],
+  "stereotypeCaution": "Brain injuries and their effects vary widely, and many people recover well, especially after a mild injury. Do not assume that every concentration or mood problem is permanent brain damage, or that a person cannot benefit from standard therapy; ask, observe and adapt.",
+  "keyConsiderations": [
+    "Use the language of history of brain injury or concussion, which conveys an expectation of recovery, rather than labelling the person as brain-injured.",
+    "Symptoms overlap: irritability, concentration and memory complaints, sleep problems and fatigue can come from PTSD, depression, pain, sleep loss, medicines, substances or the injury itself. Treating PTSD and depression often improves these symptoms.",
+    "Ask about head injury and strangulation in every assessment of violence; neither may have been recorded or treated.",
+    "Coordinate with primary care, neurology or rehabilitation for headaches, dizziness, vision or balance problems, and medicine review.",
+    "Refer for neuropsychological assessment when cognitive problems are persistent, worsening, out of keeping with the injury, or affect work, safety or capacity decisions."
+  ],
+  "assessmentAdaptations": [
+    "Ask about the circumstances of any injury, loss or alteration of consciousness, memory gaps around the event, and changes since, using plain words rather than medical terms.",
+    "Note new or worsening neurological signs (severe headache, vomiting, weakness, confusion, seizures) and route them to urgent medical care.",
+    "With consent, ask a person close to the client what changes they have noticed.",
+    "Check alcohol and drug use, which can slow recovery and worsen symptoms."
+  ],
+  "sessionAdaptations": [
+    "Break tasks into shorter steps, cover one main point per session, repeat and summarize often, and give a written summary at the end.",
+    "Use memory aids for between-session practice: phone reminders, a single card, a calendar or a support person, with consent.",
+    "Allow breaks, reduce distractions in the room, and consider shorter, more frequent sessions when fatigue is high.",
+    "Rehearse skills in session before practising them at home."
+  ],
+  "interventionNotes": [
+    { "interventionId": "cognitive-processing-therapy", "note": "Can be used with a history of brain injury; simplify worksheets, add written summaries and review practice in session." },
+    { "interventionId": "prolonged-exposure", "note": "Can be used with a history of brain injury; record sessions for review if allowed, and keep the plan written and simple." },
+    { "interventionId": "written-exposure-therapy", "note": "Its short, structured format may suit some people with concentration problems; offer typing or dictation." },
+    { "interventionId": "thought-record", "note": "Use a shorter version with fewer columns and worked examples, and complete it together first." },
+    { "interventionId": "cbti-sleep-restriction", "note": "Daytime sleepiness can worsen thinking and balance; consider stimulus control first and check with the medical team before restricting sleep." }
+  ],
+  "measureNotes": [
+    "PHQ-9 and GAD-7 items on concentration, sleep and restlessness overlap with concussion symptoms; ask what drives each answer and track change over time.",
+    "Self-reported memory problems often relate more closely to mood and PTSD than to test results; refer for testing rather than drawing conclusions from questionnaires."
+  ],
+  "measuresPending": [],
+  "safetyNotes": [
+    "Brain injury alongside PTSD or depression can add to suicide risk; ask directly and include lethal means counseling in safety planning.",
+    "Any new neurological sign, or confusion that comes and goes, needs urgent medical review rather than a mental health appointment."
+  ],
+  "cautions": [
+    "Do not attribute all symptoms to the brain injury and withhold effective PTSD or depression treatment because of it."
+  ],
+  "legalIds": ["decision-making-capacity", "military-confidentiality"],
+  "ethicsIds": [],
+  "referralIds": ["veterans-crisis-line", "national-domestic-violence-hotline", "988-lifeline"],
+  "referralKinds": [],
+  "handoutIds": ["between-session-practice-plan", "session-check-in-card", "common-reactions-after-trauma"],
+  "topicIds": ["after-trauma"],
+  "practiceIds": ["teach-back-and-plain-language", "mental-status-exam", "goal-attainment-scaling", "ipv-screening-and-first-line-support"],
+  "formulationIds": ["phase-based-trauma-sequencing"],
+  "linkOuts": [
+    { "title": "Traumatic Brain Injury and PTSD", "publisher": "National Center for PTSD (U.S. Department of Veterans Affairs)", "url": "https://www.ptsd.va.gov/professional/treat/cooccurring/tbi_ptsd_vets.asp", "lastVerified": "2026-11-27" },
+    { "title": "Traumatic Brain Injury resources for service members, families and caregivers", "publisher": "Military Health System, TBI Center of Excellence", "url": "https://health.mil/Military-Health-Topics/Centers-of-Excellence/Traumatic-Brain-Injury-Center-of-Excellence/Patient-and-Family-Resources", "lastVerified": "2026-11-27" },
+    { "title": "Traumatic Brain Injury", "publisher": "MedlinePlus (U.S. National Library of Medicine)", "url": "https://medlineplus.gov/traumaticbraininjury.html", "lastVerified": "2026-11-27" }
+  ],
+  "sud": false,
+  "sources": [
+    { "title": "Traumatic Brain Injury and PTSD (Larsen and Vasterling)", "publisher": "National Center for PTSD (U.S. Department of Veterans Affairs)", "url": "https://www.ptsd.va.gov/professional/treat/cooccurring/tbi_ptsd_vets.asp" },
+    { "title": "Traumatic brain injury in intimate partner violence: a critical review of outcomes and mechanisms (Kwako and colleagues)", "publisher": "Trauma, Violence and Abuse (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/21511686/", "year": 2011 },
+    { "title": "VA/DoD Clinical Practice Guideline for Management of Posttraumatic Stress Disorder and Acute Stress Disorder", "publisher": "U.S. Department of Veterans Affairs and Department of Defense", "url": "https://www.healthquality.va.gov/guidelines/MH/ptsd/", "year": 2023 }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

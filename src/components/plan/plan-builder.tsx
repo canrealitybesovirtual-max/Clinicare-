@@ -26,17 +26,19 @@ import {
   type PlanStepId,
 } from "./plan-model";
 import { InterventionsStep, ListStep, MeasuresStep, ProblemsStep } from "./plan-steps";
+import { FormulationStep } from "./plan-formulation";
 import { ReviewStep } from "./plan-review";
 import { PLAN_COLLAB_TITLE } from "./plan-wording";
 
 /** True when the clinician has chosen or written anything that "start over" would discard. */
 function hasWork(d: PlanDraft): boolean {
   const c = planCounts(d);
-  if (Object.values(c).some((n) => n > 0)) return true;
+  if (Object.values(c).some((n) => n > 0) || d.moduleIds.length > 0) return true;
   return d.problems.some((p) => [p.label, ...p.definitions, ...p.goals, ...p.objectives].some((i) => isCustom(i) || isEdited(i)));
 }
 
 const STEP_COUNT: Partial<Record<PlanStepId, keyof PlanCounts>> = {
+  formulation: "formulation",
   problems: "problems",
   definitions: "definitions",
   goals: "goals",
@@ -46,8 +48,9 @@ const STEP_COUNT: Partial<Record<PlanStepId, keyof PlanCounts>> = {
 };
 
 /**
- * Treatment Plan Builder (spec screen 4): focus -> problems -> behavioral definitions -> long-term goals ->
- * SMART objectives -> interventions -> measures -> review and export. The draft lives in memory only (session state)
+ * Treatment Plan Builder (spec screen 4): focus -> optional formulation -> problems (library and cross-cutting
+ * modules) -> behavioral definitions -> long-term goals -> SMART objectives -> interventions -> measures -> review
+ * and export. The draft lives in memory only (session state)
  * and clears with Clear session or the idle wipe. Adult scope only (G12).
  */
 export function PlanBuilder(props: PlanBuilderData & { sudPrompt: React.ReactNode }) {
@@ -67,11 +70,12 @@ function ConditionParam({ onValue }: { onValue: (raw: string | null) => void }) 
   return null;
 }
 
-function BuilderInner({ options, interventions, measures, sudPrompt }: PlanBuilderData & { sudPrompt: React.ReactNode }) {
+function BuilderInner({ options, interventions, measures, modules, targets, linkNames, sudPrompt }: PlanBuilderData & { sudPrompt: React.ReactNode }) {
   const { state, updatePlan } = useSession();
   const draft = state.plan;
   const optionMap = React.useMemo(() => new Map(options.map((o) => [o.conditionId, o])), [options]);
   const interventionMap = React.useMemo(() => new Map(interventions.map((i) => [i.id, i])), [interventions]);
+  const targetMap = React.useMemo(() => new Map(targets.map((t) => [t.id, t])), [targets]);
   const option = draft ? optionMap.get(draft.conditionId) : undefined;
 
   const updateRef = React.useRef(updatePlan);
@@ -125,7 +129,7 @@ function BuilderInner({ options, interventions, measures, sudPrompt }: PlanBuild
   };
 
   const ctx: PlanContextValue | null =
-    draft && option ? { options, interventions, measures, draft, option, interventionMap, update, goTo } : null;
+    draft && option ? { options, interventions, measures, modules, targets, linkNames, draft, option, interventionMap, targetMap, update, goTo } : null;
   const index = PLAN_STEPS.findIndex((s) => s.id === step);
   const current = PLAN_STEPS[index] ?? PLAN_STEPS[0];
   const prev = PLAN_STEPS[index - 1];
@@ -261,6 +265,7 @@ function BuilderInner({ options, interventions, measures, sudPrompt }: PlanBuild
             />
           ) : (
             <PlanContext.Provider value={ctx}>
+              {step === "formulation" ? <FormulationStep /> : null}
               {step === "problems" ? <ProblemsStep /> : null}
               {step === "definitions" ? <ListStep list="definitions" /> : null}
               {step === "goals" ? <ListStep list="goals" /> : null}
@@ -458,7 +463,8 @@ function FocusStep({
           <p className="font-semibold">How the builder works</p>
           <ol className="mt-2 list-decimal space-y-1 pl-5 text-muted">
             <li>Choose one of the {options.length} plan libraries above.</li>
-            <li>With the client, check the problems, signs, goals and objectives that fit, one step at a time.</li>
+            <li>If you like, tap the processes and strengths from your formulation, so the plan can show what each objective works on.</li>
+            <li>With the client, check the problems, signs, goals and objectives that fit, one step at a time. Add a cross-cutting module (for example safety, sleep or social needs) when it helps.</li>
             <li>Pick interventions and a measure schedule, then export a plan without identifiers.</li>
           </ol>
           <p className="mt-2 text-muted">Nothing is in the plan until you check it, and nothing is saved.</p>

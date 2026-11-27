@@ -38,6 +38,7 @@
   ],
   "trainingRequired": "STAIR: trained clinicians only. Deliver only after completing recognized STAIR training with consultation. Otherwise refer.",
   "handoutIds": ["grounding-5-4-3-2-1", "breathing-practice"],
+  "orientationIds": ["trauma-focused-therapies", "behavior-therapy"],
   "sources": [
     { "title": "Treatment for PTSD related to childhood abuse: a randomized controlled trial (Cloitre et al.)", "publisher": "American Journal of Psychiatry (DOI)", "url": "https://doi.org/10.1176/appi.ajp.2010.09081247", "year": 2010 },
     { "title": "A home-based telehealth randomized controlled trial of Skills Training in Affective and Interpersonal Regulation versus present-centered therapy for women veterans who have experienced military sexual trauma (Cloitre et al.)", "publisher": "Journal of Consulting and Clinical Psychology (DOI)", "url": "https://doi.org/10.1037/ccp0000872", "year": 2024 },

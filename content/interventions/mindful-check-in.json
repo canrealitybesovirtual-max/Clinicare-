@@ -53,6 +53,7 @@
     "consentNote": "Before any faith-integrated variant, explain its purpose and alternatives, confirm the client's right to decline or stop at any time, and document informed consent (AACC Code of Ethics; ACA Code of Ethics). Faith integration is client-led. Never impose beliefs or suggest that distress reflects weak faith."
   },
   "handoutIds": ["mindful-check-in"],
+  "orientationIds": ["mindfulness-and-compassion-based-therapies"],
   "sources": [
     { "title": "Mindfulness-Based Cognitive Therapy for Depression, Second Edition (Segal, Williams & Teasdale)", "publisher": "Guilford Press", "url": "https://www.guilford.com/books/Mindfulness-Based-Cognitive-Therapy-for-Depression/Segal-Williams-Teasdale/9781462537037", "year": 2013 },
     { "title": "Efficacy of mindfulness-based cognitive therapy in prevention of depressive relapse: an individual patient data meta-analysis from randomized trials (Kuyken et al.)", "publisher": "JAMA Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/27119968/", "year": 2016 },

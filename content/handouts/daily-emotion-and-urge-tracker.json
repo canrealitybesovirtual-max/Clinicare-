@@ -1,0 +1,131 @@
+{
+  "id": "daily-emotion-and-urge-tracker",
+  "title": "Daily Feelings and Urges Card",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 5,
+  "intro": "This weekly card helps you notice patterns in your feelings and urges, and which skills help. Fill in one row each evening. It takes about 5 minutes a day. Bring it to each session, so you and your counselor can look at it together. Keep it on paper and in a private place.",
+  "sections": [
+    {
+      "heading": "How to fill in a row",
+      "steps": [
+        "Strongest feeling: name the strongest feeling you had today, like sad, angry, afraid, ashamed, or lonely.",
+        "How strong: rate it from 0 (not at all) to 5 (as strong as it gets).",
+        "Urges: rate how strong each urge was today, from 0 to 5. Write 0 if you had none.",
+        "Acted on an urge? Write which urge, if any, you acted on. Honesty helps most here, and there is no judgment.",
+        "Skills I used: write any skill you tried, like a pause, slow breathing, checking the facts, or reaching out to someone."
+      ]
+    },
+    {
+      "heading": "Reading the card",
+      "body": "After a week, look for patterns with your counselor. Which days were hardest? What was going on? Which skills went with weaker urges, or with not acting on them? Use what you find to plan for the coming week."
+    },
+    {
+      "heading": "If an urge feels too strong",
+      "steps": [
+        "Use your safety plan, if you have one.",
+        "Put distance between you and anything you could use to hurt yourself.",
+        "Reach out to someone you trust, or to a crisis line.",
+        "In the US, call or text 988. If you are in danger right now, call 911."
+      ]
+    },
+    {
+      "heading": "Keep it private",
+      "body": "This card is for you and your care team. Keep it on paper, in a safe place. Do not take a photo of it or type it into an app or a shared device."
+    }
+  ],
+  "practiceLog": {
+    "columns": [
+      "Day",
+      "Strongest feeling",
+      "How strong (0-5)",
+      "Urge to hurt myself (0-5)",
+      "Urge to quit or pull away (0-5)",
+      "Other urge (0-5)",
+      "Acted on an urge? (which)",
+      "Skills I used"
+    ],
+    "rows": 7
+  },
+  "safetyNote": "Safety first: If you have urges to hurt yourself or someone else, or thoughts of suicide, do not wait for your next session. Use your safety plan and get help now. In the US, call or text 988 or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sud": false,
+  "es": {
+    "title": "Tarjeta diaria de sentimientos e impulsos",
+    "intro": "Esta tarjeta semanal le ayuda a notar patrones en sus sentimientos y en sus impulsos, y qué habilidades le ayudan. Llene una fila cada noche. Toma unos 5 minutos al día. Tráigala a cada sesión, para que usted y su consejero la miren juntos. Llénela en papel y guárdela en un lugar privado.",
+    "sections": [
+      {
+        "heading": "Cómo llenar una fila",
+        "steps": [
+          "Sentimiento más fuerte: escriba el sentimiento más fuerte que tuvo hoy, como tristeza, enojo, miedo, vergüenza o soledad.",
+          "Qué tan fuerte: califíquelo del 0 (nada) al 5 (lo más fuerte posible).",
+          "Impulsos: califique qué tan fuerte fue cada impulso hoy, del 0 al 5. Escriba 0 si no tuvo ninguno.",
+          "¿Actuó por un impulso? Escriba cuál, si actuó por alguno. Aquí lo que más ayuda es la honestidad, y nadie le va a juzgar.",
+          "Habilidades que usé: escriba cualquier habilidad que probó, como hacer una pausa, respirar despacio, revisar los hechos o buscar a alguien."
+        ]
+      },
+      {
+        "heading": "Cómo leer la tarjeta",
+        "body": "Después de una semana, busque patrones con su consejero. ¿Qué días fueron los más difíciles? ¿Qué estaba pasando? ¿Qué habilidades fueron con impulsos más débiles, o con no actuar por ellos? Use lo que encuentre para planear la semana que viene."
+      },
+      {
+        "heading": "Si un impulso se siente demasiado fuerte",
+        "steps": [
+          "Use su plan de seguridad, si tiene uno.",
+          "Aléjese de cualquier cosa que podría usar para hacerse daño.",
+          "Busque a alguien de confianza, o llame a una línea de crisis.",
+          "En EE. UU., llame o envíe un mensaje de texto al 988. Si está en peligro ahora mismo, llame al 911."
+        ]
+      },
+      {
+        "heading": "Manténgala en privado",
+        "body": "Esta tarjeta es para usted y para su equipo de atención. Llénela en papel y guárdela en un lugar seguro. No le tome fotos ni la escriba en una aplicación o en un aparato que otros usan."
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Día",
+        "Sentimiento más fuerte",
+        "Qué tan fuerte (0-5)",
+        "Impulso de hacerme daño (0-5)",
+        "Impulso de rendirme o alejarme (0-5)",
+        "Otro impulso (0-5)",
+        "¿Actué por un impulso? (cuál)",
+        "Habilidades que usé"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: Si tiene impulsos de hacerse daño o de hacerle daño a otra persona, o pensamientos de suicidio, no espere a su próxima sesión. Use su plan de seguridad y busque ayuda ahora. En EE. UU., llame o envíe un mensaje de texto al 988 o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "linkOuts": [
+    {
+      "title": "988 Suicide & Crisis Lifeline",
+      "publisher": "988 Lifeline (US)",
+      "url": "https://988lifeline.org",
+      "note": "Call, text or chat 988 any time, day or night.",
+      "lastVerified": "2026-11-27"
+    }
+  ],
+  "sources": [
+    {
+      "title": "The use of dialectical behavior therapy skills training as stand-alone treatment: a systematic review of the treatment outcome literature (Valentine et al.)",
+      "publisher": "Journal of Clinical Psychology (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25042066/",
+      "year": 2015
+    },
+    {
+      "title": "DBT Skills Training Manual, Second Edition (Linehan); link-out for the official diary card and skills forms",
+      "publisher": "Guilford Press",
+      "url": "https://www.guilford.com/books/DBT-Skills-Training-Manual/Marsha-Linehan/9781462516995",
+      "year": 2015
+    },
+    {
+      "title": "Psychological therapies for people with borderline personality disorder (Storebo et al.)",
+      "publisher": "Cochrane Database of Systematic Reviews",
+      "url": "https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD012955.pub2/full",
+      "year": 2020
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

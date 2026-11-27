@@ -1,0 +1,68 @@
+{
+  "id": "late-life-depression-programs",
+  "name": "Late-life depression programs (PEARLS, problem adaptation therapy and collaborative care) - overview and referral",
+  "modality": "Problem-solving and behavioral activation programs for older adults",
+  "conditions": ["major-depressive-disorder", "persistent-depressive-disorder"],
+  "evidenceLevel": "In a randomized trial with adults aged 60 and over who had minor depression or dysthymia and several chronic illnesses, the home-based PEARLS program (problem-solving, social and physical activation, and medication recommendations to the physician) led to more people with at least a 50% symptom reduction (43% versus 15%) and remission (36% versus 12%) at 12 months than usual care (Ciechanowski et al., 2004). In older adults with major depression and cognitive impairment up to moderate dementia, home-delivered problem adaptation therapy (PATH) reduced depression and disability more than supportive therapy, with remission in 38% versus 14% (Kiosses et al., 2015). Collaborative care for late-life depression in primary care (IMPACT) more than doubled the share of people with a 50% symptom reduction at 12 months (45% versus 19%) (Unutzer et al., 2002).",
+  "minutes": { "min": 30, "max": 60 },
+  "purpose": "Depression in later life is common, often mixed with medical illness, pain, grief, isolation or memory problems, and is frequently missed. Structured programs adapted for older adults work well. PEARLS brings brief problem-solving and planning of pleasant social and physical activities to people at home or in community agencies. PATH combines problem-solving with practical aids, changes to the home environment and caregiver involvement for people with cognitive impairment. Collaborative care links primary care, a care manager and a psychiatric consultant with regular measurement. This entry helps clinicians assess carefully, then deliver or refer to these approaches. It is not a manual for them.",
+  "steps": [
+    "Look for medical and medication contributors with the client's medical provider: thyroid problems, vitamin deficiencies, pain, sleep apnea, hearing or vision loss, new medications and alcohol use.",
+    "Screen for cognitive changes with a validated tool your setting uses (for example the Mini-Cog or MoCA, opened as link-outs because their licenses are not yet confirmed for this app), and refer for fuller assessment when there are concerns.",
+    "Track depression with the PHQ-9, which is built in, or a geriatric-specific tool your setting has licensed.",
+    "Ask about suicidal thoughts directly. Older men, people living alone, people in chronic pain and recently bereaved people are at higher risk; ask about firearms and stockpiled medications.",
+    "Offer a structured approach: problem-solving on the client's own priority problems, plus a plan of pleasant, social and physical activities matched to their abilities. Use large print, slower pacing and repeated summaries where helpful.",
+    "Where memory problems are present, add memory aids, a simpler routine, changes to the home environment and, with consent, a caregiver's involvement.",
+    "Connect the client to community programs (senior centers, PEARLS sites, aging services, transport help) and, in the US, local aging services through the Eldercare Locator.",
+    "Coordinate with primary care, measure symptoms regularly, and step up care (medication review, psychiatric consultation) if there is little change after several weeks."
+  ],
+  "script": [
+    "Feeling down for a long time is not a normal part of getting older, and it can get better.",
+    "Let's pick one problem that is bothering you most right now and work out a first step together.",
+    "What used to give you pleasure or a sense of purpose? Is there a small version of that you could do this week?",
+    "Would you like a family member or friend to help remember the plan between our meetings?",
+    "I ask everyone this: have you had thoughts that life is not worth living, or of ending your life?"
+  ],
+  "contraindications": [
+    "Sudden confusion, rapid memory decline or a change in alertness can signal delirium or another medical problem. Arrange prompt medical assessment.",
+    "Suicide rates are high among older men. Ask directly, and discuss safe storage of firearms and medications. This app does not judge risk; you do. Crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com.",
+    "Activity plans must fit physical health limits, falls risk and pain. Coordinate with medical providers before increasing physical activity.",
+    "Watch for signs of elder abuse, neglect or financial exploitation, and follow reporting rules in your jurisdiction.",
+    "Do not enter identifying details about the client or caregiver into this app."
+  ],
+  "culturalAdaptations": [
+    "Older adults may describe depression in physical terms (tiredness, pain, poor appetite) or see it as weakness. Use the client's words and normalize seeking help.",
+    "Family roles in caring for elders differ widely. Ask whom the client wants involved and respect their autonomy.",
+    "Check hearing and vision before sessions, and use a trained professional interpreter rather than family members; check that key ideas carry the intended meaning in the client's language."
+  ],
+  "handoutIds": ["activity-schedule", "problem-solving-steps"],
+  "orientationIds": ["cognitive-therapy", "behavior-therapy"],
+  "sources": [
+    {
+      "title": "Community-integrated home-based depression treatment in older adults: a randomized controlled trial (PEARLS; Ciechanowski et al.)",
+      "publisher": "JAMA (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15069044/",
+      "year": 2004
+    },
+    {
+      "title": "Problem adaptation therapy for older adults with major depression and cognitive impairment: a randomized clinical trial (Kiosses et al.)",
+      "publisher": "JAMA Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25372657/",
+      "year": 2015
+    },
+    {
+      "title": "Collaborative care management of late-life depression in the primary care setting: a randomized controlled trial (IMPACT; Unutzer et al.)",
+      "publisher": "JAMA (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12472325/",
+      "year": 2002
+    },
+    {
+      "title": "PEARLS details and FAQs",
+      "publisher": "Health Promotion Research Center, University of Washington",
+      "url": "https://hprc.uw.edu/programs-tools/pearls/pearls-details-faqs"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

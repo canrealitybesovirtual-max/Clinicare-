@@ -1,0 +1,140 @@
+{
+  "id": "suicide-specific-psychotherapies",
+  "name": "Suicide-specific psychotherapies (CAMS, brief CBT, CBT for suicide prevention, ASSIP, DBT) - overview and referral",
+  "modality": "Suicide prevention - suicide-focused psychotherapies (overview and referral)",
+  "conditions": ["major-depressive-disorder", "persistent-depressive-disorder", "borderline-personality-disorder", "ptsd", "alcohol-use-disorder", "bipolar-i-disorder"],
+  "suggestWith": ["passive-death-wish", "suicidal-ideation-active", "self-harm", "suicide-attempt-history"],
+  "evidenceLevel": "The VA/DoD 2024 suicide risk guideline suggests (weak for) CBT-based psychotherapy focused on suicide prevention for people with suicidal behavior in the past 6 months or any history of self-directed violence, recommends periodic caring communications after a suicide attempt, and found insufficient evidence for or against CAMS, ASSIP and DBT for reducing suicide behavior. NICE NG225 (2022) recommends offering a structured, CBT-informed psychological intervention tailored for adults who self-harm, typically 4 to 10 sessions, and advises against using risk tools or scales to predict suicide or decide who gets treatment. Trials: brief CBT cut suicide attempts by about 60% in soldiers (Rudd et al., 2015); cognitive therapy roughly halved repeat attempts after an emergency visit (Brown et al., 2005); ASSIP plus usual care reduced repeat attempts over 24 months (Gysin-Maillart et al., 2016); DBT halved suicide attempts compared with therapy by experts in women with borderline personality disorder (Linehan et al., 2006); CAMS reduced suicidal thoughts in a meta-analysis (Swift et al., 2021).",
+  "minutes": { "min": 10, "max": 20 },
+  "purpose": "Treating the conditions linked with suicide (such as depression) does not always reduce suicidal thoughts and behavior. Suicide-specific therapies target suicidal thinking and behavior directly. They share core features: a collaborative stance in which the client is the expert on their own suicidal experience, a careful look at what drives suicidal crises and how they unfold, a written crisis or safety plan, skills for getting through crises, and work on reasons for living. CAMS is a therapeutic framework that can sit within many therapies. Brief CBT and CBT for suicide prevention are short structured courses with a relapse-prevention rehearsal. ASSIP is a 3-session program for people after a suicide attempt, followed by regular letters. DBT is a comprehensive program for people with recurrent self-harm and severe emotion dysregulation. This entry is overview and referral only. The time estimate is for that conversation. It contains no protocol forms or scripts, and nothing in it scores or decides risk.",
+  "steps": [
+    "Complete your setting's suicide risk assessment and use clinical judgment and local procedures to decide on level of care. These therapies are chosen by the clinician with the client; this app does not judge risk or choose for you.",
+    "Make sure a collaborative safety plan and lethal means counseling are in place, using those entries, and that the client knows the crisis options (in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com).",
+    "Explain in plain language that there are therapies that work directly on suicidal thoughts and crises, and describe what they have in common.",
+    "Match options with the client's situation and preferences: brief CBT or CBT for suicide prevention after recent suicidal behavior, ASSIP after a suicide attempt, CAMS as a framework within ongoing care, DBT for recurrent self-harm with severe emotion dysregulation.",
+    "If you are not trained in a suicide-specific therapy, refer to a clinician or program that is, and arrange a warm handoff. Share information only with the client's consent, except where law or safety requires otherwise.",
+    "Plan follow-up contacts around transitions, such as after an emergency visit or hospital discharge. Caring contacts (brief, regular messages of support) are one option; see the caring contacts practice guide.",
+    "Continue treating co-occurring conditions, and keep reviewing the safety plan at each contact."
+  ],
+  "script": [
+    "Thank you for telling me about these thoughts. We can work on them directly, together.",
+    "Some therapies are made specifically to help people get through suicidal crises and build a life worth living.",
+    "They look closely at what drives the hardest moments, and you learn skills to get through them.",
+    "You are the expert on your own experience. The therapist works alongside you.",
+    "If things get worse before your next session, you can call or text 988 in the US, or use your local emergency number.",
+    "Would you like help finding a therapist who does this kind of work?"
+  ],
+  "contraindications": [
+    "If risk appears imminent, follow emergency procedures and do not rely on a referral alone. This app does not judge risk; you do. Crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com.",
+    "Do not use 'no-suicide contracts' in place of safety planning and treatment.",
+    "Do not use risk scores or low, medium or high risk categories to decide who is offered these therapies.",
+    "Do not attempt these protocols, or use their proprietary forms, without training in them.",
+    "Alcohol and drug use raise risk in a crisis. Do not enter identifying or substance-use details into this app; nothing is stored or sent. Any note or export about substance use must carry this notice: 42 CFR Part 2 prohibits unauthorized use or disclosure of these records.",
+    "Duty-to-protect and confidentiality rules vary by jurisdiction. Follow local law and consult when unsure."
+  ],
+  "culturalAdaptations": [
+    "Beliefs about suicide, shame and help-seeking vary across cultures and faiths. Ask what the client's community and faith say, and what would make help feel acceptable.",
+    "Groups with higher suicide rates (for example some Indigenous communities, veterans, LGBTQ+ people and older men) may prefer culturally grounded or peer-informed services. Ask, and include them if wanted.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "trainingRequired": "Suicide-specific psychotherapies: trained clinicians only. Deliver CAMS, brief CBT, CBT for suicide prevention, ASSIP or DBT only after formal training in the specific model with consultation (for example, CAMS training through CAMS-care, the treatment developers' official training company; DBT through official DBT training and the DBT-Linehan Board of Certification). Otherwise refer.",
+  "handoutIds": ["safety-plan", "safety-plan-easy-read", "after-a-crisis-next-steps"],
+  "orientationIds": ["cognitive-therapy", "dialectical-behavior-therapy"],
+  "evidenceGrades": [
+    {
+      "body": "VA/DoD",
+      "guideline": "Assessment and Management of Patients at Risk for Suicide",
+      "year": 2024,
+      "population": "Adults with suicidal behavior in the past 6 months or any history of self-directed violence",
+      "direction": "for",
+      "strength": "weak for (CBT-based psychotherapy focused on suicide prevention)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39903866/"
+    },
+    {
+      "body": "VA/DoD",
+      "guideline": "Assessment and Management of Patients at Risk for Suicide",
+      "year": 2024,
+      "population": "Adults with suicidal ideation (CAMS)",
+      "direction": "insufficient",
+      "strength": "insufficient evidence for or against",
+      "url": "https://www.healthquality.va.gov/guidelines/mh/srb/"
+    },
+    {
+      "body": "NICE",
+      "guideline": "Self-harm: assessment, management and preventing recurrence (NG225)",
+      "year": 2022,
+      "population": "Adults who self-harm",
+      "direction": "for",
+      "strength": "offer (structured CBT-informed psychological intervention, typically 4 to 10 sessions)",
+      "url": "https://www.nice.org.uk/guidance/ng225/chapter/Recommendations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Assessment and management of patients at risk for suicide: synopsis of the 2024 VA/DoD clinical practice guidelines (Brenner et al.)",
+      "publisher": "Annals of Internal Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39903866/",
+      "year": 2025
+    },
+    {
+      "title": "VA/DoD Clinical Practice Guideline: Assessment and Management of Patients at Risk for Suicide",
+      "publisher": "US Department of Veterans Affairs and Department of Defense",
+      "url": "https://www.healthquality.va.gov/guidelines/mh/srb/",
+      "year": 2024
+    },
+    {
+      "title": "Self-harm: assessment, management and preventing recurrence (NG225): recommendations",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng225/chapter/Recommendations",
+      "year": 2022
+    },
+    {
+      "title": "Self-harm quality standard (QS34), statement 7: psychological interventions",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/qs34/chapter/Quality-statement-7-Psychological-interventions"
+    },
+    {
+      "title": "Brief cognitive-behavioral therapy effects on post-treatment suicide attempts in a military sample: results of a randomized clinical trial with 2-year follow-up (Rudd et al.)",
+      "publisher": "American Journal of Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25677353/",
+      "year": 2015
+    },
+    {
+      "title": "Cognitive therapy for the prevention of suicide attempts: a randomized controlled trial (Brown et al.)",
+      "publisher": "JAMA (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16077050/",
+      "year": 2005
+    },
+    {
+      "title": "A novel brief therapy for patients who attempt suicide: a 24-months follow-up randomized controlled study of ASSIP (Gysin-Maillart et al.)",
+      "publisher": "PLoS Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26930055/",
+      "year": 2016
+    },
+    {
+      "title": "Two-year randomized controlled trial and follow-up of dialectical behavior therapy vs therapy by experts for suicidal behaviors and borderline personality disorder (Linehan et al.)",
+      "publisher": "Archives of General Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16818865/",
+      "year": 2006
+    },
+    {
+      "title": "The effectiveness of the Collaborative Assessment and Management of Suicidality (CAMS) compared to alternative treatment conditions: a meta-analysis (Swift et al.)",
+      "publisher": "Suicide and Life-Threatening Behavior (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33998028/",
+      "year": 2021
+    },
+    {
+      "title": "About CAMS-care (official CAMS training)",
+      "publisher": "CAMS-care",
+      "url": "https://cams-care.com/about/"
+    },
+    {
+      "title": "DBT-Linehan Board of Certification",
+      "publisher": "DBT-Linehan Board of Certification",
+      "url": "https://dbt-lbc.org/"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

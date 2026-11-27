@@ -1,0 +1,245 @@
+{
+  "id": "functional-analysis",
+  "name": "Behavioral functional analysis (ABC and SORC)",
+  "shortName": "Functional analysis",
+  "family": "behavioral",
+  "orientationIds": [
+    "behavior-therapy",
+    "dialectical-behavior-therapy"
+  ],
+  "purpose": "A close look at one specific behavior: what sets it off, what is going on inside the person at the time, what exactly they do, and what happens next in the short and long term. The aim is to find the function the behavior serves, such as escaping something unpleasant or getting relief, so the plan can offer another way to meet the same need. The ABC form (antecedent, behavior, consequence) is the short version; SORC (stimulus, organism, response, consequence) adds the person's internal state and history.",
+  "whenToUse": [
+    "For a repeated behavior the person wants to change, such as avoidance, bingeing, hair pulling, angry outbursts or self-harm urges.",
+    "When a behavior keeps coming back despite good intentions, to find what is reinforcing it.",
+    "Before exposure, behavioral activation or habit reversal, to choose targets and alternatives that fit.",
+    "Alongside a chain analysis when a high-risk behavior has happened, after immediate safety is addressed."
+  ],
+  "structure": [
+    {
+      "id": "target",
+      "label": "Target behavior",
+      "prompt": "One specific behavior in observable terms: what is done, how often, for how long and how strongly. Describe the behavior, not the person.",
+      "examples": [
+        "Leaves the supermarket within five minutes, about three times a week",
+        "Picks at skin for 20 to 40 minutes most evenings"
+      ]
+    },
+    {
+      "id": "setting",
+      "label": "Setting and triggers (stimulus or antecedent)",
+      "prompt": "Where and when it happens, with whom (kinds of people, no names), and what happened just before. Look for patterns across several episodes.",
+      "examples": [
+        "Evenings alone after work",
+        "After a tense phone call with a relative"
+      ]
+    },
+    {
+      "id": "organism",
+      "label": "Inner state and history (organism)",
+      "prompt": "What was going on inside: tiredness, hunger, pain, illness, medicines or substances; thoughts, emotions and urges; and relevant learning history.",
+      "examples": [
+        "Exhausted and hungry",
+        "Thought: I cannot cope with this",
+        "Strong urge building in the hands"
+      ],
+      "factorIds": [
+        "emotion-dysregulation",
+        "urges-and-impulsivity",
+        "sleep-rhythm-disruption",
+        "physical-health-burden",
+        "cognitive-fusion",
+        "experiential-avoidance"
+      ]
+    },
+    {
+      "id": "response",
+      "label": "The response, step by step",
+      "prompt": "Exactly what the person did, in order, including thoughts and small actions along the way.",
+      "examples": [
+        "Picked up the phone, scrolled, then started picking without noticing"
+      ]
+    },
+    {
+      "id": "short-term",
+      "label": "Short-term consequences",
+      "prompt": "What happened right after: relief, calm, escape, attention, a reward. These quick effects are usually what keeps the behavior going.",
+      "examples": [
+        "Tension dropped within minutes",
+        "Did not have to finish the shopping"
+      ]
+    },
+    {
+      "id": "long-term",
+      "label": "Long-term consequences",
+      "prompt": "What it costs over time: health, relationships, self-respect, money, a narrower life, or the problem growing.",
+      "examples": [
+        "Shame and hiding the skin",
+        "Food shopping now takes several trips"
+      ]
+    },
+    {
+      "id": "function",
+      "label": "Possible functions",
+      "prompt": "What the behavior seems to do for the person. Several functions can apply at once; choose the ones that fit the episodes you mapped.",
+      "examples": [],
+      "functionChips": true
+    },
+    {
+      "id": "alternatives",
+      "label": "Other ways to meet the same need",
+      "prompt": "Behaviors that could serve the same function with fewer costs, and what would make them easier to use in the setting where the problem happens.",
+      "examples": [
+        "Keep hands busy with a fidget item while scrolling",
+        "A five-minute breathing break before shopping, then stay until one item is bought"
+      ]
+    }
+  ],
+  "functions": [
+    {
+      "id": "escape-avoidance",
+      "label": "Escape or avoidance",
+      "plainLabel": "Getting away from something unpleasant, like a feeling, a task or a situation",
+      "description": "The behavior ends or prevents something aversive, such as fear, boredom, a demand or a memory. Relief makes the behavior more likely next time.",
+      "interventionIds": [
+        "graded-in-vivo-exposure",
+        "exposure-and-response-prevention",
+        "act-acceptance-willingness",
+        "dbt-distress-tolerance",
+        "problem-solving",
+        "behavioral-activation"
+      ]
+    },
+    {
+      "id": "access-to-reward",
+      "label": "Access to reward",
+      "plainLabel": "Getting something wanted, like an enjoyable activity or a sense of achievement",
+      "description": "The behavior is followed by something the person values. Plans can arrange the same reward for a healthier behavior or build new sources of reward.",
+      "interventionIds": [
+        "behavioral-activation",
+        "act-committed-action",
+        "problem-solving",
+        "assertiveness-training"
+      ]
+    },
+    {
+      "id": "social",
+      "label": "Social attention or connection",
+      "plainLabel": "Getting attention, closeness or care from other people",
+      "description": "The behavior brings contact, help or reassurance from others. Skills for asking directly, and support people who respond to that, can meet the same need.",
+      "interventionIds": [
+        "dbt-interpersonal-effectiveness",
+        "assertiveness-training",
+        "communication-skills-training",
+        "interpersonal-psychotherapy",
+        "social-connection-and-loneliness"
+      ]
+    },
+    {
+      "id": "automatic",
+      "label": "Automatic or internal relief",
+      "plainLabel": "Changing a feeling inside, like calming down, numbing or a sense of release",
+      "description": "The behavior changes an internal state directly, without anyone else involved, for example soothing tension, numbing distress or producing a sensation.",
+      "interventionIds": [
+        "urge-surfing",
+        "dbt-distress-tolerance",
+        "habit-reversal-training",
+        "behavioral-chain-analysis",
+        "mindfulness-meditation",
+        "diaphragmatic-breathing"
+      ]
+    }
+  ],
+  "steps": [
+    "Agree on one target behavior and define it so that two people would count it the same way.",
+    "Collect several recent episodes, using a simple log between sessions where possible.",
+    "For each episode, map setting and triggers, inner state, the response step by step, and short- and long-term consequences.",
+    "Look across episodes for the common function, and check your hypothesis with the person.",
+    "Choose alternative behaviors that meet the same need, and change the setting to make the old behavior harder and the new one easier.",
+    "Review the log over the next weeks; if the behavior does not change, revisit the function."
+  ],
+  "collaborativeTips": [
+    "Frame the behavior as understandable: it makes sense that it keeps happening, because it works in the short term.",
+    "Ask about the moment just before the behavior in slow motion; small details often show the real trigger.",
+    "Let the person choose which alternative to try first, and plan for the obstacles together."
+  ],
+  "cautions": [
+    "When the target behavior is self-harm or suicidal behavior, address immediate safety first, use your safety protocol and a collaborative safety plan, and do not delay crisis care for the analysis. The analysis never grades risk.",
+    "When the behavior involves alcohol or other substances, any record or export of the analysis is substance-use information: mark it with the 42 CFR Part 2 notice and share it only with proper consent.",
+    "Medical causes and effects matter: weight change, injury, intoxication or withdrawal may need medical review before or alongside behavioral work.",
+    "A formulation is a working hypothesis, not a diagnosis. Keep diagnosis names and codes out of the shared version, and revise the formulation when new information does not fit.",
+    "A formulation never scores, grades or decides risk. If thoughts of suicide, self-harm or harm to others come up, pause the formulation and follow your own assessment and local protocol; in the US the 988 Lifeline is available by call or text, elsewhere use the local emergency number or findahelpline.com."
+  ],
+  "conditionIds": [
+    "specific-phobia",
+    "agoraphobia",
+    "major-depressive-disorder",
+    "binge-eating-disorder",
+    "obsessive-compulsive-disorder",
+    "borderline-personality-disorder"
+  ],
+  "interventionIds": [
+    "behavioral-chain-analysis",
+    "graded-in-vivo-exposure",
+    "behavioral-activation",
+    "habit-reversal-training",
+    "exposure-and-response-prevention",
+    "dbt-distress-tolerance"
+  ],
+  "handoutIds": [
+    "chain-analysis-sheet",
+    "daily-emotion-and-urge-tracker",
+    "activity-schedule",
+    "exposure-ladder"
+  ],
+  "practiceIds": [
+    "between-session-practice",
+    "outcome-monitoring"
+  ],
+  "populationIds": [
+    "autistic-adults",
+    "intellectual-disability"
+  ],
+  "legalIds": [
+    "42-cfr-part-2"
+  ],
+  "worksheet": true,
+  "sud": false,
+  "linkOuts": [
+    {
+      "title": "Functional analysis in behavior therapy (Haynes and O'Brien)",
+      "publisher": "Clinical Psychology Review",
+      "url": "https://doi.org/10.1016/0272-7358(90)90074-K",
+      "note": "Classic paper defining functional analysis for individual clinical work."
+    }
+  ],
+  "measuresPending": [],
+  "sources": [
+    {
+      "title": "Functional analysis in behavior therapy (Haynes and O'Brien)",
+      "publisher": "Clinical Psychology Review",
+      "url": "https://doi.org/10.1016/0272-7358(90)90074-K",
+      "year": 1990
+    },
+    {
+      "title": "The future of intervention science: process-based therapy (Hofmann and Hayes)",
+      "publisher": "Clinical Psychological Science (PubMed Central)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6350520/",
+      "year": 2019
+    },
+    {
+      "title": "Depression in adults: treatment and management (NG222)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng222",
+      "year": 2022
+    },
+    {
+      "title": "Generalised anxiety disorder and panic disorder in adults: management (CG113)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg113",
+      "year": 2011
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

@@ -1,0 +1,110 @@
+{
+  "id": "psychological-first-aid-and-recovery-skills",
+  "name": "Psychological first aid and skills for psychological recovery after trauma or disaster",
+  "modality": "Early support after trauma and disaster (psychological first aid, recovery skills, active monitoring)",
+  "conditions": ["acute-stress-disorder", "adjustment-disorder", "ptsd"],
+  "evidenceLevel": "WHO's 2013 stress guidelines point to psychological first aid for people in acute distress after a recent trauma and strongly advise against psychological debriefing (very low quality evidence, with some studies showing harm). NICE NG116 (2018) says not to offer psychologically focused debriefing to prevent or treat PTSD, suggests active monitoring with follow-up within a month for people with subthreshold symptoms, and recommends offering individual trauma-focused CBT to adults with acute stress disorder or clinically important symptoms within the first month. A Cochrane review found no evidence that single-session debriefing prevents PTSD and concluded that compulsory debriefing should stop (Rose et al., 2002). Psychological first aid itself is supported mainly by expert consensus rather than trials.",
+  "minutes": { "min": 15, "max": 45 },
+  "purpose": "Most people recover after a frightening event with time and ordinary support. Psychological first aid is humane, practical support in the first hours and days: making sure people are safe, calming acute distress, meeting basic needs, listening without pressing for details, connecting people with loved ones and services, and giving accurate information about common reactions. Skills for psychological recovery is a follow-on approach for the weeks and months after, teaching a few practical skills such as problem-solving, planning positive activities, managing strong reactions, more helpful thinking and rebuilding social connections. Both sit alongside active monitoring, so that people who do not recover are offered effective treatment. Neither replaces trauma-focused therapy when it is needed.",
+  "steps": [
+    "Make contact calmly and respectfully, introduce yourself and your role, and ask what the person needs right now. Check for immediate dangers and urgent medical needs first.",
+    "Help with safety and comfort: a quieter space, water, warmth, information about what is happening, and practical help with immediate needs.",
+    "Listen if the person wants to talk, but do not ask for a detailed account of the event or push them to describe their feelings. Do not run a single structured debriefing session.",
+    "If the person is very distressed or disoriented, help them settle using simple grounding and slow breathing, and stay with them.",
+    "Connect the person with loved ones, community and faith supports, and practical services (housing, financial help, legal aid, medical care).",
+    "Give brief, accurate information about common reactions and how most people recover, and about where to get help if things do not improve.",
+    "In the following weeks, if difficulties continue, offer recovery skills in a few short meetings: choose a current problem and work through it step by step, plan positive and meaningful activities, practise ways to manage strong reactions, notice and test unhelpful thoughts, and plan steps to reconnect with others.",
+    "Arrange follow-up within about a month. Refer for trauma-focused assessment and treatment if symptoms are marked, persistent or impairing, and refer urgently for suicidal thoughts, psychosis or severe substance problems."
+  ],
+  "script": [
+    "I'm here to help. Are you hurt anywhere, and is there anything you need right now?",
+    "You do not have to tell me what happened. If you want to talk, I'm listening.",
+    "Strong reactions after something like this are very common. For most people they ease over the coming weeks.",
+    "Who would you like to be in touch with? Let's see how we can reach them.",
+    "Here is how to get help if things do not get easier, or if they get worse.",
+    "I'd like to check in with you again in a few weeks to see how you are doing."
+  ],
+  "contraindications": [
+    "Do not offer single-session psychological debriefing that asks people to recount the event and their emotions soon after it. It does not prevent PTSD and may increase distress for some people. It appears here only as a caution, never as a recommended step.",
+    "Do not force anyone to talk, and do not make promises you cannot keep, for example about loved ones' safety.",
+    "Suicidal thoughts, threats to others, psychosis, severe disorientation or intoxication need urgent assessment. This app does not judge risk; you do. Crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com.",
+    "Support is not a substitute for treatment. People with marked or persistent symptoms should be offered an assessment and a trauma-focused therapy.",
+    "Responders exposed to the same event may need support themselves. Look after the helpers too."
+  ],
+  "culturalAdaptations": [
+    "Follow local customs about greetings, eye contact, touch, gender and privacy, and ask community or faith leaders how best to help.",
+    "Collective and spiritual ways of coping (prayer, ceremonies, communal grieving) are often central after disasters. Support them rather than replacing them.",
+    "Use a trained professional interpreter rather than family members, especially children, and check that key ideas carry the intended meaning in the person's language."
+  ],
+  "handoutIds": ["after-a-disaster-self-care", "common-reactions-after-trauma"],
+  "evidenceGrades": [
+    {
+      "body": "NICE",
+      "guideline": "Post-traumatic stress disorder (NG116), psychologically focused debriefing",
+      "year": 2018,
+      "conditionId": "ptsd",
+      "population": "People exposed to a traumatic event",
+      "direction": "against",
+      "strength": "do not offer (psychologically focused debriefing)",
+      "url": "https://www.nice.org.uk/guidance/ng116/chapter/Recommendations"
+    },
+    {
+      "body": "WHO",
+      "guideline": "Guidelines for the management of conditions specifically related to stress",
+      "year": 2013,
+      "population": "Adults recently exposed to a traumatic event",
+      "direction": "against",
+      "strength": "strong recommendation against psychological debriefing",
+      "url": "https://www.who.int/publications/i/item/9789241505406"
+    },
+    {
+      "body": "Cochrane",
+      "guideline": "Psychological debriefing for preventing post traumatic stress disorder (PTSD)",
+      "year": 2002,
+      "conditionId": "ptsd",
+      "population": "People after a traumatic incident",
+      "direction": "against",
+      "strength": "no evidence of benefit; compulsory debriefing should cease",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12076399/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Psychological first aid: guide for field workers",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/publications/i/item/9789241548205",
+      "year": 2011
+    },
+    {
+      "title": "WHO guidelines on conditions specifically related to stress",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/publications/i/item/9789241505406",
+      "year": 2013
+    },
+    {
+      "title": "Psychological First Aid: Field Operations Guide",
+      "publisher": "National Center for PTSD, US Department of Veterans Affairs",
+      "url": "https://www.ptsd.va.gov/professional/treat/type/psych_firstaid_manual.asp"
+    },
+    {
+      "title": "Skills for Psychological Recovery: Field Operations Guide",
+      "publisher": "National Center for PTSD, US Department of Veterans Affairs",
+      "url": "https://www.ptsd.va.gov/professional/treat/type/skills_psych_recovery_manual.asp"
+    },
+    {
+      "title": "Psychological debriefing for preventing post traumatic stress disorder (PTSD) (Rose et al.)",
+      "publisher": "Cochrane Database of Systematic Reviews (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12076399/",
+      "year": 2002
+    },
+    {
+      "title": "Post-traumatic stress disorder (NG116): recommendations",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng116/chapter/Recommendations",
+      "year": 2018
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

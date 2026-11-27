@@ -1,0 +1,93 @@
+{
+  "id": "positive-data-log",
+  "title": "Positive Data Log",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 10,
+  "intro": "Over time, many people form a harsh belief about themselves, like 'I'm a failure' or 'I'm unlovable.' A belief like this acts like a filter. It lets in facts that fit it and screens out facts that do not. This log helps you build a fairer belief, one small piece of evidence at a time. It takes about 10 minutes to read, and a few minutes a day to fill in.",
+  "sections": [
+    {
+      "heading": "Step 1: name the old belief",
+      "body": "With your counselor, write the old belief in a few words. Rate how much you believe it right now, from 0 to 100%."
+    },
+    {
+      "heading": "Step 2: write a fairer new belief",
+      "body": "The new belief should be kinder and also believable. It does not have to be the opposite of the old one. For example, 'I'm a failure' might become 'I'm a person who does many things well and sometimes gets things wrong.' Rate how much you believe the new belief, from 0 to 100%. A low number is fine at the start."
+    },
+    {
+      "heading": "Step 3: collect evidence every day",
+      "steps": [
+        "Each day, write down anything that fits the new belief. Small things count.",
+        "Look at what you did, what others said or did, and how you handled things.",
+        "Ask, 'If a friend did this, would it count for them?' If yes, it counts for you too.",
+        "Write it down right away, before your mind has a chance to brush it off."
+      ]
+    },
+    {
+      "heading": "Watch for the brush-off",
+      "body": "The old belief will try to explain away new evidence. You may think, 'That was just luck,' or 'Anyone could do that.' Notice when this happens, and write the evidence down anyway. Mark it in the log, so you can see how often the old belief jumps in."
+    },
+    {
+      "heading": "Step 4: look back each week",
+      "body": "Once a week, read through your log. Rate both beliefs again, from 0 to 100%. Change often comes slowly, over weeks or months. That is normal. You are training your mind to notice what it has been missing."
+    }
+  ],
+  "practiceLog": {
+    "columns": ["Day", "What happened that fits my new belief", "Did my mind try to brush it off? (yes / no)", "Belief in my new belief (0-100%)"],
+    "rows": 14
+  },
+  "safetyNote": "Safety first: Working on old beliefs can stir up painful feelings or memories. Go at your own pace, and talk it over with your counselor. If you have thoughts of hurting yourself, or that you would be better off dead, do not wait. Get help now. In the US, call or text 988 or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "es": {
+    "title": "Registro de datos a mi favor",
+    "intro": "Con el tiempo, muchas personas se forman una idea dura sobre sí mismas, como 'Soy un fracaso' o 'Nadie me puede querer'. Una idea así funciona como un filtro. Deja pasar los datos que van con ella y bloquea los que no. Este registro le ayuda a formar una idea más justa, un dato pequeño a la vez. Leerlo toma unos 10 minutos, y llenarlo toma unos minutos al día.",
+    "sections": [
+      {
+        "heading": "Paso 1: póngale nombre a la idea vieja",
+        "body": "Con su consejero, escriba la idea vieja en pocas palabras. Califique cuánto la cree ahora mismo, del 0 al 100%."
+      },
+      {
+        "heading": "Paso 2: escriba una idea nueva más justa",
+        "body": "La idea nueva debe ser más amable y también creíble. No tiene que ser lo contrario de la vieja. Por ejemplo, 'Soy un fracaso' puede volverse 'Soy una persona que hace muchas cosas bien y que a veces se equivoca'. Califique cuánto cree la idea nueva, del 0 al 100%. Está bien si el número es bajo al principio."
+      },
+      {
+        "heading": "Paso 3: junte datos cada día",
+        "steps": [
+          "Cada día, anote cualquier cosa que vaya con la idea nueva. Las cosas pequeñas cuentan.",
+          "Fíjese en lo que hizo, en lo que otros dijeron o hicieron y en cómo manejó las cosas.",
+          "Pregúntese: 'Si un amigo hiciera esto, ¿contaría para él?' Si la respuesta es sí, también cuenta para usted.",
+          "Anótelo enseguida, antes de que su mente tenga tiempo de quitarle valor."
+        ]
+      },
+      {
+        "heading": "Cuidado con quitarle valor",
+        "body": "La idea vieja va a tratar de explicar los datos nuevos para restarles importancia. Puede pensar: 'Fue pura suerte' o 'Cualquiera puede hacer eso'. Fíjese cuando pase, y anote el dato de todos modos. Márquelo en el registro, para ver cada cuánto se mete la idea vieja."
+      },
+      {
+        "heading": "Paso 4: repase cada semana",
+        "body": "Una vez por semana, lea su registro. Vuelva a calificar las dos ideas, del 0 al 100%. El cambio muchas veces llega despacio, en semanas o meses. Eso es normal. Está entrenando a su mente para que note lo que se le ha estado escapando."
+      }
+    ],
+    "practiceLog": {
+      "columns": ["Día", "Lo que pasó que va con mi idea nueva", "¿Mi mente trató de quitarle valor? (sí / no)", "Cuánto creo mi idea nueva (0-100%)"]
+    },
+    "safetyNote": "La seguridad es lo primero: Trabajar con ideas viejas puede remover sentimientos o recuerdos dolorosos. Vaya a su propio ritmo, y hable de esto con su consejero. Si tiene pensamientos de hacerse daño, o de que estaría mejor muerto, no espere. Busque ayuda ahora. En EE. UU., llame o envíe un mensaje de texto al 988 o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "sources": [
+    {
+      "title": "Cognitive Behavior Therapy: Basics and Beyond, Third Edition (J. S. Beck)",
+      "publisher": "Guilford Press",
+      "url": "https://www.guilford.com/books/Cognitive-Behavior-Therapy/Judith-Beck/9781462544196",
+      "year": 2020
+    },
+    {
+      "title": "The efficacy of cognitive behavioral therapy: a review of meta-analyses (Hofmann et al.)",
+      "publisher": "Cognitive Therapy and Research (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23459093/",
+      "year": 2012
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

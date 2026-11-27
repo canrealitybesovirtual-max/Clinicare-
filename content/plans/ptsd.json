@@ -17,22 +17,30 @@
         {
           "id": "ptsd-reactions-explained",
           "text": "By session 3, describe in their own words at least 3 common trauma reactions they recognize in themselves and why reminders can set off the body's alarm system.",
-          "interventionIds": ["trauma-psychoeducation-and-grounding"]
+          "interventionIds": ["trauma-psychoeducation-and-grounding"],
+          "targets": ["trauma-memory-intrusions"],
+          "step": "low-intensity"
         },
         {
           "id": "ptsd-grounding-daily",
           "text": "Within 2 weeks, learn at least 1 grounding skill (for example naming things seen, heard and felt in the room) and then use it at least once a day for 3 weeks, rating distress (0-10) before and after.",
-          "interventionIds": ["grounding-5-4-3-2-1", "trauma-psychoeducation-and-grounding"]
+          "interventionIds": ["grounding-5-4-3-2-1", "trauma-psychoeducation-and-grounding"],
+          "targets": ["coping-skills", "threat-monitoring"],
+          "step": "low-intensity"
         },
         {
           "id": "ptsd-choose-trauma-therapy",
           "text": "By week 4, the client and clinician agree on a trauma-focused therapy (for example cognitive processing therapy, prolonged exposure or EMDR), delivered only by a clinician trained in that method or through referral to one, and the client attends at least 80 percent of scheduled sessions.",
-          "interventionIds": ["cognitive-processing-therapy", "prolonged-exposure", "emdr"]
+          "interventionIds": ["cognitive-processing-therapy", "prolonged-exposure", "emdr"],
+          "targets": ["trauma-memory-intrusions"],
+          "step": "specialist"
         },
         {
           "id": "ptsd-between-session-work",
           "text": "During the agreed trauma-focused therapy, complete the assigned between-session practice (for example written accounts, worksheets or listening to a session recording) on at least 4 days a week, and bring it to the next session.",
-          "interventionIds": ["cognitive-processing-therapy", "prolonged-exposure"]
+          "interventionIds": ["cognitive-processing-therapy", "prolonged-exposure"],
+          "targets": ["trauma-memory-intrusions", "avoidance-escape"],
+          "step": "specialist"
         },
         {
           "id": "ptsd-score-tracking",
@@ -59,22 +67,30 @@
         {
           "id": "ptsd-avoided-list",
           "text": "Within 3 weeks, list at least 8 avoided situations, people or reminders that the client and clinician agree are safe now, rating each 0-100 for expected distress.",
-          "interventionIds": ["prolonged-exposure"]
+          "interventionIds": ["prolonged-exposure"],
+          "targets": ["avoidance-escape"],
+          "step": "high-intensity"
         },
         {
           "id": "ptsd-approach-practice",
           "text": "Over weeks 4 to 12, practice approaching at least 2 listed safe reminders per week, staying until the planned end of each practice, and record distress at the start and at the end.",
-          "interventionIds": ["prolonged-exposure"]
+          "interventionIds": ["prolonged-exposure"],
+          "targets": ["avoidance-escape"],
+          "step": "high-intensity"
         },
         {
           "id": "ptsd-trauma-beliefs",
           "text": "By week 6, write down at least 3 beliefs about why the event happened or what it means about self, others or the world, then re-rate how strongly each is believed (0-100) every 2 weeks for the next 6 weeks.",
-          "interventionIds": ["cognitive-processing-therapy"]
+          "interventionIds": ["cognitive-processing-therapy"],
+          "targets": ["negative-core-beliefs", "self-criticism-shame"],
+          "step": "high-intensity"
         },
         {
           "id": "ptsd-reconnect",
           "text": "By week 10, take part in at least 1 social, community, faith or leisure activity per week that the client has chosen.",
-          "interventionIds": ["behavioral-activation"]
+          "interventionIds": ["behavioral-activation"],
+          "targets": ["low-social-support", "low-reward-engagement"],
+          "step": "low-intensity"
         }
       ],
       "measureIds": ["phq-9"]
@@ -97,38 +113,256 @@
         {
           "id": "ptsd-current-safety-check",
           "text": "Within the first 2 sessions, review current safety with the client (for example ongoing contact with a person who caused harm, or unsafe housing) and connect them with protective or practical resources if needed, before trauma-focused work begins.",
-          "interventionIds": ["trauma-psychoeducation-and-grounding"]
+          "interventionIds": ["trauma-psychoeducation-and-grounding"],
+          "targets": ["structural-stressors"]
         },
         {
           "id": "ptsd-calming-practice",
           "text": "For 4 weeks, practice slow breathing or progressive muscle relaxation for at least 10 minutes a day on 5 or more days a week, rating tension 0-10 before and after.",
-          "interventionIds": ["diaphragmatic-breathing", "progressive-muscle-relaxation", "trauma-psychoeducation-and-grounding"]
+          "interventionIds": ["diaphragmatic-breathing", "progressive-muscle-relaxation", "trauma-psychoeducation-and-grounding"],
+          "targets": ["threat-monitoring", "coping-skills"],
+          "step": "low-intensity"
         },
         {
           "id": "ptsd-sleep-log",
           "text": "For 4 weeks, keep a morning sleep log (hours slept, nightmares, how rested 0-10), keep a regular wake-up time on at least 5 days a week and use a grounding skill after waking from a nightmare. If nightmares or poor sleep continue, discuss a medical or sleep referral by week 8.",
-          "interventionIds": ["grounding-5-4-3-2-1", "trauma-psychoeducation-and-grounding"]
+          "interventionIds": ["grounding-5-4-3-2-1", "trauma-psychoeducation-and-grounding"],
+          "targets": ["sleep-rhythm-disruption"],
+          "step": "low-intensity"
         },
         {
           "id": "ptsd-anger-plan",
           "text": "Over weeks 3 to 10, log anger episodes (trigger, body signs, what was done) and use a planned time-out or calming skill in at least half of the logged episodes.",
-          "interventionIds": ["diaphragmatic-breathing", "grounding-5-4-3-2-1"]
+          "interventionIds": ["diaphragmatic-breathing", "grounding-5-4-3-2-1"],
+          "targets": ["emotion-dysregulation"],
+          "step": "low-intensity"
         },
         {
           "id": "ptsd-fewer-checks",
           "text": "By week 10, cut daily safety checks (locks, windows, scanning) to half of the baseline count or fewer, only in settings the client and clinician agree are currently safe.",
-          "interventionIds": ["safety-behavior-reduction"]
+          "interventionIds": ["safety-behavior-reduction"],
+          "targets": ["safety-behaviors", "threat-monitoring"],
+          "step": "high-intensity"
         },
         {
           "id": "ptsd-safety-plan-review",
           "text": "Whenever risk is present (for example a PHQ-9 item 9 response above 0, thoughts of suicide or self-harm, or reckless acts that could cause serious injury), the clinician assesses risk directly and, in that same session, works with the client to create or review a written safety plan: personal warning signs, coping and grounding steps, people and places that help, professional and crisis contacts (call or text 988 in the US, or the local emergency number elsewhere) and agreed steps to limit access to means of harm. Revisit the plan at every session while risk remains, and pace trauma-focused work around it. Risk level and next steps are the clinician's decision; this tool never rates risk.",
-          "interventionIds": []
+          "interventionIds": ["collaborative-safety-planning", "lethal-means-counseling"],
+          "targets": ["coping-skills", "hope-and-motivation"],
+          "step": "crisis-or-urgent"
         }
       ],
       "measureIds": ["phq-9", "gad-7"]
+    },
+    {
+      "id": "ptsd-nightmares-and-sleep",
+      "label": "Trauma nightmares and broken sleep",
+      "definitions": [
+        "Has trauma-related nightmares on at least 1 night a week and wakes in fear or distress.",
+        "Has trouble falling or staying asleep, or puts off going to bed, because of nightmares or feeling unsafe at night."
+      ],
+      "longTermGoals": [
+        "Nightmares are less frequent and less distressing, and sleep feels more restful."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "ptsd-nightmare-log",
+          "text": "For 2 weeks, record each morning how many nightmares there were, how distressing each was (0-10) and how long it took to get back to sleep.",
+          "interventionIds": ["imagery-rehearsal-therapy"],
+          "targets": ["trauma-memory-intrusions", "sleep-rhythm-disruption"],
+          "step": "low-intensity"
+        },
+        {
+          "id": "ptsd-rescript-nightmare",
+          "text": "Over weeks 3 to 8, choose 1 recurring nightmare (starting with a less distressing one), write a changed version while awake without recounting trauma details, and rehearse it for 10 to 20 minutes a day on at least 5 days a week.",
+          "interventionIds": ["imagery-rehearsal-therapy"],
+          "targets": ["trauma-memory-intrusions"],
+          "step": "high-intensity"
+        },
+        {
+          "id": "ptsd-sleep-routine",
+          "text": "From week 3, keep a regular time out of bed on at least 6 days a week and get up after about 20 minutes awake, returning to bed only when sleepy.",
+          "interventionIds": ["cbti-stimulus-control", "sleep-hygiene-education"],
+          "targets": ["sleep-rhythm-disruption"],
+          "step": "low-intensity"
+        },
+        {
+          "id": "ptsd-sleep-assessment",
+          "text": "If sleep stays poor after 6 weeks, or loud snoring or pauses in breathing are reported, refer for a sleep assessment and full CBT for insomnia.",
+          "interventionIds": [],
+          "targets": ["sleep-rhythm-disruption", "physical-health-burden"],
+          "step": "high-intensity"
+        }
+      ],
+      "measureIds": [],
+      "handoutIds": ["nightmare-rescripting-practice", "sleep-diary"]
+    },
+    {
+      "id": "ptsd-appraisals-and-meaning",
+      "label": "Beliefs since the trauma about danger, blame and self",
+      "definitions": [
+        "Holds beliefs since the trauma such as that the world is completely unsafe, that they are to blame, or that they are permanently changed or damaged.",
+        "Feels strong guilt, shame or anger linked to how they understand the event."
+      ],
+      "longTermGoals": [
+        "The client holds a more balanced understanding of the event and what it means, with less guilt and shame and less sense of threat now."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "ptsd-appraisal-list",
+          "text": "By week 4, list at least 3 beliefs about danger, blame or self that took hold after the trauma, and rate how strongly each is held (0-100).",
+          "interventionIds": ["cognitive-therapy-for-ptsd", "cognitive-processing-therapy"],
+          "targets": ["negative-core-beliefs", "self-criticism-shame"],
+          "step": "high-intensity"
+        },
+        {
+          "id": "ptsd-update-memory",
+          "text": "With a clinician trained in cognitive therapy for PTSD, identify the worst moments of the memory and update them with what is known now, re-rating the matching beliefs.",
+          "interventionIds": ["cognitive-therapy-for-ptsd"],
+          "targets": ["trauma-memory-intrusions"],
+          "step": "specialist"
+        },
+        {
+          "id": "ptsd-then-and-now",
+          "text": "Over weeks 4 to 10, when a reminder sets off a strong reaction, practice telling then from now at least 3 times a week by noting how the present situation differs from the past one.",
+          "interventionIds": ["cognitive-therapy-for-ptsd", "grounding-5-4-3-2-1"],
+          "targets": ["threat-monitoring", "trauma-memory-intrusions"],
+          "step": "high-intensity"
+        },
+        {
+          "id": "ptsd-reclaim-life",
+          "text": "By week 10, take back at least 2 activities or relationships that were given up after the trauma.",
+          "interventionIds": ["cognitive-therapy-for-ptsd", "behavioral-activation"],
+          "targets": ["avoidance-escape", "low-reward-engagement"],
+          "step": "high-intensity"
+        }
+      ],
+      "measureIds": ["phq-9"]
+    },
+    {
+      "id": "ptsd-present-focused-path",
+      "label": "Current stress and daily functioning when the client chooses not to start trauma-focused therapy now",
+      "definitions": [
+        "Prefers not to go through the trauma in detail at this time, or has current circumstances that make trauma-focused therapy hard to start.",
+        "Has current stressors (for example at work, at home or with health) that PTSD symptoms make harder to handle."
+      ],
+      "longTermGoals": [
+        "The client manages current stressors and symptoms better, and knows that trauma-focused therapy stays available if they choose it later."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "ptsd-informed-choice",
+          "text": "By session 3, explain the options in plain words (trauma-focused therapies, which guidelines rate most strongly, and other approaches), record the client's choice and reasons, and revisit the choice at each plan review.",
+          "interventionIds": ["present-centered-therapy"],
+          "targets": ["hope-and-motivation"]
+        },
+        {
+          "id": "ptsd-current-problems",
+          "text": "Over weeks 3 to 12, work on 1 current stressor each week with structured problem solving, linked to how symptoms affect daily life.",
+          "interventionIds": ["present-centered-therapy"],
+          "targets": ["structural-stressors"],
+          "step": "high-intensity"
+        },
+        {
+          "id": "ptsd-stress-skills",
+          "text": "Over weeks 3 to 10, learn and rehearse at least 3 coping skills for stress (for example paced breathing, muscle relaxation and coping self-talk) and use them in at least 3 planned stressful situations.",
+          "interventionIds": ["stress-inoculation-training", "diaphragmatic-breathing"],
+          "targets": ["coping-skills", "threat-monitoring"],
+          "step": "high-intensity"
+        },
+        {
+          "id": "ptsd-interpersonal-option",
+          "text": "If relationship problems or role changes since the trauma are central, agree by week 4 on interpersonal psychotherapy from a trained clinician.",
+          "interventionIds": ["interpersonal-psychotherapy"],
+          "targets": ["interpersonal-difficulties"],
+          "step": "high-intensity"
+        }
+      ],
+      "measureIds": ["phq-9", "gad-7"]
+    },
+    {
+      "id": "ptsd-self-organization",
+      "label": "Long-standing difficulties with emotions, self-view and relationships after repeated or prolonged trauma",
+      "definitions": [
+        "Has strong emotional reactions that are slow to settle, or feels numb or cut off for long periods.",
+        "Sees self as worthless, defeated or permanently damaged, with deep shame or guilt.",
+        "Finds it hard to feel close to people or to keep relationships going."
+      ],
+      "longTermGoals": [
+        "The client manages emotions more steadily, holds a kinder view of self, and has relationships that feel safer, while trauma memories are addressed at a pace the client agrees to."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "ptsd-skills-phase",
+          "text": "If emotion and relationship difficulties make trauma-focused work hard to start, discuss a time-limited skills phase (for example STAIR) followed by trauma-focused therapy, and agree on the timing with the client.",
+          "interventionIds": ["stair-skills-training"],
+          "targets": ["emotion-dysregulation", "interpersonal-difficulties"],
+          "step": "specialist"
+        },
+        {
+          "id": "ptsd-emotion-skills",
+          "text": "Over weeks 2 to 10, practice at least 2 emotion-regulation or distress-tolerance skills daily and use one during at least 3 hard moments a week, rating distress (0-10) before and after.",
+          "interventionIds": ["dbt-distress-tolerance", "dbt-emotion-regulation-opposite-action", "stair-skills-training"],
+          "targets": ["emotion-dysregulation"],
+          "step": "high-intensity"
+        },
+        {
+          "id": "ptsd-kinder-self-view",
+          "text": "Over weeks 4 to 12, practice a self-compassion or compassion-focused exercise for at least 5 minutes on 4 days a week, and re-rate shame (0-10) every 2 weeks.",
+          "interventionIds": ["self-compassion-practice", "compassion-focused-imagery"],
+          "targets": ["self-criticism-shame"],
+          "step": "high-intensity"
+        },
+        {
+          "id": "ptsd-processing-timing",
+          "text": "By week 10, review readiness together and agree whether and when to begin trauma-focused therapy, without waiting for every symptom to settle first.",
+          "interventionIds": ["cognitive-processing-therapy", "prolonged-exposure", "emdr"],
+          "targets": ["trauma-memory-intrusions"],
+          "step": "specialist"
+        }
+      ],
+      "measureIds": ["phq-9", "gad-7"],
+      "formulationIds": ["phase-based-trauma-sequencing"]
+    },
+    {
+      "id": "ptsd-co-occurring-substance-use",
+      "label": "Alcohol or other substance use alongside PTSD symptoms",
+      "definitions": [
+        { "text": "Uses alcohol or other substances to manage nightmares, reminders, sleep or feeling on edge.", "sud": true },
+        { "text": "Notices that symptoms and use feed each other, for example more use after a hard day and worse symptoms the next day.", "sud": true }
+      ],
+      "longTermGoals": [
+        { "text": "The client gets help for both concerns at the same time, with use reduced toward the client's own goal and PTSD symptoms easing.", "sud": true }
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "ptsd-integrated-care",
+          "text": "By week 4, discuss integrated treatment that addresses trauma and substance use together, explaining that trauma-focused therapy does not have to wait for abstinence, and agree on a referral or plan.",
+          "interventionIds": ["integrated-ptsd-sud-treatment"],
+          "sud": true,
+          "targets": ["urges-and-impulsivity", "trauma-memory-intrusions"],
+          "step": "specialist"
+        },
+        {
+          "id": "ptsd-withdrawal-check",
+          "text": "Before any plan to stop or sharply cut down substance use, the clinician checks for withdrawal risk and arranges a medical review when it is present.",
+          "interventionIds": ["medication-referral"],
+          "sud": true,
+          "targets": ["physical-health-burden"]
+        },
+        {
+          "id": "ptsd-urge-skills",
+          "text": "Over weeks 3 to 10, use a grounding or urge-management skill during at least 3 substance urges a week and note what happened.",
+          "interventionIds": ["grounding-5-4-3-2-1", "integrated-ptsd-sud-treatment"],
+          "sud": true,
+          "targets": ["coping-skills", "urges-and-impulsivity"],
+          "step": "low-intensity"
+        }
+      ],
+      "measureIds": []
     }
   ],
-  "collaborativeNote": "These are starting points for clinician review, not a finished plan. Rewrite each goal and objective with the client in their own words, let the client set the pace and how much detail they share about the event, and record their agreement before anything is added to the plan. Cognitive processing therapy, prolonged exposure and EMDR are for clinicians trained in each method; otherwise refer. Exposure goals apply only to situations that are safe now. Safety planning is always done together with the client, and the clinician makes every risk decision. Do not add names or other identifying details. Resource only. Not a substitute for clinical judgment.",
+  "collaborativeNote": "These are starting points for clinician review, not a finished plan. Rewrite each goal and objective with the client in their own words, let the client set the pace and how much detail they share about the event, and record their agreement before anything is added to the plan. Cognitive processing therapy, prolonged exposure and EMDR are for clinicians trained in each method; otherwise refer. Exposure goals apply only to situations that are safe now. Safety planning is always done together with the client, and the clinician makes every risk decision. Guidelines rate EMDR differently: NICE NG116 recommends it for non-combat trauma, the VA/DoD 2023 guideline includes it among strongly recommended trauma-focused therapies, and APA's 2025 update lists it as suggested rather than recommended. Present-centered therapy, stress inoculation training and interpersonal psychotherapy are non-trauma-focused options for clients who decline or are not ready for trauma-focused work. Do not add names or other identifying details. Resource only. Not a substitute for clinical judgment.",
   "sources": [
     { "title": "Post-traumatic stress disorder (NG116)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng116", "year": 2018 },
     { "title": "Clinical Practice Guideline for the Treatment of PTSD: treatments", "publisher": "American Psychological Association", "url": "https://www.apa.org/ptsd-guideline/treatments" },
@@ -142,9 +376,16 @@
     { "title": "A Tipping Point for Measurement-Based Care (Fortney et al.)", "publisher": "Psychiatric Services; reprinted in Focus (PubMed Central)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6996080/", "year": 2017 },
     { "title": "Implementing Measurement-Based Care in Behavioral Health: A Review (Lewis et al.)", "publisher": "JAMA Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/30566197/", "year": 2019 },
     { "title": "Shared decision making (NG197)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng197", "year": 2021 },
-    { "title": "PHQ and GAD-7 screeners (reproduction terms)", "publisher": "Pfizer / PHQ Screeners", "url": "https://www.phqscreeners.com" }
+    { "title": "PHQ and GAD-7 screeners (reproduction terms)", "publisher": "Pfizer / PHQ Screeners", "url": "https://www.phqscreeners.com" },
+    { "title": "Position Paper for the Treatment of Nightmare Disorder in Adults: An American Academy of Sleep Medicine Position Paper (Morgenthaler et al.)", "publisher": "Journal of Clinical Sleep Medicine (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/29852917/", "year": 2018 },
+    { "title": "VA/DoD Clinical Practice Guideline for Management of Posttraumatic Stress Disorder and Acute Stress Disorder", "publisher": "US Department of Veterans Affairs and Department of Defense", "url": "https://www.healthquality.va.gov/guidelines/MH/ptsd/", "year": 2023 },
+    { "title": "Psychotherapy for PTSD (summary of the 2023 VA/DoD guideline)", "publisher": "Psychological Health Center of Excellence, Defense Health Agency", "url": "https://health.mil/Reference-Center/Publications/2024/01/04/Psychotherapy-for-PTSD", "year": 2024 },
+    { "title": "A randomized controlled trial of 7-day intensive and standard weekly cognitive therapy for PTSD and emotion-focused supportive therapy (Ehlers et al.)", "publisher": "American Journal of Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/24480899/", "year": 2014 },
+    { "title": "Skills training in affective and interpersonal regulation followed by exposure: a phase-based treatment for PTSD related to childhood abuse (Cloitre et al.)", "publisher": "Journal of Consulting and Clinical Psychology (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/12362957/", "year": 2002 },
+    { "title": "Efficacy of Integrated Exposure Therapy vs Integrated Coping Skills Therapy for Comorbid Posttraumatic Stress Disorder and Alcohol Use Disorder: A Randomized Clinical Trial (Norman et al.)", "publisher": "JAMA Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/31017639/", "year": 2019 },
+    { "title": "ICD-11 for Mortality and Morbidity Statistics", "publisher": "World Health Organization", "url": "https://icd.who.int/browse/latest-release/mms/en" }
   ],
   "license": "original",
-  "lastVerified": "2026-11-26",
+  "lastVerified": "2026-11-27",
   "reviewedBy": "PENDING"
 }

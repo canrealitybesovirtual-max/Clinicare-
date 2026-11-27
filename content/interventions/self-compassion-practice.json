@@ -16,7 +16,9 @@
     "anorexia-nervosa",
     "bulimia-nervosa",
     "binge-eating-disorder",
-    "body-dysmorphic-disorder"
+    "body-dysmorphic-disorder",
+    "body-focused-repetitive-behaviors",
+    "premenstrual-dysphoric-disorder"
   ],
   "evidenceLevel": "Emerging-to-moderate evidence; not a guideline-recommended stand-alone treatment for any condition in this app, so use it as an adjunct. A meta-analysis of 21 RCTs of compassion-based interventions found moderate effects on self-compassion, depression, anxiety and distress, mostly from small samples (Kirby et al., 2017). A meta-analysis of 27 RCTs of self-compassion-based interventions found moderate effects on depression, anxiety, stress, rumination and self-criticism (Ferrari et al., 2019); another meta-analysis found no significant differences when self-compassion-related therapies were compared with active control conditions (Wilson et al., 2018), so certainty is limited. In a small RCT, the Mindful Self-Compassion program improved self-compassion and well-being versus waitlist (Neff & Germer, 2013). In an open pilot of loving-kindness meditation for PTSD, symptom reductions were mediated by gains in self-compassion (Kearney et al., 2013).",
   "minutes": { "min": 10, "max": 25 },
@@ -59,7 +61,8 @@
     "consentNote": "Before any faith-integrated variant, explain its purpose and alternatives, confirm the client's right to decline or stop at any time, and document informed consent (AACC Code of Ethics; ACA Code of Ethics). Faith integration is client-led. Never impose beliefs or suggest that distress reflects weak faith."
   },
   "trainingRequired": "Brief practices need no certification. Teaching the full Mindful Self-Compassion program requires MSC teacher training, and full compassion-focused therapy requires CFT-specific training.",
-  "handoutIds": ["kind-self-talk", "coping-cards"],
+  "handoutIds": ["kind-self-talk", "coping-cards", "three-emotion-systems"],
+  "orientationIds": ["mindfulness-and-compassion-based-therapies"],
   "sources": [
     { "title": "A pilot study and randomized controlled trial of the mindful self-compassion program (Neff & Germer)", "publisher": "Journal of Clinical Psychology (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/23070875/", "year": 2013 },
     { "title": "Introducing compassion-focused therapy (Gilbert)", "publisher": "Advances in Psychiatric Treatment (Cambridge University Press)", "url": "https://www.cambridge.org/core/journals/advances-in-psychiatric-treatment/article/introducing-compassionfocused-therapy/ECBC8B7B87E90ABB58C4530CDEE04088", "year": 2009 },

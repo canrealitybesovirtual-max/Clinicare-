@@ -1,0 +1,160 @@
+{
+  "id": "alliance-and-rupture-repair",
+  "title": "Building the alliance and repairing ruptures",
+  "category": "relationship",
+  "summary": "How to build a working alliance (agreement on goals and tasks plus a trusting bond), check on it every session in your own words, and notice and repair strains before they turn into dropout. Applies across orientations.",
+  "whenToUse": [
+    "In the first three sessions, when the alliance is forming and dropout is most likely.",
+    "Whenever a client goes quiet, agrees too readily, misses sessions, arrives late or pushes back on a task.",
+    "When progress stalls or a measure total worsens: an alliance check is the first question to ask.",
+    "After a moment you suspect landed badly, including a comment that touched culture, identity or power."
+  ],
+  "steps": [
+    {
+      "heading": "Agree on goals, tasks and the bond",
+      "body": "The alliance has three parts: shared goals, agreement on what you will do together to reach them, and a bond of trust. Name each one out loud early, in plain words, and come back to them when the plan changes.",
+      "items": [
+        "Goals: what the client wants to be different, in their words.",
+        "Tasks: what sessions and between-session work will involve, and why you think it will help.",
+        "Bond: warmth, reliability and respect shown through actions (starting on time, remembering what matters, following through)."
+      ]
+    },
+    {
+      "heading": "Use the first three sessions on purpose",
+      "items": [
+        "Ask what brought them now and what they hope for, before moving to assessment detail.",
+        "Explain how therapy works, how long it may take and that mixed feelings are normal.",
+        "Offer a short rationale for the first task and ask whether it makes sense to them.",
+        "End each early session by asking what was useful and what was not."
+      ]
+    },
+    {
+      "heading": "Ask for feedback every session",
+      "body": "A short, routine check makes it easier for clients to raise problems. Ask near the end, with enough time to respond, and thank them for criticism. Licensed alliance scales are link-outs only; the questions below are the app's own wording and are not a scale or score."
+    },
+    {
+      "heading": "Recognize rupture markers",
+      "items": [
+        "Withdrawal: short answers, changing the subject, intellectualizing, sudden agreement without engagement, missed homework without discussion.",
+        "Confrontation: complaints about you, the method or the pace, challenges to your competence, pressure to change the plan.",
+        "Quieter signs: lateness, cancellations, a flat tone after a particular topic, or a cultural misstep that was never named."
+      ]
+    },
+    {
+      "heading": "Repair in steps",
+      "items": [
+        "Notice and name it gently, in the moment if you can.",
+        "Invite the client's view and listen without defending.",
+        "Acknowledge your part, briefly and specifically.",
+        "Explore what the strain means to them, at their pace (metacommunication).",
+        "Adjust the goal, task or pace together, then check whether the adjustment fits.",
+        "Come back to it next session to see how it landed."
+      ]
+    },
+    {
+      "heading": "Take it to consultation",
+      "body": "Repeated ruptures, strong reactions in yourself, or a rupture around identity or power are good reasons to bring the case to supervision or peer consultation."
+    }
+  ],
+  "prompts": [
+    "Before we finish, how did today go for you? Was there anything that did not feel right or that we should do differently next time?",
+    "I noticed you went quiet when I suggested that exercise. I may have moved too fast. What was going on for you just then?",
+    "It sounds like what we have been doing has not been helpful enough. Thank you for saying so. Can we look at what would fit better?",
+    "I think I missed something important when I said that. I am sorry. Can you help me understand what it meant to you?",
+    "On a scale you choose, how much do you feel we are working on what matters most to you? What would move it a little higher?"
+  ],
+  "cautions": [
+    "Do not treat a rupture as resistance or a client failing; most ruptures are signals about fit, pace or understanding.",
+    "Avoid long self-justification. A short, specific acknowledgement repairs more than an explanation.",
+    "Clients from groups that have experienced discrimination in services may not voice disagreement directly; invite it explicitly and repeatedly.",
+    "Feedback questions are prompts, not a measure. Do not total them, and do not record them as a score.",
+    "A withdrawal rupture can overlap with rising hopelessness or risk. If you are unsure, ask directly about safety; the crisis resources stay on every screen."
+  ],
+  "adaptations": [
+    {
+      "context": "Telehealth",
+      "adaptation": "Ruptures are harder to see on video or phone. Ask for feedback more often, check in when the client looks away or the connection drops, and name pauses rather than filling them."
+    },
+    {
+      "context": "Mandated or referred clients",
+      "adaptation": "Acknowledge openly that they did not choose to come, separate your role from the referrer's, and look for a goal they do care about, even a small one."
+    },
+    {
+      "context": "Couples and families",
+      "adaptation": "Watch for split alliances, where one person feels sided against. Balance airtime and check each person's view of the goals separately."
+    }
+  ],
+  "evidenceSummary": "A 2018 meta-analysis of nearly 300 studies (Flückiger and colleagues) found a moderate, consistent link between alliance quality and outcome across therapies and formats. A 2018 meta-analysis of rupture repair (Eubanks, Muran and Safran) found that repaired ruptures were associated with better outcomes and that rupture-resolution training showed promise. The goals, tasks and bond model comes from Bordin (1979). The Norcross and Lambert task force (2018) rates the alliance and collaboration as demonstrably effective relationship elements.",
+  "forClinicianReview": true,
+  "crisisPanel": false,
+  "sud": false,
+  "relatedInterventionIds": [
+    "person-centered-reflective-listening",
+    "motivational-interviewing",
+    "supportive-psychotherapy"
+  ],
+  "relatedHandoutIds": [
+    "session-check-in-card",
+    "what-to-expect-in-therapy"
+  ],
+  "relatedFormulationIds": [
+    "psychodynamic-ccrt"
+  ],
+  "relatedLegalIds": [
+    "competence-and-scope-of-practice"
+  ],
+  "relatedPracticeIds": [
+    "outcome-monitoring",
+    "first-sessions-and-role-induction",
+    "multicultural-orientation-and-broaching",
+    "clinician-reactions-and-self-disclosure",
+    "supervision-and-consultation",
+    "preferences-goals-and-readiness"
+  ],
+  "relatedPopulationIds": [
+    "cultural-adaptation",
+    "justice-involved"
+  ],
+  "linkOuts": [],
+  "measuresPending": [
+    {
+      "name": "Working Alliance Inventory, short revised (WAI-SR)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25271007/",
+      "licenseKey": "WAI-SR"
+    },
+    {
+      "name": "Outcome Rating Scale and Session Rating Scale (ORS and SRS)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34484027/",
+      "licenseKey": "ORS-SRS"
+    }
+  ],
+  "sources": [
+    {
+      "title": "The alliance in adult psychotherapy: a meta-analytic synthesis (Flückiger, Del Re, Wampold and Horvath)",
+      "publisher": "Psychotherapy, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29792475/",
+      "year": 2018
+    },
+    {
+      "title": "Alliance rupture repair: a meta-analysis (Eubanks, Muran and Safran)",
+      "publisher": "Psychotherapy, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30335462/",
+      "year": 2018
+    },
+    {
+      "title": "Psychotherapy relationships that work III (Norcross and Lambert)",
+      "publisher": "Psychotherapy, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30335448/",
+      "year": 2018
+    },
+    {
+      "title": "Meta-analyses of the relation of goal consensus and collaboration to psychotherapy outcome (Tryon, Birch and Verkuilen)",
+      "publisher": "Psychotherapy, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30335451/",
+      "year": 2018
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

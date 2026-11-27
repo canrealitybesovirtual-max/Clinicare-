@@ -1,0 +1,89 @@
+{
+  "id": "older-adults",
+  "name": "Older adults and cognitive change",
+  "group": "life-stage",
+  "summary": "Adapting assessment and therapy in later life: pace and memory aids, hearing and vision access, medical and medicine overlap, falls risk in sleep and exposure work, checking cognition, capacity and consent, caregivers with consent, and elder abuse.",
+  "scopeNote": "For adults in later life. Age alone never decides what someone can do or wants. The app never asks for or saves age, diagnoses or cognitive scores; cognitive screens are link-outs, and capacity is always judged by a person for a specific decision.",
+  "whyItMatters": "APA guidelines for practice with older adults (2014) call for age-informed assessment that accounts for medical illness, medicines, sensory change and cognition, and warn against ageist assumptions. Problem-solving therapy reduced depression more than supportive therapy in older adults with executive dysfunction (Arean and colleagues, 2010), and a home-based program delivered with community agencies improved depression in older adults with minor depression or dysthymia (PEARLS, Ciechanowski and colleagues, 2004). WHO (2026) reports that mental health conditions in later life are often underrecognized and undertreated, that social isolation and loneliness affect about a quarter of older people, and that about one in six older adults experiences abuse, often by their own carers. NICE NG97 (2018) sets out assessment and support for people living with dementia and their carers.",
+  "askAbout": [
+    "What would make our sessions easier for you, such as time of day, length, seating, lighting or hearing support?",
+    "What has changed for you recently, such as health, losses, moves, retirement or caring roles?",
+    "Have you or people close to you noticed changes in memory or thinking, and how do you feel about checking that?",
+    "Who would you like involved in your care, and what are they allowed to know?",
+    "What does a good day look like for you now, and what would you like more of?",
+    "Do you feel safe with the people who help you or handle your money?"
+  ],
+  "stereotypeCaution": "Later life covers several decades and huge variety. Many older adults are healthy, active and working; others live with illness or disability. Low mood, anxiety and memory problems are not a normal part of ageing and should not be dismissed, and an older person should never be spoken over or assumed to be unable to decide for themselves.",
+  "keyConsiderations": [
+    "Depression in later life may present as loss of interest, slowing, worry about health, irritability or cognitive complaints more than as sadness.",
+    "Review physical illness and medicines (including over-the-counter and sleep aids) with the medical team; polypharmacy, pain, thyroid change and infection can all affect mood and thinking.",
+    "Sudden confusion or a fluctuating level of alertness suggests delirium, which is a medical emergency, not a mental health referral.",
+    "Ageism, including the person's own beliefs about ageing, can block help-seeking and hope; name it and work with it.",
+    "Bereavement, caregiving, retirement, moving home and loneliness are common themes; social connection is a treatment target in its own right.",
+    "Capacity is decision-specific and time-specific. A cognitive screen does not decide capacity, and family wishes do not replace the person's own.",
+    "Elder abuse, including financial exploitation and neglect, is underreported; know your local reporting duties."
+  ],
+  "assessmentAdaptations": [
+    "Check hearing and vision supports before testing anything: hearing aids in and working, glasses on, good light, a quiet room and a pocket amplifier if needed.",
+    "Offer a brief cognitive screen as a link-out tool when memory or thinking concerns are raised, explaining that it is not a diagnosis; refer for fuller assessment when results or history suggest it.",
+    "With consent, ask a family member or friend for their view, and also speak with the person alone.",
+    "Ask about falls, alcohol and medicine use, sleep, pain and recent illness, which can all change both mood and safety."
+  ],
+  "sessionAdaptations": [
+    "Slow the pace, cover fewer points per session, repeat key ideas, and end with a short written summary in large print.",
+    "Use memory aids for practice between sessions: a single card, a calendar entry, phone reminders or a supporter who prompts, with consent.",
+    "Draw on life experience and past coping as strengths, and use the person's own examples.",
+    "Offer home visits, telehealth with simple set-up, or sessions at a familiar place when travel is hard."
+  ],
+  "interventionNotes": [
+    { "interventionId": "late-life-depression-programs", "note": "Structured programs such as problem-solving and home-based models built for later life and for care settings." },
+    { "interventionId": "problem-solving", "note": "Has trial support in older adults with executive difficulties; keep steps concrete and written." },
+    { "interventionId": "behavioral-activation", "note": "Choose activities that fit current health and mobility, and include social contact; grade gently." },
+    { "interventionId": "reminiscence-and-life-review", "note": "Structured life review can support meaning and mood, individually or in groups." },
+    { "interventionId": "cbti-sleep-restriction", "note": "Daytime sleepiness from restriction can raise falls risk; consider stimulus control first, set a less strict window, and check with the medical team." },
+    { "interventionId": "interoceptive-exposure", "note": "Screen for heart and lung conditions, balance and falls risk before exercises such as spinning or rapid breathing, and adapt them." },
+    { "interventionId": "social-connection-and-loneliness", "note": "Loneliness is a target in its own right; plan contact the person actually wants." }
+  ],
+  "measureNotes": [
+    "PHQ-9 items on sleep, energy, appetite and concentration can be raised by illness, pain or medicines; ask what each answer reflects and consider an older-adult depression scale as a link-out.",
+    "GAD-7 scores can understate worry that is expressed mainly as health concerns or physical tension.",
+    "Cognitive screens are affected by education, language, hearing, vision and mood; a low score is a reason to look further, not a conclusion."
+  ],
+  "measuresPending": [
+    { "name": "Geriatric Depression Scale (GDS, including the 15-item short form)", "url": "https://pubmed.ncbi.nlm.nih.gov/7183759/", "licenseKey": "GDS-15" },
+    { "name": "Mini-Cog brief cognitive screen", "url": "https://pubmed.ncbi.nlm.nih.gov/11113982/", "licenseKey": "Mini-Cog" },
+    { "name": "Montreal Cognitive Assessment (MoCA)", "url": "https://pubmed.ncbi.nlm.nih.gov/15817019/", "licenseKey": "MoCA" }
+  ],
+  "safetyNotes": [
+    "Globally, about a sixth of suicide deaths are among people aged 70 or over (WHO, 2026); ask about suicidal thoughts directly, even when the person seems settled.",
+    "Lethal means counseling should include firearms and stored medicines, which are often within reach in later life.",
+    "Signs of abuse, neglect or exploitation, or new confusion, call for prompt action under your local reporting rules and medical review."
+  ],
+  "cautions": [
+    "Do not let a family member or caregiver answer for a person who can speak for themselves, and do not share information beyond what the person has agreed."
+  ],
+  "legalIds": ["decision-making-capacity", "mandatory-reporting", "hipaa-privacy-basics"],
+  "ethicsIds": [],
+  "referralIds": ["area-agencies-on-aging-directory", "alzheimers-association", "long-term-care-ombudsman-finder", "va-caregiver-support-line", "988-lifeline"],
+  "referralKinds": ["older-adults-and-caregivers"],
+  "handoutIds": ["social-connection-plan", "activity-schedule", "problem-solving-steps", "sleep-habits-easy-read"],
+  "topicIds": ["later-life", "caregiving"],
+  "practiceIds": ["teach-back-and-plain-language", "involving-family-and-supports", "medication-induced-psychiatric-symptoms", "collaborative-care-and-pcbh", "mental-status-exam"],
+  "formulationIds": ["five-ps-biopsychosocial-spiritual"],
+  "linkOuts": [
+    { "title": "Elder Abuse", "publisher": "National Institute on Aging", "url": "https://www.nia.nih.gov/health/elder-abuse", "note": "Signs of abuse and neglect and where to report.", "lastVerified": "2026-11-27" },
+    { "title": "Dementia: assessment, management and support for people living with dementia and their carers (NG97)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng97", "lastVerified": "2026-11-27" },
+    { "title": "Mental health of older adults", "publisher": "World Health Organization", "url": "https://www.who.int/news-room/fact-sheets/detail/mental-health-of-older-adults", "lastVerified": "2026-11-27" }
+  ],
+  "sud": false,
+  "sources": [
+    { "title": "Guidelines for psychological practice with older adults", "publisher": "American Psychologist (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/24446841/", "year": 2014 },
+    { "title": "Problem-solving therapy and supportive therapy in older adults with major depression and executive dysfunction (Arean and colleagues)", "publisher": "American Journal of Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/20516155/", "year": 2010 },
+    { "title": "Community-integrated home-based depression treatment in older adults: a randomized controlled trial (Ciechanowski and colleagues)", "publisher": "JAMA (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/15069044/", "year": 2004 },
+    { "title": "Mental health of older adults (fact sheet)", "publisher": "World Health Organization", "url": "https://www.who.int/news-room/fact-sheets/detail/mental-health-of-older-adults", "year": 2026 },
+    { "title": "Dementia: assessment, management and support for people living with dementia and their carers (NG97)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng97", "year": 2018 }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

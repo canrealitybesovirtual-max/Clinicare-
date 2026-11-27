@@ -44,6 +44,7 @@
   },
   "trainingRequired": "Prolonged grief disorder therapy (Shear): training is recommended before using the full protocol, particularly structured retelling and imaginal procedures (for example, Columbia Center for Prolonged Grief workshops and consultation). Steps here are an overview.",
   "handoutIds": ["grief-and-loss", "values-compass", "activity-schedule"],
+  "orientationIds": ["cognitive-therapy", "interpersonal-therapies"],
   "sources": [
     { "title": "Treatment of complicated grief: a randomized controlled trial (Shear et al.)", "publisher": "JAMA", "url": "https://doi.org/10.1001/jama.293.21.2601", "year": 2005 },
     { "title": "Optimizing treatment of complicated grief: a randomized clinical trial (Shear et al.)", "publisher": "JAMA Psychiatry", "url": "https://doi.org/10.1001/jamapsychiatry.2016.0892", "year": 2016 },

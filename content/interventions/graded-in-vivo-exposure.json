@@ -34,7 +34,8 @@
     "Medical conditions that limit activity (heart, lung, mobility) may need medical input and adapted steps.",
     "As-needed sedating medication taken before exposure can act as a safety signal. Discuss with the prescriber rather than changing medication yourself.",
     "In-vivo exposure to trauma reminders is part of trauma-focused protocols such as prolonged exposure. For trauma-related avoidance, refer to or train in those protocols rather than improvising.",
-    "Watch for hidden avoidance during exposure (distraction, rituals, mental checking) and address it gently."
+    "Watch for hidden avoidance during exposure (distraction, rituals, mental checking) and address it gently.",
+    "Post-exertional malaise (for example, in ME/CFS or long COVID): avoiding activity may protect against a crash rather than reflect fear. Do not build ladders on increasing physical exertion; plan steps within the client's energy limits, coordinate with the medical team, and scale back after any crash (NICE NG206)."
   ],
   "culturalAdaptations": [
     "Choose steps that fit the client's real life and values (for example, attending a place of worship, a market, a family event, or the bus route they actually need).",
@@ -43,7 +44,8 @@
     "Family members often help with avoidance (driving, shopping for the client). With consent, involve them in the plan and gradually reduce this help.",
     "Home-based or telehealth sessions can help clients who cannot yet reach the clinic."
   ],
-  "handoutIds": ["exposure-ladder"],
+  "handoutIds": ["exposure-ladder", "facing-fears-what-to-expect"],
+  "orientationIds": ["behavior-therapy"],
   "sources": [
     {
       "title": "Generalised anxiety disorder and panic disorder in adults: management (CG113)",
@@ -84,6 +86,12 @@
       "publisher": "Behavior Therapy (DOI)",
       "url": "https://doi.org/10.1016/j.beth.2016.09.005",
       "year": 2016
+    },
+    {
+      "title": "Myalgic encephalomyelitis (or encephalopathy)/chronic fatigue syndrome: diagnosis and management (NG206)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng206",
+      "year": 2021
     }
   ],
   "license": "original",

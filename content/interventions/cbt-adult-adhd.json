@@ -38,6 +38,7 @@
     "focus-and-follow-through",
     "problem-solving-steps"
   ],
+  "orientationIds": ["cognitive-therapy", "behavior-therapy"],
   "sources": [
     {
       "title": "Cognitive behavioral therapy vs relaxation with educational support for medication-treated adults with ADHD and persistent symptoms (Safren et al.)",

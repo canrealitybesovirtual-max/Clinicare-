@@ -5,35 +5,43 @@
   "conditions": [
     "borderline-personality-disorder"
   ],
-  "evidenceLevel": "Outpatient MBT led to greater reductions in self-harm, suicide attempts and hospital admission than structured clinical management in a randomized trial (Bateman and Fonagy, 2009).",
+  "evidenceLevel": "In a randomized trial (Bateman and Fonagy, 2009), outpatient MBT reduced self-harm, suicide attempts and hospital admissions more than structured clinical management. APA Division 12 lists MBT for borderline personality disorder with modest research support. The 2020 Cochrane review (Storebø et al.) found MBT may reduce self-harm and suicidality compared with usual care, based on low-certainty evidence from seven trials; a 2025 review of 14 trials (Jørgensen et al.) found MBT promising but noted a high risk of bias and mostly European, female samples. The 2024 American Psychiatric Association guideline recommends (1B) a structured psychotherapy with research support that targets the core features of borderline personality disorder.",
   "minutes": {
     "min": 50,
     "max": 90
   },
-  "purpose": "Strengthens the client's ability to understand their own and others' minds (feelings, wishes, intentions), especially under emotional stress when this capacity tends to collapse. Delivered as individual and group therapy by trained clinicians; generalist clinicians can use a curious, not-knowing stance in everyday sessions.",
+  "purpose": "Strengthens the client's ability to understand their own and others' behavior in terms of mental states (feelings, wishes, beliefs, intentions), especially under emotional stress, when this capacity tends to collapse. Developed by Anthony Bateman and Peter Fonagy. When mentalizing breaks down, people may treat thoughts as facts ('he thinks I'm worthless, so I am'; psychic equivalence), talk about feelings in a detached way that changes nothing (pretend mode), or judge minds only by actions ('if she cared, she would have called'). Full MBT combines individual and group sessions, often for 12 to 18 months, delivered by a trained team. Any clinician can use the curious, not-knowing stance and simple stop-and-rewind moves in everyday sessions.",
   "steps": [
-    "Take a curious, not-knowing stance about the client's and others' mental states.",
-    "When emotions run high, slow down and explore what happened moment by moment.",
-    "Ask about what the client thinks others were feeling or intending, and consider alternatives.",
-    "Notice and gently pause when the client jumps to certainty about others' minds.",
-    "Refer to a trained MBT program for the full treatment."
+    "Take a curious, not-knowing stance about the client's and others' mental states: ask rather than tell, and show that minds are hard to know for certain.",
+    "Notice when mentalizing slips: thoughts treated as facts, detached talk about feelings that changes nothing, or judging minds only by actions.",
+    "When emotions run high, lower the temperature first (validate, slow down), because mentalizing is hardest at high arousal.",
+    "Stop, rewind and explore: pause, go back to the moment just before feelings changed, and look moment by moment at what each person may have felt and intended.",
+    "Ask what the client imagines others were feeling or intending, consider other possibilities, and wonder together without insisting on one answer.",
+    "Use the relationship in the room: when something shifts between you, name it, explore both perspectives, and own your part (for example, a misunderstanding you caused).",
+    "Refer to a trained MBT program for the full treatment (individual and group sessions, a written formulation and a crisis plan).",
+    "STEPPS, a 20-week skills and systems group, is a structured group option with trial support; link out and refer rather than delivering it without training."
   ],
   "script": [
     "Help me understand what was going on for you in that moment.",
     "What do you imagine she was feeling when she said that?",
     "Could there be another way of seeing it?",
-    "Let's rewind and go through it slowly."
+    "Hang on, can we stop and rewind? Something changed just then, and I want to understand it.",
+    "I think I may have misunderstood you a moment ago. What was that like for you?"
   ],
   "contraindications": [
     "Not for acute crisis without a safety plan; MBT works within a structured program.",
-    "Do not start during an active crisis, current suicidal risk, acute intoxication or withdrawal; stabilize first and share crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com."
+    "Do not start during an active crisis, current suicidal risk, acute intoxication or withdrawal; stabilize first and share crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com.",
+    "Pushing for insight when arousal is high can backfire; calm things first and keep the focus on the present.",
+    "Full MBT needs training and team supervision; the generic mentalizing moves fit any clinician's scope, the structured program does not."
   ],
   "culturalAdaptations": [
     "Cultural norms shape how people talk about inner states; use the client's own words for feelings and intentions.",
-    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language.",
+    "Norms about keeping inner experience private, and about whose view counts (for example, elders), vary; explore them rather than assuming one way of talking about minds."
   ],
-  "trainingRequired": "MBT: trained clinicians only for the full treatment; refer otherwise.",
-  "handoutIds": [],
+  "trainingRequired": "MBT: trained clinicians only for the full treatment (stepped MBT training through Anna Freud); generic mentalizing moves fit within general practice. Refer otherwise.",
+  "handoutIds": ["what-to-expect-in-therapy"],
+  "orientationIds": ["psychodynamic-therapy"],
   "sources": [
     {
       "title": "Randomized controlled trial of outpatient mentalization-based treatment versus structured clinical management (Bateman and Fonagy)",
@@ -46,6 +54,40 @@
       "publisher": "National Institute for Health and Care Excellence",
       "url": "https://www.nice.org.uk/guidance/cg78",
       "year": 2009
+    },
+    {
+      "title": "Mentalization-Based Treatment for Borderline Personality Disorder",
+      "publisher": "APA Division 12, Society of Clinical Psychology",
+      "url": "https://div12.org/treatment/mentalization-based-treatment-for-borderline-personality-disorder/"
+    },
+    {
+      "title": "Psychological therapies for people with borderline personality disorder (Storebø et al.)",
+      "publisher": "Cochrane Database of Systematic Reviews",
+      "url": "https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD012955.pub2/full",
+      "year": 2020
+    },
+    {
+      "title": "Mentalization-based therapy for borderline personality disorder: state-of-the-science and future directions (Jørgensen et al.)",
+      "publisher": "Clinical Psychology & Psychotherapy (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40659413/",
+      "year": 2025
+    },
+    {
+      "title": "The American Psychiatric Association practice guideline for the treatment of patients with borderline personality disorder (Keepers et al.)",
+      "publisher": "American Journal of Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39482953/",
+      "year": 2024
+    },
+    {
+      "title": "Mentalization-based treatment training",
+      "publisher": "Anna Freud",
+      "url": "https://www.annafreud.org/training/mentalization-based-treatment-training/"
+    },
+    {
+      "title": "Systems Training for Emotional Predictability and Problem Solving (STEPPS) for outpatients with borderline personality disorder: a randomized controlled trial (Blum et al.)",
+      "publisher": "American Journal of Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18281407/",
+      "year": 2008
     }
   ],
   "license": "original",

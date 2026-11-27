@@ -1,0 +1,66 @@
+{
+  "id": "dementia-caregiver-support",
+  "name": "Multicomponent support for dementia caregivers (REACH-style)",
+  "modality": "Problem-solving, stress management and support for family caregivers",
+  "conditions": ["adjustment-disorder", "major-depressive-disorder", "generalized-anxiety-disorder"],
+  "evidenceLevel": "In the REACH II randomized trial with 642 Hispanic or Latino, white and Black dementia caregivers, 12 in-home and telephone sessions over 6 months, tailored to each caregiver's risks, improved quality of life for Hispanic or Latino and white caregivers and for Black spouse caregivers, and lowered the rate of clinical depression (12.6% versus 22.7%) compared with a control group, without changing institutionalization at 6 months (Belle et al., 2006). A translation of the program into the VA health care system (REACH VA) achieved similar benefits for caregivers of veterans (Nichols et al., 2011).",
+  "minutes": { "min": 30, "max": 60 },
+  "purpose": "Caring for a family member with dementia can be deeply meaningful and also exhausting, isolating and frightening. Caregivers have high rates of depression, anxiety and health problems. Multicomponent support, modelled on programs such as REACH, combines several practical elements tailored to the caregiver's own risks: information about dementia, problem-solving for difficult behaviors and daily care, home safety, stress management, caregiver health and self-care, mood support, and building practical and social support, including respite. The client in this entry is the caregiver.",
+  "steps": [
+    "Ask about the caregiver's own health, sleep, mood, stress and support, and screen for depression and anxiety (the PHQ-9 and GAD-7 are built in).",
+    "Ask about safety for both people: driving, wandering, cooking and fire risks, medications, firearms in the home, falls, aggression, and any signs of neglect or abuse in either direction.",
+    "Pick one or two current care problems the caregiver wants help with (for example nighttime waking, repeated questions or refusal of care). Look at what happens before and after, and plan small changes to the situation, routine or way of responding.",
+    "Teach and practise a quick stress-management skill the caregiver can use in the moment, such as slow breathing or a brief pause routine.",
+    "Encourage caregiver self-care and their own medical checkups, and plan regular breaks and respite.",
+    "Help build support: family meetings, sharing tasks, caregiver support groups, and community services. In the US, these include the Alzheimer's Association 24/7 Helpline (1-800-272-3900), the VA Caregiver Support Line for caregivers of veterans (1-855-260-3274) and local aging services through the Eldercare Locator.",
+    "Plan ahead for care decisions (legal and financial planning, future care options) and refer to legal aid or social work when needed.",
+    "Meet regularly over several months, review what is working, and step up care if the caregiver's mood or safety worsens."
+  ],
+  "script": [
+    "Caring for someone with memory loss is a big job. How are you doing, yourself?",
+    "Which part of caring is hardest right now? Let's look at that together.",
+    "What usually happens just before that behavior starts? What have you tried so far?",
+    "Taking a break is not selfish. It helps you keep going. Who could give you a few hours off?",
+    "There are helplines and groups for caregivers that you can call any time. Would you like the numbers?"
+  ],
+  "contraindications": [
+    "If the caregiver is overwhelmed to the point of thinking about harming themselves or the person they care for, address safety at once. This app does not judge risk; you do. Crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com.",
+    "Signs of elder abuse or neglect, or danger at home (for example unsafe firearms access or driving), need action under local reporting rules and procedures.",
+    "Sudden changes in the person with dementia (new confusion, drowsiness, falls) can signal a medical problem such as infection. Advise prompt medical review.",
+    "Do not enter identifying details about the caregiver or the person with dementia into this app."
+  ],
+  "culturalAdaptations": [
+    "Expectations about family caregiving, duty and accepting outside help differ across cultures. Explore them before suggesting respite or residential care.",
+    "Dementia may carry stigma or be understood as normal aging or a spiritual matter in some communities. Start from the family's understanding.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the caregiver's language."
+  ],
+  "handoutIds": ["problem-solving-steps", "breathing-practice"],
+  "orientationIds": ["cognitive-therapy", "behavior-therapy"],
+  "sources": [
+    {
+      "title": "Enhancing the quality of life of dementia caregivers from different ethnic or racial groups: a randomized, controlled trial (REACH II; Belle et al.)",
+      "publisher": "Annals of Internal Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17116917/",
+      "year": 2006
+    },
+    {
+      "title": "Translation of a dementia caregiver support program in a health care system: REACH VA (Nichols et al.)",
+      "publisher": "Archives of Internal Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21357811/",
+      "year": 2011
+    },
+    {
+      "title": "24/7 Helpline",
+      "publisher": "Alzheimer's Association",
+      "url": "https://www.alz.org/help-support/resources/helpline"
+    },
+    {
+      "title": "Family and caregiver benefits (including the Caregiver Support Line)",
+      "publisher": "US Department of Veterans Affairs",
+      "url": "https://www.va.gov/family-and-caregiver-benefits/"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

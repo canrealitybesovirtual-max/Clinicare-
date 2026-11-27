@@ -1,0 +1,95 @@
+{
+  "id": "supportive-psychotherapy",
+  "name": "Supportive psychotherapy",
+  "modality": "Supportive psychotherapy (integrative)",
+  "conditions": [
+    "major-depressive-disorder",
+    "persistent-depressive-disorder",
+    "adjustment-disorder",
+    "generalized-anxiety-disorder",
+    "schizophrenia",
+    "bipolar-i-disorder"
+  ],
+  "evidenceLevel": "A meta-analysis of non-directive supportive therapy for adult depression (Cuijpers et al., 2012) found it effective compared with no treatment and only slightly less effective than other therapies, a gap that disappeared after controlling for researcher allegiance; a 2024 update reached similar conclusions. A Cochrane review of supportive therapy for schizophrenia (Buckley et al., 2015) found very low-quality evidence, no clear difference from standard care, and some outcomes favoring other psychosocial treatments such as CBT.",
+  "minutes": {
+    "min": 30,
+    "max": 50
+  },
+  "purpose": "A flexible, relationship-centered therapy that aims to ease distress, keep or restore functioning, and strengthen the client's own coping and self-esteem rather than change personality. The clinician is warm and active: building a strong alliance, offering realistic encouragement and information, giving advice when it helps, solving current problems, and supporting healthy ways of coping. Useful in crisis and adjustment, in chronic or severe illness, alongside medication, and when the client prefers a less structured approach.",
+  "steps": [
+    "Build the alliance: listen closely, reflect, and show genuine interest and respect. Agree on practical goals.",
+    "Assess current strengths, supports and coping, and what tends to make things better or worse.",
+    "Offer reassurance only when it is realistic and specific (for example, that the symptoms are treatable), never false promises.",
+    "Give clear information about the problem and its treatment, and advice when the client asks or when it may prevent harm.",
+    "Recognize real efforts and progress, and name healthier ways of coping the client already uses.",
+    "Help with current problems step by step (see the problem-solving entry), and connect the client with practical and social supports.",
+    "Keep the focus on the present; avoid deep exploration of painful material unless the client is stable and wants it.",
+    "Review goals and functioning regularly, and step up to a specific therapy or a higher level of care if needed."
+  ],
+  "script": [
+    "It makes sense that you feel worn down. You've been dealing with a lot.",
+    "You got here today even though it was hard. That matters.",
+    "What has helped you get through tough times before?",
+    "Can I share something many people in your situation find helpful?",
+    "Let's pick one thing to work on this week that would make life a little easier."
+  ],
+  "contraindications": [
+    "Supportive therapy alone may not be enough where a specific therapy has strong evidence (for example, PTSD, OCD or panic disorder); discuss those options.",
+    "Avoid reassurance that feeds checking or reassurance seeking in anxiety and OCD.",
+    "Give advice that respects the client's autonomy and values; avoid imposing personal views.",
+    "For psychosis or bipolar disorder, use it alongside medication and coordinated care, not instead of them.",
+    "This intervention does not assess or decide risk. If suicidal thoughts, self-harm or risk to others come up, pause and follow your setting's risk-assessment and safety-planning procedures. Keep crisis options visible: 988 Suicide & Crisis Lifeline (US, call or text), the local emergency number, and findahelpline.com for other countries."
+  ],
+  "culturalAdaptations": [
+    "Expectations of the helper vary: some clients want direct advice and an expert role, others prefer collaboration; ask and adjust.",
+    "Include the family and community supports the client values in the support map.",
+    "Validate realistic stressors such as discrimination, poverty and immigration stress, and link to practical help.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "faithIntegrated": {
+    "note": "When the client describes faith as a source of strength and asks to include it, the clinician can recognize and support religious coping the client already finds helpful (for example, prayer, sacred texts, worship or rituals), and add faith community members to the support map, in the client's own terms.",
+    "consentNote": "Offer only if the client raises faith or spirituality and asks to include it. Before starting, explain what the faith-integrated option involves, that it is optional, that the same intervention is available without religious content, and that the client can change their mind at any time; document informed consent in your own clinical record, not in this app. Follow the client's own tradition and words, and never introduce, impose, endorse or challenge beliefs (AACC Code of Ethics: consent before spiritual interventions, client-led integration; ACA Code of Ethics 2014, A.2 informed consent and A.4.b personal values)."
+  },
+  "handoutIds": [
+    "what-to-expect-in-therapy",
+    "problem-solving-steps"
+  ],
+  "orientationIds": [
+    "integrative-common-factors",
+    "psychodynamic-therapy"
+  ],
+  "sources": [
+    {
+      "title": "The efficacy of non-directive supportive therapy for adult depression: a meta-analysis (Cuijpers et al.)",
+      "publisher": "Clinical Psychology Review (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22466509/",
+      "year": 2012
+    },
+    {
+      "title": "Non-directive supportive therapy for depression: a meta-analytic review (Cuijpers et al.)",
+      "publisher": "Journal of Affective Disorders (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38211757/",
+      "year": 2024
+    },
+    {
+      "title": "Supportive therapy for schizophrenia (Buckley et al.)",
+      "publisher": "Cochrane Database of Systematic Reviews (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25871462/",
+      "year": 2015
+    },
+    {
+      "title": "AACC Code of Ethics",
+      "publisher": "American Association of Christian Counselors",
+      "url": "https://aacc.net/aacc-code-of-ethics/"
+    },
+    {
+      "title": "ACA Code of Ethics (2014) and ethics resources",
+      "publisher": "American Counseling Association",
+      "url": "https://www.counseling.org/resources/ethics",
+      "year": 2014
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

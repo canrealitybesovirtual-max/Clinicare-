@@ -1,0 +1,74 @@
+{
+  "id": "suicide-bereavement-support",
+  "name": "Support after a suicide loss (suicide bereavement and postvention)",
+  "modality": "Grief support and postvention after a suicide loss",
+  "conditions": ["prolonged-grief-disorder", "major-depressive-disorder", "adjustment-disorder"],
+  "suggestWith": ["bereavement"],
+  "evidenceLevel": "A review found that people bereaved by suicide face raised risks, including suicide in partners and in mothers who lost an adult child, psychiatric admission in bereaved parents, and depression in children who lost a parent, along with more rejection and shame than after other sudden deaths (Pitman et al., 2014). A systematic review of mostly weak controlled studies found some evidence of benefit for uncomplicated grief but not for complicated grief; the more promising approaches were supportive, therapeutic or educational, involved the bereaved person's social circle and ran over a series of sessions led by trained facilitators (Andriessen et al., 2019). The 2015 US national postvention guidelines from the National Action Alliance for Suicide Prevention describe suicide bereavement as distinct from other grief and call for timely, compassionate support. Evidence is limited, so this entry relies mainly on expert guidance.",
+  "minutes": { "min": 30, "max": 50 },
+  "purpose": "Losing someone to suicide often brings intense grief along with shock, guilt, anger, a search for why, stigma, and sometimes trauma from finding the person or hearing the details. Bereaved people may themselves have suicidal thoughts. Support focuses on making room for all of these reactions without judgment, checking safety, gently addressing guilt and the questions that have no full answer, connecting the client with others who have lived through a suicide loss, and watching for grief or trauma reactions that need specific treatment. The pace and focus follow the client.",
+  "steps": [
+    "Offer condolences and use the client's words for the person and the death. Ask what happened only as far as the client wants to share.",
+    "Ask directly and kindly about the client's own suicidal thoughts, now and since the loss. Use your setting's assessment and clinical judgment; this app does not judge risk. Make sure the client knows the crisis options.",
+    "Normalize common reactions, including guilt, anger, relief after a long struggle, and repeated why questions. Let the client explore them without rushing to reassure.",
+    "Gently explore guilt and responsibility: what the client knew then, what they could and could not control, and how hindsight changes the picture.",
+    "Ask about trauma reactions (intrusive images, avoidance, being on edge), especially if the client found the person, and about grief that stays intense and disabling over time. Offer or refer for trauma-focused or grief-focused therapy when these persist.",
+    "Offer connection with others bereaved by suicide, such as suicide loss support groups or peer visits, and help the client plan for hard dates like anniversaries, birthdays and holidays.",
+    "Consider practical and social needs: telling others, children in the family, workplace return, legal and financial matters.",
+    "Keep checking in over months, not just weeks. If you are a clinician who has lost a client to suicide, seek support and consultation for yourself too."
+  ],
+  "script": [
+    "I am so sorry. Would you like to tell me about them?",
+    "People who lose someone this way often feel guilt, anger, confusion and deep sadness, sometimes all at once. Whatever you feel is welcome here.",
+    "Sometimes after a loss like this, people have thoughts of ending their own life too. Have you had thoughts like that?",
+    "Many people keep asking why. We can make space for that question, even if it never has a full answer.",
+    "There are groups of people who have lost someone the same way. Some find it helps to talk with people who truly understand.",
+    "Anniversaries and holidays can be very hard. Let's plan for the next one together."
+  ],
+  "contraindications": [
+    "Bereavement by suicide raises suicide risk. Ask directly about suicidal thoughts at the start and over time. This app does not judge risk; you do. Crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com.",
+    "Avoid assigning or removing blame, speculating about the reasons for the death, or describing methods.",
+    "Do not push the client to describe the death in detail. If trauma reactions are present, use a trauma-focused approach at a pace the client chooses.",
+    "Support groups vary. Help the client find one with trained facilitators, and check how it feels after the first few meetings."
+  ],
+  "culturalAdaptations": [
+    "Religious and cultural views of suicide shape grief, funerals and stigma. Ask what the client's faith and community believe and how that affects them.",
+    "Some families keep the cause of death private. Respect the client's choices about who knows.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "handoutIds": ["after-a-suicide-loss", "grief-and-loss"],
+  "orientationIds": ["integrative-common-factors"],
+  "sources": [
+    {
+      "title": "Effects of suicide bereavement on mental health and suicide risk (Pitman et al.)",
+      "publisher": "The Lancet Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26360405/",
+      "year": 2014
+    },
+    {
+      "title": "Effectiveness of interventions for people bereaved through suicide: a systematic review of controlled studies of grief, psychosocial and suicide-related outcomes (Andriessen et al.)",
+      "publisher": "BMC Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30700267/",
+      "year": 2019
+    },
+    {
+      "title": "Responding to Grief, Trauma, and Distress After a Suicide: U.S. National Guidelines",
+      "publisher": "National Action Alliance for Suicide Prevention",
+      "url": "https://theactionalliance.org/resource/responding-grief-trauma-and-distress-after-suicide-us-national-guidelines",
+      "year": 2015
+    },
+    {
+      "title": "I've lost someone (suicide loss resources and support groups)",
+      "publisher": "American Foundation for Suicide Prevention",
+      "url": "https://afsp.org/ive-lost-someone/"
+    },
+    {
+      "title": "988 Suicide and Crisis Lifeline",
+      "publisher": "988 Suicide and Crisis Lifeline",
+      "url": "https://988lifeline.org/"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

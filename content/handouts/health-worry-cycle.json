@@ -1,0 +1,132 @@
+{
+  "id": "health-worry-cycle",
+  "title": "When Worry About Health Takes Over",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 15,
+  "intro": "It makes sense to care about your health. But for some people, worry about being sick takes up hours of the day, even after doctors say things look okay. This sheet explains how health worry can feed itself, and gives ways to break the cycle with your counselor. It takes about 15 minutes.",
+  "sections": [
+    {
+      "heading": "How the cycle works",
+      "body": "A normal body feeling, like a headache or a skipped heartbeat, catches your attention. You worry it means something serious. The worry makes you focus on your body even more, and stress itself causes more body feelings. To feel better, you check, search, or ask for reassurance. You feel relief for a short time. Then the doubt comes back, often stronger."
+    },
+    {
+      "heading": "Things that keep the cycle going",
+      "steps": [
+        "Checking your body often, like feeling for lumps or taking your pulse",
+        "Searching symptoms online",
+        "Asking family, friends, or doctors again and again if you are okay",
+        "Asking for more tests after normal results",
+        "Avoiding doctors, news, or anything that reminds you of illness",
+        "Avoiding exercise or activities because of body feelings"
+      ]
+    },
+    {
+      "heading": "Ways to break the cycle",
+      "steps": [
+        "Notice the urge to check, search, or ask. Give it a number from 0 to 10, and wait before you act.",
+        "Cut back slowly, one habit at a time, with a goal you set with your counselor.",
+        "Try an experiment. For example, skip checking for a day and see what happens to the worry. Write down what you expected and what really happened.",
+        "Set a limit on health searches, or take a break from them.",
+        "Plan regular check-ups with one doctor you trust, instead of extra visits when worry spikes.",
+        "Spend time on things that matter to you, even when the worry is there."
+      ]
+    },
+    {
+      "heading": "Working with your doctor",
+      "steps": [
+        "Agree on a schedule of regular visits.",
+        "Ask which changes really need a call or a visit.",
+        "Write your questions down before visits, and bring them."
+      ]
+    },
+    {
+      "heading": "When to see a doctor",
+      "body": "Health worry does not mean you will never be sick. New, different, or worsening symptoms should be checked by a doctor. Talk with your doctor and counselor about how to tell these apart."
+    }
+  ],
+  "practiceLog": {
+    "columns": [
+      "Day and time",
+      "Body feeling or worry",
+      "Worry (0-10)",
+      "What I did (checked, searched, asked, or waited)",
+      "Worry later (0-10)"
+    ],
+    "rows": 10
+  },
+  "safetyNote": "Safety first: For sudden chest pain, trouble breathing, or signs of a stroke, call 911 right away. If you have thoughts of hurting yourself or someone else, get help now. In the US, call or text 988, or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sud": false,
+  "es": {
+    "title": "Cuando la preocupación por la salud toma el control",
+    "intro": "Es normal cuidar su salud. Pero a algunas personas la preocupación por estar enfermas les quita horas del día, aunque los médicos digan que todo se ve bien. Esta hoja explica cómo la preocupación por la salud se alimenta sola, y da formas de romper el ciclo con su consejero. Toma unos 15 minutos.",
+    "sections": [
+      {
+        "heading": "Cómo funciona el ciclo",
+        "body": "Una sensación normal del cuerpo, como un dolor de cabeza o un latido saltado, le llama la atención. Le preocupa que sea algo grave. La preocupación hace que se fije aún más en su cuerpo, y el mismo estrés causa más sensaciones. Para sentirse mejor, se revisa, busca información o pide que le tranquilicen. Siente alivio por un rato. Luego la duda vuelve, muchas veces más fuerte."
+      },
+      {
+        "heading": "Lo que mantiene el ciclo",
+        "steps": [
+          "Revisarse el cuerpo seguido, como buscarse bultos o tomarse el pulso",
+          "Buscar síntomas en internet",
+          "Preguntar una y otra vez a familiares, amigos o médicos si está bien",
+          "Pedir más exámenes después de resultados normales",
+          "Evitar médicos, noticias o cualquier cosa que le recuerde una enfermedad",
+          "Evitar el ejercicio o las actividades por las sensaciones del cuerpo"
+        ]
+      },
+      {
+        "heading": "Formas de romper el ciclo",
+        "steps": [
+          "Note las ganas de revisarse, buscar o preguntar. Deles un número de 0 a 10, y espere antes de actuar.",
+          "Reduzca poco a poco, un hábito a la vez, con una meta que ponga con su consejero.",
+          "Haga una prueba. Por ejemplo, no se revise por un día y vea qué pasa con la preocupación. Anote lo que esperaba y lo que pasó de verdad.",
+          "Ponga un límite a las búsquedas sobre salud, o tome un descanso de ellas.",
+          "Planee citas regulares con un médico de confianza, en lugar de citas extra cuando sube la preocupación.",
+          "Dedique tiempo a lo que le importa, aunque la preocupación esté presente."
+        ]
+      },
+      {
+        "heading": "Cómo trabajar con su médico",
+        "steps": [
+          "Acuerden un horario de citas regulares.",
+          "Pregunte qué cambios de verdad necesitan una llamada o una cita.",
+          "Escriba sus preguntas antes de las citas, y llévelas."
+        ]
+      },
+      {
+        "heading": "Cuándo ver a un médico",
+        "body": "Preocuparse por la salud no quiere decir que nunca se va a enfermar. Los síntomas nuevos, distintos o que empeoran los debe revisar un médico. Hable con su médico y su consejero sobre cómo distinguirlos."
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Día y hora",
+        "Sensación o preocupación",
+        "Preocupación (0-10)",
+        "Qué hice (me revisé, busqué, pregunté o esperé)",
+        "Preocupación después (0-10)"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: Si tiene dolor de pecho de repente, problemas para respirar o señales de un derrame cerebral, llame al 911 de inmediato. Si tiene pensamientos de hacerse daño o de hacerle daño a otra persona, busque ayuda ahora. En EE. UU., llame o envíe un mensaje de texto al 988, o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "sources": [
+    {
+      "title": "Clinical and cost-effectiveness of cognitive behaviour therapy for health anxiety in medical patients: a multicentre randomised controlled trial (Tyrer et al.)",
+      "publisher": "The Lancet (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24139977/",
+      "year": 2014
+    },
+    {
+      "title": "Cognitive behavior therapy for health anxiety: systematic review and meta-analysis of clinical efficacy and health economic outcomes (Axelsson and Hedman-Lagerlöf)",
+      "publisher": "Expert Review of Pharmacoeconomics and Outcomes Research (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31859542/",
+      "year": 2019
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

@@ -12,7 +12,8 @@
  *   licensed clinician signs off, which the UI shows as "Not yet clinically reviewed").
  * - Every summary says the item is information, not legal advice.
  * - Every legal whatToDo list ends by telling the clinician to consult their licensing board or regulator,
- *   or a healthcare attorney.
+ *   or a healthcare attorney. Topics of kind "ethics-practice" follow the same rules and add questions to ask
+ *   yourself (reflection prompts, never a verdict or a risk decision).
  * - Verification honesty: lastVerified is the day the edition, dates and URLs were last checked online, and
  *   verification.method says how strong that check was:
  *     "official-page" = the official page itself was loaded and read;
@@ -27,6 +28,7 @@
  */
 import { z } from "zod";
 import { governance, isoDate, slug } from "./schemas";
+import { PendingMeasureSchema } from "./schemas-practice";
 
 /* ------------------------------------------------------------------ */
 /* Tags, professions, places                                           */
@@ -48,7 +50,7 @@ export const ETHICS_TAGS = [
 export const EthicsTag = z.enum(ETHICS_TAGS);
 export type EthicsTag = z.infer<typeof EthicsTag>;
 
-/** Legal topics use the ethics tags plus a few legal-only ones. */
+/** Legal topics use the ethics tags plus legal-only and ethics-in-practice ones. */
 export const LEGAL_TAGS = [
   ...ETHICS_TAGS,
   "privacy",
@@ -58,9 +60,28 @@ export const LEGAL_TAGS = [
   "licensure",
   "device-regulation",
   "international",
+  "boundaries",
+  "competence",
+  "documentation",
+  "capacity",
+  "forensic",
+  "emerging-treatments",
+  "ai",
+  "accessibility",
+  "group-work",
+  "workforce-safety",
 ] as const;
 export const LegalTag = z.enum(LEGAL_TAGS);
 export type LegalTag = z.infer<typeof LegalTag>;
+
+/**
+ * "legal": a law, regulation or court rule. "ethics-practice": a practice question that professional codes answer
+ * more than any statute (boundaries, competence, contested methods). Both keep the not-legal-advice summary and the
+ * final consult step; ethics-practice topics also carry questions to ask yourself.
+ */
+export const LEGAL_TOPIC_KINDS = ["legal", "ethics-practice"] as const;
+export const LegalTopicKind = z.enum(LEGAL_TOPIC_KINDS);
+export type LegalTopicKind = z.infer<typeof LegalTopicKind>;
 
 export const PROFESSIONS = [
   "counselor",
@@ -246,6 +267,7 @@ export const LegalTopicSchema = z
   .strictObject({
     id: slug,
     title: z.string().min(5).max(140),
+    kind: LegalTopicKind.default("legal"),
     jurisdiction: LegalJurisdiction,
     /** For INTL topics: the ISO-2 countries the topic covers (used to filter by the user's country). */
     appliesIn: z.array(Iso2).min(1).max(40).optional(),
@@ -253,7 +275,13 @@ export const LegalTopicSchema = z
     keyPoints: z.array(original(20, 700)).min(3).max(16),
     /** Practical steps. The LAST step always sends the clinician to their licensing board/regulator or a healthcare attorney. */
     whatToDo: z.array(original(15, 450)).min(2).max(10),
+    /** Questions to ask yourself before deciding (required for ethics-practice topics). Prompts, never a verdict. */
+    questions: z.array(original(15, 300)).min(3).max(8).optional(),
     officialLinks: z.array(OfficialLinkSchema).min(1).max(16),
+    /** Other hub topics to read alongside this one (ids in content/legal). */
+    seeAlso: z.array(slug).min(1).max(6).optional(),
+    /** Measures mentioned as link-outs only, each registered in content/licenses.json and never built in (G7). */
+    measuresPending: z.array(PendingMeasureSchema).min(1).max(4).optional(),
     requiredText: z.array(RequiredTextSchema).max(4).optional(),
     /** How this app is designed around the topic (e.g. zero-PHI, Part 2 banner, clinician-only suggestions). */
     appPositioning: original(20, 900).optional(),
@@ -284,8 +312,13 @@ export const LegalTopicSchema = z
     if (t.statusAsOf > t.lastVerified) {
       ctx.addIssue({ code: "custom", message: "statusAsOf is after lastVerified", path: ["statusAsOf"] });
     }
+    if (t.kind === "ethics-practice" && !t.questions) {
+      ctx.addIssue({ code: "custom", message: "ethics-practice topics need questions to ask yourself", path: ["questions"] });
+    }
+    if (t.seeAlso?.includes(t.id)) ctx.addIssue({ code: "custom", message: "seeAlso lists the topic itself", path: ["seeAlso"] });
     for (const i of duplicateIndices(t.whenRelevant)) ctx.addIssue({ code: "custom", message: "duplicate tag", path: ["whenRelevant", i] });
     for (const i of duplicateIndices(t.appliesIn ?? [])) ctx.addIssue({ code: "custom", message: "duplicate country", path: ["appliesIn", i] });
+    for (const i of duplicateIndices(t.seeAlso ?? [])) ctx.addIssue({ code: "custom", message: "duplicate topic", path: ["seeAlso", i] });
   });
 export type LegalTopic = z.infer<typeof LegalTopicSchema>;
 
@@ -293,7 +326,17 @@ export type LegalTopic = z.infer<typeof LegalTopicSchema>;
 /* Contextual prompts (screen 8: faith-based -> AACC consent, SUD -> Part 2, telehealth -> jurisdiction) */
 /* ------------------------------------------------------------------ */
 
-export const HUB_CONTEXTS = ["faith-based", "sud", "telehealth", "assessment", "duty-to-warn", "technology"] as const;
+export const HUB_CONTEXTS = [
+  "faith-based",
+  "sud",
+  "telehealth",
+  "assessment",
+  "duty-to-warn",
+  "technology",
+  "emerging-treatment",
+  "letters-and-forms",
+  "groups",
+] as const;
 export type HubContext = (typeof HUB_CONTEXTS)[number];
 
 export interface HubPrompt {
@@ -306,9 +349,9 @@ export interface HubPrompt {
 export const HUB_PROMPTS: Record<HubContext, HubPrompt> = {
   "faith-based": {
     message:
-      "Faith-integrated work: explain what you propose and get the client's informed consent first, follow the client's lead, document it, and never impose beliefs.",
+      "Faith-integrated work: explain what you propose and get the client's informed consent first, follow the client's lead, document it, and never impose beliefs. Exploring a conflict between faith and identity is the client's work to lead; changing sexual orientation or gender identity is never a goal.",
     ethicsIds: ["aacc-code-of-ethics", "aca-code-of-ethics"],
-    legalIds: [],
+    legalIds: ["conversion-practices"],
   },
   sud: {
     message:
@@ -332,13 +375,31 @@ export const HUB_PROMPTS: Record<HubContext, HubPrompt> = {
     message:
       "Threats of violence, abuse or imminent self-harm: duties differ by state and country. Follow your crisis protocol, consult, document, and call 988 or emergency services when needed.",
     ethicsIds: ["aca-code-of-ethics", "nasw-code-of-ethics"],
-    legalIds: ["duty-to-warn-protect", "mandatory-reporting", "crisis-and-involuntary-holds", "crisis-988-or-911"],
+    legalIds: ["duty-to-warn-protect", "mandatory-reporting", "crisis-and-involuntary-holds", "crisis-988-or-911", "erpo-and-firearm-transfer"],
   },
   technology: {
     message:
-      "Technology: tell clients how the platform protects their information, its risks, and the backup plan, and use only tools covered by a business associate agreement where HIPAA applies.",
+      "Technology: tell clients how the platform protects their information, its risks, and the backup plan, and use only tools covered by a business associate agreement where HIPAA applies. AI note-takers need the client's consent and your review of every draft.",
     ethicsIds: ["aca-code-of-ethics", "nasw-code-of-ethics", "naadac-ncc-ap-code-of-ethics"],
-    legalIds: ["informed-consent-technology", "hipaa-privacy-basics", "international-privacy"],
+    legalIds: ["informed-consent-technology", "ai-in-clinical-practice", "hipaa-privacy-basics", "international-privacy"],
+  },
+  "emerging-treatment": {
+    message:
+      "Emerging or limited-evidence approaches: explain the evidence, the usual first-line options and the risks as part of consent, use them only within your training, and never help a client obtain or use an illegal drug.",
+    ethicsIds: ["apa-ethical-principles-psychologists", "aca-code-of-ethics"],
+    legalIds: ["emerging-treatments-and-psychedelics", "contested-practices", "competence-and-scope-of-practice"],
+  },
+  "letters-and-forms": {
+    message:
+      "Letters, forms and court requests: as the treating clinician, report facts of treatment you can stand behind, leave forensic opinions such as custody, disability or fitness for duty to an independent evaluator, and share only what the client has authorized.",
+    ethicsIds: ["apa-ethical-principles-psychologists", "aca-code-of-ethics"],
+    legalIds: ["treating-and-forensic-roles", "subpoenas-and-court-orders", "documentation-and-medical-necessity"],
+  },
+  groups: {
+    message:
+      "Groups: you can promise your own confidentiality but not other members'. Agree group rules at the start, explain that limit before people join, and plan for privacy in online groups.",
+    ethicsIds: ["aca-code-of-ethics", "nasw-code-of-ethics"],
+    legalIds: ["group-confidentiality"],
   },
 };
 
@@ -390,6 +451,28 @@ export function needsHumanCheck(item: {
 }
 
 /**
+ * Links inside legal topics: every seeAlso id is a hub topic and, when `licenses` (content/licenses.json items) is
+ * given, every link-out measure is registered there and not confirmed, so it is never mistaken for a built-in (G7).
+ */
+export function legalTopicLinkProblems(
+  topics: readonly LegalTopic[],
+  licenses?: Readonly<Record<string, { status: string }>>,
+): string[] {
+  const ids = new Set(topics.map((t) => t.id));
+  const problems: string[] = [];
+  for (const t of topics) {
+    for (const id of t.seeAlso ?? []) if (!ids.has(id)) problems.push(`legal/${t.id}: seeAlso names unknown topic ${id}`);
+    if (!licenses) continue;
+    for (const m of t.measuresPending ?? []) {
+      const lic = licenses[m.licenseKey];
+      if (!lic) problems.push(`legal/${t.id}: pending measure ${m.name} has no licenses.json entry ${m.licenseKey} (G7)`);
+      else if (lic.status === "confirmed") problems.push(`legal/${t.id}: ${m.name} is confirmed in licenses.json; it is not a link-out`);
+    }
+  }
+  return problems;
+}
+
+/**
  * Cross-file checks for the content validator and tests. Returns error strings (empty = OK).
  * `files` maps each parsed item to the file name it came from, so id/file mismatches are caught.
  */
@@ -417,6 +500,7 @@ export function hubProblems(
     for (const id of p.ethicsIds) if (!codeIds.has(id)) problems.push(`HUB_PROMPTS.${ctxName}: unknown ethics id ${id}`);
     for (const id of p.legalIds) if (!topicIds.has(id)) problems.push(`HUB_PROMPTS.${ctxName}: unknown legal id ${id}`);
   }
+  problems.push(...legalTopicLinkProblems(topics.map((t) => t.item)));
   const part2 = topics.find((t) => t.item.id === "42-cfr-part-2")?.item;
   if (part2 && !(part2.requiredText ?? []).some((r) => /42 CFR part 2/i.test(r.text))) {
     problems.push("legal/42-cfr-part-2: missing the required Part 2 notice in requiredText");

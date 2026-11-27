@@ -1,0 +1,83 @@
+{
+  "id": "counselling-for-depression",
+  "name": "Counselling for depression (person-centred experiential): overview and referral",
+  "modality": "Humanistic - person-centred experiential",
+  "conditions": [
+    "major-depressive-disorder",
+    "persistent-depressive-disorder"
+  ],
+  "evidenceLevel": "NICE NG222 (2022) lists counselling that uses an empirically validated protocol developed specifically for depression as a first-line option for less severe depression (usually 8 sessions) and for more severe depression (usually 12 to 16 sessions). In the PRaCTICED non-inferiority trial in NHS Talking Therapies services (Barkham et al., 2021), person-centred experiential therapy was not inferior to CBT for moderate to severe depression at six months.",
+  "evidenceGrades": [
+    {
+      "body": "NICE",
+      "guideline": "Depression in adults: treatment and management (NG222)",
+      "year": 2022,
+      "conditionId": "major-depressive-disorder",
+      "population": "Adults with a new episode of less severe or more severe depression; counselling using a depression-specific protocol",
+      "direction": "for",
+      "strength": "first-line option for shared decision (tables 1 and 2)",
+      "url": "https://www.nice.org.uk/guidance/ng222/chapter/Recommendations"
+    }
+  ],
+  "minutes": {
+    "min": 50,
+    "max": 60
+  },
+  "purpose": "A manualized person-centred and emotion-focused therapy developed for NHS Talking Therapies (formerly IAPT) from the competences of humanistic counselling. The counsellor offers empathic attunement, acceptance and genuineness, helps the client reach and make sense of painful emotions, and supports change in a self-view shaped by depression (for example, harsh self-criticism or feeling worthless). The client sets the pace and direction. This entry is an overview for planning and referral.",
+  "steps": [
+    "Confirm fit and training. The protocol is delivered by counsellors trained against the BACP competence framework for this model; otherwise, refer.",
+    "Build a safe, accepting relationship and agree on a time frame and focus.",
+    "Empathic exploration (overview): follow the client's moment-to-moment experience, reflect feelings and meanings, and check understanding.",
+    "Emotional processing (overview): help the client slow down and stay with emotions as they arise, put them into words, and find what they mean and what they need.",
+    "Work with the self-view (overview): notice self-critical processes and the feelings beneath them, and support self-acceptance and new meanings.",
+    "Track mood with an agreed measure (for example, PHQ-9), review progress together, and plan for ending and next steps."
+  ],
+  "script": [
+    "This is your time. We'll go at your pace and focus on what feels most important to you.",
+    "It sounds like there's a lot of sadness under the tiredness. What is that like, right now?",
+    "When you call yourself useless, what happens inside?",
+    "What do you think that part of you needs?",
+    "Let's check how our work together is going for you."
+  ],
+  "contraindications": [
+    "When a client wants a structured, skills-based approach, offer alternatives such as CBT or behavioral activation.",
+    "For severe depression, psychotic features or high risk, coordinate a medication evaluation and a higher level of care.",
+    "Deep emotional work needs stability; pace it for clients with trauma histories, and consider a trauma-focused approach when trauma symptoms are central.",
+    "This intervention does not assess or decide risk. If suicidal thoughts, self-harm or risk to others come up, pause and follow your setting's risk-assessment and safety-planning procedures. Keep crisis options visible: 988 Suicide & Crisis Lifeline (US, call or text), the local emergency number, and findahelpline.com for other countries."
+  ],
+  "culturalAdaptations": [
+    "Comfort with talking openly about feelings varies; follow the client's preferences and use their own words for distress.",
+    "Some clients expect advice; explain the non-directive approach and check whether it fits what they hope for.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "trainingRequired": "Counselling for depression: trained counsellors only for the protocol (training against the BACP competence framework for person-centred experiential counselling for depression); steps here are overview-level only.",
+  "handoutIds": [
+    "what-to-expect-in-therapy",
+    "understanding-low-mood"
+  ],
+  "orientationIds": [
+    "humanistic-experiential-therapy"
+  ],
+  "sources": [
+    {
+      "title": "Depression in adults: treatment and management (NG222)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng222",
+      "year": 2022
+    },
+    {
+      "title": "Person-centred experiential therapy versus cognitive behavioural therapy delivered in the English Improving Access to Psychological Therapies service for the treatment of moderate or severe depression (PRaCTICED): a pragmatic, randomised, non-inferiority trial (Barkham et al.)",
+      "publisher": "Lancet Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34000240/",
+      "year": 2021
+    },
+    {
+      "title": "Person-centred experiential counselling for depression: competences and curriculum",
+      "publisher": "British Association for Counselling and Psychotherapy",
+      "url": "https://www.bacp.co.uk/events-and-resources/ethics-and-standards/competences-and-curricula/pce-cfd/"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

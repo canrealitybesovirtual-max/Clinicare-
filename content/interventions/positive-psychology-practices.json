@@ -1,0 +1,88 @@
+{
+  "id": "positive-psychology-practices",
+  "name": "Positive psychology practices (gratitude, strengths, savoring, kindness)",
+  "modality": "Positive psychology",
+  "conditions": [
+    "major-depressive-disorder",
+    "persistent-depressive-disorder",
+    "adjustment-disorder"
+  ],
+  "evidenceLevel": "In a randomized trial of online exercises (Seligman et al., 2005), 'three good things' and using signature strengths in a new way increased happiness and reduced depressive symptoms for up to six months. Meta-analyses (Bolier et al., 2013; Carr et al., 2021) found small to moderate effects on well-being and small effects on depression, smaller in higher-quality trials. Best used as an add-on to an evidence-based plan, not instead of one.",
+  "minutes": {
+    "min": 10,
+    "max": 20
+  },
+  "purpose": "Brief, structured exercises that build positive emotion, engagement, meaning and connection: noting three good things each day and why they happened, writing a gratitude letter, imagining a best possible future self, using personal strengths in new ways, savoring pleasant moments, and planned acts of kindness. They can lift mood, widen attention beyond problems, and support relapse prevention alongside other treatment.",
+  "steps": [
+    "Explain the purpose and fit: these exercises add to, rather than replace, treatment for depression or anxiety.",
+    "Choose one exercise that fits the client's preferences and energy, and start small (for example, three good things for one week).",
+    "Three good things: each evening, write three things that went well and why they happened.",
+    "Strengths: identify personal strengths from the client's own stories, then use one in a new way each day.",
+    "Gratitude letter or best possible self: write it, then decide whether to share it, deliver it or keep it.",
+    "Savoring and kindness: plan to slow down and notice a pleasant moment, or do one deliberate kind act, and note the effect.",
+    "Review what the client noticed and what felt forced, and decide whether to continue, switch or stop."
+  ],
+  "script": [
+    "This isn't about pretending things are fine. It's about training your attention to notice good moments too, even small ones.",
+    "Tonight, write down three things that went well today, and why you think they happened.",
+    "Think of a time you were at your best. What strengths were you using?",
+    "How did it feel to do that? Is it something you'd like to keep doing?"
+  ],
+  "contraindications": [
+    "Not a substitute for treatment of moderate to severe depression; combine with an evidence-based plan.",
+    "Avoid pressure toward positivity ('just be grateful'), which can feel invalidating; acknowledge grief, trauma, injustice and pain first.",
+    "Some exercises, such as best possible self, can increase distress when hopes feel out of reach; adjust or stop.",
+    "This intervention does not assess or decide risk. If suicidal thoughts, self-harm or risk to others come up, pause and follow your setting's risk-assessment and safety-planning procedures. Keep crisis options visible: 988 Suicide & Crisis Lifeline (US, call or text), the local emergency number, and findahelpline.com for other countries."
+  ],
+  "culturalAdaptations": [
+    "Praising oneself may feel uncomfortable in some cultures; use exercises focused on others, family or community if preferred.",
+    "Strengths can be collective, such as family or community resilience; include them.",
+    "Choose kind acts that fit the client's resources and community.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "faithIntegrated": {
+    "note": "If the client wishes, gratitude and savoring exercises can include practices from their own tradition, such as giving thanks or a moment of reflection, in their own words.",
+    "consentNote": "Offer only if the client raises faith or spirituality and asks to include it. Before starting, explain what the faith-integrated option involves, that it is optional, that the same intervention is available without religious content, and that the client can change their mind at any time; document informed consent in your own clinical record, not in this app. Follow the client's own tradition and words, and never introduce, impose, endorse or challenge beliefs (AACC Code of Ethics: consent before spiritual interventions, client-led integration; ACA Code of Ethics 2014, A.2 informed consent and A.4.b personal values)."
+  },
+  "handoutIds": [
+    "three-good-things",
+    "kind-self-talk"
+  ],
+  "orientationIds": [
+    "positive-psychology"
+  ],
+  "sources": [
+    {
+      "title": "Positive psychology progress: empirical validation of interventions (Seligman et al.)",
+      "publisher": "American Psychologist (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16045394/",
+      "year": 2005
+    },
+    {
+      "title": "Positive psychology interventions: a meta-analysis of randomized controlled studies (Bolier et al.)",
+      "publisher": "BMC Public Health (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23390882/",
+      "year": 2013
+    },
+    {
+      "title": "Effectiveness of positive psychology interventions: a systematic review and meta-analysis (Carr et al.)",
+      "publisher": "Journal of Positive Psychology (Taylor & Francis)",
+      "url": "https://doi.org/10.1080/17439760.2020.1818807",
+      "year": 2021
+    },
+    {
+      "title": "AACC Code of Ethics",
+      "publisher": "American Association of Christian Counselors",
+      "url": "https://aacc.net/aacc-code-of-ethics/"
+    },
+    {
+      "title": "ACA Code of Ethics (2014) and ethics resources",
+      "publisher": "American Counseling Association",
+      "url": "https://www.counseling.org/resources/ethics",
+      "year": 2014
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

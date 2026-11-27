@@ -40,7 +40,8 @@
     "note": "If the client brings faith or spirituality into the conversation and wants to explore it, reflect their spiritual language and meaning as carefully as any other experience, and let them lead how far to go. Do not add your own religious views.",
     "consentNote": "Offer only if the client raises faith or spirituality and asks to include it. Before starting, explain what a faith-integrated approach involves, that it is optional, that the same intervention is available without religious content, and that the client can change their mind at any time; document the client's informed consent. Follow the client's own tradition and words, and never introduce, impose, endorse or challenge beliefs (AACC Code of Ethics: consent before spiritual interventions, client-led integration; ACA Code of Ethics 2014, A.2 informed consent and A.4.b personal values)."
   },
-  "handoutIds": [],
+  "handoutIds": ["what-to-expect-in-therapy"],
+  "orientationIds": ["humanistic-experiential-therapy"],
   "sources": [
     { "title": "The necessary and sufficient conditions of therapeutic personality change (Rogers)", "publisher": "Journal of Consulting Psychology", "url": "https://doi.org/10.1037/h0045357", "year": 1957 },
     { "title": "Therapist empathy and client outcome: an updated meta-analysis (Elliott, Bohart, Watson and Murphy)", "publisher": "Psychotherapy (author manuscript, University of Strathclyde)", "url": "https://strathprints.strath.ac.uk/66200/", "year": 2018 },

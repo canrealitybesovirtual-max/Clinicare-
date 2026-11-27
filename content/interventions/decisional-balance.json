@@ -2,7 +2,7 @@
   "id": "decisional-balance",
   "name": "Decisional balance (weighing a change)",
   "modality": "Motivational interviewing / stages of change",
-  "conditions": ["alcohol-use-disorder", "generalized-anxiety-disorder", "specific-phobia", "adjustment-disorder", "hoarding-disorder", "cannabis-use-disorder"],
+  "conditions": ["alcohol-use-disorder", "generalized-anxiety-disorder", "specific-phobia", "adjustment-disorder", "hoarding-disorder", "cannabis-use-disorder", "gambling-disorder", "tobacco-use-disorder"],
   "evidenceLevel": "Emerging and mixed evidence. Decisional balance comes from Janis and Mann's (1977) model of decision making and was later used in stages-of-change work. Miller and Rose (2015) separate it from MI: because MI aims to draw out the client's own reasons for change, asking a client to argue against change can work against that goal in people who already feel two ways about it. No NICE or APA Division 12 recommendation for decisional balance as a stand-alone method was found. See Miller and Rose (2015) and SAMHSA TIP 35.",
   "minutes": { "min": 15, "max": 30 },
   "purpose": "A structured look at the benefits and costs of keeping things as they are and of making a change. It can help a client who has not yet thought about change see the whole picture, or help a clinician stay neutral when a choice truly belongs to the client (for example, choosing between two treatment options). Because spending time on reasons not to change can strengthen ambivalence, use the full four-part version with care and pair it with MI-style reflections of the client's own reasons for change.",
@@ -36,7 +36,8 @@
     "Respect cultural and religious views about alcohol and about discussing personal problems; ask how the client's community would see each option.",
     "Check that 'pros and cons' translates clearly. Some languages work better with framing such as 'what it gives you' and 'what it takes from you'."
   ],
-  "handoutIds": ["values-compass"],
+  "handoutIds": ["values-compass", "weighing-a-change"],
+  "orientationIds": ["humanistic-experiential-therapy", "integrative-common-factors"],
   "sources": [
     { "title": "Motivational interviewing and decisional balance: contrasting responses to client ambivalence (Miller and Rose)", "publisher": "Behavioural and Cognitive Psychotherapy (Cambridge University Press)", "url": "https://doi.org/10.1017/S1352465813000878", "year": 2015 },
     { "title": "TIP 35: Enhancing Motivation for Change in Substance Use Disorder Treatment (PEP19-02-01-003)", "publisher": "Substance Abuse and Mental Health Services Administration", "url": "https://store.samhsa.gov/product/tip-35-enhancing-motivation-change-substance-use-disorder-treatment/pep19-02-01-003", "year": 2019 },

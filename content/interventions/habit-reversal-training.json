@@ -3,7 +3,8 @@
   "name": "Habit reversal training (HRT) for hair pulling and skin picking",
   "modality": "Behavioral - habit reversal",
   "conditions": [
-    "body-dysmorphic-disorder"
+    "body-dysmorphic-disorder",
+    "body-focused-repetitive-behaviors"
   ],
   "evidenceLevel": "A meta-analysis (McGuire et al., 2014) found behavior therapy based on habit reversal had large effects for hair pulling. Habit reversal is also used within CBT for body dysmorphic disorder when skin picking or hair plucking is aimed at fixing a perceived flaw. It is first line for hair-pulling and skin-picking disorders, which are not yet in this knowledge base.",
   "minutes": {
@@ -33,7 +34,8 @@
     "Hair and skin carry cultural and religious meanings (head coverings, beards, cosmetics); adapt stimulus control to fit.",
     "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
   ],
-  "handoutIds": [],
+  "handoutIds": ["habit-reversal-practice"],
+  "orientationIds": ["behavior-therapy"],
   "sources": [
     {
       "title": "Treating trichotillomania: a meta-analysis of treatment effects and moderators for behavior therapy and serotonin reuptake inhibitors (McGuire et al.)",

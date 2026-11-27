@@ -1,0 +1,123 @@
+{
+  "id": "mindfulness-and-compassion-based-therapies",
+  "name": "Mindfulness-based and compassion-focused therapies",
+  "shortName": "Mindfulness and compassion",
+  "family": "contextual",
+  "summary": "Two related groups of approaches. Mindfulness-based programs (MBCT, MBSR, MBRP) teach decentered, present-moment awareness to interrupt habitual reactions. Compassion-focused therapy targets shame and self-criticism by building the capacity for warmth and soothing toward oneself.",
+  "keyConcepts": [
+    { "term": "Decentering", "meaning": "Seeing thoughts and feelings as passing mental events rather than facts or orders, which loosens the pull of rumination and habitual reactions." },
+    { "term": "Being and doing modes", "meaning": "MBCT contrasts a problem-solving doing mode, which can turn into rumination when applied to moods, with a being mode of direct, accepting awareness." },
+    { "term": "Relapse signature", "meaning": "The early warning signs and habitual patterns that come before a depressive relapse or a lapse into substance use, noticed through mindful awareness." },
+    { "term": "Three emotion systems", "meaning": "In compassion-focused therapy, a threat-protection system, a drive-reward system and a soothing-affiliation system; shame and self-criticism keep the threat system on with little access to soothing." },
+    { "term": "Compassionate self", "meaning": "A cultivated way of relating to oneself with warmth, wisdom and the courage to face suffering and act to ease it." },
+    { "term": "Fears of compassion", "meaning": "Resistance to receiving or giving compassion, often because warmth was linked to threat or loss in the past; worked with gently rather than pushed through." }
+  ],
+  "viewOfProblem": "In mindfulness-based approaches, problems are kept going by automatic, unaware reactions to inner experience: rumination that deepens low mood, avoidance that maintains anxiety, and automatic urges that lead to substance use. In compassion-focused therapy, shame and harsh self-criticism are understood as an overactive threat system that developed for protective reasons, often in environments with little warmth or safety.",
+  "viewOfChange": "Mindfulness-based programs build a regular practice of noticing experience with curiosity and without judgment, so the person can see early warning signs and choose a different response. Compassion-focused work strengthens the soothing system through breathing, imagery and compassionate attention and action, so that the person can meet distress and mistakes with warmth instead of attack, which makes change and approach feel safer.",
+  "therapistStance": "The mindfulness teacher embodies the practice, guides from personal experience and inquires with curiosity about what participants noticed, without fixing or interpreting. The CFT clinician is warm, steady and validating, explains the evolved-brain model without blame, and paces the work around fears of compassion.",
+  "sessionShape": [
+    "Open with a short guided practice.",
+    "Inquiry: explore what the client noticed, without judging it as right or wrong.",
+    "Link the practice to the client's patterns, such as rumination, urges or self-criticism.",
+    "Teach or rehearse one new practice or compassion exercise.",
+    "Agree on daily home practice and how to fit it into the client's routine."
+  ],
+  "goalStyle": "Goals describe practice and response patterns rather than the absence of difficult feelings: for example, complete a short daily practice on five days a week, use a three-step breathing space when early warning signs appear, or respond to a self-critical thought with a compassionate alternative several times a week. Write each goal with the client in their own words.",
+  "progressMarkers": [
+    "Frequency and length of home practice.",
+    "Noticing and responding to early warning signs, recorded by the client.",
+    "Client ratings of self-criticism and of the ability to self-soothe.",
+    "Relapse or lapse frequency over follow-up, and symptom measures such as the PHQ-9."
+  ],
+  "typicalTechniques": [
+    "mindfulness-based-cognitive-therapy",
+    "mindfulness-meditation",
+    "mindful-check-in",
+    "dbt-mindfulness-skills",
+    "urge-surfing",
+    "mindfulness-oriented-recovery-enhancement",
+    "compassion-focused-imagery",
+    "self-compassion-practice",
+    "yoga-mind-body"
+  ],
+  "relatedTechniques": ["act-present-moment-self-as-context", "emotion-focused-chair-work"],
+  "missingTechniques": [
+    { "name": "Soothing rhythm breathing", "note": "A slowed, steady breathing practice used in CFT to engage the soothing system; diaphragmatic breathing covers part of it." },
+    { "name": "Compassionate letter writing", "note": "Writing to oneself from a compassionate perspective about a current difficulty; overview only in CFT training." },
+    { "name": "Functional analysis of self-criticism", "note": "Exploring what the inner critic is trying to protect against before working with it." }
+  ],
+  "formulationIds": ["transdiagnostic-process-map", "act-flexibility"],
+  "models": [
+    {
+      "name": "Mindfulness-based cognitive therapy (MBCT)",
+      "summary": "An eight-week group program that combines mindfulness practice with elements of cognitive therapy to prevent depressive relapse in people with recurrent depression.",
+      "evidenceTier": "guideline-recommended",
+      "evidence": "NICE NG222 (2022) lists group mindfulness-based approaches for preventing relapse of depression; an individual patient data meta-analysis found MBCT lowered relapse risk compared with usual care (Kuyken et al., 2016).",
+      "trainingRequired": true
+    },
+    {
+      "name": "Mindfulness-based stress reduction and relapse prevention (MBSR, MBRP)",
+      "summary": "MBSR is an eight-week general stress program; MBRP adapts the format to notice and ride out cravings and high-risk moments after substance use treatment.",
+      "evidenceTier": "research-supported",
+      "evidence": "MBSR was noninferior to escitalopram for adults with anxiety disorders in a 2023 RCT (Hoge et al., 2023), and MBRP reduced drug use and heavy drinking at 12 months compared with treatment as usual (Bowen et al., 2014).",
+      "trainingRequired": true
+    },
+    {
+      "name": "Compassion-focused therapy (CFT)",
+      "summary": "Gilbert's approach for high shame and self-criticism, built on the three emotion systems, compassionate mind training and work with fears of compassion. Brief compassion practices can be used widely; the full therapy is for trained clinicians.",
+      "evidenceTier": "emerging",
+      "evidence": "A 2023 meta-analysis found CFT reduced self-criticism and increased self-soothing (Vidal and Alberti, 2023); compassion-based interventions show moderate effects, mostly in small trials (Kirby et al., 2017). CFT is not guideline-recommended as a stand-alone treatment.",
+      "trainingRequired": true
+    }
+  ],
+  "evidenceTier": "guideline-recommended",
+  "evidenceSummary": "MBCT has the strongest support in this group: NICE NG222 (2022) lists group mindfulness-based approaches for preventing depressive relapse, backed by individual patient data meta-analysis (Kuyken et al., 2016). MBSR and MBRP have supportive RCTs (Hoge et al., 2023; Bowen et al., 2014). Compassion-focused therapy and other compassion-based interventions have emerging evidence from mostly small trials (Kirby et al., 2017; Vidal and Alberti, 2023). Meditation can have unwanted effects for some people, and these need monitoring (Britton et al., 2021).",
+  "bestFit": [
+    "Recurrent depression in remission, to lower relapse risk (MBCT).",
+    "Stress, anxiety and rumination, and urges after substance use treatment (MBSR, MBRP).",
+    "High shame and harsh self-criticism that block other therapy work (CFT).",
+    "Clients interested in a regular practice and comfortable with group formats."
+  ],
+  "cautions": [
+    "Meditation can bring up trauma memories, panic, dissociation or depersonalization. Offer eyes-open, shorter and movement-based options, make every practice optional, and ground afterward.",
+    "MBCT is designed for people between episodes; during an acute, severe episode, prioritize first-line treatment.",
+    "Warmth and compassion can feel threatening to people with trauma histories; go slowly and normalize fears of compassion.",
+    "Do not present mindfulness as a religious practice or imply that a client's own faith should be replaced; ask how the practice sits with their beliefs.",
+    "If practice brings up thoughts of death or self-harm, stop, follow your risk procedures, and review crisis options: in the US call or text 988; elsewhere, the local emergency number or findahelpline.com."
+  ],
+  "whenToRefer": [
+    "Clients who want a full MBCT, MBSR or MBRP course: refer to a trained teacher or program.",
+    "Severe shame-based presentations with trauma or dissociation: consider a clinician trained in CFT or trauma-focused work."
+  ],
+  "trainingRequired": true,
+  "trainingNote": "Brief practices can be taught by clinicians with a regular personal practice. Leading a full MBCT, MBSR or MBRP program requires teacher training in that program, and full compassion-focused therapy requires CFT-specific training.",
+  "trainingPath": [
+    { "body": "Oxford Mindfulness Foundation", "url": "https://www.oxfordmindfulness.org/train/", "note": "MBCT teacher training pathway from foundation training to competency assessment." },
+    { "body": "The Compassionate Mind Foundation", "url": "https://www.compassionatemind.co.uk/", "note": "CFT training, resources and practitioner development." }
+  ],
+  "ethicsPrompts": [
+    { "prompt": "Practice within your training: run full mindfulness programs or compassion-focused therapy only after the teacher or clinician training they require, and keep your own regular practice.", "legalIds": ["competence-and-scope-of-practice"] },
+    { "prompt": "Group programs need agreed confidentiality rules and a plan for a participant who becomes distressed or at risk during practice.", "legalIds": ["group-confidentiality"] }
+  ],
+  "culturalNotes": [
+    "Mindfulness practices come from Buddhist and other contemplative traditions; be transparent about this, and offer secular framing or links to the client's own tradition, as the client prefers.",
+    "Some clients find eyes-closed stillness unsafe or culturally unfamiliar; movement, walking or eyes-open practices are valid alternatives.",
+    "Ideas of self-compassion vary; some clients relate more to compassion for family or community, or to a faith-based sense of grace, which can be the starting point."
+  ],
+  "handoutIds": ["mindful-check-in", "urge-surfing-log", "kind-self-talk", "three-emotion-systems"],
+  "relatedPracticeIds": ["group-formats", "unwanted-effects-of-therapy", "between-session-practice"],
+  "relatedPopulationIds": ["spiritually-integrated", "sexual-violence-and-trafficking-survivors"],
+  "sources": [
+    { "title": "Depression in adults: treatment and management (NG222)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng222", "year": 2022 },
+    { "title": "Efficacy of mindfulness-based cognitive therapy in prevention of relapse: an individual patient data meta-analysis from randomized trials (Kuyken et al.)", "publisher": "JAMA Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/27119968/", "year": 2016 },
+    { "title": "Mindfulness-based stress reduction vs escitalopram for the treatment of adults with anxiety disorders: a randomized clinical trial (Hoge et al.)", "publisher": "JAMA Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/36350591/", "year": 2023 },
+    { "title": "Relative efficacy of mindfulness-based relapse prevention, standard relapse prevention, and treatment as usual for substance use disorders: a randomized clinical trial (Bowen et al.)", "publisher": "JAMA Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/24647726/", "year": 2014 },
+    { "title": "Introducing compassion-focused therapy (Gilbert)", "publisher": "Advances in Psychiatric Treatment (Cambridge University Press)", "url": "https://www.cambridge.org/core/journals/advances-in-psychiatric-treatment/article/introducing-compassionfocused-therapy/ECBC8B7B87E90ABB58C4530CDEE04088", "year": 2009 },
+    { "title": "Effect of compassion-focused therapy on self-criticism and self-soothing: a meta-analysis (Vidal & Alberti)", "publisher": "British Journal of Clinical Psychology", "url": "https://doi.org/10.1111/bjc.12394", "year": 2023 },
+    { "title": "A meta-analysis of compassion-based interventions: current state of knowledge and future directions (Kirby, Tellegen & Steindl)", "publisher": "Behavior Therapy (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/29029675/", "year": 2017 },
+    { "title": "Defining and measuring meditation-related adverse effects in mindfulness-based programs (Britton et al.)", "publisher": "Clinical Psychological Science (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/35174010/", "year": 2021 }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

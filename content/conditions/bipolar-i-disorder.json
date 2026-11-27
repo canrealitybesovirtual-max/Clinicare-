@@ -134,6 +134,16 @@
       "note": "Hyperthyroidism, brain injury, seizures, multiple sclerosis, dementia and some infections can cause elation, irritability or disinhibition, especially with a first episode after age 40. Arrange a medical work-up."
     },
     {
+      "label": "Delirium (sudden confusion)",
+      "type": "medical",
+      "note": "Confusion, drowsiness or attention that comes and goes over hours or days, often with an infection, surgery, dehydration, alcohol or sedative withdrawal or a medicine change, points to delirium (ICD-10-CM F05; ICD-11 6D70). It needs same-day medical assessment, not a mental health formulation (NICE CG103)."
+    },
+    {
+      "label": "Mild or major neurocognitive disorder",
+      "type": "medical",
+      "note": "A gradual decline in memory, thinking, planning or daily functioning, especially in later life, calls for a cognitive evaluation through primary care or a memory service (ICD-10-CM G31.84, F06.7x or F03.9x; ICD-11 6D71 or 6D80-6D8Z). Low mood, apathy, anxiety or new psychotic symptoms can be early signs (NICE NG97)."
+    },
+    {
       "label": "Primary psychotic disorder",
       "type": "psychiatric",
       "note": "Hallucinations or delusions that persist when mood is level point toward a schizophrenia-spectrum or schizoaffective picture."
@@ -252,7 +262,8 @@
     "mood-routine-tracker",
     "staying-well-plan",
     "sleep-diary",
-    "safety-plan"
+    "safety-plan",
+    "mood-highs-and-lows-plan"
   ],
   "statIds": [
     "us-bipolar-past-year"
@@ -339,6 +350,18 @@
       "title": "AACC Code of Ethics",
       "publisher": "American Association of Christian Counselors",
       "url": "https://aacc.net/aacc-code-of-ethics/"
+    },
+    {
+      "title": "Delirium: prevention, diagnosis and management in hospital and long-term care (CG103)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg103",
+      "year": 2010
+    },
+    {
+      "title": "Dementia: assessment, management and support for people living with dementia and their carers (NG97)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng97",
+      "year": 2018
     }
   ],
   "license": "original",

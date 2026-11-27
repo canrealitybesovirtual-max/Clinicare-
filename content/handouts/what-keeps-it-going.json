@@ -1,0 +1,104 @@
+{
+  "id": "what-keeps-it-going",
+  "title": "What Keeps It Going",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 15,
+  "intro": "When a problem keeps coming back, it often runs in a loop. Something happens, you think and feel certain things, you do something to cope, and what happens next feeds the loop again. This sheet helps you and your counselor map your own loop, and find places where you could step out of it. It takes about 15 minutes to read and fill in.",
+  "sections": [
+    {
+      "heading": "The parts of the loop",
+      "steps": [
+        "What happened: a situation, a reminder, or a change inside you, like a memory or a body feeling.",
+        "Thoughts: what went through your mind? What did it mean to you?",
+        "Feelings: what emotions came up?",
+        "Body: what did you notice in your body?",
+        "Actions: what did you do, or avoid doing?",
+        "What happened next: what changed right away, and later? How did that set up the next time?"
+      ]
+    },
+    {
+      "heading": "An example",
+      "body": "What happened: a friend did not reply to a text. Thoughts: 'She's fed up with me.' Feelings: hurt and low. Body: heavy and tired. Actions: stayed home and did not reach out to anyone. What happened next: there was relief at not risking more hurt. But there was also more loneliness, which made the next unanswered text feel even worse."
+    },
+    {
+      "heading": "Find a way out",
+      "body": "Every part of the loop is a place where you can step in. Pick one part to try first.",
+      "steps": [
+        "Thoughts: ask, 'What else could this mean? What would I tell a friend?'",
+        "Feelings and body: try a skill that calms your body, like slow breathing or a walk.",
+        "Actions: try a small step that goes against the loop, like reaching out, staying, or doing one task.",
+        "What happens next: notice what changes when you do something different."
+      ]
+    },
+    {
+      "heading": "Look at your loop together",
+      "body": "You and your counselor can fill in the log together, or you can bring a few loops from your week. Over time, you may see the same loop show up in different parts of your life. That makes it easier to spot early."
+    }
+  ],
+  "practiceLog": {
+    "columns": ["What happened", "Thoughts", "Feelings", "Body", "What I did", "What happened next"],
+    "rows": 5
+  },
+  "safetyNote": "Safety first: If a loop leads to thoughts of hurting yourself or someone else, do not wait for your next visit. Talk to someone now. In the US, call or text 988 or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "es": {
+    "title": "Lo que lo mantiene",
+    "intro": "Cuando un problema vuelve una y otra vez, muchas veces funciona como un ciclo. Pasa algo, usted piensa y siente ciertas cosas, hace algo para sobrellevarlo, y lo que pasa después vuelve a alimentar el ciclo. Esta hoja le ayuda a usted y a su consejero a dibujar su propio ciclo, y a encontrar lugares donde podría salir de él. Leerla y llenarla toma unos 15 minutos.",
+    "sections": [
+      {
+        "heading": "Las partes del ciclo",
+        "steps": [
+          "Lo que pasó: una situación, algo que le recordó otra cosa, o un cambio dentro de usted, como un recuerdo o una sensación del cuerpo.",
+          "Pensamientos: ¿qué le pasó por la mente? ¿Qué significó para usted?",
+          "Sentimientos: ¿qué emociones aparecieron?",
+          "Cuerpo: ¿qué notó en su cuerpo?",
+          "Acciones: ¿qué hizo, o qué evitó hacer?",
+          "Lo que pasó después: ¿qué cambió enseguida, y más tarde? ¿Cómo preparó eso la próxima vez?"
+        ]
+      },
+      {
+        "heading": "Un ejemplo",
+        "body": "Lo que pasó: una amiga no contestó un mensaje. Pensamientos: 'Ya se cansó de mí'. Sentimientos: dolido y decaído. Cuerpo: pesado y cansado. Acciones: se quedó en casa y no buscó a nadie. Lo que pasó después: sintió alivio por no arriesgarse a más dolor. Pero también se sintió más solo, y eso hizo que el siguiente mensaje sin respuesta se sintiera todavía peor."
+      },
+      {
+        "heading": "Encuentre una salida",
+        "body": "Cada parte del ciclo es un lugar donde puede actuar. Escoja una parte para probar primero.",
+        "steps": [
+          "Pensamientos: pregúntese: '¿Qué más podría significar esto? ¿Qué le diría a un amigo?'",
+          "Sentimientos y cuerpo: pruebe algo que calme su cuerpo, como respirar despacio o caminar.",
+          "Acciones: pruebe un paso pequeño que vaya en contra del ciclo, como buscar a alguien, quedarse o hacer una tarea.",
+          "Lo que pasa después: fíjese en lo que cambia cuando hace algo distinto."
+        ]
+      },
+      {
+        "heading": "Miren juntos su ciclo",
+        "body": "Usted y su consejero pueden llenar el registro juntos, o usted puede traer algunos ciclos de su semana. Con el tiempo, puede ver que el mismo ciclo aparece en distintas partes de su vida. Así es más fácil notarlo a tiempo."
+      }
+    ],
+    "practiceLog": {
+      "columns": ["Lo que pasó", "Pensamientos", "Sentimientos", "Cuerpo", "Lo que hice", "Lo que pasó después"]
+    },
+    "safetyNote": "La seguridad es lo primero: Si un ciclo le lleva a pensamientos de hacerse daño o de hacerle daño a otra persona, no espere a su próxima cita. Hable con alguien ahora. En EE. UU., llame o envíe un mensaje de texto al 988 o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "sources": [
+    {
+      "title": "Good practice guidelines on the use of psychological formulation",
+      "publisher": "British Psychological Society, Division of Clinical Psychology",
+      "url": "https://www.bps.org.uk/guideline/good-practice-guidelines-use-psychological-formulation"
+    },
+    {
+      "title": "Collaborative Case Conceptualization: Working Effectively with Clients in Cognitive-Behavioral Therapy (Kuyken, Padesky and Dudley)",
+      "publisher": "Guilford Press",
+      "url": "https://www.guilford.com/books/Collaborative-Case-Conceptualization/Kuyken-Padesky-Dudley/9781462504480"
+    },
+    {
+      "title": "Psychotherapies (health topic)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/topics/psychotherapies"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

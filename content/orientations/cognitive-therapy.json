@@ -1,0 +1,151 @@
+{
+  "id": "cognitive-therapy",
+  "name": "Cognitive therapy and CBT (Beck model and REBT)",
+  "shortName": "Cognitive therapy",
+  "family": "cognitive",
+  "summary": "Distress is kept going by how events are interpreted. Client and clinician treat thoughts as testable ideas, check them against evidence and experiments, and practice more flexible ways of seeing and acting.",
+  "keyConcepts": [
+    { "term": "Automatic thoughts", "meaning": "Quick, often unnoticed thoughts or images that pop up in a situation and shape the emotion, body reaction and behavior that follow." },
+    { "term": "Intermediate beliefs", "meaning": "Rules, attitudes and assumptions (if I do X, then Y will happen) that link deeper beliefs to everyday thoughts and coping." },
+    { "term": "Core beliefs", "meaning": "Broad, long-standing views of the self, other people and the future, often formed early, that make some interpretations feel obviously true." },
+    { "term": "Collaborative empiricism", "meaning": "Client and clinician work as a team of investigators: beliefs are hypotheses to be tested together, not errors to be corrected by the clinician." },
+    { "term": "Guided discovery", "meaning": "Open, curious questions and summaries that help the client reach their own conclusions instead of being told what to think." },
+    { "term": "Maintenance cycle", "meaning": "A loop in which thoughts, feelings, body sensations and behaviors such as avoidance or safety behaviors keep the problem going." },
+    { "term": "REBT demands", "meaning": "In rational emotive behavior therapy, rigid musts and shoulds about self, others and life, and the awfulizing and self-downing that follow from them, are the main target." }
+  ],
+  "viewOfProblem": "Emotional problems are understood as understandable reactions to biased or rigid appraisals. A person who believes I am a failure will read a mixed event as proof of failure, feel low, withdraw, and so collect more evidence for the belief. Beliefs often developed for good reasons in earlier circumstances and may still contain some truth. Real hardship, discrimination and danger are acknowledged as real; the cognitive work targets the extra layer of meaning that makes them harder to cope with.",
+  "viewOfChange": "Change comes from noticing thoughts, stepping back from them, and checking them against evidence and new experience. Behavioral experiments are often more powerful than discussion, because acting differently produces fresh information. Over time the person builds more balanced, flexible beliefs and learns skills to use without the therapist. In REBT, change comes from disputing rigid demands and replacing them with flexible preferences and unconditional self-acceptance.",
+  "therapistStance": "Active, structured and collaborative. The clinician is warm and transparent, shares the formulation, explains the rationale for each step and asks for feedback. In Beck-style therapy the clinician avoids arguing and uses guided discovery. REBT clinicians are often more directive and openly disputational, which some clients find clarifying and others find confrontational; adjust to the client.",
+  "sessionShape": [
+    "Brief mood check, measure review if used, and a bridge from the last session.",
+    "Set a shared agenda of one or two items the client chooses as most important.",
+    "Review the between-session practice, including what got in the way.",
+    "Work on the main item: identify key thoughts, test them, or plan a behavioral experiment.",
+    "Agree on a new, specific practice task that follows from today's work.",
+    "Summarize, and ask the client what was helpful and what did not fit."
+  ],
+  "goalStyle": "Goals are specific, observable and time-bound, and are linked to the formulation: for example, reduce belief in a key thought from a rating of 80 to below 40, complete three planned experiments, or return to an avoided activity twice a week. Write each goal with the client in their own words.",
+  "progressMarkers": [
+    "Change in symptom measures such as the PHQ-9 or GAD-7 across sessions.",
+    "Belief ratings for key thoughts, from 0 to 100, before and after experiments.",
+    "Completion of between-session practice and what the client learned from it.",
+    "Return to valued or avoided activities, rated by the client."
+  ],
+  "typicalTechniques": [
+    "thought-record",
+    "behavioral-experiments",
+    "core-belief-work",
+    "rebt-disputation",
+    "problem-solving",
+    "worry-time",
+    "safety-behavior-reduction",
+    "catastrophic-misinterpretation-restructuring",
+    "social-anxiety-cognitive-techniques",
+    "imagery-rescripting",
+    "relapse-prevention-planning",
+    "metacognitive-therapy",
+    "rumination-focused-cbt",
+    "intolerance-of-uncertainty-cbt",
+    "stress-inoculation-training",
+    "unified-protocol",
+    "cbasp-situational-analysis",
+    "mindfulness-based-cognitive-therapy",
+    "schema-therapy",
+    "well-being-therapy",
+    "cognitive-processing-therapy",
+    "cognitive-therapy-for-ptsd",
+    "imagery-rehearsal-therapy",
+    "ocd-appraisal-cognitive-therapy",
+    "cbt-health-anxiety",
+    "cbt-bdd",
+    "cbt-hoarding",
+    "cbt-e-eating-disorders",
+    "eating-disorder-specialist-therapies",
+    "cbt-for-psychosis",
+    "cbt-adult-adhd",
+    "bipolar-relapse-signature-plan",
+    "grief-focused-therapy",
+    "cbt-and-act-for-chronic-pain",
+    "suicide-specific-psychotherapies",
+    "religiously-integrated-cbt",
+    "culturally-adapted-cbt",
+    "lgbtq-affirmative-cbt",
+    "guided-self-help",
+    "problem-management-plus",
+    "social-connection-and-loneliness",
+    "perinatal-depression-programs",
+    "late-life-depression-programs",
+    "dementia-caregiver-support"
+  ],
+  "relatedTechniques": ["behavioral-activation", "graded-in-vivo-exposure"],
+  "missingTechniques": [],
+  "formulationIds": ["cbt-three-level", "disorder-maintenance-models", "five-ps-biopsychosocial-spiritual", "transdiagnostic-process-map"],
+  "models": [
+    {
+      "name": "Beck cognitive therapy and CBT",
+      "summary": "The cognitive model of automatic thoughts, intermediate beliefs and core beliefs, delivered in a structured, collaborative format with guided discovery, behavioral experiments and between-session practice. Disorder-specific cognitive models exist for panic, social anxiety, PTSD, OCD, health anxiety and others.",
+      "evidenceTier": "guideline-recommended",
+      "evidence": "NICE NG222 (2022) lists individual and group CBT among the treatment options for depression, and NICE CG113 (2011) recommends CBT for generalized anxiety and panic disorder. A 2012 review of meta-analyses found strong overall support for CBT across anxiety and depression (Hofmann et al.).",
+      "trainingRequired": false
+    },
+    {
+      "name": "Rational emotive behavior therapy (REBT)",
+      "summary": "Ellis's ABC model: an activating event, the beliefs about it, and the emotional and behavioral consequences. Work focuses on disputing rigid demands, catastrophizing, low frustration tolerance and global self-rating, and on building flexible preferences and unconditional self-acceptance.",
+      "evidenceTier": "research-supported",
+      "evidence": "APA Division 12 lists REBT for depression as having modest research support. A 2018 meta-analysis of 82 studies found medium effects of REBT on a range of outcomes (David et al., 2018).",
+      "trainingRequired": false
+    }
+  ],
+  "evidenceTier": "guideline-recommended",
+  "evidenceSummary": "Cognitive therapy and CBT have the largest evidence base of any psychotherapy family. NICE NG222 (2022) includes CBT among first options for depression; NICE CG113 (2011) and CG159 (2013) recommend CBT for generalized anxiety, panic and social anxiety; disorder-specific cognitive therapies are recommended for PTSD in NICE NG116 (2018). Evidence is for the packages; single techniques such as a thought record have rarely been tested on their own. REBT has a smaller but supportive evidence base (David et al., 2018).",
+  "bestFit": [
+    "Clients who like structure, homework and a clear rationale, and who want skills they can keep using.",
+    "Depression, anxiety disorders, OCD, health anxiety and insomnia, where disorder-specific cognitive models are well tested.",
+    "Clients whose distress is driven by recurring interpretations they can learn to notice and test.",
+    "Settings that need time-limited, measurable work."
+  ],
+  "cautions": [
+    "Do not challenge realistic thoughts about abuse, discrimination, poverty or danger. Validate them and move to problem-solving, advocacy or safety planning.",
+    "Arguing with a thought, or pushing positive thinking, usually backfires. Keep to curious questions and experiments.",
+    "Severe low mood, poor concentration or limited literacy can make written work hard; simplify, work verbally, and lean on behavioral methods first.",
+    "With psychosis, mania or intoxication, defer standard restructuring and use specialist adaptations with supervision.",
+    "If cognitive work brings up hopelessness or thoughts of death, pause, follow your risk procedures, and review crisis options: in the US call or text 988; elsewhere, the local emergency number or findahelpline.com."
+  ],
+  "whenToRefer": [
+    "No meaningful change after an adequate trial: review the formulation, consult, and consider another approach or a step up in care.",
+    "Complex presentations such as psychosis, eating disorders with medical risk, or severe OCD, which need specialist CBT protocols."
+  ],
+  "trainingRequired": false,
+  "trainingNote": "Core cognitive techniques are part of most graduate training. Disorder-specific protocols, cognitive therapy for PTSD and CBT for psychosis benefit from specific training and supervision, and certification is available for clinicians who want independent review of their competence.",
+  "trainingPath": [
+    { "body": "Academy of Cognitive and Behavioral Therapies", "url": "https://academyofcbt.org/certification", "note": "Certification in CBT based on review of a case write-up and a rated session recording." },
+    { "body": "Beck Institute for Cognitive Behavior Therapy", "url": "https://beckinstitute.org/certification/", "note": "Training and tiered CBT certification with supervised, rated sessions." },
+    { "body": "Albert Ellis Institute", "url": "https://albertellis.org/product-category/trainings", "note": "Primary and advanced practica in REBT." }
+  ],
+  "ethicsPrompts": [
+    { "prompt": "Practice within your training: use disorder-specific protocols such as cognitive therapy for PTSD or CBT for psychosis only with the training and supervision they call for.", "legalIds": ["competence-and-scope-of-practice"] },
+    { "prompt": "Explain the structure, the between-session tasks and the expected length of treatment at the start, and check consent again when the plan changes.", "legalIds": ["treatment-plans-and-client-access"] }
+  ],
+  "culturalNotes": [
+    "Decide with the client what counts as a balanced thought; frame it in their own values and community norms rather than individualistic ones.",
+    "Some clients describe distress through body idioms or as thinking too much; use their words and their explanation of the problem.",
+    "Where openly questioning an elder's or community's view is sensitive, use gentle what-else-might-be-true questions rather than debate.",
+    "Culturally adapted CBT keeps the core ingredients while changing language, examples, metaphors and delivery; see the cultural adaptation guide."
+  ],
+  "handoutIds": ["thought-record", "behavioral-experiment-record", "thinking-traps", "what-keeps-it-going", "positive-data-log"],
+  "relatedPracticeIds": ["socratic-questioning", "session-structure", "between-session-practice", "goals-by-orientation", "outcome-monitoring"],
+  "relatedPopulationIds": ["cultural-adaptation", "spiritually-integrated"],
+  "sources": [
+    { "title": "Depression in adults: treatment and management (NG222)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng222", "year": 2022 },
+    { "title": "Generalised anxiety disorder and panic disorder in adults: management (CG113)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/cg113", "year": 2011 },
+    { "title": "Social anxiety disorder: recognition, assessment and treatment (CG159)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/cg159", "year": 2013 },
+    { "title": "Post-traumatic stress disorder (NG116)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng116", "year": 2018 },
+    { "title": "The efficacy of cognitive behavioral therapy: a review of meta-analyses (Hofmann et al.)", "publisher": "Cognitive Therapy and Research (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/23459093/", "year": 2012 },
+    { "title": "Rational Emotive Behavioral Therapy for Depression", "publisher": "APA Division 12, Society of Clinical Psychology", "url": "https://div12.org/?p=3230" },
+    { "title": "50 years of rational-emotive and cognitive-behavioral therapy: a systematic review and meta-analysis (David et al.)", "publisher": "Journal of Clinical Psychology (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/28898411/", "year": 2018 },
+    { "title": "Psychological Treatments (treatment index)", "publisher": "APA Division 12, Society of Clinical Psychology", "url": "https://div12.org/psychological-treatments/treatments/" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

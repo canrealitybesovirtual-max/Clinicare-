@@ -1,0 +1,124 @@
+{
+  "id": "interpersonal-therapies",
+  "name": "Interpersonal therapies (IPT, IPSRT and related models)",
+  "shortName": "Interpersonal",
+  "family": "interpersonal",
+  "summary": "Mood problems are linked to what is happening in the person's relationships and social roles now. Time-limited work focuses on one interpersonal problem area, such as grief, a dispute or a life transition, and on rebuilding support and routines.",
+  "keyConcepts": [
+    { "term": "Problem areas", "meaning": "IPT focuses on one or two areas: grief after a death, a dispute with someone important, a role transition, or long-standing difficulty forming and keeping relationships." },
+    { "term": "Interpersonal inventory", "meaning": "An early review of the important people in the client's life, what each relationship gives and costs, and what the client would like to change." },
+    { "term": "Sick role", "meaning": "Naming depression as a treatable condition that temporarily limits what the person can do, which reduces self-blame while keeping the expectation of recovery." },
+    { "term": "Social rhythms", "meaning": "In IPSRT, the daily timing of sleep, meals, work and social contact, which helps stabilize mood in bipolar spectrum conditions when kept regular." },
+    { "term": "Interpersonal consequences", "meaning": "In CBASP, the way a person's behavior in a specific situation shapes how others respond, and so whether they get what they wanted." }
+  ],
+  "viewOfProblem": "Low mood and its relapse are tied to stress and loss in relationships: a death, a conflict, a change of role, isolation, or a pattern of relating that leaves needs unmet. Whatever started the mood problem, these interpersonal events keep it going, and the mood in turn makes relationships harder. In bipolar conditions, disrupted routines and sleep add to the risk of episodes.",
+  "viewOfChange": "Change comes from working on the chosen problem area: mourning and rebuilding after loss, renegotiating or resolving a dispute, grieving the old role and mastering the new one, or building social skills and connections. Improving support and communication relieves symptoms, and symptom relief makes relationships easier. IPSRT adds regular daily rhythms; CBASP links specific behaviors to their interpersonal outcomes.",
+  "therapistStance": "Warm, active and hopeful. The clinician is an ally who validates, keeps the focus on current relationships rather than early history, helps the client analyze communication and try new approaches, and is clear about the time limit. The relationship with the clinician is supportive but is not usually interpreted.",
+  "sessionShape": [
+    "Ask how the week has gone and link mood changes to interpersonal events.",
+    "Review progress on the chosen problem area and any steps the client tried.",
+    "Explore a specific interaction in detail, including what was said and felt.",
+    "Consider options and rehearse a new way to communicate or act.",
+    "In IPSRT, review the social rhythm record and plan small steps toward regular timing.",
+    "Close with a reminder of the session count and the plan for ending."
+  ],
+  "goalStyle": "Goals are tied to the chosen problem area and stated in observable terms: for example, have one conversation with a partner about dividing childcare in the next two weeks, or keep wake time within one hour of the target on five days a week. Write each goal with the client in their own words.",
+  "progressMarkers": [
+    "Symptom measures such as the PHQ-9 across the time-limited course.",
+    "Specific changes in the problem area, rated by the client.",
+    "Social contact and support, recorded by the client.",
+    "Regularity of daily rhythms on the social rhythm record (IPSRT)."
+  ],
+  "typicalTechniques": [
+    "interpersonal-psychotherapy",
+    "interpersonal-social-rhythm-therapy",
+    "grief-focused-therapy",
+    "cbasp-situational-analysis",
+    "perinatal-depression-programs"
+  ],
+  "relatedTechniques": ["communication-skills-training", "assertiveness-training", "dynamic-interpersonal-therapy"],
+  "missingTechniques": [
+    { "name": "Interpersonal counseling (IPC)", "note": "A briefer, lower-intensity version of IPT for primary care; not yet a library entry." }
+  ],
+  "formulationIds": ["five-ps-biopsychosocial-spiritual", "transdiagnostic-process-map"],
+  "models": [
+    {
+      "name": "Interpersonal psychotherapy (IPT)",
+      "summary": "Klerman and Weissman's time-limited therapy, usually 12 to 16 sessions, organized around the four problem areas; group and low-resource formats exist.",
+      "evidenceTier": "guideline-recommended",
+      "evidence": "NICE NG222 (2022) includes IPT among options for depression. Meta-analyses support IPT alone and combined with medication (Cuijpers et al., 2011; 2016), and WHO publishes a group IPT manual for low-resource settings (2016).",
+      "trainingRequired": true
+    },
+    {
+      "name": "Interpersonal and social rhythm therapy (IPSRT)",
+      "summary": "IPT combined with tracking and stabilizing daily routines and sleep for bipolar spectrum conditions, alongside medication.",
+      "evidenceTier": "research-supported",
+      "evidence": "In a 2005 trial in bipolar I disorder, people who received IPSRT during the acute phase went longer without a new episode (Frank et al., 2005).",
+      "trainingRequired": true
+    },
+    {
+      "name": "Cognitive behavioral analysis system of psychotherapy (CBASP)",
+      "summary": "McCullough's treatment for chronic depression, which combines situational analysis of interpersonal episodes with disciplined personal involvement by the therapist.",
+      "evidenceTier": "research-supported",
+      "evidence": "In a 2000 trial with 681 adults with chronic depression, about half responded to CBASP or nefazodone alone, and the combination worked better than either (Keller et al., 2000).",
+      "trainingRequired": true
+    },
+    {
+      "name": "Grief-focused therapy for prolonged grief",
+      "summary": "Targeted treatment for persistent, impairing grief that combines interpersonal, motivational and exposure-based elements, such as prolonged grief disorder therapy.",
+      "evidenceTier": "research-supported",
+      "evidence": "In a 2005 RCT, complicated grief treatment led to more response than IPT alone (Shear et al., 2005).",
+      "trainingRequired": true
+    }
+  ],
+  "evidenceTier": "guideline-recommended",
+  "evidenceSummary": "IPT is one of the best-studied therapies for depression: NICE NG222 (2022) includes it among options for depression, and meta-analyses support it alone and with medication (Cuijpers et al., 2011; 2016). WHO adapted it for group use in low-resource settings (2016). IPSRT has RCT support as an adjunct in bipolar I disorder (Frank et al., 2005), CBASP in chronic depression (Keller et al., 2000), and grief-focused treatment for prolonged grief (Shear et al., 2005). For PTSD, one RCT found IPT not meaningfully inferior to prolonged exposure (Markowitz et al., 2015).",
+  "bestFit": [
+    "Depression linked to a clear loss, conflict, role change or isolation.",
+    "Perinatal depression and other mood problems around life transitions.",
+    "Bipolar spectrum conditions, as an adjunct to medication (IPSRT).",
+    "Clients who prefer to talk about relationships and current life rather than thought records or exposure."
+  ],
+  "cautions": [
+    "In a dispute involving violence or coercion, put safety first; joint sessions or renegotiation are not appropriate until risk is assessed.",
+    "The sick role is time-limited and paired with active steps; do not let it become a reason to withdraw from all roles.",
+    "Strict social rhythm targets can be unrealistic for shift workers, caregivers or people with unstable housing; adapt them to the client's real life.",
+    "In bipolar conditions, coordinate with the prescriber and watch for early signs of mania, which need prompt medical review.",
+    "If grief or relationship loss brings thoughts of death or self-harm, follow your risk procedures and review crisis options: in the US call or text 988; elsewhere, the local emergency number or findahelpline.com."
+  ],
+  "whenToRefer": [
+    "Prolonged grief that has not eased with standard support: refer to a clinician trained in grief-focused treatment.",
+    "Bipolar disorder without medication management: refer for psychiatric evaluation alongside therapy."
+  ],
+  "trainingRequired": true,
+  "trainingNote": "Each interpersonal model is a defined, time-limited protocol. Formal training and supervised cases are recommended before delivering IPT, IPSRT, CBASP or grief-focused therapy; ISIPT offers therapist certification.",
+  "trainingPath": [
+    { "body": "International Society of Interpersonal Psychotherapy (ISIPT)", "url": "https://interpersonalpsychotherapy.org/therapist-certification/", "note": "Therapist certification in IPT: introductory training plus supervised cases." },
+    { "body": "Center for Prolonged Grief, Columbia University", "url": "https://prolongedgrief.columbia.edu/for-clinicians/", "note": "Training and consultation in prolonged grief disorder therapy." }
+  ],
+  "ethicsPrompts": [
+    { "prompt": "Practice within your training: deliver the full IPT, IPSRT, CBASP or grief protocols only after training and supervised cases.", "legalIds": ["competence-and-scope-of-practice"] },
+    { "prompt": "When a family member or partner joins a session, agree in advance with the client what will and will not be shared.", "legalIds": ["hipaa-privacy-basics"] }
+  ],
+  "culturalNotes": [
+    "Relationships, roles and the meaning of grief differ across cultures; build the interpersonal inventory from the client's own view of family, kin and community.",
+    "In collective cultures, a role transition may involve the whole family; consider whether including relatives in some sessions would help, with the client's consent.",
+    "Mourning practices and expected timelines vary widely; do not treat culturally normal grief as a problem."
+  ],
+  "handoutIds": ["my-relationships-map", "mood-routine-tracker", "grief-and-loss", "grief-rebuilding-log"],
+  "relatedPracticeIds": ["involving-family-and-supports", "goals-by-orientation", "ending-therapy-and-boosters"],
+  "relatedPopulationIds": ["perinatal", "older-adults"],
+  "sources": [
+    { "title": "Depression in adults: treatment and management (NG222)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng222", "year": 2022 },
+    { "title": "Interpersonal psychotherapy for depression: a meta-analysis (Cuijpers et al.)", "publisher": "American Journal of Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/21362740/", "year": 2011 },
+    { "title": "Interpersonal psychotherapy for mental health problems: a comprehensive meta-analysis (Cuijpers et al.)", "publisher": "American Journal of Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/27032627/", "year": 2016 },
+    { "title": "Group Interpersonal Therapy (IPT) for Depression (WHO generic field-trial version 1.0)", "publisher": "World Health Organization", "url": "https://www.who.int/publications/i/item/group-interpersonal-therapy-for-depression", "year": 2016 },
+    { "title": "Two-year outcomes for interpersonal and social rhythm therapy in individuals with bipolar I disorder (Frank et al.)", "publisher": "Archives of General Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/16143731/", "year": 2005 },
+    { "title": "A comparison of nefazodone, the cognitive behavioral-analysis system of psychotherapy, and their combination for the treatment of chronic depression (Keller et al.)", "publisher": "New England Journal of Medicine (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/10816183/", "year": 2000 },
+    { "title": "Treatment of complicated grief: a randomized controlled trial (Shear et al.)", "publisher": "JAMA (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/15928281/", "year": 2005 },
+    { "title": "Is exposure necessary? A randomized clinical trial of interpersonal psychotherapy for PTSD (Markowitz et al.)", "publisher": "American Journal of Psychiatry", "url": "https://ajp.psychiatryonline.org/doi/10.1176/appi.ajp.2014.14070908", "year": 2015 }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

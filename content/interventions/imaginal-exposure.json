@@ -42,6 +42,7 @@
     "exposure-ladder",
     "worry-log"
   ],
+  "orientationIds": ["behavior-therapy"],
   "sources": [
     {
       "title": "Worry exposure versus applied relaxation in the treatment of generalized anxiety disorder (Hoyer et al.)",

@@ -2,7 +2,7 @@
   "id": "cbti-stimulus-control",
   "name": "CBT-I: Stimulus control",
   "modality": "CBT for insomnia (CBT-I) - behavioral component",
-  "conditions": ["insomnia-disorder", "major-depressive-disorder", "generalized-anxiety-disorder", "ptsd"],
+  "conditions": ["insomnia-disorder", "major-depressive-disorder", "generalized-anxiety-disorder", "ptsd", "sedative-hypnotic-use-disorder"],
   "evidenceLevel": "The AASM 2021 guideline strongly recommends multicomponent CBT-I for chronic insomnia in adults and gives stimulus control a conditional recommendation as a single-component therapy (Edinger et al., 2021). The American College of Physicians (2016) recommends CBT-I as the initial treatment for chronic insomnia disorder (strong recommendation, moderate-quality evidence). The 2025 VA/DoD guideline on chronic insomnia and obstructive sleep apnea recommends offering CBT-I. Stimulus control works best as part of full CBT-I.",
   "minutes": { "min": 20, "max": 40 },
   "purpose": "Stimulus control, first described by Richard Bootzin, aims to re-link the bed and bedroom with feeling sleepy and sleeping, rather than with lying awake, worrying and frustration. The client uses the bed only for sleep and sex, goes to bed only when sleepy, gets up and does something quiet in dim light when unable to sleep instead of lying awake, returns only when sleepy, keeps the same wake-up time every day, and avoids daytime naps (or keeps them short and early, if agreed). It is usually combined with sleep restriction, cognitive strategies and sleep education in CBT-I. Insomnia often continues alongside depression, anxiety and PTSD and can be treated directly.",
@@ -44,7 +44,8 @@
     "note": "If the client wishes, a short prayer, reading or devotional practice can be part of the calm out-of-bed activity or the wind-down routine, chosen by the client. If night prayer is part of the client's practice, build it into the sleep schedule rather than treating it as a problem.",
     "consentNote": "Offer only if the client raises faith or spirituality and asks to include it. Before starting, explain what the faith-integrated option involves, that it is optional, that the same intervention is available without religious content, and that the client can change their mind at any time; document informed consent. Follow the client's own tradition and words, and never introduce, impose, endorse or challenge beliefs (AACC Code of Ethics: informed consent before spiritual interventions, client-led integration; ACA Code of Ethics 2014, A.2 informed consent and A.4.b personal values)."
   },
-  "handoutIds": ["sleep-diary", "sleep-habits"],
+  "handoutIds": ["sleep-diary", "sleep-habits", "how-sleep-works", "racing-mind-at-bedtime"],
+  "orientationIds": ["behavior-therapy"],
   "sources": [
     { "title": "Behavioral and psychological treatments for chronic insomnia disorder in adults: an American Academy of Sleep Medicine clinical practice guideline (Edinger et al.)", "publisher": "Journal of Clinical Sleep Medicine (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/33164742/", "year": 2021 },
     { "title": "Behavioral and psychological treatments for chronic insomnia disorder in adults: an AASM systematic review, meta-analysis and GRADE assessment", "publisher": "Journal of Clinical Sleep Medicine (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/33164741/", "year": 2021 },

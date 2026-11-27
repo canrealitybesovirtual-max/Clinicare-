@@ -1,5 +1,5 @@
 {
-  "version": "1.4.0",
+  "version": "1.5.0",
   "symptoms": [
     {
       "id": "panic-attacks-unexpected",
@@ -1789,7 +1789,10 @@
         "mass shooting",
         "hurricane",
         "earthquake",
-        "wildfire"
+        "wildfire",
+        "abused throughout childhood",
+        "abused in childhood",
+        "childhood trauma"
       ]
     },
     {
@@ -3916,6 +3919,442 @@
         "meth|cocaine|coke|crack ... despite|even though|messing up|hurting my|causing problems|cost me my job|lost my job",
         "chest pain|paranoid|heart racing ... after meth|after coke|after cocaine|after crack|on meth|on coke"
       ]
+    },
+    {
+      "id": "recent-trauma-past-month",
+      "label": "Context: the traumatic event happened within the past month, so reactions are still in the early phase that often eases with time and support (record when, not the details)",
+      "clientLabel": "A very scary event in the last few weeks",
+      "category": "context",
+      "synonyms": [
+        "recent trauma",
+        "recent traumatic event",
+        "acute stress reaction",
+        "acute trauma reaction",
+        "trauma last week",
+        "traumatized last week",
+        "car accident|motorcycle accident|serious accident|bad accident|the accident|car crash|was in a crash|was assaulted|got assaulted|was attacked|got attacked|was robbed|was mugged|was raped|the shooting|a shooting|house fire|the fire|the hurricane|hurricane|earthquake|the flood|the explosion|the assault ... last week|this week|yesterday|days ago|a week ago|one week ago|two weeks ago|2 weeks ago|three weeks ago|3 weeks ago|a few weeks ago|few weeks ago|earlier this month",
+        "last week|yesterday|days ago|a week ago|two weeks ago|2 weeks ago|three weeks ago|3 weeks ago|a few weeks ago|earlier this month ... was in a car accident|was in a crash|was assaulted|was attacked|was robbed|was mugged|was raped|witnessed a shooting|lost her home in a fire|lost his home in a fire",
+        "since the accident|since the crash|since the assault|since the attack|since the shooting|since the fire|since the flood|since the hurricane ... last week|days ago|a week ago|two weeks ago|2 weeks ago|three weeks ago|3 weeks ago|a few weeks ago"
+      ]
+    },
+    {
+      "id": "sedative-use-pattern",
+      "label": "Context: regular use of benzodiazepines, z-drugs such as zolpidem, or other sedatives, prescribed or not (record the medicine, how often and who prescribes it; regular use alone is not a disorder)",
+      "clientLabel": "Taking nerve pills or sleeping pills most days",
+      "category": "behavioral",
+      "synonyms": [
+        "xanax every day",
+        "takes xanax daily",
+        "klonopin every day",
+        "ativan every day",
+        "valium every day",
+        "benzos every day",
+        "daily benzos",
+        "daily benzodiazepine use",
+        "long term benzodiazepine use",
+        "long term benzo use",
+        "on benzos for years",
+        "on xanax for years",
+        "on klonopin for years",
+        "ambien every night",
+        "zolpidem every night",
+        "xanax|klonopin|ativan|valium|ambien|zolpidem|benzos|benzo|lorazepam|alprazolam|clonazepam|diazepam|sleeping pills|nerve pills ... every day|every night|daily|nightly|for years|several times a day|most days|most nights"
+      ]
+    },
+    {
+      "id": "sedative-impaired-control",
+      "label": "Impaired control over sedatives: taking more, or more often, than prescribed, running out early, getting extra from friends or the street, or not managing to cut down",
+      "clientLabel": "Hard to cut back on nerve pills or sleeping pills",
+      "category": "behavioral",
+      "synonyms": [
+        "addicted to xanax",
+        "addicted to benzos",
+        "addicted to sleeping pills",
+        "hooked on xanax",
+        "hooked on benzos",
+        "buys xanax",
+        "buying xanax",
+        "street xanax",
+        "xanax bars from a friend",
+        "benzos from a friend",
+        "gets benzos from friends",
+        "early refills of xanax",
+        "runs out of xanax early",
+        "runs out of her benzos early",
+        "xanax|klonopin|ativan|valium|ambien|zolpidem|benzos|benzo|sleeping pills|lorazepam|alprazolam|clonazepam|diazepam ... more than prescribed|than prescribed|more than my doctor said|runs out early|ran out early|run out early|early refills|out of control|more than i planned",
+        "cant stop taking|cant get off|cant come off|cant quit taking|tried to taper off|tried to taper|tried to come off|tried to get off|failed to taper|keeps going back on|takes extra|taking extra|took extra ... xanax|klonopin|ativan|valium|ambien|zolpidem|benzos|benzodiazepines|sleeping pills|lorazepam|alprazolam|clonazepam|diazepam"
+      ]
+    },
+    {
+      "id": "sedative-withdrawal-signs",
+      "label": "Sedative withdrawal or rebound: anxiety, poor sleep, tremor, sweating or agitation between doses, when a dose is late, or when cutting down (stopping suddenly can cause seizures)",
+      "clientLabel": "Shaky, anxious or unable to sleep when a nerve or sleeping pill wears off",
+      "category": "safety",
+      "redFlag": "withdrawal",
+      "synonyms": [
+        "rebound anxiety",
+        "rebound insomnia",
+        "interdose withdrawal",
+        "withdrawal between doses",
+        "xanax withdrawal",
+        "klonopin withdrawal",
+        "ativan withdrawal",
+        "ambien withdrawal",
+        "zolpidem withdrawal",
+        "sleeping pill withdrawal",
+        "withdrawal from sleeping pills",
+        "anxious|shaky|shaking|panicky|sweaty|tremors|tremor|cant sleep|agitated|on edge ... between doses|when the dose wears off|when it wears off|when the xanax wears off|when i miss a dose|if i miss a dose|after a missed dose|when i cut down my xanax|when i cut back on my benzos|when i lower the dose|during the taper"
+      ]
+    },
+    {
+      "id": "sedative-despite-harm",
+      "label": "Sedative use continues despite harm: falls, memory gaps, drowsy or sleep driving, mixing with alcohol or opioids (overdose risk), or problems at work or home",
+      "clientLabel": "Using nerve or sleeping pills even when it causes problems",
+      "category": "behavioral",
+      "synonyms": [
+        "mixes xanax with alcohol",
+        "mixing benzos and alcohol",
+        "takes xanax with alcohol",
+        "xanax and alcohol together",
+        "benzos with opioids",
+        "xanax with opioids",
+        "sleep driving on ambien",
+        "xanax|klonopin|ativan|valium|ambien|zolpidem|benzos|sleeping pills|lorazepam|alprazolam|clonazepam ... despite|even though|fell|falls|falling|blackouts|memory gaps|cant remember|drowsy driving|sleep driving|sleepwalking|causing problems|messing up|lost my job"
+      ]
+    },
+    {
+      "id": "gambling-preoccupation",
+      "label": "Gambling takes up a lot of mental space: the client thinks about bets, odds or the next session for much of the day",
+      "clientLabel": "Thinking about gambling a lot of the time",
+      "category": "behavioral",
+      "synonyms": [
+        "always thinking about gambling",
+        "thinks about gambling all the time",
+        "thinking about betting all the time",
+        "obsessed with gambling",
+        "obsessed with sports betting",
+        "preoccupied with gambling",
+        "constantly checking the odds",
+        "on betting apps all day",
+        "sports betting every day",
+        "gambles every day",
+        "gambling every day",
+        "betting every day",
+        "plans the next bet"
+      ]
+    },
+    {
+      "id": "chasing-losses",
+      "label": "Chasing losses: raising stakes or gambling again soon after a loss in the hope of recovering the money",
+      "clientLabel": "Gambling more to try to win back money",
+      "category": "behavioral",
+      "synonyms": [
+        "chasing losses",
+        "chasing my losses",
+        "chases losses",
+        "chase my losses",
+        "chasing his losses",
+        "win back what i lost",
+        "win back the money",
+        "bets more to win it back",
+        "bet more to win it back",
+        "trying to win back losses",
+        "double down to win it back"
+      ]
+    },
+    {
+      "id": "gambling-impaired-control",
+      "label": "Impaired control over gambling: betting more, for longer or more often than planned, not managing to cut down, or going back after deciding to stop",
+      "clientLabel": "Hard to stop or cut back on gambling",
+      "category": "behavioral",
+      "synonyms": [
+        "gambling problem",
+        "problem gambling",
+        "gambling addiction",
+        "addicted to gambling",
+        "compulsive gambling",
+        "cant stop gambling",
+        "cant stop betting",
+        "cant quit gambling",
+        "tried to quit gambling",
+        "keeps relapsing on gambling",
+        "gambling is out of control",
+        "betting is out of control",
+        "lost control of my gambling",
+        "gambling binge",
+        "gambling|gambles|gambled|betting|bets on|casino|slot machines|slots|poker|online betting|sports betting ... more than i planned|more than i meant to|cant stop|out of control|for hours|all night|until the money is gone|every last dollar"
+      ]
+    },
+    {
+      "id": "gambling-concealment-harm",
+      "label": "Secrecy and fallout from gambling: hiding how much is spent, debts or borrowing to cover losses, lost savings, or strain on relationships and work",
+      "clientLabel": "Hiding gambling, or gambling causing money or family problems",
+      "category": "behavioral",
+      "synonyms": [
+        "hides gambling",
+        "hides his gambling",
+        "lies about gambling",
+        "lied about gambling",
+        "lying about gambling",
+        "secret gambling",
+        "gambling debt",
+        "gambling debts",
+        "borrowed money to gamble",
+        "borrows money to gamble",
+        "took money to gamble",
+        "stole money to gamble",
+        "payday loans to gamble",
+        "gambled away",
+        "gambled away our savings",
+        "lost our savings gambling",
+        "lost savings gambling",
+        "maxed out credit cards gambling",
+        "gambling|gambles|gambled|betting|sports betting|casino|slots ... debt|debts|loans|maxed out|savings are gone|lost our savings|rent money|bankrupt|partner found out|wife found out|husband found out|hides it|hid it|lied about it"
+      ]
+    },
+    {
+      "id": "tobacco-use-pattern",
+      "label": "Context: regular use of cigarettes, nicotine vapes, cigars, smokeless tobacco or nicotine pouches (record the products and amount; use alone is not a disorder)",
+      "clientLabel": "Using tobacco or nicotine most days",
+      "category": "behavioral",
+      "synonyms": [
+        "smokes cigarettes",
+        "smoking cigarettes",
+        "smokes a pack a day",
+        "pack a day",
+        "half a pack a day",
+        "two packs a day",
+        "cigarettes a day",
+        "cigarettes per day",
+        "daily smoker",
+        "current smoker",
+        "heavy smoker",
+        "chain smoker",
+        "chain smokes",
+        "vapes nicotine",
+        "nicotine vape",
+        "vaping nicotine",
+        "juul",
+        "juuling",
+        "chews tobacco",
+        "chewing tobacco",
+        "dipping tobacco",
+        "smokeless tobacco",
+        "nicotine pouches",
+        "zyn",
+        "smokes cigars",
+        "tobacco use",
+        "uses tobacco",
+        "nicotine use",
+        "cigarette smoking"
+      ]
+    },
+    {
+      "id": "tobacco-craving-withdrawal",
+      "label": "Nicotine dependence signs: strong cravings, smoking or vaping soon after waking, or irritability, restlessness, low mood or poor focus when unable to use",
+      "clientLabel": "Strong urges for nicotine, or feeling bad without it",
+      "category": "behavioral",
+      "synonyms": [
+        "craving cigarettes",
+        "craves cigarettes",
+        "cravings for cigarettes",
+        "craving a cigarette",
+        "nicotine cravings",
+        "craving nicotine",
+        "nicotine withdrawal",
+        "dying for a cigarette",
+        "first cigarette of the day",
+        "cigarette first thing in the morning",
+        "smokes first thing in the morning",
+        "first cigarette within minutes of waking",
+        "craving|cravings|crave|craves|urges for|urge for ... a cigarette|cigarettes|nicotine|my vape|a smoke|tobacco|a dip",
+        "irritable|cranky|restless|anxious|on edge|cant focus|cant concentrate|grumpy|snappy ... without a cigarette|without cigarettes|without nicotine|without my vape|between cigarettes|when i cant have a cigarette"
+      ]
+    },
+    {
+      "id": "tobacco-unsuccessful-quit",
+      "label": "Unsuccessful efforts to quit or cut down on tobacco or nicotine, or use that continues despite health problems or medical advice",
+      "clientLabel": "Trying to quit tobacco or nicotine but going back to it",
+      "category": "behavioral",
+      "synonyms": [
+        "tried to quit cigarettes",
+        "cant quit cigarettes",
+        "tried to quit smoking cigarettes",
+        "cant stop smoking cigarettes",
+        "tried to quit tobacco",
+        "tried to quit nicotine",
+        "keeps relapsing on cigarettes",
+        "started smoking cigarettes again",
+        "back to smoking cigarettes",
+        "tried the nicotine patch",
+        "tried nicotine gum",
+        "smokes despite copd",
+        "still smokes despite copd",
+        "cigarettes|cigarette|cigs|pack a day|packs a day|tobacco|nicotine|daily smoker|heavy smoker|cigars|chewing tobacco|juul|vapes nicotine ... tried to quit|tried quitting|cant quit|quit attempts|keeps relapsing|started again|relapsed|went back|despite copd|despite emphysema|despite heart disease|despite asthma|despite his doctor|despite her doctor"
+      ]
+    },
+    {
+      "id": "hair-pulling",
+      "label": "Hair pulling from the scalp, eyebrows, eyelashes or elsewhere, happening again and again and leaving thinning or bald patches (sometimes focused, sometimes on autopilot)",
+      "clientLabel": "Pulling out your hair over and over",
+      "category": "behavioral",
+      "synonyms": [
+        "hair pulling",
+        "trichotillomania",
+        "pulls out her hair",
+        "pulls out his hair",
+        "pulls out my hair",
+        "pulling out her hair",
+        "pulls out her eyelashes",
+        "pulls out eyelashes",
+        "pulls out her eyebrows",
+        "pulls out eyebrows",
+        "eyelash pulling",
+        "eyebrow pulling",
+        "pulls out strands of hair",
+        "bald spots from pulling",
+        "bald patches from pulling",
+        "pulls out|pulling out|pulled out|pulls at|pulling at|yanks out ... hair|her hair|his hair|eyelashes|eyebrows|lashes|strands of hair|beard hairs"
+      ]
+    },
+    {
+      "id": "skin-picking",
+      "label": "Picking at the skin (face, arms, cuticles, scabs or blemishes) again and again, leaving sores, marks or scars",
+      "clientLabel": "Picking at your skin over and over",
+      "category": "behavioral",
+      "synonyms": [
+        "skin picking",
+        "dermatillomania",
+        "excoriation",
+        "picks at her skin",
+        "picks at his skin",
+        "picks at my skin",
+        "picking at my skin",
+        "picking at her skin",
+        "picks her skin",
+        "picks scabs",
+        "picking scabs",
+        "picks at scabs",
+        "picks at her face",
+        "picks at pimples",
+        "picks at blemishes",
+        "picks at her cuticles",
+        "picks at cuticles",
+        "picks at|picking at|picked at|digs at|digging at|squeezes|squeezing|picks her|picks his|picks my ... skin|scabs|face|arms|pimples|cuticles|blemishes|bumps|spots|lips"
+      ]
+    },
+    {
+      "id": "bfrb-attempts-to-stop",
+      "label": "The client has tried many times to stop or cut down pulling or picking, but the behavior keeps coming back",
+      "clientLabel": "Trying to stop pulling or picking, but it keeps coming back",
+      "category": "behavioral",
+      "synonyms": [
+        "cant stop picking",
+        "cant stop pulling",
+        "cant stop pulling her hair",
+        "tried to stop picking",
+        "tries to stop picking",
+        "tried to stop pulling",
+        "tries to stop pulling",
+        "tried to quit picking",
+        "wears gloves to stop picking",
+        "keeps nails short to stop picking",
+        "cant stop|tried to stop|tries to stop|trying to stop|tried to quit|wants to stop|keeps trying to stop ... picking|pulling out|pulling hair|picking at her skin|picking my skin|picking at my skin|pulling her hair|pulling my eyelashes"
+      ]
+    },
+    {
+      "id": "bfrb-distress-concealment",
+      "label": "Shame, distress or hiding the effects of pulling or picking: covering bald spots or marks with hats, makeup, wigs or clothing, or avoiding haircuts, doctors or closeness",
+      "clientLabel": "Hiding hair loss or skin marks, or feeling ashamed of them",
+      "category": "behavioral",
+      "synonyms": [
+        "hides bald spots",
+        "covers bald spots",
+        "covers the bald spot",
+        "ashamed of the bald spots",
+        "embarrassed about the bald spots",
+        "wears a hat to hide the bald spots",
+        "draws on eyebrows to hide",
+        "fake eyelashes to hide",
+        "covers the scabs",
+        "covers the marks with makeup",
+        "makeup to cover the marks",
+        "makeup to cover the scabs",
+        "long sleeves to hide the marks",
+        "avoids haircuts",
+        "ashamed of the picking",
+        "ashamed of the pulling",
+        "hides the picking"
+      ]
+    },
+    {
+      "id": "premenstrual-mood-symptoms",
+      "label": "Mood changes in the days before a period, such as irritability or anger, sadness, tension or sudden shifts in mood",
+      "clientLabel": "Mood changes before your period",
+      "category": "mood",
+      "synonyms": [
+        "pms rage",
+        "bad pms",
+        "severe pms",
+        "premenstrual mood",
+        "premenstrual mood swings",
+        "premenstrual irritability",
+        "premenstrual depression",
+        "premenstrual anxiety",
+        "mood swings before my period",
+        "irritable before my period",
+        "depressed before my period",
+        "anxious before my period",
+        "irritable|angry|depressed|sad|tearful|anxious|moody|snappy|rage|mood swings|cries|crying|hopeless|on edge ... before my period|before periods|before her periods|the week before my period|days before my period|before menstruation|premenstrually|during pms|in the luteal phase"
+      ]
+    },
+    {
+      "id": "luteal-phase-timing",
+      "label": "Cycle link: mood symptoms rise late in the menstrual cycle and fade soon after the period begins, with symptom-free stretches in between (check with daily ratings over at least two cycles)",
+      "clientLabel": "Mood changes that start before your period and ease once it starts",
+      "category": "context",
+      "synonyms": [
+        "luteal phase",
+        "cyclical mood changes",
+        "mood follows my cycle",
+        "tracked over two cycles",
+        "daily ratings over two cycles",
+        "goes away when my period starts",
+        "better once my period starts",
+        "gone once my period starts",
+        "better|gone|lifts|stops|eases|resolves|goes away|improves|fine again|back to normal ... when my period starts|once my period starts|after my period starts|when i get my period|a day or two into my period|once bleeding starts"
+      ]
+    },
+    {
+      "id": "premenstrual-impairment",
+      "label": "Premenstrual symptoms disrupt work, study, relationships or social life, for example missing work or recurring arguments in the same week of each cycle",
+      "clientLabel": "Mood changes before your period get in the way of daily life",
+      "category": "behavioral",
+      "synonyms": [
+        "pms ruins my relationship",
+        "pms is ruining my relationship",
+        "pms affects my job",
+        "misses work before her period",
+        "calls out of work before my period",
+        "cant work the week before my period",
+        "misses work|missed work|calls out|called out|calls in sick|fights|arguments|cant function|cant work|stays in bed|cancels plans|breaks up ... before my period|the week before my period|before her period|during pms|premenstrually"
+      ]
+    },
+    {
+      "id": "postpartum-onset-psychosis",
+      "label": "New hallucinations, unusual or fixed beliefs, confusion, severe agitation or very little sleep in the weeks after childbirth (a psychiatric emergency for parent and baby)",
+      "clientLabel": "Seeing, hearing or believing strange things after having a baby",
+      "category": "safety",
+      "redFlag": "psychosis",
+      "synonyms": [
+        "postpartum psychosis",
+        "post partum psychosis",
+        "puerperal psychosis",
+        "psychosis after giving birth",
+        "psychosis after the baby",
+        "hearing voices since the baby was born",
+        "hearing voices|hallucinating|hallucinations|paranoid|delusional|strange beliefs|not making sense|confused and agitated ... after the baby|since the baby|after giving birth|since giving birth|after delivery|since delivery|postpartum|since she had the baby"
+      ]
     }
   ],
   "sources": [
@@ -4079,6 +4518,36 @@
       "publisher": "The Lancet (PubMed)",
       "url": "https://pubmed.ncbi.nlm.nih.gov/24139977/",
       "year": 2014
+    },
+    {
+      "title": "Gambling-related harms: identification, assessment and management (NG248)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng248",
+      "year": 2025
+    },
+    {
+      "title": "Treatment of benzodiazepine dependence (Soyka)",
+      "publisher": "New England Journal of Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28328330/",
+      "year": 2017
+    },
+    {
+      "title": "Interventions for tobacco smoking cessation in adults, including pregnant persons: USPSTF recommendation statement",
+      "publisher": "JAMA (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33464343/",
+      "year": 2021
+    },
+    {
+      "title": "Prevalence, gender correlates, and co-morbidity of trichotillomania (Grant et al.)",
+      "publisher": "Psychiatry Research (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32334275/",
+      "year": 2020
+    },
+    {
+      "title": "Management of premenstrual disorders: ACOG Clinical Practice Guideline No. 7",
+      "publisher": "Obstetrics & Gynecology (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37973069/",
+      "year": 2023
     }
   ],
   "license": "original",

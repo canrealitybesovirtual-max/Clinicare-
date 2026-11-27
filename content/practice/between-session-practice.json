@@ -1,0 +1,126 @@
+{
+  "id": "between-session-practice",
+  "title": "Assigning and reviewing between-session practice",
+  "category": "session-process",
+  "summary": "How to design practice between sessions with the client, make it specific and doable, plan for obstacles, and review it first next time. Includes ways to adapt practice for literacy, caregiving, culture and money or time limits.",
+  "whenToUse": [
+    "In any therapy where skills, exposure, monitoring or behavior change happen between sessions.",
+    "When practice keeps not happening and the reasons are unclear.",
+    "When a client says they do not like homework."
+  ],
+  "steps": [
+    {
+      "heading": "Design it together",
+      "body": "Agree on what to practice, why it should help and how it links to their goals. Use a name the client likes (practice, experiment, plan) instead of homework if that fits better."
+    },
+    {
+      "heading": "Make it specific",
+      "items": [
+        "What exactly, when, where, how often and for how long.",
+        "Start smaller than you think; success builds momentum.",
+        "Agree on how they will record it, if at all (paper, phone note, memory)."
+      ]
+    },
+    {
+      "heading": "Rehearse in session",
+      "body": "Try the first step together in session so the client knows what it feels like and can ask questions."
+    },
+    {
+      "heading": "Plan for obstacles",
+      "items": [
+        "Ask what could get in the way and how likely they are to do it, from 0 to 10.",
+        "If it is below 7, make it smaller or easier.",
+        "Agree on a reminder and what to do if they miss a day."
+      ]
+    },
+    {
+      "heading": "Give a written copy",
+      "body": "A short written plan helps memory. The between-session practice plan handout has blank lines for this."
+    },
+    {
+      "heading": "Review it first next time",
+      "items": [
+        "Ask what they tried and what they noticed.",
+        "If it was not done, explore what got in the way with curiosity; that is useful information.",
+        "Adjust the plan based on what you learned."
+      ]
+    }
+  ],
+  "prompts": [
+    "What would be a small step you could take this week that would tell us something useful?",
+    "How likely is it, from 0 to 10, that you will do this? What would make it one point more likely?",
+    "Let's try the first two minutes of it here, so you know what it will be like.",
+    "It did not happen this week. That tells us something. What got in the way?"
+  ],
+  "cautions": [
+    "Do not shame non-completion. It usually reflects a plan that did not fit the client's life.",
+    "Practice involving exposure to feared situations should be planned within your competence and the agreed treatment.",
+    "Monitoring sheets that record substance use, self-harm or other sensitive information need privacy planning at home.",
+    "Do not assign worksheets copied from paid manuals or third-party sites; use the app's own handouts or link out."
+  ],
+  "adaptations": [
+    {
+      "context": "Low literacy",
+      "adaptation": "Use pictures, a voice memo, a single word or a tick mark instead of written records."
+    },
+    {
+      "context": "Caregiving and shift work",
+      "adaptation": "Attach practice to something already in the day (a meal, a commute, a child's bedtime) and keep it short."
+    },
+    {
+      "context": "Privacy at home",
+      "adaptation": "If others may read written notes, use neutral titles, a code word, or keep nothing written."
+    },
+    {
+      "context": "Culture",
+      "adaptation": "Check that the practice fits family roles and values, and invite the client to adapt it."
+    }
+  ],
+  "evidenceSummary": "A 2016 meta-analysis (Kazantzis and colleagues) found that both the quantity and the quality of homework completion were associated with better outcomes in cognitive behavioral therapy. A 2010 meta-analysis (Mausbach and colleagues) reported a similar positive association between homework compliance and outcome.",
+  "forClinicianReview": true,
+  "crisisPanel": false,
+  "sud": false,
+  "relatedInterventionIds": [
+    "behavioral-activation",
+    "behavioral-experiments",
+    "graded-in-vivo-exposure",
+    "problem-solving"
+  ],
+  "relatedHandoutIds": [
+    "between-session-practice-plan",
+    "activity-schedule",
+    "behavioral-experiment-record",
+    "activity-and-mood-log"
+  ],
+  "relatedFormulationIds": [],
+  "relatedLegalIds": [],
+  "relatedPracticeIds": [
+    "session-structure",
+    "socratic-questioning",
+    "teach-back-and-plain-language",
+    "outcome-monitoring"
+  ],
+  "relatedPopulationIds": [
+    "intellectual-disability",
+    "autistic-adults"
+  ],
+  "linkOuts": [],
+  "measuresPending": [],
+  "sources": [
+    {
+      "title": "Quantity and quality of homework compliance: a meta-analysis of relations with outcome in cognitive behavior therapy (Kazantzis et al.)",
+      "publisher": "Behavior Therapy, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27816086/",
+      "year": 2016
+    },
+    {
+      "title": "The relationship between homework compliance and therapy outcomes: an updated meta-analysis (Mausbach, Moore, Roesch, Cardenas and Patterson)",
+      "publisher": "Cognitive Therapy and Research, via PubMed Central",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2939342/",
+      "year": 2010
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

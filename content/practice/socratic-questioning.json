@@ -1,0 +1,114 @@
+{
+  "id": "socratic-questioning",
+  "title": "Socratic questioning and guided discovery",
+  "category": "session-process",
+  "summary": "Asking questions that help a client look at their own experience, weigh the evidence and reach their own conclusions, instead of being told what to think. Original question stems grouped by purpose, with pacing advice.",
+  "whenToUse": [
+    "When a thought, belief or prediction seems to drive distress or avoidance.",
+    "When reviewing a thought record, behavioral experiment or between-session practice.",
+    "When a client asks you to tell them whether a belief is true."
+  ],
+  "steps": [
+    {
+      "heading": "Get the details first",
+      "body": "Ask about one specific situation: what happened, what went through their mind, how they felt and what they did. Concrete examples work better than general beliefs."
+    },
+    {
+      "heading": "Clarify the meaning",
+      "items": [
+        "What did that mean to you about yourself, others or the future?",
+        "If that were true, what would be the worst part?",
+        "How strongly do you believe it right now, from 0 to 100?"
+      ]
+    },
+    {
+      "heading": "Look at the evidence and alternatives",
+      "items": [
+        "What makes it seem true? Is there anything that does not quite fit?",
+        "Have there been times when it did not happen that way?",
+        "What other explanations could there be?",
+        "What would you say to a friend who thought this?"
+      ]
+    },
+    {
+      "heading": "Look at consequences and next steps",
+      "items": [
+        "What does holding onto this thought cost you? Does it help in any way?",
+        "How could we test this out this week?",
+        "What do you make of this now?"
+      ]
+    },
+    {
+      "heading": "Summarize and let them conclude",
+      "body": "Pull together what they said, in their words, and ask what they take from it. A synthesizing question matters more than any single challenge."
+    }
+  ],
+  "prompts": [
+    "Let's slow down and look at that moment on Tuesday. What was the first thing that went through your mind?",
+    "You are 90 percent sure people saw you as foolish. What did you notice that tells you that? Was there anything that did not fit?",
+    "If your closest friend had that thought, what would you want them to keep in mind?",
+    "Putting all of that together, what do you make of it now?"
+  ],
+  "cautions": [
+    "Socratic questioning is curious, not an interrogation or a debate; if the client feels caught out, slow down and validate.",
+    "Do not use it to argue someone out of a realistic concern such as discrimination, danger or loss. Some thoughts are accurate.",
+    "With trauma memories or high distress, ground first, keep questions few and let the client control the pace.",
+    "Questions about risk are not guided discovery. Ask about safety directly."
+  ],
+  "adaptations": [
+    {
+      "context": "Cognitive or language differences",
+      "adaptation": "Use shorter questions, one at a time, with written or visual summaries and more concrete examples."
+    },
+    {
+      "context": "Collectivist or deference norms",
+      "adaptation": "Some clients may find questioning an expert-led role confusing; explain why you ask rather than tell, and welcome their questions back."
+    }
+  ],
+  "evidenceSummary": "In a 2015 study of cognitive therapy for depression (Braun, Strunk, Sasso and Cooper), more therapist use of Socratic questioning predicted greater symptom improvement in the following session, beyond the effect of the alliance. A 2012 analysis of two trials (Webb and colleagues) linked therapist adherence to cognitive methods with clients' acquisition of cognitive therapy skills.",
+  "forClinicianReview": true,
+  "crisisPanel": false,
+  "sud": false,
+  "relatedInterventionIds": [
+    "thought-record",
+    "behavioral-experiments",
+    "core-belief-work",
+    "social-anxiety-cognitive-techniques"
+  ],
+  "relatedHandoutIds": [
+    "thought-record",
+    "thinking-traps",
+    "behavioral-experiment-record"
+  ],
+  "relatedFormulationIds": [
+    "cbt-three-level",
+    "disorder-maintenance-models"
+  ],
+  "relatedLegalIds": [],
+  "relatedPracticeIds": [
+    "validation-levels",
+    "session-structure",
+    "between-session-practice",
+    "trauma-informed-care"
+  ],
+  "relatedPopulationIds": [],
+  "linkOuts": [],
+  "measuresPending": [],
+  "sources": [
+    {
+      "title": "Therapist use of Socratic questioning predicts session-to-session symptom change in cognitive therapy for depression (Braun, Strunk, Sasso and Cooper)",
+      "publisher": "Behaviour Research and Therapy, via PubMed Central",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4449800/",
+      "year": 2015
+    },
+    {
+      "title": "Predictors of patient cognitive therapy skills and symptom change in two randomized clinical trials: the role of therapist adherence and the therapeutic alliance (Webb et al.)",
+      "publisher": "Journal of Consulting and Clinical Psychology, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22468907/",
+      "year": 2012
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

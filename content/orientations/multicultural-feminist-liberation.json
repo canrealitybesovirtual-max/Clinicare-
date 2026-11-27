@@ -1,0 +1,119 @@
+{
+  "id": "multicultural-feminist-liberation",
+  "name": "Multicultural, feminist and liberation-oriented therapies",
+  "shortName": "Multicultural and feminist",
+  "family": "multicultural-feminist",
+  "summary": "These approaches place a person's distress in the context of culture, identity, power and social conditions. Therapy is collaborative and non-pathologizing, attends to racism, sexism and other oppression, and builds on strengths and community.",
+  "keyConcepts": [
+    { "term": "Cultural humility", "meaning": "An ongoing, other-oriented stance of learning about each client's cultural identities and meanings, with awareness of one's own, rather than claiming to be an expert on any group." },
+    { "term": "Intersectionality", "meaning": "Race, gender, sexuality, class, disability, faith, migration and other identities combine and interact in shaping experiences of privilege and oppression." },
+    { "term": "The personal is political", "meaning": "Feminist therapy's view that individual distress often reflects social conditions such as gender roles, violence and inequality, not only personal deficits." },
+    { "term": "Egalitarian relationship", "meaning": "Openly discussing power in the therapy room, demystifying the process and sharing decisions so the client is a full partner." },
+    { "term": "Connection and disconnection", "meaning": "Relational-cultural theory holds that growth happens through mutual, empathic connection, and that chronic disconnection, often from marginalization, causes suffering." },
+    { "term": "Critical consciousness and accompaniment", "meaning": "From liberation psychology: understanding how social forces shape one's life, and a therapist who walks alongside the client and community rather than standing above them." }
+  ],
+  "viewOfProblem": "Distress is understood as arising from the interaction of personal history with social context: discrimination, racism, sexism, homophobia and transphobia, poverty, colonization, migration stress and violence. Some reactions that look like symptoms are understandable responses to oppression. Labels can add to stigma when context is ignored, so these approaches are cautious about pathologizing.",
+  "viewOfChange": "Change comes from naming and understanding the role of social forces, reducing self-blame, building on cultural strengths and community connections, and increasing the person's sense of power and choice. It can include advocacy, connecting with community resources and collective action as well as individual coping, while respecting the client's own goals.",
+  "therapistStance": "Collaborative, transparent and culturally humble. The clinician broaches identity and power openly when relevant, examines their own biases and social position, avoids assuming that the client's group shapes their views, and shares information about the therapy process. Self-disclosure is used thoughtfully when it serves the client.",
+  "sessionShape": [
+    "Invite the client to describe the problem and its context in their own terms.",
+    "Explore cultural identities, meanings of distress and relevant experiences of discrimination, at the client's pace.",
+    "Name power dynamics where relevant, including between client and clinician.",
+    "Work on goals using methods that fit the client's culture and values, including culturally adapted treatments.",
+    "Consider community resources, supports or advocacy the client wants to pursue.",
+    "Check in about how the session fit the client and what to adjust."
+  ],
+  "goalStyle": "Goals are defined by the client, include both personal and contextual change where relevant, and avoid locating the problem only in the person: for example, reduce self-blame about workplace discrimination and choose one action, such as seeking support or making a complaint, within a month. Write each goal with the client in their own words.",
+  "progressMarkers": [
+    "Client's own sense of empowerment, connection and self-understanding.",
+    "Client ratings of the clinician's cultural responsiveness and of the alliance.",
+    "Symptom measures interpreted in context, alongside the client's own goals."
+  ],
+  "typicalTechniques": [
+    "cultural-formulation-exploration",
+    "power-and-gender-role-analysis",
+    "racial-trauma-and-race-based-stress",
+    "culturally-adapted-cbt",
+    "lgbtq-affirmative-cbt"
+  ],
+  "relatedTechniques": ["religiously-integrated-cbt", "narrative-externalizing"],
+  "missingTechniques": [
+    { "name": "Bibliotherapy and social action linkage", "note": "Connecting clients with readings, groups and community action; link-out only." }
+  ],
+  "formulationIds": ["minority-stress", "five-ps-biopsychosocial-spiritual"],
+  "models": [
+    {
+      "name": "Culturally adapted interventions",
+      "summary": "Evidence-based treatments adapted in language, content, metaphors, goals and delivery to fit a client's culture while keeping their core ingredients.",
+      "evidenceTier": "research-supported",
+      "evidence": "Across 99 studies, culturally adapted interventions outperformed comparison conditions (d = 0.50, or 0.35 after correcting for publication bias; Soto et al., 2018), consistent with an earlier meta-analysis (Hall et al., 2016).",
+      "trainingRequired": false
+    },
+    {
+      "name": "Multicultural counseling and therapy",
+      "summary": "A stance and set of competencies (awareness, knowledge, skills and cultural humility) applied within any model, guided by the APA Multicultural Guidelines.",
+      "evidenceTier": "research-supported",
+      "evidence": "Client-rated therapist multicultural competence correlated with outcome (r = .38), while therapists' self-ratings did not (Soto et al., 2018).",
+      "trainingRequired": false
+    },
+    {
+      "name": "Feminist and relational-cultural therapy",
+      "summary": "Approaches that attend to gender, power and connection, with an egalitarian relationship and a non-pathologizing view of women's and gender-diverse adults' distress.",
+      "evidenceTier": "limited",
+      "evidence": "Guidance is practice-based: the APA Guidelines for Psychological Practice with Girls and Women (2018) advise considering context and strengths and using diagnoses carefully; outcome trials of feminist therapy as a package are sparse.",
+      "trainingRequired": false
+    },
+    {
+      "name": "Liberation and decolonial psychology",
+      "summary": "Approaches rooted in Martin-Baro's liberation psychology and Indigenous and decolonial thought, emphasizing critical consciousness, community and accompaniment.",
+      "evidenceTier": "limited",
+      "evidence": "Mainly conceptual and community-based literature; the APA Guidelines on Race and Ethnicity in Psychology (2019) support attending to structural inequities in practice.",
+      "trainingRequired": false
+    }
+  ],
+  "evidenceTier": "research-supported",
+  "evidenceSummary": "Cultural adaptation of evidence-based treatments improves outcomes (Soto et al., 2018; Hall et al., 2016), and clients' ratings of their clinician's multicultural competence predict outcome (Soto et al., 2018). The APA Multicultural Guidelines (2017), Guidelines on Race and Ethnicity (2019) and Guidelines for Practice with Girls and Women (2018) set practice standards. Feminist, relational-cultural and liberation approaches rest mainly on these practice guidelines and conceptual work, with few outcome trials of their own.",
+  "bestFit": [
+    "Clients whose distress is closely tied to discrimination, racism, gender-based violence or migration.",
+    "Clients who want their identities and context to be central to therapy.",
+    "Any orientation, as a way of practicing culturally responsive care.",
+    "Clients who have felt pathologized or misunderstood in previous care."
+  ],
+  "cautions": [
+    "Never assume a client's beliefs, values or experiences from their group membership; ask.",
+    "Do not push a political framing or social action the client has not chosen.",
+    "Broaching race, gender or identity is helpful when done with care and timing; clumsy broaching can feel intrusive.",
+    "Conversion or change efforts aimed at sexual orientation or gender identity are harmful and have no place in care; see the legal topic on conversion practices.",
+    "Racism-related distress can include thoughts of death or self-harm; follow your risk procedures and review crisis options: in the US call or text 988; elsewhere, the local emergency number or findahelpline.com."
+  ],
+  "whenToRefer": [
+    "Clients who prefer a clinician who shares an identity or language, when this can be arranged.",
+    "Trauma from racial violence or hate crimes that needs a trauma-focused protocol, alongside this approach."
+  ],
+  "trainingRequired": false,
+  "trainingNote": "There is no certifying body for these approaches. Competence grows through training in multicultural and feminist practice, the APA guidelines, consultation, and ongoing self-examination; seek consultation when working across identities you know little about.",
+  "trainingPath": [],
+  "ethicsPrompts": [
+    { "prompt": "Practice within your competence: seek training and consultation when working with identities, cultures or languages you know little about.", "legalIds": ["competence-and-scope-of-practice"] },
+    { "prompt": "Use a professional interpreter rather than family members when you do not share a language with the client.", "legalIds": ["language-access-interpreters"] },
+    { "prompt": "Never offer or support efforts to change a client's sexual orientation or gender identity.", "legalIds": ["conversion-practices"] }
+  ],
+  "culturalNotes": [
+    "Use the client's own words for their identities, and ask about the ones that matter most to them.",
+    "Consider community and faith resources the client values, and indigenous or traditional healing practices the client uses, alongside therapy.",
+    "Recognize that mistrust of health systems can be a reasonable response to past harm; earn trust rather than demanding it."
+  ],
+  "handoutIds": [],
+  "relatedPracticeIds": ["multicultural-orientation-and-broaching", "working-with-interpreters", "clinician-reactions-and-self-disclosure", "intake-assessment"],
+  "relatedPopulationIds": ["cultural-adaptation", "lgbtq-affirmative", "indigenous-peoples", "refugees-and-asylum-seekers"],
+  "sources": [
+    { "title": "Multicultural Guidelines: An Ecological Approach to Context, Identity, and Intersectionality", "publisher": "American Psychological Association", "url": "https://www.apa.org/about/policy/multicultural-guidelines", "year": 2017 },
+    { "title": "APA Guidelines on Race and Ethnicity in Psychology (summary)", "publisher": "American Psychological Association", "url": "https://www.apa.org/about/policy/summary-guidelines-race-ethnicity", "year": 2019 },
+    { "title": "Guidelines for Psychological Practice with Girls and Women", "publisher": "American Psychological Association", "url": "https://www.apa.org/about/policy/psychological-practice-girls-women", "year": 2018 },
+    { "title": "Cultural adaptations and therapist multicultural competence: two meta-analytic reviews (Soto et al.)", "publisher": "Journal of Clinical Psychology (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/30091201/", "year": 2018 },
+    { "title": "A meta-analysis of cultural adaptations of psychological interventions (Hall et al.)", "publisher": "Behavior Therapy (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/27993346/", "year": 2016 }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

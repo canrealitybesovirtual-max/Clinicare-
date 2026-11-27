@@ -38,8 +38,10 @@
   ],
   "handoutIds": [
     "staying-well-plan",
-    "mood-routine-tracker"
+    "mood-routine-tracker",
+    "mood-highs-and-lows-plan"
   ],
+  "orientationIds": ["integrative-common-factors"],
   "sources": [
     {
       "title": "A randomized trial on the efficacy of group psychoeducation in the prophylaxis of recurrences in bipolar patients whose disease is in remission (Colom et al.)",

@@ -1,0 +1,140 @@
+{
+  "id": "trauma-informed-care",
+  "title": "Trauma-informed care in everyday sessions",
+  "category": "communication-and-access",
+  "summary": "Turning trauma-informed principles (safety, trustworthiness and transparency, peer support, collaboration, empowerment and choice, and attention to culture, history and gender) into concrete session behaviors. This is a way of working with everyone; it is different from trauma-focused therapy.",
+  "whenToUse": [
+    "With every client, since a history of trauma is common and often not disclosed.",
+    "During assessment, physical or sensitive questions, and any procedure the client does not control.",
+    "When a client becomes distressed, shuts down or seems far away in session."
+  ],
+  "steps": [
+    {
+      "heading": "Safety",
+      "body": "Make the space predictable: explain what will happen, who else is around, where the exits are, and that the client can pause or stop at any time."
+    },
+    {
+      "heading": "Trustworthiness and transparency",
+      "body": "Explain why you ask each kind of question before asking it, and what happens with the answers. Keep your word on time and follow-up."
+    },
+    {
+      "heading": "Choice and collaboration",
+      "items": [
+        "Offer choices about seating, pace, topics and how much to share.",
+        "Ask permission before sensitive questions.",
+        "Let the client control the pace of any disclosure; details are not needed to help."
+      ]
+    },
+    {
+      "heading": "Responding to a disclosure",
+      "items": [
+        "Thank them for telling you, and believe them.",
+        "Say it was not their fault where that fits.",
+        "Ask what they need right now.",
+        "Explain any reporting duties honestly and before more detail if possible.",
+        "Check how they are feeling before the session ends."
+      ]
+    },
+    {
+      "heading": "Grounding when distress rises",
+      "body": "If a client becomes very distressed or disconnected, pause the topic, orient to the present (the room, the date, their feet on the floor), and use a grounding skill. Return to the topic only if they choose."
+    },
+    {
+      "heading": "Culture, history and gender",
+      "body": "Ask how culture, identity and past experiences with services shape what feels safe, including historical and community trauma."
+    }
+  ],
+  "prompts": [
+    "I am going to ask some questions about difficult experiences. You can answer as much or as little as you like, and we can stop at any time.",
+    "Thank you for telling me. That took courage. What you went through was not your fault.",
+    "You seem far away right now. Can you feel your feet on the floor? Tell me three things you can see in this room.",
+    "Is there anything that would make this space feel safer for you?"
+  ],
+  "cautions": [
+    "Trauma-informed care is not trauma-focused treatment. Do not start trauma processing without training and a plan.",
+    "Avoid suggestive questioning about possible forgotten trauma; memory can be shaped by suggestion.",
+    "Routine single-session debriefing soon after a trauma is not recommended and may cause harm.",
+    "Do not push for details; it can retraumatize and is rarely needed for care.",
+    "Mandatory reporting duties may apply to some disclosures; know them before you start."
+  ],
+  "adaptations": [
+    {
+      "context": "Telehealth",
+      "adaptation": "Check the client is somewhere private and safe, agree on a signal to pause, and keep grounding skills ready for video."
+    },
+    {
+      "context": "Survivors of sexual violence",
+      "adaptation": "Offer choice about the clinician's gender where possible, and be especially careful with touch, closed doors and positioning."
+    }
+  ],
+  "evidenceSummary": "SAMHSA TIP 57 (2014) describes trauma-informed care in behavioral health services, including the principles used here and trauma-informed screening and assessment. A 2018 review (Sweeney and colleagues) describes how trauma-informed approaches change relationships in mental health services. NICE guideline NG116 (2018) advises against routine single-session psychological debriefing after trauma.",
+  "forClinicianReview": true,
+  "crisisPanel": true,
+  "sud": false,
+  "relatedInterventionIds": [
+    "trauma-psychoeducation-and-grounding",
+    "grounding-5-4-3-2-1",
+    "psychological-first-aid-and-recovery-skills",
+    "present-centered-therapy"
+  ],
+  "relatedHandoutIds": [
+    "common-reactions-after-trauma",
+    "grounding-5-4-3-2-1",
+    "breathing-and-grounding-easy-read",
+    "trauma-therapy-what-to-expect"
+  ],
+  "relatedFormulationIds": [
+    "phase-based-trauma-sequencing"
+  ],
+  "relatedLegalIds": [
+    "mandatory-reporting",
+    "memory-and-suggestion-safeguards",
+    "contested-practices",
+    "touch-and-body-based-work"
+  ],
+  "relatedPracticeIds": [
+    "intake-assessment",
+    "validation-levels",
+    "socratic-questioning",
+    "unwanted-effects-of-therapy",
+    "in-session-de-escalation"
+  ],
+  "relatedPopulationIds": [
+    "sexual-violence-and-trafficking-survivors",
+    "refugees-and-asylum-seekers",
+    "military-and-veterans",
+    "first-responders-and-health-workers",
+    "indigenous-peoples"
+  ],
+  "linkOuts": [],
+  "measuresPending": [],
+  "sources": [
+    {
+      "title": "TIP 57: Trauma-Informed Care in Behavioral Health Services",
+      "publisher": "Substance Abuse and Mental Health Services Administration",
+      "url": "https://www.samhsa.gov/resource/dbhis/tip-57-trauma-informed-care-behavioral-health-services",
+      "year": 2014
+    },
+    {
+      "title": "TIP 57, Part 1, Chapter 4: Screening and Assessment",
+      "publisher": "SAMHSA, via NCBI Bookshelf",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK207188/",
+      "year": 2014
+    },
+    {
+      "title": "A paradigm shift: relationships in trauma-informed mental health services (Sweeney, Filson, Kennedy, Collinson and Gillard)",
+      "publisher": "BJPsych Advances, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30174829/",
+      "year": 2018
+    },
+    {
+      "title": "Post-traumatic stress disorder (NG116)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng116",
+      "year": 2018
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

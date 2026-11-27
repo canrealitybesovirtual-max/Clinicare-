@@ -1,0 +1,235 @@
+{
+  "id": "cutting-down-alcohol-safely",
+  "title": "Cutting Down on Alcohol Safely",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 10,
+  "intro": "Drinking less, or stopping, is good for your health. For most people, cutting back is safe. But if your body is used to a lot of alcohol every day, stopping all at once can make you very sick. This sheet helps you plan a safe change with your care team. Reading it takes about 10 minutes.",
+  "sections": [
+    {
+      "heading": "Talk with a doctor first if",
+      "body": "Talk with a doctor or nurse before you cut back or stop if any of these are true for you.",
+      "steps": [
+        "You drink every day or almost every day, and you drink a lot.",
+        "You have a drink in the morning to steady your nerves or stop shaking.",
+        "You have felt shaky, sweaty, sick to your stomach, or very jumpy when you went without a drink.",
+        "You have had a seizure, or seen or heard things that were not there, after stopping before.",
+        "You also take pills for sleep, pain, or nerves, or you have other health problems.",
+        "You are pregnant or could be."
+      ]
+    },
+    {
+      "heading": "Getting help to stop safely",
+      "body": "A doctor can help you cut down or stop safely. Some people need medicine for a few days to keep withdrawal safe. This can often be done at home with check-ins. Some people need to stay in a hospital or a treatment center for a few days."
+    },
+    {
+      "heading": "Signs of withdrawal",
+      "body": "Withdrawal is how the body reacts when it does not get the alcohol it is used to. Signs can start a few hours after the last drink. They are often worst in the first few days. They can include:",
+      "steps": [
+        "Shaky hands",
+        "Sweating, a fast heartbeat, or feeling sick to your stomach",
+        "Feeling very nervous, cranky, or unable to sleep",
+        "Headache"
+      ]
+    },
+    {
+      "heading": "Get emergency help right away",
+      "body": "Call 911 or go to the nearest emergency room if you or someone else has any of these. Do not drive yourself.",
+      "steps": [
+        "A seizure, or passing out",
+        "Confusion, or not knowing where you are",
+        "Seeing, hearing, or feeling things that are not there",
+        "A fever, or a racing heart that does not slow down",
+        "Shaking so strong you cannot stop it"
+      ]
+    },
+    {
+      "heading": "Ways to cut back",
+      "body": "If your doctor says it is safe to cut back on your own, these steps can help.",
+      "steps": [
+        "Count your drinks. One standard drink is 12 ounces of regular beer, 5 ounces of wine, or 1.5 ounces of liquor.",
+        "Set a limit for each day, and pick days each week with no alcohol.",
+        "Start later in the day, and sip slowly. Have water or a soft drink between drinks.",
+        "Eat before and while you drink.",
+        "Keep less alcohol at home.",
+        "Plan what you will do instead at the times you usually drink.",
+        "Tell someone you trust about your plan."
+      ]
+    },
+    {
+      "heading": "Alcohol and medicines",
+      "body": "Alcohol can be dangerous with many medicines. This includes pills for sleep, pain, or nerves, and some cold and allergy medicines. Mixing alcohol with opioid pain pills can slow or stop your breathing. Ask your pharmacist or doctor about each medicine you take. If anyone in your home uses opioids, keep naloxone nearby. Naloxone is a medicine that can reverse an opioid overdose."
+    },
+    {
+      "heading": "My plan",
+      "body": "Fill this in with your counselor or doctor. Your goal is your choice.",
+      "steps": [
+        "My goal (cut back or stop): ________",
+        "Most drinks I plan to have on any one day: ________",
+        "Days with no alcohol each week: ________",
+        "When I will talk with a doctor about stopping safely: ________",
+        "Reasons I want to drink less: ________"
+      ]
+    },
+    {
+      "heading": "Privacy note",
+      "body": "Do not write your name, or the names of other people or places, on this sheet. Keep it somewhere private. If you share it with a substance use treatment program, it may become part of your treatment records. Those records have special federal privacy protection. 42 CFR Part 2 prohibits unauthorized use or disclosure of these records. Ask your counselor how your records are kept and shared."
+    }
+  ],
+  "safetyNote": "Safety first: If you drink a lot every day, do not stop all at once without medical advice. Get emergency help for a seizure, confusion, or seeing or hearing things that are not there. Never drive after drinking. If you are pregnant or could be, the safest choice is not to drink. For free, confidential help finding treatment in the US, call the SAMHSA National Helpline at 1-800-662-4357, any time, in English or Spanish. If you have thoughts of hurting yourself or someone else, get help now. In the US, call or text 988, or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sud": true,
+  "es": {
+    "title": "Cómo beber menos de forma segura",
+    "intro": "Beber menos, o dejar de beber, es bueno para su salud. Para la mayoría de las personas, beber menos no es peligroso. Pero si su cuerpo está acostumbrado a mucho alcohol todos los días, dejarlo de golpe puede enfermarle mucho. Esta hoja le ayuda a planear un cambio seguro con su equipo de atención. Leerla toma unos 10 minutos.",
+    "sections": [
+      {
+        "heading": "Hable primero con un médico si",
+        "body": "Hable con un médico o una enfermera antes de beber menos o de dejarlo si algo de esto le pasa a usted.",
+        "steps": [
+          "Bebe todos los días o casi todos los días, y bebe mucho.",
+          "Toma un trago en la mañana para calmar los nervios o dejar de temblar.",
+          "Ha tenido temblores, sudor, náuseas o muchos nervios cuando pasó un tiempo sin beber.",
+          "Tuvo una convulsión, o vio u oyó cosas que no estaban ahí, cuando dejó de beber antes.",
+          "También toma pastillas para dormir, para el dolor o para los nervios, o tiene otros problemas de salud.",
+          "Está embarazada o podría estarlo."
+        ]
+      },
+      {
+        "heading": "Ayuda para dejar de beber de forma segura",
+        "body": "Un médico puede ayudarle a beber menos o a dejarlo de forma segura. Algunas personas necesitan medicina por unos días para que la abstinencia no sea peligrosa. Muchas veces esto se puede hacer en casa, con controles. Otras personas necesitan quedarse unos días en un hospital o en un centro de tratamiento."
+      },
+      {
+        "heading": "Señales de abstinencia",
+        "body": "La abstinencia es la reacción del cuerpo cuando no recibe el alcohol al que está acostumbrado. Las señales pueden empezar unas horas después del último trago. Muchas veces son peores en los primeros días. Pueden incluir:",
+        "steps": [
+          "Manos temblorosas",
+          "Sudor, el corazón acelerado o náuseas",
+          "Muchos nervios, mal humor o no poder dormir",
+          "Dolor de cabeza"
+        ]
+      },
+      {
+        "heading": "Busque ayuda de emergencia de inmediato",
+        "body": "Llame al 911 o vaya a la sala de emergencias más cercana si usted u otra persona tiene algo de esto. No maneje usted.",
+        "steps": [
+          "Una convulsión, o desmayarse",
+          "Confusión, o no saber dónde está",
+          "Ver, oír o sentir cosas que no están ahí",
+          "Fiebre, o el corazón muy acelerado que no se calma",
+          "Temblores tan fuertes que no los puede parar"
+        ]
+      },
+      {
+        "heading": "Formas de beber menos",
+        "body": "Si su médico le dice que puede beber menos por su cuenta sin peligro, estos pasos le pueden ayudar.",
+        "steps": [
+          "Cuente sus bebidas. Una bebida estándar es 12 onzas de cerveza normal, 5 onzas de vino o 1.5 onzas de licor.",
+          "Ponga un límite para cada día, y escoja días de la semana sin alcohol.",
+          "Empiece más tarde en el día, y beba despacio. Tome agua o un refresco entre una bebida y otra.",
+          "Coma antes de beber y mientras bebe.",
+          "Tenga menos alcohol en casa.",
+          "Planee qué va a hacer en lugar de beber a las horas en que suele beber.",
+          "Cuéntele su plan a alguien de confianza."
+        ]
+      },
+      {
+        "heading": "El alcohol y los medicamentos",
+        "body": "El alcohol puede ser peligroso con muchos medicamentos. Esto incluye las pastillas para dormir, para el dolor o para los nervios, y algunas medicinas para el resfriado y la alergia. Mezclar el alcohol con pastillas de opioides para el dolor puede hacer que respire más lento o que deje de respirar. Pregúntele a su farmacéutico o a su médico por cada medicamento que toma. Si alguien en su casa usa opioides, tenga naloxona cerca. La naloxona es una medicina que puede revertir una sobredosis de opioides."
+      },
+      {
+        "heading": "Mi plan",
+        "body": "Llene esto con su consejero o su médico. Su meta es su decisión.",
+        "steps": [
+          "Mi meta (beber menos o dejar de beber): ________",
+          "Máximo de bebidas que pienso tomar en un mismo día: ________",
+          "Días sin alcohol cada semana: ________",
+          "Cuándo voy a hablar con un médico para dejarlo de forma segura: ________",
+          "Por qué quiero beber menos: ________"
+        ]
+      },
+      {
+        "heading": "Nota de privacidad",
+        "body": "No escriba su nombre, ni los nombres de otras personas o lugares, en esta hoja. Guárdela en un lugar privado. Si la comparte con un programa de tratamiento por consumo de sustancias, puede llegar a ser parte de sus registros de tratamiento. Esos registros tienen una protección federal especial de la privacidad. La ley federal 42 CFR Part 2 prohíbe el uso o la divulgación no autorizados de estos registros. Pregúntele a su consejero cómo se guardan y se comparten sus registros."
+      }
+    ],
+    "safetyNote": "La seguridad es lo primero: Si bebe mucho todos los días, no deje de beber de golpe sin consejo médico. Busque ayuda de emergencia si tiene una convulsión, confusión, o si ve u oye cosas que no están ahí. Nunca maneje después de beber. Si está embarazada o podría estarlo, lo más seguro es no beber. Para recibir ayuda gratuita y confidencial para encontrar tratamiento en EE. UU., llame a la Línea Nacional de Ayuda de SAMHSA (SAMHSA National Helpline) al 1-800-662-4357, a cualquier hora, en inglés o en español. Si tiene pensamientos de hacerse daño o de hacerle daño a otra persona, busque ayuda ahora. En EE. UU., llame o envíe un mensaje de texto al 988, o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "linkOuts": [
+    {
+      "title": "Rethinking Drinking: tools and calculators",
+      "publisher": "NIAAA, National Institutes of Health",
+      "url": "https://rethinkingdrinking.niaaa.nih.gov/tools/calculators",
+      "note": "Free online tools to count drinks and see how much is in your glass.",
+      "lastVerified": "2026-11-27"
+    },
+    {
+      "title": "Alcohol Treatment Navigator",
+      "publisher": "NIAAA, National Institutes of Health",
+      "url": "https://alcoholtreatment.niaaa.nih.gov/",
+      "note": "Help finding good-quality care to cut back or stop.",
+      "lastVerified": "2026-11-27"
+    },
+    {
+      "title": "FindTreatment.gov",
+      "publisher": "SAMHSA",
+      "url": "https://findtreatment.gov/",
+      "note": "Search for treatment near you, including programs that offer medicines.",
+      "lastVerified": "2026-11-27"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Alcohol withdrawal (medical encyclopedia)",
+      "publisher": "MedlinePlus, U.S. National Library of Medicine",
+      "url": "https://medlineplus.gov/ency/article/000764.htm"
+    },
+    {
+      "title": "Alcohol-use disorders: diagnosis, assessment and management of harmful drinking (high-risk drinking) and alcohol dependence (CG115)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg115",
+      "year": 2011
+    },
+    {
+      "title": "Alcohol-use disorders: diagnosis and management of physical complications (CG100)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg100",
+      "year": 2010
+    },
+    {
+      "title": "Effectiveness of brief alcohol interventions in primary care populations (Kaner et al.)",
+      "publisher": "Cochrane Database of Systematic Reviews (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29476653/",
+      "year": 2018
+    },
+    {
+      "title": "Harmful Interactions: Mixing Alcohol With Medicines",
+      "publisher": "NIAAA, National Institutes of Health",
+      "url": "https://www.niaaa.nih.gov/publications/brochures-and-fact-sheets/harmful-interactions-mixing-alcohol-with-medicines"
+    },
+    {
+      "title": "Naloxone nasal spray (drug information)",
+      "publisher": "MedlinePlus, U.S. National Library of Medicine",
+      "url": "https://medlineplus.gov/druginfo/meds/a616003.html"
+    },
+    {
+      "title": "National Helpline",
+      "publisher": "SAMHSA",
+      "url": "https://www.samhsa.gov/find-help/helplines/national-helpline"
+    },
+    {
+      "title": "42 CFR 2.32: notice to accompany disclosure (federal confidentiality rule for substance use treatment records)",
+      "publisher": "eCFR, U.S. Government Publishing Office",
+      "url": "https://www.ecfr.gov/current/title-42/chapter-I/subchapter-A/part-2/subpart-C/section-2.32",
+      "year": 2024
+    },
+    {
+      "title": "Confidentiality of substance use treatment records (42 CFR Part 2)",
+      "publisher": "U.S. Department of Health and Human Services",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/hipaa-part-2/index.html"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

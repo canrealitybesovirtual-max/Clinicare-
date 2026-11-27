@@ -1,0 +1,111 @@
+{
+  "id": "supervision-and-consultation",
+  "title": "Clinical supervision and consultation",
+  "category": "professional-practice",
+  "summary": "Structuring supervision and peer consultation so they protect clients and build competence: a supervision contract, a session structure, using recordings with consent, competency feedback, attention to diversity and power, and how to bring risk cases.",
+  "whenToUse": [
+    "When starting supervision as a supervisor or supervisee.",
+    "When a case involves risk, an ethical question, a strong reaction in you, or a method at the edge of your training.",
+    "When setting up a peer consultation group."
+  ],
+  "steps": [
+    {
+      "heading": "Agree a supervision contract",
+      "items": [
+        "Goals, frequency, format and how to reach the supervisor between sessions.",
+        "Responsibilities on both sides, including legal and ethical responsibility for cases.",
+        "How feedback and evaluation will work.",
+        "How diversity, identity and power in the supervisory relationship will be discussed."
+      ]
+    },
+    {
+      "heading": "Structure each session",
+      "items": [
+        "Check in and set an agenda; risk cases first.",
+        "Case discussion with a specific question.",
+        "Review of a recording or a role-play where possible.",
+        "Skill feedback and a learning goal for next time."
+      ]
+    },
+    {
+      "heading": "Use recordings with consent",
+      "body": "Recording sessions needs informed, written client consent, secure storage and deletion after review. Clients can decline without any effect on their care."
+    },
+    {
+      "heading": "Bring risk cases promptly",
+      "body": "Do not wait for the next scheduled session if a case involves imminent risk. Agree in advance how to reach consultation urgently, and document what you discussed and decided."
+    },
+    {
+      "heading": "Tell clients about supervision",
+      "body": "Clients should know when their care is discussed in supervision, who the supervisor is, and what is shared."
+    },
+    {
+      "heading": "Peer consultation",
+      "body": "Use de-identified case summaries, agree on ground rules, and remember that peer consultation does not transfer responsibility for the case."
+    }
+  ],
+  "prompts": [
+    "The question I would like help with today is how to respond when this client cancels after hard sessions.",
+    "I noticed I felt irritated in that session. I would like to understand what that is about before it affects the work.",
+    "Supervisor: what did you notice yourself doing in that moment, and what might you try next time?",
+    "To a client: I discuss my work with a supervisor to make sure you get the best care. Our discussion uses no identifying details."
+  ],
+  "cautions": [
+    "Supervision does not replace the supervisee's own judgment on risk in the moment; follow crisis procedures and consult as soon as possible.",
+    "Share only the minimum necessary information, without identifiers, in peer consultation.",
+    "Power differences can make it hard for supervisees to raise concerns; supervisors should invite feedback explicitly.",
+    "Licensed fidelity or competence rating tools are link-outs only; their licenses are pending."
+  ],
+  "evidenceSummary": "The American Psychological Association published Guidelines for Clinical Supervision in Health Service Psychology in 2015, covering supervisor competence, diversity, the supervisory relationship, feedback and evaluation, and ethical and legal considerations. The ACA Code of Ethics (2014, Section F) covers supervision, training and informed consent for supervision.",
+  "forClinicianReview": true,
+  "crisisPanel": false,
+  "sud": false,
+  "relatedInterventionIds": [
+    "motivational-interviewing"
+  ],
+  "relatedHandoutIds": [],
+  "relatedFormulationIds": [],
+  "relatedLegalIds": [
+    "competence-and-scope-of-practice",
+    "ethical-decision-making",
+    "clinician-wellbeing-and-impairment",
+    "hipaa-privacy-basics"
+  ],
+  "relatedPracticeIds": [
+    "clinician-reactions-and-self-disclosure",
+    "alliance-and-rupture-repair",
+    "multicultural-orientation-and-broaching",
+    "clinician-postvention"
+  ],
+  "relatedPopulationIds": [],
+  "linkOuts": [],
+  "measuresPending": [
+    {
+      "name": "Motivational Interviewing Treatment Integrity code (MITI 4)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26874558/",
+      "licenseKey": "MITI"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Guidelines for clinical supervision in health service psychology (American Psychological Association)",
+      "publisher": "American Psychologist, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25581007/",
+      "year": 2015
+    },
+    {
+      "title": "ACA Code of Ethics (2014) and ethics resources",
+      "publisher": "American Counseling Association",
+      "url": "https://www.counseling.org/resources/ethics",
+      "year": 2014
+    },
+    {
+      "title": "Ethical Principles of Psychologists and Code of Conduct",
+      "publisher": "American Psychological Association",
+      "url": "https://www.apa.org/ethics/code"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

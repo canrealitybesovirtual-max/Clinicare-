@@ -1,0 +1,106 @@
+{
+  "id": "bright-light-therapy",
+  "name": "Bright light therapy: information, cautions and referral",
+  "modality": "Light therapy - information and prescriber coordination",
+  "conditions": ["major-depressive-disorder", "insomnia-disorder"],
+  "evidenceLevel": "The VA/DoD 2022 depression guideline suggests (weak for) bright light therapy for mild to moderate major depression, whether or not there is a seasonal pattern. NICE NG222 (2022) advises telling people with winter depression who want to try light therapy instead of medication or psychological treatment that the evidence for its efficacy is uncertain. A meta-analysis of randomized trials found bright light efficacious for seasonal depression and for nonseasonal depression, with effects similar to many antidepressant trials, while noting weaknesses in study designs (Golden et al., 2005). In nonseasonal depression, light alone and light combined with fluoxetine both outperformed placebo, and the combination was most consistent (Lam et al., 2016). For bipolar depression, adjunctive light therapy is likely efficacious, with anti-manic medication and close monitoring recommended (ISBD task force, 2025). The AASM 2015 circadian rhythm guideline gives light therapy a weaker endorsement for some body-clock sleep problems, such as advanced sleep phase in adults.",
+  "minutes": { "min": 10, "max": 20 },
+  "purpose": "Light therapy uses a bright light box, usually around 10,000 lux with UV filtered out, for a set time each day, most often in the morning. It is best known for winter-pattern depression and also has evidence in nonseasonal depression and, with precautions, bipolar depression. Sleep specialists also use carefully timed light for some body-clock sleep problems. This entry gives information to share and the cautions to check, and points to prescriber, sleep specialist and eye-care coordination. Starting light therapy, especially for anyone with a history of mania or hypomania or with eye problems, should be agreed with the prescriber.",
+  "steps": [
+    "Explain what light therapy is and what the evidence says, including that ratings differ between guideline bodies, and that it is often used alongside, not instead of, other treatment.",
+    "Check for cautions before suggesting it: a history of mania or hypomania, eye conditions (for example retinal disease or macular degeneration), diabetes affecting the eyes, and medications or conditions that increase sensitivity to light. If any apply, the decision rests with the prescriber and, for eye concerns, an eye-care professional.",
+    "Share general information from reliable sources: a typical approach is daily use of a 10,000 lux UV-filtered light box for about 30 to 45 minutes, usually soon after waking, from fall to spring for winter-pattern depression. Exact timing and dose are set with the prescriber or sleep specialist.",
+    "For anyone with a bipolar history, coordinate with the prescriber first. Expert guidance suggests using light only with anti-manic medication, starting with shorter sessions and monitoring mood closely.",
+    "For body-clock sleep problems (falling asleep and waking much earlier or later than wanted), refer to a sleep specialist, because poorly timed light can shift the body clock the wrong way.",
+    "Track mood and sleep with the client, and ask them to report side effects such as headaches, eye strain, agitation or sleep changes to the prescriber.",
+    "Review response after several weeks and adjust the plan with the prescriber."
+  ],
+  "script": [
+    "For some people, sitting near a special bright light each morning can help with low mood, especially in the darker months.",
+    "It is not a sun lamp or a tanning light. The light boxes filter out ultraviolet light.",
+    "Before trying it, let's check with your prescriber, and your eye doctor if you have any eye problems.",
+    "If you notice you are sleeping much less, feeling unusually energetic or speeded up, stop and contact your prescriber.",
+    "Let's keep track of your mood and sleep so we can see whether it is helping."
+  ],
+  "contraindications": [
+    "History of mania or hypomania: light therapy can trigger a switch into a high. Use only with the prescriber's agreement, anti-manic medication and close mood monitoring.",
+    "Eye disease, eye surgery history or diabetes affecting the eyes: check with an eye-care professional first.",
+    "Medications or conditions that increase sensitivity to light: alternative treatments or medical supervision may be needed. Check with the prescriber.",
+    "Light therapy does not replace treatment for moderate to severe depression. If the client has suicidal thoughts, address safety first. This app does not judge risk; you do. Crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com.",
+    "Do not use tanning beds or unfiltered lights in place of a light therapy device."
+  ],
+  "culturalAdaptations": [
+    "Daily routines, prayer times and work schedules affect when morning light is practical. Plan timing around the client's life.",
+    "Cost can be a barrier. Ask about access and options, and avoid implying that the client must buy a device.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "handoutIds": ["mood-routine-tracker"],
+  "evidenceGrades": [
+    {
+      "body": "VA/DoD",
+      "guideline": "Management of Major Depressive Disorder",
+      "year": 2022,
+      "conditionId": "major-depressive-disorder",
+      "population": "Adults with mild to moderate major depressive disorder, with or without a seasonal pattern",
+      "direction": "for",
+      "strength": "weak for (suggest)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36122380/"
+    },
+    {
+      "body": "NICE",
+      "guideline": "Depression in adults: treatment and management (NG222)",
+      "year": 2022,
+      "conditionId": "major-depressive-disorder",
+      "population": "Adults with winter depression with a seasonal pattern",
+      "direction": "insufficient",
+      "strength": "advise that the evidence for light therapy is uncertain",
+      "url": "https://www.nice.org.uk/guidance/ng222/chapter/Recommendations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "The management of major depressive disorder: synopsis of the 2022 VA/DoD clinical practice guideline (McQuaid et al.)",
+      "publisher": "Annals of Internal Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36122380/",
+      "year": 2022
+    },
+    {
+      "title": "Depression in adults: treatment and management (NG222): recommendations",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng222/chapter/Recommendations",
+      "year": 2022
+    },
+    {
+      "title": "The efficacy of light therapy in the treatment of mood disorders: a review and meta-analysis of the evidence (Golden et al.)",
+      "publisher": "American Journal of Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15800134/",
+      "year": 2005
+    },
+    {
+      "title": "Efficacy of bright light treatment, fluoxetine, and the combination in patients with nonseasonal major depressive disorder: a randomized clinical trial (Lam et al.)",
+      "publisher": "JAMA Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26580307/",
+      "year": 2016
+    },
+    {
+      "title": "Light therapy for bipolar disorders: clinical recommendations from the International Society for Bipolar Disorders (ISBD) Chronobiology and Chronotherapy Task Force (Geoffroy et al.)",
+      "publisher": "Dialogues in Clinical Neuroscience (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/40705857/",
+      "year": 2025
+    },
+    {
+      "title": "Clinical practice guideline for the treatment of intrinsic circadian rhythm sleep-wake disorders: an update for 2015 (Auger et al.)",
+      "publisher": "Journal of Clinical Sleep Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26414986/",
+      "year": 2015
+    },
+    {
+      "title": "Seasonal Affective Disorder",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/publications/seasonal-affective-disorder"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

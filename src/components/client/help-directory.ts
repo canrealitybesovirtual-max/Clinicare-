@@ -8,7 +8,7 @@ import usJson from "@content/referrals/us.json";
 import intlJson from "@content/referrals/international.json";
 import type { Text } from "@/lib/i18n/core";
 import { COUNTRY_NAMES } from "@/lib/i18n/shell";
-import { ReferralDirectorySchema, isVerified, type ReferralEntry } from "@/lib/schemas-referrals";
+import { CRISIS_LIKE_KINDS, ReferralDirectorySchema, isVerified, type ReferralEntry } from "@/lib/schemas-referrals";
 import { isClientSafeText } from "@/lib/client-safe";
 
 export interface HelpEntry {
@@ -25,7 +25,7 @@ export interface HelpEntry {
   url: string;
   hours: string | null;
   verified: boolean;
-  /** A 24/7 crisis, veterans or deaf/hard-of-hearing crisis line: its call button uses the crisis colour. */
+  /** A 24/7 crisis, veterans, deaf/hard-of-hearing or violence and abuse line: its call button uses the crisis colour. */
   crisis: boolean;
 }
 
@@ -38,8 +38,18 @@ export interface HelpRegion {
 
 const REGION_ORDER = ["US", "CA", "GB", "IE", "AU", "NZ"] as const satisfies readonly (keyof typeof COUNTRY_NAMES)[];
 
-/** Kinds a client can call, text or chat with directly. */
-const KINDS = new Set<ReferralEntry["kind"]>(["crisis", "helpline", "veterans", "deaf-hoh", "lgbtq"]);
+/** Kinds a client can call, text or chat with directly (entries without a phone, text or chat route are left out). */
+const KINDS = new Set<ReferralEntry["kind"]>([
+  "crisis",
+  "helpline",
+  "veterans",
+  "deaf-hoh",
+  "lgbtq",
+  "violence-and-abuse",
+  "perinatal",
+  "older-adults-and-caregivers",
+  "basic-needs",
+]);
 
 function isHelpLine(e: ReferralEntry): boolean {
   if (KINDS.has(e.kind)) return Boolean(e.phone || e.text || e.chat);
@@ -63,7 +73,7 @@ function toEntry(e: ReferralEntry): HelpEntry {
     url: e.url,
     hours: plainOrNull(e.hours),
     verified: isVerified(e),
-    crisis: e.kind === "crisis" || e.kind === "veterans" || e.kind === "deaf-hoh",
+    crisis: CRISIS_LIKE_KINDS.has(e.kind),
   };
 }
 

@@ -1,0 +1,173 @@
+{
+  "id": "substance-use-diary",
+  "title": "Substance Use Diary",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 5,
+  "intro": "Writing down when and how much you use can show patterns you might not notice. It can also show your progress. Use your own words. There are no right or wrong answers. This diary is meant for paper. Keep it with you or somewhere private. Reading this sheet takes about 5 minutes. A row takes a minute or two.",
+  "sections": [
+    {
+      "heading": "How to fill it in",
+      "steps": [
+        "Fill in a row each day, as soon as you can after using. Fill in days you do not use too. Write 0 or none.",
+        "Write what you used and about how much, in your own words, like half a gram, two pills, or one joint.",
+        "Rate your strongest craving that day from 0 (none) to 10 (the strongest ever).",
+        "Write what was going on and how you felt before. Use general words, like after work or alone at home.",
+        "Write what happened after, good or bad, like slept badly, missed work, or felt calm.",
+        "Do not write the names of people or places."
+      ]
+    },
+    {
+      "heading": "Looking back each week",
+      "steps": [
+        "When did I use the most?",
+        "What was going on before those times?",
+        "What helped on days I used less or not at all?",
+        "How many days did I go without using?"
+      ]
+    },
+    {
+      "heading": "My goal",
+      "body": "Your goal is your choice, made with your care team. It might be to use less, to use more safely, or to stop.",
+      "steps": [
+        "My goal this week: ________",
+        "Why it matters to me: ________"
+      ]
+    },
+    {
+      "heading": "Safer use reminders",
+      "steps": [
+        "Try not to use alone. If you do, ask someone to check on you.",
+        "Do not mix drugs, or drugs with alcohol. Mixing raises the risk of overdose.",
+        "Fentanyl can be hidden in pills, powders, and other drugs. Where they are legal, fentanyl test strips can show if it is there.",
+        "Keep naloxone nearby, and show others where it is."
+      ]
+    },
+    {
+      "heading": "Privacy note",
+      "body": "Do not write your name, or the names of other people or places, on this sheet. Keep it somewhere private. If you share it with a substance use treatment program, it may become part of your treatment records. Those records have special federal privacy protection. 42 CFR Part 2 prohibits unauthorized use or disclosure of these records. Ask your counselor how your records are kept and shared."
+    }
+  ],
+  "practiceLog": {
+    "columns": [
+      "Day and time",
+      "What I used and how much",
+      "Craving (0-10)",
+      "What was going on; how I felt",
+      "What happened after"
+    ],
+    "rows": 14
+  },
+  "safetyNote": "Safety first: If someone may have overdosed, call 911 right away and give naloxone if you have it. If you drink a lot, or take pills for sleep or nerves every day, stopping all at once can be dangerous. Talk with a doctor first. For free, confidential help finding treatment in the US, call the SAMHSA National Helpline at 1-800-662-4357, any time, in English or Spanish. If you have thoughts of hurting yourself or someone else, get help now. In the US, call or text 988, or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sud": true,
+  "es": {
+    "title": "Diario de consumo de sustancias",
+    "intro": "Anotar cuándo y cuánto consume puede mostrar patrones que tal vez no ve. También puede mostrar su avance. Use sus propias palabras. No hay respuestas correctas ni incorrectas. Este diario es para usarlo en papel. Llévelo con usted o guárdelo en un lugar privado. Leer esta hoja toma unos 5 minutos. Llenar una fila toma uno o dos minutos.",
+    "sections": [
+      {
+        "heading": "Cómo llenarlo",
+        "steps": [
+          "Llene una fila cada día, lo antes posible después de consumir. Llene también los días que no consume. Escriba 0 o nada.",
+          "Escriba qué usó y más o menos cuánto, con sus palabras, como medio gramo, dos pastillas o un cigarro de marihuana.",
+          "Califique su antojo más fuerte del día de 0 (nada) a 10 (el más fuerte de su vida).",
+          "Escriba qué estaba pasando y cómo se sentía antes. Use palabras generales, como después del trabajo o sin compañía en casa.",
+          "Escriba qué pasó después, bueno o malo, como dormí mal, falté al trabajo o me sentí tranquilo.",
+          "No escriba nombres de personas ni de lugares."
+        ]
+      },
+      {
+        "heading": "Revisión de cada semana",
+        "steps": [
+          "¿Cuándo consumí más?",
+          "¿Qué estaba pasando antes de esos momentos?",
+          "¿Qué me ayudó los días que consumí menos o nada?",
+          "¿Cuántos días pasé sin consumir?"
+        ]
+      },
+      {
+        "heading": "Mi meta",
+        "body": "Su meta es su decisión, tomada con su equipo de atención. Puede ser consumir menos, consumir con menos riesgo o dejar de consumir.",
+        "steps": [
+          "Mi meta esta semana: ________",
+          "Por qué es importante para mí: ________"
+        ]
+      },
+      {
+        "heading": "Recordatorios para consumir con menos riesgo",
+        "steps": [
+          "Trate de no consumir solo. Si lo hace, pídale a alguien que lo vaya a ver.",
+          "No mezcle drogas, ni drogas con alcohol. Mezclar sube el riesgo de sobredosis.",
+          "El fentanilo puede estar escondido en pastillas, polvos y otras drogas. Donde son legales, las tiras para detectar fentanilo pueden mostrar si lo tienen.",
+          "Tenga naloxona cerca, y muéstreles a otros dónde está."
+        ]
+      },
+      {
+        "heading": "Nota de privacidad",
+        "body": "No escriba su nombre, ni los nombres de otras personas o lugares, en esta hoja. Guárdela en un lugar privado. Si la comparte con un programa de tratamiento por consumo de sustancias, puede llegar a ser parte de sus registros de tratamiento. Esos registros tienen una protección federal especial de la privacidad. La ley federal 42 CFR Part 2 prohíbe el uso o la divulgación no autorizados de estos registros. Pregúntele a su consejero cómo se guardan y se comparten sus registros."
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Día y hora",
+        "Qué usé y cuánto",
+        "Antojo (0-10)",
+        "Qué pasaba; cómo me sentía",
+        "Qué pasó después"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: Si alguien pudo haber tenido una sobredosis, llame al 911 de inmediato y dele naloxona si la tiene. Si bebe mucho, o toma todos los días pastillas para dormir o para los nervios, dejarlas de golpe puede ser peligroso. Hable primero con un médico. Para recibir ayuda gratuita y confidencial para encontrar tratamiento en EE. UU., llame a la Línea Nacional de Ayuda de SAMHSA (SAMHSA National Helpline) al 1-800-662-4357, a cualquier hora, en inglés o en español. Si tiene pensamientos de hacerse daño o de hacerle daño a otra persona, busque ayuda ahora. En EE. UU., llame o envíe un mensaje de texto al 988, o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "linkOuts": [
+    {
+      "title": "FindTreatment.gov",
+      "publisher": "SAMHSA",
+      "url": "https://findtreatment.gov/",
+      "note": "Search for treatment near you, including programs that offer medicines.",
+      "lastVerified": "2026-11-27"
+    }
+  ],
+  "sources": [
+    {
+      "title": "VA/DoD Clinical Practice Guideline for the Management of Substance Use Disorders: provider summary",
+      "publisher": "US Department of Veterans Affairs and Department of Defense",
+      "url": "https://www.healthquality.va.gov/guidelines/MH/sud/VADoDSUDCPGProviderSummary.pdf",
+      "year": 2021
+    },
+    {
+      "title": "Contingency management for treatment of substance use disorders: a meta-analysis (Prendergast et al.)",
+      "publisher": "Addiction (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17034434/",
+      "year": 2006
+    },
+    {
+      "title": "Opioid overdose (fact sheet)",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/news-room/fact-sheets/detail/opioid-overdose"
+    },
+    {
+      "title": "Naloxone nasal spray (drug information)",
+      "publisher": "MedlinePlus, U.S. National Library of Medicine",
+      "url": "https://medlineplus.gov/druginfo/meds/a616003.html"
+    },
+    {
+      "title": "National Helpline",
+      "publisher": "SAMHSA",
+      "url": "https://www.samhsa.gov/find-help/helplines/national-helpline"
+    },
+    {
+      "title": "42 CFR 2.32: notice to accompany disclosure (federal confidentiality rule for substance use treatment records)",
+      "publisher": "eCFR, U.S. Government Publishing Office",
+      "url": "https://www.ecfr.gov/current/title-42/chapter-I/subchapter-A/part-2/subpart-C/section-2.32",
+      "year": 2024
+    },
+    {
+      "title": "Confidentiality of substance use treatment records (42 CFR Part 2)",
+      "publisher": "U.S. Department of Health and Human Services",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/hipaa-part-2/index.html"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

@@ -1,0 +1,279 @@
+{
+  "id": "gambling-disorder",
+  "name": "Gambling disorder",
+  "icd10cm": [
+    {
+      "code": "F63.0",
+      "label": "Pathological gambling"
+    }
+  ],
+  "icd11": [
+    {
+      "code": "6C50.0",
+      "label": "Gambling disorder, predominantly offline"
+    },
+    {
+      "code": "6C50.1",
+      "label": "Gambling disorder, predominantly online"
+    }
+  ],
+  "dsmPointer": "See DSM-5-TR: Substance-Related and Addictive Disorders — Gambling Disorder",
+  "summary": "Gambling the client cannot keep within limits, carrying on as harm builds: chasing losses, betting more or for longer than planned, thinking ahead to the next bet, hiding how much is spent, and debts, borrowing or lost savings. Phone betting and casino apps make it constant and private. Harm reaches partners, children and finances as well as the client. NICE (NG248, 2025) highlights that gambling harms can be a dominant risk factor for suicidal thoughts and attempts, with risk possibly highest just after a gambling episode, so ask directly about suicide and plan for safety. Group or individual CBT is the core treatment, with motivational interviewing, peer support, blocking tools and debt advice; involve a partner or family member when both agree. Gambling is not a substance, so 42 CFR Part 2 does not apply, but record only what the care needs. For clinician review only; this is not a diagnosis.",
+  "features": [
+    {
+      "symptomId": "chasing-losses",
+      "kind": "core",
+      "weight": 5
+    },
+    {
+      "symptomId": "gambling-impaired-control",
+      "kind": "core",
+      "weight": 5
+    },
+    {
+      "symptomId": "gambling-concealment-harm",
+      "kind": "core",
+      "weight": 4
+    },
+    {
+      "symptomId": "gambling-preoccupation",
+      "kind": "core",
+      "weight": 3
+    },
+    {
+      "symptomId": "depressed-mood",
+      "kind": "associated",
+      "weight": 1,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "subjective-anxiety-stress",
+      "kind": "associated",
+      "weight": 1,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "irritability",
+      "kind": "associated",
+      "weight": 1,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "insomnia",
+      "kind": "associated",
+      "weight": 1
+    },
+    {
+      "symptomId": "worthlessness-guilt",
+      "kind": "associated",
+      "weight": 1
+    },
+    {
+      "symptomId": "identifiable-stressor",
+      "kind": "associated",
+      "weight": 1
+    }
+  ],
+  "minCore": 2,
+  "durationGate": {
+    "minWeeks": 12,
+    "note": "Ask how gambling has gone over the past year, including any breaks and what restarted it. Severity can rise quickly after a short spell or a relapse. Check the timing DSM-5-TR and ICD-11 describe."
+  },
+  "impairmentRequired": true,
+  "ruleOuts": [
+    {
+      "label": "Gambling only during a manic or hypomanic episode",
+      "type": "psychiatric",
+      "note": "Heavy betting together with little need for sleep, racing thoughts or grand plans points to a mood episode; screen for bipolar disorder."
+    },
+    {
+      "label": "Medicines that can trigger impulsive gambling",
+      "type": "medical",
+      "note": "Dopamine agonists (used for Parkinson disease or restless legs) and aripiprazole have been linked to gambling problems; ask the prescriber to review them (NICE NG248, recommendation 1.1.22)."
+    },
+    {
+      "label": "Neurological conditions or brain injury with disinhibition",
+      "type": "medical",
+      "note": "New gambling after a brain injury or with a neurological condition calls for medical and cognitive assessment."
+    },
+    {
+      "label": "Alcohol or drug use alongside gambling",
+      "type": "substance",
+      "note": "Drinking or drug use often goes with betting and can make it harder to stop; ask about both. This app does not store or send substance-use information."
+    }
+  ],
+  "specifiers": [
+    {
+      "label": "Predominantly online or offline (ICD-11 6C50.1 / 6C50.0)",
+      "note": "Record where most gambling happens (apps and websites, or venues such as casinos, betting shops and lottery outlets); it shapes blocking tools and relapse plans."
+    },
+    {
+      "label": "ICD-10-CM F63.0 (title: Pathological gambling)",
+      "note": "F63.0 is the ICD-10-CM code used for gambling disorder. DSM-5-TR adds course and severity specifiers: See DSM-5-TR."
+    },
+    {
+      "label": "Affected others (descriptive)",
+      "note": "Note who else is affected (partner, children, family finances) and whether they want support for themselves (NICE NG248, recommendations 1.7.1-1.7.2)."
+    }
+  ],
+  "differentials": [
+    {
+      "label": "Bipolar disorder, unspecified",
+      "icd10cm": "F31.9",
+      "distinguishing": "Gambling happens only during episodes of elevated mood, with other signs such as little need for sleep."
+    },
+    {
+      "label": "Recreational or professional gambling (no code)",
+      "distinguishing": "Betting stays within planned limits of time and money, without chasing losses, hiding it or harm."
+    },
+    {
+      "label": "Antisocial personality disorder",
+      "icd10cm": "F60.2",
+      "distinguishing": "Gambling-related lying or theft is one part of a long-standing, wider pattern of disregard for rules and others."
+    },
+    {
+      "label": "Impulse problems from dopamine agonist medicine (no separate code)",
+      "distinguishing": "Gambling starts or escalates after a dopamine agonist is started or increased, and eases when the prescriber changes it."
+    }
+  ],
+  "comorbidities": [
+    {
+      "conditionId": "major-depressive-disorder",
+      "label": "Major depressive disorder",
+      "note": "Low mood often follows losses and debts, and gambling can be used to escape low mood. Screen with the PHQ-9 and ask about suicide."
+    },
+    {
+      "conditionId": "alcohol-use-disorder",
+      "label": "Alcohol use disorder",
+      "note": "Drinking and gambling often occur together; coordinate treatment for both (NICE NG248, recommendation 1.4.4). 42 CFR Part 2 prohibits unauthorized use or disclosure of these records."
+    },
+    {
+      "conditionId": "generalized-anxiety-disorder",
+      "label": "Generalized anxiety disorder",
+      "note": "Anxiety disorders are common before and after gambling problems begin (Kessler et al., 2008)."
+    },
+    {
+      "conditionId": "ptsd",
+      "label": "Posttraumatic stress disorder",
+      "note": "PTSD is common alongside gambling problems and can make treatment harder to reach (NICE NG248, recommendation 1.4.3)."
+    }
+  ],
+  "measures": [
+    "phq-9",
+    "gad-7"
+  ],
+  "measuresPending": [
+    {
+      "name": "Problem Gambling Severity Index (PGSI)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22426971/",
+      "note": "License pending — link out only; NICE NG248 names it as an example of a validated tool",
+      "licenseKey": "PGSI"
+    }
+  ],
+  "interventions": [
+    {
+      "name": "Cognitive behavioral therapy (group, or individual if group is not suitable)",
+      "evidence": "NICE NG248 (2025), recommendations 1.5.13-1.5.15: offer group CBT to reduce gambling severity and frequency, or individual CBT when group is not possible or suitable.",
+      "note": "Covers triggers, beliefs about luck and control, urges, money management and relapse plans. NICE expects CBT to be delivered by trained practitioners."
+    },
+    {
+      "name": "Motivational interviewing",
+      "evidence": "NICE NG248, recommendations 1.1.10 and 1.5.12: consider brief motivational interviewing to encourage help-seeking and to strengthen commitment to change.",
+      "note": "Explore the client's own reasons for change and what gambling gives them, without lecturing."
+    },
+    {
+      "name": "Asking about suicide and safety planning",
+      "evidence": "NICE NG248, recommendations 1.1.11-1.1.13: ask directly about suicidal thoughts and intent, explain the link with gambling harms, and put a safety plan in place when there is risk.",
+      "note": "Risk may peak right after a big loss. Keep crisis numbers in the plan; the app never rates risk."
+    },
+    {
+      "name": "Blocking tools, self-exclusion and money advice",
+      "evidence": "NICE NG248, recommendations 1.1.14-1.1.15: discuss self-exclusion and blocking software or marketing blocks, and advice on debt and other practical needs.",
+      "note": "Bank gambling blocks, app and site self-exclusion, handing over card control for a time, and referral to a debt adviser."
+    },
+    {
+      "name": "Peer support and support for affected others",
+      "evidence": "NICE NG248, recommendations 1.5.11 and 1.7.2: offer peer support to people who want it and offer support to affected others.",
+      "note": "Mutual-help groups such as Gamblers Anonymous, and support for partners and family in their own right."
+    },
+    {
+      "name": "Referral for medication evaluation (specialist-led)",
+      "evidence": "NICE NG248, recommendations 1.5.16-1.5.17: consider naltrexone when psychological therapy has not achieved the agreed outcomes, started by or under an experienced specialist.",
+      "note": "Prescribing decisions rest with the prescriber; naltrexone cannot be taken with opioids."
+    }
+  ],
+  "handouts": [
+    "gambling-change-plan",
+    "weighing-a-change",
+    "problem-solving-steps"
+  ],
+  "statIds": [
+    "us-gambling-problems"
+  ],
+  "culturalNotes": [
+    "Gambling norms differ: lotteries, card games, sports betting and bingo can be ordinary social or family activities. Anchor the assessment in loss of control and harm, not in the type of game.",
+    "Stigma, shame and fear of disclosure stop many people from mentioning gambling, and stigma may weigh more on marginalized groups (NICE NG248, recommendation 1.1.1). Ask directly and without judgment, for example 'Do you gamble?'.",
+    "Money is often shared across households and extended families; gambling losses can affect relatives who never chose to gamble. Ask who else is affected and what support they have.",
+    "Some faith communities forbid gambling, which can deepen shame and secrecy. Explore what the client's faith means to them, and use faith-integrated approaches only when the client asks and after informed consent (see the AACC Code of Ethics for faith-based counselors).",
+    "Online betting, loot boxes and app-based casino games blur the line with gaming; ask about all of them.",
+    "Use a trained professional interpreter, not family members, and check that key terms carry the meaning you intend."
+  ],
+  "sud": false,
+  "strongMinAreas": 2,
+  "redFlagRules": [
+    {
+      "type": "suicidality",
+      "message": "Suicide-related content is documented in this input. NICE NG248 notes that gambling harms can be a dominant risk factor for suicide, sometimes highest just after a gambling episode; ask directly, plan for safety and follow your risk protocol."
+    },
+    {
+      "type": "mania",
+      "capAt": "moderate",
+      "message": "Manic or hypomanic signs are documented. Gambling during elevated mood points to a mood episode; screen for bipolar disorder and refer for psychiatric evaluation."
+    }
+  ],
+  "licensedDsm": false,
+  "wileyLicensed": false,
+  "sources": [
+    {
+      "title": "Gambling-related harms: identification, assessment and management (NG248): recommendations",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng248/chapter/recommendations",
+      "year": 2025
+    },
+    {
+      "title": "DSM-IV pathological gambling in the National Comorbidity Survey Replication (Kessler et al.)",
+      "publisher": "Psychological Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18257941/",
+      "year": 2008
+    },
+    {
+      "title": "Validity of the Problem Gambling Severity Index interpretive categories (Currie et al.)",
+      "publisher": "Journal of Gambling Studies (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22426971/",
+      "year": 2013
+    },
+    {
+      "title": "ICD-11 for Mortality and Morbidity Statistics (browser)",
+      "publisher": "World Health Organization",
+      "url": "https://icd.who.int/browse/latest-release/mms/en"
+    },
+    {
+      "title": "ICD-10-CM (official code set)",
+      "publisher": "CDC National Center for Health Statistics",
+      "url": "https://www.cdc.gov/nchs/icd/icd-10-cm/index.html"
+    },
+    {
+      "title": "ICD-10-CM codes checked with the NLM Clinical Table Search Service",
+      "publisher": "National Library of Medicine",
+      "url": "https://clinicaltables.nlm.nih.gov/apidoc/icd10cm/v3/doc.html"
+    },
+    {
+      "title": "AACC Code of Ethics",
+      "publisher": "American Association of Christian Counselors",
+      "url": "https://aacc.net/aacc-code-of-ethics/"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

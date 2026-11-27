@@ -2,7 +2,7 @@
   "id": "urge-surfing",
   "name": "Urge surfing (riding out cravings mindfully)",
   "modality": "Mindfulness-based relapse prevention (MBRP) skill",
-  "conditions": ["alcohol-use-disorder", "cannabis-use-disorder", "opioid-use-disorder", "stimulant-use-disorder"],
+  "conditions": ["alcohol-use-disorder", "cannabis-use-disorder", "opioid-use-disorder", "stimulant-use-disorder", "gambling-disorder", "tobacco-use-disorder", "body-focused-repetitive-behaviors"],
   "evidenceLevel": "Emerging evidence for the skill on its own. Urge surfing is a core practice in mindfulness-based relapse prevention (MBRP). In an RCT with 286 adults in aftercare, MBRP reduced drug use and heavy drinking more than standard relapse prevention and treatment as usual at 12 months, though not at every time point (Bowen et al., 2014). In a laboratory study with 123 student smokers, brief urge-surfing instructions did not reduce urge ratings overall compared with no instructions, although the instructed group reported smoking fewer cigarettes over the following week (Bowen and Marlatt, 2009). Use it as one skill within a broader treatment plan.",
   "minutes": { "min": 10, "max": 20 },
   "purpose": "Urge surfing, a technique developed by G. Alan Marlatt, teaches the client to notice a craving as a passing wave of body sensations, thoughts and impulses that rises, peaks and falls, rather than something that must be obeyed or fought. The client pauses, brings curious attention to where the urge shows up in the body, breathes with it, and watches its strength change without acting on it. Over time this can loosen the automatic link between craving and drinking. It is taught within MBRP (Sarah Bowen, Neha Chawla, Katie Witkiewitz and Marlatt) and similar approaches. This entry uses original wording.",
@@ -44,6 +44,7 @@
     "consentNote": "Offer only if the client raises faith or spirituality and asks to include it. Before starting, explain what the faith-integrated option involves, that it is optional, that the same intervention is available without religious content, and that the client can change their mind at any time; document informed consent. Follow the client's own tradition and words, and never introduce, impose, endorse or challenge beliefs (AACC Code of Ethics: informed consent before spiritual interventions, client-led integration; ACA Code of Ethics 2014, A.2 informed consent and A.4.b personal values)."
   },
   "handoutIds": ["urge-surfing-log", "drinking-diary"],
+  "orientationIds": ["mindfulness-and-compassion-based-therapies"],
   "sources": [
     { "title": "Relative efficacy of mindfulness-based relapse prevention, standard relapse prevention, and treatment as usual for substance use disorders: a randomized clinical trial (Bowen et al.)", "publisher": "JAMA Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/24647726/", "year": 2014 },
     { "title": "Surfing the urge: brief mindfulness-based intervention for college student smokers (Bowen and Marlatt)", "publisher": "Psychology of Addictive Behaviors (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/20025372/", "year": 2009 },

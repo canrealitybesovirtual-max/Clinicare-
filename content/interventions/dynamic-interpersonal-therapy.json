@@ -1,0 +1,77 @@
+{
+  "id": "dynamic-interpersonal-therapy",
+  "name": "Dynamic interpersonal therapy (DIT): overview and referral",
+  "modality": "Psychodynamic - brief interpersonal",
+  "conditions": [
+    "major-depressive-disorder",
+    "persistent-depressive-disorder"
+  ],
+  "evidenceLevel": "In a pilot randomized trial in primary care for moderate to severe depression (Fonagy et al., 2020), DIT led to lower depression scores at six months than low-intensity treatment (51% vs 9% with clinically significant change) and was similar to CBT on most outcomes. Evidence is still limited to small trials. DIT was built from psychodynamic competences used in UK NHS Talking Therapies (Lemma et al., 2011). NICE NG222 (2022) lists short-term psychodynamic psychotherapy among options for less severe depression.",
+  "minutes": {
+    "min": 50,
+    "max": 50
+  },
+  "purpose": "A brief, 16-session psychodynamic therapy for depression developed by Alessandra Lemma, Mary Target and Peter Fonagy. It links the client's depression to a recurring, unconscious pattern in relationships, the interpersonal-affective focus: how the client tends to see themselves, how they see others, and the feelings that go with it. The therapist helps the client recognize the pattern as it plays out in current relationships and in therapy, strengthen their capacity to reflect on their own and others' minds, and try new ways of relating. The therapy ends with a written goodbye letter from the therapist summarizing the work. This entry is an overview for planning and referral.",
+  "steps": [
+    "Confirm fit and training. DIT is delivered by clinicians trained and accredited in it; otherwise, refer.",
+    "Early phase (overview, about sessions 1 to 4): explore the client's relationships and history and agree on one interpersonal-affective focus that links them to the depression.",
+    "Middle phase (overview, about sessions 5 to 12): track the focus as it shows up in current relationships and in the therapy, encouraging curiosity about the client's and others' states of mind.",
+    "Support small changes in how the client relates to others, and review what happens.",
+    "Ending phase (overview, about sessions 13 to 16): work through feelings about ending and share a goodbye letter that summarizes the focus and the client's progress.",
+    "Track symptoms with an agreed measure (for example, PHQ-9) across the 16 sessions."
+  ],
+  "script": [
+    "It sounds like a pattern keeps coming up: you work hard to please people, then feel let down and pull away.",
+    "What do you imagine she was feeling when she said that?",
+    "I wonder if something like that happened between us last week, when I had to change our time.",
+    "We have a set number of sessions. Near the end, I'll write you a letter about what we've worked on together.",
+    "This therapy works best with a clinician trained in it. I can help you find one."
+  ],
+  "contraindications": [
+    "Full DIT requires training and supervision; steps here are overview-level only.",
+    "For severe depression, psychotic features or high risk, coordinate a medication evaluation and a higher level of care.",
+    "Where there is intimate partner violence, do not encourage changes in relating that could raise danger; prioritize safety planning.",
+    "This intervention does not assess or decide risk. If suicidal thoughts, self-harm or risk to others come up, pause and follow your setting's risk-assessment and safety-planning procedures. Keep crisis options visible: 988 Suicide & Crisis Lifeline (US, call or text), the local emergency number, and findahelpline.com for other countries."
+  ],
+  "culturalAdaptations": [
+    "Relationship patterns are shaped by family and cultural expectations; describe the focus in terms that respect the client's values.",
+    "Include extended family, community and chosen family when mapping relationships.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "trainingRequired": "DIT: trained clinicians only (accredited DIT practitioner training, for example through Anna Freud); steps here are overview-level only.",
+  "handoutIds": [
+    "what-to-expect-in-therapy",
+    "my-relationships-map"
+  ],
+  "orientationIds": [
+    "psychodynamic-therapy"
+  ],
+  "sources": [
+    {
+      "title": "Dynamic interpersonal therapy for moderate to severe depression: a pilot randomized controlled and feasibility trial (Fonagy et al.)",
+      "publisher": "Psychological Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31084635/",
+      "year": 2020
+    },
+    {
+      "title": "The development of a brief psychodynamic intervention (dynamic interpersonal therapy) and its application to depression (Lemma et al.)",
+      "publisher": "Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21463169/",
+      "year": 2011
+    },
+    {
+      "title": "Depression in adults: treatment and management (NG222)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng222",
+      "year": 2022
+    },
+    {
+      "title": "Dynamic Interpersonal Therapy (DIT) training",
+      "publisher": "Anna Freud",
+      "url": "https://www.annafreud.org/training/health-and-social-care/dynamic-interpersonal-therapy"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

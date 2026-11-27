@@ -1,0 +1,188 @@
+{
+  "id": "what-to-expect-in-therapy",
+  "title": "What to Expect in Therapy",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 10,
+  "intro": "Starting therapy can feel new and a little strange. This sheet explains what often happens in the first visits, what your counselor does, and what you can ask for. Every counselor works a bit differently, so ask about anything that is not clear. Reading this sheet takes about 10 minutes.",
+  "sections": [
+    {
+      "heading": "The first few visits",
+      "body": "The first few visits are mostly about getting to know each other and deciding what to work on.",
+      "steps": [
+        "Your counselor will ask what brings you in, what is going well, and what is hard right now.",
+        "You may be asked about your health, your family, your work, and your daily life. You can always say, 'I am not ready to talk about that yet.'",
+        "You may fill out short forms about how you have been feeling. You can ask what each form is for and who will see it.",
+        "Together you will pick a few goals. Goals can be small, like sleeping better or getting out of the house more often.",
+        "Your counselor will share ideas about what may help and about how long it might take. You decide together."
+      ]
+    },
+    {
+      "heading": "Your part and your counselor's part",
+      "steps": [
+        "You are the expert on your own life. Your counselor brings skills and training.",
+        "Your counselor listens, asks questions, explains choices, and helps you try new ways to cope.",
+        "Your part is to come when you can, be as open as you can, and say what is and is not working.",
+        "Many kinds of therapy include practice between visits. Small steps between visits often make a big difference."
+      ]
+    },
+    {
+      "heading": "Privacy and its limits",
+      "body": "What you say in therapy is private. In most cases, your counselor will not share it without your OK. But there are some limits. The rules are different from place to place, so your counselor should explain the rules where you live.",
+      "steps": [
+        "Your counselor may need to act if there is a serious risk that you or another person will be badly hurt.",
+        "Counselors must report the abuse or neglect of a child. In many places, the same is true for an older adult or an adult who needs others to care for them.",
+        "A judge can sometimes order records to be shared.",
+        "Some details may be shared with your health plan so the visit can be paid for, or with others on your care team. You can ask what is shared and why."
+      ]
+    },
+    {
+      "heading": "Feeling worse before feeling better",
+      "body": "Talking about hard things can stir up strong feelings for a while. You may feel tired, upset, or unsure after some visits. This is common, and it often eases. Tell your counselor if it happens. You can slow down, take a break from a topic, or try a different way."
+    },
+    {
+      "heading": "Your feedback matters",
+      "steps": [
+        "It is okay to tell your counselor that something is not helping. A good counselor wants to know.",
+        "Many people stop therapy without saying why. If you are thinking about stopping, try to talk about it first. Things can often be changed.",
+        "You might say, 'I am not sure this is working,' or, 'Can we try something different?'",
+        "Ask how the two of you will know if therapy is helping."
+      ]
+    },
+    {
+      "heading": "Your rights",
+      "steps": [
+        "You can ask about your counselor's training, license, and way of working.",
+        "You can ask about costs, fees for missed visits, and what your insurance pays before you start.",
+        "You can say no to any question or exercise.",
+        "You can ask for a different counselor, or stop therapy at any time.",
+        "You can ask to see your records. Some private notes may be kept apart from your main record. Ask how this works.",
+        "You should always be treated with respect. A counselor must never date you or touch you in a sexual way. If this happens, you can report it to the state board that licenses them."
+      ]
+    },
+    {
+      "heading": "Questions I want to ask",
+      "steps": [
+        "About privacy: ________________",
+        "About cost or scheduling: ________________",
+        "About how we will work together: ________________"
+      ]
+    }
+  ],
+  "safetyNote": "Safety first: Therapy visits are not an emergency service. Ask your counselor what to do if you need help between visits. If you have thoughts of hurting yourself or someone else, do not wait for your next visit. In the US, call or text 988, call 911, or go to the nearest emergency room. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sud": false,
+  "es": {
+    "title": "Qué esperar de la terapia",
+    "intro": "Empezar terapia puede sentirse nuevo y un poco extraño. Esta hoja explica lo que suele pasar en las primeras citas, lo que hace su consejero y lo que usted puede pedir. Cada consejero trabaja un poco distinto, así que pregunte todo lo que no esté claro. Leer esta hoja toma unos 10 minutos.",
+    "sections": [
+      {
+        "heading": "Las primeras citas",
+        "body": "Las primeras citas sirven sobre todo para conocerse y decidir en qué van a trabajar.",
+        "steps": [
+          "Su consejero le preguntará por qué viene, qué va bien y qué es difícil ahora.",
+          "Puede que le pregunten por su salud, su familia, su trabajo y su vida diaria. Siempre puede decir: 'Todavía no estoy listo para hablar de eso'.",
+          "Puede que llene formularios cortos sobre cómo se ha sentido. Puede preguntar para qué es cada uno y quién lo va a ver.",
+          "Juntos van a elegir unas pocas metas. Las metas pueden ser pequeñas, como dormir mejor o salir de la casa más seguido.",
+          "Su consejero le dará ideas sobre lo que puede ayudar y cuánto tiempo puede tomar. Ustedes deciden juntos."
+        ]
+      },
+      {
+        "heading": "Su parte y la parte de su consejero",
+        "steps": [
+          "Usted es quien mejor conoce su propia vida. Su consejero aporta su formación y sus habilidades.",
+          "Su consejero escucha, hace preguntas, explica las opciones y le ayuda a probar nuevas formas de salir adelante.",
+          "Su parte es venir cuando pueda, ser lo más abierto que pueda y decir lo que sí funciona y lo que no.",
+          "Muchos tipos de terapia incluyen práctica entre citas. Los pasos pequeños entre citas muchas veces hacen una gran diferencia."
+        ]
+      },
+      {
+        "heading": "La privacidad y sus límites",
+        "body": "Lo que usted dice en terapia es privado. Casi siempre, su consejero no lo comparte sin su permiso. Pero hay algunos límites. Las reglas cambian de un lugar a otro, así que su consejero debe explicarle las reglas del lugar donde vive.",
+        "steps": [
+          "Su consejero puede tener que actuar si hay un riesgo serio de que usted u otra persona salga muy lastimada.",
+          "Los consejeros deben avisar sobre el abuso o el descuido de un niño. En muchos lugares, pasa lo mismo con un adulto mayor o con un adulto que necesita que otros lo cuiden.",
+          "A veces un juez puede ordenar que se compartan los registros.",
+          "Algunos datos se pueden compartir con su plan de salud para que se pague la cita, o con otras personas de su equipo de cuidado. Puede preguntar qué se comparte y por qué."
+        ]
+      },
+      {
+        "heading": "Sentirse peor antes de sentirse mejor",
+        "body": "Hablar de cosas difíciles puede despertar sentimientos fuertes por un tiempo. Puede sentirse cansado, molesto o con dudas después de algunas citas. Esto es común y muchas veces pasa. Dígale a su consejero si le pasa. Pueden ir más despacio, dejar un tema por un tiempo o probar otra forma."
+      },
+      {
+        "heading": "Su opinión importa",
+        "steps": [
+          "Está bien decirle a su consejero que algo no le ayuda. Un buen consejero quiere saberlo.",
+          "Muchas personas dejan la terapia sin decir por qué. Si piensa dejarla, trate de hablarlo antes. Muchas veces las cosas se pueden cambiar.",
+          "Puede decir: 'No sé si esto me está ayudando', o: '¿Podemos probar algo distinto?'.",
+          "Pregunte cómo van a saber los dos si la terapia le está ayudando."
+        ]
+      },
+      {
+        "heading": "Sus derechos",
+        "steps": [
+          "Puede preguntar por la formación, la licencia y la forma de trabajar de su consejero.",
+          "Puede preguntar por los costos, los cobros por citas perdidas y lo que paga su seguro antes de empezar.",
+          "Puede decir que no a cualquier pregunta o ejercicio.",
+          "Puede pedir otro consejero, o dejar la terapia en cualquier momento.",
+          "Puede pedir ver sus registros. Algunas notas privadas se pueden guardar aparte de su registro principal. Pregunte cómo funciona.",
+          "Siempre deben tratarle con respeto. Un consejero nunca debe salir con usted ni tocarle de forma sexual. Si esto pasa, puede reportarlo a la junta estatal que le da la licencia."
+        ]
+      },
+      {
+        "heading": "Preguntas que quiero hacer",
+        "steps": [
+          "Sobre la privacidad: ________________",
+          "Sobre el costo o los horarios: ________________",
+          "Sobre cómo vamos a trabajar juntos: ________________"
+        ]
+      }
+    ],
+    "safetyNote": "La seguridad es lo primero: Las citas de terapia no son un servicio de emergencias. Pregúntele a su consejero qué hacer si necesita ayuda entre citas. Si tiene pensamientos de hacerse daño o de hacerle daño a otra persona, no espere a su próxima cita. En EE. UU., llame o envíe un mensaje de texto al 988, llame al 911 o vaya a la sala de emergencias más cercana. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "sources": [
+    {
+      "title": "Psychotherapies",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/topics/psychotherapies"
+    },
+    {
+      "title": "Understanding psychotherapy and how it works",
+      "publisher": "American Psychological Association",
+      "url": "https://www.apa.org/topics/psychotherapy/understanding",
+      "year": 2023
+    },
+    {
+      "title": "Premature discontinuation in adult psychotherapy: a meta-analysis (Swift and Greenberg)",
+      "publisher": "Journal of Consulting and Clinical Psychology (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22506792/",
+      "year": 2012
+    },
+    {
+      "title": "The alliance in adult psychotherapy: a meta-analytic synthesis (Flückiger et al.)",
+      "publisher": "Psychotherapy (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29792475/",
+      "year": 2018
+    },
+    {
+      "title": "Implementing measurement-based care in behavioral health: a review (Lewis et al.)",
+      "publisher": "JAMA Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30566197/",
+      "year": 2019
+    },
+    {
+      "title": "ACA Code of Ethics and ethics resources",
+      "publisher": "American Counseling Association",
+      "url": "https://www.counseling.org/resources/ethics"
+    },
+    {
+      "title": "Ethical Principles of Psychologists and Code of Conduct",
+      "publisher": "American Psychological Association",
+      "url": "https://www.apa.org/ethics/code"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

@@ -25,6 +25,15 @@ import triggerObjectsJson from "../content/trigger-objects.json";
 import { followUpFiles } from "../src/lib/follow-up/bank";
 import { HealthTopicsFileSchema } from "../src/lib/schemas-topics";
 import { auditContent } from "./content-audit";
+import { existsSync, readdirSync } from "node:fs";
+import { licenses } from "../src/lib/content";
+import { formulationProblems, formulations } from "../src/lib/formulations";
+import { orientationProblems, orientations } from "../src/lib/orientations";
+import { planContentProblems, planModules } from "../src/lib/plan-modules";
+import { FORMULATION_TARGET_IDS } from "../src/lib/formulations";
+import { practiceGuides, practiceProblems } from "../src/lib/practice";
+import { medicationEffectProblems, medicationEffectsFile } from "../src/lib/schemas-care";
+import { populationProblems, populations } from "../src/lib/populations";
 
 /** Exact 42 CFR Part 2 notice (owner decision 2026-11-26, docs/RESOURCES.md). */
 export const PART2_NOTICE = "42 CFR Part 2 prohibits unauthorized use or disclosure of these records.";
@@ -201,6 +210,78 @@ export function crossContentProblems(): string[] {
     }
   }
 
+  // Formulations: curated factors, behavior functions and links. Folders owned by other sections are checked once they exist.
+  const folderIds = (dir: string) => {
+    const abs = path.resolve(__dirname, "../content", dir);
+    return existsSync(abs) ? new Set(readdirSync(abs).filter((f) => f.endsWith(".json")).map((f) => f.slice(0, -5))) : undefined;
+  };
+  p.push(
+    ...formulationProblems(formulations, {
+      interventions: new Set(interventions.map((i) => i.id)),
+      handouts: handoutIds,
+      conditions: conditionIds,
+      legal: new Set(legalTopics.map((t) => t.id)),
+      sudHandouts,
+      sudConditions,
+      licenses: licenses.items,
+      orientations: folderIds("orientations"),
+      practice: folderIds("practice"),
+      populations: folderIds("populations"),
+    }),
+  );
+
+  // Orientation profiles: every intervention maps to a profile (care, harm-reduction and safety steps excepted),
+  // techniques, ethics topics and handouts resolve (orientationProblems), and links into folders owned by other
+  // sections resolve once those folders exist.
+  p.push(...orientationProblems());
+  const orientationLinkFolders = [
+    ["formulations", "formulation", (o: (typeof orientations)[number]) => o.formulationIds],
+    ["practice", "practice guide", (o: (typeof orientations)[number]) => o.relatedPracticeIds],
+    ["populations", "population", (o: (typeof orientations)[number]) => o.relatedPopulationIds],
+  ] as const;
+  for (const [dir, label, idsOf] of orientationLinkFolders) {
+    const known = folderIds(dir);
+    if (known) for (const o of orientations) for (const id of idsOf(o)) if (!known.has(id)) p.push(`orientations/${o.id}: unknown ${label} ${id}`);
+  }
+
+  // Plan libraries and modules: formulation targets, links, module interventions and measures, Part 2 tagging and
+  // problem ids that stay unique when a module joins a library (src/lib/plan-modules.ts). Every module file loads.
+  p.push(
+    ...planContentProblems(planLibraries, planModules, {
+      interventions: new Map(interventions.map((i) => [i.id, i] as const)),
+      measures: new Set(measures.map((m) => m.id)),
+      conditions: conditionIds,
+      handouts: handoutIds,
+      sudHandouts,
+      formulationTargets: new Set(FORMULATION_TARGET_IDS),
+      formulations: new Set(formulations.map((f) => f.id)),
+      practice: folderIds("practice"),
+    }),
+  );
+  const loadedModules = new Set(planModules.map((m) => m.id));
+  for (const id of folderIds("plans/modules") ?? []) if (!loadedModules.has(id)) p.push(`plans/modules/${id}: not loaded (add it to src/lib/plan-modules.ts)`);
+
+  // Practice guides: links into the library, pending measures registered in licenses.json and Part 2 tagging
+  // (src/lib/practice.ts). Population links are checked once content/populations exists.
+  p.push(
+    ...practiceProblems(practiceGuides, {
+      interventions: new Set(interventions.map((i) => i.id)),
+      handouts: handoutIds,
+      formulations: new Set(formulations.map((f) => f.id)),
+      legal: new Set(legalTopics.map((t) => t.id)),
+      sudHandouts,
+      licenses: licenses.items,
+      populations: folderIds("populations"),
+    }),
+  );
+
+  // Medicine effects (content/care): curated medication links and Part 2 tagging (src/lib/schemas-care.ts).
+  p.push(...medicationEffectProblems());
+
+  // Population profiles (content/populations): links into the library, referral entries and kinds, pending measures
+  // registered in licenses.json and Part 2 tagging (src/lib/populations.ts).
+  p.push(...populationProblems());
+
   // Wording guardrails over every clinical item loaded by either loader.
   const items: [string, unknown][] = [
     ["symptoms.json", lexicon],
@@ -210,6 +291,12 @@ export function crossContentProblems(): string[] {
     ...handouts.map((h): [string, unknown] => [`handouts/${h.id}`, h]),
     ...followUpFiles.map((f): [string, unknown] => [`follow-ups/${f.domain}`, f]),
     ["trigger-objects.json", triggerObjectsJson],
+    ...formulations.map((f): [string, unknown] => [`formulations/${f.id}`, f]),
+    ...orientations.map((o): [string, unknown] => [`orientations/${o.id}`, o]),
+    ...planModules.map((m): [string, unknown] => [`plans/modules/${m.id}`, m]),
+    ...practiceGuides.map((g): [string, unknown] => [`practice/${g.id}`, g]),
+    ["care/medication-effects.json", medicationEffectsFile],
+    ...populations.map((pop): [string, unknown] => [`populations/${pop.id}`, pop]),
   ];
   for (const [where, item] of items) {
     const body = JSON.stringify(item);

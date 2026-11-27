@@ -1,0 +1,62 @@
+{
+  "id": "racial-trauma-and-race-based-stress",
+  "name": "Working with racial trauma and race-based stress",
+  "modality": "Culturally responsive, trauma-informed therapy for racism-related stress",
+  "conditions": ["ptsd", "major-depressive-disorder", "generalized-anxiety-disorder", "adjustment-disorder"],
+  "evidenceLevel": "A meta-analysis of 293 studies found reported racism was associated with poorer health, most strongly with poorer mental health (Paradies et al., 2015). An American Psychologist special issue describes racial trauma as reactions of people of color to dangerous events and to real or perceived racial discrimination, including threats, humiliation and witnessing harm to others, involving ongoing individual and collective injury, and calls for culturally informed healing approaches (Comas-Diaz, Hall and Neville, 2019). The APA's 2019 race and ethnicity guidelines ask psychologists to recognize racism and its effects and to practise with ongoing cultural humility. Specific treatments for racial trauma are still being developed and tested; this entry draws mainly on these frameworks rather than trial evidence.",
+  "minutes": { "min": 45, "max": 60 },
+  "purpose": "Racism can harm mental health through single severe events (such as violence or police encounters), repeated everyday slights and exclusion, systemic barriers, and vicarious exposure, for example to videos of violence against people who share one's identity. Reactions can include fear, hypervigilance, anger, sadness, shame, exhaustion and avoidance. Race-based stress is not a diagnosis, and this entry does not assign one. Work centers on naming and validating racism-related experiences, understanding their cumulative effect, strengthening cultural identity, pride and community, and supporting coping and, where the client wants, collective healing and action. Standard trauma or depression treatments can be adapted to include these elements when a condition is also present.",
+  "steps": [
+    "Invite the topic openly. Acknowledge differences and similarities in identity between you and the client and say that experiences of racism are welcome in the room.",
+    "Listen to and validate the client's experiences of racism without questioning whether they really happened or asking for proof.",
+    "Explore the effects across time: single events, repeated everyday experiences, systemic barriers, and exposure through news and social media.",
+    "Separate what is accurate from what is not helpful: do not try to change realistic perceptions of discrimination or danger, but help the client notice when stress responses spread in ways that cost them, and choose responses that fit their values.",
+    "Strengthen protective resources: cultural and racial identity, pride, family and community teachings about coping with racism, spirituality, and relationships with people who share the experience.",
+    "Practise coping skills for stress reactions (grounding, breathing, limiting exposure to distressing media, rest) and plan responses to likely situations, including workplace or school incidents.",
+    "Where the client wants, support meaningful action, such as community involvement, advocacy or seeking redress, and connect them with community and culturally specific healing resources.",
+    "If trauma or depression symptoms are marked, offer or refer for an evidence-based treatment adapted to include racial trauma, ideally with a clinician experienced in this work."
+  ],
+  "script": [
+    "Experiences of racism can take a real toll. You are welcome to talk about them here.",
+    "I believe you. How has that experience stayed with you?",
+    "It makes sense to be on guard after what has happened. Let's look at when that alertness protects you, and when it wears you down.",
+    "What has helped you, your family or your community get through experiences like this?",
+    "What would healing look like for you, on your own and with others?"
+  ],
+  "contraindications": [
+    "Do not minimize, explain away or debate the client's experiences of racism, and do not treat accurate perceptions of discrimination as distorted thinking.",
+    "Do not label race-based stress as a disorder. Assess for any condition separately, using clinical judgment.",
+    "Current threats (for example ongoing harassment or violence) need safety planning and practical help. If the client has suicidal thoughts, address safety first. This app does not judge risk; you do. Crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com.",
+    "Reflect on your own identity, biases and reactions, and seek consultation or training if this work is new to you."
+  ],
+  "culturalAdaptations": [
+    "Experiences of racism differ across racial and ethnic groups, immigrants, Indigenous peoples and people with multiple marginalized identities. Ask rather than assume.",
+    "Some clients prefer a clinician who shares their background or offer culturally specific healing practices. Respect and support these preferences.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "handoutIds": ["grounding-5-4-3-2-1", "social-connection-plan"],
+  "orientationIds": ["multicultural-feminist-liberation", "trauma-focused-therapies"],
+  "sources": [
+    {
+      "title": "Racism as a determinant of health: a systematic review and meta-analysis (Paradies et al.)",
+      "publisher": "PLoS One (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26398658/",
+      "year": 2015
+    },
+    {
+      "title": "Racial trauma: theory, research, and healing: introduction to the special issue (Comas-Diaz, Hall and Neville)",
+      "publisher": "American Psychologist (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30652895/",
+      "year": 2019
+    },
+    {
+      "title": "Summary of the APA guidelines on race and ethnicity in psychology",
+      "publisher": "American Psychological Association",
+      "url": "https://www.apa.org/about/policy/summary-guidelines-race-ethnicity",
+      "year": 2019
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

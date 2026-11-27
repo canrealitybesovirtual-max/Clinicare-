@@ -36,8 +36,11 @@
   ],
   "trainingRequired": "CBTp: training and supervision needed; refer to a trained clinician.",
   "handoutIds": [
-    "staying-well-plan"
+    "staying-well-plan",
+    "understanding-unusual-experiences",
+    "voices-coping-plan"
   ],
+  "orientationIds": ["cognitive-therapy"],
   "sources": [
     {
       "title": "Cognitive behavior therapy for schizophrenia: effect sizes, clinical models, and methodological rigor (Wykes et al.)",

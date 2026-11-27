@@ -215,7 +215,10 @@
   "handouts": [
     "activity-schedule",
     "thought-record",
-    "kind-self-talk"
+    "kind-self-talk",
+    "understanding-low-mood",
+    "positive-data-log",
+    "from-why-to-how"
   ],
   "statIds": [
     "global-depression-2021"

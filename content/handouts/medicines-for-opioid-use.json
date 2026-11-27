@@ -1,0 +1,218 @@
+{
+  "id": "medicines-for-opioid-use",
+  "title": "Medicines for Opioid Recovery: What to Expect",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 10,
+  "intro": "Medicines can help people stop or cut back on opioids, such as heroin, fentanyl, or pain pills. They ease cravings and withdrawal, and two of them lower the risk of dying from an overdose. Taking these medicines is treatment. It is not trading one drug for another. This sheet explains the 3 main medicines in plain words. Your prescriber decides the dose with you. Reading it takes about 10 minutes.",
+  "sections": [
+    {
+      "heading": "Buprenorphine",
+      "body": "Buprenorphine eases cravings and withdrawal, and it lowers overdose risk.",
+      "steps": [
+        "How you take it: a film or tablet that melts under your tongue or in your cheek, or a shot every week or every month.",
+        "Where to get it: many doctors, nurse practitioners, and clinics can prescribe it, and you fill it at a pharmacy.",
+        "Starting: you usually take the first dose once you already feel some withdrawal. Starting too soon can make you feel much worse fast. Your prescriber will tell you when and how."
+      ]
+    },
+    {
+      "heading": "Methadone",
+      "body": "Methadone also eases cravings and withdrawal, and it lowers overdose risk.",
+      "steps": [
+        "How you take it: a liquid or tablet by mouth, once a day.",
+        "Where to get it: for opioid recovery, methadone comes only from special clinics called opioid treatment programs.",
+        "At first you go to the clinic most days. Over time, many people can take some doses at home.",
+        "The dose goes up slowly over the first weeks. This keeps you safe."
+      ]
+    },
+    {
+      "heading": "Naltrexone",
+      "body": "Naltrexone blocks the effects of opioids and can lower cravings. It is not an opioid.",
+      "steps": [
+        "How you take it: most often as a shot once a month.",
+        "Starting: you must be off all opioids first, usually for 7 to 10 days or more. Starting sooner can cause sudden, strong withdrawal.",
+        "When a shot wears off, or if you stop, your body can no longer handle the amount you used before. This raises your risk of overdose."
+      ]
+    },
+    {
+      "heading": "Common worries",
+      "steps": [
+        "\"Isn't this just swapping one drug for another?\" No. At the right dose, these medicines do not make you high. They help your brain and body heal so you can focus on your life.",
+        "\"How long will I take it?\" There is no set time. Many people do best when they take it for a long time. Stopping too soon raises the risk of using again and of overdose. Make any change with your prescriber.",
+        "\"Do I need counseling too?\" Counseling and support groups can help a lot, and many programs offer them. Medicine can still help while you decide.",
+        "\"What if I am pregnant?\" Buprenorphine and methadone are used in pregnancy. Do not stop opioids suddenly while pregnant. Talk with a prescriber right away."
+      ]
+    },
+    {
+      "heading": "Staying safe",
+      "steps": [
+        "Do not mix your medicine with alcohol, sleeping pills, or pills for nerves. This can slow or stop your breathing.",
+        "Keep naloxone with you and at home. It can reverse an overdose. In the US you can buy the nasal spray at most pharmacies without a prescription.",
+        "Store your medicine locked up, away from children, pets, and visitors.",
+        "If you miss doses or want to stop, talk with your prescriber first."
+      ]
+    },
+    {
+      "heading": "Where to find care",
+      "steps": [
+        "Ask your counselor or doctor.",
+        "Visit FindTreatment.gov, or call 1-800-662-4357 any time.",
+        "SAMHSA's website has a buprenorphine practitioner locator and a directory of opioid treatment programs."
+      ]
+    },
+    {
+      "heading": "Privacy note",
+      "body": "Do not write your name, or the names of other people or places, on this sheet. Keep it somewhere private. If you share it with a substance use treatment program, it may become part of your treatment records. Those records have special federal privacy protection. 42 CFR Part 2 prohibits unauthorized use or disclosure of these records. Ask your counselor how your records are kept and shared."
+    }
+  ],
+  "safetyNote": "Safety first: If someone may have overdosed, call 911 right away and give naloxone if you have it. Stay with the person. Do not stop these medicines suddenly without talking with your prescriber. For free, confidential help finding treatment in the US, call the SAMHSA National Helpline at 1-800-662-4357, any time, in English or Spanish. If you have thoughts of hurting yourself or someone else, get help now. In the US, call or text 988, or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sud": true,
+  "es": {
+    "title": "Medicinas para la recuperación de los opioides: qué esperar",
+    "intro": "Hay medicinas que ayudan a dejar o a reducir los opioides, como la heroína, el fentanilo o las pastillas para el dolor. Calman los antojos y la abstinencia, y dos de ellas bajan el riesgo de morir por una sobredosis. Tomar estas medicinas es un tratamiento. No es cambiar una droga por otra. Esta hoja explica las 3 medicinas principales con palabras sencillas. Quien se las receta decide la dosis con usted. Leerla toma unos 10 minutos.",
+    "sections": [
+      {
+        "heading": "Buprenorfina",
+        "body": "La buprenorfina calma los antojos y la abstinencia, y baja el riesgo de sobredosis.",
+        "steps": [
+          "Cómo se toma: una película o una tableta que se deshace debajo de la lengua o en la mejilla, o una inyección cada semana o cada mes.",
+          "Dónde conseguirla: muchos médicos, enfermeros practicantes y clínicas la pueden recetar, y usted la compra en una farmacia.",
+          "Cómo empezar: por lo general, la primera dosis se toma cuando ya siente algo de abstinencia. Empezar muy pronto puede hacerle sentir mucho peor de golpe. Quien se la receta le dirá cuándo y cómo."
+        ]
+      },
+      {
+        "heading": "Metadona",
+        "body": "La metadona también calma los antojos y la abstinencia, y baja el riesgo de sobredosis.",
+        "steps": [
+          "Cómo se toma: un líquido o una tableta por la boca, una vez al día.",
+          "Dónde conseguirla: para la recuperación de los opioides, la metadona solo se da en clínicas especiales llamadas programas de tratamiento de opioides.",
+          "Al principio va a la clínica casi todos los días. Con el tiempo, muchas personas pueden tomar algunas dosis en casa.",
+          "La dosis sube poco a poco en las primeras semanas. Así se cuida su seguridad."
+        ]
+      },
+      {
+        "heading": "Naltrexona",
+        "body": "La naltrexona bloquea los efectos de los opioides y puede bajar los antojos. No es un opioide.",
+        "steps": [
+          "Cómo se toma: casi siempre como una inyección una vez al mes.",
+          "Cómo empezar: primero tiene que dejar todos los opioides, por lo general de 7 a 10 días o más. Empezar antes puede causar una abstinencia fuerte y repentina.",
+          "Cuando pasa el efecto de la inyección, o si la deja, su cuerpo ya no aguanta la cantidad que usaba antes. Esto sube su riesgo de sobredosis."
+        ]
+      },
+      {
+        "heading": "Dudas comunes",
+        "steps": [
+          "\"¿No es solo cambiar una droga por otra?\" No. Con la dosis correcta, estas medicinas no le drogan. Ayudan a que su cerebro y su cuerpo sanen para que pueda enfocarse en su vida.",
+          "\"¿Por cuánto tiempo la voy a tomar?\" No hay un tiempo fijo. A muchas personas les va mejor si la toman por mucho tiempo. Dejarla muy pronto sube el riesgo de volver a consumir y de una sobredosis. Haga cualquier cambio con quien se la receta.",
+          "\"¿También necesito consejería?\" La consejería y los grupos de apoyo pueden ayudar mucho, y muchos programas los ofrecen. La medicina le puede ayudar mientras usted decide.",
+          "\"¿Y si estoy embarazada?\" La buprenorfina y la metadona se usan durante el embarazo. No deje los opioides de golpe si está embarazada. Hable con un médico de inmediato."
+        ]
+      },
+      {
+        "heading": "Cómo cuidarse",
+        "steps": [
+          "No mezcle su medicina con alcohol, pastillas para dormir o pastillas para los nervios. Esto puede hacer que respire más lento o que deje de respirar.",
+          "Tenga naloxona con usted y en su casa. Puede revertir una sobredosis. En EE. UU. puede comprar el aerosol nasal en la mayoría de las farmacias sin receta.",
+          "Guarde su medicina bajo llave, lejos de niños, mascotas y visitas.",
+          "Si se le olvidan dosis o quiere dejarla, hable primero con quien se la receta."
+        ]
+      },
+      {
+        "heading": "Dónde encontrar atención",
+        "steps": [
+          "Pregúntele a su consejero o a su médico.",
+          "Visite FindTreatment.gov, o llame al 1-800-662-4357 a cualquier hora.",
+          "El sitio web de SAMHSA tiene un buscador de profesionales que recetan buprenorfina y una lista de programas de tratamiento de opioides."
+        ]
+      },
+      {
+        "heading": "Nota de privacidad",
+        "body": "No escriba su nombre, ni los nombres de otras personas o lugares, en esta hoja. Guárdela en un lugar privado. Si la comparte con un programa de tratamiento por consumo de sustancias, puede llegar a ser parte de sus registros de tratamiento. Esos registros tienen una protección federal especial de la privacidad. La ley federal 42 CFR Part 2 prohíbe el uso o la divulgación no autorizados de estos registros. Pregúntele a su consejero cómo se guardan y se comparten sus registros."
+      }
+    ],
+    "safetyNote": "La seguridad es lo primero: Si alguien pudo haber tenido una sobredosis, llame al 911 de inmediato y dele naloxona si la tiene. Quédese con la persona. No deje estas medicinas de golpe sin hablar con quien se las receta. Para recibir ayuda gratuita y confidencial para encontrar tratamiento en EE. UU., llame a la Línea Nacional de Ayuda de SAMHSA (SAMHSA National Helpline) al 1-800-662-4357, a cualquier hora, en inglés o en español. Si tiene pensamientos de hacerse daño o de hacerle daño a otra persona, busque ayuda ahora. En EE. UU., llame o envíe un mensaje de texto al 988, o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "linkOuts": [
+    {
+      "title": "FindTreatment.gov",
+      "publisher": "SAMHSA",
+      "url": "https://findtreatment.gov/",
+      "note": "Search for treatment near you, including programs that offer medicines.",
+      "lastVerified": "2026-11-27"
+    },
+    {
+      "title": "Buprenorphine Practitioner Locator",
+      "publisher": "SAMHSA",
+      "url": "https://www.samhsa.gov/substance-use/treatment/find-treatment/buprenorphine-practitioner-locator",
+      "note": "Find a prescriber of buprenorphine near you.",
+      "lastVerified": "2026-11-27"
+    },
+    {
+      "title": "Opioid Treatment Program Directory",
+      "publisher": "SAMHSA",
+      "url": "https://dpt2.samhsa.gov/treatment/directory.aspx",
+      "note": "Find a clinic that offers methadone, by state.",
+      "lastVerified": "2026-11-27"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Buprenorphine and naloxone sublingual and buccal (drug information)",
+      "publisher": "MedlinePlus, U.S. National Library of Medicine",
+      "url": "https://medlineplus.gov/druginfo/meds/a605002.html"
+    },
+    {
+      "title": "Methadone (drug information)",
+      "publisher": "MedlinePlus, U.S. National Library of Medicine",
+      "url": "https://medlineplus.gov/druginfo/meds/a682134.html"
+    },
+    {
+      "title": "Naltrexone (drug information)",
+      "publisher": "MedlinePlus, U.S. National Library of Medicine",
+      "url": "https://medlineplus.gov/druginfo/meds/a685041.html"
+    },
+    {
+      "title": "Mortality risk during and after opioid substitution treatment: systematic review and meta-analysis (Sordo et al.)",
+      "publisher": "BMJ (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28446428/",
+      "year": 2017
+    },
+    {
+      "title": "Medication for opioid use disorder after nonfatal opioid overdose and association with mortality (Larochelle et al.)",
+      "publisher": "Annals of Internal Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29913516/",
+      "year": 2018
+    },
+    {
+      "title": "VA/DoD Clinical Practice Guideline for the Management of Substance Use Disorders: provider summary",
+      "publisher": "US Department of Veterans Affairs and Department of Defense",
+      "url": "https://www.healthquality.va.gov/guidelines/MH/sud/VADoDSUDCPGProviderSummary.pdf",
+      "year": 2021
+    },
+    {
+      "title": "Naloxone nasal spray (drug information)",
+      "publisher": "MedlinePlus, U.S. National Library of Medicine",
+      "url": "https://medlineplus.gov/druginfo/meds/a616003.html"
+    },
+    {
+      "title": "National Helpline",
+      "publisher": "SAMHSA",
+      "url": "https://www.samhsa.gov/find-help/helplines/national-helpline"
+    },
+    {
+      "title": "42 CFR 2.32: notice to accompany disclosure (federal confidentiality rule for substance use treatment records)",
+      "publisher": "eCFR, U.S. Government Publishing Office",
+      "url": "https://www.ecfr.gov/current/title-42/chapter-I/subchapter-A/part-2/subpart-C/section-2.32",
+      "year": 2024
+    },
+    {
+      "title": "Confidentiality of substance use treatment records (42 CFR Part 2)",
+      "publisher": "U.S. Department of Health and Human Services",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/hipaa-part-2/index.html"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

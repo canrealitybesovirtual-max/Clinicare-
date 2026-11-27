@@ -1,0 +1,113 @@
+{
+  "id": "problem-prioritization",
+  "title": "Prioritizing problems and sequencing treatment",
+  "category": "care-coordination",
+  "summary": "When a client brings several problems at once, a shared order of work helps: safety first, then anything that would stop therapy from working, then the problem that causes the most impairment or drives the others. This guide sets out that order in the app's own words, with guideline examples where the sequence is specific (medical risk in eating disorders, co-occurring trauma and substance use), and how to agree it with the client.",
+  "whenToUse": [
+    "After assessment, when several difficulties are present.",
+    "When a client's goals and the clinician's concerns point in different directions.",
+    "When progress has stalled and the focus may need to change.",
+    "When building a treatment plan from more than one module or condition."
+  ],
+  "steps": [
+    {
+      "heading": "Safety comes first",
+      "body": "Address risk to life or of serious harm before anything else: suicidal or homicidal thoughts with intent, ongoing violence, severe medical risk (for example in eating disorders or alcohol withdrawal) and inability to care for oneself. This does not mean pausing everything else; it means the safety plan and urgent care come first."
+    },
+    {
+      "heading": "Then what would stop therapy from working",
+      "body": "Attendance problems, intoxication at sessions, crises that take over every session, practical barriers and ruptures in the relationship need attention early, because nothing else progresses while they continue."
+    },
+    {
+      "heading": "Then the most impairing or most central problem",
+      "items": [
+        "Choose the problem the client most wants help with, or the one that causes the most impairment.",
+        "Consider whether one problem drives others (for example insomnia worsening mood, or panic driving avoidance and low mood).",
+        "Treat co-occurring problems together when guidelines support it, rather than making one wait for the other."
+      ]
+    },
+    {
+      "heading": "Use guideline examples where they exist",
+      "items": [
+        "Eating disorders: physical health risk is assessed and managed before and during psychological work (NICE NG69).",
+        "Anxiety with depression or another anxiety disorder: NICE CG113 suggests treating the primary problem first, meaning the more severe one and the one where treatment is more likely to improve overall functioning.",
+        "Trauma with substance use: the VA/DoD PTSD guideline (2023) supports treating PTSD alongside substance use rather than waiting for abstinence.",
+        "Depression with psychotic symptoms or mania: urgent psychiatric care comes first."
+      ]
+    },
+    {
+      "heading": "Agree the order with the client",
+      "body": "Explain your reasoning, ask what matters most to them and agree a shared order. Write it into the treatment plan, with review points, so the order can change as things improve."
+    }
+  ],
+  "prompts": [
+    "You have told me about several things that are hard right now. If we could make progress on one first, which would make the biggest difference?",
+    "Before we start on that, I want to make sure you are safe between sessions. Can we look at that together first?",
+    "It sounds like the poor sleep is making everything else harder. What would you think about starting there?"
+  ],
+  "cautions": [
+    "Prioritizing does not mean ignoring the client's own goals; agree the order together.",
+    "Do not make treatment of one problem wait for another to resolve when guidelines support treating them together.",
+    "Safety issues can come back at any time; review them at every session as needed.",
+    "This guide does not decide risk or the treatment order; the clinician and client do."
+  ],
+  "evidenceSummary": "NICE CG113 (2011, updated 2020) advises treating the primary disorder first when generalized anxiety occurs with depression or another anxiety disorder. NICE CG123 (2011) describes pathways to care for common mental health problems. NICE NG69 (2017, updated 2020) asks for physical health risk to be managed as part of eating disorder care. The VA/DoD guideline for PTSD and acute stress disorder (2023) supports trauma-focused treatment for people with co-occurring substance use disorders.",
+  "forClinicianReview": true,
+  "crisisPanel": true,
+  "sud": true,
+  "relatedInterventionIds": [
+    "collaborative-safety-planning",
+    "integrated-ptsd-sud-treatment",
+    "eating-disorder-medical-monitoring",
+    "problem-solving"
+  ],
+  "relatedHandoutIds": [],
+  "relatedFormulationIds": [
+    "transdiagnostic-process-map",
+    "phase-based-trauma-sequencing",
+    "co-occurring-and-level-of-care"
+  ],
+  "relatedLegalIds": [
+    "treatment-plans-and-client-access"
+  ],
+  "relatedPracticeIds": [
+    "stepped-care-and-level-of-care",
+    "eating-disorder-medical-risk",
+    "self-harm-assessment-and-formulation",
+    "preferences-goals-and-readiness",
+    "session-structure"
+  ],
+  "relatedPopulationIds": [],
+  "toolHref": "/plan",
+  "linkOuts": [],
+  "measuresPending": [],
+  "sources": [
+    {
+      "title": "Common mental health problems: identification and pathways to care (CG123)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg123",
+      "year": 2011
+    },
+    {
+      "title": "Generalised anxiety disorder and panic disorder in adults: management (CG113)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg113",
+      "year": 2011
+    },
+    {
+      "title": "Eating disorders: recognition and treatment (NG69)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng69",
+      "year": 2017
+    },
+    {
+      "title": "VA/DoD Clinical Practice Guideline for Management of Posttraumatic Stress Disorder and Acute Stress Disorder",
+      "publisher": "US Department of Veterans Affairs and Department of Defense",
+      "url": "https://www.healthquality.va.gov/guidelines/MH/ptsd/",
+      "year": 2023
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

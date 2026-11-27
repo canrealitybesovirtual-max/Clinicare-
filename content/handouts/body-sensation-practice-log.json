@@ -1,0 +1,133 @@
+{
+  "id": "body-sensation-practice-log",
+  "title": "Body Sensation Practice Log",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 15,
+  "intro": "Sometimes the fear is not of a place, but of feelings inside your body, like a racing heart, dizziness, or feeling short of breath. Bringing on these feelings on purpose, in a safe way, can teach your brain that they are uncomfortable but not dangerous. Do these exercises only with your counselor's guidance. This sheet takes about 15 minutes to read and try.",
+  "sections": [
+    {
+      "heading": "Check with your doctor first",
+      "body": "In healthy people, these exercises cause strong but harmless body feelings. Talk to a doctor before you start if you have heart or lung problems, asthma, high blood pressure, seizures, neck or back problems, or balance problems, or if you are pregnant. Skip any exercise your doctor or counselor says is not right for you."
+    },
+    {
+      "heading": "Exercises you may try",
+      "body": "Your counselor will help you choose the ones that bring up feelings most like the ones you fear.",
+      "steps": [
+        "Sit in a chair that spins and turn around for 60 seconds. This can bring on dizziness.",
+        "Pinch your nose and breathe through a thin straw for 60 seconds. This can make you feel short of breath.",
+        "Run in place or walk up and down stairs for 60 seconds. This can make your heart race.",
+        "Breathe fast and deep for 60 seconds. This can make you feel light-headed or tingly.",
+        "Gently shake your head from side to side for 30 seconds. This can bring on dizziness.",
+        "Stare at a spot on the wall, or at yourself in a mirror, for 2 minutes. This can make things feel unreal or far away."
+      ]
+    },
+    {
+      "heading": "How to practice",
+      "steps": [
+        "Before you start, write what you fear the feeling will lead to, like fainting or losing control.",
+        "Do the exercise for the full time. Let the feelings get strong. Do not try to stop them.",
+        "When you finish, sit with the feelings. Do not distract yourself or rush to calm down. Notice how they fade on their own.",
+        "Rate three things from 0 to 10: how strong the feelings were, how afraid you felt, and how much they felt like your real rushes of fear.",
+        "Write what you learned. Did the thing you feared happen?",
+        "Repeat each exercise a few times in a row and on several days. Then try it in new places, like at work or outside."
+      ]
+    },
+    {
+      "heading": "What to expect",
+      "body": "The first few times may feel very uncomfortable. That is normal, and it shows you are practicing the right feelings. With practice, the feelings usually stay but become less scary. The goal is not to never feel them. It is to learn that you can feel them and be okay."
+    }
+  ],
+  "practiceLog": {
+    "columns": [
+      "Day",
+      "Exercise",
+      "What I feared would happen",
+      "How strong the feeling was (0-10)",
+      "Fear (0-10)",
+      "How much like my real fear (0-10)",
+      "What I learned"
+    ],
+    "rows": 10
+  },
+  "safetyNote": "Safety first: Stop an exercise and get medical help if you have chest pain, fainting, or trouble breathing that feels different from what you expected or does not ease after a few minutes. If you notice any new or different body symptoms, see a doctor. In an emergency, call 911. If you have thoughts of hurting yourself or someone else, call or text 988 in the US. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "es": {
+    "title": "Registro de práctica con sensaciones del cuerpo",
+    "intro": "A veces el miedo no es a un lugar, sino a sensaciones dentro del cuerpo, como el corazón acelerado, el mareo o sentir que le falta el aire. Provocar estas sensaciones a propósito, de forma segura, puede enseñarle a su cerebro que son incómodas, pero no peligrosas. Haga estos ejercicios solo con la guía de su consejero. Leer y probar esta hoja toma unos 15 minutos.",
+    "sections": [
+      {
+        "heading": "Consulte primero a su médico",
+        "body": "En personas sanas, estos ejercicios causan sensaciones fuertes, pero que no hacen daño. Hable con un médico antes de empezar si tiene problemas del corazón o de los pulmones, asma, presión alta, convulsiones, problemas del cuello o de la espalda o problemas de equilibrio, o si está embarazada. No haga ningún ejercicio que su médico o consejero diga que no es bueno para usted."
+      },
+      {
+        "heading": "Ejercicios que puede probar",
+        "body": "Su consejero le ayudará a escoger los que traen sensaciones más parecidas a las que usted teme.",
+        "steps": [
+          "Siéntese en una silla que gire y dé vueltas durante 60 segundos. Esto puede causar mareo.",
+          "Tápese la nariz y respire por un popote o pajita delgada durante 60 segundos. Esto puede hacer que sienta que le falta el aire.",
+          "Corra sin moverse de su lugar o suba y baje escaleras durante 60 segundos. Esto puede acelerar su corazón.",
+          "Respire rápido y profundo durante 60 segundos. Esto puede hacer que se sienta aturdido o con hormigueo.",
+          "Mueva la cabeza con suavidad de un lado a otro durante 30 segundos. Esto puede causar mareo.",
+          "Mire fijo un punto en la pared, o mírese en un espejo, durante 2 minutos. Esto puede hacer que las cosas se sientan raras o lejanas."
+        ]
+      },
+      {
+        "heading": "Cómo practicar",
+        "steps": [
+          "Antes de empezar, escriba a qué teme que le lleve la sensación, como desmayarse o perder el control.",
+          "Haga el ejercicio todo el tiempo indicado. Deje que las sensaciones se pongan fuertes. No trate de pararlas.",
+          "Cuando termine, quédese con las sensaciones. No se distraiga ni se apure a calmarse. Fíjese cómo se van solas.",
+          "Califique tres cosas del 0 al 10: qué tan fuertes fueron las sensaciones, cuánto miedo sintió y cuánto se parecieron a sus olas de miedo de verdad.",
+          "Escriba lo que aprendió. ¿Pasó lo que temía?",
+          "Repita cada ejercicio varias veces seguidas y en varios días. Luego pruébelo en lugares nuevos, como en el trabajo o afuera."
+        ]
+      },
+      {
+        "heading": "Qué esperar",
+        "body": "Las primeras veces pueden ser muy incómodas. Eso es normal, y muestra que está practicando las sensaciones correctas. Con la práctica, las sensaciones suelen quedarse, pero asustan menos. La meta no es dejar de sentirlas. Es aprender que puede sentirlas y estar bien."
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Día",
+        "Ejercicio",
+        "Lo que temía que pasara",
+        "Qué tan fuerte fue la sensación (0-10)",
+        "Miedo (0-10)",
+        "Cuánto se pareció a mi miedo real (0-10)",
+        "Lo que aprendí"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: Pare el ejercicio y busque ayuda médica si tiene dolor en el pecho, se desmaya o le cuesta respirar de una forma distinta a la que esperaba, o si no se le quita en unos minutos. Si nota cualquier síntoma nuevo o distinto en el cuerpo, vaya al médico. En una emergencia, llame al 911. Si tiene pensamientos de hacerse daño o de hacerle daño a otra persona, llame o envíe un mensaje de texto al 988 en EE. UU. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "sources": [
+    {
+      "title": "Maximizing the efficacy of interoceptive exposure by optimizing inhibitory learning: a randomized controlled trial (Deacon et al.)",
+      "publisher": "Behaviour Research and Therapy (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23872701/",
+      "year": 2013
+    },
+    {
+      "title": "Dismantling cognitive-behaviour therapy for panic disorder: a systematic review and component network meta-analysis (Pompoli et al.)",
+      "publisher": "Psychological Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29368665/",
+      "year": 2018
+    },
+    {
+      "title": "Maximizing exposure therapy: an inhibitory learning approach (Craske et al.)",
+      "publisher": "Behaviour Research and Therapy (PubMed Central)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4114726/",
+      "year": 2014
+    },
+    {
+      "title": "Generalised anxiety disorder and panic disorder in adults: management (CG113)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg113",
+      "year": 2011
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

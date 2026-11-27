@@ -1,0 +1,91 @@
+{
+  "id": "positive-psychology",
+  "name": "Positive psychology and well-being approaches",
+  "shortName": "Positive psychology",
+  "family": "positive",
+  "summary": "These approaches build well-being, strengths, positive emotion and meaning, rather than only reducing symptoms. They are useful adjuncts and relapse-prevention tools, not first-line treatment for moderate or severe depression.",
+  "keyConcepts": [
+    { "term": "Flourishing", "meaning": "Well-being understood as more than the absence of illness, often described through positive emotion, engagement, relationships, meaning and accomplishment (the PERMA framework)." },
+    { "term": "Character strengths", "meaning": "Personal qualities such as kindness, curiosity, perseverance or humor that a person can recognize and use more often in daily life." },
+    { "term": "Broaden and build", "meaning": "Positive emotions widen attention and thinking in the moment and, over time, help build lasting personal and social resources." },
+    { "term": "Savoring", "meaning": "Deliberately noticing, extending and sharing positive experiences, rather than letting them pass unnoticed." },
+    { "term": "Psychological well-being dimensions", "meaning": "Well-being therapy works on autonomy, environmental mastery, personal growth, positive relations, purpose in life and self-acceptance." }
+  ],
+  "viewOfProblem": "Distress narrows attention to threats and losses, and people with depression or anxiety may struggle to notice, take in or build on positive experiences. Low well-being is also a risk factor for relapse. Problems are not denied; the approach adds attention to what is going well and to the person's strengths and resources.",
+  "viewOfChange": "Change comes from regular practices that increase positive emotion, engagement and connection, such as noticing good things, using strengths in new ways, gratitude, kindness and savoring, and, in well-being therapy, from monitoring moments of well-being and the thoughts that cut them short. Over time these build resources that protect against relapse.",
+  "therapistStance": "Warm, encouraging and collaborative, with genuine interest in the client's strengths. The clinician acknowledges pain first and avoids forced positivity, and tailors practices to what the client values and finds natural.",
+  "sessionShape": [
+    "Check in on mood, measures and what went well since the last session.",
+    "Review the week's practice, including any barriers or mixed feelings it raised.",
+    "Explore a strength, a positive experience or a dimension of well-being in depth.",
+    "Choose and plan a practice for the week that fits the client's life.",
+    "Close by naming one thing the client wants to notice or do more of."
+  ],
+  "goalStyle": "Goals describe well-being actions and experiences: for example, write down three good things on five evenings a week for a month, or use a named strength in a new way at work twice a week. Pair them with symptom goals where depression or anxiety are present. Write each goal with the client in their own words.",
+  "progressMarkers": [
+    "Completion of well-being practices, recorded by the client.",
+    "Client ratings of well-being, meaning and positive emotion.",
+    "Symptom measures such as the PHQ-9 alongside, to make sure symptoms are not being missed."
+  ],
+  "typicalTechniques": ["positive-psychology-practices", "well-being-therapy", "mindfulness-oriented-recovery-enhancement"],
+  "relatedTechniques": ["act-values-clarification", "behavioral-activation", "self-compassion-practice"],
+  "missingTechniques": [
+    { "name": "Positive psychotherapy (Rashid and Seligman)", "note": "A structured 14-session program built on strengths and positive resources; overview only." }
+  ],
+  "formulationIds": ["five-ps-biopsychosocial-spiritual"],
+  "models": [
+    {
+      "name": "Positive psychology interventions",
+      "summary": "Brief practices such as gratitude, three good things, strengths use, kindness and savoring, delivered individually, in groups or online.",
+      "evidenceTier": "research-supported",
+      "evidence": "A 2021 meta-analysis of 347 studies found small-to-medium effects on well-being and on depression, anxiety and stress (Carr et al., 2021); an earlier meta-analysis of RCTs found smaller effects (Bolier et al., 2013).",
+      "trainingRequired": false
+    },
+    {
+      "name": "Well-being therapy",
+      "summary": "Fava's short-term therapy that uses a well-being diary and cognitive work on the six dimensions of psychological well-being, often after other treatment to prevent relapse.",
+      "evidenceTier": "emerging",
+      "evidence": "A 2021 meta-analysis of 17 RCTs found that sequential psychotherapy after acute antidepressant treatment, in every trial a form of CBT and in some combined with well-being therapy, lowered the risk of relapse or recurrence (Guidi and Fava, 2021); trials of well-being therapy on its own are few.",
+      "trainingRequired": false
+    }
+  ],
+  "evidenceTier": "research-supported",
+  "evidenceSummary": "Positive psychology interventions improve well-being and modestly reduce depression, anxiety and stress (Carr et al., 2021, 347 studies), with smaller effects in stricter RCT-only analyses (Bolier et al., 2013). Well-being therapy is used within sequential CBT-based strategies that lower relapse risk after acute treatment for depression (Guidi and Fava, 2021). No major guideline recommends positive psychology interventions as a stand-alone treatment for depression or anxiety.",
+  "bestFit": [
+    "Building well-being and resilience after symptoms have improved, as part of relapse prevention.",
+    "Mild low mood or stress, alongside other support.",
+    "Clients who respond well to a strengths-based, hopeful framing.",
+    "As an adjunct to first-line treatment for depression or anxiety."
+  ],
+  "cautions": [
+    "Not a first-line treatment for moderate or severe depression; use it alongside guideline-recommended care.",
+    "Forced positivity or gratitude can feel invalidating, especially after loss, trauma or injustice; acknowledge pain first and let the client choose practices.",
+    "Some practices, such as gratitude letters, can stir up difficult feelings; check in afterward.",
+    "Low mood that persists or worsens needs review. If thoughts of death or self-harm come up, follow your risk procedures and review crisis options: in the US call or text 988; elsewhere, the local emergency number or findahelpline.com."
+  ],
+  "whenToRefer": [
+    "Moderate or severe depression, or no improvement in symptoms: offer or refer for first-line treatment."
+  ],
+  "trainingRequired": false,
+  "trainingNote": "Brief positive psychology practices can be used within general training. Well-being therapy and positive psychotherapy have manuals and workshops; no certification is required.",
+  "trainingPath": [],
+  "ethicsPrompts": [
+    { "prompt": "Practice within your competence: present positive psychology practices honestly as adjuncts with modest effects, not as a replacement for first-line treatment.", "legalIds": ["competence-and-scope-of-practice"] }
+  ],
+  "culturalNotes": [
+    "Ideas of happiness, strengths and expressing positive emotion differ across cultures; some value calm contentment or family harmony over excitement or personal achievement.",
+    "Gratitude and kindness practices may connect naturally with the client's faith or community traditions; invite those links rather than imposing a secular framing.",
+    "Be careful not to suggest that structural hardship can be fixed by a positive attitude."
+  ],
+  "handoutIds": ["three-good-things", "values-compass"],
+  "relatedPracticeIds": ["ending-therapy-and-boosters", "goals-by-orientation"],
+  "relatedPopulationIds": ["older-adults", "college-students"],
+  "sources": [
+    { "title": "Effectiveness of positive psychology interventions: a systematic review and meta-analysis (Carr et al.)", "publisher": "Journal of Positive Psychology (Taylor & Francis)", "url": "https://doi.org/10.1080/17439760.2020.1818807", "year": 2021 },
+    { "title": "Positive psychology interventions: a meta-analysis of randomized controlled studies (Bolier et al.)", "publisher": "BMC Public Health (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/23390882/", "year": 2013 },
+    { "title": "Sequential combination of pharmacotherapy and psychotherapy in major depressive disorder: a systematic review and meta-analysis (Guidi and Fava)", "publisher": "JAMA Psychiatry (PubMed Central)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7689568", "year": 2021 }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

@@ -40,6 +40,7 @@
     "kind-self-talk",
     "hard-moment-plan"
   ],
+  "orientationIds": ["cognitive-therapy", "integrative-common-factors"],
   "sources": [
     {
       "title": "Outpatient psychotherapy for borderline personality disorder: schema-focused therapy vs transference-focused psychotherapy (Giesen-Bloo et al.)",

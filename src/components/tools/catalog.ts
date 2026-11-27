@@ -1,4 +1,5 @@
-import { ChartLine, GraduationCap, LifeBuoy, NotebookPen, Send, Timer, type LucideIcon } from "lucide-react";
+import { ChartLine, Columns3, GraduationCap, LifeBuoy, Network, NotebookPen, Send, Target, Timer, type LucideIcon } from "lucide-react";
+import { ArrowRightLeft, Briefcase, FileLock2, GitCompareArrows, ShieldAlert } from "lucide-react";
 
 export interface ToolEntry {
   href: string;
@@ -45,5 +46,53 @@ export const TOOLS: readonly ToolEntry[] = [
     title: "Practice cases",
     line: "Fictional cases that show how possible considerations change as you learn more.",
     icon: GraduationCap,
+  },
+  {
+    href: "/formulations/builder",
+    title: "Formulation worksheet",
+    line: "Build a shared formulation (5 Ps, CBT, functional analysis, ACT or relationship pattern) and print a copy safe to share.",
+    icon: Network,
+  },
+  {
+    href: "/tools/goals",
+    title: "Goal writer",
+    line: "Write goals in the style of your approach, check the SMART parts, and scale up to three goals.",
+    icon: Target,
+  },
+  {
+    href: "/tools/option-grid",
+    title: "Option grid",
+    line: "Compare treatment options side by side for a shared decision, with a plain-language client view.",
+    icon: Columns3,
+  },
+  {
+    href: "/tools/precautions",
+    title: "Intervention precautions",
+    line: "Tick health and life context (pregnancy, history of mania, seizures and more) and see sourced cautions to weigh.",
+    icon: ShieldAlert,
+  },
+  {
+    href: "/tools/care-transition",
+    title: "Care transition checklist",
+    line: "Steps for discharge or referral, plus a caring-contacts plan, printed with blank lines.",
+    icon: ArrowRightLeft,
+  },
+  {
+    href: "/tools/release-of-information",
+    title: "Release of information",
+    line: "Build a plain-language authorization with the HIPAA and 42 CFR Part 2 elements and blank lines for identifiers.",
+    icon: FileLock2,
+  },
+  {
+    href: "/tools/accommodation-letter",
+    title: "Accommodation letter",
+    line: "A treating clinician's letter for work or study: what is harder and what would help, no diagnosis.",
+    icon: Briefcase,
+  },
+  {
+    href: "/diagnoses/compare",
+    title: "Compare considerations",
+    line: "Two or three possible considerations from this session side by side, with questions that tell them apart.",
+    icon: GitCompareArrows,
   },
 ];

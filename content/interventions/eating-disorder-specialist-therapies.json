@@ -1,0 +1,118 @@
+{
+  "id": "eating-disorder-specialist-therapies",
+  "name": "Specialist psychological therapies for eating disorders in adults - overview and referral",
+  "modality": "Eating-disorder-focused psychological therapies (CBT-ED, MANTRA, SSCM, focal psychodynamic therapy, guided self-help)",
+  "conditions": ["anorexia-nervosa", "bulimia-nervosa", "binge-eating-disorder"],
+  "evidenceLevel": "NICE NG69 (2017) recommends, for adults with anorexia nervosa, offering a choice of individual eating-disorder-focused CBT (CBT-ED), the Maudsley Anorexia Nervosa Treatment for Adults (MANTRA) or specialist supportive clinical management (SSCM), and considering eating-disorder-focused focal psychodynamic therapy if those are unacceptable, contraindicated or ineffective. For binge eating disorder it recommends offering guided self-help first, then group CBT-ED; for bulimia nervosa it suggests considering guided self-help, then individual CBT-ED. NICE's 2024 exceptional surveillance decided not to update the guideline but noted a gap for people with long-standing anorexia. In trials for adult anorexia, focal psychodynamic therapy showed an advantage in recovery at 12 months while enhanced CBT led to faster weight gain (Zipfel et al., 2014), and CBT-E, SSCM and MANTRA produced broadly similar outcomes (Byrne et al., 2017; Schmidt et al., 2015).",
+  "minutes": { "min": 15, "max": 30 },
+  "purpose": "Eating disorders are best treated by teams with specific training, using therapies built for them. This entry gives clinicians an overview of the main adult options so they can explain choices and refer well. CBT-ED (including enhanced CBT, CBT-E) targets the beliefs and habits that keep the eating problem going, starting with regular eating. MANTRA is a workbook-based therapy for anorexia that also works on thinking styles, emotions and relationships. SSCM combines supportive therapy with regular monitoring of physical health and weight. Focal psychodynamic therapy explores how self-image, emotions and relationships connect with the eating problem. Guided self-help uses structured CBT materials with brief support. Medical monitoring runs alongside all of them. This entry covers overview and referral only and contains no protocol materials.",
+  "steps": [
+    "Check medical risk first and coordinate with a medical provider: rapid weight loss, very low weight, fainting, chest pain, purging, electrolyte or heart rhythm problems. Use your setting's eating disorder medical risk guidance and the eating-disorder medical monitoring entry. Refer urgently when risk is high.",
+    "Ask what the client wants to change and what worries them about treatment, including fears about weight gain. Avoid comments on weight or appearance.",
+    "Explain the main therapy options in plain language and how they are matched to the type of eating problem and its severity. Support an informed choice.",
+    "Refer to a specialist eating disorder service or a clinician trained in the chosen therapy. With consent, share medical monitoring results with the treating team.",
+    "For binge eating, and for bulimia where suitable, offer or refer to guided self-help with CBT materials as a first step, and step up if there is little change after about 4 weeks.",
+    "Involve family or partners if the client wishes, to support meals and recovery.",
+    "Follow up to confirm the referral was completed, and keep checking medical risk and mood while the client waits."
+  ],
+  "script": [
+    "There are several therapies made specifically for eating difficulties, and many people recover.",
+    "Some focus on regular eating and the thoughts that keep the problem going. Others look more at feelings, relationships and how you see yourself.",
+    "Whichever you choose, someone will also keep an eye on your physical health. That is part of keeping you safe.",
+    "What matters most to you about treatment? What worries you about it?",
+    "Would you like help finding a team that specializes in this?"
+  ],
+  "contraindications": [
+    "Eating disorders carry real physical danger. Medical assessment and monitoring are needed alongside any therapy, and some situations need urgent medical or inpatient care.",
+    "Do not use weight-loss advice, calorie restriction or weight-focused goals with these clients. Be cautious with exercise advice.",
+    "Suicide risk is raised in eating disorders. Ask directly and address safety first. This app does not judge risk; you do. Crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com.",
+    "Do not attempt specialist protocols without training in them.",
+    "Co-occurring substance use, self-harm or diabetes with insulin restriction need integrated, specialist care. Do not record substance-use details in this app."
+  ],
+  "culturalAdaptations": [
+    "Eating disorders affect people of all genders, sizes, cultures and incomes. Do not let a larger body, male gender or minority background delay assessment.",
+    "Food, meals and body ideals are tied to culture and faith (for example religious fasting). Plan meals and goals with the client's food culture in mind.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "trainingRequired": "Specialist eating disorder therapies: trained clinicians only. Deliver CBT-ED or CBT-E, MANTRA, SSCM or focal psychodynamic therapy only after training in the specific model with supervision (for example, CBT-E training from the Centre for Research on Eating Disorders at Oxford, CREDO). Otherwise refer to a specialist service.",
+  "handoutIds": ["eating-concerns-warning-signs", "regular-eating-plan"],
+  "orientationIds": ["cognitive-therapy", "psychodynamic-therapy"],
+  "evidenceGrades": [
+    {
+      "body": "NICE",
+      "guideline": "Eating disorders: recognition and treatment (NG69)",
+      "year": 2017,
+      "conditionId": "anorexia-nervosa",
+      "population": "Adults with anorexia nervosa",
+      "direction": "for",
+      "strength": "offer (CBT-ED, MANTRA or SSCM); consider (focal psychodynamic therapy)",
+      "url": "https://www.nice.org.uk/guidance/ng69/chapter/Recommendations"
+    },
+    {
+      "body": "NICE",
+      "guideline": "Eating disorders: recognition and treatment (NG69)",
+      "year": 2017,
+      "conditionId": "binge-eating-disorder",
+      "population": "Adults with binge eating disorder",
+      "direction": "for",
+      "strength": "offer (guided self-help first, then group CBT-ED)",
+      "url": "https://www.nice.org.uk/guidance/ng69/chapter/Recommendations"
+    },
+    {
+      "body": "NICE",
+      "guideline": "Eating disorders: recognition and treatment (NG69)",
+      "year": 2017,
+      "conditionId": "bulimia-nervosa",
+      "population": "Adults with bulimia nervosa",
+      "direction": "for",
+      "strength": "consider (guided self-help, then individual CBT-ED)",
+      "url": "https://www.nice.org.uk/guidance/ng69/chapter/Recommendations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Eating disorders: recognition and treatment (NG69): recommendations",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng69/chapter/Recommendations",
+      "year": 2017
+    },
+    {
+      "title": "2024 exceptional surveillance of eating disorders: recognition and treatment (NG69)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng69/resources/2024-exceptional-surveillance-of-eating-disorders-recognition-and-treatment-nice-guideline-ng69-pdf-17401629609925",
+      "year": 2024
+    },
+    {
+      "title": "Focal psychodynamic therapy, cognitive behaviour therapy, and optimised treatment as usual in outpatients with anorexia nervosa (ANTOP study) (Zipfel et al.)",
+      "publisher": "The Lancet (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24131861/",
+      "year": 2014
+    },
+    {
+      "title": "A randomised controlled trial of three psychological treatments for anorexia nervosa (Byrne et al.)",
+      "publisher": "Psychological Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28552083/",
+      "year": 2017
+    },
+    {
+      "title": "The Maudsley Outpatient Study of Treatments for Anorexia Nervosa and Related Conditions (MOSAIC): MANTRA versus SSCM (Schmidt et al.)",
+      "publisher": "Journal of Consulting and Clinical Psychology (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25984803/",
+      "year": 2015
+    },
+    {
+      "title": "Transdiagnostic cognitive-behavioral therapy for patients with eating disorders: a two-site trial with 60-week follow-up (Fairburn et al.)",
+      "publisher": "American Journal of Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19074978/",
+      "year": 2009
+    },
+    {
+      "title": "Web-centred training in CBT-E",
+      "publisher": "Centre for Research on Eating Disorders at Oxford (CREDO)",
+      "url": "https://credo-oxford.com/9.2.html"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

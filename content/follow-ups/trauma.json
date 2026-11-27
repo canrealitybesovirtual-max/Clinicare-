@@ -28,7 +28,7 @@
         "triggerCategories": ["trauma-reminder"]
       },
       "targets": ["traumatic-event-exposure"],
-      "discriminates": ["ptsd", "adjustment-disorder"],
+      "discriminates": ["ptsd", "acute-stress-disorder", "adjustment-disorder"],
       "priority": 5
     },
     {
@@ -43,25 +43,25 @@
         {
           "id": "lt2w",
           "label": "Under 2 weeks",
-          "effects": { "setDuration": "lt2w" },
-          "note": "Early reactions often settle. Offer psychoeducation and grounding, check safety and support, and review again in a few weeks."
+          "effects": { "setDuration": "lt2w", "addSymptomIds": ["recent-trauma-past-month"] },
+          "note": "Early reactions often settle. Offer practical support, psychoeducation and grounding, check safety, and plan a check-in within the month."
         },
         {
           "id": "2to4w",
           "label": "2 to 4 weeks",
-          "effects": { "setDuration": "2to4w" },
-          "note": "Still within the first month: watch the course, check safety and support, and review again soon."
+          "effects": { "setDuration": "2to4w", "addSymptomIds": ["recent-trauma-past-month"] },
+          "note": "Still within the first month: watch the course, check safety and support, and consider brief trauma-focused CBT if reactions are marked or not easing. Reassess at about one month."
         },
-        { "id": "1to6m", "label": "1 to 6 months", "effects": { "setDuration": "1to6m" } },
-        { "id": "gte6m", "label": "6 months or longer", "effects": { "setDuration": "gte6m" } },
+        { "id": "1to6m", "label": "1 to 6 months", "effects": { "setDuration": "1to6m", "negateSymptomIds": ["recent-trauma-past-month"] } },
+        { "id": "gte6m", "label": "6 months or longer", "effects": { "setDuration": "gte6m", "negateSymptomIds": ["recent-trauma-past-month"] } },
         { "id": "unsure", "label": "Not sure yet", "keepOpen": true }
       ],
       "showWhen": {
         "symptomIds": ["traumatic-event-exposure"],
-        "conditionIds": ["ptsd"],
+        "conditionIds": ["ptsd", "acute-stress-disorder"],
         "triggerCategories": ["trauma-reminder"]
       },
-      "discriminates": ["ptsd", "adjustment-disorder"],
+      "discriminates": ["ptsd", "acute-stress-disorder", "adjustment-disorder"],
       "priority": 10
     },
     {
@@ -72,7 +72,7 @@
       "text": "Does the client relive the event through unwanted memories, nightmares or flashbacks?",
       "why": "Reliving the event, rather than simply remembering it, is a key feature of a trauma reaction and helps choose between trauma-focused approaches.",
       "options": [
-        { "id": "memories", "label": "Unwanted memories that break in", "effects": { "addSymptomIds": ["intrusive-memories"] } },
+        { "id": "memories", "label": "Unwanted memories that keep intruding", "effects": { "addSymptomIds": ["intrusive-memories"] } },
         { "id": "nightmares", "label": "Nightmares about it", "effects": { "addSymptomIds": ["nightmares"] } },
         { "id": "flashbacks", "label": "Flashbacks: it feels as if it is happening again", "effects": { "addSymptomIds": ["flashbacks"] } },
         {

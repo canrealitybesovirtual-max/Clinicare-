@@ -1,0 +1,131 @@
+{
+  "id": "caring-contacts",
+  "title": "Caring contacts and follow-up after a crisis",
+  "category": "safety-and-risk",
+  "summary": "Short, warm, non-demanding contacts after a crisis, an emergency visit, a hospital stay or a missed session, kept up over months. This guide covers the first contact within a few days, reviewing the safety plan, and writing brief messages that ask nothing of the client. The app never sends messages; your service does, through its own approved channel.",
+  "whenToUse": [
+    "In the days after a client has been seen for a suicidal crisis or self-harm, in an emergency department or as an outpatient.",
+    "After discharge from inpatient or crisis care, alongside the first follow-up appointment.",
+    "When a client who has recently been at risk misses a session or stops replying.",
+    "As a standing part of care for clients who agree to it, for several months after a crisis."
+  ],
+  "steps": [
+    {
+      "heading": "Agree on contact before the crisis passes",
+      "body": "While you are still with the client, ask whether they are willing to hear from you, by which channel (call, text, letter or the patient portal) and what a message may say if someone else sees the phone or mail. Record the consent in your own record system.",
+      "items": [
+        "Use only channels your service has approved for clinical contact.",
+        "Agree what happens if a message gets no reply.",
+        "Write down who is responsible for sending each contact, so it does not depend on one person remembering."
+      ]
+    },
+    {
+      "heading": "Make the first contact within a few days",
+      "body": "A brief call or message within about 24 to 72 hours of the crisis or discharge checks how the client is doing, whether the next appointment still works and whether they can reach their safety plan. NICE NG225 sets initial aftercare within 48 hours of the psychosocial assessment after self-harm.",
+      "items": [
+        "Ask how they are, without a checklist tone.",
+        "Confirm the next appointment and remove barriers (time, transport, cost, child care).",
+        "Ask whether the safety plan is to hand and still fits, and update it together if not.",
+        "Repeat crisis options: in the US call or text 988; elsewhere the local emergency number or findahelpline.com."
+      ]
+    },
+    {
+      "heading": "Review the safety plan and lethal means",
+      "body": "At the first follow-up session, go back over the safety plan in the client's own words and revisit access to the means they named. Plans that are reviewed and practised are more likely to be used."
+    },
+    {
+      "heading": "Send caring contacts over the following months",
+      "body": "Short messages at planned intervals (for example, more often in the first month, then monthly) say you are thinking of the client and that you are available. They do not ask for a reply, set tasks or check symptoms.",
+      "items": [
+        "Keep each message to one or two sentences.",
+        "Vary the wording so it does not read as automated.",
+        "Include no clinical details, no diagnosis and nothing the client would not want a family member to read.",
+        "If the client replies with distress, respond as you would to any contact about risk: speak with them directly and follow your protocol."
+      ]
+    },
+    {
+      "heading": "Respond to a missed session",
+      "body": "After a missed session by a client who has recently been at risk, reach out the same day by the agreed channel. If you cannot reach them and you are worried, follow your service's protocol for welfare concerns, which may include the emergency contact the client agreed to."
+    },
+    {
+      "heading": "Document the contacts",
+      "body": "Note each contact, the channel and any reply in your own record system. This app keeps nothing."
+    }
+  ],
+  "prompts": [
+    "Thinking of you today and hoping things are a little easier. No need to reply.",
+    "Just a note to say I am glad we have been working together. I am here when you want to talk.",
+    "I noticed you could not make it today. I hope you are okay. Here is how to reach me to set up another time.",
+    "Before you leave, can we agree on how I can check in with you over the next few days, and what the message can say?"
+  ],
+  "cautions": [
+    "Caring contacts add to treatment and safety planning; they never replace a direct risk conversation when a reply suggests danger.",
+    "Do not put clinical content, diagnosis names, appointment reasons or substance-use details in messages; texts and letters are often seen by others.",
+    "Messages must come from your service's approved system, not a personal phone or account. This app does not send, schedule or store messages.",
+    "Stop or change contacts if the client asks, and record that choice.",
+    "Unanswered messages do not mean a client is safe or unsafe. The clinician decides what to do next; this guide does not judge risk."
+  ],
+  "adaptations": [
+    {
+      "context": "Clients without a stable phone or address",
+      "adaptation": "Agree on a reachable channel, such as a shelter, a trusted support who has agreed to pass on messages, or contact at a regular drop-in, and keep messages free of any detail."
+    },
+    {
+      "context": "Possible partner monitoring",
+      "adaptation": "Where a partner may read messages, agree on neutral wording or a different channel, and never send content that reveals help-seeking unless the client has said it is safe."
+    }
+  ],
+  "evidenceSummary": "In a 2001 randomized trial (Motto and Bostrom), people who declined ongoing care after a suicidal crisis and received brief caring letters for five years had fewer suicides in the first years than those who did not. A 2013 review (Luxton, June and Comtois) found follow-up contacts after discharge promising but mixed. A 2018 cohort study (Stanley and colleagues) found that the Safety Planning Intervention with structured follow-up calls after an emergency visit was associated with about half the suicidal behavior of usual care. A 2019 trial in military personnel (Comtois and colleagues) found fewer suicide attempts with caring text messages added to usual care. NICE NG225 (2022) sets initial aftercare within 48 hours after self-harm.",
+  "forClinicianReview": true,
+  "crisisPanel": true,
+  "sud": true,
+  "relatedInterventionIds": ["collaborative-safety-planning", "lethal-means-counseling", "suicide-specific-psychotherapies"],
+  "relatedHandoutIds": ["safety-plan", "after-a-crisis-next-steps", "helping-someone-at-risk"],
+  "relatedFormulationIds": [],
+  "relatedLegalIds": ["crisis-988-or-911", "between-session-contact-policy", "hipaa-privacy-basics"],
+  "relatedPracticeIds": ["care-transitions-and-warm-handoffs", "self-harm-assessment-and-formulation", "telehealth-sessions"],
+  "relatedPopulationIds": [],
+  "toolHref": "/tools/care-transition",
+  "linkOuts": [],
+  "measuresPending": [],
+  "sources": [
+    {
+      "title": "A randomized controlled trial of postcrisis suicide prevention (Motto and Bostrom)",
+      "publisher": "Psychiatric Services, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/11376235/",
+      "year": 2001
+    },
+    {
+      "title": "Can postdischarge follow-up contacts prevent suicide and suicidal behavior? A review of the evidence (Luxton, June and Comtois)",
+      "publisher": "Crisis, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22846445/",
+      "year": 2013
+    },
+    {
+      "title": "Comparison of the Safety Planning Intervention with follow-up vs usual care of suicidal patients treated in the emergency department (Stanley et al.)",
+      "publisher": "JAMA Psychiatry, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29998307/",
+      "year": 2018
+    },
+    {
+      "title": "Effect of augmenting standard care for military personnel with brief caring text messages for suicide prevention (Comtois et al.)",
+      "publisher": "JAMA Psychiatry, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30758491/",
+      "year": 2019
+    },
+    {
+      "title": "Self-harm: assessment, management and preventing recurrence (NG225)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng225",
+      "year": 2022
+    },
+    {
+      "title": "VA/DoD Clinical Practice Guideline: Assessment and Management of Patients at Risk for Suicide",
+      "publisher": "US Department of Veterans Affairs and Department of Defense",
+      "url": "https://www.healthquality.va.gov/guidelines/MH/srb/"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

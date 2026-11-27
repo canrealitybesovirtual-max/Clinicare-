@@ -1,0 +1,123 @@
+{
+  "id": "sleep-window-guide",
+  "title": "Sleep Window Guide",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 10,
+  "intro": "When sleep is broken, many people spend more time in bed to catch up. But long hours in bed can make sleep lighter and more broken. A sleep window means spending less time in bed for a while, so your sleep gets deeper and more solid. Then you slowly add time back. Do this only with a clinician guiding you. This sheet takes about 10 minutes to read.",
+  "sections": [
+    {
+      "heading": "Check with your clinician first",
+      "body": "A sleep window can make you very sleepy for the first week or two. Talk with your clinician before you start if you drive for work, use machines, or care for others at night. Also talk with them first if you have ever had seizures, times of very high energy with little need for sleep, or loud snoring with pauses in breathing, or if you are pregnant."
+    },
+    {
+      "heading": "Step 1: keep a sleep diary",
+      "body": "For 1 to 2 weeks, write down when you go to bed, about how long you sleep, and when you get up. Your counselor can give you a sleep diary. Then work out how long you sleep on an average night. Your clinician can help with the math."
+    },
+    {
+      "heading": "Step 2: set your window",
+      "steps": [
+        "Pick a wake-up time you can keep every day, weekends too.",
+        "Your time in bed matches your average sleep time, but it should not be less than the shortest time your clinician sets. A common shortest time is 5 hours.",
+        "Count back from your wake-up time to find your earliest bedtime. For example, if you wake at 6:30 am and your window is 6 hours, go to bed no earlier than 12:30 am."
+      ]
+    },
+    {
+      "heading": "Step 3: follow the window every night",
+      "steps": [
+        "Go to bed at your set time only if you feel sleepy. If not, stay up a little longer doing something calm.",
+        "Get up at your set time every day, even after a bad night.",
+        "If you cannot sleep for what feels like a long time, get up, go to another room, and do something calm in dim light. Go back to bed when you feel sleepy.",
+        "Skip naps, unless your clinician says a short one is safe for you."
+      ]
+    },
+    {
+      "heading": "Step 4: adjust once a week",
+      "body": "Each week, look at your diary with your clinician. If you were asleep for most of your time in bed, about 85% or more, you can add about 15 minutes. If you were asleep for much less of that time, your window may stay the same or get a little shorter. It never goes below your shortest time. Keep adjusting until you sleep well and feel rested in the day."
+    },
+    {
+      "heading": "What to expect",
+      "body": "The first week or two is often the hardest. You may feel more tired and grumpy. This is a sign that the plan is building up your body's need for sleep. Most people find their sleep gets deeper and more regular within a few weeks."
+    }
+  ],
+  "practiceLog": {
+    "columns": ["Week", "Wake-up time", "Earliest bedtime", "Hours in bed", "Hours asleep (about)", "Change for next week"],
+    "rows": 6
+  },
+  "safetyNote": "Safety first: A sleep window can make you very sleepy at first. Do not drive or use machines when you feel drowsy. If you get sleepy while driving, pull over somewhere safe and rest. If you get up at night, keep a soft light on so you do not trip or fall. If you start to need much less sleep but feel full of energy, tell your clinician soon. This sheet is not for emergencies. If you have thoughts of hurting yourself or someone else, call or text 988 in the US, or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "es": {
+    "title": "Guía de la ventana de sueño",
+    "intro": "Cuando el sueño se corta mucho, muchas personas pasan más tiempo en la cama para reponerlo. Pero muchas horas en la cama pueden hacer que el sueño sea más ligero y más cortado. Una ventana de sueño significa pasar menos tiempo en la cama por un tiempo, para que el sueño sea más profundo y más firme. Luego se agrega tiempo poco a poco. Haga esto solo con la guía de un profesional de salud. Leer esta hoja toma unos 10 minutos.",
+    "sections": [
+      {
+        "heading": "Consulte primero a su profesional de salud",
+        "body": "Una ventana de sueño le puede dar mucho sueño durante la primera o la segunda semana. Hable con su profesional de salud antes de empezar si maneja por trabajo, usa máquinas o cuida a otras personas de noche. También hable con esa persona primero si alguna vez ha tenido convulsiones, épocas de mucha energía con poca necesidad de dormir, o ronquidos fuertes con pausas al respirar, o si está embarazada."
+      },
+      {
+        "heading": "Paso 1: lleve un diario de sueño",
+        "body": "Durante 1 a 2 semanas, anote a qué hora se acuesta, más o menos cuánto duerme y a qué hora se levanta. Su consejero le puede dar un diario de sueño. Luego calcule cuánto duerme en una noche promedio. Su profesional de salud le puede ayudar con las cuentas."
+      },
+      {
+        "heading": "Paso 2: fije su ventana",
+        "steps": [
+          "Escoja una hora para levantarse que pueda cumplir todos los días, también los fines de semana.",
+          "Su tiempo en la cama es igual a su tiempo promedio de sueño, pero no debe ser menor que el tiempo más corto que fije su profesional de salud. Muchas veces, ese tiempo más corto es de 5 horas.",
+          "Cuente hacia atrás desde su hora de levantarse para saber lo más temprano que puede acostarse. Por ejemplo, si se levanta a las 6:30 a. m. y su ventana es de 6 horas, no se acueste antes de las 12:30 a. m."
+        ]
+      },
+      {
+        "heading": "Paso 3: siga la ventana cada noche",
+        "steps": [
+          "Acuéstese a la hora fijada solo si tiene sueño. Si no, quédese despierto un poco más haciendo algo tranquilo.",
+          "Levántese a la hora fijada todos los días, aunque haya tenido una mala noche.",
+          "Si no puede dormir durante lo que parece mucho tiempo, levántese, vaya a otro cuarto y haga algo tranquilo con poca luz. Vuelva a la cama cuando tenga sueño.",
+          "No tome siestas, a menos que su profesional de salud diga que una siesta corta es segura para usted."
+        ]
+      },
+      {
+        "heading": "Paso 4: ajuste una vez por semana",
+        "body": "Cada semana, revise su diario con su profesional de salud. Si estuvo dormido la mayor parte del tiempo en la cama, más o menos el 85% o más, puede agregar unos 15 minutos. Si estuvo dormido mucho menos de ese tiempo, su ventana puede quedarse igual o acortarse un poco. Nunca baja de su tiempo más corto. Siga ajustando hasta que duerma bien y se sienta descansado de día."
+      },
+      {
+        "heading": "Qué esperar",
+        "body": "La primera o la segunda semana suelen ser las más difíciles. Puede sentirse más cansado y de mal humor. Es una señal de que el plan está aumentando la necesidad de dormir de su cuerpo. La mayoría de las personas nota que su sueño se vuelve más profundo y más regular en unas semanas."
+      }
+    ],
+    "practiceLog": {
+      "columns": ["Semana", "Hora de levantarme", "Lo más temprano para acostarme", "Horas en la cama", "Horas dormido (más o menos)", "Cambio para la próxima semana"]
+    },
+    "safetyNote": "La seguridad es lo primero: Una ventana de sueño le puede dar mucho sueño al principio. No maneje ni use máquinas cuando tenga sueño. Si le da sueño mientras maneja, deténgase en un lugar seguro y descanse. Si se levanta de noche, deje una luz suave encendida para no tropezar ni caerse. Si empieza a necesitar mucho menos sueño pero se siente lleno de energía, dígaselo pronto a su profesional de salud. Esta hoja no es para emergencias. Si tiene pensamientos de hacerse daño o de hacerle daño a otra persona, llame o envíe un mensaje de texto al 988 en EE. UU., o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "linkOuts": [
+    {
+      "title": "Drowsy Driving",
+      "publisher": "National Highway Traffic Safety Administration",
+      "url": "https://www.nhtsa.gov/risky-driving/drowsy-driving",
+      "note": "Warning signs of drowsy driving and how to stay safe.",
+      "lastVerified": "2026-11-27"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Behavioral and psychological treatments for chronic insomnia disorder in adults: an AASM clinical practice guideline (Edinger et al.)",
+      "publisher": "Journal of Clinical Sleep Medicine",
+      "url": "https://jcsm.aasm.org/doi/10.5664/jcsm.8986",
+      "year": 2021
+    },
+    {
+      "title": "No pain, no gain: an exploratory within-subjects mixed-methods evaluation of the patient experience of sleep restriction therapy for insomnia (Kyle, Morgan, Spiegelhalder and Espie)",
+      "publisher": "Sleep Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21907616/",
+      "year": 2011
+    },
+    {
+      "title": "Drowsy Driving",
+      "publisher": "National Highway Traffic Safety Administration",
+      "url": "https://www.nhtsa.gov/risky-driving/drowsy-driving"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

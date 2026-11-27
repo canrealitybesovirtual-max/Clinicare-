@@ -2,7 +2,7 @@
   "id": "rule-outs",
   "title": "Substance and medical rule-outs",
   "domain": "rule-outs",
-  "about": "Questions on substances, medications and medical conditions that can mimic or worsen anxiety, panic and low mood (for example caffeine, thyroid problems, heart rhythm problems). Substance answers stay in this session's memory only (42 CFR Part 2).",
+  "about": "Questions on substances, medications and medical conditions that can mimic or worsen anxiety, panic and low mood (for example caffeine, thyroid problems, heart rhythm problems), and on new confusion or cognitive decline that calls for medical or cognitive evaluation. Substance answers stay in this session's memory only (42 CFR Part 2).",
   "questions": [
     {
       "id": "ruleout-substances",
@@ -196,6 +196,70 @@
         ]
       },
       "priority": 30
+    },
+    {
+      "id": "ruleout-cognitive-change",
+      "kind": "discriminate",
+      "domain": "rule-outs",
+      "text": "Is there new confusion, drowsiness or attention that comes and goes over hours or days, or a gradual decline in memory, thinking or everyday tasks over months?",
+      "why": "Sudden or fluctuating confusion suggests delirium, which needs same-day medical care (NICE CG103). A gradual decline suggests a neurocognitive disorder that needs a cognitive evaluation (NICE NG97). Either can look like depression, anxiety, mania or psychosis.",
+      "options": [
+        {
+          "id": "sudden-fluctuating",
+          "label": "Sudden or fluctuating confusion over hours or days",
+          "effects": {
+            "setMedicalPossible": "yes"
+          },
+          "surfaces": [
+            "urgent-medical"
+          ],
+          "note": "Possible delirium: arrange a same-day medical assessment. This is a referral, not a finding."
+        },
+        {
+          "id": "gradual-decline",
+          "label": "A gradual decline in memory, thinking or daily tasks over months",
+          "effects": {
+            "setMedicalPossible": "yes"
+          },
+          "surfaces": [
+            "medical-referral"
+          ],
+          "note": "Refer for a cognitive evaluation through primary care or a memory service."
+        },
+        {
+          "id": "no",
+          "label": "No",
+          "effects": {}
+        },
+        {
+          "id": "unsure",
+          "label": "Not asked yet",
+          "keepOpen": true
+        }
+      ],
+      "showWhen": {
+        "symptomIds": [
+          "concentration-difficulty",
+          "disorganized-thinking",
+          "hallucinations",
+          "paranoia-delusions",
+          "negative-symptoms",
+          "functional-decline"
+        ],
+        "conditionIds": [
+          "major-depressive-disorder",
+          "schizophrenia",
+          "generalized-anxiety-disorder",
+          "bipolar-i-disorder"
+        ]
+      },
+      "discriminates": [
+        "major-depressive-disorder",
+        "schizophrenia",
+        "generalized-anxiety-disorder",
+        "bipolar-i-disorder"
+      ],
+      "priority": 35
     }
   ],
   "sources": [
@@ -215,6 +279,18 @@
       "title": "When Fear Overwhelms (NIMH brochure on panic attacks)",
       "publisher": "National Institute of Mental Health",
       "url": "https://www.nimh.nih.gov/health/publications/panic-disorder-when-fear-overwhelms"
+    },
+    {
+      "title": "Delirium: prevention, diagnosis and management in hospital and long-term care (CG103)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg103",
+      "year": 2010
+    },
+    {
+      "title": "Dementia: assessment, management and support for people living with dementia and their carers (NG97)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng97",
+      "year": 2018
     }
   ],
   "license": "original",

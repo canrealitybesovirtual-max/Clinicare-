@@ -1,0 +1,327 @@
+{
+  "id": "sedative-hypnotic-use-disorder",
+  "name": "Sedative, hypnotic or anxiolytic use disorder",
+  "icd10cm": [
+    {
+      "code": "F13.10",
+      "label": "Sedative, hypnotic or anxiolytic abuse, uncomplicated"
+    },
+    {
+      "code": "F13.11",
+      "label": "Sedative, hypnotic or anxiolytic abuse, in remission"
+    },
+    {
+      "code": "F13.20",
+      "label": "Sedative, hypnotic or anxiolytic dependence, uncomplicated"
+    },
+    {
+      "code": "F13.21",
+      "label": "Sedative, hypnotic or anxiolytic dependence, in remission"
+    },
+    {
+      "code": "F13.230",
+      "label": "Sedative, hypnotic or anxiolytic dependence with withdrawal, uncomplicated"
+    },
+    {
+      "code": "F13.239",
+      "label": "Sedative, hypnotic or anxiolytic dependence with withdrawal, unspecified"
+    },
+    {
+      "code": "F13.90",
+      "label": "Sedative, hypnotic, or anxiolytic use, unspecified, uncomplicated"
+    }
+  ],
+  "icd11": [
+    {
+      "code": "6C44.1",
+      "label": "Harmful pattern of use of sedatives, hypnotics or anxiolytics"
+    },
+    {
+      "code": "6C44.2",
+      "label": "Sedative, hypnotic or anxiolytic dependence"
+    }
+  ],
+  "dsmPointer": "See DSM-5-TR: Substance-Related and Addictive Disorders — Sedative, Hypnotic, or Anxiolytic Use Disorder",
+  "summary": "Use of benzodiazepines, z-drugs such as zolpidem, or related sedatives that has slipped out of the client's control: taking more or more often than prescribed, getting extra supplies, not managing to cut down, or carrying on despite falls, memory gaps, drowsy driving or problems at home and work. Long-term prescribed use often brings physiological dependence (tolerance, rebound or withdrawal between doses) without a use disorder; keep the two apart and avoid blame. Never suggest stopping suddenly: withdrawal can cause seizures and delirium, so any change goes through the prescriber as a gradual, agreed taper, ideally with CBT for insomnia or anxiety alongside, which helps people stop in the short term (Cochrane review, 2015). Mixing sedatives with alcohol or opioids raises overdose risk. Substance-use information is protected: nothing here is stored or sent, and every export carries the Part 2 notice. 42 CFR Part 2 prohibits unauthorized use or disclosure of these records. For clinician review only; this is not a diagnosis.",
+  "features": [
+    {
+      "symptomId": "sedative-impaired-control",
+      "kind": "core",
+      "weight": 5
+    },
+    {
+      "symptomId": "sedative-despite-harm",
+      "kind": "core",
+      "weight": 4
+    },
+    {
+      "symptomId": "sedative-withdrawal-signs",
+      "kind": "associated",
+      "weight": 3,
+      "group": "physiological",
+      "breadthArea": true
+    },
+    {
+      "symptomId": "alcohol-benzo-withdrawal",
+      "kind": "associated",
+      "weight": 3,
+      "group": "physiological",
+      "breadthArea": true
+    },
+    {
+      "symptomId": "sedative-use-pattern",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "subjective-anxiety-stress",
+      "kind": "associated",
+      "weight": 1,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "insomnia",
+      "kind": "associated",
+      "weight": 1,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "concentration-difficulty",
+      "kind": "associated",
+      "weight": 1
+    },
+    {
+      "symptomId": "depressed-mood",
+      "kind": "associated",
+      "weight": 1
+    }
+  ],
+  "minCore": 1,
+  "durationGate": {
+    "minWeeks": 4,
+    "note": "Ask about the pattern over the past year, including any taper attempts and what happened. DSM-5-TR and ICD-11 both look at the pattern over months; check the timing they describe."
+  },
+  "impairmentRequired": true,
+  "ruleOuts": [
+    {
+      "label": "Physiological dependence from use as prescribed",
+      "type": "substance",
+      "note": "Tolerance and withdrawal on their own, with use as prescribed, are expected effects of long-term treatment and are not a use disorder. Plan any change with the prescriber."
+    },
+    {
+      "label": "Alcohol, opioids and other sedating substances",
+      "type": "substance",
+      "note": "Combined use is common and raises the risk of overdose, falls and memory problems. This app does not store or send substance-use information."
+    },
+    {
+      "label": "Cognitive decline, falls and delirium, especially in older adults",
+      "type": "medical",
+      "note": "Sedatives can cause confusion and falls; new or fluctuating confusion needs same-day medical review."
+    },
+    {
+      "label": "Sleep apnea, pain and other medical causes of poor sleep",
+      "type": "medical",
+      "note": "Untreated sleep or pain problems often drive nightly use; sedatives can also worsen sleep apnea."
+    },
+    {
+      "label": "Anxiety, panic, insomnia or trauma symptoms driving use",
+      "type": "psychiatric",
+      "note": "Assess the condition the medicine was started for; it often needs its own psychological treatment during and after a taper."
+    }
+  ],
+  "specifiers": [
+    {
+      "label": "ICD-10-CM coding notes",
+      "note": "F13.1x codes a harmful (abuse) pattern and F13.2x a dependence pattern, each with remission and withdrawal codes; F13.9x is use without a specified disorder. DSM-5-TR applies its own severity and course specifiers to these codes: See DSM-5-TR."
+    },
+    {
+      "label": "ICD-11 coding notes",
+      "note": "6C44.1 is a harmful pattern of use and 6C44.2 is dependence on sedatives, hypnotics or anxiolytics. Check the WHO ICD-11 browser for current qualifiers."
+    },
+    {
+      "label": "Physiological dependence vs. use disorder (descriptive)",
+      "note": "Record whether the medicine is taken as prescribed. Rebound anxiety or insomnia between doses suggests physiological dependence and is a reason to plan a slow taper with the prescriber, not a judgment about the client."
+    }
+  ],
+  "differentials": [
+    {
+      "label": "Physiological dependence on a prescribed medicine (no separate code)",
+      "distinguishing": "Taken as prescribed, without loss of control, extra supplies or harm; managed with the prescriber as a medication question."
+    },
+    {
+      "label": "Alcohol dependence, uncomplicated",
+      "icd10cm": "F10.20",
+      "distinguishing": "Loss of control centers on drinking; the two often occur together and share withdrawal risks."
+    },
+    {
+      "label": "Opioid dependence, uncomplicated",
+      "icd10cm": "F11.20",
+      "distinguishing": "Loss of control centers on opioids; combined use with sedatives sharply raises overdose risk."
+    },
+    {
+      "label": "Generalized anxiety disorder",
+      "icd10cm": "F41.1",
+      "distinguishing": "Ongoing worry that predates sedative use and continues when use is stable."
+    },
+    {
+      "label": "Primary insomnia",
+      "icd10cm": "F51.01",
+      "distinguishing": "Long-standing sleep difficulty that led to sedative use; it responds to CBT for insomnia."
+    }
+  ],
+  "comorbidities": [
+    {
+      "conditionId": "alcohol-use-disorder",
+      "label": "Alcohol use disorder",
+      "note": "Alcohol and sedatives together raise overdose and fall risk, and both withdrawals can be dangerous; coordinate with the prescriber. 42 CFR Part 2 prohibits unauthorized use or disclosure of these records."
+    },
+    {
+      "conditionId": "opioid-use-disorder",
+      "label": "Opioid use disorder",
+      "note": "Combined opioid and sedative use is a major overdose risk; talk through naloxone and not using alone. 42 CFR Part 2 prohibits unauthorized use or disclosure of these records."
+    },
+    {
+      "conditionId": "insomnia-disorder",
+      "label": "Insomnia disorder",
+      "note": "Long-term sleeping-pill use often started for insomnia; CBT for insomnia can support a taper."
+    },
+    {
+      "conditionId": "panic-disorder",
+      "label": "Panic disorder",
+      "note": "Benzodiazepines are often started for panic; CBT with interoceptive exposure helps during and after a taper."
+    },
+    {
+      "conditionId": "generalized-anxiety-disorder",
+      "label": "Generalized anxiety disorder",
+      "note": "Rebound anxiety during a taper can look like the original anxiety returning; plan coping skills ahead."
+    }
+  ],
+  "measures": [
+    "gad-7",
+    "phq-9"
+  ],
+  "measuresPending": [
+    {
+      "name": "Drug Abuse Screening Test (DAST-10)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/7183189/",
+      "note": "License pending — link out only",
+      "licenseKey": "DAST-10"
+    }
+  ],
+  "interventions": [
+    {
+      "name": "Prescriber-led gradual taper (agreed with the client, never abrupt)",
+      "evidence": "Review in the New England Journal of Medicine (Soyka, 2017): gradual dose reduction over weeks to months is the standard approach to benzodiazepine dependence; abrupt stopping risks seizures and delirium.",
+      "note": "Coordinate with the prescriber; the pace is set together and can pause. This app never suggests a dose change."
+    },
+    {
+      "name": "CBT alongside the taper (for insomnia, anxiety or panic)",
+      "evidence": "Cochrane review (Darker et al., 2015): CBT plus taper led to more successful discontinuation than taper alone at about 4 weeks and 3 months (moderate-quality evidence); the benefit was less certain at 6 months and later.",
+      "note": "Teach coping skills for rebound anxiety and poor sleep before and during dose reductions."
+    },
+    {
+      "name": "Cognitive behavioral therapy for insomnia",
+      "evidence": "AASM guideline (Edinger et al., 2021): strong recommendation for multicomponent CBT-I for chronic insomnia in adults.",
+      "note": "Useful when sleeping pills were started for sleep; screen for sleep apnea first and adapt sleep restriction with care."
+    },
+    {
+      "name": "Motivational interviewing",
+      "evidence": "Cochrane review (Darker et al., 2015): evidence for MI on its own is insufficient; it is used to build readiness alongside a taper plan.",
+      "note": "Explore what the medicine does for the client, their worries about stopping, and their own reasons for change."
+    },
+    {
+      "name": "Relapse prevention and overdose safety",
+      "evidence": "Part of CBT for substance use; mixing sedatives with alcohol or opioids raises overdose risk.",
+      "note": "Plan for high-risk nights and situations, never combine with alcohol or opioids, and keep naloxone if opioids are involved."
+    }
+  ],
+  "handouts": [
+    "medicine-taper-support",
+    "sleep-habits"
+  ],
+  "statIds": [
+    "us-sedative-misuse-past-year"
+  ],
+  "culturalNotes": [
+    "Sedatives are often prescribed for years, especially to women and older adults, and many clients do not see them as a substance problem. Use neutral language about the medicine and avoid blame.",
+    "Some communities rely on 'nerve pills' shared within the family or bought abroad without a prescription. Ask about sources openly and without judgment.",
+    "Older adults are more sensitive to falls, memory problems and confusion from sedatives; involve family or caregivers in taper planning only with the client's agreement.",
+    "Stigma, fear of losing custody, work or immigration status, and past experiences with police can make clients cautious. Explain confidentiality, its limits and 42 CFR Part 2 protections plainly.",
+    "Use a trained professional interpreter, not family members, and check that key terms carry the meaning you intend.",
+    "Faith and spiritual practice can be a source of support. Use faith-integrated approaches only when the client asks for them and after informed consent (see the AACC Code of Ethics for faith-based counselors)."
+  ],
+  "sud": true,
+  "strongMinAreas": 2,
+  "redFlagRules": [
+    {
+      "type": "withdrawal",
+      "message": "Possible sedative or alcohol withdrawal is documented. Do not suggest stopping suddenly; arrange medical assessment and a prescriber-led plan, since withdrawal can cause seizures and delirium."
+    },
+    {
+      "type": "suicidality",
+      "message": "Suicide-related content is documented in this input. Sedatives, especially with alcohol or opioids, are a common means of overdose; ask directly, include medicines in safety and lethal-means planning, and follow your risk protocol."
+    },
+    {
+      "type": "psychosis",
+      "message": "Psychotic symptoms are documented. Sedative withdrawal delirium and intoxication need urgent medical and psychiatric evaluation."
+    }
+  ],
+  "licensedDsm": false,
+  "wileyLicensed": false,
+  "sources": [
+    {
+      "title": "Treatment of benzodiazepine dependence (Soyka)",
+      "publisher": "New England Journal of Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28328330/",
+      "year": 2017
+    },
+    {
+      "title": "Psychosocial interventions for benzodiazepine harmful use, abuse or dependence (Darker et al.)",
+      "publisher": "Cochrane Database of Systematic Reviews (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26106751/",
+      "year": 2015
+    },
+    {
+      "title": "Benzodiazepine use and misuse among adults in the United States (Maust et al.)",
+      "publisher": "Psychiatric Services (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30554562/",
+      "year": 2019
+    },
+    {
+      "title": "Behavioral and psychological treatments for chronic insomnia disorder in adults: an AASM clinical practice guideline (Edinger et al.)",
+      "publisher": "Journal of Clinical Sleep Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33164742/",
+      "year": 2021
+    },
+    {
+      "title": "The Drug Abuse Screening Test (Skinner)",
+      "publisher": "Addictive Behaviors (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/7183189/",
+      "year": 1982
+    },
+    {
+      "title": "ICD-11 for Mortality and Morbidity Statistics (browser)",
+      "publisher": "World Health Organization",
+      "url": "https://icd.who.int/browse/latest-release/mms/en"
+    },
+    {
+      "title": "ICD-10-CM (official code set)",
+      "publisher": "CDC National Center for Health Statistics",
+      "url": "https://www.cdc.gov/nchs/icd/icd-10-cm/index.html"
+    },
+    {
+      "title": "ICD-10-CM codes checked with the NLM Clinical Table Search Service",
+      "publisher": "National Library of Medicine",
+      "url": "https://clinicaltables.nlm.nih.gov/apidoc/icd10cm/v3/doc.html"
+    },
+    {
+      "title": "AACC Code of Ethics",
+      "publisher": "American Association of Christian Counselors",
+      "url": "https://aacc.net/aacc-code-of-ethics/"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

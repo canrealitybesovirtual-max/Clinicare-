@@ -18,37 +18,54 @@
         {
           "id": "pdd-mood-timeline",
           "text": "By session 3, draw a timeline of mood across the past several years with the clinician, marking at least 3 periods that felt somewhat better or worse and what was happening in life and relationships at each point.",
-          "interventionIds": ["solution-focused-questions", "interpersonal-psychotherapy"]
+          "interventionIds": ["solution-focused-questions", "interpersonal-psychotherapy"],
+          "targets": ["interpersonal-difficulties"]
         },
         {
           "id": "pdd-activity-baseline",
           "text": "For the first 2 weeks, keep a daily activity log on at least 5 days, rating mood, enjoyment and sense of accomplishment (each 0-10) for the main blocks of each day.",
-          "interventionIds": ["behavioral-activation"]
+          "interventionIds": ["behavioral-activation"],
+          "targets": ["low-reward-engagement"],
+          "step": "low-intensity"
         },
         {
           "id": "pdd-life-directions",
           "text": "By session 5, name at least 3 life directions that matter to the client (for example relationships, health, learning, faith or creativity) and, for each one, at least 1 small action that takes under 30 minutes.",
-          "interventionIds": ["act-values-clarification", "behavioral-activation"]
+          "interventionIds": ["act-values-clarification", "behavioral-activation"],
+          "targets": ["values-and-meaning"],
+          "step": "low-intensity"
         },
         {
           "id": "pdd-weekly-valued-actions",
           "text": "Over weeks 4 to 12, complete at least 3 planned valued actions per week, including at least 1 new or long-dropped activity every 2 weeks, and rate mood (0-10) before and after each one.",
-          "interventionIds": ["behavioral-activation", "act-committed-action"]
+          "interventionIds": ["behavioral-activation", "act-committed-action"],
+          "targets": ["low-reward-engagement", "values-and-meaning"],
+          "step": "low-intensity"
         },
         {
           "id": "pdd-movement",
           "text": "By week 8, do a physical activity the client chooses (for example a 15-minute walk) on at least 3 days a week, after checking with a medical provider first if health conditions are present.",
-          "interventionIds": ["physical-activity"]
+          "interventionIds": ["physical-activity"],
+          "targets": ["low-reward-engagement", "physical-health-burden"],
+          "step": "low-intensity"
         },
         {
           "id": "pdd-combined-care-discussion",
           "text": "By week 6, the clinician and client discuss whether to add a medication evaluation given the long course of low mood; if the client chooses it, attend an appointment with a prescriber by week 10 while therapy continues.",
-          "interventionIds": ["medication-referral"]
+          "interventionIds": ["medication-referral"],
+          "step": "high-intensity"
         },
         {
           "id": "pdd-score-tracking",
           "text": "Complete the PHQ-9 at intake and every 2 to 4 weeks (and the GAD-7 on the same schedule if anxiety is also present), reviewing totals and item responses together. Because long-standing low mood often shifts slowly, agree at the start what amount of change by week 12 will prompt a review of the plan, its intensity or a referral.",
           "interventionIds": []
+        },
+        {
+          "id": "pdd-supportive-option",
+          "text": "If structured therapy feels like too much right now, agree on supportive psychotherapy or person-centred counselling with a review every 4 weeks, and revisit other options together if the PHQ-9 does not change.",
+          "interventionIds": ["supportive-psychotherapy", "counselling-for-depression"],
+          "targets": ["hope-and-motivation"],
+          "step": "high-intensity"
         }
       ],
       "measureIds": ["phq-9", "gad-7"]
@@ -71,37 +88,64 @@
         {
           "id": "pdd-notice-self-talk",
           "text": "Over the next 3 weeks, write down at least 3 self-critical or hopeless thoughts per week, with the situation, the feeling and how strongly the thought is believed (0-100).",
-          "interventionIds": ["thought-record"]
+          "interventionIds": ["thought-record"],
+          "targets": ["self-criticism-shame", "negative-core-beliefs"],
+          "step": "low-intensity"
         },
         {
           "id": "pdd-test-predictions",
           "text": "Over weeks 4 to 12, set up at least 1 small behavioral experiment every 2 weeks to test a pessimistic prediction (for example 'no one will answer if I reach out'), writing the prediction beforehand and the actual result afterward.",
-          "interventionIds": ["behavioral-experiments", "thought-record"]
+          "interventionIds": ["behavioral-experiments", "thought-record"],
+          "targets": ["negative-core-beliefs"],
+          "step": "high-intensity"
         },
         {
           "id": "pdd-step-back-from-thoughts",
           "text": "By week 6, practice at least 1 way of stepping back from harsh thoughts (for example noticing 'I am having the thought that...') on at least 4 days a week, rating how much the thought gets in the way (0-10) before and after.",
-          "interventionIds": ["act-cognitive-defusion", "mindful-check-in"]
+          "interventionIds": ["act-cognitive-defusion", "mindful-check-in"],
+          "targets": ["cognitive-fusion"],
+          "step": "low-intensity"
         },
         {
           "id": "pdd-kinder-inner-voice",
           "text": "Over weeks 4 to 10, spend at least 5 minutes on a self-compassion or compassion-focused imagery practice on at least 4 days a week, and again after any setback, logging self-criticism (0-10) before and after.",
-          "interventionIds": ["self-compassion-practice", "compassion-focused-imagery"]
+          "interventionIds": ["self-compassion-practice", "compassion-focused-imagery"],
+          "targets": ["self-criticism-shame"],
+          "step": "high-intensity"
         },
         {
           "id": "pdd-pattern-exploration",
           "text": "By week 10, with a clinician trained in short-term psychodynamic work (or through referral), describe at least 1 repeating pattern that links past relationships to today's self-view (for example expecting to be dismissed and then holding back) and name 1 way to respond differently in a current relationship.",
-          "interventionIds": ["short-term-psychodynamic-exploration", "narrative-externalizing"]
+          "interventionIds": ["short-term-psychodynamic-exploration", "narrative-externalizing"],
+          "targets": ["interpersonal-difficulties"],
+          "step": "specialist"
         },
         {
           "id": "pdd-faith-resources-optional",
           "text": "Only if the client asks to include their faith and gives informed consent: by week 8, identify at least 2 beliefs, practices or community supports from the client's own tradition that counter harsh self-judgment, and use 1 of them at least weekly. Leave this objective out if the client does not ask for it.",
-          "interventionIds": ["religiously-integrated-cbt"]
+          "interventionIds": ["religiously-integrated-cbt"],
+          "targets": ["values-and-meaning"]
         },
         {
           "id": "pdd-safety-plan-review",
           "text": "Whenever risk is present (for example a PHQ-9 item 9 response above 0, or the client describes thoughts of death or self-harm), the clinician assesses risk directly and, in that same session, builds or reviews a written safety plan with the client: early warning signs, things the client can do alone, people and places that help, professional and crisis contacts (call or text 988 in the US, the local emergency number, or findahelpline.com elsewhere) and agreed steps to put time and distance between the client and means of harm. Revisit it at every session while risk remains. Risk level and next steps are the clinician's decision; this tool never rates risk.",
-          "interventionIds": ["collaborative-safety-planning", "lethal-means-counseling"]
+          "interventionIds": ["collaborative-safety-planning", "lethal-means-counseling"],
+          "targets": ["coping-skills", "hope-and-motivation"],
+          "step": "crisis-or-urgent"
+        },
+        {
+          "id": "pdd-core-belief-work",
+          "text": "Over weeks 6 to 14, work on the central belief about self with belief-level methods (for example a continuum and a positive data log), re-rating belief in the old and the new view every 2 weeks.",
+          "interventionIds": ["core-belief-work"],
+          "targets": ["negative-core-beliefs"],
+          "step": "high-intensity"
+        },
+        {
+          "id": "pdd-why-to-how",
+          "text": "Over weeks 3 to 10, when going over the past or what is wrong with self, switch to a concrete how question or a next step at least 3 times a week, using a short written prompt.",
+          "interventionIds": ["rumination-focused-cbt"],
+          "targets": ["repetitive-negative-thinking"],
+          "step": "high-intensity"
         }
       ],
       "measureIds": ["phq-9"]
@@ -122,27 +166,91 @@
         {
           "id": "pdd-relationship-map",
           "text": "By session 4, map the client's important relationships (family, chosen family, friends, coworkers, faith or community members), mark which feel supportive, strained or lost, and choose 1 or 2 relationship areas to work on.",
-          "interventionIds": ["interpersonal-psychotherapy", "genogram-family-systems"]
+          "interventionIds": ["interpersonal-psychotherapy", "genogram-family-systems"],
+          "targets": ["interpersonal-difficulties", "low-social-support"],
+          "step": "high-intensity"
         },
         {
           "id": "pdd-start-contacts",
           "text": "Over weeks 3 to 10, start at least 2 contacts per week with people the client chooses (a call, a back-and-forth message exchange or a visit), and rate mood (0-10) before and after.",
-          "interventionIds": ["behavioral-activation", "interpersonal-psychotherapy"]
+          "interventionIds": ["behavioral-activation", "interpersonal-psychotherapy"],
+          "targets": ["low-social-support"],
+          "step": "low-intensity"
         },
         {
           "id": "pdd-ask-and-decline",
           "text": "By week 6, role-play in session at least 2 real situations in which the client wants to ask for something or say no, then use the practiced approach in daily life at least once a week for 4 weeks and note what happened.",
-          "interventionIds": ["assertiveness-training", "dbt-interpersonal-effectiveness"]
+          "interventionIds": ["assertiveness-training", "dbt-interpersonal-effectiveness"],
+          "targets": ["interpersonal-difficulties"],
+          "step": "high-intensity"
         },
         {
           "id": "pdd-conversation-review",
           "text": "Over weeks 6 to 12, bring at least 1 recent conversation every 2 weeks to look at closely: what the client hoped for, what was said, what happened, and what to try next time.",
-          "interventionIds": ["communication-skills-training", "interpersonal-psychotherapy"]
+          "interventionIds": ["communication-skills-training", "interpersonal-psychotherapy"],
+          "targets": ["interpersonal-difficulties"],
+          "step": "high-intensity"
         },
         {
           "id": "pdd-staying-well-plan",
           "text": "In the final 3 sessions, write a personal staying-well plan that names at least 3 early signs that mood is slipping, the skills and people that helped most, and when to ask for a booster session or a medication review.",
-          "interventionIds": ["relapse-prevention-planning"]
+          "interventionIds": ["relapse-prevention-planning"],
+          "targets": ["coping-skills", "hope-and-motivation"],
+          "step": "low-intensity"
+        },
+        {
+          "id": "pdd-situational-analysis",
+          "text": "If the client wants a structured approach for persistent depression, begin by week 4 with a CBASP-trained clinician to look at 1 recent interaction each week, comparing what the client wanted with what actually happened and what they did.",
+          "interventionIds": ["cbasp-situational-analysis"],
+          "targets": ["interpersonal-difficulties"],
+          "step": "specialist"
+        },
+        {
+          "id": "pdd-relational-option",
+          "text": "If the client prefers a relational approach, agree by week 4 on a time-limited interpersonal or psychodynamic therapy from a trained clinician (for example IPT or dynamic interpersonal therapy) focused on 1 recurring relationship pattern.",
+          "interventionIds": ["interpersonal-psychotherapy", "dynamic-interpersonal-therapy"],
+          "targets": ["interpersonal-difficulties"],
+          "step": "high-intensity"
+        }
+      ],
+      "measureIds": ["phq-9"]
+    },
+    {
+      "id": "pdd-keeping-gains",
+      "label": "Keeping gains when low mood has been part of life for years",
+      "definitions": [
+        "Has had low mood for most of the past several years, so improvement feels fragile or unfamiliar.",
+        "Expects low mood to return, and may let new routines lapse once mood lifts."
+      ],
+      "longTermGoals": [
+        "The client keeps new routines and relationships going after improvement and has a plan for early signs of low mood."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "pdd-well-being-diary",
+          "text": "Over weeks 8 to 14, keep a well-being diary of moments of feeling well on at least 3 days a week, and note what interrupts them.",
+          "interventionIds": ["well-being-therapy"],
+          "targets": ["low-reward-engagement", "values-and-meaning"],
+          "step": "high-intensity"
+        },
+        {
+          "id": "pdd-prevention-course",
+          "text": "In the last 4 sessions, discuss a course of mindfulness-based cognitive therapy or continued sessions at a lower frequency, and agree on what would prompt a return to weekly sessions.",
+          "interventionIds": ["mindfulness-based-cognitive-therapy"],
+          "targets": ["repetitive-negative-thinking"],
+          "step": "high-intensity"
+        },
+        {
+          "id": "pdd-shared-medicine-plan",
+          "text": "If the client takes antidepressant medicine, agree with the prescriber, with consent, on how long to continue and how any change would be planned, and add its early signs to the staying-well plan.",
+          "interventionIds": ["medication-referral"],
+          "step": "high-intensity"
+        },
+        {
+          "id": "pdd-further-options",
+          "text": "If low mood has not improved after adequate trials of therapy and medicine, the clinician and prescriber discuss a referral for assessment for other treatments such as neuromodulation.",
+          "interventionIds": ["neuromodulation-referral"],
+          "step": "specialist"
         }
       ],
       "measureIds": ["phq-9"]
@@ -173,9 +281,16 @@
     { "title": "Shared decision making (NG197)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng197", "year": 2021 },
     { "title": "PHQ and GAD-7 screeners (reproduction terms)", "publisher": "Pfizer / PHQ Screeners", "url": "https://www.phqscreeners.com" },
     { "title": "AACC Code of Ethics", "publisher": "American Association of Christian Counselors", "url": "https://aacc.net/aacc-code-of-ethics/" },
-    { "title": "ACA Code of Ethics (2014) and ethics resources", "publisher": "American Counseling Association", "url": "https://www.counseling.org/resources/ethics", "year": 2014 }
+    { "title": "ACA Code of Ethics (2014) and ethics resources", "publisher": "American Counseling Association", "url": "https://www.counseling.org/resources/ethics", "year": 2014 },
+    { "title": "A comparison of nefazodone, the cognitive behavioral-analysis system of psychotherapy, and their combination for the treatment of chronic depression (Keller et al.)", "publisher": "New England Journal of Medicine (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/10816183/", "year": 2000 },
+    { "title": "Interpersonal Psychotherapy for Mental Health Problems: A Comprehensive Meta-Analysis (Cuijpers et al.)", "publisher": "American Journal of Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/27032627/", "year": 2016 },
+    { "title": "Efficacy of Mindfulness-Based Cognitive Therapy in Prevention of Depressive Relapse: An Individual Patient Data Meta-analysis From Randomized Trials (Kuyken et al.)", "publisher": "JAMA Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/27119968/", "year": 2016 },
+    { "title": "Continuation of Antidepressants vs Sequential Psychological Interventions to Prevent Relapse in Depression: An Individual Participant Data Meta-analysis (Breedvelt et al.)", "publisher": "JAMA Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/34009273/", "year": 2021 },
+    { "title": "Depression in adults quality standard (QS8), statement 3: preventing relapse", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/qs8/chapter/Quality-statement-3-Preventing-relapse" },
+    { "title": "VA/DoD Clinical Practice Guideline for the Management of Major Depressive Disorder", "publisher": "US Department of Veterans Affairs and Department of Defense", "url": "https://www.healthquality.va.gov/guidelines/MH/mdd/", "year": 2022 },
+    { "title": "Effective Psychotherapies for the Treatment of Major Depressive Disorder (2022 VA/DoD CPG)", "publisher": "Psychological Health Center of Excellence, Defense Health Agency", "url": "https://health.mil/Reference-Center/Publications/2022/10/28/Effective-Psychotherapies-for-the-Treatment-of-Major-Depressive-Disorder", "year": 2022 }
   ],
   "license": "original",
-  "lastVerified": "2026-11-26",
+  "lastVerified": "2026-11-27",
   "reviewedBy": "PENDING"
 }

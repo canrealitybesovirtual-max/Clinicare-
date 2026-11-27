@@ -2,7 +2,7 @@
   "id": "alcohol",
   "title": "Alcohol and other substances: pattern, control, withdrawal and safety",
   "domain": "alcohol",
-  "about": "Substance-use questions (42 CFR Part 2): answers stay in this session's memory only and are never sent or stored. They cover the drinking pattern, control over cannabis, opioids and stimulants, withdrawal and overdose safety (medical safety issues), and whether mood, anxiety or sleep problems predate or outlast heavy use.",
+  "about": "Substance-use questions (42 CFR Part 2): answers stay in this session's memory only and are never sent or stored. They cover the drinking pattern, control over cannabis, opioids, stimulants, sedatives and tobacco, withdrawal and overdose safety (medical safety issues), and whether mood, anxiety or sleep problems predate or outlast heavy use.",
   "questions": [
     {
       "id": "alcohol-pattern",
@@ -481,6 +481,168 @@
         "opioid-overdose-risk"
       ],
       "priority": 5
+    },
+    {
+      "id": "sedative-control",
+      "kind": "core",
+      "domain": "alcohol",
+      "sud": true,
+      "select": "many",
+      "text": "Ask how the sedative or sleeping medicine is going: whether it is taken as prescribed, any extra doses or early refills, symptoms between doses, and problems it causes.",
+      "why": "Long-term use as prescribed often brings rebound or withdrawal symptoms between doses without a use disorder. Extra doses, other sources and use despite falls, memory gaps or mixing with alcohol or opioids point to a use problem. Either way, changes go through the prescriber as a slow taper, never a sudden stop.",
+      "options": [
+        {
+          "id": "as-prescribed",
+          "label": "Taken as prescribed, without extra doses or problems",
+          "exclusive": true,
+          "effects": {
+            "negateSymptomIds": [
+              "sedative-impaired-control",
+              "sedative-despite-harm"
+            ]
+          },
+          "note": "Regular use as prescribed is not a use disorder. Rebound symptoms between doses are still a reason to plan any change slowly with the prescriber."
+        },
+        {
+          "id": "control",
+          "label": "Takes more or more often than prescribed, runs out early or gets extra supplies",
+          "effects": {
+            "addSymptomIds": [
+              "sedative-impaired-control"
+            ]
+          },
+          "surfaces": [
+            "part2-notice"
+          ]
+        },
+        {
+          "id": "between-doses",
+          "label": "Anxious, shaky or unable to sleep between doses or after a missed dose",
+          "effects": {
+            "addSymptomIds": [
+              "sedative-withdrawal-signs"
+            ]
+          },
+          "surfaces": [
+            "part2-notice",
+            "medical-referral"
+          ],
+          "note": "Do not suggest stopping suddenly: sedative withdrawal can cause seizures. Plan any change with the prescriber."
+        },
+        {
+          "id": "harm",
+          "label": "Falls, memory gaps, drowsy driving, or mixing with alcohol or opioids",
+          "effects": {
+            "addSymptomIds": [
+              "sedative-despite-harm"
+            ]
+          },
+          "surfaces": [
+            "part2-notice"
+          ],
+          "note": "Mixing sedatives with alcohol or opioids raises overdose risk; talk it through, and about naloxone when opioids are involved."
+        },
+        {
+          "id": "not-yet",
+          "label": "Not asked yet",
+          "keepOpen": true,
+          "exclusive": true
+        }
+      ],
+      "showWhen": {
+        "symptomIds": [
+          "sedative-use-pattern",
+          "sedative-withdrawal-signs"
+        ],
+        "conditionIds": [
+          "sedative-hypnotic-use-disorder"
+        ]
+      },
+      "targets": [
+        "sedative-impaired-control",
+        "sedative-despite-harm",
+        "sedative-withdrawal-signs"
+      ],
+      "discriminates": [
+        "sedative-hypnotic-use-disorder",
+        "insomnia-disorder",
+        "generalized-anxiety-disorder",
+        "panic-disorder"
+      ],
+      "priority": 15
+    },
+    {
+      "id": "tobacco-dependence",
+      "kind": "core",
+      "domain": "alcohol",
+      "sud": true,
+      "select": "many",
+      "text": "Ask about tobacco and nicotine: which products, how soon after waking the client uses, cravings or irritability without it, and past quit attempts.",
+      "why": "Using soon after waking, strong cravings and quit attempts that did not last show dependence, which guides how much support and medicine a quit attempt needs. Ask every adult and advise quitting respectfully (USPSTF, 2021).",
+      "options": [
+        {
+          "id": "dependence",
+          "label": "Uses soon after waking, or has strong cravings or irritability without it",
+          "effects": {
+            "addSymptomIds": [
+              "tobacco-craving-withdrawal"
+            ]
+          },
+          "surfaces": [
+            "part2-notice"
+          ]
+        },
+        {
+          "id": "quit-attempts",
+          "label": "Has tried to quit or cut down without lasting success, or uses despite health problems",
+          "effects": {
+            "addSymptomIds": [
+              "tobacco-unsuccessful-quit"
+            ]
+          },
+          "surfaces": [
+            "part2-notice"
+          ]
+        },
+        {
+          "id": "ready",
+          "label": "Wants to quit in the next month",
+          "note": "Offer behavioral support and a prescriber referral for cessation medicine; a quitline can add free coaching (USPSTF, 2021). Ask the client to tell the prescriber about the quit date."
+        },
+        {
+          "id": "none",
+          "label": "None of these",
+          "exclusive": true,
+          "effects": {
+            "negateSymptomIds": [
+              "tobacco-craving-withdrawal",
+              "tobacco-unsuccessful-quit"
+            ]
+          }
+        },
+        {
+          "id": "not-yet",
+          "label": "Not asked yet",
+          "keepOpen": true,
+          "exclusive": true
+        }
+      ],
+      "showWhen": {
+        "symptomIds": [
+          "tobacco-use-pattern"
+        ],
+        "conditionIds": [
+          "tobacco-use-disorder"
+        ]
+      },
+      "targets": [
+        "tobacco-craving-withdrawal",
+        "tobacco-unsuccessful-quit"
+      ],
+      "discriminates": [
+        "tobacco-use-disorder"
+      ],
+      "priority": 20
     }
   ],
   "sources": [
@@ -514,6 +676,18 @@
       "title": "Methamphetamine (health topic)",
       "publisher": "MedlinePlus, U.S. National Library of Medicine",
       "url": "https://medlineplus.gov/methamphetamine.html"
+    },
+    {
+      "title": "Treatment of benzodiazepine dependence (Soyka)",
+      "publisher": "New England Journal of Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28328330/",
+      "year": 2017
+    },
+    {
+      "title": "Interventions for tobacco smoking cessation in adults, including pregnant persons: USPSTF recommendation statement",
+      "publisher": "JAMA (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33464343/",
+      "year": 2021
     }
   ],
   "license": "original",

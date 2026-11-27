@@ -36,7 +36,8 @@
     "Clients who expect advice or a more directive healer may need a clear explanation of how exploratory therapy works and why it can help."
   ],
   "trainingRequired": "Psychodynamic psychotherapy: graduate training plus supervised practice in a specific short-term model (for example, supportive-expressive therapy, dynamic interpersonal therapy, or panic-focused psychodynamic psychotherapy). Steps here are overview-level only.",
-  "handoutIds": [],
+  "handoutIds": ["what-to-expect-in-therapy"],
+  "orientationIds": ["psychodynamic-therapy"],
   "sources": [
     { "title": "Short-term psychodynamic therapy for depression", "publisher": "APA Division 12, Society of Clinical Psychology", "url": "https://div12.org/treatment/short-term-psychodynamic-therapy-for-depression/" },
     { "title": "Depression in adults: treatment and management (NG222)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng222", "year": 2022 },

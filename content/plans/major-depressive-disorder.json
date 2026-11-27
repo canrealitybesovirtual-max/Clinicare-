@@ -18,32 +18,56 @@
         {
           "id": "mdd-activity-baseline",
           "text": "For the first 1 to 2 weeks, keep an hour-by-hour activity log on at least 5 days, rating mood (0-10) and enjoyment and accomplishment (0-10) for each block of time.",
-          "interventionIds": ["behavioral-activation"]
+          "interventionIds": ["behavioral-activation"],
+          "targets": ["low-reward-engagement"],
+          "step": "low-intensity"
         },
         {
           "id": "mdd-values-map",
           "text": "By session 4, name at least 3 life areas that matter to the client (for example family, health, faith, work or creativity) and at least 2 specific, doable activities linked to each.",
-          "interventionIds": ["behavioral-activation"]
+          "interventionIds": ["behavioral-activation"],
+          "targets": ["values-and-meaning", "low-reward-engagement"],
+          "step": "low-intensity"
         },
         {
           "id": "mdd-scheduled-activities",
           "text": "Over the next 4 weeks, complete at least 3 planned pleasant or meaningful activities per week and rate mood before and after each one, then build up to at least 5 per week by week 8.",
-          "interventionIds": ["behavioral-activation"]
+          "interventionIds": ["behavioral-activation"],
+          "targets": ["low-reward-engagement"],
+          "step": "low-intensity"
         },
         {
           "id": "mdd-avoidance-swaps",
           "text": "By week 6, spot at least 2 personal avoidance patterns (for example staying in bed to escape a hard task) and try a planned alternative action for each at least twice a week.",
-          "interventionIds": ["behavioral-activation", "problem-solving"]
+          "interventionIds": ["behavioral-activation", "problem-solving"],
+          "targets": ["avoidance-escape"],
+          "step": "low-intensity"
         },
         {
           "id": "mdd-reconnect",
           "text": "By week 8, have at least 2 contacts per week with a supportive person of the client's choosing (a call, a back-and-forth message exchange or time together).",
-          "interventionIds": ["behavioral-activation"]
+          "interventionIds": ["behavioral-activation"],
+          "targets": ["low-social-support", "interpersonal-difficulties"],
+          "step": "low-intensity"
         },
         {
           "id": "mdd-phq9-tracking",
           "text": "Complete the PHQ-9 at intake and every 2 to 4 weeks (and the GAD-7 on the same schedule if anxiety is also present), reviewing the total score and the item-by-item responses with the clinician each time. If scores have not improved across 2 check-ins in a row, revisit the plan together, including treatment intensity and referral for a medication evaluation.",
           "interventionIds": []
+        },
+        {
+          "id": "mdd-guided-self-help",
+          "text": "For milder depression, or when the client prefers it, start guided self-help based on CBT or behavioral activation with 6 to 8 brief support contacts, review the PHQ-9 at each contact, and step up to individual therapy if scores do not improve.",
+          "interventionIds": ["guided-self-help"],
+          "targets": ["low-reward-engagement"],
+          "step": "low-intensity"
+        },
+        {
+          "id": "mdd-person-centred-option",
+          "text": "If the client prefers to explore feelings and meaning rather than follow a structured skills program, agree by session 3 on counselling for depression or short-term psychodynamic therapy from a trained clinician, and review the PHQ-9 together every 4 weeks.",
+          "interventionIds": ["counselling-for-depression", "short-term-psychodynamic-exploration", "supportive-psychotherapy"],
+          "targets": ["self-criticism-shame", "interpersonal-difficulties"],
+          "step": "high-intensity"
         }
       ],
       "measureIds": ["phq-9", "gad-7"]
@@ -63,32 +87,44 @@
         {
           "id": "mdd-sleep-energy-log",
           "text": "For 2 weeks, fill in a short sleep and energy log each morning (bedtime, wake time, estimated hours slept, energy 0-10).",
-          "interventionIds": ["behavioral-activation"]
+          "interventionIds": ["behavioral-activation"],
+          "targets": ["sleep-rhythm-disruption"],
+          "step": "low-intensity"
         },
         {
           "id": "mdd-morning-anchor",
           "text": "From week 3, get up at the same time (within 30 minutes) on at least 6 days a week for 4 weeks, and plan one activity outside the bedroom within an hour of waking.",
-          "interventionIds": ["behavioral-activation"]
+          "interventionIds": ["behavioral-activation"],
+          "targets": ["sleep-rhythm-disruption"],
+          "step": "low-intensity"
         },
         {
           "id": "mdd-movement",
           "text": "By week 6, add a physical activity the client chooses and has been medically cleared for (for example a 10-minute walk), building up to at least 3 times a week.",
-          "interventionIds": ["behavioral-activation"]
+          "interventionIds": ["behavioral-activation"],
+          "targets": ["low-reward-engagement", "physical-health-burden"],
+          "step": "low-intensity"
         },
         {
           "id": "mdd-small-steps",
           "text": "Each week for 6 weeks, break 1 task that feels too big into small steps and finish at least the first 2 steps, rating energy before and after.",
-          "interventionIds": ["behavioral-activation", "problem-solving"]
+          "interventionIds": ["behavioral-activation", "problem-solving"],
+          "targets": ["avoidance-escape"],
+          "step": "low-intensity"
         },
         {
           "id": "mdd-wind-down",
           "text": "For 3 weeks, practice a 10 to 15 minute relaxation routine before bed on at least 4 nights a week, rating how relaxed the client feels (0-10) before and after.",
-          "interventionIds": ["progressive-muscle-relaxation"]
+          "interventionIds": ["progressive-muscle-relaxation"],
+          "targets": ["sleep-rhythm-disruption"],
+          "step": "low-intensity"
         },
         {
           "id": "mdd-sleep-referral",
           "text": "If sleep problems continue after 4 weeks of a steady routine, the clinician and client discuss a referral by week 8 for a medical review or cognitive behavioral therapy for insomnia.",
-          "interventionIds": []
+          "interventionIds": [],
+          "targets": ["sleep-rhythm-disruption"],
+          "step": "high-intensity"
         }
       ],
       "measureIds": ["phq-9"]
@@ -110,30 +146,174 @@
         {
           "id": "mdd-catch-thoughts",
           "text": "Over the next 3 weeks, write down at least 3 self-critical or hopeless thoughts per week, the situation each came up in, and how strongly each is believed (0-100).",
-          "interventionIds": ["thought-record"]
+          "interventionIds": ["thought-record"],
+          "targets": ["negative-core-beliefs", "repetitive-negative-thinking"],
+          "step": "low-intensity"
         },
         {
           "id": "mdd-weigh-thoughts",
           "text": "Over weeks 4 to 10, complete at least 2 full thought records per week that weigh the evidence and write a fairer alternative thought, then re-rate belief in the original thought.",
-          "interventionIds": ["thought-record"]
+          "interventionIds": ["thought-record"],
+          "targets": ["negative-core-beliefs"],
+          "step": "high-intensity"
         },
         {
           "id": "mdd-strengths-list",
           "text": "By week 8, list at least 5 personal strengths or recent achievements, with input from a trusted person if the client wishes, and read the list at least twice a week.",
-          "interventionIds": ["thought-record", "behavioral-activation"]
+          "interventionIds": ["thought-record", "behavioral-activation"],
+          "targets": ["strengths-and-supports", "self-criticism-shame"],
+          "step": "low-intensity"
         },
         {
           "id": "mdd-dwelling-to-doing",
           "text": "For 4 weeks, when the client notices they have been dwelling on a problem for more than 10 minutes, switch to a problem-solving step or a planned activity at least 3 times a week, and note the effect on mood.",
-          "interventionIds": ["problem-solving", "behavioral-activation"]
+          "interventionIds": ["problem-solving", "behavioral-activation"],
+          "targets": ["repetitive-negative-thinking"],
+          "step": "low-intensity"
         },
         {
           "id": "mdd-safety-plan-review",
           "text": "Whenever risk is present (for example a PHQ-9 item 9 response above 0, or the client describes thoughts of death or self-harm), the clinician assesses risk directly and, in that same session, works with the client to create or review a written safety plan: personal warning signs, coping steps, people and places that help, professional and crisis contacts (call or text 988 in the US, or the local emergency number elsewhere) and agreed steps to limit access to means of harm. Revisit the plan at every session while risk remains. Risk level and next steps are the clinician's decision; this tool never rates risk.",
-          "interventionIds": []
+          "interventionIds": ["collaborative-safety-planning", "lethal-means-counseling"],
+          "targets": ["coping-skills", "hope-and-motivation"],
+          "step": "crisis-or-urgent"
         }
       ],
       "measureIds": ["phq-9"]
+    },
+    {
+      "id": "mdd-relationships-and-roles",
+      "label": "Conflict, loss or a role change in close relationships that keeps low mood going",
+      "definitions": [
+        "Low mood started or got worse around a disagreement, a loss, a move, a new role, or growing distance from people who matter.",
+        "Describes close relationships in which needs go unspoken or disagreements go round in circles without being settled."
+      ],
+      "longTermGoals": [
+        "The client handles the key relationship problem or role change in a way that feels workable, has more support from people who matter, and mood improves."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "mdd-interpersonal-focus",
+          "text": "By session 3, agree on 1 interpersonal focus with the client (a disagreement, a role change, grief or isolation) and link changes in mood each week to events in that area.",
+          "interventionIds": ["interpersonal-psychotherapy", "dynamic-interpersonal-therapy"],
+          "targets": ["interpersonal-difficulties"],
+          "step": "high-intensity"
+        },
+        {
+          "id": "mdd-new-ways-to-ask",
+          "text": "Over weeks 4 to 12, practice at least one new way of raising a need or a disagreement in session each week, try it in real life at least once a week, and note what happened.",
+          "interventionIds": ["interpersonal-psychotherapy", "communication-skills-training"],
+          "targets": ["interpersonal-difficulties"],
+          "step": "high-intensity"
+        },
+        {
+          "id": "mdd-couple-option",
+          "text": "If distress in the relationship with a partner is central and there is no abuse or coercive control, discuss by week 4 a couples-based approach for depression, and refer if it fits.",
+          "interventionIds": ["behavioral-couples-therapy", "emotionally-focused-couples-work", "couples-relationship-skills"],
+          "targets": ["interpersonal-difficulties"],
+          "step": "specialist"
+        },
+        {
+          "id": "mdd-family-patterns",
+          "text": "If family patterns keep the low mood going, map them with the client by week 6 (for example with a genogram or circular questions) and choose 1 pattern to change.",
+          "interventionIds": ["genogram-family-systems", "systemic-circular-questioning"],
+          "targets": ["interpersonal-difficulties"],
+          "step": "high-intensity"
+        }
+      ],
+      "measureIds": ["phq-9"],
+      "handoutIds": ["my-relationships-map"]
+    },
+    {
+      "id": "mdd-rumination-and-fixed-beliefs",
+      "label": "Rumination and long-held negative beliefs that keep depression going",
+      "definitions": [
+        "Spends long periods going over why things went wrong or what is wrong with self, without reaching a decision or plan.",
+        "Holds long-standing beliefs about being a failure, unlovable or helpless that shape choices even when mood lifts."
+      ],
+      "longTermGoals": [
+        "The client spends less time stuck in rumination, holds a fairer view of self, and puts the time into action."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "mdd-why-to-how",
+          "text": "Over weeks 3 to 10, notice rumination and switch from why questions to concrete how questions or a next step at least 3 times a week, using a short written prompt.",
+          "interventionIds": ["rumination-focused-cbt"],
+          "targets": ["repetitive-negative-thinking"],
+          "step": "high-intensity"
+        },
+        {
+          "id": "mdd-metacognitive-option",
+          "text": "If the client prefers a metacognitive approach, over weeks 3 to 8 practice postponing rumination to a set time and a daily attention-shifting exercise with a clinician trained in metacognitive therapy.",
+          "interventionIds": ["metacognitive-therapy"],
+          "targets": ["repetitive-negative-thinking"],
+          "step": "specialist"
+        },
+        {
+          "id": "mdd-core-belief",
+          "text": "By week 8, name the central belief about self and rate it (0-100), then collect evidence for a fairer belief each week in a positive data log, re-rating both every 2 weeks.",
+          "interventionIds": ["core-belief-work"],
+          "targets": ["negative-core-beliefs"],
+          "step": "high-intensity"
+        },
+        {
+          "id": "mdd-persistent-pattern-option",
+          "text": "If depression has lasted for years or began early in life, discuss by week 6 an approach designed for persistent depression (for example CBASP from a trained clinician) and agree on a referral if it fits.",
+          "interventionIds": ["cbasp-situational-analysis"],
+          "targets": ["interpersonal-difficulties", "negative-core-beliefs"],
+          "step": "specialist"
+        }
+      ],
+      "measureIds": ["phq-9"],
+      "handoutIds": ["from-why-to-how", "positive-data-log"]
+    },
+    {
+      "id": "mdd-staying-well",
+      "label": "Risk of depression coming back after recovery",
+      "definitions": [
+        "Has had 2 or more earlier episodes of depression, or still has some symptoms after improving.",
+        "Notices early signs of low mood coming back at times of stress, poor sleep or change, and is unsure what to do first."
+      ],
+      "longTermGoals": [
+        "The client stays well for longer, spots early signs quickly, and has a plan agreed with the clinician and, when involved, the prescriber."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "mdd-staying-well-plan",
+          "text": "Before therapy ends, write a staying-well plan with at least 3 personal early signs, the first steps for each, and who to contact.",
+          "interventionIds": ["relapse-prevention-planning"],
+          "targets": ["coping-skills", "hope-and-motivation"],
+          "step": "low-intensity"
+        },
+        {
+          "id": "mdd-prevention-course",
+          "text": "If the client has had 2 or more earlier episodes, discuss in the last 4 sessions a course of mindfulness-based cognitive therapy, or another psychological approach shown to lower the chance of a return such as well-being therapy, and plan when it would start.",
+          "interventionIds": ["mindfulness-based-cognitive-therapy", "well-being-therapy"],
+          "targets": ["repetitive-negative-thinking"],
+          "step": "high-intensity"
+        },
+        {
+          "id": "mdd-combined-care",
+          "text": "If the client takes or is considering antidepressant medicine, agree by week 6, with consent, on a shared plan with the prescriber for combined care, including how long to continue and how any stopping would be planned and monitored.",
+          "interventionIds": ["medication-referral"],
+          "step": "high-intensity"
+        },
+        {
+          "id": "mdd-activity-group",
+          "text": "If the client wishes, join a supervised group physical activity program (for example 2 to 3 sessions a week for about 10 weeks) and log attendance and mood (0-10).",
+          "interventionIds": ["physical-activity"],
+          "targets": ["low-reward-engagement"],
+          "step": "low-intensity"
+        },
+        {
+          "id": "mdd-further-options",
+          "text": "If depression has not improved after adequate trials of therapy and medicine, the clinician and prescriber discuss a referral for assessment for other treatments such as neuromodulation.",
+          "interventionIds": ["neuromodulation-referral"],
+          "step": "specialist"
+        }
+      ],
+      "measureIds": ["phq-9"],
+      "handoutIds": ["my-therapy-summary"]
     }
   ],
   "collaborativeNote": "These are starting points for clinician review, not a finished plan. Rewrite each goal and objective with the client in their own words, scale the targets to the client's current energy, and record their agreement before anything is added to the plan. Choose activities that fit the client's culture, faith, body, budget and caregiving load. Safety planning is always done together with the client, and the clinician makes every risk decision. Do not add names or other identifying details. Resource only. Not a substitute for clinical judgment.",
@@ -151,9 +331,20 @@
     { "title": "A Tipping Point for Measurement-Based Care (Fortney et al.)", "publisher": "Psychiatric Services; reprinted in Focus (PubMed Central)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6996080/", "year": 2017 },
     { "title": "Implementing Measurement-Based Care in Behavioral Health: A Review (Lewis et al.)", "publisher": "JAMA Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/30566197/", "year": 2019 },
     { "title": "Shared decision making (NG197)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng197", "year": 2021 },
-    { "title": "PHQ and GAD-7 screeners (reproduction terms)", "publisher": "Pfizer / PHQ Screeners", "url": "https://www.phqscreeners.com" }
+    { "title": "PHQ and GAD-7 screeners (reproduction terms)", "publisher": "Pfizer / PHQ Screeners", "url": "https://www.phqscreeners.com" },
+    { "title": "Interpersonal Psychotherapy for Mental Health Problems: A Comprehensive Meta-Analysis (Cuijpers et al.)", "publisher": "American Journal of Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/27032627/", "year": 2016 },
+    { "title": "The efficacy of short-term psychodynamic psychotherapy for depression: a meta-analysis update (Driessen et al.)", "publisher": "Clinical Psychology Review (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/26281018/", "year": 2015 },
+    { "title": "Person-centred experiential therapy versus cognitive behavioural therapy delivered in the English Improving Access to Psychological Therapies service for the treatment of moderate or severe depression (PRaCTICED, Barkham et al.)", "publisher": "Lancet Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/34000240/", "year": 2021 },
+    { "title": "Effect of exercise for depression: systematic review and network meta-analysis of randomised controlled trials (Noetel et al.)", "publisher": "BMJ (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/38355154/", "year": 2024 },
+    { "title": "Efficacy of Mindfulness-Based Cognitive Therapy in Prevention of Depressive Relapse: An Individual Patient Data Meta-analysis From Randomized Trials (Kuyken et al.)", "publisher": "JAMA Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/27119968/", "year": 2016 },
+    { "title": "Continuation of Antidepressants vs Sequential Psychological Interventions to Prevent Relapse in Depression: An Individual Participant Data Meta-analysis (Breedvelt et al.)", "publisher": "JAMA Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/34009273/", "year": 2021 },
+    { "title": "A comparison of nefazodone, the cognitive behavioral-analysis system of psychotherapy, and their combination for the treatment of chronic depression (Keller et al.)", "publisher": "New England Journal of Medicine (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/10816183/", "year": 2000 },
+    { "title": "Depression in adults quality standard (QS8), statement 3: preventing relapse", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/qs8/chapter/Quality-statement-3-Preventing-relapse" },
+    { "title": "VA/DoD Clinical Practice Guideline for the Management of Major Depressive Disorder", "publisher": "US Department of Veterans Affairs and Department of Defense", "url": "https://www.healthquality.va.gov/guidelines/MH/mdd/", "year": 2022 },
+    { "title": "Effective Psychotherapies for the Treatment of Major Depressive Disorder (2022 VA/DoD CPG)", "publisher": "Psychological Health Center of Excellence, Defense Health Agency", "url": "https://health.mil/Reference-Center/Publications/2022/10/28/Effective-Psychotherapies-for-the-Treatment-of-Major-Depressive-Disorder", "year": 2022 },
+    { "title": "APA Clinical Practice Guideline for the Treatment of Depression", "publisher": "American Psychological Association", "url": "https://www.apa.org/depression-guideline", "year": 2019 }
   ],
   "license": "original",
-  "lastVerified": "2026-11-26",
+  "lastVerified": "2026-11-27",
   "reviewedBy": "PENDING"
 }

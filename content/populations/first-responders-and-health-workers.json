@@ -1,0 +1,80 @@
+{
+  "id": "first-responders-and-health-workers",
+  "name": "First responders and health workers",
+  "group": "service-and-work",
+  "summary": "Care for police, firefighters, paramedics, dispatchers, nurses, physicians and other high-exposure workers: culture and stigma, cumulative exposure, shift work and sleep, duty weapons and lethal means, keeping treatment separate from fitness-for-duty, and licensing fears.",
+  "scopeNote": "For adults (18 and over) in emergency, public safety and health care roles. The app never asks for or saves occupation, employer or licensing details. Treating clinicians do not perform fitness-for-duty evaluations for their own clients.",
+  "whyItMatters": "A meta-analysis of ambulance personnel estimated PTSD in 11 percent, depression in 15 percent and anxiety in 15 percent, rates of PTSD well above the general population (Petrie and colleagues, 2018). Among police, pooled estimates included suicidal ideation in 8.5 percent and hazardous drinking in 25.7 percent; occupational stress and avoidant coping were the strongest risk factors, and peer support was linked with fewer PTSD symptoms (Syed and colleagues, 2020). Nearly 40 percent of US physicians said they would be reluctant to seek mental health care because of concerns about their medical license (Dyrbye and colleagues, 2017). Moral injury, distress after witnessing or taking part in events that violate one's values, is also described in health care and emergency work.",
+  "askAbout": [
+    "What does your work involve day to day, and what parts of it stay with you after a shift?",
+    "Are there particular calls, patients or events that you keep coming back to?",
+    "How does your workplace usually talk about stress and asking for help?",
+    "What are your shifts like, and how much sleep do you get on and off duty?",
+    "Do you carry a weapon for work or keep firearms at home, and would you be open to talking about storage when things are hard?",
+    "Are you worried about how seeking care could affect your job, license or certification?"
+  ],
+  "stereotypeCaution": "People in these roles vary in why they chose the work, what they find hard and how they cope. Many do well; some find meaning that protects them. Do not assume burnout, trauma or a tough-it-out attitude, and do not assume that a single event is the main issue rather than cumulative strain, workload or workplace culture.",
+  "keyConsiderations": [
+    "Exposure is often cumulative and repeated rather than one index event; assessment and trauma-focused work may need to address several events or themes.",
+    "Workplace culture can reward emotional control and discourage help-seeking; frame therapy in practical terms and respect the person's pace.",
+    "Moral injury, betrayal by leadership and system pressures (staffing, resources) can matter as much as fear-based trauma.",
+    "Keep the treating role separate from any fitness-for-duty, return-to-work or licensing evaluation; refer those to an independent evaluator.",
+    "Confidentiality concerns are often strong; explain clearly what is and is not shared with an employer, peer program or licensing board, and how records are kept.",
+    "Peer support programs can help, but they are not a substitute for treatment when needed."
+  ],
+  "assessmentAdaptations": [
+    "Ask about cumulative exposure, recent critical incidents, workload, shift patterns and sleep, and alcohol use as part of routine assessment.",
+    "Ask about firearms or other duty equipment at home and at work as part of safety assessment.",
+    "Check for moral injury themes: guilt, shame, anger at leadership or the system, and loss of meaning.",
+    "Ask about family strain, relationship conflict and the impact of shift work on home life."
+  ],
+  "sessionAdaptations": [
+    "Offer scheduling around rotating shifts, telehealth, and early or late appointments.",
+    "Adapt sleep work to shift schedules: anchor sleep times around shifts, protect the main sleep period and plan naps, rather than applying a standard night-time window.",
+    "Use plain, practical language and concrete skills that can be used on shift, such as brief grounding or breathing between calls.",
+    "Plan how to handle a new critical incident during treatment."
+  ],
+  "interventionNotes": [
+    { "interventionId": "cognitive-processing-therapy", "note": "Works with themes of guilt, responsibility and betrayal common after work-related events." },
+    { "interventionId": "prolonged-exposure", "note": "With cumulative exposure, choose the event that drives most current distress first and review others as treatment continues." },
+    { "interventionId": "cbti-sleep-restriction", "note": "Sleepiness from restriction can be dangerous in safety-sensitive jobs such as driving, carrying a weapon or patient care; adapt the window to shifts, start with stimulus control and agree on safety rules." },
+    { "interventionId": "lethal-means-counseling", "note": "Plan for duty weapons and personal firearms together, with respect for work requirements, using temporary storage options where possible." },
+    { "interventionId": "psychological-first-aid-and-recovery-skills", "note": "Supports early recovery after critical incidents without requiring people to retell the event." },
+    { "orientationId": "trauma-focused-therapies", "note": "Compares the main trauma-focused therapies and how to choose among them." }
+  ],
+  "measureNotes": [
+    "Self-report scores may be low because of stigma or concern about job consequences; explain how results are used and stored.",
+    "The PHQ-9 sleep and fatigue items can reflect shift work; ask whether the problem continues on days off."
+  ],
+  "measuresPending": [],
+  "safetyNotes": [
+    "Ask about suicidal thoughts directly; access to firearms and medicines, shift isolation and fear of job consequences can all add to risk.",
+    "Include peers, family and off-duty plans in safety planning, and agree how the person will get help if a crisis comes up on shift."
+  ],
+  "cautions": [
+    "Routine single-session group debriefing that requires everyone to describe their reactions soon after an incident is not recommended and may do harm; offer practical support and follow-up instead."
+  ],
+  "legalIds": ["treating-and-forensic-roles", "erpo-and-firearm-transfer", "clinician-wellbeing-and-impairment"],
+  "ethicsIds": [],
+  "referralIds": ["988-lifeline", "crisis-text-line"],
+  "referralKinds": [],
+  "handoutIds": ["how-sleep-works", "grounding-5-4-3-2-1", "common-reactions-after-trauma", "safer-home-for-family"],
+  "topicIds": ["work-stress", "after-trauma"],
+  "practiceIds": ["trauma-informed-care", "clinician-postvention", "self-harm-assessment-and-formulation"],
+  "formulationIds": ["moral-injury"],
+  "linkOuts": [
+    { "title": "Provider Self-Care Toolkit", "publisher": "National Center for PTSD (U.S. Department of Veterans Affairs)", "url": "https://www.ptsd.va.gov/professional/treat/care/toolkits/provider/index.asp", "note": "Self-care and burnout resources for health care and trauma-exposed workers.", "lastVerified": "2026-11-27" },
+    { "title": "Occupational Health for Health Care Providers", "publisher": "MedlinePlus (U.S. National Library of Medicine)", "url": "https://medlineplus.gov/occupationalhealthforhealthcareproviders.html", "lastVerified": "2026-11-27" }
+  ],
+  "sud": true,
+  "sources": [
+    { "title": "Prevalence of PTSD and common mental disorders amongst ambulance personnel: a systematic review and meta-analysis (Petrie and colleagues)", "publisher": "Social Psychiatry and Psychiatric Epidemiology (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/29869691/", "year": 2018 },
+    { "title": "Global prevalence and risk factors for mental health problems in police personnel: a systematic review and meta-analysis (Syed and colleagues)", "publisher": "Occupational and Environmental Medicine (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/32439827/", "year": 2020 },
+    { "title": "Medical licensure questions and physician reluctance to seek care for mental health conditions (Dyrbye and colleagues)", "publisher": "Mayo Clinic Proceedings (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/28982484/", "year": 2017 },
+    { "title": "Moral injury and moral repair in war veterans: a preliminary model and intervention strategy (Litz and colleagues)", "publisher": "Clinical Psychology Review (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/19683376/", "year": 2009 },
+    { "title": "Post-traumatic stress disorder (NG116)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng116", "year": 2018 }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

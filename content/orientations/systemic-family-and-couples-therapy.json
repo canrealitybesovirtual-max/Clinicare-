@@ -1,0 +1,130 @@
+{
+  "id": "systemic-family-and-couples-therapy",
+  "name": "Systemic, family and couples therapies",
+  "shortName": "Systemic",
+  "family": "systemic",
+  "summary": "Problems are understood within the relationships and patterns a person is part of. Work with couples, families or an individual focuses on interaction cycles, roles, boundaries and the meanings people share, rather than on one person as the location of the problem.",
+  "keyConcepts": [
+    { "term": "Circular causality", "meaning": "Behaviors in a system influence each other in loops (the more one partner pursues, the more the other withdraws), so there is rarely a single cause." },
+    { "term": "Structure and boundaries", "meaning": "Structural therapy looks at hierarchies, alliances and how close or distant subsystems are, and works to make boundaries clearer and more flexible." },
+    { "term": "Problem-maintaining solutions", "meaning": "Strategic and MRI approaches notice that people's attempts to solve a problem can keep it going, and help them try something different." },
+    { "term": "Circular questioning and hypothesizing", "meaning": "Milan and post-Milan approaches ask about differences and relationships to generate new perspectives, holding hypotheses lightly." },
+    { "term": "Differentiation and triangles", "meaning": "Bowen theory describes how people balance closeness and a separate self, and how tension between two people is often managed by drawing in a third." },
+    { "term": "Attachment cycles", "meaning": "Emotionally focused couple therapy maps the negative cycle partners fall into when attachment needs feel threatened, and helps them reach each other differently." }
+  ],
+  "viewOfProblem": "A symptom is seen as part of a pattern of relationships: it may express stress in the system, help keep a fragile balance, or be maintained by how others respond. Life-cycle transitions, migration, illness, loss and wider social pressures all shape these patterns. A family or couple can also be a major source of strength and recovery.",
+  "viewOfChange": "Change comes from shifting the pattern rather than fixing one person: new ways of communicating, clearer boundaries, different responses to old triggers, reconnection between partners, or new shared stories about the problem. Including family members in psychoeducation and support can also reduce relapse in serious mental illness.",
+  "therapistStance": "Curious, multipartial and active. The clinician connects with each person, stays balanced rather than taking sides, notices patterns as they happen in the room, and invites new ways of interacting. Different schools vary from directive (structural, strategic) to collaborative and reflective (post-Milan, Open Dialogue).",
+  "sessionShape": [
+    "Join with each person present and check how each sees the reason for coming.",
+    "Track a recent interaction step by step to make the pattern visible.",
+    "Ask circular or relational questions that bring out differences and connections.",
+    "Invite a new interaction in the room, such as a different conversation, request or response.",
+    "Agree on something each person will try, and summarize the shared understanding."
+  ],
+  "goalStyle": "Goals describe changes in interaction patterns rather than in one person alone: for example, partners use an agreed pause and return when arguments escalate, or the family holds a weekly problem-solving meeting for a month. Write each goal with the clients in their own words.",
+  "progressMarkers": [
+    "Changes in the identified interaction cycle, reported by each person.",
+    "Relationship satisfaction or family functioning, rated by each member.",
+    "Symptom measures for the person whose difficulties brought the family in.",
+    "Relapse or hospital admission rates in serious mental illness, with family psychoeducation."
+  ],
+  "typicalTechniques": [
+    "genogram-family-systems",
+    "systemic-circular-questioning",
+    "couples-relationship-skills",
+    "emotionally-focused-couples-work",
+    "behavioral-couples-therapy",
+    "cbct-for-ptsd",
+    "family-psychoeducation-psychosis",
+    "family-focused-therapy-bipolar",
+    "craft-for-family-members"
+  ],
+  "relatedTechniques": ["communication-skills-training", "narrative-externalizing"],
+  "missingTechniques": [
+    { "name": "Bowen detriangulation coaching", "note": "Coaching an individual to step out of a triangle and relate one to one; overview only." },
+    { "name": "Structural boundary work and enactment", "note": "Directing family members to interact in session to reshape boundaries; adult and couple units only, overview." }
+  ],
+  "formulationIds": ["five-ps-biopsychosocial-spiritual", "functional-analysis"],
+  "models": [
+    {
+      "name": "Couple therapies",
+      "summary": "Behavioral and integrative behavioral couple therapy, and emotionally focused couple therapy, for relationship distress and as a way to treat depression, alcohol problems and PTSD with a partner.",
+      "evidenceTier": "guideline-recommended",
+      "evidence": "NICE CG115 (2011, updated 2022) recommends behavioural couples therapy for harmful drinking when a partner is willing and there is no domestic abuse. A 2020 meta-analysis found couple therapy improves relationship satisfaction (Roddy et al., 2020), and a 2016 review supports emotionally focused couple therapy (Wiebe and Johnson, 2016).",
+      "trainingRequired": true
+    },
+    {
+      "name": "Family interventions in serious mental illness",
+      "summary": "Psychoeducational family work for psychosis and family-focused therapy for bipolar disorder: shared understanding, communication and problem-solving skills, and relapse planning.",
+      "evidenceTier": "guideline-recommended",
+      "evidence": "NICE CG178 (2014) recommends family intervention for people with psychosis in close contact with family; a Cochrane review found it reduced relapse and hospital admission (Pharoah et al., 2010).",
+      "trainingRequired": false
+    },
+    {
+      "name": "Classic family therapy schools (structural, strategic, Milan, Bowen)",
+      "summary": "The foundational systemic models, each with its own view of patterns and change; widely taught in MFT training.",
+      "evidenceTier": "research-supported",
+      "evidence": "A 2019 review concluded that couple, family and systemic interventions for adult-focused problems are about as effective as individual evidence-based therapies, and more effective for some problems (Carr, 2019).",
+      "trainingRequired": true
+    },
+    {
+      "name": "Open Dialogue",
+      "summary": "A network-based approach to early psychosis and crisis in which the person and their network meet with the team quickly and repeatedly, with shared, transparent dialogue.",
+      "evidenceTier": "limited",
+      "evidence": "A 2019 review found the evidence for Open Dialogue to be of low quality, with no randomized trials at the time (Freeman et al., 2019).",
+      "trainingRequired": true
+    }
+  ],
+  "evidenceTier": "guideline-recommended",
+  "evidenceSummary": "A 2019 review concluded that systemic interventions for adult-focused problems are about as effective as individual evidence-based therapies and better for some problems, such as relationship distress and relapse in schizophrenia (Carr, 2019). NICE CG178 (2014) recommends family intervention in psychosis and NICE CG115 (2011) behavioural couples therapy for harmful drinking. Couple therapy improves relationship satisfaction on average (Roddy et al., 2020). Open Dialogue has low-quality evidence so far (Freeman et al., 2019).",
+  "bestFit": [
+    "Relationship distress and problems that clearly involve a partner or family.",
+    "Serious mental illness, where family psychoeducation lowers relapse risk.",
+    "Substance use, where partner or family involvement improves engagement and outcomes.",
+    "Clients whose culture or situation makes the family the natural unit of care."
+  ],
+  "cautions": [
+    "Screen each partner privately for intimate partner violence and coercive control before any joint session. Joint work is not appropriate while one partner is unsafe or afraid.",
+    "Agree on how individual disclosures and secrets will be handled before seeing people together and separately.",
+    "Paradoxical or strategic directives can feel manipulative; use them only with training, transparency and consent.",
+    "Keep this app's adult-only scope: youth-focused family models are outside it.",
+    "If any family member is at risk of harm, follow your risk and reporting procedures and review crisis options: in the US call or text 988; elsewhere, the local emergency number or findahelpline.com."
+  ],
+  "whenToRefer": [
+    "Couple or family work that needs specific training, such as EFT, BCT or structural therapy, when you are not trained in it.",
+    "Violence or coercive control: refer each person to safety-focused services instead of joint therapy."
+  ],
+  "trainingRequired": false,
+  "trainingNote": "Genograms and family psychoeducation are within general practice. Delivering couple therapy models, structural or Bowen therapy, or Open Dialogue requires systemic training and supervision; MFT licensure and AAMFT designations reflect that training.",
+  "trainingPath": [
+    { "body": "American Association for Marriage and Family Therapy (AAMFT)", "url": "https://aamft.org/AAMFT/Membership/Designations_Resource.aspx", "note": "Professional designations in marriage and family therapy, including Clinical Fellow." },
+    { "body": "International Centre for Excellence in Emotionally Focused Therapy (ICEEFT)", "url": "https://iceeft.com/", "note": "Externships, supervision and certification in emotionally focused couple, individual and family therapy." }
+  ],
+  "ethicsPrompts": [
+    { "prompt": "Practice within your training: offer couple or family therapy models only with systemic training and supervision.", "legalIds": ["competence-and-scope-of-practice"] },
+    { "prompt": "Decide and explain who the client is, how records are kept, and how secrets are handled when seeing several people.", "legalIds": ["multiple-relationships-and-boundaries", "hipaa-privacy-basics"] },
+    { "prompt": "If abuse or a risk to others comes to light in joint sessions, follow your reporting and duty-to-protect obligations.", "legalIds": ["mandatory-reporting", "duty-to-warn-protect"] }
+  ],
+  "culturalNotes": [
+    "Family structure, hierarchy and closeness vary widely; what looks like enmeshment in one culture may be normal interdependence in another.",
+    "Ask who counts as family, including chosen family, extended kin and community elders.",
+    "Gender roles and power differences shape couple and family patterns; name them with care rather than treating them as neutral.",
+    "Migration, acculturation gaps between generations and racism are common systemic stressors to explore."
+  ],
+  "handoutIds": ["assertive-communication", "my-relationships-map"],
+  "relatedPracticeIds": ["couples-and-conjoint-sessions", "involving-family-and-supports", "multicultural-orientation-and-broaching"],
+  "relatedPopulationIds": ["cultural-adaptation", "lgbtq-affirmative", "refugees-and-asylum-seekers"],
+  "sources": [
+    { "title": "Couple therapy, family therapy and systemic interventions for adult-focused problems: the current evidence base (Carr)", "publisher": "Journal of Family Therapy (Wiley)", "url": "https://doi.org/10.1111/1467-6427.12225", "year": 2019 },
+    { "title": "Open Dialogue: a review of the evidence (Freeman, Tribe, Stott and Pilling)", "publisher": "Psychiatric Services", "url": "https://psychiatryonline.org/doi/10.1176/appi.ps.201800236", "year": 2019 },
+    { "title": "Psychosis and schizophrenia in adults: prevention and management (CG178)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/cg178", "year": 2014 },
+    { "title": "Family intervention for schizophrenia (Pharoah et al.)", "publisher": "Cochrane Database of Systematic Reviews (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/21154340/", "year": 2010 },
+    { "title": "Alcohol-use disorders: diagnosis, assessment and management of harmful drinking (high-risk drinking) and alcohol dependence (CG115)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/cg115", "year": 2011 },
+    { "title": "Meta-analysis of couple therapy: effects across outcomes, designs, timeframes, and other moderators (Roddy et al.)", "publisher": "Journal of Consulting and Clinical Psychology (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/32551734/", "year": 2020 },
+    { "title": "A review of the research in emotionally focused therapy for couples (Wiebe and Johnson)", "publisher": "Family Process (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/27273169/", "year": 2016 }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

@@ -1,0 +1,122 @@
+{
+  "id": "goals-by-orientation",
+  "title": "Writing goals that fit the orientation",
+  "category": "measurement-and-goals",
+  "summary": "How goals are written differently across orientations, with fill-in templates, and how to keep any goal specific, measurable, agreed, relevant and time-bound without losing the client's voice. The goal writer tool builds goals from these templates in memory only.",
+  "whenToUse": [
+    "When writing or revising a treatment plan.",
+    "When a goal is vague (feel better) or framed only as removing symptoms.",
+    "When switching approach mid-treatment and the goal language no longer fits the work."
+  ],
+  "steps": [
+    {
+      "heading": "Start in the client's words",
+      "body": "Write down what the client wants in their language first. Then shape it into a goal both of you can track. Keep their phrasing in the goal where you can."
+    },
+    {
+      "heading": "Check the SMART parts",
+      "items": [
+        "Specific: what will be different, in what situation.",
+        "Measurable: how you will both notice (a count, a rating, a measure total, a behavior someone could see).",
+        "Agreed: the client says it is their goal, not only yours.",
+        "Relevant: it connects to what brought them in and to the formulation.",
+        "Time-bound: by when you will review it."
+      ]
+    },
+    {
+      "heading": "Use the template that fits the work",
+      "items": [
+        "Behavioral: increase or decrease a specific behavior in a named situation, counted over a period.",
+        "Cognitive: notice and test a specific belief, with the expected change in belief rating or behavior.",
+        "Acceptance and commitment: a valued direction plus committed actions, tracked by action rather than by feelings going away.",
+        "Dialectical behavior therapy: targets in priority order (safety, then therapy-interfering behavior, then quality of life), each with a skill.",
+        "Psychodynamic: understanding and loosening a repeating relationship pattern, noticed in relationships and in sessions.",
+        "Interpersonal: a focal problem area (grief, role dispute, role change or isolation) with the interpersonal change sought.",
+        "Humanistic and experiential: growth in awareness, self-acceptance or emotional processing, in the client's own terms.",
+        "Solution-focused: signs that the preferred future is happening, on a scale the client chooses.",
+        "Motivational interviewing: the change the client chooses and the next step they commit to.",
+        "Systemic: a change in a family or couple pattern that each person can notice.",
+        "Trauma, phase-based: stabilization and safety first, then processing, then rebuilding, each with its own markers."
+      ]
+    },
+    {
+      "heading": "Pair each goal with objectives",
+      "body": "Under each goal, list two or three objectives the client can act on, the intervention that supports each, and a review session number."
+    },
+    {
+      "heading": "Review and revise",
+      "body": "Look at goals at each planned review. Revising a goal is a normal part of therapy, not a failure."
+    }
+  ],
+  "prompts": [
+    "If therapy goes well, what will you be doing in three months that you are not doing now?",
+    "How would someone who knows you well notice the change?",
+    "Rather than waiting for the anxious feeling to go, what would you like to be doing even with it there?",
+    "Which of these goals feels most important to start with?"
+  ],
+  "cautions": [
+    "Goals written only as symptom removal can clash with acceptance-based or psychodynamic work; pick wording that fits the method you are actually using.",
+    "Do not write a diagnosis or code into a goal shared with the client.",
+    "Keep identifiers out of goal text. The goal writer removes likely identifiers and exports with blank lines for names.",
+    "A goal about substance use makes the export a Part 2 record; the tool adds the notice when the text mentions substance use."
+  ],
+  "evidenceSummary": "A 2009 practical guide (Bovend'Eerdt, Botell and Wade) describes how to write specific, measurable goals and link them to goal attainment scaling. A 2018 meta-analysis (Tryon, Birch and Verkuilen) found that agreement on goals and collaboration are associated with better outcomes. A 2013 review (Hayes and colleagues) describes how acceptance and commitment therapy defines progress by valued action rather than symptom reduction.",
+  "forClinicianReview": true,
+  "crisisPanel": false,
+  "sud": false,
+  "relatedInterventionIds": [
+    "act-values-clarification",
+    "act-committed-action",
+    "solution-focused-questions",
+    "motivational-interviewing",
+    "interpersonal-psychotherapy",
+    "behavioral-activation"
+  ],
+  "relatedHandoutIds": [
+    "values-compass",
+    "between-session-practice-plan"
+  ],
+  "relatedFormulationIds": [
+    "cbt-three-level",
+    "act-flexibility",
+    "functional-analysis",
+    "phase-based-trauma-sequencing"
+  ],
+  "relatedLegalIds": [
+    "treatment-plans-and-client-access",
+    "documentation-and-medical-necessity"
+  ],
+  "relatedPracticeIds": [
+    "goal-attainment-scaling",
+    "preferences-goals-and-readiness",
+    "outcome-monitoring",
+    "shared-decision-making"
+  ],
+  "relatedPopulationIds": [],
+  "toolHref": "/tools/goals",
+  "linkOuts": [],
+  "measuresPending": [],
+  "sources": [
+    {
+      "title": "Writing SMART rehabilitation goals and achieving goal attainment scaling: a practical guide (Bovend'Eerdt, Botell and Wade)",
+      "publisher": "Clinical Rehabilitation, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19237435/",
+      "year": 2009
+    },
+    {
+      "title": "Meta-analyses of the relation of goal consensus and collaboration to psychotherapy outcome (Tryon, Birch and Verkuilen)",
+      "publisher": "Psychotherapy, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30335451/",
+      "year": 2018
+    },
+    {
+      "title": "Acceptance and commitment therapy and contextual behavioral science: examining the progress of a distinctive model of behavioral and cognitive therapy (Hayes, Levin, Plumb-Vilardaga, Villatte and Pistorello)",
+      "publisher": "Behavior Therapy, via PubMed Central",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3635495/",
+      "year": 2013
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

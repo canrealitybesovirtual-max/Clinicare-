@@ -3,7 +3,7 @@
  * chat, website), who it serves, and whether a person has re-verified it against the official site.
  */
 import { BadgeCheck, Clock, LifeBuoy, TriangleAlert, Video } from "lucide-react";
-import { isVerified, type ReferralEntry } from "@/lib/schemas-referrals";
+import { CRISIS_LIKE_KINDS, isVerified, type ReferralEntry } from "@/lib/schemas-referrals";
 import { Badge } from "@/components/ui/badge";
 import { Disclosure } from "@/components/ui/disclosure";
 import { ExternalLink } from "@/components/ui/external-link";
@@ -27,7 +27,7 @@ export function VerificationBadge({ entry }: { entry: Pick<ReferralEntry, "lastV
 
 export function DirectoryEntryCard({ entry, headingLevel = "h4" }: { entry: ReferralEntry; headingLevel?: "h3" | "h4" }) {
   const H = headingLevel;
-  const crisisLike = entry.kind === "crisis" || entry.kind === "veterans" || entry.kind === "deaf-hoh";
+  const crisisLike = CRISIS_LIKE_KINDS.has(entry.kind);
   return (
     <article aria-labelledby={`ref-${entry.id}`} className="flex h-full flex-col gap-3 rounded-xl border border-border bg-surface p-4 shadow-sm">
       <div className="flex flex-wrap items-center gap-1.5">

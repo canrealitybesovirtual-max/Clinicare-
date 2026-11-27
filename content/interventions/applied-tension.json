@@ -39,6 +39,7 @@
     "applied-tension-practice",
     "exposure-ladder"
   ],
+  "orientationIds": ["behavior-therapy"],
   "sources": [
     {
       "title": "Applied tension: a specific behavioral method for treatment of blood phobia (Öst and Sterner)",

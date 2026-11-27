@@ -19,32 +19,54 @@
         {
           "id": "aud-withdrawal-risk-check",
           "text": "At the first session, before any plan to cut down or stop, the clinician asks about daily or near-daily heavy drinking, past withdrawal symptoms (shaking, sweating, seeing or hearing things that are not there, seizures or confusion) and use of benzodiazepines or other sedatives. If any are present, refer the client for a medical assessment of withdrawal risk (primary care or an addiction medicine provider, or emergency care for severe or worsening symptoms), and agree that the client will not stop suddenly on their own before a medical provider has advised on safe withdrawal management. This tool does not judge withdrawal severity.",
-          "interventionIds": ["medication-referral"]
+          "interventionIds": ["medication-referral"],
+          "targets": ["physical-health-burden"]
         },
         {
           "id": "aud-drinking-diary",
           "text": "For the first 4 weeks, keep a private daily drinking diary on paper or the client's own device (standard drinks, time, setting, mood and urge strength 0-10) and talk it through in each session. The diary carries no names or other identifying details, and nothing from it is typed into this tool.",
-          "interventionIds": ["motivational-interviewing", "relapse-prevention-planning"]
+          "interventionIds": ["motivational-interviewing", "relapse-prevention-planning"],
+          "targets": ["urges-and-impulsivity"],
+          "step": "low-intensity"
         },
         {
           "id": "aud-choose-goal",
           "text": "By session 3, the client chooses a drinking goal in their own words (stopping, or specific daily and weekly limits if a medical provider agrees this is safe), writes it on their own copy of the plan and rates confidence in reaching it (0-10).",
-          "interventionIds": ["motivational-interviewing"]
+          "interventionIds": ["motivational-interviewing"],
+          "targets": ["hope-and-motivation", "values-and-meaning"],
+          "step": "low-intensity"
         },
         {
           "id": "aud-harm-reduction-steps",
           "text": "By week 2, agree on at least 2 immediate safety steps the client is willing to take, such as never driving after drinking, arranging other adult care for children on days they drink, or not mixing alcohol with sedatives, sleep medicines or opioids, and check in on each step every session.",
-          "interventionIds": ["motivational-interviewing", "problem-solving"]
+          "interventionIds": ["motivational-interviewing", "problem-solving"],
+          "targets": ["urges-and-impulsivity"],
+          "step": "low-intensity"
         },
         {
           "id": "aud-medication-discussion",
           "text": "By week 4, with the client's consent, share plain-language information about FDA-approved medicines for alcohol use disorder (naltrexone, acamprosate and disulfiram) and offer a referral to a prescriber. The client decides; if referred, confirm by week 8 whether the appointment happened and how it went.",
-          "interventionIds": ["medication-referral"]
+          "interventionIds": ["medication-referral"],
+          "step": "high-intensity"
         },
         {
           "id": "aud-score-tracking",
           "text": "Complete the PHQ-9 and GAD-7 at intake and every 2 to 4 weeks to check for low mood and anxiety, which often occur alongside drinking problems and can set off drinking. An alcohol screening tool such as the AUDIT is license pending in this app; use it by link-out only if the practice has confirmed its terms. If scores rise, or drinking has not changed across 2 check-ins in a row, revisit the plan and level of care together.",
           "interventionIds": []
+        },
+        {
+          "id": "aud-brief-feedback",
+          "text": "At intake, give personal feedback on the client's drinking compared with low-risk limits, clear advice, and a goal the client chooses, then check progress on that goal at the next session.",
+          "interventionIds": ["brief-alcohol-intervention", "motivational-interviewing"],
+          "targets": ["hope-and-motivation"],
+          "step": "low-intensity"
+        },
+        {
+          "id": "aud-managed-withdrawal",
+          "text": "If the withdrawal check shows risk, arrange medically managed withdrawal (outpatient or inpatient, as the medical team advises) before or alongside therapy, and confirm the plan at the next session.",
+          "interventionIds": ["medication-referral"],
+          "targets": ["physical-health-burden"],
+          "step": "specialist"
         }
       ],
       "measureIds": ["phq-9", "gad-7"]
@@ -64,32 +86,56 @@
         {
           "id": "aud-own-reasons",
           "text": "By session 3, the client names in their own words at least 3 personal reasons for changing their drinking and at least 1 strength or past success that could help, recorded on the client's own copy of the plan.",
-          "interventionIds": ["motivational-interviewing", "decisional-balance"]
+          "interventionIds": ["motivational-interviewing", "decisional-balance"],
+          "targets": ["hope-and-motivation"],
+          "step": "low-intensity"
         },
         {
           "id": "aud-ruler-check",
           "text": "At each of the first 6 sessions, rate how important change feels and how confident the client feels about it (each 0-10), and talk through what it would take to move each rating up by 1 point.",
-          "interventionIds": ["motivational-interviewing"]
+          "interventionIds": ["motivational-interviewing"],
+          "targets": ["hope-and-motivation"],
+          "step": "low-intensity"
         },
         {
           "id": "aud-exceptions",
           "text": "By session 4, describe at least 2 recent times when drinking was lower or did not happen, what was different about those times, and plan to repeat at least 1 of those conditions each week for 4 weeks.",
-          "interventionIds": ["solution-focused-questions"]
+          "interventionIds": ["solution-focused-questions"],
+          "targets": ["coping-skills", "strengths-and-supports"],
+          "step": "low-intensity"
         },
         {
           "id": "aud-values-activities",
           "text": "By week 6, link the drinking goal to at least 2 personal values (for example being present for family, health, work, faith or community) and schedule at least 2 alcohol-free activities tied to those values each week for 6 weeks.",
-          "interventionIds": ["act-values-clarification", "act-committed-action", "behavioral-activation"]
+          "interventionIds": ["act-values-clarification", "act-committed-action", "behavioral-activation"],
+          "targets": ["values-and-meaning", "low-reward-engagement"],
+          "step": "high-intensity"
         },
         {
           "id": "aud-family-involvement",
           "text": "If the client wishes and there is no domestic abuse, invite a supportive partner or family member to at least 1 session by week 8 to plan practical support. Where a regular partner is willing, discuss behavioural couples therapy, an option NICE CG115 describes for harmful drinking and mild dependence.",
-          "interventionIds": ["genogram-family-systems", "communication-skills-training"]
+          "interventionIds": ["genogram-family-systems", "communication-skills-training"],
+          "targets": ["strengths-and-supports", "interpersonal-difficulties"],
+          "step": "high-intensity"
         },
         {
           "id": "aud-faith-support",
           "text": "Only if the client raises faith and asks to include it, and after documented informed consent: by week 6, identify faith practices, texts or community supports the client sees as helpful for their drinking goal and plan to use at least 1 of them each week. The client leads; the clinician does not introduce, endorse or challenge beliefs.",
-          "interventionIds": ["religiously-integrated-cbt"]
+          "interventionIds": ["religiously-integrated-cbt"],
+          "targets": ["values-and-meaning"]
+        },
+        {
+          "id": "aud-couples-option",
+          "text": "If the client has a partner who supports the change and there is no abuse or coercive control, discuss by week 4 behavioral couples therapy for alcohol use, and refer if it fits.",
+          "interventionIds": ["behavioral-couples-therapy"],
+          "targets": ["interpersonal-difficulties", "strengths-and-supports"],
+          "step": "specialist"
+        },
+        {
+          "id": "aud-family-support",
+          "text": "If a family member is affected and wants help for themselves, share information about family-focused support such as CRAFT or family groups, which that person would use with their own clinician or service.",
+          "interventionIds": ["craft-for-family-members"],
+          "targets": ["strengths-and-supports"]
         }
       ],
       "measureIds": []
@@ -111,37 +157,65 @@
         {
           "id": "aud-high-risk-map",
           "text": "By week 4, use the drinking diary to list at least 5 personal high-risk situations, rate each for typical urge strength (0-10), and plan at least 1 specific coping response for each.",
-          "interventionIds": ["relapse-prevention-planning", "problem-solving"]
+          "interventionIds": ["relapse-prevention-planning", "problem-solving"],
+          "targets": ["urges-and-impulsivity"],
+          "step": "high-intensity"
         },
         {
           "id": "aud-urge-surfing",
           "text": "Over weeks 3 to 10, practice urge surfing at least 4 times a week, during real cravings or as a short planned practice, noting urge strength at the start, the peak and the end on an urge log.",
-          "interventionIds": ["urge-surfing", "mindfulness-meditation"]
+          "interventionIds": ["urge-surfing", "mindfulness-meditation"],
+          "targets": ["urges-and-impulsivity", "experiential-avoidance"],
+          "step": "low-intensity"
         },
         {
           "id": "aud-drink-refusal",
           "text": "By week 6, role-play at least 2 ways of turning down a drink that fit the client's culture and relationships, then use them in at least 2 real situations and note what happened.",
-          "interventionIds": ["assertiveness-training", "communication-skills-training"]
+          "interventionIds": ["assertiveness-training", "communication-skills-training"],
+          "targets": ["interpersonal-difficulties", "coping-skills"],
+          "step": "high-intensity"
         },
         {
           "id": "aud-hard-moment-skills",
           "text": "By week 8, learn at least 2 alcohol-free skills for intense emotion (for example slow breathing, a brisk walk or a planned distraction) and use one of them in at least half of the logged high-urge moments.",
-          "interventionIds": ["dbt-distress-tolerance", "diaphragmatic-breathing"]
+          "interventionIds": ["dbt-distress-tolerance", "diaphragmatic-breathing"],
+          "targets": ["emotion-dysregulation", "coping-skills"],
+          "step": "high-intensity"
         },
         {
           "id": "aud-contingency-management-referral",
           "text": "By week 6, explain contingency management in plain language. If the client is interested and a local program with reliable testing exists, refer with written consent that meets 42 CFR Part 2. Contingency management is delivered by an established program and is never improvised by a solo clinician.",
-          "interventionIds": ["contingency-management"]
+          "interventionIds": ["contingency-management"],
+          "targets": ["urges-and-impulsivity"],
+          "step": "specialist"
         },
         {
           "id": "aud-written-relapse-plan",
           "text": "By week 10, write a relapse prevention plan with the client: early warning signs, top high-risk situations, coping steps, support options the client chooses (for example a 12-step group, SMART Recovery or a faith-based recovery group), and a lapse plan for the first 24 hours after a drink that swaps self-blame for a next step. Names of support people stay on the client's own copy only.",
-          "interventionIds": ["relapse-prevention-planning", "self-compassion-practice"]
+          "interventionIds": ["relapse-prevention-planning", "self-compassion-practice"],
+          "targets": ["coping-skills", "self-criticism-shame"],
+          "step": "high-intensity"
         },
         {
           "id": "aud-safety-plan-review",
           "text": "Whenever risk is present (for example a PHQ-9 item 9 response above 0, thoughts of suicide or self-harm, or dangerous intoxication), the clinician assesses risk directly and, in that same session, works with the client to create or review a written safety plan: personal warning signs (including drinking more), coping steps, people and places that help, professional and crisis contacts (call or text 988 in the US; elsewhere the local emergency number or findahelpline.com) and agreed steps to limit access to means of harm, such as firearms, stored medicines and alcohol in the home during a crisis. Revisit the plan at every session while risk remains. Risk level and next steps are the clinician's decision; this tool never rates risk.",
-          "interventionIds": ["collaborative-safety-planning", "lethal-means-counseling"]
+          "interventionIds": ["collaborative-safety-planning", "lethal-means-counseling"],
+          "targets": ["coping-skills", "hope-and-motivation"],
+          "step": "crisis-or-urgent"
+        },
+        {
+          "id": "aud-community-reinforcement",
+          "text": "With a clinician trained in the community reinforcement approach, by week 6 plan at least 2 rewarding alcohol-free activities a week (for example work, social or leisure activities) and an alcohol-free trial period the client agrees to.",
+          "interventionIds": ["community-reinforcement-approach"],
+          "targets": ["low-reward-engagement", "values-and-meaning"],
+          "step": "specialist"
+        },
+        {
+          "id": "aud-mutual-help",
+          "text": "By week 4, explore mutual-help options that fit the client (for example AA, SMART Recovery, or faith-based or culturally specific groups) and, if interested, attend at least 1 meeting and talk it over at the next session.",
+          "interventionIds": ["twelve-step-and-mutual-help-facilitation"],
+          "targets": ["low-social-support", "strengths-and-supports"],
+          "step": "low-intensity"
         }
       ],
       "measureIds": ["phq-9"]
@@ -178,9 +252,14 @@
     { "title": "ACA Code of Ethics (2014) and ethics resources", "publisher": "American Counseling Association", "url": "https://www.counseling.org/resources/ethics", "year": 2014 },
     { "title": "A Tipping Point for Measurement-Based Care (Fortney et al.)", "publisher": "Psychiatric Services; reprinted in Focus (PubMed Central)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6996080/", "year": 2017 },
     { "title": "Shared decision making (NG197)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng197", "year": 2021 },
-    { "title": "PHQ and GAD-7 screeners (reproduction terms)", "publisher": "Pfizer / PHQ Screeners", "url": "https://www.phqscreeners.com" }
+    { "title": "PHQ and GAD-7 screeners (reproduction terms)", "publisher": "Pfizer / PHQ Screeners", "url": "https://www.phqscreeners.com" },
+    { "title": "Alcoholics Anonymous and other 12-step programs for alcohol use disorder (Kelly et al.)", "publisher": "Cochrane Database of Systematic Reviews (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/32159228/", "year": 2020 },
+    { "title": "Screening and Behavioral Counseling Interventions to Reduce Unhealthy Alcohol Use in Adolescents and Adults: US Preventive Services Task Force Recommendation Statement", "publisher": "JAMA (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/30422199/", "year": 2018 },
+    { "title": "Evidence Brief: Community Reinforcement Approach for Alcohol Use Disorder", "publisher": "Psychological Health Center of Excellence, Defense Health Agency", "url": "https://health.mil/Reference-Center/Publications/2021/04/26/PHCoE-Evidence-Brief-Community-Reinforcement-Approach-for-Alcohol-Use-Disorder-508" },
+    { "title": "Evidence Brief: 12-Step Facilitation for Alcohol Use Disorder", "publisher": "Psychological Health Center of Excellence, Defense Health Agency", "url": "https://health.mil/Reference-Center/Publications/2021/04/26/PHCoE-Evidence-Brief-12-Step-Facilitation-For-AUD-KO-052020-508-0" },
+    { "title": "Evidence Brief: Alcohol Interventions for Unhealthy Alcohol Use", "publisher": "Psychological Health Center of Excellence, Defense Health Agency", "url": "https://health.mil/Reference-Center/Publications/2021/04/26/PHCoE-Evidence-Brief-Alcohol-Interventions-for-Unhealthy-Alcohol-Use-508" }
   ],
   "license": "original",
-  "lastVerified": "2026-11-26",
+  "lastVerified": "2026-11-27",
   "reviewedBy": "PENDING"
 }

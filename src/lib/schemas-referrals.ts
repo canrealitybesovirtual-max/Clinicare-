@@ -23,9 +23,22 @@ export const REFERRAL_KINDS = [
   "medication",
   "lgbtq",
   "deaf-hoh",
+  // Population services (content/populations links to these kinds); add a kind only with at least one entry.
+  "violence-and-abuse",
+  "perinatal",
+  "older-adults-and-caregivers",
+  "disability",
+  "basic-needs",
+  "indigenous",
 ] as const;
 export const ReferralKind = z.enum(REFERRAL_KINDS);
 export type ReferralKind = z.infer<typeof ReferralKind>;
+
+/**
+ * Kinds whose call and text buttons use the crisis colour (clinician directory and client help): 24/7 crisis
+ * lines, the Veterans Crisis Line group, the ASL crisis line and the violence and sexual assault hotlines.
+ */
+export const CRISIS_LIKE_KINDS: ReadonlySet<ReferralKind> = new Set(["crisis", "veterans", "deaf-hoh", "violence-and-abuse"]);
 
 const httpsUrl = z.url().refine((u) => u.startsWith("https://"), "https URLs only");
 

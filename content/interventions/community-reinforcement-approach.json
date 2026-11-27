@@ -1,0 +1,80 @@
+{
+  "id": "community-reinforcement-approach",
+  "name": "Community reinforcement approach (CRA) - overview and referral",
+  "modality": "Behavioral skills and community reinforcement for substance use",
+  "conditions": ["alcohol-use-disorder", "stimulant-use-disorder", "opioid-use-disorder", "cannabis-use-disorder"],
+  "evidenceLevel": "The VA/DoD 2021 substance use disorder guideline suggests (weak for) the community reinforcement approach for alcohol use disorder. A systematic review found strong evidence that CRA reduces drinking days compared with usual care (with conflicting evidence on continuous abstinence), strong evidence that CRA combined with abstinence-contingent incentives improves cocaine abstinence, and limited evidence of benefit in opioid detoxification and methadone programs (Roozen et al., 2004).",
+  "minutes": { "min": 10, "max": 20 },
+  "purpose": "The community reinforcement approach starts from a simple idea: people use less when a life without the substance offers more of what they value. Treatment maps when, where and why use happens and what it gives the person, and also what non-use already offers. It may invite a time-limited trial period without the substance, and then builds rewards that compete with use: work or study, relationships, recreation and social contacts that do not involve the substance, plus skills such as communication, problem-solving and refusing offers. It is often combined with medication and, for stimulants, with contingency management. This entry covers overview and referral only, and the time estimate is for that conversation. It contains no protocol materials and no fields for recording anyone's substance use.",
+  "steps": [
+    "Explain the approach in plain language: the goal is to build a satisfying life that makes using less appealing, not only to stop a behavior.",
+    "Explore what the client values in different areas of life (work, family, friends, health, fun, faith) and where they would most like things to change.",
+    "Discuss options: a program that offers the community reinforcement approach, contingency management (especially for stimulants), medication treatment where it fits (for example medications for alcohol or opioid use disorder), and mutual-help groups. Support an informed choice.",
+    "Check for medical safety needs, such as risk of withdrawal or overdose, and coordinate with medical providers. Make sure anyone using opioids knows about naloxone.",
+    "If you are not trained in the approach, refer to a program or clinician who is. Share information only with the client's written consent and in line with 42 CFR Part 2.",
+    "Meanwhile, support practical steps the client chooses, such as a job search, a new activity or reconnecting with someone supportive.",
+    "Follow up to confirm the referral was completed and the client was able to start."
+  ],
+  "script": [
+    "What would a really good week look like for you, a few months from now?",
+    "This approach works on building a life you enjoy, so that using has less pull.",
+    "Some people try a set period without using, just to see what it is like. It is your choice whether and how to try that.",
+    "There are also medicines and reward-based programs that help many people. We can look at those together.",
+    "Nothing you tell me about using goes into this app. Your records about this have extra legal protection."
+  ],
+  "contraindications": [
+    "Possible alcohol, sedative or benzodiazepine withdrawal can be dangerous and needs medical assessment. Do not encourage abrupt stopping without medical input.",
+    "Stopping or reducing opioids lowers tolerance and raises overdose risk. Make sure the client has naloxone, and do not advise changes to prescribed medications for opioid use disorder.",
+    "Where a partner is violent or controlling, relationship-focused parts of the approach need adapting and a safety plan comes first.",
+    "Current safety threats come first. This app does not judge risk; you do. Crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com.",
+    "Do not enter details about anyone's substance use into this app; nothing is stored or sent. Any note or export about substance use must carry this notice: 42 CFR Part 2 prohibits unauthorized use or disclosure of these records."
+  ],
+  "culturalAdaptations": [
+    "What counts as a rewarding life differs widely. Build the plan from the client's own values, family roles and community, not from a standard list of activities.",
+    "Clients facing unemployment, discrimination or unstable housing may need practical help with those barriers before new rewards are realistic.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "trainingRequired": "Community reinforcement approach: trained clinicians only. Deliver only after training in the approach with supervision or certification through the treatment developers' training program (Robert J. Meyers, PhD, and colleagues). Otherwise refer.",
+  "handoutIds": ["high-risk-situations-plan", "activity-ideas-menu"],
+  "orientationIds": ["behavior-therapy"],
+  "evidenceGrades": [
+    {
+      "body": "VA/DoD",
+      "guideline": "Management of Substance Use Disorders",
+      "year": 2021,
+      "conditionId": "alcohol-use-disorder",
+      "population": "Adults with alcohol use disorder",
+      "direction": "for",
+      "strength": "weak for (suggest)",
+      "url": "https://health.mil/Reference-Center/Publications/2021/04/26/PHCoE-Evidence-Brief-Community-Reinforcement-Approach-for-Alcohol-Use-Disorder-508"
+    }
+  ],
+  "sources": [
+    {
+      "title": "A systematic review of the effectiveness of the community reinforcement approach in alcohol, cocaine and opioid addiction (Roozen et al.)",
+      "publisher": "Drug and Alcohol Dependence (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15072802/",
+      "year": 2004
+    },
+    {
+      "title": "PHCoE Evidence Brief: Community Reinforcement Approach for Alcohol Use Disorder",
+      "publisher": "Psychological Health Center of Excellence, Defense Health Agency",
+      "url": "https://health.mil/Reference-Center/Publications/2021/04/26/PHCoE-Evidence-Brief-Community-Reinforcement-Approach-for-Alcohol-Use-Disorder-508",
+      "year": 2021
+    },
+    {
+      "title": "The management of substance use disorders: synopsis of the 2021 VA/DoD clinical practice guideline",
+      "publisher": "Annals of Internal Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35313113/",
+      "year": 2022
+    },
+    {
+      "title": "CRA and CRAFT training and certification",
+      "publisher": "Robert J. Meyers, PhD and Associates",
+      "url": "https://www.robertjmeyersphd.com"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

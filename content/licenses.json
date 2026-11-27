@@ -29,6 +29,8 @@
     "DAST-10": { "status": "pending", "terms": "Drug Abuse Screening Test (Skinner, 1982). Copyrighted; check permission for commercial software; link out only.", "source": "https://pubmed.ncbi.nlm.nih.gov/7183189/", "lastVerified": null },
     "COWS": { "status": "pending", "terms": "Clinical Opiate Withdrawal Scale (Wesson and Ling, 2003), clinician-rated. Terms for software use not confirmed; link out only.", "source": "https://pubmed.ncbi.nlm.nih.gov/12924748/", "lastVerified": null },
     "DSM-5-TR text": { "status": "not-licensed", "terms": "APA copyright. Software license required; no input into AI tools without written permission.", "source": "https://appi.org/customer-service/permissions", "lastVerified": "2026-11-26" },
-    "Wiley PracticePlanners": { "status": "not-licensed", "terms": "Wiley copyright; licensed commercially to EHRs.", "source": "https://www.wiley.com", "lastVerified": "2026-11-26" }
+    "Wiley PracticePlanners": { "status": "not-licensed", "terms": "Wiley copyright; licensed commercially to EHRs.", "source": "https://www.wiley.com", "lastVerified": "2026-11-26" },
+    "NCCN-DT": { "status": "pending", "terms": "NCCN Distress Thermometer and Problem List (National Comprehensive Cancer Network). NCCN restricts reproduction; terms for software use not confirmed; link out only.", "source": "https://pubmed.ncbi.nlm.nih.gov/9587123/", "lastVerified": null },
+    "DDS": { "status": "pending", "terms": "Diabetes Distress Scale (Polonsky et al., 2005). Copyright and terms for software use not confirmed; link out only.", "source": "https://pubmed.ncbi.nlm.nih.gov/15735199/", "lastVerified": null }
   }
 }

@@ -41,7 +41,8 @@
     "note": "If the client asks to include faith, explore how stories, values and community from their tradition support the identity they prefer, and look for unique outcomes linked to spiritual practices. Let the client name any spiritual meaning; do not assign one.",
     "consentNote": "Offer only if the client raises faith or spirituality and asks to include it. Before starting, explain what a faith-integrated approach involves, that it is optional, that the same intervention is available without religious content, and that the client can change their mind at any time; document the client's informed consent. Follow the client's own tradition and words, and never introduce, impose, endorse or challenge beliefs (AACC Code of Ethics: consent before spiritual interventions, client-led integration; ACA Code of Ethics 2014, A.2 informed consent and A.4.b personal values)."
   },
-  "handoutIds": ["values-compass", "coping-cards"],
+  "handoutIds": ["values-compass", "coping-cards", "my-story-in-my-words"],
+  "orientationIds": ["narrative-and-solution-focused-therapy"],
   "sources": [
     { "title": "Externalising Conversations (course on Michael White's narrative practice)", "publisher": "Dulwich Centre", "url": "https://dulwichcentre.com.au/courses/externalising-conversations/" },
     { "title": "Narrative therapy for adults with major depressive disorder: improved symptom and interpersonal outcomes (Vromans and Schweitzer)", "publisher": "Psychotherapy Research (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/20306354/" },

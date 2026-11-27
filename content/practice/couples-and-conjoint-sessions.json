@@ -1,0 +1,131 @@
+{
+  "id": "couples-and-conjoint-sessions",
+  "title": "Couples and conjoint sessions, with an abuse screen first",
+  "category": "formats-and-settings",
+  "summary": "How to set up couples or other conjoint sessions safely: a private screen of each partner for abuse and coercive control before any joint work, when joint sessions are not appropriate, a clear policy on secrets, and how to structure sessions.",
+  "whenToUse": [
+    "Before the first joint session with any couple.",
+    "When a client asks to bring a partner into individual therapy.",
+    "When relationship conflict, an affair, a new baby or illness is central to the presenting problem."
+  ],
+  "steps": [
+    {
+      "heading": "Screen each partner privately",
+      "items": [
+        "Meet each partner alone, at least briefly, before joint sessions, and do not tell one what the other said.",
+        "Ask about physical violence, threats, sexual coercion, monitoring, control of money or contact, and fear of the partner.",
+        "Ask about safety at home and whether a joint session could lead to harm afterward.",
+        "Use the intimate partner violence screening guide for wording and first-line support."
+      ]
+    },
+    {
+      "heading": "Decide whether joint work is safe",
+      "items": [
+        "Do not offer joint couples therapy while one partner fears the other or there is ongoing coercive control or serious violence.",
+        "Offer individual support and safety planning to the person at risk, and referral to specialist advocacy.",
+        "Refer a person using abusive behavior to a program that addresses it, rather than to couples therapy.",
+        "Re-screen privately if concerns appear later."
+      ]
+    },
+    {
+      "heading": "Agree a secrets policy",
+      "body": "Before any individual meeting, explain how you will handle information shared privately: many clinicians use a limited-secrets policy where a secret that undermines the joint work must be shared or the work stops. Whatever you choose, say it in advance and in writing."
+    },
+    {
+      "heading": "Structure joint sessions",
+      "items": [
+        "Agree on shared and individual goals.",
+        "Set ground rules for speaking and listening, and for stopping when things escalate.",
+        "Balance airtime and alliance with each partner.",
+        "Teach and practice communication and repair skills between sessions."
+      ]
+    }
+  ],
+  "prompts": [
+    "I meet with each partner alone for part of the assessment. Everything you tell me here stays here unless it involves a safety risk. Can I ask you some questions about how conflict goes at home?",
+    "Has your partner ever hurt you, threatened you, or made you afraid? Does your partner control your money, phone or who you see?",
+    "If we met together and talked about these things, could it lead to problems for you at home afterward?",
+    "Before we start, here is how I handle anything one of you tells me privately."
+  ],
+  "cautions": [
+    "Never ask about abuse with the other partner present.",
+    "Couples therapy is not a treatment for abuse and can increase risk when coercive control is present.",
+    "Be careful with what you write down or send; a partner may see records, messages or appointment reminders.",
+    "Mandatory reporting duties may apply, for example for abuse of a vulnerable adult; know your local rules.",
+    "Risk decisions remain with you and the client; no score or label decides them."
+  ],
+  "adaptations": [
+    {
+      "context": "Same-sex and gender-diverse couples",
+      "adaptation": "Screen for abuse in the same way; abuse occurs in all relationships, and outing threats can be a form of control."
+    },
+    {
+      "context": "Substance use",
+      "adaptation": "Behavioural couples therapy for alcohol use is not recommended where there is domestic abuse; screen first. Exports with substance-use content carry the Part 2 notice."
+    }
+  ],
+  "evidenceSummary": "The US Preventive Services Task Force (2018) recommends screening women of reproductive age for intimate partner violence and referring those who screen positive to ongoing support. NICE CG115 update information (2022) states that behavioural couples therapy for alcohol problems should not be offered where there is domestic abuse. A 2004 meta-analysis (Babcock, Green and Robie) found small effects of programs for men who use violence, underscoring the need for specialist programs rather than couples therapy. The AAMFT Code of Ethics (2015) addresses confidentiality with multiple clients.",
+  "forClinicianReview": true,
+  "crisisPanel": true,
+  "sud": true,
+  "relatedInterventionIds": [
+    "behavioral-couples-therapy",
+    "couples-relationship-skills",
+    "emotionally-focused-couples-work",
+    "ipv-safety-planning",
+    "communication-skills-training"
+  ],
+  "relatedHandoutIds": [
+    "couples-pause-and-repair",
+    "relationship-safety-help-card"
+  ],
+  "relatedFormulationIds": [
+    "five-ps-biopsychosocial-spiritual"
+  ],
+  "relatedLegalIds": [
+    "mandatory-reporting",
+    "multiple-relationships-and-boundaries",
+    "hipaa-privacy-basics",
+    "42-cfr-part-2"
+  ],
+  "relatedPracticeIds": [
+    "ipv-screening-and-first-line-support",
+    "involving-family-and-supports",
+    "alliance-and-rupture-repair"
+  ],
+  "relatedPopulationIds": [
+    "lgbtq-affirmative",
+    "sexual-violence-and-trafficking-survivors"
+  ],
+  "linkOuts": [],
+  "measuresPending": [],
+  "sources": [
+    {
+      "title": "Screening for intimate partner violence, elder abuse, and abuse of vulnerable adults: US Preventive Services Task Force final recommendation statement",
+      "publisher": "JAMA, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30357305/",
+      "year": 2018
+    },
+    {
+      "title": "Alcohol-use disorders (CG115): update information on behavioural couples therapy and domestic abuse",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/CG115/chapter/update-information",
+      "year": 2022
+    },
+    {
+      "title": "Does batterers' treatment work? A meta-analytic review of domestic violence treatment (Babcock, Green and Robie)",
+      "publisher": "Clinical Psychology Review, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/14729422/",
+      "year": 2004
+    },
+    {
+      "title": "AAMFT Code of Ethics",
+      "publisher": "American Association for Marriage and Family Therapy",
+      "url": "https://aamft.org/coe",
+      "year": 2015
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

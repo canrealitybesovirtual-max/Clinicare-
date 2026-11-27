@@ -1,0 +1,102 @@
+{
+  "id": "clinician-reactions-and-self-disclosure",
+  "title": "Clinician reactions, self-disclosure and immediacy",
+  "category": "relationship",
+  "summary": "Noticing and managing your own reactions to clients (countertransference), deciding when and how to disclose something about yourself, using immediacy (talking about what is happening between you), and knowing when to take it to supervision.",
+  "whenToUse": [
+    "When you notice a strong feeling about a client: boredom, irritation, protectiveness, attraction, fear or sadness.",
+    "When a client asks a personal question.",
+    "When something is happening in the relationship that is not being talked about."
+  ],
+  "steps": [
+    {
+      "heading": "Notice the reaction",
+      "body": "Name the feeling to yourself, and ask where it comes from: your own history, the client's way of relating, the situation, or a mix."
+    },
+    {
+      "heading": "Manage it",
+      "items": [
+        "Use self-reflection, supervision and your own support to understand the reaction.",
+        "Ask what the reaction might tell you about the client's relationships.",
+        "Avoid acting on it (rescuing, avoiding, punishing) without thinking first."
+      ]
+    },
+    {
+      "heading": "Decide about self-disclosure",
+      "items": [
+        "Ask whose need it meets. Disclose only to help the client.",
+        "Keep it brief, relevant and rare, then turn the focus back to the client.",
+        "Disclosing your reaction in the moment (immediacy) is usually more useful than personal history.",
+        "Do not disclose information that could burden the client or blur boundaries."
+      ]
+    },
+    {
+      "heading": "Use immediacy",
+      "body": "Talk about what is happening between you in the session: notice it, say it tentatively, invite the client's view, and connect it to their goals."
+    },
+    {
+      "heading": "Take it to supervision",
+      "body": "Strong or persistent reactions, any attraction, wishes to extend sessions or contact, or a reaction linked to your own current life events are reasons to consult."
+    }
+  ],
+  "prompts": [
+    "Right now, as you tell me this, I feel moved. I wonder what it is like for you to say it out loud.",
+    "I notice we keep moving away from the topic of your father. I wonder what is happening between us when we get close to it.",
+    "You asked whether I have children. I am happy to answer briefly, and I am curious what made you wonder.",
+    "Note to self before supervision: what was I feeling, when did it start, and what did I do with it?"
+  ],
+  "cautions": [
+    "Never act on attraction to a client; seek supervision promptly. Sexual relationships with clients are prohibited by every professional code.",
+    "Frequent or long self-disclosures shift the focus to you and can harm the alliance.",
+    "Be careful with disclosure about identity, religion or politics; think about how it may affect the client's freedom to disagree.",
+    "Clinician distress or burnout affects judgment; get your own support."
+  ],
+  "evidenceSummary": "A 2018 meta-analysis (Hayes, Gelso, Goldberg and Kivlighan) found that managing countertransference is associated with better outcomes and that acting out countertransference is associated with worse ones. A 2018 qualitative meta-analysis (Hill, Knox and Pinto-Coelho) found that infrequent, client-focused self-disclosure and immediacy were often experienced as helpful. The Norcross and Lambert task force (2018) summarizes these relationship elements.",
+  "forClinicianReview": true,
+  "crisisPanel": false,
+  "sud": false,
+  "relatedInterventionIds": [
+    "short-term-psychodynamic-exploration",
+    "person-centered-reflective-listening"
+  ],
+  "relatedHandoutIds": [],
+  "relatedFormulationIds": [
+    "psychodynamic-ccrt"
+  ],
+  "relatedLegalIds": [
+    "multiple-relationships-and-boundaries",
+    "clinician-wellbeing-and-impairment",
+    "touch-and-body-based-work"
+  ],
+  "relatedPracticeIds": [
+    "supervision-and-consultation",
+    "alliance-and-rupture-repair",
+    "multicultural-orientation-and-broaching"
+  ],
+  "relatedPopulationIds": [],
+  "linkOuts": [],
+  "measuresPending": [],
+  "sources": [
+    {
+      "title": "Countertransference management and effective psychotherapy: meta-analytic findings (Hayes, Gelso, Goldberg and Kivlighan)",
+      "publisher": "Psychotherapy, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30335461/",
+      "year": 2018
+    },
+    {
+      "title": "Therapist self-disclosure and immediacy: a qualitative meta-analysis (Hill, Knox and Pinto-Coelho)",
+      "publisher": "Psychotherapy, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30335457/",
+      "year": 2018
+    },
+    {
+      "title": "Psychotherapy relationships that work III (Norcross and Lambert)",
+      "publisher": "Psychotherapy, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30335448/",
+      "year": 2018
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

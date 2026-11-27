@@ -1,0 +1,207 @@
+{
+  "id": "work-stress-and-return-to-work",
+  "title": "Work stress, burn-out and return to work",
+  "summary": "For long-term work stress and burn-out (an occupational phenomenon in ICD-11, not a mental disorder) and for planning a graded return to work after health-related leave. Screen first for conditions that need their own plan.",
+  "appliesTo": "any",
+  "problems": [
+    {
+      "id": "work-burnout",
+      "label": "Exhaustion and distance from work after long-term work stress",
+      "definitions": [
+        "Feels drained most of the time, more cynical or detached about work, and less effective, and links this to ongoing work demands.",
+        "Works long or unpredictable hours, takes little leave, or has high demands with little control or support."
+      ],
+      "longTermGoals": [
+        "The client recovers energy, has clearer limits around work, and any condition that needs its own plan is identified and addressed."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "work-screen-first",
+          "text": "At intake, screen for depression, anxiety and sleep problems with the PHQ-9, the GAD-7 and a sleep review, and add or switch to the matching plan library if one fits, since burn-out is a work-related state rather than a mental disorder.",
+          "interventionIds": []
+        },
+        {
+          "id": "work-demands-map",
+          "text": "By session 3, map work demands, control, support, reward and fairness with the client, and choose 1 or 2 areas where change is within reach.",
+          "interventionIds": [
+            "problem-solving"
+          ],
+          "targets": [
+            "structural-stressors"
+          ],
+          "step": "low-intensity"
+        },
+        {
+          "id": "work-limits",
+          "text": "Over weeks 3 to 8, keep at least 2 limits on work time (for example a fixed finish time, or no work messages after a set hour) on at least 4 days a week, and rate energy (0-10) at the end of each week.",
+          "interventionIds": [
+            "assertiveness-training",
+            "behavioral-activation"
+          ],
+          "targets": [
+            "structural-stressors",
+            "coping-skills"
+          ],
+          "step": "low-intensity"
+        },
+        {
+          "id": "work-recovery",
+          "text": "By week 4, schedule at least 3 recovery activities a week outside work (rest, movement, time with people or hobbies) and track them.",
+          "interventionIds": [
+            "behavioral-activation",
+            "physical-activity"
+          ],
+          "targets": [
+            "low-reward-engagement"
+          ],
+          "step": "low-intensity"
+        },
+        {
+          "id": "work-stress-skills",
+          "text": "Over weeks 3 to 10, learn and use at least 1 stress-management skill (for example applied relaxation or structured problem solving) during work stress at least 3 times a week.",
+          "interventionIds": [
+            "applied-relaxation",
+            "stress-inoculation-training",
+            "problem-solving"
+          ],
+          "targets": [
+            "coping-skills"
+          ],
+          "step": "low-intensity"
+        }
+      ],
+      "measureIds": [
+        "phq-9",
+        "gad-7"
+      ],
+      "zCodes": [
+        {
+          "code": "Z73.0",
+          "label": "Burn-out"
+        },
+        {
+          "code": "Z56.3",
+          "label": "Stressful work schedule"
+        },
+        {
+          "code": "Z56.6",
+          "label": "Other physical and mental strain related to work"
+        }
+      ]
+    },
+    {
+      "id": "work-return",
+      "label": "Time off work for health reasons, with a planned return",
+      "definitions": [
+        "Is on sick leave or reduced duties because of mental health and is unsure how or when to return.",
+        "Worries about how colleagues or managers will react, or whether the job can be adjusted."
+      ],
+      "longTermGoals": [
+        "The client returns to work, or to another valued role, in a planned, graded way with any adjustments they need."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "rtw-keep-in-touch",
+          "text": "By week 2, agree with the client how and when they want to keep in touch with the workplace during leave, and who the contact person will be.",
+          "interventionIds": [],
+          "targets": [
+            "strengths-and-supports"
+          ]
+        },
+        {
+          "id": "rtw-graded-plan",
+          "text": "By week 4, write a graded return plan with the client (for example reduced hours or duties rising over 4 to 8 weeks), to share with the employer or occupational health only with the client's consent.",
+          "interventionIds": [
+            "problem-solving",
+            "behavioral-activation"
+          ],
+          "targets": [
+            "avoidance-escape"
+          ],
+          "step": "low-intensity"
+        },
+        {
+          "id": "rtw-adjustments",
+          "text": "Before the return date, decide with the client whether to ask for workplace adjustments (for example a changed schedule, a quieter space or extra breaks) and, if they ask, provide a brief letter that describes functional needs without diagnosis details (the accommodation letter tool can help).",
+          "interventionIds": [],
+          "targets": [
+            "structural-stressors"
+          ]
+        },
+        {
+          "id": "rtw-early-review",
+          "text": "During the first 4 weeks back, review progress every 1 to 2 weeks and adjust the plan if symptoms come back.",
+          "interventionIds": [],
+          "targets": [
+            "coping-skills"
+          ]
+        }
+      ],
+      "measureIds": [
+        "phq-9",
+        "gad-7"
+      ],
+      "handoutIds": [
+        "asking-for-changes-at-work"
+      ],
+      "linkOuts": [
+        {
+          "title": "Job Accommodation Network",
+          "publisher": "Job Accommodation Network (US Department of Labor)",
+          "url": "https://askjan.org/"
+        },
+        {
+          "title": "The mental health provider's role in a client's request for a reasonable accommodation at work",
+          "publisher": "US Equal Employment Opportunity Commission",
+          "url": "https://www.eeoc.gov/laws/guidance/mental-health-providers-role-clients-request-reasonable-accommodation-work"
+        }
+      ]
+    }
+  ],
+  "collaborativeNote": "Work changes are the client's decision. Share information with an employer or occupational health only with the client's written consent, and only what the request needs. Do not add names or other identifying details. Resource only. Not a substitute for clinical judgment.",
+  "sources": [
+    {
+      "title": "WHO guidelines on mental health at work",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/publications/i/item/9789240053052",
+      "year": 2022
+    },
+    {
+      "title": "Burn-out an occupational phenomenon: International Classification of Diseases",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/news/item/28-05-2019-burn-out-an-occupational-phenomenon-international-classification-of-diseases",
+      "year": 2019
+    },
+    {
+      "title": "Preventing occupational stress in healthcare workers (Ruotsalainen et al.)",
+      "publisher": "Cochrane Database of Systematic Reviews (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25847433/",
+      "year": 2015
+    },
+    {
+      "title": "Workplace health: long-term sickness absence and capability to work (NG146)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng146",
+      "year": 2019
+    },
+    {
+      "title": "Interventions to improve return to work in depressed people (Nieuwenhuijsen et al.)",
+      "publisher": "Cochrane Database of Systematic Reviews (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33052607/",
+      "year": 2020
+    },
+    {
+      "title": "The mental health provider's role in a client's request for a reasonable accommodation at work",
+      "publisher": "US Equal Employment Opportunity Commission",
+      "url": "https://www.eeoc.gov/laws/guidance/mental-health-providers-role-clients-request-reasonable-accommodation-work"
+    },
+    {
+      "title": "PHQ and GAD-7 screeners (reproduction terms)",
+      "publisher": "Pfizer / PHQ Screeners",
+      "url": "https://www.phqscreeners.com"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

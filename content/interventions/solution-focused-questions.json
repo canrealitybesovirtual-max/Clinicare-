@@ -43,6 +43,7 @@
     "consentNote": "Offer only if the client raises faith or spirituality and asks to include it. Before starting, explain what a faith-integrated approach involves, that it is optional, that the same intervention is available without religious content, and that the client can change their mind at any time; document the client's informed consent. Follow the client's own tradition and words, and never introduce, impose, endorse or challenge beliefs (AACC Code of Ethics: consent before spiritual interventions, client-led integration; ACA Code of Ethics 2014, A.2 informed consent and A.4.b personal values)."
   },
   "handoutIds": ["values-compass", "coping-cards"],
+  "orientationIds": ["narrative-and-solution-focused-therapy"],
   "sources": [
     { "title": "Effectiveness of solution-focused brief therapy: a systematic qualitative review of controlled outcome studies (Gingerich and Peterson)", "publisher": "Research on Social Work Practice (SAGE)", "url": "https://staticssl.sagepub.com/sites/default/files/Gingerich%20and%20Peterson%20%282013%29%20Effectiveness%20of%20solution-focused%20brief%20therapy.pdf", "year": 2013 },
     { "title": "Effectiveness of solution-focused brief therapy: an umbrella review of systematic reviews and meta-analyses", "publisher": "Psychotherapy Research", "url": "https://doi.org/10.1080/10503307.2024.2406540", "year": 2024 },

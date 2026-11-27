@@ -1,0 +1,183 @@
+{
+  "id": "substance-use-as-coping",
+  "title": "Alcohol or other substances used to cope",
+  "summary": "For plans that are not substance-use plans, when the client uses alcohol or other substances to manage mood, anxiety, trauma reminders or sleep. Every item records substance use, so any export that includes one carries the 42 CFR Part 2 notice.",
+  "appliesTo": "any",
+  "problems": [
+    {
+      "id": "suc-coping-with-substances",
+      "label": "Using alcohol or other substances to manage feelings or sleep",
+      "definitions": [
+        {
+          "text": "Drinks or uses other substances to calm down, numb feelings, shut out memories or get to sleep, on several days a week.",
+          "sud": true
+        },
+        {
+          "text": "Notices that use goes up when mood, anxiety or sleep gets worse, and that mood or anxiety is often worse the next day.",
+          "sud": true
+        },
+        {
+          "text": "Has mixed feelings about cutting down and has not yet looked at the pattern with the clinician.",
+          "sud": true
+        }
+      ],
+      "longTermGoals": [
+        {
+          "text": "The client understands how substance use and their main difficulties feed each other, chooses a personal goal for use, and has other ways of coping that work for them.",
+          "sud": true
+        }
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "suc-screen",
+          "text": "At intake and at each plan review, the clinician asks about alcohol and other substance use with a brief validated screen and talks through the results with the client. The answers are not entered into this tool.",
+          "interventionIds": [
+            "brief-alcohol-intervention"
+          ],
+          "sud": true,
+          "targets": [
+            "urges-and-impulsivity"
+          ],
+          "step": "low-intensity"
+        },
+        {
+          "id": "suc-withdrawal-safety",
+          "text": "Before any plan to stop or sharply cut down, the clinician checks for risk of dangerous withdrawal (for example daily heavy drinking, regular sedative use, or past seizures or severe withdrawal) and arranges a medical review when it is present.",
+          "interventionIds": [
+            "medication-referral"
+          ],
+          "sud": true,
+          "targets": [
+            "physical-health-burden"
+          ]
+        },
+        {
+          "id": "suc-function",
+          "text": "By week 3, map at least 3 recent times of use: the feeling or situation just before, what the substance did in the short term, and what happened afterwards, to see what the use does for the client.",
+          "interventionIds": [
+            "motivational-interviewing",
+            "behavioral-chain-analysis"
+          ],
+          "sud": true,
+          "targets": [
+            "experiential-avoidance",
+            "urges-and-impulsivity"
+          ],
+          "step": "low-intensity"
+        },
+        {
+          "id": "suc-goal",
+          "text": "By session 4, the client chooses a goal for use in their own words (for example stopping, cutting down to set limits, or not using to get to sleep), with reasons that matter to them.",
+          "interventionIds": [
+            "motivational-interviewing",
+            "decisional-balance"
+          ],
+          "sud": true,
+          "targets": [
+            "hope-and-motivation",
+            "values-and-meaning"
+          ],
+          "step": "low-intensity"
+        },
+        {
+          "id": "suc-alternatives",
+          "text": "Over weeks 3 to 10, use at least 2 substance-free ways of coping (for example urge surfing, a grounding skill, a call to a support person or the sleep routine) during at least 3 urges a week, and note what happened.",
+          "interventionIds": [
+            "urge-surfing",
+            "dbt-distress-tolerance"
+          ],
+          "sud": true,
+          "targets": [
+            "coping-skills",
+            "urges-and-impulsivity"
+          ],
+          "step": "low-intensity"
+        },
+        {
+          "id": "suc-step-up",
+          "text": "If use does not change or is causing harm, discuss by week 8 integrated treatment for both concerns or a referral to substance-use care, including medication options and mutual-help groups, and agree on next steps.",
+          "interventionIds": [
+            "integrated-ptsd-sud-treatment",
+            "medication-referral",
+            "twelve-step-and-mutual-help-facilitation"
+          ],
+          "sud": true,
+          "targets": [
+            "urges-and-impulsivity"
+          ],
+          "step": "specialist"
+        }
+      ],
+      "measureIds": [],
+      "handoutIds": [
+        "substance-use-diary",
+        "high-risk-situations-plan",
+        "cutting-down-alcohol-safely",
+        "mutual-help-options"
+      ],
+      "linkOuts": [
+        {
+          "title": "SAMHSA National Helpline",
+          "publisher": "Substance Abuse and Mental Health Services Administration",
+          "url": "https://www.samhsa.gov/find-help/helplines/national-helpline"
+        },
+        {
+          "title": "FindTreatment.gov",
+          "publisher": "Substance Abuse and Mental Health Services Administration",
+          "url": "https://findtreatment.gov"
+        }
+      ]
+    }
+  ],
+  "collaborativeNote": "Ask about substance use in a matter-of-fact, non-judgmental way and let the client choose the goal. Check for withdrawal risk before any plan to stop. Record only what the plan needs; no amounts, dates or other details are entered in this tool. 42 CFR Part 2 prohibits unauthorized use or disclosure of these records. Do not add names or other identifying details. Resource only. Not a substitute for clinical judgment.",
+  "sud": true,
+  "sources": [
+    {
+      "title": "Screening and Behavioral Counseling Interventions to Reduce Unhealthy Alcohol Use in Adolescents and Adults: US Preventive Services Task Force Recommendation Statement",
+      "publisher": "JAMA (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30422199/",
+      "year": 2018
+    },
+    {
+      "title": "TIP 35: Enhancing Motivation for Change in Substance Use Disorder Treatment",
+      "publisher": "Substance Abuse and Mental Health Services Administration",
+      "url": "https://store.samhsa.gov/product/tip-35-enhancing-motivation-change-substance-use-disorder-treatment/pep19-02-01-003"
+    },
+    {
+      "title": "TIP 42: Substance Use Treatment for Persons With Co-Occurring Disorders",
+      "publisher": "Substance Abuse and Mental Health Services Administration",
+      "url": "https://store.samhsa.gov/product/tip-42-substance-use-treatment-persons-co-occurring-disorders/pep20-02-01-004"
+    },
+    {
+      "title": "NIAAA Alcohol Treatment Navigator and Core Resource on Alcohol",
+      "publisher": "National Institute on Alcohol Abuse and Alcoholism",
+      "url": "https://niaaa.nih.gov/health-professionals-communities/core-resource-on-alcohol"
+    },
+    {
+      "title": "Efficacy of Integrated Exposure Therapy vs Integrated Coping Skills Therapy for Comorbid Posttraumatic Stress Disorder and Alcohol Use Disorder: A Randomized Clinical Trial (Norman et al.)",
+      "publisher": "JAMA Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31017639/",
+      "year": 2019
+    },
+    {
+      "title": "Alcohol-use disorders: diagnosis, assessment and management of harmful drinking (high-risk drinking) and alcohol dependence (CG115)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg115",
+      "year": 2011
+    },
+    {
+      "title": "VA/DoD Clinical Practice Guideline for the Management of Substance Use Disorders: Provider Summary",
+      "publisher": "US Department of Veterans Affairs and Department of Defense",
+      "url": "https://www.healthquality.va.gov/guidelines/MH/sud/VADoDSUDCPGProviderSummary.pdf",
+      "year": 2021
+    },
+    {
+      "title": "42 CFR Part 2: Confidentiality of Substance Use Disorder Patient Records",
+      "publisher": "Electronic Code of Federal Regulations",
+      "url": "https://www.ecfr.gov/current/title-42/chapter-I/subchapter-A/part-2"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

@@ -1,0 +1,78 @@
+{
+  "id": "intellectual-disability",
+  "name": "Adults with intellectual disability",
+  "group": "disability-and-communication",
+  "summary": "Adapting therapy for adults with mild to moderate intellectual disability: simpler language and visual aids, shorter and repeated sessions, a supporter with consent, checking capacity to consent, acquiescence on self-report, and Easy Read materials.",
+  "scopeNote": "For adults (18 and over). The app never asks for or saves a diagnosis, IQ or support level. Capacity to consent is judged by a clinician for each decision, and supporters join only with the person's agreement.",
+  "whyItMatters": "Adults with intellectual disability have high rates of anxiety, depression and trauma, but are often excluded from therapy or have distress put down to their disability. NICE NG54 (2016) recommends adapted psychological interventions, accessible information, involving family members and carers with the person's agreement, and checking for physical health causes of changes in behavior or mood. The trial evidence is still small: a 2016 meta-analysis of 12 studies found no compelling evidence for any one intervention and called for larger trials, while noting that some approaches are promising (Koslowski and colleagues, 2016). Adults with intellectual impairments also face a raised risk of violence (Hughes and colleagues, 2012).",
+  "askAbout": [
+    "How do you like people to explain things to you: talking, pictures, writing or showing?",
+    "Who helps you in your everyday life, and would you like them to come to some sessions?",
+    "What would you like to be different in your life?",
+    "Is there anything you do not want me to tell the people who support you?",
+    "Does anyone hurt you, frighten you, or take your money or things?",
+    "Can you tell me in your own words what we agreed to do this week?"
+  ],
+  "stereotypeCaution": "People with intellectual disability have their own preferences, relationships, sexuality, goals and opinions, and can make many decisions for themselves with the right support. Do not assume what someone understands or wants from their label, and do not speak about them to a supporter as if they were not there.",
+  "keyConsiderations": [
+    "Watch for diagnostic overshadowing: a change in behavior, mood or sleep may be distress, pain, illness, a medicine effect or abuse, not part of the disability.",
+    "Communication needs vary; some people use words, signs, symbols or devices. Learn the person's own way of communicating.",
+    "Acquiescence, a tendency to agree or say yes to please, can affect answers; use open questions, either-or choices and checks in the person's own words.",
+    "Capacity to consent is decision-specific. Support the person to decide, using simple information and time, before concluding they cannot.",
+    "Family members and paid carers can be important partners, but confidentiality still applies; agree with the person what will be shared.",
+    "People with intellectual disability may depend on others for care, which raises the risk of abuse and exploitation; know your reporting duties."
+  ],
+  "assessmentAdaptations": [
+    "Use short sentences, one question at a time, concrete examples and pictures or symbols where helpful.",
+    "Ask the person first, then, with consent, add information from people who know them well, and notice where the views differ.",
+    "Ask about physical health, pain, sleep, medicines and recent changes in routine, staff or living situation.",
+    "Allow extra time, more than one meeting, and a familiar setting when possible."
+  ],
+  "sessionAdaptations": [
+    "Keep sessions shorter and more frequent, with a predictable routine and frequent repetition of key ideas.",
+    "Use visual aids: feelings pictures, simple scales, timelines, role play and photos of practice tasks.",
+    "Use Easy Read handouts, and check understanding with teach-back rather than asking whether the person understood.",
+    "With consent, involve a supporter to help practise skills between sessions, and agree what they will and will not do."
+  ],
+  "interventionNotes": [
+    { "interventionId": "behavioral-activation", "note": "Use pictures of chosen activities and a simple visual schedule; plan with the person and, if they agree, their supporter." },
+    { "interventionId": "diaphragmatic-breathing", "note": "Teach with demonstration and a visual cue, such as breathing in for a count while watching a picture; practise in every session." },
+    { "interventionId": "problem-solving", "note": "Use fewer steps with pictures, and practise with the person's real problems." },
+    { "interventionId": "collaborative-safety-planning", "note": "Use the Easy Read safety plan, with pictures and the names of real people the person can contact." },
+    { "orientationId": "behavior-therapy", "note": "Functional analysis, done with the person and their supporters, helps explain what a behavior communicates or achieves before any plan to change it." }
+  ],
+  "measureNotes": [
+    "The PHQ-9 and GAD-7 were not designed for adults with intellectual disability; read items aloud in simpler words, use a visual response scale, and treat results with caution.",
+    "Acquiescence can inflate or flatten scores; check a few answers with open questions and examples.",
+    "Observed changes in sleep, appetite, activity and behavior, reported by people who know the person, are important alongside self-report."
+  ],
+  "measuresPending": [],
+  "safetyNotes": [
+    "Ask about thoughts of self-harm and suicide in simple, direct words; do not assume they are absent because of the disability.",
+    "Signs of abuse, neglect or exploitation call for action under your local adult safeguarding or reporting rules."
+  ],
+  "cautions": [
+    "Facilitated communication, in which another person guides the hand of someone who uses a keyboard or letter board, is not a valid way to obtain the person's own words."
+  ],
+  "legalIds": ["decision-making-capacity", "mandatory-reporting", "digital-accessibility"],
+  "ethicsIds": [],
+  "referralIds": ["988-lifeline", "job-accommodation-network"],
+  "referralKinds": ["disability"],
+  "handoutIds": ["safety-plan-easy-read", "breathing-and-grounding-easy-read", "sleep-habits-easy-read", "session-check-in-card"],
+  "topicIds": ["disability-and-wellbeing"],
+  "practiceIds": ["teach-back-and-plain-language", "involving-family-and-supports", "between-session-practice", "diagnostic-reasoning-checks"],
+  "formulationIds": ["functional-analysis"],
+  "linkOuts": [
+    { "title": "Mental health problems in people with learning disabilities: prevention, assessment and management (NG54)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng54", "lastVerified": "2026-11-27" },
+    { "title": "Developmental Disabilities", "publisher": "MedlinePlus (U.S. National Library of Medicine)", "url": "https://medlineplus.gov/developmentaldisabilities.html", "lastVerified": "2026-11-27" }
+  ],
+  "sud": false,
+  "sources": [
+    { "title": "Mental health problems in people with learning disabilities: prevention, assessment and management (NG54)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng54", "year": 2016 },
+    { "title": "Effectiveness of interventions for adults with mild to moderate intellectual disabilities and mental health problems: systematic review and meta-analysis (Koslowski and colleagues)", "publisher": "British Journal of Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/27198481/", "year": 2016 },
+    { "title": "Prevalence and risk of violence against adults with disabilities: a systematic review and meta-analysis of observational studies (Hughes and colleagues)", "publisher": "Lancet (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/22377290/", "year": 2012 }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

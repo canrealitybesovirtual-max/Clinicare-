@@ -1,0 +1,121 @@
+{
+  "id": "racing-mind-at-bedtime",
+  "title": "Quieting a Racing Mind at Bedtime",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 10,
+  "intro": "Many people find that the moment they lie down, their mind speeds up. Plans, worries, and replays of the day start to spin. This sheet gives you steps for the evening, steps for when you are in bed, and ways to let go of the effort to sleep. It takes about 10 minutes to read.",
+  "sections": [
+    {
+      "heading": "Early evening: put the day to bed",
+      "body": "Set aside 15 to 20 minutes in the early evening, at least 1 to 2 hours before bed. Sit at a table, not in bed.",
+      "steps": [
+        "Write down what is on your mind: tasks, worries, and anything left undone.",
+        "For each one, write a next step and when you will do it. Or write 'nothing to do tonight.'",
+        "Close the notebook. Tell yourself, 'That's been dealt with for today.'",
+        "If a worry comes up later in bed, remind yourself that it is on the list for tomorrow."
+      ]
+    },
+    {
+      "heading": "Make a calm zone before bed",
+      "body": "Spend the last 30 to 60 minutes before bed doing calm things in dim light. Read something light, listen to quiet music, stretch, or take a warm shower. Put away work, hard talks, and bright screens."
+    },
+    {
+      "heading": "Catch scary thoughts about sleep",
+      "body": "Thoughts like 'If I don't sleep, tomorrow will be a disaster' set off your alarm and keep you awake. Notice them, and try a calmer thought that is also true.",
+      "steps": [
+        "'I've had bad nights before, and I still got through the next day.'",
+        "'Resting quietly is still good for my body.'",
+        "'One bad night does not mean every night will be bad.'"
+      ]
+    },
+    {
+      "heading": "In bed: let go of the effort",
+      "steps": [
+        "Stop trying to fall asleep. Lie quietly and let sleep come when it is ready.",
+        "Turn the clock away. Checking the time adds pressure.",
+        "Give your mind something gentle to do, like picturing a calm place in detail, or slowly naming one food for each letter of the alphabet.",
+        "If you are still awake after what feels like a while, get up and go to another room. Do something calm in dim light, and go back to bed when you feel sleepy."
+      ]
+    },
+    {
+      "heading": "Keep going",
+      "body": "These steps work best when you use them every night for a few weeks. Your mind learns that bedtime is for rest, not for solving problems."
+    }
+  ],
+  "practiceLog": {
+    "columns": ["Day", "Did my evening list? (yes / no)", "Thoughts in bed", "What I tried", "Time to fall asleep (about)"],
+    "rows": 7
+  },
+  "safetyNote": "Safety first: If a worry at night is about your safety right now, get help now instead of waiting. If you feel very sleepy in the day, do not drive or use machines. This sheet is not for emergencies. If you have thoughts of hurting yourself or someone else, call or text 988 in the US, or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "es": {
+    "title": "Calmar la mente acelerada a la hora de dormir",
+    "intro": "Muchas personas notan que en cuanto se acuestan, su mente se acelera. Los planes, las preocupaciones y el repaso del día empiezan a dar vueltas. Esta hoja le da pasos para la tarde, pasos para cuando está en la cama y formas de dejar de esforzarse por dormir. Leerla toma unos 10 minutos.",
+    "sections": [
+      {
+        "heading": "Temprano en la tarde: cierre el día",
+        "body": "Aparte de 15 a 20 minutos temprano en la tarde, por lo menos de 1 a 2 horas antes de acostarse. Siéntese en una mesa, no en la cama.",
+        "steps": [
+          "Escriba lo que tiene en la mente: tareas, preocupaciones y cosas sin terminar.",
+          "Para cada una, escriba un siguiente paso y cuándo lo hará. O escriba 'nada que hacer esta noche'.",
+          "Cierre el cuaderno. Dígase: 'Por hoy, eso ya está atendido'.",
+          "Si más tarde le llega una preocupación en la cama, recuérdese que está en la lista para mañana."
+        ]
+      },
+      {
+        "heading": "Prepare un rato tranquilo antes de dormir",
+        "body": "Pase los últimos 30 a 60 minutos antes de acostarse haciendo cosas tranquilas con poca luz. Lea algo ligero, escuche música suave, estírese o dese una ducha tibia. Deje a un lado el trabajo, las conversaciones difíciles y las pantallas brillantes."
+      },
+      {
+        "heading": "Atrape los pensamientos que asustan sobre el sueño",
+        "body": "Pensamientos como 'Si no duermo, mañana será un desastre' encienden su alarma y le mantienen despierto. Fíjese en ellos, y pruebe un pensamiento más tranquilo que también sea cierto.",
+        "steps": [
+          "'He tenido malas noches antes, y aun así pude con el día siguiente'.",
+          "'Descansar en silencio también le hace bien a mi cuerpo'.",
+          "'Una mala noche no significa que todas las noches serán malas'."
+        ]
+      },
+      {
+        "heading": "En la cama: deje de esforzarse",
+        "steps": [
+          "Deje de intentar dormirse. Quédese quieto y deje que el sueño llegue cuando esté listo.",
+          "Voltee el reloj. Mirar la hora agrega presión.",
+          "Dele a su mente algo suave que hacer, como imaginar con detalle un lugar tranquilo, o nombrar despacio una comida para cada letra del abecedario.",
+          "Si sigue despierto después de lo que parece un buen rato, levántese y vaya a otro cuarto. Haga algo tranquilo con poca luz, y vuelva a la cama cuando tenga sueño."
+        ]
+      },
+      {
+        "heading": "Siga adelante",
+        "body": "Estos pasos funcionan mejor cuando los usa todas las noches durante unas semanas. Su mente aprende que la hora de dormir es para descansar, no para resolver problemas."
+      }
+    ],
+    "practiceLog": {
+      "columns": ["Día", "¿Hice mi lista de la tarde? (sí / no)", "Pensamientos en la cama", "Lo que probé", "Tiempo para dormirme (más o menos)"]
+    },
+    "safetyNote": "La seguridad es lo primero: Si una preocupación de noche es sobre su seguridad ahora mismo, busque ayuda ahora en vez de esperar. Si tiene mucho sueño de día, no maneje ni use máquinas. Esta hoja no es para emergencias. Si tiene pensamientos de hacerse daño o de hacerle daño a otra persona, llame o envíe un mensaje de texto al 988 en EE. UU., o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "sources": [
+    {
+      "title": "Behavioral and psychological treatments for chronic insomnia disorder in adults: an American Academy of Sleep Medicine clinical practice guideline (Edinger et al.)",
+      "publisher": "Journal of Clinical Sleep Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33164742/",
+      "year": 2021
+    },
+    {
+      "title": "A preliminary investigation of stimulus control training for worry (McGowan & Behar)",
+      "publisher": "Behavior Modification (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22977265/",
+      "year": 2013
+    },
+    {
+      "title": "Behavioral and Psychological Treatments for Insomnia: patient guide",
+      "publisher": "American Academy of Sleep Medicine",
+      "url": "https://aasm.org/wp-content/uploads/2021/08/Behavioral-and-Psychological-Treatments-for-Insomnia-Patient-Guide.pdf",
+      "year": 2021
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

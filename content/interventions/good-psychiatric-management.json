@@ -1,0 +1,81 @@
+{
+  "id": "good-psychiatric-management",
+  "name": "Good psychiatric management (GPM) for borderline personality disorder",
+  "modality": "Generalist psychiatric management - psychodynamically informed",
+  "conditions": [
+    "borderline-personality-disorder"
+  ],
+  "evidenceLevel": "In a randomized trial of 180 adults with borderline personality disorder (McMain et al., 2009), general psychiatric management led to improvements in suicidal and self-harm episodes, emergency visits and symptoms similar to DBT over one year. John Gunderson later refined it as a generalist model (review: Gunderson and Masland, 2018). NICE CG78 stresses structured, consistent care for borderline personality disorder.",
+  "minutes": {
+    "min": 30,
+    "max": 50
+  },
+  "purpose": "A practical, generalist approach to borderline personality disorder that clinicians without specialist therapy training can use. It combines honest psychoeducation about the condition and its often good long-term course, a focus on life outside therapy (work, school, relationships), case management, an active and supportive stance, and a shared understanding of interpersonal hypersensitivity: feeling connected is steadying, while feeling rejected or alone can quickly lead to anger, self-harm or dissociation. Medication is used cautiously, mainly for co-occurring conditions.",
+  "steps": [
+    "Discuss the working diagnosis openly (the clinician decides any diagnosis), and explain that many people improve substantially over time.",
+    "Introduce the interpersonal hypersensitivity model with the client's own examples: connection, then perceived rejection or threat, then anger or self-harm, then aloneness.",
+    "Set expectations: a practical, goal-focused treatment, with life outside treatment, especially work or school, as the main priority.",
+    "Take an active, thoughtful, supportive stance: express concern, check your understanding, and admit mistakes.",
+    "Make a collaborative safety plan for self-harm and suicidal crises. Respond with concern and practical steps rather than automatic escalation, using your clinical judgment about safety (this app does not assess or decide risk).",
+    "Use medication cautiously, as an adjunct, and avoid piling up medicines; coordinate with prescribers.",
+    "With consent, involve family through psychoeducation; consider adding a group or specialist therapy if progress stalls over several months.",
+    "Review progress against life goals regularly and adjust the plan."
+  ],
+  "script": [
+    "Borderline personality disorder is a name for patterns many people recognize. It's treatable, and most people get much better over time.",
+    "It sounds like when you felt close to him, things were steadier, and when he didn't text back, it felt like rejection, and things got scary fast.",
+    "What would it look like to have a job or a class that gives your week some shape?",
+    "Let's make a plan together for what you'll do the next time the urge to hurt yourself comes up.",
+    "I may get things wrong sometimes. If I do, I want you to tell me."
+  ],
+  "contraindications": [
+    "This app does not assess or decide risk. When self-harm or suicidal thoughts come up, follow your setting's risk-assessment and safety-planning procedures. Keep crisis options visible: 988 Suicide & Crisis Lifeline (US, call or text), the local emergency number, and findahelpline.com.",
+    "GPM is a generalist approach. If there is little progress after several months, or self-harm is frequent or severe, consider a specialist therapy such as DBT or MBT.",
+    "Avoid making medication the main treatment, and be cautious with medicines that are dangerous in overdose.",
+    "Check for co-occurring conditions (substance use, eating disorders, PTSD, depression) that may need their own treatment."
+  ],
+  "culturalAdaptations": [
+    "The label carries strong stigma in some communities. Explain it in plain language focused on patterns and hope, and let the client decide how to talk about it with others.",
+    "Interpersonal sensitivity may be heightened by real experiences of rejection, racism or exclusion; acknowledge them.",
+    "Work and family roles vary; set 'life outside therapy' goals with the client in their cultural context.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "trainingRequired": "GPM: designed for generalist clinicians; a short course (for example, through the Gunderson Personality Disorders Institute at McLean Hospital) is recommended before using it as a treatment model.",
+  "handoutIds": [
+    "what-to-expect-in-therapy",
+    "hard-moment-plan",
+    "safety-plan"
+  ],
+  "orientationIds": [
+    "psychodynamic-therapy",
+    "integrative-common-factors"
+  ],
+  "sources": [
+    {
+      "title": "A randomized trial of dialectical behavior therapy versus general psychiatric management for borderline personality disorder (McMain et al.)",
+      "publisher": "American Journal of Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19755574/",
+      "year": 2009
+    },
+    {
+      "title": "Good psychiatric management: a review (Gunderson and Masland)",
+      "publisher": "Current Opinion in Psychology (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29547739/",
+      "year": 2018
+    },
+    {
+      "title": "Borderline personality disorder: recognition and management (CG78)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg78",
+      "year": 2009
+    },
+    {
+      "title": "General Psychiatric Management for borderline personality disorder (training)",
+      "publisher": "McLean Hospital, Gunderson Personality Disorders Institute",
+      "url": "https://home.mcleanhospital.org/gpdi-gpm"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

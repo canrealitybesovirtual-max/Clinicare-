@@ -1,0 +1,153 @@
+{
+  "id": "questions-about-my-care",
+  "title": "Questions to Ask About My Care",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 10,
+  "intro": "You have the right to help choose your care. Often there is more than one good choice. Asking a few simple questions helps you and your care team pick the choice that fits you best. Bring this sheet to your visit. Write down the answers, or ask someone you trust to come and take notes. It takes about 10 minutes.",
+  "sections": [
+    {
+      "heading": "Three key questions",
+      "body": "When people ask questions like these, they tend to get clearer and fuller answers about their choices.",
+      "steps": [
+        "What choices do I have? This includes waiting, or doing nothing for now.",
+        "What good things could each choice bring? What are the downsides or risks?",
+        "How likely is each good thing, and each downside, for someone like me?"
+      ]
+    },
+    {
+      "heading": "More questions you can ask",
+      "steps": [
+        "What could happen if I wait, or if I do nothing for now?",
+        "How long does each choice take, and how often would I need to come?",
+        "What does each choice cost, and what will my insurance pay?",
+        "How will we know if it is working? When will we check?",
+        "What can I do on my own in the meantime?",
+        "Can I change my mind later?"
+      ]
+    },
+    {
+      "heading": "What matters to me",
+      "body": "The best choice is not the same for everyone. Think about what matters most in your life.",
+      "steps": [
+        "What matters most to me: ________________",
+        "What I want to avoid: ________________",
+        "Limits on my time, money, travel, or child care: ________________",
+        "What I have tried before, and how it went: ________________"
+      ]
+    },
+    {
+      "heading": "Make sure you understand",
+      "steps": [
+        "Say back what you heard in your own words. For example: 'So my choices are... Did I get that right?'",
+        "Ask your care team to explain any words you do not know.",
+        "Ask for the main points in writing, in the language you read best.",
+        "You can ask for an interpreter. In the US, many clinics must offer one for free.",
+        "It is okay to take time to decide. You can say, 'Can I think about this and get back to you?'"
+      ]
+    },
+    {
+      "heading": "How to use the choices table",
+      "body": "Use the table at the end to compare your choices side by side. Write one choice on each row. Your counselor can help you fill it in."
+    }
+  ],
+  "practiceLog": {
+    "columns": [
+      "Choice",
+      "Good things",
+      "Downsides",
+      "How it fits my life"
+    ],
+    "rows": 4
+  },
+  "safetyNote": "Safety first: For most care, it is fine to take time to choose. But if you have thoughts of hurting yourself or someone else, get help now, before anything else. In the US, call or text 988 or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sud": false,
+  "es": {
+    "title": "Preguntas sobre mi cuidado",
+    "intro": "Usted tiene derecho a ayudar a elegir su cuidado. Muchas veces hay más de una buena opción. Hacer unas pocas preguntas sencillas les ayuda a usted y a su equipo de cuidado a elegir la opción que mejor le queda. Traiga esta hoja a su cita. Escriba las respuestas, o pídale a alguien de confianza que venga y tome notas. Toma unos 10 minutos.",
+    "sections": [
+      {
+        "heading": "Tres preguntas clave",
+        "body": "Cuando las personas hacen preguntas como estas, suelen recibir respuestas más claras y completas sobre sus opciones.",
+        "steps": [
+          "¿Qué opciones tengo? Esto incluye esperar, o no hacer nada por ahora.",
+          "¿Qué cosas buenas puede traer cada opción? ¿Cuáles son las desventajas o los riesgos?",
+          "¿Qué tan probable es cada cosa buena, y cada desventaja, para alguien como yo?"
+        ]
+      },
+      {
+        "heading": "Otras preguntas que puede hacer",
+        "steps": [
+          "¿Qué puede pasar si espero, o si no hago nada por ahora?",
+          "¿Cuánto tiempo toma cada opción, y cada cuánto tendría que venir?",
+          "¿Cuánto cuesta cada opción, y cuánto va a pagar mi seguro?",
+          "¿Cómo vamos a saber si está funcionando? ¿Cuándo lo vamos a revisar?",
+          "¿Qué puedo hacer por mi cuenta mientras tanto?",
+          "¿Puedo cambiar de idea más adelante?"
+        ]
+      },
+      {
+        "heading": "Lo que me importa",
+        "body": "La mejor opción no es igual para todos. Piense en lo que más le importa en su vida.",
+        "steps": [
+          "Lo que más me importa: ________________",
+          "Lo que quiero evitar: ________________",
+          "Límites de tiempo, dinero, transporte o cuidado de niños: ________________",
+          "Lo que he probado antes, y cómo me fue: ________________"
+        ]
+      },
+      {
+        "heading": "Asegúrese de entender",
+        "steps": [
+          "Repita con sus propias palabras lo que escuchó. Por ejemplo: 'Entonces mis opciones son... ¿Lo entendí bien?'.",
+          "Pídale a su equipo de cuidado que le explique las palabras que no conoce.",
+          "Pida los puntos principales por escrito, en el idioma que mejor lee.",
+          "Puede pedir un intérprete. En EE. UU., muchas clínicas deben darle uno gratis.",
+          "Está bien tomarse tiempo para decidir. Puede decir: '¿Puedo pensarlo y luego le aviso?'."
+        ]
+      },
+      {
+        "heading": "Cómo usar la tabla de opciones",
+        "body": "Use la tabla del final para comparar sus opciones una al lado de la otra. Escriba una opción en cada fila. Su consejero le puede ayudar a llenarla."
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Opción",
+        "Cosas buenas",
+        "Desventajas",
+        "Cómo encaja en mi vida"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: Para la mayor parte del cuidado, está bien tomarse tiempo para elegir. Pero si tiene pensamientos de hacerse daño o de hacerle daño a otra persona, busque ayuda ahora, antes que cualquier otra cosa. En EE. UU., llame o envíe un mensaje de texto al 988, o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "sources": [
+    {
+      "title": "Three questions that patients can ask to improve the quality of information physicians give about treatment options: a cross-over trial (Shepherd et al.)",
+      "publisher": "Patient Education and Counseling (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21831558/",
+      "year": 2011
+    },
+    {
+      "title": "Shared decision making (NG197)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng197",
+      "year": 2021
+    },
+    {
+      "title": "Health Literacy Universal Precautions Toolkit, 3rd edition",
+      "publisher": "Agency for Healthcare Research and Quality",
+      "url": "https://www.ahrq.gov/health-literacy/improve/precautions/index.html",
+      "year": 2024
+    },
+    {
+      "title": "Dear colleague letter: language access under Section 1557",
+      "publisher": "US Department of Health and Human Services, Office for Civil Rights",
+      "url": "https://www.hhs.gov/sites/default/files/ocr-dcl-section-1557-language-access.pdf"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

@@ -1,0 +1,687 @@
+{
+  "id": "transdiagnostic-process-map",
+  "name": "Transdiagnostic process map",
+  "shortName": "Process map",
+  "family": "transdiagnostic",
+  "orientationIds": [
+    "integrative-common-factors",
+    "cognitive-therapy",
+    "behavior-therapy",
+    "acceptance-and-commitment-therapy"
+  ],
+  "purpose": "A curated list of processes that keep many different difficulties going (such as avoidance, repetitive negative thinking, emotion dysregulation and poor sleep), plus context and strength factors, each linked to interventions that work on that process. It helps when problems overlap, when a presentation does not fit one pattern, or when there is not yet enough information to say more. The same factor names are used by the 5 Ps worksheet and as optional targets on treatment-plan objectives. The map is deterministic: it lists links, it does not score anyone.",
+  "whenToUse": [
+    "When several conditions seem to be present and you want one plan that targets shared processes.",
+    "When the information so far is not enough to point to any one pattern: work on the processes you can see while assessment continues.",
+    "When choosing which skill to teach first, by asking which process is doing the most harm right now.",
+    "To give each treatment-plan objective a clear target, and to check that every important process has an objective."
+  ],
+  "structure": [
+    {
+      "id": "avoidance-and-control",
+      "label": "Avoidance and control processes",
+      "prompt": "Ways of escaping or preventing discomfort that bring quick relief and long-term costs: avoidance, safety behaviors, checking and reassurance seeking, and avoidance of inner experience.",
+      "examples": [
+        "Leaving a shop as soon as the heart races",
+        "Asking a partner several times a day whether a symptom is serious"
+      ]
+    },
+    {
+      "id": "thinking-processes",
+      "label": "Thinking processes",
+      "prompt": "Patterns of thinking that feed distress regardless of the topic: worry and rumination, difficulty tolerating uncertainty, scanning for threat, treating thoughts as facts, harsh core beliefs and perfectionism.",
+      "examples": [
+        "Hours spent replaying a conversation",
+        "Needing to be certain before making any decision"
+      ]
+    },
+    {
+      "id": "emotion-and-self",
+      "label": "Emotion and self processes",
+      "prompt": "How emotions are handled and how the person relates to themselves: emotions that rise fast and settle slowly, self-criticism and shame, and urges acted on for quick relief.",
+      "examples": [
+        "Going from calm to furious in seconds, then feeling ashamed",
+        "A habit of calling oneself stupid after small mistakes"
+      ]
+    },
+    {
+      "id": "activity-and-rhythm",
+      "label": "Activity and rhythm",
+      "prompt": "Daily life that has narrowed or lost its structure: fewer rewarding activities, irregular sleep and unstable routines.",
+      "examples": [
+        "Staying in bed until noon on most days",
+        "No longer seeing friends or doing hobbies"
+      ]
+    },
+    {
+      "id": "relationships-and-context",
+      "label": "Relationships, memories and life context",
+      "prompt": "Relationship strain, unprocessed trauma memories, physical health problems, isolation and practical or structural stressors. Context factors often need practical help or coordination with other services, not only therapy.",
+      "examples": [
+        "A recent move far from family",
+        "Pain that limits work",
+        "Rent arrears"
+      ]
+    },
+    {
+      "id": "strengths",
+      "label": "Strengths and resources",
+      "prompt": "What protects and helps: supportive people, values and faith, coping that already works, and hope. Every map should name at least one.",
+      "examples": [
+        "Enjoys walking with a neighbor",
+        "Clear sense of wanting to be a good parent"
+      ]
+    },
+    {
+      "id": "dimensional-view",
+      "label": "A dimensional view",
+      "prompt": "Research models such as HiTOP group symptoms into broad, overlapping dimensions rather than separate categories. That helps explain why the same processes show up across many diagnoses, and why targeting a shared process can help several problems at once.",
+      "examples": []
+    }
+  ],
+  "factors": [
+    {
+      "id": "avoidance-escape",
+      "label": "Avoidance and escape",
+      "plainLabel": "Staying away from, or leaving, hard situations, places or feelings",
+      "kind": "maintaining",
+      "description": "Steering clear of feared situations, tasks, memories or sensations, or leaving early. It brings quick relief, so it is repeated, and it blocks the chance to learn that the feared outcome is unlikely or bearable.",
+      "fivePs": [
+        "perpetuating"
+      ],
+      "domains": [
+        "psychological",
+        "social"
+      ],
+      "interventionIds": [
+        "graded-in-vivo-exposure",
+        "imaginal-exposure",
+        "interoceptive-exposure",
+        "exposure-and-response-prevention",
+        "behavioral-activation",
+        "act-acceptance-willingness",
+        "unified-protocol"
+      ]
+    },
+    {
+      "id": "safety-behaviors",
+      "label": "Safety behaviors",
+      "plainLabel": "Small habits used to feel safe that keep the fear going",
+      "kind": "maintaining",
+      "description": "Subtle actions used inside a feared situation to prevent a feared outcome, such as holding on to something, rehearsing what to say or carrying a just-in-case item. They feel protective but leave the fear untested.",
+      "fivePs": [
+        "perpetuating"
+      ],
+      "domains": [
+        "psychological"
+      ],
+      "interventionIds": [
+        "safety-behavior-reduction",
+        "behavioral-experiments",
+        "social-anxiety-cognitive-techniques",
+        "catastrophic-misinterpretation-restructuring"
+      ]
+    },
+    {
+      "id": "repetitive-negative-thinking",
+      "label": "Repetitive negative thinking (worry and rumination)",
+      "plainLabel": "Going over worries or problems again and again",
+      "kind": "maintaining",
+      "description": "Long stretches of worry about what might happen or dwelling on what went wrong and why. It feels like problem-solving but rarely leads to action, and it deepens low mood and anxiety across many presentations.",
+      "fivePs": [
+        "perpetuating"
+      ],
+      "domains": [
+        "psychological"
+      ],
+      "interventionIds": [
+        "worry-time",
+        "metacognitive-therapy",
+        "rumination-focused-cbt",
+        "mindfulness-based-cognitive-therapy",
+        "act-cognitive-defusion",
+        "behavioral-activation"
+      ]
+    },
+    {
+      "id": "intolerance-of-uncertainty",
+      "label": "Intolerance of uncertainty",
+      "plainLabel": "Finding it very hard to live with not knowing",
+      "kind": "maintaining",
+      "description": "Strong discomfort with not knowing how things will turn out, which drives worry, checking, reassurance seeking and delayed decisions.",
+      "fivePs": [
+        "predisposing",
+        "perpetuating"
+      ],
+      "domains": [
+        "psychological"
+      ],
+      "interventionIds": [
+        "intolerance-of-uncertainty-cbt",
+        "behavioral-experiments",
+        "worry-time",
+        "problem-solving"
+      ]
+    },
+    {
+      "id": "threat-monitoring",
+      "label": "Threat monitoring and hypervigilance",
+      "plainLabel": "Staying on guard and scanning for danger, including in the body",
+      "kind": "maintaining",
+      "description": "Attention that keeps scanning the surroundings or the body for signs of danger. Scanning finds more ambiguous signals, which then feel like proof that danger is near.",
+      "fivePs": [
+        "perpetuating"
+      ],
+      "domains": [
+        "psychological",
+        "biological"
+      ],
+      "interventionIds": [
+        "interoceptive-exposure",
+        "mindful-check-in",
+        "cbt-health-anxiety",
+        "trauma-psychoeducation-and-grounding",
+        "applied-relaxation",
+        "metacognitive-therapy"
+      ]
+    },
+    {
+      "id": "reassurance-seeking-checking",
+      "label": "Reassurance seeking and checking",
+      "plainLabel": "Checking, or asking others, again and again to feel sure",
+      "kind": "maintaining",
+      "description": "Repeated checking, searching or asking others for reassurance. Relief is brief, doubt returns, and the habit can draw family members into the cycle.",
+      "fivePs": [
+        "perpetuating"
+      ],
+      "domains": [
+        "psychological",
+        "social"
+      ],
+      "interventionIds": [
+        "exposure-and-response-prevention",
+        "cbt-health-anxiety",
+        "ocd-appraisal-cognitive-therapy",
+        "safety-behavior-reduction"
+      ]
+    },
+    {
+      "id": "emotion-dysregulation",
+      "label": "Emotion dysregulation",
+      "plainLabel": "Feelings that rise fast, feel very strong and are slow to settle",
+      "kind": "maintaining",
+      "description": "Emotions that are quick to rise, intense and slow to return to baseline, with few reliable ways to steady them. Often linked to temperament and to growing up where feelings were not understood or were punished.",
+      "fivePs": [
+        "predisposing",
+        "perpetuating"
+      ],
+      "domains": [
+        "psychological",
+        "biological"
+      ],
+      "interventionIds": [
+        "dbt-emotion-regulation-opposite-action",
+        "dbt-distress-tolerance",
+        "stair-skills-training",
+        "unified-protocol",
+        "mentalization-based-treatment",
+        "diaphragmatic-breathing"
+      ]
+    },
+    {
+      "id": "experiential-avoidance",
+      "label": "Experiential avoidance",
+      "plainLabel": "Working hard not to feel, think or remember certain things",
+      "kind": "maintaining",
+      "description": "Efforts to suppress, numb or escape unwanted inner experiences such as emotions, urges, memories or body sensations, even when the effort costs things that matter.",
+      "fivePs": [
+        "perpetuating"
+      ],
+      "domains": [
+        "psychological"
+      ],
+      "interventionIds": [
+        "act-acceptance-willingness",
+        "act-present-moment-self-as-context",
+        "mindfulness-meditation",
+        "unified-protocol",
+        "emotion-focused-chair-work"
+      ]
+    },
+    {
+      "id": "cognitive-fusion",
+      "label": "Cognitive fusion",
+      "plainLabel": "Taking thoughts as facts or as orders",
+      "kind": "maintaining",
+      "description": "Treating thoughts as literal truths or commands, so that a thought such as I will fail decides what the person does next.",
+      "fivePs": [
+        "perpetuating"
+      ],
+      "domains": [
+        "psychological"
+      ],
+      "interventionIds": [
+        "act-cognitive-defusion",
+        "mindfulness-based-cognitive-therapy",
+        "thought-record",
+        "metacognitive-therapy"
+      ]
+    },
+    {
+      "id": "self-criticism-shame",
+      "label": "Self-criticism and shame",
+      "plainLabel": "A harsh inner voice and feeling bad about who I am",
+      "kind": "maintaining",
+      "description": "A habitual, harsh way of speaking to oneself and a felt sense of being defective or unworthy. It keeps low mood going and makes asking for help harder.",
+      "fivePs": [
+        "predisposing",
+        "perpetuating"
+      ],
+      "domains": [
+        "psychological",
+        "social"
+      ],
+      "interventionIds": [
+        "compassion-focused-imagery",
+        "self-compassion-practice",
+        "emotion-focused-chair-work",
+        "core-belief-work",
+        "schema-therapy"
+      ]
+    },
+    {
+      "id": "negative-core-beliefs",
+      "label": "Negative core beliefs and rigid rules",
+      "plainLabel": "Deep, long-held ideas about myself, other people or the world",
+      "kind": "maintaining",
+      "description": "Enduring beliefs (for example, I am unlovable, others will hurt me) and the rules built around them. They shape how new events are read and which coping strategies are used.",
+      "fivePs": [
+        "predisposing",
+        "perpetuating"
+      ],
+      "domains": [
+        "psychological"
+      ],
+      "interventionIds": [
+        "core-belief-work",
+        "thought-record",
+        "behavioral-experiments",
+        "schema-therapy",
+        "rebt-disputation",
+        "cognitive-processing-therapy"
+      ]
+    },
+    {
+      "id": "perfectionism",
+      "label": "Perfectionism and overcontrol",
+      "plainLabel": "Very high standards and a strong fear of mistakes",
+      "kind": "maintaining",
+      "description": "Self-worth tied to meeting demanding standards, with checking, redoing, procrastination or avoidance of tasks that might not go perfectly.",
+      "fivePs": [
+        "predisposing",
+        "perpetuating"
+      ],
+      "domains": [
+        "psychological"
+      ],
+      "interventionIds": [
+        "behavioral-experiments",
+        "core-belief-work",
+        "self-compassion-practice",
+        "act-values-clarification"
+      ]
+    },
+    {
+      "id": "low-reward-engagement",
+      "label": "Low engagement with rewarding activity",
+      "plainLabel": "Doing fewer things that bring enjoyment or a sense of achievement",
+      "kind": "maintaining",
+      "description": "Withdrawal from activities, people and routines that used to bring pleasure or mastery. Less reward lowers mood further, which makes activity even harder.",
+      "fivePs": [
+        "perpetuating"
+      ],
+      "domains": [
+        "psychological",
+        "social",
+        "biological"
+      ],
+      "interventionIds": [
+        "behavioral-activation",
+        "act-committed-action",
+        "physical-activity",
+        "positive-psychology-practices",
+        "well-being-therapy"
+      ]
+    },
+    {
+      "id": "sleep-rhythm-disruption",
+      "label": "Sleep and daily-rhythm disruption",
+      "plainLabel": "Irregular sleep or an unsettled daily routine",
+      "kind": "maintaining",
+      "description": "Short, broken or irregular sleep and unstable daily timing (meals, light, activity). It worsens mood, anxiety, pain and impulsivity and can trigger mood episodes in some people.",
+      "fivePs": [
+        "precipitating",
+        "perpetuating"
+      ],
+      "domains": [
+        "biological"
+      ],
+      "interventionIds": [
+        "cbti-stimulus-control",
+        "cbti-sleep-restriction",
+        "brief-behavioral-treatment-insomnia",
+        "interpersonal-social-rhythm-therapy",
+        "sleep-hygiene-education"
+      ]
+    },
+    {
+      "id": "interpersonal-difficulties",
+      "label": "Interpersonal difficulties and role strain",
+      "plainLabel": "Conflict, losses or changes in important relationships or roles",
+      "kind": "maintaining",
+      "description": "Disputes, losses, role changes or repeating relationship patterns that both trigger distress and are kept going by it.",
+      "fivePs": [
+        "precipitating",
+        "perpetuating"
+      ],
+      "domains": [
+        "social"
+      ],
+      "interventionIds": [
+        "interpersonal-psychotherapy",
+        "dbt-interpersonal-effectiveness",
+        "assertiveness-training",
+        "communication-skills-training",
+        "couples-relationship-skills",
+        "cbasp-situational-analysis",
+        "dynamic-interpersonal-therapy"
+      ]
+    },
+    {
+      "id": "urges-and-impulsivity",
+      "label": "Urges and impulsive coping",
+      "plainLabel": "Strong urges to act right away to feel better",
+      "kind": "maintaining",
+      "description": "Acting on strong urges to get quick relief from distress (for example, bingeing, hair pulling, self-harm or risky spending). Relief now, costs later, so the behavior is learned.",
+      "fivePs": [
+        "perpetuating"
+      ],
+      "domains": [
+        "psychological",
+        "biological"
+      ],
+      "interventionIds": [
+        "urge-surfing",
+        "dbt-distress-tolerance",
+        "behavioral-chain-analysis",
+        "habit-reversal-training",
+        "relapse-prevention-planning",
+        "motivational-interviewing"
+      ]
+    },
+    {
+      "id": "trauma-memory-intrusions",
+      "label": "Unprocessed trauma memories",
+      "plainLabel": "Upsetting memories of past events that push in",
+      "kind": "maintaining",
+      "description": "Memories of traumatic events that intrude as images, nightmares or a sense of reliving, with appraisals of current threat that keep the body on alert.",
+      "fivePs": [
+        "precipitating",
+        "perpetuating"
+      ],
+      "domains": [
+        "psychological",
+        "biological"
+      ],
+      "interventionIds": [
+        "prolonged-exposure",
+        "cognitive-processing-therapy",
+        "emdr",
+        "written-exposure-therapy",
+        "narrative-exposure-therapy",
+        "cognitive-therapy-for-ptsd",
+        "imagery-rescripting",
+        "imagery-rehearsal-therapy",
+        "trauma-psychoeducation-and-grounding"
+      ]
+    },
+    {
+      "id": "physical-health-burden",
+      "label": "Physical health burden",
+      "plainLabel": "Health problems, pain, medicines or body changes that add strain",
+      "kind": "context",
+      "description": "Long-term illness, pain, disability, medication effects or hormonal change that add load, limit activity or mimic psychological symptoms. Calls for medical coordination as well as psychological work.",
+      "fivePs": [
+        "predisposing",
+        "precipitating",
+        "perpetuating"
+      ],
+      "domains": [
+        "biological"
+      ],
+      "interventionIds": [
+        "cbt-and-act-for-chronic-pain",
+        "physical-activity",
+        "problem-solving",
+        "medication-referral",
+        "yoga-mind-body"
+      ]
+    },
+    {
+      "id": "low-social-support",
+      "label": "Low social support and isolation",
+      "plainLabel": "Few people to lean on, or feeling alone",
+      "kind": "context",
+      "description": "Few trusted relationships, loneliness or a network that is unavailable, unsafe or stretched thin.",
+      "fivePs": [
+        "predisposing",
+        "perpetuating"
+      ],
+      "domains": [
+        "social"
+      ],
+      "interventionIds": [
+        "social-connection-and-loneliness",
+        "behavioral-activation",
+        "interpersonal-psychotherapy",
+        "problem-management-plus"
+      ]
+    },
+    {
+      "id": "structural-stressors",
+      "label": "Structural and social stressors",
+      "plainLabel": "Money, housing, work, discrimination or unsafe surroundings",
+      "kind": "context",
+      "description": "Poverty, debt, insecure housing or work, discrimination, unsafe relationships or neighborhoods and barriers to care. These are real-world problems, not thinking errors, and often need practical help and advocacy.",
+      "fivePs": [
+        "predisposing",
+        "precipitating",
+        "perpetuating"
+      ],
+      "domains": [
+        "social",
+        "cultural-spiritual"
+      ],
+      "interventionIds": [
+        "problem-solving",
+        "problem-management-plus",
+        "cultural-formulation-exploration",
+        "racial-trauma-and-race-based-stress",
+        "power-and-gender-role-analysis",
+        "ipv-safety-planning",
+        "lgbtq-affirmative-cbt"
+      ]
+    },
+    {
+      "id": "strengths-and-supports",
+      "label": "Strengths and supportive connections",
+      "plainLabel": "People, places and abilities that help",
+      "kind": "strength",
+      "description": "Relationships, community, skills, interests and past successes the person can draw on. Connectedness is one of the most consistent themes in personal accounts of recovery.",
+      "fivePs": [
+        "protective"
+      ],
+      "domains": [
+        "social",
+        "psychological"
+      ],
+      "interventionIds": [
+        "solution-focused-questions",
+        "social-connection-and-loneliness",
+        "positive-psychology-practices",
+        "genogram-family-systems"
+      ]
+    },
+    {
+      "id": "values-and-meaning",
+      "label": "Values, meaning and identity",
+      "plainLabel": "What matters most to me, such as faith, culture or purpose",
+      "kind": "strength",
+      "description": "Personal values, faith or spiritual life, cultural identity and a sense of purpose. They give reasons to change and guide which goals fit the person.",
+      "fivePs": [
+        "protective"
+      ],
+      "domains": [
+        "cultural-spiritual",
+        "psychological"
+      ],
+      "interventionIds": [
+        "act-values-clarification",
+        "existential-meaning-exploration",
+        "meaning-centered-and-dignity-therapy",
+        "religiously-integrated-cbt",
+        "cultural-formulation-exploration",
+        "narrative-externalizing"
+      ]
+    },
+    {
+      "id": "coping-skills",
+      "label": "Coping skills that already work",
+      "plainLabel": "Ways of coping that already help me",
+      "kind": "strength",
+      "description": "Approaches the person already uses with some success. Building on them respects the person's expertise and makes new skills easier to add.",
+      "fivePs": [
+        "protective"
+      ],
+      "domains": [
+        "psychological",
+        "biological"
+      ],
+      "interventionIds": [
+        "problem-solving",
+        "mindful-check-in",
+        "diaphragmatic-breathing",
+        "grounding-5-4-3-2-1",
+        "solution-focused-questions",
+        "relapse-prevention-planning"
+      ]
+    },
+    {
+      "id": "hope-and-motivation",
+      "label": "Hope and motivation for change",
+      "plainLabel": "Hope that things can change, and my reasons to try",
+      "kind": "strength",
+      "description": "Belief that change is possible and personal reasons for wanting it. Hope and readiness can be built in therapy and are worth naming early.",
+      "fivePs": [
+        "protective"
+      ],
+      "domains": [
+        "psychological"
+      ],
+      "interventionIds": [
+        "motivational-interviewing",
+        "decisional-balance",
+        "solution-focused-questions",
+        "well-being-therapy",
+        "narrative-externalizing"
+      ]
+    }
+  ],
+  "steps": [
+    "From the assessment, list two to five processes you can actually see in recent examples, not guesses.",
+    "For each one, ask the person for a recent example and agree how it keeps the difficulty going.",
+    "Name at least one strength and one context factor, so the map is not only about problems.",
+    "Pick one or two processes to target first: usually the one doing the most harm, the one the person most wants to change, or one that drives several others (such as sleep).",
+    "Look at the linked interventions as options for clinician review, choose within your training and scope, and link plan objectives to the chosen targets.",
+    "Track whether the targeted process is changing, not only the symptom totals, and revise the map when it is not."
+  ],
+  "collaborativeTips": [
+    "Use the plain labels with the person; they are written to be shareable.",
+    "Ask which process feels most in the way of the life they want; their choice matters for engagement.",
+    "Show how one process can feed another, for example poor sleep making worry and low mood worse."
+  ],
+  "cautions": [
+    "The map lists processes and links; it does not diagnose, rank people, or say which treatment is best. Choose interventions within your training, the evidence for the presenting problem and the person's preferences.",
+    "Some presentations need specific, established protocols (for example, exposure and response prevention for obsessions and compulsions, or trauma-focused therapy for post-traumatic stress). Process targets add to those protocols; they do not replace them.",
+    "Context factors such as an unsafe relationship, housing loss or medical illness need practical action and coordination, not only psychological work.",
+    "A formulation never scores, grades or decides risk. If thoughts of suicide, self-harm or harm to others come up, pause the formulation and follow your own assessment and local protocol; in the US the 988 Lifeline is available by call or text, elsewhere use the local emergency number or findahelpline.com."
+  ],
+  "conditionIds": [
+    "major-depressive-disorder",
+    "generalized-anxiety-disorder",
+    "panic-disorder",
+    "social-anxiety-disorder",
+    "obsessive-compulsive-disorder",
+    "ptsd",
+    "insomnia-disorder",
+    "borderline-personality-disorder"
+  ],
+  "interventionIds": [
+    "unified-protocol",
+    "behavioral-activation",
+    "act-acceptance-willingness",
+    "worry-time",
+    "dbt-emotion-regulation-opposite-action",
+    "problem-solving"
+  ],
+  "handoutIds": [
+    "what-keeps-it-going"
+  ],
+  "practiceIds": [
+    "problem-prioritization",
+    "outcome-monitoring",
+    "diagnostic-reasoning-checks"
+  ],
+  "populationIds": [],
+  "legalIds": [],
+  "worksheet": false,
+  "sud": false,
+  "linkOuts": [
+    {
+      "title": "The future of intervention science: process-based therapy (Hofmann and Hayes)",
+      "publisher": "Clinical Psychological Science (PubMed Central)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6350520/",
+      "note": "Background on process-based therapy and targeting core change processes."
+    }
+  ],
+  "measuresPending": [],
+  "sources": [
+    {
+      "title": "The future of intervention science: process-based therapy (Hofmann and Hayes)",
+      "publisher": "Clinical Psychological Science (PubMed Central)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6350520/",
+      "year": 2019
+    },
+    {
+      "title": "The Hierarchical Taxonomy of Psychopathology (HiTOP): a dimensional alternative to traditional nosologies (Kotov et al.)",
+      "publisher": "Journal of Abnormal Psychology (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28333488/",
+      "year": 2017
+    },
+    {
+      "title": "Case conceptualization research in cognitive behavior therapy: a state of the science review (Easden and Kazantzis)",
+      "publisher": "Journal of Clinical Psychology",
+      "url": "https://doi.org/10.1002/jclp.22516",
+      "year": 2018
+    },
+    {
+      "title": "Conceptual framework for personal recovery in mental health: systematic review and narrative synthesis (Leamy et al.)",
+      "publisher": "British Journal of Psychiatry",
+      "url": "https://doi.org/10.1192/bjp.bp.110.083733",
+      "year": 2011
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

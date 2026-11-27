@@ -17,37 +17,50 @@
         {
           "id": "phobia-how-fear-stays",
           "text": "By session 2, explain in their own words how avoidance and escape keep fear going, and how planned, step-by-step approach lets the brain learn that the trigger is safer or more manageable than predicted.",
-          "interventionIds": ["graded-in-vivo-exposure"]
+          "interventionIds": ["graded-in-vivo-exposure"],
+          "targets": ["avoidance-escape"],
+          "step": "low-intensity"
         },
         {
           "id": "phobia-build-ladder",
           "text": "By session 3, build a fear ladder of at least 8 steps linked to the trigger, rating each for expected fear (0-10) and adding variations such as distance, time, setting and being alone or with someone.",
-          "interventionIds": ["graded-in-vivo-exposure"]
+          "interventionIds": ["graded-in-vivo-exposure"],
+          "targets": ["avoidance-escape"],
+          "step": "high-intensity"
         },
         {
           "id": "phobia-approach-test",
           "text": "At intake, at week 6 and at the end of treatment, complete a behavioral approach test: move as close to the trigger as the client is willing, and record the closest step reached and peak fear (0-10), to track progress over time.",
-          "interventionIds": ["graded-in-vivo-exposure"]
+          "interventionIds": ["graded-in-vivo-exposure"],
+          "targets": ["avoidance-escape"]
         },
         {
           "id": "phobia-regular-practice",
           "text": "Over weeks 3 to 10, complete at least 3 planned exposure practices per week (in session and at home), staying until the planned end of each one and writing down the prediction beforehand and what actually happened afterward.",
-          "interventionIds": ["graded-in-vivo-exposure", "behavioral-experiments"]
+          "interventionIds": ["graded-in-vivo-exposure", "behavioral-experiments"],
+          "targets": ["avoidance-escape"],
+          "step": "high-intensity"
         },
         {
           "id": "phobia-single-long-session-option",
           "text": "If the client prefers a faster course and the clinician is experienced in it, decide together by session 3 whether to use a single extended exposure session (often up to about 3 hours), followed by a written home-practice plan for the next 4 weeks.",
-          "interventionIds": ["graded-in-vivo-exposure"]
+          "interventionIds": ["one-session-treatment-phobia", "graded-in-vivo-exposure"],
+          "targets": ["avoidance-escape"],
+          "step": "specialist"
         },
         {
           "id": "phobia-hard-to-reach-triggers",
           "text": "For triggers that are hard to set up in real life (for example flying or storms), use imagined, video or virtual reality exposure steps by week 6 where available, then move to real-life practice as soon as it is practical.",
-          "interventionIds": ["graded-in-vivo-exposure"]
+          "interventionIds": ["graded-in-vivo-exposure"],
+          "targets": ["avoidance-escape"],
+          "step": "high-intensity"
         },
         {
           "id": "phobia-keep-gains",
           "text": "In the final 2 sessions, write a plan to keep the gains, including at least 1 planned contact with the trigger each month for 3 months and what to do if avoidance starts to creep back.",
-          "interventionIds": ["relapse-prevention-planning"]
+          "interventionIds": ["relapse-prevention-planning"],
+          "targets": ["coping-skills"],
+          "step": "low-intensity"
         }
       ],
       "measureIds": []
@@ -68,27 +81,37 @@
         {
           "id": "phobia-readiness",
           "text": "By session 2, talk through what the client would gain and lose by facing the fear versus keeping things as they are, and rate readiness to start exposure (0-10); if readiness is below 5, revisit by session 4.",
-          "interventionIds": ["motivational-interviewing", "decisional-balance"]
+          "interventionIds": ["motivational-interviewing", "decisional-balance"],
+          "targets": ["hope-and-motivation"],
+          "step": "low-intensity"
         },
         {
           "id": "phobia-reason-card",
           "text": "By session 3, name at least 1 valued reason for facing the fear (for example visiting family overseas or hiking with a child) and write it on a card to bring to every exposure practice.",
-          "interventionIds": ["act-values-clarification", "act-acceptance-willingness"]
+          "interventionIds": ["act-values-clarification", "act-acceptance-willingness"],
+          "targets": ["values-and-meaning"],
+          "step": "low-intensity"
         },
         {
           "id": "phobia-test-predictions",
           "text": "Over weeks 3 to 10, before each exposure practice, write the specific feared outcome and how likely it seems (0-100); afterward, record what happened and re-rate how likely it now seems.",
-          "interventionIds": ["behavioral-experiments", "thought-record"]
+          "interventionIds": ["behavioral-experiments", "thought-record"],
+          "targets": ["threat-monitoring"],
+          "step": "high-intensity"
         },
         {
           "id": "phobia-drop-safety-habits",
           "text": "By week 4, list at least 3 safety habits used near the trigger, then drop or cut back at least 1 of them each week during practices through week 10, noting what was learned each time.",
-          "interventionIds": ["safety-behavior-reduction"]
+          "interventionIds": ["safety-behavior-reduction"],
+          "targets": ["safety-behaviors"],
+          "step": "high-intensity"
         },
         {
           "id": "phobia-handle-dread",
           "text": "For 4 weeks, when dread about an upcoming encounter shows up, use a brief step-back or mindful noticing skill (for example labeling the thought as 'a prediction') at least once a day, rating how much the dread gets in the way (0-10).",
-          "interventionIds": ["act-cognitive-defusion", "mindful-check-in"]
+          "interventionIds": ["act-cognitive-defusion", "mindful-check-in"],
+          "targets": ["cognitive-fusion", "repetitive-negative-thinking"],
+          "step": "low-intensity"
         },
         {
           "id": "phobia-broader-anxiety-check",
@@ -114,27 +137,36 @@
         {
           "id": "phobia-bii-medical-check",
           "text": "By session 2, review fainting history and health conditions (for example heart problems or pregnancy) and, with the client's consent, check with a medical provider before blood or needle exposure if needed; plan the first steps so the client is seated or lying down.",
-          "interventionIds": ["graded-in-vivo-exposure"]
+          "interventionIds": ["graded-in-vivo-exposure"],
+          "targets": ["physical-health-burden"]
         },
         {
           "id": "phobia-bii-tension-skill",
           "text": "If the client tends to faint, by session 4 learn and practice a muscle-tensing skill that briefly raises blood pressure (applied tension), several times a day for 1 week, then use it during exposure steps. Relaxation-only skills are generally not used during blood or needle exposure for clients who faint.",
-          "interventionIds": ["applied-tension", "graded-in-vivo-exposure"]
+          "interventionIds": ["applied-tension", "graded-in-vivo-exposure"],
+          "targets": ["coping-skills"],
+          "step": "high-intensity"
         },
         {
           "id": "phobia-bii-ladder-practice",
           "text": "Over weeks 3 to 10, work up a blood and needle ladder (for example pictures, then videos, then handling medical supplies, then watching a finger-prick, then a blood draw), completing at least 2 steps a week and rating fear and faintness (each 0-10).",
-          "interventionIds": ["graded-in-vivo-exposure", "behavioral-experiments"]
+          "interventionIds": ["graded-in-vivo-exposure", "behavioral-experiments"],
+          "targets": ["avoidance-escape"],
+          "step": "high-intensity"
         },
         {
           "id": "phobia-bii-tell-provider",
           "text": "By week 8, role-play telling a health care provider about the fear and asking for helpful changes (for example lying down for a blood draw or a short pause before the needle), then use that script at the next real appointment.",
-          "interventionIds": ["assertiveness-training", "communication-skills-training"]
+          "interventionIds": ["assertiveness-training", "communication-skills-training"],
+          "targets": ["coping-skills"],
+          "step": "low-intensity"
         },
         {
           "id": "phobia-bii-attend-appointment",
           "text": "By week 12, book and attend at least 1 needed medical, dental or vaccine appointment that has been put off, using the planned coping steps, and review with the clinician what went well and what to adjust.",
-          "interventionIds": ["graded-in-vivo-exposure", "problem-solving"]
+          "interventionIds": ["graded-in-vivo-exposure", "problem-solving"],
+          "targets": ["avoidance-escape"],
+          "step": "high-intensity"
         }
       ],
       "measureIds": []
@@ -156,9 +188,10 @@
     { "title": "A meta-analysis of cultural adaptations of psychological interventions (Hall et al.)", "publisher": "Behavior Therapy (DOI)", "url": "https://doi.org/10.1016/j.beth.2016.09.005", "year": 2016 },
     { "title": "PHQ and GAD-7 screeners (reproduction terms)", "publisher": "Pfizer / PHQ Screeners", "url": "https://www.phqscreeners.com" },
     { "title": "988 Suicide & Crisis Lifeline", "publisher": "988 Lifeline / SAMHSA", "url": "https://988lifeline.org" },
-    { "title": "Find A Helpline (international directory)", "publisher": "Find A Helpline", "url": "https://findahelpline.com" }
+    { "title": "Find A Helpline (international directory)", "publisher": "Find A Helpline", "url": "https://findahelpline.com" },
+    { "title": "One-session treatment of specific phobias: a detailed description and review of treatment efficacy (Zlomke and Davis)", "publisher": "Behavior Therapy (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/18721635/", "year": 2008 }
   ],
   "license": "original",
-  "lastVerified": "2026-11-26",
+  "lastVerified": "2026-11-27",
   "reviewedBy": "PENDING"
 }

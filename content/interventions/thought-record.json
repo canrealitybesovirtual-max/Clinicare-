@@ -2,7 +2,7 @@
   "id": "thought-record",
   "name": "Thought record (cognitive restructuring)",
   "modality": "CBT - cognitive restructuring",
-  "conditions": ["major-depressive-disorder", "generalized-anxiety-disorder", "panic-disorder", "agoraphobia", "social-anxiety-disorder", "obsessive-compulsive-disorder", "insomnia-disorder", "persistent-depressive-disorder", "adjustment-disorder", "prolonged-grief-disorder", "specific-phobia", "bipolar-ii-disorder", "illness-anxiety-disorder"],
+  "conditions": ["major-depressive-disorder", "generalized-anxiety-disorder", "panic-disorder", "agoraphobia", "social-anxiety-disorder", "obsessive-compulsive-disorder", "insomnia-disorder", "persistent-depressive-disorder", "adjustment-disorder", "prolonged-grief-disorder", "specific-phobia", "bipolar-ii-disorder", "illness-anxiety-disorder", "gambling-disorder", "premenstrual-dysphoric-disorder"],
   "evidenceLevel": "Core component of CBT, which NICE NG222 (depression) and NICE CG113 (GAD and panic disorder) recommend. A 2012 review of meta-analyses (Hofmann et al.) found strong overall support for CBT across anxiety and depression. The evidence is for CBT packages; the thought record has not been well tested as a stand-alone treatment.",
   "minutes": { "min": 20, "max": 40 },
   "purpose": "Helps the client slow down a moment of strong emotion, catch the automatic thought behind it, weigh the evidence, and arrive at a more balanced view. Over time the client learns to spot common thinking traps (jumping to conclusions, all-or-nothing thinking, mind reading, fortune telling) and to test thoughts instead of treating them as facts.",
@@ -47,7 +47,8 @@
     "note": "If the client wishes, they may draw balanced thoughts from their own faith (for example, beliefs about grace, forgiveness, hope or not being alone), or check whether a harsh thought matches what their tradition actually teaches. A 2018 meta-analysis (Captari et al.) found religiously and spiritually integrated therapies reduced distress about as well as standard approaches, with added spiritual well-being, for clients who want this approach.",
     "consentNote": "Offer only if the client raises faith or spirituality as a resource, and only after informed consent. Explain that the faith element is optional, that the standard version works without it, and that the client can change or stop it at any time. Use the client's own beliefs and words; never introduce or impose religious content. Record the consent discussion in your own clinical record, not in this app. See the AACC Code of Ethics on consent for spiritual interventions and the ACA Code of Ethics on informed consent and not imposing counselor values."
   },
-  "handoutIds": ["thought-record"],
+  "handoutIds": ["thought-record", "thinking-traps"],
+  "orientationIds": ["cognitive-therapy"],
   "sources": [
     {
       "title": "Depression in adults: treatment and management (NG222)",

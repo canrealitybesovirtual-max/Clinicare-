@@ -37,6 +37,7 @@
   ],
   "trainingRequired": "EFT chair work: trained clinicians only (for example, training recognized by the International Society for Emotion Focused Therapy, with supervised practice). Steps here are overview-level.",
   "handoutIds": ["kind-self-talk"],
+  "orientationIds": ["humanistic-experiential-therapy"],
   "sources": [
     { "title": "Psychological Treatments (treatment index)", "publisher": "APA Division 12, Society of Clinical Psychology", "url": "https://div12.org/psychological-treatments/treatments/" },
     { "title": "The effects of adding specific emotion-focused interventions to the therapeutic relationship in the treatment of depression (Goldman, Greenberg and Angus)", "publisher": "Psychotherapy Research", "url": "https://doi.org/10.1080/10503300600589456", "year": 2006 },

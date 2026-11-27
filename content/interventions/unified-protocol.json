@@ -1,0 +1,89 @@
+{
+  "id": "unified-protocol",
+  "name": "Unified Protocol (UP) for emotional disorders: overview and referral",
+  "modality": "CBT - transdiagnostic, emotion-focused",
+  "conditions": [
+    "generalized-anxiety-disorder",
+    "panic-disorder",
+    "agoraphobia",
+    "social-anxiety-disorder",
+    "major-depressive-disorder",
+    "persistent-depressive-disorder",
+    "obsessive-compulsive-disorder",
+    "ptsd"
+  ],
+  "evidenceLevel": "In a randomized equivalence trial with adults with anxiety disorders (Barlow et al., 2017), the Unified Protocol reduced symptoms about as much as diagnosis-specific CBT protocols, with fewer people dropping out. A 2019 meta-analysis (Sakiris and Berle) found medium to large improvements across anxiety, depression and related problems, with most trials in anxiety disorders. Evidence for PTSD, OCD and chronic depression is smaller. APA Division 12 includes the Unified Protocol in its treatment index; check the page for its current rating.",
+  "minutes": {
+    "min": 50,
+    "max": 60
+  },
+  "purpose": "A modular CBT for anxiety, low mood and related problems that targets what they share: strong negative emotion that feels intolerable, and avoidant or emotion-driven ways of escaping it that keep the problem going. One set of modules teaches the client to notice emotions with curiosity, think more flexibly, change emotion-driven behavior and face feared feelings and body sensations, instead of a separate protocol for each problem. Developed by David Barlow and colleagues at Boston University. Useful when a client has several overlapping anxiety and mood problems. This entry is an overview to support planning and referral; it is not the protocol.",
+  "steps": [
+    "Confirm fit and training. The full UP usually runs about 12 to 18 sessions with a clinician trained in it; otherwise, refer, or use this overview to shape a CBT plan.",
+    "Motivation and goals (overview): explore what the client wants to change and what may get in the way, using a decisional balance and concrete goals.",
+    "Understanding emotions (overview): explain that emotions are useful signals with three parts (thoughts, body sensations, behaviors), and track triggers, responses and short- and long-term consequences together.",
+    "Mindful emotion awareness (overview): practice noticing emotions in the present without judging them, with brief daily check-ins and a mild emotion induction (for example, a piece of music) in session.",
+    "Cognitive flexibility (overview): spot automatic appraisals, especially overestimating how likely or how bad a feared outcome is and underestimating coping, and generate alternatives.",
+    "Countering emotional behaviors (overview): list avoidance, subtle safety behaviors and emotion-driven actions, and plan alternative actions that move toward rather than away.",
+    "Facing sensations and emotions (overview): use interoceptive exercises and a graded list of emotional exposures, in and between sessions, after checking medical cautions.",
+    "Track progress with a measure the client agrees to (PHQ-9 and GAD-7 are built in here), and close with a skills review and a plan for setbacks."
+  ],
+  "script": [
+    "The worry, the low mood and the panic you've described may share a common thread: strong feelings that seem unbearable, and ways of pushing them away that keep them going.",
+    "Emotions aren't the enemy. They carry information. We'll learn to notice them, understand them and respond in new ways.",
+    "When you feel that urge to leave or to check, what would doing the opposite look like, even a little?",
+    "We'll practice bringing on some of those feelings on purpose, in small steps, so you can learn you can handle them.",
+    "This approach works best with a therapist trained in it. If it sounds right for you, I can help you find one."
+  ],
+  "contraindications": [
+    "Full UP requires training. Use these steps as an overview, or refer to a trained provider.",
+    "Before interoceptive exercises (overbreathing, spinning, running in place), check for heart or lung disease, seizures, pregnancy, recent injury or other medical conditions; get medical advice where needed and choose gentler exercises.",
+    "Not a stand-alone treatment for psychosis, mania, severe eating disorders, or substance use that needs its own treatment; coordinate the right level of care.",
+    "When trauma symptoms are the main concern, discuss trauma-focused therapies (such as CPT, PE or EMDR), which have the strongest guideline support for PTSD.",
+    "This intervention does not assess or decide risk. If suicidal thoughts, self-harm or risk to others come up, pause and follow your setting's risk-assessment and safety-planning procedures. Keep crisis options visible: 988 Suicide & Crisis Lifeline (US, call or text), the local emergency number, and findahelpline.com for other countries."
+  ],
+  "culturalAdaptations": [
+    "Emotion words and display rules differ across cultures. Start with the client's own words for feelings and body sensations, and explore which emotions are acceptable to show in their family and community.",
+    "Some avoidance is protective, for example avoiding a place with real danger or discrimination. Separate realistic caution from avoidance that keeps fear going before planning exposures.",
+    "The UP has been translated and studied in several countries; check for materials in the client's language.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "trainingRequired": "Unified Protocol: trained clinicians only for the full protocol (training and consultation through the Unified Protocol Institute); steps here are overview-level only.",
+  "handoutIds": [
+    "what-keeps-it-going",
+    "mindful-check-in",
+    "exposure-ladder",
+    "opposite-action-practice"
+  ],
+  "orientationIds": [
+    "cognitive-therapy",
+    "integrative-common-factors"
+  ],
+  "sources": [
+    {
+      "title": "The Unified Protocol for transdiagnostic treatment of emotional disorders compared with diagnosis-specific protocols for anxiety disorders: a randomized clinical trial (Barlow et al.)",
+      "publisher": "JAMA Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28768327/",
+      "year": 2017
+    },
+    {
+      "title": "A systematic review and meta-analysis of the Unified Protocol as a transdiagnostic emotion regulation based intervention (Sakiris and Berle)",
+      "publisher": "Clinical Psychology Review (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31271848/",
+      "year": 2019
+    },
+    {
+      "title": "Unified Protocol for the Transdiagnostic Treatment of Emotional Disorders",
+      "publisher": "APA Division 12, Society of Clinical Psychology",
+      "url": "https://div12.org/?p=10154"
+    },
+    {
+      "title": "Unified Protocol training",
+      "publisher": "Unified Protocol Institute",
+      "url": "https://unifiedprotocol.com/training"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

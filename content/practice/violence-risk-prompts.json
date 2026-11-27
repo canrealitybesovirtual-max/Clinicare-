@@ -1,0 +1,135 @@
+{
+  "id": "violence-risk-prompts",
+  "title": "Thoughts of harming others: structured prompts and documentation",
+  "category": "safety-and-risk",
+  "summary": "Structured questions for when a client talks about harming someone, or others are worried that they might: history, intent, plan, access to weapons, an identifiable person at risk, substances, stressors and protective factors, and what to write down. It produces no score and makes no decision; duty-to-warn or duty-to-protect rules differ by state and are covered in the legal hub.",
+  "whenToUse": [
+    "A client voices anger, threats or thoughts of hurting a particular person or people in general.",
+    "A family member, partner or colleague reports threats or worrying behavior.",
+    "A client with a history of violence is going through a major stressor (separation, job loss, legal action).",
+    "Homicidal thoughts come up alongside suicidal thoughts, psychosis or intoxication."
+  ],
+  "steps": [
+    {
+      "heading": "Ask directly and stay calm",
+      "body": "Explain why you are asking and the limits of confidentiality. Ask about thoughts of harming others the same way you ask about suicide: plainly, without alarm and without judgment."
+    },
+    {
+      "heading": "Cover the key areas",
+      "items": [
+        "Thoughts: what they are, how often, how long they last and how strong they feel.",
+        "Intent: whether the client wants to act, and how they feel about the thoughts (unwanted and frightening, or welcome).",
+        "Plan and preparation: any plan, timing, rehearsal, following or watching someone, or steps already taken.",
+        "Means: access to firearms or other weapons, at home, at work or through others.",
+        "Target: whether a specific, identifiable person is at risk, and how the client could reach them.",
+        "History: past violence, threats, arrests, protective orders and the most serious past incident.",
+        "Current state: intoxication or substance use, sleep loss, psychotic experiences such as command hallucinations or persecutory beliefs, agitation.",
+        "Stressors and triggers: separation, jealousy, humiliation, job loss, legal or custody disputes.",
+        "Protective factors: people, values, faith, fear of consequences, treatment engagement and reasons not to act."
+      ]
+    },
+    {
+      "heading": "Separate kinds of thoughts",
+      "body": "Unwanted, distressing intrusive thoughts of harm that the client finds horrifying and works to avoid (common in obsessive-compulsive presentations, including after childbirth) are different from wished-for intentions. Assess carefully rather than assuming either."
+    },
+    {
+      "heading": "Make a plan together",
+      "items": [
+        "Agree steps to reduce access to weapons and who will hold them, using lethal means conversations.",
+        "Address what drives the risk now: intoxication, sleep, psychosis, a crisis in a relationship.",
+        "Increase contact and support, and involve others the client agrees to.",
+        "Consider crisis, emergency or inpatient assessment when you believe someone may be harmed soon."
+      ]
+    },
+    {
+      "heading": "Consult and check your duties",
+      "body": "Consult a supervisor or colleague, and check your state's duty-to-warn or duty-to-protect law and your service policy before deciding on any disclosure. If someone is in immediate danger, call emergency services."
+    },
+    {
+      "heading": "Document clearly",
+      "items": [
+        "What the client said, in brief and without identifiers of the other person beyond what your record requires.",
+        "The areas you asked about and the answers.",
+        "Your reasoning, the options you considered, consultations and the plan agreed.",
+        "Any disclosure made, to whom, when and under which legal basis."
+      ]
+    }
+  ],
+  "prompts": [
+    "You have mentioned being furious with him. Have you had thoughts of hurting him?",
+    "When those thoughts come, do you want to act on them, or do they frighten you?",
+    "Have you thought about how or when? Have you done anything to get ready?",
+    "Do you have access to a gun or other weapon, at home or anywhere else?",
+    "Has anything like this happened before? What happened then?",
+    "What stops you from acting on these thoughts?"
+  ],
+  "cautions": [
+    "Nothing here scores, ranks or decides risk. Structured professional judgment tools such as the HCR-20 need training and a license and are link-outs only.",
+    "Duty-to-warn and duty-to-protect laws differ by state (mandatory, permissive or none); check the current law and consult before disclosing.",
+    "Do not record the other person's identifying details in this app; it keeps nothing and its exports use blank lines.",
+    "Intrusive, unwanted thoughts of harm are not the same as intent; avoid unnecessary escalation while keeping your own judgment.",
+    "If anyone is in immediate danger, call emergency services first."
+  ],
+  "adaptations": [
+    {
+      "context": "Intimate partner conflict",
+      "adaptation": "See the guide on intimate partner violence: ask about both using and experiencing violence, privately, and consider the safety of any children."
+    },
+    {
+      "context": "Psychotic experiences",
+      "adaptation": "Ask about command hallucinations and persecutory beliefs about specific people, and coordinate urgently with psychiatric services."
+    }
+  ],
+  "evidenceSummary": "NICE NG10 (2015) covers anticipating and reducing violence and aggression, including assessment of risk factors and de-escalation. The National Conference of State Legislatures summary of duty-to-warn laws shows that states differ: some make warning mandatory, some permit it and some have no statute. Femicide research (Campbell and colleagues, 2003) and the strangulation study by Glass and colleagues (2008) show why access to firearms, threats and prior strangulation matter in partner violence.",
+  "forClinicianReview": true,
+  "crisisPanel": true,
+  "sud": true,
+  "relatedInterventionIds": ["lethal-means-counseling", "dbt-distress-tolerance", "ipv-safety-planning"],
+  "relatedHandoutIds": ["anger-cycle-and-time-out"],
+  "relatedFormulationIds": ["functional-analysis"],
+  "relatedLegalIds": ["duty-to-warn-protect", "erpo-and-firearm-transfer", "crisis-988-or-911", "clinician-personal-safety", "mandatory-reporting"],
+  "relatedPracticeIds": ["in-session-de-escalation", "ipv-screening-and-first-line-support", "postpartum-psychosis-vs-intrusive-thoughts", "self-harm-assessment-and-formulation"],
+  "relatedPopulationIds": ["justice-involved"],
+  "linkOuts": [],
+  "measuresPending": [
+    {
+      "name": "HCR-20 Version 3 (structured professional judgment; training required)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35061555/",
+      "licenseKey": "HCR-20"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Violence and aggression: short-term management in mental health, health and community settings (NG10)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng10",
+      "year": 2015
+    },
+    {
+      "title": "Mental health professionals' duty to warn",
+      "publisher": "National Conference of State Legislatures",
+      "url": "https://www.ncsl.org/health/mental-health-professionals-duty-to-warn"
+    },
+    {
+      "title": "Risk factors for femicide in abusive relationships: results from a multisite case control study (Campbell et al.)",
+      "publisher": "American Journal of Public Health, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12835191/",
+      "year": 2003
+    },
+    {
+      "title": "Non-fatal strangulation is an important risk factor for homicide of women (Glass et al.)",
+      "publisher": "Journal of Emergency Medicine, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17961956/",
+      "year": 2008
+    },
+    {
+      "title": "Violence risk assessment with the HCR-20 V3 in legal contexts: a critical reflection (de Vogel et al.)",
+      "publisher": "Journal of Personality Assessment, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/35061555/",
+      "year": 2022
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

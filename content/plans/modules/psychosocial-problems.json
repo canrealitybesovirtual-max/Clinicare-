@@ -1,0 +1,571 @@
+{
+  "id": "psychosocial-problems",
+  "title": "Psychosocial and social-needs problems (ICD-10-CM Z codes)",
+  "summary": "Social and life circumstances that affect mental health, written as plan problems with the matching ICD-10-CM Z codes (Z55 to Z65 and nearby) for reference. Z codes describe circumstances, not the person, and are never a diagnosis.",
+  "appliesTo": "any",
+  "problems": [
+    {
+      "id": "psy-housing",
+      "label": "Unstable or unsafe housing",
+      "definitions": [
+        "Is behind on rent or mortgage payments, has received an eviction notice, or expects to lose current housing in the coming months.",
+        "Is staying with others for now, in a shelter, a vehicle or another place not meant for living, or lives in housing without safe heat, water or power."
+      ],
+      "longTermGoals": [
+        "The client has safer, more stable housing, or a clear plan and support to get there, and the rest of the plan fits their housing situation."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "psy-housing-first-step",
+          "text": "In the first 2 sessions, name the most urgent housing need with the client (for example a court date, a place to stay tonight or unsafe repairs) and agree on 1 concrete step for the coming week.",
+          "interventionIds": [
+            "problem-solving"
+          ],
+          "targets": [
+            "structural-stressors"
+          ],
+          "step": "low-intensity"
+        },
+        {
+          "id": "psy-housing-link",
+          "text": "By week 2, with consent, connect the client to at least 1 housing resource (for example 211, a local housing agency, or legal aid for eviction questions) and confirm at the next session whether contact happened.",
+          "interventionIds": [],
+          "targets": [
+            "structural-stressors",
+            "strengths-and-supports"
+          ]
+        },
+        {
+          "id": "psy-housing-fit",
+          "text": "Fit the rest of the plan to the housing situation (for example session times, where between-session practice can happen and how handouts are kept), and review the fit at each plan review.",
+          "interventionIds": [],
+          "targets": [
+            "structural-stressors"
+          ]
+        }
+      ],
+      "measureIds": [],
+      "zCodes": [
+        {
+          "code": "Z59.811",
+          "label": "Housing instability, housed, with risk of homelessness"
+        },
+        {
+          "code": "Z59.812",
+          "label": "Housing instability, housed, homelessness in past 12 months"
+        },
+        {
+          "code": "Z59.01",
+          "label": "Sheltered homelessness"
+        },
+        {
+          "code": "Z59.02",
+          "label": "Unsheltered homelessness"
+        },
+        {
+          "code": "Z59.19",
+          "label": "Other inadequate housing"
+        }
+      ],
+      "linkOuts": [
+        {
+          "title": "211: free help finding local services",
+          "publisher": "211 (United Way Worldwide)",
+          "url": "https://211.org/"
+        }
+      ]
+    },
+    {
+      "id": "psy-food-and-money",
+      "label": "Not enough money for food, utilities or other basics",
+      "definitions": [
+        "Runs out of food, or money for food, before the end of the month, or skips meals because of cost.",
+        "Struggles to pay for utilities, medicines, transport or other basics, or has had a utility shut-off notice."
+      ],
+      "longTermGoals": [
+        "The client's basic needs are better met through benefits and community resources, and money stress is part of the shared picture rather than a source of blame."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "psy-food-link",
+          "text": "By session 2, ask about food and money needs in a matter-of-fact way and, with consent, connect the client to at least 1 resource (for example food assistance, help with utility bills or 211) within 2 weeks.",
+          "interventionIds": [],
+          "targets": [
+            "structural-stressors"
+          ],
+          "step": "low-intensity"
+        },
+        {
+          "id": "psy-benefits-check",
+          "text": "By week 4, with the client's agreement, arrange a benefits check (for example nutrition assistance, health coverage or utility programs) through a case manager, social worker or community agency.",
+          "interventionIds": [],
+          "targets": [
+            "structural-stressors"
+          ]
+        },
+        {
+          "id": "psy-money-problem-solving",
+          "text": "Over weeks 3 to 8, use structured problem solving on 1 money-related stressor every 2 weeks and note what changed.",
+          "interventionIds": [
+            "problem-solving"
+          ],
+          "targets": [
+            "structural-stressors",
+            "repetitive-negative-thinking"
+          ],
+          "step": "low-intensity"
+        }
+      ],
+      "measureIds": [],
+      "zCodes": [
+        {
+          "code": "Z59.41",
+          "label": "Food insecurity"
+        },
+        {
+          "code": "Z59.6",
+          "label": "Low income"
+        },
+        {
+          "code": "Z59.861",
+          "label": "Financial insecurity, difficulty paying for utilities"
+        },
+        {
+          "code": "Z59.869",
+          "label": "Financial insecurity, unspecified"
+        },
+        {
+          "code": "Z59.82",
+          "label": "Transportation insecurity"
+        }
+      ],
+      "linkOuts": [
+        {
+          "title": "211: free help finding local services",
+          "publisher": "211 (United Way Worldwide)",
+          "url": "https://211.org/"
+        },
+        {
+          "title": "Find a Health Center",
+          "publisher": "Health Resources and Services Administration",
+          "url": "https://findahealthcenter.hrsa.gov/"
+        }
+      ]
+    },
+    {
+      "id": "psy-work-and-income",
+      "label": "Job loss, insecure work or strain at work",
+      "definitions": [
+        "Has lost a job or fears losing it, or works hours or conditions that leave little time for rest, family or treatment.",
+        "Describes conflict, harassment or unfair treatment at work that affects mood, sleep or safety."
+      ],
+      "longTermGoals": [
+        "The client has a plan for work or income that fits their health and values, and work stress is easing or better managed."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "psy-work-map",
+          "text": "By session 3, map the work situation with the client (what is in their control, what is not, and what support exists) and choose 1 area to work on first. For long-term work stress or a planned return to work, add the work stress and return-to-work module.",
+          "interventionIds": [
+            "problem-solving"
+          ],
+          "targets": [
+            "structural-stressors"
+          ],
+          "step": "low-intensity"
+        },
+        {
+          "id": "psy-work-link",
+          "text": "By week 4, with consent, link the client to at least 1 employment or income resource that fits (for example a job center, vocational rehabilitation, or the Job Accommodation Network for questions about workplace adjustments).",
+          "interventionIds": [],
+          "targets": [
+            "structural-stressors",
+            "strengths-and-supports"
+          ]
+        },
+        {
+          "id": "psy-work-options",
+          "text": "If unfair treatment or harassment at work is described, by week 4 share information about the client's options (for example the employer's complaint process or the US Equal Employment Opportunity Commission) and leave the decision to the client.",
+          "interventionIds": [],
+          "targets": [
+            "structural-stressors"
+          ]
+        }
+      ],
+      "measureIds": [],
+      "zCodes": [
+        {
+          "code": "Z56.0",
+          "label": "Unemployment, unspecified"
+        },
+        {
+          "code": "Z56.2",
+          "label": "Threat of job loss"
+        },
+        {
+          "code": "Z56.3",
+          "label": "Stressful work schedule"
+        },
+        {
+          "code": "Z56.4",
+          "label": "Discord with boss and workmates"
+        },
+        {
+          "code": "Z56.6",
+          "label": "Other physical and mental strain related to work"
+        },
+        {
+          "code": "Z56.81",
+          "label": "Sexual harassment on the job"
+        }
+      ],
+      "linkOuts": [
+        {
+          "title": "Job Accommodation Network",
+          "publisher": "Job Accommodation Network (US Department of Labor)",
+          "url": "https://askjan.org/"
+        }
+      ]
+    },
+    {
+      "id": "psy-isolation",
+      "label": "Living alone or cut off from people, with loneliness",
+      "definitions": [
+        "Has few or no people to talk with or rely on in a usual week, and describes feeling lonely or left out.",
+        "Has lost social roles or contact, for example after a move, retirement, illness or a death."
+      ],
+      "longTermGoals": [
+        "The client has more regular, meaningful contact with people or communities of their choosing."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "psy-connection-map",
+          "text": "By session 3, map current and past connections (people, groups, faith or community places, online communities) and choose 1 to strengthen.",
+          "interventionIds": [
+            "social-connection-and-loneliness"
+          ],
+          "targets": [
+            "low-social-support"
+          ],
+          "step": "low-intensity"
+        },
+        {
+          "id": "psy-connection-steps",
+          "text": "Over weeks 3 to 10, take at least 1 planned social step a week (for example a call, a group, volunteering or a class), starting with the easiest step and building up.",
+          "interventionIds": [
+            "social-connection-and-loneliness",
+            "behavioral-activation"
+          ],
+          "targets": [
+            "low-social-support",
+            "avoidance-escape"
+          ],
+          "step": "low-intensity"
+        },
+        {
+          "id": "psy-connection-thoughts",
+          "text": "By week 6, notice at least 2 thoughts that hold back contact (for example that others would not want to hear from the client) and test each with a small experiment.",
+          "interventionIds": [
+            "behavioral-experiments",
+            "social-connection-and-loneliness"
+          ],
+          "targets": [
+            "negative-core-beliefs"
+          ],
+          "step": "high-intensity"
+        }
+      ],
+      "measureIds": [],
+      "zCodes": [
+        {
+          "code": "Z60.2",
+          "label": "Problems related to living alone"
+        },
+        {
+          "code": "Z60.4",
+          "label": "Social exclusion and rejection"
+        }
+      ],
+      "handoutIds": [
+        "social-connection-plan",
+        "my-relationships-map"
+      ]
+    },
+    {
+      "id": "psy-discrimination-and-acculturation",
+      "label": "Stress from discrimination, exclusion or adjusting to a new culture",
+      "definitions": [
+        "Describes being treated unfairly, excluded, harassed or threatened because of race, ethnicity, religion, gender, sexual orientation, disability, age or another part of who they are.",
+        "Is adjusting to a new country or culture and describes stress from language, the loss of familiar supports, changed roles or uncertainty about legal status."
+      ],
+      "longTermGoals": [
+        "The client feels heard and supported, has ways of responding to discrimination-related stress that fit their values and community, and has the practical and legal information they want."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "psy-name-the-stress",
+          "text": "In the first 3 sessions, invite the client to describe experiences of discrimination or adjustment in their own words, and note how these affect them without questioning whether they happened.",
+          "interventionIds": [
+            "racial-trauma-and-race-based-stress",
+            "cultural-formulation-exploration"
+          ],
+          "targets": [
+            "structural-stressors"
+          ]
+        },
+        {
+          "id": "psy-belonging",
+          "text": "By week 6, name at least 2 sources of strength or belonging (for example family, community groups, faith, cultural practices or affirming organizations) and plan 1 contact with one of them.",
+          "interventionIds": [
+            "cultural-formulation-exploration",
+            "social-connection-and-loneliness"
+          ],
+          "targets": [
+            "strengths-and-supports",
+            "values-and-meaning"
+          ]
+        },
+        {
+          "id": "psy-rights-information",
+          "text": "If the client wants it, by week 4 share information about reporting or legal options (for example a civil rights office, an immigration legal service or legal aid) and leave the choice to the client.",
+          "interventionIds": [],
+          "targets": [
+            "structural-stressors"
+          ]
+        }
+      ],
+      "measureIds": [],
+      "zCodes": [
+        {
+          "code": "Z60.5",
+          "label": "Target of (perceived) adverse discrimination and persecution"
+        },
+        {
+          "code": "Z60.3",
+          "label": "Acculturation difficulty"
+        }
+      ],
+      "formulationIds": [
+        "minority-stress"
+      ]
+    },
+    {
+      "id": "psy-caregiving",
+      "label": "Strain from caring for a relative or friend who needs care at home",
+      "definitions": [
+        "Gives regular care to a family member or friend with illness, disability or memory problems, and has little time for rest, health or work.",
+        "Describes exhaustion, guilt, resentment or worry about the person they care for."
+      ],
+      "longTermGoals": [
+        "The client has more support and breaks, looks after their own health, and feels more able to manage the caring role."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "psy-care-tasks",
+          "text": "By session 3, list the caring tasks and who helps with each, and choose 1 task to share or hand over.",
+          "interventionIds": [
+            "problem-solving",
+            "dementia-caregiver-support"
+          ],
+          "targets": [
+            "low-social-support"
+          ],
+          "step": "low-intensity"
+        },
+        {
+          "id": "psy-carer-support",
+          "text": "By week 4, with consent, connect the client to at least 1 caregiver resource (for example respite care, a caregiver support line or a support group).",
+          "interventionIds": [
+            "dementia-caregiver-support"
+          ],
+          "targets": [
+            "strengths-and-supports"
+          ]
+        },
+        {
+          "id": "psy-carer-breaks",
+          "text": "Over weeks 3 to 10, schedule at least 1 short break or self-care activity a week and rate stress (0-10) before and after.",
+          "interventionIds": [
+            "behavioral-activation"
+          ],
+          "targets": [
+            "low-reward-engagement",
+            "coping-skills"
+          ],
+          "step": "low-intensity"
+        }
+      ],
+      "measureIds": [],
+      "zCodes": [
+        {
+          "code": "Z63.6",
+          "label": "Dependent relative needing care at home"
+        }
+      ]
+    },
+    {
+      "id": "psy-legal-and-reentry",
+      "label": "Legal problems, or returning to the community after incarceration",
+      "definitions": [
+        "Faces court dates, probation or parole conditions, immigration proceedings, custody disputes or other legal processes that add stress and take time.",
+        "Has recently been released from jail or prison and is working on housing, work, health care and reconnecting with family."
+      ],
+      "longTermGoals": [
+        "The client knows where to get legal help, can meet legal obligations, and has support through the transition."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "psy-legal-dates",
+          "text": "By session 2, list upcoming legal dates and obligations with the client and plan how therapy fits around them (for example session times and transport).",
+          "interventionIds": [
+            "problem-solving"
+          ],
+          "targets": [
+            "structural-stressors"
+          ]
+        },
+        {
+          "id": "psy-legal-help",
+          "text": "By week 3, with consent, connect the client to legal aid or their attorney for legal questions, and keep the clinician's treating role separate from any legal or evaluation role.",
+          "interventionIds": [],
+          "targets": [
+            "structural-stressors"
+          ]
+        },
+        {
+          "id": "psy-reentry-basics",
+          "text": "For a client returning from incarceration, by week 2 check that medicines, health coverage and a primary care appointment are in place, and link to local reentry services.",
+          "interventionIds": [
+            "medication-referral"
+          ],
+          "targets": [
+            "physical-health-burden",
+            "structural-stressors"
+          ]
+        }
+      ],
+      "measureIds": [],
+      "zCodes": [
+        {
+          "code": "Z65.3",
+          "label": "Problems related to other legal circumstances"
+        },
+        {
+          "code": "Z65.2",
+          "label": "Problems related to release from prison"
+        }
+      ]
+    },
+    {
+      "id": "psy-partner-abuse",
+      "label": "Abuse or control by a partner or former partner",
+      "definitions": [
+        "Describes a partner or former partner who hurts, threatens, controls, monitors or isolates them, or who controls money or access to care.",
+        "Changes plans, appointments or contact with others out of fear of how a partner will react."
+      ],
+      "longTermGoals": [
+        "The client is safer, knows their options and has support, and makes their own decisions about the relationship at their own pace."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "psy-ipv-private-check",
+          "text": "In private, without the partner present, the clinician asks about safety in the relationship. If abuse is described, the clinician and client make a relationship safety plan, separate from any suicide safety plan; the clinician makes every judgment about danger, and nothing here rates it.",
+          "interventionIds": [
+            "ipv-safety-planning"
+          ],
+          "targets": [
+            "structural-stressors"
+          ],
+          "step": "crisis-or-urgent"
+        },
+        {
+          "id": "psy-ipv-hotline",
+          "text": "By the next session, share hotline information in a way that is safe for the client (for example memorized, or saved under another name) and confirm the client knows how to reach emergency help.",
+          "interventionIds": [
+            "ipv-safety-planning"
+          ],
+          "targets": [
+            "strengths-and-supports"
+          ]
+        },
+        {
+          "id": "psy-ipv-safe-records",
+          "text": "Throughout treatment, keep the plan and any written materials safe from a partner's view (for example nothing sent home that names the abuse), and offer no couples sessions while abuse or coercive control is present; review both at each plan review.",
+          "interventionIds": [
+            "ipv-safety-planning"
+          ],
+          "targets": [
+            "structural-stressors"
+          ]
+        }
+      ],
+      "measureIds": [],
+      "zCodes": [
+        {
+          "code": "Z69.11",
+          "label": "Encounter for mental health services for victim of spousal or partner abuse"
+        },
+        {
+          "code": "Z91.414",
+          "label": "Personal history of adult intimate partner abuse"
+        }
+      ],
+      "practiceIds": [
+        "ipv-screening-and-first-line-support"
+      ],
+      "handoutIds": [
+        "relationship-safety-help-card"
+      ],
+      "linkOuts": [
+        {
+          "title": "National Domestic Violence Hotline",
+          "publisher": "The Hotline",
+          "url": "https://www.thehotline.org"
+        }
+      ]
+    }
+  ],
+  "collaborativeNote": "Write these problems with the client and in their words. Z codes describe circumstances, not the person, and are recorded only when the client's situation fits and recording helps their care; the code titles are official ICD-10-CM wording and never question the client's experience. Confirm each code in the current ICD-10-CM code set before use. Do not add names or other identifying details. Resource only. Not a substitute for clinical judgment.",
+  "sources": [
+    {
+      "title": "Using Z Codes: The Social Determinants of Health (SDOH) Data Journey to Better Outcomes",
+      "publisher": "Centers for Medicare & Medicaid Services, Office of Minority Health",
+      "url": "https://www.cms.gov/files/document/zcodes-infographic.pdf"
+    },
+    {
+      "title": "ICD-10-CM (official code set)",
+      "publisher": "CDC National Center for Health Statistics",
+      "url": "https://www.cdc.gov/nchs/icd/icd-10-cm/index.html"
+    },
+    {
+      "title": "ICD-10-CM code lookup (Clinical Table Search Service)",
+      "publisher": "US National Library of Medicine",
+      "url": "https://clinicaltables.nlm.nih.gov/apidoc/icd10cm/v3/doc.html"
+    },
+    {
+      "title": "Accountable Health Communities: addressing social needs through Medicare and Medicaid (Alley et al.)",
+      "publisher": "New England Journal of Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26731305/",
+      "year": 2016
+    },
+    {
+      "title": "Structural competency: theorizing a new medical engagement with stigma and inequality (Metzl and Hansen)",
+      "publisher": "Social Science and Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24507917/",
+      "year": 2014
+    },
+    {
+      "title": "Guidelines for Successful Transition of People with Mental or Substance Use Disorders from Jail and Prison",
+      "publisher": "Substance Abuse and Mental Health Services Administration",
+      "url": "https://store.samhsa.gov/product/guidelines-successful-transition-people-mental-or-substance-use-disorders-jail-and-prison/sma16-4998"
+    },
+    {
+      "title": "National Domestic Violence Hotline",
+      "publisher": "The Hotline",
+      "url": "https://www.thehotline.org"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

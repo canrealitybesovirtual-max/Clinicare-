@@ -1,0 +1,204 @@
+{
+  "id": "high-risk-situations-plan",
+  "title": "My High-Risk Situations Plan",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 20,
+  "intro": "Some people, places, feelings, and times make it much harder to stick with a change in drinking or drug use. Knowing your own high-risk situations ahead of time lets you plan what to do. This sheet works for alcohol, drugs, or any other substance. Fill it in with your counselor. It takes about 20 minutes.",
+  "sections": [
+    {
+      "heading": "Map my high-risk situations",
+      "body": "Think about the last few times you used more than you wanted to. What was going on? Use general words, not names.",
+      "steps": [
+        "People (for example, old friends I used with, or someone I often argue with): ________",
+        "Places (for example, bars, parties, or a certain street): ________",
+        "Feelings (for example, stress, boredom, loneliness, anger, or feeling great): ________",
+        "Times (for example, payday, weekends, after work, or late at night): ________",
+        "Body states (for example, pain, poor sleep, or being very tired or hungry): ________"
+      ]
+    },
+    {
+      "heading": "A plan for each situation",
+      "body": "For each one, pick a way to cope. You can avoid it, change it, or get through it with a plan.",
+      "steps": [
+        "Avoid: stay away for now, like taking a different way home or deleting a phone number.",
+        "Change: make it safer, like going with a support person or leaving early.",
+        "Cope: use a skill, like riding out the urge or calling someone.",
+        "Situation: ________ My plan: ________",
+        "Situation: ________ My plan: ________",
+        "Situation: ________ My plan: ________"
+      ]
+    },
+    {
+      "heading": "Ways to say no",
+      "body": "Saying no is easier when you have practiced. Say it clearly, look at the person, and keep it short. You do not owe anyone a long reason.",
+      "steps": [
+        "A clear no: \"No, thanks. I'm not having any.\"",
+        "Offer something else: \"No, but I'd love a coffee.\"",
+        "Change the subject: \"No, thanks. Hey, how was your trip?\"",
+        "Ask them to stop: \"I said no. Please don't offer again.\"",
+        "Leave: it is okay to walk away or go home early.",
+        "My own words: ________"
+      ]
+    },
+    {
+      "heading": "If a craving hits",
+      "steps": [
+        "Wait 15 to 30 minutes. Most cravings fade.",
+        "Call or text someone on your support list.",
+        "Leave the place, or change what you are doing.",
+        "Remind yourself of your reasons for changing.",
+        "Do something with your hands or body, like a walk or a shower."
+      ]
+    },
+    {
+      "heading": "If I slip",
+      "body": "A slip is a chance to learn, not a reason to give up. Stop as soon as you can, get to a safe place, and tell your counselor. Look at what led up to it and add it to your plan. After a break, your body cannot handle as much as before. Using your old amount can cause an overdose. If you use opioids, or drugs that may contain fentanyl, do not use alone and keep naloxone with you."
+    },
+    {
+      "heading": "Privacy note",
+      "body": "Do not write your name, or the names of other people or places, on this sheet. Keep it somewhere private. If you share it with a substance use treatment program, it may become part of your treatment records. Those records have special federal privacy protection. 42 CFR Part 2 prohibits unauthorized use or disclosure of these records. Ask your counselor how your records are kept and shared."
+    }
+  ],
+  "practiceLog": {
+    "columns": [
+      "Day",
+      "Situation (no names)",
+      "Craving (0-10)",
+      "What I did",
+      "How it went"
+    ],
+    "rows": 7
+  },
+  "safetyNote": "Safety first: If you drink a lot, or take pills like sleeping pills or pills for nerves every day, stopping all at once can be dangerous. Talk with a doctor first. If someone may have overdosed, call 911 and give naloxone if you have it. For free, confidential help finding treatment in the US, call the SAMHSA National Helpline at 1-800-662-4357, any time, in English or Spanish. If you have thoughts of hurting yourself or someone else, get help now. In the US, call or text 988, or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sud": true,
+  "es": {
+    "title": "Mi plan para situaciones de riesgo",
+    "intro": "Algunas personas, lugares, emociones y momentos hacen mucho más difícil mantener un cambio con el alcohol o las drogas. Si conoce de antemano sus situaciones de riesgo, puede planear qué hacer. Esta hoja sirve para el alcohol, las drogas o cualquier otra sustancia. Llénela con su consejero. Toma unos 20 minutos.",
+    "sections": [
+      {
+        "heading": "Mis situaciones de riesgo",
+        "body": "Piense en las últimas veces que consumió más de lo que quería. ¿Qué estaba pasando? Use palabras generales, no nombres.",
+        "steps": [
+          "Personas (por ejemplo, amigos con los que consumía, o alguien con quien discuto mucho): ________",
+          "Lugares (por ejemplo, bares, fiestas o cierta calle): ________",
+          "Emociones (por ejemplo, estrés, aburrimiento, soledad, enojo, o sentirme muy bien): ________",
+          "Momentos (por ejemplo, el día de pago, los fines de semana, después del trabajo o tarde en la noche): ________",
+          "Cómo está mi cuerpo (por ejemplo, con dolor, con mal sueño, o con mucho cansancio o hambre): ________"
+        ]
+      },
+      {
+        "heading": "Un plan para cada situación",
+        "body": "Para cada una, escoja una forma de afrontarla. Puede evitarla, cambiarla o pasarla con un plan.",
+        "steps": [
+          "Evitar: aléjese por ahora, por ejemplo, tome otro camino a casa o borre un número de teléfono.",
+          "Cambiar: hágala más segura, por ejemplo, vaya con una persona que le apoye o váyase temprano.",
+          "Afrontar: use una habilidad, como esperar a que pase el antojo o llamar a alguien.",
+          "Situación: ________ Mi plan: ________",
+          "Situación: ________ Mi plan: ________",
+          "Situación: ________ Mi plan: ________"
+        ]
+      },
+      {
+        "heading": "Formas de decir que no",
+        "body": "Decir que no es más fácil si lo ha practicado. Dígalo claro, mire a la persona y sea breve. No le debe a nadie una larga explicación.",
+        "steps": [
+          "Un no claro: \"No, gracias. No voy a tomar nada.\"",
+          "Proponga otra cosa: \"No, pero me encantaría un café.\"",
+          "Cambie de tema: \"No, gracias. Oye, ¿cómo te fue en el viaje?\"",
+          "Pida que paren: \"Ya dije que no. Por favor, no me ofrezcas otra vez.\"",
+          "Váyase: está bien alejarse o irse temprano a casa.",
+          "Mis propias palabras: ________"
+        ]
+      },
+      {
+        "heading": "Si le llega un antojo fuerte",
+        "steps": [
+          "Espere de 15 a 30 minutos. La mayoría de los antojos se calman.",
+          "Llame o escriba a alguien de su lista de apoyo.",
+          "Váyase del lugar, o cambie lo que está haciendo.",
+          "Recuerde sus razones para cambiar.",
+          "Haga algo con las manos o el cuerpo, como caminar o darse una ducha."
+        ]
+      },
+      {
+        "heading": "Si tengo una recaída",
+        "body": "Una recaída es una oportunidad para aprender, no una razón para rendirse. Pare lo antes posible, vaya a un lugar seguro y cuénteselo a su consejero. Mire qué pasó antes y agréguelo a su plan. Después de un tiempo sin consumir, su cuerpo no aguanta tanto como antes. Usar la cantidad de antes puede causar una sobredosis. Si usa opioides, o drogas que podrían tener fentanilo, no consuma solo y lleve naloxona con usted."
+      },
+      {
+        "heading": "Nota de privacidad",
+        "body": "No escriba su nombre, ni los nombres de otras personas o lugares, en esta hoja. Guárdela en un lugar privado. Si la comparte con un programa de tratamiento por consumo de sustancias, puede llegar a ser parte de sus registros de tratamiento. Esos registros tienen una protección federal especial de la privacidad. La ley federal 42 CFR Part 2 prohíbe el uso o la divulgación no autorizados de estos registros. Pregúntele a su consejero cómo se guardan y se comparten sus registros."
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Día",
+        "Situación (sin nombres)",
+        "Antojo (0-10)",
+        "Qué hice",
+        "Cómo me fue"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: Si bebe mucho, o toma todos los días pastillas como las de dormir o las de los nervios, dejarlas de golpe puede ser peligroso. Hable primero con un médico. Si alguien pudo haber tenido una sobredosis, llame al 911 y dele naloxona si la tiene. Para recibir ayuda gratuita y confidencial para encontrar tratamiento en EE. UU., llame a la Línea Nacional de Ayuda de SAMHSA (SAMHSA National Helpline) al 1-800-662-4357, a cualquier hora, en inglés o en español. Si tiene pensamientos de hacerse daño o de hacerle daño a otra persona, busque ayuda ahora. En EE. UU., llame o envíe un mensaje de texto al 988, o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "linkOuts": [
+    {
+      "title": "FindTreatment.gov",
+      "publisher": "SAMHSA",
+      "url": "https://findtreatment.gov/",
+      "note": "Search for treatment near you, including programs that offer medicines.",
+      "lastVerified": "2026-11-27"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Relapse prevention for addictive behaviors (Hendershot, Witkiewitz, George and Marlatt)",
+      "publisher": "Substance Abuse Treatment, Prevention, and Policy (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21771314/",
+      "year": 2011
+    },
+    {
+      "title": "Efficacy of relapse prevention: a meta-analytic review (Irvin, Bowers, Dunn and Wang)",
+      "publisher": "Journal of Consulting and Clinical Psychology (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/10450627/",
+      "year": 1999
+    },
+    {
+      "title": "Alcohol-use disorders: diagnosis, assessment and management of harmful drinking (high-risk drinking) and alcohol dependence (CG115)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg115",
+      "year": 2011
+    },
+    {
+      "title": "VA/DoD Clinical Practice Guideline for the Management of Substance Use Disorders: provider summary",
+      "publisher": "US Department of Veterans Affairs and Department of Defense",
+      "url": "https://www.healthquality.va.gov/guidelines/MH/sud/VADoDSUDCPGProviderSummary.pdf",
+      "year": 2021
+    },
+    {
+      "title": "Naloxone nasal spray (drug information)",
+      "publisher": "MedlinePlus, U.S. National Library of Medicine",
+      "url": "https://medlineplus.gov/druginfo/meds/a616003.html"
+    },
+    {
+      "title": "National Helpline",
+      "publisher": "SAMHSA",
+      "url": "https://www.samhsa.gov/find-help/helplines/national-helpline"
+    },
+    {
+      "title": "42 CFR 2.32: notice to accompany disclosure (federal confidentiality rule for substance use treatment records)",
+      "publisher": "eCFR, U.S. Government Publishing Office",
+      "url": "https://www.ecfr.gov/current/title-42/chapter-I/subchapter-A/part-2/subpart-C/section-2.32",
+      "year": 2024
+    },
+    {
+      "title": "Confidentiality of substance use treatment records (42 CFR Part 2)",
+      "publisher": "U.S. Department of Health and Human Services",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/hipaa-part-2/index.html"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

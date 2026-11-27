@@ -1,0 +1,109 @@
+{
+  "id": "validation-levels",
+  "title": "Levels of validation",
+  "category": "relationship",
+  "summary": "Validation tells a person that their experience makes sense in some way. This guide describes graded levels, from attentive listening to radical genuineness, how to avoid invalidation, and how to pair validation with change strategies. Useful across orientations.",
+  "whenToUse": [
+    "When a client is highly emotional, ashamed or expects to be judged.",
+    "Before asking for change, so the request is heard as support rather than criticism.",
+    "When a rupture or misunderstanding has happened."
+  ],
+  "steps": [
+    {
+      "heading": "Work up through the levels",
+      "items": [
+        "Pay full attention: put other tasks aside, look and listen, show you are with them.",
+        "Reflect accurately: say back the facts and feelings you heard, and check you got it right.",
+        "Name what is unsaid: gently put words to a feeling or thought they have not said, and let them correct you.",
+        "Make sense of it through their history: show how the reaction fits what they have lived through.",
+        "Make sense of it through the present: show how most people would react this way in the current situation.",
+        "Be genuine: treat them as an equal and capable person, not as fragile."
+      ]
+    },
+    {
+      "heading": "Validate the valid",
+      "body": "Validate feelings, wants and reasons that make sense, not every behavior. You can validate the urge to escape while not validating a choice that hurts them."
+    },
+    {
+      "heading": "Pair validation with change",
+      "body": "Alternate understanding and change. Validation lowers arousal so problem solving is possible; change work moves things forward. Notice when the client needs more of one or the other."
+    }
+  ],
+  "prompts": [
+    "Given what you have been through, it makes sense that you would want to stay away from people right now.",
+    "It sounds like underneath the anger there is a lot of hurt. Is that close?",
+    "Most people would feel overwhelmed with this much on their plate.",
+    "It makes sense that you wanted the feeling to stop. Let's look at other ways to get there that cost you less."
+  ],
+  "cautions": [
+    "Invalidation pitfalls: rushing to fix, minimizing, cheerful reassurance, interpreting before understanding, or treating the person as fragile.",
+    "Validating a behavior that causes harm can reinforce it; validate the feeling or need, not the harmful act.",
+    "Validation scripts that sound rehearsed can feel invalidating. Use your own words.",
+    "Full dialectical behavior therapy is for trained clinicians only; this guide covers validation as a general skill."
+  ],
+  "adaptations": [
+    {
+      "context": "Culture",
+      "adaptation": "What feels validating varies. Some clients prefer understated acknowledgement over emotional reflection; ask what helps them feel understood."
+    }
+  ],
+  "evidenceSummary": "A 2018 meta-analysis (Elliott and colleagues) found a moderate association between therapist empathy and outcome. A 2019 study (Benitez and colleagues) found that within sessions, validation was followed by improved affect and invalidation by worsened affect. Validation is a core strategy in dialectical behavior therapy, which a 2020 Cochrane review (Storebø and colleagues) found beneficial for some outcomes in people with emotion dysregulation and self-harm.",
+  "forClinicianReview": true,
+  "crisisPanel": false,
+  "sud": false,
+  "relatedInterventionIds": [
+    "person-centered-reflective-listening",
+    "dbt-emotion-regulation-opposite-action",
+    "dbt-distress-tolerance",
+    "self-compassion-practice"
+  ],
+  "relatedHandoutIds": [
+    "kind-self-talk",
+    "daily-emotion-and-urge-tracker"
+  ],
+  "relatedFormulationIds": [
+    "transdiagnostic-process-map"
+  ],
+  "relatedLegalIds": [
+    "competence-and-scope-of-practice"
+  ],
+  "relatedPracticeIds": [
+    "alliance-and-rupture-repair",
+    "socratic-questioning",
+    "trauma-informed-care"
+  ],
+  "relatedPopulationIds": [],
+  "linkOuts": [
+    {
+      "title": "DBT-Linehan Board of Certification",
+      "publisher": "DBT-Linehan Board of Certification",
+      "url": "https://dbt-lbc.org/",
+      "note": "Certification for clinicians and programs delivering full dialectical behavior therapy.",
+      "lastVerified": "2026-11-27"
+    }
+  ],
+  "measuresPending": [],
+  "sources": [
+    {
+      "title": "Therapist empathy and client outcome: an updated meta-analysis (Elliott, Bohart, Watson and Murphy)",
+      "publisher": "Psychotherapy, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30335453/",
+      "year": 2018
+    },
+    {
+      "title": "The within-person effects of validation and invalidation on in-session changes in affect (Benitez, Southward, Altenburger, Howard and Cheavens)",
+      "publisher": "Personality Disorders: Theory, Research, and Treatment, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30714798/",
+      "year": 2019
+    },
+    {
+      "title": "Psychological therapies for people with borderline personality disorder (Storebø et al.)",
+      "publisher": "Cochrane Database of Systematic Reviews, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32368793/",
+      "year": 2020
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

@@ -1,0 +1,100 @@
+{
+  "id": "eating-disorder-medical-risk",
+  "title": "Eating disorders: medical risk and coordinating physical care",
+  "category": "medical-interface",
+  "summary": "Eating disorders can be physically dangerous at any weight. This guide covers what physical monitoring the medical team usually arranges (vital signs, bloods, ECG, refeeding risk), warning signs that need same-day medical review, and how to coordinate with primary care, dietitians and specialist services when a higher level of care may be needed. It sets no thresholds and makes no decisions; NICE NG69 and the Royal College of Psychiatrists MEED guidance hold the detail.",
+  "whenToUse": [
+    "At the start of work with any client with restriction, loss-of-control eating, purging, compulsive exercise, or use of laxatives, diuretics or insulin to control weight.",
+    "When weight is falling quickly, purging is increasing or the client feels faint, weak or unwell.",
+    "When planning or reviewing outpatient treatment and deciding with others whether more support is needed.",
+    "When nutrition is about to increase after a period of very low intake."
+  ],
+  "steps": [
+    {
+      "heading": "Make sure someone owns the physical monitoring",
+      "body": "Agree in writing who arranges physical checks (usually primary care or the specialist eating disorder team), how often and how results reach you. Psychological therapy should not proceed alone when no one is monitoring physical health."
+    },
+    {
+      "heading": "Know what the medical team usually checks",
+      "items": [
+        "Weight and its rate of change, and height for context, with the client's consent and in a sensitive way.",
+        "Heart rate and blood pressure lying and standing, and temperature.",
+        "Blood tests including electrolytes, and an ECG when indicated (for example with purging, low weight or some medicines).",
+        "Muscle strength, for example the ability to stand from a squat or sit up without using the arms.",
+        "Risk of refeeding problems when intake increases after a period of very low intake."
+      ]
+    },
+    {
+      "heading": "Recognize signs that need same-day medical review",
+      "items": [
+        "Fainting, chest pain, palpitations, shortness of breath or new confusion.",
+        "Rapid weight loss, very low intake or near-total food or fluid refusal.",
+        "Frequent vomiting or laxative use with weakness, cramps or dizziness.",
+        "Vomiting blood, severe abdominal pain or signs of dehydration.",
+        "In type 1 diabetes, deliberately reducing or skipping insulin.",
+        "New thoughts of suicide, which are more common in eating disorders: assess and respond as usual."
+      ]
+    },
+    {
+      "heading": "Coordinate the team",
+      "body": "Share relevant findings with consent, agree who is the lead clinician, and include a dietitian and, where available, a specialist eating disorder service. Use the same message across the team about what is happening and why."
+    },
+    {
+      "heading": "Review whether more support is needed",
+      "body": "When physical risk is rising, outpatient treatment is not helping, or the client cannot manage meals at home, discuss with the medical and specialist team whether day, intensive, residential or inpatient care is needed. NICE NG69 advises against using a single weight or BMI threshold to decide on admission."
+    },
+    {
+      "heading": "Keep the client informed and involved",
+      "body": "Explain the physical risks honestly and without shaming, involve the client in decisions and, with their agreement, involve family or supports who can help with meals and monitoring."
+    }
+  ],
+  "prompts": [
+    "Eating disorders can affect the heart and body even when weight looks okay. Who is checking your physical health at the moment?",
+    "Have you felt faint, dizzy, weak or had your heart race recently?",
+    "Would it be okay for me to share what we have talked about with your doctor, so we are working together?",
+    "When you start eating more, your body needs extra care for a while. Let us make sure your medical team knows the plan."
+  ],
+  "cautions": [
+    "Weight and BMI alone do not show how medically unwell someone is; people at average or higher weights can be at serious risk.",
+    "This guide sets no thresholds and decides nothing; the medical team interprets results and the level of care is a shared clinical decision.",
+    "Refeeding after very low intake can be dangerous and needs medical oversight.",
+    "Specialist eating disorder therapies need training; see the interventions library and refer where needed.",
+    "If a client is very unwell physically or may act on suicidal thoughts, arrange urgent medical care or follow your crisis protocol."
+  ],
+  "evidenceSummary": "NICE NG69 (2017, updated 2020) recommends physical health monitoring as part of eating disorder care, coordination between services, admission for medical stabilization when outpatient care cannot manage it, and not using an absolute weight or BMI threshold to decide on admission; it refers to the Royal College of Psychiatrists guidance on medical emergencies in eating disorders (MEED, 2022) for risk assessment. A 2023 summary for general practitioners (Mughal and colleagues, BJGP) describes assessment and management of medical emergencies in eating disorders based on MEED.",
+  "forClinicianReview": true,
+  "crisisPanel": true,
+  "sud": false,
+  "relatedInterventionIds": ["eating-disorder-medical-monitoring", "eating-disorder-specialist-therapies", "cbt-e-eating-disorders"],
+  "relatedHandoutIds": ["eating-concerns-warning-signs", "regular-eating-plan"],
+  "relatedFormulationIds": [],
+  "relatedLegalIds": ["decision-making-capacity", "crisis-and-involuntary-holds"],
+  "relatedPracticeIds": ["stepped-care-and-level-of-care", "problem-prioritization", "involving-family-and-supports"],
+  "relatedPopulationIds": [],
+  "linkOuts": [
+    {
+      "title": "Eating disorders: recognition and treatment (NG69), recommendations",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/NG69/chapter/Recommendations",
+      "note": "Physical monitoring, inpatient and day patient care, and the link to the MEED risk guidance."
+    }
+  ],
+  "measuresPending": [],
+  "sources": [
+    {
+      "title": "Eating disorders: recognition and treatment (NG69)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng69",
+      "year": 2017
+    },
+    {
+      "title": "Assessment and management of medical emergencies in eating disorders: guidance for GPs (Mughal et al.)",
+      "publisher": "British Journal of General Practice, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/37105747/",
+      "year": 2023
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

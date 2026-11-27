@@ -1,0 +1,133 @@
+{
+  "id": "maintenance-and-ending",
+  "title": "Keeping gains and ending therapy well",
+  "summary": "For any plan as goals are met: a written staying-well plan, spacing out sessions, booster sessions, and approaches that help prevent a return of depression when there have been earlier episodes.",
+  "appliesTo": "any",
+  "problems": [
+    {
+      "id": "mnt-keeping-gains",
+      "label": "Keeping gains and planning the end of therapy",
+      "definitions": [
+        "Has made progress on the main goals and is starting to talk about spacing out or ending sessions.",
+        "Worries that difficulties will come back after therapy ends, or has had earlier periods when they returned."
+      ],
+      "longTermGoals": [
+        "The client leaves therapy with a written plan for staying well, knows their early warning signs, and knows how to get help again."
+      ],
+      "shortTermObjectives": [
+        {
+          "id": "mnt-summary",
+          "text": "In the final 3 sessions, write a short summary with the client of what they learned, the skills that helped most and what to keep practicing.",
+          "interventionIds": [],
+          "targets": [
+            "coping-skills"
+          ]
+        },
+        {
+          "id": "mnt-warning-signs",
+          "text": "By the second-to-last session, list at least 3 personal early warning signs and the first 2 steps to take for each, including when to contact the clinician or another service.",
+          "interventionIds": [
+            "relapse-prevention-planning"
+          ],
+          "targets": [
+            "coping-skills",
+            "hope-and-motivation"
+          ]
+        },
+        {
+          "id": "mnt-spacing",
+          "text": "Over the last 4 to 8 weeks, space sessions out if the client agrees (for example every 2 weeks, then monthly) and review the chosen measures at each spaced session.",
+          "interventionIds": [],
+          "targets": [
+            "coping-skills"
+          ]
+        },
+        {
+          "id": "mnt-boosters",
+          "text": "Before the last session, agree whether booster sessions will be offered (for example at 1 and 3 months) and how the client can come back if needed.",
+          "interventionIds": [],
+          "targets": [
+            "strengths-and-supports"
+          ]
+        },
+        {
+          "id": "mnt-recurrence-prevention",
+          "text": "When the client has had 2 or more earlier episodes of depression, discuss before ending an approach shown to help prevent a return (for example mindfulness-based cognitive therapy or continued psychological therapy) and any medication plan with the prescriber.",
+          "interventionIds": [
+            "mindfulness-based-cognitive-therapy",
+            "well-being-therapy",
+            "medication-referral"
+          ],
+          "targets": [
+            "repetitive-negative-thinking"
+          ],
+          "step": "high-intensity"
+        },
+        {
+          "id": "mnt-medicine-changes",
+          "text": "If the client plans to stop a psychiatric medicine, coordinate with the prescriber so that any reduction is planned and monitored, and add its early warning signs to the staying-well plan.",
+          "interventionIds": [
+            "medication-referral"
+          ],
+          "targets": [
+            "physical-health-burden"
+          ]
+        }
+      ],
+      "measureIds": [
+        "phq-9",
+        "gad-7"
+      ],
+      "practiceIds": [
+        "ending-therapy-and-boosters",
+        "outcome-monitoring"
+      ],
+      "handoutIds": [
+        "my-therapy-summary",
+        "between-session-practice-plan",
+        "questions-for-my-prescriber"
+      ]
+    }
+  ],
+  "collaborativeNote": "Plan the ending with the client from the middle of therapy, not in the last session. The staying-well plan is theirs: use their words for warning signs and steps, and make sure they know how to come back. Do not add names or other identifying details. Resource only. Not a substitute for clinical judgment.",
+  "sources": [
+    {
+      "title": "Depression in adults quality standard (QS8), statement 3: preventing relapse",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/qs8/chapter/Quality-statement-3-Preventing-relapse"
+    },
+    {
+      "title": "Efficacy of Mindfulness-Based Cognitive Therapy in Prevention of Depressive Relapse: An Individual Patient Data Meta-analysis From Randomized Trials (Kuyken et al.)",
+      "publisher": "JAMA Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27119968/",
+      "year": 2016
+    },
+    {
+      "title": "Continuation of Antidepressants vs Sequential Psychological Interventions to Prevent Relapse in Depression: An Individual Participant Data Meta-analysis (Breedvelt et al.)",
+      "publisher": "JAMA Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/34009273/",
+      "year": 2021
+    },
+    {
+      "title": "Depression in adults: treatment and management (NG222)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng222",
+      "year": 2022
+    },
+    {
+      "title": "Generalised anxiety disorder and panic disorder in adults: management (CG113)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg113",
+      "year": 2011
+    },
+    {
+      "title": "Collecting and delivering progress feedback: a meta-analysis of routine outcome monitoring (Lambert, Whipple and Kleinstauber)",
+      "publisher": "Psychotherapy (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30335463/",
+      "year": 2018
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

@@ -1,0 +1,71 @@
+{
+  "id": "well-being-therapy",
+  "name": "Well-being therapy (WBT)",
+  "modality": "Positive psychotherapy - well-being-focused CBT",
+  "conditions": [
+    "major-depressive-disorder",
+    "persistent-depressive-disorder",
+    "generalized-anxiety-disorder"
+  ],
+  "evidenceLevel": "Developed by Giovanni Fava. In a small trial, well-being therapy reduced residual symptoms after successful treatment of mood and anxiety disorders more than symptom-focused CBT (Fava et al., 1998). In recurrent depression, a sequence of CBT for residual symptoms, lifestyle change and well-being therapy lowered relapse compared with clinical management, with benefits over six years (Fava et al., 1998; 2004). Trials are few and mostly from the developer's group.",
+  "minutes": {
+    "min": 45,
+    "max": 50
+  },
+  "purpose": "A short structured therapy, often about 8 sessions, usually given after symptoms have improved with medication or CBT, to reduce residual symptoms and protect against relapse. It uses a structured diary of well-being episodes to find the thoughts and behaviors that cut those episodes short, and builds six dimensions of psychological well-being: environmental mastery, personal growth, purpose in life, autonomy, self-acceptance and positive relations with others.",
+  "steps": [
+    "Early sessions: the client keeps a diary of episodes of well-being, however brief, rating their intensity and describing the situation.",
+    "Middle sessions: identify thoughts and behaviors that interrupt well-being episodes (for example, 'I don't deserve this' or 'it won't last'), work on them with cognitive techniques, and schedule activities that bring mastery or pleasure.",
+    "Final sessions: review the diary against the six well-being dimensions, find areas that are thin or overdone, and set graded tasks to build balance.",
+    "Use it after symptoms have improved, as part of relapse prevention, and coordinate with medication plans; any taper decision belongs to the prescriber.",
+    "Track residual symptoms with an agreed measure."
+  ],
+  "script": [
+    "Instead of tracking only what goes wrong, this week let's track moments when you felt even a little bit well.",
+    "What happened that cut that good moment short? What went through your mind?",
+    "Looking at your week, which areas feel strong, like your relationships or sense of purpose, and which feel thin?",
+    "What's one small thing you could do this week to build on that?"
+  ],
+  "contraindications": [
+    "Not a first-line treatment for an acute, severe episode; use it after the main symptoms have improved.",
+    "Focusing on well-being should never minimize real distress or adversity; validate first.",
+    "Medication changes, including tapering, must be managed by the prescriber.",
+    "This intervention does not assess or decide risk. If suicidal thoughts, self-harm or risk to others come up, pause and follow your setting's risk-assessment and safety-planning procedures. Keep crisis options visible: 988 Suicide & Crisis Lifeline (US, call or text), the local emergency number, and findahelpline.com for other countries."
+  ],
+  "culturalAdaptations": [
+    "Ideas of well-being differ: autonomy may matter less than harmony or family duty for some clients; adapt the dimensions to the client's values.",
+    "Use the client's own words for good moments and for what makes life meaningful.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "handoutIds": [
+    "three-good-things",
+    "values-compass"
+  ],
+  "orientationIds": [
+    "positive-psychology",
+    "cognitive-therapy"
+  ],
+  "sources": [
+    {
+      "title": "Well-being therapy: a novel psychotherapeutic approach for residual symptoms of affective disorders (Fava et al.)",
+      "publisher": "Psychological Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/9572104/",
+      "year": 1998
+    },
+    {
+      "title": "Prevention of recurrent depression with cognitive behavioral therapy: preliminary findings (Fava et al.)",
+      "publisher": "Archives of General Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/9736008/",
+      "year": 1998
+    },
+    {
+      "title": "Six-year outcome of cognitive behavior therapy for prevention of recurrent depression (Fava et al.)",
+      "publisher": "American Journal of Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15465985/",
+      "year": 2004
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

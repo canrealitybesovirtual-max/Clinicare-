@@ -1,0 +1,75 @@
+{
+  "id": "rumination-focused-cbt",
+  "name": "Rumination-focused CBT (RFCBT)",
+  "modality": "CBT - rumination-focused",
+  "conditions": [
+    "major-depressive-disorder",
+    "persistent-depressive-disorder",
+    "generalized-anxiety-disorder",
+    "prolonged-grief-disorder"
+  ],
+  "evidenceLevel": "In a phase II randomized trial for medication-refractory residual depression (Watkins et al., 2011), adding RFCBT to usual care improved residual symptoms and remission, and the effect was mediated by less rumination; the trial had no attention-control group. NICE NG222 (2022) asks that CBT for chronic depressive symptoms cover maintaining processes such as rumination and avoidance, but does not name RFCBT. Use for anxiety and grief rests mainly on rumination being a shared process, not on RFCBT trials.",
+  "minutes": {
+    "min": 45,
+    "max": 60
+  },
+  "purpose": "Treats rumination, the habit of dwelling over and over on problems, feelings and their causes, as a learned behavior that serves a purpose. Developed by Edward Watkins. The work identifies what triggers rumination and what the client hopes it will achieve (for example, understanding why, or avoiding future mistakes), then helps the client shift from abstract 'why' thinking to concrete 'how' thinking, become absorbed in activities, and replace rumination with planned responses through if-then plans.",
+  "steps": [
+    "Functional analysis: map recent rumination episodes together: the trigger, where and when it happened, what the client was trying to achieve, and the effect on mood and action.",
+    "Name the function, such as trying to understand, to prevent mistakes, or to put off acting. Acknowledge the aim and look at whether rumination delivers it.",
+    "Practice the shift from abstract to concrete: replay a recent upsetting event focusing on specific sensory details, the sequence, and what could be done next ('how'), instead of meanings and causes ('why'); compare how each mode feels.",
+    "Recall times the client was fully absorbed in an activity, and build more of those moments into the week.",
+    "Build if-then plans: when an early warning sign of rumination appears (if), the client does a specific alternative response (then), such as asking 'what is one step I can take now?', moving, or reconnecting with the task at hand.",
+    "Practice the plans between sessions, review them in session, and adjust; use activity scheduling to reduce avoidance.",
+    "Plan for setbacks by listing the client's personal warning signs of slipping back into rumination."
+  ],
+  "script": [
+    "When you go over and over what happened, what are you hoping it will do for you?",
+    "Let's notice the difference between asking 'why did this happen to me?' and asking 'how can I handle the next step?'",
+    "Let's go back to that moment and describe exactly what you saw and heard, step by step.",
+    "When you notice the first sign of dwelling, what could you do instead, right then?",
+    "Let's write it as a plan: if I notice I'm starting to dwell, then I will..."
+  ],
+  "contraindications": [
+    "Grief needs room for remembering and sadness. Do not frame all thinking about a loss as rumination; target the repetitive, unproductive thinking that blocks living.",
+    "Concrete replay of an upsetting event is not trauma processing. If the memory is traumatic, with intrusions or flashbacks, use a trauma-focused approach with appropriate training.",
+    "For severe depression, psychotic features or bipolar disorder, coordinate a medication evaluation and the right level of care.",
+    "This intervention does not assess or decide risk. If suicidal thoughts, self-harm or risk to others come up, pause and follow your setting's risk-assessment and safety-planning procedures. Keep crisis options visible: 988 Suicide & Crisis Lifeline (US, call or text), the local emergency number, and findahelpline.com for other countries."
+  ],
+  "culturalAdaptations": [
+    "'Thinking too much' and similar idioms describe rumination in many cultures; use the client's term and their own examples.",
+    "For some clients, reflecting on causes is part of religious or family practice. Respect that meaning, and target only the repetitive form the client wants to change.",
+    "Choose absorbing activities that fit the client's culture, resources and abilities.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "trainingRequired": "RFCBT: CBT training needed; workshop training in the full RFCBT protocol is recommended. Steps here describe core techniques, not the manual.",
+  "handoutIds": [
+    "from-why-to-how"
+  ],
+  "orientationIds": [
+    "cognitive-therapy"
+  ],
+  "sources": [
+    {
+      "title": "Rumination-focused cognitive-behavioural therapy for residual depression: phase II randomised controlled trial (Watkins et al.)",
+      "publisher": "British Journal of Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21778171/",
+      "year": 2011
+    },
+    {
+      "title": "Depression in adults: treatment and management (NG222)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng222",
+      "year": 2022
+    },
+    {
+      "title": "'Thinking too much': a systematic review of a common idiom of distress (Kaiser et al.)",
+      "publisher": "Social Science & Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26584235/",
+      "year": 2015
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

@@ -1,0 +1,114 @@
+{
+  "id": "mental-status-exam",
+  "title": "Mental status examination",
+  "category": "professional-practice",
+  "summary": "The domains of a mental status examination with neutral descriptive wording, plus cautions about mistaking language, culture, disability or neurodivergent communication for signs of illness.",
+  "whenToUse": [
+    "At intake and at any significant change in presentation.",
+    "When documenting a session where the client's state differs from usual.",
+    "Before a referral or handover, to give the receiving clinician a clear picture."
+  ],
+  "steps": [
+    {
+      "heading": "Appearance and behavior",
+      "body": "Describe what you see without judgment: grooming, clothing suited to the setting and weather, eye contact, movement, and how the client relates to you."
+    },
+    {
+      "heading": "Speech",
+      "body": "Rate, volume, amount and flow. Note whether the client is speaking a second language or using an interpreter."
+    },
+    {
+      "heading": "Mood and affect",
+      "body": "Mood in the client's own words, and the affect you observe (range, intensity, fit with content)."
+    },
+    {
+      "heading": "Thought process and content",
+      "items": [
+        "Process: how ideas connect (goal-directed, circumstantial, tangential, loosely connected).",
+        "Content: main themes, preoccupations, unusual beliefs.",
+        "Thoughts of suicide, self-harm or harming others: always ask, and record what was asked and answered."
+      ]
+    },
+    {
+      "heading": "Perception",
+      "body": "Hallucinations or other perceptual changes, how the client describes them and how they relate to culture or faith."
+    },
+    {
+      "heading": "Cognition",
+      "body": "Orientation, attention, memory and concentration as observed. Use formal screening only with licensed tools and only when indicated."
+    },
+    {
+      "heading": "Insight and judgment",
+      "body": "Describe how the client understands their situation and how they are making decisions, in neutral terms, without labeling them as lacking insight."
+    }
+  ],
+  "prompts": [
+    "How would you describe your mood these days, in your own words?",
+    "Sometimes when people are very stressed they hear or see things others do not. Has anything like that happened to you?",
+    "Have you had thoughts of hurting yourself or anyone else?",
+    "Example neutral note: Casually dressed, appropriate to weather. Cooperative, good eye contact. Speech normal rate and volume. Mood described as worn out. Affect constricted, congruent. Thought process goal-directed. Denied thoughts of harming self or others when asked directly."
+  ],
+  "cautions": [
+    "Do not mistake communication differences for disorder: Deaf clients using sign language, people speaking a second language, autistic or otherwise neurodivergent people, and people with speech or motor disabilities may present differently.",
+    "Religious or cultural experiences (for example hearing a deceased relative) are not automatically signs of psychosis; ask how the client and their community understand them.",
+    "Use descriptive language rather than labels; avoid words like bizarre or inappropriate without describing what you observed.",
+    "A mental status examination describes a moment; it does not establish a diagnosis.",
+    "New confusion, fluctuating attention or new neurological signs need urgent medical evaluation."
+  ],
+  "adaptations": [
+    {
+      "context": "Telehealth",
+      "adaptation": "Note that observation was by video or phone and what you could not see."
+    },
+    {
+      "context": "Deaf and hard of hearing clients",
+      "adaptation": "Use a qualified sign language interpreter, ideally with mental health experience, and consider a Certified Deaf Interpreter; note language fluency separately from thought process."
+    }
+  ],
+  "evidenceSummary": "The mental status examination domains used here follow standard clinical teaching, including the Clinical Methods chapter on the mental status examination (1990) and the American Psychiatric Association guideline on psychiatric evaluation of adults (summarized in 2015).",
+  "forClinicianReview": true,
+  "crisisPanel": true,
+  "sud": false,
+  "relatedInterventionIds": [
+    "cultural-formulation-exploration"
+  ],
+  "relatedHandoutIds": [],
+  "relatedFormulationIds": [],
+  "relatedLegalIds": [
+    "language-access-interpreters",
+    "decision-making-capacity",
+    "documentation-and-medical-necessity"
+  ],
+  "relatedPracticeIds": [
+    "intake-assessment",
+    "working-with-interpreters",
+    "self-harm-assessment-and-formulation",
+    "medication-induced-psychiatric-symptoms",
+    "psychotropic-red-flags"
+  ],
+  "relatedPopulationIds": [
+    "deaf-and-hard-of-hearing",
+    "autistic-adults",
+    "older-adults",
+    "traumatic-brain-injury"
+  ],
+  "linkOuts": [],
+  "measuresPending": [],
+  "sources": [
+    {
+      "title": "Clinical Methods, 3rd edition, Chapter 207: The Mental Status Examination",
+      "publisher": "NCBI Bookshelf, National Library of Medicine",
+      "url": "https://www.ncbi.nlm.nih.gov/books/NBK320/",
+      "year": 1990
+    },
+    {
+      "title": "The American Psychiatric Association practice guidelines for the psychiatric evaluation of adults (Silverman et al.)",
+      "publisher": "American Journal of Psychiatry, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26234607/",
+      "year": 2015
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

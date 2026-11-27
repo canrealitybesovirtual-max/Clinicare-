@@ -1,0 +1,124 @@
+{
+  "id": "psychotropic-red-flags",
+  "title": "Psychiatric medicine red flags for non-prescribers",
+  "category": "medical-interface",
+  "summary": "Therapists often see clients more often than prescribers do, so they may be first to notice a serious medicine effect. This card lists the red flags worth knowing across psychiatric medicines (akathisia, serotonin toxicity, lithium toxicity, neuroleptic malignant syndrome, discontinuation symptoms, a switch into a high, and heavy sedation when sedatives are combined with opioids or alcohol), what each can look like, how urgent it is and who to contact. It gives no doses and no advice on changing medicines.",
+  "whenToUse": [
+    "A client on a psychiatric medicine describes new physical symptoms, restlessness, confusion or a sudden change in mood.",
+    "A medicine was recently started, increased, combined with another or stopped.",
+    "A client is unwell in another way (vomiting, fever, dehydration) while taking lithium or an antipsychotic.",
+    "A client mentions taking sedating medicines together with opioids, alcohol or other sedatives."
+  ],
+  "steps": [
+    {
+      "heading": "Akathisia",
+      "body": "An intense inner restlessness with an urge to keep moving: pacing, shifting, rocking, being unable to sit through the session. It usually follows starting or increasing an antipsychotic, and sometimes an antidepressant. It is very distressing, can be mistaken for anxiety or agitation and has been linked to worsening suicidal feelings. Contact the prescriber the same day; sooner if suicidal thoughts are present."
+    },
+    {
+      "heading": "Serotonin toxicity",
+      "body": "After starting, increasing or combining medicines that raise serotonin (antidepressants, MAOIs, some pain medicines, linezolid, St John's wort): agitation, tremor, sweating, diarrhea, a fast heart rate, muscle twitching or jerks and, when severe, high fever and rigidity. Mild signs need same-day medical advice; severe signs need emergency care."
+    },
+    {
+      "heading": "Lithium toxicity",
+      "body": "Coarse tremor, vomiting, diarrhea, unsteady walking, slurred speech, drowsiness or confusion. It is more likely with dehydration, illness, low salt intake and some pain and blood-pressure medicines. These signs need same-day medical assessment, and emergency care when the client is confused or very unwell."
+    },
+    {
+      "heading": "Neuroleptic malignant syndrome",
+      "body": "Fever, severe muscle stiffness, confusion, sweating and an unstable heart rate or blood pressure, usually soon after an antipsychotic is started or increased. This is a medical emergency: call emergency services."
+    },
+    {
+      "heading": "Discontinuation and withdrawal symptoms",
+      "body": "Dizziness, electric-shock sensations, flu-like feelings, irritability, anxiety, vivid dreams and poor sleep after an antidepressant is stopped, missed or reduced; these can be mistaken for relapse. Stopping benzodiazepines, gabapentinoids or some other medicines suddenly can cause serious withdrawal, including seizures. Encourage a plan with the prescriber rather than stopping alone."
+    },
+    {
+      "heading": "A switch into a high",
+      "body": "Much less need for sleep without feeling tired, racing thoughts, fast speech, unusual risk-taking or irritability after starting an antidepressant, light therapy or corticosteroids. Contact the prescriber the same day, and consider urgent assessment if judgment or safety is affected."
+    },
+    {
+      "heading": "Heavy sedation and slowed breathing",
+      "body": "Benzodiazepines, gabapentinoids or other sedating medicines taken with opioids, alcohol or each other can cause extreme sleepiness, slow or shallow breathing and being hard to wake. This is an emergency: call emergency services. Naloxone reverses opioid effects and should be used if opioids may be involved."
+    },
+    {
+      "heading": "Pass it on well",
+      "items": [
+        "Tell the client what you noticed and why it matters, in plain words.",
+        "With consent, contact the prescriber directly and describe what you saw, when it started and what changed.",
+        "Write down who you contacted and what was agreed, in your own record system.",
+        "Follow up at the next contact to check that it was dealt with."
+      ]
+    }
+  ],
+  "prompts": [
+    "You look like it is hard to sit still today. Is that a restless feeling inside? When did it start?",
+    "Has anything changed with your medicines lately, a new one, a higher dose, or stopping one?",
+    "Have you been sick, not drinking much, or taking anything new for pain while on lithium?",
+    "I think your prescriber needs to hear about this today. Can we call them together now?"
+  ],
+  "cautions": [
+    "This card is for recognizing and passing on concerns. Do not advise on doses, stopping or switching; the prescriber decides.",
+    "When signs are severe (high fever, rigidity, confusion, slowed breathing, unresponsiveness), call emergency services rather than waiting for the prescriber.",
+    "Red flags can occur in anyone, including clients who have taken the medicine for years without problems.",
+    "Substance-use details shared during this conversation stay out of this app; 42 CFR Part 2 prohibits unauthorized use or disclosure of these records.",
+    "This guide does not judge risk; the clinician and the medical team do."
+  ],
+  "evidenceSummary": "A 2005 review (Boyer and Shannon, NEJM) describes the features of serotonin toxicity and the drug combinations that cause it. A 2011 review (Berman) describes neuroleptic malignant syndrome as a medical emergency with fever, rigidity and autonomic instability. A 2017 review (Salem and colleagues) describes antipsychotic-induced akathisia, its under-recognition and its link with distress and suicidality. NICE NG222 (2022) and NG215 (2022) describe antidepressant discontinuation and withdrawal from medicines associated with dependence. The FDA boxed warning on benzodiazepines (2020) describes serious risks, including with opioids. Lithium labeling carries a boxed warning that toxicity is closely tied to blood levels.",
+  "forClinicianReview": true,
+  "crisisPanel": true,
+  "sud": true,
+  "relatedInterventionIds": ["medication-referral", "naloxone-overdose-education", "bipolar-relapse-signature-plan"],
+  "relatedHandoutIds": ["questions-for-my-prescriber", "medicine-taper-support", "overdose-safety"],
+  "relatedFormulationIds": [],
+  "relatedLegalIds": ["42-cfr-part-2", "crisis-988-or-911"],
+  "relatedPracticeIds": ["medication-induced-psychiatric-symptoms", "combined-care-decision-points"],
+  "relatedPopulationIds": ["older-adults"],
+  "toolHref": "/medications/effects",
+  "linkOuts": [
+    {
+      "title": "Lithium: drug information",
+      "publisher": "MedlinePlus (US National Library of Medicine)",
+      "url": "https://medlineplus.gov/druginfo/meds/a681039.html"
+    }
+  ],
+  "measuresPending": [],
+  "sources": [
+    {
+      "title": "The serotonin syndrome (Boyer and Shannon)",
+      "publisher": "New England Journal of Medicine, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15784664/",
+      "year": 2005
+    },
+    {
+      "title": "Neuroleptic malignant syndrome: a review for neurohospitalists (Berman)",
+      "publisher": "The Neurohospitalist, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23983836/",
+      "year": 2011
+    },
+    {
+      "title": "Revisiting antipsychotic-induced akathisia: current issues and prospective challenges (Salem et al.)",
+      "publisher": "Current Neuropharmacology, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27928948/",
+      "year": 2017
+    },
+    {
+      "title": "Depression in adults: treatment and management (NG222)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng222",
+      "year": 2022
+    },
+    {
+      "title": "Medicines associated with dependence or withdrawal symptoms: safe prescribing and withdrawal management for adults (NG215)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng215",
+      "year": 2022
+    },
+    {
+      "title": "FDA requiring Boxed Warning updated to improve safe use of benzodiazepine drug class",
+      "publisher": "US Food and Drug Administration",
+      "url": "https://www.fda.gov/drugs/drug-safety-and-availability/fda-requiring-boxed-warning-updated-improve-safe-use-benzodiazepine-drug-class",
+      "year": 2020
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

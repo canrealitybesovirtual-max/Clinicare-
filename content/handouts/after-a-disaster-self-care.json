@@ -1,0 +1,205 @@
+{
+  "id": "after-a-disaster-self-care",
+  "title": "Taking Care of Myself After a Disaster",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 10,
+  "intro": "A disaster can turn life upside down. It might be a storm, a fire, a flood, an earthquake, or violence in your community. Strong reactions in the days and weeks after are common. For most people, they ease over time, especially with support. This sheet lists steps that help many people feel safer, calmer, and more in control. It takes about 10 minutes.",
+  "sections": [
+    {
+      "heading": "Common reactions",
+      "body": "You might notice some of these. They are common reactions to a very hard event.",
+      "steps": [
+        "Feeling on edge, jumpy, or easily startled.",
+        "Trouble sleeping, bad dreams, or feeling tired all the time.",
+        "Feeling sad, angry, guilty, numb, or worried about the future.",
+        "Headaches, an upset stomach, or tight muscles.",
+        "Trouble focusing or making decisions."
+      ]
+    },
+    {
+      "heading": "Feel safer",
+      "steps": [
+        "Follow advice from local officials about where it is safe to be.",
+        "Take care of basic needs first: water, food, shelter, rest, and any medicines you take.",
+        "Keep important papers, phone chargers, and medicines together in one place.",
+        "Take breaks from the news and social media. Check for updates a few times a day, not all day."
+      ]
+    },
+    {
+      "heading": "Calm your body",
+      "steps": [
+        "Breathe slowly. Breathe in for a count of 4, and out for a count of 6.",
+        "Move your body a little each day, like a short walk or some stretching.",
+        "Try to keep some routines, like regular meals and a set time to get up.",
+        "Go easy on alcohol, caffeine, and other drugs. They can make sleep and mood worse."
+      ]
+    },
+    {
+      "heading": "Stay connected",
+      "steps": [
+        "Spend time with people who care about you. Check on neighbors, friends, and family.",
+        "You do not have to talk about what happened unless you want to. Talk when you are ready, with people you choose.",
+        "If you can, join others in your community who are helping. Helping can bring back a sense of control."
+      ]
+    },
+    {
+      "heading": "Take small steps forward",
+      "steps": [
+        "Make a list of what needs to be done. Pick one or two small tasks each day.",
+        "Ask for help with practical needs. In most of the US and Canada, you can dial 211 to find local help with food, housing, and bills.",
+        "Notice what you are doing well, even small things.",
+        "Remind yourself that recovery takes time, and that most people do recover."
+      ]
+    },
+    {
+      "heading": "Talk to someone",
+      "body": "In the US, the Disaster Distress Helpline offers free support at any time, day or night. Call or text 1-800-985-5990 to talk with a trained crisis counselor. For Spanish, press 2."
+    },
+    {
+      "heading": "When to get more help",
+      "steps": [
+        "Your reactions do not start to ease after a few weeks, or they get worse.",
+        "You have trouble taking care of yourself, your home, or your work.",
+        "You are using more alcohol or drugs to cope.",
+        "You have thoughts of suicide or of hurting someone. Get help right away."
+      ]
+    },
+    {
+      "heading": "How to use the log",
+      "body": "Each day, write one basic need you took care of and one way you connected with others. Then rate how you are doing from 0 to 10. A 0 means very hard. A 10 means very well."
+    }
+  ],
+  "practiceLog": {
+    "columns": [
+      "Day",
+      "A basic need I took care of",
+      "One way I connected",
+      "How I am doing (0-10)"
+    ],
+    "rows": 7
+  },
+  "safetyNote": "Safety first: Follow the advice of emergency officials. If you or someone near you is hurt or in danger, call 911 or your local emergency number. If you have thoughts of hurting yourself or someone else, call or text 988 in the US. For distress after a disaster, call or text 1-800-985-5990. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sud": false,
+  "es": {
+    "title": "Cómo cuidarme después de un desastre",
+    "intro": "Un desastre puede poner la vida de cabeza. Puede ser una tormenta, un incendio, una inundación, un terremoto o un hecho violento en su comunidad. Es común tener reacciones fuertes en los días y semanas después. Para la mayoría de las personas, bajan con el tiempo, sobre todo con apoyo. Esta hoja tiene pasos que ayudan a muchas personas a sentirse más seguras, más tranquilas y con más control. Toma unos 10 minutos.",
+    "sections": [
+      {
+        "heading": "Reacciones comunes",
+        "body": "Puede que note algunas de estas. Son reacciones comunes ante un hecho muy duro.",
+        "steps": [
+          "Sentirse nervioso, inquieto o que se asusta con facilidad.",
+          "Problemas para dormir, malos sueños o sentirse cansado todo el tiempo.",
+          "Sentirse triste, enojado, culpable, sin sentir nada o preocupado por el futuro.",
+          "Dolores de cabeza, malestar de estómago o músculos tensos.",
+          "Problemas para concentrarse o para tomar decisiones."
+        ]
+      },
+      {
+        "heading": "Sentirse más seguro",
+        "steps": [
+          "Siga los consejos de las autoridades locales sobre dónde es seguro estar.",
+          "Cuide primero lo básico: agua, comida, un techo, descanso y los medicamentos que toma.",
+          "Guarde juntos en un solo lugar los papeles importantes, los cargadores del teléfono y los medicamentos.",
+          "Tómese descansos de las noticias y de las redes sociales. Busque novedades unas pocas veces al día, no todo el día."
+        ]
+      },
+      {
+        "heading": "Calmar el cuerpo",
+        "steps": [
+          "Respire despacio. Tome aire mientras cuenta hasta 4, y suéltelo mientras cuenta hasta 6.",
+          "Mueva el cuerpo un poco cada día, por ejemplo con una caminata corta o unos estiramientos.",
+          "Trate de mantener algunas rutinas, como comer a horas fijas y levantarse a la misma hora.",
+          "Tenga cuidado con el alcohol, la cafeína y otras drogas. Pueden empeorar el sueño y el ánimo."
+        ]
+      },
+      {
+        "heading": "Mantenerse en contacto",
+        "steps": [
+          "Pase tiempo con personas que le quieren. Pregunte cómo están sus vecinos, amigos y familiares.",
+          "No tiene que hablar de lo que pasó si no quiere. Hable cuando esté listo, con las personas que usted elija.",
+          "Si puede, únase a otras personas de su comunidad que están ayudando. Ayudar le puede devolver la sensación de control."
+        ]
+      },
+      {
+        "heading": "Dar pasos pequeños hacia adelante",
+        "steps": [
+          "Haga una lista de lo que hay que hacer. Elija una o dos tareas pequeñas cada día.",
+          "Pida ayuda con las cosas prácticas. En la mayor parte de EE. UU. y Canadá, puede marcar el 211 para buscar ayuda local con comida, vivienda y cuentas.",
+          "Fíjese en lo que está haciendo bien, aunque sean cosas pequeñas.",
+          "Recuerde que recuperarse toma tiempo, y que la mayoría de las personas sí se recuperan."
+        ]
+      },
+      {
+        "heading": "Hablar con alguien",
+        "body": "En EE. UU., la Línea de Ayuda para Desastres (Disaster Distress Helpline) da apoyo gratis a cualquier hora, de día o de noche. Llame o envíe un mensaje de texto al 1-800-985-5990 para hablar con un consejero de crisis capacitado. Para español, marque 2."
+      },
+      {
+        "heading": "Cuándo buscar más ayuda",
+        "steps": [
+          "Sus reacciones no empiezan a bajar después de unas semanas, o empeoran.",
+          "Le cuesta cuidarse, cuidar su casa o hacer su trabajo.",
+          "Está usando más alcohol o drogas para aguantar.",
+          "Tiene pensamientos de suicidio o de hacerle daño a alguien. Busque ayuda de inmediato."
+        ]
+      },
+      {
+        "heading": "Cómo usar el registro",
+        "body": "Cada día, escriba una necesidad básica que cuidó y una forma en que se conectó con otras personas. Luego califique cómo está, del 0 al 10. Un 0 quiere decir muy difícil. Un 10 quiere decir muy bien."
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Día",
+        "Una necesidad básica que cuidé",
+        "Una forma en que me conecté",
+        "Cómo estoy (0-10)"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: Siga los consejos de las autoridades de emergencia. Si usted o alguien cerca está herido o en peligro, llame al 911 o al número de emergencias local. Si tiene pensamientos de hacerse daño o de hacerle daño a otra persona, llame o envíe un mensaje de texto al 988 en EE. UU. Para la angustia después de un desastre, llame o envíe un mensaje de texto al 1-800-985-5990. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "sources": [
+    {
+      "title": "Psychological first aid: guide for field workers",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/publications/i/item/9789241548205",
+      "year": 2011
+    },
+    {
+      "title": "Five essential elements of immediate and mid-term mass trauma intervention: empirical evidence (Hobfoll et al.)",
+      "publisher": "Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18181708/",
+      "year": 2007
+    },
+    {
+      "title": "Psychological First Aid Field Operations Guide, 2nd edition (National Child Traumatic Stress Network and National Center for PTSD)",
+      "publisher": "Substance Abuse and Mental Health Services Administration",
+      "url": "https://www.samhsa.gov/resource/dbhis/psychological-first-aid-field-operations-guide-2nd-edition"
+    },
+    {
+      "title": "Disaster Distress Helpline",
+      "publisher": "Substance Abuse and Mental Health Services Administration",
+      "url": "https://www.samhsa.gov/find-help/helplines/disaster-distress-helpline"
+    },
+    {
+      "title": "211: free help finding local services",
+      "publisher": "211 (United Way Worldwide)",
+      "url": "https://211.org/"
+    },
+    {
+      "title": "988 Suicide & Crisis Lifeline",
+      "publisher": "988 Lifeline",
+      "url": "https://988lifeline.org"
+    },
+    {
+      "title": "Find A Helpline (international directory)",
+      "publisher": "Find A Helpline",
+      "url": "https://findahelpline.com"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

@@ -1,0 +1,89 @@
+{
+  "id": "systemic-circular-questioning",
+  "name": "Systemic circular questioning and reframing (couples and families)",
+  "modality": "Systemic family and couples therapy",
+  "conditions": [
+    "major-depressive-disorder",
+    "adjustment-disorder",
+    "alcohol-use-disorder",
+    "schizophrenia"
+  ],
+  "evidenceLevel": "A review of systemic interventions for adult-focused problems (Carr, 2019) found support for couple and family therapies for relationship distress, depression, alcohol and drug problems and psychosis; trials usually test whole programs rather than specific questioning techniques. NICE recommends family intervention for psychosis (CG178) and behavioural couples therapy for some adults with depression (NG222) or harmful drinking (CG115).",
+  "minutes": {
+    "min": 50,
+    "max": 90
+  },
+  "purpose": "Systemic therapy sees problems as part of patterns of interaction in a family or relationship, not only as something inside one person. Circular questions ask each person about relationships, differences and sequences ('who notices first when Dad is low, and what do they do?'), which brings new information into the room and loosens fixed explanations. Reframing and positive connotation offer a new, often more generous meaning for a behavior, and looking at attempted solutions shows how well-meant efforts may keep a problem going. Used with adult couples and families, with everyone's consent.",
+  "steps": [
+    "Before any joint session, screen each adult privately for intimate partner or family violence and coercive control; if present, do not hold joint sessions and focus on safety (see the couples and conjoint sessions guide).",
+    "Agree with everyone on confidentiality, goals and who will attend; make sure each adult consents to joint sessions.",
+    "Map the system: who is in the family or household, key relationships and recent changes (a genogram can help).",
+    "Ask circular and difference questions about sequences ('what happens next?'), differences ('who is most worried? who is least?'), changes over time, and relationships between others ('how do your mother and sister get along when you are unwell?').",
+    "Ask hypothetical and future questions: 'If the problem were gone tomorrow, who would notice first, and what would they see?'",
+    "Explore attempted solutions: what each person has tried and how it worked, especially efforts that may keep the pattern going (taking over tasks, pleading, avoiding the topic).",
+    "Offer a reframe or positive connotation that respects everyone's intentions, and check how it lands with each person.",
+    "Agree on small changes to try in the pattern, and review them next session."
+  ],
+  "script": [
+    "When things get hard at home, who usually notices first? And then what happens?",
+    "Who in the family worries most about this? Who worries least?",
+    "If the problem vanished overnight, what's the first thing each of you would notice?",
+    "It sounds like everyone has been trying hard to help, in different ways. What have you tried so far?",
+    "I wonder if all the arguing is also a sign of how much this matters to each of you."
+  ],
+  "contraindications": [
+    "Do not hold joint sessions when there is current intimate partner violence, coercive control or fear of a family member; see each person individually and prioritize safety planning and specialized services.",
+    "Reframes must never excuse or minimize abuse, violence or neglect.",
+    "Joint sessions need consent from each adult and clear rules about confidentiality and what is shared.",
+    "Family work for psychosis or substance use works best within a structured program with psychoeducation; coordinate with the treatment team.",
+    "This intervention does not assess or decide risk. If suicidal thoughts, self-harm or risk to others come up, pause and follow your setting's risk-assessment and safety-planning procedures. Keep crisis options visible: 988 Suicide & Crisis Lifeline (US, call or text), the local emergency number, and findahelpline.com for other countries."
+  ],
+  "culturalAdaptations": [
+    "Family structure, roles and hierarchy differ; define family as the client does (extended family, chosen family, elders) and respect who speaks first.",
+    "Some families expect the clinician to take an expert role; balance curiosity with clear guidance.",
+    "Include migration, generational gaps in acculturation and discrimination as part of the system, not only individual problems.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "trainingRequired": "Systemic family and couples therapy: training and supervision in systemic practice recommended (for example, marriage and family therapy licensure or equivalent); practice within your competence (AAMFT Code of Ethics).",
+  "handoutIds": [
+    "my-relationships-map"
+  ],
+  "orientationIds": [
+    "systemic-family-and-couples-therapy"
+  ],
+  "sources": [
+    {
+      "title": "Couple therapy, family therapy and systemic interventions for adult-focused problems: the current evidence base (Carr)",
+      "publisher": "Journal of Family Therapy (Wiley)",
+      "url": "https://doi.org/10.1111/1467-6427.12225",
+      "year": 2019
+    },
+    {
+      "title": "Psychosis and schizophrenia in adults: prevention and management (CG178)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg178",
+      "year": 2014
+    },
+    {
+      "title": "Depression in adults: treatment and management (NG222)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng222",
+      "year": 2022
+    },
+    {
+      "title": "Alcohol-use disorders: diagnosis, assessment and management of harmful drinking (high-risk drinking) and alcohol dependence (CG115)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg115",
+      "year": 2011
+    },
+    {
+      "title": "AAMFT Code of Ethics",
+      "publisher": "American Association for Marriage and Family Therapy",
+      "url": "https://aamft.org/coe",
+      "year": 2015
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

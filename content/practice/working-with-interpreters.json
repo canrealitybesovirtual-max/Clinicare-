@@ -1,0 +1,125 @@
+{
+  "id": "working-with-interpreters",
+  "title": "Working with interpreters",
+  "category": "communication-and-access",
+  "summary": "How to run a session through a qualified interpreter in person, by phone or video: booking, a short pre-briefing, seating, speaking in the first person and in short segments, handling idioms and rating scales, and a debrief that looks after the interpreter too. Includes signed-language interpreting.",
+  "whenToUse": [
+    "Whenever a client prefers another language for a clinical conversation, even if they speak some English.",
+    "For Deaf clients who use a signed language.",
+    "For consent, assessment, safety planning and any session where accuracy matters."
+  ],
+  "steps": [
+    {
+      "heading": "Book a qualified interpreter",
+      "items": [
+        "Use a trained, qualified interpreter, ideally with mental health experience.",
+        "Do not use family members, friends or children; it harms accuracy and confidentiality and can put them at risk.",
+        "Ask the client about preferences (gender, dialect, not someone from their own small community) where it matters.",
+        "Book the same interpreter for continuity where possible, and double the session time."
+      ]
+    },
+    {
+      "heading": "Pre-brief for a few minutes",
+      "items": [
+        "Explain the purpose of the session and any sensitive topics (trauma, suicide, abuse).",
+        "Agree that everything said is interpreted, including side comments, in the first person.",
+        "Ask them to flag words or ideas that do not translate directly or carry cultural meaning.",
+        "Confirm confidentiality and the interpreter's role."
+      ]
+    },
+    {
+      "heading": "During the session",
+      "items": [
+        "Sit so you speak to and look at the client, with the interpreter beside or slightly behind you (or as the Deaf client prefers).",
+        "Speak directly to the client: you, not he or she.",
+        "Use short segments and pause; avoid idioms, jargon and double questions.",
+        "Explain rating scales carefully; 0 to 10 scales and some questionnaire items may not carry the same meaning in every language.",
+        "Check understanding with teach-back."
+      ]
+    },
+    {
+      "heading": "Phone and video interpreting",
+      "body": "Confirm everyone can hear or see clearly, introduce all parties, keep turns shorter, and agree what happens if the connection drops. For signed languages, video quality and lighting matter."
+    },
+    {
+      "heading": "Signed-language interpreting",
+      "body": "Use a qualified sign language interpreter with mental health experience. A Certified Deaf Interpreter working with a hearing interpreter can help when the client uses non-standard signing, a foreign sign language or has language deprivation."
+    },
+    {
+      "heading": "Debrief",
+      "body": "After sessions with distressing content, give the interpreter a few minutes to check in, raise cultural points and process what they heard. Interpreters are exposed to the same material you are."
+    }
+  ],
+  "prompts": [
+    "Before we start, I will say everything directly to you, and our interpreter will say it in your language. Everything said in this room is interpreted, and it stays confidential.",
+    "Pre-brief to interpreter: today we may talk about difficult experiences and thoughts of suicide. Please interpret everything in the first person, and let me know if a word does not translate well.",
+    "I would like to check I explained that clearly. Could you tell me in your own words what we agreed?",
+    "Debrief: that was a heavy session. How are you doing, and was there anything about the language or culture I should know?"
+  ],
+  "cautions": [
+    "Never use a child to interpret, and avoid family or friends except in an emergency until a qualified interpreter is available.",
+    "Do not ask the interpreter for their opinion of the client; ask them about language and cultural meaning only.",
+    "Interpreted sessions can make standard measures less reliable; note that an interpreter was used.",
+    "Language access duties in US federally funded settings include free qualified interpreters; see the legal topic on language access.",
+    "Interpreters can be affected by traumatic material; offer debriefs and respect their professional boundaries."
+  ],
+  "evidenceSummary": "A 2010 systematic review (Bauer and Alegría) found that clients with limited English proficiency assessed without professional interpreters were at risk of incomplete or distorted evaluation, and that professional interpreters improved the quality of care. A 2022 review (Tribe) summarizes good practice for working with interpreters in mental health with forced migrants, including briefing, debriefing and attention to vicarious distress.",
+  "forClinicianReview": true,
+  "crisisPanel": true,
+  "sud": false,
+  "relatedInterventionIds": [
+    "cultural-formulation-exploration",
+    "culturally-adapted-cbt"
+  ],
+  "relatedHandoutIds": [
+    "video-session-guide"
+  ],
+  "relatedFormulationIds": [],
+  "relatedLegalIds": [
+    "language-access-interpreters",
+    "digital-accessibility"
+  ],
+  "relatedPracticeIds": [
+    "teach-back-and-plain-language",
+    "multicultural-orientation-and-broaching",
+    "mental-status-exam",
+    "intake-assessment",
+    "telehealth-sessions"
+  ],
+  "relatedPopulationIds": [
+    "refugees-and-asylum-seekers",
+    "deaf-and-hard-of-hearing",
+    "cultural-adaptation"
+  ],
+  "linkOuts": [
+    {
+      "title": "LEP.gov: Limited English proficiency resources",
+      "publisher": "US Department of Justice, Federal Coordination and Compliance Section",
+      "url": "https://www.lep.gov/",
+      "lastVerified": "2026-11-27"
+    }
+  ],
+  "measuresPending": [],
+  "sources": [
+    {
+      "title": "Impact of patient language proficiency and interpreter service use on the quality of psychiatric care: a systematic review (Bauer and Alegría)",
+      "publisher": "Psychiatric Services, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20675834/",
+      "year": 2010
+    },
+    {
+      "title": "Working with interpreters when working with forced migrants in mental health (Tribe)",
+      "publisher": "International Review of Psychiatry, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36695209/",
+      "year": 2022
+    },
+    {
+      "title": "Dear colleague letter: language access under Section 1557",
+      "publisher": "US Department of Health and Human Services, Office for Civil Rights",
+      "url": "https://www.hhs.gov/sites/default/files/ocr-dcl-section-1557-language-access.pdf"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

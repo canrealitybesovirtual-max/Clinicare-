@@ -1,0 +1,85 @@
+{
+  "id": "imagery-rehearsal-therapy",
+  "name": "Imagery rehearsal therapy for nightmares",
+  "modality": "CBT for nightmares (imagery rehearsal)",
+  "conditions": ["ptsd", "insomnia-disorder"],
+  "suggestWith": ["nightmares"],
+  "evidenceLevel": "The American Academy of Sleep Medicine 2018 position paper lists image rehearsal therapy as the one therapy recommended for both PTSD-associated nightmares and nightmare disorder in adults (Morgenthaler et al., 2018). The VA/DoD 2023 PTSD guideline found insufficient evidence to recommend for or against imagery rehearsal therapy specifically for PTSD-related nightmares, so ratings differ by body and population.",
+  "minutes": { "min": 20, "max": 50 },
+  "purpose": "Repeated nightmares can become a learned pattern that keeps going even after the original stress has passed. In imagery rehearsal, the client chooses a recurring nightmare, changes the story in any way they like while awake, and practises the new version in imagination for a few minutes each day. The aim is a new dream script that can replace the old one. The work focuses on rewriting rather than on telling the trauma in detail, and it is usually delivered over a few sessions alongside sleep basics or CBT for insomnia.",
+  "steps": [
+    "Ask about nightmare frequency, how distressing they are, and their effect on sleep and daytime life. Screen for other causes of disturbed sleep, such as loud snoring or pauses in breathing (refer for a sleep evaluation), alcohol or drug use and withdrawal, and medication effects, and coordinate with the prescriber where relevant.",
+    "Explain the rationale: nightmares can act like a habit the mind has learned, and practising a different version while awake can change what plays at night.",
+    "Help the client pick a recurring nightmare to start with. Suggest beginning with one that is less distressing rather than the worst one.",
+    "Ask the client to note the nightmare only briefly (a few lines) and avoid a detailed retelling of any trauma.",
+    "Invite the client to change the dream in any way they choose: the ending, the setting, a new ability or helper, or something unexpected. The new version belongs to the client; offer ideas only if asked.",
+    "Have the client write the new version and rehearse it in imagination for about 10 to 20 minutes a day at a calm time, not right before sleep if that raises arousal. Pair practice with a brief calming skill.",
+    "Track nightmare frequency and distress with a simple sleep diary, review progress at each session, and move on to other nightmares when the first one eases.",
+    "Combine with sleep basics or CBT for insomnia when sleep problems persist, and with trauma-focused therapy when other trauma reactions are present."
+  ],
+  "script": [
+    "Bad dreams that come back again and again can turn into a habit the mind has learned. The good news is that habits can change.",
+    "We will pick one dream to start with. It does not have to be the worst one.",
+    "You do not need to tell me every detail. A few lines are enough.",
+    "Now imagine changing it however you like. You are the author of the new version.",
+    "Each day, spend about ten to twenty minutes picturing the new version when you feel calm.",
+    "Let's keep track of how often the dreams come and how upsetting they are, so we can see what changes."
+  ],
+  "contraindications": [
+    "If writing or imagining the dream brings flashbacks, panic or dissociation, slow down, use grounding, choose a less distressing dream and review the plan. Coordinate with the client's trauma therapist where there is one.",
+    "Loud snoring, gasping or pauses in breathing at night need a medical sleep evaluation; nightmares and sleep apnea often occur together.",
+    "Nightmares that start or worsen with a new medication, or with alcohol or sedative withdrawal, need prescriber or medical input. Do not record substance-use details in this app.",
+    "Nightmares in someone with recent suicidal thoughts call for a safety check first. This app does not judge risk; you do. Crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com."
+  ],
+  "culturalAdaptations": [
+    "Dreams carry spiritual or family meaning in many cultures, such as messages from ancestors or warnings. Ask what the dreams mean to the client before suggesting changes, and respect a wish not to alter some dreams.",
+    "Let the client choose images, helpers and endings from their own culture, faith or life.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language."
+  ],
+  "handoutIds": ["nightmare-rescripting-practice", "sleep-diary"],
+  "orientationIds": ["cognitive-therapy", "trauma-focused-therapies"],
+  "evidenceGrades": [
+    {
+      "body": "AASM",
+      "guideline": "Position paper for the treatment of nightmare disorder in adults",
+      "year": 2018,
+      "population": "Adults with PTSD-associated nightmares or nightmare disorder",
+      "direction": "for",
+      "strength": "recommended",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29852917/"
+    },
+    {
+      "body": "VA/DoD",
+      "guideline": "Management of Posttraumatic Stress Disorder and Acute Stress Disorder",
+      "year": 2023,
+      "conditionId": "ptsd",
+      "population": "Adults with nightmares associated with PTSD",
+      "direction": "insufficient",
+      "strength": "insufficient evidence for or against",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38408360/"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Position paper for the treatment of nightmare disorder in adults: an American Academy of Sleep Medicine position paper (Morgenthaler et al.)",
+      "publisher": "Journal of Clinical Sleep Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29852917/",
+      "year": 2018
+    },
+    {
+      "title": "The management of posttraumatic stress disorder and acute stress disorder: synopsis of the 2023 VA/DoD clinical practice guideline",
+      "publisher": "Annals of Internal Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/38408360/",
+      "year": 2024
+    },
+    {
+      "title": "VA/DoD Clinical Practice Guideline for Management of Posttraumatic Stress Disorder and Acute Stress Disorder",
+      "publisher": "US Department of Veterans Affairs and Department of Defense",
+      "url": "https://www.healthquality.va.gov/guidelines/MH/ptsd/",
+      "year": 2023
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

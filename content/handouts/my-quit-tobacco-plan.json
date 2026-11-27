@@ -1,0 +1,205 @@
+{
+  "id": "my-quit-tobacco-plan",
+  "title": "My Quit Plan for Tobacco and Nicotine",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 15,
+  "intro": "Quitting smoking, vaping, or chewing tobacco is one of the best things you can do for your health. Most people try more than once before they quit for good. Each try teaches you something. A plan, support, and medicine together give you the best chance. This sheet takes about 15 minutes to fill in.",
+  "sections": [
+    {
+      "heading": "My reasons",
+      "steps": [
+        "Why I want to quit: ________",
+        "What I will do with the money I save: ________"
+      ]
+    },
+    {
+      "heading": "My quit day",
+      "body": "Pick a day within the next 2 weeks. Choose a day that is not too stressful.",
+      "steps": [
+        "My quit day: ________",
+        "Before that day, I will get rid of cigarettes, vapes, lighters, and ashtrays at home, at work, and in the car."
+      ]
+    },
+    {
+      "heading": "My triggers and what I will do instead",
+      "body": "Triggers are times, places, or feelings that make you want to smoke or vape.",
+      "steps": [
+        "Example: coffee in the morning. Instead: drink it in a new spot, or switch to tea for a while.",
+        "Trigger: ________ Instead I will: ________",
+        "Trigger: ________ Instead I will: ________",
+        "Trigger: ________ Instead I will: ________"
+      ]
+    },
+    {
+      "heading": "Medicines that help",
+      "body": "Medicines ease cravings and withdrawal. Ask a doctor, nurse, or pharmacist which one is right for you.",
+      "steps": [
+        "Nicotine replacement: patches, gum, lozenges, an inhaler, or a nasal spray. Several are sold without a prescription. A patch plus a quick kind, like gum, often works better than one alone.",
+        "Prescription pills: varenicline or bupropion. Ask a prescriber.",
+        "If you are pregnant, talk with your doctor before you use any quit medicine.",
+        "Tell your prescriber you are quitting. Quitting smoking can change how some medicines work, so a dose may need to change."
+      ]
+    },
+    {
+      "heading": "Free help",
+      "steps": [
+        "Call 1-800-QUIT-NOW for free coaching from your state's quitline. Many quitlines also offer free patches or gum.",
+        "Visit smokefree.gov for tools to build a quit plan, text message support, and apps.",
+        "Ask your counselor or doctor to check in with you about your plan."
+      ]
+    },
+    {
+      "heading": "Getting through cravings",
+      "steps": [
+        "A craving usually passes in a few minutes. Wait it out.",
+        "Take slow breaths, drink water, and keep your hands busy.",
+        "Stay away from alcohol at first. It can make cravings stronger.",
+        "If you slip, do not give up. Look at what happened and get back to your plan."
+      ]
+    },
+    {
+      "heading": "Withdrawal does not last",
+      "body": "In the first weeks you may feel cranky, restless, or hungry, or have trouble sleeping or focusing. These feelings are often strongest in the first week and then fade. If your mood drops a lot or you feel very low, tell your doctor or counselor."
+    },
+    {
+      "heading": "Privacy note",
+      "body": "Do not write your name, or the names of other people or places, on this sheet. Keep it somewhere private. If you share it with a substance use treatment program, it may become part of your treatment records. Those records have special federal privacy protection. 42 CFR Part 2 prohibits unauthorized use or disclosure of these records. Ask your counselor how your records are kept and shared."
+    }
+  ],
+  "practiceLog": {
+    "columns": [
+      "Day",
+      "Smoked or vaped? How much?",
+      "Strongest craving (0-10)",
+      "What helped"
+    ],
+    "rows": 14
+  },
+  "safetyNote": "Safety first: Quitting is safe for almost everyone, and the benefits start within days. If your mood gets very low after you quit, talk with your doctor. If you have thoughts of hurting yourself or someone else, get help now. In the US, call or text 988, or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sud": true,
+  "es": {
+    "title": "Mi plan para dejar el tabaco y la nicotina",
+    "intro": "Dejar de fumar, de vapear o de mascar tabaco es una de las mejores cosas que puede hacer por su salud. La mayoría de las personas lo intentan más de una vez antes de dejarlo para siempre. Cada intento le enseña algo. Un plan, apoyo y medicina juntos le dan la mejor oportunidad. Llenar esta hoja toma unos 15 minutos.",
+    "sections": [
+      {
+        "heading": "Mis razones",
+        "steps": [
+          "Por qué quiero dejarlo: ________",
+          "Qué voy a hacer con el dinero que ahorre: ________"
+        ]
+      },
+      {
+        "heading": "Mi día para dejarlo",
+        "body": "Escoja un día dentro de las próximas 2 semanas. Escoja un día que no sea muy estresante.",
+        "steps": [
+          "Mi día para dejarlo: ________",
+          "Antes de ese día, voy a botar los cigarrillos, los vapeadores, los encendedores y los ceniceros de la casa, del trabajo y del carro."
+        ]
+      },
+      {
+        "heading": "Lo que me da ganas y qué haré en su lugar",
+        "body": "Los detonantes son momentos, lugares o emociones que le dan ganas de fumar o de vapear.",
+        "steps": [
+          "Ejemplo: el café en la mañana. En su lugar: tomarlo en otro sitio, o cambiar a té por un tiempo.",
+          "Detonante: ________ En su lugar voy a: ________",
+          "Detonante: ________ En su lugar voy a: ________",
+          "Detonante: ________ En su lugar voy a: ________"
+        ]
+      },
+      {
+        "heading": "Medicinas que ayudan",
+        "body": "Las medicinas calman los antojos y la abstinencia. Pregúntele a un médico, a una enfermera o a un farmacéutico cuál le conviene.",
+        "steps": [
+          "Reemplazo de nicotina: parches, chicles, pastillas, un inhalador o un aerosol nasal. Varios se venden sin receta. Un parche junto con uno de efecto rápido, como el chicle, muchas veces funciona mejor que uno solo.",
+          "Pastillas con receta: vareniclina o bupropión. Pregúntele a un médico.",
+          "Si está embarazada, hable con su médico antes de usar cualquier medicina para dejar de fumar.",
+          "Dígale a quien le receta sus medicinas que va a dejar de fumar. Dejar de fumar puede cambiar el efecto de algunas medicinas, y puede ser necesario cambiar una dosis."
+        ]
+      },
+      {
+        "heading": "Ayuda gratis",
+        "steps": [
+          "Llame al 1-800-QUIT-NOW para recibir consejería gratis de la línea de su estado. Muchas de estas líneas también dan parches o chicles gratis.",
+          "Visite smokefree.gov para encontrar herramientas para hacer su plan, apoyo por mensajes de texto y aplicaciones.",
+          "Pídale a su consejero o a su médico que le pregunte cómo va su plan."
+        ]
+      },
+      {
+        "heading": "Cómo pasar los antojos",
+        "steps": [
+          "Un antojo casi siempre pasa en unos minutos. Espere a que pase.",
+          "Respire despacio, tome agua y mantenga las manos ocupadas.",
+          "Al principio, no tome alcohol. Puede hacer más fuertes los antojos.",
+          "Si recae, no se rinda. Mire qué pasó y vuelva a su plan."
+        ]
+      },
+      {
+        "heading": "La abstinencia no dura para siempre",
+        "body": "En las primeras semanas puede sentir mal humor, inquietud o hambre, o tener problemas para dormir o concentrarse. Muchas veces son más fuertes la primera semana y luego bajan. Si su ánimo baja mucho o se siente muy mal, dígaselo a su médico o a su consejero."
+      },
+      {
+        "heading": "Nota de privacidad",
+        "body": "No escriba su nombre, ni los nombres de otras personas o lugares, en esta hoja. Guárdela en un lugar privado. Si la comparte con un programa de tratamiento por consumo de sustancias, puede llegar a ser parte de sus registros de tratamiento. Esos registros tienen una protección federal especial de la privacidad. La ley federal 42 CFR Part 2 prohíbe el uso o la divulgación no autorizados de estos registros. Pregúntele a su consejero cómo se guardan y se comparten sus registros."
+      }
+    ],
+    "practiceLog": {
+      "columns": [
+        "Día",
+        "¿Fumé o vapeé? ¿Cuánto?",
+        "Antojo más fuerte (0-10)",
+        "Qué me ayudó"
+      ]
+    },
+    "safetyNote": "La seguridad es lo primero: Dejar de fumar es seguro para casi todas las personas, y los beneficios empiezan en pocos días. Si su ánimo baja mucho después de dejarlo, hable con su médico. Si tiene pensamientos de hacerse daño o de hacerle daño a otra persona, busque ayuda ahora. En EE. UU., llame o envíe un mensaje de texto al 988, o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "linkOuts": [
+    {
+      "title": "Build Your Quit Plan",
+      "publisher": "Smokefree.gov, National Cancer Institute",
+      "url": "https://smokefree.gov/build-your-quit-plan",
+      "note": "Make a personal quit plan online, with tips for your triggers.",
+      "lastVerified": "2026-11-27"
+    },
+    {
+      "title": "Quitting Smoking",
+      "publisher": "MedlinePlus, U.S. National Library of Medicine",
+      "url": "https://medlineplus.gov/quittingsmoking.html",
+      "note": "Plain-language information and links in English and Spanish.",
+      "lastVerified": "2026-11-27"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Interventions for tobacco smoking cessation in adults, including pregnant persons: US Preventive Services Task Force recommendation statement",
+      "publisher": "JAMA (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33464343/",
+      "year": 2021
+    },
+    {
+      "title": "Quitting Smoking (health topic)",
+      "publisher": "MedlinePlus, U.S. National Library of Medicine",
+      "url": "https://medlineplus.gov/quittingsmoking.html"
+    },
+    {
+      "title": "Build Your Quit Plan",
+      "publisher": "Smokefree.gov, National Cancer Institute",
+      "url": "https://smokefree.gov/build-your-quit-plan"
+    },
+    {
+      "title": "42 CFR 2.32: notice to accompany disclosure (federal confidentiality rule for substance use treatment records)",
+      "publisher": "eCFR, U.S. Government Publishing Office",
+      "url": "https://www.ecfr.gov/current/title-42/chapter-I/subchapter-A/part-2/subpart-C/section-2.32",
+      "year": 2024
+    },
+    {
+      "title": "Confidentiality of substance use treatment records (42 CFR Part 2)",
+      "publisher": "U.S. Department of Health and Human Services",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/hipaa-part-2/index.html"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

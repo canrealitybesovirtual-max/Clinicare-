@@ -2,7 +2,7 @@
   "id": "sleep",
   "title": "Sleep: insomnia in its own right or as part of something else",
   "domain": "sleep",
-  "about": "Questions that tell apart insomnia as a problem in its own right from poor sleep driven by mood, worry, nightmares, substances, a medical problem or the schedule, and that check for sleep apnea and for a reduced need for sleep (mood elevation).",
+  "about": "Questions that tell apart insomnia as a problem in its own right from poor sleep driven by mood, worry, nightmares, substances, a medical problem or the schedule, and that check for sleep apnea, restless legs, a late body clock, dream enactment and a reduced need for sleep (mood elevation).",
   "questions": [
     {
       "id": "sleep-main-driver",
@@ -226,6 +226,73 @@
         "major-depressive-disorder"
       ],
       "priority": 20
+    },
+    {
+      "id": "sleep-other-disorders",
+      "kind": "discriminate",
+      "domain": "sleep",
+      "select": "many",
+      "text": "Does anything else disturb the night: an urge to move the legs in the evening that eases with movement, a body clock that runs very late (sleeps well if allowed to sleep in), frequent nightmares, or acting out dreams?",
+      "why": "Restless legs, a delayed body clock, nightmare disorder and dream enactment each need their own assessment, often with sleep medicine, and they change whether sleep restriction is suitable.",
+      "options": [
+        {
+          "id": "restless-legs",
+          "label": "An urge to move the legs at rest that eases with movement",
+          "surfaces": [
+            "medical-referral"
+          ],
+          "note": "Possible restless legs: suggest a primary care or sleep medicine review."
+        },
+        {
+          "id": "late-clock",
+          "label": "Falls asleep very late but sleeps well when allowed to sleep in",
+          "note": "Possible delayed sleep-wake phase: schedule and timed-light advice, often with sleep medicine, comes before sleep restriction."
+        },
+        {
+          "id": "nightmares",
+          "label": "Frequent nightmares that wake them up",
+          "effects": {
+            "addSymptomIds": [
+              "nightmares"
+            ]
+          },
+          "note": "Nightmares respond to imagery rehearsal or trauma-focused care (AASM position paper, 2018)."
+        },
+        {
+          "id": "dream-enactment",
+          "label": "Acts out dreams, sleepwalks or gets hurt at night",
+          "surfaces": [
+            "medical-referral"
+          ],
+          "note": "Suggest a sleep medicine referral."
+        },
+        {
+          "id": "none",
+          "label": "None of these",
+          "exclusive": true
+        },
+        {
+          "id": "unsure",
+          "label": "Not sure yet",
+          "keepOpen": true,
+          "exclusive": true
+        }
+      ],
+      "showWhen": {
+        "symptomIds": [
+          "insomnia",
+          "sleep-related-arousal",
+          "poor-sleep-daytime-impact"
+        ],
+        "conditionIds": [
+          "insomnia-disorder"
+        ]
+      },
+      "discriminates": [
+        "insomnia-disorder",
+        "ptsd"
+      ],
+      "priority": 25
     }
   ],
   "sources": [
@@ -240,6 +307,24 @@
       "publisher": "Annals of Internal Medicine (PubMed)",
       "url": "https://pubmed.ncbi.nlm.nih.gov/27136449/",
       "year": 2016
+    },
+    {
+      "title": "Position paper for the treatment of nightmare disorder in adults: an AASM position paper (Morgenthaler et al.)",
+      "publisher": "Journal of Clinical Sleep Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29852917/",
+      "year": 2018
+    },
+    {
+      "title": "Clinical practice guideline for the treatment of intrinsic circadian rhythm sleep-wake disorders (Auger et al.)",
+      "publisher": "Journal of Clinical Sleep Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26414986/",
+      "year": 2015
+    },
+    {
+      "title": "Treatment of restless legs syndrome and periodic limb movement disorder: an AASM clinical practice guideline (Winkelman et al.)",
+      "publisher": "Journal of Clinical Sleep Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39324694/",
+      "year": 2025
     }
   ],
   "license": "original",

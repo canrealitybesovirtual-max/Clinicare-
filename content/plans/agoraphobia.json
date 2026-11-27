@@ -17,27 +17,49 @@
         {
           "id": "ag-build-ladder",
           "text": "Within the first 3 sessions, build an exposure ladder with the clinician of at least 10 feared situations, each rated 0-100 for expected fear, that together cover every type of place the client avoids.",
-          "interventionIds": ["graded-in-vivo-exposure"]
+          "interventionIds": ["graded-in-vivo-exposure"],
+          "targets": ["avoidance-escape"],
+          "step": "high-intensity"
         },
         {
           "id": "ag-planned-practice",
           "text": "Starting by week 4, complete at least 3 planned exposure practices per week, staying until the planned end time rather than leaving when fear peaks, and log the feared outcome with a belief rating (0-100) before and after each one.",
-          "interventionIds": ["graded-in-vivo-exposure", "catastrophic-misinterpretation-restructuring"]
+          "interventionIds": ["graded-in-vivo-exposure", "catastrophic-misinterpretation-restructuring"],
+          "targets": ["avoidance-escape"],
+          "step": "high-intensity"
         },
         {
           "id": "ag-climb-ladder",
           "text": "Over weeks 4 to 12, move up at least 1 ladder step every 1 to 2 weeks, so that by week 12 each of the top 3 steps has been completed at least once.",
-          "interventionIds": ["graded-in-vivo-exposure"]
+          "interventionIds": ["graded-in-vivo-exposure"],
+          "targets": ["avoidance-escape"],
+          "step": "high-intensity"
         },
         {
           "id": "ag-valued-outings",
           "text": "By week 12, complete at least 2 valued errands or outings per week that were being avoided at intake (for example a grocery trip, a bus ride to work or a medical visit).",
-          "interventionIds": ["graded-in-vivo-exposure"]
+          "interventionIds": ["graded-in-vivo-exposure"],
+          "targets": ["avoidance-escape", "values-and-meaning"],
+          "step": "high-intensity"
         },
         {
           "id": "ag-gad7-tracking",
           "text": "Complete the GAD-7 at intake and every 2 to 4 weeks, and pair each score with a weekly count of avoided situations so progress is judged on both. If neither has improved across 2 check-ins in a row, revisit the plan together.",
           "interventionIds": []
+        },
+        {
+          "id": "ag-acceptance-option",
+          "text": "Over weeks 4 to 12, practice allowing anxious sensations to be there during outings rather than fighting them, and link each outing to a personal value, rating willingness (0-10) before each one.",
+          "interventionIds": ["act-acceptance-willingness", "act-committed-action"],
+          "targets": ["experiential-avoidance", "values-and-meaning"],
+          "step": "high-intensity"
+        },
+        {
+          "id": "ag-transdiagnostic-option",
+          "text": "If avoidance comes with low mood, worry or other anxiety, discuss by week 4 a transdiagnostic emotion-focused CBT program from a trained clinician (for example the Unified Protocol).",
+          "interventionIds": ["unified-protocol"],
+          "targets": ["avoidance-escape", "emotion-dysregulation"],
+          "step": "high-intensity"
         }
       ],
       "measureIds": ["gad-7"]
@@ -57,27 +79,37 @@
         {
           "id": "ag-aid-ranking",
           "text": "Within 2 weeks, list every safety aid and kind of companion support used on outings, and rank them from easiest to hardest to give up.",
-          "interventionIds": ["safety-behavior-reduction"]
+          "interventionIds": ["safety-behavior-reduction"],
+          "targets": ["safety-behaviors"],
+          "step": "high-intensity"
         },
         {
           "id": "ag-companion-fading",
           "text": "Over weeks 5 to 12, shrink the companion's role step by step (for example companion walks ahead, then waits in the car, then stays home but can be reached, then is not contacted), moving to the next step after at least 2 completed practices at the current one.",
-          "interventionIds": ["graded-in-vivo-exposure", "safety-behavior-reduction"]
+          "interventionIds": ["graded-in-vivo-exposure", "safety-behavior-reduction"],
+          "targets": ["safety-behaviors"],
+          "step": "high-intensity"
         },
         {
           "id": "ag-support-person-session",
           "text": "If the client agrees, hold at least 1 joint session with a support person by week 6 to agree on how they will cheer on practice and step back from doing tasks for the client, while respecting what is culturally typical for the family.",
-          "interventionIds": ["graded-in-vivo-exposure"]
+          "interventionIds": ["graded-in-vivo-exposure"],
+          "targets": ["strengths-and-supports"],
+          "step": "high-intensity"
         },
         {
           "id": "ag-sensation-practice",
           "text": "If panic-like sensations drive the avoidance, and after medical clearance, practice at least 2 sensation-provoking exercises on 4 or more days a week for 3 weeks before or alongside the higher ladder steps.",
-          "interventionIds": ["interoceptive-exposure"]
+          "interventionIds": ["interoceptive-exposure"],
+          "targets": ["threat-monitoring", "avoidance-escape"],
+          "step": "high-intensity"
         },
         {
           "id": "ag-maintenance-plan",
           "text": "By the final session, write a maintenance plan that names at least 3 outings to keep doing every week and the steps to take if avoidance starts to creep back.",
-          "interventionIds": ["graded-in-vivo-exposure", "safety-behavior-reduction"]
+          "interventionIds": ["graded-in-vivo-exposure", "safety-behavior-reduction"],
+          "targets": ["coping-skills"],
+          "step": "low-intensity"
         }
       ],
       "measureIds": ["gad-7"]
@@ -91,9 +123,10 @@
     { "title": "A Tipping Point for Measurement-Based Care (Fortney et al.)", "publisher": "Psychiatric Services; reprinted in Focus (PubMed Central)", "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6996080/", "year": 2017 },
     { "title": "Implementing Measurement-Based Care in Behavioral Health: A Review (Lewis et al.)", "publisher": "JAMA Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/30566197/", "year": 2019 },
     { "title": "Shared decision making (NG197)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng197", "year": 2021 },
-    { "title": "PHQ and GAD-7 screeners (reproduction terms)", "publisher": "Pfizer / PHQ Screeners", "url": "https://www.phqscreeners.com" }
+    { "title": "PHQ and GAD-7 screeners (reproduction terms)", "publisher": "Pfizer / PHQ Screeners", "url": "https://www.phqscreeners.com" },
+    { "title": "The Unified Protocol for Transdiagnostic Treatment of Emotional Disorders Compared With Diagnosis-Specific Protocols for Anxiety Disorders: A Randomized Clinical Trial (Barlow et al.)", "publisher": "JAMA Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/28768327/", "year": 2017 }
   ],
   "license": "original",
-  "lastVerified": "2026-11-26",
+  "lastVerified": "2026-11-27",
   "reviewedBy": "PENDING"
 }

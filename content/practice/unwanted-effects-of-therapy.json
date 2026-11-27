@@ -1,0 +1,117 @@
+{
+  "id": "unwanted-effects-of-therapy",
+  "title": "Unwanted effects and deterioration in therapy",
+  "category": "professional-practice",
+  "summary": "Therapy can have unwanted effects as well as benefits. This guide covers asking about them routinely, recognizing deterioration on measures, telling side effects apart from expected short-term discomfort, and what to do next.",
+  "whenToUse": [
+    "At planned reviews, and whenever a measure total rises by a meaningful amount.",
+    "When starting a method known to bring short-term distress (for example exposure or trauma processing).",
+    "When a client reports new problems in relationships, work or wellbeing since starting therapy."
+  ],
+  "steps": [
+    {
+      "heading": "Explain in advance",
+      "body": "During informed consent, say that therapy can sometimes have unwanted effects, and that you want to hear about any."
+    },
+    {
+      "heading": "Ask routinely",
+      "items": [
+        "New or worse symptoms since starting.",
+        "Unpleasant memories or feelings that do not settle between sessions.",
+        "Strain in relationships, work or study linked to therapy.",
+        "Feeling dependent on therapy or the therapist, or feeling worse about themselves.",
+        "Anything about the therapy or therapist that felt unhelpful or hurtful."
+      ]
+    },
+    {
+      "heading": "Watch the trend",
+      "body": "When a GAD-7 or PHQ-9 total worsens by at least the meaningful-change amount shown in the trend tool and stays there, treat it as possible deterioration and review."
+    },
+    {
+      "heading": "Sort out what is happening",
+      "items": [
+        "Expected and temporary: distress during exposure that eases as planned.",
+        "Unwanted effect of therapy: a new problem caused by the treatment or how it was done.",
+        "Life events or illness unrelated to therapy.",
+        "Malpractice or boundary problems, which need a different response."
+      ]
+    },
+    {
+      "heading": "Act on it",
+      "items": [
+        "Talk with the client and adjust the method, pace or focus.",
+        "Review the alliance and the formulation.",
+        "Recheck safety directly.",
+        "Consult or refer if the problem persists, and document what you did."
+      ]
+    }
+  ],
+  "prompts": [
+    "Sometimes therapy has effects people do not expect or want. Since we started, has anything got worse or felt unhelpful?",
+    "After our last session, did any memories or feelings stay with you more than you expected?",
+    "Your totals have gone up over the last few weeks. I want to take that seriously. What do you think is going on?"
+  ],
+  "cautions": [
+    "Do not dismiss every worsening as a necessary part of change.",
+    "Do not use a symptom rise alone to decide on risk; ask directly about safety.",
+    "Some practices are harmful and are never recommended, including conversion efforts and suggestive memory recovery techniques; see the legal and ethics hub.",
+    "Licensed side-effect questionnaires are link-outs only while their licenses are pending."
+  ],
+  "evidenceSummary": "A 2014 review (Linden and Schermuly-Haupt) defines psychotherapy side effects and reports that unwanted effects are common but rarely assessed. A 2013 paper (Linden) distinguishes unwanted events from adverse treatment reactions and malpractice. A 2016 study (Rozental and colleagues) developed the Negative Effects Questionnaire for monitoring unwanted events. A 2018 meta-analysis of progress feedback (Lambert and colleagues) found that feedback reduced deterioration among clients who were not on track.",
+  "forClinicianReview": true,
+  "crisisPanel": true,
+  "sud": false,
+  "relatedInterventionIds": [],
+  "relatedHandoutIds": [],
+  "relatedFormulationIds": [],
+  "relatedLegalIds": [
+    "contested-practices",
+    "conversion-practices",
+    "memory-and-suggestion-safeguards"
+  ],
+  "relatedPracticeIds": [
+    "outcome-monitoring",
+    "alliance-and-rupture-repair",
+    "trauma-informed-care",
+    "first-sessions-and-role-induction"
+  ],
+  "relatedPopulationIds": [],
+  "toolHref": "/tools/trend",
+  "linkOuts": [],
+  "measuresPending": [
+    {
+      "name": "Negative Effects Questionnaire (NEQ)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27331907/",
+      "licenseKey": "NEQ"
+    }
+  ],
+  "sources": [
+    {
+      "title": "Definition, assessment and rate of psychotherapy side effects (Linden and Schermuly-Haupt)",
+      "publisher": "World Psychiatry, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25273304/",
+      "year": 2014
+    },
+    {
+      "title": "How to define, find and classify side effects in psychotherapy: from unwanted events to adverse treatment reactions (Linden)",
+      "publisher": "Clinical Psychology and Psychotherapy, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22253218/",
+      "year": 2013
+    },
+    {
+      "title": "Negative effects of psychological treatments: an exploratory factor analysis of the Negative Effects Questionnaire for monitoring and reporting adverse and unwanted events (Rozental et al.)",
+      "publisher": "PLOS ONE, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27331907/",
+      "year": 2016
+    },
+    {
+      "title": "Collecting and delivering progress feedback: a meta-analysis of routine outcome monitoring (Lambert, Whipple and Kleinstäuber)",
+      "publisher": "Psychotherapy, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30335463/",
+      "year": 2018
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

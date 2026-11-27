@@ -1,0 +1,116 @@
+{
+  "id": "neuromodulation-referral",
+  "name": "Neuromodulation and other treatments for hard-to-treat depression (rTMS, ECT, esketamine): information and referral",
+  "modality": "Care coordination - referral for brain stimulation and specialist depression treatments",
+  "conditions": ["major-depressive-disorder", "persistent-depressive-disorder", "obsessive-compulsive-disorder"],
+  "evidenceLevel": "The VA/DoD 2022 depression guideline recommends offering electroconvulsive therapy (ECT) for severe depression with catatonia, psychotic features, severe suicidality or a history of good response to ECT; suggests repetitive transcranial magnetic stimulation (rTMS) after partial or no response to two or more adequate medication trials; and suggests ketamine or esketamine as augmentation after several unsuccessful medication trials. NICE (HTG396, formerly IPG542) finds no major safety concerns for rTMS and adequate short-term efficacy evidence, with variable response. NICE NG222 (2022) recommends considering ECT for severe depression when a rapid response is needed, other treatments have not worked, or the person prefers it based on past experience, with full discussion of risks including cognitive side effects. NIMH notes that rTMS is also FDA-cleared for some people with OCD.",
+  "minutes": { "min": 15, "max": 30 },
+  "purpose": "When depression has not improved after several adequate treatments, or is severe or life-threatening, specialist options may help. rTMS uses magnetic pulses over the scalp, usually in daily outpatient sessions over several weeks, without anesthesia. ECT is given under brief general anesthesia, typically a few times a week, and works fastest of these options, but can affect memory. Esketamine is a nasal spray given with an oral antidepressant in a certified clinic with observation afterward. These are prescriber and specialist decisions. This entry helps therapists explain options in plain language, support informed questions, coordinate care and keep psychotherapy going alongside. See the esketamine entry in the medications reference for its safety requirements.",
+  "steps": [
+    "Review with the client and the prescriber what has been tried so far (medications, doses, duration, psychotherapy) and how well it worked, to clarify whether specialist options are worth discussing.",
+    "Explain each option in plain language: what a session is like, how often, how long a course lasts, and common side effects, using reliable sources such as NIMH.",
+    "Address common fears and myths about ECT, including how it is done today with anesthesia and muscle relaxants, while being honest about possible memory effects.",
+    "Help the client prepare questions for the prescriber or specialist clinic, including practical issues such as transport after treatment, time off work and insurance coverage.",
+    "With consent, coordinate with the prescriber and the specialist service, and share relevant history.",
+    "Continue psychotherapy during and after the course where the client wants it, and plan relapse prevention, since ongoing treatment is usually needed after a course of ECT or rTMS.",
+    "Monitor mood and safety closely during transitions between treatments."
+  ],
+  "script": [
+    "There are other treatments for low mood that has not lifted with the usual options. Your prescriber can tell you if any fit your situation.",
+    "One uses magnetic pulses on the head in short daily visits. You stay awake, and you can usually go back to your day afterward.",
+    "Another, ECT, is done while you are asleep under anesthesia. It can work quickly, and some people have memory problems for a while afterward.",
+    "There is also a nasal spray medicine that is given in a clinic, where staff watch you for a while afterward.",
+    "Would it help to write down your questions for your prescriber?",
+    "We can keep meeting while you try a new treatment."
+  ],
+  "contraindications": [
+    "Treatment decisions belong to the prescriber and specialist team. Do not recommend a specific procedure or advise changes to medication.",
+    "Severe depression with suicidal thoughts, not eating or drinking, or psychotic features needs urgent psychiatric assessment, not only a routine referral. This app does not judge risk; you do. Crisis options: in the US, call or text 988; elsewhere, the local emergency number or findahelpline.com.",
+    "ECT can cause memory problems, especially for events around the time of treatment, and involves the risks of general anesthesia. Clients should be fully informed and free to change their mind.",
+    "rTMS can cause scalp discomfort and headaches, and seizures are a rare risk. Clinics screen for metal implants and seizure history.",
+    "Esketamine can cause sedation and dissociation and carries misuse warnings. It is given only in certified settings, and patients should not drive until the next day after a session.",
+    "Do not enter identifying details or treatment history into this app."
+  ],
+  "culturalAdaptations": [
+    "Beliefs about brain treatments, anesthesia and medication vary widely, and ECT in particular carries stigma in many communities and families. Explore concerns respectfully and offer reliable information.",
+    "Access to these treatments varies greatly by region and insurance. Help the client weigh travel, cost and time realistically.",
+    "Use a trained professional interpreter rather than family members, and check that key ideas carry the intended meaning in the client's language, especially for consent discussions."
+  ],
+  "handoutIds": ["questions-for-my-prescriber"],
+  "evidenceGrades": [
+    {
+      "body": "VA/DoD",
+      "guideline": "Management of Major Depressive Disorder",
+      "year": 2022,
+      "conditionId": "major-depressive-disorder",
+      "population": "Adults with severe MDD and catatonia, psychotic depression, severe suicidality or prior good response to ECT",
+      "direction": "for",
+      "strength": "recommend (ECT)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36122380/"
+    },
+    {
+      "body": "VA/DoD",
+      "guideline": "Management of Major Depressive Disorder",
+      "year": 2022,
+      "conditionId": "major-depressive-disorder",
+      "population": "Adults with partial or no response to two or more adequate medication trials",
+      "direction": "for",
+      "strength": "suggest (rTMS)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36122380/"
+    },
+    {
+      "body": "NICE",
+      "guideline": "Repetitive transcranial magnetic stimulation for depression (HTG396, formerly IPG542)",
+      "year": 2015,
+      "conditionId": "major-depressive-disorder",
+      "population": "People with depression",
+      "direction": "for",
+      "strength": "may be used with normal arrangements for clinical governance and audit",
+      "url": "https://www.nice.org.uk/guidance/htg396/chapter/1-Recommendations"
+    },
+    {
+      "body": "NICE",
+      "guideline": "Depression in adults: treatment and management (NG222), electroconvulsive therapy",
+      "year": 2022,
+      "conditionId": "major-depressive-disorder",
+      "population": "Adults with severe depression",
+      "direction": "for",
+      "strength": "consider (ECT, in specified circumstances)",
+      "url": "https://www.nice.org.uk/guidance/ng222/chapter/Recommendations"
+    }
+  ],
+  "sources": [
+    {
+      "title": "The management of major depressive disorder: synopsis of the 2022 VA/DoD clinical practice guideline (McQuaid et al.)",
+      "publisher": "Annals of Internal Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/36122380/",
+      "year": 2022
+    },
+    {
+      "title": "VA/DoD Clinical Practice Guideline for the Management of Major Depressive Disorder",
+      "publisher": "US Department of Veterans Affairs and Department of Defense",
+      "url": "https://www.healthquality.va.gov/guidelines/MH/mdd/",
+      "year": 2022
+    },
+    {
+      "title": "Repetitive transcranial magnetic stimulation for depression (HTG396, formerly IPG542): recommendations",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/htg396/chapter/1-Recommendations",
+      "year": 2015
+    },
+    {
+      "title": "Depression in adults: treatment and management (NG222): recommendations",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng222/chapter/Recommendations",
+      "year": 2022
+    },
+    {
+      "title": "Brain Stimulation Therapies",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/topics/brain-stimulation-therapies/brain-stimulation-therapies"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

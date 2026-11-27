@@ -10,7 +10,9 @@
  * - Wording is original (plan library, G2) or written by the clinician with the client; all of it passed the PHI
  *   scrubber before it reached the plan. Labeled "For clinician review"; never states a diagnosis (G3).
  * - Codes are shown as reference codes to confirm through the clinician's own assessment, with a See DSM-5-TR
- *   pointer (G1).
+ *   pointer (G1). Psychosocial problems may list reference ICD-10-CM Z codes (circumstances, never a diagnosis).
+ * - The optional formulation summary lists the formulation targets the clinician tapped and the objectives that work
+ *   on each, labeled for clinician review; it carries no identifiers and no diagnosis wording.
  */
 import {
   PDF_APP_NAME,
@@ -37,10 +39,12 @@ import { withoutDocxDates } from "./docx-dates";
 export interface PlanExportObjective {
   text: string;
   interventions: string[]; // intervention names from the library
+  careLevel?: string; // stepped-care level of the work, when the library tags it
 }
 
 export interface PlanExportProblem {
   label: string;
+  zCodes?: string[]; // "Z59.811 (Housing instability, ...)": reference only
   definitions: string[];
   goals: string[];
   objectives: PlanExportObjective[];
@@ -50,6 +54,10 @@ export interface PlanExport {
   focus: { label: string; icd10cm: string[]; icd11: string[] };
   sud: boolean;
   collaborativeNote: string;
+  /** Notes of the cross-cutting modules that contribute a selected problem. */
+  moduleNotes?: { title: string; note: string }[];
+  /** Optional formulation summary: tapped targets and the objectives ("Problem 1, objective 2") that work on them. */
+  formulation?: { factors: { label: string; kind: string; refs: string[] }[]; unlinked: string[] };
   problems: PlanExportProblem[];
   measures: { name: string; shortName: string; schedule: string }[];
   reviewInterval: string;
@@ -61,6 +69,9 @@ export interface PlanExport {
 /* ------------------------------------------------------------------ fixed wording */
 
 export const PLAN_TITLE = "Treatment plan draft";
+export const PLAN_FORMULATION_HEADING = "Formulation summary (for clinician review)";
+export const PLAN_FORMULATION_NOTE =
+  "Processes and strengths chosen with the client during planning, and the objectives in this plan that work on each. A shared, revisable working explanation, not a diagnosis.";
 export const PLAN_FOOTER = PDF_DISCLAIMER; // "Resource only. Not a substitute for clinical judgment."
 export const PLAN_PART2_NOTICE = PDF_PART2_NOTICE; // "42 CFR Part 2 prohibits unauthorized use or disclosure of these records."
 export const PLAN_NAME_LINE = PDF_NAME_LINE; // the only personal field: blank, filled in by hand
@@ -104,10 +115,28 @@ export function planOutline(plan: PlanExport): PlanBlock[] {
 
   out.push({ kind: "heading", level: 2, text: "Working with the client" });
   out.push({ kind: "paragraph", text: plan.collaborativeNote });
+  for (const m of plan.moduleNotes ?? []) out.push({ kind: "paragraph", text: `${m.title}: ${m.note}` });
+
+  if (plan.formulation?.factors.length) {
+    out.push({ kind: "heading", level: 2, text: PLAN_FORMULATION_HEADING });
+    out.push({ kind: "paragraph", text: PLAN_FORMULATION_NOTE, style: "muted" });
+    out.push({
+      kind: "list",
+      ordered: false,
+      items: plan.formulation.factors.map((f) => ({
+        text: `${f.label} (${f.kind.toLowerCase()})`,
+        sub: [f.refs.length ? `Worked on in: ${f.refs.join("; ")}` : "No objective in this plan works on this yet."],
+      })),
+    });
+    if (plan.formulation.unlinked.length)
+      out.push({ kind: "paragraph", text: `Objectives not linked to a chosen process or strength: ${plan.formulation.unlinked.join("; ")}.`, style: "muted" });
+  }
 
   if (plan.problems.length === 0) out.push(none("No problems were selected for this plan."));
   plan.problems.forEach((p, i) => {
     out.push({ kind: "heading", level: 2, text: `Problem ${i + 1}: ${p.label}` });
+    if (p.zCodes?.length)
+      out.push({ kind: "paragraph", style: "muted", text: `Reference Z codes to confirm through your own assessment (circumstances, not a diagnosis): ${p.zCodes.join("; ")}.` });
     out.push({ kind: "heading", level: 3, text: "Behavioral definitions" });
     out.push(p.definitions.length ? { kind: "list", ordered: false, items: p.definitions.map((text) => ({ text })) } : none("None selected."));
     out.push({ kind: "heading", level: 3, text: "Long-term goals" });
@@ -120,7 +149,10 @@ export function planOutline(plan: PlanExport): PlanBlock[] {
             ordered: true,
             items: p.objectives.map((o) => ({
               text: o.text,
-              sub: [o.interventions.length ? `Interventions: ${o.interventions.join("; ")}` : "Interventions: to be chosen"],
+              sub: [
+                o.interventions.length ? `Interventions: ${o.interventions.join("; ")}` : "Interventions: to be chosen",
+                ...(o.careLevel ? [`Usual level of care: ${o.careLevel}`] : []),
+              ],
             })),
           }
         : none("None selected."),

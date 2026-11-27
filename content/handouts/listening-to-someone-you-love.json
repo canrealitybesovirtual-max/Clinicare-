@@ -1,0 +1,154 @@
+{
+  "id": "listening-to-someone-you-love",
+  "title": "Listening to Someone You Love",
+  "audience": "client",
+  "readingLevel": "6-8",
+  "estimatedMinutes": 10,
+  "intro": "When someone you love is going through a hard time, it is natural to want to fix things, or to talk them out of their feelings. Often, what helps most first is feeling heard. This sheet shows ways to listen and to show you understand, even when you do not agree. It is for family members, partners, and friends. Reading it takes about 10 minutes.",
+  "sections": [
+    {
+      "heading": "Listening steps",
+      "steps": [
+        "Choose a calm time and a private place. Put your phone away.",
+        "Let them talk. Nod, and use short prompts like tell me more.",
+        "Say back what you heard in your own words: so the week was really overwhelming.",
+        "Name the feeling you notice: you seem really frustrated. Ask if you got it right.",
+        "Ask what would help: do you want ideas, or do you want me to just listen?"
+      ]
+    },
+    {
+      "heading": "Understanding is not the same as agreeing",
+      "body": "You can show that a feeling makes sense without agreeing with every thought or action. Feelings make sense given what a person has been through, or how they see things right now. Saying so can help them calm down enough to think.",
+      "steps": [
+        "I can see why you would feel hurt after that.",
+        "It makes sense that you are scared, given what happened last time.",
+        "I don't see it the same way, but I understand this really matters to you."
+      ]
+    },
+    {
+      "heading": "Phrases that can make things worse",
+      "steps": [
+        "Just calm down, or you are overreacting",
+        "Other people have it worse",
+        "You just need to think positive",
+        "Why would you do that, said in an angry tone",
+        "Bringing up old mistakes in the middle of a hard talk"
+      ]
+    },
+    {
+      "heading": "Taking care of yourself",
+      "steps": [
+        "Take breaks when you need them. You can say: I want to keep talking, but I need a few minutes.",
+        "Set limits on behavior that is hurtful or unsafe. You can be kind and firm at the same time.",
+        "Find support for yourself, like a family group, a counselor, or a friend."
+      ]
+    },
+    {
+      "heading": "About privacy",
+      "body": "Your loved one's counselor may not be able to share details of their care without their permission. You can still share what you notice, and ask general questions."
+    },
+    {
+      "heading": "When to get help",
+      "steps": [
+        "If your loved one talks about suicide or wanting to die, take it seriously. Call or text 988 together.",
+        "If they seem very confused, are upset by things others cannot see or hear, or do not sleep for days, contact their care team right away.",
+        "If anyone is in danger, call 911.",
+        "If you feel afraid of your loved one, or they are hurting or controlling you, your safety comes first. Call the National Domestic Violence Hotline at 1-800-799-7233."
+      ]
+    }
+  ],
+  "safetyNote": "Safety first: If your loved one may be in danger, or you are, get help now. In the US, you can call the National Domestic Violence Hotline at 1-800-799-7233 or text START to 88788. If you have thoughts of hurting yourself or someone else, get help now. In the US, call or text 988, or call 911. In other countries, call your local emergency number or visit findahelpline.com. Resource only. This sheet does not replace care from a licensed professional.",
+  "sud": false,
+  "es": {
+    "title": "Cómo escuchar a alguien que usted quiere",
+    "intro": "Cuando alguien que usted quiere está pasando por un momento difícil, es natural querer arreglar las cosas, o convencerle de que no se sienta así. Muchas veces, lo que más ayuda primero es sentirse escuchado. Esta hoja muestra formas de escuchar y de mostrar que entiende, aunque no esté de acuerdo. Es para familiares, parejas y amistades. Leerla toma unos 10 minutos.",
+    "sections": [
+      {
+        "heading": "Pasos para escuchar",
+        "steps": [
+          "Escoja un momento tranquilo y un lugar privado. Guarde su teléfono.",
+          "Deje que hable. Asienta con la cabeza, y use frases cortas como cuéntame más.",
+          "Repita con sus palabras lo que oyó: o sea que la semana fue muy pesada.",
+          "Nombre la emoción que nota: te veo muy frustrado. Pregunte si entendió bien.",
+          "Pregunte qué ayudaría: ¿quieres ideas, o quieres que solo te escuche?"
+        ]
+      },
+      {
+        "heading": "Entender no es lo mismo que estar de acuerdo",
+        "body": "Puede mostrar que una emoción tiene sentido sin estar de acuerdo con cada pensamiento o acción. Las emociones tienen sentido por lo que la persona ha vivido, o por cómo ve las cosas ahora. Decirlo le puede ayudar a calmarse lo suficiente para pensar.",
+        "steps": [
+          "Entiendo por qué te sentiste herido después de eso.",
+          "Tiene sentido que tengas miedo, por lo que pasó la última vez.",
+          "No lo veo igual, pero entiendo que esto es muy importante para ti."
+        ]
+      },
+      {
+        "heading": "Frases que pueden empeorar las cosas",
+        "steps": [
+          "Cálmate y ya, o estás exagerando",
+          "Otros están peor",
+          "Solo tienes que pensar en positivo",
+          "¿Por qué hiciste eso?, dicho con enojo",
+          "Sacar errores del pasado en medio de una conversación difícil"
+        ]
+      },
+      {
+        "heading": "Cuidarse usted",
+        "steps": [
+          "Tome pausas cuando las necesite. Puede decir: Quiero seguir hablando, pero necesito unos minutos.",
+          "Ponga límites a las conductas que hieren o que son peligrosas. Puede ser amable y firme a la vez.",
+          "Busque apoyo para usted, como un grupo para familias, un consejero o una amistad."
+        ]
+      },
+      {
+        "heading": "Sobre la privacidad",
+        "body": "Es posible que el consejero de su ser querido no pueda contarle detalles de su atención sin su permiso. Aun así, usted puede contar lo que nota y hacer preguntas generales."
+      },
+      {
+        "heading": "Cuándo buscar ayuda",
+        "steps": [
+          "Si su ser querido habla del suicidio o de querer morir, tómelo en serio. Llamen o envíen un mensaje de texto al 988 juntos.",
+          "Si se ve muy confundido, le alteran cosas que otros no ven ni oyen, o no duerme en días, comuníquese de inmediato con su equipo de atención.",
+          "Si alguien está en peligro, llame al 911.",
+          "Si le tiene miedo a su ser querido, o le está lastimando o controlando, su seguridad es lo primero. Llame a la Línea Nacional de Violencia Doméstica (National Domestic Violence Hotline) al 1-800-799-7233."
+        ]
+      }
+    ],
+    "safetyNote": "La seguridad es lo primero: Si su ser querido podría estar en peligro, o usted lo está, busque ayuda ahora. En EE. UU., puede llamar a la Línea Nacional de Violencia Doméstica (National Domestic Violence Hotline) al 1-800-799-7233 o enviar un mensaje de texto con la palabra START al 88788. Si tiene pensamientos de hacerse daño o de hacerle daño a otra persona, busque ayuda ahora. En EE. UU., llame o envíe un mensaje de texto al 988, o llame al 911. En otros países, llame al número de emergencias local o visite findahelpline.com. Solo es un recurso. Esta hoja no reemplaza la atención de un profesional con licencia.",
+    "translatedBy": "machine-assisted, PENDING human review"
+  },
+  "sources": [
+    {
+      "title": "Therapist empathy and client outcome: an updated meta-analysis (Elliott, Bohart, Watson and Murphy)",
+      "publisher": "Psychotherapy (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30335453/",
+      "year": 2018
+    },
+    {
+      "title": "Psychosis and schizophrenia in adults: prevention and management (CG178)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg178",
+      "year": 2014
+    },
+    {
+      "title": "Family intervention for schizophrenia (Pharoah et al.)",
+      "publisher": "Cochrane Database of Systematic Reviews (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21154340/",
+      "year": 2010
+    },
+    {
+      "title": "Help Someone Else",
+      "publisher": "988 Suicide & Crisis Lifeline",
+      "url": "https://988lifeline.org/help-someone-else/"
+    },
+    {
+      "title": "Domestic Violence (health topic; lists the National Domestic Violence Hotline call, TTY, text and chat options)",
+      "publisher": "MedlinePlus, U.S. National Library of Medicine",
+      "url": "https://medlineplus.gov/domesticviolence.html",
+      "year": 2025
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

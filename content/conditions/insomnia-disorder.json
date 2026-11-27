@@ -78,7 +78,12 @@
     {
       "label": "Obstructive sleep apnea and other sleep disorders",
       "type": "medical",
-      "note": "Loud snoring, gasping, witnessed pauses in breathing, restless legs, or a very late or early body clock point to a sleep evaluation. Strong daytime sleepiness (dozing off while driving) is a warning sign."
+      "note": "Loud snoring, gasping, witnessed pauses in breathing, an urge to move the legs at rest (restless legs) or a body clock that runs very late or early point to a sleep medicine evaluation. Strong daytime sleepiness (dozing off while driving) is a warning sign. Sleep apnea, bipolar disorder, seizures and jobs where drowsiness is dangerous change whether sleep restriction is safe; screen for them first."
+    },
+    {
+      "label": "Nightmares and other parasomnias",
+      "type": "psychiatric",
+      "note": "Frequent distressing dreams that wake the client and make them dread sleep (nightmare disorder, ICD-10-CM F51.5) need their own plan, such as imagery rehearsal or trauma-focused treatment. Acting out dreams, sleepwalking or injuries at night call for a sleep medicine referral."
     },
     {
       "label": "Pain, reflux, frequent urination, menopause, thyroid and other medical conditions",
@@ -134,6 +139,16 @@
       "label": "Circadian rhythm sleep disorder, unspecified type",
       "icd10cm": "G47.20",
       "distinguishing": "Sleep is normal once it starts but the body clock runs much later or earlier than the client's schedule."
+    },
+    {
+      "label": "Circadian rhythm sleep disorder, delayed sleep phase type",
+      "icd10cm": "G47.21",
+      "distinguishing": "Falls asleep very late but sleeps well when allowed to sleep in; trouble mainly with early starts. Timed light and schedule changes, often with sleep medicine, are the usual approach."
+    },
+    {
+      "label": "Nightmare disorder",
+      "icd10cm": "F51.5",
+      "distinguishing": "Repeated vivid, frightening dreams that wake the client; the fear of the dreams, rather than effortful sleep, drives the night-time problem."
     },
     {
       "label": "Restless legs syndrome",
@@ -229,7 +244,10 @@
   "handouts": [
     "sleep-diary",
     "sleep-habits",
-    "pmr-homework"
+    "pmr-homework",
+    "sleep-window-guide",
+    "how-sleep-works",
+    "racing-mind-at-bedtime"
   ],
   "statIds": [],
   "culturalNotes": [
@@ -277,6 +295,30 @@
       "publisher": "Annals of Internal Medicine",
       "url": "https://www.acpjournals.org/doi/10.7326/M15-2175",
       "year": 2016
+    },
+    {
+      "title": "Position paper for the treatment of nightmare disorder in adults: an AASM position paper (Morgenthaler et al.)",
+      "publisher": "Journal of Clinical Sleep Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29852917/",
+      "year": 2018
+    },
+    {
+      "title": "Clinical practice guideline for the treatment of intrinsic circadian rhythm sleep-wake disorders (Auger et al.)",
+      "publisher": "Journal of Clinical Sleep Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26414986/",
+      "year": 2015
+    },
+    {
+      "title": "Clinical practice guideline for diagnostic testing for adult obstructive sleep apnea: an AASM clinical practice guideline (Kapur et al.)",
+      "publisher": "Journal of Clinical Sleep Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/28162150/",
+      "year": 2017
+    },
+    {
+      "title": "Treatment of restless legs syndrome and periodic limb movement disorder: an AASM clinical practice guideline (Winkelman et al.)",
+      "publisher": "Journal of Clinical Sleep Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/39324694/",
+      "year": 2025
     },
     {
       "title": "Insomnia (health topic)",

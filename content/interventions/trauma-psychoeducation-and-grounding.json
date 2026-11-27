@@ -2,7 +2,7 @@
   "id": "trauma-psychoeducation-and-grounding",
   "name": "Trauma psychoeducation and stabilization skills",
   "modality": "Trauma-informed stabilization",
-  "conditions": ["ptsd"],
+  "conditions": ["ptsd", "acute-stress-disorder"],
   "evidenceLevel": "A supporting step, not a stand-alone PTSD treatment. NICE NG116, the VA/DoD 2023 guideline and the APA PTSD guideline recommend trauma-focused psychotherapies as first-line care. SAMHSA TIP 57 describes psychoeducation and grounding as core trauma-informed skills. Whether a separate stabilization phase is needed before trauma-focused work is debated: NICE NG116 lists stabilization for complex PTSD as a research priority, and De Jongh et al. (2016) argue that routine stabilization phases can delay effective treatment.",
   "minutes": { "min": 30, "max": 50 },
   "purpose": "Gives the client a plain-language understanding of common reactions after trauma, such as memories that barge in, poor sleep, jumpiness and the pull to steer around reminders, as understandable responses to danger, and teaches a few skills for managing distress (grounding, slow breathing, sleep and routine basics). It builds safety, trust and hope, prepares the client for trauma-focused therapy, and supports informed choice among treatment options. It should not replace trauma-focused treatment or delay it without good reason.",
@@ -47,7 +47,8 @@
     "note": "If the client raises faith, they may draw on spiritual practices that bring comfort (prayer, sacred texts, rituals, community support) as part of stabilization. Trauma can also shake beliefs or cause spiritual distress. Explore this gently, and offer a referral to a trusted faith leader or chaplain if the client wants one. The client leads.",
     "consentNote": "Offer only if the client raises faith or spirituality as a resource, and only after informed consent. Explain that the faith element is optional, that the standard version works without it, and that the client can change or stop it at any time. Use the client's own beliefs and words; never introduce or impose religious content. Record the consent discussion in your own clinical record, not in this app. See the AACC Code of Ethics on consent for spiritual interventions and the ACA Code of Ethics on informed consent and not imposing counselor values."
   },
-  "handoutIds": ["grounding-5-4-3-2-1", "breathing-practice"],
+  "handoutIds": ["grounding-5-4-3-2-1", "breathing-practice", "common-reactions-after-trauma"],
+  "orientationIds": ["trauma-focused-therapies"],
   "sources": [
     {
       "title": "Post-traumatic stress disorder (NG116)",

@@ -1,0 +1,114 @@
+{
+  "id": "collaborative-care-and-pcbh",
+  "title": "Collaborative care and behavioral health in primary care",
+  "category": "care-coordination",
+  "summary": "Two ways of bringing mental health care into primary care. In collaborative care, a care manager works with the primary care clinician and a psychiatric consultant, tracks every enrolled client's measures and adjusts treatment until goals are reached. In the Primary Care Behavioral Health (PCBH) model, a behavioral health consultant joins the primary care team for brief, same-day visits focused on functioning. This guide covers the roles, the rhythm of caseload review and treating to target, and a brief visit format. The app keeps no registry or client list.",
+  "whenToUse": [
+    "When working in, or setting up, a primary care or integrated medical setting.",
+    "When a client's depression or anxiety is managed jointly with a primary care clinician who prescribes.",
+    "When seeing clients for brief consultations alongside medical visits.",
+    "When a client has a long-term physical condition along with depression or anxiety."
+  ],
+  "steps": [
+    {
+      "heading": "Collaborative care: know the core ideas",
+      "items": [
+        "Team care centered on the client: the primary care clinician, a care manager and a psychiatric consultant share one plan.",
+        "Population view: the team tracks everyone enrolled, so no one who is not improving goes unnoticed.",
+        "Measurement and treating to target: a measure such as the PHQ-9 or GAD-7 is repeated regularly and treatment changes when the target is not met.",
+        "Evidence-based treatments: brief psychological treatments and medication chosen from guideline options.",
+        "Accountability: the team reviews its outcomes and improves its process."
+      ]
+    },
+    {
+      "heading": "Collaborative care: roles",
+      "items": [
+        "Care manager: engages the client, delivers brief therapy or behavioral activation, follows up, tracks measures and brings clients who are not improving to caseload review.",
+        "Primary care clinician: leads overall care and prescribes.",
+        "Psychiatric consultant: reviews the caseload with the care manager, usually without seeing the client, and recommends changes; sees clients directly when needed."
+      ]
+    },
+    {
+      "heading": "Collaborative care: caseload review",
+      "body": "At regular reviews (often weekly), the care manager and psychiatric consultant go through clients who are new, not improving or at risk. Recommendations go back to the primary care clinician. The registry or caseload list belongs in the service's own secure record system, never in this app."
+    },
+    {
+      "heading": "PCBH: what is different",
+      "items": [
+        "The behavioral health consultant is part of the primary care team and sees clients the same day, often by warm handoff from the medical visit.",
+        "Visits are short (often 15 to 30 minutes) and focus on functioning, a clear target and one or two practical changes.",
+        "The consultant serves the whole clinic population and supports the medical team with brief advice.",
+        "Clients who need longer or specialist care are referred on."
+      ]
+    },
+    {
+      "heading": "A brief visit format",
+      "items": [
+        "Introduce the role and agree on the time available.",
+        "Clarify the main concern and how it affects daily life, and ask about safety.",
+        "Use a measure if helpful and look at the trend.",
+        "Agree one or two specific steps the client wants to try (for example an activity plan, sleep changes or a breathing skill), with a handout if useful.",
+        "Agree follow-up, and feed back to the primary care clinician in a short, shared note."
+      ]
+    },
+    {
+      "heading": "Treat to target over time",
+      "body": "If measures are not improving after an agreed period, the team changes something: more intensive therapy, a medicine adjustment by the prescriber, or referral to specialist care. See the stepped-care guide for the options."
+    }
+  ],
+  "prompts": [
+    "I work with your doctor as part of the team here. We have about twenty minutes. What would be most useful to focus on?",
+    "On a typical day, how is this getting in the way of what you need or want to do?",
+    "What is one small thing you would be willing to try before we meet again?",
+    "Is it okay if I let your doctor know what we agreed today?"
+  ],
+  "cautions": [
+    "Measurement guides decisions but does not decide them; a total that is not moving is a prompt to review, not a verdict.",
+    "Brief visits still need a safety check and a clear path to crisis care; nothing in this app judges risk.",
+    "Keep registries and client lists in the service's own secure system; this app stores nothing and has no client fields.",
+    "Shared notes in integrated settings are read by the wider team; record the minimum necessary and follow your service's privacy rules.",
+    "Substance-use treatment records from a Part 2 program have extra protections; 42 CFR Part 2 prohibits unauthorized use or disclosure of these records."
+  ],
+  "evidenceSummary": "A 2012 Cochrane review (Archer and colleagues) found that collaborative care improved depression and anxiety outcomes compared with usual care. The 2002 IMPACT trial (Unützer and colleagues) found collaborative care for late-life depression in primary care more effective than usual care. NICE CG91 (2009) recommends collaborative care for some adults with depression and a chronic physical health problem. A 2018 paper (Reiter, Dobmeyer and Hunter) gives an operational definition of the PCBH model.",
+  "forClinicianReview": true,
+  "crisisPanel": false,
+  "sud": true,
+  "relatedInterventionIds": ["behavioral-activation", "problem-solving", "guided-self-help", "medication-referral"],
+  "relatedHandoutIds": ["activity-schedule", "sleep-habits", "breathing-practice"],
+  "relatedFormulationIds": [],
+  "relatedLegalIds": ["hipaa-privacy-basics", "42-cfr-part-2"],
+  "relatedPracticeIds": ["outcome-monitoring", "stepped-care-and-level-of-care", "care-transitions-and-warm-handoffs", "session-structure"],
+  "relatedPopulationIds": ["serious-medical-illness", "older-adults"],
+  "toolHref": "/tools/trend",
+  "linkOuts": [],
+  "measuresPending": [],
+  "sources": [
+    {
+      "title": "Collaborative care for depression and anxiety problems (Archer et al.)",
+      "publisher": "Cochrane Database of Systematic Reviews, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23076925/",
+      "year": 2012
+    },
+    {
+      "title": "Collaborative care management of late-life depression in the primary care setting: a randomized controlled trial (Unützer et al.)",
+      "publisher": "JAMA, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/12472325/",
+      "year": 2002
+    },
+    {
+      "title": "The Primary Care Behavioral Health (PCBH) model: an overview and operational definition (Reiter, Dobmeyer and Hunter)",
+      "publisher": "Journal of Clinical Psychology in Medical Settings, via PubMed (US National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29480434/",
+      "year": 2018
+    },
+    {
+      "title": "Depression in adults with a chronic physical health problem: recognition and management (CG91)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg91",
+      "year": 2009
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

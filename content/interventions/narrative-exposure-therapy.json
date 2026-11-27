@@ -37,7 +37,8 @@
     "Clients may prefer a clinician of a particular gender or background, especially after sexual violence. Include this preference in the referral."
   ],
   "trainingRequired": "NET: trained clinicians only. Deliver only after completing recognized NET training with supervised practice. Otherwise refer.",
-  "handoutIds": [],
+  "handoutIds": ["trauma-therapy-what-to-expect"],
+  "orientationIds": ["trauma-focused-therapies"],
   "sources": [
     { "title": "Narrative Exposure Therapy (NET) (guideline treatment page)", "publisher": "American Psychological Association", "url": "https://www.apa.org/ptsd-guideline/treatments/narrative-exposure-therapy" },
     { "title": "Clinical Practice Guideline for the Treatment of PTSD: treatments", "publisher": "American Psychological Association", "url": "https://www.apa.org/ptsd-guideline/treatments" },
