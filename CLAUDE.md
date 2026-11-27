@@ -37,6 +37,11 @@ OWNER AMENDMENT (2026-11-27) to "Call any AI/LLM API" and G16/G17 — approved b
   referrals) + follow-up questions. Never a diagnosis, never a risk decision. Never in client mode.
 - Everything else in NEVER/ALWAYS still applies. Scanner exceptions for this need `guardrail-ok: G16 owner amendment`.
 
+OWNER DECISION (2026-11-27) on substance-use reference lookups — approved by the owner in session:
+- ALLOW_SUD_REFERENCE_LOOKUPS=true lets curated SUD codes, curated keywords and drug names (never typed text,
+  never anything about a specific client) reach the allowlisted reference APIs. No client substance-use info is
+  stored or transmitted. Part 2 notice wording: "42 CFR Part 2 prohibits unauthorized use or disclosure of these records."
+
 KEY FILES
 - docs/SPEC.md (full spec)  docs/RESOURCES.md (APIs)  docs/ROADMAP.md (phases)
 - content/licenses.json (measure licenses)  scripts/guardrail-scan.sh (runs after every edit)

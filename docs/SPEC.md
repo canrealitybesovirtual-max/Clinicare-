@@ -340,7 +340,7 @@ A licensed clinical reviewer signs off on every content release.
 | G13 | Stale statistics | Never show a statistic without its source and year. | Each stat has source, year and URL. Show the year on the card, and flag stats older than 5 years for review. |
 | G14 | Disclaimers | Never remove the positioning statement. | Footer on every screen and every generated PDF: "Resource only. Not a substitute for clinical judgment." |
 | G15 | Marketing claims | Never write "HIPAA certified" or "HIPAA approved." | Use "Built for HIPAA compliance. BAA available." |
-| G16 | AI use | No calls to any AI or LLM API in Phases 1–3. | If AI is added later, it runs on the device or on scrubbed text only, and never on DSM or Wiley text. |
+| G16 | AI use | No calls to any AI or LLM API in Phases 1–3. | If AI is added later, it runs on the device or on scrubbed text only, and never on DSM or Wiley text. Owner amendment 2026-11-27: one optional server-side Claude assistant, off until BAA (see CLAUDE.md and docs/AI-ASSISTANT.md); on-device follow-ups and semantic matching allowed. |
 | G17 | External APIs | Never send typed clinical text to any API. Never put API secrets in browser code. Never ignore an API's terms (attribution, rate limits, caching). | Send only codes, curated keywords, drug names or ZIP/city (Section 11.1). Keep secrets in server-side route handlers. Cache responses, honor rate limits, show attribution (e.g., "Information from MedlinePlus.gov"). |
 
 ### CLAUDE.md for the repo (Claude Code reads this every session)

@@ -164,6 +164,19 @@ export const MeasureSchema = z.object({
 });
 export type Measure = z.infer<typeof MeasureSchema>;
 
+/** Spanish version of a client handout: same structure, translated from the app's own original English. */
+export const HandoutTranslationSchema = z.object({
+  title: z.string(),
+  intro: z.string(),
+  sections: z
+    .array(z.object({ heading: z.string(), body: z.string().optional(), steps: z.array(z.string()).optional() }))
+    .min(1),
+  practiceLog: z.object({ columns: z.array(z.string()).min(2) }).optional(),
+  safetyNote: z.string(),
+  translatedBy: z.string().min(1), // "machine-assisted, PENDING human review" until a fluent reviewer signs off
+});
+export type HandoutTranslation = z.infer<typeof HandoutTranslationSchema>;
+
 export const HandoutSchema = z.object({
   id: slug,
   title: z.string(),
@@ -177,6 +190,7 @@ export const HandoutSchema = z.object({
   practiceLog: z.object({ columns: z.array(z.string()).min(2), rows: z.number().int().min(1) }).optional(),
   safetyNote: z.string(),
   sud: z.boolean().default(false), // substance-use content: PDF footer carries the 42 CFR Part 2 notice on every page (G6)
+  es: HandoutTranslationSchema.optional(), // Spanish version (client mode / client PDF)
   ...governance,
 });
 export type Handout = z.infer<typeof HandoutSchema>;
