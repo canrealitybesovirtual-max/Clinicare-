@@ -8,6 +8,7 @@
  */
 import * as React from "react";
 import type { DurationBand, Onset, TriState } from "@/lib/types";
+import type { PlanDraft } from "@/components/plan/plan-model";
 
 export const IDLE_MS = 15 * 60 * 1000;
 
@@ -23,7 +24,12 @@ export interface SessionState {
   country: string; // crisis-line country (ISO-2), not client data
   measureAnswers: Record<string, (number | null)[]>;
   measureFunctional: Record<string, number | null>;
+  /** Treatment plan draft (screen 4). Scrubbed wording only; cleared by Clear session and the idle wipe. */
+  plan: PlanDraft | null;
 }
+
+/** New plan value, or an updater that receives the latest draft (safe for debounced, scrubbed commits). */
+export type PlanUpdate = PlanDraft | null | ((prev: PlanDraft | null) => PlanDraft | null);
 
 export const initialSession: SessionState = {
   symptomText: "",
@@ -37,6 +43,7 @@ export const initialSession: SessionState = {
   country: "US",
   measureAnswers: {},
   measureFunctional: {},
+  plan: null,
 };
 
 type Action =
@@ -45,6 +52,7 @@ type Action =
   | { type: "answer"; measureId: string; index: number; value: number | null; itemCount: number }
   | { type: "functional"; measureId: string; value: number | null }
   | { type: "clearMeasure"; measureId: string }
+  | { type: "plan"; update: PlanUpdate }
   | { type: "reset"; keepCountry?: boolean };
 
 function reducer(state: SessionState, action: Action): SessionState {
@@ -73,6 +81,10 @@ function reducer(state: SessionState, action: Action): SessionState {
       const { [action.measureId]: _f, ...functional } = state.measureFunctional;
       return { ...state, measureAnswers: answers, measureFunctional: functional };
     }
+    case "plan": {
+      const next = typeof action.update === "function" ? action.update(state.plan) : action.update;
+      return next === state.plan ? state : { ...state, plan: next };
+    }
     case "reset":
       return { ...initialSession, country: action.keepCountry ? state.country : initialSession.country };
   }
@@ -85,6 +97,8 @@ interface SessionCtx {
   answer: (measureId: string, index: number, value: number | null, itemCount: number) => void;
   setFunctional: (measureId: string, value: number | null) => void;
   clearMeasure: (measureId: string) => void;
+  /** Replace or update the treatment plan draft (memory only). */
+  updatePlan: (update: PlanUpdate) => void;
   reset: () => void;
   idleCleared: boolean;
   dismissIdleNotice: () => void;
@@ -126,6 +140,7 @@ export function SessionProvider({ children, idleMs = IDLE_MS }: { children: Reac
       answer: (measureId, index, value, itemCount) => dispatch({ type: "answer", measureId, index, value, itemCount }),
       setFunctional: (measureId, value) => dispatch({ type: "functional", measureId, value }),
       clearMeasure: (measureId) => dispatch({ type: "clearMeasure", measureId }),
+      updatePlan: (update) => dispatch({ type: "plan", update }),
       reset: () => {
         dispatch({ type: "reset", keepCountry: true });
         setResetCount((n) => n + 1);
