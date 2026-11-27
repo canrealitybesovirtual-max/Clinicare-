@@ -8,6 +8,7 @@ import { ExternalLink } from "@/components/ui/external-link";
 import { PageIntro, ReviewBadge } from "@/components/content/content-bits";
 import { POSITIONING } from "@/components/content/positioning";
 import { countryName } from "@/components/crisis/crisis-data";
+import { assistantStatus } from "@/server/ai/config";
 
 export const metadata: Metadata = { title: "About, privacy and licensing" };
 
@@ -16,12 +17,12 @@ const PRIVACY = [
   { icon: ScanSearch, title: "PHI scrubber first", body: "Typed text passes a scrubber for the 18 HIPAA Safe Harbor identifier types before any matching. Anything that looks like an identifier is replaced with a placeholder, and you see which types were removed." },
   { icon: TimerReset, title: "Memory only", body: "Session data lives in this tab’s memory. It is never written to browser storage, cookies, the URL or logs, and it is cleared when the tab closes, after 15 minutes idle, or with Clear session." },
   { icon: EyeOff, title: "No analytics or trackers", body: "No analytics, advertising or tracking scripts, and fonts and images are served from this app." },
-  { icon: ServerOff, title: "No third-party connections", body: "A Content Security Policy (connect-src 'self') blocks the browser from sending data to any other host. Phase 1 makes no external API calls; outside links are plain page visits that carry nothing you typed." },
+  { icon: ServerOff, title: "No third-party connections", body: "Your browser talks only to this site (CSP connect-src 'self'). Optional lookups run through this site's server and send only codes, curated terms, drug names or a ZIP code or city. Outside links are plain page visits that carry nothing you typed." },
   { icon: FileLock2, title: "PDFs on the device", body: "Handouts and blank forms are generated in the browser. Nothing is uploaded, and no answers or scores are written into a PDF." },
   { icon: SpellCheck2, title: "Turn off cloud spellcheckers", body: "Text boxes here ask the browser not to spellcheck and opt out of Grammarly-style assistants, but browser “enhanced” spellcheck (for example in Chrome or Microsoft Edge) and writing-assistant extensions can still send what you type to their vendors. Turn them off for this site before typing anything." },
 ] as const;
 
-const GUARDRAILS = [
+const GUARDRAILS_BASE = [
   "DSM-5-TR text is not reproduced. Features are written in original clinical wording with a “See DSM-5-TR” pointer; wording that may track criteria too closely is being revised and awaits licensed-clinician and legal review.",
   "Wiley PracticePlanners wording is not used.",
   "No final diagnosis is ever stated; every suggestion is labeled “For clinician review” with matched and missing features.",
@@ -29,10 +30,9 @@ const GUARDRAILS = [
   "Crisis information is on every screen. Red flags prompt direct assessment; the app never decides risk.",
   "Only measures with a confirmed license are built in; others are link-out only and marked “License pending”.",
   "Third-party worksheets are linked, never copied or re-hosted.",
-  "Substance-use information is never stored or transmitted (42 CFR Part 2).",
+  "No client substance-use information is stored or transmitted (42 CFR Part 2); curated reference terms may be looked up.",
   "Phase 1 is adult-only; a client-under-18 toggle hides suggestions and adult measures and shows referral links.",
   "Statistics always show their source and data year, and data older than 5 years are flagged.",
-  "No AI or LLM services are used.",
   "Unproven treatments are not listed; interventions cite their evidence source.",
 ];
 
@@ -59,7 +59,15 @@ function statusLabel(status: string): string {
   return status;
 }
 
+/** G15/G16: the AI statement follows the server configuration instead of a fixed claim. */
+function aiStatement(): string {
+  return assistantStatus().enabled
+    ? "An optional server-side AI assistant is switched on for this deployment (signed BAA). It receives only PHI-scrubbed text and curated ids, never runs in client mode, and its output is for clinician review only."
+    : "No AI or LLM services are used. The optional server-side assistant is switched off in this deployment.";
+}
+
 export default function AboutPage() {
+  const GUARDRAILS = [...GUARDRAILS_BASE.slice(0, 10), aiStatement(), ...GUARDRAILS_BASE.slice(10)];
   const reviewItems = [
     { kind: "Symptom lexicon", name: `${lexicon.symptoms.length} symptom features`, item: lexicon },
     ...conditions.map((c) => ({ kind: "Condition", name: c.name, item: c })),
@@ -110,8 +118,9 @@ export default function AboutPage() {
             responsible for your own practice and documentation.
           </p>
           <p>
-            Substance-use information is never stored or transmitted. Every printable sheet about substance use carries
-            this notice in the footer of each page: 42 CFR Part 2 prohibits unauthorized use or disclosure of these records.
+            No client substance-use information is stored or transmitted; only curated reference terms (codes, topic names,
+            drug names) may be looked up. Every printable sheet about substance use carries this notice in the footer of
+            each page: 42 CFR Part 2 prohibits unauthorized use or disclosure of these records.
           </p>
         </Card>
       </section>

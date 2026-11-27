@@ -24,8 +24,27 @@ export interface SymptomAnalysis {
   /** Negated in the text and not selected as a chip. */
   absent: MatchResult["negated"];
   redFlags: { type: RedFlagType; symptoms: Symptom[] }[];
+  /** A substance-use symptom is selected or matched (G6: show the 42 CFR Part 2 prompt). */
+  sud: boolean;
   result: ScoringResult;
 }
+
+const SUD_ID = /(?:^|-)(?:alcohol|substance|opioid|cannabis|stimulant|sedative|hallucinogen|inhalant|intoxication|drug)(?:-|$)/;
+
+/**
+ * Substance-use symptoms, by the same rule as the server catalog (src/server/ai/catalog.ts): a withdrawal flag,
+ * an id that names a substance, or a feature used only by substance-use conditions.
+ */
+export const SUD_SYMPTOM_IDS: ReadonlySet<string> = (() => {
+  const usedBySud = new Set<string>();
+  const usedByOther = new Set<string>();
+  for (const c of conditions)
+    for (const f of c.features) (c.sud || SUD_ID.test(c.id) ? usedBySud : usedByOther).add(f.symptomId);
+  const ids = new Set<string>();
+  for (const s of lexicon.symptoms)
+    if (s.redFlag === "withdrawal" || SUD_ID.test(s.id) || (usedBySud.has(s.id) && !usedByOther.has(s.id))) ids.add(s.id);
+  return ids;
+})();
 
 const RED_FLAG_ORDER: RedFlagType[] = [
   "suicidality",
@@ -72,6 +91,7 @@ export function analyze(state: SessionState): SymptomAnalysis {
     detectedIds: new Set(match.matches.map((m) => m.symptomId)),
     absent,
     redFlags,
+    sud: ids.some((id) => SUD_SYMPTOM_IDS.has(id)),
     result: shown,
   };
 }

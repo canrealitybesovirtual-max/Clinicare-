@@ -196,9 +196,9 @@ export function ReferralSearch({ sudPrompt }: { sudPrompt: React.ReactNode }) {
   return <ReferralSearchInner key={resetCount} sudPrompt={sudPrompt} />;
 }
 
-const selectClass = "min-h-11 w-full rounded-lg border border-border bg-surface px-3 text-base text-text sm:text-sm";
+const selectClass = "min-h-11 w-full rounded-lg border border-input-border bg-surface px-3 text-base text-text sm:text-sm";
 const inputClass =
-  "block min-h-11 w-full rounded-lg border border-border bg-surface px-3 text-base text-text placeholder:text-muted/80 aria-[invalid=true]:border-crisis";
+  "block min-h-11 w-full rounded-lg border border-input-border bg-surface px-3 text-base text-text placeholder:text-muted aria-[invalid=true]:border-crisis";
 
 function ReferralSearchInner({ sudPrompt }: { sudPrompt: React.ReactNode }) {
   const settings = useSearchSettings();
@@ -211,6 +211,8 @@ function ReferralSearchInner({ sudPrompt }: { sudPrompt: React.ReactNode }) {
   const cityField = useScrubbedField<HTMLInputElement>(city, setCity);
   const [stateCode, setStateCode] = React.useState("");
   const [fieldError, setFieldError] = React.useState<{ field: "zip" | "city" | "state"; message: string } | null>(null);
+  // Bumped on every failed submit; focus moves to the field AFTER React has applied aria-invalid / describedby.
+  const [focusErrTick, setFocusErrTick] = React.useState(0);
   const [outcome, setOutcome] = React.useState<Outcome>({ status: "idle" });
   const abortRef = React.useRef<AbortController | null>(null);
   const zipRef = React.useRef<HTMLInputElement>(null);
@@ -233,6 +235,7 @@ function ReferralSearchInner({ sudPrompt }: { sudPrompt: React.ReactNode }) {
   React.useEffect(() => () => abortRef.current?.abort(), []);
 
   const selectionIsSud = isSudQuery({ mode, providerType, facilityType });
+  const loading = outcome.status === "loading" || (outcome.status === "success" && outcome.loadingMore);
 
   async function run(query: Query, append: boolean) {
     abortRef.current?.abort();
@@ -260,15 +263,24 @@ function ReferralSearchInner({ sudPrompt }: { sudPrompt: React.ReactNode }) {
     setOutcome({ status: "success", result: append && previous ? merge(previous, result) : result, moreError: null, loadingMore: false });
   }
 
+  React.useEffect(() => {
+    if (focusErrTick === 0 || !fieldError) return;
+    const el = fieldError.field === "zip" ? zipRef.current : fieldError.field === "state" ? stateRef.current : cityField.ref.current;
+    el?.focus();
+    // Only a new failed submit moves focus; editing the field afterwards does not.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [focusErrTick]);
+
   function onSubmit(e: React.FormEvent) {
     e.preventDefault();
+    // aria-disabled (not disabled) keeps focus on the button while a search runs; ignore extra submits.
+    if (loading) return;
     clearPresetNotice();
     cityField.flushNow();
     const check = checkLocation(locMode, { zip, city: cityField.draft, state: stateCode });
     if (!check.ok) {
       setFieldError({ field: check.field, message: check.message });
-      const el = check.field === "zip" ? zipRef.current : check.field === "state" ? stateRef.current : cityField.ref.current;
-      el?.focus();
+      setFocusErrTick((n) => n + 1);
       return;
     }
     setFieldError(null);
@@ -282,7 +294,6 @@ function ReferralSearchInner({ sudPrompt }: { sudPrompt: React.ReactNode }) {
     void run(query, false);
   }
 
-  const loading = outcome.status === "loading" || (outcome.status === "success" && outcome.loadingMore);
   const errId = fid("err");
   const invalid = (f: "zip" | "city" | "state") => fieldError?.field === f;
 
@@ -454,16 +465,27 @@ function ReferralSearchInner({ sudPrompt }: { sudPrompt: React.ReactNode }) {
           </div>
         )}
 
-        {fieldError ? (
-          <p id={errId} className="text-sm font-semibold text-crisis">
-            {fieldError.message}
-          </p>
-        ) : null}
+        {/* Persistent alert container, so the message is announced even when focus is already in the field. */}
+        <div role="alert">
+          {fieldError ? (
+            <p id={errId} className="text-sm font-semibold text-crisis">
+              {fieldError.message}
+            </p>
+          ) : null}
+        </div>
 
         {selectionIsSud ? sudPrompt : null}
 
         <div className="flex flex-wrap items-center gap-3">
-          <Button type="submit" size="lg" disabled={loading}>
+          {/* Mouse down keeps focus in the city field: its blur-time scrub can add a notice above this button and
+              move it out from under the pointer. Submitting flushes and checks the field anyway. */}
+          <Button
+            type="submit"
+            size="lg"
+            aria-disabled={loading || undefined}
+            className="aria-disabled:cursor-wait aria-disabled:opacity-60"
+            onMouseDown={(e) => e.preventDefault()}
+          >
             {loading ? <Loader2 aria-hidden className="animate-spin" /> : <Search aria-hidden />}
             {loading ? "Searching…" : "Search"}
           </Button>
@@ -471,11 +493,22 @@ function ReferralSearchInner({ sudPrompt }: { sudPrompt: React.ReactNode }) {
         </div>
       </form>
 
-      <p role="status" aria-live="polite" className="text-sm font-medium">
+      {/* The result heading already shows the count, so a plain success message is for screen readers only. */}
+      <p
+        role="status"
+        aria-live="polite"
+        className={cn(
+          "text-sm font-medium",
+          outcome.status === "success" && !outcome.loadingMore && !outcome.moreError && !presetNotice && "sr-only",
+        )}
+      >
         {statusText(outcome, presetNotice)}
       </p>
 
-      <Results outcome={outcome} sudPrompt={sudPrompt} onRetry={(q, append) => void run(q, append)} />
+      {/* Focus target for "Try again", whose button unmounts while the retry loads. */}
+      <div data-lookup-focus tabIndex={-1} role="group" aria-label="Search results" className="rounded-lg">
+        <Results outcome={outcome} sudPrompt={sudPrompt} onRetry={(q, append) => void run(q, append)} />
+      </div>
     </div>
   );
 }
@@ -506,7 +539,16 @@ function ErrorPanel({ query, error, onRetry }: { query: Query; error: Failure; o
     <Notice tone={error.code === "not-configured" ? "info" : "warn"} title={copy.title}>
       <p>{copy.body}</p>
       {copy.retry && onRetry ? (
-        <Button type="button" variant="outline" size="sm" className="mt-1 min-h-11" onClick={onRetry}>
+        <Button
+          type="button"
+          variant="outline"
+          size="sm"
+          className="mt-1"
+          onClick={(e) => {
+            e.currentTarget.closest<HTMLElement>("[data-lookup-focus]")?.focus();
+            onRetry();
+          }}
+        >
           <RefreshCw aria-hidden />
           Try again
         </Button>
@@ -573,9 +615,14 @@ function Results({
           <p>{part2}</p>
         </Notice>
       ) : null}
-      <EndorsementNote />
-
-      {r.mode === "providers" ? <p className="text-sm leading-relaxed text-muted">{r.data.notice}</p> : null}
+      {/* Providers: the route's own notice already says a listing is not an endorsement; other modes add it. */}
+      {r.mode === "providers" ? (
+        <Notice tone="neutral" title="Listing is not an endorsement">
+          <p>{r.data.notice}</p>
+        </Notice>
+      ) : (
+        <EndorsementNote />
+      )}
       {r.mode === "health-centers" ? <p className="text-sm leading-relaxed text-muted">{r.data.slidingFeeNote}</p> : null}
       {r.mode === "treatment-facilities" ? (
         <p className="text-sm leading-relaxed text-muted">
@@ -620,7 +667,15 @@ function Results({
       {outcome.moreError ? <ErrorPanel query={q} error={outcome.moreError} onRetry={() => onRetry(q, true)} /> : null}
 
       {more !== null && n > 0 ? (
-        <Button type="button" variant="outline" disabled={outcome.loadingMore} onClick={() => onRetry(q, true)}>
+        <Button
+          type="button"
+          variant="outline"
+          aria-disabled={outcome.loadingMore || undefined}
+          className="aria-disabled:cursor-wait aria-disabled:opacity-60"
+          onClick={() => {
+            if (!outcome.loadingMore) onRetry(q, true);
+          }}
+        >
           {outcome.loadingMore ? <Loader2 aria-hidden className="animate-spin" /> : null}
           {outcome.loadingMore ? "Loading…" : "Show more results"}
         </Button>

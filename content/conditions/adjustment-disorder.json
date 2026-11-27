@@ -97,7 +97,7 @@
   "minCore": 2,
   "durationGate": {
     "minWeeks": 0,
-    "note": "Ask when the stressor happened and when the symptoms began. Onset usually follows within weeks (DSM-5-TR and ICD-11 give their own windows) and the reaction usually eases within about six months of the stressor or its consequences ending; persistence beyond that points to another pattern."
+    "note": "Ask when the stressor happened and when the symptoms began. ICD-11 (6B43) describes a reaction that usually starts soon after the stressor and typically resolves within about 6 months unless the stressor persists; check the time frames in DSM-5-TR. A reaction that lasts well beyond the stressor points to another pattern."
   },
   "impairmentRequired": true,
   "ruleOuts": [
@@ -133,8 +133,8 @@
       "note": "Choose the code that matches the main presentation; F43.20 when unspecified."
     },
     {
-      "label": "Acute or persistent (descriptive)",
-      "note": "Note how long symptoms have lasted, especially when the stressor or its consequences are ongoing (for example a chronic illness or long legal case)."
+      "label": "Course (see DSM-5-TR)",
+      "note": "Note how long symptoms have lasted and whether the stressor is still going on (for example a chronic illness or a long legal case). See DSM-5-TR for how course is recorded."
     }
   ],
   "differentials": [

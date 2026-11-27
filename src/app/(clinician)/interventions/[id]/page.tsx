@@ -7,7 +7,14 @@ import type { Handout } from "@/lib/schemas";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { Notice } from "@/components/ui/notice";
-import { ClinicianReviewBadge, Governance, PageIntro, ReviewBadge, SourcesList } from "@/components/content/content-bits";
+import {
+  ClinicianReviewBadge,
+  Governance,
+  NextStep,
+  PageIntro,
+  ReviewBadge,
+  SourcesList,
+} from "@/components/content/content-bits";
 import { HubPrompt } from "@/components/hub/hub-prompt";
 import { conditionLabel, isSudCondition, pubmedTargetFor, trialsTargetFor } from "@/components/interventions/catalog";
 import { orientationLabel, orientationsOf } from "@/components/interventions/orientation";
@@ -90,6 +97,25 @@ export default async function InterventionPage({ params }: { params: Promise<{ i
           ) : null}
           {sud ? <HubPrompt context="sud" /> : null}
 
+          {/* Safety first: cautions come before the steps and the read-aloud script. */}
+          <section aria-labelledby="cautions" className="scroll-mt-6">
+            <h2 id="cautions" className="sr-only">
+              Cautions and contraindications
+            </h2>
+            <Notice tone="warn" title="Cautions and contraindications">
+              <ul className="list-disc space-y-1.5 pl-5">
+                {iv.contraindications.map((c, i) => (
+                  <li key={i}>{c}</li>
+                ))}
+              </ul>
+              <p className="pt-1">
+                Risk decisions stay with you. In a crisis: in the US call or text 988; elsewhere, the local emergency number
+                or findahelpline.com.
+              </p>
+            </Notice>
+          </section>
+
+
           <Section id="steps" title="Clinician steps">
             <ol className="list-decimal space-y-2.5 pl-5 text-sm leading-relaxed marker:font-semibold">
               {iv.steps.map((s, i) => (
@@ -109,21 +135,30 @@ export default async function InterventionPage({ params }: { params: Promise<{ i
             </Card>
           </section>
 
-          <section aria-labelledby="cautions">
-            <h2 id="cautions" className="sr-only">
-              Cautions and contraindications
-            </h2>
-            <Notice tone="warn" title="Cautions and contraindications">
-              <ul className="list-disc space-y-1.5 pl-5">
-                {iv.contraindications.map((c, i) => (
-                  <li key={i}>{c}</li>
+          {/* Small screens: handouts right after the script (the sidebar card shows from lg). */}
+          <section aria-labelledby="handouts-inline" className="lg:hidden">
+            <Card className="space-y-3">
+              <h2 id="handouts-inline" className="text-lg font-semibold">
+                Client handouts
+              </h2>
+            {handouts.length ? (
+              <ul className="space-y-1 text-sm">
+                {handouts.map((h) => (
+                  <li key={h.id}>
+                    <Link
+                      href={`/handouts/${h.id}`}
+                      className="inline-flex min-h-11 items-center gap-2 font-semibold text-accent underline underline-offset-2"
+                    >
+                      <FileText aria-hidden className="size-4 shrink-0" />
+                      {h.title}
+                    </Link>
+                  </li>
                 ))}
               </ul>
-              <p className="pt-1">
-                Risk decisions stay with you. In a crisis: in the US call or text 988; elsewhere, the local emergency number
-                or findahelpline.com.
-              </p>
-            </Notice>
+            ) : (
+              <p className="text-sm text-muted">No matching handout yet. See the third-party link-outs on the Handouts page.</p>
+            )}
+            </Card>
           </section>
 
           <Section id="cultural" title="Cultural adaptations">
@@ -170,6 +205,8 @@ export default async function InterventionPage({ params }: { params: Promise<{ i
             <SourcesList sources={iv.sources} />
             <Governance license={iv.license} lastVerified={iv.lastVerified} reviewedBy={iv.reviewedBy} />
           </Section>
+
+          <NextStep href="/handouts" label="Step 6 · Handouts" />
         </div>
 
         <aside aria-label="At a glance" className="flex min-w-0 flex-col gap-6 lg:sticky lg:top-4">
@@ -206,7 +243,7 @@ export default async function InterventionPage({ params }: { params: Promise<{ i
             <p className="text-xs text-muted">Possible uses for clinician review; not a diagnosis.</p>
           </Card>
 
-          <Card className="space-y-3">
+          <Card className="hidden space-y-3 lg:block">
             <h2 className="text-lg font-semibold">Client handouts</h2>
             {handouts.length ? (
               <ul className="space-y-1 text-sm">

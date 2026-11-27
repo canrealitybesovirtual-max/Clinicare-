@@ -81,7 +81,16 @@ function ErrorBox({ code, fallbackUrl, site, onRetry }: { code: string; fallback
     <Notice tone={code === "not-configured" ? "neutral" : "warn"} title={errorText(code)}>
       <div className="flex flex-wrap items-center gap-3">
         {RETRYABLE.has(code) ? (
-          <Button type="button" variant="outline" size="sm" className="min-h-11" onClick={onRetry}>
+          <Button
+            type="button"
+            variant="outline"
+            size="sm"
+            onClick={(e) => {
+              // The button unmounts while the retry loads: keep focus on the section instead of <body>.
+              e.currentTarget.closest<HTMLElement>("[data-lookup-focus]")?.focus();
+              onRetry();
+            }}
+          >
             <RefreshCw aria-hidden />
             Try again
           </Button>
@@ -89,6 +98,29 @@ function ErrorBox({ code, fallbackUrl, site, onRetry }: { code: string; fallback
         {fallbackUrl ? <ExternalLink href={fallbackUrl}>Open the same search on {site}</ExternalLink> : null}
       </div>
     </Notice>
+  );
+}
+
+/** "Show …" and "Try again" unmount once clicked: move focus to the section first so it never drops to <body>. */
+function focusSectionThen(e: React.MouseEvent<HTMLElement>, run: () => void) {
+  e.currentTarget.closest<HTMLElement>("[data-lookup-focus]")?.focus();
+  run();
+}
+
+/** One short polite status line per section, instead of a live region around the whole result list. */
+function SectionStatus<T>({ state, done }: { state: Load<T>; done: (data: T) => string }) {
+  const text =
+    state.status === "loading"
+      ? "Searching…"
+      : state.status === "ok"
+        ? done(state.data)
+        : state.status === "error"
+          ? errorText(state.code)
+          : "";
+  return (
+    <p role="status" className="sr-only">
+      {text}
+    </p>
   );
 }
 
@@ -114,7 +146,7 @@ function PubmedSection({ target }: { target: PubmedTargetProps }) {
   const { state, run } = useLookup<PubmedResult>("pubmed", { queryId: target.queryId }, PUBMED_ORIGIN);
   const headingId = React.useId();
   return (
-    <section aria-labelledby={headingId} className="space-y-3">
+    <section aria-labelledby={headingId} data-lookup-focus tabIndex={-1} className="space-y-3 rounded-lg">
       <h3 id={headingId} className="flex items-center gap-2 text-base font-semibold">
         <Search aria-hidden className="size-4 text-muted" /> Reviews and trials in PubMed
       </h3>
@@ -126,12 +158,13 @@ function PubmedSection({ target }: { target: PubmedTargetProps }) {
         {target.filterLabel}
       </p>
       {state.status === "idle" ? (
-        <Button type="button" variant="outline" onClick={run}>
+        <Button type="button" variant="outline" onClick={(e) => focusSectionThen(e, run)}>
           <Search aria-hidden />
           Show PubMed results
         </Button>
       ) : null}
-      <div aria-live="polite" aria-busy={state.status === "loading"} className="space-y-3">
+      <SectionStatus state={state} done={(d: PubmedResult) => `${d.items.length} PubMed results listed.`} />
+      <div aria-busy={state.status === "loading"} className="space-y-3">
         {state.status === "loading" ? (
           <p className="flex items-center gap-2 text-sm text-muted">
             <LoaderCircle aria-hidden className="size-4 animate-spin" /> Searching PubMed…
@@ -187,7 +220,7 @@ function TrialsSection({ target }: { target: TrialsTargetProps }) {
   const { state, run } = useLookup<TrialsResult>("trials", { condition: target.conditionId }, TRIALS_ORIGIN);
   const headingId = React.useId();
   return (
-    <section aria-labelledby={headingId} className="space-y-3">
+    <section aria-labelledby={headingId} data-lookup-focus tabIndex={-1} className="space-y-3 rounded-lg">
       <h3 id={headingId} className="flex items-center gap-2 text-base font-semibold">
         <FlaskConical aria-hidden className="size-4 text-muted" /> Recruiting trials
       </h3>
@@ -196,12 +229,13 @@ function TrialsSection({ target }: { target: TrialsTargetProps }) {
         Listings are not endorsements; check eligibility and sites on the study page.
       </p>
       {state.status === "idle" ? (
-        <Button type="button" variant="outline" onClick={run}>
+        <Button type="button" variant="outline" onClick={(e) => focusSectionThen(e, run)}>
           <FlaskConical aria-hidden />
           Show recruiting trials
         </Button>
       ) : null}
-      <div aria-live="polite" aria-busy={state.status === "loading"} className="space-y-3">
+      <SectionStatus state={state} done={(d: TrialsResult) => `${d.items.length} recruiting studies listed.`} />
+      <div aria-busy={state.status === "loading"} className="space-y-3">
         {state.status === "loading" ? (
           <p className="flex items-center gap-2 text-sm text-muted">
             <LoaderCircle aria-hidden className="size-4 animate-spin" /> Searching ClinicalTrials.gov…

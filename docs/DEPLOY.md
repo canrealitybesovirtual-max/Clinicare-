@@ -23,6 +23,26 @@ All clinical text lives in browser memory only; the production Content-Security-
 ## Checks that run on every push (GitHub Actions)
 Guardrail scan, content validation, typecheck, unit tests, build, Playwright PHI-leak + axe + flow tests.
 
+### E2E upstream fixtures (tests only, never in a deployment)
+The Playwright suite must not depend on, or spend quota at, any real API. `playwright.config.ts` therefore starts
+its own `next start` with `E2E_UPSTREAM_FIXTURES=1` (plus placeholder credentials that only switch the adapters to
+"configured"). In that mode `upstreamFetch` in `src/server/core.ts` answers from `tests/fixtures/upstream/<upstream>.json`
+instead of the network:
+- **Cannot be turned on in a deployment.** Fixture mode is compiled in only when the build itself ran with
+  `E2E_UPSTREAM_FIXTURES=1` (`next.config.ts` inlines `CRC_FIXTURE_BUILD`), so a normal production build ignores a
+  stray runtime variable. It is also ignored whenever a hosting-platform marker is present (`RENDER`, `VERCEL`,
+  `NETLIFY`, Cloud Run's `K_SERVICE` and others in `HOSTING_PLATFORM_MARKERS`). Do not set `E2E_UPSTREAM_FIXTURES`
+  in Render anyway.
+- With fixtures on, no request reaches the network: a request no fixture matches fails with 502. The upstream token
+  bucket is skipped; every route-level check (body size, PHI scrub, Part 2 switch, per-client limit) still runs.
+- Fixture files are fictional data in each upstream's real response shape (placeholder NPIs, PMIDs and trial ids;
+  no WHO, FDA or NLM text). Entries can match on path, query parameters or body and answer with an error status
+  (for example ZIP `99950` gives NPPES 429, to test the retry button) or `"notConfigured": true`.
+- Rebuild them after adding conditions or medications: `node tests/fixtures/upstream/build-fixtures.mjs`.
+  `tests/integrations/upstream-fixtures.test.ts` checks the switch, the hosting guard and that every curated
+  code and medication gets an answer through the real adapters.
+- `E2E_NO_BUILD=1 npx playwright test` reuses an existing `next build` instead of building again.
+
 ## Environment variables
 
 All of these are read only in server code (`src/server/**`) and are set in Render **Environment** settings
@@ -140,18 +160,17 @@ canonical city. Before adding any instrumentation, strip query strings from thos
 `beforeSend` (or turn off fetch spans), keep `sendDefaultPii` off, and do not enable `logging.fetches` in
 `next.config.ts`. The server code itself logs nothing.
 
-### Owner decisions still open
-- **42 CFR Part 2 and reference lookups.** CLAUDE.md says never to store or transmit substance-use information, and
-  to stop and ask the owner when a task conflicts. The adapters can send curated SUD-related reference values with
-  no client data, which is why `ALLOW_SUD_REFERENCE_LOOKUPS` defaults to off. Those values are SUD ICD-10-CM codes
-  (F10-F19, Z71.4x/5x) and ICD-11 codes (6C40-6C4H), the "alcohol" health topic and SUD ICD-10-CM terms, the
-  alcohol-use-disorder PubMed strategy and trial condition, alcohol-use-disorder medications (naltrexone,
-  acamprosate, disulfiram, topiramate, gabapentin), addiction-counselor NPPES searches, and FindTreatment.gov
-  "substance-use" or "both" searches. Record the decision in docs/RESOURCES.md before setting it to `true`.
-  The Part 2 banners and export notices apply either way.
-- **Part 2 notice wording.** The current 42 CFR 2.32(a)(2) short notice reads "42 CFR part 2 prohibits unauthorized
-  use or disclosure of these records." The app (SPEC section 6, `src/lib/referral-links.ts` and content files)
-  still prints the older wording without "use". Re-read eCFR and update everywhere at once.
+### Owner decisions
+- **42 CFR Part 2 and reference lookups: decided 2026-11-26 (allowed).** Curated SUD-related reference values with
+  no client data may be sent: SUD ICD-10-CM codes (F10-F19, Z71.4x/5x) and ICD-11 codes (6C40-6C4H), the "alcohol"
+  health topic and SUD ICD-10-CM terms, the alcohol-use-disorder PubMed strategy and trial condition,
+  alcohol-use-disorder medications (naltrexone, acamprosate, disulfiram, topiramate, gabapentin), addiction-counselor
+  NPPES searches, and FindTreatment.gov "substance-use" or "both" searches. Recorded in docs/RESOURCES.md;
+  `ALLOW_SUD_REFERENCE_LOOKUPS=true` is set in render.yaml. The Part 2 banners and export notices apply either way.
+- **Part 2 notice wording: decided 2026-11-26.** The app prints the current 42 CFR 2.32(a)(2) short notice,
+  "42 CFR Part 2 prohibits unauthorized use or disclosure of these records." (`src/lib/referral-links.ts`).
+
+### Still open
 - **Terms not re-read live.** The terms pages of NLM (Clinical Tables FAQ, RxNav ToS, MedlinePlus), NCBI, openFDA,
   WHO and SAMHSA were blocked from the build sandbox. The figures above come from those publishers' published terms
   as cited in each adapter. Re-check them (`/verify-sources`) before launch, and confirm WHO's terms of reuse for

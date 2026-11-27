@@ -6,7 +6,15 @@ import { Card } from "@/components/ui/card";
 import { Notice } from "@/components/ui/notice";
 import { PageIntro } from "@/components/content/content-bits";
 import { HubPrompt } from "@/components/hub/hub-prompt";
-import { FacetCount, FacetEmpty, FacetFilterProvider, FacetGate, FacetReset, FacetSelect } from "@/components/ethics/facet-filter";
+import {
+  FacetCount,
+  FacetEmpty,
+  FacetFilterProvider,
+  FacetGate,
+  FacetReset,
+  FacetSelect,
+  FacetSessionCountry,
+} from "@/components/ethics/facet-filter";
 import { ALL, type FacetOption } from "@/components/ethics/facet-index";
 import { EthicsCodeCard, LegalTopicCard } from "@/components/ethics/hub-cards";
 import { HUB_CONTEXTS, HUB_CONTEXT_LABELS, buildHubIndex, countryLabel, hubCountries } from "@/components/ethics/hub-labels";
@@ -28,6 +36,11 @@ export default function EthicsPage() {
     ...topics.map((t) => [t.id, t.title] as const),
   ]);
 
+  const jumpList = [
+    ...codes.map((c) => ({ id: c.id, label: c.shortName })),
+    ...topics.map((t) => ({ id: t.id, label: t.title })),
+  ].sort((a, b) => a.label.localeCompare(b.label));
+
   const professionOptions: FacetOption[] = [
     { value: ALL, label: "All professions" },
     ...PROFESSIONS.map((p) => ({ value: p, label: PROFESSION_LABELS[p] })),
@@ -47,45 +60,8 @@ export default function EthicsPage() {
         </p>
       </PageIntro>
 
-      <section aria-labelledby="when-heading" className="mb-8">
-        <h2 id="when-heading" className="flex items-center gap-2 text-xl font-bold">
-          <Signpost aria-hidden className="size-5 text-accent" />
-          When this comes up
-        </h2>
-        <p className="mt-1 max-w-3xl text-sm text-muted">
-          Other screens show these reminders when the situation arises. Each one links to the codes and topics below.
-        </p>
-        <ul className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {HUB_CONTEXTS.map((ctx) => {
-            const p = HUB_PROMPTS[ctx];
-            const ids = [...p.ethicsIds, ...p.legalIds].filter((id) => names.has(id));
-            return (
-              <li key={ctx}>
-                <Card className="flex h-full flex-col gap-2">
-                  <h3 className="text-base font-semibold">{HUB_CONTEXT_LABELS[ctx]}</h3>
-                  <p className="text-sm leading-relaxed text-muted">{p.message}</p>
-                  {ids.length ? (
-                    <ul className="mt-auto flex flex-col gap-0.5 pt-1 text-sm">
-                      {ids.map((id) => (
-                        <li key={id}>
-                          <a
-                            href={`#${id}`}
-                            className="inline-flex min-h-11 items-center font-medium text-accent underline decoration-accent/40 underline-offset-2 hover:decoration-accent"
-                          >
-                            {names.get(id)}
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  ) : null}
-                </Card>
-              </li>
-            );
-          })}
-        </ul>
-      </section>
-
       <FacetFilterProvider index={index} items={items}>
+        <FacetSessionCountry facet="country" allowed={countries} />
         <section aria-labelledby="filter-heading" className="mb-8">
           <Card className="space-y-4">
             <h2 id="filter-heading" className="flex items-center gap-2 text-lg font-semibold">
@@ -98,10 +74,67 @@ export default function EthicsPage() {
               <FacetReset label="Show all" className="w-full md:w-auto" />
             </div>
             <p className="text-xs leading-relaxed text-muted">
-              Global frameworks are always included. Legal topics follow the country only. Wherever you practice, your
-              licensing board or regulator sets the rules that bind you.
+              Global frameworks are always included. Legal topics follow the country only. The country starts at the one
+              chosen for crisis numbers. Wherever you practice, your licensing board or regulator sets the rules that
+              bind you.
             </p>
           </Card>
+        </section>
+
+        <nav aria-labelledby="jump-heading" className="mb-8">
+          <h2 id="jump-heading" className="text-base font-semibold">
+            Jump to a code or topic (A–Z)
+          </h2>
+          <ul className="mt-2 flex flex-wrap gap-1.5">
+            {jumpList.map((j) => (
+              <li key={j.id}>
+                <a
+                  href={`#${j.id}`}
+                  className="inline-flex min-h-11 items-center rounded-full border border-border bg-surface px-3 text-sm font-medium text-text hover:border-accent hover:bg-surface-2"
+                >
+                  {j.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <section aria-labelledby="when-heading" className="mb-8">
+          <h2 id="when-heading" className="flex items-center gap-2 text-xl font-bold">
+            <Signpost aria-hidden className="size-5 text-accent" />
+            When this comes up
+          </h2>
+          <p className="mt-1 max-w-3xl text-sm text-muted">
+            Other screens show these reminders when the situation arises. Each one links to the codes and topics below.
+          </p>
+          <ul className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {HUB_CONTEXTS.map((ctx) => {
+              const p = HUB_PROMPTS[ctx];
+              const ids = [...p.ethicsIds, ...p.legalIds].filter((id) => names.has(id));
+              return (
+                <li key={ctx}>
+                  <Card className="flex h-full flex-col gap-2">
+                    <h3 className="text-base font-semibold">{HUB_CONTEXT_LABELS[ctx]}</h3>
+                    <p className="text-sm leading-relaxed text-muted">{p.message}</p>
+                    {ids.length ? (
+                      <ul className="mt-1 flex flex-col gap-0.5 text-sm">
+                        {ids.map((id) => (
+                          <li key={id}>
+                            <a
+                              href={`#${id}`}
+                              className="inline-flex min-h-11 items-center font-medium text-accent underline decoration-accent/40 underline-offset-2 hover:decoration-accent"
+                            >
+                              {names.get(id)}
+                            </a>
+                          </li>
+                        ))}
+                      </ul>
+                    ) : null}
+                  </Card>
+                </li>
+              );
+            })}
+          </ul>
         </section>
 
         <section aria-labelledby="codes-heading" className="mb-10">

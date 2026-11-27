@@ -36,7 +36,7 @@ export function ClinicalFlow() {
         How a session flows
       </h2>
       <p className="mt-1 text-sm text-muted">Seven steps, each usable on its own. Every suggestion stays yours to review.</p>
-      <ol className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7">
+      <ol className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
         {STEPS.map((s, i) => (
           <li key={s.href} className="min-w-0">
             <Link

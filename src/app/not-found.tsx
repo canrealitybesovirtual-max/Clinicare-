@@ -10,7 +10,7 @@ export default function NotFound() {
       <p className="text-sm font-semibold uppercase tracking-wide text-accent">404</p>
       <h1 className="mt-2 text-2xl font-bold sm:text-3xl">This page does not exist</h1>
       <p className="mt-3 text-muted">
-        The link may be out of date. Nothing you entered was sent anywhere. Crisis help stays available from the button on
+        The link may be out of date. Nothing you typed was sent anywhere. Crisis help stays available from the button on
         every screen.
       </p>
       <div className="mt-6 flex flex-wrap justify-center gap-3">

@@ -372,13 +372,20 @@ export async function planPdf(plan: PlanExport): Promise<Uint8Array> {
 /** Plan as a Word document (.docx), created on this device. The docx library loads only when this runs. */
 export async function planDocx(plan: PlanExport): Promise<Uint8Array> {
   const d = await import("docx");
-  const { AlignmentType, BorderStyle, Document, Footer, HeadingLevel, Packer, PageNumber, Paragraph, TabStopType, TextRun } = d;
+  const { AlignmentType, BorderStyle, Document, Footer, HeadingLevel, LevelFormat, Packer, PageNumber, Paragraph, TabStopType, TextRun } =
+    d;
 
   const children: InstanceType<typeof Paragraph>[] = [];
+  // Each ordered list (objectives per problem) is a real Word numbered list, restarting at 1.
+  let listInstance = 0;
   for (const block of planOutline(plan)) {
     switch (block.kind) {
       case "title":
-        children.push(new Paragraph({ heading: HeadingLevel.TITLE, children: [new TextRun({ text: block.text })] }));
+        // Heading 1 (not the Title style) so the outline runs Heading 1 > 2 > 3 for screen readers and the
+        // accessibility checker; sized up to read as the title.
+        children.push(
+          new Paragraph({ heading: HeadingLevel.HEADING_1, children: [new TextRun({ text: block.text, size: 40, bold: true })] }),
+        );
         break;
       case "nameLine":
         children.push(new Paragraph({ spacing: { before: 120, after: 240 }, children: [new TextRun({ text: block.text, size: 24 })] }));
@@ -414,14 +421,15 @@ export async function planDocx(plan: PlanExport): Promise<Uint8Array> {
           }),
         );
         break;
-      case "list":
-        block.items.forEach((item, i) => {
+      case "list": {
+        const instance = block.ordered ? ++listInstance : 0;
+        block.items.forEach((item) => {
           children.push(
             block.ordered
               ? new Paragraph({
-                  indent: { left: 360, hanging: 360 },
+                  numbering: { reference: "objectives", level: 0, instance },
                   spacing: { after: 60 },
-                  children: [new TextRun({ text: `${i + 1}.\t`, bold: true }), new TextRun({ text: item.text })],
+                  children: [new TextRun({ text: item.text })],
                 })
               : new Paragraph({ bullet: { level: 0 }, spacing: { after: 60 }, children: [new TextRun({ text: item.text })] }),
           );
@@ -430,6 +438,7 @@ export async function planDocx(plan: PlanExport): Promise<Uint8Array> {
           }
         });
         break;
+      }
     }
   }
 
@@ -453,7 +462,24 @@ export async function planDocx(plan: PlanExport): Promise<Uint8Array> {
     description: "Treatment plan draft for clinician review. No identifiers.",
     creator: PDF_APP_NAME,
     lastModifiedBy: PDF_APP_NAME,
-    styles: { default: { document: { run: { font: "Calibri", size: 21 } } } },
+    // Document language (screen readers pick the right voice; Word's accessibility checker needs it).
+    styles: { default: { document: { run: { font: "Calibri", size: 21, language: { value: "en-US" } } } } },
+    numbering: {
+      config: [
+        {
+          reference: "objectives",
+          levels: [
+            {
+              level: 0,
+              format: LevelFormat.DECIMAL,
+              text: "%1.",
+              alignment: AlignmentType.START,
+              style: { paragraph: { indent: { left: 360, hanging: 360 } } },
+            },
+          ],
+        },
+      ],
+    },
     sections: [
       {
         properties: { page: { margin: { top: 1080, bottom: 1080, left: 1080, right: 1080 } } },

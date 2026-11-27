@@ -11,13 +11,15 @@ import { createHash } from "node:crypto";
 import { readFileSync } from "node:fs";
 import path from "node:path";
 import { expect, test, type Page, type Request } from "@playwright/test";
+import { strFromU8, unzipSync } from "fflate";
 import {
   ROOT,
   answerItem,
+  buildPlan,
   choose,
   downloadVia,
+  goNav,
   gotoReady,
-  navLink,
   pdfText,
   visibleTextAndValues,
 } from "./helpers";
@@ -232,7 +234,7 @@ test.describe("PHI never leaves the page", () => {
     expect(identifierLeaks(measurePdf.name)).toEqual([]);
 
     // 5. A handout PDF.
-    await navLink(page, "Handouts").click();
+    await goNav(page, "Handouts");
     await expect(page).toHaveURL(/\/handouts$/);
     const handoutPdf = await downloadVia(page, page.getByRole("button", { name: "Download PDF" }).first());
     expect(handoutPdf.bytes.subarray(0, 5).toString("latin1")).toBe("%PDF-");
@@ -242,7 +244,7 @@ test.describe("PHI never leaves the page", () => {
     expect(handoutText.all).not.toContain("[NAME]");
 
     // 6. Back to the Symptom Finder: still only the scrubbed text, in memory.
-    await navLink(page, "Symptoms").click();
+    await goNav(page, "Symptoms");
     await expect(page.getByLabel(/^Symptoms and behaviors/)).toHaveValue(scrubbed);
     expect(identifierLeaks(await visibleTextAndValues(page))).toEqual([]);
 
@@ -292,6 +294,207 @@ test.describe("PHI never leaves the page", () => {
     }
     // No request carried a body at all: Phase 1 never posts anything.
     expect(net.captured.filter((r) => r.postData.length > 0).map((r) => `${r.method} ${r.url}`)).toEqual([]);
+
+    const csp = await page.evaluate(() => (window as unknown as { __cspViolations: string[] }).__cspViolations);
+    expect(csp).toEqual([]);
+  });
+});
+
+/* ------------------------------------------------------------------ plan builder + referral search */
+
+/** Values a request to one of our /api routes may carry (docs/RESOURCES.md): ids, codes, ZIP, canonical city. */
+const API_ROUTES = new Set([
+  "icd10cm",
+  "icd11",
+  "medlineplus",
+  "health-topics",
+  "providers",
+  "health-centers",
+  "treatment-facilities",
+  "rxnorm",
+  "drug-label",
+  "pubmed",
+  "trials",
+  "gho",
+]);
+const ID = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+const ZIP = /^\d{5}$/;
+const STATE = /^[A-Z]{2}$/;
+const ICD = /^[A-Z0-9]{2,4}(?:\.[0-9A-Z]{1,4})?$/;
+/** The only city this test types on purpose (a canonical gazetteer name). */
+const CANONICAL_CITIES = new Set(["Springfield"]);
+
+type Rule = (v: unknown) => boolean;
+const isInt: Rule = (v) => Number.isInteger(v);
+const isId: Rule = (v) => typeof v === "string" && ID.test(v);
+const isLang: Rule = (v) => v === "en" || v === "es";
+const isLocation: Rule = (v) => {
+  if (!v || typeof v !== "object") return false;
+  const o = v as Record<string, unknown>;
+  const keys = Object.keys(o).sort().join(",");
+  if (keys === "zip") return typeof o.zip === "string" && ZIP.test(o.zip);
+  if (keys === "city,state") return typeof o.city === "string" && CANONICAL_CITIES.has(o.city) && typeof o.state === "string" && STATE.test(o.state);
+  return false;
+};
+const BODY_RULES: Record<string, Record<string, Rule>> = {
+  providers: { providerType: isId, location: isLocation, limit: isInt, skip: isInt },
+  "health-centers": { location: isLocation, radiusMiles: isInt, limit: isInt },
+  "treatment-facilities": { location: isLocation, facilityType: isId, radiusMiles: isInt, page: isInt, pageSize: isInt },
+  icd10cm: { code: (v) => typeof v === "string" && ICD.test(v), term: (v) => typeof v === "string" && v.length < 120, max: isInt },
+  icd11: { code: (v) => typeof v === "string" && ICD.test(v), lang: isLang },
+  medlineplus: { code: (v) => typeof v === "string" && ICD.test(v), lang: isLang },
+  "health-topics": { topic: isId, lang: isLang, max: isInt },
+  rxnorm: { drug: isId },
+  "drug-label": { drug: isId },
+  pubmed: { queryId: isId, max: isInt },
+  trials: { condition: isId, state: (v) => typeof v === "string" && STATE.test(v), max: isInt },
+  gho: { indicator: isId, country: (v) => typeof v === "string" && /^[A-Z]{3,6}$/.test(v) },
+};
+
+/** Problems with one captured /api request: route, method, query string, headers and every body field. */
+function apiRequestProblems(r: Captured): string[] {
+  const u = new URL(r.url);
+  const route = u.pathname.replace(/^\/api\//, "");
+  const p: string[] = [];
+  if (!API_ROUTES.has(route)) p.push(`unexpected API route ${u.pathname}`);
+  if (r.method !== "POST") p.push(`${u.pathname}: method ${r.method}`);
+  if (u.search) p.push(`${u.pathname}: query string ${u.search}`);
+  const headers = Object.fromEntries(Object.entries(r.headers).map(([k, v]) => [k.toLowerCase(), v]));
+  if (headers.cookie) p.push(`${u.pathname}: sends a cookie`);
+  if (headers.referer) p.push(`${u.pathname}: sends a Referer`);
+  if (!/^application\/json\b/.test(headers["content-type"] ?? "")) p.push(`${u.pathname}: content-type ${headers["content-type"]}`);
+  let body: unknown;
+  try {
+    body = JSON.parse(r.postData);
+  } catch {
+    return [...p, `${u.pathname}: body is not JSON`];
+  }
+  const rules = BODY_RULES[route] ?? {};
+  if (!body || typeof body !== "object" || Array.isArray(body)) return [...p, `${u.pathname}: body is not an object`];
+  for (const [k, v] of Object.entries(body as Record<string, unknown>)) {
+    const rule = rules[k];
+    if (!rule) p.push(`${u.pathname}: unexpected field "${k}"`);
+    else if (!rule(v)) p.push(`${u.pathname}: field "${k}" has a value outside the allowlist: ${JSON.stringify(v)}`);
+  }
+  return p;
+}
+
+/** Text of every XML part of a DOCX. */
+function docxAll(bytes: Buffer): string {
+  const files = unzipSync(new Uint8Array(bytes));
+  return Object.entries(files)
+    .filter(([name]) => name.endsWith(".xml") || name.endsWith(".rels"))
+    .map(([, data]) => strFromU8(data))
+    .join("\n");
+}
+
+test.describe("PHI never leaves the page: plan builder and referral search", () => {
+  test("identifiers typed into a custom objective and the city field are scrubbed, never sent, exported or stored", async ({ page }) => {
+    const net = capture(page);
+    await page.addInitScript(() => {
+      (window as unknown as { __cspViolations: string[] }).__cspViolations = [];
+      document.addEventListener("securitypolicyviolation", (e) => {
+        (window as unknown as { __cspViolations: string[] }).__cspViolations.push(`${e.violatedDirective} ${e.blockedURI}`);
+      });
+    });
+
+    // 1. Plan builder: a custom objective typed key by key, full of planted identifiers.
+    const objective =
+      `${PLANTED.name} (DOB ${PLANTED.dob}, SSN ${PLANTED.ssn}, MRN ${PLANTED.mrn}) will walk to ${PLANTED.address} ` +
+      `three times a week and text ${PLANTED.phone} or email ${PLANTED.email} afterwards.`;
+    await gotoReady(page, "/plan");
+    await buildPlan(page, "Generalized anxiety disorder", { customObjective: objective });
+    const step = page.getByRole("region", { name: /^Step \d+ of \d+/ });
+    await expect(step).toContainText("three times a week");
+    expect(identifierLeaks(await visibleTextAndValues(page))).toEqual([]);
+    expect(identifierLeaks(await page.content())).toEqual([]);
+
+    // 2. Both exports: no planted value in any form.
+    const pdf = await downloadVia(page, step.getByRole("button", { name: "Download PDF" }));
+    expect(pdf.bytes.subarray(0, 4).toString("latin1")).toBe("%PDF");
+    const pdfAll = pdfText(pdf.bytes);
+    expect(pdfAll.drawn).toContain("three times a week");
+    expect(leaks(pdfAll.all)).toEqual([]);
+    const docx = await downloadVia(page, step.getByRole("button", { name: "Download Word (.docx)" }));
+    expect(docx.bytes.subarray(0, 2).toString("latin1")).toBe("PK");
+    const docxText = docxAll(docx.bytes);
+    expect(docxText).toContain("three times a week");
+    expect(leaks(docxText)).toEqual([]);
+    expect(identifierLeaks(pdf.name + docx.name)).toEqual([]);
+
+    // 3. Referral search (client-side navigation keeps the session): identifiers in the city field are never sent.
+    await goNav(page, "Referrals");
+    await expect(page).toHaveURL(/\/referrals$/);
+    const form = page.getByRole("form", { name: "Find care near a location" });
+    await choose(form, "Search location", "By city and state");
+    await form.getByLabel("State or territory").selectOption("IL");
+    const city = form.getByRole("textbox", { name: "City", exact: true });
+    const apiCalls = () => net.captured.filter((r) => new URL(r.url).pathname.startsWith("/api/")).length;
+    await net.settle();
+    const before = apiCalls();
+    for (const planted of [PLANTED.name, PLANTED.address, PLANTED.phone, PLANTED.email, `${PLANTED.ssn}`]) {
+      await city.fill("");
+      await city.pressSequentially(planted.slice(0, 40));
+      // Enter submits straight from the field, before the blur-time scrub has replaced the text.
+      await city.press("Enter");
+      await expect(city).toHaveAttribute("aria-invalid", "true");
+      expect(identifierLeaks(await city.inputValue()), `city field after ${planted}`).toEqual([]);
+    }
+    await page.waitForTimeout(300);
+    await net.settle();
+    expect(apiCalls(), "a city that held an identifier was sent").toBe(before);
+
+    // A real city goes out as its canonical name only, with the state code.
+    await city.fill("");
+    await city.pressSequentially("Springfield");
+    await form.getByRole("button", { name: "Search" }).click();
+    await expect(page.getByRole("status").filter({ hasText: /^Showing \d+ results?\.$/ })).toBeVisible();
+    // And a ZIP search for comparison.
+    await choose(form, "Search location", "By ZIP code");
+    await form.getByRole("textbox", { name: "ZIP code" }).fill("62701");
+    await form.getByRole("button", { name: "Search" }).click();
+    await expect(page.getByRole("status").filter({ hasText: /^Showing \d+ results?\.$/ })).toBeVisible();
+    expect(identifierLeaks(await visibleTextAndValues(page))).toEqual([]);
+
+    // 4. Network: every /api request carries only allowlisted fields and values; nothing planted anywhere.
+    await net.settle();
+    const api = net.captured.filter((r) => new URL(r.url).pathname.startsWith("/api/"));
+    expect(api.length).toBeGreaterThanOrEqual(2);
+    expect(api.flatMap(apiRequestProblems)).toEqual([]);
+    const bodies = api.map((r) => JSON.parse(r.postData) as { location?: unknown });
+    expect(bodies.map((b) => b.location)).toEqual(expect.arrayContaining([{ city: "Springfield", state: "IL" }, { zip: "62701" }]));
+    for (const r of net.captured) {
+      const wire = [r.url, decodeURIComponentSafe(r.url), JSON.stringify(r.headers), r.postData].join("\n");
+      expect(leaks(wire), `${r.method} ${r.url}`).toEqual([]);
+      expect(wire, `${r.method} ${r.url}`).not.toContain("three times a week");
+      const u = new URL(r.url);
+      // The only query parameter any request may carry is Next.js's own RSC cache-buster (never typed text).
+      if (u.protocol === "http:" || u.protocol === "https:")
+        for (const [k, v] of u.searchParams) expect(`${k}=${v}`, r.url).toMatch(/^_rsc=[A-Za-z0-9_-]{1,64}$/);
+    }
+    expect(net.sockets).toEqual([]);
+
+    // 5. Storage: nothing typed, scrubbed or not, is persisted.
+    const storage = await dumpStorage(page);
+    expect(storage.local).toEqual({});
+    expect(leaks(JSON.stringify(storage.session))).toEqual([]);
+    expect(JSON.stringify(storage.session)).not.toContain("three times a week");
+    expect(storage.cookie).toBe("");
+    expect(storage.idb).toEqual([]);
+    expect(leaks(storage.historyState + storage.windowName + storage.href)).toEqual([]);
+    expect(storage.historyState).not.toContain("three times a week");
+    for (const entry of storage.cacheEntries) {
+      expect(leaks(entry.url), `cached ${entry.url}`).toEqual([]);
+      const builtFile = staticFileFor(new URL(entry.url).pathname);
+      if (builtFile) expect(entry.sha256, `cached ${entry.url} differs from ${builtFile}`).toBe(sha256File(builtFile));
+      else {
+        expect(leaks(entry.body), `cached ${entry.url}`).toEqual([]);
+        expect(entry.body).not.toContain("three times a week");
+      }
+    }
+    const state = await page.context().storageState({ indexedDB: true });
+    expect(state.cookies).toEqual([]);
+    expect(leaks(JSON.stringify(state))).toEqual([]);
 
     const csp = await page.evaluate(() => (window as unknown as { __cspViolations: string[] }).__cspViolations);
     expect(csp).toEqual([]);

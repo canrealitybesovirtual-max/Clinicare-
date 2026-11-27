@@ -1,0 +1,13 @@
+{
+  "_about": "Fictional e2e fixture data in the upstream's response shape (E2E_UPSTREAM_FIXTURES=1, tests only).",
+  "upstream": "who-icd11-token",
+  "responses": [
+    {
+      "json": {
+        "access_token": "e2e-fixture-token-not-a-secret",
+        "token_type": "Bearer",
+        "expires_in": 3600
+      }
+    }
+  ]
+}

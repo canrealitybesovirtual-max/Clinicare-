@@ -105,12 +105,12 @@
       "definitions": [
         "Has few people they contact outside work or the household in a typical month, and says they would like more friendships, a partner or community ties but has not been able to act on it.",
         "Has passed up interviews, promotions, courses or leadership roles because they involve speaking up, being evaluated or meeting new people.",
-        "Drinks alcohol or uses other substances before or during social events to feel able to go, or skips events where they cannot.",
+        { "text": "Drinks alcohol or uses other substances before or during social events to feel able to go, or skips events where they cannot.", "sud": true },
         "Reports loneliness, low mood or hopelessness linked to isolation; any thoughts of death or self-harm call for direct clinician assessment at the time they come up."
       ],
       "longTermGoals": [
         "The client builds and keeps a few rewarding relationships and moves toward the work, study or community roles they want.",
-        "Coping that adds risk, such as drinking to get through events, is noticed and replaced, and any suicide risk is handled through a safety plan built together with the client."
+        { "text": "Coping that adds risk, such as drinking to get through events, is noticed and replaced, and any suicide risk is handled through a safety plan built together with the client.", "sud": true }
       ],
       "shortTermObjectives": [
         {
@@ -126,7 +126,8 @@
         {
           "id": "sad-alcohol-check",
           "text": "At intake and again by week 4, ask whether alcohol or other substances are used to get through social situations. If so, agree to attend at least 2 events a month without drinking beforehand, set up as planned experiments, and consider adding goals from the alcohol-use plan. Keep notes free of identifying details; where substance-use records fall under 42 CFR Part 2, note that 42 CFR Part 2 prohibits unauthorized use or disclosure of these records.",
-          "interventionIds": ["motivational-interviewing", "behavioral-experiments"]
+          "interventionIds": ["motivational-interviewing", "behavioral-experiments"],
+          "sud": true
         },
         {
           "id": "sad-other-options",
@@ -136,7 +137,8 @@
         {
           "id": "sad-safety-plan-review",
           "text": "Whenever risk is present (for example a PHQ-9 item 9 response above 0, or the client describes thoughts of death or self-harm), the clinician assesses risk directly and, in that same session, works with the client to create or review a written safety plan: personal warning signs, coping steps, people and places that help, professional and crisis contacts (call or text 988 in the US; elsewhere the local emergency number or findahelpline.com) and agreed steps to limit access to means of harm, including alcohol if it plays a part. Revisit the plan at every session while risk remains. Risk level and next steps are the clinician's decision; this tool never rates risk.",
-          "interventionIds": ["collaborative-safety-planning", "lethal-means-counseling"]
+          "interventionIds": ["collaborative-safety-planning", "lethal-means-counseling"],
+          "sud": true
         }
       ],
       "measureIds": ["phq-9"]

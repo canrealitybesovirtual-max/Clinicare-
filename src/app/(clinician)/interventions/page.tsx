@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { interventions } from "@/lib/library";
-import { PageIntro } from "@/components/content/content-bits";
+import { NextStep, PageIntro } from "@/components/content/content-bits";
 import { Notice } from "@/components/ui/notice";
 import { conditionLabel } from "@/components/interventions/catalog";
 import { ORIENTATIONS, OTHER_ORIENTATION, orientationsOf } from "@/components/interventions/orientation";
@@ -35,7 +35,7 @@ export default function InterventionsPage() {
 
   return (
     <>
-      <PageIntro title="Interventions" eyebrow="In-session tools">
+      <PageIntro title="Interventions" eyebrow="Step 5 · In-session tools">
         <p>
           {items.length} evidence-informed interventions across theoretical orientations, each with clinician steps, an
           original script, time needed, cautions, cultural adaptations and named sources. For clinician review: choose,
@@ -53,6 +53,7 @@ export default function InterventionsPage() {
         </p>
       </Notice>
       <InterventionLibrary items={items} orientations={orientations} conditions={conditions} />
+      <NextStep href="/handouts" label="Step 6 · Handouts" />
     </>
   );
 }

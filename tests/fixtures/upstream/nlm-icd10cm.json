@@ -1,0 +1,1552 @@
+{
+  "_about": "Fictional e2e fixture data in the upstream's response shape (E2E_UPSTREAM_FIXTURES=1, tests only). Titles are the curated labels from content/conditions.",
+  "upstream": "nlm-icd10cm",
+  "responses": [
+    {
+      "when": {
+        "query": {
+          "terms": "F10"
+        }
+      },
+      "json": [
+        4,
+        [
+          "F10.10",
+          "F10.11",
+          "F10.20",
+          "F10.21"
+        ],
+        null,
+        [
+          [
+            "F10.10",
+            "Alcohol abuse, uncomplicated"
+          ],
+          [
+            "F10.11",
+            "Alcohol abuse, in remission"
+          ],
+          [
+            "F10.20",
+            "Alcohol dependence, uncomplicated"
+          ],
+          [
+            "F10.21",
+            "Alcohol dependence, in remission"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F10.10"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F10.10"
+        ],
+        null,
+        [
+          [
+            "F10.10",
+            "Alcohol abuse, uncomplicated"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F10.11"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F10.11"
+        ],
+        null,
+        [
+          [
+            "F10.11",
+            "Alcohol abuse, in remission"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F10.20"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F10.20"
+        ],
+        null,
+        [
+          [
+            "F10.20",
+            "Alcohol dependence, uncomplicated"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F10.21"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F10.21"
+        ],
+        null,
+        [
+          [
+            "F10.21",
+            "Alcohol dependence, in remission"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F32"
+        }
+      },
+      "json": [
+        7,
+        [
+          "F32.0",
+          "F32.1",
+          "F32.2",
+          "F32.3",
+          "F32.4",
+          "F32.5",
+          "F32.9"
+        ],
+        null,
+        [
+          [
+            "F32.0",
+            "Major depressive disorder, single episode, mild"
+          ],
+          [
+            "F32.1",
+            "Major depressive disorder, single episode, moderate"
+          ],
+          [
+            "F32.2",
+            "Major depressive disorder, single episode, severe without psychotic features"
+          ],
+          [
+            "F32.3",
+            "Major depressive disorder, single episode, severe with psychotic features"
+          ],
+          [
+            "F32.4",
+            "Major depressive disorder, single episode, in partial remission"
+          ],
+          [
+            "F32.5",
+            "Major depressive disorder, single episode, in full remission"
+          ],
+          [
+            "F32.9",
+            "Major depressive disorder, single episode, unspecified"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F32.0"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F32.0"
+        ],
+        null,
+        [
+          [
+            "F32.0",
+            "Major depressive disorder, single episode, mild"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F32.1"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F32.1"
+        ],
+        null,
+        [
+          [
+            "F32.1",
+            "Major depressive disorder, single episode, moderate"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F32.2"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F32.2"
+        ],
+        null,
+        [
+          [
+            "F32.2",
+            "Major depressive disorder, single episode, severe without psychotic features"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F32.3"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F32.3"
+        ],
+        null,
+        [
+          [
+            "F32.3",
+            "Major depressive disorder, single episode, severe with psychotic features"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F32.4"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F32.4"
+        ],
+        null,
+        [
+          [
+            "F32.4",
+            "Major depressive disorder, single episode, in partial remission"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F32.5"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F32.5"
+        ],
+        null,
+        [
+          [
+            "F32.5",
+            "Major depressive disorder, single episode, in full remission"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F32.9"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F32.9"
+        ],
+        null,
+        [
+          [
+            "F32.9",
+            "Major depressive disorder, single episode, unspecified"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F33"
+        }
+      },
+      "json": [
+        7,
+        [
+          "F33.0",
+          "F33.1",
+          "F33.2",
+          "F33.3",
+          "F33.41",
+          "F33.42",
+          "F33.9"
+        ],
+        null,
+        [
+          [
+            "F33.0",
+            "Major depressive disorder, recurrent, mild"
+          ],
+          [
+            "F33.1",
+            "Major depressive disorder, recurrent, moderate"
+          ],
+          [
+            "F33.2",
+            "Major depressive disorder, recurrent severe without psychotic features"
+          ],
+          [
+            "F33.3",
+            "Major depressive disorder, recurrent, severe with psychotic symptoms"
+          ],
+          [
+            "F33.41",
+            "Major depressive disorder, recurrent, in partial remission"
+          ],
+          [
+            "F33.42",
+            "Major depressive disorder, recurrent, in full remission"
+          ],
+          [
+            "F33.9",
+            "Major depressive disorder, recurrent, unspecified"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F33.0"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F33.0"
+        ],
+        null,
+        [
+          [
+            "F33.0",
+            "Major depressive disorder, recurrent, mild"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F33.1"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F33.1"
+        ],
+        null,
+        [
+          [
+            "F33.1",
+            "Major depressive disorder, recurrent, moderate"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F33.2"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F33.2"
+        ],
+        null,
+        [
+          [
+            "F33.2",
+            "Major depressive disorder, recurrent severe without psychotic features"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F33.3"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F33.3"
+        ],
+        null,
+        [
+          [
+            "F33.3",
+            "Major depressive disorder, recurrent, severe with psychotic symptoms"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F33.41"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F33.41"
+        ],
+        null,
+        [
+          [
+            "F33.41",
+            "Major depressive disorder, recurrent, in partial remission"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F33.42"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F33.42"
+        ],
+        null,
+        [
+          [
+            "F33.42",
+            "Major depressive disorder, recurrent, in full remission"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F33.9"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F33.9"
+        ],
+        null,
+        [
+          [
+            "F33.9",
+            "Major depressive disorder, recurrent, unspecified"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F34"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F34.1"
+        ],
+        null,
+        [
+          [
+            "F34.1",
+            "Dysthymic disorder"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F34.1"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F34.1"
+        ],
+        null,
+        [
+          [
+            "F34.1",
+            "Dysthymic disorder"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F40"
+        }
+      },
+      "json": [
+        19,
+        [
+          "F40.00",
+          "F40.01",
+          "F40.02",
+          "F40.10",
+          "F40.11",
+          "F40.210",
+          "F40.218",
+          "F40.220",
+          "F40.228",
+          "F40.230",
+          "F40.231",
+          "F40.232",
+          "F40.233",
+          "F40.240",
+          "F40.241",
+          "F40.242",
+          "F40.243",
+          "F40.248",
+          "F40.298"
+        ],
+        null,
+        [
+          [
+            "F40.00",
+            "Agoraphobia, unspecified"
+          ],
+          [
+            "F40.01",
+            "Agoraphobia with panic disorder"
+          ],
+          [
+            "F40.02",
+            "Agoraphobia without panic disorder"
+          ],
+          [
+            "F40.10",
+            "Social phobia, unspecified"
+          ],
+          [
+            "F40.11",
+            "Social phobia, generalized"
+          ],
+          [
+            "F40.210",
+            "Arachnophobia"
+          ],
+          [
+            "F40.218",
+            "Other animal type phobia"
+          ],
+          [
+            "F40.220",
+            "Fear of thunderstorms"
+          ],
+          [
+            "F40.228",
+            "Other natural environment type phobia"
+          ],
+          [
+            "F40.230",
+            "Fear of blood"
+          ],
+          [
+            "F40.231",
+            "Fear of injections and transfusions"
+          ],
+          [
+            "F40.232",
+            "Fear of other medical care"
+          ],
+          [
+            "F40.233",
+            "Fear of injury"
+          ],
+          [
+            "F40.240",
+            "Claustrophobia"
+          ],
+          [
+            "F40.241",
+            "Acrophobia"
+          ],
+          [
+            "F40.242",
+            "Fear of bridges"
+          ],
+          [
+            "F40.243",
+            "Fear of flying"
+          ],
+          [
+            "F40.248",
+            "Other situational type phobia"
+          ],
+          [
+            "F40.298",
+            "Other specified phobia"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F40.00"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F40.00"
+        ],
+        null,
+        [
+          [
+            "F40.00",
+            "Agoraphobia, unspecified"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F40.01"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F40.01"
+        ],
+        null,
+        [
+          [
+            "F40.01",
+            "Agoraphobia with panic disorder"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F40.02"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F40.02"
+        ],
+        null,
+        [
+          [
+            "F40.02",
+            "Agoraphobia without panic disorder"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F40.10"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F40.10"
+        ],
+        null,
+        [
+          [
+            "F40.10",
+            "Social phobia, unspecified"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F40.11"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F40.11"
+        ],
+        null,
+        [
+          [
+            "F40.11",
+            "Social phobia, generalized"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F40.210"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F40.210"
+        ],
+        null,
+        [
+          [
+            "F40.210",
+            "Arachnophobia"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F40.218"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F40.218"
+        ],
+        null,
+        [
+          [
+            "F40.218",
+            "Other animal type phobia"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F40.220"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F40.220"
+        ],
+        null,
+        [
+          [
+            "F40.220",
+            "Fear of thunderstorms"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F40.228"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F40.228"
+        ],
+        null,
+        [
+          [
+            "F40.228",
+            "Other natural environment type phobia"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F40.230"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F40.230"
+        ],
+        null,
+        [
+          [
+            "F40.230",
+            "Fear of blood"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F40.231"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F40.231"
+        ],
+        null,
+        [
+          [
+            "F40.231",
+            "Fear of injections and transfusions"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F40.232"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F40.232"
+        ],
+        null,
+        [
+          [
+            "F40.232",
+            "Fear of other medical care"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F40.233"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F40.233"
+        ],
+        null,
+        [
+          [
+            "F40.233",
+            "Fear of injury"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F40.240"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F40.240"
+        ],
+        null,
+        [
+          [
+            "F40.240",
+            "Claustrophobia"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F40.241"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F40.241"
+        ],
+        null,
+        [
+          [
+            "F40.241",
+            "Acrophobia"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F40.242"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F40.242"
+        ],
+        null,
+        [
+          [
+            "F40.242",
+            "Fear of bridges"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F40.243"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F40.243"
+        ],
+        null,
+        [
+          [
+            "F40.243",
+            "Fear of flying"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F40.248"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F40.248"
+        ],
+        null,
+        [
+          [
+            "F40.248",
+            "Other situational type phobia"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F40.298"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F40.298"
+        ],
+        null,
+        [
+          [
+            "F40.298",
+            "Other specified phobia"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F41"
+        }
+      },
+      "json": [
+        2,
+        [
+          "F41.0",
+          "F41.1"
+        ],
+        null,
+        [
+          [
+            "F41.0",
+            "Panic disorder [episodic paroxysmal anxiety]"
+          ],
+          [
+            "F41.1",
+            "Generalized anxiety disorder"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F41.0"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F41.0"
+        ],
+        null,
+        [
+          [
+            "F41.0",
+            "Panic disorder [episodic paroxysmal anxiety]"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F41.1"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F41.1"
+        ],
+        null,
+        [
+          [
+            "F41.1",
+            "Generalized anxiety disorder"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F42"
+        }
+      },
+      "json": [
+        3,
+        [
+          "F42.2",
+          "F42.8",
+          "F42.9"
+        ],
+        null,
+        [
+          [
+            "F42.2",
+            "Mixed obsessional thoughts and acts"
+          ],
+          [
+            "F42.8",
+            "Other obsessive-compulsive disorder"
+          ],
+          [
+            "F42.9",
+            "Obsessive-compulsive disorder, unspecified"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F42.2"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F42.2"
+        ],
+        null,
+        [
+          [
+            "F42.2",
+            "Mixed obsessional thoughts and acts"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F42.8"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F42.8"
+        ],
+        null,
+        [
+          [
+            "F42.8",
+            "Other obsessive-compulsive disorder"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F42.9"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F42.9"
+        ],
+        null,
+        [
+          [
+            "F42.9",
+            "Obsessive-compulsive disorder, unspecified"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F43"
+        }
+      },
+      "json": [
+        10,
+        [
+          "F43.10",
+          "F43.11",
+          "F43.12",
+          "F43.20",
+          "F43.21",
+          "F43.22",
+          "F43.23",
+          "F43.24",
+          "F43.25",
+          "F43.81"
+        ],
+        null,
+        [
+          [
+            "F43.10",
+            "Post-traumatic stress disorder, unspecified"
+          ],
+          [
+            "F43.11",
+            "Post-traumatic stress disorder, acute"
+          ],
+          [
+            "F43.12",
+            "Post-traumatic stress disorder, chronic"
+          ],
+          [
+            "F43.20",
+            "Adjustment disorder, unspecified"
+          ],
+          [
+            "F43.21",
+            "Adjustment disorder with depressed mood"
+          ],
+          [
+            "F43.22",
+            "Adjustment disorder with anxiety"
+          ],
+          [
+            "F43.23",
+            "Adjustment disorder with mixed anxiety and depressed mood"
+          ],
+          [
+            "F43.24",
+            "Adjustment disorder with disturbance of conduct"
+          ],
+          [
+            "F43.25",
+            "Adjustment disorder with mixed disturbance of emotions and conduct"
+          ],
+          [
+            "F43.81",
+            "Prolonged grief disorder"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F43.10"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F43.10"
+        ],
+        null,
+        [
+          [
+            "F43.10",
+            "Post-traumatic stress disorder, unspecified"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F43.11"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F43.11"
+        ],
+        null,
+        [
+          [
+            "F43.11",
+            "Post-traumatic stress disorder, acute"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F43.12"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F43.12"
+        ],
+        null,
+        [
+          [
+            "F43.12",
+            "Post-traumatic stress disorder, chronic"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F43.20"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F43.20"
+        ],
+        null,
+        [
+          [
+            "F43.20",
+            "Adjustment disorder, unspecified"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F43.21"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F43.21"
+        ],
+        null,
+        [
+          [
+            "F43.21",
+            "Adjustment disorder with depressed mood"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F43.22"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F43.22"
+        ],
+        null,
+        [
+          [
+            "F43.22",
+            "Adjustment disorder with anxiety"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F43.23"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F43.23"
+        ],
+        null,
+        [
+          [
+            "F43.23",
+            "Adjustment disorder with mixed anxiety and depressed mood"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F43.24"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F43.24"
+        ],
+        null,
+        [
+          [
+            "F43.24",
+            "Adjustment disorder with disturbance of conduct"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F43.25"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F43.25"
+        ],
+        null,
+        [
+          [
+            "F43.25",
+            "Adjustment disorder with mixed disturbance of emotions and conduct"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F43.81"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F43.81"
+        ],
+        null,
+        [
+          [
+            "F43.81",
+            "Prolonged grief disorder"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F51"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F51.01"
+        ],
+        null,
+        [
+          [
+            "F51.01",
+            "Primary insomnia"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "F51.01"
+        }
+      },
+      "json": [
+        1,
+        [
+          "F51.01"
+        ],
+        null,
+        [
+          [
+            "F51.01",
+            "Primary insomnia"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "G47"
+        }
+      },
+      "json": [
+        1,
+        [
+          "G47.00"
+        ],
+        null,
+        [
+          [
+            "G47.00",
+            "Insomnia, unspecified"
+          ]
+        ]
+      ]
+    },
+    {
+      "when": {
+        "query": {
+          "terms": "G47.00"
+        }
+      },
+      "json": [
+        1,
+        [
+          "G47.00"
+        ],
+        null,
+        [
+          [
+            "G47.00",
+            "Insomnia, unspecified"
+          ]
+        ]
+      ]
+    },
+    {
+      "note": "any other code or curated term",
+      "json": [
+        2,
+        [
+          "F41.1",
+          "F41.9"
+        ],
+        null,
+        [
+          [
+            "F41.1",
+            "Generalized anxiety disorder"
+          ],
+          [
+            "F41.9",
+            "Anxiety disorder, unspecified"
+          ]
+        ]
+      ]
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { ArrowRight, HeartHandshake, Pill, Scale, ShieldCheck, Stethoscope } from "lucide-react";
-import { stats } from "@/lib/content";
+import { ArrowRight, Pill, Scale, ShieldCheck } from "lucide-react";
+import { measures, stats } from "@/lib/content";
 import { allConditions, allHandouts, ethicsCodes, interventions, legalTopics } from "@/lib/library";
 import { MEDICATIONS } from "@/lib/schemas-medications";
 import { buttonVariants } from "@/components/ui/button";
@@ -8,6 +8,8 @@ import { Badge } from "@/components/ui/badge";
 import { ReviewBadge, StatCard } from "@/components/content/content-bits";
 import { POSITIONING } from "@/components/content/positioning";
 import { ClinicalFlow } from "@/components/home/clinical-flow";
+import { ContinueCard } from "@/components/home/continue-card";
+import { Disclosure } from "@/components/ui/disclosure";
 
 const cardLink =
   "group flex h-full gap-4 rounded-2xl border border-border bg-surface p-5 shadow-sm transition-colors hover:border-primary";
@@ -28,6 +30,7 @@ export default function HomePage() {
 
   return (
     <div className="space-y-12">
+      <ContinueCard measures={measures.map((m) => ({ id: m.id, shortName: m.shortName }))} />
       <section aria-labelledby="home-title" className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_22rem] lg:items-end">
         <div>
           <p className="text-sm font-semibold uppercase tracking-wide text-accent">For licensed mental-health professionals</p>
@@ -67,48 +70,6 @@ export default function HomePage() {
             ))}
           </dl>
         </div>
-      </section>
-
-      <section aria-labelledby="modes-heading">
-        <h2 id="modes-heading" className="text-xl font-semibold">
-          Choose a mode
-        </h2>
-        <ul className="mt-4 grid gap-4 md:grid-cols-2">
-          <li>
-            <Link href="/symptoms" className={cardLink}>
-              <span className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-primary text-primary-fg">
-                <Stethoscope aria-hidden className="size-6" />
-              </span>
-              <span className="min-w-0">
-                <span className="flex items-center gap-2 text-lg font-semibold">
-                  Clinician mode
-                  <ArrowRight aria-hidden className="size-4 transition-transform group-hover:translate-x-0.5" />
-                </span>
-                <span className="mt-1 block text-sm leading-relaxed text-muted">
-                  Possible diagnoses for clinician review with ICD-10-CM and ICD-11 codes, measures, a treatment plan
-                  builder, in-session interventions, handouts and referrals.
-                </span>
-              </span>
-            </Link>
-          </li>
-          <li>
-            <Link href="/client" className={`${cardLink} hover:border-accent`}>
-              <span className="flex size-12 shrink-0 items-center justify-center rounded-xl bg-accent-soft text-accent">
-                <HeartHandshake aria-hidden className="size-6" />
-              </span>
-              <span className="min-w-0">
-                <span className="flex items-center gap-2 text-lg font-semibold">
-                  Client self-help
-                  <ArrowRight aria-hidden className="size-4 transition-transform group-hover:translate-x-0.5" />
-                </span>
-                <span className="mt-1 block text-sm leading-relaxed text-muted">
-                  Plain-language topics, skills and where to get help, with crisis information first. No diagnosis
-                  labels, codes or scores.
-                </span>
-              </span>
-            </Link>
-          </li>
-        </ul>
       </section>
 
       <ClinicalFlow />
@@ -173,11 +134,8 @@ export default function HomePage() {
             </li>
           ))}
         </ul>
-        <details className="group mt-4">
-          <summary className="inline-flex min-h-11 cursor-pointer list-none items-center gap-1 text-sm font-semibold text-accent [&::-webkit-details-marker]:hidden">
-            Show all {stats.length} statistics
-          </summary>
-          <ul className="mt-3 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <Disclosure title={`Show all ${stats.length} statistics`} bordered={false} className="mt-4">
+          <ul className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {stats
               .filter((s) => !featured.includes(s))
               .map((s) => (
@@ -186,7 +144,7 @@ export default function HomePage() {
                 </li>
               ))}
           </ul>
-        </details>
+        </Disclosure>
       </section>
     </div>
   );

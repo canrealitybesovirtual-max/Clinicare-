@@ -1,7 +1,7 @@
 "use client";
 import * as React from "react";
 import Link from "next/link";
-import { BookOpenText, Clock, FileText, GraduationCap, HandHeart, Search, X } from "lucide-react";
+import { BookOpenText, ChevronRight, Clock, FileText, GraduationCap, HandHeart, Search, X } from "lucide-react";
 import { useSession } from "@/state/session";
 import { useScrubbedField } from "@/components/symptoms/use-scrubbed-field";
 import { PRIVATE_TEXT_FIELD_PROPS } from "@/components/ui/private-field";
@@ -63,7 +63,7 @@ function applyFilters(items: readonly InterventionCardData[], f: Filters, query:
 }
 
 const selectClass =
-  "mt-1.5 block min-h-11 w-full rounded-lg border border-border bg-surface px-3 text-base text-text sm:text-sm";
+  "mt-1.5 block min-h-11 w-full rounded-lg border border-input-border bg-surface px-3 text-base text-text sm:text-sm";
 
 /** Interventions library: client-side filters and search. Search text is scrubbed and never leaves this component. */
 export function InterventionLibrary(props: {
@@ -119,7 +119,7 @@ function LibraryInner({
                 onBlur={search.flushNow}
                 {...PRIVATE_TEXT_FIELD_PROPS}
                 placeholder="e.g., breathing, worry, sleep, values"
-                className="block min-h-11 w-full rounded-lg border border-border bg-surface pl-9 pr-3 text-base text-text placeholder:text-muted/80"
+                className="block min-h-11 w-full rounded-lg border border-input-border bg-surface pl-9 pr-3 text-base text-text placeholder:text-muted"
               />
             </div>
             <div role="alert">
@@ -190,10 +190,11 @@ function LibraryInner({
                 type="button"
                 variant="ghost"
                 size="sm"
-                className="min-h-11"
                 onClick={() => {
                   setFilters(NO_FILTERS);
                   search.replace("");
+                  // The button disappears once nothing is filtered: keep focus in the search box.
+                  search.ref.current?.focus();
                 }}
               >
                 <X aria-hidden />
@@ -235,15 +236,23 @@ function InterventionCard({ item }: { item: InterventionCardData }) {
   const shown = item.conditions.slice(0, 3);
   const extra = item.conditions.length - shown.length;
   return (
-    <article aria-labelledby={`iv-${item.id}`} className="flex h-full flex-col rounded-xl border border-border bg-surface p-4 shadow-sm">
-      <h3 id={`iv-${item.id}`} className="text-base font-semibold leading-snug">
-        <Link href={`/interventions/${item.id}`} className="text-accent underline decoration-accent/40 underline-offset-2 hover:decoration-accent">
+    <article
+      aria-labelledby={`iv-${item.id}`}
+      className="relative flex h-full flex-col rounded-xl border border-border bg-surface p-4 shadow-sm transition-colors hover:border-accent"
+    >
+      <h3 id={`iv-${item.id}`} className="flex items-start gap-2 text-base font-semibold leading-snug">
+        {/* Stretched link: the whole card opens the detail page. */}
+        <Link
+          href={`/interventions/${item.id}`}
+          className="min-w-0 flex-1 text-accent underline decoration-accent/40 underline-offset-2 after:absolute after:inset-0 after:rounded-xl hover:decoration-accent"
+        >
           {item.name}
         </Link>
+        <ChevronRight aria-hidden className="mt-0.5 size-4 shrink-0 text-muted" />
       </h3>
       <p className="mt-1 text-sm text-muted">{item.modality}</p>
-      <p className="mt-2 line-clamp-3 flex-1 text-sm leading-relaxed text-text">{item.purpose}</p>
-      <dl className="mt-3 space-y-1 text-sm">
+      <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-text">{item.purpose}</p>
+      <dl className="mt-auto space-y-1 pt-3 text-sm">
         <div className="flex items-start gap-1.5">
           <dt className="flex items-center">
             <Clock aria-hidden className="mt-0.5 size-4 text-muted" />

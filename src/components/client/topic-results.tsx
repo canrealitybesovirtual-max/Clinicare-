@@ -13,14 +13,14 @@ import type { HealthTopicsResult } from "@/server/integrations/medlineplus-topic
 import { ChoiceGroup } from "@/components/ui/choice-group";
 import { ExternalLink } from "@/components/ui/external-link";
 import { useLookup } from "@/components/diagnoses/live-lookup";
-import { Attribution, LookupError, LookupLoading } from "@/components/diagnoses/lookup-status";
+import { Attribution, LookupError, LookupLoading, LookupStatusLine } from "@/components/diagnoses/lookup-status";
 import { firstPlainSafe, isPlainSafe } from "./plain-text";
 import type { ClientTopic } from "./topics";
 
 type Lang = "en" | "es";
 const LANGS = [
   { value: "en", label: "English" },
-  { value: "es", label: "Español" },
+  { value: "es", label: "Español", lang: "es" },
 ] as const;
 
 const COPY: Record<Lang, { more: (n: number) => string; page: string; none: string }> = {
@@ -44,8 +44,34 @@ export function TopicResults({ topic }: { topic: ClientTopic }) {
 
   return (
     <div className="space-y-4">
-      <ChoiceGroup legend="Language / Idioma" name={`topic-lang-${topic.id}`} value={lang} options={LANGS} onChange={setLang} className="max-w-xs" />
-      <div aria-live="polite" aria-busy={state.status === "loading" || undefined}>
+      <ChoiceGroup
+        legend={
+          <>
+            Language / <span lang="es">Idioma</span>
+          </>
+        }
+        name={`topic-lang-${topic.id}`}
+        value={lang}
+        options={LANGS}
+        onChange={setLang}
+        className="max-w-xs"
+      />
+      <LookupStatusLine
+        plain
+        state={state}
+        what={(d) => {
+          const n = (d as HealthTopicsResult).items.length;
+          return `${n} page${n === 1 ? "" : "s"} from MedlinePlus loaded`;
+        }}
+      />
+      <div
+        role="group"
+        aria-label="Pages from MedlinePlus"
+        aria-busy={state.status === "loading" || undefined}
+        data-lookup-focus
+        tabIndex={-1}
+        className="rounded-lg"
+      >
         {state.status === "idle" || state.status === "loading" ? (
           <LookupLoading what="pages from MedlinePlus" />
         ) : state.status === "error" ? (

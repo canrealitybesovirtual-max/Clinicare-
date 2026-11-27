@@ -29,7 +29,7 @@ export function CrisisCountrySelect({ className }: { className?: string }) {
         id={id}
         value={state.country}
         onChange={(e) => set({ country: e.target.value })}
-        className="min-h-11 rounded-lg border border-border bg-surface px-3 text-sm text-text"
+        className="min-h-11 rounded-lg border border-input-border bg-surface px-3 text-sm text-text"
       >
         {crisisLines.countries.map((c) => (
           <option key={c.country} value={c.country}>

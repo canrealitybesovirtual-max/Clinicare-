@@ -31,6 +31,12 @@ const securityHeaders = [
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
+  env: {
+    // Build-time switch for the test-only upstream fixtures (src/server/core.ts): "1" only when this build itself
+    // ran with E2E_UPSTREAM_FIXTURES=1 (the Playwright suite). Any other build has fixture mode compiled out, so a
+    // stray runtime variable on a host can never make the app serve fictional referral or drug data.
+    CRC_FIXTURE_BUILD: process.env.E2E_UPSTREAM_FIXTURES?.trim() === "1" ? "1" : "0",
+  },
   async headers() {
     return [
       { source: "/:path*", headers: securityHeaders },

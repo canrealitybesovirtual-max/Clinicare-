@@ -8,7 +8,8 @@
  * - No identifier fields exist anywhere in the draft or the export.
  */
 import { scrubPHI } from "@/lib/phi-scrubber";
-import type { PlanLibrary } from "@/lib/schemas-phase2";
+import { planTextIsSud, planTextOf, type PlanLibrary } from "@/lib/schemas-phase2";
+import { mentionsSubstanceUse } from "@/lib/substance-terms";
 import type { PlanExport } from "@/lib/plan-export";
 
 /* ------------------------------------------------------------------ props passed from the server */
@@ -47,6 +48,8 @@ export interface PlanTextItem {
   /** The library's original wording; absent for items the clinician added. */
   libraryText?: string;
   selected: boolean;
+  /** G6: the library tags this item as recording substance use (42 CFR Part 2 notice on export). */
+  sud?: boolean;
 }
 
 export interface PlanObjectiveDraft extends PlanTextItem {
@@ -113,7 +116,13 @@ export type ItemList = "definitions" | "goals" | "objectives";
 
 /* ------------------------------------------------------------------ construction */
 
-const item = (id: string, text: string): PlanTextItem => ({ id, text, libraryText: text, selected: false });
+const item = (id: string, text: string, sud = false): PlanTextItem => ({
+  id,
+  text,
+  libraryText: text,
+  selected: false,
+  ...(sud ? { sud: true } : {}),
+});
 
 /** A fresh draft for one plan library. Nothing is selected (G3: a clinician click adds each item). */
 export function createDraft(option: Pick<PlanLibraryOption, "conditionId" | "library">, measures: readonly MeasureOption[]): PlanDraft {
@@ -124,10 +133,10 @@ export function createDraft(option: Pick<PlanLibraryOption, "conditionId" | "lib
     problems: library.problems.map((p) => ({
       id: p.id,
       label: item(`${p.id}-label`, p.label),
-      definitions: p.definitions.map((d, i) => item(`${p.id}-def-${i + 1}`, d)),
-      goals: p.longTermGoals.map((g, i) => item(`${p.id}-goal-${i + 1}`, g)),
+      definitions: p.definitions.map((d, i) => item(`${p.id}-def-${i + 1}`, planTextOf(d), planTextIsSud(d))),
+      goals: p.longTermGoals.map((g, i) => item(`${p.id}-goal-${i + 1}`, planTextOf(g), planTextIsSud(g))),
       objectives: p.shortTermObjectives.map((o) => ({
-        ...item(`${p.id}-obj-${o.id}`, o.text),
+        ...item(`${p.id}-obj-${o.id}`, o.text, o.sud),
         suggestedInterventionIds: [...o.interventionIds],
         interventionIds: [],
       })),
@@ -296,6 +305,23 @@ function exportText(i: PlanTextItem): string {
 const scheduleLabel = (id: MeasureScheduleId) => MEASURE_SCHEDULES.find((s) => s.value === id)?.label ?? id;
 const reviewLabel = (id: ReviewIntervalId) => REVIEW_INTERVALS.find((s) => s.value === id)?.label ?? id;
 
+/**
+ * G6: the plan records substance use when the library is a substance-use library, a selected library item is tagged
+ * sud, or any selected wording (library, edited or the clinician's own) mentions alcohol or other substances.
+ * Then the builder shows the Part 2 Hub prompt and every export carries the 42 CFR Part 2 notice.
+ */
+export function planRecordsSubstanceUse(d: PlanDraft, option: Pick<PlanLibraryOption, "sud">): boolean {
+  if (option.sud) return true;
+  for (const p of selectedProblems(d)) {
+    const items: PlanTextItem[] = [p.label, ...p.definitions, ...p.goals, ...p.objectives].filter((i) => i.selected || i === p.label);
+    for (const i of items) {
+      if (i.sud) return true;
+      if (mentionsSubstanceUse(planText(i))) return true;
+    }
+  }
+  return false;
+}
+
 /** The plain export model (selected items only) for src/lib/plan-export.ts. */
 export function toPlanExport(
   d: PlanDraft,
@@ -308,7 +334,7 @@ export function toPlanExport(
   const { option } = ctx;
   return {
     focus: { label: option.label, icd10cm: option.icd10cm, icd11: option.icd11 },
-    sud: option.sud,
+    sud: planRecordsSubstanceUse(d, option),
     collaborativeNote: option.library.collaborativeNote,
     problems: selectedProblems(d)
       .map((p) => ({

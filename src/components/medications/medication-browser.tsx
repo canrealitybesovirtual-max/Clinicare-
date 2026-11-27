@@ -59,7 +59,7 @@ function MedicationBrowserInner({ items, categories }: Props) {
               {...PRIVATE_TEXT_FIELD_PROPS}
               placeholder="e.g., sertraline, Zoloft, SSRI"
               aria-describedby={`${ids}-hint`}
-              className="block min-h-11 w-full rounded-lg border border-border bg-surface pl-9 pr-3 text-base text-text placeholder:text-muted/80"
+              className="block min-h-11 w-full rounded-lg border border-input-border bg-surface pl-9 pr-3 text-base text-text placeholder:text-muted"
             />
           </div>
           <p id={`${ids}-hint`} className="mt-1 text-xs text-muted">
@@ -81,7 +81,7 @@ function MedicationBrowserInner({ items, categories }: Props) {
             id={`${ids}-cat`}
             value={category}
             onChange={(e) => setCategory(e.target.value as MedicationCategory | "all")}
-            className="min-h-11 w-full rounded-lg border border-border bg-surface px-3 text-base text-text sm:text-sm"
+            className="min-h-11 w-full rounded-lg border border-input-border bg-surface px-3 text-base text-text sm:text-sm"
           >
             <option value="all">All categories</option>
             {categories.map((c) => (
@@ -100,10 +100,10 @@ function MedicationBrowserInner({ items, categories }: Props) {
               type="button"
               variant="ghost"
               size="sm"
-              className="min-h-11"
               onClick={() => {
                 search.replace("");
                 setCategory("all");
+                search.ref.current?.focus();
               }}
             >
               Clear filters
@@ -125,10 +125,10 @@ function MedicationBrowserInner({ items, categories }: Props) {
             </h2>
             <ul className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
               {g.meds.map((m) => (
-                <li key={m.id}>
+                <li key={m.id} className="min-w-0">
                   <Link
                     href={`/medications/${m.id}`}
-                    className="flex min-h-11 items-start gap-2 rounded-xl border border-border bg-surface p-3 shadow-sm hover:bg-surface-2"
+                    className="flex h-full min-h-11 items-start gap-2 rounded-xl border border-border bg-surface p-3 shadow-sm transition-colors hover:border-accent hover:bg-surface-2"
                   >
                     <span className="min-w-0 flex-1">
                       <span className="block font-semibold text-text">{m.name}</span>

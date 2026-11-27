@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowRight, Globe, MessagesSquare, Phone, Siren, Sparkles, Stethoscope } from "lucide-react";
+import { ArrowRight, Globe, LifeBuoy, MessagesSquare, Phone, Siren, Sparkles, Stethoscope } from "lucide-react";
 import { getHandout } from "@/lib/content";
 import { clientSafeSources } from "@/lib/client-safe";
 import { Card } from "@/components/ui/card";
@@ -11,19 +11,20 @@ import { DownloadPdfButton } from "@/components/pdf/download-pdf-button";
 import { HandoutBody } from "@/components/handouts/handout-body";
 import { ReviewBadge } from "@/components/content/content-bits";
 import { TalkToSomeone } from "@/components/client/talk-to-someone";
-import { CLIENT_TOPICS } from "@/components/client/topics";
+import { groupClientTopics } from "@/components/client/topics";
 
 export const metadata: Metadata = { title: "Self-help" };
 
 /*
  * Client mode (G3): plain language (grades 6-8), crisis information first, no diagnosis names,
- * no codes, no scores, and no links into clinician screens other than the header mode switch.
+ * no codes, no scores, and no links into clinician screens (the header's "Clinician view" asks first).
  */
 
 export default function ClientPage() {
   const pmr = getHandout("pmr-homework");
   // Same client-safe rule as the printed PDF (src/lib/client-safe.ts): no titles that name a condition.
   const plainSources = pmr ? clientSafeSources(pmr.sources) : [];
+  const { crisis, groups } = groupClientTopics();
 
   return (
     <div className="mx-auto max-w-3xl space-y-8">
@@ -46,6 +47,28 @@ export default function ClientPage() {
         </Card>
       </section>
 
+      {crisis.length ? (
+        <section aria-labelledby="safety-topics">
+          <h2 id="safety-topics" className="text-lg font-bold">
+            Staying safe
+          </h2>
+          <ul className="mt-3 grid gap-2 sm:grid-cols-2">
+            {crisis.map((t) => (
+              <li key={t.id}>
+                <Link
+                  href={`/client/topics/${t.id}`}
+                  className="group flex min-h-12 items-center gap-2 rounded-xl border border-border border-l-[6px] border-l-crisis bg-surface px-4 py-2.5 text-sm font-semibold transition-colors hover:bg-surface-2"
+                >
+                  <LifeBuoy aria-hidden className="size-4 shrink-0 text-crisis" />
+                  <span className="min-w-0 flex-1">{t.label}</span>
+                  <ArrowRight aria-hidden className="size-4 shrink-0 text-muted transition-transform group-hover:translate-x-0.5" />
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
+
       <TalkToSomeone id="talk-1" title="Talk with a licensed professional" />
 
       <section aria-labelledby="topics-heading">
@@ -53,19 +76,28 @@ export default function ClientPage() {
           What would you like help with?
         </h2>
         <p className="mt-1 text-muted">Pick a topic to read trusted health pages and find skills to try.</p>
-        <ul className="mt-4 grid gap-2 sm:grid-cols-2">
-          {CLIENT_TOPICS.map((t) => (
-            <li key={t.id}>
-              <Link
-                href={`/client/topics/${t.id}`}
-                className="group flex min-h-12 items-center justify-between gap-2 rounded-xl border border-border bg-surface px-4 py-2.5 text-sm font-semibold transition-colors hover:border-accent hover:bg-accent-soft"
-              >
-                <span>{t.label}</span>
-                <ArrowRight aria-hidden className="size-4 shrink-0 text-muted transition-transform group-hover:translate-x-0.5" />
-              </Link>
-            </li>
+        <div className="mt-4 space-y-5">
+          {groups.map((g) => (
+            <div key={g.id}>
+              <h3 id={`topics-${g.id}`} className="text-base font-semibold">
+                {g.label}
+              </h3>
+              <ul aria-labelledby={`topics-${g.id}`} className="mt-2 grid gap-2 sm:grid-cols-2">
+                {g.topics.map((t) => (
+                  <li key={t.id}>
+                    <Link
+                      href={`/client/topics/${t.id}`}
+                      className="group flex min-h-12 items-center justify-between gap-2 rounded-xl border border-border bg-surface px-4 py-2.5 text-sm font-semibold transition-colors hover:border-accent hover:bg-accent-soft"
+                    >
+                      <span>{t.label}</span>
+                      <ArrowRight aria-hidden className="size-4 shrink-0 text-muted transition-transform group-hover:translate-x-0.5" />
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
           ))}
-        </ul>
+        </div>
       </section>
 
       {pmr ? (

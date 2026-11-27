@@ -1,0 +1,2835 @@
+{
+  "_about": "Fictional e2e fixture data in the upstream's response shape (E2E_UPSTREAM_FIXTURES=1, tests only). RxCUIs and brand names are the curated values from content/medications.json.",
+  "upstream": "nlm-rxnav",
+  "responses": [
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "fluoxetine"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "fluoxetine",
+          "rxnormId": [
+            "4493"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/4493/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "fluoxetine 10 MG Oral Tablet [Prozac]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "sertraline"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "sertraline",
+          "rxnormId": [
+            "36437"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/36437/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "sertraline 10 MG Oral Tablet [Zoloft]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "paroxetine"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "paroxetine",
+          "rxnormId": [
+            "32937"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/32937/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "paroxetine 10 MG Oral Tablet [PAXIL]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "citalopram"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "citalopram",
+          "rxnormId": [
+            "2556"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/2556/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "citalopram 10 MG Oral Tablet [Celexa]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "escitalopram"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "escitalopram",
+          "rxnormId": [
+            "321988"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/321988/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "escitalopram 10 MG Oral Tablet [Lexapro]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "fluvoxamine"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "fluvoxamine",
+          "rxnormId": [
+            "42355"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/42355/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "venlafaxine"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "venlafaxine",
+          "rxnormId": [
+            "39786"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/39786/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "venlafaxine 10 MG Oral Tablet [Effexor XR]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "desvenlafaxine"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "desvenlafaxine",
+          "rxnormId": [
+            "734064"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/734064/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "desvenlafaxine 10 MG Oral Tablet [Pristiq Extended-Release]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "duloxetine"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "duloxetine",
+          "rxnormId": [
+            "72625"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/72625/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "duloxetine 10 MG Oral Tablet [Cymbalta]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "levomilnacipran"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "levomilnacipran",
+          "rxnormId": [
+            "1433212"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/1433212/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "levomilnacipran 10 MG Oral Tablet [Fetzima]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "bupropion"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "bupropion",
+          "rxnormId": [
+            "42347"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/42347/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "bupropion 10 MG Oral Tablet [WELLBUTRIN XL]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "bupropion / dextromethorphan"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "bupropion / dextromethorphan",
+          "rxnormId": [
+            "2611256"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/2611256/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "bupropion / dextromethorphan 10 MG Oral Tablet [AUVELITY]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "mirtazapine"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "mirtazapine",
+          "rxnormId": [
+            "15996"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/15996/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "mirtazapine 10 MG Oral Tablet [REMERON]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "trazodone"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "trazodone",
+          "rxnormId": [
+            "10737"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/10737/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "trazodone 10 MG Oral Tablet [Raldesy]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "vortioxetine"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "vortioxetine",
+          "rxnormId": [
+            "1455099"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/1455099/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "vortioxetine 10 MG Oral Tablet [Trintellix]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "vilazodone"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "vilazodone",
+          "rxnormId": [
+            "1086769"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/1086769/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "vilazodone 10 MG Oral Tablet [VIIBRYD]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "nefazodone"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "nefazodone",
+          "rxnormId": [
+            "31565"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/31565/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "gepirone"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "gepirone",
+          "rxnormId": [
+            "2672253"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/2672253/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "gepirone 10 MG Oral Tablet [EXXUA]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "amitriptyline"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "amitriptyline",
+          "rxnormId": [
+            "704"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/704/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "amitriptyline 10 MG Oral Tablet [Elavil]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "nortriptyline"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "nortriptyline",
+          "rxnormId": [
+            "7531"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/7531/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "nortriptyline 10 MG Oral Tablet [PAMELOR]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "imipramine"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "imipramine",
+          "rxnormId": [
+            "5691"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/5691/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "clomipramine"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "clomipramine",
+          "rxnormId": [
+            "2597"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/2597/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "clomipramine 10 MG Oral Tablet [ANAFRANIL]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "desipramine"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "desipramine",
+          "rxnormId": [
+            "3247"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/3247/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "desipramine 10 MG Oral Tablet [Norpramin]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "doxepin"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "doxepin",
+          "rxnormId": [
+            "3638"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/3638/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "doxepin 10 MG Oral Tablet [Silenor]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "phenelzine"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "phenelzine",
+          "rxnormId": [
+            "8123"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/8123/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "phenelzine 10 MG Oral Tablet [Nardil]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "tranylcypromine"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "tranylcypromine",
+          "rxnormId": [
+            "10734"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/10734/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "tranylcypromine 10 MG Oral Tablet [PARNATE]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "isocarboxazid"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "isocarboxazid",
+          "rxnormId": [
+            "6011"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/6011/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "isocarboxazid 10 MG Oral Tablet [MARPLAN]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "selegiline"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "selegiline",
+          "rxnormId": [
+            "9639"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/9639/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "selegiline 10 MG Oral Tablet [EMSAM]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "buspirone"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "buspirone",
+          "rxnormId": [
+            "1827"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/1827/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "buspirone 10 MG Oral Tablet [Buspar]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "hydroxyzine"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "hydroxyzine",
+          "rxnormId": [
+            "5553"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/5553/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "hydroxyzine 10 MG Oral Tablet [Vistaril]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "alprazolam"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "alprazolam",
+          "rxnormId": [
+            "596"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/596/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "alprazolam 10 MG Oral Tablet [Xanax]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "clonazepam"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "clonazepam",
+          "rxnormId": [
+            "2598"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/2598/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "clonazepam 10 MG Oral Tablet [Klonopin]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "lorazepam"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "lorazepam",
+          "rxnormId": [
+            "6470"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/6470/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "lorazepam 10 MG Oral Tablet [Ativan]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "diazepam"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "diazepam",
+          "rxnormId": [
+            "3322"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/3322/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "diazepam 10 MG Oral Tablet [Valium]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "chlordiazepoxide"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "chlordiazepoxide",
+          "rxnormId": [
+            "2356"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/2356/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "temazepam"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "temazepam",
+          "rxnormId": [
+            "10355"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/10355/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "temazepam 10 MG Oral Tablet [RESTORIL]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "prazosin"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "prazosin",
+          "rxnormId": [
+            "8629"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/8629/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "prazosin 10 MG Oral Tablet [Minipress]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "propranolol"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "propranolol",
+          "rxnormId": [
+            "8787"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/8787/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "propranolol 10 MG Oral Tablet [INDERAL LA]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "lithium"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "lithium",
+          "rxnormId": [
+            "6448"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/6448/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "lithium 10 MG Oral Tablet [LITHOBID]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "valproate"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "valproate",
+          "rxnormId": [
+            "40254"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/40254/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "valproate 10 MG Oral Tablet [Depakote]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "lamotrigine"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "lamotrigine",
+          "rxnormId": [
+            "28439"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/28439/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "lamotrigine 10 MG Oral Tablet [LAMICTAL]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "carbamazepine"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "carbamazepine",
+          "rxnormId": [
+            "2002"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/2002/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "carbamazepine 10 MG Oral Tablet [EQUETRO]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "aripiprazole"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "aripiprazole",
+          "rxnormId": [
+            "89013"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/89013/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "aripiprazole 10 MG Oral Tablet [ABILIFY]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "brexpiprazole"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "brexpiprazole",
+          "rxnormId": [
+            "1658314"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/1658314/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "brexpiprazole 10 MG Oral Tablet [Rexulti]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "cariprazine"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "cariprazine",
+          "rxnormId": [
+            "1667655"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/1667655/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "cariprazine 10 MG Oral Tablet [Vraylar]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "quetiapine"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "quetiapine",
+          "rxnormId": [
+            "51272"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/51272/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "quetiapine 10 MG Oral Tablet [SEROQUEL]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "olanzapine"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "olanzapine",
+          "rxnormId": [
+            "61381"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/61381/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "olanzapine 10 MG Oral Tablet [Zyprexa]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "risperidone"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "risperidone",
+          "rxnormId": [
+            "35636"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/35636/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "risperidone 10 MG Oral Tablet [Perseris]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "paliperidone"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "paliperidone",
+          "rxnormId": [
+            "679314"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/679314/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "paliperidone 10 MG Oral Tablet [INVEGA]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "ziprasidone"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "ziprasidone",
+          "rxnormId": [
+            "115698"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/115698/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "ziprasidone 10 MG Oral Tablet [Geodon]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "lurasidone"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "lurasidone",
+          "rxnormId": [
+            "1040028"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/1040028/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "lurasidone 10 MG Oral Tablet [Latuda]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "lumateperone"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "lumateperone",
+          "rxnormId": [
+            "2275602"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/2275602/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "lumateperone 10 MG Oral Tablet [CAPLYTA]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "asenapine"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "asenapine",
+          "rxnormId": [
+            "784649"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/784649/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "asenapine 10 MG Oral Tablet [SAPHRIS]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "iloperidone"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "iloperidone",
+          "rxnormId": [
+            "73178"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/73178/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "iloperidone 10 MG Oral Tablet [FANAPT]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "clozapine"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "clozapine",
+          "rxnormId": [
+            "2626"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/2626/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "clozapine 10 MG Oral Tablet [Clozaril]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "trospium / xanomeline"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "trospium / xanomeline",
+          "rxnormId": [
+            "2694836"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/2694836/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "trospium / xanomeline 10 MG Oral Tablet [Cobenfy]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "esketamine"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "esketamine",
+          "rxnormId": [
+            "2119365"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/2119365/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "esketamine 10 MG Oral Tablet [Spravato]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "zuranolone"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "zuranolone",
+          "rxnormId": [
+            "2669905"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/2669905/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "zuranolone 10 MG Oral Tablet [Zurzuvae]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "brexanolone"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "brexanolone",
+          "rxnormId": [
+            "2121777"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/2121777/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "brexanolone 10 MG Oral Tablet [Zulresso]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "naltrexone"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "naltrexone",
+          "rxnormId": [
+            "7243"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/7243/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "naltrexone 10 MG Oral Tablet [ReVia]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "acamprosate"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "acamprosate",
+          "rxnormId": [
+            "82819"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/82819/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "disulfiram"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "disulfiram",
+          "rxnormId": [
+            "3554"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/3554/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "disulfiram 10 MG Oral Tablet [Antabuse]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "topiramate"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "topiramate",
+          "rxnormId": [
+            "38404"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/38404/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "topiramate 10 MG Oral Tablet [Topamax]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "gabapentin"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "gabapentin",
+          "rxnormId": [
+            "25480"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/25480/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "gabapentin 10 MG Oral Tablet [Neurontin]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "suvorexant"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "suvorexant",
+          "rxnormId": [
+            "1547099"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/1547099/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "suvorexant 10 MG Oral Tablet [BELSOMRA]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "lemborexant"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "lemborexant",
+          "rxnormId": [
+            "2272403"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/2272403/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "lemborexant 10 MG Oral Tablet [DAYVIGO]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "daridorexant"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "daridorexant",
+          "rxnormId": [
+            "2591497"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/2591497/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "daridorexant 10 MG Oral Tablet [QUVIVIQ]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "zolpidem"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "zolpidem",
+          "rxnormId": [
+            "39993"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/39993/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "zolpidem 10 MG Oral Tablet [Ambien]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "eszopiclone"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "eszopiclone",
+          "rxnormId": [
+            "461016"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/461016/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "eszopiclone 10 MG Oral Tablet [Lunesta]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "zaleplon"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "zaleplon",
+          "rxnormId": [
+            "74667"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/74667/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": []
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "ramelteon"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "ramelteon",
+          "rxnormId": [
+            "596205"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/596205/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "ramelteon 10 MG Oral Tablet [Rozerem]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "methylphenidate"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "methylphenidate",
+          "rxnormId": [
+            "6901"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/6901/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "methylphenidate 10 MG Oral Tablet [CONCERTA]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "amphetamine"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "amphetamine",
+          "rxnormId": [
+            "725"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/725/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "amphetamine 10 MG Oral Tablet [Adderall XR]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "lisdexamfetamine"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "lisdexamfetamine",
+          "rxnormId": [
+            "700810"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/700810/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "lisdexamfetamine 10 MG Oral Tablet [Vyvanse]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "atomoxetine"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "atomoxetine",
+          "rxnormId": [
+            "38400"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/38400/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "atomoxetine 10 MG Oral Tablet [Strattera]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "viloxazine"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "viloxazine",
+          "rxnormId": [
+            "11196"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/11196/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "viloxazine 10 MG Oral Tablet [QELBREE]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "valbenazine"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "valbenazine",
+          "rxnormId": [
+            "1918219"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/1918219/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "valbenazine 10 MG Oral Tablet [INGREZZA]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui.json",
+        "query": {
+          "name": "deutetrabenazine"
+        }
+      },
+      "json": {
+        "idGroup": {
+          "name": "deutetrabenazine",
+          "rxnormId": [
+            "1876905"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxcui/1876905/related.json"
+      },
+      "json": {
+        "relatedGroup": {
+          "conceptGroup": [
+            {
+              "tty": "SBD",
+              "conceptProperties": [
+                {
+                  "rxcui": "1",
+                  "name": "deutetrabenazine 10 MG Oral Tablet [AUSTEDO]"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxclass/class/byDrugName.json",
+        "query": {
+          "relaSource": "ATC"
+        }
+      },
+      "json": {
+        "rxclassDrugInfoList": {
+          "rxclassDrugInfo": [
+            {
+              "rxclassMinConceptItem": {
+                "classId": "N06AX",
+                "className": "Fixture ATC class",
+                "classType": "ATC1-4"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/rxclass/class/byDrugName.json",
+        "query": {
+          "relaSource": "DAILYMED"
+        }
+      },
+      "json": {
+        "rxclassDrugInfoList": {
+          "rxclassDrugInfo": [
+            {
+              "rxclassMinConceptItem": {
+                "classId": "N0000000001",
+                "className": "Fixture Established Pharmacologic Class",
+                "classType": "EPC"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "note": "any other drug name",
+      "when": {
+        "path": "/rxcui.json"
+      },
+      "json": {
+        "idGroup": {}
+      }
+    }
+  ]
+}

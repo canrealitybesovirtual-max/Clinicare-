@@ -1,15 +1,20 @@
 "use client";
 import * as React from "react";
+import { Check } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 export interface Choice<V extends string> {
   value: V;
   label: string;
+  /** Language of the label when it differs from the page (WCAG 3.1.2), for example "es" for "Español". */
+  lang?: string;
 }
 
 /**
  * Native radio group rendered as a segmented control (fieldset + legend, real radio inputs,
  * arrow-key navigation from the browser). Targets are at least 44px tall.
+ * The checked option is a light tint with a ring and a check mark (not a solid fill), so default answers such as
+ * "Not recorded" never look heavier than real findings; the check mark also shows in forced-colours mode.
  */
 export function ChoiceGroup<V extends string>({
   legend,
@@ -42,8 +47,9 @@ export function ChoiceGroup<V extends string>({
           <label
             key={o.value}
             className={cn(
-              "relative flex min-h-11 cursor-pointer select-none items-center justify-center rounded-lg border border-border bg-surface px-2 py-1.5 text-center text-sm leading-tight text-text transition-colors hover:bg-surface-2",
-              "has-[:checked]:border-primary has-[:checked]:bg-primary has-[:checked]:font-semibold has-[:checked]:text-primary-fg",
+              "group relative flex min-h-11 cursor-pointer select-none items-center justify-center gap-1.5 rounded-lg border border-border bg-surface px-2 py-1.5 text-center text-sm leading-tight text-text transition-colors hover:bg-surface-2",
+              "has-[:checked]:border-primary has-[:checked]:bg-primary/10 has-[:checked]:font-semibold has-[:checked]:text-text has-[:checked]:ring-2 has-[:checked]:ring-primary dark:has-[:checked]:bg-primary/20",
+              "forced-colors:has-[:checked]:outline forced-colors:has-[:checked]:outline-2 forced-colors:has-[:checked]:outline-[Highlight]",
               "has-[:focus-visible]:outline-3 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-[var(--focus)]",
             )}
           >
@@ -55,7 +61,8 @@ export function ChoiceGroup<V extends string>({
               checked={value === o.value}
               onChange={() => onChange(o.value)}
             />
-            {o.label}
+            <Check aria-hidden className="hidden size-4 shrink-0 text-primary group-has-[:checked]:inline-block" />
+            <span lang={o.lang}>{o.label}</span>
           </label>
         ))}
       </div>

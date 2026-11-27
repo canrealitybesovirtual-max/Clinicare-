@@ -7,6 +7,7 @@ import { AdultOnly } from "@/components/measures/adult-only";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogClose, DialogContent, DialogDescription, DialogTitle } from "@/components/ui/dialog";
+import { Disclosure } from "@/components/ui/disclosure";
 import { ExternalLink } from "@/components/ui/external-link";
 import { Notice } from "@/components/ui/notice";
 import { cn } from "@/lib/utils";
@@ -17,6 +18,7 @@ import {
   isCustom,
   isEdited,
   planCounts,
+  planRecordsSubstanceUse,
   setStep,
   type PlanCounts,
   type PlanDraft,
@@ -104,8 +106,18 @@ function BuilderInner({ options, interventions, measures, sudPrompt }: PlanBuild
 
   const update = React.useCallback((fn: (d: PlanDraft) => PlanDraft) => updateRef.current((prev) => (prev ? fn(prev) : prev)), []);
 
+  /* ---- small screens: the step select changes step only on "Go" (WCAG 3.2.2: no change of context on input) */
+  const [pickedStep, setPickedStep] = React.useState<PlanStepId>(step);
+  React.useEffect(() => setPickedStep(step), [step]);
+
   /* ---- choosing, switching and clearing the plan library */
-  const [confirm, setConfirm] = React.useState<{ kind: "switch"; to: string } | { kind: "clear" } | null>(null);
+  const [confirm, setConfirmState] = React.useState<{ kind: "switch"; to: string } | { kind: "clear" } | null>(null);
+  // The confirm dialog has no trigger element: remember what opened it so focus can go back there on close.
+  const openerRef = React.useRef<HTMLElement | null>(null);
+  const setConfirm = (next: { kind: "switch"; to: string } | { kind: "clear" } | null) => {
+    if (next && typeof document !== "undefined") openerRef.current = document.activeElement as HTMLElement | null;
+    setConfirmState(next);
+  };
   const start = (conditionId: string) => {
     const opt = optionMap.get(conditionId);
     if (opt) updateRef.current(createDraft(opt, measures));
@@ -123,6 +135,8 @@ function BuilderInner({ options, interventions, measures, sudPrompt }: PlanBuild
   const prev = PLAN_STEPS[index - 1];
   const next = PLAN_STEPS[index + 1];
   const counts = draft ? planCounts(draft) : null;
+  // G6: a substance-use library, a tagged item, or plan wording that mentions substance use.
+  const recordsSud = draft && option ? planRecordsSubstanceUse(draft, option) : false;
 
   return (
     <div className="space-y-6">
@@ -140,7 +154,6 @@ function BuilderInner({ options, interventions, measures, sudPrompt }: PlanBuild
             <Button
               type="button"
               size="sm"
-              className="min-h-11"
               onClick={() => {
                 start(conflict.conditionId);
                 setParamDismissed(true);
@@ -148,7 +161,7 @@ function BuilderInner({ options, interventions, measures, sudPrompt }: PlanBuild
             >
               Start a new plan for {conflict.label}
             </Button>
-            <Button type="button" variant="outline" size="sm" className="min-h-11" onClick={() => setParamDismissed(true)}>
+            <Button type="button" variant="outline" size="sm" onClick={() => setParamDismissed(true)}>
               Keep working on {option.label}
             </Button>
           </div>
@@ -163,12 +176,24 @@ function BuilderInner({ options, interventions, measures, sudPrompt }: PlanBuild
             </Badge>
             <Badge tone="neutral">Plan library: {option.label}</Badge>
             {option.library.reviewedBy === "PENDING" ? <Badge tone="warn">Not yet clinically reviewed</Badge> : null}
-            {option.sud ? <Badge tone="warn">42 CFR Part 2</Badge> : null}
+            {recordsSud ? <Badge tone="warn">42 CFR Part 2</Badge> : null}
           </div>
-          <Notice tone="accent" icon={Users} title={PLAN_COLLAB_TITLE} titleAs="h2">
-            <p>{option.library.collaborativeNote}</p>
-          </Notice>
-          {option.sud ? sudPrompt : null}
+          {step === "focus" ? (
+            <Notice tone="accent" icon={Users} title={PLAN_COLLAB_TITLE} titleAs="h2">
+              <p>{option.library.collaborativeNote}</p>
+            </Notice>
+          ) : (
+            // After the focus step the guidance folds away so each step starts near the top of the screen.
+            <Disclosure
+              title={PLAN_COLLAB_TITLE}
+              icon={Users}
+              bordered={false}
+              className="rounded-xl border border-accent/30 bg-accent-soft px-4"
+            >
+              <p>{option.library.collaborativeNote}</p>
+            </Disclosure>
+          )}
+          {recordsSud ? sudPrompt : null}
         </div>
       ) : null}
 
@@ -187,12 +212,15 @@ function BuilderInner({ options, interventions, measures, sudPrompt }: PlanBuild
                   onClick={() => goTo(s.id)}
                   className={cn(
                     "inline-flex min-h-11 items-center gap-2 rounded-full border px-3 text-sm font-medium transition-colors disabled:opacity-50",
-                    isCurrent ? "border-primary bg-primary text-primary-fg" : "border-border bg-surface text-text hover:bg-surface-2",
+                    "forced-colors:aria-[current=step]:outline forced-colors:aria-[current=step]:outline-2 forced-colors:aria-[current=step]:outline-[Highlight]",
+                    isCurrent
+                      ? "border-primary-solid bg-primary-solid text-primary-solid-fg"
+                      : "border-border bg-surface text-text hover:bg-surface-2",
                   )}
                 >
                   <span className="font-semibold">{i + 1}.</span> {s.label}{" "}
                   {n > 0 ? (
-                    <span className={cn("rounded-full px-1.5 text-xs", isCurrent ? "bg-primary-fg/20" : "bg-accent-soft text-accent")}>
+                    <span className={cn("rounded-full px-1.5 text-xs", isCurrent ? "bg-black/25" : "bg-accent-soft text-accent")}>
                       {n}{" "}
                       <span className="sr-only">chosen</span>
                     </span>
@@ -203,22 +231,44 @@ function BuilderInner({ options, interventions, measures, sudPrompt }: PlanBuild
           })}
         </ol>
         <div className="sm:hidden">
-          <label htmlFor="plan-step-select" className="text-sm font-semibold">
-            Go to step
-          </label>
-          <select
-            id="plan-step-select"
-            value={step}
-            disabled={!draft}
-            onChange={(e) => goTo(e.target.value as PlanStepId)}
-            className="mt-1.5 block min-h-11 w-full rounded-lg border border-border bg-surface px-3 text-base text-text"
+          <p className="flex items-baseline justify-between text-sm">
+            <span className="font-semibold">
+              Step {index + 1} of {PLAN_STEPS.length}
+            </span>
+            <span className="text-muted">{current.label}</span>
+          </p>
+          <div aria-hidden className="mt-1.5 h-1.5 overflow-hidden rounded-full bg-border/70">
+            <div className="h-full rounded-full bg-accent" style={{ width: `${((index + 1) / PLAN_STEPS.length) * 100}%` }} />
+          </div>
+          <form
+            className="mt-3 flex items-end gap-2"
+            onSubmit={(e) => {
+              e.preventDefault();
+              if (draft && pickedStep !== step) goTo(pickedStep);
+            }}
           >
-            {PLAN_STEPS.map((s, i) => (
-              <option key={s.id} value={s.id}>
-                {i + 1}. {s.label}
-              </option>
-            ))}
-          </select>
+            <div className="min-w-0 flex-1">
+              <label htmlFor="plan-step-select" className="text-sm font-semibold">
+                Go to step
+              </label>
+              <select
+                id="plan-step-select"
+                value={pickedStep}
+                disabled={!draft}
+                onChange={(e) => setPickedStep(e.target.value as PlanStepId)}
+                className="mt-1.5 block min-h-11 w-full rounded-lg border border-input-border bg-surface px-3 text-base text-text"
+              >
+                {PLAN_STEPS.map((s, i) => (
+                  <option key={s.id} value={s.id}>
+                    {i + 1}. {s.label}
+                  </option>
+                ))}
+              </select>
+            </div>
+            <Button type="submit" variant="outline" disabled={!draft}>
+              Go
+            </Button>
+          </form>
         </div>
       </nav>
 
@@ -230,24 +280,46 @@ function BuilderInner({ options, interventions, measures, sudPrompt }: PlanBuild
           {current.label}
         </h2>
 
-        {step === "focus" || !ctx ? (
-          <FocusStep
-            options={options}
-            option={option}
-            onChoose={choose}
-            onStartOver={() => (draft && hasWork(draft) ? setConfirm({ kind: "clear" }) : updateRef.current(null))}
-          />
-        ) : (
-          <PlanContext.Provider value={ctx}>
-            {step === "problems" ? <ProblemsStep /> : null}
-            {step === "definitions" ? <ListStep list="definitions" /> : null}
-            {step === "goals" ? <ListStep list="goals" /> : null}
-            {step === "objectives" ? <ListStep list="objectives" /> : null}
-            {step === "interventions" ? <InterventionsStep /> : null}
-            {step === "measures" ? <MeasuresStep /> : null}
-            {step === "review" ? <ReviewStep /> : null}
-          </PlanContext.Provider>
-        )}
+        {/* Small screens: Back / Next at the top too, so long steps do not need a scroll to move on. */}
+        {draft && (prev || next) ? (
+          <div className="flex items-center justify-between gap-2 sm:hidden">
+            {prev ? (
+              <Button type="button" variant="outline" size="sm" aria-label={`Back one step, to ${prev.label}`} onClick={() => goTo(prev.id)}>
+                <ArrowLeft aria-hidden />
+                Back
+              </Button>
+            ) : (
+              <span />
+            )}
+            {next ? (
+              <Button type="button" variant="outline" size="sm" aria-label={`Next step, ${next.label}`} onClick={() => goTo(next.id)}>
+                Next
+                <ArrowRight aria-hidden />
+              </Button>
+            ) : null}
+          </div>
+        ) : null}
+
+        <div className="max-w-3xl space-y-5">
+          {step === "focus" || !ctx ? (
+            <FocusStep
+              options={options}
+              option={option}
+              onChoose={choose}
+              onStartOver={() => (draft && hasWork(draft) ? setConfirm({ kind: "clear" }) : updateRef.current(null))}
+            />
+          ) : (
+            <PlanContext.Provider value={ctx}>
+              {step === "problems" ? <ProblemsStep /> : null}
+              {step === "definitions" ? <ListStep list="definitions" /> : null}
+              {step === "goals" ? <ListStep list="goals" /> : null}
+              {step === "objectives" ? <ListStep list="objectives" /> : null}
+              {step === "interventions" ? <InterventionsStep /> : null}
+              {step === "measures" ? <MeasuresStep /> : null}
+              {step === "review" ? <ReviewStep /> : null}
+            </PlanContext.Provider>
+          )}
+        </div>
 
         {draft ? (
           <div className="flex flex-wrap items-center justify-between gap-2 border-t border-border pt-4">
@@ -270,7 +342,14 @@ function BuilderInner({ options, interventions, measures, sudPrompt }: PlanBuild
       </section>
 
       <Dialog open={confirm !== null} onOpenChange={(open) => (!open ? setConfirm(null) : undefined)}>
-        <DialogContent>
+        <DialogContent
+          onCloseAutoFocus={(e) => {
+            // No DialogTrigger: return focus to the control that opened the dialog, or to the step heading.
+            e.preventDefault();
+            const el = openerRef.current;
+            (el && el.isConnected ? el : headingRef.current)?.focus();
+          }}
+        >
           <DialogTitle>
             {confirm?.kind === "switch" ? `Start a new plan for ${optionMap.get(confirm.to)?.label ?? "this condition"}?` : "Start over?"}
           </DialogTitle>
@@ -329,7 +408,7 @@ function FocusStep({
           aria-describedby="plan-condition-hint"
           value={option?.conditionId ?? ""}
           onChange={(e) => onChoose(e.target.value)}
-          className="mt-2 block min-h-11 w-full max-w-md rounded-lg border border-border bg-surface px-3 text-base text-text"
+          className="mt-2 block min-h-11 w-full max-w-md rounded-lg border border-input-border bg-surface px-3 text-base text-text"
         >
           <option value="" disabled={Boolean(option)}>
             Choose a condition…
@@ -354,12 +433,8 @@ function FocusStep({
             {option.library.problems.reduce((n, p) => n + p.shortTermObjectives.length, 0)} objectives in this library.
             Original wording; edit everything with the client.
           </p>
-          <details className="group">
-            <summary className="inline-flex min-h-11 cursor-pointer items-center gap-2 font-semibold text-accent">
-              <BookOpen aria-hidden className="size-4" />
-              Library sources ({option.library.sources.length})
-            </summary>
-            <ul className="mt-2 space-y-1.5">
+          <Disclosure title={`Library sources (${option.library.sources.length})`} icon={BookOpen} bordered={false} bodyClassName="pb-1">
+            <ul className="space-y-1.5">
               {option.library.sources.map((s) => (
                 <li key={s.url + s.title}>
                   <ExternalLink href={s.url}>{s.title}</ExternalLink>
@@ -375,8 +450,8 @@ function FocusStep({
               License: original wording (app-authored) · Last verified {option.library.lastVerified} · Clinical review:{" "}
               {option.library.reviewedBy === "PENDING" ? "pending" : option.library.reviewedBy}
             </p>
-          </details>
-          <Button type="button" variant="ghost" size="sm" className="min-h-11" onClick={onStartOver}>
+          </Disclosure>
+          <Button type="button" variant="ghost" size="sm" onClick={onStartOver}>
             <RotateCcw aria-hidden />
             Start over
           </Button>

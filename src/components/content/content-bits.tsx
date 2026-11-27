@@ -1,5 +1,6 @@
 import * as React from "react";
-import { BookOpen, ClipboardCheck } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight, BookOpen, ClipboardCheck } from "lucide-react";
 import type { Source, Stat } from "@/lib/schemas";
 import { isStatStale } from "@/lib/content";
 import { Badge } from "@/components/ui/badge";
@@ -41,9 +42,7 @@ export function StatCard({ stat, compact = false, headingLevel = "h3" }: { stat:
       <div className="flex flex-wrap items-center gap-1.5">
         <Badge tone="neutral">{stat.region === "US" ? "United States" : "Worldwide"}</Badge>
         {stale ? (
-          <Badge tone="warn" title="Data are more than 5 years old">
-            Older data
-          </Badge>
+          <Badge tone="warn">Older data (over 5 years)</Badge>
         ) : null}
       </div>
       <H className={cn("mt-3 font-bold tracking-tight text-primary dark:text-text", compact ? "text-2xl" : "text-3xl")}>
@@ -111,18 +110,40 @@ export function PageIntro({
   eyebrow,
   children,
   badges,
+  compact = false,
 }: {
   title: string;
   eyebrow?: string;
   children?: React.ReactNode;
   badges?: React.ReactNode;
+  /** Tool pages: hide the description below sm so the tool starts higher on phones. */
+  compact?: boolean;
 }) {
   return (
-    <div className="mb-6 max-w-3xl">
+    <div className={cn("max-w-3xl", compact ? "mb-4 sm:mb-6" : "mb-6")}>
       {eyebrow ? <p className="text-sm font-semibold uppercase tracking-wide text-accent">{eyebrow}</p> : null}
       <h1 className="mt-1 text-2xl font-bold tracking-tight sm:text-3xl">{title}</h1>
       {badges ? <div className="mt-3 flex flex-wrap gap-2">{badges}</div> : null}
-      {children ? <div className="mt-3 space-y-2 text-base leading-relaxed text-muted">{children}</div> : null}
+      {children ? (
+        <div className={cn("mt-3 space-y-2 text-base leading-relaxed text-muted", compact && "hidden sm:block")}>
+          {children}
+        </div>
+      ) : null}
     </div>
+  );
+}
+
+/** Consistent "Next: <step>" link at the end of a clinical-flow page. Curated paths only. */
+export function NextStep({ href, label, className }: { href: string; label: string; className?: string }) {
+  return (
+    <p className={cn("mt-8", className)}>
+      <Link
+        href={href}
+        className="inline-flex min-h-11 items-center gap-1.5 rounded-lg font-semibold text-accent underline decoration-accent/40 underline-offset-2 hover:decoration-accent"
+      >
+        Next: {label}
+        <ArrowRight aria-hidden className="size-4" />
+      </Link>
+    </p>
   );
 }

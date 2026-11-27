@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { ArrowLeft, Clock, Globe, MessageSquareText, Phone, Siren } from "lucide-react";
+import { ArrowLeft, Clock, Globe, Siren } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { ExternalLink } from "@/components/ui/external-link";
 import { CrisisPanel } from "@/components/crisis/crisis-panel";
 import { TalkToSomeone } from "@/components/client/talk-to-someone";
 import { helpRegions, type HelpEntry } from "@/components/client/help-directory";
+import { HelplineActions } from "@/components/referrals/helpline-actions";
 
 export const metadata: Metadata = { title: "Where to get help" };
 
@@ -17,27 +18,12 @@ function Entry({ e }: { e: HelpEntry }) {
       <h3 className="font-semibold">{e.name}</h3>
       {e.description ? <p className="mt-1 text-sm leading-relaxed text-muted">{e.description}</p> : null}
       {e.audience ? <p className="mt-1 text-sm text-muted">For: {e.audience}</p> : null}
-      <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm">
-        {e.phone && e.tel ? (
-          <a href={`tel:${e.tel}`} className="inline-flex min-h-11 items-center gap-1.5 font-semibold text-accent underline underline-offset-2">
-            <Phone aria-hidden className="size-4" /> Call {e.phone}
-            <span className="sr-only"> ({e.name})</span>
-          </a>
-        ) : null}
-        {e.text ? (
-          <span className="inline-flex min-h-11 items-center gap-1.5">
-            <MessageSquareText aria-hidden className="size-4 text-muted" /> {e.text}
-          </span>
-        ) : null}
-        {e.chat ? (
-          <ExternalLink href={e.chat} className="inline-flex min-h-11 items-center">
-            Chat online<span className="sr-only"> with {e.name}</span>
-          </ExternalLink>
-        ) : null}
+      <HelplineActions name={e.name} phone={e.phone} text={e.text} chat={e.chat} crisis={e.crisis} className="mt-3" />
+      <p className="mt-2 text-sm">
         <ExternalLink href={e.url} className="inline-flex min-h-11 items-center">
           Website<span className="sr-only"> of {e.name}</span>
         </ExternalLink>
-      </div>
+      </p>
       {e.phoneNote ? <p className="text-sm text-muted">{e.phoneNote}</p> : null}
       {e.hours ? (
         <p className="mt-1 flex items-center gap-1 text-xs text-muted">

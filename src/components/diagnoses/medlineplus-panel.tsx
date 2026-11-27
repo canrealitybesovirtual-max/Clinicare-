@@ -12,7 +12,7 @@ import { ExternalLink } from "@/components/ui/external-link";
 import { Notice } from "@/components/ui/notice";
 import { PART2_NOTICE } from "@/lib/referral-links";
 import { useLookup } from "./live-lookup";
-import { Attribution, LookupError, LookupLoading } from "./lookup-status";
+import { Attribution, LookupError, LookupLoading, LookupStatusLine } from "./lookup-status";
 import { LANG_CHOICES, type Lang } from "./icd11-panel";
 
 const MEDLINEPLUS_HOME: Record<Lang, string> = {
@@ -30,7 +30,21 @@ export function MedlinePlusPanel({ code, conditionId }: { code: string; conditio
         Plain-language pages matched to <span className="font-mono">{code}</span>. Only the code and the language are sent.
         Review a page before you share it with a client.
       </p>
-      <div aria-live="polite" aria-busy={state.status === "loading" || undefined}>
+      <LookupStatusLine
+        state={state}
+        what={(d) => {
+          const n = (d as MedlinePlusConnectResult).items.length;
+          return `${n} MedlinePlus page${n === 1 ? "" : "s"} loaded`;
+        }}
+      />
+      <div
+        role="group"
+        aria-label="MedlinePlus pages"
+        aria-busy={state.status === "loading" || undefined}
+        data-lookup-focus
+        tabIndex={-1}
+        className="rounded-lg"
+      >
         {state.status === "loading" || state.status === "idle" ? (
           <LookupLoading what="MedlinePlus pages" />
         ) : state.status === "error" ? (

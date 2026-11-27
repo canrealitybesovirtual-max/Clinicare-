@@ -26,7 +26,10 @@ export function ExternalLink({
     >
       {children}
       {showIcon ? <ExternalIcon aria-hidden className="ml-1 inline-block size-3.5 align-[-0.125em]" /> : null}
-      <span className="sr-only"> (opens in a new tab)</span>
+      <span className="sr-only" lang="en">
+        {" "}
+        (opens in a new tab)
+      </span>
     </a>
   );
 }

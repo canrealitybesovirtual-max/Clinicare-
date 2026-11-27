@@ -30,6 +30,7 @@ import {
   SourcesList,
   StatCard,
 } from "@/components/content/content-bits";
+import { Disclosure } from "@/components/ui/disclosure";
 import { cn } from "@/lib/utils";
 import { PART2_NOTICE } from "@/lib/referral-links";
 import { explainScore, STRENGTH_LABEL } from "./explain";
@@ -37,23 +38,19 @@ import { LazyPanel } from "./lookup-status";
 import { Icd11Panel } from "./icd11-panel";
 import { MedlinePlusPanel } from "./medlineplus-panel";
 
-function Disclosure({ title, meta, children }: { title: string; meta?: React.ReactNode; children: React.ReactNode }) {
-  return (
-    <details className="group border-t border-border">
-      <summary className="flex min-h-12 cursor-pointer list-none items-center gap-2 py-2 text-sm font-semibold hover:text-accent [&::-webkit-details-marker]:hidden">
-        <span className="flex-1">{title}</span>
-        {meta ? <span className="text-xs font-normal text-muted">{meta}</span> : null}
-        <ChevronDown aria-hidden className="size-4 text-muted transition-transform group-open:rotate-180" />
-      </summary>
-      <div className="space-y-3 pb-4 text-sm leading-relaxed">{children}</div>
-    </details>
-  );
-}
-
+/** Evidence first (feature counts), then the rule-based strength band and score. */
 function StrengthMeter({ s }: { s: Suggestion }) {
+  const coreMatched = s.matched.filter((f) => f.kind === "core").length;
+  const coreTotal = coreMatched + s.missing.filter((f) => f.kind === "core").length;
+  const assocMatched = s.matched.length - coreMatched;
+  const assocTotal = assocMatched + s.missing.filter((f) => f.kind === "associated").length;
   return (
     <div className="rounded-lg bg-surface-2 p-3">
-      <p className="flex flex-wrap items-baseline justify-between gap-x-3 text-sm">
+      <p className="text-sm font-semibold">
+        Core features {coreMatched} of {coreTotal}
+        {assocTotal > 0 ? ` · associated ${assocMatched} of ${assocTotal}` : ""}
+      </p>
+      <p className="mt-1 flex flex-wrap items-baseline justify-between gap-x-3 text-sm">
         <span className="font-semibold">{STRENGTH_LABEL[s.strength]}</span>
         <span className="text-muted">
           Score <span className="font-semibold text-text">{s.score}</span> of 100
@@ -69,12 +66,35 @@ function StrengthMeter({ s }: { s: Suggestion }) {
   );
 }
 
-function FeatureTag({ kind, weight }: { kind: "core" | "associated"; weight: number }) {
+function FeatureList({
+  items,
+  kind,
+  matched,
+}: {
+  items: Suggestion["matched"];
+  kind: "core" | "associated";
+  matched: boolean;
+}) {
+  const Icon = matched ? Check : CircleDashed;
   return (
-    <span className="ml-1 whitespace-nowrap text-xs text-muted">
-      · {kind === "core" ? "core" : "associated"}, weight {weight}
-    </span>
+    <ul className="mt-1.5 space-y-1.5">
+      {items.map((f) => (
+        <li key={f.symptomId} className="flex items-start gap-2 text-sm">
+          <Icon aria-hidden className={cn("mt-0.5 size-4 shrink-0", matched ? "text-ok" : "text-muted")} />
+          <span>
+            <span className="sr-only">
+              {matched ? "Matched" : "Missing"} {kind}:{" "}
+            </span>
+            {f.label}
+          </span>
+        </li>
+      ))}
+    </ul>
   );
+}
+
+function SubHeading({ children }: { children: React.ReactNode }) {
+  return <h4 className="mt-3 text-xs font-semibold uppercase tracking-wide text-muted first:mt-2">{children}</h4>;
 }
 
 export function SuggestionCard({
@@ -92,6 +112,10 @@ export function SuggestionCard({
   const ex = explainScore(cond, s, input);
   const missingCore = s.missing.filter((f) => f.kind === "core");
   const missingAssoc = s.missing.filter((f) => f.kind === "associated");
+  const matchedCore = s.matched.filter((f) => f.kind === "core");
+  const matchedAssoc = s.matched.filter((f) => f.kind === "associated");
+  const coreTotal = matchedCore.length + missingCore.length;
+  const assocTotal = matchedAssoc.length + missingAssoc.length;
   const builtIn = cond.measures.map((id) => getMeasure(id)).filter((m) => m !== undefined);
   const handouts = cond.handouts.map((id) => getHandout(id)).filter((h) => h !== undefined);
   const stats = cond.statIds.map((id) => getStat(id)).filter((x) => x !== undefined);
@@ -195,58 +219,49 @@ export function SuggestionCard({
           <h3 className="text-sm font-semibold">
             Matched features ({s.matched.length})
           </h3>
-          <ul className="mt-2 space-y-1.5">
-            {s.matched.map((f) => (
-              <li key={f.symptomId} className="flex items-start gap-2 text-sm">
-                <Check aria-hidden className="mt-0.5 size-4 shrink-0 text-ok" />
-                <span>
-                  <span className="sr-only">Matched: </span>
-                  {f.label}
-                  <FeatureTag kind={f.kind} weight={f.weight} />
-                </span>
-              </li>
-            ))}
-          </ul>
+          {matchedCore.length ? (
+            <>
+              <SubHeading>
+                Core ({matchedCore.length} of {coreTotal})
+              </SubHeading>
+              <FeatureList items={matchedCore} kind="core" matched />
+            </>
+          ) : null}
+          {matchedAssoc.length ? (
+            <>
+              <SubHeading>
+                Associated ({matchedAssoc.length} of {assocTotal})
+              </SubHeading>
+              <FeatureList items={matchedAssoc} kind="associated" matched />
+            </>
+          ) : null}
+          <p className="mt-2 text-xs text-muted">Feature weights are listed under “Why suggested”.</p>
         </div>
         <div>
           <h3 className="text-sm font-semibold">
             Missing features ({s.missing.length})
           </h3>
+          <SubHeading>
+            Core ({missingCore.length} of {coreTotal})
+          </SubHeading>
           {missingCore.length ? (
-            <ul className="mt-2 space-y-1.5">
-              {missingCore.map((f) => (
-                <li key={f.symptomId} className="flex items-start gap-2 text-sm">
-                  <CircleDashed aria-hidden className="mt-0.5 size-4 shrink-0 text-muted" />
-                  <span>
-                    <span className="sr-only">Missing: </span>
-                    {f.label}
-                    <FeatureTag kind={f.kind} weight={f.weight} />
-                  </span>
-                </li>
-              ))}
-            </ul>
+            <FeatureList items={missingCore} kind="core" matched={false} />
           ) : (
-            <p className="mt-2 text-sm text-muted">All core features are present.</p>
+            <p className="mt-1.5 text-sm text-muted">All core features are present.</p>
           )}
           {missingAssoc.length ? (
-            <details className="group mt-2">
-              <summary className="inline-flex min-h-10 cursor-pointer list-none items-center gap-1 text-sm font-semibold text-accent [&::-webkit-details-marker]:hidden">
-                {missingAssoc.length} associated feature{missingAssoc.length === 1 ? "" : "s"} not reported
-                <ChevronDown aria-hidden className="size-4 transition-transform group-open:rotate-180" />
-              </summary>
-              <ul className="mt-1 space-y-1.5">
-                {missingAssoc.map((f) => (
-                  <li key={f.symptomId} className="flex items-start gap-2 text-sm">
-                    <CircleDashed aria-hidden className="mt-0.5 size-4 shrink-0 text-muted" />
-                    <span>
-                      <span className="sr-only">Missing: </span>
-                      {f.label}
-                      <FeatureTag kind={f.kind} weight={f.weight} />
-                    </span>
-                  </li>
-                ))}
-              </ul>
-            </details>
+            <>
+              <SubHeading>
+                Associated ({missingAssoc.length} of {assocTotal})
+              </SubHeading>
+              <Disclosure
+                bordered={false}
+                title={`${missingAssoc.length} associated feature${missingAssoc.length === 1 ? "" : "s"} not reported`}
+                bodyClassName="pb-0"
+              >
+                <FeatureList items={missingAssoc} kind="associated" matched={false} />
+              </Disclosure>
+            </>
           ) : null}
         </div>
       </div>
@@ -256,7 +271,7 @@ export function SuggestionCard({
           <h3 className="flex items-center gap-1.5 text-sm font-semibold">
             <ClipboardList aria-hidden className="size-4 text-muted" /> Measures
           </h3>
-          <ul className="mt-2 space-y-2 text-sm">
+          <ul className="mt-2 flex flex-wrap gap-2 text-sm">
             {builtIn.map((m) => (
               <li key={m.id}>
                 <Link href={`/measures/${m.id}`} className={buttonVariants({ variant: "outline", size: "sm" })}>
@@ -265,13 +280,13 @@ export function SuggestionCard({
               </li>
             ))}
             {cond.measuresPending.map((m) => (
-              <li key={m.url} className="flex flex-wrap items-center gap-x-2 gap-y-1">
+              <li key={m.url} className="flex basis-full flex-wrap items-center gap-x-2 gap-y-1">
                 <ExternalLink href={m.url}>{m.name}</ExternalLink>
                 <Badge tone="warn">License pending</Badge>
               </li>
             ))}
             {builtIn.length === 0 && cond.measuresPending.length === 0 ? (
-              <li className="text-muted">No measure linked yet.</li>
+              <li className="basis-full text-muted">No measure linked yet.</li>
             ) : null}
           </ul>
         </div>
@@ -279,7 +294,7 @@ export function SuggestionCard({
           <h3 className="flex items-center gap-1.5 text-sm font-semibold">
             <FileText aria-hidden className="size-4 text-muted" /> Client handouts
           </h3>
-          <ul className="mt-2 space-y-2 text-sm">
+          <ul className="mt-2 flex flex-wrap gap-2 text-sm">
             {handouts.map((h) => (
               <li key={h.id}>
                 <Link href={`/handouts/${h.id}`} className={buttonVariants({ variant: "outline", size: "sm" })}>
@@ -287,7 +302,7 @@ export function SuggestionCard({
                 </Link>
               </li>
             ))}
-            {handouts.length === 0 ? <li className="text-muted">No built-in handout yet; see Handouts for link-outs.</li> : null}
+            {handouts.length === 0 ? <li className="basis-full text-muted">No built-in handout yet; see Handouts for link-outs.</li> : null}
           </ul>
         </div>
       </div>
@@ -318,6 +333,17 @@ export function SuggestionCard({
               <span className="block font-semibold">score = {s.score} (rounded, 0–100)</span>
             )}
           </p>
+          <div>
+            <p className="font-semibold">Feature weights</p>
+            <ul className="mt-1 grid gap-x-4 gap-y-1 text-muted sm:grid-cols-2">
+              {[...s.matched, ...s.missing].map((f) => (
+                <li key={f.symptomId}>
+                  <span className="text-text">{f.label}</span> · {f.kind}, weight {f.weight}
+                  {s.matched.includes(f) ? " · matched" : " · not reported"}
+                </li>
+              ))}
+            </ul>
+          </div>
           <ul className="list-disc space-y-1 pl-5 text-muted">
             <li>
               Duration gate: {cond.durationGate.minWeeks > 0 ? `about ${cond.durationGate.minWeeks} weeks or more.` : "none."}{" "}

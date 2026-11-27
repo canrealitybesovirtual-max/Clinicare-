@@ -2,14 +2,14 @@
  * One curated directory or helpline entry (link out only, G8). Shows how to reach the service (tel:/sms: links,
  * chat, website), who it serves, and whether a person has re-verified it against the official site.
  */
-import { BadgeCheck, Clock, Globe, Languages, MessageCircle, MessageSquareText, Phone, TriangleAlert, Video } from "lucide-react";
+import { BadgeCheck, Clock, Globe, Languages, LifeBuoy, TriangleAlert, Video } from "lucide-react";
 import { isVerified, type ReferralEntry } from "@/lib/schemas-referrals";
 import { Badge } from "@/components/ui/badge";
-import { buttonVariants } from "@/components/ui/button";
+import { Disclosure } from "@/components/ui/disclosure";
 import { ExternalLink } from "@/components/ui/external-link";
 import { CompactSources } from "@/components/ethics/compact-sources";
-import { cn } from "@/lib/utils";
-import { KIND_LABELS, languageList, regionLabel, smsHref, telHref } from "./referral-format";
+import { HelplineActions } from "./helpline-actions";
+import { KIND_LABELS, languageList, regionLabel } from "./referral-format";
 
 export function VerificationBadge({ entry }: { entry: Pick<ReferralEntry, "lastVerified"> }) {
   return isVerified(entry) ? (
@@ -27,13 +27,15 @@ export function VerificationBadge({ entry }: { entry: Pick<ReferralEntry, "lastV
 
 export function DirectoryEntryCard({ entry, headingLevel = "h4" }: { entry: ReferralEntry; headingLevel?: "h3" | "h4" }) {
   const H = headingLevel;
-  const tel = telHref(entry.phone);
-  const sms = smsHref(entry.text);
   const crisisLike = entry.kind === "crisis" || entry.kind === "veterans" || entry.kind === "deaf-hoh";
   return (
     <article aria-labelledby={`ref-${entry.id}`} className="flex h-full flex-col gap-3 rounded-xl border border-border bg-surface p-4 shadow-sm">
       <div className="flex flex-wrap items-center gap-1.5">
-        <Badge tone={entry.kind === "crisis" ? "crisis" : "neutral"}>{KIND_LABELS[entry.kind]}</Badge>
+        {/* Crisis red is kept for call buttons and active red flags; the category badge stays neutral. */}
+        <Badge tone="neutral">
+          {entry.kind === "crisis" ? <LifeBuoy aria-hidden className="size-3.5" /> : null}
+          {KIND_LABELS[entry.kind]}
+        </Badge>
         <Badge tone="info">
           <Globe aria-hidden className="size-3.5" />
           {regionLabel(entry.region)}
@@ -46,31 +48,7 @@ export function DirectoryEntryCard({ entry, headingLevel = "h4" }: { entry: Refe
       </H>
       <p className="text-sm leading-relaxed text-text">{entry.description}</p>
 
-      {tel || sms || entry.chat ? (
-        <div className="flex flex-wrap gap-2">
-          {tel && entry.phone ? (
-            <a href={tel} className={cn(buttonVariants({ variant: crisisLike ? "crisis" : "primary", size: "md" }))}>
-              <Phone aria-hidden />
-              Call {entry.phone}
-              <span className="sr-only"> ({entry.name})</span>
-            </a>
-          ) : null}
-          {sms && entry.text ? (
-            <a href={sms} className={buttonVariants({ variant: "outline" })}>
-              <MessageSquareText aria-hidden />
-              {entry.text}
-              <span className="sr-only"> ({entry.name})</span>
-            </a>
-          ) : null}
-          {entry.chat ? (
-            <ExternalLink href={entry.chat} showIcon={false} className={cn(buttonVariants({ variant: "outline" }), "font-semibold no-underline")}>
-              <MessageCircle aria-hidden />
-              Chat online
-              <span className="sr-only"> with {entry.name}</span>
-            </ExternalLink>
-          ) : null}
-        </div>
-      ) : null}
+      <HelplineActions name={entry.name} phone={entry.phone} text={entry.text} chat={entry.chat} crisis={crisisLike} />
 
       <ul className="space-y-1 text-sm text-muted empty:hidden">
         {entry.phoneNote ? <li className="text-text">{entry.phoneNote}</li> : null}
@@ -116,16 +94,11 @@ export function DirectoryEntryCard({ entry, headingLevel = "h4" }: { entry: Refe
             <span className="sr-only"> of {entry.name}</span>
           </ExternalLink>
         </p>
-        <details className="text-xs text-muted">
-          <summary className="inline-flex min-h-11 cursor-pointer items-center font-semibold text-accent">
-            How this was checked
-          </summary>
-          <div className="space-y-2 pt-1">
-            <p className="leading-relaxed">{entry.verification}</p>
-            {!isVerified(entry) ? <p className="font-semibold text-text">Confirm details on the official site before relying on them.</p> : null}
-            <CompactSources sources={entry.sources} className="text-xs" />
-          </div>
-        </details>
+        <Disclosure title="How this was checked" bordered={false} bodyClassName="space-y-2 pb-1 text-xs text-muted">
+          <p className="leading-relaxed">{entry.verification}</p>
+          {!isVerified(entry) ? <p className="font-semibold text-text">Confirm details on the official site before relying on them.</p> : null}
+          <CompactSources sources={entry.sources} className="text-xs" />
+        </Disclosure>
       </div>
     </article>
   );

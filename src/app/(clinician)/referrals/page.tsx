@@ -6,7 +6,7 @@ import { SUD_KINDS, DIRECTORY_REGIONS, KIND_LABELS, regionLabel } from "@/compon
 import { Card } from "@/components/ui/card";
 import { Notice } from "@/components/ui/notice";
 import { PageIntro, ReviewBadge, SourcesList } from "@/components/content/content-bits";
-import { CrisisPanel } from "@/components/crisis/crisis-panel";
+import { CrisisInline } from "@/components/crisis/crisis-panel";
 import { HubPrompt } from "@/components/hub/hub-prompt";
 import { FacetCount, FacetEmpty, FacetGate, FacetReset, FacetSelect } from "@/components/ethics/facet-filter";
 import { ALL, type FacetOption } from "@/components/ethics/facet-index";
@@ -44,26 +44,48 @@ export default function ReferralsPage() {
 
   return (
     <>
-      <PageIntro title="Referrals" eyebrow="Find care beyond counseling">
+      <PageIntro title="Referrals" eyebrow="Step 7 · Find care beyond counseling">
         <p>
           Psychiatry and medication evaluation, substance use treatment, low-cost care, peer support and crisis lines.
           Locations are typed on this device and sent only as a ZIP code or a city and state.
         </p>
       </PageIntro>
 
-      <section aria-labelledby="crisis-heading" className="mb-8">
-        <Card className="space-y-3 border-crisis/40">
-          <h2 id="crisis-heading" className="flex items-center gap-2 text-xl font-bold">
-            <LifeBuoy aria-hidden className="size-5 text-crisis" />
-            Crisis and emergency support
-          </h2>
-          <p className="text-sm text-muted">
-            Always available, on every screen through the Crisis help button. This app never assesses or decides risk;
-            follow your crisis protocol and clinical judgment.
-          </p>
-          <CrisisPanel headingLevel="h3" />
-        </Card>
+      {/* Compact crisis strip (the full panel is one tap away under Crisis help, on every screen). */}
+      <section
+        aria-labelledby="crisis-heading"
+        className="mb-6 rounded-xl border border-border border-l-[6px] border-l-crisis bg-surface p-4"
+      >
+        <h2 id="crisis-heading" className="flex items-center gap-2 text-base font-bold">
+          <LifeBuoy aria-hidden className="size-5 text-crisis" />
+          Crisis and emergency support
+        </h2>
+        <CrisisInline className="mt-1" />
+        <p className="text-xs text-muted">
+          Numbers for other countries are under the Crisis help button. This app never assesses or decides risk; follow
+          your crisis protocol and clinical judgment.
+        </p>
       </section>
+
+      <nav aria-label="On this page" className="mb-8">
+        <ul className="flex flex-wrap gap-2">
+          {[
+            { href: "#find-care", label: "Find care" },
+            { href: "#medication-evaluation", label: "Medication evaluation" },
+            { href: "#complementary", label: "Complementary options" },
+            { href: "#directory", label: "Directories" },
+          ].map((l) => (
+            <li key={l.href}>
+              <a
+                href={l.href}
+                className="inline-flex min-h-11 items-center rounded-full border border-border bg-surface px-4 text-sm font-semibold text-text hover:border-accent hover:bg-surface-2"
+              >
+                {l.label}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
 
       <ReferralSearchProvider>
         <section id="find-care" aria-labelledby="find-care-heading" className="mb-8 scroll-mt-6">

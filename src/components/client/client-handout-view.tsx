@@ -47,7 +47,9 @@ export function ClientHandoutView({
 
       <Card className="space-y-5 sm:p-7">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-sm text-muted">Read it here, or print it and write on it.</p>
+          <p className="text-sm text-muted">
+            Read it here, or print it and write on it. This page also works with screen readers; the printout is for paper.
+          </p>
           <DownloadPdfButton handout={handout} label="Download to print" variant="primary" />
         </div>
         <HandoutBody handout={handout} headingLevel="h2" />

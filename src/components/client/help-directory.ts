@@ -23,6 +23,8 @@ export interface HelpEntry {
   url: string;
   hours: string | null;
   verified: boolean;
+  /** A 24/7 crisis, veterans or deaf/hard-of-hearing crisis line: its call button uses the crisis colour. */
+  crisis: boolean;
 }
 
 export interface HelpRegion {
@@ -66,6 +68,7 @@ function toEntry(e: ReferralEntry): HelpEntry {
     url: e.url,
     hours: plainOrNull(e.hours),
     verified: isVerified(e),
+    crisis: e.kind === "crisis" || e.kind === "veterans" || e.kind === "deaf-hoh",
   };
 }
 

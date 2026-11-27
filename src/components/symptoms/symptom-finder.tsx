@@ -29,6 +29,7 @@ import { PRIVATE_TEXT_FIELD_PROPS } from "@/components/ui/private-field";
 import { cn } from "@/lib/utils";
 import { useSymptomAnalysis, type SymptomAnalysis } from "./analysis";
 import { RedFlagBanner, RiskMissNote } from "./red-flag-banner";
+import { HubPrompt } from "@/components/hub/hub-prompt";
 import { Under18Notice } from "./under18-notice";
 import { useScrubbedField } from "./use-scrubbed-field";
 import {
@@ -111,9 +112,13 @@ function SectionCard({
 
 function DiagnosesCta({ analysis, className, size = "lg" }: { analysis: SymptomAnalysis; className?: string; size?: "lg" | "md" }) {
   const n = analysis.result.suggestions.length;
+  // With nothing to score yet, a quiet outline link (no "(0)") rather than a full primary button.
   return (
-    <Link href="/diagnoses" className={cn(buttonVariants({ variant: "primary", size }), "w-full", className)}>
-      See possible diagnoses ({n})
+    <Link
+      href="/diagnoses"
+      className={cn(buttonVariants({ variant: n === 0 ? "outline" : "primary", size }), "w-full", className)}
+    >
+      {n === 0 ? "See possible diagnoses" : `See possible diagnoses (${n})`}
       <ArrowRight aria-hidden />
     </Link>
   );
@@ -151,7 +156,7 @@ function FreeTextCard({ analysis }: { analysis: SymptomAnalysis }) {
           rows={6}
           {...PRIVATE_TEXT_FIELD_PROPS}
           placeholder="e.g., sudden panic out of nowhere, heart racing, now avoids crowds and buses"
-          className="mt-2 block w-full resize-y rounded-lg border border-border bg-surface px-3 py-2.5 text-base leading-relaxed text-text placeholder:text-muted/80"
+          className="mt-2 block w-full resize-y rounded-lg border border-input-border bg-surface px-3 py-2.5 text-base leading-relaxed text-text placeholder:text-muted"
         />
       </div>
 
@@ -171,8 +176,12 @@ function FreeTextCard({ analysis }: { analysis: SymptomAnalysis }) {
             </p>
             <button
               type="button"
-              onClick={field.dismissRemoved}
-              className="inline-flex min-h-10 items-center gap-1 rounded-md text-sm font-semibold underline underline-offset-2"
+              onClick={() => {
+                field.dismissRemoved();
+                // The button disappears: put focus back in the text box instead of dropping it to <body>.
+                field.ref.current?.focus();
+              }}
+              className="inline-flex min-h-11 items-center gap-1 rounded-md text-sm font-semibold underline underline-offset-2"
             >
               Dismiss
             </button>
@@ -180,18 +189,29 @@ function FreeTextCard({ analysis }: { analysis: SymptomAnalysis }) {
         ) : null}
       </div>
 
+      {/* Below the field, so a new banner never pushes the text box (and the caret) off-screen while typing. */}
+      <RedFlagBanner flags={analysis.redFlags} className="" />
+
       <div className="flex flex-wrap items-center gap-2">
         <span className="flex items-center gap-1.5 text-sm font-semibold text-muted">
           <FlaskConical aria-hidden className="size-4" />
           Try an example:
         </span>
         {EXAMPLES.map((ex) => (
-          <Button key={ex.id} type="button" variant="outline" size="sm" className="min-h-10" onClick={() => field.replace(ex.text)}>
+          <Button key={ex.id} type="button" variant="outline" size="sm" onClick={() => field.replace(ex.text)}>
             {ex.label}
           </Button>
         ))}
         {field.draft ? (
-          <Button type="button" variant="ghost" size="sm" className="min-h-10" onClick={() => field.replace("")}>
+          <Button
+            type="button"
+            variant="ghost"
+            size="sm"
+            onClick={() => {
+              field.replace("");
+              field.ref.current?.focus();
+            }}
+          >
             <Trash2 aria-hidden />
             Clear text
           </Button>
@@ -215,10 +235,13 @@ function FreeTextCard({ analysis }: { analysis: SymptomAnalysis }) {
                 return (
                   <li key={m.symptomId} className="flex items-start gap-2 rounded-lg bg-accent-soft px-3 py-2 text-sm">
                     <Check aria-hidden className="mt-0.5 size-4 shrink-0 text-accent" />
-                    <span>
+                    <span className="min-w-0 flex-1">
                       {s?.label ?? m.symptomId}
                       <span className="block text-xs text-muted">matched “{m.phrase}”</span>
                     </span>
+                    {s?.redFlag ? (
+                      <ShieldAlert aria-label="Red flag" role="img" className="mt-0.5 size-4 shrink-0 text-crisis" />
+                    ) : null}
                   </li>
                 );
               })}
@@ -334,7 +357,7 @@ function SymptomPicker({ analysis }: { analysis: SymptomAnalysis }) {
             onBlur={search.flushNow}
             {...PRIVATE_TEXT_FIELD_PROPS}
             placeholder="e.g., can't sleep, on edge"
-            className="block min-h-11 w-full rounded-lg border border-border bg-surface pl-9 pr-3 text-base text-text placeholder:text-muted/80"
+            className="block min-h-11 w-full rounded-lg border border-input-border bg-surface pl-9 pr-3 text-base text-text placeholder:text-muted"
           />
         </div>
         <div role="alert">
@@ -407,15 +430,37 @@ function SymptomPicker({ analysis }: { analysis: SymptomAnalysis }) {
 function IncludedSummary({ analysis, className }: { analysis: SymptomAnalysis; className?: string }) {
   const { state, set, toggleSymptom } = useSession();
   const selected = new Set(state.selectedSymptomIds);
+  const listRef = React.useRef<HTMLUListElement>(null);
+  const headingRef = React.useRef<HTMLHeadingElement>(null);
+  // Where focus goes after a Remove button disappears: the next remove button, else the list, else the heading.
+  const focusAfterRemove = React.useRef<number | null>(null);
+  React.useEffect(() => {
+    const index = focusAfterRemove.current;
+    if (index === null) return;
+    focusAfterRemove.current = null;
+    const buttons = listRef.current?.querySelectorAll<HTMLButtonElement>("button[data-remove]");
+    const next = buttons?.[Math.min(index, buttons.length - 1)];
+    (next ?? listRef.current ?? headingRef.current)?.focus();
+  });
   return (
     <section aria-labelledby="included-heading" className={className}>
       <Card className="space-y-4">
-        <h2 id="included-heading" className="flex items-center justify-between gap-2 text-lg font-semibold">
+        <h2
+          id="included-heading"
+          ref={headingRef}
+          tabIndex={-1}
+          className="flex items-center justify-between gap-2 text-lg font-semibold outline-none focus-visible:outline-3"
+        >
           Included for scoring
           <Badge tone="primary">{analysis.ids.length}</Badge>
         </h2>
         {analysis.ids.length ? (
-          <ul className="max-h-80 space-y-1.5 overflow-y-auto pr-1" tabIndex={0} aria-label="Symptoms included for scoring">
+          <ul
+            ref={listRef}
+            className="max-h-80 space-y-1.5 overflow-y-auto pr-1"
+            tabIndex={0}
+            aria-label="Symptoms included for scoring"
+          >
             {analysis.ids.map((id) => {
               const s = getSymptom(id);
               const isSelected = selected.has(id);
@@ -430,8 +475,13 @@ function IncludedSummary({ analysis, className }: { analysis: SymptomAnalysis; c
                   {isSelected ? (
                     <button
                       type="button"
-                      onClick={() => toggleSymptom(id)}
-                      className="inline-flex size-10 shrink-0 items-center justify-center rounded-md text-muted hover:bg-surface-2 hover:text-text"
+                      data-remove
+                      onClick={(e) => {
+                        const all = listRef.current?.querySelectorAll("button[data-remove]");
+                        focusAfterRemove.current = all ? Array.prototype.indexOf.call(all, e.currentTarget) : 0;
+                        toggleSymptom(id);
+                      }}
+                      className="inline-flex size-11 shrink-0 items-center justify-center rounded-md text-muted hover:bg-surface-2 hover:text-text"
                     >
                       <X aria-hidden className="size-4" />
                       <span className="sr-only">Remove {s?.label ?? id}</span>
@@ -454,7 +504,16 @@ function IncludedSummary({ analysis, className }: { analysis: SymptomAnalysis; c
           <DiagnosesCta analysis={analysis} />
         )}
         {state.selectedSymptomIds.length ? (
-          <Button type="button" variant="ghost" size="sm" className="w-full" onClick={() => set({ selectedSymptomIds: [] })}>
+          <Button
+            type="button"
+            variant="ghost"
+            size="sm"
+            className="w-full"
+            onClick={() => {
+              set({ selectedSymptomIds: [] });
+              document.getElementById("symptom-search")?.focus();
+            }}
+          >
             Clear selected symptoms
           </Button>
         ) : null}
@@ -525,19 +584,19 @@ export function SymptomFinder() {
   const { state, resetCount } = useSession();
   return (
     <>
-      <RedFlagBanner flags={analysis.redFlags} />
       <RiskMissNote />
+      {/* G6: substance-use symptoms in play (selected or matched) bring up the 42 CFR Part 2 prompt. */}
+      {analysis.sud ? <HubPrompt context="sud" className="mb-6" /> : null}
       <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_23rem] lg:items-start">
         <div className="min-w-0 space-y-6">
           {/* Remount on every reset so drafts, search text and notices clear with the session (G5). */}
           <FreeTextCard key={`text-${resetCount}`} analysis={analysis} />
+          <ContextCard />
           <SymptomPicker key={`picker-${resetCount}`} analysis={analysis} />
           {!state.under18 ? <DiagnosesCta analysis={analysis} className="hidden lg:flex" /> : null}
         </div>
-        <div className="flex min-w-0 flex-col gap-6">
-          <IncludedSummary analysis={analysis} className="order-last lg:order-first" />
-          <ContextCard />
-        </div>
+        {/* Sticky on wide screens so the running list and its call to action stay in view while browsing chips. */}
+        <IncludedSummary analysis={analysis} className="order-last min-w-0 lg:sticky lg:top-4 lg:order-none" />
       </div>
     </>
   );

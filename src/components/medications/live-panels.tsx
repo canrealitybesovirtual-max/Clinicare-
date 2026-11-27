@@ -15,6 +15,7 @@ import { ExternalLink } from "@/components/ui/external-link";
 import { Notice } from "@/components/ui/notice";
 import { NOT_FOR_PRESCRIBING } from "./medication-labels";
 import { lookupErrorCopy, useLiveLookup, type LiveState } from "./use-live-lookup";
+import { Disclosure } from "@/components/ui/disclosure";
 
 
 function PanelShell({
@@ -31,7 +32,7 @@ function PanelShell({
   children: React.ReactNode;
 }) {
   return (
-    <section aria-labelledby={id} aria-busy={busy || undefined}>
+    <section aria-labelledby={id} aria-busy={busy || undefined} data-lookup-focus tabIndex={-1} className="rounded-xl">
       <Card className="space-y-4">
         <h2 id={id} className="flex items-center gap-2 text-lg font-semibold">
           <Icon aria-hidden className="size-5 text-accent" />
@@ -69,7 +70,17 @@ function LookupError({
     <Notice tone={state.code === "not-configured" ? "info" : "warn"} title={copy.title}>
       <p>{copy.body}</p>
       {copy.retry ? (
-        <Button type="button" variant="outline" size="sm" className="mt-1 min-h-11" onClick={onRetry}>
+        <Button
+          type="button"
+          variant="outline"
+          size="sm"
+          className="mt-1"
+          onClick={(e) => {
+            // The button unmounts while the retry loads: keep focus on this panel instead of <body>.
+            e.currentTarget.closest<HTMLElement>("[data-lookup-focus]")?.focus();
+            onRetry();
+          }}
+        >
           <RefreshCw aria-hidden />
           Try again
         </Button>
@@ -115,10 +126,9 @@ const MATCH_LABELS: Record<NonNullable<DrugLabelResult["matchedBy"]>, string> = 
 function LabelSection({ title, text }: { title: string; text: string | null }) {
   if (!text) return null;
   return (
-    <details className="rounded-lg border border-border">
-      <summary className="flex min-h-11 cursor-pointer items-center px-3 text-sm font-semibold">{title}</summary>
-      <p className="whitespace-pre-line px-3 pb-3 text-sm leading-relaxed">{text}</p>
-    </details>
+    <Disclosure title={title} bordered={false} className="rounded-lg border border-border px-3" bodyClassName="pb-3">
+      <p className="whitespace-pre-line">{text}</p>
+    </Disclosure>
   );
 }
 
@@ -159,12 +169,13 @@ function LabelBody({ result: r, name }: { result: DrugLabelResult; name: string 
   return (
     <div className="space-y-4">
       {r.boxedWarning ? (
-        <div className="rounded-xl border-2 border-crisis bg-surface p-4">
-          <h3 className="flex items-center gap-2 text-base font-bold">
-            <ShieldAlert aria-hidden className="size-5 text-crisis" />
+        // Warn tone (not crisis red): crisis red is kept for crisis buttons and active red flags.
+        <div className="rounded-xl border-2 border-warn-border bg-warn-bg p-4">
+          <h3 className="flex items-center gap-2 text-base font-bold text-warn-fg">
+            <ShieldAlert aria-hidden className="size-5" />
             Boxed warning
           </h3>
-          <p className="mt-2 whitespace-pre-line text-sm leading-relaxed">{r.boxedWarning}</p>
+          <p className="mt-2 whitespace-pre-line text-sm leading-relaxed text-text">{r.boxedWarning}</p>
         </div>
       ) : (
         <p className="rounded-lg bg-surface-2 p-3 text-sm">This label has no boxed warning section.</p>
@@ -303,8 +314,11 @@ function RxNormBody({ result: r, name }: { result: RxNormResult; name: string })
           <ul className="mt-2 flex flex-wrap gap-1.5">
             {r.classes.map((c) => (
               <li key={`${c.type}-${c.id}`}>
-                <Badge tone="neutral">
-                  <span className="text-muted">{CLASS_TYPE_LABELS[c.type]}:</span> {c.name}
+                {/* One inline text run, so a long class name wraps as a sentence instead of as two flex columns. */}
+                <Badge tone="neutral" className="rounded-lg">
+                  <span>
+                    <span className="text-muted">{CLASS_TYPE_LABELS[c.type]}:</span> {c.name}
+                  </span>
                 </Badge>
               </li>
             ))}

@@ -1,0 +1,3281 @@
+{
+  "_about": "Fictional e2e fixture data in the upstream's response shape (E2E_UPSTREAM_FIXTURES=1, tests only).",
+  "upstream": "openfda-label",
+  "responses": [
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"Prozac\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "Prozac"
+              ],
+              "generic_name": [
+                "FLUOXETINE"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"Zoloft\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "Zoloft"
+              ],
+              "generic_name": [
+                "SERTRALINE"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"PAXIL\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "PAXIL"
+              ],
+              "generic_name": [
+                "PAROXETINE"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"Celexa\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "Celexa"
+              ],
+              "generic_name": [
+                "CITALOPRAM"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.generic_name:\"escitalopram\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [],
+              "generic_name": [
+                "ESCITALOPRAM"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.generic_name:\"fluvoxamine\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [],
+              "generic_name": [
+                "FLUVOXAMINE"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"Effexor XR\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "Effexor XR"
+              ],
+              "generic_name": [
+                "VENLAFAXINE"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"Pristiq Extended-Release\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "Pristiq Extended-Release"
+              ],
+              "generic_name": [
+                "DESVENLAFAXINE"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.generic_name:\"duloxetine\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [],
+              "generic_name": [
+                "DULOXETINE"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"Fetzima\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "Fetzima"
+              ],
+              "generic_name": [
+                "LEVOMILNACIPRAN"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"WELLBUTRIN XL\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "WELLBUTRIN XL"
+              ],
+              "generic_name": [
+                "BUPROPION"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"AUVELITY\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "AUVELITY"
+              ],
+              "generic_name": [
+                "BUPROPION"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"REMERON\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "REMERON"
+              ],
+              "generic_name": [
+                "MIRTAZAPINE"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.generic_name:\"trazodone\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [],
+              "generic_name": [
+                "TRAZODONE"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"Trintellix\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "Trintellix"
+              ],
+              "generic_name": [
+                "VORTIOXETINE"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"VIIBRYD\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "VIIBRYD"
+              ],
+              "generic_name": [
+                "VILAZODONE"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.generic_name:\"nefazodone\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [],
+              "generic_name": [
+                "NEFAZODONE"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"EXXUA\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "EXXUA"
+              ],
+              "generic_name": [
+                "GEPIRONE"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.generic_name:\"amitriptyline\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [],
+              "generic_name": [
+                "AMITRIPTYLINE"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"PAMELOR\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "PAMELOR"
+              ],
+              "generic_name": [
+                "NORTRIPTYLINE"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.generic_name:\"imipramine\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [],
+              "generic_name": [
+                "IMIPRAMINE"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"ANAFRANIL\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "ANAFRANIL"
+              ],
+              "generic_name": [
+                "CLOMIPRAMINE"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"Norpramin\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "Norpramin"
+              ],
+              "generic_name": [
+                "DESIPRAMINE"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.generic_name:\"doxepin\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [],
+              "generic_name": [
+                "DOXEPIN"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"Nardil\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "Nardil"
+              ],
+              "generic_name": [
+                "PHENELZINE"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"PARNATE\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "PARNATE"
+              ],
+              "generic_name": [
+                "TRANYLCYPROMINE"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"MARPLAN\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "MARPLAN"
+              ],
+              "generic_name": [
+                "ISOCARBOXAZID"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"EMSAM\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "EMSAM"
+              ],
+              "generic_name": [
+                "SELEGILINE"
+              ],
+              "route": [
+                "TRANSDERMAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.generic_name:\"buspirone\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [],
+              "generic_name": [
+                "BUSPIRONE"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.generic_name:\"hydroxyzine\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [],
+              "generic_name": [
+                "HYDROXYZINE"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"Xanax\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "Xanax"
+              ],
+              "generic_name": [
+                "ALPRAZOLAM"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"Klonopin\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "Klonopin"
+              ],
+              "generic_name": [
+                "CLONAZEPAM"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"Ativan\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "Ativan"
+              ],
+              "generic_name": [
+                "LORAZEPAM"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"Valium\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "Valium"
+              ],
+              "generic_name": [
+                "DIAZEPAM"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.generic_name:\"chlordiazepoxide\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [],
+              "generic_name": [
+                "CHLORDIAZEPOXIDE"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"RESTORIL\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "RESTORIL"
+              ],
+              "generic_name": [
+                "TEMAZEPAM"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.generic_name:\"prazosin\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [],
+              "generic_name": [
+                "PRAZOSIN"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"INDERAL LA\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "INDERAL LA"
+              ],
+              "generic_name": [
+                "PROPRANOLOL"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"LITHOBID\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "LITHOBID"
+              ],
+              "generic_name": [
+                "LITHIUM CARBONATE"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"Depakote\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "Depakote"
+              ],
+              "generic_name": [
+                "DIVALPROEX SODIUM"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"LAMICTAL\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "LAMICTAL"
+              ],
+              "generic_name": [
+                "LAMOTRIGINE"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"EQUETRO\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "EQUETRO"
+              ],
+              "generic_name": [
+                "CARBAMAZEPINE"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"ABILIFY\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "ABILIFY"
+              ],
+              "generic_name": [
+                "ARIPIPRAZOLE"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"Rexulti\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "Rexulti"
+              ],
+              "generic_name": [
+                "BREXPIPRAZOLE"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"Vraylar\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "Vraylar"
+              ],
+              "generic_name": [
+                "CARIPRAZINE"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"SEROQUEL\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "SEROQUEL"
+              ],
+              "generic_name": [
+                "QUETIAPINE"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"Zyprexa\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "Zyprexa"
+              ],
+              "generic_name": [
+                "OLANZAPINE"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.generic_name:\"risperidone\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [],
+              "generic_name": [
+                "RISPERIDONE"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"INVEGA\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "INVEGA"
+              ],
+              "generic_name": [
+                "PALIPERIDONE"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"Geodon\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "Geodon"
+              ],
+              "generic_name": [
+                "ZIPRASIDONE"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"Latuda\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "Latuda"
+              ],
+              "generic_name": [
+                "LURASIDONE"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"CAPLYTA\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "CAPLYTA"
+              ],
+              "generic_name": [
+                "LUMATEPERONE"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"SAPHRIS\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "SAPHRIS"
+              ],
+              "generic_name": [
+                "ASENAPINE"
+              ],
+              "route": [
+                "SUBLINGUAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"FANAPT\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "FANAPT"
+              ],
+              "generic_name": [
+                "ILOPERIDONE"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"Clozaril\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "Clozaril"
+              ],
+              "generic_name": [
+                "CLOZAPINE"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"Cobenfy\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "Cobenfy"
+              ],
+              "generic_name": [
+                "XANOMELINE"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"Spravato\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "Spravato"
+              ],
+              "generic_name": [
+                "ESKETAMINE"
+              ],
+              "route": [
+                "NASAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.generic_name:\"naltrexone\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [],
+              "generic_name": [
+                "NALTREXONE"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.generic_name:\"acamprosate\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [],
+              "generic_name": [
+                "ACAMPROSATE"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.generic_name:\"disulfiram\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [],
+              "generic_name": [
+                "DISULFIRAM"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"Topamax\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "Topamax"
+              ],
+              "generic_name": [
+                "TOPIRAMATE"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"Neurontin\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "Neurontin"
+              ],
+              "generic_name": [
+                "GABAPENTIN"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"BELSOMRA\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "BELSOMRA"
+              ],
+              "generic_name": [
+                "SUVOREXANT"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"DAYVIGO\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "DAYVIGO"
+              ],
+              "generic_name": [
+                "LEMBOREXANT"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"QUVIVIQ\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "QUVIVIQ"
+              ],
+              "generic_name": [
+                "DARIDOREXANT"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"Ambien\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "Ambien"
+              ],
+              "generic_name": [
+                "ZOLPIDEM"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"Lunesta\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "Lunesta"
+              ],
+              "generic_name": [
+                "ESZOPICLONE"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.generic_name:\"zaleplon\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [],
+              "generic_name": [
+                "ZALEPLON"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"Rozerem\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "Rozerem"
+              ],
+              "generic_name": [
+                "RAMELTEON"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"CONCERTA\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "CONCERTA"
+              ],
+              "generic_name": [
+                "METHYLPHENIDATE"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"Adderall XR\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "Adderall XR"
+              ],
+              "generic_name": [
+                "AMPHETAMINE"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"Vyvanse\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "Vyvanse"
+              ],
+              "generic_name": [
+                "LISDEXAMFETAMINE"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"Strattera\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "Strattera"
+              ],
+              "generic_name": [
+                "ATOMOXETINE"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"QELBREE\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "QELBREE"
+              ],
+              "generic_name": [
+                "VILOXAZINE"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"INGREZZA\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "INGREZZA"
+              ],
+              "generic_name": [
+                "VALBENAZINE"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "paramStartsWith": "openfda.brand_name.exact:\"AUSTEDO\""
+      },
+      "json": {
+        "meta": {
+          "results": {
+            "total": 1
+          }
+        },
+        "results": [
+          {
+            "set_id": "00000000-0000-4000-8000-000000000001",
+            "effective_time": "20260101",
+            "boxed_warning": [
+              "BOXED WARNING: Test fixture boxed warning. The real label text comes from openFDA."
+            ],
+            "indications_and_usage": [
+              "1 INDICATIONS AND USAGE Test fixture indications text for automated tests."
+            ],
+            "warnings_and_cautions": [
+              "5 WARNINGS AND PRECAUTIONS Test fixture warnings text for automated tests."
+            ],
+            "contraindications": [
+              "4 CONTRAINDICATIONS Test fixture contraindications text."
+            ],
+            "openfda": {
+              "brand_name": [
+                "AUSTEDO"
+              ],
+              "generic_name": [
+                "DEUTETRABENAZINE"
+              ],
+              "route": [
+                "ORAL"
+              ],
+              "product_type": [
+                "HUMAN PRESCRIPTION DRUG"
+              ]
+            }
+          }
+        ]
+      }
+    },
+    {
+      "note": "no matching label (openFDA answers 404)",
+      "status": 404
+    }
+  ]
+}

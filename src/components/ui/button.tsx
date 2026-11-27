@@ -8,13 +8,13 @@ export const buttonVariants = cva(
   {
     variants: {
       variant: {
-        primary: "bg-primary text-primary-fg hover:opacity-90",
+        primary: "bg-primary-solid text-primary-solid-fg hover:opacity-90",
         accent: "bg-accent text-white hover:opacity-90 dark:text-bg",
         outline: "border border-border bg-surface text-text hover:bg-surface-2",
         ghost: "text-text hover:bg-surface-2",
         crisis: "bg-crisis text-crisis-fg hover:opacity-90",
       },
-      size: { sm: "min-h-9 px-3 text-xs", md: "", lg: "min-h-12 px-6 text-base" },
+      size: { sm: "min-h-11 px-3 text-sm", md: "", lg: "min-h-12 px-6 text-base" },
     },
     defaultVariants: { variant: "primary", size: "md" },
   },

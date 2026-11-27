@@ -57,7 +57,7 @@ export function PlanTextField({
         onBlur={field.flushNow}
         rows={rows}
         {...PRIVATE_TEXT_FIELD_PROPS}
-        className="block w-full resize-y rounded-lg border border-border bg-surface px-3 py-2 text-base leading-relaxed text-text"
+        className="block w-full resize-y rounded-lg border border-input-border bg-surface px-3 py-2 text-base leading-relaxed text-text"
       />
       <div role="alert">
         {field.removed ? (
@@ -68,7 +68,11 @@ export function PlanTextField({
             </p>
             <button
               type="button"
-              onClick={field.dismissRemoved}
+              onClick={() => {
+                field.dismissRemoved();
+                // The button disappears: return focus to the field instead of <body>.
+                field.ref.current?.focus();
+              }}
               className="inline-flex min-h-11 items-center rounded-md text-sm font-semibold underline underline-offset-2"
             >
               Dismiss
@@ -82,6 +86,9 @@ export function PlanTextField({
           variant="outline"
           size="sm"
           className="min-h-11"
+          // Keep focus in the field until the click lands: blurring first commits the text, which can add the
+          // "Edited" badge above the editor and move this button out from under the pointer (a lost click).
+          onMouseDown={(e) => e.preventDefault()}
           onClick={() => {
             field.flushNow();
             onDone();

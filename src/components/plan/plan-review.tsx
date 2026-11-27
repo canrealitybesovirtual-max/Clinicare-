@@ -6,6 +6,7 @@ import { Notice } from "@/components/ui/notice";
 import { PART2_NOTICE } from "@/lib/referral-links";
 import { usePlan } from "./plan-context";
 import { planCounts, toPlanExport } from "./plan-model";
+import { NextStep } from "@/components/content/content-bits";
 
 type ExportState = { kind: "pdf" | "docx"; status: "busy" | "done" | "error" } | null;
 
@@ -110,9 +111,12 @@ export function ReviewStep() {
         </section>
       </div>
 
-      {option.sud ? (
-        <Notice tone="warn" title="Substance-use plan: 42 CFR Part 2" icon={ShieldAlert}>
-          <p>Both exports print this notice at the top and in every page footer:</p>
+      {plan.sud ? (
+        <Notice tone="warn" title={option.sud ? "Substance-use plan: 42 CFR Part 2" : "Records substance use: 42 CFR Part 2"} icon={ShieldAlert}>
+          <p>
+            {option.sud ? "" : "Items chosen or written for this plan mention alcohol or other substance use. "}
+            Both exports print this notice at the top and in every page footer:
+          </p>
           <p className="font-semibold">{PART2_NOTICE}</p>
         </Notice>
       ) : null}
@@ -139,6 +143,10 @@ export function ReviewStep() {
             Download Word (.docx)
           </Button>
         </div>
+        <p className="text-xs text-muted">
+          The PDF is for printing and pasting into your record. This review screen is the accessible version for screen
+          readers.
+        </p>
         <p role="status" aria-live="polite" className="text-sm text-muted">
           {exporting?.status === "busy"
             ? `Creating the ${label(exporting.kind)}…`
@@ -149,6 +157,7 @@ export function ReviewStep() {
                 : ""}
         </p>
       </section>
+      <NextStep href="/handouts" label="Step 6 · Handouts for the client" className="mt-2" />
     </div>
   );
 }

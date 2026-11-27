@@ -33,13 +33,27 @@ export const PlanObjectiveSchema = z.object({
   id: slug,
   text: z.string().min(15), // SMART, measurable, original wording, editable in the builder
   interventionIds: z.array(slug), // links into the interventions library
+  // G6: the objective records substance use for this client. Selecting it makes the export carry the Part 2 notice.
+  sud: z.boolean().default(false),
 });
+
+/**
+ * A behavioral definition or long-term goal: plain original wording, or { text, sud: true } when the item records
+ * substance use (G6). Selecting a tagged item makes the plan export carry the 42 CFR Part 2 notice.
+ */
+export const PlanTextSchema = z.union([
+  z.string().min(10),
+  z.object({ text: z.string().min(10), sud: z.boolean().default(false) }).strict(),
+]);
+export type PlanText = z.infer<typeof PlanTextSchema>;
+export const planTextOf = (t: PlanText): string => (typeof t === "string" ? t : t.text);
+export const planTextIsSud = (t: PlanText): boolean => typeof t !== "string" && t.sud;
 
 export const PlanProblemSchema = z.object({
   id: slug,
   label: z.string().min(5), // short problem name, original wording
-  definitions: z.array(z.string().min(10)).min(2), // behavioral definitions (observable), original
-  longTermGoals: z.array(z.string().min(10)).min(1),
+  definitions: z.array(PlanTextSchema).min(2), // behavioral definitions (observable), original
+  longTermGoals: z.array(PlanTextSchema).min(1),
   shortTermObjectives: z.array(PlanObjectiveSchema).min(3),
   measureIds: z.array(slug), // built-in measures for tracking progress (license-confirmed only)
 });

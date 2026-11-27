@@ -7,8 +7,8 @@ import { LOINC_NOTICE, LOINC_PANELS, describeFhirExport } from "@/lib/fhir";
 import type { Measure } from "@/lib/schemas";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
-import { Governance, PageIntro, ReviewBadge, SourcesList } from "@/components/content/content-bits";
-import { MeasureForm, MeasurementBasedCareNote } from "@/components/measures/measure-form";
+import { Governance, NextStep, PageIntro, ReviewBadge, SourcesList } from "@/components/content/content-bits";
+import { MeasureForm } from "@/components/measures/measure-form";
 import type { FhirExportInfo } from "@/components/measures/fhir-export";
 import { AdultOnly } from "@/components/measures/adult-only";
 
@@ -54,6 +54,7 @@ export default async function MeasurePage({ params }: { params: Promise<{ id: st
       <PageIntro
         title={measure.name}
         eyebrow="Step 3 · Measure"
+        compact
         badges={
           <>
             <Badge tone="accent">License confirmed</Badge>
@@ -89,7 +90,6 @@ export default async function MeasurePage({ params }: { params: Promise<{ id: st
               License status: <span className="font-semibold text-text">{license.status}</span> — {license.terms}
             </p>
           ) : null}
-          <MeasurementBasedCareNote />
           {measure.loinc ? (
             <p className="text-sm text-muted">
               LOINC panel <span className="font-mono">{measure.loinc.panel}</span>
@@ -105,6 +105,7 @@ export default async function MeasurePage({ params }: { params: Promise<{ id: st
           <Governance license={measure.license} lastVerified={measure.lastVerified} reviewedBy={measure.reviewedBy} />
         </Card>
       </section>
+      <NextStep href="/plan" label="Step 4 · Plan with the client" />
     </>
   );
 }

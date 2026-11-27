@@ -11,14 +11,14 @@ export const metadata: Metadata = { title: "Possible Diagnoses" };
 export default function DiagnosesPage() {
   return (
     <>
-      <PageIntro title="Possible diagnoses" eyebrow="Step 2 · Clinician mode" badges={<ClinicianReviewBadge />}>
+      <PageIntro title="Possible diagnoses" eyebrow="Step 2 · Clinician mode" badges={<ClinicianReviewBadge />} compact>
         <p>
           Ranked considerations with matched and missing features, codes and rule-outs. Each one needs your independent
           review; none is a final diagnosis.
         </p>
       </PageIntro>
-      <HubPrompt context="assessment" className="mb-6 max-w-3xl" />
       <DiagnosesView />
+      <HubPrompt context="assessment" className="mt-6 max-w-3xl" />
       <Icd10cmLookup terms={[...ICD10CM_TERMS]} />
     </>
   );

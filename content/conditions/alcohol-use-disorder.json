@@ -30,7 +30,7 @@
     }
   ],
   "dsmPointer": "See DSM-5-TR: Substance-Related and Addictive Disorders — Alcohol Use Disorder",
-  "summary": "A pattern in which alcohol takes up more room in the client's life than they want it to. Drinking runs past plans, attempts to cut back do not hold, cravings pull, and drinking carries on despite harm to health, work, relationships or safety; tolerance and withdrawal may follow. It ranges from mild to severe and often sits alongside depression, anxiety, trauma or sleep problems that alcohol was first used to soothe. Withdrawal can be medically dangerous: never advise stopping suddenly without medical input. Substance-use information is protected: nothing here is stored or sent, and every export carries the Part 2 notice. 42 CFR Part 2 prohibits unauthorized use or disclosure of these records. For clinician review only; this is not a diagnosis.",
+  "summary": "A pattern, described in ICD-11 terms, in which alcohol use slips out of the client's control, takes priority over health, work, relationships and safety, and may bring physical adaptation such as needing far more to feel an effect or withdrawal on stopping. It often sits alongside depression, anxiety, trauma or sleep problems that alcohol was first used to soothe. Withdrawal can be medically dangerous: never advise stopping suddenly without medical input. Substance-use information is protected: nothing here is stored or sent, and every export carries the Part 2 notice. 42 CFR Part 2 prohibits unauthorized use or disclosure of these records. For clinician review only; this is not a diagnosis.",
   "features": [
     {
       "symptomId": "impaired-control-drinking",
@@ -68,12 +68,14 @@
       "symptomId": "alcohol-tolerance",
       "kind": "associated",
       "weight": 2,
+      "group": "physiological-features",
       "breadthArea": true
     },
     {
       "symptomId": "alcohol-benzo-withdrawal",
       "kind": "associated",
       "weight": 2,
+      "group": "physiological-features",
       "breadthArea": true
     },
     {
@@ -117,20 +119,16 @@
   ],
   "specifiers": [
     {
-      "label": "Severity: mild, moderate or severe (descriptive)",
-      "note": "Severity rests on how many features are present. ICD-10-CM uses F10.1x for a mild pattern and F10.2x for moderate or severe; check the coding notes in DSM-5-TR."
+      "label": "ICD-10-CM coding notes",
+      "note": "F10.1x codes a harmful (abuse) pattern and F10.2x a dependence pattern; each has its own remission code (F10.11, F10.21) and its own withdrawal codes (F10.13x, F10.23x). DSM-5-TR uses its own severity and course specifiers with these codes: See DSM-5-TR."
     },
     {
-      "label": "In early or sustained remission (descriptive)",
-      "note": "Remission codes are F10.11 and F10.21. Craving alone can persist in remission."
+      "label": "ICD-11 coding notes",
+      "note": "6C40.1 is a harmful pattern of use of alcohol and 6C40.2 is alcohol dependence, which takes a qualifier for current use or for remission; alcohol withdrawal is coded separately (6C40.4). Check the WHO ICD-11 browser for the current qualifiers."
     },
     {
-      "label": "In a controlled environment (descriptive)",
-      "note": "For example in residential treatment or custody, where access to alcohol is restricted."
-    },
-    {
-      "label": "With withdrawal (descriptive; ICD-10-CM F10.130 or F10.230, ICD-11 6C40.4)",
-      "note": "Withdrawal codes differ by severity and complications; arrange medical assessment whenever withdrawal is possible."
+      "label": "Withdrawal (ICD-10-CM F10.13x or F10.23x, ICD-11 6C40.4)",
+      "note": "Withdrawal codes differ by severity and complications. Arrange a medical assessment whenever withdrawal is possible."
     }
   ],
   "differentials": [

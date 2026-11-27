@@ -18,7 +18,8 @@
         {
           "id": "ins-medical-screen",
           "text": "By session 2, before behavioral sleep work starts, screen for signs that call for a medical or sleep medicine evaluation (loud snoring, pauses in breathing or gasping, restless legs, a body clock far out of step with daily life, acting out dreams, pain, or medicines and substances that disrupt sleep) and refer as needed, continuing CBT-I alongside where the medical provider agrees.",
-          "interventionIds": ["cbti-stimulus-control"]
+          "interventionIds": ["cbti-stimulus-control"],
+          "sud": true
         },
         {
           "id": "ins-sleep-diary",
@@ -104,7 +105,7 @@
       "label": "Daytime tiredness, mood effects, and habits or settings that work against sleep",
       "definitions": [
         "Reports feeling tired, foggy or irritable during the day, and has cut back on work, exercise, social plans or caregiving because of poor sleep.",
-        "Uses caffeine late in the day, alcohol to fall asleep, or long or late naps to get through the day.",
+        { "text": "Uses caffeine late in the day, alcohol to fall asleep, or long or late naps to get through the day.", "sud": true },
         "Works shifts, provides care at night, or sleeps in a setting with noise, light, crowding or safety concerns that makes a regular routine hard.",
         "Reports low mood or anxiety that rises and falls with sleep; any thoughts of death or self-harm call for direct clinician assessment at the time they come up."
       ],
@@ -116,7 +117,8 @@
         {
           "id": "ins-caffeine-alcohol",
           "text": "By week 3, set a personal caffeine cut-off time and avoid using alcohol as a sleep aid on at least 6 nights a week, recorded on the sleep diary. If the client drinks heavily every day or has had withdrawal symptoms, refer for a medical assessment before they cut down, and consider the alcohol-use plan.",
-          "interventionIds": ["sleep-hygiene-education", "motivational-interviewing"]
+          "interventionIds": ["sleep-hygiene-education", "motivational-interviewing"],
+          "sud": true
         },
         {
           "id": "ins-daytime-activity",

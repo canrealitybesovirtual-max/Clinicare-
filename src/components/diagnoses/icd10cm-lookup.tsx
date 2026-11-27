@@ -23,7 +23,7 @@ import { ChoiceGroup } from "@/components/ui/choice-group";
 import { Notice } from "@/components/ui/notice";
 import { HubPrompt } from "@/components/hub/hub-prompt";
 import { useLookup } from "./live-lookup";
-import { Attribution, LookupError, LookupLoading } from "./lookup-status";
+import { Attribution, LookupError, LookupLoading, LookupStatusLine } from "./lookup-status";
 
 const CDC_BROWSER = { href: "https://icd10cmtool.cdc.gov/", label: "Open the CDC ICD-10-CM Browser Tool" };
 
@@ -34,7 +34,7 @@ const MODES = [
 ] as const;
 
 const inputClass =
-  "mt-1.5 block min-h-11 w-full rounded-lg border border-border bg-surface px-3 text-base text-text aria-[invalid=true]:border-crisis sm:text-sm";
+  "mt-1.5 block min-h-11 w-full rounded-lg border border-input-border bg-surface px-3 text-base text-text aria-[invalid=true]:border-crisis sm:text-sm";
 
 export function Icd10cmLookup({ terms }: { terms: readonly string[] }) {
   const { resetCount } = useSession();
@@ -157,7 +157,21 @@ function LookupInner({ terms }: { terms: readonly string[] }) {
           </Button>
         </form>
 
-        <div aria-live="polite" aria-busy={state.status === "loading" || undefined}>
+        <LookupStatusLine
+          state={state}
+          what={(d) => {
+            const r = d as { items: unknown[]; total: number };
+            return r.items.length === 0 ? "No matching ICD-10-CM codes." : `${r.items.length} of ${r.total} matching codes loaded`;
+          }}
+        />
+        <div
+          role="group"
+          aria-label="ICD-10-CM results"
+          aria-busy={state.status === "loading" || undefined}
+          data-lookup-focus
+          tabIndex={-1}
+          className="rounded-lg"
+        >
           {state.status === "idle" ? null : state.status === "loading" ? (
             <LookupLoading what="ICD-10-CM codes" />
           ) : state.status === "error" ? (

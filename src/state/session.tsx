@@ -11,6 +11,8 @@ import type { DurationBand, Onset, TriState } from "@/lib/types";
 import type { PlanDraft } from "@/components/plan/plan-model";
 
 export const IDLE_MS = 15 * 60 * 1000;
+/** How long before the idle wipe the "Keep working" warning appears (WCAG 2.2.1: warn and allow extending). */
+export const IDLE_WARNING_MS = 60 * 1000;
 
 export interface SessionState {
   symptomText: string; // scrubbed text only
@@ -102,6 +104,10 @@ interface SessionCtx {
   reset: () => void;
   idleCleared: boolean;
   dismissIdleNotice: () => void;
+  /** True during the last IDLE_WARNING_MS before the idle wipe. */
+  idleWarning: boolean;
+  /** Restart the idle timer (the "Keep working" button). */
+  extend: () => void;
   /** Increments on every reset (Clear session or idle wipe). Key local UI state on it so it clears too. */
   resetCount: number;
 }
@@ -111,24 +117,50 @@ const Ctx = React.createContext<SessionCtx | null>(null);
 export function SessionProvider({ children, idleMs = IDLE_MS }: { children: React.ReactNode; idleMs?: number }) {
   const [state, dispatch] = React.useReducer(reducer, initialSession);
   const [idleCleared, setIdleCleared] = React.useState(false);
+  const [idleWarning, setIdleWarning] = React.useState(false);
   const [resetCount, setResetCount] = React.useState(0);
+  const armRef = React.useRef<() => void>(() => {});
 
   React.useEffect(() => {
-    let timer: ReturnType<typeof setTimeout>;
-    const arm = () => {
-      clearTimeout(timer);
-      timer = setTimeout(() => {
-        dispatch({ type: "reset", keepCountry: true });
-        setResetCount((n) => n + 1);
-        setIdleCleared(true);
-      }, idleMs);
+    let warnTimer: ReturnType<typeof setTimeout> | undefined;
+    let wipeTimer: ReturnType<typeof setTimeout> | undefined;
+    let last = Date.now();
+    // Warn a minute ahead (or halfway, for very short test timeouts).
+    const warnAfter = idleMs - Math.min(IDLE_WARNING_MS, Math.floor(idleMs / 2));
+    const wipe = () => {
+      clearTimeout(warnTimer);
+      clearTimeout(wipeTimer);
+      dispatch({ type: "reset", keepCountry: true });
+      setResetCount((n) => n + 1);
+      setIdleWarning(false);
+      setIdleCleared(true);
     };
-    const events = ["pointerdown", "keydown", "scroll", "touchstart"] as const;
+    const arm = () => {
+      last = Date.now();
+      clearTimeout(warnTimer);
+      clearTimeout(wipeTimer);
+      setIdleWarning(false);
+      warnTimer = setTimeout(() => setIdleWarning(true), warnAfter);
+      wipeTimer = setTimeout(wipe, idleMs);
+    };
+    const onVisibility = () => {
+      if (document.visibilityState !== "visible") return;
+      // Background tabs can delay timers: if the idle time already passed while hidden, clear now.
+      if (Date.now() - last >= idleMs) wipe();
+      else arm();
+    };
+    armRef.current = arm;
+    // focusin covers keyboard and screen-reader navigation that produces no keydown on the page.
+    const events = ["pointerdown", "keydown", "scroll", "touchstart", "focusin"] as const;
     events.forEach((e) => window.addEventListener(e, arm, { passive: true }));
+    document.addEventListener("visibilitychange", onVisibility);
     arm();
     return () => {
-      clearTimeout(timer);
+      clearTimeout(warnTimer);
+      clearTimeout(wipeTimer);
+      armRef.current = () => {};
       events.forEach((e) => window.removeEventListener(e, arm));
+      document.removeEventListener("visibilitychange", onVisibility);
     };
   }, [idleMs]);
 
@@ -147,9 +179,11 @@ export function SessionProvider({ children, idleMs = IDLE_MS }: { children: Reac
       },
       idleCleared,
       dismissIdleNotice: () => setIdleCleared(false),
+      idleWarning,
+      extend: () => armRef.current(),
       resetCount,
     }),
-    [state, idleCleared, resetCount],
+    [state, idleCleared, idleWarning, resetCount],
   );
 
   return <Ctx.Provider value={value}>{children}</Ctx.Provider>;

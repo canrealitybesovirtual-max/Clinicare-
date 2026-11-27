@@ -1,0 +1,18 @@
+{
+  "_about": "Fictional e2e fixture data in the upstream's response shape (E2E_UPSTREAM_FIXTURES=1, tests only).",
+  "upstream": "medlineplus-topics",
+  "responses": [
+    {
+      "when": {
+        "query": {
+          "db": "healthTopicsSpanish"
+        }
+      },
+      "text": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><nlmSearchResult><count>2</count><list num=\"2\"><document rank=\"0\" url=\"https://medlineplus.gov/spanish/stress.html\"><content name=\"title\">Estrés (fixture)</content><content name=\"FullSummary\">Texto de prueba para pruebas automatizadas.</content><content name=\"groupName\">Mental Health and Behavior</content></document><document rank=\"0\" url=\"https://medlineplus.gov/spanish/sleepdisorders.html\"><content name=\"title\">Problemas para dormir (fixture)</content><content name=\"FullSummary\">Segundo texto de prueba.</content><content name=\"groupName\">Mental Health and Behavior</content></document></list></nlmSearchResult>"
+    },
+    {
+      "note": "the second title names a condition on purpose: client mode must swap it for a neutral label",
+      "text": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><nlmSearchResult><count>3</count><list num=\"3\"><document rank=\"0\" url=\"https://medlineplus.gov/stress.html\"><content name=\"title\">Stress (fixture)</content><content name=\"FullSummary\">Fixture summary in plain words for automated tests.</content><content name=\"groupName\">Mental Health and Behavior</content></document><document rank=\"0\" url=\"https://medlineplus.gov/anxiety.html\"><content name=\"title\">Anxiety</content><content name=\"altTitle\">Worry</content><content name=\"FullSummary\">Fixture summary that names anxiety, so client mode hides it.</content><content name=\"groupName\">Mental Health and Behavior</content></document><document rank=\"0\" url=\"https://medlineplus.gov/healthysleep.html\"><content name=\"title\">Healthy Sleep (fixture)</content><content name=\"FullSummary\">Another plain fixture summary.</content><content name=\"groupName\">Mental Health and Behavior</content></document></list></nlmSearchResult>"
+    }
+  ]
+}

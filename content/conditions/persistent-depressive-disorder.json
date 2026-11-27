@@ -110,16 +110,16 @@
   ],
   "specifiers": [
     {
-      "label": "Early onset or late onset (descriptive)",
-      "note": "Onset before about age 21 is common and linked to a more chronic course. Check the age cut-off in DSM-5-TR."
+      "label": "Age at onset (see DSM-5-TR)",
+      "note": "Note when the long-lasting low mood began; an earlier start is linked to a more chronic course. See DSM-5-TR for how onset is recorded."
     },
     {
-      "label": "With intermittent or persistent major depressive episodes (descriptive)",
-      "note": "Note whether full depressive episodes come and go on top of the chronic low mood."
+      "label": "Depressive episodes on top of chronic low mood",
+      "note": "Note whether full depressive episodes come and go on top of the chronic low mood; ICD-11 codes single or recurrent depressive episodes separately (6A70, 6A71). See DSM-5-TR for its specifiers."
     },
     {
-      "label": "With anxious distress or other features (descriptive)",
-      "note": "Record anxious distress, atypical or melancholic features when present."
+      "label": "Other features (see DSM-5-TR)",
+      "note": "Record marked anxiety and other prominent features when present. ICD-11 uses qualifiers for some of them; DSM-5-TR has its own specifiers: See DSM-5-TR."
     }
   ],
   "differentials": [

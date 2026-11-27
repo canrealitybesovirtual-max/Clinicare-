@@ -7,7 +7,7 @@ export const metadata: Metadata = { title: "Symptom Finder" };
 export default function SymptomsPage() {
   return (
     <>
-      <PageIntro title="Symptom Finder" eyebrow="Step 1 · Clinician mode">
+      <PageIntro title="Symptom Finder" eyebrow="Step 1 · Clinician mode" compact>
         <p>
           Describe the presentation or tap symptoms, then add context. The app suggests possible considerations for your
           review; it never states a diagnosis.

@@ -1,15 +1,16 @@
 "use client";
 import * as React from "react";
-import { Eraser, LockKeyhole, TimerReset, X } from "lucide-react";
-import { useSession } from "@/state/session";
+import { Eraser, Hourglass, LockKeyhole, TimerReset, X } from "lucide-react";
+import { IDLE_WARNING_MS, useSession } from "@/state/session";
 import { Button } from "@/components/ui/button";
 
 /**
- * Persistent PHI banner (G5) + "Clear session" + the idle-cleared notice.
- * The status messages never repeat anything that was typed.
+ * Persistent PHI banner (G5) + "Clear session", the idle warning ("Keep working", WCAG 2.2.1) and the
+ * idle-cleared notice. The status messages never repeat anything that was typed.
+ * Small screens get a one-line banner; the full wording (and the 15-minute detail) shows from lg and on /about.
  */
 export function PrivacyBar({ client = false }: { client?: boolean }) {
-  const { reset, idleCleared, dismissIdleNotice } = useSession();
+  const { reset, idleCleared, dismissIdleNotice, idleWarning, extend } = useSession();
   const [cleared, setCleared] = React.useState(false);
 
   React.useEffect(() => {
@@ -18,22 +19,31 @@ export function PrivacyBar({ client = false }: { client?: boolean }) {
     return () => clearTimeout(t);
   }, [cleared]);
 
+  const seconds = Math.round(IDLE_WARNING_MS / 1000);
+
   return (
     <div className="no-print">
       <div className="border-t border-border bg-info-bg text-info-fg">
-        <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-4 gap-y-2 px-4 py-2">
-          <p className="flex min-w-0 flex-1 basis-64 items-start gap-2 text-xs leading-relaxed sm:text-sm">
+        <div className="mx-auto flex max-w-6xl items-center gap-x-3 gap-y-2 px-4 py-1.5 lg:gap-x-4 lg:py-2">
+          <p className="flex min-w-0 flex-1 items-start gap-2 text-xs leading-snug sm:text-sm sm:leading-relaxed">
             <LockKeyhole aria-hidden className="mt-0.5 size-4 shrink-0" />
             <span>
               {client ? (
                 <>
-                  <strong>Please do not type your name or other personal details.</strong> Nothing here is saved, and it
-                  clears when you close the tab or after 15 minutes idle.
+                  <strong>Please do not type your name or other personal details.</strong>{" "}
+                  <span className="lg:hidden">Nothing here is saved.</span>
+                  <span className="hidden lg:inline">
+                    Nothing here is saved, and it clears when you close the tab or after 15 minutes idle.
+                  </span>
                 </>
               ) : (
                 <>
-                  <strong>Do not enter names or identifying details.</strong> Text stays on this device, is never saved,
-                  and is cleared when you close the tab or after 15 minutes idle.
+                  <strong>Do not enter names or identifying details.</strong>{" "}
+                  <span className="lg:hidden">Nothing is saved.</span>
+                  <span className="hidden lg:inline">
+                    Text stays on this device, is never saved, and is cleared when you close the tab or after 15 minutes
+                    idle.
+                  </span>
                 </>
               )}
             </span>
@@ -42,7 +52,7 @@ export function PrivacyBar({ client = false }: { client?: boolean }) {
             type="button"
             variant="outline"
             size="sm"
-            className="min-h-10 border-info-fg/25 bg-surface"
+            className="shrink-0 border-info-fg/25 bg-surface"
             onClick={() => {
               reset();
               dismissIdleNotice();
@@ -54,6 +64,22 @@ export function PrivacyBar({ client = false }: { client?: boolean }) {
           </Button>
         </div>
       </div>
+      {/* Assertive: the idle warning is time-critical. The container stays mounted so the alert is announced. */}
+      <div role="alert">
+        {idleWarning ? (
+          <div className="border-t border-warn-border bg-warn-bg text-text">
+            <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-3 gap-y-2 px-4 py-2">
+              <Hourglass aria-hidden className="size-4 shrink-0 text-warn-fg" />
+              <p className="min-w-0 flex-1 basis-48 text-sm font-semibold">
+                For privacy, this session clears in {seconds} seconds.
+              </p>
+              <Button type="button" variant="outline" size="sm" onClick={extend}>
+                Keep working
+              </Button>
+            </div>
+          </div>
+        ) : null}
+      </div>
       <div role="status" aria-live="polite">
         {cleared ? (
           <div className="border-t border-border bg-accent-soft text-text">
@@ -61,16 +87,16 @@ export function PrivacyBar({ client = false }: { client?: boolean }) {
           </div>
         ) : null}
         {idleCleared ? (
-          <div className="border-t border-warn-border bg-warn-bg text-warn-fg">
+          <div className="border-t border-warn-border bg-warn-bg text-text">
             <div className="mx-auto flex max-w-6xl items-center gap-3 px-4 py-2">
-              <TimerReset aria-hidden className="size-4 shrink-0" />
+              <TimerReset aria-hidden className="size-4 shrink-0 text-warn-fg" />
               <p className="flex-1 text-sm">
                 Your session was cleared after 15 minutes without activity. Nothing was saved.
               </p>
               <button
                 type="button"
                 onClick={dismissIdleNotice}
-                className="inline-flex size-10 items-center justify-center rounded-lg hover:bg-surface/60"
+                className="inline-flex size-11 items-center justify-center rounded-lg hover:bg-surface/60"
                 aria-label="Dismiss notice"
               >
                 <X aria-hidden className="size-4" />

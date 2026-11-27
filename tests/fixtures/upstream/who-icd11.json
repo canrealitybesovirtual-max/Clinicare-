@@ -1,0 +1,784 @@
+{
+  "_about": "Fictional e2e fixture data in the upstream's response shape (E2E_UPSTREAM_FIXTURES=1, tests only).",
+  "upstream": "who-icd11",
+  "responses": [
+    {
+      "when": {
+        "path": "/mms/codeinfo/6B20.0"
+      },
+      "json": {
+        "code": "6B20.0",
+        "stemId": "http://id.who.int/icd/release/11/2026-01/mms/900000010"
+      }
+    },
+    {
+      "when": {
+        "path": "/mms/codeinfo/6B20.1"
+      },
+      "json": {
+        "code": "6B20.1",
+        "stemId": "http://id.who.int/icd/release/11/2026-01/mms/900000011"
+      }
+    },
+    {
+      "when": {
+        "path": "/mms/codeinfo/6C40.1"
+      },
+      "json": {
+        "code": "6C40.1",
+        "stemId": "http://id.who.int/icd/release/11/2026-01/mms/900000015"
+      }
+    },
+    {
+      "when": {
+        "path": "/mms/codeinfo/6C40.2"
+      },
+      "json": {
+        "code": "6C40.2",
+        "stemId": "http://id.who.int/icd/release/11/2026-01/mms/900000016"
+      }
+    },
+    {
+      "when": {
+        "path": "/mms/codeinfo/6A70"
+      },
+      "json": {
+        "code": "6A70",
+        "stemId": "http://id.who.int/icd/release/11/2026-01/mms/900000001"
+      }
+    },
+    {
+      "when": {
+        "path": "/mms/codeinfo/6A71"
+      },
+      "json": {
+        "code": "6A71",
+        "stemId": "http://id.who.int/icd/release/11/2026-01/mms/900000002"
+      }
+    },
+    {
+      "when": {
+        "path": "/mms/codeinfo/6A72"
+      },
+      "json": {
+        "code": "6A72",
+        "stemId": "http://id.who.int/icd/release/11/2026-01/mms/900000003"
+      }
+    },
+    {
+      "when": {
+        "path": "/mms/codeinfo/6B00"
+      },
+      "json": {
+        "code": "6B00",
+        "stemId": "http://id.who.int/icd/release/11/2026-01/mms/900000004"
+      }
+    },
+    {
+      "when": {
+        "path": "/mms/codeinfo/6B01"
+      },
+      "json": {
+        "code": "6B01",
+        "stemId": "http://id.who.int/icd/release/11/2026-01/mms/900000005"
+      }
+    },
+    {
+      "when": {
+        "path": "/mms/codeinfo/6B02"
+      },
+      "json": {
+        "code": "6B02",
+        "stemId": "http://id.who.int/icd/release/11/2026-01/mms/900000006"
+      }
+    },
+    {
+      "when": {
+        "path": "/mms/codeinfo/6B03"
+      },
+      "json": {
+        "code": "6B03",
+        "stemId": "http://id.who.int/icd/release/11/2026-01/mms/900000007"
+      }
+    },
+    {
+      "when": {
+        "path": "/mms/codeinfo/6B04"
+      },
+      "json": {
+        "code": "6B04",
+        "stemId": "http://id.who.int/icd/release/11/2026-01/mms/900000008"
+      }
+    },
+    {
+      "when": {
+        "path": "/mms/codeinfo/6B20"
+      },
+      "json": {
+        "code": "6B20",
+        "stemId": "http://id.who.int/icd/release/11/2026-01/mms/900000009"
+      }
+    },
+    {
+      "when": {
+        "path": "/mms/codeinfo/6B40"
+      },
+      "json": {
+        "code": "6B40",
+        "stemId": "http://id.who.int/icd/release/11/2026-01/mms/900000012"
+      }
+    },
+    {
+      "when": {
+        "path": "/mms/codeinfo/6B42"
+      },
+      "json": {
+        "code": "6B42",
+        "stemId": "http://id.who.int/icd/release/11/2026-01/mms/900000013"
+      }
+    },
+    {
+      "when": {
+        "path": "/mms/codeinfo/6B43"
+      },
+      "json": {
+        "code": "6B43",
+        "stemId": "http://id.who.int/icd/release/11/2026-01/mms/900000014"
+      }
+    },
+    {
+      "when": {
+        "path": "/mms/codeinfo/7A00"
+      },
+      "json": {
+        "code": "7A00",
+        "stemId": "http://id.who.int/icd/release/11/2026-01/mms/900000017"
+      }
+    },
+    {
+      "when": {
+        "path": "/mms/codeinfo/7A01"
+      },
+      "json": {
+        "code": "7A01",
+        "stemId": "http://id.who.int/icd/release/11/2026-01/mms/900000018"
+      }
+    },
+    {
+      "when": {
+        "path": "/mms/900000001"
+      },
+      "json": {
+        "code": "6A70",
+        "title": {
+          "@language": "en",
+          "@value": "Single episode depressive disorder"
+        },
+        "definition": {
+          "@language": "en",
+          "@value": "Test fixture definition for 6A70. Not WHO text; the real ICD-API supplies this."
+        },
+        "classKind": "category",
+        "browserUrl": "https://icd.who.int/browse/2026-01/mms/en#900000001",
+        "inclusion": [
+          {
+            "label": {
+              "@language": "en",
+              "@value": "Fixture inclusion term for 6A70"
+            }
+          }
+        ],
+        "exclusion": [
+          {
+            "label": {
+              "@language": "en",
+              "@value": "Fixture exclusion term for 6A70"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "path": "/mms/900000002"
+      },
+      "json": {
+        "code": "6A71",
+        "title": {
+          "@language": "en",
+          "@value": "Recurrent depressive disorder"
+        },
+        "definition": {
+          "@language": "en",
+          "@value": "Test fixture definition for 6A71. Not WHO text; the real ICD-API supplies this."
+        },
+        "classKind": "category",
+        "browserUrl": "https://icd.who.int/browse/2026-01/mms/en#900000002",
+        "inclusion": [
+          {
+            "label": {
+              "@language": "en",
+              "@value": "Fixture inclusion term for 6A71"
+            }
+          }
+        ],
+        "exclusion": [
+          {
+            "label": {
+              "@language": "en",
+              "@value": "Fixture exclusion term for 6A71"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "path": "/mms/900000003"
+      },
+      "json": {
+        "code": "6A72",
+        "title": {
+          "@language": "en",
+          "@value": "Dysthymic disorder"
+        },
+        "definition": {
+          "@language": "en",
+          "@value": "Test fixture definition for 6A72. Not WHO text; the real ICD-API supplies this."
+        },
+        "classKind": "category",
+        "browserUrl": "https://icd.who.int/browse/2026-01/mms/en#900000003",
+        "inclusion": [
+          {
+            "label": {
+              "@language": "en",
+              "@value": "Fixture inclusion term for 6A72"
+            }
+          }
+        ],
+        "exclusion": [
+          {
+            "label": {
+              "@language": "en",
+              "@value": "Fixture exclusion term for 6A72"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "path": "/mms/900000004"
+      },
+      "json": {
+        "code": "6B00",
+        "title": {
+          "@language": "en",
+          "@value": "Generalised anxiety disorder"
+        },
+        "definition": {
+          "@language": "en",
+          "@value": "Test fixture definition for 6B00. Not WHO text; the real ICD-API supplies this."
+        },
+        "classKind": "category",
+        "browserUrl": "https://icd.who.int/browse/2026-01/mms/en#900000004",
+        "inclusion": [
+          {
+            "label": {
+              "@language": "en",
+              "@value": "Fixture inclusion term for 6B00"
+            }
+          }
+        ],
+        "exclusion": [
+          {
+            "label": {
+              "@language": "en",
+              "@value": "Fixture exclusion term for 6B00"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "path": "/mms/900000005"
+      },
+      "json": {
+        "code": "6B01",
+        "title": {
+          "@language": "en",
+          "@value": "Panic disorder"
+        },
+        "definition": {
+          "@language": "en",
+          "@value": "Test fixture definition for 6B01. Not WHO text; the real ICD-API supplies this."
+        },
+        "classKind": "category",
+        "browserUrl": "https://icd.who.int/browse/2026-01/mms/en#900000005",
+        "inclusion": [
+          {
+            "label": {
+              "@language": "en",
+              "@value": "Fixture inclusion term for 6B01"
+            }
+          }
+        ],
+        "exclusion": [
+          {
+            "label": {
+              "@language": "en",
+              "@value": "Fixture exclusion term for 6B01"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "path": "/mms/900000006"
+      },
+      "json": {
+        "code": "6B02",
+        "title": {
+          "@language": "en",
+          "@value": "Agoraphobia"
+        },
+        "definition": {
+          "@language": "en",
+          "@value": "Test fixture definition for 6B02. Not WHO text; the real ICD-API supplies this."
+        },
+        "classKind": "category",
+        "browserUrl": "https://icd.who.int/browse/2026-01/mms/en#900000006",
+        "inclusion": [
+          {
+            "label": {
+              "@language": "en",
+              "@value": "Fixture inclusion term for 6B02"
+            }
+          }
+        ],
+        "exclusion": [
+          {
+            "label": {
+              "@language": "en",
+              "@value": "Fixture exclusion term for 6B02"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "path": "/mms/900000007"
+      },
+      "json": {
+        "code": "6B03",
+        "title": {
+          "@language": "en",
+          "@value": "Specific phobia"
+        },
+        "definition": {
+          "@language": "en",
+          "@value": "Test fixture definition for 6B03. Not WHO text; the real ICD-API supplies this."
+        },
+        "classKind": "category",
+        "browserUrl": "https://icd.who.int/browse/2026-01/mms/en#900000007",
+        "inclusion": [
+          {
+            "label": {
+              "@language": "en",
+              "@value": "Fixture inclusion term for 6B03"
+            }
+          }
+        ],
+        "exclusion": [
+          {
+            "label": {
+              "@language": "en",
+              "@value": "Fixture exclusion term for 6B03"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "path": "/mms/900000008"
+      },
+      "json": {
+        "code": "6B04",
+        "title": {
+          "@language": "en",
+          "@value": "Social anxiety disorder"
+        },
+        "definition": {
+          "@language": "en",
+          "@value": "Test fixture definition for 6B04. Not WHO text; the real ICD-API supplies this."
+        },
+        "classKind": "category",
+        "browserUrl": "https://icd.who.int/browse/2026-01/mms/en#900000008",
+        "inclusion": [
+          {
+            "label": {
+              "@language": "en",
+              "@value": "Fixture inclusion term for 6B04"
+            }
+          }
+        ],
+        "exclusion": [
+          {
+            "label": {
+              "@language": "en",
+              "@value": "Fixture exclusion term for 6B04"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "path": "/mms/900000009"
+      },
+      "json": {
+        "code": "6B20",
+        "title": {
+          "@language": "en",
+          "@value": "Obsessive-compulsive disorder"
+        },
+        "definition": {
+          "@language": "en",
+          "@value": "Test fixture definition for 6B20. Not WHO text; the real ICD-API supplies this."
+        },
+        "classKind": "category",
+        "browserUrl": "https://icd.who.int/browse/2026-01/mms/en#900000009",
+        "inclusion": [
+          {
+            "label": {
+              "@language": "en",
+              "@value": "Fixture inclusion term for 6B20"
+            }
+          }
+        ],
+        "exclusion": [
+          {
+            "label": {
+              "@language": "en",
+              "@value": "Fixture exclusion term for 6B20"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "path": "/mms/900000010"
+      },
+      "json": {
+        "code": "6B20.0",
+        "title": {
+          "@language": "en",
+          "@value": "Obsessive-compulsive disorder with fair to good insight"
+        },
+        "definition": {
+          "@language": "en",
+          "@value": "Test fixture definition for 6B20.0. Not WHO text; the real ICD-API supplies this."
+        },
+        "classKind": "category",
+        "browserUrl": "https://icd.who.int/browse/2026-01/mms/en#900000010",
+        "inclusion": [
+          {
+            "label": {
+              "@language": "en",
+              "@value": "Fixture inclusion term for 6B20.0"
+            }
+          }
+        ],
+        "exclusion": [
+          {
+            "label": {
+              "@language": "en",
+              "@value": "Fixture exclusion term for 6B20.0"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "path": "/mms/900000011"
+      },
+      "json": {
+        "code": "6B20.1",
+        "title": {
+          "@language": "en",
+          "@value": "Obsessive-compulsive disorder with poor to absent insight"
+        },
+        "definition": {
+          "@language": "en",
+          "@value": "Test fixture definition for 6B20.1. Not WHO text; the real ICD-API supplies this."
+        },
+        "classKind": "category",
+        "browserUrl": "https://icd.who.int/browse/2026-01/mms/en#900000011",
+        "inclusion": [
+          {
+            "label": {
+              "@language": "en",
+              "@value": "Fixture inclusion term for 6B20.1"
+            }
+          }
+        ],
+        "exclusion": [
+          {
+            "label": {
+              "@language": "en",
+              "@value": "Fixture exclusion term for 6B20.1"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "path": "/mms/900000012"
+      },
+      "json": {
+        "code": "6B40",
+        "title": {
+          "@language": "en",
+          "@value": "Post traumatic stress disorder"
+        },
+        "definition": {
+          "@language": "en",
+          "@value": "Test fixture definition for 6B40. Not WHO text; the real ICD-API supplies this."
+        },
+        "classKind": "category",
+        "browserUrl": "https://icd.who.int/browse/2026-01/mms/en#900000012",
+        "inclusion": [
+          {
+            "label": {
+              "@language": "en",
+              "@value": "Fixture inclusion term for 6B40"
+            }
+          }
+        ],
+        "exclusion": [
+          {
+            "label": {
+              "@language": "en",
+              "@value": "Fixture exclusion term for 6B40"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "path": "/mms/900000013"
+      },
+      "json": {
+        "code": "6B42",
+        "title": {
+          "@language": "en",
+          "@value": "Prolonged grief disorder"
+        },
+        "definition": {
+          "@language": "en",
+          "@value": "Test fixture definition for 6B42. Not WHO text; the real ICD-API supplies this."
+        },
+        "classKind": "category",
+        "browserUrl": "https://icd.who.int/browse/2026-01/mms/en#900000013",
+        "inclusion": [
+          {
+            "label": {
+              "@language": "en",
+              "@value": "Fixture inclusion term for 6B42"
+            }
+          }
+        ],
+        "exclusion": [
+          {
+            "label": {
+              "@language": "en",
+              "@value": "Fixture exclusion term for 6B42"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "path": "/mms/900000014"
+      },
+      "json": {
+        "code": "6B43",
+        "title": {
+          "@language": "en",
+          "@value": "Adjustment disorder"
+        },
+        "definition": {
+          "@language": "en",
+          "@value": "Test fixture definition for 6B43. Not WHO text; the real ICD-API supplies this."
+        },
+        "classKind": "category",
+        "browserUrl": "https://icd.who.int/browse/2026-01/mms/en#900000014",
+        "inclusion": [
+          {
+            "label": {
+              "@language": "en",
+              "@value": "Fixture inclusion term for 6B43"
+            }
+          }
+        ],
+        "exclusion": [
+          {
+            "label": {
+              "@language": "en",
+              "@value": "Fixture exclusion term for 6B43"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "path": "/mms/900000015"
+      },
+      "json": {
+        "code": "6C40.1",
+        "title": {
+          "@language": "en",
+          "@value": "Harmful pattern of use of alcohol"
+        },
+        "definition": {
+          "@language": "en",
+          "@value": "Test fixture definition for 6C40.1. Not WHO text; the real ICD-API supplies this."
+        },
+        "classKind": "category",
+        "browserUrl": "https://icd.who.int/browse/2026-01/mms/en#900000015",
+        "inclusion": [
+          {
+            "label": {
+              "@language": "en",
+              "@value": "Fixture inclusion term for 6C40.1"
+            }
+          }
+        ],
+        "exclusion": [
+          {
+            "label": {
+              "@language": "en",
+              "@value": "Fixture exclusion term for 6C40.1"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "path": "/mms/900000016"
+      },
+      "json": {
+        "code": "6C40.2",
+        "title": {
+          "@language": "en",
+          "@value": "Alcohol dependence"
+        },
+        "definition": {
+          "@language": "en",
+          "@value": "Test fixture definition for 6C40.2. Not WHO text; the real ICD-API supplies this."
+        },
+        "classKind": "category",
+        "browserUrl": "https://icd.who.int/browse/2026-01/mms/en#900000016",
+        "inclusion": [
+          {
+            "label": {
+              "@language": "en",
+              "@value": "Fixture inclusion term for 6C40.2"
+            }
+          }
+        ],
+        "exclusion": [
+          {
+            "label": {
+              "@language": "en",
+              "@value": "Fixture exclusion term for 6C40.2"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "path": "/mms/900000017"
+      },
+      "json": {
+        "code": "7A00",
+        "title": {
+          "@language": "en",
+          "@value": "Chronic insomnia"
+        },
+        "definition": {
+          "@language": "en",
+          "@value": "Test fixture definition for 7A00. Not WHO text; the real ICD-API supplies this."
+        },
+        "classKind": "category",
+        "browserUrl": "https://icd.who.int/browse/2026-01/mms/en#900000017",
+        "inclusion": [
+          {
+            "label": {
+              "@language": "en",
+              "@value": "Fixture inclusion term for 7A00"
+            }
+          }
+        ],
+        "exclusion": [
+          {
+            "label": {
+              "@language": "en",
+              "@value": "Fixture exclusion term for 7A00"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "path": "/mms/900000018"
+      },
+      "json": {
+        "code": "7A01",
+        "title": {
+          "@language": "en",
+          "@value": "Short-term insomnia"
+        },
+        "definition": {
+          "@language": "en",
+          "@value": "Test fixture definition for 7A01. Not WHO text; the real ICD-API supplies this."
+        },
+        "classKind": "category",
+        "browserUrl": "https://icd.who.int/browse/2026-01/mms/en#900000018",
+        "inclusion": [
+          {
+            "label": {
+              "@language": "en",
+              "@value": "Fixture inclusion term for 7A01"
+            }
+          }
+        ],
+        "exclusion": [
+          {
+            "label": {
+              "@language": "en",
+              "@value": "Fixture exclusion term for 7A01"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "note": "unknown code",
+      "status": 404
+    }
+  ]
+}

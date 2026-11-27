@@ -18,7 +18,8 @@
         {
           "id": "pgd-initial-screening",
           "text": "Within the first 2 sessions, the clinician screens for depression, trauma reactions (especially after a sudden or violent death), use of alcohol or sleep aids to cope, and thoughts of suicide, and agrees with the client whether grief-focused, trauma-focused or combined care should come first.",
-          "interventionIds": ["grief-focused-therapy", "cultural-formulation-exploration"]
+          "interventionIds": ["grief-focused-therapy", "cultural-formulation-exploration"],
+          "sud": true
         },
         {
           "id": "pgd-share-the-story",

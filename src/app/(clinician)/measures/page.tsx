@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ExternalLink } from "@/components/ui/external-link";
-import { PageIntro, ReviewBadge } from "@/components/content/content-bits";
+import { NextStep, PageIntro, ReviewBadge } from "@/components/content/content-bits";
 import { DownloadPdfButton } from "@/components/pdf/download-pdf-button";
 import { AdultOnly } from "@/components/measures/adult-only";
 import { MeasurementBasedCareNote } from "@/components/measures/measure-form";
@@ -27,7 +27,7 @@ export default function MeasuresPage() {
 
   return (
     <>
-      <PageIntro title="Measures" eyebrow="Step 3 · Clinician mode">
+      <PageIntro title="Measures" eyebrow="Step 3 · Clinician mode" compact>
         <p>
           Built-in measures are limited to those with a confirmed license. Answers stay in this tab and scores are never
           saved — record results in your EHR. Completed forms can be exported as FHIR JSON with no identifiers.
@@ -63,7 +63,8 @@ export default function MeasuresPage() {
                       Range {m.scoring.min}–{m.scoring.max}
                     </Badge>
                     {m.riskItems.length ? (
-                      <Badge tone="crisis">Risk item {m.riskItems.map((r) => r.itemId).join(", ")}</Badge>
+                      // Informational only: crisis red is kept for crisis buttons and active red flags.
+                      <Badge tone="info">Includes a risk item ({m.riskItems.map((r) => r.itemId).join(", ")})</Badge>
                     ) : null}
                     <ReviewBadge reviewedBy={m.reviewedBy} />
                   </div>
@@ -110,13 +111,15 @@ export default function MeasuresPage() {
                   <ExternalLink href={p.url}>{p.name}</ExternalLink>
                   <Badge tone="warn">License pending</Badge>
                 </div>
-                <p className="mt-1.5 text-sm text-muted">{p.note}</p>
+                {/* The badge already says "License pending"; show the note only when it adds something. */}
+                {/license pending/i.test(p.note) ? null : <p className="mt-1.5 text-sm text-muted">{p.note}</p>}
                 <p className="mt-1 text-xs text-muted">Referenced for: {p.conditions.join(", ")}</p>
               </li>
             ))}
           </ul>
         </section>
       </AdultOnly>
+      <NextStep href="/plan" label="Step 4 · Plan with the client" />
     </>
   );
 }

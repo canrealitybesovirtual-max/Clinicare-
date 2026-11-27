@@ -1,0 +1,65 @@
+{
+  "_about": "Fictional e2e fixture data in the upstream's response shape (E2E_UPSTREAM_FIXTURES=1, tests only). PMIDs 99000001-99000003 are placeholders.",
+  "upstream": "ncbi-eutils",
+  "responses": [
+    {
+      "when": {
+        "path": "/esearch.fcgi"
+      },
+      "json": {
+        "esearchresult": {
+          "count": "3",
+          "idlist": [
+            "99000001",
+            "99000002",
+            "99000003"
+          ]
+        }
+      }
+    },
+    {
+      "when": {
+        "path": "/esummary.fcgi"
+      },
+      "json": {
+        "result": {
+          "99000001": {
+            "uid": "99000001",
+            "title": "Fixture citation 1: a placeholder title for automated tests.",
+            "source": "Fixture J",
+            "pubdate": "2024 Jan",
+            "pubtype": [
+              "Meta-Analysis",
+              "Journal Article"
+            ]
+          },
+          "99000002": {
+            "uid": "99000002",
+            "title": "Fixture citation 2: a placeholder title for automated tests.",
+            "source": "Fixture J",
+            "pubdate": "2023 Jan",
+            "pubtype": [
+              "Randomized Controlled Trial",
+              "Journal Article"
+            ]
+          },
+          "99000003": {
+            "uid": "99000003",
+            "title": "Fixture citation 3: a placeholder title for automated tests.",
+            "source": "Fixture J",
+            "pubdate": "2022 Jan",
+            "pubtype": [
+              "Systematic Review",
+              "Journal Article"
+            ]
+          },
+          "uids": [
+            "99000001",
+            "99000002",
+            "99000003"
+          ]
+        }
+      }
+    }
+  ]
+}

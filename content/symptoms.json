@@ -2362,7 +2362,7 @@
     },
     {
       "id": "impaired-control-drinking",
-      "label": "Drinking runs past the client's own plan: more, or for longer, than intended, with trouble stopping once started",
+      "label": "Impaired control over drinking: once drinking starts it is hard to stop, and nights or occasions run well past what the client set out to do",
       "clientLabel": "Drinking more or longer than you planned",
       "category": "behavioral",
       "synonyms": [
@@ -2388,7 +2388,7 @@
     },
     {
       "id": "unsuccessful-cut-down",
-      "label": "A lasting wish to cut down or stop drinking, or attempts that keep falling through",
+      "label": "Impaired control over drinking: the client has tried to drink less or quit, and the change has not stuck",
       "clientLabel": "Trying to cut down on drinking but not being able to",
       "category": "behavioral",
       "synonyms": [
@@ -2427,7 +2427,7 @@
     },
     {
       "id": "drinking-despite-harm",
-      "label": "Drinking carries on despite clear harm: health warnings, liver or stomach problems, low mood, fights at home or legal trouble",
+      "label": "Alcohol comes first even after harm: health warnings, liver or stomach problems, low mood, fights at home or legal trouble have not changed the drinking",
       "clientLabel": "Still drinking even though it causes problems",
       "category": "behavioral",
       "synonyms": [
@@ -2445,7 +2445,7 @@
     },
     {
       "id": "drinking-role-impact",
-      "label": "Drinking or recovering from it crowds out roles and interests: missed work, neglected home or children, dropped hobbies, whole days lost",
+      "label": "Alcohol takes priority over the rest of life: work, home, children or hobbies give way to drinking or to getting over it",
       "clientLabel": "Drinking getting in the way of work, home or fun things",
       "category": "behavioral",
       "synonyms": [
@@ -2485,7 +2485,7 @@
     },
     {
       "id": "alcohol-tolerance",
-      "label": "Tolerance: it takes clearly more alcohol than before to feel an effect, or the usual amount does much less",
+      "label": "Physiological adaptation: the client now needs much more alcohol than they used to before they feel any effect",
       "clientLabel": "Needing more alcohol than before to feel it",
       "category": "behavioral",
       "synonyms": [

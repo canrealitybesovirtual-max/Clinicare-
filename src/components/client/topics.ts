@@ -30,6 +30,66 @@ export const CLIENT_TOPICS: readonly ClientTopic[] = file.topics.map((t) => ({
 
 export const getClientTopic = (id: string): ClientTopic | undefined => CLIENT_TOPICS.find((t) => t.id === id);
 
+/**
+ * Plain-language groups for the client topic list (curated ids). Crisis topics are pulled out and shown first;
+ * any topic not listed here falls into "More topics", so a new topic is never hidden.
+ */
+const GROUPS: readonly { id: string; label: string; ids: readonly string[] }[] = [
+  {
+    id: "feelings",
+    label: "Feelings",
+    ids: [
+      "anxiety",
+      "panic-attacks",
+      "low-mood",
+      "stress",
+      "grief",
+      "strong-fears",
+      "social-nervousness",
+      "unwanted-thoughts",
+      "after-trauma",
+      "mood-and-energy-shifts",
+      "focus-and-attention",
+    ],
+  },
+  {
+    id: "sleep-body",
+    label: "Sleep and body",
+    ids: ["trouble-sleeping", "healthy-sleep", "relaxation", "exercise", "eating-concerns", "feeling-better"],
+  },
+  {
+    id: "life",
+    label: "Life changes and relationships",
+    ids: ["mood-after-baby", "seasonal-mood", "caregiving", "disasters", "later-life", "military-life"],
+  },
+  { id: "habits", label: "Alcohol, drugs and habits", ids: ["alcohol", "quitting-smoking"] },
+  { id: "health", label: "Health conditions", ids: ["chronic-illness", "mental-health", "mental-health-conditions"] },
+];
+
+export interface ClientTopicGroup {
+  id: string;
+  label: string;
+  topics: ClientTopic[];
+}
+
+export function groupClientTopics(topics: readonly ClientTopic[] = CLIENT_TOPICS): {
+  crisis: ClientTopic[];
+  groups: ClientTopicGroup[];
+} {
+  const crisis = topics.filter((t) => t.crisis);
+  const rest = topics.filter((t) => !t.crisis);
+  const placed = new Set<string>();
+  const groups: ClientTopicGroup[] = [];
+  for (const g of GROUPS) {
+    const list = g.ids.flatMap((id) => rest.filter((t) => t.id === id));
+    list.forEach((t) => placed.add(t.id));
+    if (list.length) groups.push({ id: g.id, label: g.label, topics: list });
+  }
+  const other = rest.filter((t) => !placed.has(t.id));
+  if (other.length) groups.push({ id: "more", label: "More topics", topics: other });
+  return { crisis, groups };
+}
+
 /** Related self-help skills (handout ids) per topic. Curated; every id must exist in content/handouts. */
 export const TOPIC_SKILLS: Readonly<Record<string, readonly string[]>> = {
   anxiety: ["worry-log", "breathing-practice", "pmr-homework", "grounding-5-4-3-2-1"],

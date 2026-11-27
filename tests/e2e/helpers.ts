@@ -2,16 +2,33 @@
  * Shared helpers for the Playwright suite. Session state is memory-only, so any test that carries
  * state from one screen to the next must move with in-app links (client-side navigation), never
  * page.goto(), which reloads the tab and wipes the session by design.
+ *
+ * The app server runs with canned upstream answers (E2E_UPSTREAM_FIXTURES=1, tests/fixtures/upstream), so
+ * every /api lookup below returns deterministic fixture data and nothing reaches a real API.
  */
-import { readFileSync } from "node:fs";
+import { readFileSync, readdirSync } from "node:fs";
 import path from "node:path";
 import { inflateSync } from "node:zlib";
 import { expect, type Download, type Locator, type Page } from "@playwright/test";
 
 export const ROOT = path.resolve(__dirname, "../..");
 
-/** Every route in the Phase 1 app. */
-export const ROUTES = [
+/** Sample ids for the dynamic routes (curated content ids, the only values that may appear in a URL). */
+export const SAMPLE = {
+  intervention: "progressive-muscle-relaxation",
+  sudIntervention: "urge-surfing",
+  medication: "sertraline",
+  sudMedication: "naltrexone",
+  handout: "pmr-homework",
+  sudHandout: "drinking-diary",
+  topic: "stress",
+  conditionTopic: "anxiety",
+  sudTopic: "alcohol",
+  skill: "grounding-5-4-3-2-1",
+} as const;
+
+/** The pages the service worker precaches (public/sw.js PAGES). */
+export const SW_ROUTES = [
   "/",
   "/symptoms",
   "/diagnoses",
@@ -23,14 +40,58 @@ export const ROUTES = [
   "/about",
 ] as const;
 
-/** Routes that show the clinician PHI banner (everything except client mode). */
-export const CLINICIAN_ROUTES = ROUTES.filter((r) => r !== "/client");
+/** Client-facing routes: client mode and the public share page. No diagnosis names, codes or scores (G3). */
+export const CLIENT_ROUTES = [
+  "/client",
+  "/client/help",
+  "/client/skills",
+  `/client/skills/${SAMPLE.skill}`,
+  `/client/topics/${SAMPLE.topic}`,
+  `/client/topics/${SAMPLE.conditionTopic}`,
+  `/client/topics/${SAMPLE.sudTopic}`,
+  `/r/${SAMPLE.handout}`,
+] as const;
+
+/** Clinician routes (the PHI banner and clinician navigation show on these). */
+export const CLINICIAN_ROUTES = [
+  "/",
+  "/symptoms",
+  "/diagnoses",
+  "/measures",
+  "/measures/gad-7",
+  "/measures/phq-9",
+  "/plan",
+  "/interventions",
+  `/interventions/${SAMPLE.intervention}`,
+  `/interventions/${SAMPLE.sudIntervention}`,
+  "/handouts",
+  `/handouts/${SAMPLE.handout}`,
+  `/handouts/${SAMPLE.sudHandout}`,
+  "/referrals",
+  "/medications",
+  `/medications/${SAMPLE.medication}`,
+  `/medications/${SAMPLE.sudMedication}`,
+  "/ethics",
+  "/about",
+] as const;
+
+/** Every route in the app (one sample per dynamic segment, plus the SUD samples). */
+export const ROUTES: readonly string[] = [...CLINICIAN_ROUTES, ...CLIENT_ROUTES];
+
+export function isClientRoute(route: string): boolean {
+  return route === "/client" || route.startsWith("/client/") || route.startsWith("/r/");
+}
 
 export const DISCLAIMER =
   "Resource only. Not a substitute for clinical judgment. Not a medical device. For licensed clinicians.";
 
 export const CLINICIAN_PHI_BANNER = "Do not enter names or identifying details.";
 export const CLIENT_PHI_BANNER = "Please do not type your name or other personal details.";
+
+/** Exact 42 CFR Part 2 notice (owner decision 2026-11-26, docs/RESOURCES.md). */
+export const PART2_NOTICE = "42 CFR Part 2 prohibits unauthorized use or disclosure of these records.";
+/** Start of the SUD Ethics & Legal Hub prompt (<HubPrompt context="sud"/>). */
+export const SUD_HUB_PROMPT = "Substance use: 42 CFR Part 2 may protect these records in addition to HIPAA.";
 
 /** ICD-10-CM F-codes (F41.1) and ICD-11 mental-health codes (6A70, 6B00). */
 export const ICD_CODE_RE = /F\d\d\.|6[AB]\d\d/;
@@ -42,18 +103,67 @@ export interface ConditionInfo {
   icd11: { code: string }[];
 }
 
+/** Every condition in the knowledge base (names and codes that must never reach a client page). */
 export function loadConditions(): ConditionInfo[] {
-  const ids = ["panic-disorder", "agoraphobia", "generalized-anxiety-disorder", "major-depressive-disorder", "ptsd"];
-  return ids.map((id) => JSON.parse(readFileSync(path.join(ROOT, "content/conditions", `${id}.json`), "utf8")) as ConditionInfo);
+  const dir = path.join(ROOT, "content/conditions");
+  return readdirSync(dir)
+    .filter((f) => f.endsWith(".json"))
+    .sort()
+    .map((f) => JSON.parse(readFileSync(path.join(dir, f), "utf8")) as ConditionInfo);
+}
+
+/**
+ * Client-facing text limits (G3): no ICD codes, no condition names, no scoring or diagnosis words. Checks the
+ * visible text and the HTML (attributes and hidden text included).
+ */
+export async function expectClientSafe(page: Page, label: string): Promise<void> {
+  const text = await page.locator("body").innerText();
+  const html = await page.content();
+  expect(text, label).not.toMatch(ICD_CODE_RE);
+  expect(html, label).not.toMatch(/\bF\d\d\.\d/);
+  const lower = text.toLowerCase();
+  for (const c of loadConditions()) {
+    expect(lower, `${label}: condition name ${c.name}`).not.toContain(c.name.toLowerCase());
+    for (const code of [...c.icd10cm, ...c.icd11]) expect(text, `${label}: code ${code.code}`).not.toContain(code.code);
+  }
+  expect(text, label).not.toMatch(/\b(GAD-7|PHQ-9|score|scores|scored|severity|diagnos\w*|disorder)\b/i);
+  expect(text, label).not.toMatch(/\b\d+\s*(of|\/)\s*(21|27)\b/);
 }
 
 export function crisisButton(page: Page): Locator {
   return page.getByRole("button", { name: /^(Crisis help|Get help now)$/ });
 }
 
-/** The site-wide navigation link (header nav), by its visible label. */
-export function navLink(page: Page, label: "Symptoms" | "Diagnoses" | "Measures" | "Handouts" | "About"): Locator {
-  return page.getByRole("navigation", { name: "Main" }).getByRole("link", { name: label, exact: true });
+export type NavLabel =
+  | "Symptoms"
+  | "Diagnoses"
+  | "Measures"
+  | "Plan"
+  | "Interventions"
+  | "Handouts"
+  | "Referrals"
+  | "Medications"
+  | "Ethics & Legal"
+  | "Client mode"
+  | "About";
+
+/**
+ * Follow a site-wide navigation link with a client-side navigation, wherever it sits at this width: the header
+ * bar, its "More" menu (wide screens) or the menu drawer (small screens).
+ */
+export async function goNav(page: Page, label: NavLabel): Promise<void> {
+  const drawerTrigger = page.getByRole("banner").getByRole("button", { name: /^Menu\b/ });
+  if (await drawerTrigger.isVisible()) {
+    await drawerTrigger.click();
+    const drawer = page.getByRole("dialog", { name: "Menu" });
+    await drawer.getByRole("link", { name: label, exact: true }).click();
+    await expect(drawer).toBeHidden();
+    return;
+  }
+  const nav = page.getByRole("banner").getByRole("navigation", { name: "Main" });
+  const inBar = nav.getByRole("link", { name: label, exact: true }).filter({ visible: true });
+  if ((await inBar.count()) === 0) await nav.getByRole("button", { name: "More" }).click();
+  await nav.getByRole("link", { name: label, exact: true }).filter({ visible: true }).first().click();
 }
 
 /** Resolves once React has hydrated the page (event handlers are attached to the header). */
@@ -72,7 +182,7 @@ export async function gotoReady(page: Page, route: string): Promise<void> {
 }
 
 /** Pick one option of a ChoiceGroup (fieldset + legend, visually styled radio labels). */
-export async function choose(page: Page, legend: string | RegExp, option: string): Promise<void> {
+export async function choose(page: Page | Locator, legend: string | RegExp, option: string): Promise<void> {
   const group = page.getByRole("group", { name: legend });
   await group.locator("label").filter({ hasText: option }).first().click();
   await expect(group.getByRole("radio", { name: option, exact: true })).toBeChecked();
@@ -92,13 +202,31 @@ export async function enterSymptomText(page: Page, text: string): Promise<void> 
   await box.blur();
 }
 
+/** Open every <details> element (disclosures) so their content is audited too. */
+export async function openAllDetails(page: Page): Promise<void> {
+  await page.locator("details").evaluateAll((ds) => ds.forEach((d) => ((d as HTMLDetailsElement).open = true)));
+}
+
+/** Open every collapsed lazy panel / disclosure button (aria-expanded="false") inside `scope`. */
+export async function expandAll(scope: Locator): Promise<number> {
+  const closed = scope.locator('button[aria-expanded="false"]:visible');
+  let n = 0;
+  for (let guard = 0; guard < 40; guard++) {
+    const count = await closed.count();
+    if (count === 0) break;
+    await closed.first().click();
+    n += 1;
+  }
+  return n;
+}
+
 export async function readDownload(download: Download): Promise<Buffer> {
   const p = await download.path();
   if (!p) throw new Error("download has no local path");
   return readFileSync(p);
 }
 
-/** Click a button that triggers a client-side PDF download and return the bytes. */
+/** Click a button that triggers a client-side download and return the bytes. */
 export async function downloadVia(page: Page, button: Locator): Promise<{ bytes: Buffer; name: string }> {
   const [download] = await Promise.all([page.waitForEvent("download"), button.click()]);
   const bytes = await readDownload(download);
@@ -141,4 +269,37 @@ export async function visibleTextAndValues(page: Page): Promise<string> {
     );
     return [document.body.innerText, ...values].join("\n");
   });
+}
+
+/* ------------------------------------------------------------------ plan builder */
+
+/**
+ * Start a plan for one curated library on /plan: choose the library, check the first problem, its first
+ * definition, goal and objective, then (optionally) add a custom objective with `customObjective` typed key by key.
+ * Ends on the review step. Uses only in-page controls, so the memory-only draft survives.
+ */
+export async function buildPlan(page: Page, conditionLabel: string, opts: { customObjective?: string } = {}): Promise<void> {
+  await page.getByLabel("Plan library").selectOption({ label: conditionLabel });
+  await expect(page.getByText(`Plan library: ${conditionLabel}`)).toBeVisible();
+  const step = page.getByRole("region", { name: /^Step \d+ of \d+/ });
+  const next = () => step.getByRole("button", { name: /^Next: / }).click();
+
+  await next(); // Problems
+  await step.getByRole("checkbox").first().check();
+  for (let i = 0; i < 3; i++) {
+    await next(); // Behavioral definitions, Long-term goals, Objectives
+    await step.getByRole("checkbox").first().check();
+  }
+  if (opts.customObjective !== undefined) {
+    await step.getByRole("button", { name: /^Add an objective/ }).first().click();
+    const editor = step.getByLabel("Wording for this objective");
+    await expect(editor).toBeFocused();
+    await editor.pressSequentially(opts.customObjective);
+    await editor.blur();
+    await step.getByRole("button", { name: "Done editing" }).click();
+  }
+  await next(); // Interventions
+  await next(); // Measures
+  await next(); // Review
+  await expect(step.getByRole("heading", { name: "Export", exact: true })).toBeVisible();
 }

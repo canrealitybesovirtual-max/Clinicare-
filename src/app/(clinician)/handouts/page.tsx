@@ -5,7 +5,7 @@ import { measures } from "@/lib/content";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { ExternalLink } from "@/components/ui/external-link";
-import { PageIntro } from "@/components/content/content-bits";
+import { NextStep, PageIntro } from "@/components/content/content-bits";
 import { DownloadPdfButton } from "@/components/pdf/download-pdf-button";
 import { AdultOnly } from "@/components/measures/adult-only";
 import { HandoutLibrary } from "@/components/handouts/handout-library";
@@ -123,6 +123,7 @@ export default function HandoutsPage() {
           </section>
         </div>
       </div>
+      <NextStep href="/referrals" label="Step 7 · Referrals" />
     </>
   );
 }

@@ -9,6 +9,7 @@ import * as React from "react";
 import { Braces, LoaderCircle } from "lucide-react";
 import type { Measure } from "@/lib/schemas";
 import { Button } from "@/components/ui/button";
+import { Disclosure } from "@/components/ui/disclosure";
 
 /** LOINC facts computed on the server (describeFhirExport + LOINC_PANELS) and passed down. */
 export interface FhirExportInfo {
@@ -76,8 +77,7 @@ export function FhirExport({
                 ? "Exports a QuestionnaireResponse with every answer and the total."
                 : "Incomplete forms export as in-progress, without a total."}
       </p>
-      <details className="text-xs text-muted">
-        <summary className="min-h-10 cursor-pointer py-2 font-semibold text-text">LOINC codes in the export</summary>
+      <Disclosure title="LOINC codes in the export" bordered={false} bodyClassName="space-y-0 pb-1 text-xs text-muted">
         <dl className="grid grid-cols-[auto_1fr] gap-x-3 gap-y-1">
           <dt className="font-semibold text-text">Panel</dt>
           <dd className="font-mono">{info.panel}</dd>
@@ -102,7 +102,7 @@ export function FhirExport({
         </dl>
         {info.note ? <p className="mt-2">{info.note}</p> : null}
         <p className="mt-2 leading-relaxed">{info.loincNotice}</p>
-      </details>
+      </Disclosure>
     </div>
   );
 }

@@ -10,6 +10,7 @@ import { Card } from "@/components/ui/card";
 import { ExternalLink } from "@/components/ui/external-link";
 import { CrisisInline } from "@/components/crisis/crisis-panel";
 import { DownloadPdfButton } from "@/components/pdf/download-pdf-button";
+import { Disclosure } from "@/components/ui/disclosure";
 import { cn } from "@/lib/utils";
 import { FhirExport, type FhirExportInfo } from "./fhir-export";
 
@@ -100,6 +101,7 @@ export function MeasureForm({ measure, fhir }: { measure: Measure; fhir?: FhirEx
   const score = scoreMeasure(measure, answers);
   const n = measure.items.length;
   const flagged = new Map(score.riskFlags.map((r) => [r.itemId, r.message] as const));
+  const nothingToClear = score.answered === 0 && functional === null;
   const liveText = `Total ${score.total} of ${measure.scoring.max}. ${score.answered} of ${n} items answered.${
     score.band ? ` Severity band: ${score.band.label}.` : ""
   }${score.riskFlags.length ? " Risk item flagged." : ""}`;
@@ -136,8 +138,7 @@ export function MeasureForm({ measure, fhir }: { measure: Measure; fhir?: FhirEx
           Item {score.riskFlags.map((r) => r.itemId).join(", ")} flagged: follow up directly (see the item).
         </p>
       ) : null}
-      <details className="text-sm">
-        <summary className="min-h-10 cursor-pointer py-2 font-semibold">Scoring bands</summary>
+      <Disclosure title="Scoring bands" bordered={false} bodyClassName="pb-1">
         <ul className="space-y-1 text-muted">
           {measure.scoring.bands.map((b) => (
             <li key={b.label} className="flex justify-between gap-2">
@@ -148,16 +149,27 @@ export function MeasureForm({ measure, fhir }: { measure: Measure; fhir?: FhirEx
             </li>
           ))}
         </ul>
-      </details>
+      </Disclosure>
       <p className="text-xs font-semibold text-text">Scores are not saved — record the result in your EHR.</p>
       <MeasurementBasedCareNote className="text-xs" />
       <div className="flex flex-wrap gap-2">
-        <Button type="button" variant="outline" onClick={() => clearMeasure(measure.id)} disabled={score.answered === 0 && functional === null}>
+        {/* aria-disabled, not disabled: the button stays focusable after clearing, so focus never drops to <body>. */}
+        <Button
+          type="button"
+          variant="outline"
+          aria-disabled={nothingToClear || undefined}
+          className="aria-disabled:cursor-not-allowed aria-disabled:opacity-50"
+          onClick={() => {
+            if (nothingToClear) return;
+            clearMeasure(measure.id);
+          }}
+        >
           <Eraser aria-hidden />
           Clear answers
         </Button>
         <DownloadPdfButton measure={measure} label="Download blank PDF" />
       </div>
+      <p className="text-xs text-muted">The blank PDF is for paper. This page is the accessible version for screen readers.</p>
       {fhir ? <FhirExport measure={measure} answers={answers} functional={functional} info={fhir} /> : null}
     </Card>
   );
@@ -165,7 +177,12 @@ export function MeasureForm({ measure, fhir }: { measure: Measure; fhir?: FhirEx
   return (
     <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_20rem] lg:items-start">
       <div className="min-w-0">
-        <div className="sticky top-0 z-10 -mx-4 mb-4 border-b border-border bg-bg/95 px-4 py-2 text-sm backdrop-blur lg:hidden" aria-hidden>
+        {/* data-sticky-score: globals.css adds scroll-padding-top so focused radios never sit under this bar. */}
+        <div
+          data-sticky-score
+          className="sticky top-0 z-10 -mx-4 mb-4 border-b border-border bg-bg/95 px-4 py-2 text-sm backdrop-blur lg:hidden [@media(max-height:30rem)]:static"
+          aria-hidden
+        >
           <span className="font-semibold">Total {score.total}</span>
           <span className="text-muted"> of {measure.scoring.max} · {score.answered}/{n} answered</span>
           {score.band ? <span className="text-muted"> · {score.band.label}</span> : null}

@@ -6,7 +6,7 @@
  */
 import * as React from "react";
 import Link from "next/link";
-import { ArrowRight, Clock, Search, X } from "lucide-react";
+import { ChevronRight, Clock, Search, X } from "lucide-react";
 import { useSession } from "@/state/session";
 import { useScrubbedField } from "@/components/symptoms/use-scrubbed-field";
 import { PRIVATE_TEXT_FIELD_PROPS } from "@/components/ui/private-field";
@@ -16,7 +16,7 @@ import { Card } from "@/components/ui/card";
 import type { FilterOption, HandoutCardData } from "./catalog";
 
 const selectClass =
-  "mt-1.5 block min-h-11 w-full rounded-lg border border-border bg-surface px-3 text-base text-text sm:text-sm";
+  "mt-1.5 block min-h-11 w-full rounded-lg border border-input-border bg-surface px-3 text-base text-text sm:text-sm";
 
 interface Props {
   cards: HandoutCardData[];
@@ -81,7 +81,7 @@ function LibraryInner({ cards, practiceTypes, interventions }: Props) {
                 onBlur={search.flushNow}
                 {...PRIVATE_TEXT_FIELD_PROPS}
                 placeholder="e.g., sleep, worry, breathing, urges"
-                className="block min-h-11 w-full rounded-lg border border-border bg-surface pl-9 pr-3 text-base text-text placeholder:text-muted/80"
+                className="block min-h-11 w-full rounded-lg border border-input-border bg-surface pl-9 pr-3 text-base text-text placeholder:text-muted"
               />
             </div>
             <div role="alert">
@@ -130,12 +130,12 @@ function LibraryInner({ cards, practiceTypes, interventions }: Props) {
                 type="button"
                 variant="ghost"
                 size="sm"
-                className="min-h-11"
                 onClick={() => {
                   setPractice("");
                   setIntervention("");
                   setLogOnly(false);
                   search.replace("");
+                  search.ref.current?.focus();
                 }}
               >
                 <X aria-hidden />
@@ -158,11 +158,19 @@ function LibraryInner({ cards, practiceTypes, interventions }: Props) {
         <ul className="grid gap-4 md:grid-cols-2" aria-label="Handouts">
           {results.map((c) => (
             <li key={c.id}>
-              <article aria-labelledby={`card-${c.id}`} className="flex h-full flex-col rounded-xl border border-border bg-surface p-4 shadow-sm">
-                <h3 id={`card-${c.id}`} className="text-base font-semibold leading-snug">
-                  <Link href={`/handouts/${c.id}`} className="hover:text-accent hover:underline">
+              <article
+                aria-labelledby={`card-${c.id}`}
+                className="relative flex h-full flex-col rounded-xl border border-border bg-surface p-4 shadow-sm transition-colors hover:border-accent"
+              >
+                <h3 id={`card-${c.id}`} className="flex items-start gap-2 text-base font-semibold leading-snug">
+                  {/* Stretched link: the whole card opens the handout (open, print or share). */}
+                  <Link
+                    href={`/handouts/${c.id}`}
+                    className="min-w-0 flex-1 text-accent underline decoration-accent/40 underline-offset-2 after:absolute after:inset-0 after:rounded-xl hover:decoration-accent"
+                  >
                     {c.title}
                   </Link>
+                  <ChevronRight aria-hidden className="mt-0.5 size-4 shrink-0 text-muted" />
                 </h3>
                 <p className="mt-1.5 flex-1 text-sm leading-relaxed text-muted">{c.blurb}</p>
                 <div className="mt-3 flex flex-wrap gap-1.5">
@@ -174,14 +182,7 @@ function LibraryInner({ cards, practiceTypes, interventions }: Props) {
                   {c.sud ? <Badge tone="warn">Part 2 notice on PDF</Badge> : null}
                   {c.reviewPending ? <Badge tone="warn">Not yet clinically reviewed</Badge> : null}
                 </div>
-                <Link
-                  href={`/handouts/${c.id}`}
-                  className="mt-3 inline-flex min-h-11 items-center gap-1 self-start text-sm font-semibold text-accent underline decoration-accent/40 underline-offset-2 hover:decoration-accent"
-                >
-                  Open, print or share
-                  <span className="sr-only">: {c.title}</span>
-                  <ArrowRight aria-hidden className="size-4" />
-                </Link>
+                <p className="mt-2 text-xs text-muted">Open to print, download or share a link.</p>
               </article>
             </li>
           ))}

@@ -38,7 +38,7 @@ const GUIDANCE: Record<RedFlagType, { title: string; body: React.ReactNode; cris
   },
   withdrawal: {
     title: "Possible alcohol or sedative withdrawal noted",
-    body: "Consider an urgent medical referral: withdrawal can be medically dangerous. This app does not store or transmit substance-use information (42 CFR Part 2).",
+    body: "Consider an urgent medical referral: withdrawal can be medically dangerous. This app does not store or transmit client substance-use information (42 CFR Part 2).",
   },
 };
 
@@ -46,13 +46,19 @@ const GUIDANCE: Record<RedFlagType, { title: string; body: React.ReactNode; cris
  * Red-flag banner (G9). Appears the moment a red-flag symptom is selected or detected.
  * It prompts direct assessment; the app never decides risk.
  */
-export function RedFlagBanner({ flags }: { flags: { type: RedFlagType; symptoms: Symptom[] }[] }) {
+export function RedFlagBanner({
+  flags,
+  className = "mb-6",
+}: {
+  flags: { type: RedFlagType; symptoms: Symptom[] }[];
+  className?: string;
+}) {
   return (
     <div role="alert">
       {flags.length > 0 ? (
         <section
           aria-label="Safety red flags"
-          className="mb-6 rounded-xl border border-crisis/40 border-l-[6px] border-l-crisis bg-surface p-4 shadow-sm sm:p-5"
+          className={`${className} rounded-xl border border-crisis/40 border-l-[6px] border-l-crisis bg-surface p-4 shadow-sm sm:p-5`}
         >
           <p className="flex items-center gap-2 text-base font-bold text-crisis">
             <ShieldAlert aria-hidden className="size-5" />

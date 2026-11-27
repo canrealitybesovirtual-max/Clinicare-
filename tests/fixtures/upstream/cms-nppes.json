@@ -1,0 +1,610 @@
+{
+  "_about": "Fictional e2e fixture data in the upstream's response shape (E2E_UPSTREAM_FIXTURES=1, tests only). NPIs in the 1999000000 range are not issued to anyone.",
+  "upstream": "cms-nppes",
+  "responses": [
+    {
+      "note": "ZIP 99950: rate-limited answer, to test the retry button",
+      "when": {
+        "query": {
+          "postal_code": "99950"
+        }
+      },
+      "status": 429
+    },
+    {
+      "note": "ZIP 59001: no results",
+      "when": {
+        "query": {
+          "postal_code": "59001"
+        }
+      },
+      "json": {
+        "result_count": 0,
+        "results": []
+      }
+    },
+    {
+      "json": {
+        "result_count": 18,
+        "results": [
+          {
+            "number": "1999000001",
+            "enumeration_type": "NPI-1",
+            "basic": {
+              "first_name": "AVERY",
+              "last_name": "SAMPLE",
+              "credential": "MD",
+              "status": "A",
+              "last_updated": "2026-10-01"
+            },
+            "addresses": [
+              {
+                "address_purpose": "MAILING",
+                "address_1": "PO BOX 100",
+                "city": "SPRINGFIELD",
+                "state": "IL",
+                "postal_code": "627010000"
+              },
+              {
+                "address_purpose": "LOCATION",
+                "address_1": "100 FIXTURE AVE",
+                "address_2": "SUITE 2",
+                "city": "SPRINGFIELD",
+                "state": "IL",
+                "postal_code": "627010000",
+                "telephone_number": "217-555-0110"
+              }
+            ],
+            "taxonomies": [
+              {
+                "code": "2084P0800X",
+                "desc": "Psychiatry & Neurology, Psychiatry",
+                "primary": true,
+                "state": "IL"
+              }
+            ]
+          },
+          {
+            "number": "1999000002",
+            "enumeration_type": "NPI-2",
+            "basic": {
+              "organization_name": "FIXTURE PSYCHIATRY & NEUROLOGY GROUP",
+              "status": "A",
+              "last_updated": "2026-09-15"
+            },
+            "addresses": [
+              {
+                "address_purpose": "LOCATION",
+                "address_1": "200 SAMPLE ST",
+                "city": "SPRINGFIELD",
+                "state": "IL",
+                "postal_code": "62702",
+                "telephone_number": "217-555-0210"
+              }
+            ],
+            "taxonomies": [
+              {
+                "code": "2084P0800X",
+                "desc": "Psychiatry & Neurology, Psychiatry",
+                "primary": true,
+                "state": "IL"
+              }
+            ]
+          },
+          {
+            "number": "1999000003",
+            "enumeration_type": "NPI-1",
+            "basic": {
+              "first_name": "JORDAN",
+              "last_name": "EXAMPLE",
+              "credential": "PMHNP",
+              "status": "A",
+              "last_updated": "2026-10-01"
+            },
+            "addresses": [
+              {
+                "address_purpose": "MAILING",
+                "address_1": "PO BOX 100",
+                "city": "SPRINGFIELD",
+                "state": "IL",
+                "postal_code": "627010000"
+              },
+              {
+                "address_purpose": "LOCATION",
+                "address_1": "101 FIXTURE AVE",
+                "address_2": "SUITE 2",
+                "city": "SPRINGFIELD",
+                "state": "IL",
+                "postal_code": "627010000",
+                "telephone_number": "217-555-0111"
+              }
+            ],
+            "taxonomies": [
+              {
+                "code": "363LP0808X",
+                "desc": "Nurse Practitioner, Psych/Mental Health",
+                "primary": true,
+                "state": "IL"
+              }
+            ]
+          },
+          {
+            "number": "1999000004",
+            "enumeration_type": "NPI-2",
+            "basic": {
+              "organization_name": "FIXTURE NURSE PRACTITIONER GROUP",
+              "status": "A",
+              "last_updated": "2026-09-15"
+            },
+            "addresses": [
+              {
+                "address_purpose": "LOCATION",
+                "address_1": "201 SAMPLE ST",
+                "city": "SPRINGFIELD",
+                "state": "IL",
+                "postal_code": "62702",
+                "telephone_number": "217-555-0211"
+              }
+            ],
+            "taxonomies": [
+              {
+                "code": "363LP0808X",
+                "desc": "Nurse Practitioner, Psych/Mental Health",
+                "primary": true,
+                "state": "IL"
+              }
+            ]
+          },
+          {
+            "number": "1999000005",
+            "enumeration_type": "NPI-1",
+            "basic": {
+              "first_name": "RILEY",
+              "last_name": "FIXTURE",
+              "credential": "PHD",
+              "status": "A",
+              "last_updated": "2026-10-01"
+            },
+            "addresses": [
+              {
+                "address_purpose": "MAILING",
+                "address_1": "PO BOX 100",
+                "city": "SPRINGFIELD",
+                "state": "IL",
+                "postal_code": "627010000"
+              },
+              {
+                "address_purpose": "LOCATION",
+                "address_1": "102 FIXTURE AVE",
+                "address_2": "SUITE 2",
+                "city": "SPRINGFIELD",
+                "state": "IL",
+                "postal_code": "627010000",
+                "telephone_number": "217-555-0112"
+              }
+            ],
+            "taxonomies": [
+              {
+                "code": "103T00000X",
+                "desc": "Psychologist",
+                "primary": true,
+                "state": "IL"
+              }
+            ]
+          },
+          {
+            "number": "1999000006",
+            "enumeration_type": "NPI-2",
+            "basic": {
+              "organization_name": "FIXTURE PSYCHOLOGIST GROUP",
+              "status": "A",
+              "last_updated": "2026-09-15"
+            },
+            "addresses": [
+              {
+                "address_purpose": "LOCATION",
+                "address_1": "202 SAMPLE ST",
+                "city": "SPRINGFIELD",
+                "state": "IL",
+                "postal_code": "62702",
+                "telephone_number": "217-555-0212"
+              }
+            ],
+            "taxonomies": [
+              {
+                "code": "103T00000X",
+                "desc": "Psychologist",
+                "primary": true,
+                "state": "IL"
+              }
+            ]
+          },
+          {
+            "number": "1999000007",
+            "enumeration_type": "NPI-1",
+            "basic": {
+              "first_name": "CASEY",
+              "last_name": "PLACEHOLDER",
+              "credential": "PSYD",
+              "status": "A",
+              "last_updated": "2026-10-01"
+            },
+            "addresses": [
+              {
+                "address_purpose": "MAILING",
+                "address_1": "PO BOX 100",
+                "city": "SPRINGFIELD",
+                "state": "IL",
+                "postal_code": "627010000"
+              },
+              {
+                "address_purpose": "LOCATION",
+                "address_1": "103 FIXTURE AVE",
+                "address_2": "SUITE 2",
+                "city": "SPRINGFIELD",
+                "state": "IL",
+                "postal_code": "627010000",
+                "telephone_number": "217-555-0113"
+              }
+            ],
+            "taxonomies": [
+              {
+                "code": "103TC0700X",
+                "desc": "Psychologist, Clinical",
+                "primary": true,
+                "state": "IL"
+              }
+            ]
+          },
+          {
+            "number": "1999000008",
+            "enumeration_type": "NPI-2",
+            "basic": {
+              "organization_name": "FIXTURE PSYCHOLOGIST GROUP",
+              "status": "A",
+              "last_updated": "2026-09-15"
+            },
+            "addresses": [
+              {
+                "address_purpose": "LOCATION",
+                "address_1": "203 SAMPLE ST",
+                "city": "SPRINGFIELD",
+                "state": "IL",
+                "postal_code": "62702",
+                "telephone_number": "217-555-0213"
+              }
+            ],
+            "taxonomies": [
+              {
+                "code": "103TC0700X",
+                "desc": "Psychologist, Clinical",
+                "primary": true,
+                "state": "IL"
+              }
+            ]
+          },
+          {
+            "number": "1999000009",
+            "enumeration_type": "NPI-1",
+            "basic": {
+              "first_name": "MORGAN",
+              "last_name": "DEMO",
+              "credential": "LPC",
+              "status": "A",
+              "last_updated": "2026-10-01"
+            },
+            "addresses": [
+              {
+                "address_purpose": "MAILING",
+                "address_1": "PO BOX 100",
+                "city": "SPRINGFIELD",
+                "state": "IL",
+                "postal_code": "627010000"
+              },
+              {
+                "address_purpose": "LOCATION",
+                "address_1": "104 FIXTURE AVE",
+                "address_2": "SUITE 2",
+                "city": "SPRINGFIELD",
+                "state": "IL",
+                "postal_code": "627010000",
+                "telephone_number": "217-555-0114"
+              }
+            ],
+            "taxonomies": [
+              {
+                "code": "101YP2500X",
+                "desc": "Counselor, Professional",
+                "primary": true,
+                "state": "IL"
+              }
+            ]
+          },
+          {
+            "number": "1999000010",
+            "enumeration_type": "NPI-2",
+            "basic": {
+              "organization_name": "FIXTURE COUNSELOR GROUP",
+              "status": "A",
+              "last_updated": "2026-09-15"
+            },
+            "addresses": [
+              {
+                "address_purpose": "LOCATION",
+                "address_1": "204 SAMPLE ST",
+                "city": "SPRINGFIELD",
+                "state": "IL",
+                "postal_code": "62702",
+                "telephone_number": "217-555-0214"
+              }
+            ],
+            "taxonomies": [
+              {
+                "code": "101YP2500X",
+                "desc": "Counselor, Professional",
+                "primary": true,
+                "state": "IL"
+              }
+            ]
+          },
+          {
+            "number": "1999000011",
+            "enumeration_type": "NPI-1",
+            "basic": {
+              "first_name": "QUINN",
+              "last_name": "MOCKWELL",
+              "credential": "LMHC",
+              "status": "A",
+              "last_updated": "2026-10-01"
+            },
+            "addresses": [
+              {
+                "address_purpose": "MAILING",
+                "address_1": "PO BOX 100",
+                "city": "SPRINGFIELD",
+                "state": "IL",
+                "postal_code": "627010000"
+              },
+              {
+                "address_purpose": "LOCATION",
+                "address_1": "105 FIXTURE AVE",
+                "address_2": "SUITE 2",
+                "city": "SPRINGFIELD",
+                "state": "IL",
+                "postal_code": "627010000",
+                "telephone_number": "217-555-0115"
+              }
+            ],
+            "taxonomies": [
+              {
+                "code": "101YM0800X",
+                "desc": "Counselor, Mental Health",
+                "primary": true,
+                "state": "IL"
+              }
+            ]
+          },
+          {
+            "number": "1999000012",
+            "enumeration_type": "NPI-2",
+            "basic": {
+              "organization_name": "FIXTURE COUNSELOR GROUP",
+              "status": "A",
+              "last_updated": "2026-09-15"
+            },
+            "addresses": [
+              {
+                "address_purpose": "LOCATION",
+                "address_1": "205 SAMPLE ST",
+                "city": "SPRINGFIELD",
+                "state": "IL",
+                "postal_code": "62702",
+                "telephone_number": "217-555-0215"
+              }
+            ],
+            "taxonomies": [
+              {
+                "code": "101YM0800X",
+                "desc": "Counselor, Mental Health",
+                "primary": true,
+                "state": "IL"
+              }
+            ]
+          },
+          {
+            "number": "1999000013",
+            "enumeration_type": "NPI-1",
+            "basic": {
+              "first_name": "SKYLER",
+              "last_name": "TESTWOOD",
+              "credential": "LCSW",
+              "status": "A",
+              "last_updated": "2026-10-01"
+            },
+            "addresses": [
+              {
+                "address_purpose": "MAILING",
+                "address_1": "PO BOX 100",
+                "city": "SPRINGFIELD",
+                "state": "IL",
+                "postal_code": "627010000"
+              },
+              {
+                "address_purpose": "LOCATION",
+                "address_1": "106 FIXTURE AVE",
+                "address_2": "SUITE 2",
+                "city": "SPRINGFIELD",
+                "state": "IL",
+                "postal_code": "627010000",
+                "telephone_number": "217-555-0116"
+              }
+            ],
+            "taxonomies": [
+              {
+                "code": "1041C0700X",
+                "desc": "Social Worker, Clinical",
+                "primary": true,
+                "state": "IL"
+              }
+            ]
+          },
+          {
+            "number": "1999000014",
+            "enumeration_type": "NPI-2",
+            "basic": {
+              "organization_name": "FIXTURE SOCIAL WORKER GROUP",
+              "status": "A",
+              "last_updated": "2026-09-15"
+            },
+            "addresses": [
+              {
+                "address_purpose": "LOCATION",
+                "address_1": "206 SAMPLE ST",
+                "city": "SPRINGFIELD",
+                "state": "IL",
+                "postal_code": "62702",
+                "telephone_number": "217-555-0216"
+              }
+            ],
+            "taxonomies": [
+              {
+                "code": "1041C0700X",
+                "desc": "Social Worker, Clinical",
+                "primary": true,
+                "state": "IL"
+              }
+            ]
+          },
+          {
+            "number": "1999000015",
+            "enumeration_type": "NPI-1",
+            "basic": {
+              "first_name": "DREW",
+              "last_name": "STUBBS",
+              "credential": "LMFT",
+              "status": "A",
+              "last_updated": "2026-10-01"
+            },
+            "addresses": [
+              {
+                "address_purpose": "MAILING",
+                "address_1": "PO BOX 100",
+                "city": "SPRINGFIELD",
+                "state": "IL",
+                "postal_code": "627010000"
+              },
+              {
+                "address_purpose": "LOCATION",
+                "address_1": "107 FIXTURE AVE",
+                "address_2": "SUITE 2",
+                "city": "SPRINGFIELD",
+                "state": "IL",
+                "postal_code": "627010000",
+                "telephone_number": "217-555-0117"
+              }
+            ],
+            "taxonomies": [
+              {
+                "code": "106H00000X",
+                "desc": "Marriage & Family Therapist",
+                "primary": true,
+                "state": "IL"
+              }
+            ]
+          },
+          {
+            "number": "1999000016",
+            "enumeration_type": "NPI-2",
+            "basic": {
+              "organization_name": "FIXTURE MARRIAGE & FAMILY THERAPIST GROUP",
+              "status": "A",
+              "last_updated": "2026-09-15"
+            },
+            "addresses": [
+              {
+                "address_purpose": "LOCATION",
+                "address_1": "207 SAMPLE ST",
+                "city": "SPRINGFIELD",
+                "state": "IL",
+                "postal_code": "62702",
+                "telephone_number": "217-555-0217"
+              }
+            ],
+            "taxonomies": [
+              {
+                "code": "106H00000X",
+                "desc": "Marriage & Family Therapist",
+                "primary": true,
+                "state": "IL"
+              }
+            ]
+          },
+          {
+            "number": "1999000017",
+            "enumeration_type": "NPI-1",
+            "basic": {
+              "first_name": "ROWAN",
+              "last_name": "DUMMYFORD",
+              "credential": "LADC",
+              "status": "A",
+              "last_updated": "2026-10-01"
+            },
+            "addresses": [
+              {
+                "address_purpose": "MAILING",
+                "address_1": "PO BOX 100",
+                "city": "SPRINGFIELD",
+                "state": "IL",
+                "postal_code": "627010000"
+              },
+              {
+                "address_purpose": "LOCATION",
+                "address_1": "108 FIXTURE AVE",
+                "address_2": "SUITE 2",
+                "city": "SPRINGFIELD",
+                "state": "IL",
+                "postal_code": "627010000",
+                "telephone_number": "217-555-0118"
+              }
+            ],
+            "taxonomies": [
+              {
+                "code": "101YA0400X",
+                "desc": "Counselor, Addiction (Substance Use Disorder)",
+                "primary": true,
+                "state": "IL"
+              }
+            ]
+          },
+          {
+            "number": "1999000018",
+            "enumeration_type": "NPI-2",
+            "basic": {
+              "organization_name": "FIXTURE COUNSELOR GROUP",
+              "status": "A",
+              "last_updated": "2026-09-15"
+            },
+            "addresses": [
+              {
+                "address_purpose": "LOCATION",
+                "address_1": "208 SAMPLE ST",
+                "city": "SPRINGFIELD",
+                "state": "IL",
+                "postal_code": "62702",
+                "telephone_number": "217-555-0218"
+              }
+            ],
+            "taxonomies": [
+              {
+                "code": "101YA0400X",
+                "desc": "Counselor, Addiction (Substance Use Disorder)",
+                "primary": true,
+                "state": "IL"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

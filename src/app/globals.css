@@ -8,8 +8,13 @@
   --text: #13202e;
   --muted: #4a5a6a;
   --border: #d3dce5;
+  /* Outline of text inputs, selects and textareas: >= 3:1 against surface and bg (WCAG 1.4.11). */
+  --input-border: #6b7a89;
   --primary: #1f3a5f;
   --primary-fg: #ffffff;
+  /* Solid fills (primary buttons, primary badges): stay calmer than the crisis colour in dark mode. */
+  --primary-solid: #1f3a5f;
+  --primary-solid-fg: #ffffff;
   --accent: #1d6b66;
   --accent-soft: #e3f1ef;
   --crisis: #b42318;
@@ -30,8 +35,11 @@
     --text: #e8eef4;
     --muted: #a9b7c5;
     --border: #2c3a49;
+    --input-border: #6e8297;
     --primary: #9cc2ef;
     --primary-fg: #0e141b;
+    --primary-solid: #3b6ea5;
+    --primary-solid-fg: #ffffff;
     --accent: #6fd0c6;
     --accent-soft: #15302e;
     --crisis: #f0625a;
@@ -53,8 +61,11 @@
   --color-text: var(--text);
   --color-muted: var(--muted);
   --color-border: var(--border);
+  --color-input-border: var(--input-border);
   --color-primary: var(--primary);
   --color-primary-fg: var(--primary-fg);
+  --color-primary-solid: var(--primary-solid);
+  --color-primary-solid-fg: var(--primary-solid-fg);
   --color-accent: var(--accent);
   --color-accent-soft: var(--accent-soft);
   --color-crisis: var(--crisis);
@@ -69,6 +80,14 @@
 }
 
 html { -webkit-text-size-adjust: 100%; }
+/*
+ * WCAG 2.4.11 Focus Not Obscured: below lg the crisis button floats at the bottom of the viewport, and measure
+ * forms keep a sticky score bar at the top. Scroll padding keeps focused controls and anchor targets clear of both.
+ */
+@media (max-width: 63.98rem) {
+  html { scroll-padding-bottom: 5.5rem; }
+  html:has([data-sticky-score]) { scroll-padding-top: 4.5rem; }
+}
 body { background: var(--bg); color: var(--text); font-family: var(--font-sans); }
 :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
 @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }

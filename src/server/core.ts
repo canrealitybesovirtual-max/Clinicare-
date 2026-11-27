@@ -13,6 +13,8 @@ import "server-only";
  * Secrets come only from process.env in this file's callers; never NEXT_PUBLIC_*.
  */
 import { createHmac, randomBytes } from "node:crypto";
+import { readFileSync } from "node:fs";
+import path from "node:path";
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { OutboundRejected } from "@/lib/outbound";
@@ -191,6 +193,12 @@ export async function upstreamFetch<T = unknown>(url: string, opts: UpstreamOpti
     const hit = cacheGet<T>(key);
     if (hit !== undefined) return hit;
   }
+  if (upstreamFixturesEnabled()) {
+    // Tests only (see below): canned answer, no network, no upstream quota used.
+    const value = fixtureResponse<T>(url, opts);
+    if (ttl > 0) cacheSet(key, value, ttl);
+    return value;
+  }
   if (!takeToken(opts.upstream)) throw new UpstreamError(opts.upstream, 429, "Rate limit reached, try again shortly");
 
   const method = opts.method ?? "GET";
@@ -251,6 +259,122 @@ export async function upstreamFetch<T = unknown>(url: string, opts: UpstreamOpti
   }
   if (ttl > 0) cacheSet(key, value, ttl);
   return value;
+}
+
+/* ---------------- e2e upstream fixtures (tests only, never in a deployment) ---------------- */
+/**
+ * E2E_UPSTREAM_FIXTURES=1 makes upstreamFetch answer from tests/fixtures/upstream/<upstream>.json instead of the
+ * network, so the Playwright suite can drive every /api route offline and deterministically (playwright.config.ts
+ * sets it for its own `next start`; docs/DEPLOY.md "E2E upstream fixtures").
+ * - Compiled out of any build not made with E2E_UPSTREAM_FIXTURES=1 (CRC_FIXTURE_BUILD, next.config.ts), so a stray
+ *   runtime variable cannot switch it on in a normal production build.
+ * - Also IGNORED whenever a hosting platform marker is present (RENDER, which Render sets on every service, VERCEL,
+ *   NETLIFY, Cloud Run and others). There the real adapters run with their real limits.
+ * - With fixtures on, nothing reaches the network: a request no fixture matches fails with 502.
+ * - The upstream token bucket is skipped (no upstream quota is spent). Route-level checks (body size, PHI, Part 2
+ *   switch, per-client limit) still run. A fixture can answer with an error status (429, 404, 5xx) or
+ *   `"notConfigured": true` so the UI's retry and link-out paths can be tested.
+ * Fixture files hold fictional data only. They are read from disk on first use and kept in memory.
+ */
+export const UPSTREAM_FIXTURES_ENV = "E2E_UPSTREAM_FIXTURES";
+/** Set by hosting platforms; any of them disables fixture mode outright. */
+export const HOSTING_PLATFORM_MARKERS = [
+  "RENDER",
+  "VERCEL",
+  "NETLIFY",
+  "FLY_APP_NAME",
+  "K_SERVICE", // Google Cloud Run
+  "AWS_LAMBDA_FUNCTION_NAME",
+  "DYNO", // Heroku
+  "RAILWAY_ENVIRONMENT",
+  "WEBSITE_SITE_NAME", // Azure App Service
+] as const;
+export const UPSTREAM_FIXTURES_DIR = path.join(/* turbopackIgnore: true */ process.cwd(), "tests", "fixtures", "upstream");
+
+/**
+ * Build-time opt-in (next.config.ts `env`): `next build` inlines process.env.CRC_FIXTURE_BUILD as "1" only when the
+ * build ran with E2E_UPSTREAM_FIXTURES=1, so production builds compile fixture mode out. Outside a Next build (unit
+ * and integration tests) it is read from the environment like any other variable.
+ */
+export const FIXTURE_BUILD_ENV = "CRC_FIXTURE_BUILD";
+
+export function upstreamFixturesEnabled(env: Record<string, string | undefined> = process.env): boolean {
+  if (env[UPSTREAM_FIXTURES_ENV]?.trim() !== "1") return false;
+  // Literal process.env access so Next can inline it; an explicit env object (tests) is read directly.
+  const build = env === process.env ? process.env.CRC_FIXTURE_BUILD : env[FIXTURE_BUILD_ENV];
+  if (build !== "1") return false;
+  return !HOSTING_PLATFORM_MARKERS.some((k) => env[k] !== undefined);
+}
+
+const FixtureWhen = z.strictObject({
+  method: z.enum(["GET", "POST"]).optional(),
+  path: z.string().min(1).optional(), // substring of the URL path
+  query: z.record(z.string(), z.string()).optional(), // exact values of these query parameters
+  paramStartsWith: z.string().min(1).optional(), // start of any (decoded) query parameter value
+  bodyIncludes: z.string().min(1).optional(), // substring of the request body (POST upstreams)
+});
+const FixtureEntry = z.strictObject({
+  note: z.string().optional(),
+  when: FixtureWhen.optional(),
+  status: z.number().int().min(200).max(599).default(200),
+  notConfigured: z.literal(true).optional(),
+  json: z.unknown().optional(),
+  text: z.string().optional(),
+});
+export const UpstreamFixtureFile = z.strictObject({
+  _about: z.string().min(20),
+  upstream: z.string().regex(/^[a-z0-9-]{2,40}$/),
+  responses: z.array(FixtureEntry).min(1),
+});
+type UpstreamFixtureFile = z.infer<typeof UpstreamFixtureFile>;
+const fixtureFiles = new Map<string, UpstreamFixtureFile | null>();
+
+function loadFixtureFile(upstream: string): UpstreamFixtureFile | null {
+  if (!/^[a-z0-9-]{2,40}$/.test(upstream)) return null;
+  if (!fixtureFiles.has(upstream)) {
+    let file: UpstreamFixtureFile | null = null;
+    try {
+      const parsed = UpstreamFixtureFile.parse(JSON.parse(readFileSync(path.join(UPSTREAM_FIXTURES_DIR, `${upstream}.json`), "utf8")));
+      file = parsed.upstream === upstream ? parsed : null;
+    } catch {
+      file = null;
+    }
+    fixtureFiles.set(upstream, file);
+  }
+  return fixtureFiles.get(upstream) ?? null;
+}
+
+function fixtureMatches(entry: z.infer<typeof FixtureEntry>, u: URL, method: string, body: string): boolean {
+  const w = entry.when;
+  if (!w) return true;
+  if (w.method && w.method !== method) return false;
+  if (w.path && !u.pathname.includes(w.path)) return false;
+  if (w.query && Object.entries(w.query).some(([k, v]) => u.searchParams.get(k) !== v)) return false;
+  if (w.paramStartsWith && ![...u.searchParams.values()].some((v) => v.startsWith(w.paramStartsWith!))) return false;
+  if (w.bodyIncludes && !body.includes(w.bodyIncludes)) return false;
+  return true;
+}
+
+/** The canned answer for one upstream request (first matching entry wins). Throws like a real upstream would. */
+function fixtureResponse<T>(url: string, opts: UpstreamOptions): T {
+  const file = loadFixtureFile(opts.upstream);
+  const u = new URL(url);
+  const entry = file?.responses.find((r) => fixtureMatches(r, u, opts.method ?? "GET", opts.body ?? ""));
+  if (!entry) throw new UpstreamError(opts.upstream, 502, "No e2e fixture matches this request");
+  if (entry.notConfigured) throw new NotConfigured(opts.upstream);
+  if (entry.status >= 300) throw new UpstreamError(opts.upstream, entry.status >= 400 ? entry.status : 502);
+  if (opts.parse === "text") return (entry.text ?? JSON.stringify(entry.json ?? null)) as T;
+  if (entry.json !== undefined) return structuredClone(entry.json) as T;
+  try {
+    return JSON.parse(entry.text ?? "") as T;
+  } catch {
+    throw new UpstreamError(opts.upstream, 502, "Unexpected response from upstream service");
+  }
+}
+
+/** Test helper: forget loaded fixture files. */
+export function __resetUpstreamFixturesForTests() {
+  fixtureFiles.clear();
 }
 
 /* ---------------- 42 CFR Part 2 owner switch ---------------- */

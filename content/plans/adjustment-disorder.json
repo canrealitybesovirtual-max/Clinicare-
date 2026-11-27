@@ -99,7 +99,7 @@
       "label": "Low mood, hopelessness or harmful coping after the stressor",
       "definitions": [
         "Talks about the future as ruined or says life will never be okay again, and has trouble naming anything to look forward to.",
-        "Has started coping in ways that may add harm since the stressor (for example drinking more, using other substances, overspending, gambling or not eating), by self-report.",
+        { "text": "Has started coping in ways that may add harm since the stressor (for example drinking more, using other substances, overspending, gambling or not eating), by self-report.", "sud": true },
         "Blames self harshly for the stressor or for how they are coping with it.",
         "May report thoughts of death, of not wanting to be alive or of self-harm, even when the stressor might seem moderate to others; these call for direct clinician assessment at the time they come up."
       ],
@@ -116,7 +116,8 @@
         {
           "id": "adj-coping-review",
           "text": "By session 3, list current ways of coping and mark which help in the short run and which cause problems later; agree on at least 2 healthier swaps to try each week for 4 weeks. If drinking or other substance use has increased, the clinician screens further, explores the client's own reasons for change, and follows the safeguards for substance use information.",
-          "interventionIds": ["motivational-interviewing", "decisional-balance"]
+          "interventionIds": ["motivational-interviewing", "decisional-balance"],
+          "sud": true
         },
         {
           "id": "adj-strengths-story",
@@ -136,7 +137,8 @@
         {
           "id": "adj-safety-plan-review",
           "text": "Whenever risk is present (for example a PHQ-9 item 9 response above 0, or the client describes thoughts of death or self-harm), the clinician assesses risk directly and, in that same session, builds or reviews a written safety plan with the client: early warning signs, things the client can do alone, people and places that help, professional and crisis contacts (call or text 988 in the US, the local emergency number, or findahelpline.com elsewhere) and agreed steps to put time and distance between the client and means of harm, including alcohol where relevant. Revisit it at every session while risk remains. Risk level and next steps are the clinician's decision; this tool never rates risk.",
-          "interventionIds": ["collaborative-safety-planning", "lethal-means-counseling"]
+          "interventionIds": ["collaborative-safety-planning", "lethal-means-counseling"],
+          "sud": true
         }
       ],
       "measureIds": ["phq-9"]

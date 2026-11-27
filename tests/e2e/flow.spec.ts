@@ -6,6 +6,7 @@
 import { expect, test } from "@playwright/test";
 import {
   CLIENT_PHI_BANNER,
+  CLIENT_ROUTES,
   CLINICIAN_PHI_BANNER,
   CLINICIAN_ROUTES,
   DISCLAIMER,
@@ -16,9 +17,11 @@ import {
   crisisButton,
   downloadVia,
   enterSymptomText,
+  expectClientSafe,
+  goNav,
   gotoReady,
+  isClientRoute,
   loadConditions,
-  navLink,
   pdfText,
 } from "./helpers";
 
@@ -96,7 +99,7 @@ test.describe("every route", () => {
       await trigger.click();
       const dialog = page.getByRole("dialog");
       await expect(dialog).toBeVisible();
-      await expect(dialog).toHaveAccessibleName(route === "/client" ? "Get help now" : "Crisis support");
+      await expect(dialog).toHaveAccessibleName(isClientRoute(route) ? "Get help now" : "Crisis support");
       await expect(dialog.getByRole("link", { name: "Call 988" })).toBeVisible();
       await expect(dialog.getByRole("link", { name: /Call 911/ })).toBeVisible();
       await expect(dialog.getByRole("link", { name: /findahelpline\.com/ })).toBeVisible();
@@ -123,6 +126,39 @@ test.describe("every route", () => {
       await expect(page.getByRole("button", { name: "Clear session" })).toBeVisible();
     });
   }
+
+  for (const route of CLIENT_ROUTES) {
+    test(`client banner and client chrome on ${route}`, async ({ page }) => {
+      await gotoReady(page, route);
+      await expect(page.getByRole("banner").getByText(CLIENT_PHI_BANNER)).toBeVisible();
+      await expect(page.getByRole("banner").getByText(CLINICIAN_PHI_BANNER)).toHaveCount(0);
+      await expect(page.getByRole("navigation", { name: "Main" })).toHaveCount(0);
+      await expect(crisisButton(page)).toHaveText(/Get help now/);
+      // G3: no one-tap way back into the clinician screens; the share page has no mode control at all.
+      await expect(page.getByRole("navigation", { name: "Mode" })).toHaveCount(0);
+      await expect(page.getByRole("banner").getByRole("link", { name: "Clinician", exact: true })).toHaveCount(0);
+      await expect(page.getByRole("banner").getByRole("button", { name: "Clinician view" })).toHaveCount(
+        route.startsWith("/r/") ? 0 : 1,
+      );
+    });
+  }
+
+  test("client mode asks before returning to the clinician view", async ({ page }) => {
+    await gotoReady(page, "/client");
+    await page.getByRole("banner").getByRole("button", { name: "Clinician view" }).click();
+    const dialog = page.getByRole("dialog", { name: "Return to clinician view?" });
+    await expect(dialog).toBeVisible();
+    await expect(dialog).toContainText("Clinical notes from this session will be visible on this screen.");
+    // The safe choice has focus and keeps client mode.
+    await expect(dialog.getByRole("button", { name: "Stay in client mode" }).first()).toBeFocused();
+    await dialog.getByRole("button", { name: "Stay in client mode" }).first().click();
+    await expect(dialog).toBeHidden();
+    await expect(page).toHaveURL(/\/client$/);
+    await page.getByRole("banner").getByRole("button", { name: "Clinician view" }).click();
+    await page.getByRole("dialog").getByRole("link", { name: "Return to clinician view" }).click();
+    await expect(page).toHaveURL(/\/symptoms$/);
+    await expect(page.getByRole("banner").getByText(CLINICIAN_PHI_BANNER)).toBeVisible();
+  });
 });
 
 test.describe("client mode (G3)", () => {
@@ -132,27 +168,16 @@ test.describe("client mode (G3)", () => {
     await enterSymptomText(page, WORRY_TEXT);
     await choose(page, "Duration", "6 months or longer");
     await choose(page, "Clinically significant distress or functional impairment", "Yes");
-    await navLink(page, "Measures").click();
+    await goNav(page, "Measures");
     await page.getByRole("link", { name: "Run PHQ-9" }).click();
     await answerItem(page, 1, 9, "Nearly every day");
 
-    await page.getByRole("navigation", { name: "Mode" }).getByRole("link", { name: "Client" }).click();
+    await goNav(page, "Client mode");
     await expect(page).toHaveURL(/\/client$/);
     await expect(page.getByRole("heading", { level: 1 })).toHaveText("Help and skills you can use today");
     await expect(page.getByRole("banner").getByText(CLIENT_PHI_BANNER)).toBeVisible();
 
-    const check = async () => {
-      const text = await page.locator("body").innerText();
-      const html = await page.content();
-      expect(text).not.toMatch(ICD_CODE_RE);
-      expect(html).not.toMatch(/\bF\d\d\.\d/);
-      for (const c of loadConditions()) {
-        expect(text.toLowerCase()).not.toContain(c.name.toLowerCase());
-        for (const code of [...c.icd10cm, ...c.icd11]) expect(text).not.toContain(code.code);
-      }
-      expect(text).not.toMatch(/\b(GAD-7|PHQ-9|score|scores|scored|severity|diagnos\w*|disorder)\b/i);
-      expect(text).not.toMatch(/\b\d+\s*(of|\/)\s*(21|27)\b/);
-    };
+    const check = () => expectClientSafe(page, "client mode");
     await check();
 
     // The client-mode crisis dialog follows the same limits.
@@ -195,12 +220,17 @@ test.describe("adult-only scope (G12)", () => {
     await expect(page.getByText("Adult content only: suggestions are not shown for clients under 18.")).toBeVisible();
     await expect(page.getByText("Adult content only", { exact: true })).toBeVisible();
 
-    await navLink(page, "Diagnoses").click();
+    await goNav(page, "Diagnoses");
     await expect(page).toHaveURL(/\/diagnoses$/);
     await expect(page.getByText("Adult content only", { exact: true })).toBeVisible();
     await expect(page.getByRole("list", { name: "Possible considerations, ranked" })).toHaveCount(0);
     await expect(page.getByRole("article")).toHaveCount(0);
-    const main = await page.locator("main").innerText();
+    // No suggestion content: no codes anywhere in main except the ICD-10-CM lookup tool's own example hint.
+    const main = await page.locator("main").evaluate((el) => {
+      const copy = el.cloneNode(true) as HTMLElement;
+      copy.querySelector('section[aria-labelledby="icd10-lookup-heading"]')?.remove();
+      return copy.innerText || copy.textContent || "";
+    });
     expect(main).not.toMatch(ICD_CODE_RE);
     expect(main).not.toContain("Consideration 1");
 
@@ -220,7 +250,7 @@ test.describe("adult-only measures (G12)", () => {
     await expect(page).toHaveURL(/\/measures\/phq-9$/);
     await expect(page.getByRole("group", { name: /^Item 1 of 9:/ })).toBeVisible();
 
-    await navLink(page, "Symptoms").click();
+    await goNav(page, "Symptoms");
     await choose(page, "Client is under 18", "Yes, under 18");
 
     // Back (client-side, so the memory-only session survives) to the PHQ-9 screen.
@@ -240,14 +270,14 @@ test.describe("adult-only measures (G12)", () => {
     await expect(page.getByRole("heading", { name: /License pending/ })).toHaveCount(0);
 
     // Handouts: the client handout stays, the blank measure forms go.
-    await navLink(page, "Handouts").click();
+    await goNav(page, "Handouts");
     await expect(page).toHaveURL(/\/handouts$/);
     await expect(page.getByText(/adult measures and their blank forms are not shown/)).toBeVisible();
     await expect(page.getByRole("button", { name: /blank PDF/ })).toHaveCount(0);
     await expect(page.getByRole("button", { name: "Download PDF" }).first()).toBeVisible();
 
     // The gate is a toggle: switching back to adult restores the measures.
-    await navLink(page, "Measures").click();
+    await goNav(page, "Measures");
     // The toggle unmounts with the gate, so click it directly rather than via choose().
     await page.getByRole("group", { name: "Client is under 18" }).locator("label").filter({ hasText: "No (adult)" }).click();
     await expect(page.getByRole("link", { name: "Run PHQ-9" })).toBeVisible();
@@ -322,7 +352,7 @@ test.describe("text matching never reads as 'no risk' (G9)", () => {
     const note = "Text matching can miss risk statements; always ask directly about suicide risk.";
     await gotoReady(page, "/symptoms");
     await expect(page.getByText(note)).toBeVisible();
-    await navLink(page, "Diagnoses").click();
+    await goNav(page, "Diagnoses");
     await expect(page).toHaveURL(/\/diagnoses$/);
     await expect(page.getByText(note)).toBeVisible();
   });

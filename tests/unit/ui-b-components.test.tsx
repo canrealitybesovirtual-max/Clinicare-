@@ -108,7 +108,10 @@ describe("referral location search", () => {
     search();
     await screen.findByText("Pat Example, MD");
     expect(calls).toEqual([{ url: "/api/providers", body: { providerType: "psychiatrist", location: { zip: "20877" }, limit: 20, skip: 0 } }]);
-    expect(screen.getByText("Listing is not an endorsement — call to confirm.")).toBeTruthy();
+    // Providers mode shows the route's own notice under a "not an endorsement" title (no duplicate static note).
+    expect(screen.getByText("Listing is not an endorsement")).toBeTruthy();
+    expect(screen.getByText("Public NPI Registry records.")).toBeTruthy();
+    expect(screen.queryByText("Listing is not an endorsement — call to confirm.")).toBeNull();
     expect(screen.getByText("Data: CMS NPPES NPI Registry. Listing is not an endorsement.")).toBeTruthy();
     expect(screen.getByRole("link", { name: /301-555-0100/ }).getAttribute("href")).toBe("tel:3015550100");
     expect(screen.getByRole("status").textContent).toMatch(/Showing 1 result/);
@@ -123,6 +126,10 @@ describe("referral location search", () => {
     expect(calls).toHaveLength(0);
     expect(screen.getByText("Enter a 5-digit US ZIP code.")).toBeTruthy();
     expect(zipInput().getAttribute("aria-invalid")).toBe("true");
+    // WCAG 3.3.1 / 4.1.3: the error sits in a live alert region and focus lands on the field once it is invalid.
+    expect(screen.getByText("Enter a 5-digit US ZIP code.").closest('[role="alert"]')).not.toBeNull();
+    expect(document.activeElement).toBe(zipInput());
+    expect(zipInput().getAttribute("aria-describedby")).toContain(screen.getByText("Enter a 5-digit US ZIP code.").id);
   });
 
   it("never sends a city the PHI scrubber flags (planted identifiers stay on the device)", async () => {

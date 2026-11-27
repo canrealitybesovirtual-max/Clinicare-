@@ -19,7 +19,15 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { CrisisButton } from "@/components/crisis/crisis-button";
-import { Dialog, DialogContent, DialogDescription, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import { Button, buttonVariants } from "@/components/ui/button";
+import {
+  Dialog,
+  DialogClose,
+  DialogContent,
+  DialogDescription,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 import { PrivacyBar } from "./privacy-bar";
 import { cn } from "@/lib/utils";
 
@@ -43,8 +51,8 @@ const CLINICIAN_NAV: readonly NavItem[] = [
   { href: "/measures", label: "Measures", icon: ClipboardList, placement: "lg" },
   { href: "/plan", label: "Plan", icon: ListTodo, placement: "lg" },
   { href: "/interventions", label: "Interventions", icon: HeartHandshake, placement: "xl" },
-  { href: "/handouts", label: "Handouts", icon: FileText, placement: "more" },
-  { href: "/referrals", label: "Referrals", icon: MapPin, placement: "more" },
+  { href: "/handouts", label: "Handouts", icon: FileText, placement: "xl" },
+  { href: "/referrals", label: "Referrals", icon: MapPin, placement: "xl" },
   { href: "/medications", label: "Medications", icon: Pill, placement: "more" },
   { href: "/ethics", label: "Ethics & Legal", icon: Scale, placement: "more" },
 ];
@@ -54,8 +62,10 @@ const OTHER_NAV: readonly Omit<NavItem, "placement">[] = [
   { href: "/about", label: "About", icon: Info },
 ];
 
+/** Client-facing pages: client mode and the public share pages (/r/<handout id>) a client opens from a link. */
 export function isClientPath(pathname: string | null): boolean {
-  return pathname === "/client" || (pathname?.startsWith("/client/") ?? false);
+  if (!pathname) return false;
+  return pathname === "/client" || pathname.startsWith("/client/") || pathname.startsWith("/r/");
 }
 
 function isActive(pathname: string | null, href: string): boolean {
@@ -76,20 +86,30 @@ function Brand() {
   );
 }
 
-function ModeSwitch({ client }: { client: boolean }) {
-  const item =
-    "inline-flex min-h-11 items-center rounded-md px-3 text-xs font-semibold transition-colors sm:text-sm aria-[current=page]:bg-surface aria-[current=page]:text-text aria-[current=page]:shadow-sm";
+/**
+ * Client mode (G3): no clinician switch a client could tap by accident. A quiet "Clinician view" control asks
+ * first, because the clinician screens show this session's notes, possible diagnoses, codes and scores.
+ */
+function ClinicianViewButton() {
+  const [open, setOpen] = React.useState(false);
   return (
-    <nav aria-label="Mode" className="shrink-0">
-      <div className="flex rounded-lg border border-border bg-surface-2 p-0.5 text-muted">
-        <Link href="/symptoms" className={item} aria-current={client ? undefined : "page"}>
-          Clinician
-        </Link>
-        <Link href="/client" className={item} aria-current={client ? "page" : undefined}>
-          Client
-        </Link>
-      </div>
-    </nav>
+    <Dialog open={open} onOpenChange={setOpen}>
+      <DialogTrigger className={cn(buttonVariants({ variant: "ghost", size: "sm" }), "font-medium text-muted")}>
+        Clinician view
+      </DialogTrigger>
+      <DialogContent>
+        <DialogTitle>Return to clinician view?</DialogTitle>
+        <DialogDescription>Clinical notes from this session will be visible on this screen.</DialogDescription>
+        <div className="mt-5 flex flex-wrap justify-end gap-2">
+          <DialogClose asChild>
+            <Button type="button">Stay in client mode</Button>
+          </DialogClose>
+          <Link href="/symptoms" onClick={() => setOpen(false)} className={buttonVariants({ variant: "outline" })}>
+            Return to clinician view
+          </Link>
+        </div>
+      </DialogContent>
+    </Dialog>
   );
 }
 
@@ -177,7 +197,7 @@ function MoreMenu({ pathname }: { pathname: string | null }) {
           })}
         </ul>
         <ul className="mt-1 border-t border-border pt-1">
-          {OTHER_NAV.filter((n) => n.href !== "/client").map((n) => {
+          {OTHER_NAV.map((n) => {
             const active = isActive(pathname, n.href);
             return (
               <li key={n.href}>
@@ -251,20 +271,18 @@ function MobileNav({ pathname }: { pathname: string | null }) {
 
   return (
     <Dialog open={open} onOpenChange={setOpen}>
-      <DialogTrigger className="flex min-h-12 w-full items-center justify-between gap-3 rounded-lg border border-border bg-surface-2 px-3 text-sm font-semibold text-text hover:bg-surface lg:hidden">
-        <span className="flex items-center gap-2">
-          <Menu aria-hidden className="size-5" />
-          Menu
-        </span>
-        {current ? (
-          <span className="truncate font-medium text-muted">
-            <span className="sr-only">, current page:</span> {current.label}
-          </span>
-        ) : null}
+      <DialogTrigger className="inline-flex min-h-11 min-w-11 items-center justify-center gap-2 rounded-lg border border-border bg-surface-2 px-3 text-sm font-semibold text-text hover:bg-surface lg:hidden">
+        <Menu aria-hidden className="size-5" />
+        Menu
+        {current ? <span className="sr-only">, current page: {current.label}</span> : null}
       </DialogTrigger>
       <DialogContent closeLabel="Close menu">
         <DialogTitle>Menu</DialogTitle>
         <DialogDescription>Clinician tools, client mode and about this app.</DialogDescription>
+        {/* G9: crisis help stays one tap away while the menu covers the page. */}
+        <div className="mt-4">
+          <CrisisButton inline />
+        </div>
         <nav aria-label="Main" className="mt-4 space-y-4">
           <div>
             <p id={toolsId} className="px-3 pb-1 text-xs font-semibold uppercase tracking-wide text-muted">
@@ -292,32 +310,31 @@ function MobileNav({ pathname }: { pathname: string | null }) {
   );
 }
 
-/** Banner landmark: brand, navigation, mode switch, crisis button, privacy banner. */
+/** Banner landmark: brand, navigation, crisis button, privacy banner. */
 export function SiteHeader() {
   const pathname = usePathname();
   const client = isClientPath(pathname);
+  // A share page (/r/<id>) opens on the client's own device: no mode control at all.
+  const sharePage = pathname?.startsWith("/r/") ?? false;
   return (
-    <header className="border-b border-border bg-surface">
+    <header id="site-header" className="border-b border-border bg-surface">
       <a
         href="#main"
-        className="sr-only z-[60] rounded-lg bg-primary px-4 py-3 font-semibold text-primary-fg focus:not-sr-only focus:fixed focus:left-3 focus:top-3"
+        className="sr-only z-[60] rounded-lg bg-primary-solid px-4 py-3 font-semibold text-primary-solid-fg focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:px-4 focus:py-3 focus:shadow-lg"
       >
         Skip to main content
       </a>
-      <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-x-3 gap-y-2 px-4 py-2 lg:flex-nowrap lg:gap-x-4">
+      <div className="mx-auto flex max-w-6xl items-center gap-x-3 px-4 py-2 lg:gap-x-4">
         <Brand />
-        <div className="order-last w-full pb-1 lg:order-none lg:w-auto lg:flex-1 lg:pb-0">
-          {client ? (
-            <p className="text-sm font-medium text-muted">Self-help · plain language</p>
-          ) : (
-            <>
-              <DesktopNav pathname={pathname} />
-              <MobileNav pathname={pathname} />
-            </>
-          )}
-        </div>
+        {client ? (
+          <p className="hidden text-sm font-medium text-muted sm:block lg:flex-1">Self-help · plain language</p>
+        ) : (
+          <div className="hidden min-w-0 lg:block lg:flex-1">
+            <DesktopNav pathname={pathname} />
+          </div>
+        )}
         <div className="ml-auto flex items-center gap-2 lg:ml-0">
-          <ModeSwitch client={client} />
+          {client ? sharePage ? null : <ClinicianViewButton /> : <MobileNav pathname={pathname} />}
           <CrisisButton plain={client} />
         </div>
       </div>

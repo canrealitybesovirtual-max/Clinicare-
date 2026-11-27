@@ -1,0 +1,99 @@
+{
+  "_about": "Fictional e2e fixture data in the upstream's response shape (E2E_UPSTREAM_FIXTURES=1, tests only). NCT9900000x ids are placeholders.",
+  "upstream": "clinicaltrials-gov",
+  "responses": [
+    {
+      "json": {
+        "totalCount": 2,
+        "studies": [
+          {
+            "protocolSection": {
+              "identificationModule": {
+                "nctId": "NCT99000001",
+                "briefTitle": "Fixture recruiting study 1 for automated tests"
+              },
+              "statusModule": {
+                "overallStatus": "RECRUITING",
+                "lastUpdatePostDateStruct": {
+                  "date": "2026-10-01"
+                }
+              },
+              "designModule": {
+                "phases": [
+                  "PHASE2"
+                ],
+                "studyType": "INTERVENTIONAL"
+              },
+              "conditionsModule": {
+                "conditions": [
+                  "Fixture condition"
+                ]
+              },
+              "armsInterventionsModule": {
+                "interventions": [
+                  {
+                    "name": "Fixture intervention"
+                  }
+                ]
+              },
+              "contactsLocationsModule": {
+                "locations": [
+                  {
+                    "country": "United States",
+                    "state": "Illinois"
+                  },
+                  {
+                    "country": "Canada"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "protocolSection": {
+              "identificationModule": {
+                "nctId": "NCT99000002",
+                "briefTitle": "Fixture recruiting study 2 for automated tests"
+              },
+              "statusModule": {
+                "overallStatus": "RECRUITING",
+                "lastUpdatePostDateStruct": {
+                  "date": "2026-10-01"
+                }
+              },
+              "designModule": {
+                "phases": [
+                  "NA"
+                ],
+                "studyType": "INTERVENTIONAL"
+              },
+              "conditionsModule": {
+                "conditions": [
+                  "Fixture condition"
+                ]
+              },
+              "armsInterventionsModule": {
+                "interventions": [
+                  {
+                    "name": "Fixture intervention"
+                  }
+                ]
+              },
+              "contactsLocationsModule": {
+                "locations": [
+                  {
+                    "country": "United States",
+                    "state": "Illinois"
+                  },
+                  {
+                    "country": "Canada"
+                  }
+                ]
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

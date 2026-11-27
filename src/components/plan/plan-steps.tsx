@@ -146,7 +146,7 @@ function ProblemList({ problem, list }: { problem: PlanProblemDraft; list: ItemL
       )}
       <Button ref={addRef} type="button" variant="outline" size="sm" className="min-h-11" onClick={() => update((d) => addCustomItem(d, problem.id, list).draft)}>
         <Plus aria-hidden />
-        Add a {meta.kind} <span className="sr-only">for {problemTitle(problem)}</span>
+        Add {/^[aeiou]/.test(meta.kind) ? "an" : "a"} {meta.kind} <span className="sr-only">for {problemTitle(problem)}</span>
       </Button>
     </section>
   );
@@ -196,6 +196,7 @@ function ObjectiveInterventions({ problem, objective }: { problem: PlanProblemDr
                   type="checkbox"
                   checked={objective.interventionIds.includes(id)}
                   onChange={(e) => update((d) => toggleIntervention(d, problem.id, objective.id, id, e.target.checked))}
+                  aria-describedby={iv.trainingRequired ? `${cb}-training` : undefined}
                   className="mt-0.5 size-5 shrink-0 accent-[var(--accent)]"
                 />
                 <label htmlFor={cb} className="min-w-0 flex-1 cursor-pointer text-sm">
@@ -204,10 +205,17 @@ function ObjectiveInterventions({ problem, objective }: { problem: PlanProblemDr
                     {iv.modality} · {minutesLabel(iv.minutes)}
                     {suggested ? " · linked in the library" : " · added by you"}
                   </span>
+                  {/* Safety-relevant: visible text (not a tooltip), also the checkbox's description. */}
+                  {iv.trainingRequired ? (
+                    <span id={`${cb}-training`} className="mt-1 block text-xs text-text">
+                      <span className="font-semibold text-warn-fg">Training: </span>
+                      {iv.trainingRequired}
+                    </span>
+                  ) : null}
                 </label>
                 <span className="flex items-center gap-2 pl-8 sm:pl-0">
                   {iv.trainingRequired ? (
-                    <Badge tone="warn" title={iv.trainingRequired}>
+                    <Badge tone="warn">
                       <GraduationCap aria-hidden className="size-3.5" /> Trained clinicians only
                     </Badge>
                   ) : null}
@@ -234,7 +242,7 @@ function ObjectiveInterventions({ problem, objective }: { problem: PlanProblemDr
             id={`${base}-add`}
             value={toAdd}
             onChange={(e) => setToAdd(e.target.value)}
-            className="mt-1 block min-h-11 w-full rounded-lg border border-border bg-surface px-3 text-base text-text sm:text-sm"
+            className="mt-1 block min-h-11 w-full rounded-lg border border-input-border bg-surface px-3 text-base text-text sm:text-sm"
           >
             <option value="">Choose an intervention…</option>
             {forCondition.length ? (

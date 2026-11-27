@@ -110,12 +110,8 @@
   ],
   "specifiers": [
     {
-      "label": "Performance only (descriptive)",
-      "note": "Fear limited to speaking or performing in public, with ordinary social contact feeling manageable. Check how DSM-5-TR records this."
-    },
-    {
-      "label": "Broad social fear (descriptive; ICD-10-CM F40.11 Social phobia, generalized)",
-      "note": "Fear spans most social situations, including casual conversation and meeting new people."
+      "label": "Narrow or broad social fear (see DSM-5-TR for specifiers)",
+      "note": "Note whether the fear centres on speaking or being watched by others, or spans most social situations, including casual conversation and meeting new people. ICD-10-CM F40.11 codes the generalized form; DSM-5-TR has its own specifier: See DSM-5-TR."
     }
   ],
   "differentials": [

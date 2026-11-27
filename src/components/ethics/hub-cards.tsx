@@ -2,10 +2,11 @@
  * Server-rendered cards for the Ethics & Legal Hub. Original summaries only, each with the official link,
  * edition and verification status, and a "check the official source" badge when a person must re-check it.
  */
-import { BadgeCheck, CalendarClock, ExternalLink as ExternalIcon, Landmark, ListChecks, ScrollText, TriangleAlert } from "lucide-react";
+import { CalendarClock, ExternalLink as ExternalIcon, Info, Landmark, ListChecks, ScrollText, TriangleAlert } from "lucide-react";
 import { PROFESSION_LABELS, needsHumanCheck, type EthicsCode, type LegalTopic } from "@/lib/schemas-hub";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
+import { Disclosure } from "@/components/ui/disclosure";
 import { ExternalLink } from "@/components/ui/external-link";
 import { Governance, ReviewBadge } from "@/components/content/content-bits";
 import { CompactSources, LinkList } from "./compact-sources";
@@ -31,21 +32,23 @@ function VerificationNote({
   lastVerified: string;
   check: boolean;
 }) {
+  // Neutral unless a person still has to re-check the item against the official source.
   return (
-    <details className="group rounded-lg border border-border bg-surface-2">
-      <summary className="flex min-h-11 cursor-pointer list-none items-center gap-2 px-3 text-sm font-semibold [&::-webkit-details-marker]:hidden">
-        {check ? <TriangleAlert aria-hidden className="size-4 text-warn-fg" /> : <BadgeCheck aria-hidden className="size-4 text-ok" />}
-        <span className="flex-1">Verification: {VERIFICATION_LABELS[method]}</span>
-        <span aria-hidden className="text-muted group-open:rotate-90">›</span>
-      </summary>
-      <div className="space-y-2 px-3 pb-3 text-sm leading-relaxed">
-        <p>{note}</p>
-        <p className="text-muted">
-          Last checked online: <span className="font-semibold text-text">{lastVerified}</span>.
-          {check ? " Confirm against the official source before relying on it." : null}
-        </p>
-      </div>
-    </details>
+    <Disclosure
+      title="How this was checked"
+      meta={check ? "re-check due" : VERIFICATION_LABELS[method]}
+      icon={check ? TriangleAlert : Info}
+      bordered={false}
+      className="rounded-lg border border-border bg-surface-2 px-3"
+      bodyClassName="space-y-2 pb-3"
+    >
+      <p className="text-muted">{VERIFICATION_LABELS[method]}.</p>
+      <p>{note}</p>
+      <p className="text-muted">
+        Last checked online: <span className="font-semibold text-text">{lastVerified}</span>.
+        {check ? " Confirm against the official source before relying on it." : null}
+      </p>
+    </Disclosure>
   );
 }
 
@@ -72,8 +75,8 @@ export function EthicsCodeCard({ code }: { code: EthicsCode }) {
         </div>
 
         {code.editionNote ? (
-          <p className="rounded-lg border border-warn-border bg-warn-bg p-3 text-sm leading-relaxed text-warn-fg">
-            <span className="font-semibold">Edition note: </span>
+          <p className="rounded-lg border border-warn-border bg-warn-bg p-3 text-sm leading-relaxed text-text">
+            <span className="font-semibold text-warn-fg">Edition note: </span>
             {code.editionNote}
           </p>
         ) : null}
@@ -85,36 +88,40 @@ export function EthicsCodeCard({ code }: { code: EthicsCode }) {
           {code.appliesTo.map((p) => PROFESSION_LABELS[p]).join("; ")}
         </p>
 
-        <div>
-          <h4 className="flex items-center gap-2 text-sm font-semibold">
-            <ListChecks aria-hidden className="size-4 text-accent" />
-            Key reminders
-          </h4>
-          <ul className="mt-2 space-y-2">
-            {code.keyReminders.map((r) => (
-              <li key={r.topic} className="rounded-lg bg-surface-2 p-3 text-sm leading-relaxed">
-                <span className="font-semibold">{r.topic}. </span>
-                {r.text}
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <p className="flex items-start gap-2 text-sm leading-relaxed">
-          <Landmark aria-hidden className="mt-0.5 size-4 shrink-0 text-muted" />
-          <span>
-            <span className="font-semibold">Your regulator: </span>
-            {code.regulatorNote}
-          </span>
+        <p className="text-sm">
+          <ExternalLink href={code.officialUrl} className="inline-flex min-h-11 items-center">
+            Read the official {code.shortName}
+          </ExternalLink>
         </p>
 
-        <div className="space-y-1.5 text-sm">
-          <p>
-            <ExternalLink href={code.officialUrl} className="inline-flex min-h-11 items-center">
-              Read the official {code.shortName}
-            </ExternalLink>
-          </p>
-          {code.relatedLinks?.length ? <LinkList links={code.relatedLinks} /> : null}
+        <div>
+          <Disclosure
+            title="Key reminders and your regulator"
+            meta={`${code.keyReminders.length} reminders`}
+            icon={ListChecks}
+            bodyClassName="space-y-3 pb-2"
+          >
+            <ul className="space-y-2">
+              {code.keyReminders.map((r) => (
+                <li key={r.topic} className="rounded-lg bg-surface-2 p-3 text-sm leading-relaxed">
+                  <span className="font-semibold">{r.topic}. </span>
+                  {r.text}
+                </li>
+              ))}
+            </ul>
+            <p className="flex items-start gap-2 text-sm leading-relaxed">
+              <Landmark aria-hidden className="mt-0.5 size-4 shrink-0 text-muted" />
+              <span>
+                <span className="font-semibold">Your regulator: </span>
+                {code.regulatorNote}
+              </span>
+            </p>
+            {code.relatedLinks?.length ? <LinkList links={code.relatedLinks} /> : null}
+          </Disclosure>
+          <Disclosure title="Sources and review" meta={`${code.sources.length} sources`}>
+            <CompactSources sources={code.sources} />
+            <Governance license={code.license} lastVerified={code.lastVerified} reviewedBy={code.reviewedBy} />
+          </Disclosure>
         </div>
 
         <p className="flex items-start gap-2 text-xs text-muted">
@@ -124,14 +131,6 @@ export function EthicsCodeCard({ code }: { code: EthicsCode }) {
         </p>
 
         <VerificationNote method={code.verification.method} note={code.verification.note} lastVerified={code.lastVerified} check={check} />
-
-        <details className="text-sm">
-          <summary className="inline-flex min-h-11 cursor-pointer items-center font-semibold text-accent">Sources and review</summary>
-          <div className="space-y-3 pt-2">
-            <CompactSources sources={code.sources} />
-            <Governance license={code.license} lastVerified={code.lastVerified} reviewedBy={code.reviewedBy} />
-          </div>
-        </details>
       </Card>
     </article>
   );
@@ -162,6 +161,12 @@ export function LegalTopicCard({ topic }: { topic: LegalTopic }) {
         </h3>
         <p className="text-sm leading-relaxed">{topic.summary}</p>
 
+        <Disclosure
+          title="Key points, what to do and official sources"
+          meta={`${topic.keyPoints.length} points`}
+          icon={ScrollText}
+          bodyClassName="space-y-4 pb-2"
+        >
         <div>
           <h4 className="text-sm font-semibold">Key points</h4>
           <ul className="mt-2 list-disc space-y-1.5 pl-5 text-sm leading-relaxed marker:text-muted">
@@ -215,6 +220,7 @@ export function LegalTopicCard({ topic }: { topic: LegalTopic }) {
           </h4>
           <LinkList links={topic.officialLinks} className="mt-1" />
         </div>
+        </Disclosure>
 
         <p className="text-xs font-semibold text-muted">
           Information, not legal advice. Rules differ by jurisdiction and change; consult your licensing board or a
@@ -223,13 +229,10 @@ export function LegalTopicCard({ topic }: { topic: LegalTopic }) {
 
         <VerificationNote method={topic.verification.method} note={topic.verification.note} lastVerified={topic.lastVerified} check={check} />
 
-        <details className="text-sm">
-          <summary className="inline-flex min-h-11 cursor-pointer items-center font-semibold text-accent">Sources and review</summary>
-          <div className="space-y-3 pt-2">
-            <CompactSources sources={topic.sources} />
-            <Governance license={topic.license} lastVerified={topic.lastVerified} reviewedBy={topic.reviewedBy} />
-          </div>
-        </details>
+        <Disclosure title="Sources and review" meta={`${topic.sources.length} sources`} bordered={false}>
+          <CompactSources sources={topic.sources} />
+          <Governance license={topic.license} lastVerified={topic.lastVerified} reviewedBy={topic.reviewedBy} />
+        </Disclosure>
       </Card>
     </article>
   );

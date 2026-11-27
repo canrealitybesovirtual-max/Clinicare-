@@ -144,6 +144,52 @@ describe("plan outline", () => {
     expect(PLAN_PART2_NOTICE).toBe("42 CFR Part 2 prohibits unauthorized use or disclosure of these records.");
   });
 
+  it("carries the Part 2 notice when a selected item in a non-SUD library records substance use (G6)", () => {
+    const sadOption = option("social-anxiety-disorder", "Social anxiety disorder", false);
+    // Nothing selected: no notice.
+    expect(exportOf(sadOption, createDraft(sadOption, MEASURES)).sud).toBe(false);
+    // Select only the tagged alcohol objective (and its problem).
+    let d = createDraft(sadOption, MEASURES);
+    const prob = d.problems.find((p) => p.objectives.some((o) => o.sud))!;
+    const tagged = prob.objectives.find((o) => o.sud)!;
+    d = toggleProblem(d, prob.id, true);
+    d = toggleItem(d, prob.id, "objectives", tagged.id, true);
+    const plan = exportOf(sadOption, d);
+    expect(plan.sud).toBe(true);
+    expect(planOutlineText(plan)).toContain(PLAN_PART2_NOTICE);
+    // The same problem without the tagged objective: no notice.
+    const untagged = prob.objectives.find((o) => !o.sud && !/alcohol|drink|substance/i.test(o.text))!;
+    let d2 = toggleProblem(createDraft(sadOption, MEASURES), prob.id, true);
+    d2 = toggleItem(d2, prob.id, "objectives", untagged.id, true);
+    expect(exportOf(sadOption, d2).sud).toBe(false);
+  });
+
+  it("carries the Part 2 notice when the clinician's own wording mentions substance use", () => {
+    let d = createDraft(gadOption, MEASURES);
+    const pid = d.problems[0]!.id;
+    d = toggleProblem(d, pid, true);
+    const added = addCustomItem(d, pid, "objectives");
+    d = setItemText(added.draft, pid, "objectives", added.id, "Cut back to no more than 2 drinks on weekend evenings by week 6.");
+    const plan = exportOf(gadOption, d);
+    expect(plan.sud).toBe(true);
+    expect(planOutlineText(plan)).toContain(PLAN_PART2_NOTICE);
+  });
+
+  it("tags every non-SUD library item that mentions alcohol or other substances", () => {
+    const re = /\b(?:alcohol|drink(?:s|ing)?|substances?|drugs?)\b/i;
+    for (const id of ["adjustment-disorder", "insomnia-disorder", "prolonged-grief-disorder", "social-anxiety-disorder"]) {
+      const lib = getPlanLibrary(id)!;
+      expect(lib.sud, id).toBe(false);
+      for (const p of lib.problems) {
+        for (const t of [...p.definitions, ...p.longTermGoals]) {
+          const text = typeof t === "string" ? t : t.text;
+          if (re.test(text)) expect(typeof t === "string" ? false : t.sud, `${id}: ${text.slice(0, 50)}`).toBe(true);
+        }
+        for (const o of p.shortTermObjectives) if (re.test(o.text)) expect(o.sud, `${id}: ${o.id}`).toBe(true);
+      }
+    }
+  });
+
   it("adds the PHQ-9 item 9 follow-up note only when PHQ-9 is in the plan", () => {
     const withPhq = planOutlineText(exportOf(gadOption)).join(" ");
     expect(withPhq).toMatch(/item 9/);
@@ -211,6 +257,19 @@ describe("planDocx", () => {
     expect(xmlText(footers)).not.toContain(PLAN_PART2_NOTICE);
     expect(body).not.toContain(PLAN_PART2_NOTICE);
     expect(DOCX_MIME).toMatch(/wordprocessingml/);
+  });
+
+  it("is accessible: document language, a Heading 1 title (no Title style) and real numbered lists", async () => {
+    const files = unzipSync(await planDocx(exportOf(gadOption)));
+    const styles = strFromU8(files["word/styles.xml"]!);
+    const document = strFromU8(files["word/document.xml"]!);
+    expect(styles).toMatch(/<w:lang [^>]*w:val="en-US"/);
+    expect(document).not.toMatch(/<w:pStyle w:val="Title"\/>/);
+    expect(document).toMatch(/<w:pStyle w:val="Heading1"\/>/);
+    expect(files["word/numbering.xml"]).toBeDefined();
+    expect(document).toMatch(/<w:numPr>/);
+    // No typed "1." numbering left in the text.
+    expect(xmlText(document)).not.toMatch(/(?:^| )1\.\t/);
   });
 
   it("carries the Part 2 notice in the body and the footer of a substance-use plan", async () => {

@@ -12,12 +12,12 @@ import { ExternalLink } from "@/components/ui/external-link";
 import { Notice } from "@/components/ui/notice";
 import { PART2_NOTICE } from "@/lib/referral-links";
 import { useLookup } from "./live-lookup";
-import { Attribution, LookupError, LookupLoading } from "./lookup-status";
+import { Attribution, LookupError, LookupLoading, LookupStatusLine } from "./lookup-status";
 
 export type Lang = "en" | "es";
 export const LANG_CHOICES = [
   { value: "en", label: "English" },
-  { value: "es", label: "Español" },
+  { value: "es", label: "Español", lang: "es" },
 ] as const;
 
 const ICD11_BROWSER = "https://icd.who.int/browse/";
@@ -25,11 +25,21 @@ const ICD11_BROWSER = "https://icd.who.int/browse/";
 function Icd11Code({ code, label, lang }: { code: string; label: string; lang: Lang }) {
   const { state, retry } = useLookup<Icd11Result>("icd11", { code, lang });
   return (
-    <section aria-labelledby={`icd11-${code}`} aria-busy={state.status === "loading" || undefined} className="space-y-2">
+    <section
+      aria-labelledby={`icd11-${code}`}
+      aria-busy={state.status === "loading" || undefined}
+      data-lookup-focus
+      tabIndex={-1}
+      className="space-y-2 rounded-lg"
+    >
       <h3 id={`icd11-${code}`} className="font-semibold">
         <span className="font-mono">{code}</span> <span className="font-normal text-muted">{label}</span>
       </h3>
-      <div aria-live="polite">
+      <LookupStatusLine
+        state={state}
+        what={(d) => ((d as Icd11Result).found ? `ICD-11 ${code} details loaded` : `No ICD-11 entry for ${code}`)}
+      />
+      <div>
         {state.status === "loading" || state.status === "idle" ? (
           <LookupLoading what={`ICD-11 ${code}`} />
         ) : state.status === "error" ? (

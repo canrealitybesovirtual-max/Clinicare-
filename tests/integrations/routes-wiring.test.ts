@@ -20,6 +20,7 @@ const ROUTES = [
   "pubmed",
   "trials",
   "gho",
+  "assistant", // optional Claude assistant (CLAUDE.md owner amendment 2026-11-27); off unless configured server-side
 ] as const;
 
 const APP = path.resolve(__dirname, "../../src/app/api");

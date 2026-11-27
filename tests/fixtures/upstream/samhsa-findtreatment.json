@@ -1,0 +1,105 @@
+{
+  "_about": "Fictional e2e fixture data in the upstream's response shape (E2E_UPSTREAM_FIXTURES=1, tests only).",
+  "upstream": "samhsa-findtreatment",
+  "responses": [
+    {
+      "json": {
+        "page": 1,
+        "totalPages": 1,
+        "recordCount": 2,
+        "rows": [
+          {
+            "name1": "Fixture Treatment Center 1",
+            "name2": "Outpatient Program",
+            "street1": "100 Placeholder Blvd",
+            "city": "SPRINGFIELD",
+            "state": "IL",
+            "zip": "62703",
+            "phone": "217-555-0410",
+            "intake1": "217-555-0411",
+            "hotline1": null,
+            "website": "https://findtreatment.gov/",
+            "miles": 2.4,
+            "services": [
+              {
+                "f1": "TC",
+                "f2": "TC",
+                "f3": "Outpatient; Telemedicine/telehealth therapy"
+              },
+              {
+                "f1": "SET",
+                "f2": "SET",
+                "f3": "Outpatient"
+              },
+              {
+                "f1": "PAY",
+                "f2": "PAY",
+                "f3": "Cash or self-payment; Medicaid; Private health insurance"
+              },
+              {
+                "f1": "PYAS",
+                "f2": "PYAS",
+                "f3": "Sliding fee scale"
+              },
+              {
+                "f1": "AGE",
+                "f2": "AGE",
+                "f3": "Adults; Seniors"
+              },
+              {
+                "f1": "SL",
+                "f2": "SL",
+                "f3": "Spanish"
+              }
+            ]
+          },
+          {
+            "name1": "Fixture Treatment Center 2",
+            "name2": null,
+            "street1": "200 Placeholder Blvd",
+            "city": "SPRINGFIELD",
+            "state": "IL",
+            "zip": "62703",
+            "phone": "217-555-0420",
+            "intake1": "217-555-0421",
+            "hotline1": null,
+            "website": "https://findtreatment.gov/",
+            "miles": 4.8,
+            "services": [
+              {
+                "f1": "TC",
+                "f2": "TC",
+                "f3": "Outpatient; Telemedicine/telehealth therapy"
+              },
+              {
+                "f1": "SET",
+                "f2": "SET",
+                "f3": "Outpatient"
+              },
+              {
+                "f1": "PAY",
+                "f2": "PAY",
+                "f3": "Cash or self-payment; Medicaid; Private health insurance"
+              },
+              {
+                "f1": "PYAS",
+                "f2": "PYAS",
+                "f3": "Sliding fee scale"
+              },
+              {
+                "f1": "AGE",
+                "f2": "AGE",
+                "f3": "Adults; Seniors"
+              },
+              {
+                "f1": "SL",
+                "f2": "SL",
+                "f3": "Spanish"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "_about": "Fictional e2e fixture data in the upstream's response shape (E2E_UPSTREAM_FIXTURES=1, tests only).",
+  "upstream": "hrsa-hdw",
+  "responses": [
+    {
+      "when": {
+        "path": "/GetHealthCentersAroundALocation"
+      },
+      "json": {
+        "HCC": [
+          {
+            "HCC_FCT_ID": 900001,
+            "SITE_NM": "Fixture Community Health Center 1",
+            "SITE_ADDRESS": "10 Example Rd",
+            "SITE_CITY": "SPRINGFIELD",
+            "SITE_STATE_ABBR": "IL",
+            "SITE_ZIP_CD": "62701",
+            "SITE_PHONE_NUM": "2175550301",
+            "SITE_URL": "https://findahealthcenter.hrsa.gov/",
+            "HCC_TYP_DESC": "Service Delivery Site",
+            "HCC_LOC_DESC": "Permanent",
+            "Distance": 1.7
+          },
+          {
+            "HCC_FCT_ID": 900002,
+            "SITE_NM": "Fixture Community Health Center 2",
+            "SITE_ADDRESS": "20 Example Rd",
+            "SITE_CITY": "SPRINGFIELD",
+            "SITE_STATE_ABBR": "IL",
+            "SITE_ZIP_CD": "62701",
+            "SITE_PHONE_NUM": "2175550302",
+            "SITE_URL": "https://findahealthcenter.hrsa.gov/",
+            "HCC_TYP_DESC": "Service Delivery Site",
+            "HCC_LOC_DESC": "Permanent",
+            "Distance": 3.4
+          },
+          {
+            "HCC_FCT_ID": 900003,
+            "SITE_NM": "Fixture Community Health Center 3",
+            "SITE_ADDRESS": "30 Example Rd",
+            "SITE_CITY": "SPRINGFIELD",
+            "SITE_STATE_ABBR": "IL",
+            "SITE_ZIP_CD": "62701",
+            "SITE_PHONE_NUM": "2175550303",
+            "SITE_URL": "https://findahealthcenter.hrsa.gov/",
+            "HCC_TYP_DESC": "Service Delivery Site",
+            "HCC_LOC_DESC": "Permanent",
+            "Distance": 5.1
+          }
+        ]
+      }
+    },
+    {
+      "when": {
+        "path": "/GetHealthCentersByArea"
+      },
+      "json": {
+        "HCC": [
+          {
+            "HCC_FCT_ID": 900001,
+            "SITE_NM": "Fixture Community Health Center 1",
+            "SITE_ADDRESS": "10 Example Rd",
+            "SITE_CITY": "SPRINGFIELD",
+            "SITE_STATE_ABBR": "IL",
+            "SITE_ZIP_CD": "62701",
+            "SITE_PHONE_NUM": "2175550301",
+            "SITE_URL": "https://findahealthcenter.hrsa.gov/",
+            "HCC_TYP_DESC": "Service Delivery Site",
+            "HCC_LOC_DESC": "Permanent"
+          }
+        ]
+      }
+    }
+  ]
+}

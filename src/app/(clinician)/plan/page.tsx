@@ -34,7 +34,7 @@ export default function PlanPage() {
 
   return (
     <>
-      <PageIntro title="Treatment plan builder" eyebrow="Plan with the client · Clinician mode">
+      <PageIntro title="Treatment plan builder" eyebrow="Step 4 · Plan with the client" compact>
         <p>
           Build a plan together with the client: problems, observable behavioral definitions, long-term goals, SMART
           objectives, interventions and a measurement schedule. All wording is original and editable. Export a plan

@@ -12,6 +12,7 @@
 import * as React from "react";
 import { RotateCcw } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useSession } from "@/state/session";
 import { cn } from "@/lib/utils";
 import { ALL, matchesFacets, type FacetIndex, type FacetOption } from "./facet-index";
 
@@ -118,6 +119,24 @@ export function FacetFilterProvider({
   return <Ctx.Provider value={ctx}>{children}</Ctx.Provider>;
 }
 
+/**
+ * Start a facet at the session's crisis country (memory-only session.country, a curated ISO code) when it is one
+ * of the offered values. Runs once after hydration, so the server HTML and anchors stay complete, and never when
+ * the page was opened at an #anchor (that card must stay visible).
+ */
+export function FacetSessionCountry({ facet, allowed }: { facet: string; allowed: readonly string[] }) {
+  const { setValue } = useFacets();
+  const { state } = useSession();
+  const done = React.useRef(false);
+  React.useEffect(() => {
+    if (done.current) return;
+    done.current = true;
+    if (window.location.hash.length > 1) return;
+    if (allowed.includes(state.country)) setValue(facet, state.country);
+  }, [allowed, facet, setValue, state.country]);
+  return null;
+}
+
 /** Native select bound to one facet (44px target, visible label). */
 export function FacetSelect({
   facet,
@@ -150,7 +169,7 @@ export function FacetSelect({
         value={values[facet] ?? ALL}
         aria-describedby={hint ? hintId : undefined}
         onChange={(e) => setValue(facet, e.target.value)}
-        className="min-h-11 w-full min-w-0 rounded-lg border border-border bg-surface px-3 text-sm text-text"
+        className="min-h-11 w-full min-w-0 rounded-lg border border-input-border bg-surface px-3 text-sm text-text"
       >
         {options.map((o) => (
           <option key={o.value} value={o.value}>

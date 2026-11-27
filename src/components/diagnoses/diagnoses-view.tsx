@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { ArrowLeft, ListChecks, SearchX } from "lucide-react";
+import { ArrowLeft, ChevronRight, ListChecks, SearchX } from "lucide-react";
 import { conditions, getCondition } from "@/lib/content";
 import { useSession } from "@/state/session";
 import { buttonVariants } from "@/components/ui/button";
@@ -13,6 +13,7 @@ import { durationLabel, triLabel } from "@/components/symptoms/symptom-meta";
 import { HubPrompt } from "@/components/hub/hub-prompt";
 import { PART2_NOTICE } from "@/lib/referral-links";
 import { SuggestionCard } from "./suggestion-card";
+import { STRENGTH_LABEL } from "./explain";
 
 function codeSummary(codes: { code: string }[], max = 3): string {
   const shown = codes.slice(0, max).map((x) => x.code).join(", ");
@@ -27,11 +28,24 @@ function KnowledgeBase() {
       </h2>
       <ul className="mt-3 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
         {conditions.map((c) => (
-          <li key={c.id} className="rounded-lg border border-border bg-surface p-3 text-sm">
-            <p className="font-semibold">{c.name}</p>
-            <p className="mt-0.5 text-muted">
-              ICD-10-CM {codeSummary(c.icd10cm)} · ICD-11 {codeSummary(c.icd11)}
-            </p>
+          <li
+            key={c.id}
+            className="relative flex h-full items-start gap-2 rounded-lg border border-border bg-surface p-3 text-sm hover:border-accent"
+          >
+            <div className="min-w-0 flex-1">
+              {/* Curated condition id only in the URL. */}
+              <Link
+                href={`/interventions?condition=${encodeURIComponent(c.id)}`}
+                className="font-semibold text-text after:absolute after:inset-0 after:rounded-lg hover:text-accent"
+              >
+                {c.name}
+                <span className="sr-only">: interventions</span>
+              </Link>
+              <p className="mt-0.5 text-muted">
+                ICD-10-CM {codeSummary(c.icd10cm)} · ICD-11 {codeSummary(c.icd11)}
+              </p>
+            </div>
+            <ChevronRight aria-hidden className="mt-0.5 size-4 shrink-0 text-muted" />
           </li>
         ))}
       </ul>
@@ -125,6 +139,27 @@ export function DiagnosesView() {
           <KnowledgeBase />
         </>
       ) : (
+        <>
+        {result.suggestions.length >= 2 ? (
+          <nav aria-label="Considerations" className="mb-6 rounded-xl border border-border bg-surface p-3 sm:p-4">
+            <p className="text-sm font-semibold">Jump to a consideration</p>
+            <ol className="mt-2 grid gap-1 sm:grid-cols-2">
+              {result.suggestions.map((s, i) => (
+                <li key={s.conditionId}>
+                  <a
+                    href={`#cond-${s.conditionId}`}
+                    className="flex min-h-11 items-center gap-2 rounded-lg px-2 text-sm hover:bg-surface-2"
+                  >
+                    <span className="font-semibold text-accent underline underline-offset-2">
+                      {i + 1}. {s.name}
+                    </span>
+                    <span className="text-muted">· {STRENGTH_LABEL[s.strength]}</span>
+                  </a>
+                </li>
+              ))}
+            </ol>
+          </nav>
+        ) : null}
         <ol className="space-y-6" aria-label="Possible considerations, ranked">
           {result.suggestions.map((s, i) => {
             const cond = getCondition(s.conditionId);
@@ -136,6 +171,7 @@ export function DiagnosesView() {
             );
           })}
         </ol>
+        </>
       )}
 
       <p className="mt-8 max-w-3xl text-sm text-muted">

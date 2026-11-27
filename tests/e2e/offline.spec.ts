@@ -3,7 +3,7 @@
  * and never a query string, and it must not break navigation, online or offline.
  */
 import { expect, test, type Page } from "@playwright/test";
-import { ROUTES, answerItem, enterSymptomText, gotoReady, navLink } from "./helpers";
+import { SW_ROUTES as ROUTES, answerItem, enterSymptomText, goNav, gotoReady } from "./helpers";
 
 const SECRET = "zz-offline-probe-7781";
 
@@ -41,7 +41,7 @@ test.describe("service worker", () => {
     // Typed text and query strings never reach the cache.
     await page.goto(`/symptoms?note=${SECRET}`);
     await enterSymptomText(page, `Worries about everything ${SECRET}, restless, cannot sleep.`);
-    await navLink(page, "Measures").click();
+    await goNav(page, "Measures");
     await expect(page).toHaveURL(/\/measures$/);
 
     const entries = await cacheEntries(page);
@@ -71,7 +71,7 @@ test.describe("service worker", () => {
       await expect(page.getByText(/^Total 1 of 21\. 1 of 7 items answered\.$/)).toBeAttached();
 
       // In-app navigation falls back to a full page load, served from the cache.
-      await navLink(page, "Handouts").click();
+      await goNav(page, "Handouts");
       await expect(page).toHaveURL(/\/handouts$/);
       await expect(page.getByRole("heading", { level: 1 })).toHaveText("Handouts");
 

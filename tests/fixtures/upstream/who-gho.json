@@ -1,0 +1,72 @@
+{
+  "_about": "Fictional e2e fixture data in the upstream's response shape (E2E_UPSTREAM_FIXTURES=1, tests only).",
+  "upstream": "who-gho",
+  "responses": [
+    {
+      "json": {
+        "value": [
+          {
+            "TimeDim": 2021,
+            "Dim1Type": "SEX",
+            "Dim1": "SEX_BTSX",
+            "NumericValue": 10,
+            "Low": 8,
+            "High": 12,
+            "Value": "10",
+            "Date": "2026-01-15T00:00:00"
+          },
+          {
+            "TimeDim": 2021,
+            "Dim1Type": "SEX",
+            "Dim1": "SEX_FMLE",
+            "NumericValue": 9,
+            "Low": 7,
+            "High": 11,
+            "Value": "9",
+            "Date": "2026-01-15T00:00:00"
+          },
+          {
+            "TimeDim": 2020,
+            "Dim1Type": "SEX",
+            "Dim1": "SEX_BTSX",
+            "NumericValue": 11,
+            "Low": 9,
+            "High": 13,
+            "Value": "11",
+            "Date": "2026-01-15T00:00:00"
+          },
+          {
+            "TimeDim": 2020,
+            "Dim1Type": "SEX",
+            "Dim1": "SEX_FMLE",
+            "NumericValue": 10,
+            "Low": 8,
+            "High": 12,
+            "Value": "10",
+            "Date": "2026-01-15T00:00:00"
+          },
+          {
+            "TimeDim": 2019,
+            "Dim1Type": "SEX",
+            "Dim1": "SEX_BTSX",
+            "NumericValue": 12,
+            "Low": 10,
+            "High": 14,
+            "Value": "12",
+            "Date": "2026-01-15T00:00:00"
+          },
+          {
+            "TimeDim": 2019,
+            "Dim1Type": "SEX",
+            "Dim1": "SEX_FMLE",
+            "NumericValue": 11,
+            "Low": 9,
+            "High": 13,
+            "Value": "11",
+            "Date": "2026-01-15T00:00:00"
+          }
+        ]
+      }
+    }
+  ]
+}

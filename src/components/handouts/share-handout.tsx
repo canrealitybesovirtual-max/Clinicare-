@@ -69,8 +69,10 @@ export function ShareHandout({ path, title }: { path: string; title: string }) {
   }
 
   return (
-    <div className="space-y-4">
-      <div className="grid gap-4 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-start">
+    // Container query, not a viewport breakpoint: stacked in the 22rem sidebar and on phones, side by side when the
+    // card itself is wide enough (tablets).
+    <div className="@container space-y-4">
+      <div className="grid gap-4 @md:grid-cols-[minmax(0,1fr)_auto] @md:items-start">
         <div className="min-w-0 space-y-2">
           <label htmlFor={ids.link} className="text-sm font-semibold">
             Link to send
@@ -83,7 +85,7 @@ export function ShareHandout({ path, title }: { path: string; title: string }) {
             value={url}
             aria-describedby={ids.note}
             onFocus={(e) => e.currentTarget.select()}
-            className="block min-h-11 w-full rounded-lg border border-border bg-surface-2 px-3 font-mono text-sm text-text"
+            className="block min-h-11 w-full rounded-lg border border-input-border bg-surface-2 px-3 font-mono text-sm text-text"
           />
           <p id={ids.note} className="text-xs text-muted">
             The link contains only the handout id. Nothing about the client, the session or you is in the link or the
@@ -105,7 +107,7 @@ export function ShareHandout({ path, title }: { path: string; title: string }) {
             {status}
           </p>
         </div>
-        <figure className="flex flex-col items-center gap-2 justify-self-center rounded-xl border border-border bg-white p-3 sm:justify-self-end">
+        <figure className="flex flex-col items-center gap-2 justify-self-center rounded-xl border border-border bg-white p-3 @md:justify-self-end">
           {qr ? (
             // A data: URL generated on this device (CSP img-src allows data:). Not a remote image.
             // eslint-disable-next-line @next/next/no-img-element

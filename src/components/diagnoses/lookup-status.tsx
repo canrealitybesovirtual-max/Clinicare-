@@ -42,7 +42,16 @@ export function LookupError({
       <p>{copy.body}</p>
       <div className="flex flex-wrap items-center gap-x-4 gap-y-2">
         {copy.retry ? (
-          <Button type="button" variant="outline" size="sm" className="min-h-11" onClick={onRetry}>
+          <Button
+            type="button"
+            variant="outline"
+            size="sm"
+            onClick={(e) => {
+              // This button unmounts while the retry loads: move focus to the panel first so it never drops to <body>.
+              e.currentTarget.closest<HTMLElement>("[data-lookup-focus]")?.focus();
+              onRetry();
+            }}
+          >
             <RefreshCw aria-hidden />
             Try again
           </Button>
@@ -54,6 +63,34 @@ export function LookupError({
         ) : null}
       </div>
     </Notice>
+  );
+}
+
+/**
+ * One short polite status line per panel (WCAG 4.1.3), instead of a live region around the whole result list,
+ * which would read every item, link and attribution on each update.
+ */
+export function LookupStatusLine({
+  state,
+  what,
+  plain = false,
+}: {
+  state: LookupState<unknown>;
+  what: (data: unknown) => string;
+  plain?: boolean;
+}) {
+  const text =
+    state.status === "loading"
+      ? "Loading…"
+      : state.status === "ok"
+        ? what(state.data)
+        : state.status === "error"
+          ? lookupErrorCopy(state.code, state.message, plain).title
+          : "";
+  return (
+    <p role="status" className="sr-only">
+      {text}
+    </p>
   );
 }
 
@@ -108,7 +145,7 @@ export function LazyPanel({
         {Icon ? <Icon aria-hidden className="size-4 shrink-0 text-muted" /> : null}
         <span className="flex-1">{title}</span>
         {meta ? <span className="text-xs font-normal text-muted">{meta}</span> : null}
-        <ChevronDown aria-hidden className={cn("size-4 text-muted transition-transform", open && "rotate-180")} />
+        <ChevronDown aria-hidden className={cn("size-4 shrink-0 text-muted transition-transform", open && "rotate-180")} />
       </button>
       <div id={regionId} hidden={!open} className="space-y-3 pb-4 text-sm leading-relaxed">
         {mounted ? children : null}

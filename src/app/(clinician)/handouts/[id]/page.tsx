@@ -6,6 +6,8 @@ import { allHandouts, getAnyHandout } from "@/lib/library";
 import { sharePath } from "@/lib/share";
 import { PART2_NOTICE } from "@/lib/referral-links";
 import { Badge } from "@/components/ui/badge";
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import { Card } from "@/components/ui/card";
 import { Notice } from "@/components/ui/notice";
 import { Governance, PageIntro, ReviewBadge, SourcesList } from "@/components/content/content-bits";
@@ -75,8 +77,18 @@ export default async function HandoutPage({ params }: { params: Promise<{ id: st
               <h2 id="handout-body-heading" className="text-lg font-semibold">
                 What the client will read
               </h2>
-              <DownloadPdfButton handout={h} label="Download PDF" variant="primary" />
+              <div className="flex flex-wrap gap-2">
+                <DownloadPdfButton handout={h} label="Download PDF" variant="primary" />
+                {/* On phones the share card comes after the whole handout: jump straight to it. */}
+                <a href="#share-heading" className={cn(buttonVariants({ variant: "outline" }), "lg:hidden")}>
+                  <Send aria-hidden />
+                  Share link or QR
+                </a>
+              </div>
             </div>
+            <p className="text-xs text-muted">
+              The PDF is for printing. This page is the accessible version for screen readers.
+            </p>
             <HandoutBody handout={h} headingLevel="h3" />
             <div className="space-y-3 border-t border-border pt-4">
               <h3 className="text-sm font-semibold">Sources</h3>
@@ -87,9 +99,9 @@ export default async function HandoutPage({ params }: { params: Promise<{ id: st
         </article>
 
         <div className="flex min-w-0 flex-col gap-6 lg:sticky lg:top-4">
-          <section aria-labelledby="share-heading">
+          <section aria-labelledby="share-heading" className="scroll-mt-4">
             <Card className="space-y-3">
-              <h2 id="share-heading" className="flex items-center gap-2 text-lg font-semibold">
+              <h2 id="share-heading" className="flex scroll-mt-4 items-center gap-2 text-lg font-semibold">
                 <Send aria-hidden className="size-5 text-accent" /> Share with the client
               </h2>
               <ShareHandout path={sharePath(h.id)} title={h.title} />

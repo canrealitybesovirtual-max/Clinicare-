@@ -1,0 +1,69 @@
+{
+  "_about": "Fictional e2e fixture data in the upstream's response shape (E2E_UPSTREAM_FIXTURES=1, tests only).",
+  "upstream": "medlineplus-connect",
+  "responses": [
+    {
+      "when": {
+        "query": {
+          "informationRecipient.languageCode.c": "es"
+        }
+      },
+      "json": {
+        "feed": {
+          "entry": [
+            {
+              "title": {
+                "_value": "Salud mental (fixture)"
+              },
+              "link": [
+                {
+                  "href": "https://medlineplus.gov/spanish/mentalhealth.html",
+                  "rel": "alternate"
+                }
+              ],
+              "summary": {
+                "_value": "Resumen de prueba en español para pruebas automatizadas."
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "json": {
+        "feed": {
+          "entry": [
+            {
+              "title": {
+                "_value": "Mental Health (fixture)"
+              },
+              "link": [
+                {
+                  "href": "https://medlineplus.gov/mentalhealth.html",
+                  "rel": "alternate"
+                }
+              ],
+              "summary": {
+                "_value": "Fixture summary for automated tests. The real MedlinePlus page has the plain-language text."
+              }
+            },
+            {
+              "title": {
+                "_value": "Stress (fixture)"
+              },
+              "link": [
+                {
+                  "href": "https://medlineplus.gov/stress.html",
+                  "rel": "alternate"
+                }
+              ],
+              "summary": {
+                "_value": "Second fixture page so lists render with more than one item."
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
