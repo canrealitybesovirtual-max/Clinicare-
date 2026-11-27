@@ -1,0 +1,154 @@
+{
+  "id": "trauma",
+  "title": "Trauma: the event, timing and reliving",
+  "domain": "trauma",
+  "about": "Questions on whether a frightening event is part of the picture, how long ago it happened (reactions in the first month are expected and often settle), and the reliving, avoidance and on-guard features that follow it. Ask at the client's pace; detail is not needed in a first conversation.",
+  "questions": [
+    {
+      "id": "trauma-event",
+      "kind": "discriminate",
+      "domain": "trauma",
+      "text": "Has something happened to the client, or in front of them, that was terrifying or dangerous, such as an assault, a serious accident, combat, abuse or a disaster?",
+      "why": "Trauma-related patterns start from a frightening event; without one, the same symptoms point elsewhere. Ask gently, let the client choose how much to share, and do not press for detail early on.",
+      "options": [
+        { "id": "yes", "label": "Yes", "effects": { "addSymptomIds": ["traumatic-event-exposure"] } },
+        { "id": "no", "label": "No", "effects": { "negateSymptomIds": ["traumatic-event-exposure"] } },
+        {
+          "id": "not-ready",
+          "label": "The client prefers not to say right now",
+          "keepOpen": true,
+          "note": "Respect the choice; offer grounding skills and come back to it when the client is ready."
+        },
+        { "id": "unsure", "label": "Not asked yet", "keepOpen": true }
+      ],
+      "showWhen": {
+        "symptomCategories": ["trauma"],
+        "symptomIds": ["avoidance-trauma-reminders", "negative-beliefs", "emotional-numbing-detachment"],
+        "conditionIds": ["ptsd"],
+        "triggerCategories": ["trauma-reminder"]
+      },
+      "targets": ["traumatic-event-exposure"],
+      "discriminates": ["ptsd", "adjustment-disorder"],
+      "priority": 5
+    },
+    {
+      "id": "trauma-timing",
+      "kind": "discriminate",
+      "domain": "trauma",
+      "gate": "duration",
+      "group": "duration",
+      "text": "When did the event happen, and how long have the reactions lasted?",
+      "why": "Strong reactions in the first month after an event are common and often settle with support (an acute stress reaction). A trauma pattern such as PTSD is considered when they last beyond about a month; reactions can also begin months later.",
+      "options": [
+        {
+          "id": "lt2w",
+          "label": "Under 2 weeks",
+          "effects": { "setDuration": "lt2w" },
+          "note": "Early reactions often settle. Offer psychoeducation and grounding, check safety and support, and review again in a few weeks."
+        },
+        {
+          "id": "2to4w",
+          "label": "2 to 4 weeks",
+          "effects": { "setDuration": "2to4w" },
+          "note": "Still within the first month: watch the course, check safety and support, and review again soon."
+        },
+        { "id": "1to6m", "label": "1 to 6 months", "effects": { "setDuration": "1to6m" } },
+        { "id": "gte6m", "label": "6 months or longer", "effects": { "setDuration": "gte6m" } },
+        { "id": "unsure", "label": "Not sure yet", "keepOpen": true }
+      ],
+      "showWhen": {
+        "symptomIds": ["traumatic-event-exposure"],
+        "conditionIds": ["ptsd"],
+        "triggerCategories": ["trauma-reminder"]
+      },
+      "discriminates": ["ptsd", "adjustment-disorder"],
+      "priority": 10
+    },
+    {
+      "id": "trauma-reliving",
+      "kind": "core",
+      "domain": "trauma",
+      "select": "many",
+      "text": "Does the client relive the event through unwanted memories, nightmares or flashbacks?",
+      "why": "Reliving the event, rather than simply remembering it, is a key feature of a trauma reaction and helps choose between trauma-focused approaches.",
+      "options": [
+        { "id": "memories", "label": "Unwanted memories that break in", "effects": { "addSymptomIds": ["intrusive-memories"] } },
+        { "id": "nightmares", "label": "Nightmares about it", "effects": { "addSymptomIds": ["nightmares"] } },
+        { "id": "flashbacks", "label": "Flashbacks: it feels as if it is happening again", "effects": { "addSymptomIds": ["flashbacks"] } },
+        {
+          "id": "none",
+          "label": "None of these",
+          "exclusive": true,
+          "effects": { "negateSymptomIds": ["intrusive-memories", "nightmares", "flashbacks"] }
+        },
+        { "id": "unsure", "label": "Not sure yet", "exclusive": true, "keepOpen": true }
+      ],
+      "showWhen": {
+        "symptomIds": ["traumatic-event-exposure", "avoidance-trauma-reminders", "cue-reactivity", "hypervigilance", "startle"],
+        "conditionIds": ["ptsd"]
+      },
+      "targets": ["intrusive-memories", "nightmares", "flashbacks"],
+      "discriminates": ["ptsd"],
+      "priority": 10
+    },
+    {
+      "id": "trauma-avoidance",
+      "kind": "core",
+      "domain": "trauma",
+      "text": "Does the client keep away from thoughts, conversations, places or people that bring the event back?",
+      "why": "Avoiding reminders keeps the memory from being processed and is a key target of trauma-focused treatment.",
+      "options": [
+        { "id": "yes", "label": "Yes", "effects": { "addSymptomIds": ["avoidance-trauma-reminders"] } },
+        { "id": "no", "label": "No", "effects": { "negateSymptomIds": ["avoidance-trauma-reminders"] } },
+        { "id": "unsure", "label": "Not sure yet", "keepOpen": true }
+      ],
+      "showWhen": {
+        "symptomIds": ["traumatic-event-exposure", "intrusive-memories", "nightmares", "flashbacks"],
+        "conditionIds": ["ptsd"]
+      },
+      "targets": ["avoidance-trauma-reminders"],
+      "discriminates": ["ptsd"],
+      "priority": 15
+    },
+    {
+      "id": "trauma-on-guard",
+      "kind": "core",
+      "domain": "trauma",
+      "select": "many",
+      "text": "Since the event, is the client constantly on guard, or easily and strongly startled?",
+      "why": "A body that stays on alert after the danger has passed is common after trauma and often drives poor sleep, irritability and poor concentration.",
+      "options": [
+        { "id": "on-guard", "label": "Constantly on guard, scanning for danger", "effects": { "addSymptomIds": ["hypervigilance"] } },
+        { "id": "startles", "label": "Startles easily and strongly", "effects": { "addSymptomIds": ["startle"] } },
+        { "id": "neither", "label": "Neither", "exclusive": true, "effects": { "negateSymptomIds": ["hypervigilance", "startle"] } },
+        { "id": "unsure", "label": "Not sure yet", "exclusive": true, "keepOpen": true }
+      ],
+      "showWhen": { "symptomIds": ["traumatic-event-exposure"], "conditionIds": ["ptsd"] },
+      "targets": ["hypervigilance", "startle"],
+      "discriminates": ["ptsd"],
+      "priority": 25
+    }
+  ],
+  "sources": [
+    {
+      "title": "Post-traumatic stress disorder (NG116)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng116",
+      "year": 2018
+    },
+    {
+      "title": "VA/DoD Clinical Practice Guideline for Management of Posttraumatic Stress Disorder and Acute Stress Disorder",
+      "publisher": "US Department of Veterans Affairs and Department of Defense",
+      "url": "https://www.healthquality.va.gov/guidelines/MH/ptsd/",
+      "year": 2023
+    },
+    {
+      "title": "Post-Traumatic Stress Disorder (health topic)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/topics/post-traumatic-stress-disorder-ptsd"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

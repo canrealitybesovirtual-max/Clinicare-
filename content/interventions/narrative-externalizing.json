@@ -2,7 +2,7 @@
   "id": "narrative-externalizing",
   "name": "Narrative therapy: externalizing conversations",
   "modality": "Narrative therapy",
-  "conditions": ["major-depressive-disorder", "adjustment-disorder", "persistent-depressive-disorder"],
+  "conditions": ["major-depressive-disorder", "adjustment-disorder", "persistent-depressive-disorder", "obsessive-compulsive-disorder"],
   "evidenceLevel": "Emerging evidence with few controlled trials. An eight-session narrative therapy program for adults with major depression showed improvement in symptoms and relationships in an uncontrolled trial (Vromans and Schweitzer). The ANU BluePages evidence summary judges the evidence not yet strong enough to recommend narrative therapy as a stand-alone treatment for depression. No NICE or APA Division 12 recommendation was found. Use it as an add-on technique within guideline-supported care.",
   "minutes": { "min": 20, "max": 50 },
   "purpose": "Externalizing, developed by Michael White and David Epston, separates the person from the problem, so the problem becomes something the client has a relationship with rather than who they are. Naming the problem, mapping its effects, and finding moments when the client resisted it (unique outcomes) can reduce shame and blame, make room for the client's preferred identity and values, and support re-authoring a richer life story.",

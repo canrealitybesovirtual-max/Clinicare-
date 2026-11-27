@@ -11,7 +11,7 @@ import { auditContent } from "../../scripts/content-audit";
 
 const ROOT = path.resolve(__dirname, "../..");
 const CONTENT = path.join(ROOT, "content");
-const TODAY = "2026-11-26";
+const TODAY = "2026-11-27";
 
 describe("content audit on the real content", () => {
   const audit = auditContent(CONTENT, { today: TODAY });

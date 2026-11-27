@@ -7,7 +7,7 @@ import { isVerified, type ReferralEntry } from "@/lib/schemas-referrals";
 import { Badge } from "@/components/ui/badge";
 import { buttonVariants } from "@/components/ui/button";
 import { ExternalLink } from "@/components/ui/external-link";
-import { SourcesList } from "@/components/content/content-bits";
+import { CompactSources } from "@/components/ethics/compact-sources";
 import { cn } from "@/lib/utils";
 import { KIND_LABELS, languageList, regionLabel, smsHref, telHref } from "./referral-format";
 
@@ -63,11 +63,11 @@ export function DirectoryEntryCard({ entry, headingLevel = "h4" }: { entry: Refe
             </a>
           ) : null}
           {entry.chat ? (
-            <a href={entry.chat} target="_blank" rel="noopener noreferrer" className={buttonVariants({ variant: "outline" })}>
+            <ExternalLink href={entry.chat} showIcon={false} className={cn(buttonVariants({ variant: "outline" }), "font-semibold no-underline")}>
               <MessageCircle aria-hidden />
               Chat online
-              <span className="sr-only"> with {entry.name} (opens in a new tab)</span>
-            </a>
+              <span className="sr-only"> with {entry.name}</span>
+            </ExternalLink>
           ) : null}
         </div>
       ) : null}
@@ -123,7 +123,7 @@ export function DirectoryEntryCard({ entry, headingLevel = "h4" }: { entry: Refe
           <div className="space-y-2 pt-1">
             <p className="leading-relaxed">{entry.verification}</p>
             {!isVerified(entry) ? <p className="font-semibold text-text">Confirm details on the official site before relying on them.</p> : null}
-            <SourcesList sources={entry.sources} className="text-xs" />
+            <CompactSources sources={entry.sources} className="text-xs" />
           </div>
         </details>
       </div>

@@ -10,6 +10,8 @@ import { useSymptomAnalysis } from "@/components/symptoms/analysis";
 import { RedFlagBanner, RiskMissNote } from "@/components/symptoms/red-flag-banner";
 import { Under18Notice } from "@/components/symptoms/under18-notice";
 import { durationLabel, triLabel } from "@/components/symptoms/symptom-meta";
+import { HubPrompt } from "@/components/hub/hub-prompt";
+import { PART2_NOTICE } from "@/lib/referral-links";
 import { SuggestionCard } from "./suggestion-card";
 
 function codeSummary(codes: { code: string }[], max = 3): string {
@@ -45,6 +47,9 @@ export function DiagnosesView() {
   const { state } = useSession();
   const analysis = useSymptomAnalysis();
   const { result } = analysis;
+  // G6: any substance-use consideration on screen => Part 2 banner + Ethics & Legal Hub prompt, once, at the top.
+  const anySud =
+    !state.under18 && result.status === "ok" && result.suggestions.some((s) => getCondition(s.conditionId)?.sud === true);
   const context = {
     duration: state.duration,
     impairment: state.impairment,
@@ -56,6 +61,18 @@ export function DiagnosesView() {
     <>
       <RedFlagBanner flags={analysis.redFlags} />
       <RiskMissNote />
+
+      {anySud ? (
+        <div className="mb-6 space-y-3">
+          <Notice tone="warn" title="42 CFR Part 2: substance use">
+            <p>
+              A substance-use consideration is on screen. Nothing here is stored or sent, and every export carries the
+              notice: {PART2_NOTICE}
+            </p>
+          </Notice>
+          <HubPrompt context="sud" />
+        </div>
+      ) : null}
 
       <Card className="mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <div className="text-sm">

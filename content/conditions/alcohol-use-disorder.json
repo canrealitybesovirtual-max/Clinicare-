@@ -1,0 +1,336 @@
+{
+  "id": "alcohol-use-disorder",
+  "name": "Alcohol use disorder",
+  "icd10cm": [
+    {
+      "code": "F10.10",
+      "label": "Alcohol abuse, uncomplicated"
+    },
+    {
+      "code": "F10.11",
+      "label": "Alcohol abuse, in remission"
+    },
+    {
+      "code": "F10.20",
+      "label": "Alcohol dependence, uncomplicated"
+    },
+    {
+      "code": "F10.21",
+      "label": "Alcohol dependence, in remission"
+    }
+  ],
+  "icd11": [
+    {
+      "code": "6C40.1",
+      "label": "Harmful pattern of use of alcohol"
+    },
+    {
+      "code": "6C40.2",
+      "label": "Alcohol dependence"
+    }
+  ],
+  "dsmPointer": "See DSM-5-TR: Substance-Related and Addictive Disorders — Alcohol Use Disorder",
+  "summary": "A pattern in which alcohol takes up more room in the client's life than they want it to. Drinking runs past plans, attempts to cut back do not hold, cravings pull, and drinking carries on despite harm to health, work, relationships or safety; tolerance and withdrawal may follow. It ranges from mild to severe and often sits alongside depression, anxiety, trauma or sleep problems that alcohol was first used to soothe. Withdrawal can be medically dangerous: never advise stopping suddenly without medical input. Substance-use information is protected: nothing here is stored or sent, and every export carries the Part 2 notice. 42 CFR Part 2 prohibits unauthorized use or disclosure of these records. For clinician review only; this is not a diagnosis.",
+  "features": [
+    {
+      "symptomId": "impaired-control-drinking",
+      "kind": "core",
+      "weight": 5
+    },
+    {
+      "symptomId": "unsuccessful-cut-down",
+      "kind": "core",
+      "weight": 4
+    },
+    {
+      "symptomId": "alcohol-craving",
+      "kind": "core",
+      "weight": 4
+    },
+    {
+      "symptomId": "drinking-despite-harm",
+      "kind": "core",
+      "weight": 4
+    },
+    {
+      "symptomId": "drinking-role-impact",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "hazardous-drinking",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "alcohol-tolerance",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "alcohol-benzo-withdrawal",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "heavy-drinking-pattern",
+      "kind": "associated",
+      "weight": 1
+    }
+  ],
+  "minCore": 2,
+  "durationGate": {
+    "minWeeks": 4,
+    "note": "Ask about the drinking pattern over the past year, including heavy stretches and attempts to stop. DSM-5-TR and ICD-11 both look at the pattern over a period of months; check the timing they describe."
+  },
+  "impairmentRequired": true,
+  "ruleOuts": [
+    {
+      "label": "Other sedative, opioid or cannabis use",
+      "type": "substance",
+      "note": "Combined use with benzodiazepines, sleep medicines, gabapentinoids or opioids raises overdose and withdrawal risk and changes the plan. Ask about all substances; this app does not store or send substance-use information."
+    },
+    {
+      "label": "Medication effects and interactions",
+      "type": "substance",
+      "note": "Some prescribed medicines interact with alcohol or cause sedation, confusion or mood change. Review the medication list with the prescriber."
+    },
+    {
+      "label": "Medical conditions that mimic intoxication or withdrawal",
+      "type": "medical",
+      "note": "Low blood sugar, head injury, infection, liver failure (hepatic encephalopathy) and some neurological illnesses can look like intoxication or withdrawal. Confusion, a seizure or a fall needs urgent medical assessment."
+    },
+    {
+      "label": "Medical harm from drinking",
+      "type": "medical",
+      "note": "Liver, pancreatic, heart and nerve problems, and vitamin deficiency (thiamine), often need medical care. Coordinate with the client's medical provider."
+    },
+    {
+      "label": "Mood, anxiety or sleep symptoms caused by alcohol",
+      "type": "psychiatric",
+      "note": "Low mood, anxiety and insomnia often improve within weeks of stopping heavy drinking. Ask whether symptoms began before heavy drinking or persist during sober periods before assuming a separate condition."
+    }
+  ],
+  "specifiers": [
+    {
+      "label": "Severity: mild, moderate or severe (descriptive)",
+      "note": "Severity rests on how many features are present. ICD-10-CM uses F10.1x for a mild pattern and F10.2x for moderate or severe; check the coding notes in DSM-5-TR."
+    },
+    {
+      "label": "In early or sustained remission (descriptive)",
+      "note": "Remission codes are F10.11 and F10.21. Craving alone can persist in remission."
+    },
+    {
+      "label": "In a controlled environment (descriptive)",
+      "note": "For example in residential treatment or custody, where access to alcohol is restricted."
+    },
+    {
+      "label": "With withdrawal (descriptive; ICD-10-CM F10.130 or F10.230, ICD-11 6C40.4)",
+      "note": "Withdrawal codes differ by severity and complications; arrange medical assessment whenever withdrawal is possible."
+    }
+  ],
+  "differentials": [
+    {
+      "label": "Alcohol use without a disorder (ICD-10-CM title: Alcohol use, unspecified, uncomplicated)",
+      "icd10cm": "F10.90",
+      "distinguishing": "Drinking, even heavy at times, without loss of control, craving or continued use despite harm."
+    },
+    {
+      "label": "Alcohol-induced mood disorder (ICD-10-CM title: Alcohol dependence with alcohol-induced mood disorder)",
+      "icd10cm": "F10.24",
+      "distinguishing": "Depressive symptoms that arise during heavy use or withdrawal and fade with sustained sobriety."
+    },
+    {
+      "label": "Major depressive disorder",
+      "distinguishing": "Depression that began before heavy drinking or persists through weeks of sobriety; both often co-occur."
+    },
+    {
+      "label": "Other substance use disorders",
+      "distinguishing": "Problems centered on sedatives, opioids, cannabis or stimulants; polysubstance use is common and needs its own assessment."
+    },
+    {
+      "label": "Bipolar disorder, unspecified",
+      "icd10cm": "F31.9",
+      "distinguishing": "Drinking binges during periods of high energy, little need for sleep and risky behavior suggest a mood episode; ask about past highs."
+    }
+  ],
+  "comorbidities": [
+    {
+      "conditionId": "major-depressive-disorder",
+      "label": "Major depressive disorder",
+      "note": "Depression and heavy drinking feed each other and raise suicide risk. Screen with the PHQ-9 and ask directly about suicidal thoughts. 42 CFR Part 2 prohibits unauthorized use or disclosure of these records."
+    },
+    {
+      "conditionId": "ptsd",
+      "label": "Posttraumatic stress disorder",
+      "note": "Drinking to blunt trauma symptoms is common; integrated care for both works better than treating one at a time."
+    },
+    {
+      "conditionId": "social-anxiety-disorder",
+      "label": "Social anxiety disorder",
+      "note": "Some clients drink to get through social situations. Ask what drinking does for the client."
+    },
+    {
+      "conditionId": "insomnia-disorder",
+      "label": "Insomnia disorder",
+      "note": "Alcohol shortens time to sleep but fragments the second half of the night; insomnia often rebounds in early sobriety and is a common relapse trigger."
+    },
+    {
+      "conditionId": "generalized-anxiety-disorder",
+      "label": "Generalized anxiety disorder",
+      "note": "Rebound anxiety between drinks can look like generalized worry; reassess after a period of sobriety."
+    }
+  ],
+  "measures": [
+    "phq-9",
+    "gad-7"
+  ],
+  "measuresPending": [
+    {
+      "name": "Alcohol Use Disorders Identification Test (AUDIT)",
+      "url": "https://www.who.int/publications/i/item/WHO-MSD-MSB-01.6a",
+      "note": "License pending — link out only",
+      "licenseKey": "AUDIT"
+    }
+  ],
+  "interventions": [
+    {
+      "name": "Motivational interviewing and brief intervention",
+      "evidence": "NICE CG115 (2011) includes motivational approaches within psychological interventions for harmful drinking and dependence. APA Division 12 lists motivational interviewing and motivational enhancement for alcohol use (check the current rating).",
+      "note": "Explore the client's own reasons for change and agree a drinking goal (cutting down or stopping) together. 42 CFR Part 2 prohibits unauthorized use or disclosure of these records."
+    },
+    {
+      "name": "CBT and relapse prevention",
+      "evidence": "NICE CG115 recommends psychological interventions such as CBT or behavioral therapies focused on alcohol for harmful drinking and mild dependence, and alongside medication for moderate or severe dependence.",
+      "note": "Map high-risk situations, build coping and refusal skills, and plan for lapses using the drinking diary and relapse prevention plan."
+    },
+    {
+      "name": "Behavioral couples therapy",
+      "evidence": "NICE CG115 recommends offering it when the client has a regular partner who is willing to take part.",
+      "note": "Screen for intimate partner violence before joint sessions."
+    },
+    {
+      "name": "Mutual-help groups and twelve-step facilitation",
+      "evidence": "A 2020 Cochrane review (Kelly et al.) found manualized AA and twelve-step facilitation as effective as other established treatments, and better for continuous abstinence.",
+      "note": "Offer a choice of groups (AA, SMART Recovery, faith-based or culturally specific groups) and respect the client's preference."
+    },
+    {
+      "name": "Medically managed withdrawal referral",
+      "evidence": "NICE CG115: assess withdrawal risk and arrange assisted withdrawal in a setting that matches the risk.",
+      "note": "Daily heavy drinking, past withdrawal seizures or delirium tremens, or serious medical illness call for medical assessment before any change in drinking. Do not advise stopping suddenly without medical support."
+    },
+    {
+      "name": "Referral for medication evaluation",
+      "evidence": "NICE CG115 lists acamprosate or oral naltrexone, combined with a psychological intervention, for moderate or severe dependence, with disulfiram as an option. The APA practice guideline (2018) suggests naltrexone or acamprosate for moderate to severe alcohol use disorder.",
+      "note": "Refer to an addiction specialist, psychiatry, a primary care provider or a psychiatric nurse practitioner. Prescribing decisions rest with the prescriber."
+    },
+    {
+      "name": "Contingency management (where available)",
+      "evidence": "Strongest evidence is for stimulant use; trials in alcohol use are fewer, so check current guidance.",
+      "note": "Incentives for verified goals, offered through programs that can measure them."
+    }
+  ],
+  "handouts": [],
+  "statIds": [],
+  "culturalNotes": [
+    "Drinking norms vary widely. In some families and communities daily drinking or heavy weekend drinking is ordinary; in others any alcohol use is forbidden and brings shame. Ask about the client's own norms and goals before judging a pattern, and anchor the assessment in harms and control rather than in amounts alone.",
+    "Standard drink sizes differ by country (for example 14 g of alcohol in the US, 8 g per unit in the UK and 10 g in many other countries). Convert carefully when using drinking guidelines or the AUDIT.",
+    "Stigma, fear of losing custody or immigration status, and past experiences with police or child-welfare services can make clients cautious. Explain confidentiality, the limits of confidentiality and 42 CFR Part 2 protections plainly.",
+    "Women, older adults and people with some medical conditions reach harm at lower amounts. Thresholds in screening tools may need adjusting for these groups.",
+    "For many Indigenous and other communities, culturally grounded and community-led programs are more acceptable and effective than generic ones. Ask what healing and support look like for the client.",
+    "Faith can be a strong source of support in recovery. Offer faith-based groups or faith-integrated approaches only when the client asks for them and after informed consent (see the AACC Code of Ethics for faith-based counselors).",
+    "Use a trained professional interpreter, not family members, for questions about drinking and withdrawal."
+  ],
+  "sud": true,
+  "requiredFeatures": [],
+  "strongMinAreas": 2,
+  "redFlagRules": [
+    {
+      "type": "withdrawal",
+      "message": "Possible alcohol or sedative withdrawal is documented. Withdrawal can cause seizures and delirium; arrange an urgent medical assessment before any change in drinking and do not advise stopping suddenly without medical support."
+    },
+    {
+      "type": "suicidality",
+      "message": "Suicide-related content is documented in this input. Alcohol use raises suicide risk, especially during intoxication or after a loss; ask directly, include alcohol and other means in safety planning, and follow your risk protocol."
+    },
+    {
+      "type": "psychosis",
+      "message": "Psychotic symptoms are documented in this input. Hallucinations with heavy drinking or withdrawal can signal delirium or alcohol-induced psychosis, which need urgent medical evaluation."
+    }
+  ],
+  "licensedDsm": false,
+  "wileyLicensed": false,
+  "sources": [
+    {
+      "title": "Understanding Alcohol Use Disorder",
+      "publisher": "National Institute on Alcohol Abuse and Alcoholism",
+      "url": "https://www.niaaa.nih.gov/publications/brochures-and-fact-sheets/understanding-alcohol-use-disorder"
+    },
+    {
+      "title": "Healthcare Professional's Core Resource on Alcohol",
+      "publisher": "National Institute on Alcohol Abuse and Alcoholism",
+      "url": "https://www.niaaa.nih.gov/health-professionals-communities/core-resource-on-alcohol"
+    },
+    {
+      "title": "Alcohol-use disorders: diagnosis, assessment and management of harmful drinking (high-risk drinking) and alcohol dependence (CG115)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg115",
+      "year": 2011
+    },
+    {
+      "title": "The American Psychiatric Association Practice Guideline for the Pharmacological Treatment of Patients With Alcohol Use Disorder",
+      "publisher": "American Psychiatric Association Publishing",
+      "url": "https://psychiatryonline.org/doi/book/10.1176/appi.books.9781615371969",
+      "year": 2018
+    },
+    {
+      "title": "AUDIT: the Alcohol Use Disorders Identification Test: guidelines for use in primary health care",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/publications/i/item/WHO-MSD-MSB-01.6a",
+      "year": 2001
+    },
+    {
+      "title": "Alcoholics Anonymous and other 12-step programs for alcohol use disorder (Kelly et al.)",
+      "publisher": "Cochrane Database of Systematic Reviews (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32159228/",
+      "year": 2020
+    },
+    {
+      "title": "42 CFR Part 2: Confidentiality of Substance Use Disorder Patient Records",
+      "publisher": "Electronic Code of Federal Regulations",
+      "url": "https://www.ecfr.gov/current/title-42/chapter-I/subchapter-A/part-2"
+    },
+    {
+      "title": "ICD-11 for Mortality and Morbidity Statistics (browser)",
+      "publisher": "World Health Organization",
+      "url": "https://icd.who.int/browse/latest-release/mms/en"
+    },
+    {
+      "title": "ICD-10-CM (official code set)",
+      "publisher": "CDC National Center for Health Statistics",
+      "url": "https://www.cdc.gov/nchs/icd/icd-10-cm/index.html"
+    },
+    {
+      "title": "ICD-10-CM codes checked with the NLM Clinical Table Search Service",
+      "publisher": "National Library of Medicine",
+      "url": "https://clinicaltables.nlm.nih.gov/apidoc/icd10cm/v3/doc.html"
+    },
+    {
+      "title": "Psychological Treatments (treatment index)",
+      "publisher": "APA Division 12, Society of Clinical Psychology",
+      "url": "https://div12.org/psychological-treatments/treatments/"
+    },
+    {
+      "title": "AACC Code of Ethics",
+      "publisher": "American Association of Christian Counselors",
+      "url": "https://aacc.net/aacc-code-of-ethics/"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

@@ -1,0 +1,326 @@
+{
+  "id": "mood",
+  "title": "Low mood: key features, course and mood elevation",
+  "domain": "mood",
+  "about": "Questions on the two key features of a depressive episode, its course (recent episode or years of low mood), and a past elevated episode, which changes the picture and the plan.",
+  "questions": [
+    {
+      "id": "mood-interest",
+      "kind": "core",
+      "domain": "mood",
+      "text": "Has the client lost interest or pleasure in things they usually enjoy (hobbies, food, company, sex)?",
+      "why": "Loss of interest or pleasure is one of the two key features of a depressive episode, alongside low mood. Knowing whether it is present changes how much weight the rest of the picture carries.",
+      "options": [
+        {
+          "id": "yes",
+          "label": "Yes",
+          "effects": {
+            "addSymptomIds": [
+              "anhedonia"
+            ]
+          }
+        },
+        {
+          "id": "no",
+          "label": "No: still enjoys things",
+          "effects": {
+            "negateSymptomIds": [
+              "anhedonia"
+            ]
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "Not sure yet",
+          "keepOpen": true
+        }
+      ],
+      "showWhen": {
+        "symptomIds": [
+          "depressed-mood",
+          "worthlessness-guilt",
+          "social-withdrawal",
+          "fatigue",
+          "emotional-numbing-detachment"
+        ],
+        "conditionIds": [
+          "major-depressive-disorder",
+          "persistent-depressive-disorder"
+        ]
+      },
+      "targets": [
+        "anhedonia"
+      ],
+      "discriminates": [
+        "major-depressive-disorder",
+        "persistent-depressive-disorder",
+        "prolonged-grief-disorder"
+      ],
+      "priority": 10
+    },
+    {
+      "id": "mood-low-most-days",
+      "kind": "core",
+      "domain": "mood",
+      "text": "Has the client's mood been low, empty or heavy through long stretches of the day, and on the majority of days lately?",
+      "why": "Persistent low mood is the other key feature of a depressive episode. Mood that lifts readily with good news, or dips only around one stressor, points elsewhere.",
+      "options": [
+        {
+          "id": "yes",
+          "label": "Yes",
+          "effects": {
+            "addSymptomIds": [
+              "depressed-mood"
+            ]
+          }
+        },
+        {
+          "id": "no",
+          "label": "No",
+          "effects": {
+            "negateSymptomIds": [
+              "depressed-mood"
+            ]
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "Not sure yet",
+          "keepOpen": true
+        }
+      ],
+      "showWhen": {
+        "symptomIds": [
+          "anhedonia",
+          "worthlessness-guilt",
+          "social-withdrawal"
+        ],
+        "conditionIds": [
+          "major-depressive-disorder",
+          "persistent-depressive-disorder"
+        ]
+      },
+      "targets": [
+        "depressed-mood"
+      ],
+      "discriminates": [
+        "major-depressive-disorder",
+        "persistent-depressive-disorder"
+      ],
+      "priority": 10
+    },
+    {
+      "id": "mood-course",
+      "kind": "discriminate",
+      "domain": "mood",
+      "gate": "duration",
+      "group": "duration",
+      "text": "How long has the low mood been around: a recent stretch of weeks or months, or most days for years?",
+      "why": "A recent episode of at least about two weeks fits a depressive episode; low mood on most days for two years or more points toward persistent depression; a few days of low mood after a setback is usually an ordinary reaction.",
+      "options": [
+        {
+          "id": "lt2w",
+          "label": "Under 2 weeks",
+          "effects": {
+            "setDuration": "lt2w"
+          }
+        },
+        {
+          "id": "2to4w",
+          "label": "2 to 4 weeks",
+          "effects": {
+            "setDuration": "2to4w"
+          }
+        },
+        {
+          "id": "1to6m",
+          "label": "1 to 6 months",
+          "effects": {
+            "setDuration": "1to6m"
+          }
+        },
+        {
+          "id": "6m-to-2y",
+          "label": "6 months to 2 years",
+          "effects": {
+            "setDuration": "gte6m"
+          }
+        },
+        {
+          "id": "years",
+          "label": "Most days for 2 years or longer",
+          "effects": {
+            "setDuration": "gte6m",
+            "addSymptomIds": [
+              "longstanding-low-mood"
+            ]
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "Not sure yet",
+          "keepOpen": true
+        }
+      ],
+      "showWhen": {
+        "symptomIds": [
+          "depressed-mood",
+          "anhedonia"
+        ],
+        "conditionIds": [
+          "major-depressive-disorder",
+          "persistent-depressive-disorder"
+        ]
+      },
+      "discriminates": [
+        "major-depressive-disorder",
+        "persistent-depressive-disorder",
+        "adjustment-disorder"
+      ],
+      "priority": 20
+    },
+    {
+      "id": "mood-years",
+      "kind": "discriminate",
+      "domain": "mood",
+      "text": "Looking back, has low mood been part of most days for two years or more, with only short breaks?",
+      "why": "Long-standing low mood with only brief breaks points toward persistent depression, which can also carry a depressive episode on top. It changes expectations about pace and the value of longer-term support.",
+      "options": [
+        {
+          "id": "yes",
+          "label": "Yes: most days for two years or more",
+          "effects": {
+            "setDuration": "gte6m",
+            "addSymptomIds": [
+              "longstanding-low-mood"
+            ]
+          }
+        },
+        {
+          "id": "no",
+          "label": "No: this is a more recent change",
+          "effects": {}
+        },
+        {
+          "id": "unsure",
+          "label": "Not sure yet",
+          "keepOpen": true
+        }
+      ],
+      "showWhen": {
+        "answered": [
+          {
+            "questionId": "gate-duration",
+            "answerIds": [
+              "gte6m"
+            ]
+          },
+          {
+            "questionId": "mood-course",
+            "answerIds": [
+              "6m-to-2y"
+            ]
+          }
+        ],
+        "conditionIds": [
+          "persistent-depressive-disorder"
+        ]
+      },
+      "alsoRequires": {
+        "symptomIds": [
+          "depressed-mood"
+        ],
+        "conditionIds": [
+          "major-depressive-disorder",
+          "persistent-depressive-disorder"
+        ]
+      },
+      "discriminates": [
+        "persistent-depressive-disorder",
+        "major-depressive-disorder"
+      ],
+      "priority": 30
+    },
+    {
+      "id": "mood-elevated-history",
+      "kind": "discriminate",
+      "domain": "mood",
+      "text": "Has the client ever had a stretch of several days feeling unusually up, wired or extremely irritable, with far more energy, thoughts racing, and little need for sleep?",
+      "why": "A past elevated episode changes the picture (bipolar spectrum) and the treatment plan, including medication choices. Bipolar disorders are outside the current knowledge base, so a 'yes' calls for a psychiatric evaluation rather than a match here.",
+      "options": [
+        {
+          "id": "yes",
+          "label": "Yes",
+          "effects": {
+            "addSymptomIds": [
+              "grandiosity-elevated-mood"
+            ]
+          },
+          "surfaces": [
+            "psychiatric-referral"
+          ],
+          "note": "Consider a psychiatric evaluation before antidepressant decisions; ask about family history of bipolar disorder."
+        },
+        {
+          "id": "with-substances",
+          "label": "Only while using substances or a medication",
+          "effects": {
+            "setSubstancePossible": "yes"
+          },
+          "note": "Substance- or medication-related elevation still matters for planning; review with the prescriber."
+        },
+        {
+          "id": "no",
+          "label": "No",
+          "effects": {}
+        },
+        {
+          "id": "unsure",
+          "label": "Not sure yet",
+          "keepOpen": true
+        }
+      ],
+      "showWhen": {
+        "symptomIds": [
+          "depressed-mood",
+          "anhedonia",
+          "decreased-need-for-sleep"
+        ],
+        "conditionIds": [
+          "major-depressive-disorder",
+          "persistent-depressive-disorder"
+        ]
+      },
+      "targets": [
+        "grandiosity-elevated-mood"
+      ],
+      "discriminates": [
+        "major-depressive-disorder",
+        "persistent-depressive-disorder"
+      ],
+      "priority": 15
+    }
+  ],
+  "sources": [
+    {
+      "title": "Depression in adults: treatment and management (NG222)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng222",
+      "year": 2022
+    },
+    {
+      "title": "VA/DoD Clinical Practice Guideline: Management of Major Depressive Disorder",
+      "publisher": "US Department of Veterans Affairs and Department of Defense",
+      "url": "https://www.healthquality.va.gov/guidelines/MH/mdd/",
+      "year": 2022
+    },
+    {
+      "title": "Depression (health topic)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/topics/depression"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

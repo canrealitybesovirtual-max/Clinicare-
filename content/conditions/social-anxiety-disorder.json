@@ -1,0 +1,342 @@
+{
+  "id": "social-anxiety-disorder",
+  "name": "Social anxiety disorder",
+  "icd10cm": [
+    {
+      "code": "F40.10",
+      "label": "Social phobia, unspecified"
+    },
+    {
+      "code": "F40.11",
+      "label": "Social phobia, generalized"
+    }
+  ],
+  "icd11": [
+    {
+      "code": "6B04",
+      "label": "Social anxiety disorder"
+    }
+  ],
+  "dsmPointer": "See DSM-5-TR: Anxiety Disorders — Social Anxiety Disorder (Social Phobia)",
+  "summary": "A lasting fear of how one comes across to other people. The client expects to look awkward, boring or visibly nervous and to be judged or rejected for it, so conversations, meetings, phone calls, dates, eating with others or giving a talk become ordeals to avoid or grit through. In session it often shows up as self-focused attention ('I could feel my face burning'), quiet protective habits such as rehearsing lines or avoiding eye contact, and long replays of social events afterwards. It usually starts in the teens and can narrow work, study and relationships for years. Depression and alcohol used to take the edge off are common companions. For clinician review only; this is not a diagnosis.",
+  "features": [
+    {
+      "symptomId": "fear-social-scrutiny",
+      "kind": "core",
+      "weight": 5
+    },
+    {
+      "symptomId": "social-situation-avoidance",
+      "kind": "core",
+      "weight": 4
+    },
+    {
+      "symptomId": "blushing",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "post-event-rumination",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "social-safety-behaviors",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "anticipatory-anxiety",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "trembling",
+      "kind": "associated",
+      "weight": 1
+    },
+    {
+      "symptomId": "sweating",
+      "kind": "associated",
+      "weight": 1
+    },
+    {
+      "symptomId": "palpitations",
+      "kind": "associated",
+      "weight": 1
+    },
+    {
+      "symptomId": "concentration-difficulty",
+      "kind": "associated",
+      "weight": 1
+    }
+  ],
+  "minCore": 1,
+  "durationGate": {
+    "minWeeks": 26,
+    "note": "Ask how long social situations have been feared or avoided and whether it began in a particular setting. Long-standing patterns are typical; check the expected duration in DSM-5-TR."
+  },
+  "impairmentRequired": true,
+  "ruleOuts": [
+    {
+      "label": "Medical conditions that draw attention (tremor, stuttering, visible skin conditions, obesity)",
+      "type": "medical",
+      "note": "Worry about being noticed because of a medical condition can be understandable. Consider this pattern only when the fear is unrelated to the condition or clearly out of proportion to it."
+    },
+    {
+      "label": "Hyperthyroidism and other causes of tremor or sweating",
+      "type": "medical",
+      "note": "Physical signs of anxiety, such as shaking or sweating, can have medical causes. Coordinate with the client's medical provider when they are new or severe."
+    },
+    {
+      "label": "Alcohol, cannabis or sedative use to cope",
+      "type": "substance",
+      "note": "Many clients drink or use before social events to feel calmer, and rebound anxiety the next day can worsen fear. Ask gently about use; this app does not store substance-use information."
+    },
+    {
+      "label": "Stimulants, caffeine and some medications",
+      "type": "substance",
+      "note": "Stimulants, high caffeine intake, some asthma medicines and thyroid hormone can cause tremor, a racing heart and sweating that the client may fear others will see."
+    },
+    {
+      "label": "Fear better explained by another mental health condition",
+      "type": "psychiatric",
+      "note": "Check whether the feared outcome is a panic attack, a perceived flaw in appearance, social communication differences or a paranoid belief (see the differentials list)."
+    }
+  ],
+  "specifiers": [
+    {
+      "label": "Performance only (descriptive)",
+      "note": "Fear limited to speaking or performing in public, with ordinary social contact feeling manageable. Check how DSM-5-TR records this."
+    },
+    {
+      "label": "Broad social fear (descriptive; ICD-10-CM F40.11 Social phobia, generalized)",
+      "note": "Fear spans most social situations, including casual conversation and meeting new people."
+    }
+  ],
+  "differentials": [
+    {
+      "label": "Agoraphobia",
+      "icd10cm": "F40.00",
+      "distinguishing": "The fear is of being stuck somewhere with panic-like symptoms and no easy way out or help; being watched or judged is not the main concern."
+    },
+    {
+      "label": "Panic disorder",
+      "icd10cm": "F41.0",
+      "distinguishing": "Attacks come without warning and the fear is of the attacks themselves; in social anxiety, attacks happen only around feared social situations and the dread is of others' judgment."
+    },
+    {
+      "label": "Avoidant personality disorder",
+      "icd10cm": "F60.6",
+      "distinguishing": "A broader, lifelong sense of inadequacy and fear of rejection that shapes most relationships; it often overlaps with broad social anxiety and both may apply."
+    },
+    {
+      "label": "Autism spectrum disorder (ICD-10-CM title: Autistic disorder)",
+      "icd10cm": "F84.0",
+      "distinguishing": "Social difficulty stems from differences in social communication and restricted interests present since early childhood, not mainly from fear of evaluation; anxiety can co-occur."
+    },
+    {
+      "label": "Body dysmorphic disorder",
+      "icd10cm": "F45.22",
+      "distinguishing": "The fear centers on a perceived flaw in appearance, with mirror checking or camouflaging."
+    },
+    {
+      "label": "Major depressive disorder",
+      "distinguishing": "Social withdrawal comes from low mood, low energy or loss of interest rather than fear of being judged; the two often occur together."
+    },
+    {
+      "label": "Normal shyness or performance nerves",
+      "distinguishing": "Brief nerves that do not lead to marked distress or avoidance and do not limit work, study or relationships."
+    }
+  ],
+  "comorbidities": [
+    {
+      "conditionId": "major-depressive-disorder",
+      "label": "Major depressive disorder",
+      "note": "Depression often follows years of social avoidance and isolation. Screen with the PHQ-9 and ask directly about suicidal thoughts."
+    },
+    {
+      "conditionId": "generalized-anxiety-disorder",
+      "label": "Generalized anxiety disorder",
+      "note": "Broad worry can sit alongside social fear; ask whether worry reaches well beyond social situations."
+    },
+    {
+      "conditionId": "alcohol-use-disorder",
+      "label": "Alcohol use disorder",
+      "note": "Drinking to get through social events is common and can grow into a problem of its own. Ask without judgment. 42 CFR Part 2 prohibits unauthorized use or disclosure of these records."
+    },
+    {
+      "conditionId": "panic-disorder",
+      "label": "Panic disorder",
+      "note": "Some clients have both social fear and unexpected attacks; assess each one separately."
+    },
+    {
+      "conditionId": "agoraphobia",
+      "label": "Agoraphobia",
+      "note": "Avoidance of public places can reflect either fear of judgment or fear of being trapped with panic symptoms; clarify the reason for each avoided place."
+    }
+  ],
+  "measures": [
+    "gad-7",
+    "phq-9"
+  ],
+  "measuresPending": [
+    {
+      "name": "Social Phobia Inventory (SPIN)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/10827888/",
+      "note": "License pending — link out only",
+      "licenseKey": "SPIN"
+    },
+    {
+      "name": "APA Severity Measure for Social Anxiety Disorder — Adult",
+      "url": "https://www.psychiatry.org/psychiatrists/practice/dsm/educational-resources/assessment-measures",
+      "note": "License pending — link out only",
+      "licenseKey": "APA Severity Measures"
+    }
+  ],
+  "interventions": [
+    {
+      "name": "Individual CBT developed for social anxiety (cognitive therapy model)",
+      "evidence": "NICE CG159 (2013) recommends individual CBT specifically developed for social anxiety disorder as the first-line treatment for adults. A 2014 network meta-analysis (Mayo-Wilson et al.) found individual CBT had the largest effect among psychological treatments, and a 2006 trial (Clark et al.) found cognitive therapy outperformed exposure plus applied relaxation.",
+      "note": "Works on self-focused attention, safety behaviors and post-event processing using video feedback, attention training and behavioral experiments. NICE describes up to 14 sessions."
+    },
+    {
+      "name": "Graded exposure and behavioral experiments in real social situations",
+      "evidence": "Core component of CBT protocols for social anxiety (NICE CG159).",
+      "note": "Build a ladder of feared situations with the client and test feared predictions while dropping safety behaviors. Fit steps to the client's culture and setting."
+    },
+    {
+      "name": "CBT-based supported self-help",
+      "evidence": "NICE CG159 lists CBT-based supported self-help for adults who decline individual CBT but want a psychological approach.",
+      "note": "Structured book or online program with brief support contacts; review progress and step up if needed."
+    },
+    {
+      "name": "Short-term psychodynamic psychotherapy designed for social anxiety",
+      "evidence": "NICE CG159 lists it as an option for adults who decline both CBT and medication.",
+      "note": "Focuses on core relationship conflicts, shame and self-image."
+    },
+    {
+      "name": "Referral for medication evaluation",
+      "evidence": "NICE CG159 names SSRIs (escitalopram or sertraline) for adults who prefer medication.",
+      "note": "Refer to psychiatry, a primary care provider or a psychiatric nurse practitioner. Prescribing decisions rest with the prescriber."
+    },
+    {
+      "name": "Mindfulness- and acceptance-based approaches (adjunct)",
+      "evidence": "Smaller trials suggest benefit; evidence is less established than for CBT.",
+      "note": "Can help with self-criticism and willingness to approach feared situations; offer alongside exposure rather than instead of it."
+    }
+  ],
+  "handouts": [],
+  "statIds": [
+    "us-any-anxiety-past-year",
+    "global-anxiety-disorders-2021"
+  ],
+  "culturalNotes": [
+    "Taijin kyofusho, described in Japan and Korea, is a fear of offending or making others uncomfortable through one's gaze, blushing, body odor or appearance. The focus is on harm to others rather than on one's own embarrassment. Explore the meaning with the client rather than forcing it into a Western frame; the lexicon notes the idiom without scoring it.",
+    "Norms for eye contact, speaking up, assertiveness and self-promotion differ widely. Quietness or deference toward elders, supervisors or clergy can be respectful, not anxious. Judge avoidance against the client's own cultural expectations and goals.",
+    "Fear of judgment can be realistic for clients facing racism, homophobia, transphobia, ableism or anti-immigrant hostility. Separate realistic threat, which may call for advocacy or safety planning, from fear that runs well beyond the actual risk.",
+    "Clients speaking a second language may fear being judged for their accent or grammar. Offer a trained interpreter or a clinician who speaks their language, and do not mistake language strain for social anxiety.",
+    "Questionnaire cut-offs can shift across cultures and groups; a 2015 study (Asnaani et al.) found that feared situations clustered differently in race-ethnic minority groups in the US. Interpret scores alongside the interview.",
+    "Faith communities can be both a feared social setting and a source of support. If the client wants to include faith, explore it respectfully and use faith-integrated approaches only with informed consent (see the AACC Code of Ethics for faith-based counselors)."
+  ],
+  "sud": false,
+  "requiredFeatures": [],
+  "strongMinAreas": 2,
+  "redFlagRules": [
+    {
+      "type": "mania",
+      "message": "Manic or hypomanic signs are documented in this input. Screen for bipolar disorder (ICD-10-CM F31.x) and refer for psychiatric evaluation before treatment planning."
+    },
+    {
+      "type": "psychosis",
+      "message": "Psychotic symptoms are documented in this input. Fear of others that rests on beliefs of being watched, followed or plotted against suggests paranoia rather than social anxiety; refer for an urgent psychiatric evaluation."
+    }
+  ],
+  "licensedDsm": false,
+  "wileyLicensed": false,
+  "sources": [
+    {
+      "title": "Social Anxiety Disorder: More Than Just Shyness",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/publications/social-anxiety-disorder-more-than-just-shyness"
+    },
+    {
+      "title": "Social anxiety disorder: recognition, assessment and treatment (CG159)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg159",
+      "year": 2013
+    },
+    {
+      "title": "ICD-11 for Mortality and Morbidity Statistics (browser)",
+      "publisher": "World Health Organization",
+      "url": "https://icd.who.int/browse/latest-release/mms/en"
+    },
+    {
+      "title": "ICD-10-CM (official code set)",
+      "publisher": "CDC National Center for Health Statistics",
+      "url": "https://www.cdc.gov/nchs/icd/icd-10-cm/index.html"
+    },
+    {
+      "title": "ICD-10-CM codes checked with the NLM Clinical Table Search Service",
+      "publisher": "National Library of Medicine",
+      "url": "https://clinicaltables.nlm.nih.gov/apidoc/icd10cm/v3/doc.html"
+    },
+    {
+      "title": "Psychological and pharmacological interventions for social anxiety disorder in adults: a systematic review and network meta-analysis (Mayo-Wilson et al.)",
+      "publisher": "Lancet Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/26361000/",
+      "year": 2014
+    },
+    {
+      "title": "Cognitive therapy versus exposure and applied relaxation in social phobia: a randomized controlled trial (Clark et al.)",
+      "publisher": "Journal of Consulting and Clinical Psychology (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/16822113/",
+      "year": 2006
+    },
+    {
+      "title": "Psychometric properties of the Social Phobia Inventory (SPIN) (Connor et al.)",
+      "publisher": "British Journal of Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/10827888/",
+      "year": 2000
+    },
+    {
+      "title": "The place of culture in psychiatric nosology: taijin kyofusho and DSM-III-R (Kirmayer)",
+      "publisher": "Journal of Nervous and Mental Disease (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/1985144/",
+      "year": 1991
+    },
+    {
+      "title": "The structure of feared social situations among race-ethnic minorities and Whites with social anxiety disorder in the United States (Asnaani et al.)",
+      "publisher": "Transcultural Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/25795220/",
+      "year": 2015
+    },
+    {
+      "title": "Social Anxiety Disorder (statistics)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/statistics/social-anxiety-disorder"
+    },
+    {
+      "title": "Online assessment measures (including disorder-specific severity measures)",
+      "publisher": "American Psychiatric Association",
+      "url": "https://www.psychiatry.org/psychiatrists/practice/dsm/educational-resources/assessment-measures"
+    },
+    {
+      "title": "Psychological Treatments (treatment index)",
+      "publisher": "APA Division 12, Society of Clinical Psychology",
+      "url": "https://div12.org/psychological-treatments/treatments/"
+    },
+    {
+      "title": "AACC Code of Ethics",
+      "publisher": "American Association of Christian Counselors",
+      "url": "https://aacc.net/aacc-code-of-ethics/"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

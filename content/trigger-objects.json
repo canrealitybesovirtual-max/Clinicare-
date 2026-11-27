@@ -1,0 +1,3084 @@
+{
+  "version": "1.0.0",
+  "about": "Curated dictionary of feared objects and situations used by src/lib/follow-up/triggers.ts. Objects are matched only after a fear, panic or avoidance cue (\"afraid of X\", \"panic around X\", \"avoids X\"). Terms are normalized and lightly stemmed like the symptom matcher, so regular plurals match; irregular forms are listed. Ids and categories are curated codes; the matched words stay on the device.",
+  "categories": {
+    "animal": {
+      "label": "Animals or insects",
+      "clinicianNote": "Fear centered on an animal or insect. Clarify whether fear comes on nearly every time the animal is near or expected, whether it is avoided or endured with intense distress, and whether it is out of proportion to the real danger in the client's setting. A bite or attack also calls for trauma questions.",
+      "conditionHints": [
+        "specific-phobia",
+        "ptsd"
+      ],
+      "interventionIds": [
+        "graded-in-vivo-exposure",
+        "behavioral-experiments",
+        "safety-behavior-reduction"
+      ],
+      "handoutIds": [
+        "exposure-ladder",
+        "behavioral-experiment-record"
+      ],
+      "measureIds": [],
+      "referralKinds": [
+        "psychologist",
+        "professional-counselor"
+      ]
+    },
+    "natural-environment": {
+      "label": "Heights, storms, water or darkness",
+      "clinicianNote": "Fear of heights, storms, water, darkness or similar settings. Check avoidance, how much daily life narrows around it, and whether a real current danger (for example, living in a storm-prone area after a disaster) makes the fear proportionate.",
+      "conditionHints": [
+        "specific-phobia",
+        "ptsd"
+      ],
+      "interventionIds": [
+        "graded-in-vivo-exposure",
+        "behavioral-experiments",
+        "safety-behavior-reduction"
+      ],
+      "handoutIds": [
+        "exposure-ladder",
+        "behavioral-experiment-record"
+      ],
+      "measureIds": [],
+      "referralKinds": [
+        "psychologist",
+        "professional-counselor"
+      ]
+    },
+    "blood-injection-injury": {
+      "label": "Needles, blood, injury or medical care",
+      "clinicianNote": "Fear of needles, blood, injury or medical and dental care. Ask about fainting: this fear often brings a drop in heart rate and blood pressure after the first surge, which changes exposure planning (applied tension is often used; it is not yet in the intervention library) and is worth telling medical staff. Check whether needed care is being delayed.",
+      "conditionHints": [
+        "specific-phobia"
+      ],
+      "interventionIds": [
+        "graded-in-vivo-exposure",
+        "behavioral-experiments"
+      ],
+      "handoutIds": [
+        "exposure-ladder",
+        "behavioral-experiment-record"
+      ],
+      "measureIds": [],
+      "referralKinds": [
+        "psychologist",
+        "primary-care"
+      ]
+    },
+    "situational": {
+      "label": "Flying, enclosed spaces, driving or transport",
+      "clinicianNote": "Fear of flying, enclosed spaces, elevators, bridges, tunnels, driving, crowds or public transport. Ask whether the fear is about the situation itself (a crash, being shut in) or about not being able to get out or get help if panic strikes, across several kinds of places; the second points toward agoraphobia.",
+      "conditionHints": [
+        "specific-phobia",
+        "agoraphobia",
+        "panic-disorder"
+      ],
+      "interventionIds": [
+        "graded-in-vivo-exposure",
+        "safety-behavior-reduction",
+        "behavioral-experiments",
+        "interoceptive-exposure"
+      ],
+      "handoutIds": [
+        "exposure-ladder",
+        "panic-cycle"
+      ],
+      "measureIds": [],
+      "referralKinds": [
+        "psychologist",
+        "professional-counselor"
+      ]
+    },
+    "choking-vomiting": {
+      "label": "Choking, swallowing or vomiting",
+      "clinicianNote": "Fear of choking, swallowing or vomiting. Make sure a swallowing or digestive problem has been checked, and ask about eating and weight: marked food restriction calls for a medical review.",
+      "conditionHints": [
+        "specific-phobia"
+      ],
+      "interventionIds": [
+        "behavioral-experiments",
+        "graded-in-vivo-exposure"
+      ],
+      "handoutIds": [
+        "exposure-ladder",
+        "behavioral-experiment-record"
+      ],
+      "measureIds": [],
+      "referralKinds": [
+        "psychologist",
+        "primary-care"
+      ]
+    },
+    "social": {
+      "label": "Being watched, judged or embarrassed",
+      "clinicianNote": "Fear of being watched, judged or embarrassed. Clarify whether the worry is about other people's evaluation (social anxiety) rather than about panic symptoms or escape (agoraphobia), and whether it covers many social situations or only performing.",
+      "conditionHints": [
+        "social-anxiety-disorder",
+        "agoraphobia"
+      ],
+      "interventionIds": [
+        "social-anxiety-cognitive-techniques",
+        "behavioral-experiments",
+        "graded-in-vivo-exposure",
+        "assertiveness-training"
+      ],
+      "handoutIds": [
+        "social-situations-practice",
+        "behavioral-experiment-record",
+        "assertive-communication"
+      ],
+      "measureIds": [],
+      "referralKinds": [
+        "psychologist",
+        "professional-counselor"
+      ]
+    },
+    "contamination": {
+      "label": "Germs, dirt or contamination",
+      "clinicianNote": "Fear of germs, dirt or contamination. Ask about repeated washing, cleaning or avoidance routines and the time they take; unwanted contamination thoughts followed by rituals point toward OCD.",
+      "conditionHints": [
+        "obsessive-compulsive-disorder"
+      ],
+      "interventionIds": [
+        "exposure-and-response-prevention",
+        "act-cognitive-defusion"
+      ],
+      "handoutIds": [
+        "erp-practice-log",
+        "exposure-ladder",
+        "unhooking-from-thoughts"
+      ],
+      "measureIds": [],
+      "referralKinds": [
+        "psychologist",
+        "professional-counselor"
+      ]
+    },
+    "trauma-reminder": {
+      "label": "Reminders of a frightening event",
+      "clinicianNote": "The fear is tied to a frightening event (for example \"since the attack\" or \"since the accident\"). Ask what happened, when, and whether the client relives it; pace trauma questions, and offer safety questions.",
+      "conditionHints": [
+        "ptsd",
+        "adjustment-disorder",
+        "specific-phobia"
+      ],
+      "interventionIds": [
+        "trauma-psychoeducation-and-grounding",
+        "grounding-5-4-3-2-1"
+      ],
+      "handoutIds": [
+        "grounding-5-4-3-2-1",
+        "breathing-practice"
+      ],
+      "measureIds": [],
+      "referralKinds": [
+        "psychologist",
+        "clinical-social-worker"
+      ]
+    },
+    "health": {
+      "label": "Dying, heart attack or serious illness",
+      "clinicianNote": "Fear of dying, a heart attack or a serious illness. Clarify whether it comes mainly during panic surges or is a lasting preoccupation with having or getting an illness (health anxiety, outside the current knowledge base), and make sure a medical review has been offered.",
+      "conditionHints": [
+        "panic-disorder",
+        "generalized-anxiety-disorder"
+      ],
+      "interventionIds": [
+        "catastrophic-misinterpretation-restructuring",
+        "behavioral-experiments",
+        "thought-record"
+      ],
+      "handoutIds": [
+        "panic-cycle",
+        "thought-record",
+        "behavioral-experiment-record"
+      ],
+      "measureIds": [],
+      "referralKinds": [
+        "primary-care",
+        "psychologist"
+      ]
+    }
+  },
+  "objects": [
+    {
+      "id": "dog",
+      "category": "animal",
+      "label": "dogs",
+      "terms": [
+        "dog",
+        "dogs",
+        "puppy",
+        "puppies",
+        "pit bull",
+        "pit bulls",
+        "pitbull",
+        "pitbulls",
+        "canine",
+        "canines",
+        "hound",
+        "hounds"
+      ]
+    },
+    {
+      "id": "cat",
+      "category": "animal",
+      "label": "cats",
+      "terms": [
+        "cat",
+        "cats",
+        "kitten",
+        "kittens",
+        "kitty"
+      ]
+    },
+    {
+      "id": "spider",
+      "category": "animal",
+      "label": "spiders",
+      "terms": [
+        "spider",
+        "spiders",
+        "tarantula",
+        "tarantulas",
+        "arachnid",
+        "arachnids",
+        "daddy longlegs"
+      ]
+    },
+    {
+      "id": "cobweb",
+      "category": "animal",
+      "label": "cobwebs",
+      "terms": [
+        "cobweb",
+        "cobwebs",
+        "spider web",
+        "spider webs",
+        "spiderweb",
+        "spiderwebs"
+      ]
+    },
+    {
+      "id": "snake",
+      "category": "animal",
+      "label": "snakes",
+      "terms": [
+        "snake",
+        "snakes",
+        "serpent",
+        "serpents",
+        "python",
+        "pythons",
+        "rattlesnake",
+        "rattlesnakes",
+        "cobra",
+        "cobras",
+        "viper",
+        "vipers"
+      ]
+    },
+    {
+      "id": "bird",
+      "category": "animal",
+      "label": "birds",
+      "terms": [
+        "bird",
+        "birds"
+      ]
+    },
+    {
+      "id": "pigeon",
+      "category": "animal",
+      "label": "pigeons",
+      "terms": [
+        "pigeon",
+        "pigeons"
+      ]
+    },
+    {
+      "id": "seagull",
+      "category": "animal",
+      "label": "seagulls",
+      "terms": [
+        "seagull",
+        "seagulls",
+        "gull",
+        "gulls"
+      ]
+    },
+    {
+      "id": "crow",
+      "category": "animal",
+      "label": "crows",
+      "terms": [
+        "crow",
+        "crows",
+        "raven",
+        "ravens"
+      ]
+    },
+    {
+      "id": "owl",
+      "category": "animal",
+      "label": "owls",
+      "terms": [
+        "owl",
+        "owls"
+      ]
+    },
+    {
+      "id": "bird-of-prey",
+      "category": "animal",
+      "label": "birds of prey",
+      "terms": [
+        "birds of prey",
+        "eagle",
+        "eagles",
+        "hawk",
+        "hawks",
+        "vulture",
+        "vultures"
+      ]
+    },
+    {
+      "id": "parrot",
+      "category": "animal",
+      "label": "parrots",
+      "terms": [
+        "parrot",
+        "parrots",
+        "budgie",
+        "budgies"
+      ]
+    },
+    {
+      "id": "swan",
+      "category": "animal",
+      "label": "swans",
+      "terms": [
+        "swan",
+        "swans"
+      ]
+    },
+    {
+      "id": "chicken",
+      "category": "animal",
+      "label": "chickens",
+      "terms": [
+        "chicken",
+        "chickens",
+        "hen",
+        "hens",
+        "rooster",
+        "roosters"
+      ]
+    },
+    {
+      "id": "duck",
+      "category": "animal",
+      "label": "ducks",
+      "terms": [
+        "duck",
+        "ducks"
+      ]
+    },
+    {
+      "id": "goose",
+      "category": "animal",
+      "label": "geese",
+      "terms": [
+        "goose",
+        "geese"
+      ]
+    },
+    {
+      "id": "feather",
+      "category": "animal",
+      "label": "feathers",
+      "terms": [
+        "feather",
+        "feathers"
+      ]
+    },
+    {
+      "id": "insect",
+      "category": "animal",
+      "label": "insects",
+      "terms": [
+        "insect",
+        "insects",
+        "bug",
+        "bugs",
+        "creepy crawlies",
+        "creepy crawly"
+      ]
+    },
+    {
+      "id": "bee",
+      "category": "animal",
+      "label": "bees",
+      "terms": [
+        "bee",
+        "bees",
+        "bumblebee",
+        "bumblebees",
+        "honeybee",
+        "honeybees"
+      ]
+    },
+    {
+      "id": "wasp",
+      "category": "animal",
+      "label": "wasps",
+      "terms": [
+        "wasp",
+        "wasps",
+        "hornet",
+        "hornets",
+        "yellow jacket",
+        "yellow jackets",
+        "yellowjacket",
+        "yellowjackets"
+      ]
+    },
+    {
+      "id": "ant",
+      "category": "animal",
+      "label": "ants",
+      "terms": [
+        "ant",
+        "ants",
+        "fire ants"
+      ]
+    },
+    {
+      "id": "cockroach",
+      "category": "animal",
+      "label": "cockroaches",
+      "terms": [
+        "cockroach",
+        "cockroaches",
+        "roach",
+        "roaches"
+      ]
+    },
+    {
+      "id": "housefly",
+      "category": "animal",
+      "label": "flies",
+      "terms": [
+        "flies",
+        "housefly",
+        "houseflies",
+        "blowfly",
+        "blowflies"
+      ]
+    },
+    {
+      "id": "gnat",
+      "category": "animal",
+      "label": "gnats",
+      "terms": [
+        "gnat",
+        "gnats",
+        "midge",
+        "midges"
+      ]
+    },
+    {
+      "id": "mosquito",
+      "category": "animal",
+      "label": "mosquitoes",
+      "terms": [
+        "mosquito",
+        "mosquitoes",
+        "mosquitos"
+      ]
+    },
+    {
+      "id": "moth",
+      "category": "animal",
+      "label": "moths",
+      "terms": [
+        "moth",
+        "moths"
+      ]
+    },
+    {
+      "id": "butterfly",
+      "category": "animal",
+      "label": "butterflies",
+      "terms": [
+        "butterfly",
+        "butterflies"
+      ]
+    },
+    {
+      "id": "dragonfly",
+      "category": "animal",
+      "label": "dragonflies",
+      "terms": [
+        "dragonfly",
+        "dragonflies"
+      ]
+    },
+    {
+      "id": "beetle",
+      "category": "animal",
+      "label": "beetles",
+      "terms": [
+        "beetle",
+        "beetles",
+        "ladybug",
+        "ladybugs",
+        "earwig",
+        "earwigs"
+      ]
+    },
+    {
+      "id": "grasshopper",
+      "category": "animal",
+      "label": "grasshoppers",
+      "terms": [
+        "grasshopper",
+        "grasshoppers",
+        "crickets",
+        "locust",
+        "locusts"
+      ]
+    },
+    {
+      "id": "termite",
+      "category": "animal",
+      "label": "termites",
+      "terms": [
+        "termite",
+        "termites",
+        "silverfish"
+      ]
+    },
+    {
+      "id": "worm",
+      "category": "animal",
+      "label": "worms",
+      "terms": [
+        "worm",
+        "worms",
+        "earthworm",
+        "earthworms"
+      ]
+    },
+    {
+      "id": "caterpillar",
+      "category": "animal",
+      "label": "caterpillars",
+      "terms": [
+        "caterpillar",
+        "caterpillars"
+      ]
+    },
+    {
+      "id": "maggot",
+      "category": "animal",
+      "label": "maggots",
+      "terms": [
+        "maggot",
+        "maggots",
+        "larvae"
+      ]
+    },
+    {
+      "id": "tick",
+      "category": "animal",
+      "label": "ticks",
+      "terms": [
+        "ticks",
+        "mite",
+        "mites",
+        "dust mites"
+      ]
+    },
+    {
+      "id": "flea",
+      "category": "animal",
+      "label": "fleas",
+      "terms": [
+        "flea",
+        "fleas"
+      ]
+    },
+    {
+      "id": "lice",
+      "category": "animal",
+      "label": "lice",
+      "terms": [
+        "lice",
+        "head lice",
+        "louse"
+      ]
+    },
+    {
+      "id": "bedbug",
+      "category": "animal",
+      "label": "bed bugs",
+      "terms": [
+        "bed bug",
+        "bed bugs",
+        "bedbug",
+        "bedbugs"
+      ]
+    },
+    {
+      "id": "scorpion",
+      "category": "animal",
+      "label": "scorpions",
+      "terms": [
+        "scorpion",
+        "scorpions"
+      ]
+    },
+    {
+      "id": "centipede",
+      "category": "animal",
+      "label": "centipedes",
+      "terms": [
+        "centipede",
+        "centipedes",
+        "millipede",
+        "millipedes"
+      ]
+    },
+    {
+      "id": "slug",
+      "category": "animal",
+      "label": "slugs",
+      "terms": [
+        "slug",
+        "slugs",
+        "snail",
+        "snails"
+      ]
+    },
+    {
+      "id": "leech",
+      "category": "animal",
+      "label": "leeches",
+      "terms": [
+        "leech",
+        "leeches"
+      ]
+    },
+    {
+      "id": "rat",
+      "category": "animal",
+      "label": "rats",
+      "terms": [
+        "rat",
+        "rats"
+      ]
+    },
+    {
+      "id": "mouse",
+      "category": "animal",
+      "label": "mice",
+      "terms": [
+        "mouse",
+        "mice"
+      ]
+    },
+    {
+      "id": "rodent",
+      "category": "animal",
+      "label": "rodents",
+      "terms": [
+        "rodent",
+        "rodents",
+        "vermin",
+        "hamster",
+        "hamsters",
+        "gerbil",
+        "gerbils",
+        "guinea pig",
+        "guinea pigs"
+      ]
+    },
+    {
+      "id": "squirrel",
+      "category": "animal",
+      "label": "squirrels",
+      "terms": [
+        "squirrel",
+        "squirrels"
+      ]
+    },
+    {
+      "id": "rabbit",
+      "category": "animal",
+      "label": "rabbits",
+      "terms": [
+        "rabbit",
+        "rabbits",
+        "bunny",
+        "bunnies",
+        "hare",
+        "hares"
+      ]
+    },
+    {
+      "id": "bat",
+      "category": "animal",
+      "label": "bats",
+      "terms": [
+        "bat",
+        "bats"
+      ]
+    },
+    {
+      "id": "horse",
+      "category": "animal",
+      "label": "horses",
+      "terms": [
+        "horse",
+        "horses",
+        "pony",
+        "ponies",
+        "donkey",
+        "donkeys",
+        "mule",
+        "mules"
+      ]
+    },
+    {
+      "id": "cow",
+      "category": "animal",
+      "label": "cows",
+      "terms": [
+        "cow",
+        "cows",
+        "cattle",
+        "bull",
+        "bulls"
+      ]
+    },
+    {
+      "id": "pig",
+      "category": "animal",
+      "label": "pigs",
+      "terms": [
+        "pig",
+        "pigs",
+        "hog",
+        "hogs"
+      ]
+    },
+    {
+      "id": "goat",
+      "category": "animal",
+      "label": "goats",
+      "terms": [
+        "goat",
+        "goats",
+        "sheep",
+        "lamb",
+        "lambs"
+      ]
+    },
+    {
+      "id": "frog",
+      "category": "animal",
+      "label": "frogs",
+      "terms": [
+        "frog",
+        "frogs",
+        "toad",
+        "toads"
+      ]
+    },
+    {
+      "id": "lizard",
+      "category": "animal",
+      "label": "lizards",
+      "terms": [
+        "lizard",
+        "lizards",
+        "gecko",
+        "geckos",
+        "iguana",
+        "iguanas"
+      ]
+    },
+    {
+      "id": "turtle",
+      "category": "animal",
+      "label": "turtles",
+      "terms": [
+        "turtle",
+        "turtles",
+        "tortoise",
+        "tortoises"
+      ]
+    },
+    {
+      "id": "reptile",
+      "category": "animal",
+      "label": "reptiles",
+      "terms": [
+        "reptile",
+        "reptiles",
+        "amphibian",
+        "amphibians"
+      ]
+    },
+    {
+      "id": "crocodile",
+      "category": "animal",
+      "label": "crocodiles",
+      "terms": [
+        "crocodile",
+        "crocodiles",
+        "alligator",
+        "alligators"
+      ]
+    },
+    {
+      "id": "shark",
+      "category": "animal",
+      "label": "sharks",
+      "terms": [
+        "shark",
+        "sharks"
+      ]
+    },
+    {
+      "id": "fish",
+      "category": "animal",
+      "label": "fish",
+      "terms": [
+        "fish",
+        "fishes"
+      ]
+    },
+    {
+      "id": "eel",
+      "category": "animal",
+      "label": "eels",
+      "terms": [
+        "eel",
+        "eels",
+        "stingray",
+        "stingrays"
+      ]
+    },
+    {
+      "id": "jellyfish",
+      "category": "animal",
+      "label": "jellyfish",
+      "terms": [
+        "jellyfish",
+        "jelly fish"
+      ]
+    },
+    {
+      "id": "crab",
+      "category": "animal",
+      "label": "crabs",
+      "terms": [
+        "crab",
+        "crabs",
+        "lobster",
+        "lobsters"
+      ]
+    },
+    {
+      "id": "octopus",
+      "category": "animal",
+      "label": "octopuses",
+      "terms": [
+        "octopus",
+        "octopuses",
+        "squid"
+      ]
+    },
+    {
+      "id": "whale",
+      "category": "animal",
+      "label": "whales",
+      "terms": [
+        "whale",
+        "whales"
+      ]
+    },
+    {
+      "id": "monkey",
+      "category": "animal",
+      "label": "monkeys",
+      "terms": [
+        "monkey",
+        "monkeys",
+        "ape",
+        "apes",
+        "gorilla",
+        "gorillas"
+      ]
+    },
+    {
+      "id": "bear",
+      "category": "animal",
+      "label": "bears",
+      "terms": [
+        "bear",
+        "bears"
+      ]
+    },
+    {
+      "id": "wolf",
+      "category": "animal",
+      "label": "wolves",
+      "terms": [
+        "wolf",
+        "wolves",
+        "coyote",
+        "coyotes"
+      ]
+    },
+    {
+      "id": "fox",
+      "category": "animal",
+      "label": "foxes",
+      "terms": [
+        "fox",
+        "foxes"
+      ]
+    },
+    {
+      "id": "big-cat",
+      "category": "animal",
+      "label": "lions or tigers",
+      "terms": [
+        "lion",
+        "lions",
+        "tiger",
+        "tigers",
+        "cougar",
+        "cougars"
+      ]
+    },
+    {
+      "id": "elephant",
+      "category": "animal",
+      "label": "elephants",
+      "terms": [
+        "elephant",
+        "elephants"
+      ]
+    },
+    {
+      "id": "deer",
+      "category": "animal",
+      "label": "deer",
+      "terms": [
+        "deer",
+        "moose"
+      ]
+    },
+    {
+      "id": "raccoon",
+      "category": "animal",
+      "label": "raccoons",
+      "terms": [
+        "raccoon",
+        "raccoons",
+        "possum",
+        "possums",
+        "opossum",
+        "opossums",
+        "skunk",
+        "skunks"
+      ]
+    },
+    {
+      "id": "ferret",
+      "category": "animal",
+      "label": "ferrets",
+      "terms": [
+        "ferret",
+        "ferrets"
+      ]
+    },
+    {
+      "id": "animals-general",
+      "category": "animal",
+      "label": "animals",
+      "terms": [
+        "animal",
+        "animals",
+        "wild animals",
+        "wildlife",
+        "zoo",
+        "zoos",
+        "the zoo"
+      ]
+    },
+    {
+      "id": "farm-animals",
+      "category": "animal",
+      "label": "farm animals",
+      "terms": [
+        "farm animals",
+        "livestock"
+      ]
+    },
+    {
+      "id": "pet",
+      "category": "animal",
+      "label": "pets",
+      "terms": [
+        "pet",
+        "pets"
+      ]
+    },
+    {
+      "id": "heights",
+      "category": "natural-environment",
+      "label": "heights",
+      "terms": [
+        "heights",
+        "high places",
+        "being up high",
+        "being high up",
+        "tall buildings",
+        "high floors",
+        "the top floor"
+      ]
+    },
+    {
+      "id": "ledge",
+      "category": "natural-environment",
+      "label": "ledges or cliffs",
+      "terms": [
+        "ledge",
+        "ledges",
+        "cliff",
+        "cliffs",
+        "cliff edges"
+      ]
+    },
+    {
+      "id": "balcony",
+      "category": "natural-environment",
+      "label": "balconies",
+      "terms": [
+        "balcony",
+        "balconies"
+      ]
+    },
+    {
+      "id": "ladder",
+      "category": "natural-environment",
+      "label": "ladders",
+      "terms": [
+        "ladder",
+        "ladders",
+        "step ladders"
+      ]
+    },
+    {
+      "id": "rooftop",
+      "category": "natural-environment",
+      "label": "rooftops",
+      "terms": [
+        "rooftop",
+        "rooftops",
+        "roofs"
+      ]
+    },
+    {
+      "id": "lookout",
+      "category": "natural-environment",
+      "label": "lookouts",
+      "terms": [
+        "lookout",
+        "lookouts",
+        "observation deck",
+        "observation decks",
+        "viewing platforms"
+      ]
+    },
+    {
+      "id": "ride",
+      "category": "natural-environment",
+      "label": "fairground rides",
+      "terms": [
+        "ferris wheel",
+        "ferris wheels",
+        "roller coaster",
+        "roller coasters",
+        "rollercoaster",
+        "rollercoasters"
+      ]
+    },
+    {
+      "id": "mountain",
+      "category": "natural-environment",
+      "label": "mountains",
+      "terms": [
+        "mountain",
+        "mountains",
+        "mountain roads"
+      ]
+    },
+    {
+      "id": "storm",
+      "category": "natural-environment",
+      "label": "storms",
+      "terms": [
+        "storm",
+        "storms",
+        "bad weather",
+        "severe weather",
+        "rainstorms",
+        "heavy rain"
+      ]
+    },
+    {
+      "id": "thunder",
+      "category": "natural-environment",
+      "label": "thunder",
+      "terms": [
+        "thunder",
+        "thunderstorm",
+        "thunderstorms",
+        "thunder storms"
+      ]
+    },
+    {
+      "id": "lightning",
+      "category": "natural-environment",
+      "label": "lightning",
+      "terms": [
+        "lightning",
+        "lightning storms"
+      ]
+    },
+    {
+      "id": "wind",
+      "category": "natural-environment",
+      "label": "high winds",
+      "terms": [
+        "high winds",
+        "strong winds",
+        "windstorms",
+        "gales"
+      ]
+    },
+    {
+      "id": "tornado",
+      "category": "natural-environment",
+      "label": "tornadoes",
+      "terms": [
+        "tornado",
+        "tornadoes",
+        "tornados",
+        "twisters"
+      ]
+    },
+    {
+      "id": "hurricane",
+      "category": "natural-environment",
+      "label": "hurricanes",
+      "terms": [
+        "hurricane",
+        "hurricanes",
+        "cyclones",
+        "typhoons"
+      ]
+    },
+    {
+      "id": "earthquake",
+      "category": "natural-environment",
+      "label": "earthquakes",
+      "terms": [
+        "earthquake",
+        "earthquakes"
+      ]
+    },
+    {
+      "id": "tsunami",
+      "category": "natural-environment",
+      "label": "tsunamis",
+      "terms": [
+        "tsunami",
+        "tsunamis",
+        "tidal waves"
+      ]
+    },
+    {
+      "id": "volcano",
+      "category": "natural-environment",
+      "label": "volcanoes",
+      "terms": [
+        "volcano",
+        "volcanoes"
+      ]
+    },
+    {
+      "id": "flood",
+      "category": "natural-environment",
+      "label": "floods",
+      "terms": [
+        "flood",
+        "floods",
+        "flooding"
+      ]
+    },
+    {
+      "id": "water",
+      "category": "natural-environment",
+      "label": "water",
+      "terms": [
+        "water",
+        "deep water",
+        "open water",
+        "bodies of water",
+        "being in water"
+      ]
+    },
+    {
+      "id": "swimming",
+      "category": "natural-environment",
+      "label": "swimming",
+      "terms": [
+        "swimming",
+        "swimming pools",
+        "swimming pool",
+        "pool",
+        "pools"
+      ]
+    },
+    {
+      "id": "ocean",
+      "category": "natural-environment",
+      "label": "the ocean",
+      "terms": [
+        "ocean",
+        "the ocean",
+        "oceans",
+        "the sea",
+        "sea",
+        "waves"
+      ]
+    },
+    {
+      "id": "lake",
+      "category": "natural-environment",
+      "label": "lakes or rivers",
+      "terms": [
+        "lake",
+        "lakes",
+        "river",
+        "rivers"
+      ]
+    },
+    {
+      "id": "drowning",
+      "category": "natural-environment",
+      "label": "drowning",
+      "terms": [
+        "drowning",
+        "being underwater",
+        "going underwater"
+      ]
+    },
+    {
+      "id": "dark",
+      "category": "natural-environment",
+      "label": "the dark",
+      "terms": [
+        "the dark",
+        "darkness",
+        "dark places",
+        "dark rooms",
+        "being in the dark",
+        "pitch dark",
+        "nighttime",
+        "night time",
+        "the night"
+      ]
+    },
+    {
+      "id": "fog",
+      "category": "natural-environment",
+      "label": "fog",
+      "terms": [
+        "fog",
+        "foggy weather"
+      ]
+    },
+    {
+      "id": "fire",
+      "category": "natural-environment",
+      "label": "fire",
+      "terms": [
+        "fire",
+        "fires",
+        "flames",
+        "open flames",
+        "wildfire",
+        "wildfires",
+        "bonfire",
+        "bonfires"
+      ]
+    },
+    {
+      "id": "snow",
+      "category": "natural-environment",
+      "label": "snow or ice",
+      "terms": [
+        "snow",
+        "blizzards",
+        "ice storms",
+        "icy roads"
+      ]
+    },
+    {
+      "id": "heat",
+      "category": "natural-environment",
+      "label": "extreme heat",
+      "terms": [
+        "heat waves",
+        "heatwaves",
+        "extreme heat"
+      ]
+    },
+    {
+      "id": "woods",
+      "category": "natural-environment",
+      "label": "the woods",
+      "terms": [
+        "the woods",
+        "woods",
+        "forest",
+        "forests"
+      ]
+    },
+    {
+      "id": "cave",
+      "category": "natural-environment",
+      "label": "caves",
+      "terms": [
+        "cave",
+        "caves",
+        "caverns"
+      ]
+    },
+    {
+      "id": "needle",
+      "category": "blood-injection-injury",
+      "label": "needles",
+      "terms": [
+        "needle",
+        "needles",
+        "needle sticks"
+      ]
+    },
+    {
+      "id": "injection",
+      "category": "blood-injection-injury",
+      "label": "injections",
+      "terms": [
+        "injection",
+        "injections",
+        "shots",
+        "getting shots",
+        "getting a shot",
+        "flu shot",
+        "flu shots",
+        "jabs",
+        "booster shots"
+      ]
+    },
+    {
+      "id": "vaccine",
+      "category": "blood-injection-injury",
+      "label": "vaccines",
+      "terms": [
+        "vaccine",
+        "vaccines",
+        "vaccination",
+        "vaccinations",
+        "immunization",
+        "immunizations"
+      ]
+    },
+    {
+      "id": "blood",
+      "category": "blood-injection-injury",
+      "label": "blood",
+      "terms": [
+        "blood",
+        "seeing blood",
+        "the sight of blood",
+        "bleeding"
+      ]
+    },
+    {
+      "id": "blood-draw",
+      "category": "blood-injection-injury",
+      "label": "blood draws",
+      "terms": [
+        "blood draw",
+        "blood draws",
+        "blood test",
+        "blood tests",
+        "having blood taken",
+        "getting blood drawn",
+        "blood work",
+        "bloodwork",
+        "finger prick",
+        "finger pricks"
+      ]
+    },
+    {
+      "id": "iv",
+      "category": "blood-injection-injury",
+      "label": "IV lines",
+      "terms": [
+        "iv",
+        "ivs",
+        "iv drip",
+        "iv drips",
+        "drips",
+        "cannula",
+        "cannulas",
+        "intravenous lines"
+      ]
+    },
+    {
+      "id": "injury",
+      "category": "blood-injection-injury",
+      "label": "injuries",
+      "terms": [
+        "injury",
+        "injuries",
+        "wound",
+        "wounds",
+        "open wounds",
+        "cuts",
+        "gore",
+        "broken bones",
+        "seeing someone hurt"
+      ]
+    },
+    {
+      "id": "surgery",
+      "category": "blood-injection-injury",
+      "label": "surgery",
+      "terms": [
+        "surgery",
+        "surgeries",
+        "operation",
+        "operations",
+        "being operated on",
+        "anesthesia",
+        "anaesthesia",
+        "general anesthetic"
+      ]
+    },
+    {
+      "id": "hospital",
+      "category": "blood-injection-injury",
+      "label": "hospitals",
+      "terms": [
+        "hospital",
+        "hospitals",
+        "the hospital",
+        "emergency rooms",
+        "the er"
+      ]
+    },
+    {
+      "id": "doctor",
+      "category": "blood-injection-injury",
+      "label": "doctors",
+      "terms": [
+        "doctor",
+        "doctors",
+        "the doctor",
+        "doctor visits",
+        "doctors offices",
+        "medical appointments",
+        "check ups",
+        "checkups",
+        "physical exams",
+        "medical exams"
+      ]
+    },
+    {
+      "id": "dentist",
+      "category": "blood-injection-injury",
+      "label": "dentists",
+      "terms": [
+        "dentist",
+        "dentists",
+        "the dentist",
+        "dental work",
+        "dental visits",
+        "dental procedures",
+        "dental appointments",
+        "dental chair",
+        "the dentists chair",
+        "tooth extraction",
+        "fillings",
+        "root canals"
+      ]
+    },
+    {
+      "id": "medical-procedure",
+      "category": "blood-injection-injury",
+      "label": "medical procedures",
+      "terms": [
+        "medical procedures",
+        "procedures",
+        "medical tests",
+        "catheter",
+        "catheters",
+        "endoscopy",
+        "endoscopies",
+        "colonoscopy",
+        "colonoscopies"
+      ]
+    },
+    {
+      "id": "gynecological-exam",
+      "category": "blood-injection-injury",
+      "label": "pelvic exams",
+      "terms": [
+        "pelvic exam",
+        "pelvic exams",
+        "smear tests",
+        "pap smears",
+        "gynecological exams"
+      ]
+    },
+    {
+      "id": "stitches",
+      "category": "blood-injection-injury",
+      "label": "stitches",
+      "terms": [
+        "stitches",
+        "sutures"
+      ]
+    },
+    {
+      "id": "childbirth",
+      "category": "blood-injection-injury",
+      "label": "childbirth",
+      "terms": [
+        "childbirth",
+        "giving birth",
+        "labor and delivery"
+      ]
+    },
+    {
+      "id": "piercing",
+      "category": "blood-injection-injury",
+      "label": "piercings or tattoos",
+      "terms": [
+        "piercings",
+        "ear piercing",
+        "tattoos",
+        "getting a tattoo"
+      ]
+    },
+    {
+      "id": "ambulance",
+      "category": "blood-injection-injury",
+      "label": "ambulances",
+      "terms": [
+        "ambulance",
+        "ambulances"
+      ]
+    },
+    {
+      "id": "eye-procedure",
+      "category": "blood-injection-injury",
+      "label": "eye exams or eye drops",
+      "terms": [
+        "eye drops",
+        "eye exams",
+        "contact lenses"
+      ]
+    },
+    {
+      "id": "sharp-object",
+      "category": "blood-injection-injury",
+      "label": "knives or sharp objects",
+      "terms": [
+        "knife",
+        "knives",
+        "sharp objects",
+        "scalpels"
+      ]
+    },
+    {
+      "id": "flying",
+      "category": "situational",
+      "label": "flying",
+      "terms": [
+        "flying",
+        "fly",
+        "flight",
+        "flights",
+        "airplane",
+        "airplanes",
+        "aeroplanes",
+        "plane",
+        "planes",
+        "air travel",
+        "takeoff",
+        "take off",
+        "turbulence",
+        "airport",
+        "airports",
+        "being on a plane"
+      ]
+    },
+    {
+      "id": "elevator",
+      "category": "situational",
+      "label": "elevators",
+      "terms": [
+        "elevator",
+        "elevators",
+        "lifts",
+        "the lift"
+      ]
+    },
+    {
+      "id": "escalator",
+      "category": "situational",
+      "label": "escalators",
+      "terms": [
+        "escalator",
+        "escalators",
+        "moving walkways"
+      ]
+    },
+    {
+      "id": "bridge",
+      "category": "situational",
+      "label": "bridges",
+      "terms": [
+        "bridge",
+        "bridges",
+        "overpass",
+        "overpasses",
+        "crossing bridges"
+      ]
+    },
+    {
+      "id": "tunnel",
+      "category": "situational",
+      "label": "tunnels",
+      "terms": [
+        "tunnel",
+        "tunnels",
+        "underpasses",
+        "underground tunnels"
+      ]
+    },
+    {
+      "id": "driving",
+      "category": "situational",
+      "label": "driving",
+      "terms": [
+        "driving",
+        "drive",
+        "car",
+        "cars",
+        "car rides",
+        "being in a car",
+        "highway",
+        "highways",
+        "freeway",
+        "freeways",
+        "motorway",
+        "motorways",
+        "interstates",
+        "the interstate",
+        "traffic",
+        "merging",
+        "being a passenger",
+        "riding in cars"
+      ]
+    },
+    {
+      "id": "motorcycle",
+      "category": "situational",
+      "label": "motorcycles",
+      "terms": [
+        "motorcycle",
+        "motorcycles",
+        "motorbikes",
+        "scooters",
+        "bicycles",
+        "cycling"
+      ]
+    },
+    {
+      "id": "crossing-road",
+      "category": "situational",
+      "label": "crossing the street",
+      "terms": [
+        "crossing the street",
+        "crossing streets",
+        "crossing roads",
+        "crosswalks"
+      ]
+    },
+    {
+      "id": "enclosed",
+      "category": "situational",
+      "label": "enclosed spaces",
+      "terms": [
+        "enclosed spaces",
+        "enclosed places",
+        "small spaces",
+        "small places",
+        "closed spaces",
+        "confined spaces",
+        "tight spaces",
+        "cramped spaces",
+        "small rooms",
+        "windowless rooms",
+        "closet",
+        "closets",
+        "being trapped",
+        "being stuck",
+        "being locked in",
+        "locked rooms",
+        "revolving doors"
+      ]
+    },
+    {
+      "id": "basement",
+      "category": "situational",
+      "label": "basements or attics",
+      "terms": [
+        "basement",
+        "basements",
+        "attic",
+        "attics",
+        "cellars"
+      ]
+    },
+    {
+      "id": "parking-garage",
+      "category": "situational",
+      "label": "parking garages",
+      "terms": [
+        "parking garage",
+        "parking garages",
+        "multistory car parks"
+      ]
+    },
+    {
+      "id": "scanner",
+      "category": "situational",
+      "label": "MRI scanners",
+      "terms": [
+        "mri",
+        "mris",
+        "mri scans",
+        "mri scanners",
+        "mri machines",
+        "scanners",
+        "ct scans",
+        "cat scans"
+      ]
+    },
+    {
+      "id": "bus",
+      "category": "situational",
+      "label": "buses",
+      "terms": [
+        "bus",
+        "buses",
+        "busses",
+        "coach trips"
+      ]
+    },
+    {
+      "id": "train",
+      "category": "situational",
+      "label": "trains",
+      "terms": [
+        "train",
+        "trains",
+        "the train",
+        "railway",
+        "railways",
+        "rail travel",
+        "commuter trains"
+      ]
+    },
+    {
+      "id": "subway",
+      "category": "situational",
+      "label": "the subway",
+      "terms": [
+        "subway",
+        "subways",
+        "the subway",
+        "metro",
+        "the metro",
+        "the underground",
+        "the tube",
+        "light rail"
+      ]
+    },
+    {
+      "id": "tram",
+      "category": "situational",
+      "label": "trams",
+      "terms": [
+        "tram",
+        "trams",
+        "streetcar",
+        "streetcars",
+        "trolley",
+        "trolleys"
+      ]
+    },
+    {
+      "id": "boat",
+      "category": "situational",
+      "label": "boats",
+      "terms": [
+        "ferry",
+        "ferries",
+        "boat",
+        "boats",
+        "ship",
+        "ships",
+        "cruise ships",
+        "cruises",
+        "sailing"
+      ]
+    },
+    {
+      "id": "taxi",
+      "category": "situational",
+      "label": "taxis",
+      "terms": [
+        "taxi",
+        "taxis",
+        "cabs",
+        "ubers",
+        "rideshares"
+      ]
+    },
+    {
+      "id": "public-transport",
+      "category": "situational",
+      "label": "public transport",
+      "terms": [
+        "public transport",
+        "public transportation",
+        "mass transit",
+        "transit"
+      ]
+    },
+    {
+      "id": "crowds",
+      "category": "situational",
+      "label": "crowds",
+      "terms": [
+        "crowd",
+        "crowds",
+        "crowded places",
+        "crowded rooms",
+        "crowded spaces",
+        "busy places",
+        "packed places",
+        "big groups of people",
+        "large groups"
+      ]
+    },
+    {
+      "id": "public-places",
+      "category": "situational",
+      "label": "public places",
+      "terms": [
+        "public places",
+        "public spaces",
+        "being in public"
+      ]
+    },
+    {
+      "id": "mall",
+      "category": "situational",
+      "label": "shopping malls",
+      "terms": [
+        "mall",
+        "malls",
+        "shopping malls",
+        "shopping centers",
+        "shopping centres",
+        "shopping"
+      ]
+    },
+    {
+      "id": "store",
+      "category": "situational",
+      "label": "stores",
+      "terms": [
+        "store",
+        "stores",
+        "supermarket",
+        "supermarkets",
+        "grocery store",
+        "grocery stores",
+        "grocery shopping",
+        "big box stores"
+      ]
+    },
+    {
+      "id": "restaurant",
+      "category": "situational",
+      "label": "restaurants",
+      "terms": [
+        "restaurant",
+        "restaurants"
+      ]
+    },
+    {
+      "id": "nightclub",
+      "category": "situational",
+      "label": "clubs or bars",
+      "terms": [
+        "nightclubs",
+        "nightclub",
+        "clubs",
+        "bars"
+      ]
+    },
+    {
+      "id": "gym",
+      "category": "situational",
+      "label": "gyms",
+      "terms": [
+        "gym",
+        "gyms",
+        "fitness classes"
+      ]
+    },
+    {
+      "id": "waiting-line",
+      "category": "situational",
+      "label": "waiting in line",
+      "terms": [
+        "lines",
+        "waiting in line",
+        "standing in line",
+        "queues",
+        "queueing",
+        "queuing",
+        "checkout lines"
+      ]
+    },
+    {
+      "id": "waiting-room",
+      "category": "situational",
+      "label": "waiting rooms",
+      "terms": [
+        "waiting room",
+        "waiting rooms"
+      ]
+    },
+    {
+      "id": "theater",
+      "category": "situational",
+      "label": "theaters",
+      "terms": [
+        "theater",
+        "theaters",
+        "theatre",
+        "theatres",
+        "movie theaters",
+        "cinema",
+        "cinemas",
+        "the movies",
+        "middle seats",
+        "the middle of the row"
+      ]
+    },
+    {
+      "id": "concert",
+      "category": "situational",
+      "label": "concerts",
+      "terms": [
+        "concert",
+        "concerts",
+        "festivals",
+        "stadium",
+        "stadiums",
+        "sports events",
+        "arenas"
+      ]
+    },
+    {
+      "id": "church",
+      "category": "situational",
+      "label": "religious services",
+      "terms": [
+        "church",
+        "churches",
+        "religious services",
+        "places of worship"
+      ]
+    },
+    {
+      "id": "salon",
+      "category": "situational",
+      "label": "hair salons",
+      "terms": [
+        "hairdressers",
+        "hair salons",
+        "the barber",
+        "barbers"
+      ]
+    },
+    {
+      "id": "open-spaces",
+      "category": "situational",
+      "label": "open spaces",
+      "terms": [
+        "open spaces",
+        "open areas",
+        "wide open spaces",
+        "parking lots",
+        "open fields",
+        "empty streets",
+        "plazas"
+      ]
+    },
+    {
+      "id": "leaving-home",
+      "category": "situational",
+      "label": "leaving the house",
+      "terms": [
+        "leaving the house",
+        "leave the house",
+        "leaving home",
+        "leave home",
+        "going outside",
+        "go outside",
+        "going out alone",
+        "go out alone",
+        "being outside alone",
+        "being away from home",
+        "being far from home"
+      ]
+    },
+    {
+      "id": "home-alone",
+      "category": "situational",
+      "label": "being home alone",
+      "terms": [
+        "being home alone",
+        "being alone at home",
+        "staying home alone",
+        "home alone"
+      ]
+    },
+    {
+      "id": "travel",
+      "category": "situational",
+      "label": "traveling",
+      "terms": [
+        "travel",
+        "traveling",
+        "travelling",
+        "trips",
+        "road trips",
+        "hotels",
+        "hotel rooms"
+      ]
+    },
+    {
+      "id": "choking",
+      "category": "choking-vomiting",
+      "label": "choking",
+      "terms": [
+        "choking",
+        "choke",
+        "chokes",
+        "choking on food"
+      ]
+    },
+    {
+      "id": "vomiting",
+      "category": "choking-vomiting",
+      "label": "vomiting",
+      "terms": [
+        "vomiting",
+        "vomit",
+        "throwing up",
+        "throw up",
+        "puking",
+        "puke",
+        "retching",
+        "seeing someone vomit",
+        "other people vomiting"
+      ]
+    },
+    {
+      "id": "swallowing",
+      "category": "choking-vomiting",
+      "label": "swallowing",
+      "terms": [
+        "swallowing",
+        "swallow",
+        "swallowing food",
+        "swallowing pills",
+        "taking pills",
+        "pills",
+        "tablets",
+        "capsules"
+      ]
+    },
+    {
+      "id": "gagging",
+      "category": "choking-vomiting",
+      "label": "gagging",
+      "terms": [
+        "gagging",
+        "gag reflex",
+        "gag"
+      ]
+    },
+    {
+      "id": "solid-food",
+      "category": "choking-vomiting",
+      "label": "solid food",
+      "terms": [
+        "solid food",
+        "solid foods",
+        "eating solids",
+        "chewing food",
+        "eating food"
+      ]
+    },
+    {
+      "id": "stomach-bug",
+      "category": "choking-vomiting",
+      "label": "stomach bugs",
+      "terms": [
+        "food poisoning",
+        "stomach bug",
+        "stomach bugs",
+        "stomach flu",
+        "norovirus",
+        "the stomach bug"
+      ]
+    },
+    {
+      "id": "public-speaking",
+      "category": "social",
+      "label": "public speaking",
+      "terms": [
+        "public speaking",
+        "speaking in public",
+        "speaking publicly",
+        "talking in public",
+        "speeches",
+        "speech",
+        "giving speeches",
+        "giving a speech",
+        "making a speech",
+        "speaking in groups",
+        "giving toasts"
+      ]
+    },
+    {
+      "id": "presentation",
+      "category": "social",
+      "label": "presentations",
+      "terms": [
+        "presentation",
+        "presentations",
+        "giving presentations",
+        "presenting",
+        "presenting at work"
+      ]
+    },
+    {
+      "id": "meeting",
+      "category": "social",
+      "label": "meetings",
+      "terms": [
+        "meeting",
+        "meetings",
+        "team meetings",
+        "staff meetings",
+        "speaking up in meetings",
+        "speaking up"
+      ]
+    },
+    {
+      "id": "class-participation",
+      "category": "social",
+      "label": "speaking in class",
+      "terms": [
+        "speaking in class",
+        "answering in class",
+        "asking questions in class",
+        "class discussions",
+        "being called on",
+        "seminars"
+      ]
+    },
+    {
+      "id": "party",
+      "category": "social",
+      "label": "parties",
+      "terms": [
+        "party",
+        "parties",
+        "social events",
+        "social gatherings",
+        "gatherings",
+        "get togethers",
+        "celebrations",
+        "weddings",
+        "office parties",
+        "family gatherings"
+      ]
+    },
+    {
+      "id": "new-people",
+      "category": "social",
+      "label": "meeting new people",
+      "terms": [
+        "meeting new people",
+        "meeting people",
+        "new people",
+        "strangers",
+        "talking to strangers",
+        "meeting strangers",
+        "introducing self",
+        "introductions",
+        "making friends"
+      ]
+    },
+    {
+      "id": "conversation",
+      "category": "social",
+      "label": "conversations",
+      "terms": [
+        "small talk",
+        "making conversation",
+        "conversations",
+        "chatting",
+        "starting conversations",
+        "talking to people"
+      ]
+    },
+    {
+      "id": "phone",
+      "category": "social",
+      "label": "phone calls",
+      "terms": [
+        "phone calls",
+        "phone call",
+        "making phone calls",
+        "calling people",
+        "answering the phone",
+        "the phone",
+        "talking on the phone"
+      ]
+    },
+    {
+      "id": "being-watched",
+      "category": "social",
+      "label": "being watched",
+      "terms": [
+        "being watched",
+        "being observed",
+        "being stared at",
+        "people staring",
+        "people watching",
+        "being looked at",
+        "being the center of attention",
+        "being the centre of attention"
+      ]
+    },
+    {
+      "id": "being-judged",
+      "category": "social",
+      "label": "being judged",
+      "terms": [
+        "being judged",
+        "judgment",
+        "judgement",
+        "criticism",
+        "being criticized",
+        "being criticised",
+        "being evaluated",
+        "negative evaluation",
+        "what people think",
+        "what others think",
+        "looking stupid",
+        "looking foolish",
+        "embarrassment",
+        "embarrassing self",
+        "humiliation",
+        "being humiliated",
+        "making a fool of self",
+        "rejection",
+        "being rejected"
+      ]
+    },
+    {
+      "id": "eating-in-public",
+      "category": "social",
+      "label": "eating in front of others",
+      "terms": [
+        "eating in front of others",
+        "eating in front of people",
+        "eating in public",
+        "eating out",
+        "eating with others",
+        "drinking in front of others",
+        "drinking in public"
+      ]
+    },
+    {
+      "id": "writing-in-public",
+      "category": "social",
+      "label": "writing in front of others",
+      "terms": [
+        "writing in front of others",
+        "signing in front of others",
+        "writing in public"
+      ]
+    },
+    {
+      "id": "public-restroom",
+      "category": "social",
+      "label": "public restrooms",
+      "terms": [
+        "public restroom",
+        "public restrooms",
+        "public bathrooms",
+        "public toilets",
+        "using public restrooms",
+        "using public bathrooms",
+        "urinals",
+        "shared bathrooms"
+      ]
+    },
+    {
+      "id": "interview",
+      "category": "social",
+      "label": "job interviews",
+      "terms": [
+        "interview",
+        "interviews",
+        "job interviews",
+        "being interviewed"
+      ]
+    },
+    {
+      "id": "dating",
+      "category": "social",
+      "label": "dating",
+      "terms": [
+        "dating",
+        "dates",
+        "going on dates",
+        "first dates"
+      ]
+    },
+    {
+      "id": "eye-contact",
+      "category": "social",
+      "label": "eye contact",
+      "terms": [
+        "eye contact",
+        "making eye contact",
+        "looking people in the eye"
+      ]
+    },
+    {
+      "id": "blushing",
+      "category": "social",
+      "label": "blushing",
+      "terms": [
+        "blushing",
+        "blush",
+        "turning red",
+        "going red",
+        "sweating in front of others",
+        "shaking in front of others",
+        "showing anxiety"
+      ]
+    },
+    {
+      "id": "performing",
+      "category": "social",
+      "label": "performing",
+      "terms": [
+        "performing",
+        "performance",
+        "performances",
+        "being on stage",
+        "the stage",
+        "stage fright",
+        "singing in public",
+        "auditions",
+        "recitals"
+      ]
+    },
+    {
+      "id": "socializing",
+      "category": "social",
+      "label": "social situations",
+      "terms": [
+        "socializing",
+        "socialising",
+        "social situations",
+        "social settings",
+        "social interactions",
+        "social activities",
+        "mixing with people",
+        "mingling"
+      ]
+    },
+    {
+      "id": "group",
+      "category": "social",
+      "label": "groups",
+      "terms": [
+        "groups",
+        "group settings",
+        "group work",
+        "group activities"
+      ]
+    },
+    {
+      "id": "authority",
+      "category": "social",
+      "label": "authority figures",
+      "terms": [
+        "authority figures",
+        "bosses",
+        "the boss",
+        "supervisors",
+        "managers",
+        "teachers",
+        "professors"
+      ]
+    },
+    {
+      "id": "workplace-social",
+      "category": "social",
+      "label": "coworkers or networking",
+      "terms": [
+        "coworkers",
+        "co workers",
+        "colleagues",
+        "work events",
+        "networking",
+        "networking events",
+        "classmates"
+      ]
+    },
+    {
+      "id": "asking",
+      "category": "social",
+      "label": "asking for help",
+      "terms": [
+        "asking for help",
+        "asking questions"
+      ]
+    },
+    {
+      "id": "camera",
+      "category": "social",
+      "label": "being photographed",
+      "terms": [
+        "being photographed",
+        "having photo taken",
+        "video calls",
+        "being on camera"
+      ]
+    },
+    {
+      "id": "conflict",
+      "category": "social",
+      "label": "conflict",
+      "terms": [
+        "conflict",
+        "confrontation",
+        "arguments",
+        "saying no",
+        "disagreeing"
+      ]
+    },
+    {
+      "id": "germs",
+      "category": "contamination",
+      "label": "germs",
+      "terms": [
+        "germ",
+        "germs",
+        "bacteria",
+        "viruses",
+        "microbes",
+        "catching germs",
+        "picking up germs"
+      ]
+    },
+    {
+      "id": "dirt",
+      "category": "contamination",
+      "label": "dirt",
+      "terms": [
+        "dirt",
+        "dirty things",
+        "dust",
+        "grime",
+        "filth",
+        "grease"
+      ]
+    },
+    {
+      "id": "contamination",
+      "category": "contamination",
+      "label": "contamination",
+      "terms": [
+        "contamination",
+        "being contaminated",
+        "getting contaminated",
+        "contaminated things",
+        "contaminating others",
+        "contagion"
+      ]
+    },
+    {
+      "id": "surfaces",
+      "category": "contamination",
+      "label": "doorknobs and public surfaces",
+      "terms": [
+        "doorknob",
+        "doorknobs",
+        "door handles",
+        "handrails",
+        "elevator buttons",
+        "shopping carts",
+        "public surfaces"
+      ]
+    },
+    {
+      "id": "toilet",
+      "category": "contamination",
+      "label": "toilets",
+      "terms": [
+        "toilet",
+        "toilets",
+        "toilet seats"
+      ]
+    },
+    {
+      "id": "bodily-fluid",
+      "category": "contamination",
+      "label": "bodily fluids",
+      "terms": [
+        "bodily fluids",
+        "body fluids",
+        "saliva",
+        "spit",
+        "urine",
+        "feces",
+        "faeces",
+        "semen"
+      ]
+    },
+    {
+      "id": "chemical",
+      "category": "contamination",
+      "label": "chemicals or toxins",
+      "terms": [
+        "chemicals",
+        "cleaning products",
+        "toxins",
+        "toxic substances",
+        "poison",
+        "poisons",
+        "being poisoned",
+        "pesticides",
+        "radiation",
+        "asbestos",
+        "lead paint",
+        "mold",
+        "mould"
+      ]
+    },
+    {
+      "id": "trash",
+      "category": "contamination",
+      "label": "garbage",
+      "terms": [
+        "garbage",
+        "trash",
+        "rubbish",
+        "bins",
+        "garbage cans",
+        "trash cans"
+      ]
+    },
+    {
+      "id": "raw-meat",
+      "category": "contamination",
+      "label": "raw meat",
+      "terms": [
+        "raw meat",
+        "raw chicken",
+        "uncooked food"
+      ]
+    },
+    {
+      "id": "sick-people",
+      "category": "contamination",
+      "label": "sick people",
+      "terms": [
+        "sick people",
+        "ill people",
+        "people coughing",
+        "coughing",
+        "sneezing",
+        "people sneezing"
+      ]
+    },
+    {
+      "id": "touch",
+      "category": "contamination",
+      "label": "shaking hands or being touched",
+      "terms": [
+        "shaking hands",
+        "handshakes",
+        "shake hands",
+        "touching people",
+        "being touched"
+      ]
+    },
+    {
+      "id": "sharing",
+      "category": "contamination",
+      "label": "sharing utensils",
+      "terms": [
+        "sharing utensils",
+        "sharing food",
+        "sharing cups",
+        "shared utensils",
+        "used towels"
+      ]
+    },
+    {
+      "id": "money",
+      "category": "contamination",
+      "label": "handling money",
+      "terms": [
+        "handling money",
+        "touching money",
+        "cash",
+        "coins"
+      ]
+    },
+    {
+      "id": "sticky",
+      "category": "contamination",
+      "label": "sticky things",
+      "terms": [
+        "sticky things",
+        "sticky substances",
+        "glue"
+      ]
+    },
+    {
+      "id": "accident-reminder",
+      "category": "trauma-reminder",
+      "label": "the accident",
+      "terms": [
+        "the accident",
+        "the car accident",
+        "the crash",
+        "the car crash",
+        "the collision",
+        "the wreck"
+      ]
+    },
+    {
+      "id": "attack-reminder",
+      "category": "trauma-reminder",
+      "label": "the attack",
+      "terms": [
+        "the attack",
+        "the assault",
+        "the attacker",
+        "the attackers",
+        "the mugging",
+        "the robbery",
+        "the break in",
+        "the stabbing",
+        "the beating"
+      ]
+    },
+    {
+      "id": "gunfire",
+      "category": "trauma-reminder",
+      "label": "gunfire",
+      "terms": [
+        "the shooting",
+        "the shootout",
+        "gunfire",
+        "gunshots",
+        "gun shots",
+        "guns",
+        "firearms"
+      ]
+    },
+    {
+      "id": "explosion",
+      "category": "trauma-reminder",
+      "label": "explosions",
+      "terms": [
+        "explosion",
+        "explosions",
+        "bombs",
+        "bombings",
+        "blasts",
+        "fireworks",
+        "loud bangs",
+        "backfiring cars"
+      ]
+    },
+    {
+      "id": "combat",
+      "category": "trauma-reminder",
+      "label": "combat",
+      "terms": [
+        "combat",
+        "the war",
+        "war",
+        "deployment",
+        "the deployment",
+        "war zones",
+        "military vehicles"
+      ]
+    },
+    {
+      "id": "event-place",
+      "category": "trauma-reminder",
+      "label": "where it happened",
+      "terms": [
+        "where it happened",
+        "the place where it happened",
+        "the scene",
+        "the street where it happened",
+        "the area where it happened"
+      ]
+    },
+    {
+      "id": "event-reminder",
+      "category": "trauma-reminder",
+      "label": "reminders of what happened",
+      "terms": [
+        "reminders",
+        "reminders of what happened",
+        "reminders of the event",
+        "anything that reminds",
+        "things that remind",
+        "talking about what happened",
+        "thinking about what happened",
+        "what happened",
+        "the memories"
+      ]
+    },
+    {
+      "id": "anniversary",
+      "category": "trauma-reminder",
+      "label": "the anniversary",
+      "terms": [
+        "the anniversary",
+        "anniversaries",
+        "the date it happened"
+      ]
+    },
+    {
+      "id": "perpetrator",
+      "category": "trauma-reminder",
+      "label": "people who resemble the perpetrator",
+      "terms": [
+        "the perpetrator",
+        "the abuser",
+        "the person who hurt",
+        "people who look like",
+        "men who look like",
+        "women who look like"
+      ]
+    },
+    {
+      "id": "siren",
+      "category": "trauma-reminder",
+      "label": "sirens",
+      "terms": [
+        "siren",
+        "sirens",
+        "police cars",
+        "emergency vehicles",
+        "flashing lights"
+      ]
+    },
+    {
+      "id": "smoke",
+      "category": "trauma-reminder",
+      "label": "smoke",
+      "terms": [
+        "smoke",
+        "the smell of smoke",
+        "burning smells"
+      ]
+    },
+    {
+      "id": "dying",
+      "category": "health",
+      "label": "dying",
+      "terms": [
+        "dying",
+        "death",
+        "die",
+        "dying suddenly",
+        "sudden death",
+        "being dead"
+      ]
+    },
+    {
+      "id": "heart-attack",
+      "category": "health",
+      "label": "a heart attack",
+      "terms": [
+        "heart attack",
+        "heart attacks",
+        "having a heart attack",
+        "heart problems",
+        "heart disease",
+        "cardiac arrest",
+        "the heart stopping",
+        "heart failure"
+      ]
+    },
+    {
+      "id": "stroke",
+      "category": "health",
+      "label": "a stroke",
+      "terms": [
+        "stroke",
+        "strokes",
+        "having a stroke",
+        "aneurysm",
+        "aneurysms",
+        "blood clot",
+        "blood clots"
+      ]
+    },
+    {
+      "id": "cancer",
+      "category": "health",
+      "label": "cancer",
+      "terms": [
+        "cancer",
+        "cancers",
+        "tumor",
+        "tumors",
+        "tumour",
+        "tumours",
+        "brain tumor",
+        "brain tumors",
+        "brain tumour"
+      ]
+    },
+    {
+      "id": "illness",
+      "category": "health",
+      "label": "illness",
+      "terms": [
+        "illness",
+        "illnesses",
+        "serious illness",
+        "getting sick",
+        "getting ill",
+        "being ill",
+        "falling ill",
+        "disease",
+        "diseases",
+        "getting a disease",
+        "catching a disease",
+        "health problems",
+        "medical problems"
+      ]
+    },
+    {
+      "id": "infection",
+      "category": "health",
+      "label": "infections",
+      "terms": [
+        "infection",
+        "infections",
+        "catching something",
+        "infectious diseases",
+        "covid",
+        "pandemic",
+        "pandemics",
+        "flu"
+      ]
+    },
+    {
+      "id": "sti",
+      "category": "health",
+      "label": "HIV or other infections",
+      "terms": [
+        "hiv",
+        "aids",
+        "hepatitis",
+        "stds",
+        "sexually transmitted infections",
+        "stis"
+      ]
+    },
+    {
+      "id": "fainting",
+      "category": "health",
+      "label": "fainting",
+      "terms": [
+        "fainting",
+        "passing out",
+        "blacking out",
+        "losing consciousness",
+        "collapsing"
+      ]
+    },
+    {
+      "id": "suffocating",
+      "category": "health",
+      "label": "suffocating",
+      "terms": [
+        "suffocating",
+        "suffocation",
+        "not being able to breathe",
+        "being unable to breathe",
+        "running out of air",
+        "smothering"
+      ]
+    },
+    {
+      "id": "seizure",
+      "category": "health",
+      "label": "seizures",
+      "terms": [
+        "seizure",
+        "seizures",
+        "fits",
+        "epilepsy"
+      ]
+    },
+    {
+      "id": "dementia",
+      "category": "health",
+      "label": "dementia",
+      "terms": [
+        "dementia",
+        "alzheimers",
+        "alzheimer",
+        "memory loss"
+      ]
+    },
+    {
+      "id": "allergic-reaction",
+      "category": "health",
+      "label": "allergic reactions",
+      "terms": [
+        "allergic reaction",
+        "allergic reactions",
+        "anaphylaxis",
+        "allergies"
+      ]
+    },
+    {
+      "id": "test-results",
+      "category": "health",
+      "label": "medical test results",
+      "terms": [
+        "test results",
+        "medical test results",
+        "lab results",
+        "biopsy results",
+        "scan results"
+      ]
+    },
+    {
+      "id": "body-symptoms",
+      "category": "health",
+      "label": "body symptoms",
+      "terms": [
+        "bodily symptoms",
+        "body sensations",
+        "physical symptoms",
+        "symptoms"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "title": "Anxiety Disorders (health topic)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/topics/anxiety-disorders"
+    },
+    {
+      "title": "Exposure Therapies for Specific Phobias",
+      "publisher": "APA Division 12, Society of Clinical Psychology",
+      "url": "https://div12.org/treatment/exposure-therapies-for-specific-phobias/"
+    },
+    {
+      "title": "Clinical descriptions and diagnostic requirements for ICD-11 mental, behavioural and neurodevelopmental disorders (CDDR)",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/publications/i/item/9789240077263",
+      "year": 2024
+    },
+    {
+      "title": "Social anxiety disorder: recognition, assessment and treatment (CG159)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg159",
+      "year": 2013
+    },
+    {
+      "title": "Obsessive-compulsive disorder and body dysmorphic disorder: treatment (CG31)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg31",
+      "year": 2005
+    },
+    {
+      "title": "Post-traumatic stress disorder (NG116)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng116",
+      "year": 2018
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

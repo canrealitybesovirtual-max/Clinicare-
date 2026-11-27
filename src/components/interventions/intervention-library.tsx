@@ -8,6 +8,7 @@ import { PRIVATE_TEXT_FIELD_PROPS } from "@/components/ui/private-field";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { minutesLabel } from "./format";
 
 export interface InterventionCardData {
   id: string;
@@ -40,10 +41,6 @@ interface Filters {
 }
 
 const NO_FILTERS: Filters = { orientation: "", condition: "", training: "any", handout: false, faith: false };
-
-export function minutesLabel(m: { min: number; max: number }): string {
-  return m.min === m.max ? `${m.min} min` : `${m.min}–${m.max} min`;
-}
 
 /** All search words must appear in the name, purpose or modality. Runs on this device only. */
 function matchesQuery(item: InterventionCardData, query: string): boolean {
@@ -210,7 +207,7 @@ function LibraryInner({
       <section aria-labelledby="results-heading" className="space-y-3">
         <div className="flex flex-wrap items-baseline justify-between gap-2">
           <h2 id="results-heading" className="text-lg font-semibold">
-            Interventions
+            Results
           </h2>
           <p role="status" aria-live="polite" className="text-sm text-muted">
             Showing {results.length} of {items.length}

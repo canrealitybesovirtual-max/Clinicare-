@@ -2,7 +2,7 @@
   "id": "thought-record",
   "name": "Thought record (cognitive restructuring)",
   "modality": "CBT - cognitive restructuring",
-  "conditions": ["major-depressive-disorder", "generalized-anxiety-disorder", "panic-disorder", "agoraphobia"],
+  "conditions": ["major-depressive-disorder", "generalized-anxiety-disorder", "panic-disorder", "agoraphobia", "social-anxiety-disorder", "obsessive-compulsive-disorder", "insomnia-disorder", "persistent-depressive-disorder", "adjustment-disorder", "prolonged-grief-disorder", "specific-phobia"],
   "evidenceLevel": "Core component of CBT, which NICE NG222 (depression) and NICE CG113 (GAD and panic disorder) recommend. A 2012 review of meta-analyses (Hofmann et al.) found strong overall support for CBT across anxiety and depression. The evidence is for CBT packages; the thought record has not been well tested as a stand-alone treatment.",
   "minutes": { "min": 20, "max": 40 },
   "purpose": "Helps the client slow down a moment of strong emotion, catch the automatic thought behind it, weigh the evidence, and arrive at a more balanced view. Over time the client learns to spot common thinking traps (jumping to conclusions, all-or-nothing thinking, mind reading, fortune telling) and to test thoughts instead of treating them as facts.",

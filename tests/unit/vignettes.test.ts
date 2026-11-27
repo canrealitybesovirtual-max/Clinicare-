@@ -8,7 +8,7 @@
  * surfaced; negated symptoms kept out; and "insufficient" instead of a forced match.
  */
 import { describe, expect, it } from "vitest";
-import { conditions, lexicon } from "@/lib/content";
+import { conditions, getCondition, lexicon } from "@/lib/content";
 import { matchSymptoms, type MatchResult } from "@/lib/matcher";
 import { scrubPHI } from "@/lib/phi-scrubber";
 import type { RedFlagType } from "@/lib/schemas";
@@ -17,7 +17,20 @@ import type { ScoringInput, ScoringResult, ScrubResult, Suggestion, SuggestionFl
 
 type Toggles = Partial<Omit<ScoringInput, "symptomIds">>;
 type Strength = Suggestion["strength"];
-type ConditionId = "panic-disorder" | "agoraphobia" | "generalized-anxiety-disorder" | "major-depressive-disorder" | "ptsd";
+type ConditionId =
+  | "panic-disorder"
+  | "agoraphobia"
+  | "generalized-anxiety-disorder"
+  | "major-depressive-disorder"
+  | "ptsd"
+  | "social-anxiety-disorder"
+  | "obsessive-compulsive-disorder"
+  | "alcohol-use-disorder"
+  | "insomnia-disorder"
+  | "persistent-depressive-disorder"
+  | "adjustment-disorder"
+  | "prolonged-grief-disorder"
+  | "specific-phobia";
 
 interface Expectation {
   status: ScoringResult["status"];
@@ -40,6 +53,11 @@ interface Expectation {
   negated?: string[];
   /** Exact set of red-flag types (sorted). Defaults to none. */
   redFlags?: RedFlagType[];
+  /**
+   * A substance-use suggestion is shown, so the 42 CFR Part 2 banner and export notice apply (G6).
+   * Defaults to false: no other vignette may surface a substance-use condition.
+   */
+  part2?: boolean;
 }
 
 interface Vignette {
@@ -423,16 +441,33 @@ const VIGNETTES: Vignette[] = [
     text: "Feeling stressed and tired lately, trouble at work, not sleeping well.",
     expect: { status: "insufficient", matched: ["subjective-anxiety-stress", "fatigue", "insomnia"] },
   },
+  // These two were out of scope (5 conditions) and expected "possible" / "insufficient". OCD and social anxiety
+  // are now in the knowledge base, so the same text suggests them, still held at moderate on a thin picture.
   {
-    name: "OCD-like checking (out of scope): low strength only",
+    name: "OCD checking and washing with contamination thoughts: OCD only, held at moderate (few supporting features)",
     text:
       "Checks the stove 20 times before leaving and washes hands until raw. Gets anxious if she can't finish the ritual and can't stop thinking about germs.",
-    expect: { status: "ok", maxStrength: "possible", excludes: ["panic-disorder", "agoraphobia", "ptsd", "major-depressive-disorder"] },
+    expect: {
+      status: "ok",
+      top: ["obsessive-compulsive-disorder"],
+      strength: { "obsessive-compulsive-disorder": "moderate" },
+      flags: { "obsessive-compulsive-disorder": ["breadth"] },
+      excludes: ["panic-disorder", "agoraphobia", "ptsd", "major-depressive-disorder", "generalized-anxiety-disorder"],
+      matched: ["obsessions", "compulsions"],
+      notMatched: ["worry-hard-to-control"],
+    },
   },
   {
-    name: "social fear of judgment (out of scope): insufficient",
+    name: "social fear of judgment with avoidance and blushing: social anxiety, held at moderate",
     text: "Afraid people will judge her, avoids parties and speaking up in meetings, blushes and gets sweaty when talking to people.",
-    expect: { status: "insufficient" },
+    expect: {
+      status: "ok",
+      top: ["social-anxiety-disorder"],
+      strength: { "social-anxiety-disorder": "moderate" },
+      flags: { "social-anxiety-disorder": ["breadth", "duration"] },
+      excludes: ["agoraphobia", "panic-disorder", "generalized-anxiety-disorder", "major-depressive-disorder"],
+      matched: ["fear-social-scrutiny", "social-situation-avoidance", "blushing", "sweating"],
+    },
   },
   {
     name: "racing mind at night with poor sleep: GAD possible only",
@@ -451,6 +486,489 @@ const VIGNETTES: Vignette[] = [
     expect: { status: "empty" },
   },
 
+  /* ------------------------------------------------------------- social anxiety disorder */
+  {
+    name: "classic social anxiety: fear of judgment, avoidance, blushing, shaking, post-event replay",
+    text:
+      "Since college she has been terrified of being judged. She avoids parties and work meetings, never speaks up in class, blushes and her hands shake when talking to people, and replays conversations for days afterwards.",
+    toggles: { duration: "gte6m" },
+    expect: {
+      status: "ok",
+      top: ["social-anxiety-disorder"],
+      strength: { "social-anxiety-disorder": "strong" },
+      excludes: ["agoraphobia", "panic-disorder", "generalized-anxiety-disorder"],
+      matched: ["fear-social-scrutiny", "social-situation-avoidance", "blushing", "trembling", "post-event-rumination"],
+      noFlags: { "social-anxiety-disorder": ["breadth", "duration", "partial-core"] },
+    },
+  },
+  {
+    name: "hard case, agoraphobia not social anxiety: avoidance driven by fear of panic and no escape, judgment denied",
+    text:
+      "Avoids crowds, buses and the mall because she is afraid she will have a panic attack and cannot get out; only goes out with her husband. Not worried about what people think of her.",
+    toggles: { duration: "gte6m" },
+    expect: {
+      status: "ok",
+      top: ["agoraphobia"],
+      excludes: ["social-anxiety-disorder", "specific-phobia"],
+      negated: ["fear-social-scrutiny"],
+      notMatched: ["fear-social-scrutiny"],
+      matched: ["fear-escape-help-unavailable", "needs-companion"],
+    },
+  },
+  {
+    name: "hard case, social anxiety AND agoraphobia: two reasons for avoidance, both suggested with a comorbidity note",
+    text:
+      "Avoids work events and phone calls because she is afraid of saying something stupid, rehearses what to say and avoids eye contact. Also avoids buses and crowded stores, afraid she cannot escape if she panics.",
+    toggles: { duration: "gte6m" },
+    expect: {
+      status: "ok",
+      top: ["social-anxiety-disorder", "agoraphobia"],
+      strength: { "social-anxiety-disorder": "moderate", agoraphobia: "moderate" },
+      comorbid: [["social-anxiety-disorder", "agoraphobia"]],
+      matched: ["social-safety-behaviors", "fear-escape-help-unavailable", "avoid-public-transport"],
+    },
+  },
+  {
+    name: "social anxiety with a depressive episode on top: both suggested, comorbidity note",
+    text:
+      "Terrified of being judged for years; avoids social events and dating and replays every conversation afterwards. Over the past month she has been feeling down most days, lost interest in everything, has no energy, feels worthless and can't concentrate.",
+    toggles: { duration: "gte6m" },
+    expect: {
+      status: "ok",
+      includes: ["social-anxiety-disorder", "major-depressive-disorder"],
+      strength: { "major-depressive-disorder": "strong", "social-anxiety-disorder": "moderate" },
+      comorbid: [["social-anxiety-disorder", "major-depressive-disorder"]],
+    },
+  },
+
+  /* ------------------------------------------------------------- OCD */
+  {
+    name: "classic contamination OCD: obsessions, washing, avoidance, reassurance seeking, time lost",
+    text:
+      "Intrusive thoughts about germs and contamination for two years. Washes her hands 50 times a day, avoids public restrooms, won't touch door handles, asks her husband for reassurance over and over, and rituals make her late for work.",
+    toggles: { duration: "gte6m" },
+    expect: {
+      status: "ok",
+      top: ["obsessive-compulsive-disorder"],
+      strength: { "obsessive-compulsive-disorder": "strong" },
+      excludes: ["generalized-anxiety-disorder", "specific-phobia", "ptsd"],
+      matched: ["obsessions", "compulsions", "ocd-trigger-avoidance", "reassurance-seeking", "time-consuming-rituals"],
+    },
+  },
+  {
+    name: "hard case, GAD not OCD: realistic everyday worries, rituals denied",
+    text:
+      "Worries about everything - money, her kids' health, her job - and can't stop worrying. Tense, restless, poor sleep, irritable. No rituals or checking, the worries feel like realistic everyday concerns.",
+    toggles: { duration: "gte6m" },
+    expect: {
+      status: "ok",
+      top: ["generalized-anxiety-disorder"],
+      strength: { "generalized-anxiety-disorder": "strong" },
+      excludes: ["obsessive-compulsive-disorder"],
+      negated: ["compulsions"],
+      notMatched: ["compulsions", "obsessions"],
+    },
+  },
+  {
+    name: "hard case, OCD checking plus everyday worry: OCD leads, GAD possible only",
+    text:
+      "Constant worry that she left the stove on or the door unlocked; checks the locks over and over, takes hours to leave the house, also worries a lot about finances and her health, muscle tension.",
+    toggles: { duration: "gte6m" },
+    expect: {
+      status: "ok",
+      top: ["obsessive-compulsive-disorder"],
+      strength: { "obsessive-compulsive-disorder": "moderate", "generalized-anxiety-disorder": "possible" },
+      flags: { "generalized-anxiety-disorder": ["partial-core"] },
+      matched: ["obsessions", "compulsions", "time-consuming-rituals", "worry-excessive"],
+    },
+  },
+  {
+    name: "harm obsessions: OCD suggested AND the homicidality red flag stays visible (the app never decides risk)",
+    text:
+      "Unwanted intrusive thoughts of harming her baby that horrify her; she hides the knives, won't be alone with the baby and asks her partner for reassurance. Afraid the thought means she wants to do it.",
+    toggles: { duration: "1to6m" },
+    expect: {
+      status: "ok",
+      top: ["obsessive-compulsive-disorder"],
+      strength: { "obsessive-compulsive-disorder": "moderate" },
+      flags: { "obsessive-compulsive-disorder": ["red-flag"] },
+      matched: ["homicidal-ideation", "obsessions", "ocd-trigger-avoidance", "ocd-appraisals"],
+      redFlags: ["homicidality"],
+    },
+  },
+  {
+    name: "scrupulosity: religious obsessions with prayer and confession rituals",
+    text:
+      "Scrupulosity: afraid of committing a sin, repeats prayers until they feel right, confesses over and over and spends hours on mental rituals. Her faith used to bring her peace.",
+    toggles: { duration: "gte6m" },
+    expect: {
+      status: "ok",
+      top: ["obsessive-compulsive-disorder"],
+      strength: { "obsessive-compulsive-disorder": ["moderate", "strong"] },
+      matched: ["obsessions", "compulsions", "time-consuming-rituals"],
+    },
+  },
+
+  /* ------------------------------------------------------------- alcohol use disorder (Part 2) */
+  {
+    name: "AUD with withdrawal: strong match, withdrawal red flag and medical caution, Part 2 applies",
+    text:
+      "Drinking more than he intended most nights for the past year, tried to cut down on drinking several times without success, strong urges to drink after work, missed work because of hangovers, and keeps drinking despite his doctor's warning about his liver. Gets the shakes in the morning and needs a drink to stop shaking.",
+    toggles: { duration: "gte6m" },
+    expect: {
+      status: "ok",
+      top: ["alcohol-use-disorder"],
+      strength: { "alcohol-use-disorder": "strong" },
+      flags: { "alcohol-use-disorder": ["red-flag", "substance"] },
+      matched: [
+        "impaired-control-drinking",
+        "unsuccessful-cut-down",
+        "alcohol-craving",
+        "drinking-role-impact",
+        "drinking-despite-harm",
+        "alcohol-benzo-withdrawal",
+      ],
+      redFlags: ["withdrawal"],
+      part2: true,
+    },
+  },
+  {
+    name: "AUD without withdrawal: loss of control, failed cut-down, tolerance, drunk driving",
+    text: "Binge drinks on weekends, got a DUI last month, can't stop once she starts drinking, wants to cut back on drinking, needs more to get drunk than before.",
+    toggles: { duration: "gte6m" },
+    expect: {
+      status: "ok",
+      top: ["alcohol-use-disorder"],
+      strength: { "alcohol-use-disorder": "moderate" },
+      matched: ["hazardous-drinking", "impaired-control-drinking", "unsuccessful-cut-down", "alcohol-tolerance"],
+      part2: true,
+    },
+  },
+  {
+    name: "AUD with a depressive episode and a passive death wish: both suggested, suicidality red flag",
+    text:
+      "Drinking more than she planned most nights, tried to quit drinking twice, cravings for alcohol every afternoon. Down most days, lost interest in everything, feels worthless and sometimes wishes she wouldn't wake up.",
+    toggles: { duration: "gte6m" },
+    expect: {
+      status: "ok",
+      includes: ["alcohol-use-disorder", "major-depressive-disorder"],
+      strength: { "alcohol-use-disorder": "moderate" },
+      flags: { "alcohol-use-disorder": ["red-flag"] },
+      comorbid: [["alcohol-use-disorder", "major-depressive-disorder"]],
+      matched: ["passive-death-wish"],
+      redFlags: ["suicidality"],
+      part2: true,
+    },
+  },
+  {
+    name: "AUD and an adjustment reaction after a divorce: both moderate, comorbidity note",
+    text:
+      "Since the divorce he drinks every night, can't stop after one drink, has strong urges to drink in the evening and keeps drinking despite his doctor's warning. Can't stop thinking about the divorce and is struggling to cope.",
+    toggles: { duration: "1to6m" },
+    expect: {
+      status: "ok",
+      includes: ["adjustment-disorder", "alcohol-use-disorder"],
+      strength: { "adjustment-disorder": "moderate", "alcohol-use-disorder": "moderate" },
+      comorbid: [["adjustment-disorder", "alcohol-use-disorder"]],
+      matched: ["identifiable-stressor", "stressor-preoccupation", "impaired-control-drinking", "alcohol-craving"],
+      notMatched: ["worry-hard-to-control"],
+      part2: true,
+    },
+  },
+  {
+    name: "low-risk drinking with loss of control denied: nothing to suggest, no Part 2 content",
+    text: "Drinks 2 glasses of wine with dinner on weekends, no problems, never drinks more than she planned, denies cravings for alcohol.",
+    expect: { status: "empty", negated: ["impaired-control-drinking", "alcohol-craving"] },
+  },
+
+  /* ------------------------------------------------------------- insomnia disorder */
+  {
+    name: "primary insomnia: chronic, sleep-focused worry and clock watching, napping, daytime fallout, mood fine",
+    text:
+      "Trouble falling asleep most nights for two years; lies awake for hours, watches the clock, dreads going to bed, naps to catch up on sleep, and is exhausted at work from not sleeping. Mood is fine and she still enjoys her hobbies.",
+    toggles: { duration: "gte6m" },
+    expect: {
+      status: "ok",
+      top: ["insomnia-disorder"],
+      strength: { "insomnia-disorder": "strong" },
+      excludes: ["major-depressive-disorder", "generalized-anxiety-disorder"],
+      matched: ["insomnia", "insomnia-chronicity", "sleep-related-arousal", "sleep-compensatory-behaviors", "poor-sleep-daytime-impact"],
+    },
+  },
+  {
+    name: "hard case, insomnia as one symptom of depression: MDD only, no insomnia-disorder suggestion",
+    text:
+      "Waking up at 4am and can't get back to sleep for the past month, feeling down most days, lost interest in everything, no appetite, feels worthless, can't concentrate.",
+    toggles: { duration: "1to6m" },
+    expect: {
+      status: "ok",
+      top: ["major-depressive-disorder"],
+      strength: { "major-depressive-disorder": "strong" },
+      excludes: ["insomnia-disorder", "persistent-depressive-disorder"],
+      matched: ["insomnia"],
+    },
+  },
+  {
+    name: "hard case, insomnia disorder AND a depressive episode: both suggested, comorbidity note",
+    text:
+      "Insomnia most nights for a year, worries about not sleeping and is exhausted from poor sleep. For the past month she also feels depressed, has no interest in anything and feels worthless.",
+    toggles: { duration: "gte6m" },
+    expect: {
+      status: "ok",
+      includes: ["insomnia-disorder", "major-depressive-disorder"],
+      comorbid: [["insomnia-disorder", "major-depressive-disorder"]],
+    },
+  },
+  {
+    name: "insomnia with snoring and breathing pauses: medical flag lists sleep apnea",
+    text:
+      "Insomnia for years, wide awake as soon as she gets into bed, takes sleeping pills most nights, low energy and irritable during the day, falling asleep at work. Snoring loudly, partner notices pauses in breathing.",
+    toggles: { duration: "gte6m", medicalPossible: "yes" },
+    expect: {
+      status: "ok",
+      top: ["insomnia-disorder"],
+      flags: { "insomnia-disorder": ["medical"] },
+      matched: ["sleep-compensatory-behaviors", "poor-sleep-daytime-impact"],
+    },
+  },
+  {
+    name: "sleep trouble for only three weeks: duration flag (short-term insomnia territory)",
+    text: "Since starting a new job three weeks ago she has trouble falling asleep most nights, worries about sleep, and is exhausted from lack of sleep.",
+    toggles: { duration: "2to4w" },
+    expect: {
+      status: "ok",
+      top: ["insomnia-disorder"],
+      maxStrength: "moderate",
+      flags: { "insomnia-disorder": ["duration"] },
+    },
+  },
+  {
+    name: "hard case, mania not insomnia: little sleep with high energy, red flag, no insomnia suggestion",
+    text: "Hasn't slept in 3 days but full of energy, racing thoughts, spending sprees, can't sleep.",
+    expect: { status: "insufficient", redFlags: ["mania"], matched: ["decreased-need-for-sleep", "grandiosity-elevated-mood"] },
+  },
+  {
+    name: "insomnia with a nightly drink to fall asleep: insomnia disorder, alcohol use disorder not suggested",
+    text:
+      "Drinks wine every night to fall asleep, wakes up at 3am and can't get back to sleep, trouble sleeping most nights for a year, exhausted at work from poor sleep, worries about not sleeping.",
+    toggles: { duration: "gte6m" },
+    expect: {
+      status: "ok",
+      top: ["insomnia-disorder"],
+      strength: { "insomnia-disorder": "strong" },
+      excludes: ["alcohol-use-disorder"],
+      matched: ["sleep-compensatory-behaviors", "insomnia-chronicity"],
+    },
+  },
+
+  /* ------------------------------------------------------------- persistent depressive disorder */
+  {
+    name: "classic PDD: low mood for as long as she can remember, low energy, low self-esteem, indecision",
+    text:
+      "Has felt down for as long as she can remember, since her teens. Low energy, low self-esteem, hard to make decisions, poor appetite. Still works and has never had a two-week stretch of feeling okay.",
+    toggles: { duration: "gte6m" },
+    expect: {
+      status: "ok",
+      top: ["persistent-depressive-disorder", "major-depressive-disorder"],
+      strength: { "persistent-depressive-disorder": "strong", "major-depressive-disorder": "moderate" },
+      comorbid: [["persistent-depressive-disorder", "major-depressive-disorder"]],
+      matched: ["longstanding-low-mood", "depressed-mood", "fatigue", "worthlessness-guilt", "concentration-difficulty"],
+    },
+  },
+  {
+    name: "double depression: years of low-grade depression with a recent full episode and thoughts of death",
+    text:
+      "Chronic low grade depression for years, and over the past month much worse: lost interest in everything, sleeping all day, feels worthless, can't concentrate, thoughts of death.",
+    toggles: { duration: "gte6m" },
+    expect: {
+      status: "ok",
+      includes: ["persistent-depressive-disorder", "major-depressive-disorder"],
+      strength: { "persistent-depressive-disorder": "strong", "major-depressive-disorder": "strong" },
+      comorbid: [["persistent-depressive-disorder", "major-depressive-disorder"]],
+      redFlags: ["suicidality"],
+    },
+  },
+  {
+    name: "hard case, MDD not PDD: six weeks of low mood after a setback, well before",
+    text:
+      "Low mood for six weeks since her promotion fell through, no interest in anything, poor sleep, feels guilty, cannot concentrate. Felt well before this.",
+    toggles: { duration: "1to6m" },
+    expect: {
+      status: "ok",
+      top: ["major-depressive-disorder"],
+      strength: { "major-depressive-disorder": "strong" },
+      excludes: ["persistent-depressive-disorder"],
+      notMatched: ["longstanding-low-mood"],
+    },
+  },
+  {
+    name: "hard case, years of low mood but the duration toggle says 1-6 months: PDD duration flag",
+    text: "Depressed for years, low energy, low self-esteem, poor concentration, poor appetite.",
+    toggles: { duration: "1to6m" },
+    expect: {
+      status: "ok",
+      top: ["persistent-depressive-disorder"],
+      maxStrength: "moderate",
+      flags: { "persistent-depressive-disorder": ["duration"] },
+      noFlags: { "major-depressive-disorder": ["duration"] },
+    },
+  },
+
+  /* ------------------------------------------------------------- adjustment disorder */
+  {
+    name: "classic adjustment reaction: job loss, preoccupation, trouble adjusting, still enjoys things",
+    text:
+      "Lost her job three weeks ago. Since then tearful and anxious, can't stop thinking about losing her job, trouble adjusting, sleeping poorly, but still enjoys time with her kids and her usual hobbies.",
+    toggles: { duration: "1to6m" },
+    expect: {
+      status: "ok",
+      top: ["adjustment-disorder"],
+      strength: { "adjustment-disorder": "strong" },
+      excludes: ["persistent-depressive-disorder", "generalized-anxiety-disorder"],
+      matched: ["identifiable-stressor", "stressor-preoccupation", "difficulty-adjusting", "depressed-mood"],
+      notMatched: ["anhedonia", "worry-hard-to-control"],
+      noFlags: { "adjustment-disorder": ["required", "partial-core"] },
+    },
+  },
+  {
+    name: "hard case, MDD not adjustment: full depressive picture after a job loss, death wish",
+    text:
+      "Lost his job two months ago. Since then depressed most days, lost interest in everything, sleeping all day, feels worthless, can't concentrate, no appetite, wishes he were dead.",
+    toggles: { duration: "1to6m" },
+    expect: {
+      status: "ok",
+      top: ["major-depressive-disorder"],
+      strength: { "major-depressive-disorder": "strong", "adjustment-disorder": "possible" },
+      flags: { "adjustment-disorder": ["partial-core", "red-flag"] },
+      redFlags: ["suicidality"],
+    },
+  },
+  {
+    name: "adjustment reaction after a breakup: preoccupation, not coping, irritable and nervous",
+    text: "Since the breakup she has been struggling to cope, cant stop thinking about the breakup, irritable and nervous, missing work.",
+    toggles: { duration: "1to6m" },
+    expect: {
+      status: "ok",
+      top: ["adjustment-disorder"],
+      strength: { "adjustment-disorder": ["moderate", "strong"] },
+      matched: ["identifiable-stressor", "difficulty-adjusting", "stressor-preoccupation"],
+    },
+  },
+  {
+    name: "a stressor on its own: adjustment possible only, gather more",
+    text: "Recently retired.",
+    expect: {
+      status: "ok",
+      top: ["adjustment-disorder"],
+      maxStrength: "possible",
+      flags: { "adjustment-disorder": ["partial-core"] },
+    },
+  },
+
+  /* ------------------------------------------------------------- prolonged grief disorder */
+  {
+    name: "classic prolonged grief: 14 months after a death, yearning, disbelief, avoidance, identity loss",
+    text:
+      "Her husband died 14 months ago. She yearns for him every day, can't accept that he is gone, avoids his room, feels part of her died with him, and the grief is as raw as day one. She still enjoys her grandchildren and does not feel worthless.",
+    toggles: { duration: "gte6m" },
+    expect: {
+      status: "ok",
+      top: ["prolonged-grief-disorder"],
+      strength: { "prolonged-grief-disorder": "strong" },
+      excludes: ["major-depressive-disorder", "ptsd"],
+      matched: ["bereavement", "grief-yearning", "grief-disbelief", "grief-avoidance-reminders", "grief-identity-meaning", "grief-intense-pain"],
+      negated: ["worthlessness-guilt"],
+      noFlags: { "prolonged-grief-disorder": ["required"] },
+    },
+  },
+  {
+    name: "hard case, MDD not prolonged grief: pervasive depression three months after a death",
+    text:
+      "Her mother died three months ago. Since then she is depressed most of the day, lost interest in everything, feels worthless, sleeping all day, can't concentrate, and wishes she were dead.",
+    toggles: { duration: "1to6m" },
+    expect: {
+      status: "ok",
+      top: ["major-depressive-disorder"],
+      strength: { "major-depressive-disorder": "strong" },
+      excludes: ["prolonged-grief-disorder"],
+      matched: ["bereavement", "passive-death-wish"],
+      redFlags: ["suicidality"],
+    },
+  },
+  {
+    name: "traumatic loss with a wish to join the person and hearing his voice: suicidality and psychosis flags stay visible",
+    text:
+      "Lost my son two years ago to an overdose. I can't stop thinking about my son, the grief is unbearable, life has no meaning without him, I wish I could join him, and I avoid his room. I sometimes hear his voice at night.",
+    toggles: { duration: "gte6m" },
+    expect: {
+      status: "ok",
+      top: ["prolonged-grief-disorder"],
+      flags: { "prolonged-grief-disorder": ["red-flag"] },
+      matched: ["bereavement", "grief-preoccupation", "grief-intense-pain", "passive-death-wish", "hallucinations"],
+      redFlags: ["psychosis", "suicidality"],
+    },
+  },
+  {
+    name: "expected grief: missing him but functioning, pain in waves: possible only",
+    text: "Widowed last year; misses him terribly but is back at work, sees friends and the pain comes in waves around anniversaries.",
+    toggles: { duration: "gte6m", impairment: "no" },
+    expect: {
+      status: "ok",
+      top: ["prolonged-grief-disorder"],
+      maxStrength: "possible",
+      flags: { "prolonged-grief-disorder": ["partial-core", "impairment"] },
+    },
+  },
+
+  /* ------------------------------------------------------------- specific phobia */
+  {
+    name: "blood-injection-injury phobia: needle fear, medical avoidance, fainting during a blood draw",
+    text:
+      "Terrified of needles since childhood; hasn't been to the doctor in years, skips blood work and refuses vaccines because of needles, and fainted during a blood draw.",
+    toggles: { duration: "gte6m" },
+    expect: {
+      status: "ok",
+      top: ["specific-phobia"],
+      strength: { "specific-phobia": "strong" },
+      excludes: ["panic-disorder", "agoraphobia"],
+      matched: ["circumscribed-fear", "phobic-avoidance", "blood-injury-fainting"],
+    },
+  },
+  {
+    name: "fear of heights with avoidance only: specific phobia, held at moderate",
+    text: "Afraid of heights; avoids balconies and high places, panics on ladders, turned down a job on the 30th floor.",
+    toggles: { duration: "gte6m" },
+    expect: {
+      status: "ok",
+      top: ["specific-phobia"],
+      strength: { "specific-phobia": "moderate" },
+      flags: { "specific-phobia": ["breadth"] },
+    },
+  },
+  {
+    name: "hard case, specific phobia not agoraphobia: fear of flying only, other transport fine",
+    text:
+      "Fear of flying for 10 years, drives instead of flying, cancels flights, heart pounds and hands shake the week before a trip. Fine on buses, trains, elevators and in crowds.",
+    toggles: { duration: "gte6m" },
+    expect: {
+      status: "ok",
+      top: ["specific-phobia"],
+      excludes: ["agoraphobia", "panic-disorder"],
+      matched: ["circumscribed-fear", "phobic-avoidance"],
+    },
+  },
+  {
+    name: "hard case, agoraphobia not specific phobia: several situations feared for panic and no escape",
+    text: "Afraid of elevators, buses, crowds and the mall because she might panic and can't get out; only goes out with her sister.",
+    toggles: { duration: "gte6m" },
+    expect: {
+      status: "ok",
+      top: ["agoraphobia", "specific-phobia"],
+      strength: { agoraphobia: "moderate", "specific-phobia": "possible" },
+      matched: ["fear-escape-help-unavailable", "needs-companion", "circumscribed-fear"],
+    },
+  },
+
   /* ------------------------------------------------------------- PHI first */
   {
     name: "identifiers are scrubbed before matching and do not change the result",
@@ -466,9 +984,16 @@ const VIGNETTES: Vignette[] = [
 ];
 
 describe("clinical vignettes (real content)", () => {
-  it("has at least 25 vignettes", () => {
-    expect(VIGNETTES.length).toBeGreaterThanOrEqual(25);
+  it("has at least 70 vignettes, with unique names", () => {
+    expect(VIGNETTES.length).toBeGreaterThanOrEqual(70);
     expect(new Set(VIGNETTES.map((v) => v.name)).size).toBe(VIGNETTES.length);
+  });
+
+  it("covers every condition in the knowledge base with at least 3 vignettes that expect it", () => {
+    for (const c of conditions) {
+      const n = VIGNETTES.filter((v) => v.expect.top?.includes(c.id as ConditionId) || v.expect.includes?.includes(c.id as ConditionId)).length;
+      expect(n, c.id).toBeGreaterThanOrEqual(3);
+    }
   });
 
   it.each(VIGNETTES)("$name", ({ text, toggles, expect: e }) => {
@@ -515,6 +1040,10 @@ describe("clinical vignettes (real content)", () => {
 
     const flagTypes = [...new Set(result.redFlags.map((f) => f.type))].sort();
     expect(flagTypes).toEqual(e.redFlags ?? []);
+
+    // G6: a substance-use suggestion means the Part 2 banner and export notice apply; nothing else may surface one.
+    const sudShown = result.suggestions.filter((s) => getCondition(s.conditionId)?.sud).map((s) => s.conditionId);
+    expect(sudShown.length > 0, `Part 2 content shown: [${sudShown.join(", ")}]`).toBe(e.part2 ?? false);
   });
 });
 
@@ -637,12 +1166,29 @@ describe("phrase-level behavior on the real lexicon", () => {
     ["Avoids buses, trains, and the mall.", ["avoid-public-transport", "avoid-enclosed-spaces"], []],
     ["Avoids alcohol. Takes the bus to work.", [], []],
     ["Avoids crowds but takes the bus every day.", ["avoid-crowds-lines"], []],
-    ["Pt is not afraid of elevators.", [], ["avoid-enclosed-spaces"]],
+    ["Pt is not afraid of elevators.", [], ["avoid-enclosed-spaces", "circumscribed-fear"]],
     // Non-consuming: one mention supports situational panic AND dread of the place.
     ["Panic attacks in stores.", ["panic-attack-cued", "avoid-enclosed-spaces"], []],
     // Safety-relevant near-collisions stay apart.
     ["Has thoughts of dying.", ["passive-death-wish"], []],
     ["Thought she was dying during the attack.", ["fear-of-dying"], []],
+    // Expansion lexicon: a red flag is never swallowed by an overlapping OCD phrase.
+    ["Intrusive thoughts of hurting someone.", ["homicidal-ideation", "obsessions"], []],
+    // The same words can point to agoraphobia or social anxiety: both surface, the clinician clarifies.
+    ["Afraid I will embarrass myself.", ["fear-escape-help-unavailable", "fear-social-scrutiny"], []],
+    ["Not worried about what people think.", [], ["fear-social-scrutiny"]],
+    // Everyday wording that must not trigger substance-use, OCD, grief or chronic-mood entries.
+    ["Drinks too much coffee.", [], []],
+    ["Checks her blood sugar 4 times a day.", [], []],
+    ["Food cravings at night.", [], []],
+    ["Low back pain for years.", [], []],
+    ["Lost her temper with her husband.", [], []],
+    ["Avoids AA meetings.", [], []],
+    ["Denies cravings for alcohol.", [], ["alcohol-craving"]],
+    // Preoccupation with a stressor also records the stressor itself.
+    ["Can't stop thinking about the divorce.", ["stressor-preoccupation", "identifiable-stressor"], []],
+    ["Her husband died last spring.", ["bereavement"], []],
+    ["Faints at the sight of blood.", ["dizziness", "blood-injury-fainting"], []],
   ] as [string, string[], string[]][])("%s", (text, positive, negated) => {
     const m = matchSymptoms(text, lexicon.symptoms);
     expect(ids(m.matches)).toEqual(positive);

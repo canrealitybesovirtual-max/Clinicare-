@@ -2,7 +2,7 @@
   "id": "assertiveness-training",
   "name": "Assertiveness training",
   "modality": "Behavioral skills training",
-  "conditions": ["major-depressive-disorder", "social-anxiety-disorder", "alcohol-use-disorder", "persistent-depressive-disorder", "adjustment-disorder"],
+  "conditions": ["major-depressive-disorder", "social-anxiety-disorder", "alcohol-use-disorder", "persistent-depressive-disorder", "adjustment-disorder", "specific-phobia"],
   "evidenceLevel": "Emerging evidence as a stand-alone treatment. A review by Speed, Goldstein and Goldfried (2018) summarizes early trials linking assertiveness training to better symptoms, self-esteem and relationships, and argues the method has been overlooked. Drink-refusal skills training is part of NIAAA's Project MATCH coping-skills CBT manual and the COMBINE Combined Behavioral Intervention, and a secondary COMBINE analysis examined its effects (Witkiewitz et al.). For social anxiety disorder, NICE CG159 recommends individual CBT developed for social anxiety as first line; use assertiveness practice within that framework.",
   "minutes": { "min": 30, "max": 60 },
   "purpose": "Helps clients express needs, opinions and limits honestly and respectfully, finding a middle path between passive responses (giving in, staying silent) and aggressive ones (attacking, overriding). Covers saying no, making requests, handling criticism and refusing drinks. Rooted in behavior therapy (Andrew Salter, Joseph Wolpe, Robert Alberti and Michael Emmons) and delivered through modeling, rehearsal, feedback and step-by-step real-world practice. Useful when unassertiveness feeds social fear, resentment and low mood, or pressure to drink.",

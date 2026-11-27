@@ -29,6 +29,7 @@ interface SearchCtx extends SearchSettings {
   update: (patch: Partial<SearchSettings>) => void;
   applyPreset: (patch: Partial<SearchSettings>, label: string) => void;
   presetNotice: string | null;
+  clearPresetNotice: () => void;
   /** The search form registers how to focus its location field. */
   focusLocation: React.RefObject<(() => void) | null>;
 }
@@ -60,6 +61,7 @@ export function ReferralSearchProvider({ children }: { children: React.ReactNode
         requestAnimationFrame(() => focusLocation.current?.());
       },
       presetNotice,
+      clearPresetNotice: () => setPresetNotice(null),
       focusLocation,
     }),
     [presetNotice, settings],

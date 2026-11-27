@@ -1,0 +1,340 @@
+{
+  "id": "specific-phobia",
+  "name": "Specific phobia",
+  "icd10cm": [
+    {
+      "code": "F40.210",
+      "label": "Arachnophobia"
+    },
+    {
+      "code": "F40.218",
+      "label": "Other animal type phobia"
+    },
+    {
+      "code": "F40.220",
+      "label": "Fear of thunderstorms"
+    },
+    {
+      "code": "F40.228",
+      "label": "Other natural environment type phobia"
+    },
+    {
+      "code": "F40.230",
+      "label": "Fear of blood"
+    },
+    {
+      "code": "F40.231",
+      "label": "Fear of injections and transfusions"
+    },
+    {
+      "code": "F40.232",
+      "label": "Fear of other medical care"
+    },
+    {
+      "code": "F40.233",
+      "label": "Fear of injury"
+    },
+    {
+      "code": "F40.240",
+      "label": "Claustrophobia"
+    },
+    {
+      "code": "F40.241",
+      "label": "Acrophobia"
+    },
+    {
+      "code": "F40.242",
+      "label": "Fear of bridges"
+    },
+    {
+      "code": "F40.243",
+      "label": "Fear of flying"
+    },
+    {
+      "code": "F40.248",
+      "label": "Other situational type phobia"
+    },
+    {
+      "code": "F40.298",
+      "label": "Other specified phobia"
+    }
+  ],
+  "icd11": [
+    {
+      "code": "6B03",
+      "label": "Specific phobia"
+    }
+  ],
+  "dsmPointer": "See DSM-5-TR: Anxiety Disorders — Specific Phobia",
+  "summary": "Fear tied to one kind of thing or situation, such as an animal, heights, storms, water, blood, needles, flying or tight spaces. Contact with it, or the prospect of contact, sets off fear quickly and reliably, well beyond the real danger in the client's setting, and the client steers around it or gets through it in dread. Life can be narrowed in quiet ways: skipped vaccines and dental care, refused promotions that involve travel, routes planned around dogs. Blood, injection and injury fears often bring fainting rather than a racing heart, which changes how exposure is done. Exposure-based treatment works well and can be brief. For clinician review only; this is not a diagnosis.",
+  "features": [
+    {
+      "symptomId": "circumscribed-fear",
+      "kind": "core",
+      "weight": 5
+    },
+    {
+      "symptomId": "phobic-avoidance",
+      "kind": "core",
+      "weight": 4
+    },
+    {
+      "symptomId": "anticipatory-anxiety",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "panic-attack-cued",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "blood-injury-fainting",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "palpitations",
+      "kind": "associated",
+      "weight": 1
+    },
+    {
+      "symptomId": "trembling",
+      "kind": "associated",
+      "weight": 1
+    },
+    {
+      "symptomId": "sweating",
+      "kind": "associated",
+      "weight": 1
+    },
+    {
+      "symptomId": "dizziness",
+      "kind": "associated",
+      "weight": 1
+    }
+  ],
+  "minCore": 1,
+  "durationGate": {
+    "minWeeks": 26,
+    "note": "Ask how long the fear has been present and whether it followed a frightening event. Brief fears after a scare often fade on their own; check the expected duration in DSM-5-TR."
+  },
+  "impairmentRequired": true,
+  "ruleOuts": [
+    {
+      "label": "Heart rhythm problems, low blood pressure and other causes of fainting",
+      "type": "medical",
+      "note": "Fainting with blood or needles is usually a reflex response, but a medical check is wise before exposure work, especially with heart conditions or pregnancy."
+    },
+    {
+      "label": "Inner-ear and balance disorders",
+      "type": "medical",
+      "note": "Fear of heights or falling can follow real dizziness or vertigo; refer for medical review when balance problems are present."
+    },
+    {
+      "label": "Caffeine, stimulants and other substances",
+      "type": "substance",
+      "note": "These can raise physical arousal and make fear responses stronger. This app does not store substance-use information."
+    },
+    {
+      "label": "Fear better explained by another mental health condition",
+      "type": "psychiatric",
+      "note": "Check whether the fear is about panic and escape (agoraphobia), judgment (social anxiety), contamination (OCD) or trauma reminders (PTSD)."
+    }
+  ],
+  "specifiers": [
+    {
+      "label": "Animal, natural environment, blood-injection-injury, situational or other type (descriptive)",
+      "note": "ICD-10-CM codes by type (F40.21x to F40.29x). Several types often occur together; code each one."
+    },
+    {
+      "label": "Blood-injection-injury pattern (descriptive)",
+      "note": "Often a brief rise then a drop in heart rate and blood pressure with fainting. Applied tension is used before and during exposure."
+    }
+  ],
+  "differentials": [
+    {
+      "label": "Agoraphobia",
+      "icd10cm": "F40.00",
+      "distinguishing": "Fear across several kinds of places (transport, open or enclosed spaces, crowds, being out alone), centered on panic-like symptoms and escape; specific phobia fears the thing itself (a crash, a fall, a bite)."
+    },
+    {
+      "label": "Panic disorder",
+      "icd10cm": "F41.0",
+      "distinguishing": "Attacks come without warning; in specific phobia, attacks happen only near the feared object or situation."
+    },
+    {
+      "label": "Social anxiety disorder (ICD-10-CM title: Social phobia, unspecified)",
+      "icd10cm": "F40.10",
+      "distinguishing": "The fear is of being judged, for example fear of eating in front of others rather than fear of choking."
+    },
+    {
+      "label": "Obsessive-compulsive disorder (ICD-10-CM title: Mixed obsessional thoughts and acts)",
+      "icd10cm": "F42.2",
+      "distinguishing": "Avoidance of dirt or germs driven by contamination obsessions and washing rituals."
+    },
+    {
+      "label": "Posttraumatic stress disorder",
+      "icd10cm": "F43.10",
+      "distinguishing": "Fear and avoidance began after a traumatic event and come with intrusive memories and hyperarousal."
+    },
+    {
+      "label": "Avoidant/restrictive food intake disorder",
+      "icd10cm": "F50.82",
+      "distinguishing": "Fear of choking or vomiting leads to food restriction with weight loss or nutritional problems."
+    }
+  ],
+  "comorbidities": [
+    {
+      "conditionId": "panic-disorder",
+      "label": "Panic disorder",
+      "note": "Some clients also have unexpected attacks; assess them separately."
+    },
+    {
+      "conditionId": "agoraphobia",
+      "label": "Agoraphobia",
+      "note": "When feared situations spread to several kinds of places, consider agoraphobia as well."
+    },
+    {
+      "conditionId": "generalized-anxiety-disorder",
+      "label": "Generalized anxiety disorder",
+      "note": "If worry reaches well beyond the feared object, screen for broader anxiety with the GAD-7."
+    },
+    {
+      "conditionId": "major-depressive-disorder",
+      "label": "Major depressive disorder",
+      "note": "Avoidance that narrows work, travel or health care can feed low mood; screen with the PHQ-9."
+    }
+  ],
+  "measures": [
+    "gad-7"
+  ],
+  "measuresPending": [
+    {
+      "name": "APA Severity Measure for Specific Phobia — Adult",
+      "url": "https://www.psychiatry.org/psychiatrists/practice/dsm/educational-resources/assessment-measures",
+      "note": "License pending — link out only",
+      "licenseKey": "APA Severity Measures"
+    }
+  ],
+  "interventions": [
+    {
+      "name": "Graded in vivo exposure",
+      "evidence": "A 2008 meta-analysis (Wolitzky-Taylor et al.) found exposure-based treatments outperformed other approaches, with in vivo exposure strongest at the end of treatment.",
+      "note": "Build a fear ladder with the client, practice each step until fear expectations are disconfirmed, and drop safety habits. Use the exposure ladder handout."
+    },
+    {
+      "name": "One-session treatment",
+      "evidence": "Developed and tested by Öst (1989) for specific phobias; a single extended session of guided exposure can produce large, lasting gains.",
+      "note": "Typically up to about three hours with modeling and step-by-step approach; needs careful preparation and consent."
+    },
+    {
+      "name": "Applied tension for blood-injection-injury fears",
+      "evidence": "Öst and Sterner (1987) described applied tension to counter fainting in blood phobia.",
+      "note": "Teach brief tensing of large muscles to raise blood pressure, then pair it with exposure to blood, needles or injury images. Check medical history first."
+    },
+    {
+      "name": "Virtual reality or imaginal exposure",
+      "evidence": "Used for fears that are hard to arrange in real life, such as flying or storms; supported in the exposure literature (Wolitzky-Taylor et al., 2008).",
+      "note": "Follow with real-world steps where possible."
+    },
+    {
+      "name": "Cognitive work on feared predictions",
+      "evidence": "Commonly combined with exposure; evidence is strongest when paired with exposure.",
+      "note": "Write the feared outcome before each practice and compare it with what happened."
+    },
+    {
+      "name": "Referral for medication evaluation (not first line)",
+      "evidence": "Psychological treatment is the main approach; medication has a limited role.",
+      "note": "Short-term medication around a necessary procedure is a prescriber decision. Prescribing decisions rest with the prescriber."
+    }
+  ],
+  "handouts": [],
+  "statIds": [
+    "us-any-anxiety-past-year",
+    "global-anxiety-disorders-2021"
+  ],
+  "culturalNotes": [
+    "Judge whether fear is out of proportion within the client's real setting. Fear of dogs, snakes or storms can be realistic where stray dogs, venomous snakes or severe weather are common.",
+    "Feared objects and their meanings are shaped by culture and belief, such as fear of particular animals, the dark or spirits. Ask what the feared thing means to the client before planning exposure.",
+    "Avoidance of medical care can reflect historical abuse and mistrust of health systems rather than a phobia. Explore both, and do not label vaccine hesitancy rooted in mistrust as a phobia.",
+    "Plan exposure steps that respect the client's religious and cultural practices, for example around animals considered unclean or gender norms during therapist-assisted exposure.",
+    "Use a trained professional interpreter, not family members, and confirm that the fear ladder makes sense in the client's language.",
+    "If the client wants to draw on prayer or faith during exposure, include it only at their request and after informed consent (see the AACC Code of Ethics for faith-based counselors)."
+  ],
+  "sud": false,
+  "requiredFeatures": [],
+  "redFlagRules": [
+    {
+      "type": "eating-disorder-medical",
+      "message": "Food restriction or medical warning signs related to eating are documented. Fear of choking or vomiting can drive dangerous restriction (consider avoidant/restrictive food intake disorder, ICD-10-CM F50.82); arrange medical assessment."
+    },
+    {
+      "type": "psychosis",
+      "message": "Psychotic symptoms are documented in this input. Fear based on fixed unusual beliefs points away from a phobia; refer for an urgent psychiatric evaluation."
+    }
+  ],
+  "licensedDsm": false,
+  "wileyLicensed": false,
+  "sources": [
+    {
+      "title": "Specific Phobia (statistics)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/statistics/specific-phobia"
+    },
+    {
+      "title": "Psychological approaches in the treatment of specific phobias: a meta-analysis (Wolitzky-Taylor et al.)",
+      "publisher": "Clinical Psychology Review (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/18410984/",
+      "year": 2008
+    },
+    {
+      "title": "One-session treatment for specific phobias (Öst)",
+      "publisher": "Behaviour Research and Therapy (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2914000/",
+      "year": 1989
+    },
+    {
+      "title": "Applied tension: a specific behavioral method for treatment of blood phobia (Öst and Sterner)",
+      "publisher": "Behaviour Research and Therapy (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/3593159/",
+      "year": 1987
+    },
+    {
+      "title": "Phobias (overview)",
+      "publisher": "NHS",
+      "url": "https://www.nhs.uk/mental-health/conditions/phobias/overview/"
+    },
+    {
+      "title": "ICD-11 for Mortality and Morbidity Statistics (browser)",
+      "publisher": "World Health Organization",
+      "url": "https://icd.who.int/browse/latest-release/mms/en"
+    },
+    {
+      "title": "ICD-10-CM (official code set)",
+      "publisher": "CDC National Center for Health Statistics",
+      "url": "https://www.cdc.gov/nchs/icd/icd-10-cm/index.html"
+    },
+    {
+      "title": "ICD-10-CM codes checked with the NLM Clinical Table Search Service",
+      "publisher": "National Library of Medicine",
+      "url": "https://clinicaltables.nlm.nih.gov/apidoc/icd10cm/v3/doc.html"
+    },
+    {
+      "title": "Online assessment measures (including disorder-specific severity measures)",
+      "publisher": "American Psychiatric Association",
+      "url": "https://www.psychiatry.org/psychiatrists/practice/dsm/educational-resources/assessment-measures"
+    },
+    {
+      "title": "AACC Code of Ethics",
+      "publisher": "American Association of Christian Counselors",
+      "url": "https://aacc.net/aacc-code-of-ethics/"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

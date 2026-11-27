@@ -258,8 +258,7 @@ function MobileNav({ pathname }: { pathname: string | null }) {
         </span>
         {current ? (
           <span className="truncate font-medium text-muted">
-            <span className="sr-only">, current page: </span>
-            {current.label}
+            <span className="sr-only">, current page:</span> {current.label}
           </span>
         ) : null}
       </DialogTrigger>

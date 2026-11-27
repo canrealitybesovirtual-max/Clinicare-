@@ -46,6 +46,7 @@ import {
   type ProviderTypeId,
   type RadiusOption,
 } from "./search-options";
+import { telHref } from "./referral-format";
 import { EndorsementNote, FacilityCard, FinderFallback, HealthCenterCard, ProviderCard } from "./search-results";
 
 /* ------------------------------------------------------------------ query model */
@@ -201,7 +202,8 @@ const inputClass =
 
 function ReferralSearchInner({ sudPrompt }: { sudPrompt: React.ReactNode }) {
   const settings = useSearchSettings();
-  const { mode, providerType, facilityType, healthCenterRadius, facilityRadius, update, presetNotice, focusLocation } = settings;
+  const { mode, providerType, facilityType, healthCenterRadius, facilityRadius, update, presetNotice, clearPresetNotice, focusLocation } =
+    settings;
 
   const [locMode, setLocMode] = React.useState<LocationMode>("zip");
   const [zip, setZip] = React.useState("");
@@ -260,11 +262,11 @@ function ReferralSearchInner({ sudPrompt }: { sudPrompt: React.ReactNode }) {
 
   function onSubmit(e: React.FormEvent) {
     e.preventDefault();
+    clearPresetNotice();
     cityField.flushNow();
     const check = checkLocation(locMode, { zip, city: cityField.draft, state: stateCode });
     if (!check.ok) {
       setFieldError({ field: check.field, message: check.message });
-      if (check.identifier) cityField.replace(cityField.draft); // show the scrubbed text and the removal notice
       const el = check.field === "zip" ? zipRef.current : check.field === "state" ? stateRef.current : cityField.ref.current;
       el?.focus();
       return;
@@ -286,7 +288,7 @@ function ReferralSearchInner({ sudPrompt }: { sudPrompt: React.ReactNode }) {
 
   return (
     <div className="space-y-5">
-      <form onSubmit={onSubmit} noValidate className="space-y-5" aria-describedby={fid("privacy")}>
+      <form onSubmit={onSubmit} noValidate className="space-y-5" aria-label="Find care near a location">
         <ChoiceGroup
           legend="What to find"
           name={fid("mode")}
@@ -360,12 +362,12 @@ function ReferralSearchInner({ sudPrompt }: { sudPrompt: React.ReactNode }) {
         </div>
 
         <ChoiceGroup
-          legend="Location"
+          legend="Search location"
           name={fid("locmode")}
           value={locMode}
           options={[
-            { value: "zip", label: "ZIP code" },
-            { value: "city", label: "City and state" },
+            { value: "zip", label: "By ZIP code" },
+            { value: "city", label: "By city and state" },
           ]}
           onChange={(v) => {
             setLocMode(v);
@@ -391,7 +393,7 @@ function ReferralSearchInner({ sudPrompt }: { sudPrompt: React.ReactNode }) {
               value={zip}
               onChange={(e) => setZip(e.target.value.replace(/\D/g, "").slice(0, 5))}
               aria-invalid={invalid("zip") || undefined}
-              aria-describedby={invalid("zip") ? errId : undefined}
+              aria-describedby={invalid("zip") ? `${fid("privacy")} ${errId}` : fid("privacy")}
               {...PRIVATE_TEXT_FIELD_PROPS}
               placeholder="5 digits"
               className={cn(inputClass, "mt-1.5")}
@@ -403,9 +405,6 @@ function ReferralSearchInner({ sudPrompt }: { sudPrompt: React.ReactNode }) {
               <label htmlFor={fid("city")} className="text-sm font-semibold">
                 City
               </label>
-              <p id={fid("cityhint")} className="mt-0.5 text-xs text-muted">
-                USPS spelling, letters only, no accents (for example St. Louis or Canon City).
-              </p>
               <input
                 id={fid("city")}
                 ref={cityField.ref}
@@ -415,10 +414,13 @@ function ReferralSearchInner({ sudPrompt }: { sudPrompt: React.ReactNode }) {
                 onChange={(e) => cityField.setDraft(e.target.value)}
                 onBlur={cityField.flushNow}
                 aria-invalid={invalid("city") || undefined}
-                aria-describedby={cn(fid("cityhint"), invalid("city") && errId)}
+                aria-describedby={[fid("cityhint"), fid("privacy"), invalid("city") ? errId : ""].filter(Boolean).join(" ")}
                 {...PRIVATE_TEXT_FIELD_PROPS}
                 className={cn(inputClass, "mt-1.5")}
               />
+              <p id={fid("cityhint")} className="mt-1 text-xs text-muted">
+                USPS spelling, letters only, no accents (for example St. Louis or Canon City).
+              </p>
               <div role="alert">
                 {cityField.removed ? (
                   <p className="mt-2 text-sm font-medium text-warn-fg">
@@ -432,9 +434,6 @@ function ReferralSearchInner({ sudPrompt }: { sudPrompt: React.ReactNode }) {
               <label htmlFor={fid("state")} className="text-sm font-semibold">
                 State or territory
               </label>
-              <p className="mt-0.5 text-xs text-muted" aria-hidden>
-                &nbsp;
-              </p>
               <select
                 id={fid("state")}
                 ref={stateRef}
@@ -482,9 +481,10 @@ function ReferralSearchInner({ sudPrompt }: { sudPrompt: React.ReactNode }) {
 }
 
 function statusText(outcome: Outcome, presetNotice: string | null): string {
+  if (presetNotice && outcome.status !== "loading") return presetNotice;
   switch (outcome.status) {
     case "idle":
-      return presetNotice ?? "";
+      return "";
     case "loading":
       return "Searching…";
     case "error":
@@ -541,7 +541,7 @@ function Results({
         <h3 id="ref-results-heading" className="text-lg font-semibold">
           {describeQuery(q)}
         </h3>
-        {isSudQuery(q as Parameters<typeof isSudQuery>[0]) ? sudPrompt : null}
+        {isSudQuery(q) ? sudPrompt : null}
         <ErrorPanel query={q} error={outcome.error} onRetry={() => onRetry(q, false)} />
       </section>
     );
@@ -551,7 +551,7 @@ function Results({
   const q = r.query;
   const more = nextPage(r);
   const n = countOf(r);
-  const sud = isSudQuery(q as Parameters<typeof isSudQuery>[0]);
+  const sud = isSudQuery(q);
   const part2 = r.mode === "health-centers" ? null : r.data.part2Notice;
 
   return (
@@ -580,7 +580,7 @@ function Results({
       {r.mode === "treatment-facilities" ? (
         <p className="text-sm leading-relaxed text-muted">
           {r.data.notice} {r.data.helpline.label}:{" "}
-          <a href={`tel:${r.data.helpline.number.replace(/[^\d]/g, "")}`} className="inline-flex min-h-11 items-center font-semibold text-accent underline underline-offset-2">
+          <a href={telHref(r.data.helpline.number) ?? undefined} className="inline-flex min-h-11 items-center font-semibold text-accent underline underline-offset-2">
             {r.data.helpline.number}
           </a>
         </p>

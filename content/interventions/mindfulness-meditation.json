@@ -9,7 +9,8 @@
     "agoraphobia",
     "ptsd",
     "alcohol-use-disorder",
-    "insomnia-disorder"
+    "insomnia-disorder",
+    "prolonged-grief-disorder"
   ],
   "evidenceLevel": "Depression: recommended in NICE NG222 (2022), which lists group mindfulness and meditation (such as an 8-session MBCT programme designed for depression) among treatment options for less severe depression and names MBCT among relapse-prevention options for people at higher risk of relapse (NICE QS8). An individual patient data meta-analysis found MBCT cut relapse risk versus non-MBCT controls (hazard ratio 0.69; Kuyken et al., 2016). The 2022 VA/DoD MDD guideline includes MBCT among its psychotherapy options for uncomplicated MDD (strength could not be re-verified; confirm in the CPG). Anxiety: an RCT found 8-week MBSR noninferior to escitalopram for adult anxiety disorders (Hoge et al., 2023). PTSD: the 2023 VA/DoD guideline gives MBSR a weak-for recommendation; trauma-focused psychotherapy remains first-line. Substance use: mindfulness-based relapse prevention reduced relapse risk versus treatment as usual (Bowen et al., 2014). NCCIH evidence note: results for anxiety and depression are mixed and much research is preliminary; mindfulness improved sleep quality more than education-based treatments but not more than CBT or exercise; practices are generally low risk, but few studies have examined harms.",
   "minutes": { "min": 10, "max": 45 },

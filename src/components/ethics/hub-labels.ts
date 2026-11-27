@@ -14,7 +14,7 @@ import {
   type LegalTopic,
   type VerificationMethod,
 } from "@/lib/schemas-hub";
-import type { FacetIndex } from "./facet-filter";
+import type { FacetIndex } from "./facet-index";
 
 /** Countries most users choose, listed first in the country select. */
 export const PRIORITY_COUNTRIES = ["US", "CA", "GB", "IE", "AU", "NZ"] as const;

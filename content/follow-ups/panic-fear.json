@@ -1,0 +1,809 @@
+{
+  "id": "panic-fear",
+  "title": "Panic, cued fear, agoraphobia, specific phobia and social fear",
+  "domain": "panic-fear",
+  "about": "Questions that tell apart unexpected panic, fear cued by one object or situation, fear of being unable to escape or get help in several places, and fear of other people's judgment. Several template the extracted trigger phrase (\"<trigger>\"), so a note as short as \"panic from dogs\" leads somewhere useful.",
+  "questions": [
+    {
+      "id": "fear-cued-or-unexpected",
+      "kind": "discriminate",
+      "domain": "panic-fear",
+      "text": "Do the attacks happen only around <trigger>, or also out of the blue?",
+      "textNoTrigger": "Do the panic attacks come out of the blue, or only in particular situations?",
+      "why": "Attacks that come only with a clear cue point toward a fear of that cue (a phobic pattern); attacks that also strike without warning keep panic disorder in view. Both can be present at once.",
+      "options": [
+        {
+          "id": "only-trigger",
+          "label": "Only around <trigger>",
+          "labelNoTrigger": "Only in particular situations",
+          "effects": {
+            "addSymptomIds": [
+              "panic-attack-cued",
+              "circumscribed-fear"
+            ],
+            "negateSymptomIds": [
+              "panic-attacks-unexpected",
+              "panic-attacks-unspecified"
+            ]
+          }
+        },
+        {
+          "id": "also-unexpected",
+          "label": "Around <trigger>, and also out of the blue",
+          "labelNoTrigger": "Both: some unexpected, some in particular situations",
+          "effects": {
+            "addSymptomIds": [
+              "panic-attacks-unexpected",
+              "panic-attack-cued"
+            ],
+            "negateSymptomIds": [
+              "panic-attacks-unspecified"
+            ]
+          }
+        },
+        {
+          "id": "unexpected-only",
+          "label": "Out of the blue, with no clear trigger",
+          "when": "no-trigger",
+          "effects": {
+            "addSymptomIds": [
+              "panic-attacks-unexpected"
+            ],
+            "negateSymptomIds": [
+              "panic-attacks-unspecified"
+            ]
+          }
+        },
+        {
+          "id": "no-attacks",
+          "label": "No attack-like surges: a steady fear around <trigger>",
+          "when": "trigger",
+          "effects": {
+            "negateSymptomIds": [
+              "panic-attacks-unspecified",
+              "panic-attacks-unexpected"
+            ],
+            "addSymptomIds": [
+              "circumscribed-fear"
+            ]
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "Not sure yet",
+          "keepOpen": true
+        }
+      ],
+      "showWhen": {
+        "triggerCues": [
+          "panic"
+        ],
+        "symptomIds": [
+          "panic-attacks-unspecified",
+          "panic-attack-cued",
+          "panic-attacks-unexpected"
+        ]
+      },
+      "targets": [
+        "panic-attacks-unexpected",
+        "panic-attack-cued"
+      ],
+      "discriminates": [
+        "panic-disorder",
+        "specific-phobia",
+        "agoraphobia",
+        "social-anxiety-disorder"
+      ],
+      "priority": 1
+    },
+    {
+      "id": "fear-avoids-trigger",
+      "kind": "discriminate",
+      "domain": "panic-fear",
+      "text": "Does the client steer clear of <trigger>, or of places where <trigger> might be, or face them only while very frightened?",
+      "why": "Steering clear of the feared thing, or facing it only in great distress, is part of what separates a phobic pattern from an ordinary dislike. It also shows where an exposure ladder could start.",
+      "options": [
+        {
+          "id": "avoids",
+          "label": "Yes: avoids <trigger>",
+          "effects": {
+            "addSymptomIds": [
+              "phobic-avoidance"
+            ]
+          }
+        },
+        {
+          "id": "endures",
+          "label": "Faces it, but only while very frightened",
+          "effects": {
+            "addSymptomIds": [
+              "phobic-avoidance"
+            ]
+          }
+        },
+        {
+          "id": "no-avoidance",
+          "label": "No real avoidance or marked distress",
+          "effects": {
+            "negateSymptomIds": [
+              "phobic-avoidance"
+            ]
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "Not sure yet",
+          "keepOpen": true
+        }
+      ],
+      "showWhen": {
+        "triggerCategories": [
+          "animal",
+          "natural-environment",
+          "blood-injection-injury",
+          "situational",
+          "choking-vomiting"
+        ]
+      },
+      "discriminates": [
+        "specific-phobia",
+        "agoraphobia"
+      ],
+      "priority": 20
+    },
+    {
+      "id": "fear-every-time",
+      "kind": "discriminate",
+      "domain": "panic-fear",
+      "text": "Is the fear predictable: does it come on whenever the client meets <trigger>, or even just expects to?",
+      "why": "A phobic fear is dependable: it shows up whenever the client meets or expects the feared thing, not only now and then. Fear that builds in advance also tells you how far the pattern reaches into daily plans.",
+      "options": [
+        {
+          "id": "every-time",
+          "label": "Yes, whenever it happens, and while expecting it",
+          "effects": {
+            "addSymptomIds": [
+              "anticipatory-anxiety",
+              "circumscribed-fear"
+            ]
+          }
+        },
+        {
+          "id": "on-contact",
+          "label": "Yes, on contact, but not much in advance",
+          "effects": {
+            "addSymptomIds": [
+              "circumscribed-fear"
+            ]
+          }
+        },
+        {
+          "id": "sometimes",
+          "label": "Only sometimes",
+          "effects": {}
+        },
+        {
+          "id": "unsure",
+          "label": "Not sure yet",
+          "keepOpen": true
+        }
+      ],
+      "showWhen": {
+        "triggerCategories": [
+          "animal",
+          "natural-environment",
+          "blood-injection-injury",
+          "situational",
+          "choking-vomiting"
+        ]
+      },
+      "discriminates": [
+        "specific-phobia"
+      ],
+      "priority": 25
+    },
+    {
+      "id": "fear-out-of-proportion",
+      "kind": "discriminate",
+      "domain": "panic-fear",
+      "text": "Is the fear much bigger than the danger <trigger> actually poses where the client lives and works, given local conditions and the client's cultural norms?",
+      "why": "A fear that matches a real, current danger (for example, aggressive stray dogs in the neighborhood, or a recent disaster) is not a phobia. Cultural and local context shape what counts as proportionate, so judge it from the client's world, not only your own.",
+      "options": [
+        {
+          "id": "out-of-proportion",
+          "label": "Yes: much bigger than the actual danger",
+          "effects": {
+            "addSymptomIds": [
+              "circumscribed-fear"
+            ]
+          }
+        },
+        {
+          "id": "fits-real-danger",
+          "label": "No: it fits a real danger in the client's setting",
+          "effects": {
+            "negateSymptomIds": [
+              "circumscribed-fear"
+            ]
+          },
+          "note": "Problem-solving and practical safety steps around the real danger may fit better than exposure work."
+        },
+        {
+          "id": "unsure",
+          "label": "Not sure yet",
+          "keepOpen": true
+        }
+      ],
+      "showWhen": {
+        "triggerCategories": [
+          "animal",
+          "natural-environment",
+          "blood-injection-injury",
+          "situational",
+          "choking-vomiting",
+          "social",
+          "contamination"
+        ]
+      },
+      "discriminates": [
+        "specific-phobia",
+        "social-anxiety-disorder"
+      ],
+      "priority": 30
+    },
+    {
+      "id": "fear-escape-several-places",
+      "kind": "discriminate",
+      "domain": "panic-fear",
+      "text": "Is the fear mostly about <trigger> itself, or about being trapped or cut off from help if the client feels ill or panicky, and does that worry follow them into several different kinds of places?",
+      "textNoTrigger": "Is the fear mostly about particular things or places themselves, or about being stuck without a way out or help if panic or embarrassing symptoms strike, in several kinds of places?",
+      "why": "Fear of the situation itself (a crash, being shut in) fits a situational phobia; fear of being trapped or helpless when symptoms strike, across several unrelated places, points toward agoraphobia.",
+      "options": [
+        {
+          "id": "the-thing-itself",
+          "label": "About <trigger> itself (for example, a crash or being shut in)",
+          "labelNoTrigger": "About the things or places themselves",
+          "effects": {
+            "negateSymptomIds": [
+              "fear-escape-help-unavailable"
+            ],
+            "addSymptomIds": [
+              "circumscribed-fear"
+            ]
+          }
+        },
+        {
+          "id": "escape-or-help",
+          "label": "About getting out or getting help, across several kinds of places",
+          "effects": {
+            "addSymptomIds": [
+              "fear-escape-help-unavailable"
+            ]
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "Not sure yet",
+          "keepOpen": true
+        }
+      ],
+      "showWhen": {
+        "triggerCategories": [
+          "situational"
+        ],
+        "symptomIds": [
+          "avoid-public-transport",
+          "avoid-open-spaces",
+          "avoid-enclosed-spaces",
+          "avoid-crowds-lines",
+          "avoid-leaving-home-alone",
+          "needs-companion"
+        ],
+        "conditionIds": [
+          "agoraphobia"
+        ]
+      },
+      "targets": [
+        "fear-escape-help-unavailable"
+      ],
+      "discriminates": [
+        "agoraphobia",
+        "specific-phobia",
+        "panic-disorder"
+      ],
+      "priority": 10
+    },
+    {
+      "id": "fear-social-scrutiny",
+      "kind": "discriminate",
+      "domain": "panic-fear",
+      "text": "In these situations, is the main worry being watched, judged or embarrassed by other people?",
+      "why": "Fear centered on other people's evaluation points toward social anxiety. Fear of panic symptoms or of being unable to leave points toward panic or agoraphobia, and pulling away because nothing feels worth it points toward low mood.",
+      "options": [
+        {
+          "id": "judged",
+          "label": "Yes: being watched, judged or embarrassed",
+          "effects": {
+            "addSymptomIds": [
+              "fear-social-scrutiny"
+            ]
+          }
+        },
+        {
+          "id": "panic-or-escape",
+          "label": "No: mainly panic symptoms or being unable to get out",
+          "effects": {},
+          "note": "Points away from social anxiety; the panic and agoraphobia questions fit better."
+        },
+        {
+          "id": "low-interest",
+          "label": "No: the client pulls away because things feel pointless or flat",
+          "effects": {},
+          "note": "Points toward low mood rather than social fear; ask the mood questions."
+        },
+        {
+          "id": "unsure",
+          "label": "Not sure yet",
+          "keepOpen": true
+        }
+      ],
+      "showWhen": {
+        "triggerCategories": [
+          "social"
+        ],
+        "symptomIds": [
+          "avoid-crowds-lines",
+          "social-withdrawal"
+        ],
+        "conditionIds": [
+          "social-anxiety-disorder"
+        ]
+      },
+      "discriminates": [
+        "social-anxiety-disorder",
+        "agoraphobia",
+        "panic-disorder",
+        "major-depressive-disorder"
+      ],
+      "priority": 5
+    },
+    {
+      "id": "fear-social-avoids",
+      "kind": "discriminate",
+      "domain": "panic-fear",
+      "text": "Does the client steer clear of <trigger> or similar social situations, or face them only while very anxious?",
+      "why": "Steering clear of social situations, or facing them in great distress, rather than one-off nerves, is what makes social fear a clinical concern. Note whether it is limited to speaking or performing in front of others.",
+      "options": [
+        {
+          "id": "many-situations",
+          "label": "Yes, across many social situations",
+          "effects": {
+            "addSymptomIds": [
+              "social-situation-avoidance"
+            ]
+          }
+        },
+        {
+          "id": "performing-only",
+          "label": "Yes, but only when speaking or performing in front of others",
+          "effects": {
+            "addSymptomIds": [
+              "social-situation-avoidance"
+            ]
+          }
+        },
+        {
+          "id": "no-avoidance",
+          "label": "No real avoidance or marked distress",
+          "effects": {
+            "negateSymptomIds": [
+              "social-situation-avoidance"
+            ]
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "Not sure yet",
+          "keepOpen": true
+        }
+      ],
+      "showWhen": {
+        "triggerCategories": [
+          "social"
+        ]
+      },
+      "discriminates": [
+        "social-anxiety-disorder"
+      ],
+      "priority": 20
+    },
+    {
+      "id": "fear-fainting",
+      "kind": "discriminate",
+      "domain": "panic-fear",
+      "text": "When faced with <trigger>, has the client ever felt faint or actually fainted?",
+      "why": "Fear of needles, blood or injury often brings a drop in heart rate and blood pressure after the first surge, so fainting is common. That changes exposure planning (applied tension is often used instead of relaxation) and is worth telling medical and dental staff.",
+      "options": [
+        {
+          "id": "fainted",
+          "label": "Yes: has felt faint or fainted",
+          "effects": {
+            "addSymptomIds": [
+              "blood-injury-fainting"
+            ]
+          },
+          "note": "Plan exposure with a fainting-aware approach and let medical or dental staff know, so procedures can be done lying down."
+        },
+        {
+          "id": "never",
+          "label": "No",
+          "effects": {}
+        },
+        {
+          "id": "unsure",
+          "label": "Not sure yet",
+          "keepOpen": true
+        }
+      ],
+      "showWhen": {
+        "triggerCategories": [
+          "blood-injection-injury"
+        ]
+      },
+      "discriminates": [
+        "specific-phobia",
+        "panic-disorder"
+      ],
+      "priority": 35
+    },
+    {
+      "id": "fear-eating-restriction",
+      "kind": "discriminate",
+      "domain": "panic-fear",
+      "text": "Because of the fear of <trigger>, is the client eating much less, avoiding many foods, or losing weight?",
+      "why": "Fear of choking or vomiting can quietly narrow eating. Marked restriction or weight loss needs a medical review and can point to an eating problem outside the current knowledge base.",
+      "options": [
+        {
+          "id": "marked-restriction",
+          "label": "Yes: marked restriction or rapid weight loss",
+          "effects": {
+            "addSymptomIds": [
+              "severe-food-restriction"
+            ]
+          },
+          "surfaces": [
+            "medical-referral"
+          ]
+        },
+        {
+          "id": "some-foods",
+          "label": "Avoids some foods; weight is stable",
+          "effects": {}
+        },
+        {
+          "id": "no",
+          "label": "No",
+          "effects": {}
+        },
+        {
+          "id": "unsure",
+          "label": "Not sure yet",
+          "keepOpen": true
+        }
+      ],
+      "showWhen": {
+        "triggerCategories": [
+          "choking-vomiting"
+        ]
+      },
+      "targets": [
+        "severe-food-restriction"
+      ],
+      "discriminates": [
+        "specific-phobia"
+      ],
+      "priority": 15
+    },
+    {
+      "id": "fear-swallowing-checked",
+      "kind": "gate",
+      "domain": "panic-fear",
+      "gate": "medical",
+      "group": "medical-check",
+      "text": "Has a swallowing or digestive problem been checked by a medical clinician?",
+      "why": "Choking and swallowing fears can follow a real swallowing problem, reflux or a past choking episode. A medical check comes first; it also reassures the client before any exposure work.",
+      "options": [
+        {
+          "id": "checked-clear",
+          "label": "Checked: no medical cause found",
+          "effects": {
+            "setMedicalPossible": "no"
+          }
+        },
+        {
+          "id": "cause-suspected",
+          "label": "A medical cause is suspected or known",
+          "effects": {
+            "setMedicalPossible": "yes"
+          },
+          "surfaces": [
+            "medical-referral"
+          ]
+        },
+        {
+          "id": "not-checked",
+          "label": "Not checked yet",
+          "surfaces": [
+            "medical-referral"
+          ]
+        },
+        {
+          "id": "unsure",
+          "label": "Not sure",
+          "keepOpen": true
+        }
+      ],
+      "showWhen": {
+        "triggerCategories": [
+          "choking-vomiting"
+        ]
+      },
+      "priority": 20
+    },
+    {
+      "id": "fear-event-link",
+      "kind": "discriminate",
+      "domain": "panic-fear",
+      "text": "Did the fear of <trigger> start after a frightening event, and does the client relive that event (unwanted memories, nightmares or flashbacks)?",
+      "why": "A fear that began with an attack or accident can be a phobia learned from that event, or part of a trauma reaction. Reliving the event and avoiding reminders point toward a trauma reaction; ask gently and let the client set the pace.",
+      "options": [
+        {
+          "id": "event-and-reliving",
+          "label": "Started after an event, and the client relives it",
+          "effects": {
+            "addSymptomIds": [
+              "traumatic-event-exposure",
+              "intrusive-memories"
+            ]
+          }
+        },
+        {
+          "id": "event-no-reliving",
+          "label": "Started after an event, without reliving it",
+          "effects": {
+            "addSymptomIds": [
+              "traumatic-event-exposure"
+            ],
+            "negateSymptomIds": [
+              "intrusive-memories",
+              "flashbacks"
+            ]
+          }
+        },
+        {
+          "id": "no-event",
+          "label": "Not linked to a frightening event",
+          "effects": {}
+        },
+        {
+          "id": "unsure",
+          "label": "Not sure yet",
+          "keepOpen": true
+        }
+      ],
+      "showWhen": {
+        "triggerCategories": [
+          "trauma-reminder"
+        ]
+      },
+      "targets": [
+        "traumatic-event-exposure",
+        "intrusive-memories"
+      ],
+      "discriminates": [
+        "ptsd",
+        "specific-phobia",
+        "adjustment-disorder"
+      ],
+      "priority": 3
+    },
+    {
+      "id": "fear-impairment",
+      "kind": "gate",
+      "domain": "panic-fear",
+      "gate": "impairment",
+      "group": "impairment",
+      "text": "Does the fear of <trigger> cause marked distress or get in the way of daily life (work, errands, visits, routines)?",
+      "why": "A fear becomes a clinical concern when it causes marked distress or narrows daily life. Without this, scores are not adjusted and the pattern may simply be a common fear.",
+      "options": [
+        {
+          "id": "interferes",
+          "label": "Yes: marked distress or it gets in the way",
+          "effects": {
+            "setImpairment": "yes"
+          }
+        },
+        {
+          "id": "no-interference",
+          "label": "No: little distress and daily life is unaffected",
+          "effects": {
+            "setImpairment": "no"
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "Not sure yet",
+          "keepOpen": true
+        }
+      ],
+      "showWhen": {
+        "triggerCategories": [
+          "animal",
+          "natural-environment",
+          "blood-injection-injury",
+          "situational",
+          "choking-vomiting",
+          "social",
+          "contamination"
+        ]
+      },
+      "priority": 15
+    },
+    {
+      "id": "panic-between-attacks",
+      "kind": "core",
+      "domain": "panic-fear",
+      "select": "many",
+      "text": "Between attacks, is the client preoccupied with when the next one will come or what the attacks say about their body or mind, or do they do things differently to head them off?",
+      "why": "Ongoing worry about attacks and the changes people make to avoid them are what turn occasional panic into panic disorder; they also show which safety behaviors to work on.",
+      "options": [
+        {
+          "id": "ongoing-worry",
+          "label": "Ongoing worry about more attacks or what they mean",
+          "effects": {
+            "addSymptomIds": [
+              "persistent-concern-future-attacks"
+            ]
+          }
+        },
+        {
+          "id": "changed-routines",
+          "label": "Changed routines to prevent or escape attacks",
+          "effects": {
+            "addSymptomIds": [
+              "behavior-change-avoid-attacks"
+            ]
+          }
+        },
+        {
+          "id": "neither",
+          "label": "Neither",
+          "exclusive": true,
+          "effects": {
+            "negateSymptomIds": [
+              "persistent-concern-future-attacks",
+              "behavior-change-avoid-attacks"
+            ]
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "Not sure yet",
+          "exclusive": true,
+          "keepOpen": true
+        }
+      ],
+      "showWhen": {
+        "symptomIds": [
+          "panic-attacks-unexpected",
+          "panic-attacks-unspecified"
+        ],
+        "conditionIds": [
+          "panic-disorder"
+        ]
+      },
+      "targets": [
+        "persistent-concern-future-attacks",
+        "behavior-change-avoid-attacks"
+      ],
+      "discriminates": [
+        "panic-disorder"
+      ],
+      "priority": 10
+    },
+    {
+      "id": "agora-going-out",
+      "kind": "core",
+      "domain": "panic-fear",
+      "select": "many",
+      "text": "Can the client go out alone, or do outings depend on staying near home or having a trusted person along?",
+      "why": "A shrinking safe zone around home, or needing a companion to go out, shows how far agoraphobic avoidance reaches and where graded exposure could begin.",
+      "options": [
+        {
+          "id": "stays-near-home",
+          "label": "Avoids going out alone or stays near home",
+          "effects": {
+            "addSymptomIds": [
+              "avoid-leaving-home-alone"
+            ]
+          }
+        },
+        {
+          "id": "needs-companion",
+          "label": "Manages outings only with a trusted person",
+          "effects": {
+            "addSymptomIds": [
+              "needs-companion"
+            ]
+          }
+        },
+        {
+          "id": "goes-out-freely",
+          "label": "Goes out alone without much trouble",
+          "exclusive": true,
+          "effects": {
+            "negateSymptomIds": [
+              "avoid-leaving-home-alone",
+              "needs-companion"
+            ]
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "Not sure yet",
+          "exclusive": true,
+          "keepOpen": true
+        }
+      ],
+      "showWhen": {
+        "symptomIds": [
+          "fear-escape-help-unavailable"
+        ],
+        "conditionIds": [
+          "agoraphobia"
+        ]
+      },
+      "targets": [
+        "avoid-leaving-home-alone",
+        "needs-companion"
+      ],
+      "discriminates": [
+        "agoraphobia"
+      ],
+      "priority": 20
+    }
+  ],
+  "sources": [
+    {
+      "title": "NICE guideline CG113: managing anxiety and panic in adults",
+      "publisher": "National Institute for Health and Care Excellence (NICE)",
+      "url": "https://www.nice.org.uk/guidance/cg113",
+      "year": 2011
+    },
+    {
+      "title": "Exposure Therapies for Specific Phobias",
+      "publisher": "APA Division 12, Society of Clinical Psychology",
+      "url": "https://div12.org/treatment/exposure-therapies-for-specific-phobias/"
+    },
+    {
+      "title": "Social anxiety disorder: recognition, assessment and treatment (CG159)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg159",
+      "year": 2013
+    },
+    {
+      "title": "Clinical descriptions and diagnostic requirements for ICD-11 mental, behavioural and neurodevelopmental disorders (CDDR)",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/publications/i/item/9789240077263",
+      "year": 2024
+    },
+    {
+      "title": "Anxiety Disorders (health topic)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/topics/anxiety-disorders"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

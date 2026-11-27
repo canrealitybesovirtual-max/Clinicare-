@@ -1,0 +1,303 @@
+{
+  "id": "worry",
+  "title": "Worry: generalized worry, obsessions and health anxiety",
+  "domain": "worry",
+  "about": "Questions that tell apart worry spread across everyday life, unwanted intrusive thoughts that the client tries to cancel out, and a lasting preoccupation with illness.",
+  "questions": [
+    {
+      "id": "worry-scope",
+      "kind": "discriminate",
+      "domain": "worry",
+      "text": "Is the worry spread across many everyday matters (work, money, family, health), or is it one kind of unwanted thought or image the client tries to push away or cancel out?",
+      "why": "Worry that hops between ordinary topics fits generalized anxiety. An unwanted, intrusive thought followed by an urge to neutralize it (washing, checking, praying a set way, seeking reassurance) points toward OCD. A narrow, lasting focus on having a serious illness points toward health anxiety.",
+      "options": [
+        {
+          "id": "many-topics",
+          "label": "Many everyday matters",
+          "effects": {
+            "addSymptomIds": [
+              "worry-excessive"
+            ]
+          }
+        },
+        {
+          "id": "intrusive",
+          "label": "An unwanted intrusive thought or image the client tries to cancel out",
+          "effects": {
+            "addSymptomIds": [
+              "obsessions"
+            ]
+          },
+          "note": "Ask about rituals and how much time they take; unwanted thoughts with rituals point toward OCD."
+        },
+        {
+          "id": "illness",
+          "label": "Mostly about having or getting a serious illness",
+          "effects": {
+            "addTriggerCategory": "health"
+          },
+          "note": "Health anxiety is outside the current knowledge base. Record it, offer a medical review, and do not force a match."
+        },
+        {
+          "id": "unsure",
+          "label": "Not sure yet",
+          "keepOpen": true
+        }
+      ],
+      "showWhen": {
+        "symptomIds": [
+          "worry-excessive",
+          "worry-hard-to-control",
+          "subjective-anxiety-stress"
+        ],
+        "triggerCategories": [
+          "contamination"
+        ],
+        "conditionIds": [
+          "generalized-anxiety-disorder",
+          "obsessive-compulsive-disorder"
+        ]
+      },
+      "discriminates": [
+        "generalized-anxiety-disorder",
+        "obsessive-compulsive-disorder"
+      ],
+      "priority": 10
+    },
+    {
+      "id": "worry-control",
+      "kind": "core",
+      "domain": "worry",
+      "text": "Once a worry starts, can the client set it aside, or does it keep running despite their efforts?",
+      "why": "Worry that feels hard to stop or steer away from is one of the key features of generalized anxiety, and it shapes the choice of worry-focused techniques.",
+      "options": [
+        {
+          "id": "hard-to-stop",
+          "label": "Hard to set aside",
+          "effects": {
+            "addSymptomIds": [
+              "worry-hard-to-control"
+            ]
+          }
+        },
+        {
+          "id": "can-set-aside",
+          "label": "Can usually set it aside",
+          "effects": {
+            "negateSymptomIds": [
+              "worry-hard-to-control"
+            ]
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "Not sure yet",
+          "keepOpen": true
+        }
+      ],
+      "showWhen": {
+        "symptomIds": [
+          "worry-excessive",
+          "subjective-anxiety-stress"
+        ],
+        "conditionIds": [
+          "generalized-anxiety-disorder"
+        ]
+      },
+      "targets": [
+        "worry-hard-to-control"
+      ],
+      "discriminates": [
+        "generalized-anxiety-disorder"
+      ],
+      "priority": 10
+    },
+    {
+      "id": "worry-many-areas",
+      "kind": "core",
+      "domain": "worry",
+      "text": "Does the client worry more than the situation calls for about several areas of life, on most days?",
+      "why": "Broad, excessive worry on most days is the other key feature of generalized anxiety. Worry limited to one topic, or that fits real current problems, points elsewhere.",
+      "options": [
+        {
+          "id": "yes",
+          "label": "Yes",
+          "effects": {
+            "addSymptomIds": [
+              "worry-excessive"
+            ]
+          }
+        },
+        {
+          "id": "no",
+          "label": "No: worry is limited or fits real problems",
+          "effects": {
+            "negateSymptomIds": [
+              "worry-excessive"
+            ]
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "Not sure yet",
+          "keepOpen": true
+        }
+      ],
+      "showWhen": {
+        "symptomIds": [
+          "worry-hard-to-control",
+          "subjective-anxiety-stress",
+          "restlessness",
+          "muscle-tension"
+        ],
+        "conditionIds": [
+          "generalized-anxiety-disorder"
+        ]
+      },
+      "targets": [
+        "worry-excessive"
+      ],
+      "discriminates": [
+        "generalized-anxiety-disorder"
+      ],
+      "priority": 15
+    },
+    {
+      "id": "ocd-rituals",
+      "kind": "discriminate",
+      "domain": "worry",
+      "text": "Does the client repeat actions or mental acts (washing, cleaning, checking, counting, seeking reassurance) to ease the distress, and do these take a lot of time or get in the way?",
+      "why": "Rituals that eat up a large part of the day or disrupt daily life, done to ease an unwanted thought, are central to OCD and guide treatment toward exposure and response prevention.",
+      "options": [
+        {
+          "id": "time-consuming",
+          "label": "Yes: time-consuming or getting in the way",
+          "effects": {
+            "setImpairment": "yes",
+            "addSymptomIds": [
+              "compulsions",
+              "time-consuming-rituals"
+            ]
+          }
+        },
+        {
+          "id": "some-rituals",
+          "label": "Some rituals, but brief and not disruptive",
+          "effects": {
+            "addSymptomIds": [
+              "compulsions"
+            ]
+          }
+        },
+        {
+          "id": "no-rituals",
+          "label": "No rituals",
+          "effects": {
+            "negateSymptomIds": [
+              "compulsions",
+              "time-consuming-rituals"
+            ]
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "Not sure yet",
+          "keepOpen": true
+        }
+      ],
+      "showWhen": {
+        "triggerCategories": [
+          "contamination"
+        ],
+        "conditionIds": [
+          "obsessive-compulsive-disorder"
+        ],
+        "answered": [
+          {
+            "questionId": "worry-scope",
+            "answerIds": [
+              "intrusive"
+            ]
+          }
+        ]
+      },
+      "discriminates": [
+        "obsessive-compulsive-disorder",
+        "generalized-anxiety-disorder"
+      ],
+      "priority": 12
+    },
+    {
+      "id": "health-fear-focus",
+      "kind": "discriminate",
+      "domain": "worry",
+      "text": "Is the fear of <trigger> mainly during panic surges, or a lasting preoccupation with having or getting a serious illness (body checking, searching symptoms, seeking reassurance)?",
+      "why": "Fear of dying or of a heart attack that flares during attacks fits panic. A steady preoccupation with illness, with reassurance helping only briefly, points toward health anxiety, which is outside the current knowledge base.",
+      "options": [
+        {
+          "id": "during-panic",
+          "label": "Mainly during panic surges",
+          "effects": {
+            "addSymptomIds": [
+              "panic-attacks-unspecified",
+              "fear-of-dying"
+            ]
+          }
+        },
+        {
+          "id": "lasting-preoccupation",
+          "label": "A lasting preoccupation with illness",
+          "effects": {},
+          "note": "Health anxiety is outside the current knowledge base. Record it, offer a medical review, and do not force a match."
+        },
+        {
+          "id": "both",
+          "label": "Both",
+          "effects": {
+            "addSymptomIds": [
+              "panic-attacks-unspecified",
+              "fear-of-dying"
+            ]
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "Not sure yet",
+          "keepOpen": true
+        }
+      ],
+      "showWhen": {
+        "triggerCategories": [
+          "health"
+        ]
+      },
+      "discriminates": [
+        "panic-disorder",
+        "generalized-anxiety-disorder"
+      ],
+      "priority": 5
+    }
+  ],
+  "sources": [
+    {
+      "title": "NICE guideline CG113: managing anxiety and panic in adults",
+      "publisher": "National Institute for Health and Care Excellence (NICE)",
+      "url": "https://www.nice.org.uk/guidance/cg113",
+      "year": 2011
+    },
+    {
+      "title": "Obsessive-compulsive disorder and body dysmorphic disorder: treatment (CG31)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg31",
+      "year": 2005
+    },
+    {
+      "title": "Anxiety Disorders (health topic)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/topics/anxiety-disorders"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

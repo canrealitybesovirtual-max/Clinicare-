@@ -7,7 +7,8 @@ import { PROFESSION_LABELS, needsHumanCheck, type EthicsCode, type LegalTopic } 
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { ExternalLink } from "@/components/ui/external-link";
-import { Governance, ReviewBadge, SourcesList } from "@/components/content/content-bits";
+import { Governance, ReviewBadge } from "@/components/content/content-bits";
+import { CompactSources, LinkList } from "./compact-sources";
 import { EDITION_STATUS_LABELS, VERIFICATION_LABELS, jurisdictionLabel, scopeLabel } from "./hub-labels";
 
 function CheckOfficialBadge() {
@@ -113,17 +114,7 @@ export function EthicsCodeCard({ code }: { code: EthicsCode }) {
               Read the official {code.shortName}
             </ExternalLink>
           </p>
-          {code.relatedLinks?.length ? (
-            <ul className="space-y-1">
-              {code.relatedLinks.map((l) => (
-                <li key={l.url}>
-                  <ExternalLink href={l.url} className="inline-flex min-h-11 items-center">
-                    {l.title}
-                  </ExternalLink>
-                </li>
-              ))}
-            </ul>
-          ) : null}
+          {code.relatedLinks?.length ? <LinkList links={code.relatedLinks} /> : null}
         </div>
 
         <p className="flex items-start gap-2 text-xs text-muted">
@@ -137,7 +128,7 @@ export function EthicsCodeCard({ code }: { code: EthicsCode }) {
         <details className="text-sm">
           <summary className="inline-flex min-h-11 cursor-pointer items-center font-semibold text-accent">Sources and review</summary>
           <div className="space-y-3 pt-2">
-            <SourcesList sources={code.sources} />
+            <CompactSources sources={code.sources} />
             <Governance license={code.license} lastVerified={code.lastVerified} reviewedBy={code.reviewedBy} />
           </div>
         </details>
@@ -222,15 +213,7 @@ export function LegalTopicCard({ topic }: { topic: LegalTopic }) {
             <ExternalIcon aria-hidden className="size-4 text-accent" />
             Official sources
           </h4>
-          <ul className="mt-1 space-y-0.5 text-sm">
-            {topic.officialLinks.map((l) => (
-              <li key={l.url}>
-                <ExternalLink href={l.url} className="inline-flex min-h-11 items-center">
-                  {l.title}
-                </ExternalLink>
-              </li>
-            ))}
-          </ul>
+          <LinkList links={topic.officialLinks} className="mt-1" />
         </div>
 
         <p className="text-xs font-semibold text-muted">
@@ -243,7 +226,7 @@ export function LegalTopicCard({ topic }: { topic: LegalTopic }) {
         <details className="text-sm">
           <summary className="inline-flex min-h-11 cursor-pointer items-center font-semibold text-accent">Sources and review</summary>
           <div className="space-y-3 pt-2">
-            <SourcesList sources={topic.sources} />
+            <CompactSources sources={topic.sources} />
             <Governance license={topic.license} lastVerified={topic.lastVerified} reviewedBy={topic.reviewedBy} />
           </div>
         </details>

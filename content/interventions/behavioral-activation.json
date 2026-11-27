@@ -2,7 +2,7 @@
   "id": "behavioral-activation",
   "name": "Behavioral activation (activity scheduling)",
   "modality": "Behavioral activation",
-  "conditions": ["major-depressive-disorder"],
+  "conditions": ["major-depressive-disorder", "ptsd", "social-anxiety-disorder", "alcohol-use-disorder", "insomnia-disorder", "persistent-depressive-disorder", "adjustment-disorder", "prolonged-grief-disorder"],
   "evidenceLevel": "Well supported for depression. NICE NG222 lists behavioural activation (group or individual) among treatment options for less severe depression and individual behavioural activation for more severe depression. A 2014 meta-analysis of 26 trials (Ekers et al.) found BA outperformed control conditions. The COBRA trial (Richards et al.) found BA delivered by junior mental health workers was not inferior to CBT and cost less. The VA/DoD 2022 guideline includes BA among psychotherapy options for uncomplicated MDD. APA Division 12 has historically rated BA as having strong research support; the listing is marked pending re-evaluation (check the current page).",
   "minutes": { "min": 20, "max": 50 },
   "purpose": "Helps the client break the cycle in which low mood leads to withdrawal and inactivity, which then deepens low mood. The client tracks activities and mood, clarifies personal values, and schedules small, specific activities that bring enjoyment, a sense of achievement or connection, while reducing avoidance. Action comes first; motivation often follows rather than leads.",

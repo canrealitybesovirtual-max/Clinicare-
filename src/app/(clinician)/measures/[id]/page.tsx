@@ -3,13 +3,32 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 import { getMeasure, licenses, measures } from "@/lib/content";
+import { LOINC_NOTICE, LOINC_PANELS, describeFhirExport } from "@/lib/fhir";
+import type { Measure } from "@/lib/schemas";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { Governance, PageIntro, ReviewBadge, SourcesList } from "@/components/content/content-bits";
-import { MeasureForm } from "@/components/measures/measure-form";
+import { MeasureForm, MeasurementBasedCareNote } from "@/components/measures/measure-form";
+import type { FhirExportInfo } from "@/components/measures/fhir-export";
 import { AdultOnly } from "@/components/measures/adult-only";
 
 export const dynamicParams = false;
+
+/** LOINC facts for the FHIR export, computed here so the client bundle only loads src/lib/fhir.ts on click. */
+function fhirInfo(measure: Measure): FhirExportInfo {
+  const d = describeFhirExport(measure);
+  const panel = d.available && measure.loinc ? LOINC_PANELS[measure.loinc.panel] : undefined;
+  return {
+    available: d.available && panel !== undefined,
+    note: d.note,
+    questionnaire: d.questionnaire,
+    panel: panel?.panel,
+    total: panel?.total,
+    items: panel ? measure.items.map((it) => ({ id: it.id, loinc: panel.items[it.id] ?? "" })) : [],
+    functional: d.includesFunctionalItem ? panel?.functional?.code : undefined,
+    loincNotice: LOINC_NOTICE,
+  };
+}
 
 export function generateStaticParams() {
   return measures.map((m) => ({ id: m.id }));
@@ -52,7 +71,7 @@ export default async function MeasurePage({ params }: { params: Promise<{ id: st
       </PageIntro>
 
       <AdultOnly>
-        <MeasureForm measure={measure} />
+        <MeasureForm measure={measure} fhir={fhirInfo(measure)} />
       </AdultOnly>
 
       <section aria-labelledby="about-measure" className="mt-8">
@@ -70,6 +89,7 @@ export default async function MeasurePage({ params }: { params: Promise<{ id: st
               License status: <span className="font-semibold text-text">{license.status}</span> — {license.terms}
             </p>
           ) : null}
+          <MeasurementBasedCareNote />
           {measure.loinc ? (
             <p className="text-sm text-muted">
               LOINC panel <span className="font-mono">{measure.loinc.panel}</span>

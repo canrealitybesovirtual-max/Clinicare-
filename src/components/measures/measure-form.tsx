@@ -1,6 +1,6 @@
 "use client";
 import * as React from "react";
-import { Eraser, ShieldAlert } from "lucide-react";
+import { Eraser, Repeat, ShieldAlert } from "lucide-react";
 import type { Measure } from "@/lib/schemas";
 import { licenses } from "@/lib/content";
 import { emptyAnswers, scoreMeasure } from "@/lib/measures";
@@ -11,6 +11,7 @@ import { ExternalLink } from "@/components/ui/external-link";
 import { CrisisInline } from "@/components/crisis/crisis-panel";
 import { DownloadPdfButton } from "@/components/pdf/download-pdf-button";
 import { cn } from "@/lib/utils";
+import { FhirExport, type FhirExportInfo } from "./fhir-export";
 
 const CSSRS_URL = licenses.items["C-SSRS"]?.source ?? "https://cssrs.columbia.edu";
 
@@ -78,8 +79,21 @@ function RiskPanel({ itemId, message }: { itemId: string; message: string }) {
   );
 }
 
+/** Measurement-based care reminder (spec section 15). Original wording. */
+export function MeasurementBasedCareNote({ className }: { className?: string }) {
+  return (
+    <p className={cn("flex items-start gap-2 rounded-lg bg-surface-2 p-3 text-sm leading-relaxed", className)}>
+      <Repeat aria-hidden className="mt-0.5 size-4 shrink-0 text-accent" />
+      <span>
+        <span className="font-semibold">Measurement-based care:</span> repeat the same measure every 2–4 weeks and
+        review the change with the client. This app stores nothing, so record each score and date in your EHR.
+      </span>
+    </p>
+  );
+}
+
 /** Interactive measure (GAD-7 / PHQ-9). Answers live in memory-only session state; scores are never saved. */
-export function MeasureForm({ measure }: { measure: Measure }) {
+export function MeasureForm({ measure, fhir }: { measure: Measure; fhir?: FhirExportInfo }) {
   const { state, answer, setFunctional, clearMeasure } = useSession();
   const answers = state.measureAnswers[measure.id] ?? emptyAnswers(measure);
   const functional = state.measureFunctional[measure.id] ?? null;
@@ -136,6 +150,7 @@ export function MeasureForm({ measure }: { measure: Measure }) {
         </ul>
       </details>
       <p className="text-xs font-semibold text-text">Scores are not saved — record the result in your EHR.</p>
+      <MeasurementBasedCareNote className="text-xs" />
       <div className="flex flex-wrap gap-2">
         <Button type="button" variant="outline" onClick={() => clearMeasure(measure.id)} disabled={score.answered === 0 && functional === null}>
           <Eraser aria-hidden />
@@ -143,6 +158,7 @@ export function MeasureForm({ measure }: { measure: Measure }) {
         </Button>
         <DownloadPdfButton measure={measure} label="Download blank PDF" />
       </div>
+      {fhir ? <FhirExport measure={measure} answers={answers} functional={functional} info={fhir} /> : null}
     </Card>
   );
 

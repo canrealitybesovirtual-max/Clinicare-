@@ -1,0 +1,65 @@
+{
+  "id": "gates",
+  "title": "Duration and impairment",
+  "domain": "gates",
+  "about": "The two context questions most patterns depend on. Until they are answered, scores are not adjusted for them and each suggestion carries a note saying so.",
+  "questions": [
+    {
+      "id": "gate-duration",
+      "kind": "gate",
+      "domain": "gates",
+      "gate": "duration",
+      "group": "duration",
+      "text": "About how long have these symptoms been present?",
+      "why": "Several patterns need symptoms to last a minimum time: about 2 weeks for a depressive episode, about a month for panic disorder or PTSD, and about 6 months for generalized worry, agoraphobia or a specific phobia. Until duration is recorded, scores are not adjusted for it.",
+      "options": [
+        { "id": "lt2w", "label": "Under 2 weeks", "effects": { "setDuration": "lt2w" } },
+        { "id": "2to4w", "label": "2 to 4 weeks", "effects": { "setDuration": "2to4w" } },
+        { "id": "1to6m", "label": "1 to 6 months", "effects": { "setDuration": "1to6m" } },
+        { "id": "gte6m", "label": "6 months or longer", "effects": { "setDuration": "gte6m" } },
+        { "id": "unsure", "label": "Not sure yet", "keepOpen": true }
+      ],
+      "showWhen": { "anySignal": true },
+      "priority": 10
+    },
+    {
+      "id": "gate-impairment",
+      "kind": "gate",
+      "domain": "gates",
+      "gate": "impairment",
+      "group": "impairment",
+      "text": "Do the symptoms cause marked distress, or get in the way of work, study, relationships or daily tasks?",
+      "why": "Most patterns need marked distress or a real effect on daily life; without it, the same experiences may be within ordinary range. Until it is recorded, scores are not adjusted for it.",
+      "options": [
+        { "id": "yes", "label": "Yes", "effects": { "setImpairment": "yes" } },
+        { "id": "no", "label": "No", "effects": { "setImpairment": "no" } },
+        { "id": "unsure", "label": "Not sure yet", "keepOpen": true }
+      ],
+      "showWhen": { "anySignal": true },
+      "priority": 20
+    }
+  ],
+  "sources": [
+    {
+      "title": "Clinical descriptions and diagnostic requirements for ICD-11 mental, behavioural and neurodevelopmental disorders (CDDR)",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/publications/i/item/9789240077263",
+      "year": 2024
+    },
+    {
+      "title": "NICE guideline CG113: managing anxiety and panic in adults",
+      "publisher": "National Institute for Health and Care Excellence (NICE)",
+      "url": "https://www.nice.org.uk/guidance/cg113",
+      "year": 2011
+    },
+    {
+      "title": "Depression in adults: treatment and management (NG222)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng222",
+      "year": 2022
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

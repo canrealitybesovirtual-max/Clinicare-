@@ -5,7 +5,8 @@
   "conditions": [
     "ptsd",
     "major-depressive-disorder",
-    "alcohol-use-disorder"
+    "alcohol-use-disorder",
+    "adjustment-disorder"
   ],
   "evidenceLevel": "Strong evidence for comprehensive DBT in borderline personality disorder and recurrent self-harm (Cochrane review, Storebo et al., 2020); BPD is outside this app's current condition list. In a component trial with highly suicidal clients, DBT versions that included skills training performed comparably to standard DBT on suicide-related outcomes (Linehan et al., 2015). A systematic review of 17 trials found preliminary support for stand-alone DBT skills training across a range of problems (Valentine et al., 2015). A specialized program, DBT-PTSD, outperformed CPT for women with childhood-abuse PTSD and marked emotion dysregulation (Bohus et al., 2020). DBT is not among the PTSD psychotherapies recommended or suggested in the 2023 VA/DoD guideline (see the 2023 synopsis). Distress tolerance as an isolated module: emerging evidence.",
   "minutes": { "min": 20, "max": 45 },

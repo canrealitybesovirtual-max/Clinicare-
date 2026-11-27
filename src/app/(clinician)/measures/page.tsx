@@ -9,6 +9,8 @@ import { ExternalLink } from "@/components/ui/external-link";
 import { PageIntro, ReviewBadge } from "@/components/content/content-bits";
 import { DownloadPdfButton } from "@/components/pdf/download-pdf-button";
 import { AdultOnly } from "@/components/measures/adult-only";
+import { MeasurementBasedCareNote } from "@/components/measures/measure-form";
+import { HubPrompt } from "@/components/hub/hub-prompt";
 
 export const metadata: Metadata = { title: "Measures" };
 
@@ -28,9 +30,13 @@ export default function MeasuresPage() {
       <PageIntro title="Measures" eyebrow="Step 3 · Clinician mode">
         <p>
           Built-in measures are limited to those with a confirmed license. Answers stay in this tab and scores are never
-          saved — record results in your EHR.
+          saved — record results in your EHR. Completed forms can be exported as FHIR JSON with no identifiers.
         </p>
       </PageIntro>
+      <div className="mb-6 max-w-3xl space-y-3">
+        <MeasurementBasedCareNote />
+        <HubPrompt context="assessment" />
+      </div>
 
       <AdultOnly>
         <section aria-labelledby="builtin-heading">
@@ -65,6 +71,17 @@ export default function MeasuresPage() {
                     Bands: {m.scoring.bands.map((b) => `${b.label} ${b.min}–${b.max}`).join(" · ")}
                   </p>
                   <p className="text-xs text-muted">{m.citation}</p>
+                  {m.loinc ? (
+                    <p className="text-xs text-muted">
+                      LOINC panel <span className="font-mono">{m.loinc.panel}</span>
+                      {m.loinc.total ? (
+                        <>
+                          {" "}
+                          · total score <span className="font-mono">{m.loinc.total}</span>
+                        </>
+                      ) : null}
+                    </p>
+                  ) : null}
                   <div className="mt-auto flex flex-wrap gap-2 pt-1">
                     <Link href={`/measures/${m.id}`} className={buttonVariants({ variant: "primary" })}>
                       Run {m.shortName}

@@ -9,7 +9,10 @@
     "ptsd",
     "social-anxiety-disorder",
     "obsessive-compulsive-disorder",
-    "alcohol-use-disorder"
+    "alcohol-use-disorder",
+    "insomnia-disorder",
+    "persistent-depressive-disorder",
+    "specific-phobia"
   ],
   "evidenceLevel": "Moderate evidence for ACT as a package; emerging evidence for defusion as a stand-alone component. A meta-analysis of 66 laboratory component studies found defusion components outperformed inactive comparisons on targeted outcomes (Levin et al., 2012). Meta-analyses of full ACT found it more effective than waitlist, placebo and usual care and broadly comparable to CBT across anxiety, depression and substance use (A-Tjak et al., 2015; Gloster et al., 2020 review of 20 meta-analyses). The 2022 VA/DoD MDD guideline includes ACT among its psychotherapy options for uncomplicated MDD (the strength of that recommendation could not be re-verified; confirm in the CPG). An RCT found ACT without in-session exposure outperformed relaxation training for OCD (Twohig et al., 2010). PTSD: emerging evidence; ACT is not among the PTSD psychotherapies recommended or suggested in the 2023 VA/DoD guideline (see the 2023 synopsis). APA Division 12 lists ACT for several conditions; the current rating was not verified this session, so check div12.org.",
   "minutes": { "min": 10, "max": 25 },

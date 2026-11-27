@@ -13,16 +13,8 @@ import * as React from "react";
 import { RotateCcw } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { ALL, matchesFacets, type FacetIndex, type FacetOption } from "./facet-index";
 
-export const ALL = "all";
-
-/** group -> facet -> value -> matching ids. A facet missing from a group does not filter that group. */
-export type FacetIndex = Record<string, Record<string, Record<string, readonly string[]>>>;
-
-export interface FacetOption {
-  value: string;
-  label: string;
-}
 
 interface FacetCtx {
   values: Record<string, string>;
@@ -40,24 +32,6 @@ function useFacets(): FacetCtx {
   const ctx = React.useContext(Ctx);
   if (!ctx) throw new Error("Facet components must be used inside <FacetFilterProvider>");
   return ctx;
-}
-
-/** Pure visibility rule (exported for tests). */
-export function matchesFacets(
-  index: FacetIndex,
-  group: string,
-  id: string,
-  values: Record<string, string>,
-): boolean {
-  const facets = index[group];
-  if (!facets) return true;
-  for (const [facet, value] of Object.entries(values)) {
-    if (!value || value === ALL) continue;
-    const byValue = facets[facet];
-    if (!byValue) continue; // this facet does not apply to the group
-    if (!(byValue[value] ?? []).includes(id)) return false;
-  }
-  return true;
 }
 
 export function FacetFilterProvider({

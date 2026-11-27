@@ -6,16 +6,8 @@ import { Card } from "@/components/ui/card";
 import { Notice } from "@/components/ui/notice";
 import { PageIntro } from "@/components/content/content-bits";
 import { HubPrompt } from "@/components/hub/hub-prompt";
-import {
-  ALL,
-  FacetCount,
-  FacetEmpty,
-  FacetFilterProvider,
-  FacetGate,
-  FacetReset,
-  FacetSelect,
-  type FacetOption,
-} from "@/components/ethics/facet-filter";
+import { FacetCount, FacetEmpty, FacetFilterProvider, FacetGate, FacetReset, FacetSelect } from "@/components/ethics/facet-filter";
+import { ALL, type FacetOption } from "@/components/ethics/facet-index";
 import { EthicsCodeCard, LegalTopicCard } from "@/components/ethics/hub-cards";
 import { HUB_CONTEXTS, HUB_CONTEXT_LABELS, buildHubIndex, countryLabel, hubCountries } from "@/components/ethics/hub-labels";
 

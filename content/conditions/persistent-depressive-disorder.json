@@ -1,0 +1,311 @@
+{
+  "id": "persistent-depressive-disorder",
+  "name": "Persistent depressive disorder",
+  "icd10cm": [
+    {
+      "code": "F34.1",
+      "label": "Dysthymic disorder"
+    }
+  ],
+  "icd11": [
+    {
+      "code": "6A72",
+      "label": "Dysthymic disorder"
+    }
+  ],
+  "dsmPointer": "See DSM-5-TR: Depressive Disorders — Persistent Depressive Disorder",
+  "summary": "A long, grinding low that has lasted for years rather than weeks. Mood sits below the client's hoped-for baseline on most days, with low energy, poor self-esteem, pessimism and trouble deciding, and better stretches are short. Because it has gone on so long, clients and families often see it as personality ('I've always been like this'), so it is under-recognized and people may seek help only when a fuller depressive episode lands on top of it (sometimes called double depression). Early onset, chronic stress and childhood adversity are common in the history. For clinician review only; this is not a diagnosis.",
+  "features": [
+    {
+      "symptomId": "longstanding-low-mood",
+      "kind": "core",
+      "weight": 5
+    },
+    {
+      "symptomId": "depressed-mood",
+      "kind": "associated",
+      "weight": 2
+    },
+    {
+      "symptomId": "fatigue",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "worthlessness-guilt",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "concentration-difficulty",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "appetite-change",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "insomnia",
+      "kind": "associated",
+      "weight": 2,
+      "group": "sleep",
+      "breadthArea": true
+    },
+    {
+      "symptomId": "hypersomnia",
+      "kind": "associated",
+      "weight": 2,
+      "group": "sleep",
+      "breadthArea": true
+    },
+    {
+      "symptomId": "anhedonia",
+      "kind": "associated",
+      "weight": 1
+    },
+    {
+      "symptomId": "social-withdrawal",
+      "kind": "associated",
+      "weight": 1
+    }
+  ],
+  "minCore": 1,
+  "durationGate": {
+    "minWeeks": 104,
+    "note": "Ask how many years low mood has been present on most days and how long the longest good stretch lasted. The six-months-or-longer setting cannot show whether two years have passed; ask directly and check the timing in DSM-5-TR."
+  },
+  "impairmentRequired": true,
+  "ruleOuts": [
+    {
+      "label": "Hypothyroidism",
+      "type": "medical",
+      "note": "Can cause long-standing fatigue, low mood and slowed thinking. Consider thyroid testing through the client's medical provider."
+    },
+    {
+      "label": "Chronic medical illness and chronic pain",
+      "type": "medical",
+      "note": "Long-term illness, pain, sleep apnea and some neurological conditions can produce years of low mood and low energy. Coordinate with medical care."
+    },
+    {
+      "label": "Long-term alcohol, cannabis, sedative or opioid use",
+      "type": "substance",
+      "note": "Steady use can cause or deepen chronic low mood. Ask about use over the same years; this app does not store substance-use information."
+    },
+    {
+      "label": "Medication effects",
+      "type": "substance",
+      "note": "Some long-term medicines are linked to low mood. Review the medication list with the prescriber."
+    },
+    {
+      "label": "History of manic or hypomanic episodes, or cyclothymic mood swings",
+      "type": "psychiatric",
+      "note": "Periods of high energy or little need for sleep point toward a bipolar-spectrum condition; refer for psychiatric evaluation."
+    }
+  ],
+  "specifiers": [
+    {
+      "label": "Early onset or late onset (descriptive)",
+      "note": "Onset before about age 21 is common and linked to a more chronic course. Check the age cut-off in DSM-5-TR."
+    },
+    {
+      "label": "With intermittent or persistent major depressive episodes (descriptive)",
+      "note": "Note whether full depressive episodes come and go on top of the chronic low mood."
+    },
+    {
+      "label": "With anxious distress or other features (descriptive)",
+      "note": "Record anxious distress, atypical or melancholic features when present."
+    }
+  ],
+  "differentials": [
+    {
+      "label": "Major depressive disorder",
+      "distinguishing": "A shorter episode (weeks to months) that is a clear change from the client's usual self; both can be present (double depression)."
+    },
+    {
+      "label": "Cyclothymic disorder",
+      "icd10cm": "F34.0",
+      "distinguishing": "Years of mood swings that include periods of raised mood or energy, not only lows."
+    },
+    {
+      "label": "Bipolar II disorder",
+      "icd10cm": "F31.81",
+      "distinguishing": "At least one hypomanic episode in the history; ask about past highs."
+    },
+    {
+      "label": "Depressive symptoms due to a medical condition or substance",
+      "distinguishing": "The low mood tracks the course of an illness, medication or substance use."
+    },
+    {
+      "label": "Personality disorders",
+      "distinguishing": "Long-standing patterns in relationships and self-image; they can co-occur and do not rule out treatable chronic depression."
+    }
+  ],
+  "comorbidities": [
+    {
+      "conditionId": "major-depressive-disorder",
+      "label": "Major depressive disorder",
+      "note": "A fuller depressive episode can arise on top of years of low mood (double depression). Track both, screen with the PHQ-9 and ask directly about suicidal thoughts."
+    },
+    {
+      "conditionId": "generalized-anxiety-disorder",
+      "label": "Generalized anxiety disorder",
+      "note": "Chronic worry and chronic low mood often travel together."
+    },
+    {
+      "conditionId": "social-anxiety-disorder",
+      "label": "Social anxiety disorder",
+      "note": "Long-standing social fear can shrink life and feed chronic low mood; ask about it."
+    },
+    {
+      "conditionId": "alcohol-use-disorder",
+      "label": "Alcohol use disorder",
+      "note": "Drinking to cope with chronic low mood is common. 42 CFR Part 2 prohibits unauthorized use or disclosure of these records."
+    }
+  ],
+  "measures": [
+    "phq-9",
+    "gad-7"
+  ],
+  "measuresPending": [
+    {
+      "name": "Columbia Suicide Severity Rating Scale (C-SSRS)",
+      "url": "https://cssrs.columbia.edu",
+      "note": "License pending — link out only",
+      "licenseKey": "C-SSRS"
+    }
+  ],
+  "interventions": [
+    {
+      "name": "Psychotherapy combined with medication",
+      "evidence": "A 2010 meta-analysis (Cuijpers et al.) found psychotherapy helped chronic depression and dysthymia, with smaller effects than medication, and combined treatment did better than psychotherapy alone. A 2014 network meta-analysis (Kriston et al.) reached similar conclusions. NICE NG222 includes recommendations for chronic depressive symptoms.",
+      "note": "Discuss options with the client and coordinate with a prescriber; expect gradual change."
+    },
+    {
+      "name": "Cognitive behavioral analysis system of psychotherapy (CBASP)",
+      "evidence": "Developed for chronic depression; trial results are mixed (see Kriston et al., 2014).",
+      "note": "Focuses on how the client's actions affect others and on interpersonal patterns rooted in early experience. Requires specific training."
+    },
+    {
+      "name": "Behavioral activation and CBT",
+      "evidence": "Established for depression (NICE NG222); adapted for chronic presentations.",
+      "note": "Start small, as years of low mood shrink routines; target pessimistic predictions with behavioral experiments."
+    },
+    {
+      "name": "Interpersonal psychotherapy (IPT)",
+      "evidence": "NICE NG222 lists IPT among treatments for depression; adaptations exist for dysthymia.",
+      "note": "Works on role transitions, conflict and social isolation linked to mood."
+    },
+    {
+      "name": "Suicide risk screening and safety planning",
+      "evidence": "Clinical standard of care. If PHQ-9 item 9 is above 0 or the client reports suicidal thoughts, follow up with a structured screen (e.g., C-SSRS, link-out only) and safety planning.",
+      "note": "The clinician decides on risk level and next steps. Crisis resources (988, local emergency number, findahelpline.com) stay visible on every screen."
+    },
+    {
+      "name": "Referral for medication evaluation",
+      "evidence": "Medication is effective for chronic depression in meta-analyses (Cuijpers et al., 2010; Kriston et al., 2014).",
+      "note": "Refer to psychiatry, a primary care provider or a psychiatric nurse practitioner. Prescribing decisions rest with the prescriber."
+    }
+  ],
+  "handouts": [],
+  "statIds": [
+    "global-depression-2021"
+  ],
+  "culturalNotes": [
+    "Years of low mood are often read as character, fate or 'just how life is' by the client, the family or the community. Ask about mood directly and in the client's own words, and explain that long-standing low mood is treatable.",
+    "Chronic low mood is often expressed through the body (tiredness, aches, a 'heavy heart'). Ask about mood alongside physical complaints and coordinate with medical care.",
+    "Long-term poverty, discrimination, caregiving and unsafe housing can wear mood down over years. Address practical stressors and social supports alongside therapy.",
+    "In families that value endurance or not burdening others, clients may minimize distress. Normalize help-seeking and involve family only as the client wishes.",
+    "The PHQ-9 has been validated in many languages, but best cut-offs vary across groups and settings. Interpret scores with the interview, and use a trained professional interpreter, especially for questions about suicide.",
+    "Faith can bring hope and community, and for some clients also guilt about not feeling better. Explore this respectfully and use faith-integrated approaches only at the client's request and after informed consent (see the AACC Code of Ethics for faith-based counselors)."
+  ],
+  "sud": false,
+  "requiredFeatures": [],
+  "strongMinAreas": 3,
+  "redFlagRules": [
+    {
+      "type": "mania",
+      "capAt": "moderate",
+      "message": "Manic or hypomanic signs are documented in this input: consider a bipolar-spectrum condition (ICD-10-CM F31.x or F34.0) rather than chronic unipolar depression, and refer for psychiatric evaluation."
+    },
+    {
+      "type": "psychosis",
+      "message": "Psychotic symptoms are documented in this input and are not part of this pattern. Consider a depressive episode with psychotic features or a primary psychotic disorder, and refer for an urgent psychiatric evaluation."
+    }
+  ],
+  "licensedDsm": false,
+  "wileyLicensed": false,
+  "sources": [
+    {
+      "title": "Depression (health topic)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/topics/depression"
+    },
+    {
+      "title": "Persistent Depressive Disorder (Dysthymic Disorder) (statistics)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/statistics/persistent-depressive-disorder-dysthymic-disorder"
+    },
+    {
+      "title": "Depression in adults: treatment and management (NG222)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng222",
+      "year": 2022
+    },
+    {
+      "title": "Psychotherapy for chronic major depression and dysthymia: a meta-analysis (Cuijpers et al.)",
+      "publisher": "Clinical Psychology Review (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/19781837/",
+      "year": 2010
+    },
+    {
+      "title": "Efficacy and acceptability of acute treatments for persistent depressive disorder: a network meta-analysis (Kriston et al.)",
+      "publisher": "Depression and Anxiety (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/24448972/",
+      "year": 2014
+    },
+    {
+      "title": "ICD-11 for Mortality and Morbidity Statistics (browser)",
+      "publisher": "World Health Organization",
+      "url": "https://icd.who.int/browse/latest-release/mms/en"
+    },
+    {
+      "title": "ICD-10-CM (official code set)",
+      "publisher": "CDC National Center for Health Statistics",
+      "url": "https://www.cdc.gov/nchs/icd/icd-10-cm/index.html"
+    },
+    {
+      "title": "ICD-10-CM codes checked with the NLM Clinical Table Search Service",
+      "publisher": "National Library of Medicine",
+      "url": "https://clinicaltables.nlm.nih.gov/apidoc/icd10cm/v3/doc.html"
+    },
+    {
+      "title": "On dimensionality, measurement invariance, and suitability of sum scores for the PHQ-9 and the GAD-7",
+      "publisher": "PubMed (National Library of Medicine)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33269612/"
+    },
+    {
+      "title": "The Columbia Lighthouse Project (C-SSRS)",
+      "publisher": "Columbia University",
+      "url": "https://cssrs.columbia.edu"
+    },
+    {
+      "title": "Psychological Treatments (treatment index)",
+      "publisher": "APA Division 12, Society of Clinical Psychology",
+      "url": "https://div12.org/psychological-treatments/treatments/"
+    },
+    {
+      "title": "AACC Code of Ethics",
+      "publisher": "American Association of Christian Counselors",
+      "url": "https://aacc.net/aacc-code-of-ethics/"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

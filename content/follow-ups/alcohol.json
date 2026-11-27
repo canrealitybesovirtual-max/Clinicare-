@@ -1,0 +1,186 @@
+{
+  "id": "alcohol",
+  "title": "Alcohol: pattern, withdrawal and timing",
+  "domain": "alcohol",
+  "about": "Substance-use questions (42 CFR Part 2): answers stay in this session's memory only and are never sent or stored. They cover the drinking pattern, withdrawal (a medical safety issue) and whether mood, anxiety or sleep problems predate or outlast heavy drinking.",
+  "questions": [
+    {
+      "id": "alcohol-pattern",
+      "kind": "discriminate",
+      "domain": "alcohol",
+      "sud": true,
+      "text": "Ask about drinking: how often, how much on a typical day, and how often there are heavy-drinking days.",
+      "why": "A quick pattern check shows whether alcohol could explain or worsen sleep, mood or anxiety, and whether a fuller assessment is needed. Ask without judgment; many people underestimate their intake.",
+      "options": [
+        {
+          "id": "heavy",
+          "label": "Drinks more than intended, or has frequent heavy-drinking days",
+          "effects": {
+            "setSubstancePossible": "yes",
+            "addSymptomIds": [
+              "heavy-drinking-pattern"
+            ]
+          },
+          "surfaces": [
+            "part2-notice"
+          ]
+        },
+        {
+          "id": "low-risk",
+          "label": "Drinks within low-risk limits",
+          "effects": {}
+        },
+        {
+          "id": "none",
+          "label": "Does not drink",
+          "effects": {}
+        },
+        {
+          "id": "not-yet",
+          "label": "Not asked yet",
+          "keepOpen": true
+        }
+      ],
+      "showWhen": {
+        "symptomIds": [
+          "alcohol-benzo-withdrawal"
+        ],
+        "conditionIds": [
+          "alcohol-use-disorder"
+        ],
+        "answered": [
+          {
+            "questionId": "ruleout-substances",
+            "answerIds": [
+              "alcohol"
+            ]
+          }
+        ]
+      },
+      "discriminates": [
+        "alcohol-use-disorder",
+        "major-depressive-disorder",
+        "generalized-anxiety-disorder",
+        "insomnia-disorder"
+      ],
+      "priority": 10
+    },
+    {
+      "id": "alcohol-withdrawal",
+      "kind": "safety",
+      "domain": "alcohol",
+      "sud": true,
+      "text": "When the client cuts down or stops drinking, do they get shaky, sweaty, sick, very anxious or confused, or have they ever had a seizure or seen things that were not there?",
+      "why": "Alcohol withdrawal can be medically dangerous (seizures, delirium). If these signs are present, arrange an urgent medical assessment before any change in drinking, and do not advise stopping suddenly without medical support.",
+      "options": [
+        {
+          "id": "yes",
+          "label": "Yes: withdrawal signs",
+          "effects": {
+            "addSymptomIds": [
+              "alcohol-benzo-withdrawal"
+            ]
+          },
+          "surfaces": [
+            "urgent-medical",
+            "part2-notice"
+          ]
+        },
+        {
+          "id": "no",
+          "label": "No",
+          "effects": {}
+        },
+        {
+          "id": "not-yet",
+          "label": "Not asked yet",
+          "keepOpen": true
+        }
+      ],
+      "showWhen": {
+        "answered": [
+          {
+            "questionId": "alcohol-pattern",
+            "answerIds": [
+              "heavy"
+            ]
+          }
+        ],
+        "conditionIds": [
+          "alcohol-use-disorder"
+        ]
+      },
+      "targets": [
+        "alcohol-benzo-withdrawal"
+      ],
+      "priority": 5
+    },
+    {
+      "id": "alcohol-timing",
+      "kind": "discriminate",
+      "domain": "alcohol",
+      "sud": true,
+      "text": "Did the mood, anxiety or sleep problems start before the heavy drinking, or do they continue through long alcohol-free stretches (about a month or more)?",
+      "why": "Symptoms that start only with heavy drinking or withdrawal often ease within weeks of stopping; symptoms that came first or persist without alcohol suggest an independent problem that needs its own care.",
+      "options": [
+        {
+          "id": "independent",
+          "label": "Started before, or continue when not drinking",
+          "effects": {
+            "setSubstancePossible": "no"
+          }
+        },
+        {
+          "id": "alcohol-related",
+          "label": "Only during heavy drinking or soon after stopping",
+          "effects": {
+            "setSubstancePossible": "yes"
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "Not sure yet",
+          "keepOpen": true
+        }
+      ],
+      "showWhen": {
+        "answered": [
+          {
+            "questionId": "alcohol-pattern",
+            "answerIds": [
+              "heavy"
+            ]
+          }
+        ]
+      },
+      "discriminates": [
+        "alcohol-use-disorder",
+        "major-depressive-disorder",
+        "generalized-anxiety-disorder",
+        "insomnia-disorder"
+      ],
+      "priority": 20
+    }
+  ],
+  "sources": [
+    {
+      "title": "Alcohol-use disorders: diagnosis, assessment and management of harmful drinking (high-risk drinking) and alcohol dependence (CG115)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg115",
+      "year": 2011
+    },
+    {
+      "title": "Healthcare Professional's Core Resource on Alcohol",
+      "publisher": "National Institute on Alcohol Abuse and Alcoholism",
+      "url": "https://niaaa.nih.gov/health-professionals-communities/core-resource-on-alcohol"
+    },
+    {
+      "title": "Confidentiality of substance use treatment records (42 CFR Part 2)",
+      "publisher": "U.S. Department of Health and Human Services",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/hipaa-part-2/index.html"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

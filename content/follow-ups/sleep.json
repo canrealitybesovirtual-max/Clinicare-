@@ -1,0 +1,248 @@
+{
+  "id": "sleep",
+  "title": "Sleep: insomnia in its own right or as part of something else",
+  "domain": "sleep",
+  "about": "Questions that tell apart insomnia as a problem in its own right from poor sleep driven by mood, worry, nightmares, substances, a medical problem or the schedule, and that check for sleep apnea and for a reduced need for sleep (mood elevation).",
+  "questions": [
+    {
+      "id": "sleep-main-driver",
+      "kind": "discriminate",
+      "domain": "sleep",
+      "select": "many",
+      "text": "Is poor sleep a problem in its own right, or mostly the result of something else, such as low mood, worry, nightmares, pain, a medical problem, alcohol, caffeine or shift work?",
+      "why": "Insomnia that persists in its own right responds well to CBT for insomnia, even alongside other problems. Sleep driven by nightmares, substances, a medical problem or the work schedule calls for those to be addressed directly.",
+      "options": [
+        {
+          "id": "own-right",
+          "label": "A problem in its own right",
+          "effects": {
+            "addSymptomIds": [
+              "insomnia"
+            ]
+          }
+        },
+        {
+          "id": "mood-or-worry",
+          "label": "Mostly low mood or worry",
+          "effects": {},
+          "note": "Treat the mood or worry pattern; CBT for insomnia can still help if poor sleep persists."
+        },
+        {
+          "id": "nightmares",
+          "label": "Mostly nightmares",
+          "effects": {
+            "addSymptomIds": [
+              "nightmares"
+            ]
+          }
+        },
+        {
+          "id": "substances",
+          "label": "Mostly alcohol, caffeine or other substances",
+          "effects": {
+            "setSubstancePossible": "yes"
+          }
+        },
+        {
+          "id": "medical",
+          "label": "Mostly pain, breathing problems or another medical issue",
+          "effects": {
+            "setMedicalPossible": "yes"
+          },
+          "surfaces": [
+            "medical-referral"
+          ]
+        },
+        {
+          "id": "schedule",
+          "label": "Shift work or an irregular schedule",
+          "effects": {},
+          "note": "Consider a circadian rhythm problem; schedule-focused sleep advice comes first."
+        },
+        {
+          "id": "unsure",
+          "label": "Not sure yet",
+          "exclusive": true,
+          "keepOpen": true
+        }
+      ],
+      "showWhen": {
+        "symptomIds": [
+          "insomnia",
+          "hypersomnia"
+        ],
+        "conditionIds": [
+          "insomnia-disorder"
+        ]
+      },
+      "discriminates": [
+        "insomnia-disorder",
+        "major-depressive-disorder",
+        "generalized-anxiety-disorder",
+        "ptsd"
+      ],
+      "priority": 10
+    },
+    {
+      "id": "sleep-how-long",
+      "kind": "gate",
+      "domain": "sleep",
+      "gate": "duration",
+      "group": "duration",
+      "text": "How many nights a week is sleep poor, and for how long has this been going on?",
+      "why": "Poor sleep on most nights for months is a different problem from a rough patch of a few weeks, which often settles once the trigger passes. It also sets the duration used for the other patterns.",
+      "options": [
+        {
+          "id": "gte6m",
+          "label": "Most nights, for 6 months or more",
+          "effects": {
+            "setDuration": "gte6m",
+            "addSymptomIds": [
+              "insomnia-chronicity"
+            ]
+          }
+        },
+        {
+          "id": "1to6m",
+          "label": "Most nights, for 1 to 6 months",
+          "effects": {
+            "setDuration": "1to6m",
+            "addSymptomIds": [
+              "insomnia-chronicity"
+            ]
+          }
+        },
+        {
+          "id": "lt1m",
+          "label": "Most nights, for under a month",
+          "effects": {
+            "setDuration": "2to4w"
+          }
+        },
+        {
+          "id": "occasional",
+          "label": "Only now and then",
+          "effects": {},
+          "note": "Occasional poor sleep is common; sleep habits advice may be enough."
+        },
+        {
+          "id": "unsure",
+          "label": "Not sure yet",
+          "keepOpen": true
+        }
+      ],
+      "showWhen": {
+        "symptomIds": [
+          "insomnia"
+        ]
+      },
+      "priority": 12
+    },
+    {
+      "id": "sleep-apnea-check",
+      "kind": "gate",
+      "domain": "sleep",
+      "gate": "medical",
+      "group": "medical-check",
+      "text": "Does the client snore loudly, stop breathing or gasp in sleep (as a bed partner may notice), or feel very sleepy in the daytime despite enough time in bed?",
+      "why": "Sleep apnea often sits behind tiredness, poor sleep and low mood, and it changes the plan: it needs a medical or sleep medicine assessment.",
+      "options": [
+        {
+          "id": "yes",
+          "label": "Yes",
+          "effects": {
+            "setMedicalPossible": "yes"
+          },
+          "surfaces": [
+            "medical-referral"
+          ],
+          "note": "Suggest a primary care or sleep medicine assessment for possible sleep apnea."
+        },
+        {
+          "id": "no",
+          "label": "No",
+          "effects": {}
+        },
+        {
+          "id": "unsure",
+          "label": "Not sure yet",
+          "keepOpen": true
+        }
+      ],
+      "showWhen": {
+        "symptomIds": [
+          "insomnia",
+          "hypersomnia",
+          "fatigue"
+        ]
+      },
+      "priority": 30
+    },
+    {
+      "id": "sleep-energy",
+      "kind": "discriminate",
+      "domain": "sleep",
+      "text": "On nights with little sleep, is the client tired the next day, or unusually full of energy despite sleeping little?",
+      "why": "Feeling charged rather than tired after little sleep can signal mood elevation, which changes the picture and the plan; tiredness after poor sleep fits insomnia.",
+      "options": [
+        {
+          "id": "tired",
+          "label": "Tired and wanting more sleep",
+          "effects": {
+            "addSymptomIds": [
+              "insomnia"
+            ]
+          }
+        },
+        {
+          "id": "energized",
+          "label": "Unusually full of energy",
+          "effects": {
+            "addSymptomIds": [
+              "decreased-need-for-sleep"
+            ]
+          },
+          "surfaces": [
+            "psychiatric-referral"
+          ],
+          "note": "Ask about other signs of mood elevation and consider a psychiatric evaluation."
+        },
+        {
+          "id": "unsure",
+          "label": "Not sure yet",
+          "keepOpen": true
+        }
+      ],
+      "showWhen": {
+        "symptomIds": [
+          "insomnia"
+        ]
+      },
+      "targets": [
+        "decreased-need-for-sleep"
+      ],
+      "discriminates": [
+        "insomnia-disorder",
+        "major-depressive-disorder"
+      ],
+      "priority": 20
+    }
+  ],
+  "sources": [
+    {
+      "title": "Behavioral and psychological treatments for chronic insomnia disorder in adults: an American Academy of Sleep Medicine clinical practice guideline (Edinger et al.)",
+      "publisher": "Journal of Clinical Sleep Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33164742/",
+      "year": 2021
+    },
+    {
+      "title": "Management of Chronic Insomnia Disorder in Adults: A Clinical Practice Guideline From the American College of Physicians (Qaseem et al.)",
+      "publisher": "Annals of Internal Medicine (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27136449/",
+      "year": 2016
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

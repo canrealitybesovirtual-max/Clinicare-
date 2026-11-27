@@ -6,7 +6,11 @@
     "generalized-anxiety-disorder",
     "panic-disorder",
     "major-depressive-disorder",
-    "ptsd"
+    "ptsd",
+    "persistent-depressive-disorder",
+    "adjustment-disorder",
+    "prolonged-grief-disorder",
+    "specific-phobia"
   ],
   "evidenceLevel": "Emerging evidence as a stand-alone brief practice. It is adapted from the idea of the short breathing-space practice in mindfulness-based cognitive therapy (Segal, Williams & Teasdale). The full 8-session MBCT program has strong evidence for preventing depressive relapse (individual patient data meta-analysis: hazard ratio 0.69 vs non-MBCT controls; Kuyken et al., 2016), and NICE NG222 (2022) lists group mindfulness programmes such as MBCT among options for less severe depression and names MBCT among relapse-prevention options (NICE QS8). The benefit of the brief check-in on its own has not been established. NCCIH: mindfulness research is mixed and often preliminary; generally low risk.",
   "minutes": { "min": 3, "max": 10 },

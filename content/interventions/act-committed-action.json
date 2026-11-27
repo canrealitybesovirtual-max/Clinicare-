@@ -7,7 +7,12 @@
     "generalized-anxiety-disorder",
     "agoraphobia",
     "alcohol-use-disorder",
-    "social-anxiety-disorder"
+    "social-anxiety-disorder",
+    "obsessive-compulsive-disorder",
+    "insomnia-disorder",
+    "persistent-depressive-disorder",
+    "adjustment-disorder",
+    "prolonged-grief-disorder"
   ],
   "evidenceLevel": "Moderate evidence for ACT as a package (A-Tjak et al., 2015; Gloster et al., 2020); committed action has not been tested much as a stand-alone component (emerging evidence). In practice it overlaps with behavioral activation and graded exposure, which have stronger support: NICE NG222 (2022) lists individual and group behavioral activation among first-line options for less severe depression. The 2022 VA/DoD MDD guideline includes ACT among its psychotherapy options for uncomplicated MDD (the strength of that recommendation could not be re-verified; confirm in the CPG). APA Division 12 rating not verified this session; check div12.org.",
   "minutes": { "min": 15, "max": 30 },

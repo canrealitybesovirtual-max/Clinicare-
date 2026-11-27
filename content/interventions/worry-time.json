@@ -2,7 +2,7 @@
   "id": "worry-time",
   "name": "Worry time (stimulus control for worry)",
   "modality": "CBT - stimulus control",
-  "conditions": ["generalized-anxiety-disorder"],
+  "conditions": ["generalized-anxiety-disorder", "insomnia-disorder", "adjustment-disorder"],
   "evidenceLevel": "Limited but supportive; best used within a CBT package. Early trials (Borkovec et al., 1983) found that limiting worry to a set time and place reduced worry. A 2013 randomized trial (McGowan & Behar) found that two weeks of a daily 30-minute worry period reduced worry, anxiety and insomnia in people with high levels of worry. NICE CG113 recommends CBT for GAD; worry postponement is a common element of CBT, not a stand-alone guideline recommendation.",
   "minutes": { "min": 15, "max": 25 },
   "purpose": "Helps the client gain a sense of control over worry by postponing daytime worries to a short, scheduled 'worry time' in a set place. During worry time the client sorts worries into ones they can act on and ones they cannot, which leads either to problem-solving or to letting go. Over time many worries lose their urgency before worry time arrives.",

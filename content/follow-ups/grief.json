@@ -1,0 +1,252 @@
+{
+  "id": "grief",
+  "title": "Grief, loss and life stressors",
+  "domain": "grief",
+  "about": "Questions that keep expected grief from being read as a disorder: whether someone close died, how long ago, whether the pain centers on the person who died or spreads across all of life, and whether symptoms followed a clear life stressor.",
+  "questions": [
+    {
+      "id": "grief-loss",
+      "kind": "discriminate",
+      "domain": "grief",
+      "text": "Has someone close to the client died?",
+      "why": "Grief can look like depression. Knowing about a death, when it happened, and the client's cultural and faith practices around mourning helps avoid treating expected grief as a disorder.",
+      "options": [
+        {
+          "id": "yes",
+          "label": "Yes",
+          "effects": {
+            "addSymptomIds": [
+              "bereavement"
+            ]
+          }
+        },
+        {
+          "id": "no",
+          "label": "No",
+          "effects": {}
+        },
+        {
+          "id": "unsure",
+          "label": "Not asked yet",
+          "keepOpen": true
+        }
+      ],
+      "showWhen": {
+        "symptomIds": [
+          "depressed-mood",
+          "anhedonia",
+          "emotional-numbing-detachment",
+          "social-withdrawal"
+        ],
+        "conditionIds": [
+          "major-depressive-disorder",
+          "prolonged-grief-disorder",
+          "persistent-depressive-disorder"
+        ]
+      },
+      "discriminates": [
+        "major-depressive-disorder",
+        "prolonged-grief-disorder"
+      ],
+      "priority": 30
+    },
+    {
+      "id": "grief-time-since",
+      "kind": "discriminate",
+      "domain": "grief",
+      "group": "duration",
+      "text": "How long ago did the death happen?",
+      "why": "Intense grief in the first months is expected and shaped by culture and faith. A prolonged grief pattern is considered only when grief stays intense and impairing well beyond that (about 6 months in ICD-11; about 12 months for adults in DSM-5-TR, see DSM-5-TR) and beyond what the client's community would expect.",
+      "options": [
+        {
+          "id": "lt2w",
+          "label": "Under 2 weeks",
+          "effects": {
+            "setDuration": "lt2w"
+          }
+        },
+        {
+          "id": "2to4w",
+          "label": "2 to 4 weeks",
+          "effects": {
+            "setDuration": "2to4w"
+          }
+        },
+        {
+          "id": "1to6m",
+          "label": "1 to 6 months",
+          "effects": {
+            "setDuration": "1to6m"
+          }
+        },
+        {
+          "id": "6to12m",
+          "label": "6 to 12 months",
+          "effects": {
+            "setDuration": "gte6m"
+          }
+        },
+        {
+          "id": "gt12m",
+          "label": "More than 12 months",
+          "effects": {
+            "setDuration": "gte6m"
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "Not sure yet",
+          "keepOpen": true
+        }
+      ],
+      "showWhen": {
+        "answered": [
+          {
+            "questionId": "grief-loss",
+            "answerIds": [
+              "yes"
+            ]
+          }
+        ],
+        "conditionIds": [
+          "prolonged-grief-disorder"
+        ]
+      },
+      "discriminates": [
+        "prolonged-grief-disorder",
+        "major-depressive-disorder"
+      ],
+      "priority": 10
+    },
+    {
+      "id": "grief-focus",
+      "kind": "discriminate",
+      "domain": "grief",
+      "text": "Is the pain mostly longing for, or preoccupation with, the person who died, or a broader loss of pleasure and self-worth across life?",
+      "why": "Grief centers on the person who died and the relationship, and self-worth is usually intact; a depressive picture spreads to everything, with loss of pleasure and harsh self-criticism. Both can be present, and each points to a different focus of care.",
+      "options": [
+        {
+          "id": "longing",
+          "label": "Mostly longing for or preoccupation with the person",
+          "effects": {
+            "addSymptomIds": [
+              "grief-yearning"
+            ]
+          }
+        },
+        {
+          "id": "broad",
+          "label": "A broader loss of pleasure and self-worth",
+          "effects": {
+            "addSymptomIds": [
+              "anhedonia",
+              "worthlessness-guilt"
+            ]
+          }
+        },
+        {
+          "id": "both",
+          "label": "Both",
+          "effects": {
+            "addSymptomIds": [
+              "anhedonia",
+              "worthlessness-guilt",
+              "grief-yearning"
+            ]
+          }
+        },
+        {
+          "id": "unsure",
+          "label": "Not sure yet",
+          "keepOpen": true
+        }
+      ],
+      "showWhen": {
+        "answered": [
+          {
+            "questionId": "grief-loss",
+            "answerIds": [
+              "yes"
+            ]
+          }
+        ],
+        "conditionIds": [
+          "prolonged-grief-disorder"
+        ]
+      },
+      "discriminates": [
+        "prolonged-grief-disorder",
+        "major-depressive-disorder"
+      ],
+      "priority": 15
+    },
+    {
+      "id": "adjustment-stressor",
+      "kind": "discriminate",
+      "domain": "grief",
+      "text": "Did the symptoms start within a few months of a clear life stressor, such as a breakup, job loss, a move, an illness or money trouble?",
+      "why": "Distress that follows a clear stressor and centers on it can be an adjustment reaction, especially when it does not fill out another pattern; it usually eases as the person adapts or the stressor ends. Problem-solving and support often fit well.",
+      "options": [
+        {
+          "id": "yes",
+          "label": "Yes: after a clear stressor",
+          "effects": {
+            "addSymptomIds": [
+              "identifiable-stressor"
+            ]
+          }
+        },
+        {
+          "id": "no",
+          "label": "No clear stressor",
+          "effects": {}
+        },
+        {
+          "id": "unsure",
+          "label": "Not sure yet",
+          "keepOpen": true
+        }
+      ],
+      "showWhen": {
+        "symptomIds": [
+          "depressed-mood",
+          "worry-excessive",
+          "subjective-anxiety-stress",
+          "irritability"
+        ],
+        "conditionIds": [
+          "adjustment-disorder"
+        ]
+      },
+      "discriminates": [
+        "adjustment-disorder",
+        "major-depressive-disorder",
+        "generalized-anxiety-disorder"
+      ],
+      "priority": 60
+    }
+  ],
+  "sources": [
+    {
+      "title": "Clinical descriptions and diagnostic requirements for ICD-11 mental, behavioural and neurodevelopmental disorders (CDDR)",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/publications/i/item/9789240077263",
+      "year": 2024
+    },
+    {
+      "title": "Treatment of complicated grief: a randomized controlled trial (Shear et al.)",
+      "publisher": "JAMA",
+      "url": "https://doi.org/10.1001/jama.293.21.2601",
+      "year": 2005
+    },
+    {
+      "title": "A systematic review of psychological and pharmacological treatments for adjustment disorder in adults",
+      "publisher": "Journal of Traumatic Stress (DOI)",
+      "url": "https://doi.org/10.1002/jts.22295",
+      "year": 2018
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

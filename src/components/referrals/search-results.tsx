@@ -191,7 +191,7 @@ export function FinderFallback({ finder, className }: { finder: FinderLink; clas
 
 export function EndorsementNote() {
   return (
-    <Notice tone="neutral" title="Listing is not an endorsement. Call to confirm.">
+    <Notice tone="neutral" title="Listing is not an endorsement — call to confirm.">
       <p>
         Confirm services, availability, fees, insurance and licensure directly before referring. Listings come from
         public registries and can be out of date.

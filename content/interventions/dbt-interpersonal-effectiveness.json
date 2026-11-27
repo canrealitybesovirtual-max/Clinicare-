@@ -4,7 +4,9 @@
   "modality": "Dialectical Behavior Therapy (DBT) skills",
   "conditions": [
     "major-depressive-disorder",
-    "ptsd"
+    "ptsd",
+    "social-anxiety-disorder",
+    "persistent-depressive-disorder"
   ],
   "evidenceLevel": "Emerging evidence for the interpersonal effectiveness module on its own. It is one of the four skills modules in comprehensive DBT, which has strong evidence for BPD and recurrent self-harm (Cochrane, Storebo et al., 2020); skills-inclusive DBT versions performed comparably to standard DBT on suicide-related outcomes in a component trial (Linehan et al., 2015), and stand-alone DBT skills training has preliminary support across problems (Valentine et al., 2015). Module-specific outcome trials are few.",
   "minutes": { "min": 25, "max": 50 },

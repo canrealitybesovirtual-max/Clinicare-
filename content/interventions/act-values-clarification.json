@@ -7,7 +7,12 @@
     "generalized-anxiety-disorder",
     "ptsd",
     "alcohol-use-disorder",
-    "social-anxiety-disorder"
+    "social-anxiety-disorder",
+    "obsessive-compulsive-disorder",
+    "persistent-depressive-disorder",
+    "adjustment-disorder",
+    "prolonged-grief-disorder",
+    "specific-phobia"
   ],
   "evidenceLevel": "Moderate evidence for ACT as a package; emerging evidence for values work as a stand-alone component. In a meta-analysis of 66 laboratory component studies, values components (alone and combined with mindfulness) outperformed inactive comparisons on targeted outcomes (Levin et al., 2012). Full ACT outperforms waitlist and usual care and is broadly comparable to CBT across anxiety, depression and substance use (A-Tjak et al., 2015; Gloster et al., 2020). The 2022 VA/DoD MDD guideline includes ACT among its psychotherapy options for uncomplicated MDD (the strength of that recommendation could not be re-verified; confirm in the CPG). An initial meta-analysis of 10 RCTs found a small-to-medium effect favoring ACT over active comparisons for substance use (Lee et al., 2015). APA Division 12 rating not verified this session; check div12.org.",
   "minutes": { "min": 20, "max": 45 },

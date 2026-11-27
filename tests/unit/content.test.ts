@@ -22,14 +22,33 @@ import {
   measures,
   stats,
 } from "@/lib/content";
+import { allConditions, getPlanLibrary, interventions, interventionsFor, planLibraries } from "@/lib/library";
 import { CASE_RESTRICTED_ABBREVIATIONS, matchSymptoms, normalizeText } from "@/lib/matcher";
 import { RedFlagType } from "@/lib/schemas";
 import { scoreConditions } from "@/lib/scoring";
 import type { ScoringInput } from "@/lib/types";
+import { MIN_INTERVENTIONS_PER_CONDITION, PART2_NOTICE, crossContentProblems } from "../../scripts/validate-content";
 
 const ROOT = path.resolve(__dirname, "../..");
 const CONTENT_DIR = path.join(ROOT, "content");
-const TODAY = "2026-11-26";
+const TODAY = "2026-11-27";
+
+/** The 13 adult conditions in the knowledge base (5 from Phase 1 plus the 8 added in the expansion). */
+const CONDITION_IDS = [
+  "adjustment-disorder",
+  "agoraphobia",
+  "alcohol-use-disorder",
+  "generalized-anxiety-disorder",
+  "insomnia-disorder",
+  "major-depressive-disorder",
+  "obsessive-compulsive-disorder",
+  "panic-disorder",
+  "persistent-depressive-disorder",
+  "prolonged-grief-disorder",
+  "ptsd",
+  "social-anxiety-disorder",
+  "specific-phobia",
+];
 const ISO = /^\d{4}-\d{2}-\d{2}$/;
 
 const neutral = (symptomIds: string[]): ScoringInput => ({
@@ -51,9 +70,7 @@ function jsonFiles(dir: string): string[] {
 describe("content loads and cross-references", () => {
   it("parses every content file through content.ts", () => {
     expect(lexicon.symptoms.length).toBeGreaterThanOrEqual(10);
-    expect(conditions.map((c) => c.id).sort()).toEqual(
-      ["agoraphobia", "generalized-anxiety-disorder", "major-depressive-disorder", "panic-disorder", "ptsd"].sort(),
-    );
+    expect(conditions.map((c) => c.id).sort()).toEqual(CONDITION_IDS);
     expect(measures.length).toBeGreaterThan(0);
     expect(handouts.map((h) => h.id)).toContain("pmr-homework");
     expect(stats.length).toBeGreaterThan(0);
@@ -62,6 +79,20 @@ describe("content loads and cross-references", () => {
 
   it("has no cross-reference problems (contentProblems() is empty)", () => {
     expect(contentProblems()).toEqual([]);
+  });
+
+  it("loads every condition file from the generated index, the same set library.ts sees", () => {
+    const files = readdirSync(path.join(CONTENT_DIR, "conditions"))
+      .filter((f) => f.endsWith(".json"))
+      .map((f) => f.replace(/\.json$/, ""))
+      .sort();
+    expect(files).toEqual(CONDITION_IDS);
+    expect(conditions.map((c) => c.id)).toEqual(files);
+    expect(allConditions.map((c) => c.id)).toEqual(conditions.map((c) => c.id));
+  });
+
+  it("has no library cross-reference problems either (validate-content covers ALL content, G10)", () => {
+    expect(crossContentProblems()).toEqual([]);
   });
 
   it("resolves every id a condition points to", () => {
@@ -160,6 +191,127 @@ describe("conditions", () => {
       const r = scoreConditions(neutral(c.features.map((f) => f.symptomId)), [c], lexicon.symptoms);
       expect(r.suggestions[0]?.strength, c.id).toBe("strong");
     }
+  });
+});
+
+describe("expansion conditions (codes, measures, Part 2, cultural notes, interventions)", () => {
+  const cond = (id: string) => {
+    const c = getCondition(id);
+    if (!c) throw new Error(`missing condition ${id}`);
+    return c;
+  };
+  const codes = (id: string) => cond(id).icd10cm.map((x) => x.code);
+  const icd11 = (id: string) => cond(id).icd11.map((x) => x.code);
+
+  // ICD-10-CM codes and titles were checked against the NLM Clinical Table Search Service on 2026-11-27.
+  it.each([
+    ["social-anxiety-disorder", ["F40.10", "F40.11"], ["6B04"]],
+    ["obsessive-compulsive-disorder", ["F42.2", "F42.8", "F42.9"], ["6B20", "6B20.0", "6B20.1"]],
+    ["alcohol-use-disorder", ["F10.10", "F10.11", "F10.20", "F10.21"], ["6C40.1", "6C40.2"]],
+    ["insomnia-disorder", ["F51.01", "G47.00"], ["7A00", "7A01"]],
+    ["persistent-depressive-disorder", ["F34.1"], ["6A72"]],
+    ["adjustment-disorder", ["F43.20", "F43.21", "F43.22", "F43.23", "F43.24", "F43.25"], ["6B43"]],
+    ["prolonged-grief-disorder", ["F43.81"], ["6B42"]],
+  ] as [string, string[], string[]][])("%s carries the expected ICD-10-CM and ICD-11 codes", (id, ten, eleven) => {
+    expect(codes(id)).toEqual(ten);
+    expect(icd11(id)).toEqual(eleven);
+  });
+
+  it("specific phobia uses the F40.2xx family and ICD-11 6B03", () => {
+    expect(codes("specific-phobia").length).toBeGreaterThanOrEqual(10);
+    for (const c of codes("specific-phobia")) expect(c).toMatch(/^F40\.2\d{2}$/);
+    expect(icd11("specific-phobia")).toEqual(["6B03"]);
+  });
+
+  it("explains the F51.01 / G47.00 choice for insomnia disorder", () => {
+    const note = cond("insomnia-disorder").specifiers.find((s) => /F51\.01/.test(s.label));
+    expect(note?.note).toMatch(/DSM-5-TR lists F51\.01/);
+    expect(note?.note).toMatch(/G47\.00/);
+  });
+
+  it("builds in only GAD-7 and PHQ-9; SPIN, Y-BOCS, AUDIT and ISI stay link-out 'license pending' (G7)", () => {
+    for (const id of CONDITION_IDS) for (const m of cond(id).measures) expect(["gad-7", "phq-9"], `${id} -> ${m}`).toContain(m);
+    const pending = (id: string) => cond(id).measuresPending.map((m) => m.licenseKey);
+    expect(pending("social-anxiety-disorder")).toContain("SPIN");
+    expect(pending("obsessive-compulsive-disorder")).toContain("Y-BOCS");
+    expect(pending("alcohol-use-disorder")).toContain("AUDIT");
+    expect(pending("insomnia-disorder")).toContain("ISI");
+    for (const id of CONDITION_IDS)
+      for (const m of cond(id).measuresPending) {
+        expect(licenses.items[m.licenseKey]?.status, `${id} -> ${m.licenseKey}`).not.toBe("confirmed");
+        expect(m.note).toMatch(/License pending/);
+      }
+  });
+
+  it("marks alcohol use disorder (only) as substance-use content with the exact Part 2 notice (G6)", () => {
+    expect(conditions.filter((c) => c.sud).map((c) => c.id)).toEqual(["alcohol-use-disorder"]);
+    expect(PART2_NOTICE).toBe("42 CFR Part 2 prohibits unauthorized use or disclosure of these records.");
+    expect(cond("alcohol-use-disorder").summary).toContain(PART2_NOTICE);
+    expect(getPlanLibrary("alcohol-use-disorder")?.sud).toBe(true);
+    for (const c of conditions) expect(getPlanLibrary(c.id)?.sud ?? false, c.id).toBe(c.sud);
+    expect(cond("alcohol-use-disorder").redFlagRules.map((r) => r.type)).toContain("withdrawal");
+  });
+
+  it("keeps the 'See DSM-5-TR' pointer and never stores DSM text (G1)", () => {
+    for (const id of CONDITION_IDS) {
+      expect(cond(id).dsmPointer).toMatch(/^See DSM-5-TR: /);
+      expect(cond(id).license).toBe("original");
+    }
+  });
+
+  it.each([
+    ["social-anxiety-disorder", /taijin kyofusho/i],
+    ["obsessive-compulsive-disorder", /scrupulosity/i],
+    ["obsessive-compulsive-disorder", /faith/i],
+    ["prolonged-grief-disorder", /mourning customs/i],
+    ["alcohol-use-disorder", /drinking norms/i],
+  ] as [string, RegExp][])("%s has a culturally specific note matching %s", (id, re) => {
+    expect(cond(id).culturalNotes.some((n) => re.test(n))).toBe(true);
+  });
+
+  it("recognizes taijin kyofusho as a cultural idiom (shown, never scored)", () => {
+    const ids = matchSymptoms("Describes taijin kyofusho since moving abroad.", lexicon.symptoms).matches.map((m) => m.symptomId);
+    expect(ids).toContain("cultural-idiom-of-distress");
+  });
+
+  it.each([
+    ["obsessive-compulsive-disorder", "exposure-and-response-prevention"],
+    ["insomnia-disorder", "cbti-stimulus-control"],
+    ["insomnia-disorder", "cbti-sleep-restriction"],
+    ["alcohol-use-disorder", "motivational-interviewing"],
+    ["alcohol-use-disorder", "relapse-prevention-planning"],
+    ["alcohol-use-disorder", "urge-surfing"],
+    ["alcohol-use-disorder", "contingency-management"],
+    ["alcohol-use-disorder", "medication-referral"],
+    ["prolonged-grief-disorder", "grief-focused-therapy"],
+    ["specific-phobia", "graded-in-vivo-exposure"],
+    ["social-anxiety-disorder", "graded-in-vivo-exposure"],
+    ["social-anxiety-disorder", "social-anxiety-cognitive-techniques"],
+    ["persistent-depressive-disorder", "behavioral-activation"],
+    ["adjustment-disorder", "problem-solving"],
+  ])("the interventions library links %s to %s", (conditionId, interventionId) => {
+    expect(interventionsFor(conditionId).map((i) => i.id)).toContain(interventionId);
+  });
+
+  it(`gives every condition at least ${MIN_INTERVENTIONS_PER_CONDITION} library interventions and a plan library`, () => {
+    for (const id of CONDITION_IDS) {
+      expect(interventionsFor(id).length, id).toBeGreaterThanOrEqual(MIN_INTERVENTIONS_PER_CONDITION);
+      expect(getPlanLibrary(id), id).toBeDefined();
+    }
+    expect(planLibraries.map((p) => p.conditionId).sort()).toEqual(CONDITION_IDS);
+  });
+
+  it("only links interventions to real conditions, and every plan objective's interventions exist and list that condition", () => {
+    const known = new Set(CONDITION_IDS);
+    for (const i of interventions) for (const c of i.conditions) expect(known.has(c), `${i.id} -> ${c}`).toBe(true);
+    const byId = new Map(interventions.map((i) => [i.id, i] as const));
+    for (const pl of planLibraries)
+      for (const prob of pl.problems)
+        for (const o of prob.shortTermObjectives)
+          for (const iid of o.interventionIds) {
+            expect(byId.has(iid), `${pl.conditionId}/${o.id} -> ${iid}`).toBe(true);
+            expect(byId.get(iid)?.conditions, `${pl.conditionId}/${o.id} -> ${iid}`).toContain(pl.conditionId);
+          }
   });
 });
 

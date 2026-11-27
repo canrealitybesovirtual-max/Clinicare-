@@ -1,0 +1,331 @@
+{
+  "id": "insomnia-disorder",
+  "name": "Insomnia disorder",
+  "icd10cm": [
+    {
+      "code": "F51.01",
+      "label": "Primary insomnia"
+    },
+    {
+      "code": "G47.00",
+      "label": "Insomnia, unspecified"
+    }
+  ],
+  "icd11": [
+    {
+      "code": "7A00",
+      "label": "Chronic insomnia"
+    },
+    {
+      "code": "7A01",
+      "label": "Short-term insomnia"
+    }
+  ],
+  "dsmPointer": "See DSM-5-TR: Sleep-Wake Disorders — Insomnia Disorder",
+  "summary": "Trouble getting to sleep, staying asleep or waking far too early that keeps returning on most nights for months, even with enough time in bed, and that the client feels the next day. Over time the bed becomes a place of effort and worry: the client watches the clock, tries hard to sleep, naps or sleeps in to catch up, and dreads the night, which keeps the problem going after its first trigger has passed. It is common on its own and alongside depression, anxiety, pain, alcohol use and trauma; when another condition is present, insomnia that keeps its own momentum still deserves its own treatment. For clinician review only; this is not a diagnosis.",
+  "features": [
+    {
+      "symptomId": "sleep-related-arousal",
+      "kind": "core",
+      "weight": 4
+    },
+    {
+      "symptomId": "insomnia-chronicity",
+      "kind": "core",
+      "weight": 4
+    },
+    {
+      "symptomId": "poor-sleep-daytime-impact",
+      "kind": "core",
+      "weight": 3
+    },
+    {
+      "symptomId": "insomnia",
+      "kind": "associated",
+      "weight": 3,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "sleep-compensatory-behaviors",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "fatigue",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "concentration-difficulty",
+      "kind": "associated",
+      "weight": 1
+    },
+    {
+      "symptomId": "irritability",
+      "kind": "associated",
+      "weight": 1
+    }
+  ],
+  "minCore": 2,
+  "durationGate": {
+    "minWeeks": 12,
+    "note": "Ask how many nights a week sleep is poor and for how long. Chronic insomnia in ICD-11 (7A00) involves several nights a week for at least about three months; shorter spells fit short-term insomnia (7A01). Check the timing in DSM-5-TR."
+  },
+  "impairmentRequired": true,
+  "ruleOuts": [
+    {
+      "label": "Obstructive sleep apnea and other sleep disorders",
+      "type": "medical",
+      "note": "Loud snoring, gasping, witnessed pauses in breathing, restless legs, or a very late or early body clock point to a sleep evaluation. Strong daytime sleepiness (dozing off while driving) is a warning sign."
+    },
+    {
+      "label": "Pain, reflux, frequent urination, menopause, thyroid and other medical conditions",
+      "type": "medical",
+      "note": "Ask what wakes the client. Coordinate with the medical provider when a medical problem drives the awakenings."
+    },
+    {
+      "label": "Caffeine, nicotine, alcohol and other substances",
+      "type": "substance",
+      "note": "Late caffeine, nicotine and alcohol (which fragments sleep later in the night) are common causes. Withdrawal from alcohol or sedatives can cause severe insomnia; this app does not store substance-use information."
+    },
+    {
+      "label": "Medication effects",
+      "type": "substance",
+      "note": "Stimulants, steroids, some antidepressants, decongestants and beta-blockers can disturb sleep. Review the medication list with the prescriber."
+    },
+    {
+      "label": "Sleep loss better explained by another mental health condition",
+      "type": "psychiatric",
+      "note": "Depression, anxiety, PTSD and bipolar disorder all disturb sleep. Little sleep with high energy and no tiredness suggests decreased need for sleep, a possible manic sign, not insomnia."
+    },
+    {
+      "label": "Lack of opportunity to sleep",
+      "type": "psychiatric",
+      "note": "Shift work, night caregiving, noise or an unsafe sleeping place limit sleep without an insomnia pattern. Problem-solve the setting first."
+    }
+  ],
+  "specifiers": [
+    {
+      "label": "Coding note: F51.01 and G47.00",
+      "note": "DSM-5-TR lists F51.01 for insomnia disorder. G47.00 (Insomnia, unspecified) sits in the nervous-system chapter and is often used in medical settings. Use the code your setting and payer require."
+    },
+    {
+      "label": "With co-occurring mental health, medical or sleep disorder (descriptive)",
+      "note": "Note the co-occurring condition; insomnia often needs its own treatment even when another condition is present."
+    },
+    {
+      "label": "Episodic, persistent or recurrent (descriptive)",
+      "note": "Track the pattern over time with a sleep diary."
+    }
+  ],
+  "differentials": [
+    {
+      "label": "Short-term insomnia (ICD-11 7A01; no separate ICD-10-CM code)",
+      "distinguishing": "Sleep trouble lasting less than about three months, usually after a clear stressor."
+    },
+    {
+      "label": "Obstructive sleep apnea",
+      "icd10cm": "G47.33",
+      "distinguishing": "Snoring, breathing pauses and marked daytime sleepiness; needs a sleep study."
+    },
+    {
+      "label": "Circadian rhythm sleep disorder, unspecified type",
+      "icd10cm": "G47.20",
+      "distinguishing": "Sleep is normal once it starts but the body clock runs much later or earlier than the client's schedule."
+    },
+    {
+      "label": "Restless legs syndrome",
+      "icd10cm": "G25.81",
+      "distinguishing": "An urge to move the legs in the evening or at rest that delays sleep."
+    },
+    {
+      "label": "Insufficient sleep syndrome",
+      "icd10cm": "F51.12",
+      "distinguishing": "The client sleeps well when given the chance but does not allow enough time for sleep."
+    },
+    {
+      "label": "Major depressive disorder",
+      "distinguishing": "Sleep change is one part of a broader picture of low mood or loss of interest; both can be present."
+    },
+    {
+      "label": "Bipolar disorder, unspecified",
+      "icd10cm": "F31.9",
+      "distinguishing": "Short sleep with high energy and no tiredness during a mood episode."
+    }
+  ],
+  "comorbidities": [
+    {
+      "conditionId": "major-depressive-disorder",
+      "label": "Major depressive disorder",
+      "note": "Insomnia and depression often occur together, and insomnia that persists raises the risk of relapse. CBT for insomnia can be offered alongside depression treatment."
+    },
+    {
+      "conditionId": "generalized-anxiety-disorder",
+      "label": "Generalized anxiety disorder",
+      "note": "Bedtime worry links the two; CBT for insomnia and worry-focused work can run in parallel."
+    },
+    {
+      "conditionId": "ptsd",
+      "label": "Posttraumatic stress disorder",
+      "note": "Nightmares and hyperarousal disturb sleep; insomnia often persists after trauma treatment and may need its own plan."
+    },
+    {
+      "conditionId": "alcohol-use-disorder",
+      "label": "Alcohol use disorder",
+      "note": "Alcohol used as a nightcap worsens sleep later in the night, and insomnia in early sobriety is a common relapse trigger. 42 CFR Part 2 prohibits unauthorized use or disclosure of these records."
+    }
+  ],
+  "measures": [
+    "phq-9",
+    "gad-7"
+  ],
+  "measuresPending": [
+    {
+      "name": "Insomnia Severity Index (ISI)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21532953/",
+      "note": "License pending — link out only",
+      "licenseKey": "ISI"
+    }
+  ],
+  "interventions": [
+    {
+      "name": "Cognitive behavioral therapy for insomnia (CBT-I, multicomponent)",
+      "evidence": "The AASM guideline (Edinger et al., 2021) makes a strong recommendation for multicomponent CBT-I for chronic insomnia in adults, and the ACP guideline (2016) recommends CBT-I as the initial treatment. A 2012 systematic review (Mitchell et al.) found CBT-I at least as effective as sleep medication, with more lasting benefit.",
+      "note": "Combines sleep restriction, stimulus control, cognitive work on sleep beliefs and relaxation, tracked with a sleep diary. Usually 4 to 8 sessions; digital and group formats exist."
+    },
+    {
+      "name": "Stimulus control",
+      "evidence": "AASM 2021: conditional recommendation as a single-component therapy.",
+      "note": "Bed for sleep (and sex) only; get up when unable to sleep and return when sleepy; fixed wake time."
+    },
+    {
+      "name": "Sleep restriction (time-in-bed restriction)",
+      "evidence": "AASM 2021: conditional recommendation as a single-component therapy.",
+      "note": "Screen first for bipolar disorder, seizures, sleep apnea and jobs where drowsiness is dangerous (for example driving), and warn about short-term daytime sleepiness."
+    },
+    {
+      "name": "Relaxation training",
+      "evidence": "AASM 2021: conditional recommendation.",
+      "note": "Progressive muscle relaxation or slow breathing as part of a wind-down routine; the PMR home-practice handout can support practice."
+    },
+    {
+      "name": "Brief behavioral therapy for insomnia (BBTI)",
+      "evidence": "AASM 2021: conditional recommendation.",
+      "note": "A shorter behavioral package suited to primary care and older adults."
+    },
+    {
+      "name": "Sleep hygiene education (adjunct only)",
+      "evidence": "AASM 2021 suggests against sleep hygiene alone as a treatment for chronic insomnia.",
+      "note": "Useful alongside CBT-I (caffeine, alcohol, light and timing), not as the only intervention."
+    },
+    {
+      "name": "Referral for medication evaluation",
+      "evidence": "The ACP guideline (2016) advises a shared decision about medication when CBT-I alone has not helped.",
+      "note": "Refer to a primary care provider, psychiatry, a sleep specialist or a psychiatric nurse practitioner. Prescribing decisions rest with the prescriber."
+    }
+  ],
+  "handouts": [
+    "pmr-homework"
+  ],
+  "statIds": [],
+  "culturalNotes": [
+    "Sleep customs differ: shared beds and rooms, afternoon rest, segmented night sleep and late family meals are normal in many households. Assess the client's distress and daytime functioning, not distance from a single Western sleep model.",
+    "Shift work, night caregiving, crowded or noisy housing, unsafe neighborhoods and money stress limit sleep for structural reasons. Problem-solve the setting and do not label limited opportunity as insomnia.",
+    "Racial and ethnic minority groups in the US report shorter and poorer sleep on average, partly linked to discrimination and neighborhood stress. Ask about these experiences respectfully.",
+    "Religious practices such as night prayer, vigils or fasting periods (for example Ramadan) change sleep timing. Plan sleep schedules around these practices with the client rather than against them.",
+    "Beliefs about sleep, dreams and nighttime vary across cultures; some clients may fear sleep because of spiritual beliefs or nightmares. Explore the meaning before starting behavioral steps.",
+    "If the client wants to use prayer or meditation as part of a wind-down routine, fit it in at the client's request and with informed consent for faith-integrated work (see the AACC Code of Ethics for faith-based counselors)."
+  ],
+  "sud": false,
+  "requiredFeatures": [
+    {
+      "symptomId": "insomnia",
+      "note": "The sleep complaint itself (trouble falling asleep, staying asleep or waking too early) is not documented; this pattern depends on it (see DSM-5-TR). Ask about the sleep problem directly."
+    }
+  ],
+  "strongMinAreas": 2,
+  "redFlagRules": [
+    {
+      "type": "mania",
+      "capAt": "moderate",
+      "message": "Manic or hypomanic signs are documented in this input. Short sleep with high energy suggests decreased need for sleep rather than insomnia; screen for bipolar disorder and refer for psychiatric evaluation. Sleep restriction is not suitable until this is clarified."
+    },
+    {
+      "type": "suicidality",
+      "message": "Suicide-related content is documented in this input. Insomnia is linked to higher risk of suicidal thoughts and behavior (Pigeon et al., 2012); ask directly and follow your risk protocol."
+    },
+    {
+      "type": "withdrawal",
+      "message": "Possible alcohol or sedative withdrawal is documented. Withdrawal can cause severe insomnia and is medically dangerous; arrange medical assessment before behavioral sleep work."
+    }
+  ],
+  "licensedDsm": false,
+  "wileyLicensed": false,
+  "sources": [
+    {
+      "title": "Behavioral and psychological treatments for chronic insomnia disorder in adults: an AASM clinical practice guideline (Edinger et al.)",
+      "publisher": "Journal of Clinical Sleep Medicine",
+      "url": "https://jcsm.aasm.org/doi/10.5664/jcsm.8986",
+      "year": 2021
+    },
+    {
+      "title": "Management of chronic insomnia disorder in adults: a clinical practice guideline from the American College of Physicians (Qaseem et al.)",
+      "publisher": "Annals of Internal Medicine",
+      "url": "https://www.acpjournals.org/doi/10.7326/M15-2175",
+      "year": 2016
+    },
+    {
+      "title": "Insomnia (health topic)",
+      "publisher": "National Heart, Lung, and Blood Institute",
+      "url": "https://www.nhlbi.nih.gov/health/insomnia"
+    },
+    {
+      "title": "Comparative effectiveness of cognitive behavioral therapy for insomnia: a systematic review (Mitchell et al.)",
+      "publisher": "BMC Family Practice (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/22631616/",
+      "year": 2012
+    },
+    {
+      "title": "The Insomnia Severity Index: psychometric indicators to detect insomnia cases and evaluate treatment response (Morin et al.)",
+      "publisher": "Sleep (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21532953/",
+      "year": 2011
+    },
+    {
+      "title": "Meta-analysis of sleep disturbance and suicidal thoughts and behaviors (Pigeon et al.)",
+      "publisher": "Journal of Clinical Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/23059158/",
+      "year": 2012
+    },
+    {
+      "title": "Sleep Disorders and Complementary Health Approaches: Usefulness and Safety",
+      "publisher": "National Center for Complementary and Integrative Health (NCCIH)",
+      "url": "https://www.nccih.nih.gov/health/sleep-disorders-in-depth"
+    },
+    {
+      "title": "ICD-11 for Mortality and Morbidity Statistics (browser)",
+      "publisher": "World Health Organization",
+      "url": "https://icd.who.int/browse/latest-release/mms/en"
+    },
+    {
+      "title": "ICD-10-CM (official code set)",
+      "publisher": "CDC National Center for Health Statistics",
+      "url": "https://www.cdc.gov/nchs/icd/icd-10-cm/index.html"
+    },
+    {
+      "title": "ICD-10-CM codes checked with the NLM Clinical Table Search Service",
+      "publisher": "National Library of Medicine",
+      "url": "https://clinicaltables.nlm.nih.gov/apidoc/icd10cm/v3/doc.html"
+    },
+    {
+      "title": "AACC Code of Ethics",
+      "publisher": "American Association of Christian Counselors",
+      "url": "https://aacc.net/aacc-code-of-ethics/"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

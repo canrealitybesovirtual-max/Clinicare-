@@ -2,13 +2,18 @@
 import * as React from "react";
 import Link from "next/link";
 import {
+  ArrowRight,
   BookOpen,
   Check,
   ChevronDown,
   CircleDashed,
   ClipboardList,
   FileText,
+  Globe2,
+  HeartHandshake,
   Info,
+  ListTodo,
+  Newspaper,
   TriangleAlert,
 } from "lucide-react";
 import type { Condition } from "@/lib/schemas";
@@ -26,7 +31,11 @@ import {
   StatCard,
 } from "@/components/content/content-bits";
 import { cn } from "@/lib/utils";
+import { PART2_NOTICE } from "@/lib/referral-links";
 import { explainScore, STRENGTH_LABEL } from "./explain";
+import { LazyPanel } from "./lookup-status";
+import { Icd11Panel } from "./icd11-panel";
+import { MedlinePlusPanel } from "./medlineplus-panel";
 
 function Disclosure({ title, meta, children }: { title: string; meta?: React.ReactNode; children: React.ReactNode }) {
   return (
@@ -165,10 +174,21 @@ export function SuggestionCard({
 
       {cond.sud ? (
         <Notice tone="warn" title="42 CFR Part 2" className="mt-4">
-          Substance-use information is not stored or transmitted. Any export will carry the notice: 42 CFR Part 2 prohibits
-          unauthorized disclosure of these records.
+          Substance-use information is not stored by this app. Any export carries the notice: {PART2_NOTICE}
         </Notice>
       ) : null}
+
+      <div className="mt-4 flex flex-wrap gap-2">
+        <Link href={`/interventions?condition=${encodeURIComponent(cond.id)}`} className={buttonVariants({ variant: "outline" })}>
+          <HeartHandshake aria-hidden />
+          Interventions for this
+        </Link>
+        <Link href={`/plan?condition=${encodeURIComponent(cond.id)}`} className={buttonVariants({ variant: "outline" })}>
+          <ListTodo aria-hidden />
+          Start a treatment plan
+          <ArrowRight aria-hidden />
+        </Link>
+      </div>
 
       <div className="mt-5 grid gap-5 md:grid-cols-2">
         <div>
@@ -262,7 +282,7 @@ export function SuggestionCard({
           <ul className="mt-2 space-y-2 text-sm">
             {handouts.map((h) => (
               <li key={h.id}>
-                <Link href={`/handouts#${h.id}`} className={buttonVariants({ variant: "outline", size: "sm" })}>
+                <Link href={`/handouts/${h.id}`} className={buttonVariants({ variant: "outline", size: "sm" })}>
                   {h.title}
                 </Link>
               </li>
@@ -400,7 +420,13 @@ export function SuggestionCard({
               </li>
             ))}
           </ul>
-          <p className="text-xs text-muted">The full interventions library, with steps and scripts, arrives in Phase 2.</p>
+          <p className="text-xs text-muted">
+            Steps, scripts and cautions for each are in the{" "}
+            <Link href={`/interventions?condition=${encodeURIComponent(cond.id)}`} className="font-semibold text-accent underline underline-offset-2">
+              interventions library
+            </Link>
+            .
+          </p>
         </Disclosure>
 
         {stats.length ? (
@@ -411,6 +437,16 @@ export function SuggestionCard({
               ))}
             </div>
           </Disclosure>
+        ) : null}
+
+        <LazyPanel title="ICD-11 details (WHO)" meta="loads when opened" icon={Globe2}>
+          <Icd11Panel codes={cond.icd11} conditionId={cond.id} />
+        </LazyPanel>
+
+        {cond.icd10cm[0] ? (
+          <LazyPanel title="Psychoeducation links (MedlinePlus)" meta="loads when opened" icon={Newspaper}>
+            <MedlinePlusPanel code={cond.icd10cm[0].code} conditionId={cond.id} />
+          </LazyPanel>
         ) : null}
 
         <Disclosure title="Sources and review status" meta={`${cond.sources.length} sources`}>

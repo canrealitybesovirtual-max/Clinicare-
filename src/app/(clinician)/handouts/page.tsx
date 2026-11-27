@@ -1,13 +1,15 @@
 import type { Metadata } from "next";
-import { Clock, FileText, GraduationCap } from "lucide-react";
-import { handouts, measures } from "@/lib/content";
+import Link from "next/link";
+import { Clock, FileText, Zap } from "lucide-react";
+import { measures } from "@/lib/content";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { ExternalLink } from "@/components/ui/external-link";
-import { Governance, PageIntro, ReviewBadge, SourcesList } from "@/components/content/content-bits";
+import { PageIntro } from "@/components/content/content-bits";
 import { DownloadPdfButton } from "@/components/pdf/download-pdf-button";
-import { HandoutBody } from "@/components/handouts/handout-body";
 import { AdultOnly } from "@/components/measures/adult-only";
+import { HandoutLibrary } from "@/components/handouts/handout-library";
+import { handoutCards, handoutsById, interventionOptions, practiceTypeOptions } from "@/components/handouts/catalog";
 
 export const metadata: Metadata = { title: "Handouts" };
 
@@ -19,46 +21,51 @@ const LINK_OUTS = [
   { title: "PHQ and GAD-7 screeners (official forms and translations)", publisher: "PHQ Screeners (Pfizer)", url: "https://www.phqscreeners.com" },
 ] as const;
 
+/** Quick downloads for the most common in-session skills. */
+const QUICK = ["pmr-homework", "breathing-practice", "grounding-5-4-3-2-1"] as const;
+
 export default function HandoutsPage() {
+  const cards = handoutCards();
+  const quick = handoutsById(QUICK);
+
   return (
     <>
-      <PageIntro title="Handouts" eyebrow="Step 4 · Resources for the client">
+      <PageIntro title="Handouts" eyebrow="Step 6 · Resources for the client">
         <p>
-          Original, plain-language handouts to give or send to the client, plus blank measure forms. PDFs are created on
-          this device; nothing is uploaded, and the only personal field is a blank name line to fill in by hand.
+          Original, plain-language handouts to print, download or send as a link. PDFs are created on this device and
+          nothing is uploaded; the only personal field is a blank name line to fill in by hand. Share links carry the
+          handout id only.
         </p>
       </PageIntro>
 
       <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_20rem] lg:items-start">
-        <div className="min-w-0 space-y-6">
-          {handouts.map((h) => (
-            <article key={h.id} id={h.id} aria-labelledby={`${h.id}-title`} className="scroll-mt-6">
-              <Card className="space-y-5 sm:p-7">
-                <div className="flex flex-wrap items-center gap-2">
-                  <Badge tone="accent">Client handout</Badge>
-                  <Badge tone="neutral">
-                    <GraduationCap aria-hidden className="size-3.5" /> Reading level grades {h.readingLevel}
-                  </Badge>
-                  <Badge tone="neutral">
-                    <Clock aria-hidden className="size-3.5" /> About {h.estimatedMinutes} minutes
-                  </Badge>
-                  <ReviewBadge reviewedBy={h.reviewedBy} />
-                </div>
-                <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
-                  <h2 id={`${h.id}-title`} className="text-2xl font-bold leading-tight">
-                    {h.title}
-                  </h2>
-                  <DownloadPdfButton handout={h} label="Download PDF" variant="primary" />
-                </div>
-                <HandoutBody handout={h} />
-                <div className="space-y-3 border-t border-border pt-4">
-                  <h3 className="text-sm font-semibold">Sources</h3>
-                  <SourcesList sources={h.sources} />
-                  <Governance license={h.license} lastVerified={h.lastVerified} reviewedBy={h.reviewedBy} />
-                </div>
-              </Card>
-            </article>
-          ))}
+        <div className="min-w-0 space-y-8">
+          <section aria-labelledby="quick-heading">
+            <h2 id="quick-heading" className="flex items-center gap-2 text-lg font-semibold">
+              <Zap aria-hidden className="size-5 text-accent" /> Quick downloads
+            </h2>
+            <ul className="mt-3 grid gap-3 sm:grid-cols-3">
+              {quick.map((h) => (
+                <li key={h.id}>
+                  <Card className="flex h-full flex-col gap-2 p-4 sm:p-4">
+                    <h3 className="font-semibold leading-snug">
+                      <Link href={`/handouts/${h.id}`} className="hover:text-accent hover:underline">
+                        {h.title}
+                      </Link>
+                    </h3>
+                    <p className="flex items-center gap-1 text-xs text-muted">
+                      <Clock aria-hidden className="size-3.5" /> About {h.estimatedMinutes} minutes
+                    </p>
+                    <div className="mt-auto pt-1">
+                      <DownloadPdfButton handout={h} label="Download PDF" variant="primary" className="w-full" />
+                    </div>
+                  </Card>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          <HandoutLibrary cards={cards} practiceTypes={practiceTypeOptions(cards)} interventions={interventionOptions(cards)} />
         </div>
 
         <div className="flex min-w-0 flex-col gap-6 lg:sticky lg:top-4">
@@ -99,6 +106,19 @@ export default function HandoutsPage() {
                   </li>
                 ))}
               </ul>
+            </Card>
+          </section>
+
+          <section aria-labelledby="sharing-note">
+            <Card className="space-y-2 text-sm">
+              <h2 id="sharing-note" className="text-lg font-semibold">
+                Sending a handout
+              </h2>
+              <p className="text-muted">
+                Open a handout to get its link and QR code. The client sees a plain-language page with the same wording,
+                a printable PDF and crisis numbers. No diagnosis, code or score appears there.
+              </p>
+              <Badge tone="neutral">The link contains only the handout id</Badge>
             </Card>
           </section>
         </div>

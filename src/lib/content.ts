@@ -4,11 +4,7 @@
  * G7: only measures whose license is "confirmed" in content/licenses.json are exposed as built-in.
  */
 import symptomsJson from "@content/symptoms.json";
-import panicJson from "@content/conditions/panic-disorder.json";
-import agoraJson from "@content/conditions/agoraphobia.json";
-import gadJson from "@content/conditions/generalized-anxiety-disorder.json";
-import mddJson from "@content/conditions/major-depressive-disorder.json";
-import ptsdJson from "@content/conditions/ptsd.json";
+import { conditionsRaw } from "./generated/content-index";
 import gad7Json from "@content/measures/gad-7.json";
 import phq9Json from "@content/measures/phq-9.json";
 import pmrJson from "@content/handouts/pmr-homework.json";
@@ -31,9 +27,17 @@ import {
 } from "./schemas";
 
 export const lexicon = SymptomLexiconSchema.parse(symptomsJson);
-export const conditions: Condition[] = [panicJson, agoraJson, gadJson, mddJson, ptsdJson].map((c) =>
-  ConditionSchema.parse(c),
-);
+
+/**
+ * Every content/conditions/*.json file, in file-name order, from the generated static index (npm run gen:content).
+ * A malformed file throws here with its id, so the build and the tests fail (G10).
+ */
+export const conditions: Condition[] = conditionsRaw.map((raw, i) => {
+  const parsed = ConditionSchema.safeParse(raw);
+  if (parsed.success) return parsed.data;
+  const id = (raw as { id?: unknown } | null)?.id;
+  throw new Error(`Invalid condition content (${typeof id === "string" ? id : `#${i}`}): ${parsed.error.message.slice(0, 400)}`);
+});
 export const licenses = LicensesSchema.parse(licensesJson);
 const allMeasures: Measure[] = [gad7Json, phq9Json].map((m) => MeasureSchema.parse(m));
 export const handouts: Handout[] = [pmrJson].map((h) => HandoutSchema.parse(h));

@@ -1,0 +1,306 @@
+{
+  "id": "prolonged-grief-disorder",
+  "name": "Prolonged grief disorder",
+  "icd10cm": [
+    {
+      "code": "F43.81",
+      "label": "Prolonged grief disorder"
+    }
+  ],
+  "icd11": [
+    {
+      "code": "6B42",
+      "label": "Prolonged grief disorder"
+    }
+  ],
+  "dsmPointer": "See DSM-5-TR: Trauma- and Stressor-Related Disorders — Prolonged Grief Disorder",
+  "summary": "Grief that stays stuck at full strength long after a death. The client still longs for the person who died, or is taken up with thoughts of them or of how they died, most days, with raw pain: trouble accepting the death, bitterness, guilt, numbness, a feeling of having lost a piece of themselves, or a life that feels empty and without direction. Reminders are avoided or clung to, and re-engaging with people and plans feels impossible or disloyal. The pain stays focused on the loss rather than spreading to a general low view of self, which helps separate it from depression, though both often occur together. Sudden, violent or stigmatized deaths raise the risk. Suicidal thoughts, including wishes to be reunited with the person, should be asked about directly. For clinician review only; this is not a diagnosis.",
+  "features": [
+    {
+      "symptomId": "grief-yearning",
+      "kind": "core",
+      "weight": 5,
+      "group": "separation-distress"
+    },
+    {
+      "symptomId": "grief-preoccupation",
+      "kind": "core",
+      "weight": 4,
+      "group": "separation-distress"
+    },
+    {
+      "symptomId": "grief-intense-pain",
+      "kind": "core",
+      "weight": 4
+    },
+    {
+      "symptomId": "bereavement",
+      "kind": "associated",
+      "weight": 2
+    },
+    {
+      "symptomId": "grief-disbelief",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "grief-identity-meaning",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "grief-avoidance-reminders",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "emotional-numbing-detachment",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "social-withdrawal",
+      "kind": "associated",
+      "weight": 1
+    }
+  ],
+  "minCore": 2,
+  "durationGate": {
+    "minWeeks": 26,
+    "note": "Ask how long ago the death happened and whether the grief has eased at all. ICD-11 describes at least six months after the loss (longer where cultural norms expect it); DSM-5-TR uses its own time frame for adults. The six-months-or-longer setting cannot show whether a year has passed; ask directly."
+  },
+  "impairmentRequired": true,
+  "ruleOuts": [
+    {
+      "label": "Medical conditions affecting mood and energy",
+      "type": "medical",
+      "note": "Grief can coincide with the client's own illness, poor sleep, weight change or neglected health care; coordinate with medical care."
+    },
+    {
+      "label": "Alcohol, sedative or other substance use to cope",
+      "type": "substance",
+      "note": "Drinking or using more after a death is common and can deepen and prolong grief. Ask gently; this app does not store substance-use information."
+    },
+    {
+      "label": "Expected grief within cultural norms",
+      "type": "psychiatric",
+      "note": "Intense grief is expected early on and mourning customs differ. Consider this pattern only when grief stays intense beyond what the client's culture and faith would expect and it disrupts daily life."
+    },
+    {
+      "label": "Major depressive episode or PTSD",
+      "type": "psychiatric",
+      "note": "Pervasive low mood, worthlessness and loss of interest in everything suggest depression; a traumatic death with intrusive memories and fear suggests PTSD. Each can co-occur with grief."
+    }
+  ],
+  "specifiers": [
+    {
+      "label": "Traumatic or violent loss (descriptive)",
+      "note": "Deaths by suicide, homicide, overdose, accident or disaster raise the risk of prolonged grief and of PTSD; assess both."
+    },
+    {
+      "label": "Loss of a child or partner (descriptive)",
+      "note": "These losses carry higher risk of prolonged grief."
+    }
+  ],
+  "differentials": [
+    {
+      "label": "Uncomplicated bereavement (ICD-10-CM title: Disappearance and death of family member)",
+      "icd10cm": "Z63.4",
+      "distinguishing": "Grief that is intense at first but slowly eases and lets the client keep up daily roles; pain comes in waves around reminders."
+    },
+    {
+      "label": "Major depressive disorder",
+      "distinguishing": "Low mood, loss of interest and harsh self-judgment spread across life rather than centering on the loss and the person who died."
+    },
+    {
+      "label": "Posttraumatic stress disorder",
+      "icd10cm": "F43.10",
+      "distinguishing": "Intrusive memories and fear about the way the death happened, with threat-related avoidance; grief focuses on longing and loss."
+    },
+    {
+      "label": "Adjustment disorder, unspecified",
+      "icd10cm": "F43.20",
+      "distinguishing": "A reaction to a non-death stressor, or one that does not center on longing for the person who died."
+    },
+    {
+      "label": "Separation anxiety disorder (ICD-10-CM title: Separation anxiety disorder of childhood)",
+      "icd10cm": "F93.0",
+      "distinguishing": "Fear of separation from living attachment figures, not grief for someone who has died."
+    }
+  ],
+  "comorbidities": [
+    {
+      "conditionId": "major-depressive-disorder",
+      "label": "Major depressive disorder",
+      "note": "Grief and depression often co-occur and need different emphasis in treatment. Screen with the PHQ-9 and ask directly about suicidal thoughts."
+    },
+    {
+      "conditionId": "ptsd",
+      "label": "Posttraumatic stress disorder",
+      "note": "After a sudden or violent death, assess for trauma symptoms as well as grief."
+    },
+    {
+      "conditionId": "alcohol-use-disorder",
+      "label": "Alcohol use disorder",
+      "note": "Drinking to numb grief is common. 42 CFR Part 2 prohibits unauthorized use or disclosure of these records."
+    },
+    {
+      "conditionId": "insomnia-disorder",
+      "label": "Insomnia disorder",
+      "note": "Sleep often breaks down after a loss and can keep grief raw; it may need its own plan."
+    }
+  ],
+  "measures": [
+    "phq-9"
+  ],
+  "measuresPending": [
+    {
+      "name": "Columbia Suicide Severity Rating Scale (C-SSRS)",
+      "url": "https://cssrs.columbia.edu",
+      "note": "License pending — link out only",
+      "licenseKey": "C-SSRS"
+    }
+  ],
+  "interventions": [
+    {
+      "name": "Prolonged grief disorder therapy (complicated grief treatment)",
+      "evidence": "Randomized trials found it more effective than interpersonal psychotherapy (Shear et al., 2005) and than citalopram or placebo given without it (Shear et al., 2016).",
+      "note": "Combines loss-focused work (retelling the death, imaginal conversations) with restoration-focused work (goals, relationships). Requires specific training."
+    },
+    {
+      "name": "Grief-focused CBT",
+      "evidence": "A 2007 trial (Boelen et al.) found CBT focused on grief outperformed supportive counseling.",
+      "note": "Integrates the loss into memory, works on unhelpful beliefs and graded approach to avoided reminders."
+    },
+    {
+      "name": "Behavioral activation and re-engagement",
+      "evidence": "A component of grief-focused protocols.",
+      "note": "Plan meaningful activities and contacts at the client's pace, framed as honoring the person rather than leaving them behind."
+    },
+    {
+      "name": "Support groups and faith or community rituals",
+      "evidence": "Commonly used; evidence for groups alone in prolonged grief is limited.",
+      "note": "Offer options that fit the client's culture and beliefs."
+    },
+    {
+      "name": "Suicide risk screening and safety planning",
+      "evidence": "Clinical standard of care; prolonged grief is linked to suicidal thoughts.",
+      "note": "Ask directly, including about wishes to die or to join the person who died. The clinician decides on risk level and next steps; crisis resources (988, local emergency number, findahelpline.com) stay visible on every screen."
+    },
+    {
+      "name": "Referral for medication evaluation (for co-occurring conditions)",
+      "evidence": "In Shear et al. (2016), citalopram did not improve grief symptoms more than placebo but helped co-occurring depressive symptoms.",
+      "note": "Refer when depression, anxiety or sleep problems call for it. Prescribing decisions rest with the prescriber."
+    }
+  ],
+  "handouts": [],
+  "statIds": [],
+  "culturalNotes": [
+    "Mourning customs, timelines and expressions of grief differ widely, from set mourning periods and anniversary rites to ongoing ceremonies for ancestors. ICD-11 asks clinicians to compare grief with the norms of the client's culture and religion. Ask what grieving well looks like in the client's community.",
+    "Continuing bonds with the person who died (talking to them, keeping their belongings, visiting the grave, sensing their presence) are normal in many cultures and are not by themselves signs of a disorder. Sensing, seeing or hearing the person who died is common in grief and is not by itself psychosis.",
+    "Some losses are disenfranchised: the death of a same-sex partner, an ex-partner, a friend, a pregnancy loss, or a death by suicide or overdose may get little recognition. Acknowledge the loss explicitly.",
+    "A culturally adapted measurement study (Killikelly et al., 2020) and a review on culture and prolonged grief (Stelzer et al., 2019) found that grief symptoms and expected timelines vary across Chinese, German-speaking and other groups. Interpret any questionnaire with care.",
+    "Faith can bring comfort, and for some clients spiritual distress, such as anger at God or worry about the person's afterlife. Explore spiritual questions respectfully and use faith-integrated approaches only at the client's request and after informed consent (see the AACC Code of Ethics for faith-based counselors).",
+    "Use a trained professional interpreter, not family members, who may be grieving the same loss."
+  ],
+  "sud": false,
+  "requiredFeatures": [
+    {
+      "symptomId": "bereavement",
+      "note": "The death of someone close is not documented; this pattern requires a bereavement (see DSM-5-TR). Ask about the loss before relying on this suggestion."
+    }
+  ],
+  "strongMinAreas": 2,
+  "redFlagRules": [
+    {
+      "type": "suicidality",
+      "message": "Suicide-related content is documented in this input. In grief this can include wishes to die or to be reunited with the person who died; ask directly and follow your risk protocol and safety planning."
+    },
+    {
+      "type": "psychosis",
+      "message": "Hallucination-like or unusual experiences are documented in this input. Briefly sensing, seeing or hearing the person who died is common in grief across cultures; ask about content, distress and other psychotic signs before drawing conclusions, and refer for psychiatric evaluation if other signs are present."
+    }
+  ],
+  "licensedDsm": false,
+  "wileyLicensed": false,
+  "sources": [
+    {
+      "title": "Prolonged Grief Disorder (patient and family information)",
+      "publisher": "American Psychiatric Association",
+      "url": "https://www.psychiatry.org/patients-families/prolonged-grief-disorder"
+    },
+    {
+      "title": "Prolonged grief disorder in DSM-5-TR and the PG-13-Revised scale: a validation study (Prigerson et al.)",
+      "publisher": "World Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/33432758/",
+      "year": 2021
+    },
+    {
+      "title": "Treatment of complicated grief: a randomized controlled trial (Shear et al.)",
+      "publisher": "JAMA (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15928281/",
+      "year": 2005
+    },
+    {
+      "title": "Optimizing treatment of complicated grief: a randomized clinical trial (Shear et al.)",
+      "publisher": "JAMA Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27276373/",
+      "year": 2016
+    },
+    {
+      "title": "Treatment of complicated grief: a comparison between cognitive-behavioral therapy and supportive counseling (Boelen et al.)",
+      "publisher": "Journal of Consulting and Clinical Psychology (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17469885/",
+      "year": 2007
+    },
+    {
+      "title": "Prolonged grief disorder and the cultural crisis (Stelzer et al.)",
+      "publisher": "Frontiers in Psychology (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31998204/",
+      "year": 2019
+    },
+    {
+      "title": "Development of the international prolonged grief disorder scale for the ICD-11 (Killikelly et al.)",
+      "publisher": "Journal of Affective Disorders (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32896722/",
+      "year": 2020
+    },
+    {
+      "title": "Grief, Bereavement, and Coping With Loss (PDQ), health professional version",
+      "publisher": "National Cancer Institute",
+      "url": "https://www.cancer.gov/about-cancer/advanced-cancer/caregivers/planning/bereavement-hp-pdq"
+    },
+    {
+      "title": "ICD-11 for Mortality and Morbidity Statistics (browser)",
+      "publisher": "World Health Organization",
+      "url": "https://icd.who.int/browse/latest-release/mms/en"
+    },
+    {
+      "title": "ICD-10-CM (official code set)",
+      "publisher": "CDC National Center for Health Statistics",
+      "url": "https://www.cdc.gov/nchs/icd/icd-10-cm/index.html"
+    },
+    {
+      "title": "ICD-10-CM codes checked with the NLM Clinical Table Search Service",
+      "publisher": "National Library of Medicine",
+      "url": "https://clinicaltables.nlm.nih.gov/apidoc/icd10cm/v3/doc.html"
+    },
+    {
+      "title": "The Columbia Lighthouse Project (C-SSRS)",
+      "publisher": "Columbia University",
+      "url": "https://cssrs.columbia.edu"
+    },
+    {
+      "title": "AACC Code of Ethics",
+      "publisher": "American Association of Christian Counselors",
+      "url": "https://aacc.net/aacc-code-of-ethics/"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

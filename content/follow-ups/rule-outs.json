@@ -1,0 +1,220 @@
+{
+  "id": "rule-outs",
+  "title": "Substance and medical rule-outs",
+  "domain": "rule-outs",
+  "about": "Questions on substances, medications and medical conditions that can mimic or worsen anxiety, panic and low mood (for example caffeine, thyroid problems, heart rhythm problems). Substance answers stay in this session's memory only (42 CFR Part 2).",
+  "questions": [
+    {
+      "id": "ruleout-substances",
+      "kind": "gate",
+      "domain": "rule-outs",
+      "gate": "substance",
+      "select": "many",
+      "sud": true,
+      "text": "Could caffeine or energy drinks, alcohol, cannabis or other drugs, or a medication started, stopped or changed recently explain some of these symptoms?",
+      "why": "Caffeine, stimulants, decongestants, cannabis, alcohol and withdrawal from alcohol or sedatives can produce panic, anxiety, low mood and poor sleep. Medication changes can too. Ask before attributing symptoms to a mental health pattern.",
+      "options": [
+        {
+          "id": "caffeine",
+          "label": "Caffeine or energy drinks could explain them",
+          "effects": {
+            "setSubstancePossible": "yes"
+          }
+        },
+        {
+          "id": "alcohol",
+          "label": "Alcohol could explain them",
+          "effects": {
+            "setSubstancePossible": "yes"
+          },
+          "surfaces": [
+            "part2-notice"
+          ]
+        },
+        {
+          "id": "drugs",
+          "label": "Cannabis or other drugs could explain them",
+          "effects": {
+            "setSubstancePossible": "yes"
+          },
+          "surfaces": [
+            "part2-notice"
+          ]
+        },
+        {
+          "id": "medication",
+          "label": "A medication started, stopped or changed could explain them",
+          "effects": {
+            "setSubstancePossible": "yes"
+          },
+          "note": "Review with the prescriber; do not suggest stopping a medication without them."
+        },
+        {
+          "id": "none",
+          "label": "None of these seems to explain them",
+          "exclusive": true,
+          "effects": {
+            "setSubstancePossible": "no"
+          }
+        },
+        {
+          "id": "not-yet",
+          "label": "Not asked yet",
+          "exclusive": true,
+          "keepOpen": true
+        }
+      ],
+      "showWhen": {
+        "anySignal": true
+      },
+      "priority": 40
+    },
+    {
+      "id": "ruleout-medical-anxiety",
+      "kind": "gate",
+      "domain": "rule-outs",
+      "gate": "medical",
+      "group": "medical-check",
+      "text": "Has a medical check looked for physical causes that can mimic these symptoms, such as an overactive thyroid, heart rhythm problems, low blood sugar, asthma or medication side effects?",
+      "why": "Several medical problems produce racing heart, breathlessness, shaking or dizziness. Ruling them out protects the client and makes the anxiety work more credible to them.",
+      "options": [
+        {
+          "id": "checked-clear",
+          "label": "Checked: nothing found",
+          "effects": {
+            "setMedicalPossible": "no"
+          }
+        },
+        {
+          "id": "cause-suspected",
+          "label": "A medical cause is suspected or known",
+          "effects": {
+            "setMedicalPossible": "yes"
+          },
+          "surfaces": [
+            "medical-referral"
+          ]
+        },
+        {
+          "id": "not-checked",
+          "label": "Not checked yet",
+          "surfaces": [
+            "medical-referral"
+          ],
+          "note": "Suggest a primary care review, especially with chest pain, fainting, or symptoms that are new or changing."
+        },
+        {
+          "id": "unsure",
+          "label": "Not sure",
+          "keepOpen": true
+        }
+      ],
+      "showWhen": {
+        "symptomCategories": [
+          "panic"
+        ],
+        "symptomIds": [
+          "palpitations",
+          "sweating",
+          "trembling",
+          "shortness-of-breath",
+          "choking-sensation",
+          "chest-pain",
+          "dizziness",
+          "numbness-tingling",
+          "chills-heat-sensations",
+          "nausea-abdominal-distress",
+          "muscle-tension",
+          "restlessness",
+          "subjective-anxiety-stress",
+          "worry-excessive"
+        ],
+        "conditionIds": [
+          "panic-disorder",
+          "generalized-anxiety-disorder",
+          "agoraphobia"
+        ],
+        "triggerCategories": [
+          "health"
+        ]
+      },
+      "priority": 30
+    },
+    {
+      "id": "ruleout-medical-mood",
+      "kind": "gate",
+      "domain": "rule-outs",
+      "gate": "medical",
+      "group": "medical-check",
+      "text": "Has a medical check looked for physical causes of low mood and tiredness, such as an underactive thyroid, anemia, low vitamin levels, sleep apnea or medication side effects?",
+      "why": "Thyroid problems, anemia, vitamin deficiencies, sleep apnea and some medications can cause or deepen low mood and fatigue. A recent check makes the rest of the picture easier to read.",
+      "options": [
+        {
+          "id": "checked-clear",
+          "label": "Checked: nothing found",
+          "effects": {
+            "setMedicalPossible": "no"
+          }
+        },
+        {
+          "id": "cause-suspected",
+          "label": "A medical cause is suspected or known",
+          "effects": {
+            "setMedicalPossible": "yes"
+          },
+          "surfaces": [
+            "medical-referral"
+          ]
+        },
+        {
+          "id": "not-checked",
+          "label": "Not checked yet",
+          "surfaces": [
+            "medical-referral"
+          ],
+          "note": "Suggest a primary care review, including basic blood tests where appropriate."
+        },
+        {
+          "id": "unsure",
+          "label": "Not sure",
+          "keepOpen": true
+        }
+      ],
+      "showWhen": {
+        "symptomIds": [
+          "depressed-mood",
+          "anhedonia",
+          "fatigue",
+          "hypersomnia"
+        ],
+        "conditionIds": [
+          "major-depressive-disorder",
+          "persistent-depressive-disorder"
+        ]
+      },
+      "priority": 30
+    }
+  ],
+  "sources": [
+    {
+      "title": "NICE guideline CG113: managing anxiety and panic in adults",
+      "publisher": "National Institute for Health and Care Excellence (NICE)",
+      "url": "https://www.nice.org.uk/guidance/cg113",
+      "year": 2011
+    },
+    {
+      "title": "Depression in adults: treatment and management (NG222)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng222",
+      "year": 2022
+    },
+    {
+      "title": "When Fear Overwhelms (NIMH brochure on panic attacks)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/publications/panic-disorder-when-fear-overwhelms"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

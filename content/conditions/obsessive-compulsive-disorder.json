@@ -1,0 +1,314 @@
+{
+  "id": "obsessive-compulsive-disorder",
+  "name": "Obsessive-compulsive disorder",
+  "icd10cm": [
+    {
+      "code": "F42.2",
+      "label": "Mixed obsessional thoughts and acts"
+    },
+    {
+      "code": "F42.8",
+      "label": "Other obsessive-compulsive disorder"
+    },
+    {
+      "code": "F42.9",
+      "label": "Obsessive-compulsive disorder, unspecified"
+    }
+  ],
+  "icd11": [
+    {
+      "code": "6B20",
+      "label": "Obsessive-compulsive disorder"
+    },
+    {
+      "code": "6B20.0",
+      "label": "Obsessive-compulsive disorder with fair to good insight"
+    },
+    {
+      "code": "6B20.1",
+      "label": "Obsessive-compulsive disorder with poor to absent insight"
+    }
+  ],
+  "dsmPointer": "See DSM-5-TR: Obsessive-Compulsive and Related Disorders — Obsessive-Compulsive Disorder",
+  "summary": "A loop of unwelcome thoughts and the acts used to quiet them. An unwelcome idea, mental picture or impulse (germs, causing harm, a taboo or blasphemous idea, a nagging doubt, things not feeling 'just right') pushes in against the client's will and brings anxiety, disgust or a sense of incompleteness; checking, washing, counting, repeating, confessing, asking for reassurance or mental undoing brings brief relief, which teaches the brain to repeat the ritual. Content is often the opposite of what the client values, so shame and secrecy are common and people may wait years to disclose. Family members are often drawn into rituals. For clinician review only; this is not a diagnosis.",
+  "features": [
+    {
+      "symptomId": "obsessions",
+      "kind": "core",
+      "weight": 5
+    },
+    {
+      "symptomId": "compulsions",
+      "kind": "core",
+      "weight": 5
+    },
+    {
+      "symptomId": "ocd-trigger-avoidance",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "reassurance-seeking",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "time-consuming-rituals",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "ocd-appraisals",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "subjective-anxiety-stress",
+      "kind": "associated",
+      "weight": 1
+    }
+  ],
+  "minCore": 1,
+  "durationGate": {
+    "minWeeks": 0,
+    "note": "No minimum duration is used here. Ask how much of the day obsessions and rituals take and how long they have been present; compare with DSM-5-TR."
+  },
+  "impairmentRequired": true,
+  "ruleOuts": [
+    {
+      "label": "Medical and neurological causes",
+      "type": "medical",
+      "note": "Sudden onset after an infection (especially in young people), a head injury, stroke or a neurological illness calls for medical review before assuming a primary pattern."
+    },
+    {
+      "label": "Stimulants and some medications",
+      "type": "substance",
+      "note": "Stimulants and some other medicines can bring on repetitive behaviors or worsen existing ones. Review the medication list with the prescriber; this app does not store substance-use information."
+    },
+    {
+      "label": "Repetitive thinking better explained by another mental health condition",
+      "type": "psychiatric",
+      "note": "Everyday worries (generalized anxiety), guilty rumination (depression), appearance concerns, hoarding, hair-pulling, skin-picking or fixed false beliefs each point to a different fit (see the differentials list)."
+    }
+  ],
+  "specifiers": [
+    {
+      "label": "Insight: good or fair, poor, or absent (descriptive)",
+      "note": "How strongly the client believes the feared outcome would happen. ICD-11 codes insight as fair to good (6B20.0) or poor to absent (6B20.1). Check how DSM-5-TR records insight."
+    },
+    {
+      "label": "Tic-related (descriptive)",
+      "note": "A current or past tic disorder changes the picture and may change treatment planning."
+    },
+    {
+      "label": "Main themes (descriptive)",
+      "note": "Contamination, harm, taboo or sexual content, religious or moral fears (scrupulosity), doubt and checking, symmetry or 'just right' feelings. Themes often shift over time."
+    }
+  ],
+  "differentials": [
+    {
+      "label": "Generalized anxiety disorder",
+      "icd10cm": "F41.1",
+      "distinguishing": "Worry is about real-life matters such as money, health or family, feels like the client's own thinking and is not neutralized by rituals."
+    },
+    {
+      "label": "Obsessive-compulsive personality disorder",
+      "icd10cm": "F60.5",
+      "distinguishing": "A lifelong, valued preference for order, rules and control without intrusive thoughts or anxiety-driven rituals."
+    },
+    {
+      "label": "Hoarding disorder",
+      "icd10cm": "F42.3",
+      "distinguishing": "Difficulty discarding possessions and the distress of letting go drive the problem, not intrusive thoughts."
+    },
+    {
+      "label": "Trichotillomania or excoriation (skin-picking) disorder",
+      "icd10cm": "F63.3",
+      "distinguishing": "Body-focused repetitive behaviors that are often soothing or automatic rather than a response to an obsession."
+    },
+    {
+      "label": "Body dysmorphic disorder",
+      "icd10cm": "F45.22",
+      "distinguishing": "Preoccupation is limited to a perceived flaw in appearance."
+    },
+    {
+      "label": "Major depressive disorder",
+      "distinguishing": "Ruminations about failure or guilt fit the client's low mood and are not resisted as alien; obsessions feel foreign to the client's values."
+    },
+    {
+      "label": "Psychotic disorder",
+      "distinguishing": "Beliefs are held with full conviction and come with other psychotic signs; in OCD with poor insight the content still centers on obsessional themes and rituals."
+    }
+  ],
+  "comorbidities": [
+    {
+      "conditionId": "major-depressive-disorder",
+      "label": "Major depressive disorder",
+      "note": "Depression is common and adds to risk. Screen with the PHQ-9 and ask directly about suicidal thoughts."
+    },
+    {
+      "conditionId": "generalized-anxiety-disorder",
+      "label": "Generalized anxiety disorder",
+      "note": "Both can be present; separate everyday worry from intrusive, ritual-driven thoughts."
+    },
+    {
+      "conditionId": "social-anxiety-disorder",
+      "label": "Social anxiety disorder",
+      "note": "Fear of others noticing rituals can look like social fear; clarify what the client expects others to see."
+    },
+    {
+      "label": "Tic disorders",
+      "note": "Ask about current or past tics, which are more common in early-onset presentations."
+    }
+  ],
+  "measures": [
+    "gad-7",
+    "phq-9"
+  ],
+  "measuresPending": [
+    {
+      "name": "Yale-Brown Obsessive Compulsive Scale (Y-BOCS)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2684084/",
+      "note": "License pending — link out only",
+      "licenseKey": "Y-BOCS"
+    }
+  ],
+  "interventions": [
+    {
+      "name": "Exposure and response prevention (ERP)",
+      "evidence": "NICE CG31 (2005) recommends CBT including ERP for adults, with intensity matched to impairment. A 2005 trial (Foa et al.) found intensive exposure and ritual prevention more effective than clomipramine alone. APA Division 12 lists ERP for OCD (check the current rating).",
+      "note": "Build an exposure ladder with the client, practice approaching triggers while resisting rituals and reassurance, and track urges on the ERP practice log. Fade family accommodation in step with the client."
+    },
+    {
+      "name": "Cognitive therapy for OCD appraisals",
+      "evidence": "Cognitive approaches that target inflated responsibility and thought-action fusion are part of CBT for OCD (NICE CG31).",
+      "note": "Normalize intrusive thoughts and test beliefs about what thoughts mean. Avoid turning discussion into reassurance."
+    },
+    {
+      "name": "Family involvement to reduce accommodation",
+      "evidence": "NICE CG31 advises involving family or carers where appropriate.",
+      "note": "With the client's consent, explain how reassurance and joining in rituals keep the cycle going, and agree a stepwise plan to step back."
+    },
+    {
+      "name": "Acceptance and commitment therapy (ACT) for OCD",
+      "evidence": "A 2010 randomized trial (Twohig et al.) found ACT outperformed progressive relaxation training; the evidence base is smaller than for ERP.",
+      "note": "Can be used with exposure; watch that defusion phrases do not become mental rituals."
+    },
+    {
+      "name": "Referral for medication evaluation",
+      "evidence": "NICE CG31 lists SSRIs (or clomipramine) for adults, alone or with CBT, depending on impairment and preference.",
+      "note": "Refer to psychiatry, a primary care provider or a psychiatric nurse practitioner. Prescribing decisions rest with the prescriber."
+    }
+  ],
+  "handouts": [],
+  "statIds": [
+    "global-mental-health-conditions"
+  ],
+  "culturalNotes": [
+    "Scrupulosity (religious or moral obsessions) needs faith-sensitive care. Separate devotion the client chooses and finds meaningful from rituals driven by fear and doubt, such as repeating prayers until they feel 'right' or confessing over and over. With consent, consulting the client's own faith leader about what their tradition actually requires can support exposure work (Huppert et al., 2007). Never frame the client's faith as the problem.",
+    "Norms for cleanliness, purity, food handling and ritual washing differ by culture and religion. Judge washing or checking against the client's own community norms and against the distress and time involved, not against the clinician's habits.",
+    "Taboo, sexual or violent obsessions carry heavy shame and stigma, so clients may hint rather than say them outright. Explain early that unwanted thoughts are common and do not show what a person wants. Postpartum harm obsessions are frequent and frightening for new parents.",
+    "Unwanted thoughts of harming others need a careful, non-judgmental assessment: this app cannot tell harm obsessions from homicidal ideation, and the clinician, not this tool, judges risk.",
+    "Family accommodation is shaped by family structure and roles. In close-knit or multigenerational households, plan changes with the family where the client agrees.",
+    "Use a trained professional interpreter; the meaning of 'thoughts' and 'rituals' can be lost in translation. If the client wants faith-integrated care, offer it only after informed consent (see the AACC Code of Ethics for faith-based counselors)."
+  ],
+  "sud": false,
+  "requiredFeatures": [],
+  "strongMinAreas": 2,
+  "redFlagRules": [
+    {
+      "type": "homicidality",
+      "message": "Thoughts of harming others are documented in this input. Harm obsessions in OCD are unwanted and resisted, but this app cannot tell them apart from homicidal ideation; assess intent, plan, access to means and history directly and follow your risk protocol."
+    },
+    {
+      "type": "suicidality",
+      "message": "Suicide-related content is documented in this input. OCD, especially with co-occurring depression, carries real suicide risk; ask directly and follow your risk protocol and safety planning."
+    },
+    {
+      "type": "psychosis",
+      "message": "Psychotic symptoms are documented in this input. Consider OCD with poor or absent insight versus a psychotic disorder, and refer for psychiatric evaluation."
+    }
+  ],
+  "licensedDsm": false,
+  "wileyLicensed": false,
+  "sources": [
+    {
+      "title": "Obsessive-Compulsive Disorder (health topic)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/topics/obsessive-compulsive-disorder-ocd"
+    },
+    {
+      "title": "Obsessive-compulsive disorder and body dysmorphic disorder: treatment (CG31)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/cg31",
+      "year": 2005
+    },
+    {
+      "title": "ICD-11 for Mortality and Morbidity Statistics (browser)",
+      "publisher": "World Health Organization",
+      "url": "https://icd.who.int/browse/latest-release/mms/en"
+    },
+    {
+      "title": "ICD-10-CM (official code set)",
+      "publisher": "CDC National Center for Health Statistics",
+      "url": "https://www.cdc.gov/nchs/icd/icd-10-cm/index.html"
+    },
+    {
+      "title": "ICD-10-CM codes checked with the NLM Clinical Table Search Service",
+      "publisher": "National Library of Medicine",
+      "url": "https://clinicaltables.nlm.nih.gov/apidoc/icd10cm/v3/doc.html"
+    },
+    {
+      "title": "Randomized, placebo-controlled trial of exposure and ritual prevention, clomipramine, and their combination in the treatment of obsessive-compulsive disorder (Foa et al.)",
+      "publisher": "American Journal of Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/15625214/",
+      "year": 2005
+    },
+    {
+      "title": "A randomized clinical trial of acceptance and commitment therapy versus progressive relaxation training for obsessive-compulsive disorder (Twohig et al.)",
+      "publisher": "Journal of Consulting and Clinical Psychology (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/20873905/",
+      "year": 2010
+    },
+    {
+      "title": "The Yale-Brown Obsessive Compulsive Scale. I. Development, use, and reliability (Goodman et al.)",
+      "publisher": "Archives of General Psychiatry (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/2684084/",
+      "year": 1989
+    },
+    {
+      "title": "When religion and obsessive-compulsive disorder collide: treating scrupulosity in Ultra-Orthodox Jews (Huppert et al.)",
+      "publisher": "Journal of Clinical Psychology (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/17828763/",
+      "year": 2007
+    },
+    {
+      "title": "Scrupulosity, religious affiliation and symptom presentation in obsessive compulsive disorder (Buchholz et al.)",
+      "publisher": "Behavioural and Cognitive Psychotherapy (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/30642412/",
+      "year": 2019
+    },
+    {
+      "title": "Obsessive-Compulsive Disorder (statistics)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/statistics/obsessive-compulsive-disorder-ocd"
+    },
+    {
+      "title": "Psychological Treatments (treatment index)",
+      "publisher": "APA Division 12, Society of Clinical Psychology",
+      "url": "https://div12.org/psychological-treatments/treatments/"
+    },
+    {
+      "title": "AACC Code of Ethics",
+      "publisher": "American Association of Christian Counselors",
+      "url": "https://aacc.net/aacc-code-of-ethics/"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

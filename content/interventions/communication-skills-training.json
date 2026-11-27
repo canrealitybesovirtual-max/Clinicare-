@@ -2,7 +2,7 @@
   "id": "communication-skills-training",
   "name": "Communication skills training",
   "modality": "Behavioral skills training",
-  "conditions": ["major-depressive-disorder", "alcohol-use-disorder", "adjustment-disorder", "persistent-depressive-disorder", "social-anxiety-disorder"],
+  "conditions": ["major-depressive-disorder", "alcohol-use-disorder", "adjustment-disorder", "persistent-depressive-disorder", "social-anxiety-disorder", "obsessive-compulsive-disorder", "specific-phobia"],
   "evidenceLevel": "Usually delivered as part of broader treatments rather than alone. NICE CG115 recommends behavioural couples therapy, which includes communication training, for harmful drinking and mild alcohol dependence when a regular partner is willing to take part (not suitable where there is domestic abuse). A Cochrane review found couple therapy about as effective as individual psychotherapy for depression, based on low-quality evidence (Barbato et al., 2018). Skills-training modules, including handling social pressure to drink, are part of NIAAA's COMBINE Combined Behavioral Intervention. Evidence for communication training as a stand-alone treatment is emerging.",
   "minutes": { "min": 30, "max": 60 },
   "purpose": "Teaches practical skills for saying what you feel and need clearly, listening so the other person feels heard, and working through disagreements without escalating. Often used when relationship strain is feeding low mood or drinking, within IPT, CBT, behavioural couples therapy or relapse-prevention work. Uses standard behavioral skills-training methods: explain, model, rehearse, give feedback, and practice in real life.",

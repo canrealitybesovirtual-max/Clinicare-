@@ -2,7 +2,7 @@
   "id": "diaphragmatic-breathing",
   "name": "Diaphragmatic (slow, low) breathing",
   "modality": "Relaxation - breathing skill",
-  "conditions": ["generalized-anxiety-disorder", "panic-disorder", "agoraphobia"],
+  "conditions": ["generalized-anxiety-disorder", "panic-disorder", "agoraphobia", "ptsd", "alcohol-use-disorder", "adjustment-disorder"],
   "evidenceLevel": "Mixed; use as a supporting skill, not a stand-alone treatment. NCCIH lists slow diaphragmatic breathing as a generally safe relaxation technique with limited condition-specific evidence. A small 2017 randomized trial in healthy adults (Ma et al.) found lower negative affect and cortisol after 8 weeks of training. In panic CBT, a 2018 component network meta-analysis (Pompoli et al.) found breathing retraining improved acceptability but had small effects on efficacy, and a 2003 review (Meuret et al.) cautions that breathing training can become a safety behavior or lead to over-breathing.",
   "minutes": { "min": 5, "max": 15 },
   "purpose": "Teaches slow, gentle breathing that uses the diaphragm, with an out-breath longer than the in-breath, to help settle physical arousal. It is a general calming skill and an alternative to fast, shallow chest breathing. In panic work, present it as a way to ride out sensations, not as protection from a feared catastrophe, so it does not turn into a safety behavior that blocks learning during exposure.",

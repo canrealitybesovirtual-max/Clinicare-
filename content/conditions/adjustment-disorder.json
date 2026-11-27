@@ -1,0 +1,324 @@
+{
+  "id": "adjustment-disorder",
+  "name": "Adjustment disorder",
+  "icd10cm": [
+    {
+      "code": "F43.20",
+      "label": "Adjustment disorder, unspecified"
+    },
+    {
+      "code": "F43.21",
+      "label": "Adjustment disorder with depressed mood"
+    },
+    {
+      "code": "F43.22",
+      "label": "Adjustment disorder with anxiety"
+    },
+    {
+      "code": "F43.23",
+      "label": "Adjustment disorder with mixed anxiety and depressed mood"
+    },
+    {
+      "code": "F43.24",
+      "label": "Adjustment disorder with disturbance of conduct"
+    },
+    {
+      "code": "F43.25",
+      "label": "Adjustment disorder with mixed disturbance of emotions and conduct"
+    }
+  ],
+  "icd11": [
+    {
+      "code": "6B43",
+      "label": "Adjustment disorder"
+    }
+  ],
+  "dsmPointer": "See DSM-5-TR: Trauma- and Stressor-Related Disorders — Adjustment Disorders",
+  "summary": "A clear life change (a breakup, job loss, illness, a move, money or legal trouble) is followed within weeks by distress or problems coping that go beyond what the situation would usually bring, and the client struggles to get back on track. Preoccupation with the stressor is typical: going over it again and again, worrying about what it means, finding it hard to think of anything else, with low mood, anxiety, poor sleep or acting-out mixed in. It is meant to be time-limited and usually eases as the client adapts or the stressor ends; when the picture fills out into a depressive or anxiety disorder, that pattern is the better fit. Suicidal thoughts can occur and should be asked about directly. For clinician review only; this is not a diagnosis.",
+  "features": [
+    {
+      "symptomId": "identifiable-stressor",
+      "kind": "core",
+      "weight": 5
+    },
+    {
+      "symptomId": "stressor-preoccupation",
+      "kind": "core",
+      "weight": 4
+    },
+    {
+      "symptomId": "difficulty-adjusting",
+      "kind": "core",
+      "weight": 4
+    },
+    {
+      "symptomId": "depressed-mood",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "subjective-anxiety-stress",
+      "kind": "associated",
+      "weight": 2,
+      "breadthArea": true
+    },
+    {
+      "symptomId": "insomnia",
+      "kind": "associated",
+      "weight": 1
+    },
+    {
+      "symptomId": "irritability",
+      "kind": "associated",
+      "weight": 1
+    },
+    {
+      "symptomId": "social-withdrawal",
+      "kind": "associated",
+      "weight": 1
+    },
+    {
+      "symptomId": "concentration-difficulty",
+      "kind": "associated",
+      "weight": 1
+    },
+    {
+      "symptomId": "worry-excessive",
+      "kind": "associated",
+      "weight": 1
+    },
+    {
+      "symptomId": "reckless-self-destructive",
+      "kind": "associated",
+      "weight": 1
+    }
+  ],
+  "minCore": 2,
+  "durationGate": {
+    "minWeeks": 0,
+    "note": "Ask when the stressor happened and when the symptoms began. Onset usually follows within weeks (DSM-5-TR and ICD-11 give their own windows) and the reaction usually eases within about six months of the stressor or its consequences ending; persistence beyond that points to another pattern."
+  },
+  "impairmentRequired": true,
+  "ruleOuts": [
+    {
+      "label": "Medical illness as the stressor or the cause",
+      "type": "medical",
+      "note": "A new illness can be the stressor, but some illnesses (thyroid disease, stroke, cancer treatment) also cause mood or anxiety symptoms directly. Coordinate with medical care."
+    },
+    {
+      "label": "Alcohol or drug use to cope",
+      "type": "substance",
+      "note": "Drinking or using more after a stressor is common and can drive the distress. Ask gently; this app does not store substance-use information."
+    },
+    {
+      "label": "Medication effects",
+      "type": "substance",
+      "note": "New medicines started around the time of the stressor may affect mood or sleep. Review the medication list with the prescriber."
+    },
+    {
+      "label": "A depressive, anxiety or trauma-related condition",
+      "type": "psychiatric",
+      "note": "If the full picture of major depression, generalized anxiety or PTSD is present, that pattern is the better fit; a traumatic event points toward acute stress or PTSD."
+    },
+    {
+      "label": "Expected grief after a death",
+      "type": "psychiatric",
+      "note": "Grief after a death follows its own course; consider prolonged grief only when longing and pain stay intense well beyond what the client's culture expects."
+    }
+  ],
+  "specifiers": [
+    {
+      "label": "With depressed mood, with anxiety, mixed, with disturbance of conduct, or mixed emotions and conduct (descriptive; ICD-10-CM F43.21 to F43.25)",
+      "note": "Choose the code that matches the main presentation; F43.20 when unspecified."
+    },
+    {
+      "label": "Acute or persistent (descriptive)",
+      "note": "Note how long symptoms have lasted, especially when the stressor or its consequences are ongoing (for example a chronic illness or long legal case)."
+    }
+  ],
+  "differentials": [
+    {
+      "label": "Major depressive disorder",
+      "distinguishing": "Low mood or loss of interest has spread to sleep, energy, appetite, self-worth and concentration, forming a full depressive episode whatever the trigger."
+    },
+    {
+      "label": "Generalized anxiety disorder",
+      "icd10cm": "F41.1",
+      "distinguishing": "Worry ranges across many topics and pre-dates or outlasts the stressor."
+    },
+    {
+      "label": "Posttraumatic stress disorder",
+      "icd10cm": "F43.10",
+      "distinguishing": "Follows a traumatic event (threat of death, serious injury or sexual violence) with intrusive memories and avoidance of reminders."
+    },
+    {
+      "label": "Acute stress disorder (ICD-10-CM title: Acute stress reaction)",
+      "icd10cm": "F43.0",
+      "distinguishing": "A trauma-related reaction in the first weeks after a traumatic event."
+    },
+    {
+      "label": "Prolonged grief disorder",
+      "icd10cm": "F43.81",
+      "distinguishing": "The stressor is a death, and longing for or preoccupation with the person who died dominates."
+    },
+    {
+      "label": "Normal stress response",
+      "distinguishing": "Distress that fits the size of the stressor and does not cause marked impairment."
+    }
+  ],
+  "comorbidities": [
+    {
+      "conditionId": "major-depressive-disorder",
+      "label": "Major depressive disorder",
+      "note": "If the full depressive picture is present, that pattern usually takes precedence over an adjustment reaction (see DSM-5-TR). Screen with the PHQ-9 and ask directly about suicidal thoughts."
+    },
+    {
+      "conditionId": "generalized-anxiety-disorder",
+      "label": "Generalized anxiety disorder",
+      "note": "Worry that started with the stressor but now spreads to many topics may reflect a broader anxiety pattern."
+    },
+    {
+      "conditionId": "alcohol-use-disorder",
+      "label": "Alcohol use disorder",
+      "note": "Drinking more after a loss or setback is common; ask about it. 42 CFR Part 2 prohibits unauthorized use or disclosure of these records."
+    },
+    {
+      "conditionId": "prolonged-grief-disorder",
+      "label": "Prolonged grief disorder",
+      "note": "When the stressor is a death, grief-focused assessment may fit better."
+    }
+  ],
+  "measures": [
+    "phq-9",
+    "gad-7"
+  ],
+  "measuresPending": [
+    {
+      "name": "Columbia Suicide Severity Rating Scale (C-SSRS)",
+      "url": "https://cssrs.columbia.edu",
+      "note": "License pending — link out only",
+      "licenseKey": "C-SSRS"
+    }
+  ],
+  "interventions": [
+    {
+      "name": "Problem-solving therapy and brief CBT-based stress management",
+      "evidence": "Reviews (O'Donnell et al., 2019; Bachem and Casey, 2018) describe a small but growing evidence base, with brief problem-solving and CBT-based approaches showing benefit.",
+      "note": "Sort problems into those the client can act on and those that call for acceptance or support; plan concrete steps."
+    },
+    {
+      "name": "WHO Problem Management Plus (PM+) and Self-Help Plus (Doing What Matters in Times of Stress)",
+      "evidence": "WHO low-intensity programs for adults impaired by distress after adversity.",
+      "note": "Brief, scalable formats that can be delivered by trained non-specialists or as guided self-help."
+    },
+    {
+      "name": "Supportive counseling and interpersonal psychotherapy (role transitions)",
+      "evidence": "IPT is established for depression (NICE NG222) and its role-transition focus fits life changes; direct trial evidence in adjustment disorder is limited.",
+      "note": "Help the client make sense of the change, mourn what was lost and build the new role."
+    },
+    {
+      "name": "Practical help and social work referral",
+      "evidence": "Recommended in WHO PM+ guidance for adults facing ongoing adversity.",
+      "note": "Housing, employment, legal, financial and caregiving help can reduce the stressor itself."
+    },
+    {
+      "name": "Suicide risk screening and safety planning",
+      "evidence": "Clinical standard of care; adjustment reactions can carry suicide risk.",
+      "note": "Ask directly about suicidal thoughts. The clinician decides on risk level and next steps; crisis resources (988, local emergency number, findahelpline.com) stay visible on every screen."
+    }
+  ],
+  "handouts": [],
+  "statIds": [],
+  "culturalNotes": [
+    "What counts as a major stressor, and what reaction is expected, varies across cultures and families. Ask how people in the client's community would usually respond before judging the reaction as out of proportion.",
+    "Migration and acculturation stress, discrimination, loss of social status and separation from family are common stressors for immigrants and refugees, and they often pile up. Address them practically as well as clinically.",
+    "In collectivist families a stressor may be shared, for example a relative's illness or a family member's job loss. Consider the impact on the whole family and involve them as the client wishes.",
+    "Avoid labeling ordinary adaptation as a disorder. Many reactions to hard life events are expected and ease with time, support and practical help.",
+    "Use a trained professional interpreter, not family members, especially when the stressor involves family conflict.",
+    "Faith and spiritual community can be central to coping with change. Offer faith-integrated approaches only when the client asks for them and after informed consent (see the AACC Code of Ethics for faith-based counselors)."
+  ],
+  "sud": false,
+  "requiredFeatures": [
+    {
+      "symptomId": "identifiable-stressor",
+      "note": "A clear recent stressor is not documented; this pattern depends on one (see DSM-5-TR). Ask what changed and when."
+    }
+  ],
+  "redFlagRules": [
+    {
+      "type": "suicidality",
+      "message": "Suicide-related content is documented in this input. Suicidal thoughts and behavior can occur in adjustment reactions, sometimes soon after the stressor; ask directly and follow your risk protocol and safety planning."
+    },
+    {
+      "type": "psychosis",
+      "message": "Psychotic symptoms are documented in this input and are not part of this pattern. Consider a brief psychotic disorder, a mood disorder with psychotic features, substance effects or a medical cause, and refer for an urgent psychiatric evaluation."
+    },
+    {
+      "type": "mania",
+      "message": "Manic or hypomanic signs are documented in this input. Screen for bipolar disorder (ICD-10-CM F31.x) and refer for psychiatric evaluation before treatment planning."
+    }
+  ],
+  "licensedDsm": false,
+  "wileyLicensed": false,
+  "sources": [
+    {
+      "title": "Adjustment Disorder: Current Developments and Future Directions (O'Donnell et al.)",
+      "publisher": "International Journal of Environmental Research and Public Health (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/31315203/",
+      "year": 2019
+    },
+    {
+      "title": "Adjustment disorder: a diagnosis whose time has come (Bachem and Casey)",
+      "publisher": "Journal of Affective Disorders (PubMed)",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/29107817/",
+      "year": 2018
+    },
+    {
+      "title": "Problem management plus (PM+): individual psychological help for adults impaired by distress in communities exposed to adversity",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/publications/i/item/problem-management-plus-(-pm-)-individual-psychological-help-for-adults-impaired-by-distress-in-communities-exposed-to-adversity",
+      "year": 2016
+    },
+    {
+      "title": "Doing What Matters in Times of Stress",
+      "publisher": "World Health Organization",
+      "url": "https://www.who.int/publications/i/item/9789240003927",
+      "year": 2020
+    },
+    {
+      "title": "Depression in adults: treatment and management (NG222)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng222",
+      "year": 2022
+    },
+    {
+      "title": "ICD-11 for Mortality and Morbidity Statistics (browser)",
+      "publisher": "World Health Organization",
+      "url": "https://icd.who.int/browse/latest-release/mms/en"
+    },
+    {
+      "title": "ICD-10-CM (official code set)",
+      "publisher": "CDC National Center for Health Statistics",
+      "url": "https://www.cdc.gov/nchs/icd/icd-10-cm/index.html"
+    },
+    {
+      "title": "ICD-10-CM codes checked with the NLM Clinical Table Search Service",
+      "publisher": "National Library of Medicine",
+      "url": "https://clinicaltables.nlm.nih.gov/apidoc/icd10cm/v3/doc.html"
+    },
+    {
+      "title": "The Columbia Lighthouse Project (C-SSRS)",
+      "publisher": "Columbia University",
+      "url": "https://cssrs.columbia.edu"
+    },
+    {
+      "title": "AACC Code of Ethics",
+      "publisher": "American Association of Christian Counselors",
+      "url": "https://aacc.net/aacc-code-of-ethics/"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

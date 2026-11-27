@@ -1,0 +1,14 @@
+all-MiniLM-L6-v2 (ONNX, int8 quantized) - used on-device only by the optional
+"Possible matches - on-device AI" feature. See docs/ON-DEVICE-AI.md.
+
+Model:     sentence-transformers/all-MiniLM-L6-v2 (Apache License 2.0)
+           https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2
+ONNX:      Xenova/all-MiniLM-L6-v2 (Apache License 2.0), commit 751bff37182d3f1213fa05d7196b954e230abad9
+           https://huggingface.co/Xenova/all-MiniLM-L6-v2/tree/751bff37182d3f1213fa05d7196b954e230abad9
+License:   https://www.apache.org/licenses/LICENSE-2.0
+
+Files are unmodified copies of that commit and are verified by SHA-256 in scripts/fetch-model.ts:
+  7135149f7cffa1a573466c6e4d8423ed73b62fd2332c575bf738a0d033f70df7  config.json (650 bytes)
+  9261e7d79b44c8195c1cada2b453e55b00aeb81e907a6664974b4d7776172ab3  tokenizer_config.json (366 bytes)
+  da0e79933b9ed51798a3ae27893d3c5fa4a201126cef75586296df9b4d2c62a0  tokenizer.json (711661 bytes)
+  afdb6f1a0e45b715d0bb9b11772f032c399babd23bfc31fed1c170afc848bdb1  onnx/model_quantized.onnx (22972370 bytes)

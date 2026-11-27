@@ -29,6 +29,7 @@ import {
   type PdfOp,
   type PdfPageLayout,
 } from "./pdf";
+import { PLAN_MBC_NOTE, PLAN_PHQ9_NOTE, PLAN_REVIEW_LABEL } from "@/components/plan/plan-wording";
 
 /* ------------------------------------------------------------------ export model */
 
@@ -62,12 +63,7 @@ export const PLAN_TITLE = "Treatment plan draft";
 export const PLAN_FOOTER = PDF_DISCLAIMER; // "Resource only. Not a substitute for clinical judgment."
 export const PLAN_PART2_NOTICE = PDF_PART2_NOTICE; // "42 CFR Part 2 prohibits unauthorized use or disclosure of these records."
 export const PLAN_NAME_LINE = PDF_NAME_LINE; // the only personal field: blank, filled in by hand
-export const PLAN_REVIEW_LABEL =
-  "For clinician review. Original wording from the app's plan library, adapted with the client. Not a diagnosis and not a substitute for clinical judgment.";
-export const PLAN_MBC_NOTE =
-  "Measurement-based care: give the same measure at the start and on the schedule below, look at the results together with the client, and use the change over time to adjust the plan. A score is screening information for clinician review, not a diagnosis.";
-export const PLAN_PHQ9_NOTE =
-  "PHQ-9: if item 9 is answered above 0, follow up with a suicide risk assessment and safety planning. The app never decides risk.";
+export { PLAN_MBC_NOTE, PLAN_PHQ9_NOTE, PLAN_REVIEW_LABEL };
 export const PLAN_PDF_FILENAME = "Treatment plan draft.pdf";
 export const PLAN_DOCX_FILENAME = "Treatment plan draft.docx";
 export const DOCX_MIME = "application/vnd.openxmlformats-officedocument.wordprocessingml.document";

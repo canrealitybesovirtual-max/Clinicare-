@@ -2,7 +2,7 @@
   "id": "progressive-muscle-relaxation",
   "name": "Progressive muscle relaxation (PMR)",
   "modality": "Relaxation",
-  "conditions": ["generalized-anxiety-disorder"],
+  "conditions": ["generalized-anxiety-disorder", "major-depressive-disorder", "ptsd", "insomnia-disorder"],
   "evidenceLevel": "Supportive as a component skill. NICE CG113 lists applied relaxation, which is built on PMR, as a high-intensity psychological option for GAD alongside CBT. A 2008 meta-analysis (Manzoni et al.) found relaxation training reduced anxiety across studies. NCCIH describes relaxation techniques as generally safe but notes limited evidence for specific conditions. In panic CBT packages, a 2018 component network meta-analysis (Pompoli et al.) linked muscle relaxation with lower efficacy, so PMR is not a first-choice component for panic.",
   "minutes": { "min": 15, "max": 30 },
   "purpose": "Teaches the client to notice the contrast between tense and relaxed muscles by tightening and then releasing muscle groups in a set order. It lowers physical tension linked to worry and gives the client a portable self-calming skill. PMR is also the first stage of applied relaxation. Use it as one skill within a broader treatment plan, not as a stand-alone treatment for an anxiety condition.",

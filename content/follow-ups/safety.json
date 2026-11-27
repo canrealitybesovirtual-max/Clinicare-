@@ -1,0 +1,179 @@
+{
+  "id": "safety",
+  "title": "Safety questions",
+  "domain": "safety",
+  "about": "Offered first whenever low mood, hopelessness, trauma, grief or substance signals appear, or a red flag is documented. Answers only record what the clinician chose. Nothing here estimates or decides risk; a 'yes' brings crisis resources and the safety-planning link to the top of the screen, and a 'no' never removes anything.",
+  "questions": [
+    {
+      "id": "safety-ask-directly",
+      "kind": "safety",
+      "domain": "safety",
+      "select": "many",
+      "text": "Ask directly about thoughts of suicide or self-harm, including passive thoughts of death.",
+      "why": "Low mood, hopelessness, trauma, grief and heavy substance use all make asking more important. Asking plainly does not put the idea in someone's head and often brings relief. The app records only what you choose; it never estimates risk, and a 'no' today does not rule anything out later.",
+      "options": [
+        {
+          "id": "thoughts-of-death",
+          "label": "Yes: thoughts of death or of not wanting to be alive",
+          "effects": { "addSymptomIds": ["passive-death-wish"] },
+          "surfaces": ["crisis-resources", "safety-plan"]
+        },
+        {
+          "id": "suicidal-thoughts",
+          "label": "Yes: thoughts of suicide",
+          "effects": { "addSymptomIds": ["suicidal-ideation-active"] },
+          "surfaces": ["crisis-resources", "safety-plan", "lethal-means"],
+          "note": "Follow your service's suicide-risk procedures. Ask about plans, intent, preparation, past attempts and access to means, and build a safety plan together."
+        },
+        {
+          "id": "self-harm",
+          "label": "Yes: self-harm",
+          "effects": { "addSymptomIds": ["self-harm"] },
+          "surfaces": ["crisis-resources", "safety-plan"]
+        },
+        {
+          "id": "past-attempt",
+          "label": "Yes: a past suicide attempt",
+          "effects": { "addSymptomIds": ["suicide-attempt-history"] },
+          "surfaces": ["crisis-resources", "safety-plan", "lethal-means"]
+        },
+        {
+          "id": "denied",
+          "label": "Asked: the client said no to these today",
+          "exclusive": true,
+          "note": "Recorded as asked. This is not a risk estimate; ask again as things change and keep crisis information visible."
+        },
+        { "id": "not-yet", "label": "Not asked yet", "exclusive": true, "keepOpen": true }
+      ],
+      "showWhen": {
+        "symptomCategories": ["trauma", "safety"],
+        "symptomIds": [
+          "depressed-mood",
+          "anhedonia",
+          "worthlessness-guilt",
+          "social-withdrawal",
+          "emotional-numbing-detachment",
+          "traumatic-event-exposure",
+          "reckless-self-destructive"
+        ],
+        "conditionIds": [
+          "major-depressive-disorder",
+          "persistent-depressive-disorder",
+          "ptsd",
+          "prolonged-grief-disorder",
+          "alcohol-use-disorder",
+          "adjustment-disorder"
+        ],
+        "redFlags": ["suicidality", "homicidality", "psychosis", "mania", "withdrawal", "eating-disorder-medical"],
+        "triggerCategories": ["trauma-reminder"],
+        "substanceYes": true,
+        "answered": [
+          { "questionId": "alcohol-pattern", "answerIds": ["heavy"] },
+          { "questionId": "grief-loss", "answerIds": ["yes"] }
+        ]
+      },
+      "priority": 1
+    },
+    {
+      "id": "safety-lethal-means",
+      "kind": "safety",
+      "domain": "safety",
+      "text": "Ask about access to lethal means, such as firearms or stored medication, and whether the client is willing to put distance between themselves and those means for now.",
+      "why": "Putting time and distance between a person in crisis and lethal means is one of the most effective suicide-prevention steps. Keep it collaborative and practical; the app records only that the conversation happened.",
+      "options": [
+        { "id": "agreed-steps", "label": "Discussed: steps to limit access agreed", "surfaces": ["lethal-means"] },
+        { "id": "no-steps", "label": "Discussed: no steps agreed yet", "surfaces": ["lethal-means", "crisis-resources"] },
+        { "id": "not-yet", "label": "Not discussed yet", "keepOpen": true }
+      ],
+      "showWhen": {
+        "answered": [
+          { "questionId": "safety-ask-directly", "answerIds": ["thoughts-of-death", "suicidal-thoughts", "self-harm", "past-attempt"] }
+        ],
+        "redFlags": ["suicidality"]
+      },
+      "priority": 2
+    },
+    {
+      "id": "safety-plan",
+      "kind": "safety",
+      "domain": "safety",
+      "text": "Offer to make or review a safety plan together: warning signs, coping steps, people and places that help, professional and crisis contacts, and making the surroundings safer.",
+      "why": "A brief collaborative safety plan reduces suicidal behavior and gives the client concrete steps for hard moments. The handout and the crisis panel are one tap away.",
+      "options": [
+        { "id": "made", "label": "Safety plan made or reviewed today", "surfaces": ["safety-plan"] },
+        {
+          "id": "declined",
+          "label": "The client declined for now",
+          "surfaces": ["safety-plan", "crisis-resources"],
+          "note": "Keep crisis numbers visible, share them in writing, and offer the plan again later."
+        },
+        { "id": "not-yet", "label": "Not yet", "keepOpen": true }
+      ],
+      "showWhen": {
+        "answered": [
+          { "questionId": "safety-ask-directly", "answerIds": ["thoughts-of-death", "suicidal-thoughts", "self-harm", "past-attempt"] }
+        ],
+        "redFlags": ["suicidality"]
+      },
+      "priority": 3
+    },
+    {
+      "id": "safety-harm-others",
+      "kind": "safety",
+      "domain": "safety",
+      "text": "Ask directly about thoughts or urges to hurt someone else, and whether anyone may be in danger now.",
+      "why": "A documented statement about harming others, or perceptual disturbances that may include commands, makes asking necessary. Unwanted harm thoughts that horrify the client (as in OCD) differ from intent; record what the client says and follow your service's duty-to-protect procedures.",
+      "options": [
+        {
+          "id": "described",
+          "label": "Yes: the client described thoughts or urges to harm someone",
+          "effects": { "addSymptomIds": ["homicidal-ideation"] },
+          "surfaces": ["crisis-resources"],
+          "note": "Follow your service's procedures, including any duty-to-warn or duty-to-protect rules where you practice. Consult a supervisor or colleague."
+        },
+        {
+          "id": "unwanted-intrusive",
+          "label": "Unwanted, distressing harm thoughts the client does not want to act on",
+          "note": "This can fit intrusive thoughts (as in OCD). Clarify with care and consult if unsure. Nothing was added to the symptom list."
+        },
+        { "id": "denied", "label": "Asked: the client said no" },
+        { "id": "not-yet", "label": "Not asked yet", "keepOpen": true }
+      ],
+      "showWhen": { "redFlags": ["homicidality", "psychosis"] },
+      "priority": 4
+    }
+  ],
+  "sources": [
+    {
+      "title": "VA/DoD Clinical Practice Guideline: Assessment and Management of Patients at Risk for Suicide",
+      "publisher": "US Department of Veterans Affairs and Department of Defense",
+      "url": "https://www.healthquality.va.gov/guidelines/mh/srb/",
+      "year": 2024
+    },
+    {
+      "title": "Self-harm: assessment, management and preventing recurrence (NG225)",
+      "publisher": "National Institute for Health and Care Excellence",
+      "url": "https://www.nice.org.uk/guidance/ng225",
+      "year": 2022
+    },
+    {
+      "title": "Suicide Prevention (health topic)",
+      "publisher": "National Institute of Mental Health",
+      "url": "https://www.nimh.nih.gov/health/topics/suicide-prevention"
+    },
+    {
+      "title": "Comparison of the safety planning intervention with follow-up vs usual care of suicidal patients treated in the emergency department (Stanley et al.)",
+      "publisher": "JAMA Psychiatry (PubMed Central)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6142908/",
+      "year": 2018
+    },
+    {
+      "title": "988 Suicide & Crisis Lifeline",
+      "publisher": "988 Lifeline",
+      "url": "https://988lifeline.org"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

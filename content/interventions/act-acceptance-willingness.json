@@ -10,7 +10,11 @@
     "ptsd",
     "social-anxiety-disorder",
     "obsessive-compulsive-disorder",
-    "alcohol-use-disorder"
+    "alcohol-use-disorder",
+    "insomnia-disorder",
+    "adjustment-disorder",
+    "prolonged-grief-disorder",
+    "specific-phobia"
   ],
   "evidenceLevel": "Moderate evidence for acceptance-based treatments in anxiety; emerging evidence as a stand-alone component. Acceptance components outperformed inactive comparisons in a meta-analysis of 66 laboratory studies (Levin et al., 2012). In RCTs, an acceptance-based behavior therapy matched applied relaxation for GAD (Hayes-Skelton et al., 2013), ACT matched CBT for social anxiety (Craske et al., 2014), and ACT outperformed relaxation training for OCD (Twohig et al., 2010). ACT for substance use showed a small-to-medium effect over active comparisons in an initial meta-analysis (Lee et al., 2015). PTSD: emerging evidence; ACT is not among the PTSD psychotherapies recommended or suggested in the 2023 VA/DoD guideline (see the 2023 synopsis). APA Division 12 rating not verified this session; check div12.org.",
   "minutes": { "min": 15, "max": 30 },

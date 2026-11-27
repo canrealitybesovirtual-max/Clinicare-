@@ -1,13 +1,17 @@
 import type { Metadata } from "next";
-import { HeartHandshake, MessagesSquare, Phone, Siren, Globe, Stethoscope } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight, Globe, MessagesSquare, Phone, Siren, Sparkles, Stethoscope } from "lucide-react";
 import { getHandout } from "@/lib/content";
 import { clientSafeSources } from "@/lib/client-safe";
 import { Card } from "@/components/ui/card";
 import { ExternalLink } from "@/components/ui/external-link";
+import { buttonVariants } from "@/components/ui/button";
 import { CrisisPanel } from "@/components/crisis/crisis-panel";
 import { DownloadPdfButton } from "@/components/pdf/download-pdf-button";
 import { HandoutBody } from "@/components/handouts/handout-body";
 import { ReviewBadge } from "@/components/content/content-bits";
+import { TalkToSomeone } from "@/components/client/talk-to-someone";
+import { CLIENT_TOPICS } from "@/components/client/topics";
 
 export const metadata: Metadata = { title: "Self-help" };
 
@@ -15,26 +19,6 @@ export const metadata: Metadata = { title: "Self-help" };
  * Client mode (G3): plain language (grades 6-8), crisis information first, no diagnosis names,
  * no codes, no scores, and no links into clinician screens other than the header mode switch.
  */
-
-function TalkToSomeone({ id, title }: { id: string; title: string }) {
-  return (
-    <section aria-labelledby={id}>
-      <div className="flex gap-4 rounded-2xl border border-accent/30 bg-accent-soft p-5">
-        <HeartHandshake aria-hidden className="mt-0.5 size-7 shrink-0 text-accent" />
-        <div className="space-y-1.5">
-          <h2 id={id} className="text-lg font-semibold">
-            {title}
-          </h2>
-          <p className="leading-relaxed">
-            The tips on this page are things you can try on your own. They do not take the place of a counselor,
-            therapist, doctor or nurse. If you are having a hard time, or things are not getting better, please talk
-            with a licensed professional. Asking for help is a strong step.
-          </p>
-        </div>
-      </div>
-    </section>
-  );
-}
 
 export default function ClientPage() {
   const pmr = getHandout("pmr-homework");
@@ -47,7 +31,8 @@ export default function ClientPage() {
         <p className="text-sm font-semibold uppercase tracking-wide text-accent">Self-help</p>
         <h1 className="mt-1 text-2xl font-bold tracking-tight sm:text-3xl">Help and skills you can use today</h1>
         <p className="mt-3 text-lg leading-relaxed text-muted">
-          Simple steps to calm your body, and places to get help. You do not need to type anything on this page.
+          Simple steps to calm your body, things to read, and places to get help. You do not need to type anything on
+          these pages.
         </p>
       </div>
 
@@ -62,6 +47,26 @@ export default function ClientPage() {
       </section>
 
       <TalkToSomeone id="talk-1" title="Talk with a licensed professional" />
+
+      <section aria-labelledby="topics-heading">
+        <h2 id="topics-heading" className="text-xl font-bold">
+          What would you like help with?
+        </h2>
+        <p className="mt-1 text-muted">Pick a topic to read trusted health pages and find skills to try.</p>
+        <ul className="mt-4 grid gap-2 sm:grid-cols-2">
+          {CLIENT_TOPICS.map((t) => (
+            <li key={t.id}>
+              <Link
+                href={`/client/topics/${t.id}`}
+                className="group flex min-h-12 items-center justify-between gap-2 rounded-xl border border-border bg-surface px-4 py-2.5 text-sm font-semibold transition-colors hover:border-accent hover:bg-accent-soft"
+              >
+                <span>{t.label}</span>
+                <ArrowRight aria-hidden className="size-4 shrink-0 text-muted transition-transform group-hover:translate-x-0.5" />
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </section>
 
       {pmr ? (
         <section aria-labelledby="pmr-heading">
@@ -97,6 +102,24 @@ export default function ClientPage() {
           </Card>
         </section>
       ) : null}
+
+      <section aria-labelledby="more-skills">
+        <Card className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex gap-3">
+            <Sparkles aria-hidden className="mt-1 size-5 shrink-0 text-accent" />
+            <div>
+              <h2 id="more-skills" className="text-lg font-semibold">
+                More skills to practice
+              </h2>
+              <p className="text-sm text-muted">Breathing, grounding, sleep, worry, kind self-talk and more.</p>
+            </div>
+          </div>
+          <Link href="/client/skills" className={buttonVariants({ variant: "outline" })}>
+            See all skills
+            <ArrowRight aria-hidden />
+          </Link>
+        </Card>
+      </section>
 
       <section aria-labelledby="where-help">
         <Card className="space-y-4 sm:p-6">
@@ -149,6 +172,10 @@ export default function ClientPage() {
               </div>
             </li>
           </ul>
+          <Link href="/client/help" className={buttonVariants({ variant: "outline" })}>
+            More free helplines, by country
+            <ArrowRight aria-hidden />
+          </Link>
         </Card>
       </section>
 

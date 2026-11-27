@@ -13,7 +13,7 @@ import {
   type ReferralEntry,
   type ReferralKind,
 } from "@/lib/schemas-referrals";
-import type { FacetIndex } from "@/components/ethics/facet-filter";
+import type { FacetIndex } from "@/components/ethics/facet-index";
 import { DIRECTORY_REGIONS, KIND_ORDER } from "./referral-format";
 
 export const usDirectory: ReferralDirectory = ReferralDirectorySchema.parse(usJson);
