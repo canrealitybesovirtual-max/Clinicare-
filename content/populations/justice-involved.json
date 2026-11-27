@@ -1,0 +1,77 @@
+{
+  "id": "justice-involved",
+  "name": "Justice-involved and mandated clients",
+  "group": "circumstances",
+  "summary": "Care for adults on probation or parole, in diversion or drug court, or recently released: consent and the limits of confidentiality when treatment is mandated, scope of releases, Part 2 rules for court-related substance-use records, reentry continuity and overdose risk, and Risk-Need-Responsivity principles.",
+  "scopeNote": "For adults (18 and over). The app never asks for or saves criminal history, charges, case numbers or supervision status. Treating clinicians provide treatment; risk or forensic opinions for courts belong to trained evaluators in a separate role.",
+  "whyItMatters": "In the first two weeks after release from prison, the risk of death among former inmates in Washington State was 12.7 times that of other residents, and the risk of drug overdose death about 129 times higher (Binswanger and colleagues, 2007). A research synthesis of 26 studies found that treatment for offenders with mental illness reduced distress and improved coping and behavior, and that programs designed for both psychiatric and criminal justice needs reduced psychiatric and criminal recidivism (Morgan and colleagues, 2012). Skeem and colleagues (2011) argued that reducing recidivism among people with mental illness also requires addressing general risk factors set out in the Risk-Need-Responsivity model, not only symptoms. SAMHSA's reentry guidelines describe continuity of care from jail or prison into the community.",
+  "askAbout": [
+    "Whose idea was it for you to come here, and what would you want from it for yourself?",
+    "What do you understand about what I will have to share with the court, probation or parole, and what would you like me to keep private?",
+    "What did you need help with before, and what do you need most right now, such as housing, ID, benefits, medicines or work?",
+    "If you have been released recently, how are you managing medicines, appointments and staying safe from overdose?",
+    "Who in your life supports you, and who makes things harder?",
+    "What has worked for you before when you wanted to make a change?"
+  ],
+  "stereotypeCaution": "People involved with the justice system differ widely in history, needs and goals, and many have experienced trauma, poverty and discrimination. Do not assume dangerousness, dishonesty or lack of motivation, and do not let a charge define the person in front of you.",
+  "keyConsiderations": [
+    "Informed consent is central: before starting, explain in writing what will be shared, with whom (court, probation, parole, attorney), how often and what will not be shared.",
+    "Keep releases narrow: attendance and participation only, unless the person agrees to more, and review them when circumstances change.",
+    "Substance-use treatment records, including court-ordered ones, are protected by 42 CFR Part 2; disclosure needs specific written consent or a qualifying court order.",
+    "Separate treatment from forensic work: do not give opinions on risk, guilt, fitness or sentencing as the treating clinician; refer to an independent evaluator.",
+    "Risk-Need-Responsivity principles can inform treatment planning: match intensity to need, target changeable factors linked to offending (such as substance use, antisocial thinking, peers, employment), and adapt delivery to the person.",
+    "Reentry needs are practical and urgent: ID, benefits, housing, medicines, follow-up appointments and naloxone in the first days after release."
+  ],
+  "assessmentAdaptations": [
+    "Clarify the referral question and who receives any report before assessment begins.",
+    "Screen for trauma, brain injury, substance use, and learning or literacy difficulties, which are common and affect engagement.",
+    "Ask about opioid use and tolerance before and after release, and about access to medicines for opioid use disorder.",
+    "Explore the person's own goals separately from the court's requirements."
+  ],
+  "sessionAdaptations": [
+    "Use a collaborative, nonjudgmental stance; acknowledge the mandate and invite the person to find their own reasons to engage.",
+    "Use plain language and written summaries, and check literacy before relying on homework.",
+    "Coordinate with probation, parole or court staff only within the signed release.",
+    "Plan for interruptions such as re-arrest, transfer or changes in supervision conditions."
+  ],
+  "interventionNotes": [
+    { "interventionId": "motivational-interviewing", "note": "Helps the person find their own reasons for change within a mandated setting." },
+    { "interventionId": "moud-referral", "note": "Starting or continuing medicines for opioid use disorder around release reduces overdose risk; refer early." },
+    { "interventionId": "naloxone-overdose-education", "note": "Tolerance drops in custody, so overdose education and naloxone are essential at release." },
+    { "interventionId": "relapse-prevention-planning", "note": "Plan for high-risk situations after release, including people, places and stress." },
+    { "interventionId": "problem-solving", "note": "Supports practical reentry tasks such as housing, ID, benefits and appointments." },
+    { "orientationId": "cognitive-therapy", "note": "Structured cognitive-behavioral programs address thinking patterns linked to offending as well as mood and anxiety." }
+  ],
+  "measureNotes": [
+    "Scores may be shaped by what the person believes will reach the court; explain how results are used and shared before giving any questionnaire.",
+    "Structured risk tools are for trained evaluators; the app does not include them and never produces a risk level."
+  ],
+  "measuresPending": [],
+  "safetyNotes": [
+    "The weeks after release carry a very high risk of overdose and suicide; plan naloxone, medicines, housing and follow-up before or at release.",
+    "Ask about suicidal thoughts directly, especially around court dates, sentencing, violations and release."
+  ],
+  "cautions": [
+    "Do not share substance-use treatment information with courts or supervision officers without Part 2-compliant written consent or a qualifying court order."
+  ],
+  "legalIds": ["treating-and-forensic-roles", "42-cfr-part-2", "subpoenas-and-court-orders", "hipaa-privacy-basics"],
+  "ethicsIds": [],
+  "referralIds": ["samhsa-national-helpline", "findtreatment-gov", "hrsa-find-a-health-center", "988-lifeline"],
+  "referralKinds": ["substance-use", "low-cost"],
+  "handoutIds": ["overdose-safety", "medicines-for-opioid-use", "problem-solving-steps", "after-a-crisis-next-steps"],
+  "topicIds": ["opioids"],
+  "practiceIds": ["recovery-and-harm-reduction", "care-transitions-and-warm-handoffs", "alliance-and-rupture-repair", "violence-risk-prompts"],
+  "formulationIds": ["co-occurring-and-level-of-care"],
+  "linkOuts": [],
+  "sud": true,
+  "sources": [
+    { "title": "Release from prison: a high risk of death for former inmates (Binswanger and colleagues)", "publisher": "New England Journal of Medicine (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/17215533/", "year": 2007 },
+    { "title": "Treating offenders with mental illness: a research synthesis (Morgan and colleagues)", "publisher": "Law and Human Behavior (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/22471384/", "year": 2012 },
+    { "title": "Correctional policy for offenders with mental illness: creating a new paradigm for recidivism reduction (Skeem, Manchak and Peterson)", "publisher": "Law and Human Behavior (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/20390443/", "year": 2011 },
+    { "title": "Guidelines for Successful Transition of People with Mental or Substance Use Disorders from Jail and Prison", "publisher": "Substance Abuse and Mental Health Services Administration", "url": "https://store.samhsa.gov/product/guidelines-successful-transition-people-mental-or-substance-use-disorders-jail-and-prison/sma16-4998", "year": 2017 },
+    { "title": "42 CFR Part 2: Confidentiality of Substance Use Disorder Patient Records", "publisher": "U.S. Department of Health and Human Services", "url": "https://www.hhs.gov/hipaa/for-professionals/regulatory-initiatives/hipaa-part-2/index.html" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

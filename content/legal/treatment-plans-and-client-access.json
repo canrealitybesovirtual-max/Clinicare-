@@ -1,0 +1,83 @@
+{
+  "id": "treatment-plans-and-client-access",
+  "title": "Treatment plans, progress notes and the client's right to see them",
+  "kind": "legal",
+  "jurisdiction": "US-federal",
+  "summary": "Under HIPAA, clients have a right to see and get copies of most of their record, including treatment plans and progress notes. Psychotherapy notes kept separately are the main exception. The 21st Century Cures Act's information blocking rules also expect providers not to hold back electronic notes without a recognized reason. Writing plans and notes as if the client will read them, in plain and respectful words, supports both the law and collaborative care. This page is information, not legal advice.",
+  "keyPoints": [
+    "The HIPAA right of access (45 CFR 164.524) covers the designated record set, which includes treatment plans, progress notes, assessments and billing records. Providers must answer within set deadlines and may charge only a reasonable, cost-based fee.",
+    "Psychotherapy notes are a clinician's separate notes analyzing session content. They do not include medications, session times, treatment type, test results, diagnosis, treatment plan, symptoms, prognosis or progress, which belong in the record the client can see.",
+    "Access can be denied on only a few grounds. One is a licensed professional's judgment that access is reasonably likely to endanger the life or physical safety of the client or another person, and the client can ask for that decision to be reviewed.",
+    "Information blocking rules (45 CFR part 171) apply to most providers with electronic records. Delaying release of notes through a portal can count as blocking unless an exception applies, such as preventing substantial harm or protecting privacy. Psychotherapy notes are outside these rules.",
+    "A November 2026 HIPAA rule shortens access deadlines, with compliance expected in 2027. See the HIPAA basics topic and check the final dates.",
+    "Codes support collaboration: counseling plans are developed with the client (ACA Standard A.1.c), consent to therapy is informed (APA Standard 10.01), clients have reasonable access to their records (NASW Standard 1.08), and self-determination is respected (NASW Standard 1.02)."
+  ],
+  "whatToDo": [
+    "Tell clients at intake that they can see their record, what psychotherapy notes are, and how to request copies.",
+    "Write plans and notes in plain, respectful language that describes behavior and goals rather than labels, and include strengths.",
+    "Build the plan with the client, read it together, and give them a copy.",
+    "If you think access could endanger someone, document the specific reason and the review option, and offer to go through the record together instead.",
+    "Consult your licensing board or a healthcare attorney about state access rules and your portal settings."
+  ],
+  "officialLinks": [
+    {
+      "title": "HHS: Individuals' right under HIPAA to access their health information",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/access/index.html"
+    },
+    {
+      "title": "HHS: Your right to access your health information (for individuals)",
+      "url": "https://www.hhs.gov/hipaa/for-individuals/right-to-access/index.html"
+    },
+    {
+      "title": "eCFR: 45 CFR part 171, information blocking",
+      "url": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-D/part-171"
+    },
+    {
+      "title": "ACA Code of Ethics and ethics resources (Standard A.1.c)",
+      "url": "https://www.counseling.org/resources/ethics"
+    },
+    {
+      "title": "NASW Code of Ethics (Standards 1.02 and 1.08)",
+      "url": "https://www.socialworkers.org/About/Ethics/Code-of-Ethics/Code-of-Ethics-English"
+    }
+  ],
+  "seeAlso": [
+    "hipaa-privacy-basics",
+    "documentation-and-medical-necessity",
+    "record-retention-overview"
+  ],
+  "appPositioning": "Plan drafts in the app use plain, collaborative wording and leave blank lines for identifiers. Nothing is stored, so the clinician's own record system decides what the client can access.",
+  "whenRelevant": [
+    "records",
+    "privacy",
+    "informed-consent",
+    "documentation"
+  ],
+  "changesOften": true,
+  "statusAsOf": "2026-06-01",
+  "verification": {
+    "method": "not-verified",
+    "note": "Not checked online on 2026-11-27: the build sandbox could not resolve the publishers' sites and the shared web-search budget was used up, so no page was re-read this round. The text is the author's reading of the listed sources as known up to mid-2026. The November 2026 access-deadline change is taken from the HIPAA basics topic in this hub; confirm it and the information blocking exceptions on the official pages. A person must open each official link, confirm current status and dates, and correct this page before release."
+  },
+  "sources": [
+    {
+      "title": "Individuals' Right under HIPAA to Access their Health Information",
+      "publisher": "US Department of Health and Human Services, Office for Civil Rights",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/access/index.html"
+    },
+    {
+      "title": "45 CFR part 171: Information Blocking",
+      "publisher": "eCFR (US Government Publishing Office)",
+      "url": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-D/part-171"
+    },
+    {
+      "title": "ACA Code of Ethics (2014) and ethics resources",
+      "publisher": "American Counseling Association",
+      "url": "https://www.counseling.org/resources/ethics",
+      "year": 2014
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

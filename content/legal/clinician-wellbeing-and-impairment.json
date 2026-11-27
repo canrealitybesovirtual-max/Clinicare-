@@ -1,0 +1,91 @@
+{
+  "id": "clinician-wellbeing-and-impairment",
+  "title": "Clinician wellbeing, impairment and vicarious trauma",
+  "kind": "ethics-practice",
+  "jurisdiction": "INTL",
+  "summary": "Burnout, compassion fatigue, vicarious trauma and personal crises affect clinical judgment. Codes ask clinicians to notice when their own problems could harm their work and to act early: seek consultation, adjust or limit their caseload, and pause practice when needed. Organizations share responsibility through manageable workloads, supervision and support. If you are in crisis yourself, call or text 988 in the US or your local crisis line. This page is information, not legal advice.",
+  "keyPoints": [
+    "Codes ask you to refrain from work that personal problems are likely to impair, to watch for early signs, and to seek help, limit, suspend or end work when needed (APA Standard 2.06, ACA Standard C.2.g, NASW Standard 4.05).",
+    "Early signs include dread before sessions, numbness or irritability with clients, intrusive images from clients' stories, sleep changes, more mistakes, and avoiding supervision.",
+    "Protective steps include a mix of cases, regular breaks and leave, peer consultation, supervision that makes room for reactions, personal therapy, and limits on after-hours contact.",
+    "When you are worried about a colleague, codes ask you to raise it with them first when safe, and to use formal routes if clients are at risk.",
+    "Many licensing boards and professional associations run confidential health or colleague-assistance programs that support recovery, sometimes as an alternative to discipline.",
+    "Free self-check measures exist, such as the Professional Quality of Life Scale (ProQOL). It is linked out only here and is not scored in this app."
+  ],
+  "whatToDo": [
+    "Check in with yourself regularly, for example at supervision, and take early signs seriously.",
+    "Adjust caseload, schedule or case mix before problems reach clients, and plan coverage for time away.",
+    "Use consultation, supervision and personal support, and call or text 988 (US) or your local crisis line if you are in crisis.",
+    "If you need to pause practice, arrange continuity of care for your clients.",
+    "Consult your supervisor, your board's health program or your licensing board about impairment and fitness to practice."
+  ],
+  "questions": [
+    "Am I less patient, more avoidant or more mistake-prone with clients than usual?",
+    "Which clients or stories stay with me after work, and who can I talk to about them?",
+    "Is my caseload and schedule sustainable for the next three months?",
+    "Would I notice, and say something, if a colleague looked the way I feel?"
+  ],
+  "officialLinks": [
+    {
+      "title": "APA Ethical Principles of Psychologists and Code of Conduct (Standard 2.06)",
+      "url": "https://www.apa.org/ethics/code"
+    },
+    {
+      "title": "ACA Code of Ethics and ethics resources (Standard C.2.g)",
+      "url": "https://www.counseling.org/resources/ethics"
+    },
+    {
+      "title": "SAMHSA TIP 57: Trauma-Informed Care in Behavioral Health Services",
+      "url": "https://www.samhsa.gov/resource/dbhis/tip-57-trauma-informed-care-behavioral-health-services"
+    },
+    {
+      "title": "988 Suicide and Crisis Lifeline",
+      "url": "https://988lifeline.org"
+    }
+  ],
+  "seeAlso": [
+    "continuity-and-professional-will",
+    "clinician-personal-safety",
+    "ethical-decision-making"
+  ],
+  "measuresPending": [
+    {
+      "name": "Professional Quality of Life Scale (ProQOL), self-check for clinicians",
+      "url": "https://proqol.org/",
+      "licenseKey": "ProQOL"
+    }
+  ],
+  "whenRelevant": [
+    "competence",
+    "workforce-safety"
+  ],
+  "changesOften": false,
+  "statusAsOf": "2026-06-01",
+  "verification": {
+    "method": "not-verified",
+    "note": "Not checked online on 2026-11-27: the build sandbox could not resolve the publishers' sites and the shared web-search budget was used up, so no page was re-read this round. The text is the author's reading of the listed sources as known up to mid-2026. Check the ProQOL terms of use and the cited standard numbers (APA 2.06, ACA C.2.g, NASW 4.05). A person must open each official link, confirm current status and dates, and correct this page before release."
+  },
+  "sources": [
+    {
+      "title": "Ethical Principles of Psychologists and Code of Conduct",
+      "publisher": "American Psychological Association",
+      "url": "https://www.apa.org/ethics/code",
+      "year": 2017
+    },
+    {
+      "title": "ACA Code of Ethics (2014) and ethics resources",
+      "publisher": "American Counseling Association",
+      "url": "https://www.counseling.org/resources/ethics",
+      "year": 2014
+    },
+    {
+      "title": "TIP 57: Trauma-Informed Care in Behavioral Health Services",
+      "publisher": "Substance Abuse and Mental Health Services Administration",
+      "url": "https://www.samhsa.gov/resource/dbhis/tip-57-trauma-informed-care-behavioral-health-services",
+      "year": 2014
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

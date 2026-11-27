@@ -1,0 +1,76 @@
+{
+  "id": "between-session-contact-policy",
+  "title": "Between-session contact, messaging and social media",
+  "kind": "ethics-practice",
+  "jurisdiction": "INTL",
+  "summary": "Texts, email, portals and social media make clinicians easier to reach, which helps and also blurs limits. A written policy, agreed at intake, should say how clients may contact you, how fast you reply, what is not suitable for messages, and what to do in a crisis: call or text 988 in the US, or call local emergency services. It should also cover social media, online reviews and whether you ever search for clients online. This page is information, not legal advice.",
+  "keyPoints": [
+    "Tell clients which channels you use, when you check them, your usual reply time, and that messages are not monitored for emergencies.",
+    "Explain the risks of unencrypted text and email, offer a secure option, and document the client's choice. Where HIPAA applies, use tools covered by a business associate agreement.",
+    "Clinically relevant messages belong in the record. Keep content brief and move complex topics to a session.",
+    "Social work technology standards ask for consent before searching for a client online, except for urgent safety reasons, and for clear policies on social media.",
+    "Do not reply to online reviews in a way that confirms someone is a client. Privacy regulators have fined providers for doing so.",
+    "Some models build in structured between-session contact, such as DBT phone coaching or caring contacts, with clear purpose and limits taught in training."
+  ],
+  "whatToDo": [
+    "Write a contact policy covering channels, hours, reply times, crisis steps and social media, and go over it at intake.",
+    "Put 988 and local emergency numbers in your voicemail, auto-replies and portal messages.",
+    "Use secure, covered tools for messages, and document clinically relevant exchanges.",
+    "Revisit the policy when a client starts contacting you often or outside the agreed channels.",
+    "Consult your licensing board or a healthcare attorney about messaging, recording and review rules in your state."
+  ],
+  "questions": [
+    "Does the client know exactly what to do in a crisis when I do not answer?",
+    "Is this message something to answer briefly, or a topic for our next session?",
+    "Would searching for this client online serve them, and have they agreed to it?",
+    "Is my reply pattern sustainable, and does it match what I promised?"
+  ],
+  "officialLinks": [
+    {
+      "title": "NASW, ASWB, CSWE and CSWA: Standards for Technology in Social Work Practice",
+      "url": "https://www.socialworkers.org/Practice/NASW-Practice-Standards-Guidelines/Standards-for-Technology-in-Social-Work-Practice"
+    },
+    {
+      "title": "APA: Guidelines for the Practice of Telepsychology (2024)",
+      "url": "https://www.apa.org/about/policy/telepsychology-revisions"
+    },
+    {
+      "title": "988 Suicide and Crisis Lifeline",
+      "url": "https://988lifeline.org"
+    }
+  ],
+  "seeAlso": [
+    "informed-consent-technology",
+    "multiple-relationships-and-boundaries",
+    "continuity-and-professional-will"
+  ],
+  "whenRelevant": [
+    "technology",
+    "boundaries",
+    "telehealth",
+    "crisis"
+  ],
+  "changesOften": false,
+  "statusAsOf": "2026-06-01",
+  "verification": {
+    "method": "not-verified",
+    "note": "Not checked online on 2026-11-27: the build sandbox could not resolve the publishers' sites and the shared web-search budget was used up, so no page was re-read this round. The text is the author's reading of the listed sources as known up to mid-2026. Both guidance documents were cited by other topics in this hub; the online-search and review points should be checked against their current text. A person must open each official link, confirm current status and dates, and correct this page before release."
+  },
+  "sources": [
+    {
+      "title": "Standards for Technology in Social Work Practice",
+      "publisher": "National Association of Social Workers",
+      "url": "https://www.socialworkers.org/Practice/NASW-Practice-Standards-Guidelines/Standards-for-Technology-in-Social-Work-Practice",
+      "year": 2017
+    },
+    {
+      "title": "Guidelines for the Practice of Telepsychology (2024 revision)",
+      "publisher": "American Psychological Association",
+      "url": "https://www.apa.org/about/policy/telepsychology-revisions",
+      "year": 2024
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

@@ -1,0 +1,103 @@
+{
+  "id": "competence-and-scope-of-practice",
+  "title": "Competence, training pathways and scope of practice",
+  "kind": "ethics-practice",
+  "jurisdiction": "INTL",
+  "summary": "Knowing about a model is not the same as being able to deliver it. Every major code asks clinicians to practice within the limits of their education, training, supervised experience and license, to get training and supervision before adding a new method, and to refer when a client needs skills they do not have. Some models are taught only through certified training. Scope of practice, such as who may diagnose, test, prescribe or treat across state lines, is set by law and differs by license and place. The app's orientation and intervention pages are overviews, not training. This page is information, not legal advice.",
+  "keyPoints": [
+    "Codes describe competence the same way: practice within your education, training, supervised experience and credentials; build new skills through formal training, consultation and supervision; and refer when needed (APA Standard 2.01, ACA Standard C.2, NASW Standard 1.04, AAMFT Standard III).",
+    "Competence includes working with the client's culture, language, age, disability and identity. When those are outside your experience, get consultation or training, or refer.",
+    "Several models are taught only through certifying bodies, for example EMDR (EMDR International Association), DBT (DBT-Linehan Board of Certification), mentalization-based treatment and Internal Family Systems. Reading a book or watching a video does not make you trained.",
+    "In an emergency or where no specialist is available, codes allow you to provide needed help while you arrange training, consultation or referral, and to stop once a qualified clinician is available.",
+    "Scope of practice is set by each license and jurisdiction: whether you may diagnose, which psychological tests you may use, whether you may prescribe, and where you may treat by telehealth. Test publishers also set user qualification levels.",
+    "Pre-licensed clinicians work under a supervisor's license and the rules of their board. Tell clients who is supervising their care."
+  ],
+  "whatToDo": [
+    "Before using a method, ask whether you have had training, supervised practice and feedback in it, not only reading.",
+    "Use the training pathway from the method's certifying body, and keep records of training and supervision.",
+    "Arrange consultation or supervision for new skills, populations or settings, and refer when a client needs more than you can safely offer.",
+    "Check your license's scope for diagnosis, testing, prescribing and the client's location before you act.",
+    "Consult your licensing board, your supervisor or a healthcare attorney when you are unsure whether something is within your scope."
+  ],
+  "questions": [
+    "Have I been trained and supervised in delivering this, or have I only read about it?",
+    "Is this within my license's scope in the place where the client is right now?",
+    "Would a peer trained in this method see my work as competent?",
+    "What consultation, supervision or referral would make this safer for the client?",
+    "If I am filling a gap in an emergency, what is my plan to hand over to a qualified clinician?"
+  ],
+  "officialLinks": [
+    {
+      "title": "APA Ethical Principles of Psychologists and Code of Conduct (Standard 2.01)",
+      "url": "https://www.apa.org/ethics/code"
+    },
+    {
+      "title": "ACA Code of Ethics and ethics resources (Standard C.2)",
+      "url": "https://www.counseling.org/resources/ethics"
+    },
+    {
+      "title": "NASW Code of Ethics (Standard 1.04)",
+      "url": "https://www.socialworkers.org/About/Ethics/Code-of-Ethics/Code-of-Ethics-English"
+    },
+    {
+      "title": "AAMFT Code of Ethics (Standard III)",
+      "url": "https://aamft.org/coe"
+    },
+    {
+      "title": "EMDR International Association: training and certification",
+      "url": "https://www.emdria.org"
+    },
+    {
+      "title": "DBT-Linehan Board of Certification",
+      "url": "https://dbt-lbc.org/"
+    },
+    {
+      "title": "IFS Institute: Level 1 training",
+      "url": "https://ifs-institute.com/trainings/level-1"
+    },
+    {
+      "title": "Anna Freud: mentalization-based treatment training",
+      "url": "https://www.annafreud.org/training/mentalization-based-treatment-training/"
+    }
+  ],
+  "seeAlso": [
+    "telehealth-jurisdiction",
+    "emerging-treatments-and-psychedelics",
+    "clinician-wellbeing-and-impairment"
+  ],
+  "appPositioning": "Orientation and intervention pages summarize models and link to their certifying bodies; models that need certified training are marked Trained clinicians only. Nothing in the app is a manual or a substitute for training and supervision.",
+  "whenRelevant": [
+    "competence",
+    "licensure",
+    "assessment"
+  ],
+  "changesOften": false,
+  "statusAsOf": "2026-06-01",
+  "verification": {
+    "method": "not-verified",
+    "note": "Not checked online on 2026-11-27: the build sandbox could not resolve the publishers' sites and the shared web-search budget was used up, so no page was re-read this round. The text is the author's reading of the listed sources as known up to mid-2026. The training links were reused from orientation profiles in this app; the code standard numbers should be checked against current editions. A person must open each official link, confirm current status and dates, and correct this page before release."
+  },
+  "sources": [
+    {
+      "title": "Ethical Principles of Psychologists and Code of Conduct",
+      "publisher": "American Psychological Association",
+      "url": "https://www.apa.org/ethics/code",
+      "year": 2017
+    },
+    {
+      "title": "ACA Code of Ethics (2014) and ethics resources",
+      "publisher": "American Counseling Association",
+      "url": "https://www.counseling.org/resources/ethics",
+      "year": 2014
+    },
+    {
+      "title": "NASW Code of Ethics",
+      "publisher": "National Association of Social Workers",
+      "url": "https://www.socialworkers.org/About/Ethics/Code-of-Ethics/Code-of-Ethics-English",
+      "year": 2021
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

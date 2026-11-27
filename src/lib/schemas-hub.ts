@@ -344,6 +344,8 @@ export interface HubPrompt {
   message: string;
   ethicsIds: readonly string[];
   legalIds: readonly string[];
+  /** The item the prompt's hub link opens (one of its ids); defaults to the first id. */
+  anchor?: string;
 }
 
 export const HUB_PROMPTS: Record<HubContext, HubPrompt> = {
@@ -388,18 +390,21 @@ export const HUB_PROMPTS: Record<HubContext, HubPrompt> = {
       "Emerging or limited-evidence approaches: explain the evidence, the usual first-line options and the risks as part of consent, use them only within your training, and never help a client obtain or use an illegal drug.",
     ethicsIds: ["apa-ethical-principles-psychologists", "aca-code-of-ethics"],
     legalIds: ["emerging-treatments-and-psychedelics", "contested-practices", "competence-and-scope-of-practice"],
+    anchor: "emerging-treatments-and-psychedelics",
   },
   "letters-and-forms": {
     message:
       "Letters, forms and court requests: as the treating clinician, report facts of treatment you can stand behind, leave forensic opinions such as custody, disability or fitness for duty to an independent evaluator, and share only what the client has authorized.",
     ethicsIds: ["apa-ethical-principles-psychologists", "aca-code-of-ethics"],
     legalIds: ["treating-and-forensic-roles", "subpoenas-and-court-orders", "documentation-and-medical-necessity"],
+    anchor: "treating-and-forensic-roles",
   },
   groups: {
     message:
       "Groups: you can promise your own confidentiality but not other members'. Agree group rules at the start, explain that limit before people join, and plan for privacy in online groups.",
     ethicsIds: ["aca-code-of-ethics", "nasw-code-of-ethics"],
     legalIds: ["group-confidentiality"],
+    anchor: "group-confidentiality",
   },
 };
 
@@ -499,6 +504,7 @@ export function hubProblems(
   for (const [ctxName, p] of Object.entries(HUB_PROMPTS)) {
     for (const id of p.ethicsIds) if (!codeIds.has(id)) problems.push(`HUB_PROMPTS.${ctxName}: unknown ethics id ${id}`);
     for (const id of p.legalIds) if (!topicIds.has(id)) problems.push(`HUB_PROMPTS.${ctxName}: unknown legal id ${id}`);
+    if (p.anchor && ![...p.ethicsIds, ...p.legalIds].includes(p.anchor)) problems.push(`HUB_PROMPTS.${ctxName}: anchor ${p.anchor} is not one of its ids`);
   }
   problems.push(...legalTopicLinkProblems(topics.map((t) => t.item)));
   const part2 = topics.find((t) => t.item.id === "42-cfr-part-2")?.item;

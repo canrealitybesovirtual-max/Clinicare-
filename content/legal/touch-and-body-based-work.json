@@ -1,0 +1,78 @@
+{
+  "id": "touch-and-body-based-work",
+  "title": "Touch and body-based interventions: consent and boundaries",
+  "kind": "ethics-practice",
+  "jurisdiction": "INTL",
+  "summary": "Body-oriented methods, grounding and some trauma therapies can involve touch, posture or attention to sensation. Codes do not ban nonsexual touch, but they forbid sexual contact and ask you to avoid harm and exploitation. Touch carries extra weight for people with trauma histories, and its meaning differs across cultures, genders and settings. Use it only with explicit, specific consent that the client can withdraw at any moment, offer no-touch alternatives, stay within your license and training, and document. This page is information, not legal advice.",
+  "keyPoints": [
+    "Sexual contact with a client is prohibited by every major code, and many states make it a crime for psychotherapists. Nonsexual touch is a clinical decision that must serve the client, never the clinician's needs.",
+    "Consent should be specific (what touch, where, for how long, for what purpose), given before the moment, and easy to withdraw by word or gesture. Ask again each time rather than assuming ongoing consent.",
+    "Offer alternatives that reach the same goal without touch, such as the client's own hand on their chest, holding an object, or describing sensation.",
+    "Trauma history, culture, religion, gender, age and the power gap all change how touch is felt. A gesture that comforts one person can frighten another.",
+    "Hands-on bodywork such as massage may need a separate license in many places. Check what your board considers within your scope before adding it.",
+    "On video, use client-led movement and self-touch only, and check privacy and physical safety at the client's end first."
+  ],
+  "whatToDo": [
+    "Decide in advance whether touch has a clear clinical purpose, and whether a no-touch method would do as well.",
+    "Explain what you propose and why, ask for explicit consent, agree a stop signal, and check in during and after.",
+    "Document the purpose, the consent, what happened and how the client responded.",
+    "Seek consultation before using touch with clients who have trauma histories, strong attachment needs or boundary concerns.",
+    "Consult your licensing board or a healthcare attorney about scope rules on physical contact and bodywork in your jurisdiction."
+  ],
+  "questions": [
+    "Whose need does this touch meet, the client's or mine?",
+    "Has the client agreed to exactly this, and do they know they can stop it at any moment?",
+    "Is there a no-touch way to reach the same goal?",
+    "How might this client's history, culture or gender change the meaning of touch?",
+    "Would I be comfortable describing this to my supervisor and writing it in the record?"
+  ],
+  "officialLinks": [
+    {
+      "title": "APA Ethical Principles of Psychologists and Code of Conduct (Standards 3.04, 3.05 and 10.05)",
+      "url": "https://www.apa.org/ethics/code"
+    },
+    {
+      "title": "ACA Code of Ethics and ethics resources (Section A.5 and A.6)",
+      "url": "https://www.counseling.org/resources/ethics"
+    }
+  ],
+  "seeAlso": [
+    "multiple-relationships-and-boundaries",
+    "memory-and-suggestion-safeguards",
+    "competence-and-scope-of-practice"
+  ],
+  "whenRelevant": [
+    "boundaries",
+    "informed-consent",
+    "competence"
+  ],
+  "changesOften": false,
+  "statusAsOf": "2026-06-01",
+  "verification": {
+    "method": "not-verified",
+    "note": "Not checked online on 2026-11-27: the build sandbox could not resolve the publishers' sites and the shared web-search budget was used up, so no page was re-read this round. The text is the author's reading of the listed sources as known up to mid-2026. The standard numbers cited (APA 3.04, 3.05, 10.05; ACA A.5, A.6) should be checked against the current codes. A person must open each official link, confirm current status and dates, and correct this page before release."
+  },
+  "sources": [
+    {
+      "title": "Somatic experiencing: effectiveness and key factors of a body-oriented trauma therapy, a scoping literature review (Kuhfuss and colleagues)",
+      "publisher": "European Journal of Psychotraumatology (PMC)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8276649",
+      "year": 2021
+    },
+    {
+      "title": "Ethical Principles of Psychologists and Code of Conduct",
+      "publisher": "American Psychological Association",
+      "url": "https://www.apa.org/ethics/code",
+      "year": 2017
+    },
+    {
+      "title": "ACA Code of Ethics (2014) and ethics resources",
+      "publisher": "American Counseling Association",
+      "url": "https://www.counseling.org/resources/ethics",
+      "year": 2014
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

@@ -1,0 +1,78 @@
+{
+  "id": "housing-instability",
+  "name": "Homelessness and housing instability",
+  "group": "circumstances",
+  "summary": "Low-barrier care for adults who are unhoused, in shelters, couch-surfing or at risk of losing housing: flexible engagement, practice tasks without an address, phone or storage, sleep advice that fits shelters, and referral to Housing First, health centers and benefits help.",
+  "scopeNote": "For adults (18 and over). The app never asks for or saves housing status or an address; exports leave blank lines for anything identifying. Never make housing, food or other basic help conditional on attending therapy.",
+  "whyItMatters": "People experiencing homelessness in high-income countries have higher rates of premature death, especially from suicide and unintentional injury, and more mental disorders, substance use and infectious disease; the availability of low-cost housing is thought to be the most important structural driver (Fazel and colleagues, 2014). In a randomized trial in four Canadian cities, scattered-site Housing First with rent supplements and intensive case management increased the time homeless adults with mental illness spent stably housed compared with usual services (Stergiopoulos and colleagues, 2015).",
+  "askAbout": [
+    "Where are you staying right now, and is it safe for you?",
+    "What would help most this week: somewhere to sleep, food, a phone, ID, benefits, medicines or something else?",
+    "What is the best way to reach you between sessions, and what should I do if I cannot reach you?",
+    "Is there a safe place to keep papers or medicines?",
+    "How are you sleeping, and what gets in the way where you are staying?",
+    "Who has helped you so far, and which services have been good or bad for you?"
+  ],
+  "stereotypeCaution": "Homelessness happens to people for many reasons, including job loss, illness, family breakdown, violence, discharge from care or custody, and high housing costs. Do not assume substance use, mental illness or unwillingness to accept help, and do not judge the person's choices about shelters or services without hearing why.",
+  "keyConsiderations": [
+    "Meet basic needs first or alongside therapy; safety, food, sleep and housing often come before skills practice.",
+    "Use low-barrier engagement: walk-ins, flexible times, outreach locations, and no discharge for missed sessions.",
+    "Practice tasks should not depend on an address, a phone or storage; use a single card, memory-based practice or tasks done in session.",
+    "Sleep advice should fit the person's setting, such as shelter rules, noise and safety concerns, rather than standard bedroom routines.",
+    "Trauma and violence are common in homelessness; ask about current safety as well as past events.",
+    "Link with Housing First and permanent supportive housing programs, health centers for people experiencing homelessness, benefits help for disability income and, for veterans, VA homeless services."
+  ],
+  "assessmentAdaptations": [
+    "Keep the first contact short and practical, focused on what the person wants now.",
+    "Screen for physical health problems, injuries, infections and medicine access, and for alcohol and other drug use without judgment.",
+    "Ask about cognitive problems or past head injury, which can affect paperwork and appointments.",
+    "Record context, not stigma: describe the housing situation factually and only as needed for care."
+  ],
+  "sessionAdaptations": [
+    "Offer sessions at places the person already goes, by phone if they have one, and at times that fit shelter schedules.",
+    "Give practical help with forms, appointments and phone calls as part of the work when needed.",
+    "Agree on how to reconnect if contact is lost, such as a drop-in time or a trusted service that can pass on messages.",
+    "Celebrate small steps toward stability."
+  ],
+  "interventionNotes": [
+    { "interventionId": "smi-community-support-referral", "note": "Assertive community treatment, intensive case management and supportive housing referrals for people with serious mental illness." },
+    { "interventionId": "problem-solving", "note": "Practical problem-solving for housing, benefits and daily survival tasks." },
+    { "interventionId": "motivational-interviewing", "note": "A respectful, low-pressure way to explore change, including about substance use, without making help conditional." },
+    { "interventionId": "naloxone-overdose-education", "note": "Offer naloxone and overdose education when opioids are part of the picture." },
+    { "interventionId": "trauma-psychoeducation-and-grounding", "note": "Stabilizing skills that can be used anywhere and need no materials." }
+  ],
+  "measureNotes": [
+    "PHQ-9 sleep, energy and appetite items can be driven by shelter conditions and hunger; ask what each answer reflects.",
+    "Offer to read questionnaires aloud, and do not delay help until measures are completed."
+  ],
+  "measuresPending": [],
+  "safetyNotes": [
+    "Premature death, including suicide and accidental overdose, is more common among people experiencing homelessness; ask about suicidal thoughts and overdose risk directly.",
+    "Ask about safety from violence and exploitation where the person stays, and about cold, heat and other weather exposure."
+  ],
+  "cautions": [
+    "Do not make housing, food or other help depend on therapy attendance or abstinence; requirements like these push people away from care."
+  ],
+  "legalIds": ["hipaa-privacy-basics", "psychiatric-advance-directives"],
+  "ethicsIds": [],
+  "referralIds": ["va-homeless-veterans-call-center", "hrsa-find-a-health-center", "samhsa-national-helpline", "988-lifeline"],
+  "referralKinds": ["basic-needs", "low-cost"],
+  "handoutIds": ["problem-solving-steps", "grounding-5-4-3-2-1", "overdose-safety", "safety-plan"],
+  "topicIds": ["money-and-housing-stress"],
+  "practiceIds": ["recovery-and-harm-reduction", "care-transitions-and-warm-handoffs", "stepped-care-and-level-of-care"],
+  "formulationIds": ["co-occurring-and-level-of-care"],
+  "linkOuts": [
+    { "title": "Homelessness and Health", "publisher": "MedlinePlus (U.S. National Library of Medicine)", "url": "https://medlineplus.gov/homelessnessandhealth.html", "lastVerified": "2026-11-27" },
+    { "title": "Homelessness Assistance Programs", "publisher": "U.S. Department of Housing and Urban Development (HUD Exchange)", "url": "https://www.hudexchange.info/homelessness-assistance/", "lastVerified": "2026-11-27" },
+    { "title": "Homeless programs for veterans", "publisher": "U.S. Department of Veterans Affairs", "url": "https://www.va.gov/homeless/for-homeless-veterans/", "lastVerified": "2026-11-27" }
+  ],
+  "sud": true,
+  "sources": [
+    { "title": "The health of homeless people in high-income countries: descriptive epidemiology, health consequences, and clinical and policy recommendations (Fazel, Geddes and Kushel)", "publisher": "Lancet (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/25390578/", "year": 2014 },
+    { "title": "Effect of scattered-site housing using rent supplements and intensive case management on housing stability among homeless adults with mental illness: a randomized trial (Stergiopoulos and colleagues)", "publisher": "JAMA (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/25734732/", "year": 2015 },
+    { "title": "Homelessness and Health", "publisher": "MedlinePlus (U.S. National Library of Medicine)", "url": "https://medlineplus.gov/homelessnessandhealth.html" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

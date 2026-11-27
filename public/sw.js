@@ -33,6 +33,9 @@ const PAGES = [
   "/formulations/builder",
   "/orientations",
   "/practice",
+  "/populations",
+  "/about/changelog",
+  "/about/report",
 ];
 const PAGE_SET = new Set(PAGES);
 

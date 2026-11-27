@@ -22,8 +22,9 @@ interface FacetCtx {
   setValue: (facet: string, value: string) => void;
   reset: () => void;
   isVisible: (group: string, id: string) => boolean;
-  visibleCount: (group: string) => number;
-  total: (group: string) => number;
+  /** Visible items in the group, or only among `ids` when given (a section that shows part of a group). */
+  visibleCount: (group: string, ids?: readonly string[]) => number;
+  total: (group: string, ids?: readonly string[]) => number;
   active: boolean;
 }
 
@@ -110,8 +111,8 @@ export function FacetFilterProvider({
       setValue: (facet, value) => setValues((v) => ({ ...v, [facet]: value })),
       reset: () => setValues(allValues),
       isVisible,
-      visibleCount: (group) => (items[group] ?? []).filter((id) => isVisible(group, id)).length,
-      total: (group) => (items[group] ?? []).length,
+      visibleCount: (group, ids) => (ids ?? items[group] ?? []).filter((id) => isVisible(group, id)).length,
+      total: (group, ids) => (ids ?? items[group] ?? []).length,
       active: Object.values(values).some((v) => v && v !== ALL),
     }),
     [allValues, isVisible, items, values],
@@ -208,21 +209,23 @@ export function FacetGate({
   );
 }
 
-/** Polite live count: "Showing 7 of 22 codes". */
+/** Polite live count: "Showing 7 of 22 codes". `ids` limits the count to one section of the group. */
 export function FacetCount({
   group,
+  ids,
   singular,
   plural,
   className,
 }: {
   group: string;
+  ids?: readonly string[];
   singular: string;
   plural: string;
   className?: string;
 }) {
   const { visibleCount, total } = useFacets();
-  const n = visibleCount(group);
-  const t = total(group);
+  const n = visibleCount(group, ids);
+  const t = total(group, ids);
   return (
     <p role="status" aria-live="polite" className={cn("text-sm text-muted", className)}>
       Showing {n} of {t} {t === 1 ? singular : plural}
@@ -230,10 +233,10 @@ export function FacetCount({
   );
 }
 
-/** Children shown only when nothing in the group matches. */
-export function FacetEmpty({ group, children }: { group: string; children: React.ReactNode }) {
+/** Children shown only when nothing in the group (or among `ids`) matches. */
+export function FacetEmpty({ group, ids, children }: { group: string; ids?: readonly string[]; children: React.ReactNode }) {
   const { visibleCount } = useFacets();
-  return visibleCount(group) === 0 ? <>{children}</> : null;
+  return visibleCount(group, ids) === 0 ? <>{children}</> : null;
 }
 
 /** "Show all" button, enabled only while a filter is active. */

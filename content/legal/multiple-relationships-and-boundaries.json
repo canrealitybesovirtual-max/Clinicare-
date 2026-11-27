@@ -1,0 +1,83 @@
+{
+  "id": "multiple-relationships-and-boundaries",
+  "title": "Multiple relationships and boundaries",
+  "kind": "ethics-practice",
+  "jurisdiction": "INTL",
+  "summary": "A boundary crossing, such as attending a client's graduation or accepting a small gift, is not always harmful and can sometimes help. A boundary violation exploits the client or damages the work. Codes do not forbid every second relationship; they forbid those that risk impaired judgment, exploitation or harm, and they forbid sexual relationships with clients. Rural, faith, military, Deaf and other close communities make some overlap unavoidable, so the question becomes how to manage it openly. This page is information, not legal advice.",
+  "keyPoints": [
+    "A multiple relationship is unethical when it could reasonably impair your objectivity or effectiveness, or risk exploitation or harm. Ones that do not carry that risk are not forbidden (APA Standard 3.05; ACA Standard A.6).",
+    "Sexual or romantic relationships with current clients are prohibited. Codes also restrict them with former clients for years afterward, or forever in some codes and states.",
+    "Small and close communities: plan with the client how to handle meeting in public, at church or at school, and agree what you will each do.",
+    "Gifts: consider the value, timing, the client's culture and motive, and what refusing or accepting would mean clinically.",
+    "Bartering is allowed in some codes only if it is not clinically harmful and the arrangement is not exploitative. Written terms help.",
+    "Social media: do not friend or follow clients from personal accounts, and have a written policy on online contact, reviews and searching for clients.",
+    "A published risk-management model asks: is the second relationship necessary, could it exploit or harm, whose interests does it serve, is your judgment objective, and have you consulted, documented and gained informed consent?"
+  ],
+  "whatToDo": [
+    "Before any crossing, think through who benefits, the risks and the alternatives, and discuss it with the client.",
+    "Consult a colleague and document your reasoning, especially in small communities or with gifts, bartering or outside contact.",
+    "Put your social media and outside-contact policy in your consent documents.",
+    "If a relationship starts to impair your judgment, address it openly and refer if needed.",
+    "Consult your licensing board or a healthcare attorney about your code's and your state's rules on former clients and dual roles."
+  ],
+  "questions": [
+    "Who benefits from this crossing, and could it exploit or confuse the client?",
+    "Is my judgment still objective, and would a colleague agree?",
+    "What would happen to therapy if this second relationship went badly?",
+    "Have I discussed it with the client, consulted, and written down why?"
+  ],
+  "officialLinks": [
+    {
+      "title": "APA Ethical Principles of Psychologists and Code of Conduct (Standards 3.05, 6.05, 10.05 to 10.08)",
+      "url": "https://www.apa.org/ethics/code"
+    },
+    {
+      "title": "ACA Code of Ethics and ethics resources (Sections A.5 and A.6)",
+      "url": "https://www.counseling.org/resources/ethics"
+    },
+    {
+      "title": "NASW Code of Ethics (Standards 1.06 and 1.09)",
+      "url": "https://www.socialworkers.org/About/Ethics/Code-of-Ethics/Code-of-Ethics-English"
+    }
+  ],
+  "seeAlso": [
+    "touch-and-body-based-work",
+    "between-session-contact-policy",
+    "treating-and-forensic-roles",
+    "ethical-decision-making"
+  ],
+  "whenRelevant": [
+    "dual-relationships",
+    "boundaries",
+    "technology"
+  ],
+  "changesOften": false,
+  "statusAsOf": "2026-06-01",
+  "verification": {
+    "method": "not-verified",
+    "note": "Not checked online on 2026-11-27: the build sandbox could not resolve the publishers' sites and the shared web-search budget was used up, so no page was re-read this round. The text is the author's reading of the listed sources as known up to mid-2026. Waiting periods for former clients differ by code and state; check the current standards cited. A person must open each official link, confirm current status and dates, and correct this page before release."
+  },
+  "sources": [
+    {
+      "title": "Managing risk when contemplating multiple relationships (Younggren and Gottlieb)",
+      "publisher": "Professional Psychology: Research and Practice",
+      "url": "https://doi.org/10.1037/0735-7028.35.3.255",
+      "year": 2004
+    },
+    {
+      "title": "The concept of boundaries in clinical practice: theoretical and risk-management dimensions (Gutheil and Gabbard)",
+      "publisher": "American Journal of Psychiatry",
+      "url": "https://doi.org/10.1176/ajp.150.2.188",
+      "year": 1993
+    },
+    {
+      "title": "Ethical Principles of Psychologists and Code of Conduct",
+      "publisher": "American Psychological Association",
+      "url": "https://www.apa.org/ethics/code",
+      "year": 2017
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

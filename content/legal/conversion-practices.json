@@ -1,0 +1,79 @@
+{
+  "id": "conversion-practices",
+  "title": "Conversion practices: why they are never a treatment goal",
+  "kind": "ethics-practice",
+  "jurisdiction": "INTL",
+  "summary": "Efforts to change a person's sexual orientation or gender identity have no reliable evidence of benefit and are linked to harms such as depression, shame and suicidal thoughts. Major professional bodies oppose them for everyone, including adults who ask for them. Faith-integrated work may help a client explore a conflict between faith and identity, at the client's lead and without a set outcome, but it never sets orientation or gender change as a goal. Many places restrict these practices by law, especially with minors. This page is information, not legal advice.",
+  "keyPoints": [
+    "The American Psychological Association's 2021 resolutions on sexual orientation change efforts and gender identity change efforts found no credible evidence that they work and evidence that they can cause harm, and APA opposes them.",
+    "A client may arrive asking to change. The ethical response is to explore the distress, values, faith, family and minority stress behind the request, without steering toward any identity outcome.",
+    "Affirming care does not mean dismissing faith. Clients can be supported to find their own way to hold faith and identity, and referred to faith-sensitive affirming clinicians or communities when they wish.",
+    "Watch for referrals to programs or ministries that promise change, and do not refer clients to them.",
+    "US: about half of the states ban conversion practices with minors by licensed professionals. The US Supreme Court heard a First Amendment challenge to Colorado's ban as applied to talk therapy (Chiles v. Salazar) in its 2025-26 term, so check the decision and your state's current law.",
+    "Elsewhere: Canada's Criminal Code has banned conversion therapy for all ages since 2022, New Zealand passed a prohibition law in 2022, and several Australian states have bans. Rules differ in each country."
+  ],
+  "whatToDo": [
+    "Never set changing sexual orientation or gender identity as a goal, in a plan, a referral or a faith-integrated intervention.",
+    "When a client asks for change, explore what is driving the request and offer support for distress, safety and values.",
+    "Screen for suicidal thoughts and minority stress, and use the crisis resources on every screen when needed.",
+    "Check any referral program or group for change claims before suggesting it.",
+    "Consult your licensing board or a healthcare attorney about the law where you and the client are, which can include criminal penalties."
+  ],
+  "questions": [
+    "Is my response led by the client's values and wellbeing, or by an outcome I or others prefer?",
+    "Have I explored the distress behind the request, including family, faith and minority stress?",
+    "Would any part of my plan or referral imply that orientation or gender identity should change?",
+    "Who could I consult with experience in both faith and affirming care?"
+  ],
+  "officialLinks": [
+    {
+      "title": "APA Resolution on Sexual Orientation Change Efforts (2021, PDF)",
+      "url": "https://www.apa.org/about/policy/resolution-sexual-orientation-change-efforts.pdf"
+    },
+    {
+      "title": "APA Resolution on Gender Identity Change Efforts (2021, PDF)",
+      "url": "https://www.apa.org/about/policy/resolution-gender-identity-change-efforts.pdf"
+    },
+    {
+      "title": "New Zealand: Conversion Practices Prohibition Legislation Act 2022",
+      "url": "https://www.legislation.govt.nz/act/public/2022/0001/latest/whole.html"
+    },
+    {
+      "title": "Canada: Criminal Code (Justice Laws website)",
+      "url": "https://laws-lois.justice.gc.ca/eng/acts/C-46/"
+    }
+  ],
+  "seeAlso": [
+    "contested-practices",
+    "ethical-decision-making"
+  ],
+  "appPositioning": "The intervention library contains no change-effort method. Faith-integrated interventions carry a hub reminder that orientation or gender change is never a goal, and plan goals are written with the client.",
+  "whenRelevant": [
+    "faith-based",
+    "cultural-competence",
+    "informed-consent"
+  ],
+  "changesOften": true,
+  "statusAsOf": "2026-06-01",
+  "verification": {
+    "method": "not-verified",
+    "note": "Not checked online on 2026-11-27: the build sandbox could not resolve the publishers' sites and the shared web-search budget was used up, so no page was re-read this round. The text is the author's reading of the listed sources as known up to mid-2026. The outcome of Chiles v. Salazar was not known to the author; check it, the current count of US state bans, and the Canadian and New Zealand provisions. A person must open each official link, confirm current status and dates, and correct this page before release."
+  },
+  "sources": [
+    {
+      "title": "APA Resolution on Sexual Orientation Change Efforts",
+      "publisher": "American Psychological Association",
+      "url": "https://www.apa.org/about/policy/resolution-sexual-orientation-change-efforts.pdf",
+      "year": 2021
+    },
+    {
+      "title": "APA Resolution on Gender Identity Change Efforts",
+      "publisher": "American Psychological Association",
+      "url": "https://www.apa.org/about/policy/resolution-gender-identity-change-efforts.pdf",
+      "year": 2021
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

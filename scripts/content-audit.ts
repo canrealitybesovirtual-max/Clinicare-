@@ -2,7 +2,8 @@
  * Audit of EVERY file under content/ (G7, G10, G13). Each file must match a registered schema; an
  * unregistered file is itself a problem, so new content cannot skip validation. Clinical content must
  * carry governance (sources[], license, lastVerified <= today, reviewedBy); non-clinical data and
- * registries are labeled as such and must still name their sources and license.
+ * registries are labeled as such and must still name their sources and license. It also collects a report-only
+ * review queue: items awaiting clinical sign-off, Spanish text awaiting human review, and old evidence grades.
  *
  * Used by scripts/validate-content.ts (CI) and tests/unit/content-audit.test.ts. Node only.
  */
@@ -106,7 +107,33 @@ export interface AuditResult {
   files: { file: string; kind: ContentKind }[];
   problems: string[];
   warnings: string[];
+  /**
+   * Report-only review queue (G10): clinical files still waiting for a licensed clinician's sign-off, and files whose
+   * Spanish text is machine-assisted and still needs a fluent human review (45 CFR 92.201 asks for human review of
+   * machine translation of critical content).
+   */
+  review: { clinical: string[]; translation: string[]; staleEvidence: string[] };
 }
+
+/** An evidence grade older than this many years is listed for re-checking against the body's current guideline. */
+export const EVIDENCE_GRADE_MAX_AGE_YEARS = 5;
+
+/**
+ * Evidence grades are optional on content items (`evidenceGrades: [{ body, guideline, year, ... }]`). Each one
+ * older than EVIDENCE_GRADE_MAX_AGE_YEARS is reported, never failed: an old recommendation can still be current.
+ */
+function staleEvidenceGrades(file: string, raw: unknown, year: number): string[] {
+  const grades = (raw as { evidenceGrades?: unknown }).evidenceGrades;
+  if (!Array.isArray(grades)) return [];
+  return grades.flatMap((g: { body?: unknown; guideline?: unknown; year?: unknown }) =>
+    typeof g.year === "number" && year - g.year > EVIDENCE_GRADE_MAX_AGE_YEARS
+      ? [`${file}: ${String(g.body ?? "evidence")} grade (${String(g.guideline ?? "guideline")}, ${g.year}) is over ${EVIDENCE_GRADE_MAX_AGE_YEARS} years old; check the current guideline`]
+      : [],
+  );
+}
+
+/** Machine-assisted Spanish that still needs a person: `es.translatedBy` says PENDING. */
+const translationPending = (raw: unknown): boolean => /PENDING/.test(String((raw as { es?: { translatedBy?: unknown } }).es?.translatedBy ?? ""));
 
 function jsonFiles(dir: string, base = dir): string[] {
   return readdirSync(dir)
@@ -139,7 +166,8 @@ function lastVerifiedDates(value: unknown, out: string[] = []): string[] {
 
 export function auditContent(contentDir: string, opts: { release?: boolean; today?: string } = {}): AuditResult {
   const today = opts.today ?? new Date().toISOString().slice(0, 10);
-  const result: AuditResult = { files: [], problems: [], warnings: [] };
+  const result: AuditResult = { files: [], problems: [], warnings: [], review: { clinical: [], translation: [], staleEvidence: [] } };
+  const year = Number(today.slice(0, 4));
   const parsed = new Map<string, unknown>();
 
   for (const file of jsonFiles(contentDir)) {
@@ -169,6 +197,9 @@ export function auditContent(contentDir: string, opts: { release?: boolean; toda
       if (id !== expected) result.problems.push(`${file}: ${rule.idField} "${String(id)}" does not match the file name`);
     }
     for (const d of lastVerifiedDates(raw)) if (d > today) result.problems.push(`${file}: lastVerified ${d} is in the future`);
+    if (rule.kind === "clinical" && (raw as { reviewedBy?: unknown }).reviewedBy === "PENDING") result.review.clinical.push(file);
+    if (translationPending(raw)) result.review.translation.push(file);
+    result.review.staleEvidence.push(...staleEvidenceGrades(file, raw, year));
   }
 
   // Cross-references among Phase 2 content.

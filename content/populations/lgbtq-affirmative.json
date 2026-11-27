@@ -65,7 +65,7 @@
   "practiceIds": ["multicultural-orientation-and-broaching", "intake-assessment", "couples-and-conjoint-sessions", "ipv-screening-and-first-line-support"],
   "formulationIds": ["minority-stress"],
   "linkOuts": [],
-  "sud": false,
+  "sud": true,
   "sources": [
     { "title": "Prejudice, social stress, and mental health in lesbian, gay, and bisexual populations: conceptual issues and research evidence (Meyer)", "publisher": "Psychological Bulletin (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/12956539/", "year": 2003 },
     { "title": "LGB-affirmative cognitive-behavioral therapy for young adult gay and bisexual men: a randomized controlled trial of a transdiagnostic minority stress approach (Pachankis and colleagues)", "publisher": "Journal of Consulting and Clinical Psychology (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/26147563/", "year": 2015 },

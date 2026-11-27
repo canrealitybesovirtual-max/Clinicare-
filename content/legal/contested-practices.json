@@ -1,0 +1,96 @@
+{
+  "id": "contested-practices",
+  "title": "Contested and potentially harmful practices: cautions",
+  "kind": "ethics-practice",
+  "jurisdiction": "INTL",
+  "summary": "Some methods have been found to harm some clients, and others rest on explanations that research does not support. Codes ask clinicians to use methods grounded in evidence or theory and to avoid those with substantial evidence of harm. This page lists cautions, not recommendations: routine single-session debriefing after trauma, memory-recovery techniques, rebirthing and coercive holding, conversion practices, facilitated communication, and overstated claims about the brain or nervous system. When clients ask, answer neutrally with what the evidence shows. This page is information, not legal advice.",
+  "keyPoints": [
+    "Codes ask you to use techniques grounded in theory or evidence, to explain the risks of developing methods, and not to use a technique when substantial evidence suggests harm (ACA Standard C.7).",
+    "Routine single-session psychological debriefing for everyone after a trauma has not prevented PTSD in trials and may worsen it for some. NICE advises against offering it; psychological first aid and watchful waiting are the usual alternatives.",
+    "Techniques aimed at recovering memories of abuse risk creating false memories. See the memory and suggestion topic.",
+    "Rebirthing and coercive holding or restraint therapies have caused deaths and are banned in some US states.",
+    "Facilitated communication, in which a helper guides a person's hand to type, has been shown in controlled tests to reflect the helper's messages. Professional speech and language bodies oppose it.",
+    "Conversion practices aimed at sexual orientation or gender identity are not supported and are linked to harm. See the conversion practices topic.",
+    "Explanations that reduce distress to a single cause, such as a simple chemical imbalance, or that present contested nervous-system theories as settled science, oversimplify the evidence. Explain treatments by what trials show.",
+    "Claims about energy meridians lack scientific support. Where a method has some trial evidence, present that evidence honestly without the unsupported explanation."
+  ],
+  "whatToDo": [
+    "Before adopting a method, look for controlled trials and guideline reviews, not only testimonials or training marketing.",
+    "If a client asks about a contested method, explain what is known, the possible harms and the better-supported options, without ridicule.",
+    "Offer psychological first aid, practical support and follow-up after trauma, rather than routine single-session debriefing.",
+    "Report serious harms you see from a practice to your supervisor and, where required, your board.",
+    "Consult your licensing board or a healthcare attorney before using any method your code or state restricts."
+  ],
+  "questions": [
+    "What do controlled trials and guidelines say, apart from the method's own training materials?",
+    "Could this method harm this client, and how would I notice?",
+    "Am I describing the mechanism more confidently than the evidence allows?",
+    "How can I answer the client's question respectfully while being honest about the evidence?"
+  ],
+  "officialLinks": [
+    {
+      "title": "NICE guideline NG116: Post-traumatic stress disorder, recommendations",
+      "url": "https://www.nice.org.uk/guidance/ng116/chapter/Recommendations"
+    },
+    {
+      "title": "ACA Code of Ethics and ethics resources (Standard C.7)",
+      "url": "https://www.counseling.org/resources/ethics"
+    },
+    {
+      "title": "ASHA position statement on facilitated communication",
+      "url": "https://www.asha.org/policy/ps2018-00352/"
+    }
+  ],
+  "seeAlso": [
+    "memory-and-suggestion-safeguards",
+    "conversion-practices",
+    "emerging-treatments-and-psychedelics"
+  ],
+  "appPositioning": "The intervention library includes none of these practices as a recommended method. They appear only here, as cautions, and intervention pages show the evidence summary and its sources.",
+  "whenRelevant": [
+    "informed-consent",
+    "competence",
+    "emerging-treatments"
+  ],
+  "changesOften": false,
+  "statusAsOf": "2026-06-01",
+  "verification": {
+    "method": "not-verified",
+    "note": "Not checked online on 2026-11-27: the build sandbox could not resolve the publishers' sites and the shared web-search budget was used up, so no page was re-read this round. The text is the author's reading of the listed sources as known up to mid-2026. Check the NICE debriefing recommendation, the ASHA statement address, and the cited reviews on harmful treatments and polyvagal claims. A person must open each official link, confirm current status and dates, and correct this page before release."
+  },
+  "sources": [
+    {
+      "title": "Psychological treatments that cause harm (Lilienfeld)",
+      "publisher": "Perspectives on Psychological Science",
+      "url": "https://doi.org/10.1111/j.1745-6916.2007.00029.x",
+      "year": 2007
+    },
+    {
+      "title": "Discredited psychological treatments and tests: a Delphi poll (Norcross, Koocher and Garofalo)",
+      "publisher": "Professional Psychology: Research and Practice",
+      "url": "https://doi.org/10.1037/0735-7028.37.5.515",
+      "year": 2006
+    },
+    {
+      "title": "Psychological debriefing for preventing post traumatic stress disorder (Cochrane review)",
+      "publisher": "Cochrane Database of Systematic Reviews",
+      "url": "https://doi.org/10.1002/14651858.CD000560",
+      "year": 2002
+    },
+    {
+      "title": "Fundamental challenges and likely refutations of the five basic premises of the polyvagal theory (Grossman)",
+      "publisher": "Biological Psychology",
+      "url": "https://doi.org/10.1016/j.biopsycho.2023.108589",
+      "year": 2023
+    },
+    {
+      "title": "ACA Code of Ethics (2014) and ethics resources",
+      "publisher": "American Counseling Association",
+      "url": "https://www.counseling.org/resources/ethics",
+      "year": 2014
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

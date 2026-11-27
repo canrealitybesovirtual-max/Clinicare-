@@ -1,0 +1,71 @@
+{
+  "id": "military-confidentiality",
+  "title": "Military service members: confidentiality and command notification",
+  "kind": "legal",
+  "jurisdiction": "US-federal",
+  "summary": "Service members often fear that seeking care will reach their command. For military health care providers, a Department of Defense instruction sets a default of not notifying command and lists the limited situations in which they must, such as serious risk of harm to self, others or the mission. Civilian clinicians follow HIPAA and state law and normally need the client's written authorization to share anything with command. This page is information, not legal advice.",
+  "keyPoints": [
+    "DoD Instruction 6490.08 applies to military health care providers. It presumes no command notification and allows it only in listed circumstances, such as harm to self, harm to others, harm to the mission, certain special duty roles, inpatient care, formal substance misuse treatment and command-directed evaluations. Only the minimum needed is shared.",
+    "Civilian clinicians, including many paid through TRICARE, are not bound by that instruction. HIPAA permits some disclosures to military command for mission purposes but does not require them, so get the client's written authorization unless a legal duty applies.",
+    "Seeking mental health care does not by itself end a security clearance, and the clearance form's mental health question has been narrowed in recent revisions.",
+    "Service members can ask for a mental health evaluation through a self-initiated referral process created by the Brandon Act.",
+    "Military OneSource offers confidential non-medical counseling, with the usual limits for safety and abuse reporting. Veterans and service members can reach the Veterans Crisis Line by dialing 988 and pressing 1.",
+    "Family advocacy and sexual assault programs on installations have their own restricted and unrestricted reporting options."
+  ],
+  "whatToDo": [
+    "Ask early whether the client is serving, in the Guard or Reserve, or a veteran, and what worries them about privacy.",
+    "Explain your confidentiality limits and that you will not contact command without written authorization unless a legal duty applies.",
+    "If the client wants you to talk with command, agree in writing exactly what you will share.",
+    "Know the military and veteran crisis options, including 988 then press 1.",
+    "Consult a military legal assistance office (JAG), your licensing board or a healthcare attorney when command asks for information."
+  ],
+  "officialLinks": [
+    {
+      "title": "DoD Instruction 6490.08: Command notification requirements (PDF)",
+      "url": "https://www.esd.whs.mil/Portals/54/Documents/DD/issuances/dodi/649008p.pdf"
+    },
+    {
+      "title": "Military OneSource",
+      "url": "https://www.militaryonesource.mil/"
+    },
+    {
+      "title": "eCFR: 45 CFR 164.512, including the armed forces provision in paragraph (k)",
+      "url": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-E/section-164.512"
+    },
+    {
+      "title": "988 Suicide and Crisis Lifeline (press 1 for the Veterans Crisis Line)",
+      "url": "https://988lifeline.org"
+    }
+  ],
+  "seeAlso": [
+    "duty-to-warn-protect",
+    "mandatory-reporting",
+    "hipaa-privacy-basics"
+  ],
+  "whenRelevant": [
+    "confidentiality",
+    "privacy",
+    "crisis"
+  ],
+  "changesOften": false,
+  "statusAsOf": "2026-06-01",
+  "verification": {
+    "method": "not-verified",
+    "note": "Not checked online on 2026-11-27: the build sandbox could not resolve the publishers' sites and the shared web-search budget was used up, so no page was re-read this round. The text is the author's reading of the listed sources as known up to mid-2026. Check the current version of DoDI 6490.08 and its list of notification circumstances, and the current clearance form wording. A person must open each official link, confirm current status and dates, and correct this page before release."
+  },
+  "sources": [
+    {
+      "title": "DoD Instruction 6490.08: Command Notification Requirements to Dispel Stigma in Providing Mental Health Care to Service Members",
+      "publisher": "US Department of Defense",
+      "url": "https://www.esd.whs.mil/Portals/54/Documents/DD/issuances/dodi/649008p.pdf"
+    },
+    {
+      "title": "Military OneSource",
+      "publisher": "US Department of Defense",
+      "url": "https://www.militaryonesource.mil/"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

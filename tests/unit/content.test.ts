@@ -33,6 +33,7 @@ const TODAY = "2026-11-27";
 
 /** The 29 adult conditions in the knowledge base. */
 const CONDITION_IDS = [
+  "acute-stress-disorder",
   "adjustment-disorder",
   "adult-adhd",
   "agoraphobia",
@@ -42,10 +43,12 @@ const CONDITION_IDS = [
   "bipolar-i-disorder",
   "bipolar-ii-disorder",
   "body-dysmorphic-disorder",
+  "body-focused-repetitive-behaviors",
   "borderline-personality-disorder",
   "bulimia-nervosa",
   "cannabis-use-disorder",
   "cyclothymic-disorder",
+  "gambling-disorder",
   "generalized-anxiety-disorder",
   "hoarding-disorder",
   "illness-anxiety-disorder",
@@ -55,16 +58,26 @@ const CONDITION_IDS = [
   "opioid-use-disorder",
   "panic-disorder",
   "persistent-depressive-disorder",
+  "premenstrual-dysphoric-disorder",
   "prolonged-grief-disorder",
   "ptsd",
   "schizophrenia",
+  "sedative-hypnotic-use-disorder",
   "social-anxiety-disorder",
   "somatic-symptom-disorder",
   "specific-phobia",
   "stimulant-use-disorder",
+  "tobacco-use-disorder",
 ];
 /** Substance-use conditions: Part 2 banner, Part 2 export notice and sud plans (G6). */
-const SUD_IDS = ["alcohol-use-disorder", "cannabis-use-disorder", "opioid-use-disorder", "stimulant-use-disorder"];
+const SUD_IDS = [
+  "alcohol-use-disorder",
+  "cannabis-use-disorder",
+  "opioid-use-disorder",
+  "sedative-hypnotic-use-disorder",
+  "stimulant-use-disorder",
+  "tobacco-use-disorder",
+];
 const ISO = /^\d{4}-\d{2}-\d{2}$/;
 
 const neutral = (symptomIds: string[]): ScoringInput => ({

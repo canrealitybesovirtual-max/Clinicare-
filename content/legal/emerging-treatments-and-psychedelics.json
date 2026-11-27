@@ -1,0 +1,99 @@
+{
+  "id": "emerging-treatments-and-psychedelics",
+  "title": "Emerging treatments, psychedelics and ketamine: consent and limits",
+  "kind": "ethics-practice",
+  "jurisdiction": "INTL",
+  "summary": "Clients increasingly ask about psilocybin, MDMA, ketamine and other approaches whose evidence is still developing. Professional codes ask for fuller consent when a treatment is not yet established: say that the evidence is developing, name the risks and the better-supported alternatives, and make clear that taking part is voluntary. In the US, psilocybin and MDMA stay illegal under federal law outside research, a few states run regulated psilocybin programs, and esketamine is the only related medicine approved for depression. Talking about safety and meaning is different from arranging or guiding illegal use. This page is information, not legal advice.",
+  "keyPoints": [
+    "For a treatment without established techniques, codes ask you to tell the client that the evidence is still developing, the known and possible risks, the alternatives with stronger support, and that taking part is voluntary (APA Standard 10.01(b); ACA Standard C.7).",
+    "In the US, psilocybin and MDMA are Schedule I controlled substances. As of mid-2026 no psychedelic is FDA-approved for a mental health condition; in August 2024 FDA declined to approve MDMA-assisted therapy for PTSD. Legal access is mainly through registered clinical trials.",
+    "Esketamine nasal spray is FDA-approved for treatment-resistant depression and for depressive symptoms with acute suicidal thoughts. It is given only in certified settings with monitoring under a safety program (REMS). Ketamine by other routes for depression is off-label, and FDA has warned about compounded and at-home ketamine products.",
+    "Oregon licenses psilocybin service centers and facilitators (services began in 2023), and Colorado runs a state natural medicine program. These are not medical treatment and do not change federal law. A clinician who also works as a facilitator must follow both the program rules and their licensing board.",
+    "Australia has let authorized psychiatrists prescribe MDMA for PTSD and psilocybin for treatment-resistant depression since July 2023. Rules in other countries differ.",
+    "Listening without judgment, giving general harm-reduction information, and helping a client make sense of an experience afterward (often called integration) differ from recommending a source, dose, guide or venue, or being present during illegal use. The second group can bring criminal, licensing and liability risk.",
+    "Some people face higher risk from these substances, for example with a personal or family history of psychosis or bipolar disorder, or heart disease. Medical screening and monitoring belong to the prescribing or research team.",
+    "Malpractice policies may exclude psychedelic-related services. Check your coverage before offering integration work."
+  ],
+  "whatToDo": [
+    "Write down what you will say about evidence, risks, alternatives and voluntary participation, and document the consent conversation.",
+    "Offer established first-line treatments alongside any emerging option, and point clients to registered trials or licensed prescribers for legal access.",
+    "Keep harm-reduction and integration conversations about safety, meaning and support; do not recommend sources, doses, guides or venues, and do not attend illegal use.",
+    "Ask about any use in a calm, nonjudgmental way, and screen for risks such as a history of psychosis or mania that call for medical input.",
+    "Consult your licensing board, your malpractice carrier and a healthcare attorney before taking on any psychedelic-related role."
+  ],
+  "questions": [
+    "Can I explain, in plain words, the evidence for this approach, its risks and the better-supported alternatives?",
+    "Is this within my training and my license, and would my board see it that way?",
+    "Am I being asked to obtain, supply, guide or supervise a substance that is illegal where I practice?",
+    "If the client is using on their own, how do I keep the focus on safety and meaning without endorsing or arranging use?",
+    "Would my note make sense to a colleague, a board or a court reading it later?"
+  ],
+  "officialLinks": [
+    {
+      "title": "APA Ethical Principles of Psychologists and Code of Conduct (Standard 10.01)",
+      "url": "https://www.apa.org/ethics/code"
+    },
+    {
+      "title": "ACA Code of Ethics and ethics resources (Standard C.7)",
+      "url": "https://www.counseling.org/resources/ethics"
+    },
+    {
+      "title": "FDA: Psychedelic Drugs, Considerations for Clinical Investigations (draft guidance)",
+      "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/psychedelic-drugs-considerations-clinical-investigations"
+    },
+    {
+      "title": "Oregon Health Authority: Oregon Psilocybin Services",
+      "url": "https://www.oregon.gov/oha/ph/preventionwellness/pages/oregon-psilocybin-services.aspx"
+    },
+    {
+      "title": "ClinicalTrials.gov: find registered studies",
+      "url": "https://clinicaltrials.gov/"
+    }
+  ],
+  "seeAlso": [
+    "contested-practices",
+    "competence-and-scope-of-practice",
+    "42-cfr-part-2"
+  ],
+  "appPositioning": "The intervention library lists no psychedelic-assisted therapy, and the app never suggests a drug, dose, source or retreat. Medicine pages are reference only and link to official labels; esketamine appears there with its safety program noted.",
+  "whenRelevant": [
+    "emerging-treatments",
+    "informed-consent",
+    "competence",
+    "sud"
+  ],
+  "changesOften": true,
+  "statusAsOf": "2026-06-01",
+  "verification": {
+    "method": "not-verified",
+    "note": "Not checked online on 2026-11-27: the build sandbox could not resolve the publishers' sites and the shared web-search budget was used up, so no page was re-read this round. The text is the author's reading of the listed sources as known up to mid-2026. Re-check the FDA status of MDMA, psilocybin and esketamine, the Oregon and Colorado program rules, and the Australian prescribing rules, all of which change. A person must open each official link, confirm current status and dates, and correct this page before release."
+  },
+  "sources": [
+    {
+      "title": "Ethical Principles of Psychologists and Code of Conduct",
+      "publisher": "American Psychological Association",
+      "url": "https://www.apa.org/ethics/code",
+      "year": 2017
+    },
+    {
+      "title": "ACA Code of Ethics (2014) and ethics resources",
+      "publisher": "American Counseling Association",
+      "url": "https://www.counseling.org/resources/ethics",
+      "year": 2014
+    },
+    {
+      "title": "Psychedelic Drugs: Considerations for Clinical Investigations (draft guidance)",
+      "publisher": "US Food and Drug Administration",
+      "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/psychedelic-drugs-considerations-clinical-investigations",
+      "year": 2023
+    },
+    {
+      "title": "Oregon Psilocybin Services",
+      "publisher": "Oregon Health Authority",
+      "url": "https://www.oregon.gov/oha/ph/preventionwellness/pages/oregon-psilocybin-services.aspx"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

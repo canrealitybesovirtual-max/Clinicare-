@@ -1,0 +1,78 @@
+{
+  "id": "sexual-health-in-therapy",
+  "name": "Sexual health concerns in therapy",
+  "group": "health-and-body",
+  "summary": "Raising sexual concerns with adults in a stepped, permission-based way (the PLISSIT model), medicine side effects such as those of antidepressants, when to refer for specialist sex therapy or multidisciplinary pain care, and keeping consent, coercion and safety in view.",
+  "scopeNote": "For adults (18 and over). The app never asks for or saves sexual history, orientation, practices or partner details. Specialist sex therapy, including sensate focus and mindfulness-based sex therapy, is for trained clinicians; these notes cover raising concerns and referring.",
+  "whyItMatters": "Sexual concerns are common in adults with depression, anxiety, trauma and chronic illness, and are often affected by medicines, yet are rarely raised unless the clinician asks. A Cochrane review of 23 trials found limited evidence on managing antidepressant-related sexual dysfunction, with some support for added medicines that a prescriber can consider (Taylor and colleagues, 2013). In 117 women seeking help for low desire and arousal, four group sessions of mindfulness-based therapy improved desire, arousal and satisfaction compared with a delayed-treatment group (Brotto and Basson, 2014). ICD-11 moved sexual dysfunctions and sexual pain out of the mental disorders chapter into a separate chapter on conditions related to sexual health, reflecting their mixed physical and psychological causes (Reed and colleagues, 2016).",
+  "askAbout": [
+    "Some people find that mood, stress, medicines or health problems affect their sex life or relationships. Is that something you would like to talk about, now or another time?",
+    "Since starting or changing any medicine, have you noticed changes in desire, arousal, orgasm or comfort?",
+    "Is sex ever painful or uncomfortable for you, and have you been able to talk with a medical provider about it?",
+    "Do you feel free to say no to sex, and are you ever pressured or forced?",
+    "What would a good outcome look like for you, if anything needs to change?"
+  ],
+  "stereotypeCaution": "People's sexual lives, identities, relationships and values vary widely, including asexual people and those who are not sexually active by choice. Do not assume a partner's gender, a relationship structure, what counts as a problem or that sex is a goal; follow the person's own definition of a concern.",
+  "keyConsiderations": [
+    "PLISSIT is a stepped way to respond: give Permission to talk, offer Limited Information, make Specific Suggestions within your competence, and refer for Intensive Therapy when needed.",
+    "Ask with permission and in neutral, inclusive words; explain why you are asking.",
+    "Medicines (including many antidepressants), alcohol and other drugs, illness, pain, trauma and relationship strain can all contribute; look at each with the person and their medical team.",
+    "Sexual pain needs medical assessment and often multidisciplinary care, such as gynecology, urology, pelvic floor physical therapy and psychological support.",
+    "Refer to a qualified sex therapist (for example, one certified by AASECT in the US) for specialist work beyond your training.",
+    "Keep consent and safety in view: ask privately about coercion and partner violence."
+  ],
+  "assessmentAdaptations": [
+    "Ask whether the concern began before or after a medicine change, an illness, childbirth, a trauma or a relationship change.",
+    "Ask about distress: a difference in sexual function is a concern only if the person or the relationship is troubled by it.",
+    "Screen for depression, anxiety and trauma, which often affect sexual health and are treatable.",
+    "With consent and when relevant, consider meeting with a partner, while also seeing the person alone."
+  ],
+  "sessionAdaptations": [
+    "Use plain, nonjudgmental language and let the person choose words; avoid jargon.",
+    "Give accurate basic information about sexual response and the effects of stress and medicines.",
+    "Coordinate with prescribers about side effects rather than advising on medicines yourself.",
+    "Respect cultural and religious values, and let the person decide what is acceptable to discuss."
+  ],
+  "interventionNotes": [
+    { "interventionId": "medication-referral", "note": "Antidepressant-related sexual side effects are a prescriber question; help the person prepare to raise it." },
+    { "interventionId": "couples-relationship-skills", "note": "Communication about intimacy and needs can be part of couple work when both partners want it." },
+    { "interventionId": "mindfulness-meditation", "note": "Mindfulness skills can support attention and reduce performance anxiety; specialist mindfulness-based sex therapy is for trained clinicians." },
+    { "interventionId": "cbt-and-act-for-chronic-pain", "note": "Pain-focused CBT and ACT can be part of multidisciplinary care for sexual pain, alongside medical assessment." },
+    { "orientationId": "systemic-family-and-couples-therapy", "note": "Systemic approaches look at how both partners and the relationship shape sexual concerns." }
+  ],
+  "measureNotes": [
+    "PHQ-9 and GAD-7 scores do not capture sexual concerns; ask directly when relevant.",
+    "Specialist sexual function questionnaires are not built into the app."
+  ],
+  "measuresPending": [],
+  "safetyNotes": [
+    "Ask privately about sexual coercion, assault and partner violence, and respond with first-line support if the person discloses.",
+    "In the US, the National Sexual Assault Hotline and the National Domestic Violence Hotline can help; in danger now, call 911 or the local emergency number."
+  ],
+  "cautions": [
+    "Never offer or suggest physical touch, examination or demonstration as part of psychotherapy; see the touch and body-based work topic.",
+    "Do not try to change a person's sexual orientation or gender identity; such efforts are harmful."
+  ],
+  "legalIds": ["reproductive-health-privacy", "competence-and-scope-of-practice", "touch-and-body-based-work", "conversion-practices"],
+  "ethicsIds": [],
+  "referralIds": ["rainn-sexual-assault-hotline", "national-domestic-violence-hotline"],
+  "referralKinds": [],
+  "handoutIds": ["questions-for-my-prescriber", "couples-pause-and-repair", "kind-self-talk"],
+  "topicIds": ["sexual-health"],
+  "practiceIds": ["couples-and-conjoint-sessions", "medication-induced-psychiatric-symptoms", "shared-decision-making"],
+  "formulationIds": [],
+  "linkOuts": [
+    { "title": "Sexual Health", "publisher": "MedlinePlus (U.S. National Library of Medicine)", "url": "https://medlineplus.gov/sexualhealth.html", "lastVerified": "2026-11-27" },
+    { "title": "Sexuality and Intimacy in Older Adults", "publisher": "National Institute on Aging", "url": "https://www.nia.nih.gov/health/sexuality/sexuality-and-intimacy-older-adults", "lastVerified": "2026-11-27" }
+  ],
+  "sud": true,
+  "sources": [
+    { "title": "Strategies for managing sexual dysfunction induced by antidepressant medication (Taylor and colleagues)", "publisher": "Cochrane Database of Systematic Reviews (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/23728643/", "year": 2013 },
+    { "title": "Group mindfulness-based therapy significantly improves sexual desire in women (Brotto and Basson)", "publisher": "Behaviour Research and Therapy (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/24814472/", "year": 2014 },
+    { "title": "Disorders related to sexuality and gender identity in the ICD-11 (Reed and colleagues)", "publisher": "World Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/27717275/", "year": 2016 },
+    { "title": "Sexual Health", "publisher": "MedlinePlus (U.S. National Library of Medicine)", "url": "https://medlineplus.gov/sexualhealth.html" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

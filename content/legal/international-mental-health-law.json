@@ -1,0 +1,96 @@
+{
+  "id": "international-mental-health-law",
+  "title": "Mental health and capacity law outside the US",
+  "kind": "legal",
+  "jurisdiction": "INTL",
+  "appliesIn": [
+    "GB",
+    "IE",
+    "CA",
+    "AU",
+    "NZ"
+  ],
+  "summary": "Involuntary care, capacity and consent are governed by national, provincial or state law, and each country differs. England and Wales use the Mental Health Act 1983 and the Mental Capacity Act 2005; Scotland and Northern Ireland have their own laws; Ireland has the Mental Health Act 2001 and a 2015 capacity act; Canada, Australia and their provinces, states and territories each have their own acts; New Zealand is replacing its 1992 act. WHO and the UN human rights office published rights-based guidance in 2023. This page is information, not legal advice.",
+  "keyPoints": [
+    "England and Wales: the Mental Health Act 1983 covers assessment and treatment in hospital and community treatment orders. A reform bill was before Parliament in 2025; check whether it is now law and when its parts start.",
+    "The Mental Capacity Act 2005 (England and Wales) presumes capacity, requires practical help before deciding someone lacks it, treats unwise decisions as allowed, and requires best-interests and least-restrictive choices.",
+    "Scotland and Northern Ireland have separate mental health and capacity laws, so check the law where the client is.",
+    "Ireland: the Mental Health Act 2001 governs involuntary admission, and the Assisted Decision-Making (Capacity) Act 2015, in force since 2023, replaced wardship with supported decision-making arrangements.",
+    "Canada: each province and territory has its own mental health act and consent law; for example Ontario has a Mental Health Act and a Health Care Consent Act, with a board that reviews capacity findings.",
+    "Australia: each state and territory has its own mental health act, often with a tribunal that reviews involuntary treatment.",
+    "New Zealand: the Mental Health (Compulsory Assessment and Treatment) Act 1992 still applies while a replacement bill, introduced in 2024, moves through Parliament.",
+    "The 2023 WHO and OHCHR guidance encourages laws that reduce coercion, support decision-making and align with the UN Convention on the Rights of Persons with Disabilities."
+  ],
+  "whatToDo": [
+    "Identify which country and region's law applies, based on where the client is.",
+    "Learn who may start an assessment or detention locally, and keep crisis and emergency contacts ready.",
+    "Use capacity and best-interests or supported decision-making processes as your local law describes, and document them.",
+    "Check professional duties with your regulator, such as the HCPC or BACP in the UK, provincial colleges in Canada, AHPRA in Australia or the relevant New Zealand board.",
+    "Consult your regulator, your employer's legal team or a lawyer licensed in that jurisdiction before acting on these laws."
+  ],
+  "officialLinks": [
+    {
+      "title": "legislation.gov.uk: Mental Health Act 1983",
+      "url": "https://www.legislation.gov.uk/ukpga/1983/20/contents"
+    },
+    {
+      "title": "legislation.gov.uk: Mental Capacity Act 2005",
+      "url": "https://www.legislation.gov.uk/ukpga/2005/9/contents"
+    },
+    {
+      "title": "Irish Statute Book: Assisted Decision-Making (Capacity) Act 2015",
+      "url": "https://www.irishstatutebook.ie/eli/2015/act/64/enacted/en/html"
+    },
+    {
+      "title": "Ontario e-Laws: Mental Health Act",
+      "url": "https://www.ontario.ca/laws/statute/90m07"
+    },
+    {
+      "title": "New Zealand Legislation: Mental Health (Compulsory Assessment and Treatment) Act 1992",
+      "url": "https://www.legislation.govt.nz/act/public/1992/0046/latest/whole.html"
+    },
+    {
+      "title": "WHO and OHCHR: Mental health, human rights and legislation, guidance and practice (2023)",
+      "url": "https://www.who.int/publications/i/item/9789240080737"
+    }
+  ],
+  "seeAlso": [
+    "decision-making-capacity",
+    "crisis-and-involuntary-holds",
+    "international-privacy"
+  ],
+  "whenRelevant": [
+    "international",
+    "capacity",
+    "crisis"
+  ],
+  "changesOften": true,
+  "statusAsOf": "2026-06-01",
+  "verification": {
+    "method": "not-verified",
+    "note": "Not checked online on 2026-11-27: the build sandbox could not resolve the publishers' sites and the shared web-search budget was used up, so no page was re-read this round. The text is the author's reading of the listed sources as known up to mid-2026. Check the status of the England and Wales and New Zealand reform bills, and the addresses for the Irish and Ontario acts. A person must open each official link, confirm current status and dates, and correct this page before release."
+  },
+  "sources": [
+    {
+      "title": "Mental Health Act 1983",
+      "publisher": "legislation.gov.uk (The National Archives)",
+      "url": "https://www.legislation.gov.uk/ukpga/1983/20/contents",
+      "year": 1983
+    },
+    {
+      "title": "Mental Capacity Act 2005",
+      "publisher": "legislation.gov.uk (The National Archives)",
+      "url": "https://www.legislation.gov.uk/ukpga/2005/9/contents",
+      "year": 2005
+    },
+    {
+      "title": "Mental health, human rights and legislation: guidance and practice",
+      "publisher": "World Health Organization and UN Office of the High Commissioner for Human Rights",
+      "url": "https://www.who.int/publications/i/item/9789240080737",
+      "year": 2023
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

@@ -1,0 +1,83 @@
+{
+  "id": "decision-making-capacity",
+  "title": "Decision-making capacity, surrogates and supported decisions",
+  "kind": "legal",
+  "jurisdiction": "US-state-varies",
+  "summary": "Capacity is about one decision at one time: a person may be able to choose a therapist but not manage complex finances, and capacity can change from day to day. Adults are presumed to have capacity. When it is in doubt, clinicians look at whether the person can express a choice, understand the information, see how it applies to them, and reason about options. Who may decide for someone else, such as an agent, a default surrogate or a guardian, is set by state law. This page is information, not legal advice.",
+  "keyPoints": [
+    "Capacity is a clinical judgment about a specific decision. Competence is a legal finding made by a court.",
+    "Commonly used abilities are: communicating a choice, understanding relevant information, appreciating how it applies to one's own situation, and reasoning about the options and consequences.",
+    "Support comes first: plain language, more time, hearing aids or an interpreter, a quieter setting, or a better time of day can restore capacity for a decision.",
+    "An unwise or unusual choice does not by itself show lack of capacity.",
+    "Surrogates include a health care agent named in a power of attorney, a default family surrogate under state law, and a court-appointed guardian. Guardianship is the most restrictive, and limited orders are preferred.",
+    "Many states now recognize supported decision-making agreements, in which a person keeps the right to decide and chooses helpers.",
+    "Signs of financial exploitation of an older or dependent adult include sudden banking changes, new people controlling money, unpaid bills despite resources, missing belongings, and changes to wills or powers of attorney. Reporting duties to Adult Protective Services vary by state.",
+    "HIPAA lets you share relevant information with family or friends involved in care when the client agrees or does not object, and in some cases when the client lacks capacity and sharing is in their interest."
+  ],
+  "whatToDo": [
+    "Name the exact decision, and assess the abilities for that decision, not general capacity.",
+    "Offer supports first and re-assess when the person is at their best.",
+    "Ask the client in private who they want involved, and see them alone for part of the visit when family attends.",
+    "If you suspect exploitation or abuse, follow your state's Adult Protective Services reporting rules; the Eldercare Locator and NCEA list local contacts.",
+    "Consult your licensing board, your agency's policy or a healthcare attorney about surrogate and guardianship law in your state."
+  ],
+  "questions": [
+    "What exactly is the decision, and what does the person need to understand to make it?",
+    "Have I given every reasonable support before concluding the person cannot decide?",
+    "Am I questioning capacity because the choice worries me, or because the abilities are missing?",
+    "Who has legal authority here, and does the person know and agree?"
+  ],
+  "officialLinks": [
+    {
+      "title": "ABA and APA: Assessment of Older Adults with Diminished Capacity, a handbook for psychologists (PDF)",
+      "url": "https://www.apa.org/pi/aging/programs/assessment/capacity-psychologist-handbook.pdf"
+    },
+    {
+      "title": "National Center on Elder Abuse",
+      "url": "https://ncea.acl.gov/"
+    },
+    {
+      "title": "Eldercare Locator",
+      "url": "https://eldercare.acl.gov"
+    }
+  ],
+  "seeAlso": [
+    "psychiatric-advance-directives",
+    "mandatory-reporting",
+    "international-mental-health-law"
+  ],
+  "whenRelevant": [
+    "capacity",
+    "abuse-reporting",
+    "informed-consent",
+    "confidentiality"
+  ],
+  "changesOften": false,
+  "statusAsOf": "2026-06-01",
+  "verification": {
+    "method": "not-verified",
+    "note": "Not checked online on 2026-11-27: the build sandbox could not resolve the publishers' sites and the shared web-search budget was used up, so no page was re-read this round. The text is the author's reading of the listed sources as known up to mid-2026. Confirm the ABA and APA handbook address and the four-abilities summary (Appelbaum 2007). A person must open each official link, confirm current status and dates, and correct this page before release."
+  },
+  "sources": [
+    {
+      "title": "Assessment of Older Adults with Diminished Capacity: A Handbook for Psychologists",
+      "publisher": "American Bar Association and American Psychological Association",
+      "url": "https://www.apa.org/pi/aging/programs/assessment/capacity-psychologist-handbook.pdf",
+      "year": 2008
+    },
+    {
+      "title": "Assessment of patients' competence to consent to treatment (Appelbaum)",
+      "publisher": "New England Journal of Medicine",
+      "url": "https://doi.org/10.1056/NEJMcp074045",
+      "year": 2007
+    },
+    {
+      "title": "National Center on Elder Abuse",
+      "publisher": "US Administration for Community Living",
+      "url": "https://ncea.acl.gov/"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

@@ -1,11 +1,10 @@
 /**
  * Server-rendered cards for the Ethics & Legal Hub. Original summaries only, each with the official link,
- * edition and verification status, and a "check the official source" badge when a person must re-check it.
- * The long parts (reminders, key points, sources) render only when their disclosure is opened (LazyHubBody), so
- * the page stays light while every card, summary and #id anchor is in the server HTML. Exact regulatory wording
- * (requiredText) is always shown.
+ * edition and a "check the official source" badge when a person must re-check it. The long parts (reminders,
+ * key points, questions, sources and how each item was checked) render only when their disclosure is opened
+ * (LazyHubBody), so the page stays light while every card, summary and #id anchor is in the server HTML. Exact
+ * regulatory wording (requiredText) is always shown.
  */
-import { CalendarClock, Landmark, TriangleAlert } from "lucide-react";
 import { PROFESSION_LABELS, needsHumanCheck, type EthicsCode, type LegalTopic } from "@/lib/schemas-hub";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
@@ -13,46 +12,15 @@ import { Disclosure } from "@/components/ui/disclosure";
 import { ExternalLink } from "@/components/ui/external-link";
 import { ReviewBadge } from "@/components/content/content-meta";
 import { LazyHubBody } from "./lazy-hub-body";
-import { EDITION_STATUS_LABELS, VERIFICATION_LABELS, jurisdictionLabel, scopeLabel } from "./hub-labels";
+import { EDITION_STATUS_LABELS, scopeLabel, topicPlaceLabel } from "./hub-labels";
 
+// Text-only badges: every card carries them, so icons would add weight without adding meaning.
 function CheckOfficialBadge() {
-  return (
-    <Badge tone="warn">
-      <TriangleAlert aria-hidden className="size-3.5" />
-      Check the official source
-    </Badge>
-  );
+  return <Badge tone="warn">Check the official source</Badge>;
 }
 
-function VerificationNote({
-  method,
-  note,
-  lastVerified,
-  check,
-}: {
-  method: keyof typeof VERIFICATION_LABELS;
-  note: string;
-  lastVerified: string;
-  check: boolean;
-}) {
-  // Neutral; the card's "Check the official source" badge already flags a re-check, so the summary only says so.
-  return (
-    <Disclosure
-      title="How this was checked"
-      meta={check ? "re-check due" : VERIFICATION_LABELS[method]}
-      bordered={false}
-      className="rounded-lg border border-border bg-surface-2 px-3"
-      bodyClassName="space-y-2 pb-3"
-    >
-      <p className="text-muted">{VERIFICATION_LABELS[method]}.</p>
-      <p>{note}</p>
-      <p className="text-muted">
-        Last checked online: <span className="font-semibold text-text">{lastVerified}</span>.
-        {check ? " Confirm against the official source before relying on it." : null}
-      </p>
-    </Disclosure>
-  );
-}
+/** "3 sources · re-check due": the disclosure that also holds how the item was checked. */
+const sourcesMeta = (n: number, check: boolean) => `${n} ${n === 1 ? "source" : "sources"}${check ? " · re-check due" : ""}`;
 
 export function EthicsCodeCard({ code }: { code: EthicsCode }) {
   const check = needsHumanCheck(code);
@@ -104,12 +72,10 @@ export function EthicsCodeCard({ code }: { code: EthicsCode }) {
           >
             <LazyHubBody part="ethics-reminders" id={code.id} />
           </Disclosure>
-          <Disclosure title="Sources and review" meta={`${code.sources.length} sources`}>
+          <Disclosure title="Sources and review" meta={sourcesMeta(code.sources.length, check)}>
             <LazyHubBody part="ethics-sources" id={code.id} />
           </Disclosure>
         </div>
-
-        <VerificationNote method={code.verification.method} note={code.verification.note} lastVerified={code.lastVerified} check={check} />
       </Card>
     </article>
   );
@@ -118,20 +84,13 @@ export function EthicsCodeCard({ code }: { code: EthicsCode }) {
 export function LegalTopicCard({ topic }: { topic: LegalTopic }) {
   const check = needsHumanCheck(topic);
   const titleId = `${topic.id}-title`;
+  const practice = topic.kind === "ethics-practice";
   return (
     <article id={topic.id} aria-labelledby={titleId} className="scroll-mt-6">
       <Card className="space-y-4">
         <div className="flex flex-wrap items-center gap-2">
-          <Badge tone="info">
-            <Landmark aria-hidden className="size-3.5" />
-            {jurisdictionLabel(topic.jurisdiction, topic.appliesIn)}
-          </Badge>
-          {topic.changesOften ? (
-            <Badge tone="warn">
-              <CalendarClock aria-hidden className="size-3.5" />
-              Changes often: status as of {topic.statusAsOf}
-            </Badge>
-          ) : null}
+          <Badge tone="info">{topicPlaceLabel(topic)}</Badge>
+          {topic.changesOften ? <Badge tone="warn">Changes often: status as of {topic.statusAsOf}</Badge> : null}
           {check ? <CheckOfficialBadge /> : null}
           <ReviewBadge reviewedBy={topic.reviewedBy} inList />
         </div>
@@ -158,24 +117,23 @@ export function LegalTopicCard({ topic }: { topic: LegalTopic }) {
           </div>
         ) : null}
 
-        <Disclosure
-          title="Key points, what to do and official sources"
-          meta={`${topic.keyPoints.length} points`}
-          bodyClassName="space-y-4 pb-2"
-        >
-          <LazyHubBody part="legal-details" id={topic.id} />
-        </Disclosure>
-
+        {/* The summary already says it is not legal advice; this line adds the jurisdiction warning. */}
         <p className="text-xs font-semibold text-muted">
-          Information, not legal advice. Rules differ by jurisdiction and change; consult your licensing board or a
-          healthcare attorney about your situation.
+          Laws and codes vary by state and country: check with your licensing board and a healthcare attorney.
         </p>
 
-        <VerificationNote method={topic.verification.method} note={topic.verification.note} lastVerified={topic.lastVerified} check={check} />
-
-        <Disclosure title="Sources and review" meta={`${topic.sources.length} sources`} bordered={false}>
-          <LazyHubBody part="legal-sources" id={topic.id} />
-        </Disclosure>
+        <div>
+          <Disclosure
+            title={practice ? "Key points, questions to ask and what to do" : "Key points, what to do and official sources"}
+            meta={`${topic.keyPoints.length} points`}
+            bodyClassName="space-y-4 pb-2"
+          >
+            <LazyHubBody part="legal-details" id={topic.id} />
+          </Disclosure>
+          <Disclosure title="Sources and review" meta={sourcesMeta(topic.sources.length, check)}>
+            <LazyHubBody part="legal-sources" id={topic.id} />
+          </Disclosure>
+        </div>
       </Card>
     </article>
   );

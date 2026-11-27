@@ -8,12 +8,16 @@
     "Only the minimum necessary information may be disclosed, and psychotherapy notes have extra protection under HIPAA.",
     "For records covered by 42 CFR Part 2, a subpoena alone is not enough: disclosure without consent needs a court order that meets Part 2's requirements, and only the information the order covers may be released.",
     "In Jaffee v. Redmond (1996), the US Supreme Court recognized a psychotherapist-patient privilege in federal courts, including licensed clinical social workers. State courts apply state privilege law, which varies.",
-    "The privilege usually belongs to the client. The clinician may assert it on the client's behalf until the client waives it or a court orders disclosure."
+    "The privilege usually belongs to the client. The clinician may assert it on the client's behalf until the client waives it or a court orders disclosure.",
+    "Test data, meaning raw scores, responses and notes about test behavior, may be released to the client or to people the client names, but psychologists may withhold it to protect against substantial harm or misuse (APA Standard 9.04). Test materials such as manuals and stimuli must be protected for test security (APA Standard 9.11). Courts can order either.",
+    "A treating clinician is usually a fact witness who describes what they observed and did. Giving expert opinions on legal questions is a different role; see the treating and forensic roles topic.",
+    "You can usually ask for time to respond, ask the requesting attorney to narrow the request, and ask for a protective order. Your liability insurer can often provide legal help."
   ],
   "whatToDo": [
     "Do not ignore a subpoena, and do not send records before checking what it is and who signed it.",
     "Contact the client, explain the request and their options, and ask whether they or their attorney will respond or object.",
     "Check whether the records include substance use treatment information covered by 42 CFR Part 2, and apply its stricter rules.",
+    "If test data or test materials are requested, separate them, and release test materials only under a court order or to another qualified professional.",
     "Disclose only what a valid court order or the client's written authorization covers, and document every step.",
     "Consult a healthcare attorney, your professional liability insurer's risk management line or your licensing board before responding."
   ],
@@ -33,20 +37,34 @@
     {
       "title": "Jaffee v. Redmond, 518 U.S. 1 (1996) (Legal Information Institute)",
       "url": "https://www.law.cornell.edu/supremecourt/text/518/1"
+    },
+    {
+      "title": "eCFR: 45 CFR 164.512(e), disclosures for judicial and administrative proceedings",
+      "url": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-E/section-164.512"
+    },
+    {
+      "title": "APA Ethical Principles of Psychologists and Code of Conduct (Standards 9.04 and 9.11)",
+      "url": "https://www.apa.org/ethics/code"
     }
+  ],
+  "seeAlso": [
+    "treating-and-forensic-roles",
+    "42-cfr-part-2",
+    "record-retention-overview"
   ],
   "appPositioning": "The app stores no client records, so it holds nothing that could be subpoenaed; exports that a clinician saves become part of the clinician's own records.",
   "whenRelevant": [
     "records",
     "confidentiality",
     "privacy",
-    "sud"
+    "sud",
+    "forensic"
   ],
   "changesOften": false,
   "statusAsOf": "2026-11-27",
   "verification": {
-    "method": "search-index",
-    "note": "hhs.gov, ecfr.gov and law.cornell.edu were not reachable from the build sandbox. The HIPAA satisfactory-assurance and qualified-protective-order rules were confirmed through search results indexing HHS FAQs; the Part 2 court-order requirement was confirmed through secondary summaries of 42 CFR 2.61 and Subpart E. Jaffee v. Redmond is cited from the published decision. A person must read the regulations and the current HHS guidance before release."
+    "method": "not-verified",
+    "note": "The HIPAA satisfactory-assurance and protective-order rules and the Part 2 court-order requirement were confirmed in an earlier round only through search results and secondary summaries. Points added on 2026-11-27 (test data and test materials, fact witness role, protective orders) were not checked online: the sandbox could not reach the official sites. A person must read 45 CFR 164.512(e), 42 CFR Part 2 Subpart E and APA Standards 9.04 and 9.11 before release."
   },
   "sources": [
     {
@@ -64,6 +82,12 @@
       "publisher": "Legal Information Institute, Cornell Law School",
       "url": "https://www.law.cornell.edu/supremecourt/text/518/1",
       "year": 1996
+    },
+    {
+      "title": "Strategies for private practitioners coping with subpoenas or compelled testimony for client/patient records or test data or test materials",
+      "publisher": "APA Committee on Legal Issues, Professional Psychology: Research and Practice",
+      "url": "https://doi.org/10.1037/pro0000063",
+      "year": 2016
     }
   ],
   "license": "original",

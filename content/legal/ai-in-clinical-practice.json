@@ -1,0 +1,95 @@
+{
+  "id": "ai-in-clinical-practice",
+  "title": "AI in clinical practice: scribes, chatbots, consent and state laws",
+  "kind": "legal",
+  "jurisdiction": "US-state-varies",
+  "summary": "AI note-takers, ambient scribes and chatbots now touch therapy records. Using them raises consent, recording, privacy and accuracy duties: tell clients what the tool does and get their consent, follow state recording laws, use only vendors under a business associate agreement where HIPAA applies, and review every AI draft before it enters the record. Some states now limit AI in therapy itself, and federal rules ask health programs to check decision-support tools for bias. AI can support your work, but it is never the therapist and never decides care. This page is information, not legal advice.",
+  "keyPoints": [
+    "Consent for an AI scribe should cover what is recorded or transcribed, where the data goes, how long it is kept, who can see it, whether it trains any model, and that the client can say no without losing care. Ask again if the tool changes.",
+    "Recording laws: most states allow recording with one party's consent, but about a dozen, including California, Florida, Illinois, Maryland, Massachusetts, Pennsylvania and Washington, require every party's consent. With telehealth, the client's state may apply too.",
+    "Where HIPAA applies, a vendor that receives session audio or notes is a business associate and needs a signed BAA. Consumer chatbots and free tools usually are not covered and should not receive client information.",
+    "AI drafts can leave things out, misattribute statements or invent details. You sign the note, so read and correct every draft, and do not let a tool add a diagnosis, risk level or plan you did not decide.",
+    "Section 1557 (45 CFR 92.210) asks covered health programs to make reasonable efforts to identify decision-support tools that use race, color, national origin, sex, age or disability, and to reduce the risk of discrimination, from May 2025.",
+    "Illinois' 2025 Wellness and Oversight for Psychological Resources Act bars AI from providing therapy or making therapeutic decisions, and allows licensed professionals to use AI for administrative and supplementary support with consent. Nevada and Utah also passed AI and mental health laws in 2025, and more states are acting.",
+    "Clients may already use chatbots for support. Ask about it without judgment, talk about accuracy, privacy and crisis limits, and make sure they know 988 and local emergency numbers.",
+    "Professional guidance, such as APA's 2025 ethical guidance on AI in health service psychology, stresses transparency, consent, data protection, bias awareness and keeping clinical judgment with the clinician."
+  ],
+  "whatToDo": [
+    "Before adopting an AI tool, get its BAA, data flow, retention and training terms in writing, and check your state's AI and recording laws.",
+    "Add AI and recording to your consent documents, explain them aloud, record the client's choice, and offer a no-AI option.",
+    "Review and edit every AI-drafted note or summary before signing, and correct errors in the record.",
+    "Never paste client details into consumer chatbots or tools without a BAA.",
+    "Consult your licensing board and a healthcare attorney about AI, recording and consent rules in each state where your clients are."
+  ],
+  "questions": [
+    "Does the client know exactly what this tool hears, keeps and shares, and did they freely agree?",
+    "Is the vendor covered by a BAA, and does it keep or train on session data?",
+    "Have I read and corrected this draft as carefully as if I had written it myself?",
+    "Is the tool supporting my judgment, or starting to make decisions for me?"
+  ],
+  "officialLinks": [
+    {
+      "title": "APA: Ethical guidance for AI in the professional practice of health service psychology",
+      "url": "https://www.apa.org/topics/artificial-intelligence-machine-learning/ethical-guidance-professional-practice"
+    },
+    {
+      "title": "eCFR: 45 CFR 92.210, use of patient care decision support tools",
+      "url": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-A/part-92/subpart-C/section-92.210"
+    },
+    {
+      "title": "Federal Register: Section 1557 final rule (2024)",
+      "url": "https://www.federalregister.gov/documents/2024/05/06/2024-08711/nondiscrimination-in-health-programs-and-activities"
+    },
+    {
+      "title": "Illinois General Assembly: HB1806, Wellness and Oversight for Psychological Resources Act",
+      "url": "https://www.ilga.gov/legislation/BillStatus.asp?DocNum=1806&GAID=18&DocTypeID=HB&SessionID=114&GA=104"
+    },
+    {
+      "title": "HHS: Business associates (HIPAA)",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/faq/business-associates/"
+    }
+  ],
+  "seeAlso": [
+    "informed-consent-technology",
+    "fda-cds",
+    "hipaa-privacy-basics",
+    "international-privacy"
+  ],
+  "appPositioning": "The app has one optional Claude assistant, off by default. It can run only after the owner confirms a signed business associate agreement with Anthropic and switches it on in the server settings, and the clinician must turn it on for each session. It receives only text the PHI scrubber has cleaned, checked again on the server, plus curated ids; it refuses text about substance use and never receives DSM-5-TR or treatment-planner wording. It returns follow-up questions and curated ids only, labeled For clinician review, never a diagnosis or a risk decision, keeps no logs, and is never offered in client mode. The app is not an AI scribe and records nothing.",
+  "whenRelevant": [
+    "ai",
+    "technology",
+    "informed-consent",
+    "privacy",
+    "records"
+  ],
+  "changesOften": true,
+  "statusAsOf": "2026-06-01",
+  "verification": {
+    "method": "not-verified",
+    "note": "Not checked online on 2026-11-27: the build sandbox could not resolve the publishers' sites and the shared web-search budget was used up, so no page was re-read this round. The text is the author's reading of the listed sources as known up to mid-2026. State AI laws change fast: confirm the Illinois act's final terms, the Nevada and Utah laws, newer state laws, the list of all-party recording states, and the 92.210 compliance date. A person must open each official link, confirm current status and dates, and correct this page before release."
+  },
+  "sources": [
+    {
+      "title": "Ethical guidance for AI in the professional practice of health service psychology",
+      "publisher": "American Psychological Association",
+      "url": "https://www.apa.org/topics/artificial-intelligence-machine-learning/ethical-guidance-professional-practice",
+      "year": 2025
+    },
+    {
+      "title": "Nondiscrimination in Health Programs and Activities (Section 1557 final rule, including patient care decision support tools)",
+      "publisher": "Federal Register (HHS Office for Civil Rights)",
+      "url": "https://www.federalregister.gov/documents/2024/05/06/2024-08711/nondiscrimination-in-health-programs-and-activities",
+      "year": 2024
+    },
+    {
+      "title": "HB1806 Wellness and Oversight for Psychological Resources Act",
+      "publisher": "Illinois General Assembly",
+      "url": "https://www.ilga.gov/legislation/BillStatus.asp?DocNum=1806&GAID=18&DocTypeID=HB&SessionID=114&GA=104",
+      "year": 2025
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

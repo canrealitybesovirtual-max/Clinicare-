@@ -1,0 +1,73 @@
+{
+  "id": "continuity-and-professional-will",
+  "title": "Continuity of care: absences, coverage and a professional will",
+  "kind": "ethics-practice",
+  "jurisdiction": "INTL",
+  "summary": "Clients can be harmed when a clinician becomes unavailable without a plan, whether for a vacation, illness, a move or death. Codes ask clinicians to plan ahead so that care is not abandoned: arrange coverage, tell clients how to reach help, and name in a professional will a trusted colleague who can contact clients, keep records safe and arrange referrals. This page is information, not legal advice.",
+  "keyPoints": [
+    "Codes ask you to plan for interruptions of care from illness, death, unavailability or relocation, and to provide for orderly transfer when you leave a job or practice (APA Standards 3.12 and 10.09; ACA Standard C.2.h; NASW Standard 1.17).",
+    "Planned absences: tell clients in advance, name a covering clinician, and give clear crisis instructions, including 988 and local emergency numbers, in your voicemail and away messages.",
+    "A professional will names an executor or records custodian, explains how to reach your schedule, client contacts, records and passwords, and includes notification letters and referral lists.",
+    "The custodian must protect records under privacy law and keep them for the period your state requires. Some boards ask to be told who holds your records.",
+    "Ending services: codes treat ending without notice or referral as abandonment, except when you are threatened or the client stops coming. Give notice and referrals when you can."
+  ],
+  "whatToDo": [
+    "Write a coverage plan for planned absences and update voicemail and away messages with crisis numbers.",
+    "Draft a professional will naming a custodian, and keep access instructions secure and current.",
+    "Tell clients in your consent documents how care continues if you are suddenly unavailable.",
+    "Review the plan each year and whenever your practice changes.",
+    "Consult your licensing board and a healthcare attorney about record custody, retention and notice rules in your state."
+  ],
+  "questions": [
+    "If I could not work tomorrow, who would tell my clients, and how?",
+    "Does my away message tell a client in crisis exactly what to do?",
+    "Can my custodian reach my records and contacts without breaking privacy rules?",
+    "How long must my records be kept, and who pays for that?"
+  ],
+  "officialLinks": [
+    {
+      "title": "APA Ethical Principles of Psychologists and Code of Conduct (Standards 3.12, 10.09 and 10.10)",
+      "url": "https://www.apa.org/ethics/code"
+    },
+    {
+      "title": "ACA Code of Ethics and ethics resources (Standard C.2.h)",
+      "url": "https://www.counseling.org/resources/ethics"
+    },
+    {
+      "title": "988 Suicide and Crisis Lifeline",
+      "url": "https://988lifeline.org"
+    }
+  ],
+  "seeAlso": [
+    "record-retention-overview",
+    "between-session-contact-policy",
+    "clinician-wellbeing-and-impairment"
+  ],
+  "whenRelevant": [
+    "records",
+    "crisis"
+  ],
+  "changesOften": false,
+  "statusAsOf": "2026-06-01",
+  "verification": {
+    "method": "not-verified",
+    "note": "Not checked online on 2026-11-27: the build sandbox could not resolve the publishers' sites and the shared web-search budget was used up, so no page was re-read this round. The text is the author's reading of the listed sources as known up to mid-2026. Check the cited standard numbers and any state rule on notifying the board of a records custodian. A person must open each official link, confirm current status and dates, and correct this page before release."
+  },
+  "sources": [
+    {
+      "title": "ACA Code of Ethics (2014), Standard C.2.h",
+      "publisher": "American Counseling Association",
+      "url": "https://www.counseling.org/resources/ethics",
+      "year": 2014
+    },
+    {
+      "title": "Ethical Principles of Psychologists and Code of Conduct (Standards 3.12 and 10.09)",
+      "publisher": "American Psychological Association",
+      "url": "https://www.apa.org/ethics/code",
+      "year": 2017
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

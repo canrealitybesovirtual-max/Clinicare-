@@ -6,7 +6,11 @@
  *     cross-content checks below): handouts, interventions, plans, ethics codes and legal topics, and the links
  *     between them and the conditions.
  *  3. EVERY file under content/ matches a registered schema with governance (scripts/content-audit.ts).
+ *  4. Handout wiring (wiringReport): every handout has its Spanish version and is linked from at least one
+ *     condition, intervention, client topic or library item. Inverse links (an intervention's handout missing from
+ *     all of its conditions, a handout only library items reach) and the review queue are reported, never failed.
  * `--release` also fails while any crisis line is unverified (a person must check each official site).
+ * `--report` prints every report-only line instead of the counts.
  */
 import path from "node:path";
 import { CASE_RESTRICTED_ABBREVIATIONS, matchSymptoms } from "../src/lib/matcher";
@@ -34,6 +38,11 @@ import { FORMULATION_TARGET_IDS } from "../src/lib/formulations";
 import { practiceGuides, practiceProblems } from "../src/lib/practice";
 import { medicationEffectProblems, medicationEffectsFile } from "../src/lib/schemas-care";
 import { populationProblems, populations } from "../src/lib/populations";
+import { legalTopicLinkProblems } from "../src/lib/schemas-hub";
+import { z } from "zod";
+import { slug, type Condition, type Handout } from "../src/lib/schemas";
+import type { Intervention } from "../src/lib/schemas-phase2";
+import { interventionsRaw } from "../src/lib/generated/interventions";
 
 /** Exact 42 CFR Part 2 notice (owner decision 2026-11-26, docs/RESOURCES.md). */
 export const PART2_NOTICE = "42 CFR Part 2 prohibits unauthorized use or disclosure of these records.";
@@ -75,6 +84,112 @@ function stringsOf(value: unknown): string[] {
   if (Array.isArray(value)) return value.flatMap(stringsOf);
   if (value && typeof value === "object") return Object.values(value).flatMap(stringsOf);
   return [];
+}
+
+/**
+ * A curated place that offers client handouts. Condition and intervention links make a handout a suggestion on
+ * that card; client-topic links reach clients; library links (formulation frameworks, practice guides, population
+ * profiles, orientation profiles, plan problems) reach clinicians who open that item.
+ */
+export interface HandoutLink {
+  where: string;
+  kind: "condition" | "intervention" | "topic" | "library";
+  handoutIds: readonly string[];
+}
+
+export interface WiringInput {
+  handouts: readonly Pick<Handout, "id" | "es">[];
+  conditions: readonly Pick<Condition, "id" | "handouts">[];
+  interventions: readonly Pick<Intervention, "id" | "conditions" | "handoutIds">[];
+  /** Client topics and library items (conditions and interventions are read from their own lists). */
+  links: readonly HandoutLink[];
+}
+
+/**
+ * Handout wiring. Pure. Problems: a handout without its Spanish version, or one that no condition, intervention,
+ * client topic or library item links (no page would offer it). Warnings (report only): a handout reached only from
+ * library items, so no condition card or client topic suggests it, and an intervention handout that none of the
+ * intervention's conditions lists. Unknown ids are reported by each type's own checks, not repeated here.
+ */
+export function wiringReport({ handouts, conditions, interventions, links }: WiringInput): { problems: string[]; warnings: string[] } {
+  const problems: string[] = [];
+  const warnings: string[] = [];
+  const linkedFrom = new Map<string, HandoutLink[]>();
+  const all: HandoutLink[] = [
+    ...conditions.map((c): HandoutLink => ({ where: `conditions/${c.id}`, kind: "condition", handoutIds: c.handouts })),
+    ...interventions.map((i): HandoutLink => ({ where: `interventions/${i.id}`, kind: "intervention", handoutIds: i.handoutIds })),
+    ...links,
+  ];
+  for (const l of all) for (const id of l.handoutIds) linkedFrom.set(id, [...(linkedFrom.get(id) ?? []), l]);
+
+  for (const h of handouts) {
+    const where = `handouts/${h.id}`;
+    if (!h.es) problems.push(`${where}: no Spanish version (es); every client handout needs one`);
+    const from = linkedFrom.get(h.id) ?? [];
+    if (!from.length) problems.push(`${where}: not linked from any condition, intervention, client topic or library item, so no page offers it`);
+    else if (from.every((l) => l.kind === "library"))
+      warnings.push(`${where}: reached only from ${from.map((l) => l.where).join(", ")}; no condition, intervention or client topic suggests it`);
+  }
+
+  const onCondition = new Map(conditions.map((c) => [c.id, new Set(c.handouts)] as const));
+  for (const i of interventions) {
+    const missing = i.handoutIds.filter((h) => !i.conditions.some((c) => onCondition.get(c)?.has(h)));
+    if (missing.length) warnings.push(`interventions/${i.id}: ${missing.join(", ")} not listed on any of its conditions (${i.conditions.join(", ")})`);
+  }
+  return { problems, warnings };
+}
+
+/** Every client topic and library item that links handouts, from the loaded content. */
+export function handoutLinks(): HandoutLink[] {
+  const library = (where: string, handoutIds: readonly string[] | undefined): HandoutLink => ({ where, kind: "library", handoutIds: handoutIds ?? [] });
+  return [
+    ...HealthTopicsFileSchema.parse(topicsJson).topics.map((t): HandoutLink => ({ where: `topics.json/${t.id}`, kind: "topic", handoutIds: t.handoutIds })),
+    ...formulations.map((f) => library(`formulations/${f.id}`, f.handoutIds)),
+    ...practiceGuides.map((g) => library(`practice/${g.id}`, g.relatedHandoutIds)),
+    ...populations.map((pop) => library(`populations/${pop.id}`, pop.handoutIds)),
+    ...orientations.map((o) => library(`orientations/${o.id}`, o.handoutIds)),
+    ...planLibraries.flatMap((pl) => pl.problems.map((prob) => library(`plans/${pl.conditionId} ${prob.id}`, prob.handoutIds))),
+    ...planModules.flatMap((m) => m.problems.map((prob) => library(`plans/modules/${m.id} ${prob.id}`, prob.handoutIds))),
+  ];
+}
+
+/** wiringReport over the loaded content. */
+export const contentWiring = () => wiringReport({ handouts, conditions, interventions, links: handoutLinks() });
+
+/**
+ * Optional structured evidence grades on interventions: what a named body recommends, for whom, in its own
+ * strength term, with a link to the guideline. Checked on the raw files because InterventionSchema does not carry
+ * the field yet; grades older than five years are listed by the content audit's review queue.
+ */
+export const EvidenceGradeSchema = z.strictObject({
+  body: z.enum(["NICE", "VA/DoD", "APA", "APA Div 12", "WHO", "Cochrane", "USPSTF", "AASM", "SAMHSA", "other"]),
+  guideline: z.string().min(5),
+  year: z.number().int().min(1990),
+  conditionId: slug.optional(),
+  population: z.string().min(5).optional(),
+  direction: z.enum(["for", "against", "insufficient"]),
+  strength: z.string().min(2),
+  url: z.url().refine((u) => u.startsWith("https://"), "https URLs only"),
+});
+
+/** Each raw intervention's evidenceGrades parse, are not dated in the future and name one of its own conditions. */
+export function evidenceGradeProblems(raw: readonly unknown[], thisYear = new Date().getFullYear()): string[] {
+  const p: string[] = [];
+  for (const item of raw) {
+    const { id, conditions: listed = [], evidenceGrades } = item as { id?: string; conditions?: string[]; evidenceGrades?: unknown };
+    if (evidenceGrades === undefined) continue;
+    const where = `interventions/${String(id)} evidenceGrades`;
+    const parsed = z.array(EvidenceGradeSchema).max(6).safeParse(evidenceGrades);
+    if (!parsed.success) {
+      p.push(`${where}: ${parsed.error.issues.slice(0, 3).map((i) => `${i.path.join(".")}: ${i.message}`).join("; ")}`);
+      continue;
+    }
+    for (const g of parsed.data) {
+      if (g.year > thisYear) p.push(`${where}: ${g.body} ${g.year} is in the future`);
+      if (g.conditionId && !listed.includes(g.conditionId)) p.push(`${where}: ${g.body} grade names ${g.conditionId}, which this intervention does not list`);
+    }
+  }
+  return p;
 }
 
 /** Text that surfaces as a suggestion flag or note must not read as a verdict (G3). */
@@ -282,6 +397,13 @@ export function crossContentProblems(): string[] {
   // registered in licenses.json and Part 2 tagging (src/lib/populations.ts).
   p.push(...populationProblems());
 
+  // Legal and ethics-practice topics: seeAlso links resolve and link-out measures are registered in licenses.json (G7).
+  p.push(...legalTopicLinkProblems(legalTopics, licenses.items));
+
+  // Handout wiring: Spanish version and at least one page that offers each handout (warnings are printed by main).
+  p.push(...contentWiring().problems);
+  p.push(...evidenceGradeProblems(interventionsRaw));
+
   // Wording guardrails over every clinical item loaded by either loader.
   const items: [string, unknown][] = [
     ["symptoms.json", lexicon],
@@ -297,6 +419,8 @@ export function crossContentProblems(): string[] {
     ...practiceGuides.map((g): [string, unknown] => [`practice/${g.id}`, g]),
     ["care/medication-effects.json", medicationEffectsFile],
     ...populations.map((pop): [string, unknown] => [`populations/${pop.id}`, pop]),
+    ...ethicsCodes.map((e): [string, unknown] => [`ethics/${e.id}`, e]),
+    ...legalTopics.map((t): [string, unknown] => [`legal/${t.id}`, t]),
   ];
   for (const [where, item] of items) {
     const body = JSON.stringify(item);
@@ -310,10 +434,22 @@ export function crossContentProblems(): string[] {
 
 function main(): void {
   const release = process.argv.includes("--release");
+  const report = process.argv.includes("--report");
   const audit = auditContent(path.resolve(__dirname, "../content"), { release });
   const problems = [...contentProblems(), ...crossContentProblems(), ...audit.problems];
 
   for (const w of audit.warnings) console.warn(`warning: ${w}`);
+  // Report-only queues: counts by default, every line with --report.
+  const queues: [string, readonly string[]][] = [
+    ["handout wiring to review", contentWiring().warnings],
+    ["clinical files awaiting clinician sign-off", audit.review.clinical],
+    ["files with Spanish awaiting human review", audit.review.translation],
+    ["evidence grades to re-check", audit.review.staleEvidence],
+  ];
+  for (const [label, lines] of queues) {
+    if (!lines.length) continue;
+    console.log(`report: ${lines.length} ${label}${report ? ":\n  " + lines.join("\n  ") : " (--report lists them)"}`);
+  }
   if (problems.length) {
     console.error("Content validation failed:\n- " + problems.join("\n- "));
     process.exit(1);

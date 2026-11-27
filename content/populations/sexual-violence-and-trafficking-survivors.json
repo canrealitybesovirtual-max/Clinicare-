@@ -1,0 +1,82 @@
+{
+  "id": "sexual-violence-and-trafficking-survivors",
+  "name": "Survivors of sexual violence and trafficking",
+  "group": "circumstances",
+  "summary": "Trauma-informed care for adults who have experienced sexual assault, sexual abuse or human trafficking: responding well to disclosure, medical and forensic exam routes and advocacy, the person's own choices about reporting, signs of trafficking, and pacing trauma-focused therapy.",
+  "scopeNote": "For adults (18 and over). The app never asks for or saves details of an assault, an offender or a person's location. Adult survivors generally decide whether to report; check the reporting duties that apply where you practise, including for dependent adults.",
+  "whyItMatters": "WHO estimates published in 2023 indicate that about 1 in 3 women worldwide (31.6 percent) have experienced physical or sexual violence from a partner or sexual violence from a non-partner in their lifetime (WHO, 2026 fact sheet). WHO's clinical guidelines (2013) describe health-care providers as often the first professional contact for survivors and set out first-line support: listening without judgment, asking about needs, validating, enhancing safety and supporting connection to services. A systematic review found that people who have been trafficked report high levels of violence, physical symptoms and depression, anxiety and PTSD (Ottisova and colleagues, 2016). Men and people of all genders are also survivors and may face extra barriers to disclosure.",
+  "askAbout": [
+    "Would it help to talk about what happened, or would you rather focus first on how you are doing now?",
+    "Is there anything you need right now to feel safer, today or this week?",
+    "Have you been able to get medical care, and would you like information about exams, testing or emergency contraception?",
+    "Do you know your options about reporting, and would you like help thinking them through without any pressure?",
+    "Is anyone controlling where you go, your documents, your money or your phone, or making you work or do things you do not want to do?",
+    "Who in your life knows, and who feels safe to lean on?"
+  ],
+  "stereotypeCaution": "Survivors respond in many ways, from calm to distressed to numb, and none of these shows whether an assault happened. People of every gender, age, sexual orientation and background are survivors, and trafficking includes labor as well as sexual exploitation. Do not assume what someone needs, whom they blame or whether they want to report.",
+  "keyConsiderations": [
+    "Respond to disclosure with first-line support: listen, believe, do not push for detail, ask what the person needs, and support their choices.",
+    "Offer information about medical care, including forensic exams and time limits for some medical options, and local advocacy services; the person decides.",
+    "Adult survivors generally choose whether to report to police; check any duties that apply to you, such as for dependent adults or particular settings.",
+    "Trafficking signs can include someone else controlling documents, money, movement or communication, owing a debt to an employer, or living at the workplace; ask privately and with an interpreter if needed.",
+    "Shame, self-blame and fear of not being believed are common barriers; validation and a calm, predictable stance help.",
+    "Plan trauma-focused therapy at a pace the person chooses, once immediate safety and support are in place."
+  ],
+  "assessmentAdaptations": [
+    "Ask about sexual violence in a routine, matter-of-fact way, and only as much as the care in front of you needs.",
+    "See the person alone for at least part of each contact, especially where control by another person is possible.",
+    "Assess current safety, physical health needs and support before trauma history.",
+    "Ask about alcohol and drug use without blame, including any that a perpetrator used to facilitate an assault."
+  ],
+  "sessionAdaptations": [
+    "Give the person choice and control: where to sit, what to discuss, pace and breaks.",
+    "Explain each step, especially in trauma-focused work, and agree on a signal to pause.",
+    "Ask about preferences for the clinician's gender and for interpreters, and accommodate them where possible.",
+    "Coordinate with advocates or legal services only with consent and within agreed limits."
+  ],
+  "interventionNotes": [
+    { "interventionId": "trauma-psychoeducation-and-grounding", "note": "A stabilizing early step that explains common reactions and builds coping before any trauma processing." },
+    { "interventionId": "cognitive-processing-therapy", "note": "Has strong evidence after sexual assault; targets self-blame, shame and safety and trust beliefs." },
+    { "interventionId": "prolonged-exposure", "note": "Has strong evidence after sexual assault; plan pace and safety with the person." },
+    { "interventionId": "ipv-safety-planning", "note": "When the perpetrator is a partner or a trafficker, plan for safety before and during therapy." },
+    { "interventionId": "psychological-first-aid-and-recovery-skills", "note": "Practical early support in the days and weeks after an assault." },
+    { "orientationId": "trauma-focused-therapies", "note": "Compares the main trauma-focused therapies and their training paths." }
+  ],
+  "measureNotes": [
+    "Self-report measures can feel intrusive soon after disclosure; explain why you are asking and offer to wait.",
+    "Scores may understate distress when shame or fear of consequences is strong; read them alongside the conversation."
+  ],
+  "measuresPending": [],
+  "safetyNotes": [
+    "In the US, the National Sexual Assault Hotline can connect survivors with a local service, and the National Domestic Violence Hotline helps with abuse by a partner; in danger now, call 911 or the local emergency number.",
+    "Ask about suicidal thoughts and self-harm directly; risk can rise after sexual violence and around legal proceedings.",
+    "If trafficking is suspected, put the person's safety and choices first and seek specialist advice before acting."
+  ],
+  "cautions": [
+    "Do not use techniques that aim to recover memories that are not available, and avoid leading questions about whether abuse happened; see the memory and suggestion safeguards topic.",
+    "Do not require a detailed account of the assault before offering help."
+  ],
+  "legalIds": ["mandatory-reporting", "memory-and-suggestion-safeguards", "subpoenas-and-court-orders"],
+  "ethicsIds": [],
+  "referralIds": ["rainn-sexual-assault-hotline", "national-domestic-violence-hotline", "988-lifeline", "crisis-text-line"],
+  "referralKinds": ["violence-and-abuse"],
+  "handoutIds": ["common-reactions-after-trauma", "trauma-therapy-what-to-expect", "relationship-safety-help-card", "grounding-5-4-3-2-1"],
+  "topicIds": ["after-trauma", "relationship-safety"],
+  "practiceIds": ["trauma-informed-care", "ipv-screening-and-first-line-support"],
+  "formulationIds": ["phase-based-trauma-sequencing"],
+  "linkOuts": [
+    { "title": "Sexual Assault Experienced as an Adult", "publisher": "National Center for PTSD (U.S. Department of Veterans Affairs)", "url": "https://www.ptsd.va.gov/professional/treat/type/sexual_assault_adult.asp", "lastVerified": "2026-11-27" },
+    { "title": "Responding to intimate partner violence and sexual violence against women: WHO clinical and policy guidelines", "publisher": "World Health Organization", "url": "https://www.who.int/publications/i/item/9789241548595", "lastVerified": "2026-11-27" },
+    { "title": "Resources by State on Violence against Women", "publisher": "Office on Women's Health (HHS)", "url": "https://womenshealth.gov/relationships-and-safety/get-help/state-resources", "lastVerified": "2026-11-27" }
+  ],
+  "sud": true,
+  "sources": [
+    { "title": "Responding to intimate partner violence and sexual violence against women: WHO clinical and policy guidelines", "publisher": "World Health Organization", "url": "https://www.who.int/publications/i/item/9789241548595", "year": 2013 },
+    { "title": "Violence against women (fact sheet)", "publisher": "World Health Organization", "url": "https://www.who.int/news-room/fact-sheets/detail/violence-against-women", "year": 2026 },
+    { "title": "Prevalence and risk of violence and the mental, physical and sexual health problems associated with human trafficking: an updated systematic review (Ottisova and colleagues)", "publisher": "Epidemiology and Psychiatric Sciences (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/27066701/", "year": 2016 },
+    { "title": "Sexual Assault", "publisher": "MedlinePlus (U.S. National Library of Medicine)", "url": "https://medlineplus.gov/sexualassault.html" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

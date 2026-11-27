@@ -1,0 +1,79 @@
+{
+  "id": "documentation-and-medical-necessity",
+  "title": "Documentation, medical necessity and accurate billing",
+  "kind": "legal",
+  "jurisdiction": "US-federal",
+  "summary": "Payers, including Medicare and Medicaid, pay for services that are medically necessary and documented. Records should show the assessment behind the diagnosis, how symptoms affect daily life, a plan with measurable goals, what was done in each session, progress, and why care continues. Codes and diagnoses must reflect what actually happened; choosing them to fit coverage is fraud. This page is information, not legal advice.",
+  "keyPoints": [
+    "Medical necessity documentation usually links the diagnosis, functional impairment, goals, interventions and progress. Plan review frequency is set by payers and state Medicaid programs, not by one federal rule.",
+    "Time-based psychotherapy codes depend on time actually spent, so record start and stop times or total time. Code descriptors are copyrighted by the AMA; use your payer's current coding guidance.",
+    "Crisis psychotherapy codes and the interactive complexity add-on have specific qualifying conditions. Using an interpreter alone does not qualify for interactive complexity.",
+    "Report diagnoses, services and fees accurately (APA Standard 6.06). Up-coding, billing for services not provided, or choosing a diagnosis to get coverage can violate the False Claims Act for federal programs.",
+    "Z codes describe social factors such as housing or relationship problems; CMS encourages recording them when assessed.",
+    "Auditors can request progress notes. Psychotherapy notes kept separately are not needed for billing and have extra protection.",
+    "Mental health parity laws limit stricter coverage rules for mental health than for medical care; enforcement of parts of the 2024 parity rule was paused in 2025, so check current status."
+  ],
+  "whatToDo": [
+    "Write each note so it shows the service, time, intervention, client response and how it ties to the plan.",
+    "Review and update the plan on the schedule your payers require, with the client.",
+    "Choose codes and diagnoses only from what you assessed and did, and fix errors promptly.",
+    "Keep a copy of current payer documentation rules, and audit a sample of your own notes each year.",
+    "Consult a healthcare attorney or billing compliance adviser, and your licensing board, about coding and documentation questions."
+  ],
+  "officialLinks": [
+    {
+      "title": "CMS: Medicare and Mental Health Coverage (MLN booklet, PDF)",
+      "url": "https://www.cms.gov/files/document/mln1986542-medicare-mental-health.pdf"
+    },
+    {
+      "title": "CMS: Using Z codes (infographic, PDF)",
+      "url": "https://www.cms.gov/files/document/zcodes-infographic.pdf"
+    },
+    {
+      "title": "APA: Record Keeping Guidelines",
+      "url": "https://www.apa.org/practice/guidelines/record-keeping"
+    },
+    {
+      "title": "APA Ethical Principles of Psychologists and Code of Conduct (Standard 6.06)",
+      "url": "https://www.apa.org/ethics/code"
+    }
+  ],
+  "seeAlso": [
+    "treatment-plans-and-client-access",
+    "record-retention-overview",
+    "good-faith-estimate"
+  ],
+  "appPositioning": "The app never assigns a diagnosis or states a final one. ICD codes appear as references for clinician review, and plan and note exports are drafts the clinician edits and signs in their own record system.",
+  "whenRelevant": [
+    "documentation",
+    "records",
+    "assessment"
+  ],
+  "changesOften": false,
+  "statusAsOf": "2026-06-01",
+  "verification": {
+    "method": "not-verified",
+    "note": "Not checked online on 2026-11-27: the build sandbox could not resolve the publishers' sites and the shared web-search budget was used up, so no page was re-read this round. The text is the author's reading of the listed sources as known up to mid-2026. Check the CMS booklet address and edition, the interactive complexity rule in current CPT guidance, and the status of the 2024 parity rule. A person must open each official link, confirm current status and dates, and correct this page before release."
+  },
+  "sources": [
+    {
+      "title": "Record Keeping Guidelines",
+      "publisher": "American Psychological Association",
+      "url": "https://www.apa.org/practice/guidelines/record-keeping"
+    },
+    {
+      "title": "Medicare and Mental Health Coverage (MLN1986542)",
+      "publisher": "Centers for Medicare and Medicaid Services",
+      "url": "https://www.cms.gov/files/document/mln1986542-medicare-mental-health.pdf"
+    },
+    {
+      "title": "Ethical Principles of Psychologists and Code of Conduct",
+      "publisher": "American Psychological Association",
+      "url": "https://www.apa.org/ethics/code",
+      "year": 2017
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

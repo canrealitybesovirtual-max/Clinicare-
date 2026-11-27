@@ -1,0 +1,81 @@
+{
+  "id": "clinician-personal-safety",
+  "title": "Clinician personal safety and workplace violence",
+  "kind": "ethics-practice",
+  "jurisdiction": "INTL",
+  "summary": "Health and social care workers face more workplace violence than most workers, and clinicians can also be stalked or harassed online. Employers and practices share responsibility for prevention: room set-up, alarms, check-in rules for home and community visits, training in de-escalation, and support after an incident. Codes allow clinicians to end services when they are threatened, with referral when possible. This page is information, not legal advice.",
+  "keyPoints": [
+    "US federal workplace safety guidance for health care and social service workers describes five parts of a prevention program: leadership commitment and worker involvement, worksite analysis, hazard prevention and control, training, and recordkeeping with program review.",
+    "Office: keep a clear path to the door for both people, remove objects that could be used as weapons, have a way to call for help, and avoid being alone in the building for higher-risk sessions.",
+    "Home and community visits: share your itinerary, check in and out with a named person, keep your phone charged, park for an easy exit, and leave if a situation feels unsafe.",
+    "Online: limit personal information on public profiles, use separate work accounts, and know your options, such as address confidentiality programs and protective orders, if you are stalked.",
+    "After an incident: get medical care if needed, report it, talk it through with a supervisor or peer, and decide with support whether treatment can safely continue or should be transferred.",
+    "Codes allow ending therapy when you are threatened or endangered by the client or someone close to them (for example APA Standard 10.10).",
+    "A threat against someone else may trigger duties to warn or protect; see that topic."
+  ],
+  "whatToDo": [
+    "Review your office and visit procedures with your team, including alarms, exits and check-in rules.",
+    "Train in de-escalation and agree a code word or signal for calling help.",
+    "Record threats and incidents, and follow your organization's reporting process.",
+    "Plan how to end or transfer care safely when a client has threatened you, and document the reasons.",
+    "Consult your employer's safety lead, your licensing board or a healthcare attorney about reporting, protective orders and ending services."
+  ],
+  "questions": [
+    "If this session went badly, how would I get out and get help?",
+    "Does someone know where I am and when to expect me back?",
+    "What personal information about me can a client find online?",
+    "After a threat, can I keep working with this client safely and effectively?"
+  ],
+  "officialLinks": [
+    {
+      "title": "OSHA 3148: Guidelines for Preventing Workplace Violence for Healthcare and Social Service Workers (PDF)",
+      "url": "https://www.osha.gov/sites/default/files/publications/osha3148.pdf"
+    },
+    {
+      "title": "NASW Practice Standards and Guidelines",
+      "url": "https://www.socialworkers.org/Practice/NASW-Practice-Standards-Guidelines"
+    },
+    {
+      "title": "APA Ethical Principles of Psychologists and Code of Conduct (Standard 10.10)",
+      "url": "https://www.apa.org/ethics/code"
+    }
+  ],
+  "seeAlso": [
+    "duty-to-warn-protect",
+    "clinician-wellbeing-and-impairment",
+    "continuity-and-professional-will"
+  ],
+  "whenRelevant": [
+    "workforce-safety",
+    "crisis",
+    "duty-to-warn"
+  ],
+  "changesOften": false,
+  "statusAsOf": "2026-06-01",
+  "verification": {
+    "method": "not-verified",
+    "note": "Not checked online on 2026-11-27: the build sandbox could not resolve the publishers' sites and the shared web-search budget was used up, so no page was re-read this round. The text is the author's reading of the listed sources as known up to mid-2026. Check the OSHA 3148 address and edition and the NASW workplace safety guidelines. A person must open each official link, confirm current status and dates, and correct this page before release."
+  },
+  "sources": [
+    {
+      "title": "Guidelines for Preventing Workplace Violence for Healthcare and Social Service Workers (OSHA 3148)",
+      "publisher": "US Occupational Safety and Health Administration",
+      "url": "https://www.osha.gov/sites/default/files/publications/osha3148.pdf",
+      "year": 2016
+    },
+    {
+      "title": "NASW Practice Standards and Guidelines",
+      "publisher": "National Association of Social Workers",
+      "url": "https://www.socialworkers.org/Practice/NASW-Practice-Standards-Guidelines"
+    },
+    {
+      "title": "Ethical Principles of Psychologists and Code of Conduct",
+      "publisher": "American Psychological Association",
+      "url": "https://www.apa.org/ethics/code",
+      "year": 2017
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

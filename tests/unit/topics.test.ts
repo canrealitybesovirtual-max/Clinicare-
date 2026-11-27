@@ -27,13 +27,33 @@ describe("topic handouts (content/topics.json handoutIds)", () => {
     for (const t of crisis) expect(t.handoutIds, t.id).toContain("safety-plan");
   });
 
-  it("keeps the substance-use sheets on substance-use topics (tobacco may use the urge log)", () => {
+  it("keeps the substance-use sheets on substance-use topics (tobacco may use the urge log and quit plan)", () => {
     const sudHandouts = new Set(allHandouts.filter((h) => h.sud).map((h) => h.id));
+    // Tobacco is outside 42 CFR Part 2: any non-SUD topic may link the urge log, and the quitting topic its quit plan.
+    const allowed = (topicId: string, id: string) => id === "urge-surfing-log" || (topicId === "quitting-smoking" && id === "my-quit-tobacco-plan");
     for (const t of file.topics) {
       if (t.sud) continue;
-      // A non-SUD topic may still link the urge log (quitting smoking): tobacco is outside 42 CFR Part 2.
-      const sud = t.handoutIds.filter((id) => sudHandouts.has(id) && id !== "urge-surfing-log");
+      const sud = t.handoutIds.filter((id) => sudHandouts.has(id) && !allowed(t.id, id));
       expect(sud, t.id).toEqual([]);
+    }
+  });
+
+  it("offers only client handouts with a Spanish version, so every topic works in both languages", () => {
+    const byId = new Map(allHandouts.map((h) => [h.id, h]));
+    for (const t of file.topics)
+      for (const id of t.handoutIds) {
+        expect(byId.get(id)?.audience, `${t.id} -> ${id}`).toBe("client");
+        expect(byId.get(id)?.es, `${t.id} -> ${id}`).toBeTruthy();
+      }
+  });
+
+  it("includes the population topics (round 4) with plain MedlinePlus pages", () => {
+    const ids = new Set(file.topics.map((t) => t.id));
+    for (const id of ["racism-and-discrimination-stress", "work-stress", "living-with-pain", "college-life", "money-and-housing-stress", "sexual-health", "disability-and-wellbeing"])
+      expect(ids.has(id), id).toBe(true);
+    for (const t of file.topics) {
+      expect(t.pages.en, t.id).toMatch(/^https:\/\/medlineplus\.gov\/[a-z]+\.html$/);
+      expect(t.pages.es, t.id).toMatch(/^https:\/\/medlineplus\.gov\/spanish\/[a-z]+\.html$/);
     }
   });
 

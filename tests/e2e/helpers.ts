@@ -76,6 +76,9 @@ export const SW_ROUTES = [
   "/formulations/builder",
   "/orientations",
   "/practice",
+  "/populations",
+  "/about/changelog",
+  "/about/report",
   "/measures/gad-7",
   "/measures/phq-9",
 ] as const;
@@ -91,6 +94,7 @@ export const CLIENT_ROUTES = [
   `/client/topics/${SAMPLE.sudTopic}`,
   `/client/topics/${SAMPLE.newTopic}`,
   `/client/topics/${SAMPLE.newSudTopic}`,
+  "/client/topics/work-stress",
   "/client/calm",
   `/r/${SAMPLE.handout}`,
   `/r/${SAMPLE.handout}/es`,
@@ -132,7 +136,12 @@ export const CLINICIAN_ROUTES = [
   "/practice",
   "/practice/alliance-and-rupture-repair",
   "/practice/intake-assessment",
+  "/populations",
+  "/populations/perinatal",
+  "/populations/justice-involved",
   "/about",
+  "/about/changelog",
+  "/about/report",
 ] as const;
 
 /** Every route in the app (one sample per dynamic segment, plus the SUD samples). */

@@ -1,0 +1,82 @@
+{
+  "id": "erpo-and-firearm-transfer",
+  "title": "Extreme risk protection orders and temporary firearm storage",
+  "kind": "legal",
+  "jurisdiction": "US-state-varies",
+  "summary": "Extreme risk protection order (ERPO) laws, in about 20 states and the District of Columbia, let a court temporarily remove firearms from someone at serious risk of harming themselves or others. Who may ask the court differs: always law enforcement, often family or household members, and in a few states some clinicians. Other options include voluntary temporary storage outside the home and, in some states, adding oneself to a do-not-sell list. These are tools for the clinician's judgment, never automatic decisions. This page is information, not legal advice.",
+  "keyPoints": [
+    "ERPO petitioners: every ERPO state allows law enforcement, most allow family or household members, and a few, such as Maryland, New York, Colorado, Hawaii and the District of Columbia, allow some licensed clinicians to petition directly.",
+    "Orders usually start with a short emergency order and a hearing within days, followed by a longer order if the court finds the legal standard met. Standards and lengths differ by state.",
+    "Voluntary storage: clients can store firearms with a trusted person, a gun shop or range, or in some places law enforcement. State background-check laws may cover such transfers, and some exempt temporary transfers to prevent harm, so check before advising.",
+    "Several states, including Washington, Virginia and Utah, let a person voluntarily add their own name to a list that blocks firearm purchases.",
+    "Counseling on access to lethal means, done collaboratively, is a core suicide prevention step whether or not a court order is involved.",
+    "HIPAA permits disclosures that you believe in good faith are needed to prevent a serious and imminent threat. State ERPO laws may add immunity or rules about what clinicians may share.",
+    "In United States v. Rahimi (2024), the US Supreme Court upheld temporarily disarming people a court has found to pose a credible threat to others."
+  ],
+  "whatToDo": [
+    "Learn whether your state has an ERPO law, who may petition, and how to reach the local court or law enforcement contact.",
+    "Talk with clients and families about safe storage and temporary transfer as part of safety planning, using lethal means counseling.",
+    "When risk is high, follow your crisis protocol and call 988 or emergency services when needed; the app never decides risk for you.",
+    "Document your assessment, what you discussed, and any action and its reasons.",
+    "Consult your licensing board, your agency's policy or a healthcare attorney before petitioning or disclosing information for an order."
+  ],
+  "officialLinks": [
+    {
+      "title": "RAND: Effects of Extreme Risk Protection Orders",
+      "url": "https://www.rand.org/research/gun-policy/analysis/extreme-risk-protection-orders.html"
+    },
+    {
+      "title": "National Extreme Risk Protection Order Resource Center",
+      "url": "https://erpo.org"
+    },
+    {
+      "title": "Suicide Prevention Resource Center: CALM, Counseling on Access to Lethal Means",
+      "url": "https://sprc.org/online-library/calm-counseling-on-access-to-lethal-means"
+    },
+    {
+      "title": "US Supreme Court: United States v. Rahimi (2024, PDF)",
+      "url": "https://www.supremecourt.gov/opinions/23pdf/22-915_8o6b.pdf"
+    },
+    {
+      "title": "988 Suicide and Crisis Lifeline",
+      "url": "https://988lifeline.org"
+    }
+  ],
+  "seeAlso": [
+    "duty-to-warn-protect",
+    "crisis-and-involuntary-holds",
+    "crisis-988-or-911"
+  ],
+  "appPositioning": "The app never scores or decides risk and keeps crisis resources (988, local emergency numbers and findahelpline.com) on every screen. Safety plan entries stay in memory and are never sent anywhere.",
+  "whenRelevant": [
+    "crisis",
+    "duty-to-warn",
+    "confidentiality"
+  ],
+  "changesOften": true,
+  "statusAsOf": "2026-06-01",
+  "verification": {
+    "method": "not-verified",
+    "note": "Not checked online on 2026-11-27: the build sandbox could not resolve the publishers' sites and the shared web-search budget was used up, so no page was re-read this round. The text is the author's reading of the listed sources as known up to mid-2026. ERPO laws and petitioner lists change often; confirm the state count, which states let clinicians petition, and the voluntary do-not-sell states. A person must open each official link, confirm current status and dates, and correct this page before release."
+  },
+  "sources": [
+    {
+      "title": "Effects of Extreme Risk Protection Orders",
+      "publisher": "RAND Gun Policy in America",
+      "url": "https://www.rand.org/research/gun-policy/analysis/extreme-risk-protection-orders.html"
+    },
+    {
+      "title": "National Extreme Risk Protection Order Resource Center",
+      "publisher": "Johns Hopkins Center for Gun Violence Solutions",
+      "url": "https://erpo.org"
+    },
+    {
+      "title": "CALM: Counseling on Access to Lethal Means",
+      "publisher": "Suicide Prevention Resource Center",
+      "url": "https://sprc.org/online-library/calm-counseling-on-access-to-lethal-means"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

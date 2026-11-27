@@ -1,0 +1,78 @@
+{
+  "id": "digital-accessibility",
+  "title": "Digital accessibility: websites, apps and documents",
+  "kind": "legal",
+  "jurisdiction": "US-federal",
+  "summary": "Disability rights laws apply to websites, patient portals, apps and electronic documents as well as buildings. In 2024, HHS updated its Section 504 rule to require recipients of HHS funding to meet WCAG 2.1 Level AA for web content and mobile apps, and the Justice Department set the same standard for state and local governments under ADA Title II. Private practices are covered by ADA Title III and, if they take federal funds, by Section 1557. This page is information, not legal advice.",
+  "keyPoints": [
+    "HHS Section 504 rule (2024): recipients of HHS federal financial assistance, which includes practices paid by Medicaid, must make web content and mobile apps meet WCAG 2.1 Level AA. Published compliance dates were May 2026 for recipients with 15 or more employees and May 2027 for smaller ones; check for changes.",
+    "ADA Title II rule (2024): state and local government websites and apps, including public clinics and universities, must meet WCAG 2.1 Level AA, with deadlines in 2026 and 2027 depending on size.",
+    "ADA Title III covers private offices. There is no specific technical rule, but the Justice Department has long said that services offered online must be accessible, and settlements commonly use WCAG.",
+    "Section 1557 also requires covered health programs to make information and communication technology accessible.",
+    "Documents count: forms and handouts should be tagged PDFs or accessible Word files with headings, reading order, alternative text and enough contrast, or be offered in another accessible format on request.",
+    "Telehealth platforms should support captions, screen readers and keyboard use, and work with sign language interpreters."
+  ],
+  "whatToDo": [
+    "Ask your website, portal and telehealth vendors for an accessibility conformance report against WCAG 2.1 Level AA.",
+    "Test key tasks, such as booking, intake forms and payment, with a screen reader and keyboard only.",
+    "Make intake forms and handouts accessible, and say how clients can ask for another format.",
+    "Name someone responsible for accessibility and a way to report barriers.",
+    "Consult your organization's compliance office or a healthcare attorney about which rules and deadlines apply; your licensing board can answer practice questions."
+  ],
+  "officialLinks": [
+    {
+      "title": "HHS OCR: Section 504 of the Rehabilitation Act",
+      "url": "https://www.hhs.gov/civil-rights/for-individuals/disability/section-504-rehabilitation-act-of-1973/index.html"
+    },
+    {
+      "title": "ADA.gov: Fact sheet on the web and mobile app accessibility rule (Title II)",
+      "url": "https://www.ada.gov/resources/2024-03-08-web-rule/"
+    },
+    {
+      "title": "ADA.gov: Effective communication",
+      "url": "https://www.ada.gov/resources/effective-communication/"
+    },
+    {
+      "title": "W3C: Web Content Accessibility Guidelines (WCAG) 2.2",
+      "url": "https://www.w3.org/TR/WCAG22/"
+    }
+  ],
+  "seeAlso": [
+    "language-access-interpreters"
+  ],
+  "appPositioning": "The app is tested with automated accessibility checks (axe) on every route in light and dark themes, uses 44-pixel touch targets and AA contrast, respects reduced motion and offers large text. Printable PDFs are made in the browser and are not yet tagged PDFs; the Word exports carry headings and document language. Ask for another format if a client needs one.",
+  "whenRelevant": [
+    "accessibility",
+    "technology",
+    "cultural-competence"
+  ],
+  "changesOften": true,
+  "statusAsOf": "2026-06-01",
+  "verification": {
+    "method": "not-verified",
+    "note": "Not checked online on 2026-11-27: the build sandbox could not resolve the publishers' sites and the shared web-search budget was used up, so no page was re-read this round. The text is the author's reading of the listed sources as known up to mid-2026. Compliance dates for both 2024 rules are given from memory of the published rules; confirm them, and whether they were delayed, on hhs.gov and ada.gov. A person must open each official link, confirm current status and dates, and correct this page before release."
+  },
+  "sources": [
+    {
+      "title": "Section 504 of the Rehabilitation Act (2024 final rule)",
+      "publisher": "US Department of Health and Human Services, Office for Civil Rights",
+      "url": "https://www.hhs.gov/civil-rights/for-individuals/disability/section-504-rehabilitation-act-of-1973/index.html",
+      "year": 2024
+    },
+    {
+      "title": "Fact Sheet: New Rule on the Accessibility of Web Content and Mobile Apps Provided by State and Local Governments",
+      "publisher": "US Department of Justice (ADA.gov)",
+      "url": "https://www.ada.gov/resources/2024-03-08-web-rule/",
+      "year": 2024
+    },
+    {
+      "title": "Web Content Accessibility Guidelines (WCAG) 2.2",
+      "publisher": "World Wide Web Consortium (W3C)",
+      "url": "https://www.w3.org/TR/WCAG22/",
+      "year": 2023
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

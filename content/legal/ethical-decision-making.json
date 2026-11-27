@@ -1,0 +1,77 @@
+{
+  "id": "ethical-decision-making",
+  "title": "Ethical decision-making: a step-by-step approach",
+  "kind": "ethics-practice",
+  "jurisdiction": "INTL",
+  "summary": "When duties conflict, a structured process helps you slow down, see who is affected and explain your choice later. Most published models, including the Canadian Code of Ethics for Psychologists, follow similar steps: name the people involved and the ethical issues, notice your own biases and interests, list options, weigh likely benefits and harms, choose and act, then review the result and learn from it. Culture, consultation and clear documentation run through every step. When law and ethics conflict, codes ask you to try to resolve the conflict in a responsible way. This page is information, not legal advice.",
+  "keyPoints": [
+    "The Canadian code organizes ethics around four principles: respect for the dignity of persons and peoples, responsible caring, integrity in relationships, and responsibility to society. It gives guidance on how to weigh them when they conflict.",
+    "Step 1: name who is affected (the client, family, others at risk, colleagues, the public) and the facts you know and do not know.",
+    "Step 2: name the ethical issues, the relevant code standards, laws and policies, and your own feelings, interests and biases about the situation.",
+    "Step 3: list realistic options, including doing nothing, and think through likely short- and long-term benefits and harms of each for everyone affected.",
+    "Step 4: choose the option that best fits the principles and the law, act on it, and take responsibility for it.",
+    "Step 5: review what happened, correct harm where you can, and change policies or habits so the problem is less likely to recur.",
+    "Culture shapes what clients see as respectful, private or caring. Ask about it, rather than assuming your own frame is neutral.",
+    "Consultation is part of the process, not a sign of weakness, and documenting your reasoning protects both client and clinician."
+  ],
+  "whatToDo": [
+    "Write the dilemma down in one or two sentences, including the competing duties.",
+    "Read the relevant standards in your own code and the laws that apply where the client is.",
+    "Consult a colleague or supervisor before acting when time allows, and record whom you consulted and what you considered.",
+    "Act on the choice that best fits the principles and the law, and document your reasoning.",
+    "Consult your licensing board's ethics line or a healthcare attorney when the dilemma involves a legal duty or a board rule."
+  ],
+  "questions": [
+    "Who could be helped or harmed by each option, now and later?",
+    "Which principles or duties are in tension, and which carries more weight here and why?",
+    "What would I want a trusted colleague to point out that I might be missing?",
+    "How might the client's culture, or mine, be shaping how I see the options?",
+    "Could I explain this choice openly to the client, a board and the public?"
+  ],
+  "officialLinks": [
+    {
+      "title": "Canadian Psychological Association: Canadian Code of Ethics for Psychologists",
+      "url": "https://cpa.ca/?p=2491"
+    },
+    {
+      "title": "APA Ethical Principles of Psychologists and Code of Conduct (Standards 1.02 and 1.03)",
+      "url": "https://www.apa.org/ethics/code"
+    },
+    {
+      "title": "ACA Code of Ethics and ethics resources",
+      "url": "https://www.counseling.org/resources/ethics"
+    }
+  ],
+  "seeAlso": [
+    "multiple-relationships-and-boundaries",
+    "competence-and-scope-of-practice"
+  ],
+  "whenRelevant": [
+    "cultural-competence",
+    "dual-relationships",
+    "boundaries"
+  ],
+  "changesOften": false,
+  "statusAsOf": "2026-06-01",
+  "verification": {
+    "method": "not-verified",
+    "note": "Not checked online on 2026-11-27: the build sandbox could not resolve the publishers' sites and the shared web-search budget was used up, so no page was re-read this round. The text is the author's reading of the listed sources as known up to mid-2026. The steps are a summary in the app's own words; check them against the current edition of the Canadian code. A person must open each official link, confirm current status and dates, and correct this page before release."
+  },
+  "sources": [
+    {
+      "title": "Canadian Code of Ethics for Psychologists, fourth edition",
+      "publisher": "Canadian Psychological Association",
+      "url": "https://cpa.ca/?p=2491",
+      "year": 2017
+    },
+    {
+      "title": "Ethical Principles of Psychologists and Code of Conduct",
+      "publisher": "American Psychological Association",
+      "url": "https://www.apa.org/ethics/code",
+      "year": 2017
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

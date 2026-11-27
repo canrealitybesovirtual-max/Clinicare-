@@ -1,0 +1,77 @@
+{
+  "id": "treating-and-forensic-roles",
+  "title": "Treating clinician or forensic evaluator: keeping roles separate",
+  "kind": "ethics-practice",
+  "jurisdiction": "INTL",
+  "summary": "Clients often ask their therapist for letters about custody, disability, fitness for work, immigration, court or parole. A treating clinician is an ally with a one-sided view, while a forensic evaluator works for the court or agency, gathers outside information and stays neutral. Mixing the roles can harm both the therapy and the case. As the treating clinician you can usually report facts of treatment you can stand behind, and leave legal opinions to an independent evaluator. This page is information, not legal advice.",
+  "keyPoints": [
+    "The roles differ in who the client is, the goal (helping versus answering a legal question), the stance (supportive versus neutral), the information used (the client's account versus many sources) and confidentiality.",
+    "Forensic guidelines advise against providing both therapy and forensic evaluation for the same person, because each role undermines the other.",
+    "Facts of treatment usually include dates of service, the reason for referral, symptoms observed, diagnosis when authorized, treatment given and the client's response.",
+    "Opinions on legal questions, such as which parent should have custody, whether someone is disabled under a program's rules, fit for duty, credible, or dangerous, need an evaluation designed for that question.",
+    "Some forms are routine for treating clinicians, such as leave certification or a summary for a new provider. Answer only what you know, and say when a question is outside your role.",
+    "Assistance animal letters for housing should come only from a clinician who knows the person's disability-related need, under the relevant housing guidance, never from an online purchase.",
+    "If you are subpoenaed, you will usually testify as a fact witness about what you observed and did, not as a retained expert."
+  ],
+  "whatToDo": [
+    "Ask who wants the letter, what question it must answer and who will read it, before agreeing.",
+    "Discuss with the client what you can and cannot say, and that the letter may be shared with others.",
+    "Get specific written authorization, write only facts you can support, and keep a copy in the record.",
+    "Refer to a trained forensic evaluator when the request asks for a legal opinion.",
+    "Consult your licensing board, your liability carrier or a healthcare attorney before writing for a court or agency."
+  ],
+  "questions": [
+    "Is this request asking for facts of treatment, or for an opinion on a legal question?",
+    "Do I have the information an evaluator would need, or only the client's account?",
+    "How might writing this change my relationship with the client if the outcome goes badly?",
+    "Have I been clear in the letter about my role and its limits?"
+  ],
+  "officialLinks": [
+    {
+      "title": "APA: Specialty Guidelines for Forensic Psychology",
+      "url": "https://www.apa.org/practice/guidelines/forensic-psychology"
+    },
+    {
+      "title": "HUD: Assessing a person's request to have an animal as a reasonable accommodation (FHEO-2020-01, PDF)",
+      "url": "https://www.hud.gov/sites/dfiles/PA/documents/HUDAsstAnimalNC1-28-2020.pdf"
+    },
+    {
+      "title": "APA Ethical Principles of Psychologists and Code of Conduct (Standards 3.05 and 9.01)",
+      "url": "https://www.apa.org/ethics/code"
+    }
+  ],
+  "seeAlso": [
+    "subpoenas-and-court-orders",
+    "asylum-and-immigration-evaluations",
+    "documentation-and-medical-necessity"
+  ],
+  "appPositioning": "Letter and form tools in the app draft factual summaries for the clinician to edit, with blank lines instead of client identifiers. They do not write forensic opinions, and nothing is stored after the session.",
+  "whenRelevant": [
+    "forensic",
+    "dual-relationships",
+    "records"
+  ],
+  "changesOften": false,
+  "statusAsOf": "2026-06-01",
+  "verification": {
+    "method": "not-verified",
+    "note": "Not checked online on 2026-11-27: the build sandbox could not resolve the publishers' sites and the shared web-search budget was used up, so no page was re-read this round. The text is the author's reading of the listed sources as known up to mid-2026. Check the forensic guideline wording on role conflicts and the current HUD assistance animal guidance. A person must open each official link, confirm current status and dates, and correct this page before release."
+  },
+  "sources": [
+    {
+      "title": "Irreconcilable conflict between therapeutic and forensic roles (Greenberg and Shuman)",
+      "publisher": "Professional Psychology: Research and Practice",
+      "url": "https://doi.org/10.1037/0735-7028.28.1.50",
+      "year": 1997
+    },
+    {
+      "title": "Specialty Guidelines for Forensic Psychology",
+      "publisher": "American Psychologist (American Psychological Association)",
+      "url": "https://doi.org/10.1037/a0029889",
+      "year": 2013
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

@@ -1,0 +1,74 @@
+{
+  "id": "rural-and-agricultural",
+  "name": "Rural and agricultural communities",
+  "group": "circumstances",
+  "summary": "Care for adults in rural, remote and farming communities: overlapping relationships and privacy in small towns, stigma, distance and limited broadband, firearm access and lethal means, and farm stress from weather, debt and isolation.",
+  "scopeNote": "For adults (18 and over). The app never asks for or saves where a person lives beyond the ZIP code or city they choose to search, which is sent only to find services. Rural life varies widely; these notes are prompts, not assumptions.",
+  "whyItMatters": "US suicide rates rose in every county group from 1999 to 2015, and the increase sped up in smaller metro and non-metro counties, where the authors point to difficult economic conditions, limited access to services and social isolation (Kegler and colleagues, 2017). MedlinePlus notes that rural communities tend to have less access to health care, with clinics and hospitals far away, more residents without insurance and more exposure to farm chemicals, and points to telehealth as one answer; the Rural Health Information Hub collects resources on agricultural health and safety. In small communities, clinicians and clients often meet outside sessions, so planning for overlapping relationships is part of good care.",
+  "askAbout": [
+    "How far do you travel to get here, and would phone or video sessions be easier some weeks?",
+    "How reliable are your phone signal and internet, and is there a private place to talk from home?",
+    "How do people in your community see counseling, and what would you like to keep private?",
+    "If we run into each other in town, how would you like us to handle it?",
+    "What pressures are you facing right now, such as weather, prices, debt, workload or family business decisions?",
+    "Are there firearms at home or on the property, and would you be open to talking about storing them differently during hard times?"
+  ],
+  "stereotypeCaution": "Rural communities differ greatly in economy, culture, faith, politics and diversity, and many rural residents do not farm. Do not assume someone's views, stoicism or attitudes to firearms or therapy from where they live; ask about their own situation.",
+  "keyConsiderations": [
+    "Overlapping relationships are often unavoidable in small towns; plan for them openly, set clear boundaries, and document your reasoning.",
+    "Privacy concerns can be strong where everyone knows each other; discuss where the person parks, who might see them and how reminders are sent.",
+    "Audio-only or low-bandwidth telehealth may be the most realistic option; check licensure and privacy rules for each format.",
+    "Firearms are common in rural homes and work; lethal means counseling should be routine, practical and respectful of the person's values.",
+    "Farm and ranch stress can include weather, market prices, debt, succession and long hours alone; problem-solving and practical supports matter.",
+    "Use local strengths, such as faith communities, extension services, cooperatives and neighbors, with the person's consent."
+  ],
+  "assessmentAdaptations": [
+    "Ask about work patterns, seasonal pressures, finances, injuries and physical health, alongside mood.",
+    "Ask about alcohol and other drug use, which may be seen as normal or kept private.",
+    "Ask routinely about firearms and other lethal means, including farm chemicals and medicines.",
+    "Ask who the person could turn to locally in a crisis, given the distance to emergency services."
+  ],
+  "sessionAdaptations": [
+    "Offer flexible scheduling around seasonal work, and plan for times when attendance will be hard, such as harvest or calving.",
+    "Use telehealth or phone sessions with a backup plan for dropped connections.",
+    "Plan crisis steps that account for travel time to emergency care and the nearest hospital.",
+    "Frame therapy in practical terms and link goals to the person's work and family responsibilities."
+  ],
+  "interventionNotes": [
+    { "interventionId": "problem-solving", "note": "Suits practical pressures such as finances, workload and family business decisions." },
+    { "interventionId": "lethal-means-counseling", "note": "Discuss temporary storage or transfer of firearms with someone trusted, and secure storage of farm chemicals and medicines." },
+    { "interventionId": "behavioral-activation", "note": "Plan around seasonal workloads and long working days, and include contact with others." },
+    { "interventionId": "guided-self-help", "note": "Can extend care between sessions when distance limits how often the person can attend." }
+  ],
+  "measureNotes": [
+    "Stigma and stoicism can lower self-report scores; explain how answers are used and kept private.",
+    "PHQ-9 sleep and fatigue items can reflect seasonal workloads; ask whether the problem continues in quieter times."
+  ],
+  "measuresPending": [],
+  "safetyNotes": [
+    "Ask about suicidal thoughts directly, especially during financial strain, crop or herd losses, or after an injury.",
+    "Agree on a crisis plan that works with long distances, including 988 by phone or text and who nearby could help."
+  ],
+  "cautions": [],
+  "legalIds": ["multiple-relationships-and-boundaries", "telehealth-jurisdiction", "erpo-and-firearm-transfer"],
+  "ethicsIds": ["aca-code-of-ethics", "apa-ethical-principles-psychologists"],
+  "referralIds": ["988-lifeline", "hrsa-find-a-health-center", "warmline-directory"],
+  "referralKinds": ["low-cost"],
+  "handoutIds": ["problem-solving-steps", "safer-home-for-family", "video-session-guide"],
+  "topicIds": ["stress", "work-stress"],
+  "practiceIds": ["telehealth-sessions", "self-harm-assessment-and-formulation"],
+  "formulationIds": [],
+  "linkOuts": [
+    { "title": "Rural Health Concerns", "publisher": "MedlinePlus (U.S. National Library of Medicine)", "url": "https://medlineplus.gov/ruralhealthconcerns.html", "lastVerified": "2026-11-27" },
+    { "title": "Rural Agricultural Health and Safety", "publisher": "Rural Health Information Hub", "url": "https://www.ruralhealthinfo.org/topics/agricultural-health-and-safety", "lastVerified": "2026-11-27" },
+    { "title": "Violence and Abuse in Rural America", "publisher": "Rural Health Information Hub", "url": "https://www.ruralhealthinfo.org/topics/violence-and-abuse", "lastVerified": "2026-11-27" }
+  ],
+  "sud": true,
+  "sources": [
+    { "title": "Trends in suicide by level of urbanization, United States, 1999-2015 (Kegler and colleagues)", "publisher": "MMWR Morbidity and Mortality Weekly Report (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/28301448/", "year": 2017 },
+    { "title": "Rural Health Concerns", "publisher": "MedlinePlus (U.S. National Library of Medicine)", "url": "https://medlineplus.gov/ruralhealthconcerns.html" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

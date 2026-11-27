@@ -1,0 +1,71 @@
+{
+  "id": "asylum-and-immigration-evaluations",
+  "title": "Asylum evaluations and immigration enforcement",
+  "kind": "legal",
+  "jurisdiction": "US-federal",
+  "summary": "Clients seeking asylum or other immigration relief may ask for a psychological evaluation or a letter. These evaluations are forensic work with their own standards, including the UN Istanbul Protocol for documenting torture, and are usually best done by a trained evaluator rather than the treating therapist. Separately, practices should know how to respond if immigration officers arrive: an administrative warrant is not a judicial warrant. Clinicians should not record immigration status unless care requires it. This page is information, not legal advice.",
+  "keyPoints": [
+    "Asylum and hardship evaluations answer legal questions and follow forensic standards. The 2022 Istanbul Protocol describes how to document the psychological effects of torture and ill treatment.",
+    "Treating clinicians can usually write a factual letter about treatment, with the client's written authorization, and refer to a trained evaluator for a forensic opinion. Several human rights organizations train volunteer evaluators.",
+    "An administrative warrant or form signed by an immigration officer does not by itself allow officers into private, non-public areas without consent. A judicial warrant is signed by a judge. Practices should mark non-public areas and name a person to handle visits.",
+    "In January 2025 the federal government rescinded the policy that had limited immigration enforcement at health care facilities and other sensitive locations. Check current guidance.",
+    "HIPAA allows disclosures to law enforcement only in specific circumstances, such as a court order, a warrant or a request that meets set conditions. Ask for the document and consult counsel before sharing anything.",
+    "Do not ask about or record immigration status unless it matters for care, and explain to clients what you write down."
+  ],
+  "whatToDo": [
+    "Decide whether a request needs a factual treatment letter or a forensic evaluation, and refer for the latter.",
+    "Get specific written authorization for any letter, and keep it to facts of treatment.",
+    "Write a front-desk plan for visits by immigration or other officers, including who responds and whom to call.",
+    "Keep immigration status out of records unless clinically needed.",
+    "Consult an immigration attorney or a healthcare attorney before releasing records or responding to officers; your licensing board can answer practice questions."
+  ],
+  "officialLinks": [
+    {
+      "title": "OHCHR: Istanbul Protocol, 2022 edition",
+      "url": "https://www.ohchr.org/en/publications/policy-and-methodological-publications/istanbul-protocol-manual-effective-0"
+    },
+    {
+      "title": "APA: Specialty Guidelines for Forensic Psychology",
+      "url": "https://www.apa.org/practice/guidelines/forensic-psychology"
+    },
+    {
+      "title": "eCFR: 45 CFR 164.512, disclosures for law enforcement purposes (paragraph f)",
+      "url": "https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-E/section-164.512"
+    }
+  ],
+  "seeAlso": [
+    "treating-and-forensic-roles",
+    "subpoenas-and-court-orders",
+    "language-access-interpreters"
+  ],
+  "appPositioning": "The app has no field for immigration or citizenship status and stores nothing. Letter tools draft factual summaries for the clinician to edit and never write forensic opinions.",
+  "whenRelevant": [
+    "forensic",
+    "confidentiality",
+    "records",
+    "cultural-competence"
+  ],
+  "changesOften": true,
+  "statusAsOf": "2026-06-01",
+  "verification": {
+    "method": "not-verified",
+    "note": "Not checked online on 2026-11-27: the build sandbox could not resolve the publishers' sites and the shared web-search budget was used up, so no page was re-read this round. The text is the author's reading of the listed sources as known up to mid-2026. Enforcement policy changes often; confirm the January 2025 rescission and any later guidance, and the Istanbul Protocol address. A person must open each official link, confirm current status and dates, and correct this page before release."
+  },
+  "sources": [
+    {
+      "title": "Istanbul Protocol: Manual on the Effective Investigation and Documentation of Torture and Other Cruel, Inhuman or Degrading Treatment or Punishment (2022 edition)",
+      "publisher": "UN Office of the High Commissioner for Human Rights",
+      "url": "https://www.ohchr.org/en/publications/policy-and-methodological-publications/istanbul-protocol-manual-effective-0",
+      "year": 2022
+    },
+    {
+      "title": "Specialty Guidelines for Forensic Psychology",
+      "publisher": "American Psychological Association",
+      "url": "https://www.apa.org/practice/guidelines/forensic-psychology",
+      "year": 2013
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

@@ -1,0 +1,75 @@
+{
+  "id": "reproductive-health-privacy",
+  "title": "Reproductive health privacy and perinatal reporting",
+  "kind": "legal",
+  "jurisdiction": "US-state-varies",
+  "summary": "Therapy records can include pregnancy, pregnancy loss, abortion or fertility care, which some states now investigate or restrict. A 2024 HIPAA rule added protections for lawful reproductive care, but a federal court vacated most of it in June 2025. Ordinary HIPAA rules and many state shield laws still apply. Separately, rules on substance use in pregnancy and notifying child welfare differ widely by state, and federal law asks for plans of safe care for affected infants. This page is information, not legal advice.",
+  "keyPoints": [
+    "Most HIPAA disclosures to law enforcement or in legal proceedings are permitted, not required. You can usually decline a permissive request and should disclose only the minimum necessary.",
+    "The 2024 reproductive health privacy amendments were mostly vacated nationwide in June 2025 (Purl v. HHS). The Notice of Privacy Practices changes tied to Part 2 records remained. Check HHS for the current status.",
+    "Many states have shield laws that limit cooperation with out-of-state investigations of reproductive or gender-affirming care, and some protect consumer health data held outside HIPAA.",
+    "Write only what care requires. Details of a client's reproductive decisions may not be needed in a progress note, and psychotherapy notes kept separately have extra protection.",
+    "Federal child welfare law (CAPTA) asks states to have health care providers notify child protective services about infants affected by prenatal substance exposure and to make plans of safe care. In many states this notification is not an abuse report, but some states treat prenatal use as abuse.",
+    "Substance use treatment records may also be covered by 42 CFR Part 2, which adds limits on disclosure."
+  ],
+  "whatToDo": [
+    "Learn your state's rules on prenatal substance use reporting and the difference between a notification and an abuse report.",
+    "Document reproductive health details only as care requires, and keep sensitive analysis in separate psychotherapy notes if you use them.",
+    "Treat any request from law enforcement or another state for reproductive health records as a legal request: check what it is and who signed it.",
+    "Talk with pregnant and postpartum clients about confidentiality limits at the start, in plain words.",
+    "Consult a healthcare attorney or your licensing board before releasing records connected to reproductive care or prenatal substance use."
+  ],
+  "officialLinks": [
+    {
+      "title": "HHS OCR: HIPAA and reproductive health care",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/special-topics/reproductive-health/index.html"
+    },
+    {
+      "title": "National Center on Substance Abuse and Child Welfare: Plans of Safe Care",
+      "url": "https://ncsacw.acf.hhs.gov/topics/plans-of-safe-care/"
+    },
+    {
+      "title": "Guttmacher Institute: state policies on substance use during pregnancy",
+      "url": "https://www.guttmacher.org/state-policy/explore/substance-use-during-pregnancy"
+    }
+  ],
+  "seeAlso": [
+    "hipaa-privacy-basics",
+    "mandatory-reporting",
+    "42-cfr-part-2",
+    "subpoenas-and-court-orders"
+  ],
+  "appPositioning": "The app has no fields for pregnancy, reproductive history or substance use status and stores nothing after the session. Exports that can carry substance-use content print the Part 2 notice.",
+  "whenRelevant": [
+    "privacy",
+    "records",
+    "abuse-reporting",
+    "sud"
+  ],
+  "changesOften": true,
+  "statusAsOf": "2026-06-01",
+  "verification": {
+    "method": "not-verified",
+    "note": "Not checked online on 2026-11-27: the build sandbox could not resolve the publishers' sites and the shared web-search budget was used up, so no page was re-read this round. The text is the author's reading of the listed sources as known up to mid-2026. The Purl v. HHS outcome matches the HIPAA basics topic in this hub; confirm it, any appeal, and state reporting rules, which change often. A person must open each official link, confirm current status and dates, and correct this page before release."
+  },
+  "sources": [
+    {
+      "title": "HIPAA and reproductive health care",
+      "publisher": "US Department of Health and Human Services, Office for Civil Rights",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/special-topics/reproductive-health/index.html"
+    },
+    {
+      "title": "Plans of Safe Care",
+      "publisher": "National Center on Substance Abuse and Child Welfare (HHS)",
+      "url": "https://ncsacw.acf.hhs.gov/topics/plans-of-safe-care/"
+    },
+    {
+      "title": "Substance Use During Pregnancy (state policy table)",
+      "publisher": "Guttmacher Institute",
+      "url": "https://www.guttmacher.org/state-policy/explore/substance-use-during-pregnancy"
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

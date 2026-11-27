@@ -22,6 +22,7 @@ import {
   Sparkles,
   TextSearch,
   Users,
+  UsersRound,
   Wind,
   Wrench,
   type LucideIcon,
@@ -70,6 +71,7 @@ const CLINICIAN_NAV: readonly (NavItem & { placement: Placement })[] = [
   { href: "/formulations", label: { en: "Formulations", es: "Formulaciones" }, icon: Network, placement: "more" },
   { href: "/orientations", label: { en: "Orientations", es: "Orientaciones" }, icon: Compass, placement: "more" },
   { href: "/practice", label: { en: "Practice guides", es: "Guías de práctica" }, icon: Route, placement: "more" },
+  { href: "/populations", label: { en: "Populations", es: "Poblaciones" }, icon: UsersRound, placement: "more" },
 ];
 
 const OTHER_NAV: readonly NavItem[] = [

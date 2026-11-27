@@ -75,7 +75,7 @@
     { "title": "Dementia: assessment, management and support for people living with dementia and their carers (NG97)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng97", "lastVerified": "2026-11-27" },
     { "title": "Mental health of older adults", "publisher": "World Health Organization", "url": "https://www.who.int/news-room/fact-sheets/detail/mental-health-of-older-adults", "lastVerified": "2026-11-27" }
   ],
-  "sud": false,
+  "sud": true,
   "sources": [
     { "title": "Guidelines for psychological practice with older adults", "publisher": "American Psychologist (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/24446841/", "year": 2014 },
     { "title": "Problem-solving therapy and supportive therapy in older adults with major depression and executive dysfunction (Arean and colleagues)", "publisher": "American Journal of Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/20516155/", "year": 2010 },

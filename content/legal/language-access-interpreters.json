@@ -2,18 +2,23 @@
   "id": "language-access-interpreters",
   "title": "Language access and interpreters",
   "jurisdiction": "US-federal",
-  "summary": "Clients with limited English proficiency and Deaf or hard of hearing clients have a right to communicate effectively about their care. In the US, Title VI of the Civil Rights Act and Section 1557 of the Affordable Care Act require health programs that receive federal financial assistance, such as Medicaid or Medicare payments, to provide meaningful language access, and the Americans with Disabilities Act requires effective communication for people with disabilities, including sign language interpreters. Parts of the 2024 Section 1557 rule have been affected by court decisions, so check the current status. This page is information, not legal advice.",
+  "summary": "Clients with limited English proficiency and Deaf or hard of hearing clients have a right to communicate effectively about their care. In the US, Title VI of the Civil Rights Act and Section 1557 of the Affordable Care Act require health programs that receive federal financial assistance, such as Medicaid or Medicare payments, to provide meaningful language access, and the Americans with Disabilities Act requires effective communication for people with disabilities, including sign language interpreters, in public and private practices. Parts of the 2024 Section 1557 rule have been affected by court decisions and federal policy has shifted, so check the current status. This page is information, not legal advice.",
   "keyPoints": [
     "The 2024 Section 1557 rule (45 CFR 92.201) requires covered entities to offer a qualified interpreter when interpretation is needed, free of charge, and bars requiring clients to bring their own interpreter.",
     "Relying on an adult family member or friend, or on a minor child, is limited to narrow emergency situations involving an imminent threat to safety, until a qualified interpreter is available, or, for an adult companion, when the client asks for it and it is appropriate.",
     "Machine translation of critical documents must be reviewed by a qualified human translator when the information affects a person's rights, benefits or meaningful access.",
+    "Title VI bars national-origin discrimination by recipients of federal funds, which includes failing to give people with limited English proficiency meaningful access. A March 2025 executive order naming English the official language revoked the earlier executive order on federal language access; it did not change Title VI or the Section 1557 regulations, so check current OCR guidance.",
+    "The 2024 rule also requires covered entities to post notices that free language help and auxiliary aids are available, in English and the most common languages of their state, with compliance dates phased in from 2025.",
     "For Deaf clients, the ADA requires effective communication; this often means a qualified sign language interpreter, in person or by video, not lip-reading or written notes for a therapy session.",
+    "ADA Title III covers private offices: provide the aid needed for effective communication at no charge to the client. Video remote interpreting must meet quality rules, such as real-time, clear video and audio, and may not suit every client or session.",
     "Interpreted therapy works best when the interpreter is briefed on confidentiality and the session's purpose, and when the clinician speaks directly to the client.",
-    "Professional codes ask clinicians to practice within their competence and to respect language and culture; using a trained interpreter is part of that duty."
+    "Professional codes ask clinicians to practice within their competence and to respect language and culture; using a trained interpreter is part of that duty.",
+    "Outside the US, equality and health service rules differ, for example the UK Equality Act 2010 and NHS interpreting guidance. Check your regulator's expectations."
   ],
   "whatToDo": [
     "Ask every client which language they prefer for care and whether they need an interpreter or other aids, and record it.",
     "Arrange a qualified professional or video interpreter in advance; avoid family members, and never use children, except in an emergency.",
+    "Post the required notices of free language help, and tell clients how to ask for an interpreter or another format.",
     "Brief the interpreter before the session on confidentiality, the purpose of the session and any terms that are hard to translate.",
     "Use translated handouts reviewed by a qualified human translator, and check understanding by asking the client to explain key points in their own words.",
     "Consult your licensing board, your organization's compliance office or a healthcare attorney about which rules apply to your practice and payer mix."
@@ -38,19 +43,32 @@
     {
       "title": "LEP.gov: Limited English proficiency resources",
       "url": "https://www.lep.gov/"
+    },
+    {
+      "title": "Federal Register: Section 1557 final rule (2024)",
+      "url": "https://www.federalregister.gov/documents/2024/05/06/2024-08711/nondiscrimination-in-health-programs-and-activities"
+    },
+    {
+      "title": "legislation.gov.uk: Equality Act 2010",
+      "url": "https://www.legislation.gov.uk/ukpga/2010/15/contents"
     }
   ],
-  "appPositioning": "Client handouts are written in English and Spanish, and the Spanish versions are marked for review by a fluent human translator before release. The app does not interpret sessions.",
+  "seeAlso": [
+    "digital-accessibility",
+    "asylum-and-immigration-evaluations"
+  ],
+  "appPositioning": "Client handouts are written in English and Spanish. The Spanish versions are machine-assisted and marked for review by a qualified human translator; under the 2024 rule, critical documents translated by machine need that review, so treat them as drafts until it is done. The app does not interpret sessions.",
   "whenRelevant": [
     "cultural-competence",
     "informed-consent",
-    "telehealth"
+    "telehealth",
+    "accessibility"
   ],
   "changesOften": true,
-  "statusAsOf": "2026-11-27",
+  "statusAsOf": "2026-06-01",
   "verification": {
-    "method": "search-index",
-    "note": "hhs.gov, ecfr.gov, ada.gov and lep.gov were not reachable from the build sandbox. The qualified-interpreter, family-member, minor-child and machine-translation points were confirmed through search results indexing the eCFR text of 45 CFR 92.201 and the HHS OCR Dear Colleague letter, which notes that the 2024 rule is applied subject to court decisions. A person must read 45 CFR 92.201 and the current OCR guidance before release."
+    "method": "not-verified",
+    "note": "The qualified-interpreter, family-member, minor-child and machine-translation points were confirmed in an earlier round only through search results indexing 45 CFR 92.201 and the OCR Dear Colleague letter. Points added on 2026-11-27 (Title VI, the 2025 executive order, notices, ADA Title III and video interpreting, the UK pointer) were not checked online: the sandbox could not reach the official sites. A person must read 45 CFR 92.201 and 92.11, the current OCR guidance and 28 CFR 36.303 before release."
   },
   "sources": [
     {
@@ -68,6 +86,11 @@
       "title": "Effective communication",
       "publisher": "U.S. Department of Justice, Civil Rights Division (ADA.gov)",
       "url": "https://www.ada.gov/resources/effective-communication/"
+    },
+    {
+      "title": "Section 1557 of the Patient Protection and Affordable Care Act",
+      "publisher": "US Department of Health and Human Services, Office for Civil Rights",
+      "url": "https://www.hhs.gov/civil-rights/for-individuals/section-1557/index.html"
     }
   ],
   "license": "original",

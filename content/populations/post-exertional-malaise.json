@@ -1,0 +1,74 @@
+{
+  "id": "post-exertional-malaise",
+  "name": "Post-exertional malaise (ME/CFS and long COVID)",
+  "group": "health-and-body",
+  "summary": "A safety caution for activity-based work: when symptoms crash hours to days after effort, steer away from graded increases in activity or exercise and toward pacing within the person's energy limits, coordinated with their medical team.",
+  "scopeNote": "For adults (18 and over). The app never asks for or saves a diagnosis. Post-exertional malaise is assessed and managed with the medical team; these notes change how psychological interventions that involve activity are used.",
+  "whyItMatters": "In myalgic encephalomyelitis or chronic fatigue syndrome (ME/CFS), symptoms can worsen after physical, mental or emotional effort, often with a delay of hours to days. NICE NG206 (2021) advises against any therapy based on physical activity or exercise as a cure, against generalised exercise programmes, and against programmes that use fixed incremental increases, such as graded exercise therapy; it supports energy management within the person's limits and describes CBT only as a supportive, non-curative option. A 2024 meta-analysis found post-exertional malaise in more than half of people with post-COVID-19 condition three months or more after infection (An and colleagues, 2024).",
+  "askAbout": [
+    "After a busier day, or a demanding conversation, do your symptoms get worse later that day or over the next one to two days?",
+    "How long does it take to recover from a crash, and what usually sets one off?",
+    "What does a sustainable day look like for you at the moment, and how much does it vary?",
+    "Who on your medical team helps you with pacing or activity, and can we coordinate with them?",
+    "How have other people's beliefs about your illness affected you?"
+  ],
+  "stereotypeCaution": "People with ME/CFS or long COVID have often been disbelieved or told they simply need to push through. Do not assume symptoms are caused by deconditioning, avoidance or mood, and do not assume the person lacks motivation; treat their account of their limits as essential information.",
+  "keyConsiderations": [
+    "A simple screening question about delayed worsening after effort, often 12 to 48 hours later, can flag post-exertional malaise before activity-based work starts.",
+    "When post-exertional malaise is present, do not use graded exercise or fixed incremental increases in activity; pacing within an individual energy envelope, with planned rest, is the safer frame.",
+    "Mental and emotional effort count: long sessions, intense emotional work or travel to appointments can trigger crashes.",
+    "Depression and anxiety can occur alongside these conditions and deserve treatment, but they do not explain the physical symptoms.",
+    "Coordinate with the medical team on activity plans, orthostatic symptoms, sleep and medicines."
+  ],
+  "assessmentAdaptations": [
+    "Ask about delayed symptom worsening after physical, mental or emotional effort, and the pattern of crashes and recovery.",
+    "Offer short assessments split across sessions, by video or phone if travel is costly in energy.",
+    "Separate low mood from the illness's effects on energy, concentration and sleep."
+  ],
+  "sessionAdaptations": [
+    "Keep sessions short, offer breaks, allow lying down or camera-off video, and schedule at the person's best time of day.",
+    "Plan between-session tasks that cost little energy, and build rest in.",
+    "Use pacing tools (activity and symptom diaries, energy budgets) to support the person's own decisions, not to push activity up."
+  ],
+  "interventionNotes": [
+    { "interventionId": "behavioral-activation", "note": "With post-exertional malaise, focus on meaningful low-energy activities within limits, never on steadily increasing activity levels." },
+    { "interventionId": "physical-activity", "note": "Do not prescribe exercise or graded activity when post-exertional malaise is present; any activity plan belongs with the medical team and stays within energy limits." },
+    { "interventionId": "graded-in-vivo-exposure", "note": "Exposure to feared situations should not demand physical exertion beyond the person's limits; adapt or postpone." },
+    { "interventionId": "act-acceptance-willingness", "note": "Acceptance and values work can help with grief and adjustment without pushing activity." },
+    { "interventionId": "cbt-and-act-for-chronic-pain", "note": "Pain-focused CBT and ACT must drop any graded activity components when post-exertional malaise is present." }
+  ],
+  "measureNotes": [
+    "PHQ-9 items on fatigue, sleep, concentration and slowing will usually be raised by the illness itself; read mood and interest items closely and ask what each answer reflects.",
+    "Completing questionnaires can itself be tiring; use short measures and allow breaks."
+  ],
+  "measuresPending": [],
+  "safetyNotes": [
+    "Ask about suicidal thoughts directly; chronic illness, disbelief from others, isolation and loss of function can add to risk.",
+    "A severe crash or new symptoms need medical review."
+  ],
+  "cautions": [
+    "Graded exercise therapy and programs that treat ME/CFS as deconditioning or exercise avoidance are not recommended by NICE NG206 (2021) and may cause harm."
+  ],
+  "legalIds": ["contested-practices"],
+  "ethicsIds": [],
+  "referralIds": ["988-lifeline", "job-accommodation-network"],
+  "referralKinds": ["disability"],
+  "handoutIds": ["pacing-and-flare-plan", "kind-self-talk", "values-compass"],
+  "topicIds": ["chronic-illness"],
+  "practiceIds": ["collaborative-care-and-pcbh", "goal-attainment-scaling", "telehealth-sessions"],
+  "formulationIds": ["fear-avoidance-pain"],
+  "linkOuts": [
+    { "title": "Myalgic encephalomyelitis (or encephalopathy)/chronic fatigue syndrome: diagnosis and management (NG206)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng206", "lastVerified": "2026-11-27" },
+    { "title": "Manage Myalgic Encephalomyelitis/Chronic Fatigue Syndrome", "publisher": "Centers for Disease Control and Prevention", "url": "https://www.cdc.gov/me-cfs/management/", "lastVerified": "2026-11-27" },
+    { "title": "Long COVID", "publisher": "MedlinePlus (U.S. National Library of Medicine)", "url": "https://medlineplus.gov/longcovid.html", "lastVerified": "2026-11-27" }
+  ],
+  "sud": false,
+  "sources": [
+    { "title": "Myalgic encephalomyelitis (or encephalopathy)/chronic fatigue syndrome: diagnosis and management (NG206)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/ng206", "year": 2021 },
+    { "title": "Prevalence and measurement of post-exertional malaise in post-acute COVID-19 syndrome: a systematic review and meta-analysis (An and colleagues)", "publisher": "General Hospital Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/39490027/", "year": 2024 },
+    { "title": "Myalgic Encephalomyelitis/Chronic Fatigue Syndrome", "publisher": "MedlinePlus (U.S. National Library of Medicine)", "url": "https://medlineplus.gov/myalgicencephalomyelitischronicfatiguesyndrome.html" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

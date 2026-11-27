@@ -20,7 +20,10 @@
     "Consult your licensing board or a healthcare attorney about consent requirements in each state where your clients are located."
   ],
   "officialLinks": [
-    { "title": "HHS Telehealth: Obtaining informed consent", "url": "https://telehealth.hhs.gov/providers/preparing-patients-for-telehealth/obtaining-informed-consent" },
+    {
+      "title": "HHS Telehealth: Obtaining informed consent",
+      "url": "https://telehealth.hhs.gov/providers/preparing-patients-for-telehealth/obtaining-informed-consent"
+    },
     {
       "title": "HHS Telehealth: Informed consent for telebehavioral health",
       "url": "https://telehealth.hhs.gov/providers/telehealth-for-behavioral-health/preparing-patients-for-telebehavioral-health/informed-consent-for-telebehavioral-health/"
@@ -29,12 +32,31 @@
       "title": "NASW: Standards for Technology in Social Work Practice",
       "url": "https://www.socialworkers.org/Practice/NASW-Practice-Standards-Guidelines/Standards-for-Technology-in-Social-Work-Practice"
     },
-    { "title": "APA: Guidelines for the Practice of Telepsychology (2024)", "url": "https://www.apa.org/about/policy/telepsychology-revisions" },
-    { "title": "HHS: HIPAA and audio-only telehealth", "url": "https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/hipaa-audio-telehealth/index.html" },
-    { "title": "Center for Connected Health Policy: Consent requirements by state", "url": "https://cchpca.org/topic/consent-requirements-professional-requirements" }
+    {
+      "title": "APA: Guidelines for the Practice of Telepsychology (2024)",
+      "url": "https://www.apa.org/about/policy/telepsychology-revisions"
+    },
+    {
+      "title": "HHS: HIPAA and audio-only telehealth",
+      "url": "https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/hipaa-audio-telehealth/index.html"
+    },
+    {
+      "title": "Center for Connected Health Policy: Consent requirements by state",
+      "url": "https://cchpca.org/topic/consent-requirements-professional-requirements"
+    }
   ],
-  "appPositioning": "This app sends no typed clinical text to any server or AI service and stores nothing after the session, so it adds no recording or data-retention risk to a telehealth visit. Clinicians still need consent for their own telehealth platform and any other tools they use.",
-  "whenRelevant": ["informed-consent", "technology", "telehealth", "privacy"],
+  "seeAlso": [
+    "ai-in-clinical-practice",
+    "between-session-contact-policy",
+    "telehealth-jurisdiction"
+  ],
+  "appPositioning": "This app records nothing and stores nothing after the session. Typed clinical text stays in the browser unless the clinician switches on the optional AI assistant, which is off by default, runs only after the owner confirms a business associate agreement with Anthropic, and receives only PHI-scrubbed text. Clinicians still need consent for their own telehealth platform and any other tools they use.",
+  "whenRelevant": [
+    "informed-consent",
+    "technology",
+    "telehealth",
+    "privacy"
+  ],
   "changesOften": true,
   "statusAsOf": "2026-11-26",
   "verification": {
@@ -53,7 +75,12 @@
       "url": "https://www.socialworkers.org/Practice/NASW-Practice-Standards-Guidelines/Standards-for-Technology-in-Social-Work-Practice",
       "year": 2017
     },
-    { "title": "Guidelines for the Practice of Telepsychology", "publisher": "American Psychological Association", "url": "https://www.apa.org/about/policy/telepsychology-revisions", "year": 2024 },
+    {
+      "title": "Guidelines for the Practice of Telepsychology",
+      "publisher": "American Psychological Association",
+      "url": "https://www.apa.org/about/policy/telepsychology-revisions",
+      "year": 2024
+    },
     {
       "title": "Guidance on How the HIPAA Rules Permit Covered Health Care Providers and Health Plans to Use Remote Communication Technologies for Audio-Only Telehealth",
       "publisher": "US Department of Health and Human Services, Office for Civil Rights",
@@ -62,6 +89,6 @@
     }
   ],
   "license": "original",
-  "lastVerified": "2026-11-26",
+  "lastVerified": "2026-11-27",
   "reviewedBy": "PENDING"
 }

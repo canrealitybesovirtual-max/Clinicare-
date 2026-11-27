@@ -1,0 +1,77 @@
+{
+  "id": "memory-and-suggestion-safeguards",
+  "title": "Memory and suggestion: safeguards in trauma, imagery and parts work",
+  "kind": "ethics-practice",
+  "jurisdiction": "INTL",
+  "summary": "Memory is reconstructive: questions, imagery and the therapist's expectations can shape what a person recalls and how sure they feel. Most people abused as children remember some or all of it; forgotten memories can return; and research also shows that detailed, confident memories of events that never happened can be created. Good practice is to work with what the client brings, never set out to uncover hidden events, avoid leading questions, and document neutrally. This matters most in imagery, hypnosis, EMDR, parts work and body-based methods. This page is information, not legal advice.",
+  "keyPoints": [
+    "Trauma-focused treatments such as prolonged exposure, cognitive processing therapy and EMDR work with memories the client already has. They are not methods for finding events the client does not remember.",
+    "Suggestive methods raise the risk of false or distorted memories: repeated imagining of possible abuse, hypnosis or drug-assisted interviews used to recover memories, interpreting dreams or body sensations as proof of events, and checklists that present symptoms as signs of hidden abuse.",
+    "Neither confidence nor vividness shows whether a memory is accurate. A therapist cannot tell a true recovered memory from a false one without outside evidence, and therapy is not the place to decide that.",
+    "Parts work and somatic approaches can invite interpretation. Treat what a part says, or what the body feels, as the client's experience to explore, not as evidence that a specific event occurred.",
+    "Courts in many places limit or exclude testimony about events recalled after hypnosis, and therapy records can be subpoenaed. Leading methods can harm a client's later case as well as their relationships.",
+    "Clients who doubt a memory deserve the same care: help them live with uncertainty, focus on present symptoms and goals, and avoid pushing toward any conclusion."
+  ],
+  "whatToDo": [
+    "Ask open, non-leading questions, and let the client choose words for their own experience.",
+    "Explain at the start of trauma work that the aim is to reduce distress from memories the client has, not to search for new ones.",
+    "Avoid hypnosis or imagery for recovering memories, and do not suggest that symptoms prove hidden abuse.",
+    "Document what the client reported, in their words and when it was first reported, and keep your interpretations separate from facts.",
+    "Consult a trauma-trained supervisor, and your licensing board or a healthcare attorney when records may reach a court."
+  ],
+  "questions": [
+    "Am I following the client's account, or adding details, labels or expectations of my own?",
+    "Did my question suggest an answer, or could it be answered in any direction?",
+    "Would I be comfortable if a court read my notes and my questions word for word?",
+    "Is a parts, imagery or body method being used to explore experience, or to look for events?"
+  ],
+  "officialLinks": [
+    {
+      "title": "APA: Questions and answers about memories of childhood abuse",
+      "url": "https://www.apa.org/topics/trauma/memories"
+    },
+    {
+      "title": "APA Ethical Principles of Psychologists and Code of Conduct",
+      "url": "https://www.apa.org/ethics/code"
+    }
+  ],
+  "seeAlso": [
+    "contested-practices",
+    "treating-and-forensic-roles",
+    "touch-and-body-based-work"
+  ],
+  "appPositioning": "Trauma interventions in the library describe work with memories the client already reports; none is presented as a way to recover memories. Notes and plans are drafted by the clinician and nothing is stored after the session.",
+  "whenRelevant": [
+    "informed-consent",
+    "records",
+    "forensic"
+  ],
+  "changesOften": false,
+  "statusAsOf": "2026-06-01",
+  "verification": {
+    "method": "not-verified",
+    "note": "Not checked online on 2026-11-27: the build sandbox could not resolve the publishers' sites and the shared web-search budget was used up, so no page was re-read this round. The text is the author's reading of the listed sources as known up to mid-2026. Confirm the APA memories page is still live and that the research summaries (Loftus 2005; Otgaar and colleagues 2019) are cited correctly. A person must open each official link, confirm current status and dates, and correct this page before release."
+  },
+  "sources": [
+    {
+      "title": "Questions and answers about memories of childhood abuse",
+      "publisher": "American Psychological Association",
+      "url": "https://www.apa.org/topics/trauma/memories"
+    },
+    {
+      "title": "Planting misinformation in the human mind: a 30-year investigation of the malleability of memory (Loftus)",
+      "publisher": "Learning and Memory",
+      "url": "https://doi.org/10.1101/lm.94705",
+      "year": 2005
+    },
+    {
+      "title": "The return of the repressed: the persistent and problematic claims of long-forgotten trauma (Otgaar and colleagues)",
+      "publisher": "Perspectives on Psychological Science",
+      "url": "https://doi.org/10.1177/1745691619862306",
+      "year": 2019
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

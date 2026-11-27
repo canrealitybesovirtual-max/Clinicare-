@@ -123,6 +123,30 @@ Rule: every external call sends only a standard code, a curated keyword, a drug 
 - **Phase:** 3
 - **Privacy rule:** Curated search terms only
 
+## LactMed (NCBI Bookshelf, via E-utilities)
+- **Category:** Medications
+- **Endpoint / docs:** https://eutils.ncbi.nlm.nih.gov/entrez/eutils/ (`db=books`, term `"<ingredient>"[title] AND lactmed[book]`); database https://www.ncbi.nlm.nih.gov/books/NBK501922/
+- **Access / terms:** Free. Same NCBI E-utilities rules as PubMed (3 requests/second per IP without a key, `tool` on every request, `email` only if the operator sets NCBI_EMAIL); the adapter shares the PubMed limiter. NLM: information created by or for the US government is in the public domain, with acknowledgment requested (checked 2026-11-27). The Bookshelf web pages answer automated clients with a challenge, so only E-utilities is called.
+- **Use in app:** `/api/lactmed` returns the LactMed record title and NCBI link for one curated medication (clinician mode, education only, "discuss with the prescriber"), plus a link to LactMed itself. Record text is not fetched or shown. Cached 7 days.
+- **Phase:** 3
+- **Privacy rule:** Curated drug (ingredient) names only. Substance-use treatment medicines follow ALLOW_SUD_REFERENCE_LOOKUPS.
+
+## AGS Beers Criteria (American Geriatrics Society)
+- **Category:** Medications
+- **Endpoint / docs:** https://doi.org/10.1111/jgs.18372 (2023 update; PubMed 37139824)
+- **Access / terms:** Copyrighted by AGS; recorded as "not-licensed" in content/licenses.json. Never reproduced or paraphrased
+- **Use in app:** Link out only, next to the older-adult cautions already in content/medications.json (falls and confusion with benzodiazepines, anticholinergic effects, hyponatremia with SSRIs) and from the older-adults population profile
+- **Phase:** 3
+- **Privacy rule:** Link only
+
+## Measures with license pending (link-out only)
+- **Category:** Measures
+- **Endpoint / docs:** content/licenses.json (status "pending", publisher terms and a source for each)
+- **Access / terms:** Only GAD-7 and PHQ-9 are built in. EPDS, GDS-15, Mini-Cog, GAI, MoCA, PC-PTSD-5, PEG, RHS-15, AQ-10, ProQOL, DRSP, PHQ-2, GAD-2, PHQ-4, ASQ, AUDIT-C, WHO-5, K6/K10, DASS-21, CORE-10, PROMIS, WSAS, WHODAS 2.0, NEQ, ORS/SRS, WAI-SR, PGSI, FTND, MGH-HPS, Danger Assessment, HCR-20, MITI, CTS-R, the ASAM Criteria and LOCUS stay link-outs until the owner confirms terms in writing (G7)
+- **Use in app:** Named in practice guides, population profiles, formulations, legal topics and condition cards with a link to the publisher
+- **Phase:** 2–3
+- **Privacy rule:** Link only; nothing is scored or stored
+
 ## ClinicalTrials.gov API v2
 - **Category:** Evidence
 - **Endpoint / docs:** https://clinicaltrials.gov/api/v2/studies

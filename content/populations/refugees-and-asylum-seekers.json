@@ -1,0 +1,82 @@
+{
+  "id": "refugees-and-asylum-seekers",
+  "name": "Refugees, asylum seekers and immigrants",
+  "group": "circumstances",
+  "summary": "Care for adults who have migrated, especially those forced from home: daily stressors after migration alongside past trauma, torture and detention, family separation and ambiguous loss, pacing trauma work during legal uncertainty, interpreters, and a firm rule never to record immigration status.",
+  "scopeNote": "For adults (18 and over). Immigration status is a sensitive identifier: the app never asks for or saves it, and it should never be written into notes, letters or exports unless the person asks and the purpose requires it. Clinical care is separate from any legal evaluation.",
+  "whyItMatters": "In 2024 there were 123.2 million forcibly displaced people worldwide, and WHO (2025) notes that refugees and migrants exposed to adversity are more likely than host populations to experience depression, anxiety, PTSD and other conditions, shaped by the journey, the host country's policies and living conditions after arrival. An ecological view links distress to past trauma, ongoing daily stressors and disrupted psychosocial supports, from the individual to the couple and family (Silove and colleagues, 2017). An umbrella review found depression and anxiety at least as common as PTSD, affecting up to 40 percent of asylum seekers and refugees, with narrative exposure therapy the most studied psychological treatment (Turrini and colleagues, 2017). The Refugee Health Screener-15 was developed for this population (Hollifield and colleagues, 2013).",
+  "askAbout": [
+    "What language would you like to use with me, and would you like an interpreter, possibly from outside your community?",
+    "What are the biggest pressures in daily life right now, such as housing, work, money, legal matters or family far away?",
+    "Who are the people you are missing or worried about, and do you know whether they are safe?",
+    "What helped you cope before and during the journey, and what helps now?",
+    "Is there anything you are worried about me writing down or sharing?",
+    "When would be a good time, if ever, to talk about what happened before you came here?"
+  ],
+  "stereotypeCaution": "People who migrate differ in why and how they moved, their education, wealth, faith, politics and experiences; many are resilient and some have had no traumatic experiences. Do not assume trauma, a particular culture or a wish to talk about the past, and do not assume someone's legal situation from their language or appearance.",
+  "keyConsiderations": [
+    "Address daily stressors after migration (housing, income, legal uncertainty, discrimination, isolation, loss of role) as treatment targets, not distractions from it.",
+    "Past torture, detention or persecution may be part of the history; ask with care, let the person set the pace, and consider referral to a specialist torture treatment program where available.",
+    "Family separation and not knowing whether loved ones are safe (ambiguous loss) can sustain grief and worry; acknowledge it directly.",
+    "While an asylum or immigration case is pending, the person may need stability and coping skills more than intensive trauma processing; agree on the order with them (see phase-based trauma sequencing).",
+    "Keep treatment separate from forensic evaluation for asylum or immigration proceedings; refer to trained evaluators and see the asylum and immigration evaluations topic.",
+    "Never record immigration status, and know your organization's policy if immigration enforcement or legal requests arrive."
+  ],
+  "assessmentAdaptations": [
+    "Use a qualified, independent interpreter; check that the interpreter's background, gender or community ties feel safe to the person.",
+    "Use the cultural formulation exploration to understand the person's own view of their problems and what help they expect.",
+    "Ask about physical health, pain, sleep and access to medical care, which often affect mood and are sometimes neglected after arrival.",
+    "Separate understandable distress about current threats, such as a pending case, from symptoms that persist without them, while recognizing both need help."
+  ],
+  "sessionAdaptations": [
+    "Prioritize safety, stability and practical help early, and link with legal, housing and community services with consent.",
+    "Use plain language, check understanding, and avoid idioms that do not translate.",
+    "Offer flexible scheduling, telehealth where suitable, and help with travel or child care barriers when possible.",
+    "Draw on the person's strengths, faith, community and sense of meaning as part of the plan."
+  ],
+  "interventionNotes": [
+    { "interventionId": "problem-management-plus", "note": "Developed for adults affected by adversity and designed for adaptation to language and context." },
+    { "interventionId": "narrative-exposure-therapy", "note": "The most studied trauma therapy with refugees; suited to multiple traumatic events across a life story." },
+    { "interventionId": "culturally-adapted-cbt", "note": "Adapt language, metaphors and goals to the person's background while keeping the core techniques." },
+    { "interventionId": "trauma-psychoeducation-and-grounding", "note": "A stabilizing first step when legal or housing uncertainty makes intensive trauma work hard to start." },
+    { "orientationId": "narrative-and-solution-focused-therapy", "note": "Narrative approaches can help a person tell their story in their own terms and reclaim identity beyond the trauma." }
+  ],
+  "measureNotes": [
+    "Use the PHQ-9 and GAD-7 only in official translations, with a qualified interpreter if needed, and remember that cut-offs may not transfer across languages and cultures.",
+    "Distress may be expressed through the body (headaches, pain, poor sleep); treat these reports as meaningful and ask what they mean to the person.",
+    "Screening tools developed with refugees, such as the RHS-15, are link-outs here and are not built into the app."
+  ],
+  "measuresPending": [
+    { "name": "Refugee Health Screener-15 (RHS-15)", "url": "https://pubmed.ncbi.nlm.nih.gov/23347455/", "licenseKey": "RHS-15" }
+  ],
+  "safetyNotes": [
+    "Ask about suicidal thoughts in the person's language and in more than one way; fear of deportation, detention or losing family can raise risk.",
+    "Ask about current safety, including exploitation at work or in housing, and violence at home."
+  ],
+  "cautions": [
+    "Do not press for a detailed trauma account early or as a condition for help, and do not write letters that offer forensic opinions you are not trained or engaged to give."
+  ],
+  "legalIds": ["asylum-and-immigration-evaluations", "language-access-interpreters", "treating-and-forensic-roles"],
+  "ethicsIds": [],
+  "referralIds": ["988-lifeline-spanish", "findahelpline", "who-mhgap", "hrsa-find-a-health-center"],
+  "referralKinds": ["low-cost"],
+  "handoutIds": ["common-reactions-after-trauma", "grounding-5-4-3-2-1", "grief-and-loss", "problem-solving-steps"],
+  "topicIds": ["after-trauma", "stress"],
+  "practiceIds": ["working-with-interpreters", "trauma-informed-care", "multicultural-orientation-and-broaching"],
+  "formulationIds": ["phase-based-trauma-sequencing"],
+  "linkOuts": [
+    { "title": "Refugee and migrant mental health (fact sheet)", "publisher": "World Health Organization", "url": "https://www.who.int/news-room/fact-sheets/detail/mental-health-and-forced-displacement", "lastVerified": "2026-11-27" },
+    { "title": "Problem Management Plus (PM+): individual psychological help for adults impaired by distress", "publisher": "World Health Organization", "url": "https://www.who.int/publications/i/item/problem-management-plus-(-pm-)-individual-psychological-help-for-adults-impaired-by-distress-in-communities-exposed-to-adversity", "lastVerified": "2026-11-27" },
+    { "title": "Health Information in Multiple Languages", "publisher": "MedlinePlus (U.S. National Library of Medicine)", "url": "https://medlineplus.gov/languages/languages.html", "lastVerified": "2026-11-27" }
+  ],
+  "sud": false,
+  "sources": [
+    { "title": "Refugee and migrant mental health (fact sheet)", "publisher": "World Health Organization", "url": "https://www.who.int/news-room/fact-sheets/detail/mental-health-and-forced-displacement", "year": 2025 },
+    { "title": "The contemporary refugee crisis: an overview of mental health challenges (Silove, Ventevogel and Rees)", "publisher": "World Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/28498581/", "year": 2017 },
+    { "title": "Common mental disorders in asylum seekers and refugees: umbrella review of prevalence and intervention studies (Turrini and colleagues)", "publisher": "International Journal of Mental Health Systems (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/28855963/", "year": 2017 },
+    { "title": "The Refugee Health Screener-15 (RHS-15): development and validation of an instrument for anxiety, depression, and PTSD in refugees (Hollifield and colleagues)", "publisher": "General Hospital Psychiatry (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/23347455/", "year": 2013 }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

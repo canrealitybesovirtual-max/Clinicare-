@@ -1,0 +1,76 @@
+{
+  "id": "men-and-masculinity",
+  "name": "Men and masculinity-informed practice",
+  "group": "culture-and-identity",
+  "summary": "Engaging adult men in therapy: how norms about strength, self-reliance and emotion can shape distress, help-seeking and how depression shows up, and process adaptations that tend to help, such as transparent, collaborative, goal-focused work.",
+  "scopeNote": "For adult men (18 and over), including trans men, in keeping with the app's adult scope. The app never asks for or saves gender. These notes describe norms some men were raised with, which each person may or may not hold.",
+  "whyItMatters": "APA Guidelines for Psychological Practice with Boys and Men (2018) describe how socialized norms about masculinity, such as self-reliance and restricting emotion, can affect health and help-seeking, and call for gender-sensitive care. A systematic review found that conformity to traditional masculine norms affected how depressed men experienced and expressed symptoms, their attitudes to and use of help, and how they managed symptoms (Seidler and colleagues, 2016). A scoping review of 46 papers recommended collaborative, transparent, action-oriented and goal-focused treatment styles, attention to language, and clinicians' awareness of their own gender assumptions (Seidler and colleagues, 2018).",
+  "askAbout": [
+    "What made you decide to come in now, and what would make this worth your time?",
+    "How do you usually deal with stress or bad days, and what does that cost you?",
+    "Growing up, what were you taught about showing feelings or asking for help, and do you still agree with it?",
+    "Where in your body or behavior do you notice stress first, such as anger, sleep, drinking or working harder?",
+    "Who do you talk to when things are hard, if anyone?",
+    "What kind of man, partner, father, friend or worker do you want to be?"
+  ],
+  "stereotypeCaution": "Masculinity takes many forms across cultures, generations, sexual orientations and individuals, and many men talk about emotions readily. Use these notes to explore what norms the person holds and how they help or hurt, not to assume that a man is emotionally closed, resistant to therapy or prone to anger.",
+  "keyConsiderations": [
+    "Depression may show up as irritability, anger, overwork, risk-taking, drinking or physical complaints more than as sadness; ask about these directly.",
+    "Norms about self-reliance can make help-seeking feel like failure; frame therapy as a practical, skilled way to solve problems and regain control.",
+    "Shame about vulnerability can be strong; normalizing, brief and appropriate clinician self-disclosure and a collaborative stance can help.",
+    "Relationship breakdown, job loss, money problems and legal trouble are common triggers for crisis in men and are worth asking about.",
+    "Men who have experienced sexual abuse or partner violence may find disclosure especially hard; ask in a matter-of-fact way.",
+    "Strengths often associated with masculinity, such as commitment, protecting others and problem-solving, can be harnessed for change."
+  ],
+  "assessmentAdaptations": [
+    "Ask about anger, irritability, alcohol and drug use, risk-taking and work patterns alongside mood.",
+    "Use plain, concrete language and explain why each question matters.",
+    "Ask about firearms and other lethal means routinely, without judgment.",
+    "Ask about recent losses of relationship, role, status or income."
+  ],
+  "sessionAdaptations": [
+    "Be transparent about what therapy involves, how long it may take and how progress will be measured.",
+    "Work toward concrete goals and practical skills early, while making room for feelings as trust builds.",
+    "Use the person's own language and metaphors, such as training, tools or strategy, if they fit.",
+    "Offer activity-based or side-by-side formats, such as walking sessions where appropriate, or group options with other men."
+  ],
+  "interventionNotes": [
+    { "interventionId": "behavioral-activation", "note": "Its practical, action-first structure often suits men who prefer doing over talking at first." },
+    { "interventionId": "problem-solving", "note": "A clear, stepwise method that fits a wish for practical tools." },
+    { "interventionId": "motivational-interviewing", "note": "Respects autonomy and reduces pressure, which helps when the person feels pushed into treatment." },
+    { "interventionId": "lethal-means-counseling", "note": "Discuss firearm storage and other means with respect for the person's values." },
+    { "orientationId": "humanistic-experiential-therapy", "note": "Can help with emotional awareness once trust is built, at a pace the person sets." }
+  ],
+  "measureNotes": [
+    "The PHQ-9 may miss depression that shows mainly as anger, irritability, risk-taking or drinking; ask about these alongside the score.",
+    "Some men underreport on self-report measures because of stigma; explain how answers are used."
+  ],
+  "measuresPending": [],
+  "safetyNotes": [
+    "Men may be less likely to volunteer suicidal thoughts; ask directly and calmly, especially after a breakup, job loss or legal trouble.",
+    "Include firearms, alcohol and drugs in safety planning, and identify at least one person the man would actually contact."
+  ],
+  "cautions": [
+    "Do not frame men's distress as a character flaw, and do not use shaming confrontation; it tends to drive disengagement."
+  ],
+  "legalIds": ["erpo-and-firearm-transfer", "competence-and-scope-of-practice"],
+  "ethicsIds": [],
+  "referralIds": ["988-lifeline", "crisis-text-line", "veterans-crisis-line"],
+  "referralKinds": [],
+  "handoutIds": ["activity-schedule", "problem-solving-steps", "anger-cycle-and-time-out", "safer-home-for-family"],
+  "topicIds": ["stress", "low-mood"],
+  "practiceIds": ["multicultural-orientation-and-broaching", "first-sessions-and-role-induction", "clinician-reactions-and-self-disclosure"],
+  "formulationIds": [],
+  "linkOuts": [
+    { "title": "Men's Health", "publisher": "MedlinePlus (U.S. National Library of Medicine)", "url": "https://medlineplus.gov/menshealth.html", "lastVerified": "2026-11-27" }
+  ],
+  "sud": true,
+  "sources": [
+    { "title": "APA Guidelines for Psychological Practice with Boys and Men", "publisher": "American Psychological Association", "url": "https://www.apa.org/about/policy/boys-men-practice-guidelines.pdf", "year": 2018 },
+    { "title": "The role of masculinity in men's help-seeking for depression: a systematic review (Seidler and colleagues)", "publisher": "Clinical Psychology Review (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/27664823/", "year": 2016 },
+    { "title": "Engaging men in psychological treatment: a scoping review (Seidler and colleagues)", "publisher": "American Journal of Men's Health (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/30103643/", "year": 2018 }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

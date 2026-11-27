@@ -125,11 +125,19 @@ export function populationLinks(p: Population): PopulationLinks {
   };
 }
 
-/** Population notes for one intervention, A to Z by population: the panel on /interventions/[id]. */
-export function populationNotesFor(interventionId: string): { population: Population; note: string }[] {
-  return populations.flatMap((population) =>
-    population.interventionNotes.filter((n) => n.interventionId === interventionId).map((n) => ({ population, note: n.note })),
-  );
+/** What a population note can be attached to: one library intervention or one orientation profile. */
+export type AdaptationTargetRef = { interventionId: string } | { orientationId: string };
+
+/**
+ * Population notes for one intervention or orientation, A to Z by population: the adaptations panel on
+ * /interventions/[id] and /orientations/[id] (src/components/populations/population-notes-panel.tsx).
+ */
+export function populationNotesFor(target: AdaptationTargetRef): { population: Population; note: string }[] {
+  const matches =
+    "interventionId" in target
+      ? (n: Population["interventionNotes"][number]) => n.interventionId === target.interventionId
+      : (n: Population["interventionNotes"][number]) => n.orientationId === target.orientationId;
+  return populations.flatMap((population) => population.interventionNotes.filter(matches).map((n) => ({ population, note: n.note })));
 }
 
 /** Ids the profiles may point at. A folder that does not exist yet is passed as undefined and not checked. */

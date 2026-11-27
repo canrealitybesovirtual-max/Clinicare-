@@ -1,0 +1,85 @@
+{
+  "id": "serious-medical-illness",
+  "name": "Serious and chronic medical illness",
+  "group": "health-and-body",
+  "summary": "Health-psychology adaptations for adults living with cancer, heart disease, diabetes, HIV, other chronic illness or advanced illness: overlap between illness and depression items, distress screening, fear of recurrence, meaning-centered work near the end of life, and coordinating with the medical team.",
+  "scopeNote": "For adults (18 and over). The app never asks for or saves medical diagnoses or results. Medical decisions belong with the treating team; these notes cover psychological care alongside them.",
+  "whyItMatters": "ASCO's 2014 guideline adaptation recommends that all adults with cancer be evaluated for depression and anxiety at intervals across their care using validated measures, with treatment pathways matched to severity (Andersen and colleagues, 2014). An American Heart Association scientific statement reviewed 53 studies and recommended treating depression as a risk factor for poor outcomes after acute coronary syndrome (Lichtman and colleagues, 2014). In advanced cancer, meaning-centered group psychotherapy improved spiritual well-being, quality of life, depression and hopelessness more than supportive group therapy (Breitbart and colleagues, 2015). NICE CG91 (2009) covers recognizing and treating depression in adults with a chronic physical health problem, and diabetes distress shows a graded link with self-care and glucose control (Fisher and colleagues, 2012).",
+  "askAbout": [
+    "How is the illness affecting your days, and what matters most to you right now?",
+    "Which worries take up the most space: symptoms, tests, the future, money, family or something else?",
+    "How do you and your medical team talk about your treatment, and is there anything you wish you could ask them?",
+    "What has helped you cope with illness before, and who supports you?",
+    "Are there thoughts about dying, or about the illness coming back, that you would like to talk about?",
+    "Is there anything from your faith, values or life story that you lean on now?"
+  ],
+  "stereotypeCaution": "People respond to illness in very different ways; distress is common but not universal, and many people find resilience or meaning. Do not assume that low mood is simply understandable and needs no care, and do not assume someone wants to talk about death, prognosis or spirituality; ask.",
+  "keyConsiderations": [
+    "Illness symptoms and treatments (fatigue, pain, appetite and sleep changes, steroids, some cancer, heart and HIV medicines) overlap with depression; consider both and coordinate with the medical team.",
+    "Fear of recurrence or progression can be persistent after treatment; it responds to structured work similar to health anxiety approaches.",
+    "Illness-specific distress, such as diabetes distress, cancer-related worry or cardiac anxiety, may need its own targets.",
+    "Near the end of life, meaning, dignity, legacy, relationships and spiritual concerns may become central; palliative care teams are key partners.",
+    "Practical burdens (costs, work, transport, caregiving) add to distress and can be addressed directly.",
+    "Coordinate care with consent and keep communication short and specific; collaborative care models improve depression outcomes in medical settings."
+  ],
+  "assessmentAdaptations": [
+    "Use a distress screen or the PHQ-9 and GAD-7 at key points (diagnosis, treatment changes, end of treatment, recurrence), reading somatic items with care.",
+    "Ask about pain, sleep, fatigue and medicines, and whether symptoms change with treatment cycles.",
+    "Ask about the person's understanding of their illness and goals of care, and about advance care planning if relevant.",
+    "Check for delirium or medicine effects when mood or thinking changes suddenly, and route to medical review."
+  ],
+  "sessionAdaptations": [
+    "Offer flexible scheduling around treatment, telehealth on low-energy days, and shorter sessions when needed.",
+    "Plan activity and goals around energy and symptoms, and include rest.",
+    "Involve family or caregivers with consent, and offer them support too.",
+    "Work toward values-based goals that remain possible as illness changes."
+  ],
+  "interventionNotes": [
+    { "interventionId": "meaning-centered-and-dignity-therapy", "note": "For advanced illness, supports meaning, dignity and legacy; trial evidence in advanced cancer." },
+    { "interventionId": "cbt-health-anxiety", "note": "Can be adapted for fear of recurrence or progression, keeping appropriate medical follow-up in place." },
+    { "interventionId": "cbt-and-act-for-chronic-pain", "note": "For pain alongside illness, in coordination with the medical team." },
+    { "interventionId": "behavioral-activation", "note": "Choose activities that fit energy and treatment cycles; small, meaningful steps." },
+    { "interventionId": "problem-solving", "note": "Practical problem-solving for treatment logistics, work and money." },
+    { "orientationId": "acceptance-and-commitment-therapy", "note": "Acceptance and values-based action suit conditions that cannot be cured or controlled." }
+  ],
+  "measureNotes": [
+    "PHQ-9 items on fatigue, sleep, appetite, concentration and slowing can be raised by the illness or its treatment; ask what each answer reflects and look at mood and interest items closely.",
+    "Brief distress thermometers and illness-specific distress scales are link-outs here and are not built into the app.",
+    "Repeat measures over the course of treatment, since distress often changes with each phase."
+  ],
+  "measuresPending": [
+    { "name": "NCCN Distress Thermometer and Problem List", "url": "https://pubmed.ncbi.nlm.nih.gov/9587123/", "licenseKey": "NCCN-DT" },
+    { "name": "Diabetes Distress Scale (DDS)", "url": "https://pubmed.ncbi.nlm.nih.gov/15735199/", "licenseKey": "DDS" }
+  ],
+  "safetyNotes": [
+    "Ask about suicidal thoughts and wishes for hastened death directly; serious illness, pain, loss of function and hopelessness can raise risk, and such thoughts deserve care rather than assumption.",
+    "Make sure the person knows how to reach crisis help, and coordinate with the medical team when risk is present."
+  ],
+  "cautions": [
+    "Do not advise on medical treatment or medicines; refer questions to the treating team."
+  ],
+  "legalIds": ["decision-making-capacity", "psychiatric-advance-directives"],
+  "ethicsIds": [],
+  "referralIds": ["988-lifeline", "alzheimers-association"],
+  "referralKinds": [],
+  "handoutIds": ["pacing-and-flare-plan", "health-worry-cycle", "values-compass", "questions-for-my-prescriber"],
+  "topicIds": ["chronic-illness", "living-with-pain"],
+  "practiceIds": ["collaborative-care-and-pcbh", "medication-induced-psychiatric-symptoms", "involving-family-and-supports", "goal-attainment-scaling"],
+  "formulationIds": ["fear-avoidance-pain"],
+  "linkOuts": [
+    { "title": "Adjustment to Cancer: Anxiety and Distress (PDQ)", "publisher": "National Cancer Institute", "url": "https://www.cancer.gov/about-cancer/coping/feelings/anxiety-distress-pdq", "lastVerified": "2026-11-27" },
+    { "title": "Depression in adults with a chronic physical health problem: recognition and management (CG91)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/cg91", "lastVerified": "2026-11-27" },
+    { "title": "Cancer: Living with Cancer", "publisher": "MedlinePlus (U.S. National Library of Medicine)", "url": "https://medlineplus.gov/cancerlivingwithcancer.html", "lastVerified": "2026-11-27" }
+  ],
+  "sud": false,
+  "sources": [
+    { "title": "Screening, assessment, and care of anxiety and depressive symptoms in adults with cancer: an American Society of Clinical Oncology guideline adaptation (Andersen and colleagues)", "publisher": "Journal of Clinical Oncology (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/24733793/", "year": 2014 },
+    { "title": "Depression as a risk factor for poor prognosis among patients with acute coronary syndrome: systematic review and recommendations (Lichtman and colleagues)", "publisher": "Circulation (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/24566200/", "year": 2014 },
+    { "title": "Meaning-centered group psychotherapy: an effective intervention for improving psychological well-being in patients with advanced cancer (Breitbart and colleagues)", "publisher": "Journal of Clinical Oncology (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/25646186/", "year": 2015 },
+    { "title": "Depression in adults with a chronic physical health problem: recognition and management (CG91)", "publisher": "National Institute for Health and Care Excellence", "url": "https://www.nice.org.uk/guidance/cg91", "year": 2009 },
+    { "title": "When is diabetes distress clinically meaningful? Establishing cut points for the Diabetes Distress Scale (Fisher and colleagues)", "publisher": "Diabetes Care (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/22228744/", "year": 2012 }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

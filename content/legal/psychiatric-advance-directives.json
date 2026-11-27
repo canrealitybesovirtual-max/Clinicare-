@@ -1,0 +1,78 @@
+{
+  "id": "psychiatric-advance-directives",
+  "title": "Psychiatric advance directives",
+  "kind": "legal",
+  "jurisdiction": "US-state-varies",
+  "summary": "A psychiatric advance directive (PAD) is a legal document in which a person, while well, records their preferences for mental health treatment during a future crisis, names someone to decide for them, or both. About half of US states have a specific PAD law; others use general health care directive laws, and the rules on when clinicians may override a PAD differ. Clinicians can help clients complete one and link it to relapse and safety plans. This page is information, not legal advice.",
+  "keyPoints": [
+    "An instructional PAD records preferences, such as medicines that helped or did not, hospitals, people to contact, and care for children or pets. A proxy PAD names an agent to make decisions if the person loses capacity.",
+    "States differ on witnesses, how long a PAD lasts, whether it can be revoked during a crisis, and when providers may act against it, for example during involuntary treatment or an emergency.",
+    "Hospitals and other facilities in Medicare and Medicaid must tell adults about their right to make advance directives (42 CFR 489.102).",
+    "A facilitated conversation with a trained helper made people with serious mental illness more likely to complete a PAD in a randomized trial.",
+    "A PAD works best when copies are with the agent, the treatment team and the client, and when it is reviewed after each crisis."
+  ],
+  "whatToDo": [
+    "Raise PADs when the client is well, for example while building a relapse prevention or safety plan.",
+    "Use your state's official form and instructions, and help the client think through preferences and an agent.",
+    "With the client's permission, share copies with their agent and treatment team, and note where the PAD is kept.",
+    "Review the PAD with the client after a crisis or a change in treatment.",
+    "Consult your licensing board or a healthcare attorney about your state's PAD law and when it can be overridden."
+  ],
+  "questions": [
+    "Has the client had a chance to think about this while well, without pressure?",
+    "Who does the client trust to decide for them, and does that person agree?",
+    "Do the treatment team and crisis services know the PAD exists and how to find it?"
+  ],
+  "officialLinks": [
+    {
+      "title": "SAMHSA: A Practical Guide to Psychiatric Advance Directives",
+      "url": "https://www.samhsa.gov/resource/ebp/practical-guide-psychiatric-advance-directives"
+    },
+    {
+      "title": "National Resource Center on Psychiatric Advance Directives: state laws and forms",
+      "url": "https://nrc-pad.org/"
+    },
+    {
+      "title": "eCFR: 42 CFR 489.102, requirements for providers on advance directives",
+      "url": "https://www.ecfr.gov/current/title-42/chapter-IV/subchapter-G/part-489/subpart-I/section-489.102"
+    }
+  ],
+  "seeAlso": [
+    "decision-making-capacity",
+    "crisis-and-involuntary-holds"
+  ],
+  "appPositioning": "The app does not create or store PAD forms. Its safety plan tool keeps entries in memory only, and clinicians should use their state's official PAD form.",
+  "whenRelevant": [
+    "capacity",
+    "crisis",
+    "informed-consent"
+  ],
+  "changesOften": false,
+  "statusAsOf": "2026-06-01",
+  "verification": {
+    "method": "not-verified",
+    "note": "Not checked online on 2026-11-27: the build sandbox could not resolve the publishers' sites and the shared web-search budget was used up, so no page was re-read this round. The text is the author's reading of the listed sources as known up to mid-2026. The count of states with a specific PAD law is approximate; check NRC-PAD's state list and the SAMHSA guide's current address. A person must open each official link, confirm current status and dates, and correct this page before release."
+  },
+  "sources": [
+    {
+      "title": "A Practical Guide to Psychiatric Advance Directives",
+      "publisher": "Substance Abuse and Mental Health Services Administration",
+      "url": "https://www.samhsa.gov/resource/ebp/practical-guide-psychiatric-advance-directives",
+      "year": 2019
+    },
+    {
+      "title": "National Resource Center on Psychiatric Advance Directives",
+      "publisher": "NRC-PAD",
+      "url": "https://nrc-pad.org/"
+    },
+    {
+      "title": "Facilitated psychiatric advance directives: a randomized trial (Swanson and colleagues)",
+      "publisher": "American Journal of Psychiatry",
+      "url": "https://doi.org/10.1176/ajp.2006.163.11.1943",
+      "year": 2006
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

@@ -1,0 +1,82 @@
+{
+  "id": "group-confidentiality",
+  "title": "Group therapy: confidentiality, consent and records",
+  "kind": "ethics-practice",
+  "jurisdiction": "INTL",
+  "summary": "In a group, the clinician can keep their own confidentiality but cannot guarantee that every member will. Codes ask you to explain this limit before people join, agree group rules together, and describe what happens if the rules are broken. Records need care so that one member's chart does not expose another, and online groups add privacy and safety steps. Substance use groups may also fall under 42 CFR Part 2. This page is information, not legal advice.",
+  "keyPoints": [
+    "Codes ask you to explain, before a client joins, the purpose of the group, members' roles, and that you cannot promise other members will keep what is shared private (for example APA Standard 10.03, ACA Standard B.4.a, NASW Standard 1.07(f)).",
+    "A written group agreement usually covers what stays in the group, contact between members outside sessions, social media, attendance, recording, safety rules and what happens after a breach.",
+    "Pre-group screening helps check fit, readiness and safety, and is a chance to go over consent one to one.",
+    "Each member's record should describe that member's participation without naming or identifying others. Remove other members' details before releasing a record.",
+    "The usual limits of confidentiality, such as risk of serious harm and mandatory reporting, apply in groups too, and members should hear them at the start.",
+    "Online groups: each member should join from a private space, use headphones where possible, agree not to record or screenshot, and share a location and emergency contact at the start of each session."
+  ],
+  "whatToDo": [
+    "Screen each prospective member, and go over the group's purpose, rules and confidentiality limits before the first session.",
+    "Agree the group rules together, write them down, and revisit them when new members join.",
+    "Chart each member separately, without other members' identifying details.",
+    "For online groups, use a platform covered by a business associate agreement, a waiting room and a check-in of each member's location.",
+    "Consult a supervisor experienced in group work, and your licensing board or a healthcare attorney about records and Part 2 questions."
+  ],
+  "questions": [
+    "Does every member understand that I cannot guarantee what others will do with what they hear?",
+    "What will I do if a member shares something from the group outside it?",
+    "Would any member's chart reveal another member's identity or story?",
+    "For online sessions, how will I know where each member is if a crisis happens?"
+  ],
+  "officialLinks": [
+    {
+      "title": "ACA Code of Ethics and ethics resources (Standard B.4.a)",
+      "url": "https://www.counseling.org/resources/ethics"
+    },
+    {
+      "title": "APA Ethical Principles of Psychologists and Code of Conduct (Standard 10.03)",
+      "url": "https://www.apa.org/ethics/code"
+    },
+    {
+      "title": "NASW Code of Ethics (Standard 1.07)",
+      "url": "https://www.socialworkers.org/About/Ethics/Code-of-Ethics/Code-of-Ethics-English"
+    }
+  ],
+  "seeAlso": [
+    "42-cfr-part-2",
+    "informed-consent-technology",
+    "between-session-contact-policy"
+  ],
+  "whenRelevant": [
+    "group-work",
+    "confidentiality",
+    "informed-consent",
+    "telehealth"
+  ],
+  "changesOften": false,
+  "statusAsOf": "2026-06-01",
+  "verification": {
+    "method": "not-verified",
+    "note": "Not checked online on 2026-11-27: the build sandbox could not resolve the publishers' sites and the shared web-search budget was used up, so no page was re-read this round. The text is the author's reading of the listed sources as known up to mid-2026. Check the cited standard numbers and the ASGW Guiding Principles citation. A person must open each official link, confirm current status and dates, and correct this page before release."
+  },
+  "sources": [
+    {
+      "title": "Association for Specialists in Group Work: Guiding Principles for Group Work",
+      "publisher": "The Journal for Specialists in Group Work",
+      "url": "https://doi.org/10.1080/01933922.2021.1950882",
+      "year": 2021
+    },
+    {
+      "title": "ACA Code of Ethics (2014) and ethics resources",
+      "publisher": "American Counseling Association",
+      "url": "https://www.counseling.org/resources/ethics",
+      "year": 2014
+    },
+    {
+      "title": "Ethical Principles of Psychologists and Code of Conduct",
+      "publisher": "American Psychological Association",
+      "url": "https://www.apa.org/ethics/code",
+      "year": 2017
+    }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

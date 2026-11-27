@@ -64,7 +64,7 @@
     { "title": "Traumatic Brain Injury resources for service members, families and caregivers", "publisher": "Military Health System, TBI Center of Excellence", "url": "https://health.mil/Military-Health-Topics/Centers-of-Excellence/Traumatic-Brain-Injury-Center-of-Excellence/Patient-and-Family-Resources", "lastVerified": "2026-11-27" },
     { "title": "Traumatic Brain Injury", "publisher": "MedlinePlus (U.S. National Library of Medicine)", "url": "https://medlineplus.gov/traumaticbraininjury.html", "lastVerified": "2026-11-27" }
   ],
-  "sud": false,
+  "sud": true,
   "sources": [
     { "title": "Traumatic Brain Injury and PTSD (Larsen and Vasterling)", "publisher": "National Center for PTSD (U.S. Department of Veterans Affairs)", "url": "https://www.ptsd.va.gov/professional/treat/cooccurring/tbi_ptsd_vets.asp" },
     { "title": "Traumatic brain injury in intimate partner violence: a critical review of outcomes and mechanisms (Kwako and colleagues)", "publisher": "Trauma, Violence and Abuse (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/21511686/", "year": 2011 },

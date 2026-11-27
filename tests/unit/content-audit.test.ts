@@ -87,4 +87,21 @@ describe("content audit rules (temporary content folder)", () => {
     write("interventions/progressive-muscle-relaxation.json", { ...intervention, handoutIds: ["missing-handout"] });
     expect(auditContent(dir, { today: TODAY }).problems.join("\n")).toMatch(/unknown handout missing-handout/);
   });
+
+  it("lists pending clinical sign-off, pending Spanish review and old evidence grades without failing", () => {
+    dir = mkdtempSync(path.join(tmpdir(), "content-audit-"));
+    write("handouts/pmr-homework.json", handout);
+    write("handouts/reviewed.json", { ...handout, id: "reviewed", reviewedBy: "A. Clinician, LPC", es: { ...(handout.es as object), translatedBy: "A. Translator" } });
+    const intervention = JSON.parse(readFileSync(path.join(CONTENT, "interventions/progressive-muscle-relaxation.json"), "utf8")) as Record<
+      string,
+      unknown
+    >;
+    const grade = { body: "NICE", guideline: "Old guideline", year: 2011, direction: "for", strength: "offer", url: "https://www.nice.org.uk/guidance/cg113" };
+    write("interventions/progressive-muscle-relaxation.json", { ...intervention, handoutIds: [], evidenceGrades: [grade, { ...grade, year: 2024 }] });
+    const audit = auditContent(dir, { today: TODAY });
+    expect(audit.problems).toEqual([]);
+    expect(audit.review.clinical).toEqual(["handouts/pmr-homework.json", "interventions/progressive-muscle-relaxation.json"]);
+    expect(audit.review.translation).toEqual(["handouts/pmr-homework.json"]);
+    expect(audit.review.staleEvidence).toEqual([expect.stringMatching(/^interventions\/progressive-muscle-relaxation\.json: NICE grade \(Old guideline, 2011\)/)]);
+  });
 });

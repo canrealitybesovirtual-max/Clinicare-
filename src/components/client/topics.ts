@@ -67,13 +67,18 @@ const GROUPS: readonly { id: string; label: Text; ids: readonly string[] }[] = [
   {
     id: "life",
     label: { en: "Life changes and relationships", es: "Cambios en la vida y relaciones" },
-    ids: ["mood-after-baby", "seasonal-mood", "caregiving", "disasters", "later-life", "military-life"],
+    ids: ["mood-after-baby", "seasonal-mood", "caregiving", "disasters", "later-life", "military-life", "sexual-health"],
+  },
+  {
+    id: "everyday-pressures",
+    label: { en: "Work, study, money, access and fairness", es: "Trabajo, estudios, dinero, acceso y trato justo" },
+    ids: ["work-stress", "college-life", "money-and-housing-stress", "disability-and-wellbeing", "racism-and-discrimination-stress"],
   },
   { id: "habits", label: { en: "Alcohol, drugs and habits", es: "Alcohol, drogas y hábitos" }, ids: ["alcohol", "cannabis", "opioids", "stimulants", "quitting-smoking"] },
   {
     id: "health",
     label: { en: "Health conditions", es: "Problemas de salud" },
-    ids: ["chronic-illness", "mental-health", "mental-health-conditions"],
+    ids: ["chronic-illness", "living-with-pain", "mental-health", "mental-health-conditions"],
   },
 ];
 

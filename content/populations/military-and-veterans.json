@@ -71,7 +71,7 @@
     { "title": "Military Sexual Trauma (MST)", "publisher": "U.S. Department of Veterans Affairs", "url": "https://www.va.gov/health-care/health-needs-conditions/military-sexual-trauma/", "lastVerified": "2026-11-27" },
     { "title": "Community Care", "publisher": "U.S. Department of Veterans Affairs", "url": "https://www.va.gov/COMMUNITYCARE/index.asp", "note": "Eligibility and how community providers work with VA.", "lastVerified": "2026-11-27" }
   ],
-  "sud": false,
+  "sud": true,
   "sources": [
     { "title": "Combat duty in Iraq and Afghanistan, mental health problems, and barriers to care (Hoge and colleagues)", "publisher": "New England Journal of Medicine (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/15229303/", "year": 2004 },
     { "title": "Moral injury and moral repair in war veterans: a preliminary model and intervention strategy (Litz and colleagues)", "publisher": "Clinical Psychology Review (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/19683376/", "year": 2009 },

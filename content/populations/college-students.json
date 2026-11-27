@@ -1,0 +1,76 @@
+{
+  "id": "college-students",
+  "name": "College and university students",
+  "group": "life-stage",
+  "summary": "Adapting care for adult students: which privacy law covers campus records, confidential and reporting roles after sexual misconduct, medical leave and return, course-load rules for international students, disability accommodations, and brief, stepped care around the academic calendar.",
+  "scopeNote": "For students aged 18 and over; youth-only services stay outside this adult-only app. The app never asks for or saves school, enrollment, visa or disability status. Campus policies and federal rules change; check the current versions.",
+  "whyItMatters": "In the WHO World Mental Health International College Student surveys across 8 countries, 35 percent of 13,984 full-time first-year students screened positive for at least one common lifetime mental disorder and 31 percent for one in the past year, most with onset before college, and the authors described a level of need beyond what campus services can usually meet (Auerbach and colleagues, 2018). Students often move between campus counseling, community care and home services across terms, so continuity and clear privacy rules matter.",
+  "askAbout": [
+    "How is the term going so far, and what is the heaviest pressure right now: courses, money, work, family, relationships or something else?",
+    "Where will you be over breaks, and how could we keep care going if you move between home and campus?",
+    "Are you an international student or on a scholarship with conditions, so that course load or grades affect your situation?",
+    "Have you used disability services or other campus supports before, and would you like to?",
+    "Is there anything that happened on or off campus that you want to talk about, and do you know what support options and reporting choices you have?",
+    "How are sleep, eating, alcohol and other drugs fitting into student life right now?"
+  ],
+  "stereotypeCaution": "Students differ in age, background, finances, family duties and reasons for studying; many are first in their family at college, work long hours, are parents or are older returners. Do not assume a traditional student life, family support or that distress is simply normal student stress.",
+  "keyConsiderations": [
+    "Privacy rules depend on the setting: campus counseling records may be covered by education privacy law rather than health privacy law, or by both in some cases; check with the institution before sharing anything.",
+    "After sexual misconduct, campus roles differ: some staff can keep information confidential and others must report to the institution. Rules have changed repeatedly, so explain the student's options and check current policy.",
+    "Medical leave and return processes vary by institution; help the student understand the policy before deciding, including effects on housing, aid and insurance.",
+    "For international students, reducing course load or taking leave can affect visa status; they should speak with the international student office before dropping courses.",
+    "Disability services can arrange academic accommodations for mental health conditions; the student decides whether to register and what to share.",
+    "Brief, stepped and group options fit the academic calendar; plan care around exams, breaks and graduation."
+  ],
+  "assessmentAdaptations": [
+    "Ask about the academic calendar, workload, paid work, money, housing and food security as part of the picture.",
+    "Screen sleep, alcohol and other drug use, and eating patterns, which often change during study.",
+    "Ask about earlier mental health care and medicines, since many problems began before college.",
+    "Check where the student will be physically located for each session, since licensure and emergency planning depend on it."
+  ],
+  "sessionAdaptations": [
+    "Offer brief, goal-focused work with clear endpoints matched to the term, and plan for breaks.",
+    "Use telehealth across breaks only where licensure allows, and arrange handoffs when it does not.",
+    "Build skills for procrastination, sleep timing, test anxiety and perfectionism into the plan where relevant.",
+    "Help the student practise self-advocacy with faculty and offices, such as requesting extensions or accommodations."
+  ],
+  "interventionNotes": [
+    { "interventionId": "guided-self-help", "note": "A low-intensity first step that fits busy schedules and stepped campus care." },
+    { "interventionId": "brief-behavioral-treatment-insomnia", "note": "Irregular schedules and late nights are common; a brief sleep intervention can help mood and study." },
+    { "interventionId": "problem-solving", "note": "Practical problem-solving suits academic, money and housing pressures." },
+    { "interventionId": "social-connection-and-loneliness", "note": "Moving away from home can bring isolation; plan for connection the student wants." },
+    { "orientationId": "positive-psychology", "note": "Strengths and values work can support engagement and meaning in study." }
+  ],
+  "measureNotes": [
+    "PHQ-9 sleep and concentration items can be raised by exam periods and irregular schedules; repeat measures across the term and compare.",
+    "Read scores alongside functioning, such as attendance, grades and social contact."
+  ],
+  "measuresPending": [],
+  "safetyNotes": [
+    "Ask about suicidal thoughts directly, especially around exams, academic setbacks, relationship breakups or disciplinary processes.",
+    "Know both campus and community crisis routes, including after-hours options, and make sure the student knows how to reach them from where they live."
+  ],
+  "cautions": [
+    "Do not share information with family, faculty or campus offices without the student's consent, except where law or an emergency requires it."
+  ],
+  "legalIds": ["hipaa-privacy-basics", "telehealth-jurisdiction", "mandatory-reporting"],
+  "ethicsIds": [],
+  "referralIds": ["988-lifeline", "crisis-text-line", "rainn-sexual-assault-hotline", "open-path-collective"],
+  "referralKinds": [],
+  "handoutIds": ["sleep-habits", "problem-solving-steps", "social-connection-plan", "focus-and-follow-through"],
+  "topicIds": ["college-life"],
+  "practiceIds": ["stepped-care-and-level-of-care", "telehealth-sessions", "care-transitions-and-warm-handoffs"],
+  "formulationIds": [],
+  "linkOuts": [
+    { "title": "College Health", "publisher": "MedlinePlus (U.S. National Library of Medicine)", "url": "https://medlineplus.gov/collegehealth.html", "lastVerified": "2026-11-27" },
+    { "title": "Sexual Assault on College Campuses", "publisher": "Office on Women's Health (HHS)", "url": "https://womenshealth.gov/relationships-and-safety/sexual-assault-and-rape/college-sexual-assault", "lastVerified": "2026-11-27" }
+  ],
+  "sud": true,
+  "sources": [
+    { "title": "WHO World Mental Health Surveys International College Student Project: prevalence and distribution of mental disorders (Auerbach and colleagues)", "publisher": "Journal of Abnormal Psychology (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/30211576/", "year": 2018 },
+    { "title": "College Health", "publisher": "MedlinePlus (U.S. National Library of Medicine)", "url": "https://medlineplus.gov/collegehealth.html" }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}

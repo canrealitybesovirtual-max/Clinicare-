@@ -20,15 +20,28 @@
     "Consult a regulatory or healthcare attorney before changing the app's intended use; clinicians with practice questions should consult their licensing board."
   ],
   "officialLinks": [
-    { "title": "FDA: Clinical Decision Support Software (guidance page)", "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software" },
+    {
+      "title": "FDA: Clinical Decision Support Software (guidance page)",
+      "url": "https://www.fda.gov/regulatory-information/search-fda-guidance-documents/clinical-decision-support-software"
+    },
     {
       "title": "FDA: Town hall on the Clinical Decision Support Software final guidance (March 11, 2026)",
       "url": "https://www.fda.gov/medical-devices/medical-devices-news-and-events/town-hall-clinical-decision-support-software-final-guidance-03112026"
     },
-    { "title": "FDA guidance PDF cited in the app spec (confirm it opens the 2026 version)", "url": "https://www.fda.gov/media/109618/download" }
+    {
+      "title": "FDA guidance PDF cited in the app spec (confirm it opens the 2026 version)",
+      "url": "https://www.fda.gov/media/109618/download"
+    }
   ],
-  "appPositioning": "Clinician mode labels every suggestion For clinician review, shows matched and missing features, uses deterministic and transparent scoring, needs a clinician click to add anything to a plan, and never states a final diagnosis. Client mode shows no diagnosis names, codes or scores. No images or physiological signals are processed, and no AI model is used in Phases 1 to 3.",
-  "whenRelevant": ["device-regulation", "assessment", "technology"],
+  "seeAlso": [
+    "ai-in-clinical-practice"
+  ],
+  "appPositioning": "Clinician mode labels every suggestion For clinician review, shows matched and missing features, uses deterministic and transparent scoring, needs a clinician click to add anything to a plan, and never states a final diagnosis. Client mode shows no diagnosis names, codes or scores. No images or physiological signals are processed. The optional AI assistant, off by default, returns only follow-up questions and curated ids for clinician review, and the optional on-device model only offers symptom chips the clinician must tap; neither directs care.",
+  "whenRelevant": [
+    "device-regulation",
+    "assessment",
+    "technology"
+  ],
   "changesOften": false,
   "statusAsOf": "2026-11-26",
   "verification": {
@@ -62,6 +75,6 @@
     }
   ],
   "license": "original",
-  "lastVerified": "2026-11-26",
+  "lastVerified": "2026-11-27",
   "reviewedBy": "PENDING"
 }

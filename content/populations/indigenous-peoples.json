@@ -1,0 +1,74 @@
+{
+  "id": "indigenous-peoples",
+  "name": "Indigenous peoples",
+  "group": "culture-and-identity",
+  "summary": "Care with American Indian, Alaska Native and other Indigenous adults, including First Nations, Inuit, Métis, Māori and Aboriginal and Torres Strait Islander peoples: sovereignty and community-run services, historical and intergenerational trauma, traditional healing alongside care with consent, and culturally grounded crisis routes.",
+  "scopeNote": "For adults (18 and over). The app never asks for or saves Indigenous identity, Nation, Tribe, community or enrollment. Records and reporting may be shaped by Tribal sovereignty and community agreements; ask the person and check local rules.",
+  "whyItMatters": "Indigenous Peoples of the Americas have experienced massive collective and intergenerational trauma alongside ongoing discrimination, and historical trauma offers a framework for understanding unresolved grief and distress across generations (Brave Heart and colleagues, 2011). A global review found suicide rates elevated in many Indigenous populations, though not all, with rates more than 20 times higher than non-Indigenous rates in some places and parity in others (Pollock and colleagues, 2018). In the US, mental health needs have outpaced an underfunded Indian Health Service, and community members increasingly advocate culturally grounded approaches (Gone and Trimble, 2012).",
+  "askAbout": [
+    "Would you like to tell me about your Nation, community or family, and what connection to them means to you?",
+    "Are there traditional, spiritual or community ways of healing that you use or would like to include?",
+    "Which services do you use or trust, such as Tribal, urban Indigenous, Indian Health Service or other programs?",
+    "Are there experiences in your family or community, past or present, that shape how you feel about services like this one?",
+    "Who would you want involved in your care, and who should not be told anything?",
+    "What strengths in yourself, your family or your culture help you get through hard times?"
+  ],
+  "stereotypeCaution": "Indigenous peoples include hundreds of distinct Nations, languages and cultures, and individuals relate to culture, spirituality and community in their own ways; some live on their homelands, many in cities. Do not assume beliefs, practices, health behaviors, family structure or trauma, and do not ask someone to speak for all Indigenous people.",
+  "keyConsiderations": [
+    "Respect sovereignty: many Tribes and Indigenous communities run their own health and behavioral health services and set their own priorities and research rules.",
+    "Historical and intergenerational trauma, including colonization, forced removal and boarding or residential schools, can be part of the context; let the person decide how much to explore.",
+    "Traditional healing and ceremony can sit alongside clinical care when the person wants it; ask, never perform or appropriate practices, and collaborate with traditional healers only with consent.",
+    "Trust may be shaped by past harm from health, child welfare and justice systems; be transparent about records, reporting and who sees what.",
+    "Community and family connection, culture and language are often sources of strength and protection; build them into goals and safety plans when the person chooses.",
+    "Know the Indigenous-specific services in your region, such as Hope for Wellness in Canada and 13YARN in Australia."
+  ],
+  "assessmentAdaptations": [
+    "Allow time for relationship-building before structured questions, and explain the purpose of each step.",
+    "Ask about stressors in the person's terms, including loss, grief, discrimination and community events, without assuming them.",
+    "Use the cultural formulation exploration to understand how the person and their community understand the problem and its healing.",
+    "When grief is collective, such as several community deaths, ask about it directly and about the support around the person."
+  ],
+  "sessionAdaptations": [
+    "Be flexible with time, place and format, including telehealth for people far from services, and welcome family or Elders when the person wishes.",
+    "Use storytelling, narrative and strengths-based approaches where they fit the person's preferences.",
+    "Adapt examples, metaphors and goals with the person so they reflect their community and values.",
+    "Coordinate with Tribal, urban Indigenous or community services the person already uses, with consent."
+  ],
+  "interventionNotes": [
+    { "interventionId": "cultural-formulation-exploration", "note": "Hear the person's own and their community's understanding of distress and healing before planning." },
+    { "interventionId": "culturally-adapted-cbt", "note": "Adapt content and goals with the person and, where they wish, community members; keep the core skills intact." },
+    { "interventionId": "narrative-externalizing", "note": "Narrative approaches can honor storytelling and separate the person from the problem." },
+    { "interventionId": "grief-focused-therapy", "note": "Collective and repeated losses may call for grief work that includes community and cultural ways of mourning." },
+    { "orientationId": "multicultural-feminist-liberation", "note": "Frames distress in the context of colonization, power and resistance as well as individual factors." }
+  ],
+  "measureNotes": [
+    "Few measures have been validated with specific Indigenous communities; use the PHQ-9 and GAD-7 with care, explain their purpose, and read scores alongside the conversation.",
+    "Questions about guilt, hopelessness or spirituality can carry different meanings across cultures; ask what each answer meant."
+  ],
+  "measuresPending": [],
+  "safetyNotes": [
+    "Ask about suicidal thoughts directly and with care, including after deaths in the community, and include cultural and family supports in the safety plan if the person wants.",
+    "In Canada, Hope for Wellness offers help for Indigenous people at any time, and in Australia, 13YARN is a crisis line run by Aboriginal and Torres Strait Islander people; in the US, call or text 988."
+  ],
+  "cautions": [
+    "Do not offer or imitate ceremonies or traditional practices yourself; support the person's access to their own knowledge holders if they want that."
+  ],
+  "legalIds": ["mandatory-reporting", "hipaa-privacy-basics", "competence-and-scope-of-practice"],
+  "ethicsIds": [],
+  "referralIds": ["ihs-behavioral-health", "hope-for-wellness", "13yarn", "988-lifeline", "area-agencies-on-aging-directory"],
+  "referralKinds": ["indigenous"],
+  "handoutIds": ["grief-and-loss", "social-connection-plan", "my-story-in-my-words"],
+  "topicIds": ["grief"],
+  "practiceIds": ["multicultural-orientation-and-broaching", "trauma-informed-care", "involving-family-and-supports"],
+  "formulationIds": ["five-ps-biopsychosocial-spiritual"],
+  "linkOuts": [],
+  "sud": false,
+  "sources": [
+    { "title": "Historical trauma among Indigenous Peoples of the Americas: concepts, research, and clinical considerations (Brave Heart and colleagues)", "publisher": "Journal of Psychoactive Drugs (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/22400458/", "year": 2011 },
+    { "title": "Global incidence of suicide among Indigenous peoples: a systematic review (Pollock and colleagues)", "publisher": "BMC Medicine (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/30122155/", "year": 2018 },
+    { "title": "American Indian and Alaska Native mental health: diverse perspectives on enduring disparities (Gone and Trimble)", "publisher": "Annual Review of Clinical Psychology (PubMed)", "url": "https://pubmed.ncbi.nlm.nih.gov/22149479/", "year": 2012 }
+  ],
+  "license": "original",
+  "lastVerified": "2026-11-27",
+  "reviewedBy": "PENDING"
+}
